@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Submit an event — Gulf Coast Adventures</title>
+<meta name="description" content="Got an event? Tell us. Listing is free and it always will be.">
+<meta name="theme-color" content="#0d1b28">
+<meta property="og:title" content="Submit an event — Gulf Coast Adventures">
+<meta property="og:description" content="Got an event? Tell us. Listing is free and it always will be.">
+<meta property="og:type" content="website">
+<!-- ONE PLACE FOR THE NAME. "Gulf Coast Adventures" is a WORKING TITLE — an active Destin tour
+     company already uses it. When the real name lands it changes in <title>, the og: tags and
+     the .brand element. Nothing else hardcodes it. -->
+<link rel="stylesheet" href="scene.css">
+<style>
+  fieldset{border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:16px 16px 6px;margin:0 0 18px}
+  legend{padding:0 8px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:800}
+  label{display:block;margin:0 0 14px}
+  .lb{display:block;font-size:14px;font-weight:700;margin-bottom:5px}
+  .hint{display:block;font-size:12.5px;color:var(--mut);font-weight:400;margin-top:3px}
+  .req{color:var(--gold)}
+  input,select,textarea{width:100%;min-height:48px;padding:12px 13px;border-radius:11px;
+    border:1px solid var(--line);background:#0f2032;color:var(--ink);font-size:16px;font-family:inherit}
+  textarea{min-height:96px;resize:vertical}
+  input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold2);outline-offset:1px}
+  .row{display:grid;gap:0}
+  @media(min-width:600px){.row{grid-template-columns:1fr 1fr;gap:0 16px}}
+  .note{background:rgba(19,133,103,.10);border:1px solid rgba(19,133,103,.42);border-radius:12px;
+    padding:14px 16px;margin:0 0 20px;color:var(--sand);font-size:14.5px}
+  .err{background:rgba(184,52,52,.12);border:1px solid rgba(184,52,52,.5);border-radius:12px;
+    padding:12px 14px;margin:0 0 16px;color:#f0bcbc;font-size:14.5px;display:none}
+  .ok{display:none;background:rgba(19,133,103,.12);border:1px solid rgba(19,133,103,.5);
+    border-radius:14px;padding:20px;margin-top:18px}
+  .ok h2{margin:0 0 8px;font-size:20px}
+  main{padding:26px 0 60px}
+</style>
+</head>
+<body><header class="scene band">
+<div class="sky" aria-hidden="true"></div>
+<div class="sunglow" aria-hidden="true"></div>
+<div class="sun" aria-hidden="true"></div>
+<div class="sea far" aria-hidden="true"></div>
+
+<!-- gulls, high and slow -->
+<svg class="crit gull" viewBox="0 0 40 14" aria-hidden="true">
+  <path d="M2 9 Q10 1 19 8 Q28 1 38 9" fill="none" stroke="#f6e7c8" stroke-width="1.7" stroke-linecap="round"/>
+</svg>
+<svg class="crit gull b" viewBox="0 0 40 14" aria-hidden="true">
+  <path d="M2 9 Q10 2 19 8 Q28 2 38 9" fill="none" stroke="#f6e7c8" stroke-width="2" stroke-linecap="round"/>
+</svg>
+
+<!-- the sloop: hull, two sails, a mast, and its own reflection -->
+<svg class="crit sloop" viewBox="0 0 80 74" aria-hidden="true">
+  <path d="M40 6 L40 50" stroke="#e8d8bd" stroke-width="1.6"/>
+  <path d="M41 9 L41 48 L67 48 Z" fill="#fdf4e2" opacity=".96"/>
+  <path d="M38 14 L38 48 L20 48 Z" fill="#f3e3c6" opacity=".92"/>
+  <path d="M12 49 L70 49 L62 58 L21 58 Z" fill="#20364a"/>
+  <path d="M14 60 L68 60 L64 63 L19 63 Z" fill="#0f3f52" opacity=".45"/>
+</svg>
+
+<div class="sea mid" aria-hidden="true"></div>
+
+<!-- dolphin pod: fins only, falcate curve, three of them out of step -->
+<svg class="crit pod" viewBox="0 0 120 34" aria-hidden="true">
+  <path d="M6 28 Q16 8 30 27 Q20 20 6 28 Z" fill="#123f52"/>
+  <path d="M46 30 Q54 14 65 29 Q57 23 46 30 Z" fill="#14556b"/>
+  <path d="M84 29 Q93 11 106 28 Q95 21 84 29 Z" fill="#123f52" opacity=".9"/>
+  <ellipse cx="20" cy="30" rx="20" ry="3" fill="#0f3f52" opacity=".5"/>
+  <ellipse cx="58" cy="31" rx="16" ry="2.6" fill="#0f3f52" opacity=".45"/>
+</svg>
+
+<div class="glint" aria-hidden="true"></div>
+<div class="sea near" aria-hidden="true"></div>
+<div class="foam" aria-hidden="true"></div>
+<div class="wet" aria-hidden="true"></div>
+<div class="shore" aria-hidden="true"></div>
+
+<!-- sandpipers, trotting the wet line -->
+<svg class="crit piper" viewBox="0 0 22 18" aria-hidden="true">
+  <ellipse cx="10" cy="8" rx="6.5" ry="4.6" fill="#e6d6b8"/>
+  <circle cx="16" cy="5" r="2.8" fill="#e6d6b8"/>
+  <path d="M18.6 5 L22 5.8" stroke="#3a2f22" stroke-width="1.1" stroke-linecap="round"/>
+  <path d="M8 12 L7 17 M12 12 L13 17" stroke="#3a2f22" stroke-width="1.1" stroke-linecap="round"/>
+</svg>
+<svg class="crit piper b" viewBox="0 0 22 18" aria-hidden="true">
+  <ellipse cx="10" cy="8" rx="6" ry="4.2" fill="#dcc9a6"/>
+  <circle cx="15.6" cy="5.4" r="2.5" fill="#dcc9a6"/>
+  <path d="M18 5.4 L21.4 6" stroke="#3a2f22" stroke-width="1" stroke-linecap="round"/>
+  <path d="M8 11.6 L7.2 16.4 M12 11.6 L12.8 16.4" stroke="#3a2f22" stroke-width="1" stroke-linecap="round"/>
+</svg>
+
+<!-- the ghost crab, sideways, pausing halfway across like they do -->
+<svg class="crit crab" viewBox="0 0 30 20" aria-hidden="true">
+  <ellipse cx="15" cy="12" rx="8" ry="5.6" fill="#f0dcb4"/>
+  <circle cx="12" cy="5.6" r="1.5" fill="#2c2419"/><circle cx="18" cy="5.6" r="1.5" fill="#2c2419"/>
+  <path d="M12 6.6 L12 9 M18 6.6 L18 9" stroke="#e2c79c" stroke-width="1"/>
+  <path d="M7 10 Q3 7 2 10 M23 10 Q27 7 28 10" fill="none" stroke="#f0dcb4" stroke-width="2" stroke-linecap="round"/>
+  <path d="M9 16 L6 19 M13 17 L11 20 M17 17 L19 20 M21 16 L24 19"
+        stroke="#e0c79c" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+
+<!-- sea oats, one clump each side, swaying out of phase -->
+<svg class="oats l" viewBox="0 0 40 60" aria-hidden="true">
+  <path d="M20 60 L18 20 M20 60 L26 26 M20 60 L12 30" stroke="#b99b64" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <ellipse cx="18" cy="17" rx="3" ry="7" fill="#d9c08a"/>
+  <ellipse cx="26.6" cy="23" rx="2.5" ry="6" fill="#cbb079"/>
+  <ellipse cx="11.4" cy="27" rx="2.4" ry="5.6" fill="#cbb079"/>
+</svg>
+<svg class="oats r" viewBox="0 0 40 60" aria-hidden="true">
+  <path d="M20 60 L22 24 M20 60 L13 30" stroke="#b99b64" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <ellipse cx="22" cy="21" rx="2.7" ry="6.4" fill="#d9c08a"/>
+  <ellipse cx="12.4" cy="27" rx="2.2" ry="5.2" fill="#cbb079"/>
+</svg>
+<nav class="top"><div class="wrap">
+  <a href="index.html">Home</a>
+  <a href="mission.html">Our mission</a>
+  <a href="submit.html" aria-current="page">Submit an event</a>
+  <a href="business.html">For local business</a>
+  <a href="volunteer.html">Volunteer</a>
+</div></nav>
+  <div class="wrap" style="padding-top:26px">
+    <span class="eyebrow">Free listing, always</span>
+    <h1 class="brand" style="font-size:32px;margin-top:14px">Got an event? Tell us.</h1>
+    <p class="tag" style="font-size:16px">We verify everything against your own page before it goes live.</p>
+  </div>
+</header>
+<main class="wrap">
+
+  <div class="note">
+    We don't charge for inclusion, we don't rank paying venues higher, and we'll never leave a real
+    family event off the list because nobody paid us. We verify everything against your own page
+    before it goes live, so the more you give us here, the faster it lands.
+    <br><br>
+    <strong>Nonprofits, churches, schools and libraries:</strong> same form, same free listing,
+    same treatment.
+  </div>
+
+  <div class="err" id="err"></div>
+
+  <form id="f" novalidate>
+
+    <fieldset>
+      <legend>The event</legend>
+      <label><span class="lb">Event name <span class="req">*</span></span><input name="Event name" required></label>
+      <label><span class="lb">Venue name <span class="req">*</span></span><input name="Venue name" required></label>
+      <label><span class="lb">Street address <span class="req">*</span>
+        <span class="hint">Full address — we geocode it on our end</span></span><input name="Street address" required></label>
+      <div class="row">
+        <label><span class="lb">Date <span class="req">*</span></span><input type="date" name="Date" id="d1" required></label>
+        <label><span class="lb">End date <span class="hint">Multi-day events only</span></span><input type="date" name="End date"></label>
+      </div>
+      <div class="row">
+        <label><span class="lb">Start time <span class="req">*</span></span><input type="time" name="Start time" required></label>
+        <label><span class="lb">Recurring?</span>
+          <select name="Recurring" id="rec">
+            <option value="One-time">One-time</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Monthly">Monthly</option>
+            <option value="Other">Other</option>
+          </select></label>
+      </div>
+      <label id="endWrap" style="display:none"><span class="lb">If recurring, when does the series end? <span class="req">*</span>
+        <span class="hint">The field nobody fills in and everybody needs. An unbounded series is how a calendar rots.</span></span>
+        <input type="date" name="Series ends" id="d2"></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>What it costs</legend>
+      <label><span class="lb">Cost — adults <span class="req">*</span>
+        <span class="hint">"Free" is a valid answer. "TBA" is too. Empty is not.</span></span><input name="Cost adults" required></label>
+      <label><span class="lb">Cost — children <span class="req">*</span>
+        <span class="hint">Include the age cut-off, e.g. "$8, ages 3–12"</span></span><input name="Cost children" required></label>
+      <div class="row">
+        <label><span class="lb">Are under-2s free?</span>
+          <select name="Under 2 free"><option>N/A</option><option>Yes</option><option>No</option></select></label>
+        <label><span class="lb">Military or veteran rate?
+          <span class="hint">Amount or code. Ask us why and we'll tell you: it's what families here look for first.</span></span>
+          <input name="Military rate"></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Who it's for</legend>
+      <div class="row">
+        <label><span class="lb">Age range <span class="req">*</span>
+          <span class="hint">"All ages" is fine</span></span><input name="Age range" required></label>
+        <label><span class="lb">Indoor or outdoor <span class="req">*</span></span>
+          <select name="Indoor or outdoor" required><option>Indoor</option><option>Outdoor</option><option>Both</option></select></label>
+      </div>
+      <div class="row">
+        <label><span class="lb">Stroller accessible?</span>
+          <select name="Stroller accessible"><option>Yes</option><option>No</option><option>Partly</option></select></label>
+        <label><span class="lb">Published minimum age
+          <span class="hint">Only if you post one — 18+, 21+. Leave blank otherwise.</span></span>
+          <input name="Minimum age"></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Where we verify it</legend>
+      <label><span class="lb">Ticket or info link <span class="req">*</span>
+        <span class="hint">Your own website. We verify against your page — a Facebook link is a lead, not a source.</span></span>
+        <input type="url" name="Ticket or info link" id="url" placeholder="https://" required></label>
+      <label><span class="lb">One or two sentences about it <span class="req">*</span>
+        <span class="hint">300 characters</span></span>
+        <textarea name="About" maxlength="300" required></textarea></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>You</legend>
+      <div class="row">
+        <label><span class="lb">Your name <span class="req">*</span></span><input name="Your name" required></label>
+        <label><span class="lb">Your role <span class="req">*</span>
+          <span class="hint">Owner, staff, organizer, volunteer</span></span><input name="Your role" required></label>
+      </div>
+      <div class="row">
+        <label><span class="lb">Email <span class="req">*</span>
+          <span class="hint">Verification contact only</span></span><input type="email" name="Email" required></label>
+        <label><span class="lb">Phone
+          <span class="hint">Faster for us when something doesn't match</span></span><input type="tel" name="Phone"></label>
+      </div>
+    </fieldset>
+
+    <button class="btn" type="submit">Send it</button>
+    <p style="font-size:13px;color:var(--mut);margin-top:12px">
+      This opens your email app with everything above already filled in. No account, no tracking,
+      nothing stored on a server — this whole site makes zero network calls.</p>
+  </form>
+
+  <div class="ok" id="ok">
+    <h2>Got it — thanks.</h2>
+    <p>We check every submission against your own page before it goes live, usually within a few
+      days. If something doesn't line up we'll email you rather than guess.</p>
+    <p style="margin-bottom:0"><strong>Listing is free. It stays free.</strong></p>
+  </div>
+
+</main>
+<footer class="wrap">
+  <div class="ftlinks">
+    <a href="index.html">Home</a>
+    <a href="mission.html">Our mission</a>
+    <a href="submit.html">Submit an event</a>
+    <a href="business.html">For local business</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="terms.html">Terms of use</a>
+  </div>
+  <p style="margin:0">Built and verified by a family on the Gulf Coast. Free for families, always.</p>
+  <p style="margin:8px 0 0">Venues change hours, cancel events and raise prices without telling
+    anyone. Confirm before you drive.</p>
+</footer>
+<script>
+  var TO = 'events@example.com'; /* SET THIS to the real inbox before publish. */
+  var rec = document.getElementById('rec'), endWrap = document.getElementById('endWrap');
+  rec.addEventListener('change', function(){
+    var on = rec.value !== 'One-time';
+    endWrap.style.display = on ? 'block' : 'none';
+    document.getElementById('d2').required = on;
+  });
+  document.getElementById('f').addEventListener('submit', function(e){
+    e.preventDefault();
+    var err = document.getElementById('err'); err.style.display = 'none';
+    var f = e.target, problems = [];
+
+    /* the four validations the spec names, done here so a bad lead never reaches the queue */
+    var u = document.getElementById('url').value.trim();
+    if(/facebook\.com|instagram\.com|fb\.me|tiktok\.com/i.test(u))
+      problems.push('We verify against your own page — a social link is a lead, not a source. Got a website URL?');
+    var d1 = document.getElementById('d1').value;
+    if(d1 && new Date(d1 + 'T23:59:59') < new Date()) problems.push('That date has already passed.');
+    if(rec.value !== 'One-time' && !document.getElementById('d2').value)
+      problems.push('A recurring series needs an end date — an unbounded series is how a calendar rots.');
+    [].forEach.call(f.querySelectorAll('[required]'), function(el){
+      if(el.offsetParent !== null && !el.value.trim()) problems.push('Missing: ' + (el.name || 'a required field'));
+    });
+
+    if(problems.length){
+      err.innerHTML = problems.map(function(p){ return '• ' + p; }).join('<br>');
+      err.style.display = 'block';
+      err.scrollIntoView({behavior:'smooth', block:'center'});
+      return;
+    }
+
+    var lines = [];
+    [].forEach.call(f.querySelectorAll('input,select,textarea'), function(el){
+      if(el.name && el.value.trim()) lines.push(el.name + ': ' + el.value.trim());
+    });
+    var subj = encodeURIComponent('Event submission: ' + (f.querySelector('[name="Event name"]').value || 'untitled'));
+    window.location.href = 'mailto:' + TO + '?subject=' + subj + '&body=' + encodeURIComponent(lines.join('\n'));
+    f.style.display = 'none';
+    document.getElementById('ok').style.display = 'block';
+  });
+</script>
+</body>
+</html>

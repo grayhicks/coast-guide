@@ -1,0 +1,36 @@
+{
+  "name": "Gulf Coast Adventures",
+  "short_name": "Gulf Coast",
+  "description": "Every verified thing to do on the Gulf Coast, priced by age, free forever.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0B2531",
+  "theme_color": "#0B2531",
+  "categories": [
+    "travel",
+    "lifestyle",
+    "entertainment"
+  ],
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
