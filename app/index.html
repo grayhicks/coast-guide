@@ -7419,12 +7419,20 @@ button.dnx_tag{ margin:0; font-family:inherit; }
 /* the placed piece, and the carried one. Both are the same shared tile path; only the state
    differs, which is why a piece never changes shape between a claw and a slot. */
 .xps_fill{ position:absolute; left:1px; top:1px; z-index:5; width:13px; height:13px;
-  color:#F6D98C; opacity:0; transform:scale(.6) rotate(-14deg); transition:opacity .34s ease, transform .34s cubic-bezier(.25,1.4,.5,1); }
-.xps_carry{ position:absolute; z-index:7; width:11px; height:11px; color:#F6D98C; opacity:.95;
+  opacity:0; transform:scale(.6) rotate(-14deg); transition:opacity .34s ease, transform .34s cubic-bezier(.25,1.4,.5,1); }
+.xps_carry{ position:absolute; z-index:7; width:11px; height:11px; opacity:.95;
   filter:drop-shadow(0 1px 2px rgba(10,32,44,.5)); transition:opacity .26s ease, transform .26s ease; }
 .xps_carry.one{ left:30px; top:6px; }      /* under the dolphin's rostrum */
 .xps_carry.two{ left:43px; top:27px; }     /* at the turtle's front flipper, clear of its face */
 .xps_carry.three{ left:29px; top:9px; }    /* in the crab's raised claw */
+/* ⚠ THREE PIECES, THREE COLOURS, and this is asserted rather than decorative: gate_support checks
+   new Set(inked).size === 3 on the placed pieces. One shared gold would fail it the moment the
+   mosaic's assertions are repointed here, and it would also say the wrong thing -- the pieces are
+   different because the people are. Same palette the retiring hero used, carried over deliberately
+   so nothing about the symbol changes when the hero does. */
+.xps_carry.one,.xps_fill.one{ color:#7DC8E8; }
+.xps_carry.two,.xps_fill.two{ color:#E5B9E5; }
+.xps_carry.three,.xps_fill.three{ color:#F0D06D; }
 /* THE HANDOVER. It fires on the beat the reader picks an amount, because that is the sentence
    this page is making: the coast is short three pieces and the giver is who completes it. */
 .xp_supportstage.cheering .xps_carry,.xp_supportstage.verified .xps_carry{ opacity:0; transform:scale(.5); }
