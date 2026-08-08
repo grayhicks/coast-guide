@@ -1497,8 +1497,23 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
    the only thing up there that is not a control — so on the widths where they actually collide it
    spends less of it. The words are untouched; the tracking and the type size carry the trim, which
    is what an eyebrow can afford to lose and a label cannot. */
-@media (max-width:409px){
-  .hero-eyebrow{ font-size:9.5px; letter-spacing:1.3px; padding:5px 7px; gap:4px; }
+/* ⚠ 08/08 — THE TRIM ABOVE WAS KEYED TO max-width:409 AND THAT INVERTED THE BREAKPOINT. Past 409
+   the eyebrow snapped back to full size and, being centred, immediately grew back into the More
+   pill — so a WIDER phone got a WORSE rail than a narrow one. Re-measured on the shipped render:
+
+     360   more ends 99 · eyebrow starts 105  →   6px
+     390   more ends 99 · eyebrow starts 120  →  21px
+     430   more ends 99 · eyebrow starts 101  →   2px      <- the widest phone, the tightest rail
+
+   Gray, 08/08: "the pill area in the hero... it all needs to be smaller. the hamburger the center
+   mainly." So both give width, and the trim now covers every phone rather than only the narrow
+   ones. The words are untouched at every size; tracking and type size carry it, which is what an
+   eyebrow can afford to lose and a label cannot. */
+@media (max-width:520px){
+  .hero-eyebrow{ font-size:10px; letter-spacing:1.9px; padding:4px 9px; gap:5px; }
+}
+@media (max-width:379px){
+  .hero-eyebrow{ font-size:9.2px; letter-spacing:1.2px; padding:4px 7px; gap:4px; }
 }
 .hero-title{ font-family:Fraunces,serif; font-weight:600; font-size:42px; line-height:.98; letter-spacing:-.02em; color:#FFFDF8; margin:18px 0 0; text-shadow:0 2px 8px rgba(8,22,34,.38), 0 6px 28px rgba(8,22,34,.5); }
 .hero-script{ font-family:'Great Vibes',cursive; font-size:41px; line-height:1; margin-top:-2px; padding:6px 12px 14px 14px; margin-left:-14px; margin-bottom:-12px; display:inline-block; background:linear-gradient(100deg,#FFF3D0,#F8D57E 48%,#E9B54A); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; filter:drop-shadow(0 3px 10px rgba(10,20,30,.34)); }
@@ -1525,6 +1540,9 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
 .hero-datebtn:active{ transform:scale(.97); }
 .hero-datebtn:focus-visible{ outline:2px solid #FFE9C4; outline-offset:2px; }
 .hero-datebtn .hk_mmark{ width:14px; height:14px; flex:0 0 auto; opacity:.92; }
+/* the last hop of the flag tint — see the note at the pill's style prop. --flagink comes off the
+   button from today's reading; this rule is what lets it beat .hk_mmark's own --mm4. */
+.hero-datebtn .hk_mmark{ --mm4:var(--flagink,#FFF9EC); }
 /* The shared waterline is the set's signature at 19px and a smudge at 14px — it is one stroke of
    detail below the size the method allows detail at. The staff, the cloth and the sand line still
    say beach flag on their own, so the signature drops here and stays everywhere else. */
@@ -5337,6 +5355,20 @@ button.dnx_tag{ margin:0; font-family:inherit; }
 .morebtn:hover{ border-color:#D9B764; color:#FBEFCF; box-shadow:inset 0 1px 0 rgba(255,241,184,.16), 0 8px 22px rgba(0,0,0,.36), 0 0 14px -6px rgba(201,164,78,.7); }
 .morebtn:active{ transform:translateY(1px); }
 .morebtn::after{ content:""; position:absolute; inset:-9px 0; border-radius:999px; }
+/* ⚠ 08/08 — THE DOOR GIVES WIDTH, and it is the one Gray named first: "it all needs to be smaller.
+   the hamburger the center mainly." At 15px Cormorant with 14px of right padding this was an 89x31
+   pill — the tallest thing on a rail whose other two pills are 25, and the fixed left edge the
+   centred eyebrow kept walking into.
+   ⚠ THIS BLOCK LIVES HERE, NOT WITH THE EYEBROW TRIM IT BELONGS WITH. Written up there it lost
+   silently: the base .morebtn rule is ~3,800 lines further down the sheet, and equal specificity
+   means the later rule wins whatever the media query says. Measured, not assumed — the first
+   attempt shipped an eyebrow that shrank and a More pill that did not move a pixel.
+   ⚠ THE 44px TAP TARGET IS NOT NEGOTIABLE and never came from the pill's own box — it comes from
+   the ::after bleed, so the bleed grows by exactly what the padding gives up. */
+@media (max-width:520px){
+  .morebtn{ font-size:13px; padding:5px 11px 5px 9px; gap:6px; }
+  .morebtn::after{ inset:-11px -2px; }
+}
 /* ---- 08/07 THE DOOR DRESSES FOR THE SKY.
    Gray: "currently the GCA hamburger is navy blue. I think it should be the elegant white during
    the day and something else elegant during the night you tell me... maybe the Navy blue and gold
@@ -11033,7 +11065,7 @@ function useLiveWx(){const[,bump]=useState(0);useEffect(()=>{const cb=()=>bump(n
    the stand is the truth. A colour nobody earned is worse than no colour, which
    is the same law verifiedOn runs on.
    =========================================================================== *//* GCA_FLAG_DATA_BEGIN — one line, replaced verbatim by claude/harness/bake_beach_flag.js.
-   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-08T15:46:53.249Z","issued":"2026-08-08T08:03:00+00:00","productId":"478a379c-0860-40aa-9324-d58b33497331","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"},"forecastSource":{"name":"NWS Mobile — Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"observed","county":{"level":2,"flags":["yellow","purple"],"risk":"Moderate","marineLife":true,"waterTempF":85,"updated":"2026-08-08T14:11:13.49Z","chance":{"green":60,"yellow":40,"red":0,"doubleRed":0,"marineLife":80},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-08","risk":"Moderate","flags":["yellow","purple"],"observedAt":"2026-08-08T14:11:13.49Z","chance":{"green":60,"yellow":40,"red":0,"doubleRed":0,"marineLife":80},"surf":"1 to 2 feet","uv":"Extreme","water":"85°F","weather":"Sunny","winds":"Northeast winds around 10 mph, becoming south in the afternoon"},"outlook":[{"date":"2026-08-08","label":"Today","risk":"Moderate","flags":["yellow"],"surf":"1 to 2 feet"},{"date":"2026-08-09","label":"Sunday","risk":"Low","flags":["green"],"surf":"Around 1 foot"},{"date":"2026-08-10","label":"Monday","risk":"Low","flags":["green"],"surf":"Around 1 foot"},{"date":"2026-08-11","label":"Tuesday","risk":"Low","flags":["green"],"surf":"1 to 2 feet"},{"date":"2026-08-12","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"1 to 2 feet"}],"alerts":[]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
+   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-08T16:05:21.487Z","issued":"2026-08-08T08:03:00+00:00","productId":"478a379c-0860-40aa-9324-d58b33497331","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"},"forecastSource":{"name":"NWS Mobile — Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"observed","county":{"level":2,"flags":["yellow","purple"],"risk":"Moderate","marineLife":true,"waterTempF":85,"updated":"2026-08-08T14:11:13.49Z","chance":{"green":60,"yellow":40,"red":0,"doubleRed":0,"marineLife":80},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-08","risk":"Moderate","flags":["yellow","purple"],"observedAt":"2026-08-08T14:11:13.49Z","chance":{"green":60,"yellow":40,"red":0,"doubleRed":0,"marineLife":80},"surf":"1 to 2 feet","uv":"Extreme","water":"85°F","weather":"Sunny","winds":"Northeast winds around 10 mph, becoming south in the afternoon"},"outlook":[{"date":"2026-08-08","label":"Today","risk":"Moderate","flags":["yellow"],"surf":"1 to 2 feet"},{"date":"2026-08-09","label":"Sunday","risk":"Low","flags":["green"],"surf":"Around 1 foot"},{"date":"2026-08-10","label":"Monday","risk":"Low","flags":["green"],"surf":"Around 1 foot"},{"date":"2026-08-11","label":"Tuesday","risk":"Low","flags":["green"],"surf":"1 to 2 feet"},{"date":"2026-08-12","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"1 to 2 feet"}],"alerts":[]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
    same words fetch_beach_flag.js emits so the two cannot drift apart. */const FLAG_INK={green:"#2E9E5B",yellow:"#E0A81F",red:"#C7202A",purple:"#7B3FA0"};const FLAG_SAY={green:["Low hazard","Calm conditions. Rip currents still run on green days."],yellow:["Medium hazard","Moderate surf or currents. Keep the little ones in reach."],red:["High hazard","High surf, strong currents, or both. Most people should stay out."],purple:["Marine life","Usually jellyfish or man o' war. It flies below a colour, never alone."]};/* THE READING — what the app is allowed to say, given the reader's own clock.
 
    ⚠ 08/08 — THE LAST FLAG IS CARRIED FORWARD NOW. It used to blank out the moment the reader's
@@ -11112,7 +11144,24 @@ function useLiveWx(){const[,bump]=useState(0);useEffect(()=>{const cb=()=>bump(n
    Both degenerate cases fall out for free: at the quarters the ellipse has zero width, so the
    terminator is the straight line it really is; at new and full it is the full disc, so it either
    erases the lit half or completes it. Northern hemisphere, so waxing is lit on the RIGHT. */function moonShadowGeom(p,R){const c=Math.cos(2*Math.PI*p);return{litX:p<0.5?30:30-R,rx:+(R*Math.abs(c)).toFixed(3),cut:c<0?"#000":"#fff"};}function Hero({upcoming,onFlags}){const hashPhase=()=>{if(typeof window==="undefined")return null;const m=(window.location.hash||"").match(/(dawn|day|golden|night)/);return m?m[1]:null;};const[override,setOverride]=useState(hashPhase);const[auto,setAuto]=useState(skyPhase);const[chip,setChip]=useState(null);useEffect(()=>{const id=setInterval(()=>setAuto(skyPhase()),60000);return()=>clearInterval(id);},[]);const phase=override||auto;/* TONIGHT'S ACTUAL MOON. Computed once per render from TODAY, which is midnight local, so the
-     drawing changes when the date does and never mid-session. */const moonP=moonPhaseOf(TODAY);const moonGeom=moonShadowGeom(moonP,27);const moonLabel=moonName(moonP)+", "+Math.round(moonLitFrac(moonP)*100)+" percent lit";useEffect(()=>{if(!chip)return;const t=setTimeout(()=>setChip(null),2600);return()=>clearTimeout(t);},[chip]);const cycle=()=>{const cur=override||auto;const i=PH_ORDER.indexOf(cur);const nxt=override&&i===PH_ORDER.length-1?null:PH_ORDER[(i+1)%PH_ORDER.length];setOverride(nxt);setChip(nxt?PH_LABEL[nxt]+" · preview":"Live sky");};const sleepRef=useSleepy();const adEpoch=useAdEpoch();const heroElRef=useRef(null);useEffect(()=>{const el=heroElRef.current;if(!el||typeof IntersectionObserver==="undefined")return;let away=false,io;try{io=new IntersectionObserver(ens=>ens.forEach(en=>{if(!en.isIntersecting)away=true;else if(away){away=false;adBus.bump();}}),{threshold:0});io.observe(el);}catch(e){}return()=>{try{if(io)io.disconnect();}catch(e){}};},[]);return React.createElement("div",{ref:el=>{sleepRef.current=el;heroElRef.current=el;},className:"hero ph-"+phase},onFlags?React.createElement(HeroBeachFlag,{onOpen:onFlags}):null,onFlags?React.createElement("button",{type:"button",className:"hero-date hero-datebtn","data-testid":"hero-flags","aria-label":"Beach flags — what the warning colours mean",onClick:onFlags},React.createElement(MenuMark,{k:"flags"}),TODAY_SHORT):React.createElement("div",{className:"hero-date"},TODAY_SHORT),React.createElement("button",{type:"button",className:"sunb","aria-label":"Preview time of day — cycles dawn, day, golden hour, night, live"+(phase==="night"?". Tonight: "+moonLabel:""),onClick:cycle},phase==="night"?React.createElement("span",{className:"moon",/* ⚠ MEASURED, NOT NUDGED. At top:2/right:14 the disc rendered at x 288..348 while
+     drawing changes when the date does and never mid-session. */const moonP=moonPhaseOf(TODAY);const moonGeom=moonShadowGeom(moonP,27);const moonLabel=moonName(moonP)+", "+Math.round(moonLitFrac(moonP)*100)+" percent lit";useEffect(()=>{if(!chip)return;const t=setTimeout(()=>setChip(null),2600);return()=>clearTimeout(t);},[chip]);const cycle=()=>{const cur=override||auto;const i=PH_ORDER.indexOf(cur);const nxt=override&&i===PH_ORDER.length-1?null:PH_ORDER[(i+1)%PH_ORDER.length];setOverride(nxt);setChip(nxt?PH_LABEL[nxt]+" · preview":"Live sky");};const sleepRef=useSleepy();const adEpoch=useAdEpoch();const heroElRef=useRef(null);useEffect(()=>{const el=heroElRef.current;if(!el||typeof IntersectionObserver==="undefined")return;let away=false,io;try{io=new IntersectionObserver(ens=>ens.forEach(en=>{if(!en.isIntersecting)away=true;else if(away){away=false;adBus.bump();}}),{threshold:0});io.observe(el);}catch(e){}return()=>{try{if(io)io.disconnect();}catch(e){}};},[]);return React.createElement("div",{ref:el=>{sleepRef.current=el;heroElRef.current=el;},className:"hero ph-"+phase},onFlags?React.createElement(HeroBeachFlag,{onOpen:onFlags}):null,onFlags?React.createElement("button",{type:"button",className:"hero-date hero-datebtn","data-testid":"hero-flags","aria-label":"Beach flags — what the warning colours mean",/* ⚠ 08/08 — THE CLOTH FLIES TODAY'S COLOUR, because on a beach a flag IS a colour before it is
+       a shape — this file's own words, at MENU_MARKS.flags. The pill was rendering the generic mark,
+       whose cloth is the set's rose ink, so on a day the county flew YELLOW the masthead showed a
+       red flag: the one condition on that scale a parent must not be told wrongly. Nothing else in
+       the app was wrong — the flags page has always stated the real colour — which is exactly why
+       this survived; nobody reads a masthead pill as a claim until it contradicts the page.
+       No new CSS: .hk_mmark resolves its cloth through --mm4, so setting that one custom property on
+       the button retints the cloth and nothing else. Two flags flown together (yellow + purple is
+       today) take the FIRST, which is the water-condition flag; purple is marine life and rides
+       beside it rather than replacing it, and the page says so in words.
+       ⚠ IT IS SET AS --flagink AND RE-READ IN CSS, not written straight to --mm4. .hk_mmark declares
+       its own --mm4 ON THE SVG, so a value inherited from the button is overridden by the element's
+       own declaration and the first build changed nothing at all — measured fill still rgb(232,116,
+       140). Same specificity trap that cost four rounds on the hero wash. The stylesheet does the
+       last hop, where .hero-datebtn .hk_mmark can outrank .hk_mmark.
+       ⚠ WHEN THE READING IS UNKNOWN THE CLOTH CLAIMS NOTHING — it falls back to the pill's own warm
+       ink, not to rose. An unknown flag drawn in a real flag colour is a fabricated reading, and the
+       $ TBA law is the same law: no colour is honest, a wrong colour is not. */style:function(){var r=flagReading();var f=r&&r.known&&r.flags&&r.flags.length?r.flags[0]:null;return{"--flagink":f&&FLAG_INK[f]||"#FFF9EC"};}(),onClick:onFlags},React.createElement(MenuMark,{k:"flags"}),TODAY_SHORT):React.createElement("div",{className:"hero-date"},TODAY_SHORT),React.createElement("button",{type:"button",className:"sunb","aria-label":"Preview time of day — cycles dawn, day, golden hour, night, live"+(phase==="night"?". Tonight: "+moonLabel:""),onClick:cycle},phase==="night"?React.createElement("span",{className:"moon",/* ⚠ MEASURED, NOT NUDGED. At top:2/right:14 the disc rendered at x 288..348 while
        .hero-title ends at x 297.1 — a 9px overlap with the hero copy, which the hero DO-NOT list
        bans outright and which the osprey was re-laned for once already. At top:-4/right:0 it
        renders 302..362, clear by ~5px, and still inside .sunb's 94px tap box so the time-of-day
@@ -12066,7 +12115,29 @@ const eat=ev=>{ev.stopPropagation();ev.preventDefault();};r.addEventListener("cl
        enough: the panel still landed 453px down, and a flat 64vh (540px) overflowed the 844px
        viewport by 163px, so Cost, Holiday and Saved stayed unreachable. Measuring after the
        scroll settles is the only thing that cannot be wrong -- it does not care where the dock
-       is, how far the deck was scrolled, or what the browser chrome is doing. */const fit=()=>{try{const panel=document.querySelector(".fpanel");const sc=panel&&panel.querySelector(".fpanel_scroll");if(!sc)return;const room=window.innerHeight-sc.getBoundingClientRect().top-18;sc.style.maxHeight=Math.max(220,Math.round(room))+"px";}catch(e){}};window.requestAnimationFrame(()=>window.requestAnimationFrame(()=>{try{const panel=document.querySelector(".fpanel");if(!panel)return;const top=panel.getBoundingClientRect().top+(window.scrollY||0);window.scrollTo({top:Math.max(0,top-58),behavior:"auto"});}catch(e){}fit();/* one more after the browser settles, for smooth-scroll and mobile chrome retraction */setTimeout(fit,260);}));};useEffect(()=>{fOpenRef.current=fOpen;},[fOpen]);useEffect(()=>{let lastY=window.scrollY||0,acc=0,away=false;const onScroll=()=>{const y=window.scrollY||0,dy=y-lastY;lastY=y;setShowTop(y>500);const nav=navRef.current;if(!nav)return;if(fOpenRef.current){acc=0;return;}if(performance.now()<dockCalm.current){acc=0;return;}const ae=document.activeElement;if(ae&&ae.tagName==="INPUT"&&nav.contains(ae)){acc=0;return;}acc=dy>0===acc>0?acc+dy:dy;if(!away){if(nav.getBoundingClientRect().top<=9&&acc>24){away=true;dockCalm.current=performance.now()+400;setDockAway(true);setFOpen(false);}}else if(acc<-12||y<60){away=false;setDockAway(false);}};window.addEventListener("scroll",onScroll,{passive:true});return()=>window.removeEventListener("scroll",onScroll);},[]);useEffect(()=>{let live=true;store.get(PIN_KEY).then(raw=>{if(!live||!raw)return;try{const arr=JSON.parse(raw);if(Array.isArray(arr))setPinned(new Set(arr));}catch(e){}});return()=>{live=false;};},[]);const togglePin=id=>setPinned(prev=>{const next=new Set(prev);if(next.has(id))next.delete(id);else next.add(id);store.set(PIN_KEY,JSON.stringify([...next]));return next;});/* 08/04 — CONFIRMED and fixed. The 21+ toggle could not persist OFF. State defaults to true and
+       is, how far the deck was scrolled, or what the browser chrome is doing. */const fit=()=>{try{const panel=document.querySelector(".fpanel");const sc=panel&&panel.querySelector(".fpanel_scroll");if(!sc)return;const room=window.innerHeight-sc.getBoundingClientRect().top-18;sc.style.maxHeight=Math.max(220,Math.round(room))+"px";}catch(e){}};window.requestAnimationFrame(()=>window.requestAnimationFrame(()=>{try{const panel=document.querySelector(".fpanel");if(!panel)return;const top=panel.getBoundingClientRect().top+(window.scrollY||0);window.scrollTo({top:Math.max(0,top-58),behavior:"auto"});}catch(e){}fit();/* one more after the browser settles, for smooth-scroll and mobile chrome retraction */setTimeout(fit,260);}));};useEffect(()=>{fOpenRef.current=fOpen;},[fOpen]);useEffect(()=>{let lastY=window.scrollY||0,acc=0,/* ⚠ A ROLLING 250ms WINDOW, NOT "when this run began". The first build measured the age of
+         the whole same-direction run, which looks fast at its start and slow forever after — so a
+         flick that CONTINUED a slow read-up was timed from the read and never registered. Measured,
+         not reasoned: the gesture harness caught it. This is px travelled in the last quarter
+         second, which is what velocity actually means and what a flick actually is. */winAt=0,winAcc=0,away=false;const onScroll=()=>{const y=window.scrollY||0,dy=y-lastY;lastY=y;setShowTop(y>500);const nav=navRef.current;if(!nav)return;if(fOpenRef.current){acc=0;return;}if(performance.now()<dockCalm.current){acc=0;return;}const ae=document.activeElement;if(ae&&ae.tagName==="INPUT"&&nav.contains(ae)){acc=0;return;}const nowMs=performance.now();if(nowMs-winAt>250){winAt=nowMs;winAcc=0;}winAcc+=dy;acc=dy>0===acc>0?acc+dy:dy;if(!away){if(nav.getBoundingClientRect().top<=9&&acc>24){away=true;dockCalm.current=performance.now()+400;setDockAway(true);setFOpen(false);}/* ⚠ 08/08 — TWELVE PIXELS BROUGHT THE WHOLE RAIL BACK, and twelve pixels is not a request.
+         Gray: "a lot of times people just want to scroll up a little to see the top of the card",
+         and every one of those nudges was summoning the tabs, the Anytime chip and the filters over
+         the thing he was trying to read.
+         Distance alone cannot fix it, because the two gestures that should bring the dock back are
+         different shapes: a DELIBERATE long pull, and a FAST FLICK that is short but unmistakably a
+         reach for the controls. He asked for exactly that pair — "it needs to be more of a scroll
+         up. or quicker scroll up." So the rule is 300px of sustained travel, OR 70px inside a
+         rolling 250ms window — a reading nudge cannot produce that rate and a flick always does.
+         ⚠ 300, NOT THE 160 THIS SHIPPED WITH FIRST. Measured on the real gesture: reading back up
+         a card is 60px, then another 110, then more — 160 fired on the second nudge, which is the
+         complaint again with a bigger number. Cards run past 400px tall, so re-reading one from the
+         bottom is a 200-300px climb, and the threshold has to sit above the tallest READ rather
+         than above the smallest nudge. The flick is what makes that affordable: nobody has to climb
+         300px to get the dock, they flick and it is there. y < 60 still wins outright:
+         at the top of the page the dock is never hidden, whatever the gesture was.
+         The alternative he floated — a button that pops it up — was not taken, because it puts a
+         permanent control on every screen to fix what is really one bad threshold. If this still
+         reads wrong in the hand, that button is the fallback and this comment is why. */}else if(acc<-300||winAcc<-70||y<60){away=false;setDockAway(false);}};window.addEventListener("scroll",onScroll,{passive:true});return()=>window.removeEventListener("scroll",onScroll);},[]);useEffect(()=>{let live=true;store.get(PIN_KEY).then(raw=>{if(!live||!raw)return;try{const arr=JSON.parse(raw);if(Array.isArray(arr))setPinned(new Set(arr));}catch(e){}});return()=>{live=false;};},[]);const togglePin=id=>setPinned(prev=>{const next=new Set(prev);if(next.has(id))next.delete(id);else next.add(id);store.set(PIN_KEY,JSON.stringify([...next]));return next;});/* 08/04 — CONFIRMED and fixed. The 21+ toggle could not persist OFF. State defaults to true and
      this restore effect only ever called setAdult(TRUE), so the "0" written when a parent turned
      nightlife off was stored faithfully and then never read back: one reload and bar, DJ and
      ladies'-night events were in the deck again. That defeats the family content filter, which is
