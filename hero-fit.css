@@ -65,8 +65,33 @@
 @media (min-width:1280px){.scene.tall{--sy:2.2;--um:2.1;--us:1.9;--ub:1.9;--up:1.6}}
 @media (min-width:1536px){.scene.tall{--sy:2.25;--um:2.3;--us:2.05;--ub:2.05;--up:1.75}}
 
-/* on phones the copy owns the sky, so the moon rides high and small */
-@media (max-width:767px){.scene.tall .sunb{top:14px}}
+/* ------------------------------------------- the tall masthead under 901px */
+/* Below 901px site.css swaps the copy's radial wash for a full-width vertical
+   veil at .88 alpha, dense from the scene's top edge to the copy block's
+   bottom. NOTHING behind that veil can exceed ~1.3:1 — measured, not guessed:
+   a pure-white sail composites to rgb(36,43,52) against the veiled sky. The
+   only honest light on a phone is the veil's own tail: it falls to .52 by
+   copy-bottom+42px and to zero at +64px. So under 901 the stage grows past the
+   copy, slides down 57 logical rows so the beach (which would otherwise put
+   the sloop on wet sand) crops off the bottom, and the sloop drops to ride the
+   open water inside that clear strip — moonlit, unveiled, whole. The moon
+   itself lifts mostly above the top crop: a lower limb and its halo in the
+   one sliver of sky the copy doesn't own, with the lane running down from it.
+   The bottom of the phone masthead stops being 180px of black and becomes the
+   scene: glade, glints, swells, sloop. */
+@media (max-width:900px){
+  .scene.tall{--sy:2.72;--um:.85;--us:1.25;--ub:1.3;--up:1.05;--moonr:2px;
+    min-height:calc(298px * 2.72)}
+  .scene.tall .scene-stage .hero{
+    transform:scale(var(--sx),var(--sy)) translateY(57px)}
+  .scene.tall .sunb{top:-66px}
+  .scene.tall .hk_boat{top:157px !important}
+  .scene.tall .boat-refl{top:214px}
+  /* unveiled water gets the lane at full song — but the 2.7x vertical stretch
+     turns crisp facets into stacked beads, so the melt is a touch heavier */
+  .scene.tall .glit{top:148px;height:100px}
+  .scene.tall .glit .lane{filter:blur(1.3px);opacity:.95}
+}
 
 .scene.band{--sy:.83;--um:1;--us:1.05;--ub:1.05;min-height:200px}
 @media (min-width:768px){.scene.band{--sy:.9;--um:1.35;--us:1.2;--ub:1.25;min-height:232px}}
@@ -93,11 +118,34 @@
 .scene-stage .sunb{transform-origin:100% 0;right:var(--moonr,28px);
   transform:scale(calc(var(--um) / var(--sx)),calc(var(--um) / var(--sy)))}
 
-/* the glitter lane tracks the moon it reflects: centered under the disc, about
-   a moon-and-a-half wide whatever the stretch */
+/* ------------------------------------------------------- the moon's lane */
+/* Ratios the lane math leans on: --k is a rigid-body px expressed in stage px
+   (moon family), --kb the same for the boat. --lcx is the moon disc's centre
+   measured from the stage's right edge, in stage px — the one x that the lane's
+   core, its mask and the moon itself must agree on at every breakpoint. --bcx
+   is the sloop's mast foot from the right edge, where the water under the hull
+   picks up its own shimmer. */
+.scene{--k:calc(var(--um) / var(--sx));--kb:calc(var(--ub) / var(--sx));
+  --lcx:calc(var(--moonr,28px) + 47px * var(--k));
+  --bcx:calc(18px + 49px * var(--kb))}
+
+/* The lane itself: a masked radial falloff, brightest at the horizon directly
+   under the moon, dissolving toward the viewer, with the sloop's water inside
+   its reach — the container runs from the stage's right edge (under the sloop)
+   left past the moon's column, and the mask is the only outline it has: an
+   ellipse of alpha centred on the moon's column at the horizon, so intensity
+   falls off in every direction and no edge exists anywhere. The generated
+   clip-path trapezoid is removed outright. */
 .scene-stage .glit{
-  right:calc(var(--moonr,28px) - 14px * var(--um) / var(--sx));
-  width:calc(88px * var(--um) / var(--sx))}
+  top:145px;right:0;height:96px;
+  width:calc(var(--moonr,28px) + 118px * var(--k) + 14px);
+  clip-path:none;
+  -webkit-mask-image:radial-gradient(135% 160% at right var(--lcx) top 0px,
+    rgba(0,0,0,1) 0%,rgba(0,0,0,.88) 18%,rgba(0,0,0,.62) 40%,
+    rgba(0,0,0,.38) 62%,rgba(0,0,0,.16) 82%,transparent 98%);
+  mask-image:radial-gradient(135% 160% at right var(--lcx) top 0px,
+    rgba(0,0,0,1) 0%,rgba(0,0,0,.88) 18%,rgba(0,0,0,.62) 40%,
+    rgba(0,0,0,.38) 62%,rgba(0,0,0,.16) 82%,transparent 98%)}
 
 /* the sloop: hull stays on its waterline at the right, boat returns to shape */
 .scene-stage .hk_boat{transform-origin:100% 74%;
@@ -125,11 +173,80 @@
    preserveAspectRatio="none" makes the drawn coast simply reach the edge. */
 .scene-stage .hero-sand,.scene-stage .hkn_wet{width:100%}
 
-/* the glitter lane's clip trapezoid gets razor edges at masthead stretch; a
-   radial mask turns it back into a cone of light that dissolves */
-.scene-stage .glit{
-  -webkit-mask-image:radial-gradient(75% 130% at 50% 0%,rgba(0,0,0,.95),rgba(0,0,0,.5) 55%,transparent 94%);
-  mask-image:radial-gradient(75% 130% at 50% 0%,rgba(0,0,0,.95),rgba(0,0,0,.5) 55%,transparent 94%)}
+/* What the mask shapes, this paints: the water inside the lane. Not a beam —
+   a field of facets. A hot blaze at the horizon directly under the disc, a
+   column that loosens as it comes forward, a broad body of lit water leaning
+   out to the sloop, and ~25 hand-placed glints — jittered depths, no two the
+   same width, size or offset, every one an ellipse that fades before it ends.
+   Offsets ride --k / --kb so the scatter hangs under the moon and under the
+   hull at every breakpoint; colour rides --glitc through color-mix so a phase
+   re-capture re-tints the whole lane.
+   ⚠ site.css carries a GLOBAL `.lane` for its own drawn scene — width:190px,
+   margin-left:-95px, blur(17px). Those laid the hero's lane 95 stage-px left
+   of its box and were why nothing painted where the math said it would.
+   width:auto / margin:0 below neutralize them; hero.css's inset:0 does the rest. */
+.scene-stage .glit .lane{width:auto;margin:0;opacity:1;filter:blur(.7px);background:
+  radial-gradient(26px 2.6px at right var(--lcx) top 2px,color-mix(in srgb,var(--glitc) 100%,transparent),transparent 72%),
+  radial-gradient(48px 6px at right calc(var(--lcx) - 3px * var(--k)) top 3px,color-mix(in srgb,var(--glitc) 72%,transparent),transparent 74%),
+  radial-gradient(55% 10px at right calc(var(--lcx) - 8px * var(--k)) top 5px,color-mix(in srgb,var(--glitc) 34%,transparent),transparent 78%),
+  radial-gradient(34px 46px at right calc(var(--lcx) + 4px * var(--k)) top 14px,color-mix(in srgb,var(--glitc) 26%,transparent),transparent 74%),
+  radial-gradient(26% 88px at right calc(var(--lcx) - 7px * var(--k)) top 40px,color-mix(in srgb,var(--glitc) 16%,transparent),transparent 78%),
+  radial-gradient(60% 90px at right calc(var(--lcx) * .62) top 66px,color-mix(in srgb,var(--glitc) 12%,transparent),transparent 80%),
+  radial-gradient(34% 34px at right calc(var(--bcx) + 6px * var(--kb)) top 58px,color-mix(in srgb,var(--glitc) 18%,transparent),transparent 78%),
+  radial-gradient(9px 1.6px at right calc(var(--lcx) - 16px * var(--k)) top 6px,color-mix(in srgb,var(--glitc) 66%,transparent),transparent 70%),
+  radial-gradient(6px 1.3px at right calc(var(--lcx) + 10px * var(--k)) top 4px,color-mix(in srgb,var(--glitc) 74%,transparent),transparent 70%),
+  radial-gradient(12px 1.8px at right calc(var(--lcx) + 19px * var(--k)) top 9px,color-mix(in srgb,var(--glitc) 55%,transparent),transparent 70%),
+  radial-gradient(7px 1.5px at right calc(var(--lcx) - 6px * var(--k)) top 12px,color-mix(in srgb,var(--glitc) 62%,transparent),transparent 70%),
+  radial-gradient(14px 2.0px at right calc(var(--lcx) + 2px * var(--k)) top 17px,color-mix(in srgb,var(--glitc) 50%,transparent),transparent 70%),
+  radial-gradient(10px 2.0px at right calc(var(--lcx) - 24px * var(--k)) top 21px,color-mix(in srgb,var(--glitc) 44%,transparent),transparent 70%),
+  radial-gradient(16px 2.2px at right calc(var(--lcx) + 13px * var(--k)) top 24px,color-mix(in srgb,var(--glitc) 46%,transparent),transparent 70%),
+  radial-gradient(9px 1.8px at right calc(var(--lcx) + 30px * var(--k)) top 31px,color-mix(in srgb,var(--glitc) 38%,transparent),transparent 70%),
+  radial-gradient(18px 2.4px at right calc(var(--lcx) - 11px * var(--k)) top 34px,color-mix(in srgb,var(--glitc) 40%,transparent),transparent 70%),
+  radial-gradient(12px 2.2px at right calc(var(--lcx) - 30px * var(--k)) top 42px,color-mix(in srgb,var(--glitc) 30%,transparent),transparent 70%),
+  radial-gradient(20px 2.6px at right calc(var(--lcx) + 5px * var(--k)) top 45px,color-mix(in srgb,var(--glitc) 34%,transparent),transparent 70%),
+  radial-gradient(13px 2.4px at right calc(var(--lcx) + 22px * var(--k)) top 52px,color-mix(in srgb,var(--glitc) 28%,transparent),transparent 70%),
+  radial-gradient(24px 3.0px at right calc(var(--lcx) - 18px * var(--k)) top 57px,color-mix(in srgb,var(--glitc) 26%,transparent),transparent 70%),
+  radial-gradient(15px 2.6px at right calc(var(--lcx) + 38px * var(--k)) top 63px,color-mix(in srgb,var(--glitc) 24%,transparent),transparent 70%),
+  radial-gradient(28px 3.2px at right calc(var(--lcx) - 4px * var(--k)) top 68px,color-mix(in srgb,var(--glitc) 22%,transparent),transparent 70%),
+  radial-gradient(18px 3.0px at right calc(var(--lcx) + 12px * var(--k)) top 78px,color-mix(in srgb,var(--glitc) 19%,transparent),transparent 70%),
+  radial-gradient(30px 3.6px at right calc(var(--lcx) - 26px * var(--k)) top 84px,color-mix(in srgb,var(--glitc) 15%,transparent),transparent 70%),
+  radial-gradient(22px 3.4px at right calc(var(--lcx) + 2px * var(--k)) top 92px,color-mix(in srgb,var(--glitc) 12%,transparent),transparent 70%),
+  radial-gradient(14px 2.2px at right calc((var(--lcx) + var(--bcx)) / 2 + 8px * var(--k)) top 48px,color-mix(in srgb,var(--glitc) 26%,transparent),transparent 70%),
+  radial-gradient(18px 2.6px at right calc((var(--lcx) + var(--bcx)) / 2 - 6px * var(--k)) top 60px,color-mix(in srgb,var(--glitc) 20%,transparent),transparent 70%),
+  radial-gradient(24px 3.0px at right calc((var(--lcx) + var(--bcx)) / 2 + 2px * var(--k)) top 74px,color-mix(in srgb,var(--glitc) 15%,transparent),transparent 70%),
+  radial-gradient(10px 1.8px at right calc(var(--bcx) - 10px * var(--kb)) top 50px,color-mix(in srgb,var(--glitc) 30%,transparent),transparent 70%),
+  radial-gradient(13px 2.0px at right calc(var(--bcx) + 13px * var(--kb)) top 56px,color-mix(in srgb,var(--glitc) 26%,transparent),transparent 70%),
+  radial-gradient(20px 2.8px at right calc(var(--bcx) + 2px * var(--kb)) top 66px,color-mix(in srgb,var(--glitc) 20%,transparent),transparent 70%),
+  radial-gradient(16px 2.8px at right calc(var(--bcx) - 6px * var(--kb)) top 76px,color-mix(in srgb,var(--glitc) 16%,transparent),transparent 70%)}
+
+/* the travelling sparks that ride the lane: thinner, softly bloomed, and no
+   two on the same axis — the rebuilt hk_gl below folds each one's cant and
+   thickness into its blink so transform stays the only thing animating */
+.scene-stage .gl{height:1.6px;filter:blur(.5px)}
+.scene-stage .glit .gl:nth-of-type(2n){--gr:1.6deg;--gsy:.75}
+.scene-stage .glit .gl:nth-of-type(3n){--gr:-1.3deg;--gsy:1.3}
+.scene-stage .glit .gl:nth-of-type(4n+1){--gr:-.7deg;--gsy:.9}
+.scene-stage .glit .gl:nth-of-type(5n){--gr:2.1deg;--gsy:.6}
+@keyframes hk_gl{
+  0%,100%{opacity:0;transform:scale(.3,var(--gsy,1)) rotate(var(--gr,0deg))}
+  45%,55%{opacity:min(calc(var(--glo,.6) * .8),.5);transform:scale(1,var(--gsy,1)) rotate(var(--gr,0deg))}
+}
+
+/* the sloop sits inside the lane now, so it is lit by it: full opacity (the
+   authored .82 is baked inline, hence the important), sails holding a faint
+   wash of moon, and its dark water-shadow put back under the hull to seat it */
+.scene-stage .hk_boat{opacity:1 !important}
+.scene-stage .hk_boat .sails path{fill:#C9D8E6}
+.scene-stage .hk_boat .sails path[fill="url(#hk_maing)"]{fill:#D3E0EC}
+.scene-stage .boat-refl{display:block;opacity:.5}
+
+/* re-lit night shore: the captured scene was tuned for a 298px phone card and
+   its night floor crushes to black once a masthead veil sits over it — lift
+   the sand, props and surf toward moonlight instead of letting them die */
+.scene-stage .hero-sand{opacity:.92;filter:brightness(.68) saturate(.75)}
+.scene-stage .beachprops{opacity:.95;filter:brightness(.72) saturate(.78)}
+.scene-stage .hero-surf{opacity:.62}
+.scene-stage .hk_swellw{opacity:.66}
 
 /* film grain: tile size held at true pixels so it never smears */
 .scene-stage .grain{background-size:calc(160px / var(--sx)) calc(160px / var(--sy))}
@@ -199,7 +316,22 @@
   .scene-stage .clm1{transform:translateX(300px)}
   .scene-stage .clm2{transform:translateX(150px)}
   .scene-stage .cln1{transform:translateX(430px)}
-  .scene-stage .gl{opacity:.35;transform:scaleX(1)}
+  /* the lane's static facets carry the texture; frozen sparks would be the
+     old row-of-bars ghost, so they go */
+  .scene-stage .gl{display:none}
+  /* ⚠ THE SAILS AND BURGEE ARE SMIL. The luff of the jib, the belly of the
+     main and the flap of the burgee are <animate attributeName="d"> INSIDE the
+     boat SVG — animation:none cannot touch them and they were the last 925
+     moving pixels under reduce. SMIL sits in the cascade as an override sheet
+     that only !important author declarations outrank, and `d` is a real CSS
+     property in Chromium — so each path is pinned to its authored rest shape. */
+  .scene-stage .hk_boat .sails path[fill="url(#hk_jibg)"]{
+    d:path("M66,15 L27,72.5 L59,71 C62.5,52 64.5,33 66,15 Z") !important}
+  .scene-stage .hk_boat .sails path[fill="url(#hk_maing)"]{
+    d:path("M69,12 L67,66 L103,62.5 C96.5,44.5 85.5,26 69,12 Z") !important}
+  .scene-stage .hk_boat path[fill="#C74B3C"]{
+    d:path("M69,7.4 L77.5,9.6 L69,12.2 Z") !important}
+  .scene-stage .boat-refl{opacity:.4}
   /* the breaking surf frozen mid-cycle is a bright foam sheet nailed across the
      shore — the app removes the travelling pieces under reduced motion and
      keeps a calm swell line at low opacity; do the same */
