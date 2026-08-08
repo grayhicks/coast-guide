@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Gulf Coast Adventures//Gulf Coast events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Bands on the Beach
+BEGIN:VEVENT
+UID:ev_bands-2026-08-11@coast-guide
+DTSTAMP:20260811T000000Z
+DTSTART;VALUE=DATE:20260811
+DTEND;VALUE=DATE:20260812
+SUMMARY:Bands on the Beach
+DESCRIPTION:Free beach concert every Tuesday. Coming up: 8/4 The New Cahoo
+ ts\, 8/11 9th Avenue Brass\, 8/18 Paperchase\, 8/25 Mass Kunfuzion — fu
+ ll lineup runs to 10/27.\nPrice: Free\nDrive: 15 min from Gulf Breeze\nTi
+ mes: Tuesdays · 7:00–9:00 PM\nhttps://grayhicks.github.io/coast-guide/
+ events/ev-bands.html
+LOCATION:Gulfside Pavilion at Casino Beach\, 20 Casino Beach Blvd\, Pensac
+ ola Beach\, FL 32561
+URL:https://grayhicks.github.io/coast-guide/events/ev-bands.html
+END:VEVENT
+END:VCALENDAR

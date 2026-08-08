@@ -3,191 +3,302 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Gulf Coast Adventures — the free, verified local guide</title>
-<meta name="description" content="Every real event and place on the Gulf Coast, checked against the venue's own page, priced for the family actually going. Free, always.">
-<meta name="theme-color" content="#0d1b28">
-<meta property="og:title" content="Gulf Coast Adventures — the free, verified local guide">
-<meta property="og:description" content="Every real event and place on the Gulf Coast, checked against the venue's own page, priced for the family actually going. Free, always.">
+<title>Gulf Coast Adventures — every real thing to do on the Gulf Coast, checked</title>
+<meta name="description" content="Events and places from Gulf Breeze to Mobile and 30A, each one read off the venue's own page before it ships. Free, no account, no tracking.">
+<link rel="canonical" href="https://grayhicks.github.io/coast-guide/">
+<meta name="theme-color" content="#0b1826">
 <meta property="og:type" content="website">
-<!-- ONE PLACE FOR THE NAME. "Gulf Coast Adventures" is a WORKING TITLE — an active Destin tour
-     company already uses it. When the real name lands it changes in <title>, the og: tags and
-     the .brand element. Nothing else hardcodes it. -->
-<link rel="stylesheet" href="scene.css">
+<meta property="og:site_name" content="Gulf Coast Adventures">
+<meta property="og:title" content="Gulf Coast Adventures — every real thing to do on the Gulf Coast, checked">
+<meta property="og:description" content="Events and places from Gulf Breeze to Mobile and 30A, each one read off the venue's own page before it ships. Free, no account, no tracking.">
+<meta property="og:url" content="https://grayhicks.github.io/coast-guide/">
+<meta property="og:image" content="https://grayhicks.github.io/coast-guide/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A drawn Gulf Coast shoreline at dusk under the words: every real thing to do on the Gulf Coast, checked.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://grayhicks.github.io/coast-guide/og.jpg">
+<meta name="twitter:title" content="Gulf Coast Adventures — every real thing to do on the Gulf Coast, checked">
+<meta name="twitter:description" content="Events and places from Gulf Breeze to Mobile and 30A, each one read off the venue's own page before it ships. Free, no account, no tracking.">
+<link rel="stylesheet" href="site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Gulf Coast Adventures","url":"https://grayhicks.github.io/coast-guide/","description":"A free, verified guide to events and places on the Florida and Alabama Gulf Coast."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://grayhicks.github.io/coast-guide/events/ev-elissa-sail250.html"},{"@type":"ListItem","position":2,"url":"https://grayhicks.github.io/coast-guide/events/ev-saenger-murder-mystery-0808.html"},{"@type":"ListItem","position":3,"url":"https://grayhicks.github.io/coast-guide/events/ev-plt-little-mermaid-final.html"},{"@type":"ListItem","position":4,"url":"https://grayhicks.github.io/coast-guide/events/ev-palafox.html"},{"@type":"ListItem","position":5,"url":"https://grayhicks.github.io/coast-guide/events/ev-grandblvd-mkt.html"},{"@type":"ListItem","position":6,"url":"https://grayhicks.github.io/coast-guide/events/ev-foley-mkt.html"}]}</script>
 </head>
-<body><header class="scene tall">
-<div class="sky" aria-hidden="true"></div>
-<div class="sunglow" aria-hidden="true"></div>
-<div class="sun" aria-hidden="true"></div>
-<div class="sea far" aria-hidden="true"></div>
-
-<!-- gulls, high and slow -->
-<svg class="crit gull" viewBox="0 0 40 14" aria-hidden="true">
-  <path d="M2 9 Q10 1 19 8 Q28 1 38 9" fill="none" stroke="#f6e7c8" stroke-width="1.7" stroke-linecap="round"/>
-</svg>
-<svg class="crit gull b" viewBox="0 0 40 14" aria-hidden="true">
-  <path d="M2 9 Q10 2 19 8 Q28 2 38 9" fill="none" stroke="#f6e7c8" stroke-width="2" stroke-linecap="round"/>
-</svg>
-
-<!-- the sloop: hull, two sails, a mast, and its own reflection -->
-<svg class="crit sloop" viewBox="0 0 80 74" aria-hidden="true">
-  <path d="M40 6 L40 50" stroke="#e8d8bd" stroke-width="1.6"/>
-  <path d="M41 9 L41 48 L67 48 Z" fill="#fdf4e2" opacity=".96"/>
-  <path d="M38 14 L38 48 L20 48 Z" fill="#f3e3c6" opacity=".92"/>
-  <path d="M12 49 L70 49 L62 58 L21 58 Z" fill="#20364a"/>
-  <path d="M14 60 L68 60 L64 63 L19 63 Z" fill="#0f3f52" opacity=".45"/>
-</svg>
-
-<div class="sea mid" aria-hidden="true"></div>
-
-<!-- dolphin pod: fins only, falcate curve, three of them out of step -->
-<svg class="crit pod" viewBox="0 0 120 34" aria-hidden="true">
-  <path d="M6 28 Q16 8 30 27 Q20 20 6 28 Z" fill="#123f52"/>
-  <path d="M46 30 Q54 14 65 29 Q57 23 46 30 Z" fill="#14556b"/>
-  <path d="M84 29 Q93 11 106 28 Q95 21 84 29 Z" fill="#123f52" opacity=".9"/>
-  <ellipse cx="20" cy="30" rx="20" ry="3" fill="#0f3f52" opacity=".5"/>
-  <ellipse cx="58" cy="31" rx="16" ry="2.6" fill="#0f3f52" opacity=".45"/>
-</svg>
-
-<div class="glint" aria-hidden="true"></div>
-<div class="sea near" aria-hidden="true"></div>
-<div class="foam" aria-hidden="true"></div>
-<div class="wet" aria-hidden="true"></div>
-<div class="shore" aria-hidden="true"></div>
-
-<!-- sandpipers, trotting the wet line -->
-<svg class="crit piper" viewBox="0 0 22 18" aria-hidden="true">
-  <ellipse cx="10" cy="8" rx="6.5" ry="4.6" fill="#e6d6b8"/>
-  <circle cx="16" cy="5" r="2.8" fill="#e6d6b8"/>
-  <path d="M18.6 5 L22 5.8" stroke="#3a2f22" stroke-width="1.1" stroke-linecap="round"/>
-  <path d="M8 12 L7 17 M12 12 L13 17" stroke="#3a2f22" stroke-width="1.1" stroke-linecap="round"/>
-</svg>
-<svg class="crit piper b" viewBox="0 0 22 18" aria-hidden="true">
-  <ellipse cx="10" cy="8" rx="6" ry="4.2" fill="#dcc9a6"/>
-  <circle cx="15.6" cy="5.4" r="2.5" fill="#dcc9a6"/>
-  <path d="M18 5.4 L21.4 6" stroke="#3a2f22" stroke-width="1" stroke-linecap="round"/>
-  <path d="M8 11.6 L7.2 16.4 M12 11.6 L12.8 16.4" stroke="#3a2f22" stroke-width="1" stroke-linecap="round"/>
-</svg>
-
-<!-- the ghost crab, sideways, pausing halfway across like they do -->
-<svg class="crit crab" viewBox="0 0 30 20" aria-hidden="true">
-  <ellipse cx="15" cy="12" rx="8" ry="5.6" fill="#f0dcb4"/>
-  <circle cx="12" cy="5.6" r="1.5" fill="#2c2419"/><circle cx="18" cy="5.6" r="1.5" fill="#2c2419"/>
-  <path d="M12 6.6 L12 9 M18 6.6 L18 9" stroke="#e2c79c" stroke-width="1"/>
-  <path d="M7 10 Q3 7 2 10 M23 10 Q27 7 28 10" fill="none" stroke="#f0dcb4" stroke-width="2" stroke-linecap="round"/>
-  <path d="M9 16 L6 19 M13 17 L11 20 M17 17 L19 20 M21 16 L24 19"
-        stroke="#e0c79c" stroke-width="1.5" stroke-linecap="round"/>
-</svg>
-
-<!-- sea oats, one clump each side, swaying out of phase -->
-<svg class="oats l" viewBox="0 0 40 60" aria-hidden="true">
-  <path d="M20 60 L18 20 M20 60 L26 26 M20 60 L12 30" stroke="#b99b64" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-  <ellipse cx="18" cy="17" rx="3" ry="7" fill="#d9c08a"/>
-  <ellipse cx="26.6" cy="23" rx="2.5" ry="6" fill="#cbb079"/>
-  <ellipse cx="11.4" cy="27" rx="2.4" ry="5.6" fill="#cbb079"/>
-</svg>
-<svg class="oats r" viewBox="0 0 40 60" aria-hidden="true">
-  <path d="M20 60 L22 24 M20 60 L13 30" stroke="#b99b64" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-  <ellipse cx="22" cy="21" rx="2.7" ry="6.4" fill="#d9c08a"/>
-  <ellipse cx="12.4" cy="27" rx="2.2" ry="5.2" fill="#cbb079"/>
-</svg>
-<nav class="top"><div class="wrap">
-  <a href="index.html" aria-current="page">Home</a>
-  <a href="mission.html">Our mission</a>
-  <a href="submit.html">Submit an event</a>
-  <a href="business.html">For local business</a>
-  <a href="volunteer.html">Volunteer</a>
-</div></nav>
-  <div class="wrap" style="padding-top:34px">
-    <span class="eyebrow">The free local guide</span>
-    <h1 class="brand">Gulf Coast <small>Adventures</small></h1>
-    <p class="tag">Every real thing to do from Gulf Breeze to Mobile and Destin &mdash; checked
-      against the venue&rsquo;s own page, priced for the family actually going, and free to everybody.</p>
+<body class="ph-dawn">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="wrap bar">
+  <a class="brand" href="index.html">
+    <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+      <path class="swash" d="M7 27.5 L18.5 38.5 L36 16.5" fill="none" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path class="curl" d="M31.5 22 C 35.5 15.5 41.5 11.5 44.6 14.2 C 47 16.4 45.4 20.6 42 20.7 C 39.6 20.8 38.5 19.2 38.9 17.4" fill="none" stroke-width="4.4" stroke-linecap="round"/>
+      <circle class="spray" cx="44.8" cy="8.6" r="2"/>
+      <circle class="spray" cx="40" cy="6.2" r="1.4"/>
+    </svg>
+    <span class="brand-name" aria-hidden="true"></span><span class="sr">Gulf Coast Adventures — home</span>
+  </a>
+  <nav aria-label="Primary" class="nav-scroll">
+    <a href="events/this-weekend.html">Events</a>
+    <a href="free/index.html">Free things</a>
+    <a href="new/index.html">New &amp; upcoming</a>
+    <a href="where/index.html">Where</a>
+    <a href="places/index.html">Places</a>
+    <a href="date-night/index.html">Date Night</a>
+  </nav>
+  <a class="btn quiet head-cta" href="submit.html">Submit an event</a>
+</div></header>
+<div class="scene tall" role="img" aria-label="A drawn Gulf Coast shoreline: gulls over open water, a sailboat on the horizon, dolphins, sandpipers and sea oats on the sand.">
+  <div class="sky" aria-hidden="true"></div>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="cloud c1" aria-hidden="true"></div>
+  <div class="cloud c2" aria-hidden="true"></div>
+  <div class="sun-halo" aria-hidden="true"></div>
+  <div class="sun" aria-hidden="true"></div>
+  <div class="hz" aria-hidden="true"></div>
+  <div class="haze" aria-hidden="true"></div>
+  <div class="sunbleed" aria-hidden="true"></div>
+  <svg class="crit gull" viewBox="0 0 40 14" aria-hidden="true">
+    <path d="M2 9 Q10 1 19 8 Q28 1 38 9" fill="none" stroke="#f6e7c8" stroke-width="1.7" stroke-linecap="round"/>
+  </svg>
+  <svg class="crit gull b" viewBox="0 0 40 14" aria-hidden="true">
+    <path d="M2 9 Q10 2 19 8 Q28 2 38 9" fill="none" stroke="#f6e7c8" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+  <svg class="crit sloop" viewBox="0 0 80 74" aria-hidden="true">
+    <path d="M40 6 L40 50" stroke="#e8d8bd" stroke-width="1.6"/>
+    <path d="M41 9 L41 48 L67 48 Z" fill="#fdf4e2" opacity=".96"/>
+    <path d="M38 14 L38 48 L20 48 Z" fill="#f3e3c6" opacity=".92"/>
+    <path d="M12 49 L70 49 L62 58 L21 58 Z" fill="#20364a"/>
+    <path d="M14 60 L68 60 L64 63 L19 63 Z" fill="#0f3f52" opacity=".45"/>
+  </svg>
+  <svg class="swell s1" viewBox="0 0 1440 26" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 14 C 130 7, 290 19, 470 13 C 650 7, 810 18, 990 13 C 1170 8, 1320 17, 1440 11 L1440 26 L0 26 Z" fill="rgba(8,42,58,.42)"/>
+    <path d="M0 14 C 130 7, 290 19, 470 13 C 650 7, 810 18, 990 13 C 1170 8, 1320 17, 1440 11" fill="none" stroke="rgba(255,236,200,.14)" stroke-width="1.3"/>
+  </svg>
+  <div class="crest" aria-hidden="true"></div>
+  <svg class="crit pod" viewBox="0 0 120 34" aria-hidden="true">
+    <path d="M6 28 Q16 8 30 27 Q20 20 6 28 Z" fill="#123f52"/>
+    <path d="M46 30 Q54 14 65 29 Q57 23 46 30 Z" fill="#14556b"/>
+    <path d="M84 29 Q93 11 106 28 Q95 21 84 29 Z" fill="#123f52" opacity=".9"/>
+    <ellipse cx="20" cy="30" rx="20" ry="3" fill="#0f3f52" opacity=".5"/>
+    <ellipse cx="58" cy="31" rx="16" ry="2.6" fill="#0f3f52" opacity=".45"/>
+  </svg>
+  <div class="lane" aria-hidden="true"></div>
+  <div class="glint" aria-hidden="true"></div>
+  <svg class="swell s2" viewBox="0 0 1440 36" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 20 C 180 10, 340 26, 520 19 C 700 12, 900 27, 1080 19 C 1240 12, 1360 24, 1440 17 L1440 36 L0 36 Z" fill="rgba(5,30,44,.5)"/>
+    <path d="M0 20 C 180 10, 340 26, 520 19 C 700 12, 900 27, 1080 19 C 1240 12, 1360 24, 1440 17" fill="none" stroke="rgba(255,240,210,.1)" stroke-width="1.4"/>
+  </svg>
+  <svg class="shoresvg" viewBox="0 0 1440 94" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="wetg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#3a5a68" stop-opacity="0"/>
+        <stop offset=".55" stop-color="#3a5a68" stop-opacity=".55"/>
+        <stop offset="1" stop-color="#4a6a74" stop-opacity=".25"/>
+      </linearGradient>
+      <linearGradient id="sandg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#8a7150"/>
+        <stop offset=".38" stop-color="#b3946a"/>
+        <stop offset="1" stop-color="#dcbf90"/>
+      </linearGradient>
+    </defs>
+    <path d="M0 22 C 150 10, 330 30, 520 18 C 700 8, 880 26, 1060 20 C 1220 15, 1340 26, 1440 14 L1440 66 L0 66 Z" fill="url(#wetg)"/>
+    <path d="M0 44 C 170 34, 350 50, 545 40 C 730 31, 900 48, 1090 42 C 1250 37, 1360 50, 1440 38 L1440 94 L0 94 Z" fill="url(#sandg)"/>
+    <path d="M0 22 C 150 10, 330 30, 520 18 C 700 8, 880 26, 1060 20 C 1220 15, 1340 26, 1440 14" fill="none" stroke="rgba(255,252,242,.55)" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="34 12 58 16 24 10"/>
+    <path d="M0 27 C 160 15, 340 34, 528 23 C 706 13, 886 30, 1064 25 C 1224 20, 1344 30, 1440 19" fill="none" stroke="rgba(255,252,242,.28)" stroke-width="1.6" stroke-dasharray="12 18 30 22"/>
+  </svg>
+  <svg class="crit piper" viewBox="0 0 22 18" aria-hidden="true">
+    <ellipse cx="10" cy="8" rx="6.5" ry="4.6" fill="#e6d6b8"/>
+    <circle cx="16" cy="5" r="2.8" fill="#e6d6b8"/>
+    <path d="M18.6 5 L22 5.8" stroke="#3a2f22" stroke-width="1.1" stroke-linecap="round"/>
+    <path d="M8 12 L7 17 M12 12 L13 17" stroke="#3a2f22" stroke-width="1.1" stroke-linecap="round"/>
+  </svg>
+  <svg class="crit piper b" viewBox="0 0 22 18" aria-hidden="true">
+    <ellipse cx="10" cy="8" rx="6" ry="4.2" fill="#dcc9a6"/>
+    <circle cx="15.6" cy="5.4" r="2.5" fill="#dcc9a6"/>
+    <path d="M18 5.4 L21.4 6" stroke="#3a2f22" stroke-width="1" stroke-linecap="round"/>
+    <path d="M8 11.6 L7.2 16.4 M12 11.6 L12.8 16.4" stroke="#3a2f22" stroke-width="1" stroke-linecap="round"/>
+  </svg>
+  <svg class="crit crab" viewBox="0 0 30 20" aria-hidden="true">
+    <ellipse cx="15" cy="12" rx="8" ry="5.6" fill="#f0dcb4"/>
+    <circle cx="12" cy="5.6" r="1.5" fill="#2c2419"/><circle cx="18" cy="5.6" r="1.5" fill="#2c2419"/>
+    <path d="M12 6.6 L12 9 M18 6.6 L18 9" stroke="#e2c79c" stroke-width="1"/>
+    <path d="M7 10 Q3 7 2 10 M23 10 Q27 7 28 10" fill="none" stroke="#f0dcb4" stroke-width="2" stroke-linecap="round"/>
+    <path d="M9 16 L6 19 M13 17 L11 20 M17 17 L19 20 M21 16 L24 19" stroke="#e0c79c" stroke-width="1.5" stroke-linecap="round"/>
+  </svg>
+  <svg class="oats l" viewBox="0 0 40 60" aria-hidden="true">
+    <path d="M20 60 L18 20 M20 60 L26 26 M20 60 L12 30" stroke="#b99b64" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    <ellipse cx="18" cy="17" rx="3" ry="7" fill="#d9c08a"/>
+    <ellipse cx="26.6" cy="23" rx="2.5" ry="6" fill="#cbb079"/>
+    <ellipse cx="11.4" cy="27" rx="2.4" ry="5.6" fill="#cbb079"/>
+  </svg>
+  <svg class="oats r" viewBox="0 0 40 60" aria-hidden="true">
+    <path d="M20 60 L22 24 M20 60 L13 30" stroke="#b99b64" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <ellipse cx="22" cy="21" rx="2.7" ry="6.4" fill="#d9c08a"/>
+    <ellipse cx="12.4" cy="27" rx="2.2" ry="5.2" fill="#cbb079"/>
+  </svg>
+  <div class="wrap scene-copy hero">
+    <span class="eyebrow">The free, verified local guide</span>
+    <h1>Every real thing to do on the Gulf Coast, checked.</h1>
+    <p class="sub">Dates and prices read off each venue's own page before they ship. Gulf Breeze to
+      Mobile to 30A, free to everybody.</p>
     <div class="cta">
-      <a class="btn p" href="app/">Open the app</a>
-      <a class="btn s" href="submit.html">Got an event? Tell us</a>
+      <a class="btn primary" href="events/this-weekend.html">Browse this weekend</a>
+      <a class="btn quiet" href="date-night/index.html">Plan a date night</a>
+    </div>
+    <p class="hero-count"><strong>178</strong> events live right now &middot;
+      <strong>52</strong> of them free &middot;
+      <strong>69</strong> carrying the date we last read them off the venue&rsquo;s own page</p>
+  </div>
+</div>
+<main id="main" tabindex="-1"><div class="wrap">
+  <section class="home-sec">
+    <div class="sec-head"><h2>On the list this weekend</h2>
+      <a class="more" href="events/this-weekend.html">All 29 &rarr;</a></div>
+    <p class="count">Saturday, August 8, 2026 through Sunday, August 9, 2026</p>
+    <div class="card-grid">
+<article class="card rise" style="--i:0">
+  <div class="ev-top">
+    <p class="ev-when">FRI 8/7&ndash;SUN 8/9</p>
+    <span class="pill free">Free</span>
+  </div>
+  <h3><a href="events/ev-elissa-sail250.html">1877 Tall Ship ELISSA — free deck tours</a></h3>
+  <p class="ev-where">Palafox Pier <span class="area">&middot; Pensacola</span></p>
+  <p class="ev-meta"><span>25 min drive</span><span>Outdoor</span></p>
+  <div class="ev-foot"><span class="tag">Outdoor</span><span class="tag">STEM</span><span class="tag">Stroller-ok</span><span class="verified"><svg viewBox="0 0 16 16" aria-hidden="true"><path class="tick" d="M2.5 8.5 L6 12 L13.5 4" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>verified 8/5</span></div>
+</article>
+<article class="card rise" style="--i:1">
+  <div class="ev-top">
+    <p class="ev-when">SAT 8/8</p>
+    <span class="pill price" title="$111.20 — Per person — dinner + show, chicken entree">from $111.20</span>
+  </div>
+  <h3><a href="events/ev-saenger-murder-mystery-0808.html">Red Carpet Hollywood Murder Mystery Dinner Theatre</a></h3>
+  <p class="ev-where">Pensacola Saenger Theatre <span class="area">&middot; Pensacola</span></p>
+  <p class="ev-meta"><span>25 min drive</span><span>Indoor</span></p>
+  <div class="ev-foot"><span class="pill age">Adults</span><span class="tag">Date night</span><span class="tag">Indoor</span><span class="verified"><svg viewBox="0 0 16 16" aria-hidden="true"><path class="tick" d="M2.5 8.5 L6 12 L13.5 4" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>verified 8/5</span></div>
+</article>
+<article class="card rise" style="--i:2">
+  <div class="ev-top">
+    <p class="ev-when">FRI 8/7&ndash;SUN 8/9</p>
+    <span class="pill tba" title="The venue has not published a price. We say so instead of guessing.">$&nbsp;TBA</span>
+  </div>
+  <h3><a href="events/ev-plt-little-mermaid-final.html">Disney's The Little Mermaid — FINAL WEEKEND</a></h3>
+  <p class="ev-where">Pensacola Little Theatre <span class="area">&middot; Pensacola</span></p>
+  <p class="ev-meta"><span>25 min drive</span><span>Indoor</span></p>
+  <div class="ev-foot"><span class="tag">Indoor</span><span class="tag">Art</span><span class="tag">Kids</span><span class="verified"><svg viewBox="0 0 16 16" aria-hidden="true"><path class="tick" d="M2.5 8.5 L6 12 L13.5 4" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>verified 8/5</span></div>
+</article>
+<article class="card rise" style="--i:3">
+  <div class="ev-top">
+    <p class="ev-when">Saturdays · 9 AM–2 PM <span class="thru">thru SAT 12/26</span></p>
+    <span class="pill free">Free</span>
+  </div>
+  <h3><a href="events/ev-palafox.html">Palafox Market</a></h3>
+  <p class="ev-where">MLK Jr. Plaza + Plaza Ferdinand, Downtown Pensacola <span class="area">&middot; Pensacola</span></p>
+  <p class="ev-meta"><span>20 min drive</span><span>Outdoor</span></p>
+  <div class="ev-foot"><span class="tag">Family</span><span class="tag">Outdoor</span></div>
+</article>
+<article class="card rise" style="--i:4">
+  <div class="ev-top">
+    <p class="ev-when">Saturdays · 9 AM–1 PM <span class="thru">thru SAT 10/10</span></p>
+    <span class="pill free">Free</span>
+  </div>
+  <h3><a href="events/ev-grandblvd-mkt.html">Grand Boulevard Farmers' Market</a></h3>
+  <p class="ev-where">Grand Park, Grand Boulevard at Sandestin <span class="area">&middot; Miramar Beach</span></p>
+  <p class="ev-meta"><span>1 hr drive</span><span>Outdoor</span></p>
+  <div class="ev-foot"><span class="tag">Market</span><span class="tag">Destin</span></div>
+</article>
+<article class="card rise" style="--i:5">
+  <div class="ev-top">
+    <p class="ev-when">Saturdays · 9 AM–2 PM <span class="thru">thru SAT 10/10</span></p>
+    <span class="pill free">Free</span>
+  </div>
+  <h3><a href="events/ev-foley-mkt.html">Coastal Alabama Farmers &amp; Fishermens Market</a></h3>
+  <p class="ev-where">Coastal Alabama Market <span class="area">&middot; Foley</span></p>
+  <p class="ev-meta"><span>1 hr drive</span><span>Outdoor</span></p>
+  <div class="ev-foot"><span class="tag">Market</span><span class="tag">Foley</span></div>
+</article>
+</div>
+  </section>
+
+  <section class="home-sec">
+    <div class="sec-head"><h2>Find it fast</h2></div>
+    <div class="quick">
+      <a class="quick-card" href="events/today.html"><span class="q-n">21</span>
+        <span class="q-t">Today</span><span class="q-d">Happening on the coast right now</span></a>
+      <a class="quick-card" href="free/index.html"><span class="q-n">52</span>
+        <span class="q-t">Free things</span><span class="q-d">Confirmed free, not &ldquo;probably free&rdquo;</span></a>
+      <a class="quick-card" href="new/index.html"><span class="q-n">21</span>
+        <span class="q-t">New &amp; upcoming</span><span class="q-d">Venues that just opened their doors</span></a>
+      <a class="quick-card" href="events/next-90-days.html"><span class="q-n">145</span>
+        <span class="q-t">Next 90 days</span><span class="q-d">Far enough out to book a sitter</span></a>
+    </div>
+  </section>
+
+  <section class="home-sec">
+    <div class="sec-head"><h2>A list you can actually trust</h2></div>
+    <p class="lead">Most local event lists are a scrape of a scrape. Dates roll over from last year,
+      prices are whatever someone typed in 2023, and half the venues closed.</p>
+    <div class="grid two">
+      <div class="panel"><h3><span class="chk">&#10003;</span> Priced for your family</h3>
+        <p>What an adult pays, what a kid pays, at what ages, what is free, and the senior, student
+          and military rates where a venue publishes them. Not one generic number.</p></div>
+      <div class="panel"><h3><span class="chk">&#10003;</span> Checked, and stamped</h3>
+        <p>Every card carries the date we last read it off the venue's own page. Where we could not
+          confirm a price the card says <span class="tba-inline">$&nbsp;TBA</span> instead of guessing,
+          because a wrong price is worse than no price.</p></div>
+      <div class="panel"><h3><span class="chk">&#10003;</span> No account, no tracking</h3>
+        <p>No sign-up, no analytics, no ads following you around. Nothing about your plans leaves
+          your phone.</p></div>
+      <div class="panel"><h3><span class="no">&#10007;</span> Nobody buys their way on</h3>
+        <p>A business can sponsor, and when it does the card says <em>Sponsored</em>, in that word,
+          every time. What money never buys is a place on the honest list.</p></div>
+    </div>
+  </section>
+
+  <section class="home-sec band-cta">
+    <h2>Run something local?</h2>
+    <p>Listing is free and it stays free. We do not charge for inclusion, we do not rank paying
+      venues higher, and we will never leave a real family event off the list because nobody paid us.
+      Nonprofits, churches, schools and libraries: same form, same free listing, same treatment.</p>
+    <div class="cta">
+      <a class="btn primary" href="submit.html">Submit an event</a>
+      <a class="btn quiet" href="business.html">For local business</a>
+    </div>
+  </section>
+</div></main>
+<footer class="site-foot"><div class="wrap inner">
+  <div class="foot-brand">
+    <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+      <path class="swash" d="M7 27.5 L18.5 38.5 L36 16.5" fill="none" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path class="curl" d="M31.5 22 C 35.5 15.5 41.5 11.5 44.6 14.2 C 47 16.4 45.4 20.6 42 20.7 C 39.6 20.8 38.5 19.2 38.9 17.4" fill="none" stroke-width="4.4" stroke-linecap="round"/>
+      <circle class="spray" cx="44.8" cy="8.6" r="2"/>
+      <circle class="spray" cx="40" cy="6.2" r="1.4"/>
+    </svg>
+    <div>
+      <p class="foot-name">Gulf Coast Adventures</p>
+      <p class="fine">Working title. The real name is coming; the checking already happened.</p>
     </div>
   </div>
-</header>
-<main>
-<section class="wrap">
-  <h2><span class="k">What this is</span>A list you can actually trust</h2>
-  <p class="lead">Most local event lists are a scrape of a scrape. Dates roll over from last year,
-    prices are whatever someone typed in 2023, and half the venues closed.</p>
-  <p>We check. Every price, every date, every set of hours gets read off the venue&rsquo;s own page
-    before it ships, and each card shows the date it was last verified. Where we could not confirm
-    something, the card says so instead of guessing &mdash; because a wrong price is worse than no price.</p>
-  <div class="grid two">
-    <div class="card"><h3><span class="chk">&#10003;</span> Priced for your family</h3>
-      <p>What an adult pays, what a kid pays, at what ages, what&rsquo;s free, and the senior, student
-        and military rates when a venue publishes them. Not one generic number.</p></div>
-    <div class="card"><h3><span class="chk">&#10003;</span> Military and veteran rates</h3>
-      <p>Every venue gets its own discount search, every sweep. If a rate exists we find it. If it
-        doesn&rsquo;t, we say &ldquo;not published&rdquo; rather than imply one.</p></div>
-    <div class="card"><h3><span class="chk">&#10003;</span> Works with no signal</h3>
-      <p>Add it to your home screen and it opens on the beach, in the car, anywhere. No account, no
-        tracking, no analytics &mdash; nothing about your plans leaves your phone.</p></div>
-    <div class="card"><h3><span class="no">&#10007;</span> Nobody buys their way on</h3>
-      <p>A business can sponsor, and when it does the card says <em>Sponsored</em>, in that word,
-        every time. What money never buys is a place on the honest list.</p></div>
+  <div class="foot-cols">
+    <div><p class="foot-h">Explore</p>
+      <a href="events/this-weekend.html">Events</a>
+      <a href="free/index.html">Free things</a>
+      <a href="new/index.html">New &amp; upcoming</a>
+      <a href="where/index.html">Browse by area</a>
+      <a href="what/index.html">Browse by kind</a>
+      <a href="places/index.html">Places</a>
+      <a href="date-night/index.html">Date Night</a>
+      <a href="app/">Open the app</a></div>
+    <div><p class="foot-h">About</p>
+      <a href="mission.html">Our mission</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="terms.html">Terms of use</a></div>
+    <div><p class="foot-h">Contribute</p>
+      <a href="submit.html">Submit an event</a>
+      <a href="business.html">For local business</a>
+      <a href="mailto:grayhicks4@gmail.com">Email us</a></div>
   </div>
-</section>
-
-<section class="wrap">
-  <h2><span class="k">Why we built it</span>No family should miss a good day because nobody told them</h2>
-  <p>We&rsquo;re a family on this coast. We got tired of finding out on Sunday night about the free
-    thing that happened Saturday morning, and tired of driving forty minutes on a price that turned
-    out to be wrong.</p>
-  <p><strong>Everyone belongs.</strong> The dad who needs to know there&rsquo;s a quiet room. The
-    grandmother who wants the senior rate. The wheelchair user who&rsquo;s tired of finding out about
-    the stairs after they&rsquo;ve already parked. Autism is personal in this house, so every plan is
-    written plain: real time, real price, no surprises.</p>
-  <p style="margin-top:14px"><a href="mission.html">Read the whole mission &rarr;</a></p>
-</section>
-
-<section class="wrap">
-  <h2><span class="k">Run something local?</span>Listing is free and it stays free</h2>
-  <p>We don&rsquo;t charge for inclusion, we don&rsquo;t rank paying venues higher, and we&rsquo;ll
-    never leave a real family event off the list because nobody paid us. Nonprofits, churches,
-    schools and libraries: same form, same free listing, same treatment.</p>
-  <div class="cta">
-    <a class="btn p" href="submit.html">Submit an event</a>
-    <a class="btn s" href="business.html">For local business</a>
-  </div>
-</section>
-
-<section class="wrap">
-  <h2><span class="k">Stay in the loop</span>One email when the week&rsquo;s list is worth your time</h2>
-  <p>No spam, no selling your address, unsubscribe whenever. One field, that&rsquo;s it.</p>
-  <form class="cta" onsubmit="return goMail(event)" style="align-items:stretch">
-    <label class="sr" for="em">Your email address</label>
-    <input id="em" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com"
-      required style="flex:1 1 220px;min-height:48px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:#0f2032;color:var(--ink);font-size:16px">
-    <button class="btn p" type="submit">Keep me posted</button>
-  </form>
-  <p class="fine">This opens your email app with a one-line message already written. We add you by
-    hand &mdash; which is also why we&rsquo;ll never lose your address in somebody else&rsquo;s database.</p>
-</section>
-</main>
-<footer class="wrap">
-  <div class="ftlinks">
-    <a href="index.html">Home</a>
-    <a href="mission.html">Our mission</a>
-    <a href="submit.html">Submit an event</a>
-    <a href="business.html">For local business</a>
-    <a href="volunteer.html">Volunteer</a>
-    <a href="terms.html">Terms of use</a>
-  </div>
-  <p style="margin:0">Built and verified by a family on the Gulf Coast. Free for families, always.</p>
-  <p style="margin:8px 0 0">Venues change hours, cancel events and raise prices without telling
-    anyone. Confirm before you drive.</p>
-</footer>
-<script>
-function goMail(e){e.preventDefault();
-  var v=document.getElementById('em').value.trim(); if(!v)return false;
-  var to='grayhicks4@gmail.com'; /* The inbox. Swap it the day a branded address exists — it is written here and in submit.html, nowhere else. */
-  window.location.href='mailto:'+to+'?subject='+encodeURIComponent('Add me to the list')
-    +'&body='+encodeURIComponent('Please add '+v+' to the weekly list. Thanks!');
-  return false;}
-</script>
+  <p class="foot-fine">Built and verified by a family on the Gulf Coast. Free for families, always.</p>
+  <p class="foot-fine">Venues change hours, cancel events and raise prices without telling anyone.
+    Confirm before you drive.</p>
+</div></footer>
 </body>
 </html>
