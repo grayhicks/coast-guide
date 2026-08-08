@@ -1604,3 +1604,35 @@ main:has(.chip[aria-current="true"][href$="new/index.html"]) .ev-why{
   border:1px dashed var(--line);padding:var(--s-7) var(--s-5)}
 .empty h3{font-size:var(--fs-h3)}
 .empty p{font-size:var(--fs-body);color:var(--ink-2)}
+
+/* ============================================================================
+   THE MISSION MARK. The same drawing the app ships, on the one page that argues
+   for it. Four pieces in the app's gilt, teal, rose and cream, with a heart-
+   shaped VOID where they meet — cut by a mask, so it takes the page colour and
+   never becomes a fifth value to keep in sync between the app and this site.
+   ⚠ IT IS NOT THE AWARENESS EMBLEM AND MUST NOT DRIFT INTO ONE. The colours are
+   deliberately not red/blue/gold/green. The piece here is the GIFT and everybody
+   holds one, which is the opposite of the reading where the piece is a person and
+   the person is incomplete. Autism belongs on this page in words, where it is.
+   ============================================================================ */
+.pzfig{margin:0 0 26px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.pzmark{width:96px;height:96px;flex:none;color:var(--ink);display:block}
+/* The rim and the seams are the one part of the mark that changes with the
+   ground, and it is measured, not taste. Against the dark panel the four colours
+   are far enough from it that .45 separates them without the mark reading as a
+   sticker. On a light ground the cream piece and the paper are within a few
+   points of each other, and at .45 a reviewer read the icon as an L-shape with a
+   ghost corner — the seams held the inside while the pale piece's own outer edge
+   dissolved. Both weight and opacity go up there. */
+/* .34 here, not the app's .45: the app draws this mark on a cream info page where the rim is dark
+   ink, and the site draws it on the dark panel where currentColor is near-white. The same opacity
+   that reads as a drawn edge in dark ink reads as a bright sticker outline in white — measured on a
+   render of this page, not assumed from the number. */
+.pz-rim{stroke-width:.6;opacity:.34}
+html[data-theme="light"] .pz-rim{stroke-width:.8;opacity:.75}
+.pzfig figcaption{flex:1 1 260px;min-width:0;font-size:var(--fs-small);line-height:1.55;
+  color:var(--ink-2);font-style:italic}
+@media (max-width:560px){
+  .pzmark{width:72px;height:72px}
+  .pzfig{gap:14px}
+}
