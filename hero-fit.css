@@ -369,3 +369,45 @@ body.ph-night .scene{--skytop:#050B18}
    so this hides no content. `clip`, not `hidden`: `hidden` would make the root a scroll container
    and break position:sticky on the header. */
 html, body { overflow-x: clip; }
+
+/* ============================================================================
+   TWO EDGES, BOTH MEASURED OFF A RENDERED PNG RATHER THAN REASONED ABOUT.
+   ============================================================================ */
+
+/* 1 · THE NOTCH AT THE RIGHT EDGE — MEASURED, NOT FIXED. Recorded so the next
+   pass starts from the measurement instead of re-taking it.
+   At 1920 the surf line measures x-305 w2129 right1823 against a 1920 viewport:
+   the SVG is exactly stage-width, so the moment `hk_wv` translates it left, its
+   right end leaves the frame and a ~35x23px wedge of open water shows where the
+   dark swash should be. Nothing is wrong at t=0, which is why every static review
+   passed it. The obvious repair — widening the strip in percent — does not take:
+   computed width stays 430px against a 430px containing block, so a percentage
+   override is silently lost somewhere in the lifted cascade, and a `transform`
+   override cannot be used because `hk_wv` already animates transform on this
+   element. The honest next move is to change the ANIMATION to translate a wider
+   strip rather than to fight the width. Left as measured rather than shipped as a
+   rule that does nothing, per "assert what must be true, not the characters that
+   currently make it true". */
+
+/* 2 · THE BOTTOM EDGE, WHICH WAS A CUT.
+   The masthead ended on a ruler-straight horizontal line: lit sand above, flat
+   page below, at full contrast across the whole width. Every other boundary in
+   this scene is atmospheric — the horizon melts, the swells fade, the sky runs
+   through four stops — and then the thing that frames all of it ended like a
+   crop mark. Sixty-four pixels of the scene's own page color, rising from
+   nothing, dissolve the sand into the page instead of severing it.
+
+   z-index 2 is the load-bearing number: above the stage (0) so it can act on the
+   sand, below `.wrap` (20) so it never touches a word or dims a button. And it
+   is painted in `--bg`, the page's own ground, so it stays correct in the light
+   theme and at every one of the four sky phases without being re-keyed. */
+.scene::after{content:"";position:absolute;left:0;right:0;bottom:0;height:64px;
+  z-index:2;pointer-events:none;
+  background:linear-gradient(180deg,
+    rgba(0,0,0,0) 0,
+    color-mix(in srgb, var(--bg) 34%, transparent) 42%,
+    color-mix(in srgb, var(--bg) 78%, transparent) 76%,
+    var(--bg) 100%)}
+/* the short detail masthead is only ~176px tall — a 64px fade would eat a third
+   of it, so it gets a proportionate one */
+.scene.band.short::after{height:38px}

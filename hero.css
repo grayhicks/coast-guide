@@ -198,11 +198,6 @@ html.hkscroll .tdec *, html.hkscroll .tdec ::before, html.hkscroll .tdec ::after
 .itin .big { font-family: Fraunces, serif; font-weight: 600; font-size: 23px; line-height: 1.08; }
 .skbwrap.nite .skbg { filter: brightness(0.8) saturate(0.65); }
 .adyacht { position: absolute; top: 150px; left: 0px; z-index: 0; pointer-events: none; will-change: transform; opacity: 0.9; animation: 56s linear 0s infinite normal none running hk_adyacht; }
-.rplfield { position: absolute; inset: 0px; z-index: 1; pointer-events: none; }
-.rrip { position: absolute; border: 0px; border-radius: 50%; transform: translate(-50%, -50%) scale(0.25); opacity: 0; will-change: transform, opacity; background: radial-gradient(rgba(226, 244, 251, 0) 30%, rgba(232, 248, 253, 0.2) 52%, rgba(240, 252, 255, 0.46) 68%, rgba(206, 238, 250, 0.22) 84%, rgba(180, 222, 238, 0) 100%); animation: auto ease-out 0s 1 normal forwards running hk_rrip; }
-.ph-night .rrip { background: radial-gradient(rgba(150, 208, 255, 0) 30%, rgba(158, 214, 255, 0.17) 52%, rgba(178, 224, 255, 0.44) 68%, rgba(130, 196, 240, 0.18) 84%, rgba(110, 178, 228, 0) 100%); }
-.ph-golden .rrip { background: radial-gradient(rgba(255, 234, 200, 0) 30%, rgba(255, 238, 208, 0.19) 52%, rgba(255, 246, 224, 0.5) 68%, rgba(255, 220, 176, 0.2) 84%, rgba(255, 206, 158, 0) 100%); }
-.rrip.bio { background: radial-gradient(rgba(120, 224, 255, 0) 28%, rgba(140, 232, 255, 0.26) 50%, rgba(176, 244, 255, 0.66) 68%, rgba(110, 206, 246, 0.24) 84%, rgba(100, 196, 240, 0) 100%); box-shadow: rgba(120, 224, 255, 0.28) 0px 0px 7px; }
 @media (prefers-reduced-motion: reduce){.hk .flyby, .hk .grain, .hk .baw, .hk .gullw, .hk .ccrab, .hk .snote, .hk .hpel, .hk .fwx, .hk .aspl, .hk .rheart, .hk .lspk, .hk .dnm_bok, .hk .tdust, .hk .fly, .hk .skbwrap, .hk .pipw, .hk .dnx_rolled, .hk .trtw, .hk .htchw, .hk .kitew, .hk .rplfield, .hk .shw, .hk .hcw, .hk .tgw, .hk .whw, .hk .d2bw, .hk .pelw, .hk .rayw, .hk .dcw, .hk .hkop, .hk .dwgiant, .hk .dwpod, .hk .dwglow, .hk .hboat, .hk .dnote, .hk .dbloom, .hk .rmote, .hk .rsmokew .hk .supw, .hk .fld, .hk .crbw, .hk .crbh, .hk .htchf, .hk .lx_rock, .hk .lx_dig, .hk .mstrip, .hk .mbeam, .hk .cm_cone, .hk .cm_pool, .hk .romacc .racc_wash, .hk .em_fly, .hk .cs_shoot, .hk .cs_neb, .hk .brd, .hk .mthrow, .hk .mgrain, .hk .bawrap, .hk .popf, .hk .rm_bulb, .hk .cm_laugh, .hk .cm_cable, .hk .adrip, .hk .lsc_cur, .hk .swash, .hk .swash_lip, .hk .backwash, .hk .vwkw, .hk .vwk, .hk .fprt, .hk .swl_crest { display: none !important; }}
 @media (prefers-reduced-motion: reduce){.hk .swg, .hk .sw_heave { animation: auto ease 0s 1 normal none running none !important; }}
 @media (prefers-reduced-motion: reduce){.hk .swl_body { animation: auto ease 0s 1 normal none running none !important; opacity: 0.4 !important; }}
@@ -628,12 +623,6 @@ html.hkscroll .tdec *, html.hkscroll .tdec ::before, html.hkscroll .tdec ::after
 @keyframes hk_adyacht { 
   0% { transform: translateX(-110px); }
   100% { transform: translateX(575px); }
-}
-@keyframes hk_rrip { 
-  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.25); }
-  20% { opacity: 0.82; }
-  54% { opacity: 0.56; }
-  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.7); }
 }
 @keyframes hk_hshim { 
   0% { opacity: 0.18; transform: translateX(-7px) scaleX(0.85); }
