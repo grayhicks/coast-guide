@@ -22,18 +22,24 @@
 
 .scene-stage{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;
   /* safety net: if copy ever outgrows the stage, the sliver above the stage
-     continues the night sky instead of showing the page background */
-  background:linear-gradient(180deg,#050B18 0%,#081226 55%,#0C1B31 100%)}
+     continues the sky instead of showing the page background. The phase floats
+     with the deploy clock, so the backstop is keyed per phase off each sky
+     gradient's 0% stop — one hard-coded night blue leaked a midnight ceiling
+     onto a noon sky the day the cron ran at 10am. */
+  background:var(--skytop,#050B18)}
+body.ph-day .scene{--skytop:#4FA5D2}
+body.ph-dawn .scene{--skytop:#6D83AE}
+body.ph-golden .scene{--skytop:#5F7CA8}
+body.ph-night .scene{--skytop:#050B18}
 
 .scene-stage .hero{position:absolute;right:0;bottom:0;width:430px;height:298px;
   margin:0;padding:0;min-height:0;overflow:visible;
   transform:scale(var(--sx),var(--sy));transform-origin:100% 100%}
 
 /* when the copy runs taller than the stage, the sliver above it continues the
-   stage's own top-of-sky color, attached to the stage so the joint cannot show.
-   (Keyed to the pinned ph-night capture, like the scene-stage backstop above.) */
+   stage's own top-of-sky color, attached to the stage so the joint cannot show. */
 .scene-stage .hero::before{content:"";position:absolute;bottom:100%;left:0;
-  width:100%;height:160px;background:#050B18}
+  width:100%;height:340px;background:var(--skytop,#050B18)}
 
 /* -------------------------------------------------- the scale, per viewport */
 /* --sx makes the 430px stage cover (and slightly overshoot) the viewport; --vwl is the viewport
