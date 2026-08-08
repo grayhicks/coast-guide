@@ -1,0 +1,233 @@
+/* HERO FIT — geometry only.
+   web/hero.css is GENERATED from the app and must never be hand-edited. This file is the one
+   place the lifted hero is adapted to web widths: size, crop, layer scale, breakpoints, and the
+   relationship between the scene and the copy over it. Nothing else belongs here.
+
+   THE ELASTIC STAGE. The hero was authored on a 430x298 phone card. Here it becomes a full-bleed
+   masthead by scaling that stage NON-UNIFORMLY — X to the viewport (--sx), Y to the masthead
+   height (--sy) — because the scene is mostly fluids: sky gradients, sea bands, sand and surf all
+   read BETTER stretched wide. The rigid bodies that would distort (moon, sloop, stars, beach
+   props, shore lights) are counter-scaled back to a uniform size of their own (--um, --ub, --us,
+   --up), each about the anchor that must not move. Where a rigid body's transform is animated by
+   a generated @keyframes, that keyframe set is re-declared here with the counter-scale baked into
+   every frame — last declaration wins, so hero.css needs no edit.
+
+   Anchoring: the stage pins BOTTOM-RIGHT. Bottom, so the beach always hugs the masthead's foot;
+   right, so the moon / glitter lane / sloop — the right-hand event — never crop, and any excess
+   stage crops on the left, under the copy's dark wash where nothing is lost. Left-anchored
+   residents (beach props, shore lights) are re-shifted to the VISIBLE left edge with --vwl, the
+   viewport width expressed in stage-logical px, so they never fall into the crop. */
+
+/* ---------------------------------------------------------------- the stage */
+
+.scene-stage{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;
+  /* safety net: if copy ever outgrows the stage, the sliver above the stage
+     continues the night sky instead of showing the page background */
+  background:linear-gradient(180deg,#050B18 0%,#081226 55%,#0C1B31 100%)}
+
+.scene-stage .hero{position:absolute;right:0;bottom:0;width:430px;height:298px;
+  margin:0;padding:0;min-height:0;overflow:visible;
+  transform:scale(var(--sx),var(--sy));transform-origin:100% 100%}
+
+/* when the copy runs taller than the stage, the sliver above it continues the
+   stage's own top-of-sky color, attached to the stage so the joint cannot show.
+   (Keyed to the pinned ph-night capture, like the scene-stage backstop above.) */
+.scene-stage .hero::before{content:"";position:absolute;bottom:100%;left:0;
+  width:100%;height:160px;background:#050B18}
+
+/* -------------------------------------------------- the scale, per viewport */
+/* --sx makes the 430px stage cover (and slightly overshoot) the viewport; --vwl is the viewport
+   width in stage-logical px (100vw / --sx, kept as a literal division so no var-math is needed).
+   On phones --sx runs ~1.35x so the scene CROPS into its left field rather than shrinking. */
+
+.scene{--sx:1.35;--vwl:calc(100vw / 1.35)}
+@media (min-width:431px){.scene{--sx:1.45;--vwl:calc(100vw / 1.45)}}
+@media (min-width:540px){.scene{--sx:1.7;--vwl:calc(100vw / 1.7)}}
+@media (min-width:680px){.scene{--sx:2;--vwl:calc(100vw / 2)}}
+@media (min-width:820px){.scene{--sx:2.45;--vwl:calc(100vw / 2.45)}}
+@media (min-width:1024px){.scene{--sx:2.9;--vwl:calc(100vw / 2.9)}}
+@media (min-width:1220px){.scene{--sx:3.45;--vwl:calc(100vw / 3.45)}}
+@media (min-width:1450px){.scene{--sx:4.1;--vwl:calc(100vw / 4.1)}}
+@media (min-width:1750px){.scene{--sx:4.95;--vwl:calc(100vw / 4.95)}}
+@media (min-width:2100px){.scene{--sx:6;--vwl:calc(100vw / 6)}}
+
+/* ------------------------------------------- the two sizes, and their crops */
+/* TALL (home): the full 298 logical rows, stretched — masthead height IS 298 x --sy.
+   BAND (interior): a fixed quiet height; the stage keeps ~natural vertical scale and the surplus
+   sky crops off the TOP (the stage is bottom-anchored), so interior pages keep horizon, sea and
+   sand and give up only empty sky. The moon is re-seated lower so it rides just above the
+   horizon inside the crop window. */
+
+.scene.tall{--sy:2.1;--um:1.2;--us:1.25;--ub:1.15;--up:1.05;
+  min-height:calc(298px * var(--sy))}
+@media (min-width:768px){.scene.tall{--sy:1.85;--um:1.7;--us:1.5;--ub:1.5;--up:1.3}}
+@media (min-width:1024px){.scene.tall{--sy:2;--um:1.9;--us:1.6;--ub:1.7;--up:1.45}}
+@media (min-width:1280px){.scene.tall{--sy:2.2;--um:2.1;--us:1.9;--ub:1.9;--up:1.6}}
+@media (min-width:1536px){.scene.tall{--sy:2.25;--um:2.3;--us:2.05;--ub:2.05;--up:1.75}}
+
+/* on phones the copy owns the sky, so the moon rides high and small */
+@media (max-width:767px){.scene.tall .sunb{top:14px}}
+
+.scene.band{--sy:.83;--um:1;--us:1.05;--ub:1.05;min-height:200px}
+@media (min-width:768px){.scene.band{--sy:.9;--um:1.35;--us:1.2;--ub:1.25;min-height:232px}}
+/* only move the moon off the sloop's column once the copy wash goes radial
+   (site.css switches at 901px); under the narrow full-width wash a mid-sky
+   moon reads as a dark ghost behind the veil */
+@media (min-width:901px){.scene.band{--moonr:110px}}
+@media (min-width:1280px){.scene.band{--sy:1;--um:1.6;--us:1.35;--ub:1.45;min-height:264px;--moonr:130px}}
+
+.scene.band.short{--sy:.68;--um:1;min-height:176px}
+@media (min-width:768px){.scene.band.short{--sy:.78;--um:1.1;min-height:200px}}
+@media (min-width:1280px){.scene.band.short{--sy:.84;--um:1.15;min-height:216px}}
+
+/* the band's moon self-seats: its lower limb held a fixed clearance above the
+   horizon (drawn at 145 logical), whatever the crop and stretch — 26px keeps it
+   off the sloop's mast tip when the two share the right edge */
+.scene.band .sunb{top:calc(145px - (60px * var(--um) + var(--seat,26px)) / var(--sy))}
+
+/* ------------------------------------- rigid bodies: aspect put back, sized */
+
+/* the moon: right edge and top stay put, the disc returns to a circle at --um.
+   --moonr lets a layout move the moon off the sloop's column (the two share the
+   right edge in the authored card, which is a totem pole at band heights). */
+.scene-stage .sunb{transform-origin:100% 0;right:var(--moonr,28px);
+  transform:scale(calc(var(--um) / var(--sx)),calc(var(--um) / var(--sy)))}
+
+/* the glitter lane tracks the moon it reflects: centered under the disc, about
+   a moon-and-a-half wide whatever the stretch */
+.scene-stage .glit{
+  right:calc(var(--moonr,28px) - 14px * var(--um) / var(--sx));
+  width:calc(88px * var(--um) / var(--sx))}
+
+/* the sloop: hull stays on its waterline at the right, boat returns to shape */
+.scene-stage .hk_boat{transform-origin:100% 74%;
+  transform:scale(calc(var(--ub) / var(--sx)),calc(var(--ub) / var(--sy)))}
+.scene-stage .boat-refl{transform-origin:100% 50%;right:22px}
+
+/* stars: static pose for reduced-motion; the live pose lives in the re-declared
+   keyframes below. --stx/--sty resolve per element from the scene's scale. */
+.scene{--stx:calc(var(--us) / var(--sx));--sty:calc(var(--us) / var(--sy))}
+.scene-stage .hkn_st1,.scene-stage .hkn_st2,.scene-stage .hkn_st3{
+  transform:scale(var(--stx),var(--sty))}
+
+/* beach props sit at the VISIBLE left edge, not the stage's cropped one */
+.scene-stage .beachprops{transform-origin:0 100%;
+  transform:translateX(calc(430px - var(--vwl)))
+    scale(calc(var(--up) / var(--sx)),calc(var(--up) / var(--sy)))}
+
+/* the three far shore lights follow the visible edge too, dots kept round-ish */
+.scene-stage .hkn_tl{
+  transform:translateX(calc(430px - var(--vwl))) scaleX(calc(var(--sy) / var(--sx)))}
+
+/* the sand and its wet sheen were drawn 87% wide — on the 430 card the last 56px
+   read as the beach easing into water; stretched to a masthead the mismatch with
+   the 100%-wide surf becomes a bright wedge in the corner. Run them full width;
+   preserveAspectRatio="none" makes the drawn coast simply reach the edge. */
+.scene-stage .hero-sand,.scene-stage .hkn_wet{width:100%}
+
+/* the glitter lane's clip trapezoid gets razor edges at masthead stretch; a
+   radial mask turns it back into a cone of light that dissolves */
+.scene-stage .glit{
+  -webkit-mask-image:radial-gradient(75% 130% at 50% 0%,rgba(0,0,0,.95),rgba(0,0,0,.5) 55%,transparent 94%);
+  mask-image:radial-gradient(75% 130% at 50% 0%,rgba(0,0,0,.95),rgba(0,0,0,.5) 55%,transparent 94%)}
+
+/* film grain: tile size held at true pixels so it never smears */
+.scene-stage .grain{background-size:calc(160px / var(--sx)) calc(160px / var(--sy))}
+
+/* the sail carries a placeholder sponsor name in the app; the site masthead is
+   not an ad surface */
+.scene-stage .adboatname{display:none}
+
+/* -------------------- re-declared keyframes (last declaration wins) --------
+   Only the sets that animate `transform` on a counter-scaled body, plus the
+   cloud drift whose travel was written in stage px + real vw. Transform and
+   opacity only, exactly like the originals. */
+
+/* clouds: same fade law, travel restated in logical units so a cloud crosses
+   the whole masthead once per loop instead of vanishing off a 3x-scaled vw */
+@keyframes hk_drift{
+  0%{transform:translateX(0);opacity:0}
+  7%{opacity:var(--clo,.18)}
+  90%{opacity:var(--clo,.18)}
+  100%{transform:translateX(calc(480px + var(--vwl)));opacity:0}
+}
+
+/* star twinkle, with the aspect correction folded into every frame */
+@keyframes hk_ntw1{
+  0%,100%{opacity:.86;transform:scale(var(--stx),var(--sty))}
+  50%{opacity:1;transform:scale(calc(var(--stx) * 1.06),calc(var(--sty) * 1.06))}
+}
+@keyframes hk_ntw2{
+  0%,100%{opacity:.5;transform:scale(calc(var(--stx) * .92),calc(var(--sty) * .92))}
+  50%{opacity:.95;transform:scale(var(--stx),var(--sty))}
+}
+@keyframes hk_ntw3{
+  0%,100%{opacity:.14;transform:scale(calc(var(--stx) * .75),calc(var(--sty) * .75))}
+  55%{opacity:.7;transform:scale(var(--stx),var(--sty))}
+}
+
+/* the sloop's bob, in its corrected frame */
+.scene{--btx:calc(var(--ub) / var(--sx));--bty:calc(var(--ub) / var(--sy))}
+@keyframes hk_sailbob{
+  0%{transform:scale(var(--btx),var(--bty)) translateY(2.5px) rotate(1.1deg)}
+  34%{transform:scale(var(--btx),var(--bty)) translateY(-.4px) rotate(-1.35deg)}
+  44%{transform:scale(var(--btx),var(--bty)) translateY(.1px) rotate(-1.2deg)}
+  62%{transform:scale(var(--btx),var(--bty)) translateY(.3px) rotate(-1.05deg)}
+  100%{transform:scale(var(--btx),var(--bty)) translateY(2.5px) rotate(1.1deg)}
+}
+@keyframes hk_refl{
+  0%,100%{transform:scale(var(--btx),var(--bty)) scaleX(1);opacity:.55}
+  50%{transform:scale(var(--btx),var(--bty)) scaleX(.86);opacity:.36}
+}
+
+/* ------------------------------------------------ the copy over the scene */
+/* The home copy wrap carries the literal class `hero`, so the generated app rules for the app's
+   own hero box land on it: a phase sky background, negative card margins, a 298px min-height.
+   Neutralize exactly that contamination; layout, wash and type stay site.css's business. */
+.scene .wrap.hero{margin:0 auto;min-height:0;background:none;overflow:visible;
+  padding-left:20px;padding-right:20px}
+
+/* ------------------------------------------------------------ still, please */
+/* hero.css's own reduced-motion collapse is scoped under the app's `.hk` root, which does not
+   exist on the site — so the collapse is restated here for the lifted scene. Everything freezes;
+   travellers that would freeze mid-sky are removed; clouds take fixed, spread positions. */
+@media (prefers-reduced-motion:reduce){
+  .scene-stage .hero *,
+  .scene-stage .hero *::before,
+  .scene-stage .hero *::after{animation:none !important;transition:none !important}
+  .scene-stage .cl{opacity:var(--clo,.18)}
+  .scene-stage .clm1{transform:translateX(300px)}
+  .scene-stage .clm2{transform:translateX(150px)}
+  .scene-stage .cln1{transform:translateX(430px)}
+  .scene-stage .gl{opacity:.35;transform:scaleX(1)}
+  /* the breaking surf frozen mid-cycle is a bright foam sheet nailed across the
+     shore — the app removes the travelling pieces under reduced motion and
+     keeps a calm swell line at low opacity; do the same */
+  .scene-stage .swash,
+  .scene-stage .swash_lip,
+  .scene-stage .backwash,
+  .scene-stage .swl_crest,
+  .scene-stage .sswp,
+  .scene-stage .shootN,
+  .scene-stage .skbwrap,
+  .scene-stage .rplfield,
+  .scene-stage .grain{display:none}
+  .scene-stage .swl_body{opacity:.4}
+}
+
+/* ⚠ THE STAGE MUST CLIP. A scaled 430px stage is wider than its box by design — that is how the
+   surplus crops under the copy — but a cloud drifting off the right edge at 768 pushed the whole
+   document 20px wide and gave every detail page a horizontal scrollbar. The scene clips; so does
+   the stage inside it. */
+.scene, .scene-stage { overflow: hidden; }
+.scene-stage { contain: paint; }
+
+/* ⚠ AND THE STAGE'S BLEED STILL REACHED THE DOCUMENT. At 768 the detail-page masthead pushed the
+   page 20px wide and it really scrolled — window.scrollX reached 20. Four candidate fixes were
+   measured and only this one worked: `contain: layout paint` on the scene, `overflow: clip` on the
+   scene, on the stage, and on both, all left the 20px. A transformed, absolutely-positioned
+   descendant contributes to the DOCUMENT's scrollable overflow even where an ancestor clips it.
+   Before reaching for this, everything outside `.scene` was measured at 768 and nothing overflows —
+   so this hides no content. `clip`, not `hidden`: `hidden` would make the root a scroll container
+   and break position:sticky on the header. */
+html, body { overflow-x: clip; }

@@ -37,6 +37,8 @@
   --panel:#13273a;        /* card, rail, form field ground */
   --panel-2:#182f45;      /* raised: hovered card, active row, table head */
   --field:#0e2233;        /* input wells, slightly deeper than panel */
+  --band:#0f2033;         /* the card's ticket header — one step below panel */
+  --band-line:rgba(38,66,92,.8); /* the perforation under it */
   --line:#26425c;         /* primary border */
   --line-soft:rgba(38,66,92,.55); /* section rules, quiet dividers */
   --sheen:rgba(255,255,255,.045); /* the 1px top-light every raised surface wears */
@@ -75,9 +77,15 @@
   --shadow-1:0 1px 2px rgba(4,10,17,.5), 0 4px 14px rgba(4,10,17,.3);
   --shadow-2:0 2px 4px rgba(4,10,17,.55), 0 14px 36px rgba(4,10,17,.45);
 
-  /* --------------------------------------------------------------- motion */
+  /* --------------------------------------------------------------- motion
+     Two voices, from the app's animation bible: --ease for glides, and
+     --ease-snap for anything that ARRIVES — it overshoots a few percent and
+     settles, which is what gives a landing weight. Entry choreography is
+     snap-and-settle: fast in (the move spends most of its distance early),
+     one small overshoot, ring down. Transform and opacity only. */
   --t-fast:160ms; --t-med:240ms;
   --ease:cubic-bezier(.2,.7,.25,1);
+  --ease-snap:cubic-bezier(.22,.9,.24,1.12);
 
   /* ----------------------------------------------------------------- type
      System stacks only, made deliberate: a heavy tight display voice, a calm
@@ -91,7 +99,10 @@
 
   --fs-display:clamp(34px, 3.2vw + 22px, 54px); /* hero only, w800, ls -0.025em, lh 1.04 */
   --fs-h1:clamp(28px, 2vw + 20px, 36px);        /* page title, w800, ls -0.02em, lh 1.1 */
-  --fs-h2:23px;   /* section, w750, ls -0.01em, lh 1.2 */
+  /* Section H2. Measured flat at 23px — only 6px over a 17px card title, so
+     every page below the hero read as one undifferentiated sheet. Time Out
+     sets section heads 32–40; this scale now steps 54 → 36 → 32 → 17. */
+  --fs-h2:clamp(26px, 1.5vw + 20px, 32px);   /* section, w800, ls -0.015em, lh 1.15 */
   --fs-h3:17px;   /* card title, w700, lh 1.35 */
   --fs-lead:18px; /* intro paragraph, w400, lh 1.6 */
   --fs-body:16px; /* body, w400, lh 1.65 */
@@ -190,6 +201,8 @@ html[data-theme="light"]{
   --panel:#f9f9f6;
   --panel-2:#ffffff;
   --field:#ffffff;
+  --band:#eff1ee;
+  --band-line:rgba(160,168,164,.7);
   --line:#c9cdc9;
   --line-soft:rgba(160,168,164,.5);
   --sheen:rgba(255,255,255,.6);
@@ -512,7 +525,7 @@ html[data-theme="light"] .site-head{background:rgba(238,240,239,.9)}
 
 /* ==================================================================== TYPE */
 h1,h2,h3{margin:0;color:var(--ink)}
-h2{font-size:var(--fs-h2);font-weight:750;letter-spacing:-.01em;line-height:1.25}
+h2{font-size:var(--fs-h2);font-weight:800;letter-spacing:-.015em;line-height:1.15}
 h3{font-size:var(--fs-h3);font-weight:700;line-height:1.35}
 p{margin:0 0 1em;color:var(--ink-2)}
 p:last-child{margin-bottom:0}
@@ -532,7 +545,7 @@ section.pad + section.pad{border-top:1px solid var(--line-soft)}
   background:linear-gradient(90deg,var(--line),transparent)}
 .strip-head .rule{order:1;flex:1 1 40px;height:1px;align-self:center;
   background:linear-gradient(90deg,var(--line),transparent)}
-.sec-head .more,.strip-head .more{order:2;flex:none;font:600 14px/1.2 var(--font-sans);
+.sec-head .more,.strip-head .more{order:2;flex:none;font:700 15px/1.2 var(--font-sans);
   white-space:nowrap;min-height:44px;display:inline-flex;align-items:center}
 .count{font:500 13px/1.6 var(--font-mono);color:var(--ink-3);margin:10px 0 0;
   font-variant-numeric:tabular-nums}
@@ -563,6 +576,11 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
   .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .card-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
+/* THE CARD IS A TICKET. 592 pages are made of this object, so it carries the
+   product's whole identity: the checked DATE rides a darker header band — the
+   stub — separated from the body by a punched perforation with a notch bitten
+   out of each edge, the way a ticket tears. The date is the ticket's serial;
+   the price is its fare; the verified stamp is its validation. */
 .card{position:relative;background:linear-gradient(180deg, var(--sheen), transparent 46px), var(--panel);
   border:1px solid var(--line);
   border-radius:var(--r-card);padding:var(--s-4);
@@ -580,24 +598,45 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
 .card h3 a:focus-visible{outline:none}
 .card:has(h3 a:focus-visible){outline:3px solid var(--gold-bright);outline-offset:2px}
 
-/* top row: when + price. The min-height keeps titles level across a row
-   whether or not a card carries the quieter recurrence line */
-.ev-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;min-height:42px}
-.ev-when{font:600 13px/1.45 var(--font-mono);color:var(--gold-bright);margin:0;
-  letter-spacing:.02em;text-transform:uppercase;font-variant-numeric:tabular-nums;
+/* the stub: full-bleed band, one surface below the card, wearing the date */
+.ev-top{position:relative;display:flex;align-items:flex-start;justify-content:space-between;
+  gap:10px;min-height:44px;
+  margin:calc(-1 * var(--s-4)) calc(-1 * var(--s-4)) 2px;
+  padding:12px var(--s-4) 11px;
+  background:var(--band);
+  border-radius:calc(var(--r-card) - 1px) calc(var(--r-card) - 1px) 0 0}
+/* the perforation: a row of punched dots, not a rule */
+.ev-top::after{content:"";position:absolute;left:14px;right:14px;bottom:-2px;height:3px;
+  background:radial-gradient(circle 1.3px at 1.5px 50%, var(--band-line) 1.05px, transparent 1.35px);
+  background-size:8px 3px;background-repeat:repeat-x}
+/* the tear notches: a half-circle of page ground bitten out of each edge,
+   with a hairline rim so the card's border reads as continuing around it */
+/* the box ends AT the card's outer edge so only the inner half of each bite
+   paints — the outer half would float in the grid gutter as a stray mark */
+.ev-top::before{content:"";position:absolute;left:-1px;right:-1px;bottom:-7px;height:14px;
+  pointer-events:none;background:
+    radial-gradient(circle 7px at 0 50%,    var(--bg) 5.1px, var(--line) 5.7px, transparent 7px),
+    radial-gradient(circle 7px at 100% 50%, var(--bg) 5.1px, var(--line) 5.7px, transparent 7px)}
+.ev-top .pill{flex:none}
+.ev-when{font:700 13px/1.5 var(--font-mono);color:var(--gold-bright);margin:0;
+  letter-spacing:.045em;text-transform:uppercase;font-variant-numeric:tabular-nums;
   display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
-.ev-when .thru{display:block;color:var(--ink-3);text-transform:none;letter-spacing:0}
+.ev-when .thru{display:block;color:var(--ink-3);text-transform:none;letter-spacing:0;font-weight:500}
 .ev-where{font-size:var(--fs-small);color:var(--ink-2);margin:0;
   display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
 .ev-where .area{color:var(--ink-3)}
 .ev-meta{display:flex;flex-wrap:wrap;gap:4px 14px;font:500 12.5px/1.5 var(--font-mono);
   color:var(--ink-3);margin:0;font-variant-numeric:tabular-nums}
 .ev-foot{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:auto;padding-top:6px}
+.ev-foot:empty{display:none}
 
 /* place & opening cards: hours and status speak in a neutral voice — gold
    mono stays reserved for a checked DATE */
-.card.place .ev-when{color:var(--ink-2);text-transform:none}
-.card.opening .ev-when{color:var(--ink-2);text-transform:none}
+.card.place .ev-when{color:var(--ink-2);text-transform:none;font-weight:600;letter-spacing:.02em}
+.card.opening .ev-when{color:var(--ink-2);text-transform:none;font-weight:600;letter-spacing:.02em}
+/* an opening's stub carries the confirmed-green wash: its whole claim is
+   "new, and we checked" — semantic color, not decoration */
+.card.opening .ev-top{background:linear-gradient(180deg, var(--ok-wash), var(--ok-wash)), var(--band)}
 .new-flag{display:inline-flex;align-items:center;margin-right:6px;padding:2.5px 8px;
   border-radius:var(--r-pill);font:800 10.5px/1.2 var(--font-sans);letter-spacing:.1em;
   text-transform:uppercase;color:var(--pill-free-fg);background:var(--pill-free-bg);
@@ -609,7 +648,7 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
 
 /* sponsored: the word appears, in that word, every time */
 .card.sponsored{border-color:rgba(217,164,65,.45)}
-.card.sponsored::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;
+.card.sponsored::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;z-index:2;
   border-radius:var(--r-card) var(--r-card) 0 0;background:var(--gold);opacity:.8}
 .sponsor-tag{font:700 11px/1 var(--font-sans);letter-spacing:.14em;text-transform:uppercase;
   color:var(--sponsor-fg)}
@@ -637,15 +676,27 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
    Quiet on every card; pressed as a seal on the detail page. */
 .verified{display:inline-flex;align-items:center;gap:6px;margin-left:auto;
   font:600 11.5px/1 var(--font-mono);color:var(--ink-3);letter-spacing:.02em;
-  font-variant-numeric:tabular-nums;
-  border:1px dashed var(--ok-line);border-radius:7px;padding:5px 8px}
+  font-variant-numeric:tabular-nums;background:var(--ok-wash);
+  border:1px dashed var(--ok-line);border-radius:7px;padding:5px 8px;
+  transition:transform var(--t-fast) var(--ease)}
 .verified svg{width:13px;height:13px;flex:none}
 .verified .tick{stroke:var(--ok)}
+/* on hover the stamp presses — the one detail a screenshot won't show
+   and a hand will find */
+.card:hover .verified{transform:rotate(-3deg) scale(1.06)}
 
-/* =========================================================== SCOPE TABS */
-.scope{display:flex;gap:4px;background:var(--panel);border:1px solid var(--line);
-  border-radius:var(--r-pill);padding:4px;margin-top:var(--s-5);
+/* =========================================================== SCOPE TABS
+   The primary navigation of the whole product. The track is a recessed
+   channel (a static inset shadow — never animated); the chosen scope holds
+   the lane in lit gold with a top-light, and takes it with a snap-and-settle
+   on arrival (motion section). */
+.scope{display:flex;gap:5px;background:linear-gradient(180deg, rgba(4,10,17,.4), rgba(4,10,17,0) 75%), var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--r-pill);padding:5px;margin-top:var(--s-5);
+  box-shadow:inset 0 1px 4px rgba(4,10,17,.35);
   overflow-x:auto;scrollbar-width:none}
+html[data-theme="light"] .scope{background:linear-gradient(180deg, rgba(40,50,60,.07), rgba(40,50,60,0) 75%), var(--panel);
+  box-shadow:inset 0 1px 3px rgba(40,50,60,.12)}
 @media(max-width:640px){
   .scope{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 32px),transparent);
     mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 32px),transparent)}
@@ -656,7 +707,10 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
   font:600 15px/1.2 var(--font-sans);color:var(--ink-2);white-space:nowrap;
   transition:transform var(--t-fast) var(--ease)}
 .scope a:hover{color:var(--ink)}
-.scope a[aria-current="page"],.scope a[aria-current="true"]{background:var(--gold);color:var(--accent-ink);font-weight:700}
+.scope a[aria-current="page"],.scope a[aria-current="true"]{
+  background:linear-gradient(180deg, var(--gold-bright), var(--gold) 85%);
+  color:var(--accent-ink);font-weight:800;
+  box-shadow:0 1px 2px rgba(4,10,17,.45), 0 3px 12px rgba(217,164,65,.25)}
 .scope a:active{transform:scale(.97)}
 
 /* ==================================================== LISTING LAYOUT + RAIL */
@@ -669,9 +723,15 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
 .chip:hover{color:var(--ink);border-color:var(--ink-3)}
 .chip:active{transform:scale(.97)}
 .chip[aria-current="true"],.chip.on{border-color:var(--gold);color:var(--gold-bright);
-  background:rgba(217,164,65,.12)}
+  background:rgba(217,164,65,.12);font-weight:700}
+/* the lit chip carries a harbor-light dot — you can find the active filter
+   from across the room */
+.chip[aria-current="true"]::before,.chip.on::before{content:"";width:7px;height:7px;flex:none;
+  border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px rgba(217,164,65,.18)}
 html[data-theme="light"] .chip[aria-current="true"],
 html[data-theme="light"] .chip.on{background:rgba(138,95,16,.1)}
+html[data-theme="light"] .chip[aria-current="true"]::before,
+html[data-theme="light"] .chip.on::before{box-shadow:0 0 0 3px rgba(138,95,16,.15)}
 .chip[aria-current="true"] .x{font-weight:800}
 .listing,.index-layout{margin-top:var(--s-5)}
 @media(min-width:1024px){
@@ -682,8 +742,13 @@ html[data-theme="light"] .chip.on{background:rgba(138,95,16,.1)}
   .filter-group{margin-bottom:var(--s-5)}
   .rail-h,.filter-group h2{font:800 var(--fs-kicker)/1 var(--font-sans);letter-spacing:.18em;
     text-transform:uppercase;color:var(--ink-3);margin:0 0 10px}
-  .rail-h{margin-top:var(--s-5)}
+  /* each rail group heads with the same dissolving hairline the sections
+     wear — one rule system, page and rail */
+  .rail-h{display:flex;align-items:center;gap:10px;margin-top:var(--s-5)}
+  .rail-h::after{content:"";flex:1 1 12px;height:1px;
+    background:linear-gradient(90deg,var(--line-soft),transparent)}
   .rail-h:first-child{margin-top:0}
+  .rail .chip:hover{transform:translateX(3px)}
   .rail-note{margin-top:var(--s-4)}
   .legend-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);
     padding:var(--s-4);display:grid;gap:12px;box-shadow:var(--shadow-1)}
@@ -723,6 +788,29 @@ html[data-theme="light"] .chip.on{background:rgba(138,95,16,.1)}
 .rail-card-h{font:700 15px/1.35 var(--font-sans);color:var(--ink);margin:0 0 6px}
 .rail-card .btn{width:100%;margin-top:var(--s-3)}
 .rail-note{font-size:var(--fs-fine);color:var(--ink-3)}
+
+/* ==================================================== MONTH GROUPS + JUMP
+   The 90-day page is a season, told a month at a time. Each month heads on
+   the section-rule system at full H2 weight; the jump row is a rank of month
+   tickets, each carrying its event count in ledger figures. */
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:var(--s-5)}
+.jump a{display:inline-flex;align-items:center;gap:9px;min-height:44px;padding:8px 8px 8px 16px;
+  border-radius:var(--r-pill);border:1px solid var(--tag-line);color:var(--ink-2);
+  text-decoration:none;font:600 14px/1.2 var(--font-sans);white-space:nowrap;
+  transition:transform var(--t-fast) var(--ease)}
+.jump a:hover{color:var(--ink);border-color:var(--ink-3)}
+.jump a:active{transform:scale(.97)}
+.jn{font:600 12px/1 var(--font-mono);color:var(--gold-bright);font-variant-numeric:tabular-nums;
+  background:rgba(217,164,65,.12);border-radius:var(--r-pill);padding:5px 9px}
+html[data-theme="light"] .jn{background:rgba(138,95,16,.1)}
+.group{margin-top:var(--s-7);scroll-margin-top:84px}
+.group:first-of-type{margin-top:var(--s-6)}
+.group-h{display:flex;align-items:baseline;gap:16px}
+.group-h::after{content:"";flex:1 1 40px;height:1px;align-self:center;
+  background:linear-gradient(90deg,var(--line),transparent)}
+/* landing on a month from the jump row lights its name — the :target is the
+   answer to "did that link take me anywhere" on a page this long */
+.group:target .group-h{color:var(--gold-bright)}
 
 /* ============================================================= BREADCRUMB */
 .crumbs{margin-top:var(--s-3);font:500 13px/1.6 var(--font-mono);color:var(--ink-3)}
@@ -844,19 +932,30 @@ html[data-theme="light"] .chip.on{background:rgba(138,95,16,.1)}
 .quick{display:grid;gap:var(--s-3);margin-top:var(--s-5)}
 @media(min-width:560px){.quick{grid-template-columns:1fr 1fr}}
 @media(min-width:1024px){.quick{grid-template-columns:repeat(4,1fr)}}
-.quick-card{position:relative;display:flex;flex-direction:column;gap:2px;
-  background:linear-gradient(180deg, var(--sheen), transparent 40px), var(--panel);
+/* the count IS the message — a hub tile is a ledger figure with tide rings
+   receding into its corner, and an arrow that answers the hand on hover */
+.quick-card{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:2px;
+  background:
+    repeating-radial-gradient(circle at calc(100% + 26px) calc(100% + 34px),
+      transparent 0 17px, var(--line-soft) 17px 18px, transparent 18px 36px,
+      var(--line-soft) 36px 37px, transparent 37px 58px, var(--line-soft) 58px 59px,
+      transparent 59px 200px),
+    linear-gradient(180deg, var(--sheen), transparent 40px), var(--panel);
   border:1px solid var(--line);border-radius:var(--r-card);
-  padding:var(--s-4) var(--s-4) var(--s-4);min-height:112px;
+  padding:var(--s-5) var(--s-4) var(--s-4);min-height:128px;
   text-decoration:none;color:var(--ink);box-shadow:var(--shadow-1);
   transition:transform var(--t-med) var(--ease)}
 .quick-card::after{content:"";position:absolute;inset:0;border-radius:var(--r-card);
   box-shadow:var(--shadow-2);opacity:0;pointer-events:none;transition:opacity var(--t-med) var(--ease)}
 .quick-card:hover{transform:translateY(-2px)}
 .quick-card:hover::after{opacity:1}
-.q-n{font:600 32px/1.1 var(--font-mono);color:var(--gold-bright);
+.q-n{font:600 clamp(34px, 2vw + 24px, 42px)/1.05 var(--font-mono);color:var(--gold-bright);
   font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-.q-t{font-weight:700;font-size:16px;margin-top:4px}
+.q-t{font-weight:700;font-size:16.5px;margin-top:6px;letter-spacing:-.01em}
+.q-t::after{content:"\2192";display:inline-block;margin-left:8px;color:var(--gold-bright);
+  opacity:0;transform:translateX(-6px);
+  transition:transform var(--t-fast) var(--ease), opacity var(--t-fast) var(--ease)}
+.quick-card:hover .q-t::after,.quick-card:focus-visible .q-t::after{opacity:1;transform:none}
 .q-d{font-size:13px;color:var(--ink-3);line-height:1.45}
 /* trust panels */
 .grid.two{display:grid;gap:var(--s-4);margin-top:var(--s-5)}
@@ -1003,10 +1102,68 @@ div.foot-fine{border-top:1px solid var(--line-soft);margin-top:var(--s-6);paddin
 .foot-fine .stamp{font:500 12px/1.6 var(--font-mono);color:var(--ink-3);
   font-variant-numeric:tabular-nums}
 
-/* ======================================================== ENTRY MOTION */
+/* ======================================================== ENTRY MOTION
+   The page ARRIVES, once, on the animation bible's terms — snap and settle,
+   drag, holds — then sits absolutely still. Transform and opacity only;
+   nothing loops, nothing moves for its own sake. Every animated class here
+   is covered by the prefers-reduced-motion block below. */
 @media (prefers-reduced-motion:no-preference){
-  .rise{animation:rise .5s var(--ease) both;animation-delay:calc(var(--i,0)*60ms)}
-  @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+  /* cards: most of the rise is spent in the first third, a 2px overshoot,
+     ring down. The 60ms stagger is the follow-through — each card drags a
+     beat behind its neighbor. */
+  .rise{animation:rise .5s var(--ease-snap) both;animation-delay:calc(var(--i,0)*60ms)}
+  @keyframes rise{
+    0%{opacity:0;transform:translateY(14px) scale(.985)}
+    62%{opacity:1;transform:translateY(-2px) scale(1.004)}
+    82%{transform:translateY(1px) scale(1)}
+    100%{opacity:1;transform:translateY(0) scale(1)}
+  }
+  /* the price lands AFTER its ticket is on the table — drop, touch, settle */
+  .ev-top .pill{animation:land .3s var(--ease-snap) both;
+    animation-delay:calc(var(--i,0)*60ms + 230ms)}
+  .detail-pills .pill{animation:land .32s var(--ease-snap) 180ms both}
+  @keyframes land{
+    0%{opacity:0;transform:translateY(-7px) scale(.88)}
+    60%{opacity:1;transform:translateY(1px) scale(1.04)}
+    100%{opacity:1;transform:translateY(0) scale(1)}
+  }
+  /* the chosen scope takes the lane: anticipates small, overshoots, holds */
+  .scope a[aria-current="page"],.scope a[aria-current="true"]{
+    animation:take-lane .36s var(--ease-snap) 120ms both}
+  @keyframes take-lane{
+    0%{opacity:0;transform:scale(.86)}
+    55%{opacity:1;transform:scale(1.045)}
+    80%{transform:scale(.99)}
+    100%{opacity:1;transform:scale(1)}
+  }
+  /* hub tiles rise on the same beat as cards, staggered by hand */
+  .quick .quick-card{animation:rise .5s var(--ease-snap) both}
+  .quick .quick-card:nth-child(1){animation-delay:0ms}
+  .quick .quick-card:nth-child(2){animation-delay:55ms}
+  .quick .quick-card:nth-child(3){animation-delay:110ms}
+  .quick .quick-card:nth-child(4){animation-delay:165ms}
+  .quick .quick-card:nth-child(5){animation-delay:220ms}
+  .quick .quick-card:nth-child(6){animation-delay:275ms}
+  .quick .quick-card:nth-child(7){animation-delay:330ms}
+  .quick .quick-card:nth-child(8){animation-delay:385ms}
+  /* the month jump row files in */
+  .jump a{animation:land .3s var(--ease-snap) both}
+  .jump a:nth-child(1){animation-delay:120ms}
+  .jump a:nth-child(2){animation-delay:170ms}
+  .jump a:nth-child(3){animation-delay:220ms}
+  .jump a:nth-child(4){animation-delay:270ms}
+  .jump a:nth-child(n+5){animation-delay:320ms}
+}
+/* the detail page's seal is PRESSED, not faded — it arrives over-rotated and
+   too large, slams past its rest size, and settles into the paper */
+@media (prefers-reduced-motion:no-preference) and (min-width:700px){
+  .verify-note::before{animation:press .5s cubic-bezier(.3,1.25,.4,1) .4s both}
+  @keyframes press{
+    0%{opacity:0;transform:rotate(-23deg) scale(1.9)}
+    55%{opacity:.85;transform:rotate(-10deg) scale(.94)}
+    78%{transform:rotate(-11.5deg) scale(1.03)}
+    100%{opacity:.75;transform:rotate(-11deg) scale(1)}
+  }
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
@@ -1107,7 +1264,7 @@ div.foot-fine{border-top:1px solid var(--line-soft);margin-top:var(--s-6);paddin
 /* A card link that can only be seen when :has() is supported is a focus ring
    with a browser requirement. The plain rule is the floor; the card-level ring
    stays as the nicer treatment where it works. */
-.card h3 a:focus-visible{outline:3px solid var(--gold-2);outline-offset:3px;border-radius:4px}
+.card h3 a:focus-visible{outline:3px solid var(--gold-bright);outline-offset:3px;border-radius:4px}
 
 /* The two hubs and the 404 are short pages; without this their footers rode up
    the viewport on a tall screen. */
@@ -1122,4 +1279,7 @@ main{flex:1 0 auto}
 /* A hidden heading still has to be a heading — the listing grids jumped h1 to h3. */
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);
   clip-path:inset(50%);white-space:nowrap}
-}
+
+/* The calendar link in the count line is a real control — give the finger a
+   real target without moving the line. */
+.ics-link{display:inline-block;padding:12px 2px;margin:-12px 0 -12px 8px}
