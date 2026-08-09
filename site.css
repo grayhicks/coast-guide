@@ -844,18 +844,25 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
      card — which moved the hole from the ornament to the place the eye enters. Split the slack. */
   .card h3{min-height:50px;display:flex;align-items:center;justify-content:center}
   .ev-why{min-height:39px}
-  /* the last two ranks with no floor were the whole residual: a card with a one-line venue and no
-     hours at all reserved nothing, and its neighbour reserved four lines */
-  .ev-where{min-height:32px;display:flex;align-items:center;justify-content:center}
-  /* two lines, because a two-line venue and a two-line schedule are both ordinary and a one-line
-     floor just moves the hole down a rank */
-  .ev-hours{min-height:33px}
+  /* ⚠ THE VENUE FLOOR IS GONE, because what it was for is fixed at the root now. It existed to
+     stop a one-line venue leaving a hole in a two-line box — and the hole was the TOP-SETTING, not
+     the box. With the rank centring its own text there is nothing to reserve against, and the floor
+     was costing up to sixteen pixels a card at grid widths against an 8% density tripwire. Slack a
+     card does not need goes to the one gap designed to absorb it. */
+  /* ⚠ THE TWO-LINE HOURS FLOOR AND THE EN-DASH ARE BOTH GONE, and both were mine. The floor
+     reserved a line nothing filled, which put 33px of cream above the ornament on a desktop row
+     where the phone had 16. The dash was worse: a 4px mark alone in a 60px void, on a card whose
+     kicker two ranks up ALREADY said HOURS NOT PUBLISHED — the same absence stated twice, once in
+     words and once in dust — and it painted at 1100 and not at 390. A rank that exists at one
+     width and not at another is not a rank.
+     ⚠ AND THE VARIANCE THEY WERE CHASING IS THE MECHANISM, NOT A DEFECT. `.ev-prog` rides
+     margin-top:auto, so a stretched row's slack has to land somewhere, and landing all of it in
+     ONE soft gap above the ornament is what keeps every rank below it on a shared scanline. */
   /* ⚠ AND A RANK IS NEVER LEFT BLANK. A card with nothing to say about its hours showed 40px of
      empty cream where its neighbour showed a line, which reads as something that failed to load
      rather than as a fact. A programme sets a dash. It is content the phone does not need — there
      is no row to line up with there — so it is drawn by the stylesheet at grid widths only. */
-  .ev-hours:empty{display:flex;align-items:center;justify-content:center}
-  .ev-hours:empty::before{content:"\2013";color:var(--ink-3)}
+
   .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .card-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
@@ -918,9 +925,21 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
   letter-spacing:-.005em;text-align:center;text-wrap:balance}
 
 /* RANK 4 — the venue, in letter-spaced caps. */
-.ev-where{margin:6px 0 0;font:600 var(--fs-kicker)/1.45 var(--font-sans);color:var(--ink-2);
-  text-transform:uppercase;letter-spacing:.16em;text-align:center;text-wrap:balance;
-  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+/* ⚠ THE CLAMP IS ON THE SPAN, NOT ON THE RANK, AND THAT IS THE WHOLE POINT. The floor added at
+   grid widths tried to centre this text with `align-items`, and it did nothing: `display:flex` in
+   a media query higher up the file loses to `display:-webkit-box` in this rule, which is later at
+   equal specificity. Every one-line venue then top-set in a two-line box and left about thirty
+   pixels of nothing under it — a hole in the tightest coupling on the card, and the first thing the
+   eye hits after the title. It is the same cascade trap the `.ev-hours` comment records one rank
+   down. The rank is a flex box, the span carries the clamp, and neither fights the other.
+   ⚠ AND IT IS THE SERIF NOW. The card had three type stacks, two of them the OS UI font, so the
+   blurb and the venue were set in whatever the reader's system uses for buttons. A programme has
+   two voices: this serif and the mono. The venue also drops from 600/.16em, which measured as the
+   heaviest mass on the card, to 500/.11em — it is a label, not a second headline. */
+.ev-where{margin:6px 14px 0;font:500 var(--fs-kicker)/1.45 var(--font-serif);color:var(--ink-2);
+  text-transform:uppercase;letter-spacing:.11em;text-align:center;text-wrap:balance;
+  display:flex;align-items:center;justify-content:center}
+.ev-where > span{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
 .ev-where .area{color:var(--ink-3)}
 
 /* RANK 5 — the card's voice: one sentence of WHY this is on the list. Clamped
@@ -933,7 +952,7 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
    "the way it was..", which is a typo, not a truncation. Measured at 1100 where the
    3-up columns are narrowest, the shortfall is about four pixels. The inset is symmetric,
    so the centre axis is untouched. */
-.ev-why{margin:6px 14px 0;padding:0 6px;font-size:var(--fs-small);line-height:1.5;color:var(--ink-2);text-align:center;
+.ev-why{margin:6px 14px 0;padding:0 6px;font:var(--fs-small)/1.55 var(--font-serif);color:var(--ink-2);text-align:center;
   display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
 
 /* RANK 5 — the hours, which is the half of the old schedule line that is not
@@ -957,15 +976,24 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
    into a boxed panel. Wikimedia Commons,
    Decorative_text_divider_-_central_flare.svg, PUBLIC DOMAIN, carried as
    --orn-swell. See the ornament section at the foot of this file. */
-.orn-swell-rule{height:5px;margin:0 24px;background-color:var(--cat, var(--orn-rule));
-  -webkit-mask-image:linear-gradient(90deg,transparent,black 14%,black 86%,transparent),var(--orn-swell);
-          mask-image:linear-gradient(90deg,transparent,black 14%,black 86%,transparent),var(--orn-swell);
-  -webkit-mask-size:100% 1px,min(90px,100%) 5px;
-          mask-size:100% 1px,min(90px,100%) 5px;
-  -webkit-mask-position:50% 2px,50% 50%;
-          mask-position:50% 2px,50% 50%;
+/* ⚠ THE RULE HAS TO SWELL, AND IT WAS NOT SWELLING. It painted a flat 1px hairline across the
+   full width and laid the 90px ornament figure on top of it, so measured along its length it was
+   2 device px constant with a flare only within four pixels of centre — a hairline with a diamond
+   on it. The card's one decorative moment read as an app divider with a dot.
+   The figure IS the rule now: the public-domain mark is stretched across the whole span, so the
+   silhouette tapers to a point at both ends and thickens through the middle, which is what a
+   swelled rule is and what the ornament law describes in words. No second mark, no hairline
+   underneath it, nothing to composite wrongly.
+   ⚠ SCOPED TO THE CARD ON PURPOSE. The primary button and the tab rail wear the same ornament at
+   4px on a short span, where Gray approved the read by name; stretching the figure there would put
+   a fat spindle on a small control. One vocabulary, two sizes, and the card is the one that was
+   measured wrong. */
+.orn-swell-rule{height:6px;margin:0 24px;background-color:var(--cat, var(--orn-rule));
+  -webkit-mask-image:var(--orn-swell);mask-image:var(--orn-swell);
+  -webkit-mask-size:100% 100%;mask-size:100% 100%;
+  -webkit-mask-position:50% 50%;mask-position:50% 50%;
   -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
-  opacity:.85}
+  opacity:.9}
 
 /* RANK 2 — THE FARE. Its own line on every card, always. */
 /* ⚠ THE LINE BOX IS FIXED AT 24px AND THE FONT SIZE IS NOT. That is what lets
@@ -973,8 +1001,16 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
    "No published price" was the longest and loudest line on the card, which is
    maximum emphasis on something that is not there, and simply shrinking it was
    what put the swelled rule 4px out of line across a desktop row last round. */
-.ev-fare{margin:10px 0 0;text-align:center;
-  font:700 var(--fs-h3)/24px var(--font-mono);color:var(--ink);
+/* ⚠ ONE SIZE, AND IT IS BODY SIZE. At --fs-h3 700 mono a priced fare measured 96px wide at the
+   TITLE'S own size and out-shouted the name of the thing. The line box is pinned at 24px, so the
+   size no longer moves the block and a desktop row cannot come apart over it — which is the reason
+   the previous round had to make the two states one measure in the first place.
+   ⚠ AND IT SITS IN THE MIDDLE OF ITS FIELD. Measured on eight phone cards the cap-top sat 11.5px
+   under the ornament and the baseline 20px above the agate rule: it hugged the ornament and
+   floated over the largest void on the card. Four pixels move from below it to above it and the
+   block height is unchanged. */
+.ev-fare{margin:14px 0 0;text-align:center;
+  font:700 var(--fs-body)/24px var(--font-mono);color:var(--ink);
   letter-spacing:.01em;font-variant-numeric:tabular-nums}
 .ev-fare.free{color:var(--ok)}
 /* ⚠ THE AMBER STATE NO LONGER SAYS "TBA". Gray: "why is there TBA? I thought
@@ -998,7 +1034,7 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
    "Free". Both themes now carry the amber toward the panel until the absence sits BELOW the good
    news — 5.94:1 in light, 6.25:1 in dark — and both stay clear of the floor. A claim about a
    colour that has not been measured is a guess with a comment attached to it. */
-.ev-fare.tba{color:var(--pill-tba-fg);font-size:var(--fs-body)}
+.ev-fare.tba{color:var(--pill-tba-fg)}
 .card .ev-fare.tba{color:color-mix(in srgb, var(--pill-tba-fg) 75%, var(--panel))}
 html[data-theme="light"] .card .ev-fare.tba{color:color-mix(in srgb, var(--pill-tba-fg) 90%, var(--panel))}
 
@@ -1019,13 +1055,10 @@ html[data-theme="light"] .card .ev-fare.tba{color:color-mix(in srgb, var(--pill-
    the baseline at the bottom, so the box IS the ink, and symmetric padding is
    then symmetric ink on every device and at every font size, by construction.
    gate_card_band.js reads the painted pixels at 3x and holds it. */
-/* ⚠ SCOPED TO THE PHONE RATHER THAN RACING THE GRID RULE. The grid media query sits ABOVE this
-   point in the file, so a bare `.ev-hours:empty{display:none}` here wins at every width and quietly
-   undoes the reserved line — measured as a 2008px gap, because a display:none element reports a
-   rect of all zeros and the probe happily subtracted from nothing. */
-@media(max-width:699px){ .ev-hours:empty{display:none} }
+/* nothing to say about the hours means no rank, at every width */
+.ev-hours:empty{display:none}
 
-.ev-agate{margin:14px 14px 0;padding:8px 4px;text-align:center;
+.ev-agate{margin:10px 14px 0;padding:8px 4px;text-align:center;
   font:500 var(--fs-kicker)/1 var(--font-mono);color:var(--ink-2);letter-spacing:.09em;
   text-transform:uppercase;font-variant-numeric:tabular-nums;
   border-top:1px solid color-mix(in srgb, var(--cat, var(--line)) 72%, transparent);
@@ -1167,6 +1200,11 @@ a.nap-line:hover{color:var(--gold-bright)}
   color:var(--ink);font:var(--fs-body)/1.4 var(--font-sans)}
 .fbar-q input::placeholder{color:var(--ink-3)}
 .fbar-q input:focus-visible{outline:3px solid var(--gold-bright);outline-offset:2px}
+.fbar-d{flex:0 0 auto}
+.fbar-d input{min-height:44px;padding:10px 12px;border-radius:var(--r-field);
+  border:1px solid var(--line);background:var(--field);color:var(--ink);
+  font:var(--fs-small)/1.4 var(--font-mono);font-variant-numeric:tabular-nums}
+.fbar-d input:focus-visible{outline:3px solid var(--gold-bright);outline-offset:2px}
 .fbar-chips{flex:0 1 auto;margin:0}
 /* the chip is the site's own chip; pressed is the same lit state the scope
    tabs use, so one vocabulary answers "this filter is on" everywhere */
