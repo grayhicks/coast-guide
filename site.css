@@ -107,6 +107,11 @@
               "Helvetica Neue", Arial, sans-serif;
   --font-mono:ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas,
               "Liberation Mono", "Courier New", monospace;
+  /* THE ONE SERIF, and it has exactly one job: the card title. A programme has
+     a display rank and this is it. System stack only — there is no web font on
+     this site and there is not going to be one. */
+  --font-serif:ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia,
+              "Times New Roman", serif;
 
   /* THE SCALE. A reviewer measured thirteen rendered sizes on one listing page,
      nine of them packed between 12 and 17px — hierarchy carried by weight and
@@ -825,86 +830,246 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
 
 /* ================================================================== CARDS */
 .card-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s-4);margin-top:var(--s-5);align-items:stretch}
+/* ⚠ THE VOID ABOVE THE ORNAMENT WAS 124px ON ONE CARD AND 36px ON THE ONE BESIDE IT.
+   `margin-top:auto` pins the foot block, which is what makes every ornament and hairline in a
+   desktop row land on one line — and it also means every pixel of a row's height difference is
+   spent in ONE gap. The slack cannot be moved: below the foot band it un-pins the foot, and
+   spread between the ranks it makes every gap ragged. So the VARIANCE is cut instead, by giving
+   the two ranks that vary most a two-line floor. It costs nothing, because in a stretched row the
+   short card was already paying that height as a hole. Phone is one card per row with no hole to
+   pay for, so the floor is scoped to the grid. */
 @media(min-width:700px){
+  /* ⚠ AND THE FLOOR CENTRES ITS TEXT RATHER THAN TOP-SETTING IT. A one-line title in a two-line
+     floor left 36.5px of nothing between the title and the venue — the tightest coupling on the
+     card — which moved the hole from the ornament to the place the eye enters. Split the slack. */
+  .card h3{min-height:50px;display:flex;align-items:center;justify-content:center}
+  .ev-why{min-height:39px}
+  /* the last two ranks with no floor were the whole residual: a card with a one-line venue and no
+     hours at all reserved nothing, and its neighbour reserved four lines */
+  .ev-where{min-height:32px;display:flex;align-items:center;justify-content:center}
+  /* two lines, because a two-line venue and a two-line schedule are both ordinary and a one-line
+     floor just moves the hole down a rank */
+  .ev-hours{min-height:33px}
+  /* ⚠ AND A RANK IS NEVER LEFT BLANK. A card with nothing to say about its hours showed 40px of
+     empty cream where its neighbour showed a line, which reads as something that failed to load
+     rather than as a fact. A programme sets a dash. It is content the phone does not need — there
+     is no row to line up with there — so it is drawn by the stylesheet at grid widths only. */
+  .ev-hours:empty{display:flex;align-items:center;justify-content:center}
+  .ev-hours:empty::before{content:"\2013";color:var(--ink-3)}
   .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .card-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
-/* THE CARD IS A TICKET. 592 pages are made of this object, so it carries the
-   product's whole identity: the checked DATE rides a darker header band — the
-   stub — separated from the body by a punched perforation with a notch bitten
-   out of each edge, the way a ticket tears. The date is the ticket's serial;
-   the price is its fare; the verified stamp is its validation. */
+/* ═══ THE CARD IS A PROGRAMME ════════════════════════════════════════════════
+   592 pages are made of this object, so it carries the product's whole
+   identity. It used to be a ticket: a dark stub band across the top wearing
+   the date, a punched perforation, tear notches, a price pill, an age pill, a
+   meta line and up to three tag pills. Gray, 08/09: "the cards need
+   something.... currently they are plain as hell." He was right, and the
+   diagnosis is that eight rounded rectangles differing only in tint is a
+   spreadsheet with rounded corners, not a design.
+
+   It is a theatre programme now. ONE rounded rectangle, a centre axis, five
+   ranks of type, and rules where the boxes were. Built from
+   claude/design/CARD_COMP_2026-08-09_AC.html, which is the direction Gray
+   chose: "I almost like the emblem and the one with lines."
+
+   ⚠ DENSITY IS A FEATURE AND THIS CARD SPENT NONE OF IT. It prints two facts
+   more than the ticket did (the setting and the area were their own line
+   before, and the fare's meaning was an abbreviation) and it is not taller at
+   any phone width. Ranks and rules are cheaper than boxes. */
 .card{position:relative;background:linear-gradient(180deg, var(--sheen), transparent 46px), var(--panel);
   border:1px solid var(--line);
-  border-radius:var(--r-card);padding:var(--s-4);
-  display:flex;flex-direction:column;gap:10px;
+  border-radius:var(--r-card);padding:15px var(--s-4) 13px;
+  display:flex;flex-direction:column;
   box-shadow:var(--shadow-1); /* cards sit ON the ground, at rest */
-  transition:transform var(--t-med) var(--ease)}
-.card::after{content:"";position:absolute;inset:0;border-radius:var(--r-card);
-  box-shadow:var(--shadow-2);opacity:0;pointer-events:none;
-  transition:opacity var(--t-med) var(--ease)}
-.card:hover{transform:translateY(-2px)}
-.card:hover::after{opacity:1}
+  transition:transform var(--t-med) var(--ease), box-shadow var(--t-med) var(--ease)}
+.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-2)}
 .card h3 a{color:var(--ink);text-decoration:none}
 .card h3 a::before{content:"";position:absolute;inset:0;border-radius:var(--r-card)}
 .card h3 a:hover{color:var(--gold-bright)}
 .card h3 a:focus-visible{outline:none}
 .card:has(h3 a:focus-visible){outline:3px solid var(--gold-bright);outline-offset:2px}
 
-/* the stub: full-bleed band, one surface below the card, wearing the date */
-/* ⚠ THE STUB HAS A FIXED HEIGHT. Measured on places/index at 1440, row one:
-   perforations at y 313 / 326 / 303 — 23px apart — because a one-line hours
-   string and a three-line one made three different stubs. A ticket band that
-   doesn't line up across the row reads as three broken cards. The stub is now
-   exactly 64px at every width (two mono lines, centered) and the date/hours
-   string clamps to two lines; the full string always lives on the detail page.
-   Fixed px, not min-height — min would let a long stub grow and break the row
-   all over again. */
-.ev-top{position:relative;display:flex;align-items:center;justify-content:space-between;
-  gap:10px;height:64px;
-  margin:calc(-1 * var(--s-4)) calc(-1 * var(--s-4)) 2px;
-  padding:0 var(--s-4);
-  background:var(--band);
-  border-radius:calc(var(--r-card) - 1px) calc(var(--r-card) - 1px) 0 0}
-/* the perforation: a row of punched dots, not a rule */
-.ev-top::after{content:"";position:absolute;left:14px;right:14px;bottom:-2px;height:3px;
-  background:radial-gradient(circle 1.3px at 1.5px 50%, var(--band-line) 1.05px, transparent 1.35px);
-  background-size:8px 3px;background-repeat:repeat-x}
-/* the tear notches: a half-circle of page ground bitten out of each edge,
-   with a hairline rim so the card's border reads as continuing around it */
-/* the box ends AT the card's outer edge so only the inner half of each bite
-   paints — the outer half would float in the grid gutter as a stray mark */
-.ev-top::before{content:"";position:absolute;left:-1px;right:-1px;bottom:-7px;height:14px;
-  pointer-events:none;background:
-    radial-gradient(circle 7px at 0 50%,    var(--bg) 5.1px, var(--line) 5.7px, transparent 7px),
-    radial-gradient(circle 7px at 100% 50%, var(--bg) 5.1px, var(--line) 5.7px, transparent 7px)}
-.ev-top .pill{flex:none}
-.ev-when{font:700 var(--fs-small)/1.5 var(--font-mono);color:var(--gold-bright);margin:0;
-  letter-spacing:.045em;text-transform:uppercase;font-variant-numeric:tabular-nums;
-  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
-.ev-when .thru{display:block;color:var(--ink-3);text-transform:none;letter-spacing:0;font-weight:500}
-.ev-where{font-size:var(--fs-small);color:var(--ink-2);margin:0;
+/* RANK 3 — the kicker. The day, and only the day. One line, never wrapping:
+   a kicker that can grow to two lines is a headline wearing a kicker's size,
+   which is exactly what the old when-line became. */
+/* ⚠ THE KICKER USES --cat-ink, NOT --cat, AND THAT IS AN ACCESSIBILITY FIX.
+   Three of the light-theme category hues measured under 4.5:1 as TEXT against
+   the card's own tinted head — event 3.71:1, art 3.89:1, town 4.22:1 — because
+   the wash at the top of the card eats the margin the palette was checked
+   against on a plain panel. The hues are fine as MARKS, where the floor does
+   not apply; they are not fine as words. --cat-ink mixes each hue toward the
+   body ink by a fixed proportion, so every category darkens by the same rule
+   and none of them has to be hand-picked or re-checked when a hue changes. */
+.ev-kicker{margin:0;font:700 var(--fs-kicker)/1.55 var(--font-mono);color:var(--cat-ink, var(--gold-bright));
+  letter-spacing:.06em;text-transform:uppercase;text-align:center;
+  font-variant-numeric:tabular-nums;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* ⚠ --ink-3 measured 4.44:1 here in dark, under the floor, on the card's washed
+   head rather than on the plain panel it was checked against. The quiet half of
+   a rank is still text. */
+.ev-kicker .thru{color:var(--ink-2);text-transform:none;letter-spacing:0;font-weight:500}
+
+/* RANK 1 — the title. The card's one display moment, and the only serif on it. */
+/* a centred title that drops one word onto its own line is a widow, and three
+   of five cards had one. `text-wrap:balance` is the browser doing the thing a
+   compositor would. */
+.card h3{margin:2px 0 0;font:700 var(--fs-h3)/1.25 var(--font-serif);
+  letter-spacing:-.005em;text-align:center;text-wrap:balance}
+
+/* RANK 4 — the venue, in letter-spaced caps. */
+.ev-where{margin:6px 0 0;font:600 var(--fs-kicker)/1.45 var(--font-sans);color:var(--ink-2);
+  text-transform:uppercase;letter-spacing:.16em;text-align:center;text-wrap:balance;
   display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
 .ev-where .area{color:var(--ink-3)}
-.ev-meta{display:flex;flex-wrap:wrap;gap:4px 14px;font:500 var(--fs-small)/1.5 var(--font-mono);
-  color:var(--ink-3);margin:0;font-variant-numeric:tabular-nums}
-/* the card's voice: one sentence of WHY this is on the list, between the
-   facts and the foot. Body size — it is the card's only prose — clamped to
-   two lines so no card can ramble. Cards without one still sit flush beside
-   cards with one: the grid stretches rows equal and the foot rides
-   margin-top:auto to the floor either way. */
-.ev-why{margin:2px 0 0;font-size:var(--fs-body);line-height:1.5;color:var(--ink-2);
-  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
-.ev-foot{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:auto;padding-top:6px}
-.ev-foot:empty{display:none}
 
-/* place & opening cards: hours and status speak in a neutral voice — gold
-   mono stays reserved for a checked DATE */
-.card.place .ev-when{color:var(--ink-2);text-transform:none;font-weight:600;letter-spacing:.02em}
-.card.opening .ev-when{color:var(--ink-2);text-transform:none;font-weight:600;letter-spacing:.02em}
-/* an opening's stub carries the confirmed-green wash: its whole claim is
-   "new, and we checked" — semantic color, not decoration */
-.card.opening .ev-top{background:linear-gradient(180deg, var(--ok-wash), var(--ok-wash)), var(--band)}
+/* RANK 5 — the card's voice: one sentence of WHY this is on the list. Clamped
+   to two lines so no card can ramble. Centred by decision, not by default: at
+   one or two lines under three centred ranks, a left-set block was the only
+   ragged-right object on the card and read as a mistake. */
+/* ⚠ THE 6px INSET IS LOAD-BEARING AND IT IS NOT DECORATIVE SPACING. -webkit-line-clamp
+   places its own ellipsis, and when the last visible line runs nearly full the third dot
+   lands outside the content box and overflow:hidden eats it: the card then reads
+   "the way it was..", which is a typo, not a truncation. Measured at 1100 where the
+   3-up columns are narrowest, the shortfall is about four pixels. The inset is symmetric,
+   so the centre axis is untouched. */
+.ev-why{margin:6px 14px 0;padding:0 6px;font-size:var(--fs-small);line-height:1.5;color:var(--ink-2);text-align:center;
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+
+/* RANK 5 — the hours, which is the half of the old schedule line that is not
+   the day. Quiet, below the title, clamped: visible, which is what Gray asked
+   for, without being the loudest thing on the card, which is what he objected
+   to. */
+.ev-hours{margin:6px 14px 0;padding:0 6px;font:500 var(--fs-kicker)/1.5 var(--font-mono);color:var(--ink-3);
+  text-align:center;font-variant-numeric:tabular-nums;
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+
+/* ═══ THE PINNED FOOT BLOCK ═══════════════════════════════════════════════
+   Everything from the swelled rule down rides margin-top:auto to the card
+   floor. The grid stretches every card in a row to one height, so the fare,
+   the agate band and the stamp all land on the SAME baseline across the row.
+   That is what answers "the price moves": its seat no longer depends on how
+   long anything above it happens to be. */
+.ev-prog{margin-top:auto;padding-top:12px}
+
+/* THE SWELLED RULE — the house ornament, exactly once per card, inked with the
+   card's own category. It never reaches a corner, so the card cannot close
+   into a boxed panel. Wikimedia Commons,
+   Decorative_text_divider_-_central_flare.svg, PUBLIC DOMAIN, carried as
+   --orn-swell. See the ornament section at the foot of this file. */
+.orn-swell-rule{height:5px;margin:0 24px;background-color:var(--cat, var(--orn-rule));
+  -webkit-mask-image:linear-gradient(90deg,transparent,black 14%,black 86%,transparent),var(--orn-swell);
+          mask-image:linear-gradient(90deg,transparent,black 14%,black 86%,transparent),var(--orn-swell);
+  -webkit-mask-size:100% 1px,min(90px,100%) 5px;
+          mask-size:100% 1px,min(90px,100%) 5px;
+  -webkit-mask-position:50% 2px,50% 50%;
+          mask-position:50% 2px,50% 50%;
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+  opacity:.85}
+
+/* RANK 2 — THE FARE. Its own line on every card, always. */
+/* ⚠ THE LINE BOX IS FIXED AT 24px AND THE FONT SIZE IS NOT. That is what lets
+   the absence be quieter than a price without moving the ornament above it:
+   "No published price" was the longest and loudest line on the card, which is
+   maximum emphasis on something that is not there, and simply shrinking it was
+   what put the swelled rule 4px out of line across a desktop row last round. */
+.ev-fare{margin:10px 0 0;text-align:center;
+  font:700 var(--fs-h3)/24px var(--font-mono);color:var(--ink);
+  letter-spacing:.01em;font-variant-numeric:tabular-nums}
+.ev-fare.free{color:var(--ok)}
+/* ⚠ THE AMBER STATE NO LONGER SAYS "TBA". Gray: "why is there TBA? I thought
+   we verified everything?" TBA never meant unverified — it means the venue
+   publishes no price, which is a checked finding about the venue. An
+   abbreviation cannot carry that and this word can. The state and the ink are
+   unchanged; only the reader's half of it is.
+   ⚠ THE SIZE DEMOTION IS FINE; LETTING IT CHANGE THE BLOCK'S HEIGHT WAS NOT.
+   A smaller no-price fare made the pinned block ten pixels shorter, so in a
+   desktop row the swelled rule above a "Free" card and the one above a "No
+   published price" card sat four pixels apart at the same rank, side by side.
+   The line box is pinned at 24px above, so the word can be quieter while the
+   rank stays one measure. */
+/* ⚠ AND IN DARK IT WAS THE LOUDEST THING ON THE CARD. #F2CD7E measured 10.0:1
+   against 6.8:1 for the green "Free" and the state the CSS calls demoted was
+   out-ranking the state a reader most wants to see. The amber is carried toward
+   the panel until it sits BELOW Free rather than above it: 6.25:1. Light theme
+   was already under its Free and is left alone. */
+/* ⚠ AND LIGHT WAS INVERTED IN EXACTLY THE SAME WAY, which the previous comment here denied in
+   writing without measuring it: "No published price" ran 7.70:1 against 6.08:1 for the green
+   "Free". Both themes now carry the amber toward the panel until the absence sits BELOW the good
+   news — 5.94:1 in light, 6.25:1 in dark — and both stay clear of the floor. A claim about a
+   colour that has not been measured is a guess with a comment attached to it. */
+.ev-fare.tba{color:var(--pill-tba-fg);font-size:var(--fs-body)}
+.card .ev-fare.tba{color:color-mix(in srgb, var(--pill-tba-fg) 75%, var(--panel))}
+html[data-theme="light"] .card .ev-fare.tba{color:color-mix(in srgb, var(--pill-tba-fg) 90%, var(--panel))}
+
+/* ═══ THE AGATE LINE ══════════════════════════════════════════════════════
+   Newspaper classifieds, borrowed as a typographic convention: one ruled line
+   of small caps carrying what used to be five rounded chips and a meta row.
+
+   ⚠ ITS INK IS CENTRED BY TRIMMING THE LINE BOX, NOT BY NUDGING THE PADDING.
+   Gray caught this band riding high TWICE, and both times the DOM said 0.00px
+   because getBoundingClientRect measures the line BOX — which reserves
+   descender space that all-caps text never uses — rather than the painted
+   pixels. The first fix was an asymmetric padding equal to the measured ink
+   offset, and it was wrong in method as well as in value: that offset is a
+   property of whichever mono face the reader's device resolves, so a constant
+   measured on one machine is wrong on the next.
+   `text-box: trim-both cap alphabetic` deletes the problem instead of
+   compensating for it. It trims the line box to the cap height at the top and
+   the baseline at the bottom, so the box IS the ink, and symmetric padding is
+   then symmetric ink on every device and at every font size, by construction.
+   gate_card_band.js reads the painted pixels at 3x and holds it. */
+/* ⚠ SCOPED TO THE PHONE RATHER THAN RACING THE GRID RULE. The grid media query sits ABOVE this
+   point in the file, so a bare `.ev-hours:empty{display:none}` here wins at every width and quietly
+   undoes the reserved line — measured as a 2008px gap, because a display:none element reports a
+   rect of all zeros and the probe happily subtracted from nothing. */
+@media(max-width:699px){ .ev-hours:empty{display:none} }
+
+.ev-agate{margin:14px 14px 0;padding:8px 4px;text-align:center;
+  font:500 var(--fs-kicker)/1 var(--font-mono);color:var(--ink-2);letter-spacing:.09em;
+  text-transform:uppercase;font-variant-numeric:tabular-nums;
+  border-top:1px solid color-mix(in srgb, var(--cat, var(--line)) 72%, transparent);
+  border-bottom:1px solid color-mix(in srgb, var(--cat, var(--line)) 72%, transparent);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@supports (text-box: trim-both cap alphabetic){
+  .ev-agate{text-box:trim-both cap alphabetic;padding:9px 4px}
+}
+.ev-agate .dot{color:var(--ink-3);padding:0 3px;font-style:normal}
+.ev-agate .age{color:var(--pill-age-fg);font-weight:800}
+
+/* THE FOOT BAND — accession number · the crest on the centre axis · the stamp.
+   Fixed height, so the sponsored state is the same object at the same size
+   rather than a second layout. */
+/* ⚠ AND THE THREE CELLS KEEP A GAP. At 320 the award grew until its first rule
+   touched the crest — 0.0px between them — which reads as one collided object
+   rather than three marks on an axis. The gap is on the grid, so the crest
+   stays on the card's true centre while both outer cells give way to it. */
+.ev-foot{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
+  column-gap:8px;height:40px;margin-top:8px}
+.ev-foot > :first-child{justify-self:start}
+.ev-foot > :last-child{justify-self:end}
+/* the serial's baseline sat 1.6px above the stamp's because the two ranks are
+   different sizes and a centred BOX centres the leading, not the letters. Both
+   trim to their own ink, the same construction the agate band uses. */
+.accn{font:500 var(--fs-kicker)/1 var(--font-mono);color:var(--ink-2);
+  letter-spacing:.06em;font-variant-numeric:tabular-nums;white-space:nowrap}
+/* ⚠ NAMED ev-crest, NOT crest. `.crest` is already the hero's fine texture
+   layer at the top of this file, and it carries position:absolute — a card
+   crest under that name inherited it and painted itself into the card's
+   bottom-left corner on top of the accession number. One name, one object. */
+.ev-crest{flex:none;color:var(--cat, var(--orn-rule));opacity:.9}
+/* the sponsored state: a disclosure, in muted ink, with no colour and no box.
+   What a sponsor buys is a placement, never a verdict, so the stamp beside it
+   is untouched. */
+.spon{display:flex;flex-direction:column;gap:3px;min-width:0}
+.spon-name{font:600 var(--fs-small)/1.2 var(--font-sans);color:var(--ink-2);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.spon-mark{font:700 var(--fs-kicker)/1 var(--font-mono);color:var(--ink-3);
+  text-transform:uppercase;letter-spacing:.13em;white-space:nowrap}
+
+/* an opening's kicker carries the confirmed-green: its whole claim is
+   "new, and we checked" — semantic colour, not decoration */
+.card.opening .ev-kicker{color:var(--ok)}
 .new-flag{display:inline-flex;align-items:center;margin-right:6px;padding:2.5px 8px;
   border-radius:var(--r-pill);font:800 var(--fs-kicker)/1.2 var(--font-sans);letter-spacing:.1em;
   text-transform:uppercase;color:var(--pill-free-fg);background:var(--pill-free-bg);
@@ -934,21 +1099,48 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
 .pill.age{background:var(--pill-age-bg);color:var(--pill-age-fg);border-color:var(--pill-age-line)}
 .tag{display:inline-flex;align-items:center;border-radius:var(--r-pill);padding:4px 10px;
   font:600 var(--fs-small)/1.3 var(--font-sans);color:var(--tag-fg);border:1px solid var(--tag-line)}
-/* "$ TBA" spoken inside running prose */
-.tba-inline{font-family:var(--font-mono);font-size:.92em;word-spacing:-.34ch;
+/* the no-price state spoken inside running prose. The negative word-spacing went
+   with the words: it existed only to close mono's cell-width gap in "$  TBA". */
+.tba-inline{font-family:var(--font-mono);font-size:.92em;
   color:var(--pill-tba-fg);background:var(--pill-tba-bg);border:1px solid var(--pill-tba-line);
   border-radius:6px;padding:1px 6px;white-space:nowrap}
 
 /* ======================================================= THE VERIFIED STAMP
    The moat, worn as a stamp: teal tick, mono date, a perforated edge.
    Quiet on every card; pressed as a seal on the detail page. */
-.verified{display:inline-flex;align-items:center;gap:6px;margin-left:auto;
-  font:600 var(--fs-kicker)/1 var(--font-mono);color:var(--ink-3);letter-spacing:.02em;
-  font-variant-numeric:tabular-nums;background:var(--ok-wash);
-  border:1px dashed var(--ok-line);border-radius:7px;padding:5px 8px;
+/* ⚠ 08/09 — IT IS AN AWARD NOW, NOT AN EIGHTH PILL. The stamp used to be a
+   dashed rounded box in grey ink, which put it at the visual rank of the tag
+   "Stroller-ok" — the moat rendered as the least important object on the card.
+   The precedent is the printed Michelin mark: small caps between two fine
+   rules, ends tapered by the house taper so it never closes into a box. It is
+   now the only green object and the only ruled mark in the foot band, which is
+   what "it must outrank a tag" means in pixels. Precedent only; no Michelin
+   artwork is used and the tick is this project's own path. */
+.verified{position:relative;display:inline-flex;align-items:center;gap:6px;
+  padding:7px 6px;color:var(--ok);
+  font:800 var(--fs-small)/1 var(--font-sans);letter-spacing:.1em;
+  text-transform:uppercase;font-variant-numeric:tabular-nums;
   transition:transform var(--t-fast) var(--ease)}
+.verified::before,.verified::after{content:"";position:absolute;left:0;right:0;height:4px;
+  pointer-events:none;background-color:var(--ok);
+  -webkit-mask-image:linear-gradient(90deg,transparent,black 9%,black 91%,transparent),
+                     linear-gradient(90deg,transparent,black 12%,black 88%,transparent);
+          mask-image:linear-gradient(90deg,transparent,black 9%,black 91%,transparent),
+                     linear-gradient(90deg,transparent,black 12%,black 88%,transparent);
+  -webkit-mask-size:100% 1px,72% 1px;
+          mask-size:100% 1px,72% 1px;
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.verified::before{top:0;-webkit-mask-position:50% 100%,50% 0;mask-position:50% 100%,50% 0}
+.verified::after{bottom:0;-webkit-mask-position:50% 0,50% 100%;mask-position:50% 0,50% 100%}
+@supports (text-box: trim-both cap alphabetic){
+  .accn,.verified{text-box:trim-both cap alphabetic}
+}
 .verified svg{width:13px;height:13px;flex:none}
 .verified .tick{stroke:var(--ok)}
+/* the second state: a named source, but no day anybody read the venue's own page.
+   Muted, tickless, and deliberately not green — see award() in build_site_pages.js. */
+.verified.is-sourced{color:var(--ink-3)}
+.verified.is-sourced::before,.verified.is-sourced::after{background-color:var(--ink-3);opacity:.7}
 /* on hover the stamp presses — the one detail a screenshot won't show
    and a hand will find */
 .card:hover .verified{transform:rotate(-3deg) scale(1.06)}
@@ -1510,8 +1702,8 @@ div.foot-fine{border-top:1px solid var(--line-soft);margin-top:var(--s-6);paddin
     82%{transform:translateY(1px) scale(1)}
     100%{opacity:1;transform:translateY(0) scale(1)}
   }
-  /* the price lands AFTER its ticket is on the table — drop, touch, settle */
-  .ev-top .pill{animation:land .3s var(--ease-snap) both;
+  /* the fare lands AFTER the card is on the table — drop, touch, settle */
+  .ev-fare{animation:land .3s var(--ease-snap) both;
     animation-delay:calc(var(--i,0)*60ms + 230ms)}
   .detail-pills .pill{animation:land .32s var(--ease-snap) 180ms both}
   @keyframes land{
@@ -1748,6 +1940,26 @@ html[data-theme="light"]{
   --cat-place:#5d6873;  --catw-place:rgba(93,104,115,.08);
   --ok-ink:#0c7a5a;
 }
+/* the mark ink is the hue itself; the TEXT ink is the hue carried toward the
+   body colour until it clears the contrast floor on every ground the card
+   paints. Dark theme needs no mixing — measured 4.5 to 6.7 across all nine.
+   ⚠ AND IT IS DECLARED HERE, ON THE ELEMENT THAT OWNS --cat, NOT ON :root.
+   The first version put both declarations on :root and on html[data-theme],
+   where --cat does not exist. `var(--cat)` with nothing to substitute makes the
+   whole declaration GUARANTEED-INVALID at computed-value time, and an invalid
+   custom property inherits as invalid — so every card fell through to the
+   fallback and every kicker on 592 pages painted the same gold, in both themes.
+   The contrast floor was met by accident and the palette was never on screen.
+   ⚠ A GREEN GATE WAS NOT PROOF THE STEP DID ANYTHING: gate_card_ink compared
+   luminance and read the category from the DOM attribute, so it certified nine
+   categories of one colour. It compares painted HUES now. */
+/* ⚠ DARK NEEDS A MIX TOO, and the claim that it did not was made against the plain panel. On the
+   card's own washed head the darkest hue, movie, measures 4.44:1 — under the floor by four
+   hundredths, which is exactly the kind of miss that survives a spot check. Carrying every hue 10%
+   toward the body ink takes the worst case to 4.87:1 and costs no visible saturation. Same
+   construction as light, opposite direction, because in dark the body ink is the pale one. */
+.card[data-cat]{ --cat-ink:color-mix(in srgb, var(--cat) 90%, var(--ink)) }
+html[data-theme="light"] .card[data-cat]{ --cat-ink:color-mix(in srgb, var(--cat) 72%, var(--ink)) }
 .card[data-cat="music"]  {--cat:var(--cat-music);  --catw:var(--catw-music)}
 .card[data-cat="art"]    {--cat:var(--cat-art);    --catw:var(--catw-art)}
 .card[data-cat="movie"]  {--cat:var(--cat-movie);  --catw:var(--catw-movie)}
@@ -1758,9 +1970,26 @@ html[data-theme="light"]{
 .card[data-cat="stem"]   {--cat:var(--cat-stem);   --catw:var(--catw-stem)}
 .card[data-cat="place"]  {--cat:var(--cat-place);  --catw:var(--catw-place)}
 .card[data-cat="opening"]{--cat:var(--cat-opening);--catw:var(--catw-opening)}
-.card[data-cat] .ev-top{
-  box-shadow:inset 4px 0 0 var(--cat);
-  background:linear-gradient(0deg,var(--catw),var(--catw)),var(--band)}
+/* ⚠ AND THE SEVEN VALUES THAT HAD NO HUE AT ALL — 704 cards, every promotion among them, painting
+   the fallback gold while their crests varied by category. The promotions deck files by its own
+   five-value scheme and two event values (`iconic`, `coastal`) predate this map. No twelfth hue is
+   invented: each is pointed at the existing hue closest to what it means, because the job of the
+   ink is to separate a card from its neighbours on the page it is actually on. */
+.card[data-cat="food"]      {--cat:var(--cat-town);   --catw:var(--catw-town)}
+.card[data-cat="activity"]  {--cat:var(--cat-nature); --catw:var(--catw-nature)}
+.card[data-cat="attraction"]{--cat:var(--cat-beach);  --catw:var(--catw-beach)}
+.card[data-cat="retail"]    {--cat:var(--cat-art);    --catw:var(--catw-art)}
+.card[data-cat="service"]   {--cat:var(--cat-place);  --catw:var(--catw-place)}
+.card[data-cat="iconic"]    {--cat:var(--cat-town);   --catw:var(--catw-town)}
+.card[data-cat="coastal"]   {--cat:var(--cat-beach);  --catw:var(--catw-beach)}
+/* ⚠ THE CATEGORY USED TO INK A DARK STUB BAND AND A 4px SPINE. Both went with
+   the stub. It now inks the card's MARKS — the kicker, the swelled rule, the
+   agate hairlines and the crest — which is the same signal carried by the
+   objects a reader is already looking at instead of by a block of colour.
+   The eleven-hue system finally gets spent at full strength rather than at 6%
+   opacity behind everything, which is the "plain as hell" note in one line. */
+.card[data-cat]{background:linear-gradient(180deg, var(--catw), transparent 88px),
+  linear-gradient(180deg, var(--sheen), transparent 46px), var(--panel)}
 
 /* the same hues answer on the what/ hub — each door wears its line's color,
    so the tile you tap and the tickets you land on are visibly one system */
@@ -1925,7 +2154,7 @@ main:has(.chip[aria-current="true"][href$="new/index.html"]) .new-flag{
   padding:1.5px 7px}
 html[data-theme="light"] main:has(.chip[aria-current="true"][href$="new/index.html"]) .new-flag{
   color:var(--pill-free-fg)}
-main:has(.chip[aria-current="true"][href$="new/index.html"]) .card.opening .ev-when{
+main:has(.chip[aria-current="true"][href$="new/index.html"]) .card.opening .ev-kicker{
   color:var(--ink);font-weight:700}
 main:has(.chip[aria-current="true"][href$="new/index.html"]) .ev-why{
   -webkit-line-clamp:3}
