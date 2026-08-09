@@ -135,6 +135,12 @@
   --fs-small:13px;/* meta, w500, lh 1.5 */
   --fs-fine:13px; /* fine print folds into small — one quiet size, not two */
   --fs-pill:13px; /* pills + badges, w700, ls .02em */
+  /* ⚠ AN EIGHTH STEP, ADDED DELIBERATELY AND ON THE RECORD. Four consecutive ranks at the bottom
+     of the card were all 11px mono differing only in colour — the exact failure the paragraph above
+     records, reproduced at the foot of the object it was written about. The agate band and the
+     catalogue number are FURNITURE rather than voice, so they take a step below micro. It holds the
+     10px mono floor exactly, and both measure over 7:1 in either theme. */
+  --fs-agate:10px;
   --fs-kicker:11px;/* the one uppercase kicker style, w800, ls .18em */
 
   /* ============================================================= THE SCENE
@@ -434,12 +440,9 @@ html[data-theme="light"] .site-head{background:rgba(238,240,239,.9)}
 .rail-app{position:relative;margin:0 0 var(--s-4);padding:0 0 var(--s-4)}
 .rail-app::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;pointer-events:none;
   background-color:var(--orn-rule);opacity:.55;
-  -webkit-mask-image:linear-gradient(90deg,transparent,black 14%,black 86%,transparent),var(--orn-swell);
-          mask-image:linear-gradient(90deg,transparent,black 14%,black 86%,transparent),var(--orn-swell);
-  -webkit-mask-size:100% 1px,min(90px,100%) 5px;
-          mask-size:100% 1px,min(90px,100%) 5px;
-  -webkit-mask-position:50% 2px,50% 50%;
-          mask-position:50% 2px,50% 50%;
+  -webkit-mask-image:var(--orn-swell);mask-image:var(--orn-swell);
+  -webkit-mask-size:100% 100%;mask-size:100% 100%;
+  -webkit-mask-position:50% 50%;mask-position:50% 50%;
   -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
 .rail-app .btn{width:100%;min-height:44px;padding:10px 16px;font-size:15px}
 .rail-app .fine{margin:8px 0 0;color:var(--ink-3)}
@@ -483,8 +486,7 @@ html[data-theme="light"] .site-head{background:rgba(238,240,239,.9)}
    that can drift out of register with anything else. */
 .site-head::before,.site-head::after{content:"";position:absolute;left:22px;right:22px;height:5px;
   pointer-events:none;z-index:1;background-color:var(--orn-rule);
-  -webkit-mask-image:linear-gradient(90deg,transparent,black 10%,black 90%,transparent),var(--orn-swell);
-          mask-image:linear-gradient(90deg,transparent,black 10%,black 90%,transparent),var(--orn-swell);
+  -webkit-mask-image:var(--orn-swell);mask-image:var(--orn-swell);
   -webkit-mask-size:100% 1px,min(104px,100%) 5px;
           mask-size:100% 1px,min(104px,100%) 5px;
   -webkit-mask-position:50% 2px,50% 50%;
@@ -844,11 +846,27 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
      card — which moved the hole from the ornament to the place the eye enters. Split the slack. */
   .card h3{min-height:50px;display:flex;align-items:center;justify-content:center}
   .ev-why{min-height:39px}
-  /* ⚠ THE VENUE FLOOR IS GONE, because what it was for is fixed at the root now. It existed to
-     stop a one-line venue leaving a hole in a two-line box — and the hole was the TOP-SETTING, not
-     the box. With the rank centring its own text there is nothing to reserve against, and the floor
-     was costing up to sixteen pixels a card at grid widths against an 8% density tripwire. Slack a
-     card does not need goes to the one gap designed to absorb it. */
+  /* ⚠ THE FLOORS ARE BACK, AND THEY WORK NOW, WHICH THEY DID NOT BEFORE. They were written once
+     while the cascade trap below was still live, so `align-items` was inert, they reserved space
+     nothing centred in, and pulling them was right at the time. With the rank centring its own
+     text they do the job they were written for: 38.5px of empty ground beside a card showing 17.5
+     is the first thing a designer's eye lands on in a stretched row, and "the slack has to go
+     somewhere" stops being an answer at twice the gap.
+     ⚠ AND THE DENSITY BUDGET IS MEASURED, NOT ASSUMED: moving the venue and blurb to the serif
+     took 15 to 30 css px OFF every card at 1100, so these floors spend space the last round freed
+     rather than space the card never had. */
+  /* ⚠ AND THE FLOOR HAS TO APPLY TO THE EMPTY ONE OR IT MAKES THINGS WORSE, WHICH IS WHAT THE
+     FIRST ATTEMPT DID. A floor on the ranks that HAVE content only makes those cards taller; the
+     card with nothing still reserves nothing, so the variance grows and the density budget pays
+     for it twice. Measured: gap spread went from 23.8 to 23.1 and the 1100 median from 326 to 350,
+     which is the wrong direction on both. It is the EMPTY rank that has to hold its line. */
+  /* ⚠ AND THE VENUE FLOOR IS REFUSED ON THE NUMBERS, not on principle. It closes the last
+     outlier — one card in a row of six, gap 31px against its neighbours' 15 — and it costs 16px on
+     the median at 1100, which takes the card from +5.3% against the ticket it replaced to +10.4%
+     and through an 8% tripwire. Density is a stated feature and one soft gap on the shortest card
+     in a row is what margin-top:auto is for. Measured both ways rather than argued. */
+  .ev-hours{min-height:17px}
+  .ev-hours:empty{display:block}
   /* ⚠ THE TWO-LINE HOURS FLOOR AND THE EN-DASH ARE BOTH GONE, and both were mine. The floor
      reserved a line nothing filled, which put 33px of cream above the ornament on a desktop row
      where the phone had 16. The dash was worse: a 4px mark alone in a 60px void, on a card whose
@@ -952,7 +970,12 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
    "the way it was..", which is a typo, not a truncation. Measured at 1100 where the
    3-up columns are narrowest, the shortfall is about four pixels. The inset is symmetric,
    so the centre axis is untouched. */
-.ev-why{margin:6px 14px 0;padding:0 6px;font:var(--fs-small)/1.55 var(--font-serif);color:var(--ink-2);text-align:center;
+/* ⚠ HALF A STEP LIGHTER THAN THE VENUE, because two ranks at one ink let the bigger one win. The
+   blurb and the venue were both --ink-2, so thirteen pixels over two lines out-massed eleven over
+   one and rank 5 read before rank 4 — the pitch arriving before the place. Half a step is all it
+   takes; the venue must not become a second headline again. */
+.ev-why{margin:6px 14px 0;padding:0 6px;font:var(--fs-small)/1.55 var(--font-serif);
+  color:color-mix(in srgb, var(--ink-2) 85%, var(--panel));text-align:center;
   display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
 
 /* RANK 5 — the hours, which is the half of the old schedule line that is not
@@ -1055,11 +1078,13 @@ html[data-theme="light"] .card .ev-fare.tba{color:color-mix(in srgb, var(--pill-
    the baseline at the bottom, so the box IS the ink, and symmetric padding is
    then symmetric ink on every device and at every font size, by construction.
    gate_card_band.js reads the painted pixels at 3x and holds it. */
-/* nothing to say about the hours means no rank, at every width */
-.ev-hours:empty{display:none}
+/* ⚠ SCOPED, BECAUSE THE GRID RULE SITS ABOVE THIS POINT IN THE FILE and an unscoped collapse here
+   wins at every width and silently undoes the reserved line. On a phone there is no row to line up
+   with, so a card with nothing to say about its hours simply has one rank fewer. */
+@media(max-width:699px){ .ev-hours:empty{display:none} }
 
 .ev-agate{margin:10px 14px 0;padding:8px 4px;text-align:center;
-  font:500 var(--fs-kicker)/1 var(--font-mono);color:var(--ink-2);letter-spacing:.09em;
+  font:500 var(--fs-agate)/1 var(--font-mono);color:var(--ink-2);letter-spacing:.1em;
   text-transform:uppercase;font-variant-numeric:tabular-nums;
   border-top:1px solid color-mix(in srgb, var(--cat, var(--line)) 72%, transparent);
   border-bottom:1px solid color-mix(in srgb, var(--cat, var(--line)) 72%, transparent);
@@ -1084,7 +1109,7 @@ html[data-theme="light"] .card .ev-fare.tba{color:color-mix(in srgb, var(--pill-
 /* the serial's baseline sat 1.6px above the stamp's because the two ranks are
    different sizes and a centred BOX centres the leading, not the letters. Both
    trim to their own ink, the same construction the agate band uses. */
-.accn{font:500 var(--fs-kicker)/1 var(--font-mono);color:var(--ink-2);
+.accn{font:500 var(--fs-agate)/1 var(--font-mono);color:var(--ink-2);
   letter-spacing:.06em;font-variant-numeric:tabular-nums;white-space:nowrap}
 /* ⚠ NAMED ev-crest, NOT crest. `.crest` is already the hero's fine texture
    layer at the top of this file, and it carries position:absolute — a card
@@ -1247,7 +1272,7 @@ a.nap-line:hover{color:var(--gold-bright)}
    artwork is used and the tick is this project's own path. */
 .verified{position:relative;display:inline-flex;align-items:center;gap:6px;
   padding:7px 6px;color:var(--ok);
-  font:800 var(--fs-small)/1 var(--font-sans);letter-spacing:.1em;
+  font:700 var(--fs-kicker)/1 var(--font-mono);letter-spacing:.14em;
   text-transform:uppercase;font-variant-numeric:tabular-nums;
   transition:transform var(--t-fast) var(--ease)}
 .verified::before,.verified::after{content:"";position:absolute;left:0;right:0;height:4px;
@@ -2283,10 +2308,9 @@ main:has(.chip[aria-current="true"][href$="new/index.html"]) .new-flag{
   padding:1.5px 7px}
 html[data-theme="light"] main:has(.chip[aria-current="true"][href$="new/index.html"]) .new-flag{
   color:var(--pill-free-fg)}
-main:has(.chip[aria-current="true"][href$="new/index.html"]) .card.opening .ev-kicker{
-  color:var(--ink);font-weight:700}
-main:has(.chip[aria-current="true"][href$="new/index.html"]) .ev-why{
-  -webkit-line-clamp:3}
+/* ⚠ THIS FORK IS DELETED. It took the openings' kicker off the category ink and gave their blurb a
+   third line, so one of the four card families was a different object at two ranks on one page.
+   A card is one card. */
 
 /* --------------------------------------- 5 · THE VERIFY PANEL IS THE PRODUCT
    "What we checked, and when" is the thing no other events site has, and it
@@ -2417,7 +2441,19 @@ html[data-theme="light"]{
 :root{ --orn-rule:var(--gold); }
 html[data-theme="light"]{ --orn-rule:#7a4e08; }
 :root{
-  --orn-swell:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20'%3E%3Cpath d='M150 1.5c0 8.1555533-40 8.5-145 9 105 .5 145 .844447 145 9 0-8.155553 40-8.5 145-9-105-.5-145-.8444467-145-9z'/%3E%3C/svg%3E");
+  /* ⚠ THIS IS DRAWN, NOT TRACED, AND THE ONE IT REPLACES WAS THE WRONG ARTEFACT. The old figure
+     was Wikimedia's "Decorative text divider — CENTRAL FLARE", and its name is the diagnosis: both
+     of its control points sit within 40 units of centre on a 300-unit box, so the silhouette
+     collapses to about ±13% of the span and the remaining 87% is under one device pixel tall —
+     below the renderer's floor, so it simply is not there. Measured on the card, ink was present
+     across 22% of the rule at 390 and 19% at 1100. A flare on a hairline was the right use of that
+     file and it is not what the ornament law asks for.
+     The law asks, in its own words, for "a tapered hairline spanning the edge with a printer's
+     spindle swelling at its centre, tapering to a point at both ends". That is a SWELLED RULE, a
+     generic form of typographic furniture that predates copyright by centuries, and this is one:
+     a lens across the full span with a spindle at its middle. Same mark everywhere it is used, so
+     there is still exactly one ornament dialect on this site. */
+  --orn-swell:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20'%3E%3Cpath d='M2 10C55 8.9 100 5.6 132 4.2c6-1.4 12-2.6 18-2.6s12 1.2 18 2.6c32 1.4 77 4.7 130 5.8-53 1.1-98 4.4-130 5.8-6 1.4-12 2.6-18 2.6s-12-1.2-18-2.6C100 14.4 55 11.1 2 10z'/%3E%3C/svg%3E");
 }
 
 /* 1 · the divider. Both halves are the SAME gradient, the right one mirrored by
@@ -2548,14 +2584,10 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
 .btn.primary{position:relative;background-color:var(--gold);background-image:none}
 .btn.primary::before{content:"";position:absolute;inset:4px 14px;pointer-events:none;
   background-color:var(--accent-ink);
-  -webkit-mask-image:linear-gradient(90deg,transparent,black 12%,black 88%,transparent),var(--orn-swell),
-    linear-gradient(90deg,transparent,black 12%,black 88%,transparent),var(--orn-swell);
-          mask-image:linear-gradient(90deg,transparent,black 12%,black 88%,transparent),var(--orn-swell),
-    linear-gradient(90deg,transparent,black 12%,black 88%,transparent),var(--orn-swell);
-  -webkit-mask-size:100% 1px,min(78px,100%) 5px,100% 1px,min(78px,100%) 5px;
-          mask-size:100% 1px,min(78px,100%) 5px,100% 1px,min(78px,100%) 5px;
-  -webkit-mask-position:50% 2px,50% 0,50% calc(100% - 2px),50% 100%;
-          mask-position:50% 2px,50% 0,50% calc(100% - 2px),50% 100%;
+  -webkit-mask-image:var(--orn-swell),var(--orn-swell);
+          mask-image:var(--orn-swell),var(--orn-swell);
+  -webkit-mask-size:100% 5px,100% 5px;mask-size:100% 5px,100% 5px;
+  -webkit-mask-position:50% 0,50% 100%;mask-position:50% 0,50% 100%;
   -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
   opacity:.85}
 
@@ -2577,12 +2609,9 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
 .scope{position:relative;padding-top:9px;padding-bottom:9px}
 .scope::before,.scope::after{content:"";position:absolute;left:16px;right:16px;height:5px;
   pointer-events:none;background-color:var(--orn-rule);
-  -webkit-mask-image:linear-gradient(90deg,transparent,black 14%,black 86%,transparent),var(--orn-swell);
-          mask-image:linear-gradient(90deg,transparent,black 14%,black 86%,transparent),var(--orn-swell);
-  -webkit-mask-size:100% 1px,min(90px,100%) 5px;
-          mask-size:100% 1px,min(90px,100%) 5px;
-  -webkit-mask-position:50% 2px,50% 50%;
-          mask-position:50% 2px,50% 50%;
+  -webkit-mask-image:var(--orn-swell);mask-image:var(--orn-swell);
+  -webkit-mask-size:100% 100%;mask-size:100% 100%;
+  -webkit-mask-position:50% 50%;mask-position:50% 50%;
   -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
   opacity:.72}
 .scope::before{top:0}
