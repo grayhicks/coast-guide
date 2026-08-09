@@ -3,17 +3,18 @@ VERSION:2.0
 PRODID:-//Gulf Coast Adventures//Gulf Coast events//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Blue Wahoos vs Knoxville — Fireworks 8/22 · Vet-Free 8/23
+X-WR-CALNAME:Blue Wahoos vs Knoxville: Fireworks 8/22 · Vet-Free 8/23
 BEGIN:VEVENT
 UID:ev_wahoos_knox-2026-08-18@coast-guide
 DTSTAMP:20260818T000000Z
 DTSTART;VALUE=DATE:20260818
 DTEND;VALUE=DATE:20260824
-SUMMARY:Blue Wahoos vs Knoxville — Fireworks 8/22 · Vet-Free 8/23
-DESCRIPTION:Last big August homestand — same playbook: Saturday firework
- s\, free-vet Sunday with run-the-bases.\nPrice: from $10\nArea: Pensacola
- \nTimes: Aug 18–23 · Fireworks Sat 8/22 · Military Family Sunday 8/23
- \nhttps://grayhicks.github.io/coast-guide/events/ev-wahoos-knox.html
+SUMMARY:Blue Wahoos vs Knoxville: Fireworks 8/22 · Vet-Free 8/23
+DESCRIPTION:The last big August homestand runs the same playbook: Saturday
+  fireworks\, and a free-vet Sunday with run-the-bases.\nPrice: from $10\n
+ Area: Pensacola\nTimes: Aug 18-23 · Fireworks Sat 8/22 · Military Famil
+ y Sunday 8/23\nhttps://grayhicks.github.io/coast-guide/events/ev-wahoos-k
+ nox.html
 LOCATION:Blue Wahoos Stadium\, 351 W Cedar St\, Pensacola\, FL 32502
 URL:https://grayhicks.github.io/coast-guide/events/ev-wahoos-knox.html
 END:VEVENT

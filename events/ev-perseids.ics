@@ -3,21 +3,21 @@ VERSION:2.0
 PRODID:-//Gulf Coast Adventures//Gulf Coast events//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Perseid Meteor Shower — NEW MOON Peak Year
+X-WR-CALNAME:Perseid Meteor Shower: NEW MOON Peak Year
 BEGIN:VEVENT
 UID:ev_perseids-2026-08-12@coast-guide
 DTSTAMP:20260812T000000Z
 DTSTART;VALUE=DATE:20260812
 DTEND;VALUE=DATE:20260814
-SUMMARY:Perseid Meteor Shower — NEW MOON Peak Year
-DESCRIPTION:This is the year: the Perseids peak on a NEW MOON\, so dark sk
- ies could hit ~60–90 meteors/hour. No telescope needed — blankets in 
- the yard\, let the astronomy fan run the count. EAAA's Big Lagoon gaze on
-  8/8 is the warm-up.\nPrice: Free\nArea: Pensacola Beach & Perdido\nTimes
- : Peak nights Aug 11–12 + 12–13 · best 11 PM–dawn\nhttps://grayhic
- ks.github.io/coast-guide/events/ev-perseids.html
-LOCATION:Your backyard (north sky) — or Big Lagoon State Park for dark s
- ky\, 12301 Gulf Beach Hwy\, Pensacola\, FL 32507
+SUMMARY:Perseid Meteor Shower: NEW MOON Peak Year
+DESCRIPTION:The Perseids peak on a new moon this year\, so dark skies coul
+ d hit roughly 60-90 meteors per hour. No telescope is needed. Bring blank
+ ets to the yard and let the astronomy fan run the count. EAAA's Big Lagoo
+ n gaze on 8/8 is the warm-up.\nPrice: Free\nArea: Pensacola Beach & Perdi
+ do\nTimes: Peak nights Aug 11-12 + 12-13 · best 11 PM to dawn\nhttps://g
+ rayhicks.github.io/coast-guide/events/ev-perseids.html
+LOCATION:Your backyard (north sky)\, or Big Lagoon State Park for dark sky
+ \, 12301 Gulf Beach Hwy\, Pensacola\, FL 32507
 URL:https://grayhicks.github.io/coast-guide/events/ev-perseids.html
 END:VEVENT
 END:VCALENDAR

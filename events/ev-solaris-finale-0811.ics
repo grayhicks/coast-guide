@@ -3,23 +3,22 @@ VERSION:2.0
 PRODID:-//Gulf Coast Adventures//Gulf Coast events//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Sunset & Fireworks Dinner Cruise — last sailing of the seas
- on
+X-WR-CALNAME:Sunset & Fireworks Dinner Cruise: last sailing of the season
 BEGIN:VEVENT
 UID:ev_solaris_finale_0811-2026-08-11@coast-guide
 DTSTAMP:20260811T000000Z
 DTSTART;VALUE=DATE:20260811
 DTEND;VALUE=DATE:20260812
-SUMMARY:Sunset & Fireworks Dinner Cruise — last sailing of the season
-DESCRIPTION:A plated dinner on a three-deck yacht that leaves the marina i
- nto the sunset and turns for Baytowne's fireworks. 08/11 is the last one 
- — the season runs Tuesdays and Thursdays from 05/26 and ends here.\nPri
- ce: not published by the venue — confirm before you go\nArea: Destin & 
- Fort Walton\nTimes: Tue 08/11/2026 · 6:30 PM boarding · the season's fi
- nal run\nChecked against the venue's own page on 2026-08-08\nhttps://gray
- hicks.github.io/coast-guide/events/ev-solaris-finale-0811.html
-LOCATION:SOLARIS Yacht — Baytowne Marina\, 8330 Mike Hayes Dr\, Miramar 
- Beach\, FL 32550
+SUMMARY:Sunset & Fireworks Dinner Cruise: last sailing of the season
+DESCRIPTION:This plated dinner sails on a three-deck yacht that leaves the
+  marina into the sunset and turns for Baytowne's fireworks. 08/11 is the 
+ last one. The season runs Tuesdays and Thursdays from 05/26 and ends here
+ .\nPrice: not published by the venue\, so confirm before you go\nArea: De
+ stin & Fort Walton\nTimes: Tue 08/11/2026 · 6:30 PM boarding · the seas
+ on's final run\nChecked against the venue's own page on 2026-08-08\nhttps
+ ://grayhicks.github.io/coast-guide/events/ev-solaris-finale-0811.html
+LOCATION:SOLARIS Yacht\, Baytowne Marina\, 8330 Mike Hayes Dr\, Miramar Be
+ ach\, FL 32550
 URL:https://grayhicks.github.io/coast-guide/events/ev-solaris-finale-0811.
  html
 END:VEVENT

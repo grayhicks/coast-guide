@@ -369,15 +369,49 @@ html[data-theme="light"] .site-head{background:rgba(238,240,239,.9)}
   flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
   /* ⚠ A SCROLLING ROW THAT ENDS MID-WORD READS AS BROKEN, NOT AS SCROLLABLE. At 390 row one cut
      at "Date N" and row two at "Volu", and a truncated word in the first row of pixels is the
-     fastest way a site looks unfinished. The mask fades the last 28px to nothing, so the cut
+     fastest way a site looks unfinished. The mask fades the last 56px to nothing, so the cut
      always lands on a gradient rather than on a letter, and the fade itself is the affordance
-     that says there is more to the right. The rows still scroll; they just stop lying about it. */
-  -webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 28px),transparent);
-          mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 28px),transparent)}
+     that says there is more to the right. The rows still scroll; they just stop lying about it.
+     ⚠ 08/09 — 56px, NOT 28, AND IT IS ONE NUMBER FOR BOTH ROWS NOW. The about row was moved to 56
+     first, with the finding written beside it: at 28px the last word is sliced through its
+     letterforms while the fade has barely started, and a cold read of the page called it a
+     truncation bug. The doing row then took a fifth destination (Promotions, R4-11.5) and went
+     from 325px of links to 425px in a 350px box, so it cuts at every phone width the same way the
+     about row always has. Two fade lengths on two rows of the same header was the divergence; one
+     number is the fix. Measured: 425 in 280 at 320, in 320 at 360, in 350 at 390, in 390 at 430. */
+  -webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 56px),transparent);
+          mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 56px),transparent)}
 .site-head nav::-webkit-scrollbar{display:none}
+/* ⚠ 08/09 — THE DOING ROW WRAPS BELOW 420 AND STOPS CUTTING WORDS. A cold grade of the new
+   Promotions page named this first: at 390 row one ended "Date Night Pr" and the reader was ON the
+   Promotions page, so its own active state was off screen. A fade is the right affordance for a
+   strip you swipe; it is the wrong answer for the PRIMARY row, where the destination you are
+   standing on can end up past the edge.
+   Measured at 390: five links are 425px of content in a 350px box at 11px of side padding and
+   385px at 7px, so seven still overflows and wrapping is what actually fixes it. Wrapping costs
+   one 44px line on a phone and nothing at all from 420 up, where the row fits again. The about
+   row keeps scrolling — it is secondary, nobody navigates from it under pressure, and a third
+   stacked row is the cost the last pass correctly refused to pay. */
+/* ⚠ AND A WRAPPED HEADER MUST NOT ALSO BE STICKY. Both rows wrapping costs 234px at 390 and
+   326px at 320, which as a sticky bar is a quarter to a third of the phone permanently gone — the
+   exact objection the last pass raised against wrapping, and it was right about the cost while
+   being wrong about which half to give up. A half-rendered word is a defect a reader sees on every
+   page; a header that scrolls away is a header. So below 460 the rows wrap AND the bar releases,
+   which buys the whole nav being legible for nothing but a swipe back to the top. From 460 up it
+   is one line, it stays stuck, and nothing changes. */
+@media (max-width:459px){
+  .site-head .nav-scroll,.site-head .nav-about{flex-wrap:wrap;overflow-x:visible;
+    -webkit-mask-image:none;mask-image:none}
+  .site-head{position:static}
+  /* ⚠ A WRAPPED FLEX ROW PACKS GREEDILY AND STRANDS THE LAST LINK ALONE. Five destinations are
+     424px in a 350px column, so four fit the first line and "Promotions" sat by itself on the
+     second, where a cold grade read it as a section heading rather than as a nav item. A three
+     column grid splits them three and two by construction, at every width, with no measuring. */
+  .site-head .nav-scroll{display:grid;grid-template-columns:repeat(3,auto);justify-content:center}
+}
 .site-head nav a{
   color:var(--ink-2);text-decoration:none;font-size:var(--fs-body);font-weight:600;
-  padding:0 11px;min-height:44px;display:inline-flex;align-items:center;
+  padding:0 7px;min-height:44px;display:inline-flex;align-items:center;
   border-radius:var(--r-field);white-space:nowrap;
   transition:transform var(--t-fast) var(--ease);
 }
@@ -471,9 +505,7 @@ html[data-theme="light"] .site-head{background:rgba(238,240,239,.9)}
    row on a sticky header that is already 146px tall on a 390 phone, which is a fifth of the
    screen before any content. Recorded rather than decided. */
 .nav-about{display:flex;align-items:center;gap:2px;flex-wrap:nowrap;min-width:0;
-  overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
-  -webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 56px),transparent);
-          mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 56px),transparent)}
+  overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
 .nav-about::-webkit-scrollbar{display:none}
 .nav-about a{
   color:var(--ink-3);text-decoration:none;font-size:var(--fs-fine);font-weight:600;
@@ -976,6 +1008,29 @@ html[data-theme="light"] .scope{background:linear-gradient(180deg, rgba(40,50,60
   white-space:nowrap;transition:transform var(--t-fast) var(--ease)}
 .chip:hover{color:var(--ink);border-color:var(--ink-3)}
 .chip:active{transform:scale(.97)}
+/* ⚠ EIGHT AREA CHIPS ARE 340px OF PHONE. A cold grade of a listing page counted three viewports of
+   controls before the first card at 390, and the largest single block was this one. Above 1024 the
+   rail is a column beside the listing and the eight chips cost nothing, so they stay; on a phone
+   the rail sits ON TOP of the product and they are replaced by one link to the page that carries
+   all eight. No filter is lost — every one of them is still its own URL, still in the nav under
+   "By area", and still one tap away. */
+/* ⚠ AND IT CARRIES NO CLASS OF ITS OWN, WHICH IS THE POINT. The first version gave the phone's
+   stand-in link a .rail-allareas class and it came up wearing a pale fill no other chip in the
+   rail had; a cold grade read that fill as a stuck hover state rather than as a link, twice. A
+   chip that is styled by its POSITION cannot diverge from its siblings, because it is the same
+   element with the same classes. It is simply the last chip in the areas row: below 1024 it is the
+   only one shown, above 1024 it is the only one hidden.
+   ⚠ AND THE GROUP IS rail-areas, NOT areas. The first name collided with .areas, a class this
+   stylesheet has carried for weeks on the By-area index, whose `.areas a` rule painted a panel
+   fill onto all eight chips. That fill is what the cold grade kept reading as a stuck hover state,
+   and it was never the stand-in link's doing — it was every area chip, inherited from a rule five
+   hundred lines away that mentions none of this. FOURTH TIME in this stylesheet. */
+@media (max-width:1023px){
+  .chip-row.rail-areas .chip:not(:last-child){display:none}
+}
+@media (min-width:1024px){
+  .chip-row.rail-areas .chip:last-child{display:none}
+}
 .chip[aria-current="true"],.chip.on{border-color:var(--gold);color:var(--gold-bright);
   background:rgba(217,164,65,.12);font-weight:700}
 /* the lit chip carries a harbor-light dot — you can find the active filter
@@ -992,7 +1047,12 @@ html[data-theme="light"] .chip.on::before{box-shadow:0 0 0 3px rgba(138,95,16,.1
   .listing,.index-layout{display:grid;grid-template-columns:240px 1fr;gap:var(--s-6);align-items:start}
   .rail,.filter-rail{position:sticky;top:76px}
   .rail .chip-row,.filter-rail .chip-row{flex-direction:column;align-items:stretch}
-  .rail .chip,.filter-rail .chip{justify-content:space-between}
+  /* ⚠ space-between TEARS THE DOT OFF ITS LABEL. On the desktop rail a chip is a full-width row,
+     and the current-page marker is a 7px ::before dot, so space-between pushed the dot to the far
+     left edge and the word to the far right with 340px of empty pill between them. A cold grade
+     read the dot as a stray bullet twice. The dot belongs to the word: the row is flex-start and
+     the gap does the spacing. */
+  .rail .chip,.filter-rail .chip{justify-content:flex-start}
   .filter-group{margin-bottom:var(--s-5)}
   .rail-h,.filter-group h2{font:800 var(--fs-kicker)/1 var(--font-sans);letter-spacing:.18em;
     text-transform:uppercase;color:var(--ink-3);margin:0 0 10px}
@@ -1158,7 +1218,9 @@ html[data-theme="light"] .jn{background:rgba(138,95,16,.1)}
 .steps li{position:relative;padding:10px 0 10px 26px;color:var(--ink-2);
   border-top:1px solid var(--line-soft);font-size:var(--fs-body)}
 .steps li:first-child{border-top:0}
-.steps li::before{content:"—";position:absolute;left:2px;color:var(--gold);font-weight:700}
+/* R4-G2 — the step marker was an em dash. The dash law is about what a reader SEES, and a reader
+   sees a dash here, so it is the house middot now. Same colour, same weight, no dash. */
+.steps li::before{content:"·";position:absolute;left:2px;color:var(--gold);font-weight:700}
 
 /* the verification note — the honesty, spoken, with the stamp pressed on it.
    The generated markup has no seal element, so the seal is drawn by CSS:
