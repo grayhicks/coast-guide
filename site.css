@@ -1117,6 +1117,39 @@ a.nap-line:hover{color:var(--gold-bright)}
 .sp-lede{margin:0 0 var(--s-5);font-size:var(--fs-lead);line-height:1.55;color:var(--ink-2);
   border-left:3px solid var(--gold);padding-left:var(--s-4)}
 
+/* ═══ THE PERSISTENT SUPPORT CONTROL ══════════════════════════════════
+   The house primary button's ground, made persistent, so the ask is on every
+   page rather than only on the two a reader has to already be looking at.
+   ⚠ IT CLEARS THE FOOTER AND THE THUMB. Fixed to the bottom-right with a
+   44px minimum target and a safe-area inset, so on a phone it sits above
+   the home indicator rather than under it, and it steps out of the way of
+   the footer's own controls by riding the viewport rather than the page.
+   ⚠ AND IT HAS NO ANIMATION AT ALL, which is a decision and not an
+   omission: a control that moves on every page of a four-hundred-page site
+   is a distraction the fourth time you see it, and the ornament is doing
+   the work of saying it is the important one. */
+.sup-float{position:fixed;right:max(14px, env(safe-area-inset-right));
+  bottom:max(14px, env(safe-area-inset-bottom));z-index:40;
+  display:inline-flex;align-items:center;min-height:44px;padding:11px 22px;
+  border-radius:var(--r-pill);background-color:var(--gold);color:var(--accent-ink);
+  font:800 var(--fs-small)/1 var(--font-sans);letter-spacing:.06em;text-transform:uppercase;
+  text-decoration:none;box-shadow:var(--shadow-2)}
+/* ⚠ AND IT DOES NOT WEAR THE SWELLED RULE, WHICH LOOKS LIKE AN OMISSION AND IS
+   NOT. The rail's "Open the app" button is a gold pill with the ornament on it,
+   and at the top of a listing page the float sits a few centimetres away — two
+   gold pills, same size, same mark, in one eyeful, reading as a pair of
+   siblings when they are a page control and persistent chrome. A MARK USED
+   TWICE IN ONE EYEFUL IS WALLPAPER; that law has been paid for here once
+   already, on the card. The ornament stays with the button that is asking to be
+   pressed on THIS page, and the float earns its prominence from the gold and
+   from never going away. */
+.sup-float:hover{background-color:var(--gold-bright)}
+.sup-float:focus-visible{outline:3px solid var(--gold-bright);outline-offset:3px}
+.sup-float-in{position:relative}
+/* ⚠ AND IT GETS OUT OF THE WAY OF THE FOOTER. Pinned to the viewport it would
+   otherwise sit on top of the footer's own links at the end of a long page. */
+.site-foot{padding-bottom:84px}
+
 /* =================================================================== PILLS */
 .pill{display:inline-flex;align-items:center;gap:5px;border-radius:var(--r-pill);
   padding:5px 11px;font:700 var(--fs-pill)/1.3 var(--font-sans);letter-spacing:.02em;
