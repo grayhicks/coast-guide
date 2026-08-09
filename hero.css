@@ -117,6 +117,7 @@
 .skbg.rev { animation-name: hk_skgR; }
 .sksoar { display: block; will-change: transform; animation: auto ease-in-out 0s infinite normal none running hk_sksoar; }
 .sksoar.big { animation-name: hk_sksoarB; }
+.skbnear.rev { animation-name: hk_gullnearR; }
 .grain { position: absolute; inset: -12%; z-index: 3; pointer-events: none; opacity: 0.028; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E"); background-size: 160px 160px; animation: 2.4s steps(1) 0s infinite normal none running hk_grain; }
 .ph-night .grain { opacity: 0.045; }
 .hero-eyebrow { display: inline-flex; align-items: center; gap: 7px; padding: 5px 14px; border-radius: 999px; font-family: "Cormorant Garamond", Georgia, serif; font-size: 11.5px; font-weight: 600; letter-spacing: 3.4px; color: rgb(255, 249, 236); text-transform: uppercase; background: rgba(12, 42, 58, 0.3); border: 1px solid rgba(255, 255, 255, 0.34); backdrop-filter: blur(2px); text-shadow: rgba(8, 24, 36, 0.4) 0px 1px 6px; }
@@ -314,8 +315,6 @@ html.hkscroll .tdec *, html.hkscroll .tdec ::before, html.hkscroll .tdec ::after
 .hk_mmark .mm_c4.mm_solid { fill: var(--mm4); fill-opacity: 0.22; }
 .hk_mmark .mm_hole { fill: none; }
 .hk_mmark .mm_water { stroke: var(--mm2); opacity: 0.72; }
-.hk_mmark .mm_petal { fill: var(--mm4); fill-opacity: 0.3; stroke: var(--mm4); transform-origin: 14.6px 12.2px; animation: 11s ease-in 0s infinite normal none running hk_petal; }
-@media (prefers-reduced-motion: reduce){.hk_mmark .mm_petal { animation: auto ease 0s 1 normal none running none; }}
 .hk_infoic .hk_mmark, .xp_paper .hk_mmark, .hk_infobody .hk_mmark { --mm1: #8A6A1E; --mm2: #1C7C74; --mm3: #A9822C; --mm4: #B8395A; }
 .hk_mmark .mm_water { stroke-width: 1.15; opacity: 0.5; }
 .hk_segb.on .hk_tmark .mm_solid { fill: currentcolor; fill-opacity: 0.26; }
@@ -334,6 +333,11 @@ html.hkscroll .tdec *, html.hkscroll .tdec ::before, html.hkscroll .tdec ::after
 .xsky_star.s2 { left: 140px; top: 11px; animation: 3s ease-in-out 0s infinite normal none running xskyTwinkle; }
 .xps_star.s1 { left: 24px; top: 12px; opacity: 0.3; }
 .xps_star.s2 { left: 138px; top: 7px; animation: 3s ease-in-out 0s infinite normal none running xpsTwinkle; }
+.xp_supportstage.reviewing .xps_star { animation: auto ease 0s 1 normal none running none; opacity: 0.55; }
+.xp_supportstage.reviewing .xps_hairline { opacity: 0.85; }
+.xp_supportstage.reviewing .xps_turtle { animation: 1.3s ease-in-out 0s infinite normal none running xps_turtleanticipate; }
+.xp_supportstage.reviewing .xps_baby { animation: 1.08s ease-in-out 0s infinite normal none running xps_babyanticipate; }
+.xp_supportstage.reviewing .xps_dolphin { animation: 1.05s ease-in-out 0s infinite normal none running xps_dolphinanticipate; }
 @keyframes hk_drift { 
   0% { transform: translateX(0px); opacity: 0; }
   7% { opacity: var(--clo,.18); }
@@ -444,6 +448,12 @@ html.hkscroll .tdec *, html.hkscroll .tdec ::before, html.hkscroll .tdec ::after
   30% { transform: translateY(-7px) rotate(-4.5deg); }
   62% { transform: translateY(3px) rotate(1.5deg); }
   82% { transform: translateY(-2px) rotate(-2deg); }
+}
+@keyframes hk_gullnearR { 
+  0%, 55% { transform: translate(452px, 6px); }
+  70% { transform: translate(242px, -2px); }
+  84% { transform: translate(62px, 3px); }
+  100% { transform: translate(-90px, -4px); }
 }
 @keyframes hk_grain { 
   0% { transform: translate(0px, 0px); }
@@ -582,12 +592,6 @@ html.hkscroll .tdec *, html.hkscroll .tdec ::before, html.hkscroll .tdec ::after
   50% { opacity: 0.9; }
   100% { transform: rotate(-24deg); opacity: 0.45; }
 }
-@keyframes hk_petal { 
-  0%, 88% { transform: translate(0px, 0px) rotate(0deg); opacity: 1; }
-  92% { transform: translate(1.1px, 3.2px) rotate(38deg); opacity: 0.85; }
-  97% { transform: translate(0.2px, 7.4px) rotate(96deg); opacity: 0.18; }
-  99.9%, 100% { transform: translate(0.6px, 9.6px) rotate(128deg); opacity: 0; }
-}
 @keyframes skb_spl1 { 
   0%, 9.5% { opacity: 0; transform: scale(0.4); }
   11.5% { opacity: 0.95; transform: scale(1.15); }
@@ -607,4 +611,22 @@ html.hkscroll .tdec *, html.hkscroll .tdec ::before, html.hkscroll .tdec ::after
 @keyframes xpsTwinkle { 
   0%, 100% { opacity: 0.25; }
   50% { opacity: 0.75; }
+}
+@keyframes xps_turtleanticipate { 
+  0%, 100% { transform: translate(0px, 2px) rotate(-2deg) scale(1, 1); }
+  34% { transform: translate(9px, -3px) rotate(1deg) scale(1.03, 0.96); }
+  45% { transform: translate(12px, -9px) rotate(4deg) scale(0.96, 1.05); }
+  64% { transform: translate(15px, 1px) rotate(-1deg) scale(1.02, 0.98); }
+}
+@keyframes xps_babyanticipate { 
+  0%, 100% { transform: translate(-2px, 0px) rotate(-2deg) scale(0.82, 0.82); }
+  36% { transform: translate(4px, -3px) rotate(3deg) scale(0.85, 0.78); }
+  48% { transform: translate(8px, -10px) rotate(8deg) scale(0.78, 0.87); }
+  72% { transform: translate(4px, 0px) rotate(1deg) scale(0.83, 0.8); }
+}
+@keyframes xps_dolphinanticipate { 
+  0%, 100% { transform: translate(0px, 2px) rotate(-2deg) scale(1, 1); }
+  34% { transform: translate(-5px, -4px) rotate(3deg) scale(1.03, 0.96); }
+  46% { transform: translate(-8px, -12px) rotate(8deg) scale(0.95, 1.06); }
+  68% { transform: translate(-13px, 0px) rotate(-2deg) scale(1.02, 0.98); }
 }
