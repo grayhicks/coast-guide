@@ -34,6 +34,17 @@
 
   /* -------------------------------------------------------------- surfaces */
   --bg:#0b1826;           /* page — deep gulf at dusk */
+  /* ⚠ THE SCENE HAS ITS OWN GROUND AND IT IS THE SAME IN BOTH THEMES. 08/09: .scene painted
+     var(--bg), which was correct for exactly as long as the page was also navy. The moment the
+     content surfaces went cream, every part of a masthead band that the lifted hero does not
+     cover started showing CREAM — and the hero sits 65px down inside a 333px band, so a hard
+     cream strip ran across the top of every interior page above a night sky. Gray, immediately:
+     "I don't like the weekend pic that's terrible not elegant." He was right and it was not the
+     drawing; it was one token doing two jobs.
+     The hero stays dark in both themes by decision (it is the brand, and a cream page under a
+     live night sky is the contrast the site is built on), so its ground is its own token and is
+     NOT redefined in the light block below. */
+  --scene-ground:#0b1826;
   --panel:#13273a;        /* card, rail, form field ground */
   --panel-2:#182f45;      /* raised: hovered card, active row, table head */
   --field:#0e2233;        /* input wells, slightly deeper than panel */
@@ -201,35 +212,73 @@ body.ph-night{
 }
 
 /* ============================================================ LIGHT THEME
-   A shell-white morning. Scene tokens stay phase-driven (the scene is the
-   brand); surfaces and ink swap. Applied via data-theme="light" on <html>. */
+   ⚠ 08/09 — THIS IS NOW THE DEFAULT, AND IT IS CREAM RATHER THAN SHELL-WHITE.
+
+   Two things decided it and they agreed, which is the only reason a palette
+   this settled got moved.
+
+   THE RESEARCH, run against live sites rather than from memory. Songkick,
+   Eventbrite, Time Out and Secret NYC are all light-ground with a near-black
+   primary ink and a distinctly lighter secondary ink one step down; three
+   independent codebases converging on the same two-tier hierarchy. The Infatuation
+   and Resident Advisor are dark, and both are adult nightlife or restaurant-critic
+   brands. Dice.fm, which an earlier pass here recorded as light, is measured DARK
+   (its listing wrapper ships data-dark-bg="true" over a #000 page) and that
+   correction is recorded rather than quietly dropped. Navy and gilt is a
+   wedding-invitation palette; for a parent scanning "splash pad, Saturday, free"
+   it signals the wrong occasion before a word is read.
+
+   GRAY, and he got there first: "i think the light mode should be the elegant
+   white ish cream with the elegant background like we somewhat have in the app.
+   I'm totally fine with light not dark background."
+
+   So the paper is the app's OWN cream, #FFF6E4, the one its info pages already
+   use and the one part of the app he singles out as elegant. This is a
+   unification, not a fifth palette. The hero stays dark on every page, because
+   the animated coast at four sky phases is the brand and a cream page under a
+   live night sky is the contrast the site was missing.
+
+   CONTRAST, computed rather than eyeballed (WCAG relative luminance, sRGB):
+     ink on paper 14.77 AAA · ink on panel 15.47 · ink on band 13.43
+     ink-2 on paper 7.02 AAA · ink-3 on paper 4.87 AA (fine print floor)
+     gold on paper 5.51 AA · gold-bright on paper 6.69 AA · on panel 7.01 AAA
+     accent-ink on gold 5.51 AA · ok on paper 5.81 AA
+     every pill: free 6.91 · tba 6.79 · price 11.79 · age 7.42
+   The three ratios that are deliberately low are not text: the hairline (1.39),
+   the card lift (1.05) and the ticket band (1.15). Songkick's own hairline sits
+   at about 1.0 against its page for the same reason - a divider that competes
+   with the text is a divider drawn twice.  */
 html[data-theme="light"]{
-  --ink:#202b36;
-  --ink-2:#46525e;
-  --ink-3:#5d6873;
-  --bg:#eef0ef;
-  --panel:#f9f9f6;
+  --ink:#0e2436;          /* the app's info-page navy */
+  --ink-2:#44566a;
+  --ink-3:#5e6e80;
+  --bg:#fff6e4;           /* THE CREAM. Same value as the app's info paper. */
+  --panel:#fffcf4;        /* the card lifts off the page rather than sitting in it */
   --panel-2:#ffffff;
   --field:#ffffff;
-  --band:#eff1ee;
-  --band-line:rgba(160,168,164,.7);
-  --line:#c9cdc9;
-  --line-soft:rgba(160,168,164,.5);
-  --sheen:rgba(255,255,255,.6);
-  --gold:#8a5f10;          /* darkened for AA on light ground */
-  --gold-bright:#7c5610;   /* links on light */
-  --accent-ink:#fff8ec;    /* text on gold flips to cream in light */
-  --ok:#0c7a5a;
-  --ok-line:rgba(12,122,90,.4);
-  --ok-wash:rgba(12,122,90,.06);
-  --pill-free-bg:#dff2e6;  --pill-free-fg:#0b5c3e;  --pill-free-line:#a9d8bd;
-  --pill-tba-bg:#f7ecd2;   --pill-tba-fg:#6e4e08;   --pill-tba-line:#dcc490;
-  --pill-price-bg:#e8ecef; --pill-price-fg:#202b36; --pill-price-line:#c9cfd4;
-  --pill-age-bg:#f5e2ea;   --pill-age-fg:#7c2c4e;   --pill-age-line:#dcb3c4;
-  --tag-fg:#46525e;        --tag-line:#b7bfc6;
+  --band:#f7ebd4;         /* the ticket header, one step warmer than the card */
+  --band-line:rgba(198,176,132,.75);
+  --line:#e2d2ae;
+  --line-soft:rgba(198,176,132,.5);
+  --sheen:rgba(255,255,255,.75);
+  /* gilt is DEMOTED TO ORNAMENT on this ground: rules, marks, struck corners and
+     the trim. It stops being a surface colour. These two values are the ink
+     versions of it, dark enough to read as type. */
+  --gold:#8a5a0c;
+  --gold-bright:#7a4e08;
+  --accent-ink:#fff6e4;   /* cream on gilt, not white: white on gilt reads cold */
+  --ok:#0b6e52;
+  --ok-line:rgba(11,110,82,.42);
+  --ok-wash:rgba(11,110,82,.06);
+  --pill-free-bg:#e2f2e4;  --pill-free-fg:#0b5c3e;  --pill-free-line:#a9d8bd;
+  --pill-tba-bg:#f9edd2;   --pill-tba-fg:#6b4c05;   --pill-tba-line:#dcc490;
+  --pill-price-bg:#f0e9da; --pill-price-fg:#1a2c3e; --pill-price-line:#ddd0b6;
+  --pill-age-bg:#f8e4ea;   --pill-age-fg:#7c2c4e;   --pill-age-line:#e3bfcb;
+  --tag-fg:#44566a;        --tag-line:#d9c9a6;
   --sponsor-fg:#6e5a2e;
-  --shadow-1:0 1px 2px rgba(40,50,60,.12), 0 4px 14px rgba(40,50,60,.08);
-  --shadow-2:0 2px 4px rgba(40,50,60,.14), 0 12px 32px rgba(40,50,60,.12);
+  /* shadows warm to the paper. A neutral grey shadow on cream reads as dirt. */
+  --shadow-1:0 1px 2px rgba(74,58,28,.10), 0 4px 14px rgba(74,58,28,.07);
+  --shadow-2:0 2px 4px rgba(74,58,28,.12), 0 12px 32px rgba(74,58,28,.10);
 }
 
 /* ============================================================================
@@ -292,7 +341,10 @@ a:hover{text-decoration-thickness:2px}
 /* ================================================================== HEADER */
 .site-head{
   position:sticky;top:0;z-index:50;
-  background:rgba(11,24,38,.88);
+  /* 08/09 — was a hardcoded rgba(11,24,38,.88) navy pane, which on cream paper read as a bar
+     from a different website sitting on top of this one. It is the page's own ground now, at the
+     same alpha, so the blur still separates it and the colour never has to be kept in sync. */
+  background:color-mix(in srgb, var(--bg) 88%, transparent);
   border-bottom:1px solid var(--line-soft);
   backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
 }
@@ -306,8 +358,14 @@ html[data-theme="light"] .site-head{background:rgba(238,240,239,.9)}
    two-thirds of the product is not navigation. It now WRAPS: every link is on
    screen at every width, full stop. The wrap only engages when the row is
    genuinely out of room, so wide viewports see the same single row as before. */
+/* ⚠ 08/09 — THIS CLASS IS CALLED nav-scroll AND IT WAS SET TO WRAP. With six links it wrapped to
+   two lines on a phone; with the about row added on top of that the header measured 470px at 390,
+   which is a fifth of the viewport spent on chrome before a single event is visible. It scrolls
+   now, which is what the class name has always claimed. The scrollbar is hidden because a system
+   bar under a 44px row is noise, and the row is still fully reachable by swipe. */
 .site-head nav{display:flex;align-items:center;gap:2px;flex:1 1 auto;min-width:0;
-  flex-wrap:wrap}
+  flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+.site-head nav::-webkit-scrollbar{display:none}
 .site-head nav a{
   color:var(--ink-2);text-decoration:none;font-size:var(--fs-body);font-weight:600;
   padding:0 11px;min-height:44px;display:inline-flex;align-items:center;
@@ -318,10 +376,73 @@ html[data-theme="light"] .site-head{background:rgba(238,240,239,.9)}
 .site-head nav a[aria-current="page"],
 .site-head nav a[aria-current="true"]{color:var(--gold-bright);box-shadow:inset 0 -2px 0 var(--gold)}
 .head-cta{margin-left:auto;flex:none;white-space:nowrap;padding:10px 16px}
+
+/* R4-WD2 / R4-WN1 / R4-W8 — the app sits at the TOP of the left rail, and smaller. The old
+   rail-card was the LAST thing in the rail, under four filter groups and a note, so on a phone
+   the entire listing had to be scrolled past before it appeared at all. */
+.rail-app{margin:0 0 var(--s-4);padding:0 0 var(--s-4);border-bottom:1px solid var(--line-soft)}
+.rail-app .btn{width:100%;min-height:44px;padding:10px 16px;font-size:15px}
+.rail-app .fine{margin:8px 0 0;color:var(--ink-3)}
+/* ⚠ AND THE RAIL ITSELF SCROLLS. Gray: "also the left side needs to be scrollable". On desktop
+   it sticks under the header and scrolls on its own axis, so a long area list can never push the
+   app link out of reach; on a phone it is a normal block above the listing. */
+@media(min-width:1000px){
+  .rail{position:sticky;top:var(--s-5);max-height:calc(100vh - var(--s-6));overflow-y:auto;
+    scrollbar-width:thin;padding-right:6px}
+}
+
+/* ============================================================ THE ABOUT ROW
+   R4-W6 asked for Support to sit up top with Mission and Volunteer; R4-WW5 said there are already
+   too many links up there. They are not in conflict once you notice they are two kinds of link:
+   the first row is what you came to do, the second is what this is and how to help. Splitting them
+   let the doing row get SHORTER while three about-links came up out of the footer. */
+.site-head .bar-about{display:flex;align-items:center;min-height:34px;padding-top:0;padding-bottom:2px}
+.nav-about{display:flex;align-items:center;gap:2px;flex-wrap:nowrap;min-width:0;
+  overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+.nav-about::-webkit-scrollbar{display:none}
+.nav-about a{
+  color:var(--ink-3);text-decoration:none;font-size:var(--fs-fine);font-weight:600;
+  letter-spacing:.3px;padding:0 9px;min-height:32px;display:inline-flex;align-items:center;
+  border-radius:var(--r-field);white-space:nowrap;
+}
+.nav-about a:hover{color:var(--ink-2)}
+.nav-about a[aria-current="page"]{color:var(--gold-bright)}
+
+/* ------------------------------------------------------------ THEME TOGGLE
+   R4-11.6. Both marks are always in the DOM and the theme decides which one is shown, so the
+   control never has to be re-rendered and there is no state to lose. The sun and the moon are
+   Lucide's (ISC, https://github.com/lucide-icons/lucide) redrawn here as CSS masks so they inherit
+   currentColor and cost no element. Lucide's moon is on its Feather-derived list, so both notices
+   apply: ISC for Lucide, MIT (Cole Bemis) for the Feather original. */
+.theme-toggle{
+  flex:none;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;
+  background:transparent;border:1px solid var(--line);border-radius:999px;color:var(--ink-2);
+  cursor:pointer;padding:0;
+}
+.theme-toggle:hover{color:var(--ink);border-color:var(--gold)}
+.theme-toggle:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.tt-sun,.tt-moon{width:19px;height:19px;background-color:currentColor;
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center;
+  -webkit-mask-size:100% 100%;mask-size:100% 100%}
+.tt-sun{-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3Cpath d='M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41'/%3E%3C/svg%3E");
+        mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3Cpath d='M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41'/%3E%3C/svg%3E")}
+.tt-moon{-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401'/%3E%3C/svg%3E");
+         mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401'/%3E%3C/svg%3E")}
+/* light is showing, so the control offers the moon; dark is showing, so it offers the sun */
+.tt-sun{display:none}
+html[data-theme="dark"] .tt-sun{display:block}
+html[data-theme="dark"] .tt-moon{display:none}
+@media(max-width:820px){ .site-head .bar-about{min-height:30px} .nav-about a{padding:0 7px} }
+
 .nav-submit{display:none}
 @media(max-width:820px){
   .site-head .bar{padding-top:6px;padding-bottom:4px;flex-wrap:wrap}
-  .site-head .brand{width:100%;min-height:44px}
+  /* the brand keeps its own line but the theme control rides ON it rather than taking a third
+     row: order puts it after the brand, and margin-left:auto pins it to the right edge */
+  .site-head .brand{flex:1 1 auto;min-height:44px;width:auto}
+  .site-head .theme-toggle{order:0;margin-left:auto;width:40px;height:40px}
+  .site-head nav{order:1;width:100%;flex-basis:100%}
+  .site-head .bar-about{padding-top:0}
   .site-head .head-cta.btn{display:none} /* Submit lives in footer on phones */
   .nav-submit{display:inline-flex}
   /* a two-row wrapped nav under a sticky header would eat a third of a phone
@@ -349,7 +470,7 @@ html[data-theme="light"] .site-head{background:rgba(238,240,239,.9)}
    Phases change only the light, never the geometry. */
 .scene{position:relative;overflow:hidden;isolation:isolate;
   --hz:36%; --sandh:64px; --sun-x:76%; --glint-x:76%;
-  background:var(--bg);
+  background:var(--scene-ground);
   box-shadow:0 18px 40px -18px rgba(3,8,14,.6)}
 .scene.tall{min-height:600px}
 .scene.tall > .wrap{padding-top:84px;padding-bottom:120px}
@@ -567,8 +688,17 @@ section.pad + section.pad{border-top:1px solid var(--line-soft)}
   font-variant-numeric:tabular-nums}
 
 /* ================================================================= BUTTONS */
+/* ⚠ 08/09 — R4-WD3. Gray: "&amp; tickets leaks into the top venue-page button on the right-hand
+   side of some cards." It is not a leak from another element; it is this button overflowing its
+   own box. The label is the VENUE'S own link text, taken from the data rather than written here,
+   and some of them are long: "Hours &amp; tickets", "Events &amp; music", "Tickets &amp; showtimes".
+   An inline-flex with no max-width and no wrapping grows past its container and the tail of the
+   label sits outside the shape.
+   ⚠ Fixed at the BUTTON rather than in the data, because shortening the labels would be rewriting
+   what a venue calls its own page, and the next long one would break it again. */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
   min-height:48px;padding:12px 22px;border-radius:var(--r-field);
+  max-width:100%;text-align:center;overflow-wrap:anywhere;
   font:700 16px/1.2 var(--font-sans);text-decoration:none;cursor:pointer;border:0;
   background:var(--gold);color:var(--accent-ink);box-shadow:var(--shadow-1);
   transition:transform var(--t-fast) var(--ease)}
@@ -803,7 +933,7 @@ html[data-theme="light"] .chip.on::before{box-shadow:0 0 0 3px rgba(138,95,16,.1
   .rail::-webkit-scrollbar{display:none}
   .rail .chip-row{display:contents}
   .rail .chip{flex:none;min-height:40px;padding:6px 14px}
-  .rail-h,.rail-note,.rail-card{display:none}
+  .rail-h,.rail-note{display:none}
   .filter-group h2{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
   .filter-group.legend{display:none}
   .filter-rail .chip-row{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px;
@@ -813,11 +943,10 @@ html[data-theme="light"] .chip.on::before{box-shadow:0 0 0 3px rgba(138,95,16,.1
   .filter-rail .chip-row::-webkit-scrollbar{display:none}
   .filter-rail{margin-top:var(--s-4)}
 }
-.rail-card{margin-top:var(--s-5);background:linear-gradient(180deg, var(--sheen), transparent 40px), var(--panel);
-  border:1px solid var(--line);border-radius:var(--r-card);padding:var(--s-4);
-  box-shadow:var(--shadow-1)}
-.rail-card-h{font:700 var(--fs-body)/1.35 var(--font-sans);color:var(--ink);margin:0 0 6px}
-.rail-card .btn{width:100%;margin-top:var(--s-3)}
+/* .rail-card and .rail-card-h were removed 08/09 with the block they styled — the app link
+   moved to the TOP of the rail as .rail-app. A rule with no element left to style is the
+   same defect as an element with no rule, and this stylesheet went 24 dead classes to zero
+   on 08/07 precisely so that stays true. */
 .rail-note{font-size:var(--fs-fine);color:var(--ink-3)}
 
 /* ==================================================== MONTH GROUPS + JUMP
@@ -1292,13 +1421,34 @@ div.foot-fine{border-top:1px solid var(--line-soft);margin-top:var(--s-6);paddin
   /* ⚠ PERCENTAGE STOPS ON A BOX THAT IS 380px TALLER THAN ITS CONTENT put the dense band in the
      bleed rather than on the words — measured 2.19:1, worse than no wash at all. The bleed is a
      known number, so the stops are that number. */
+  /* ⚠ 08/09 — R4-11.7, AND THE ALPHAS CAME DOWN ONLY BECAUSE THE PIXELS WERE MEASURED FIRST.
+     Gray: "the hero on the website is slightly too dark as well... where we can see the hero more."
+     The punchlist warns against simply lowering this, because a measured contrast fight is what
+     drove it to .88 over four rounds. So it was measured before it was touched, on the composited
+     screenshot rather than on the declaration: the ground under the copy read 17.4 of 255 at 1100,
+     which is white text at about 19:1. The AA floor for this copy is 4.5:1, which is a ground of
+     118. There were a hundred points of headroom sitting unused, and that headroom is exactly what
+     he is asking to spend. gate_site_wash holds the real claim now - white against the ground
+     actually measured under it - rather than a threshold chosen to suit. */
   background:linear-gradient(180deg,
-    rgba(6,14,24,.30) 0,
-    rgba(6,14,24,.72) 26px,
-    rgba(6,14,24,.88) 64px,
-    rgba(6,14,24,.88) calc(100% - 64px),
-    rgba(6,14,24,.52) calc(100% - 22px),
+    rgba(6,14,24,.16) 0,
+    rgba(6,14,24,.46) 26px,
+    rgba(6,14,24,.60) 64px,
+    rgba(6,14,24,.60) calc(100% - 64px),
+    rgba(6,14,24,.34) calc(100% - 22px),
     rgba(6,14,24,0) 100%)}
+/* ⚠ AND THE SECOND HALF OF THE FIX IS WHERE IT STOPS, NOT HOW DARK IT IS. This box runs from
+   -52vw to +40vw, i.e. across the whole viewport and past both edges, so on a wide screen it was
+   painting a scrim over the entire picture in order to protect a column of text occupying the left
+   third of it. On desktop it now fades out across the right side, which is where the sun, the
+   horizon and the boat are - the part of the scene there was never any text over. Phones keep the
+   full-width wash unchanged: the copy spans the whole column there, so there is no picture beside
+   it to reveal and a radial tuned for desktop already measured 2.01:1 at 390px once. */
+@media (min-width:901px){
+  .scene-copy::before{
+    -webkit-mask-image:linear-gradient(90deg,#000 0,#000 62%,rgba(0,0,0,.35) 78%,transparent 92%);
+            mask-image:linear-gradient(90deg,#000 0,#000 62%,rgba(0,0,0,.35) 78%,transparent 92%)}
+}
 @media (min-width:901px){
   /* the copy is bounded so a long title can never walk out of the dense middle of the wash */
   .scene-copy h1,.page-title{max-width:16ch}
@@ -1307,13 +1457,22 @@ div.foot-fine{border-top:1px solid var(--line-soft);margin-top:var(--s-6);paddin
   .hero-count{max-width:52ch}
   /* the tail has to be longer than the eye's ability to find an edge — a 505px falloff, not a
      100px one. A short tail is how a soft wash still ends in a visible vertical line. */
+  /* ⚠ 08/09 — AND THIS IS THE RULE THAT WAS ACTUALLY WINNING ON DESKTOP, WHICH IS THE TRAP
+     START_HERE ALREADY NAMES: "a superseded rule left thirty lines further down that kept
+     winning". The first attempt at R4-11.7 lowered the alphas on the base linear gradient above
+     and the measured pixels did not move a single point at 1100, because this radial replaces it
+     entirely at 901 and up. An ablation caught it: hiding .scene-copy::before took the ground
+     under the copy from 17.4 to 43.2, which proved the wash was the dominant darkness and that
+     something else was still supplying it.
+     ⚠ When a measurement will not move no matter what you change, the measurement is not measuring
+     what you think. That sentence has now been earned twice on this same element. */
   .scene-copy::before{background:radial-gradient(52% 88% at 30% 50%,
-    rgba(6,14,24,.90) 0%,
-    rgba(6,14,24,.88) 22%,
-    rgba(6,14,24,.74) 40%,
-    rgba(6,14,24,.50) 55%,
-    rgba(6,14,24,.27) 70%,
-    rgba(6,14,24,.09) 85%,
+    rgba(6,14,24,.62) 0%,
+    rgba(6,14,24,.60) 22%,
+    rgba(6,14,24,.50) 40%,
+    rgba(6,14,24,.34) 55%,
+    rgba(6,14,24,.18) 70%,
+    rgba(6,14,24,.06) 85%,
     rgba(6,14,24,0) 100%)}
 }
 /* with a real wash underneath, the shadows can stop shouting */
@@ -1687,43 +1846,147 @@ html[data-theme="light"]{
    clips — it detached into a diamond floating over the nav. Neither is a flaw in the ornament; both
    are flaws in where it was hung. The system stays, applied deliberately per surface, which is also
    the only way "symmetrical and uniformity" survives contact with 600 generated pages. */
+/* ═══ 08/09 — TWO PIECES REBUILT, ONE ADDED, AND ALL THREE ARE ANSWERS TO A NAMED FAILURE ═════
+   The 08/08 set was drawn from nothing, which is the method Gray rated 1/10 on the icons before
+   the law changed. These are built from stated primitives or from verified public-domain geometry,
+   with the source and licence recorded at each piece.
+     · Wikimedia Commons, Decorative_text_divider.svg, PD-self (Inductiveload). The concentric bead
+       is used at its own fetched radii, 6.375 outer at stroke 1.5 and 2.775 inner.
+     · Openclipart greek-key-pattern id 255890, CC0-1.0,
+       https://openclipart.org/detail/255890/greek-key-pattern — the meander tradition the trim
+       course belongs to. The 12x4 tile below is CONSTRUCTED with every coordinate stated, not
+       traced, because a traced repeat unit cannot be checked for symmetry and this one can.
+   ⚠ ENCODING: every data URI is double-quoted, its SVG attributes single-quoted, only the angle
+   brackets percent-encoded, and the paint keyword is 'black' so no raw hash can end the value. The
+   marks are MASKS over background-color:currentColor, because a background-image data URI cannot
+   see currentColor and a two-theme ornament that needs a second definition is two ornaments. */
+
+/* 2 · THE CARD FRAME — an Oxford double rule, and the chipped corners are gone by construction.
+   ⚠ The old version struck four corner marks ON the border-radius, so on a rounded card they read
+   as notches cut out of the corner rather than as ornament laid over it. There is nothing to fix
+   in the drawing; the geometry was wrong. This is an outer border on the card's own radius and an
+   inner keyline inset 5px at radius 5 — outer radius minus inset EQUALS inner radius, so the two
+   runs are exactly concentric and neither is ever interrupted. Four 3px beads sit ON the inner
+   keyline's 45-degree point, which is 5 - 4.5/root2 = 1.82 from the corner of its box, so they are
+   attached to a line rather than floating beside one.
+   ⚠ If the card radius ever changes, the inset and the inner radius change with it or this breaks
+   in exactly the old way. */
 .orn-frame{position:relative}
-.orn-frame::after{content:"";position:absolute;inset:0;pointer-events:none;
-  border-radius:inherit;
-  --t:linear-gradient(var(--orn-ink),var(--orn-ink));
-  background:var(--t),var(--t),var(--t),var(--t),var(--t),var(--t),var(--t),var(--t);
+.orn-frame::after{content:"";position:absolute;inset:5px;pointer-events:none;
+  border:1px solid var(--orn-faint);border-radius:5px;
+  background-image:
+    radial-gradient(circle at .8px .8px, var(--orn-ink) 1.4px, transparent 1.9px),
+    radial-gradient(circle at calc(100% - .8px) .8px, var(--orn-ink) 1.4px, transparent 1.9px),
+    radial-gradient(circle at .8px calc(100% - .8px), var(--orn-ink) 1.4px, transparent 1.9px),
+    radial-gradient(circle at calc(100% - .8px) calc(100% - .8px), var(--orn-ink) 1.4px, transparent 1.9px);
   background-repeat:no-repeat;
-  background-size:12px 1px,1px 12px,12px 1px,1px 12px,12px 1px,1px 12px,12px 1px,1px 12px;
-  background-position:0 0,0 0,100% 0,100% 0,0 100%,0 100%,100% 100%,100% 100%;
-  opacity:.55}
+  opacity:.62}
 
-/* 3 · the button. An inner echo line and one keystone lozenge on the top edge,
-   knocked out of the border so the frame reads as struck rather than stuck on. */
-.orn-btn{position:relative}
-.orn-btn::before{content:"";position:absolute;inset:3px;pointer-events:none;
-  border:1px solid var(--orn-faint);border-radius:inherit;
-  transition:border-color .18s ease}
-.orn-btn::after{content:"";position:absolute;top:-3.5px;left:50%;
-  width:5px;height:5px;transform:translateX(-50%) rotate(45deg);
-  background:var(--orn-fill);border:1px solid var(--orn-ink);pointer-events:none}
-.orn-btn:hover::before{border-color:var(--orn-ink)}
-
-/* 4 · the trim. "Thicker" is THREE stacked hairline runs per edge, each shorter
-   and quieter than the one outside it, which is how a real moulding gets its
-   depth. Reserved for top-level section heads: its authority is scarcity. */
-.orn-trim{text-align:center;padding:26px 32px 28px;color:var(--orn-hi);
-  --orn-run:linear-gradient(90deg,transparent,currentColor 22%,currentColor 78%,transparent);
-  --orn-run2:linear-gradient(90deg,transparent 8%,var(--orn-ink) 34%,var(--orn-ink) 66%,transparent 92%);
-  --orn-run3:linear-gradient(90deg,transparent 15%,var(--orn-faint) 42%,var(--orn-faint) 58%,transparent 85%);
-  background:
-    var(--orn-run) top/100% 1px,
-    var(--orn-run2) left 0 top 4px/100% 1px,
-    var(--orn-run3) left 0 top 8px/100% 1px,
-    var(--orn-run3) left 0 bottom 8px/100% 1px,
-    var(--orn-run2) left 0 bottom 4px/100% 1px,
-    var(--orn-run) bottom/100% 1px;
+/* 3 · THE BUTTON EDGE — every mark is a BACKGROUND LAYER of the button itself.
+   ⚠ The old keystone was an ::after at top:-3.5px, i.e. OUTSIDE the border box, and inside the
+   site header — which clips — it detached and floated over the nav as a loose diamond. Nothing
+   here leaves the box, so it clips with the button, pixel for pixel, and the failure cannot recur.
+   Two tapered hairlines inset 4px from the top and bottom edges, fading in over 18px to 34px so
+   they stay clear of the 8px corner arcs, and one 3px bead centred exactly ON each hairline
+   (4px layer offset 2.5px puts its centre at y4.5, which is the hairline's own centre). */
+.orn-btn{
+  background-image:
+    linear-gradient(90deg,transparent 18px,var(--orn-faint) 34px,var(--orn-faint) calc(100% - 34px),transparent calc(100% - 18px)),
+    linear-gradient(90deg,transparent 18px,var(--orn-faint) 34px,var(--orn-faint) calc(100% - 34px),transparent calc(100% - 18px)),
+    radial-gradient(circle, var(--orn-ink) 1.4px, transparent 1.8px),
+    radial-gradient(circle, var(--orn-ink) 1.4px, transparent 1.8px);
+  background-size:100% 1px,100% 1px,4px 4px,4px 4px;
+  background-position:0 4px,0 calc(100% - 4px),50% 2.5px,50% calc(100% - 2.5px);
   background-repeat:no-repeat}
+
+/* 4 · THE TRIM — and this is the piece Gray keeps coming back to.
+   R4-11.8, verbatim: "for borders around tabs, I was thinking of elegant borders that are not just
+   straight. but somewhat like a design almost like trim on a house walls." The old trim was three
+   stacked STRAIGHT hairlines, which is a moulding seen edge-on and reads as three rules. This is
+   the moulding seen as a SILHOUETTE: an embattled fillet, the single-course flattened form of the
+   Greek key, where the line runs, drops, returns and rises. It steps and returns, which is the
+   behaviour he is describing and the one thing a straight rule cannot do.
+   THE TILE, every coordinate stated: 12 wide by 4 tall, one 1px stroke, M0 .5 H3 V3.5 H9 V.5 H12.
+   The half-pixel offsets keep a 1px stroke inside the box and crisp. The run enters and leaves at
+   y .5 so it is continuous across the seam, and the two verticals at x3 and x9 make the tile
+   MIRROR-SYMMETRIC about its own centre at x6 — which is why mask-position is 50%: it anchors that
+   mirror axis to the middle of the element, so the course is symmetric at any width. "Symmetrical
+   and uniformity as always. This is a hard rule always."
+   The strips are inset 10px from each end, inboard of any corner radius, so nothing lands on an
+   arc; the bottom strip is the exact vertical mirror of the top. */
+.orn-trim{position:relative}
+.orn-trim::before,.orn-trim::after{content:"";position:absolute;left:10px;right:10px;height:4px;
+  pointer-events:none;background-color:var(--orn-ink);opacity:.7;
+  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 4'%3E%3Cpath fill='none' stroke='black' d='M0 .5H3V3.5H9V.5H12'/%3E%3C/svg%3E");
+          mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 4'%3E%3Cpath fill='none' stroke='black' d='M0 .5H3V3.5H9V.5H12'/%3E%3C/svg%3E");
+  -webkit-mask-size:12px 4px;mask-size:12px 4px;
+  -webkit-mask-position:50% 0;mask-position:50% 0;
+  -webkit-mask-repeat:repeat-x;mask-repeat:repeat-x}
+.orn-trim::before{top:0}
+.orn-trim::after{bottom:0;transform:scaleY(-1)}
+/* the heavier cut: a fillet rail over the fret, which is a cornice in cross-section */
+.orn-trim.band::before,.orn-trim.band::after{height:7px;
+  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 4'%3E%3Cpath fill='none' stroke='black' d='M0 .5H3V3.5H9V.5H12'/%3E%3C/svg%3E"),linear-gradient(black,black);
+          mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 4'%3E%3Cpath fill='none' stroke='black' d='M0 .5H3V3.5H9V.5H12'/%3E%3C/svg%3E"),linear-gradient(black,black);
+  -webkit-mask-size:12px 4px,100% 1px;mask-size:12px 4px,100% 1px;
+  -webkit-mask-position:50% 3px,50% 0;mask-position:50% 3px,50% 0;
+  -webkit-mask-repeat:repeat-x,no-repeat;mask-repeat:repeat-x,no-repeat}
+
+/* 5 · THE FLEURON — the centre jewel. Outer ring r6.375 at stroke 1.5 and inner disc r2.775 are
+   the fetched radii of the Wikimedia divider's own bead, recentred on 12,12; the four cardinal
+   ticks run from r11.5 in to r8.5, leaving 1.375 of air outside the ring. Four-fold symmetric.
+   One per composition — it is a jewel, not a repeat. Never on an element with text in it: the
+   mask would erase the text. */
+.orn-fleuron{display:inline-block;width:22px;height:22px;vertical-align:middle;
+  background-color:currentColor;
+  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='6.375' fill='none' stroke='black' stroke-width='1.5'/%3E%3Ccircle cx='12' cy='12' r='2.775'/%3E%3Cpath fill='none' stroke='black' d='M12 .5V3.5M12 20.5V23.5M.5 12H3.5M20.5 12H23.5'/%3E%3C/svg%3E");
+          mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='6.375' fill='none' stroke='black' stroke-width='1.5'/%3E%3Ccircle cx='12' cy='12' r='2.775'/%3E%3Cpath fill='none' stroke='black' d='M12 .5V3.5M12 20.5V23.5M.5 12H3.5M20.5 12H23.5'/%3E%3C/svg%3E");
+  -webkit-mask-size:100% 100%;mask-size:100% 100%;
+  -webkit-mask-position:center;mask-position:center;
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
 .orn-crest{display:block;margin:0 auto 10px;width:180px;height:10px;color:var(--orn-hi)}
 .orn-crest .orn-blade{fill:currentColor}
 .orn-crest .orn-loz{fill:none;stroke:currentColor;stroke-width:1.4}
-@media (prefers-reduced-motion:reduce){.orn-btn::before{transition:none}}
+
+/* ─── WHERE IT IS HUNG, and it is hung deliberately, per surface ─────────────────────────────
+   R4-W3: "Not tooooo large and out there, but medium to low profile border elegance in the
+   buttons. Especially the Cards." R4-W1 offered the elegant borders as the alternative to a gold
+   bar on the top and bottom of the header, and that is the better of the two: a bar is a block of
+   colour, the trim is a profile. */
+/* THE CARDS get the frame's inner keyline and NOT its beads. Four beads on one featured card is
+   ornament; four beads on the four hundred cards of the places index is confetti. The keyline is
+   concentric with the card's own radius by the same arithmetic as .orn-frame, so it cannot notch. */
+.card{position:relative}
+.card::after{content:"";position:absolute;inset:6px;pointer-events:none;
+  border-radius:calc(var(--r-card) - 6px);
+  border:1px solid var(--orn-faint);opacity:.55}
+.card:hover::after{opacity:.9;border-color:var(--orn-ink)}
+
+/* THE PRIMARY BUTTON gets the full edge. It is the one control per page that is asking to be
+   pressed, so it is the one that earns ornament; secondary and quiet buttons stay plain, which is
+   what stops the system reading as decoration applied everywhere. */
+.btn.primary{
+  background-image:
+    linear-gradient(180deg,var(--gold-bright),var(--gold) 85%),
+    linear-gradient(90deg,transparent 18px,var(--accent-ink) 34px,var(--accent-ink) calc(100% - 34px),transparent calc(100% - 18px)),
+    linear-gradient(90deg,transparent 18px,var(--accent-ink) 34px,var(--accent-ink) calc(100% - 34px),transparent calc(100% - 18px)),
+    radial-gradient(circle, var(--accent-ink) 1.4px, transparent 1.8px),
+    radial-gradient(circle, var(--accent-ink) 1.4px, transparent 1.8px);
+  background-size:100% 100%,100% 1px,100% 1px,4px 4px,4px 4px;
+  background-position:0 0,0 4px,0 calc(100% - 4px),50% 2.5px,50% calc(100% - 2.5px);
+  background-repeat:no-repeat}
+
+/* THE SCOPE TABS get the moulding course, top and bottom. R4-W1 offered the elegant borders as
+   the alternative to a gold bar across the header, and this is that answer applied where the tabs
+   actually are: a profile that steps and returns, not a block of colour. */
+.scope{position:relative;padding-top:7px;padding-bottom:7px}
+.scope::before,.scope::after{content:"";position:absolute;left:10px;right:10px;height:4px;
+  pointer-events:none;background-color:var(--orn-ink);opacity:.55;
+  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 4'%3E%3Cpath fill='none' stroke='black' d='M0 .5H3V3.5H9V.5H12'/%3E%3C/svg%3E");
+          mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 4'%3E%3Cpath fill='none' stroke='black' d='M0 .5H3V3.5H9V.5H12'/%3E%3C/svg%3E");
+  -webkit-mask-size:12px 4px;mask-size:12px 4px;
+  -webkit-mask-position:50% 0;mask-position:50% 0;
+  -webkit-mask-repeat:repeat-x;mask-repeat:repeat-x}
+.scope::before{top:0}
+.scope::after{bottom:0;transform:scaleY(-1)}
+

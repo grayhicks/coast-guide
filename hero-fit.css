@@ -428,7 +428,22 @@ html, body { overflow-x: clip; }
    sand, below `.wrap` (20) so it never touches a word or dims a button. And it
    is painted in `--bg`, the page's own ground, so it stays correct in the light
    theme and at every one of the four sky phases without being re-keyed. */
-.scene::after{content:"";position:absolute;left:0;right:0;bottom:0;height:64px;
+   ⚠ 08/09 — AND IT WAS PAINTING AT THE TOP OF EVERY SCENE, NOT THE BOTTOM, SINCE THE DAY IT
+   SHIPPED. It was written as .scene::after, and site.css ALSO has a .scene::after — the vignette,
+   declared with inset:0. This file loads second, so its background won; but `inset:0` had already
+   set top:0, and this rule never reset it. With top:0, bottom:0 AND height:64px present, top plus
+   height wins, so the "dissolve into the page" gradient has always been a 64px band across the
+   TOP of the masthead.
+   It was invisible for as long as --bg was navy: navy fading into a navy sky is nothing. The
+   moment the content surfaces went cream it became a hard cream strip across the top of every
+   interior page above a night sky, and Gray saw it within minutes: "I don't like the weekend pic
+   that's terrible not elegant." The flip did not cause this. It revealed it.
+   ⚠ AND THE SECOND DEFECT IN THE SAME PLACE: because this rule replaced site.css's background
+   wholesale, the vignette and text scrim that rule exists to paint have never rendered either.
+   Both are fixed by giving the two layers two pseudo-elements instead of fighting over one. The
+   fade moves to ::before; site.css keeps ::after for the vignette. z-index 2 is unchanged and is
+   still the load-bearing number: above the stage at 0, below .wrap at 20. */
+.scene::before{content:"";position:absolute;left:0;right:0;bottom:0;height:64px;
   z-index:2;pointer-events:none;
   background:linear-gradient(180deg,
     rgba(0,0,0,0) 0,
@@ -437,4 +452,4 @@ html, body { overflow-x: clip; }
     var(--bg) 100%)}
 /* the short detail masthead is only ~176px tall — a 64px fade would eat a third
    of it, so it gets a proportionate one */
-.scene.band.short::after{height:38px}
+.scene.band.short::before{height:38px}
