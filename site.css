@@ -364,7 +364,14 @@ html[data-theme="light"] .site-head{background:rgba(238,240,239,.9)}
    now, which is what the class name has always claimed. The scrollbar is hidden because a system
    bar under a 44px row is noise, and the row is still fully reachable by swipe. */
 .site-head nav{display:flex;align-items:center;gap:2px;flex:1 1 auto;min-width:0;
-  flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+  flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+  /* ⚠ A SCROLLING ROW THAT ENDS MID-WORD READS AS BROKEN, NOT AS SCROLLABLE. At 390 row one cut
+     at "Date N" and row two at "Volu", and a truncated word in the first row of pixels is the
+     fastest way a site looks unfinished. The mask fades the last 28px to nothing, so the cut
+     always lands on a gradient rather than on a letter, and the fade itself is the affordance
+     that says there is more to the right. The rows still scroll; they just stop lying about it. */
+  -webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 28px),transparent);
+          mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 28px),transparent)}
 .site-head nav::-webkit-scrollbar{display:none}
 .site-head nav a{
   color:var(--ink-2);text-decoration:none;font-size:var(--fs-body);font-weight:600;
@@ -398,7 +405,9 @@ html[data-theme="light"] .site-head{background:rgba(238,240,239,.9)}
    let the doing row get SHORTER while three about-links came up out of the footer. */
 .site-head .bar-about{display:flex;align-items:center;min-height:34px;padding-top:0;padding-bottom:2px}
 .nav-about{display:flex;align-items:center;gap:2px;flex-wrap:nowrap;min-width:0;
-  overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+  overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+  -webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 28px),transparent);
+          mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 28px),transparent)}
 .nav-about::-webkit-scrollbar{display:none}
 .nav-about a{
   color:var(--ink-3);text-decoration:none;font-size:var(--fs-fine);font-weight:600;
@@ -931,6 +940,19 @@ html[data-theme="light"] .chip.on::before{box-shadow:0 0 0 3px rgba(138,95,16,.1
     -webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 36px),transparent);
     mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 36px),transparent)}
   .rail::-webkit-scrollbar{display:none}
+  /* ⚠ 08/09 — .rail-app HAD TO BE TAKEN OUT OF THE FLEX ROW AND IT WAS MISSED FIRST TIME.
+     Below 1024 this rule flattens the rail into one horizontal chip strip, and the app block that
+     moved to the top of the rail today became a flex CHILD of that strip: a 56px pill reading
+     "Op / en / th / e / ap / p" one word per line beside a 56px paragraph doing the same, on the
+     three pages the whole site funnels into. An independent review of the rendered page at 390
+     found it; nothing in the source said it, because the rule that broke it is 500 lines from the
+     rule that created it and neither mentions the other.
+     It is a full-width block ABOVE the strip now — order:-1 puts it first, flex-basis:100% makes
+     it take its own line, and the row wraps once so the chips keep their single scrolling line. */
+  .rail{flex-wrap:wrap}
+  .rail-app{order:-1;flex:0 0 100%;width:100%;margin:0 0 var(--s-3);padding:0 0 var(--s-3)}
+  .rail-app .btn{width:100%}
+  .rail-app .fine{margin:6px 0 0}
   .rail .chip-row{display:contents}
   .rail .chip{flex:none;min-height:40px;padding:6px 14px}
   .rail-h,.rail-note{display:none}
@@ -1591,11 +1613,24 @@ main > .wrap > section.home-sec:only-child .quick-card[href$=".html"]{
    alphabetical-ish order. It is now the coast itself: ONE strip, read the way
    the map reads — Mobile Bay in the west down to 30A in the east — every area
    a stop on a drawn route line, each carrying its count in ledger figures and
-   the honest drive band from home base. Gulf Breeze is the filled gold node:
-   this site is written from somewhere, and now the page says where.
-   The drive bands agree with the per-card drive times the site already
-   publishes (Palafox 25 min, USS Alabama 70, Sandestin 60); when the build
-   gains a data-drive attribute these belong in markup, not here.
+   its position along the coast. Gulf Breeze is the filled gold node: the coast
+   is read west to east and the strip has to start somewhere.
+   ⚠ 08/09 — THESE BANDS USED TO BE DRIVE TIMES FROM ONE HOUSE, AND THEY WERE
+   ALSO BROKEN. Two faults in one line each, caught by an independent review of
+   the rendered page rather than of the source:
+   (a) R4-WW3. Every band read "70-90 min drive · west" measured from Gulf
+       Breeze, and one of them said "home base - most of it under 25 min" out
+       loud. Gray ruled personal drive times off the public site the same day;
+       this block was missed because it lives in CSS `content`, not in the
+       generator that the removal pass swept. A rule that prints copy is copy.
+   (b) The escapes were malformed. `content:"70\201390 min drive"` — CSS
+       consumes up to SIX hex digits after a backslash, so `\201390` parsed as
+       the single invalid codepoint U+201390 and every band rendered as
+       "70<replacement glyph> MIN DRIVE", eating the en dash AND the second
+       number. Six of the eight were affected. An escape must be terminated by
+       a space, and the parser then consumes that space.
+   They are compass bearings and rough distances along the shoreline now, which
+   is true for every reader rather than for one address.
    Scoped to the where hub alone by its own hrefs; without :has() the page
    falls back to the standard hub tiles, losing nothing. */
 main > .wrap > section.home-sec:only-child .quick:has(> .quick-card[href="gulf-breeze.html"]){
@@ -1648,21 +1683,21 @@ main > .wrap > section.home-sec:only-child .quick:has(> .quick-card[href="gulf-b
   font:600 var(--fs-kicker)/1.5 var(--font-mono);letter-spacing:.13em;
   color:var(--ink-3);text-transform:uppercase;font-variant-numeric:tabular-nums}
 main > .wrap > section.home-sec:only-child .quick > .quick-card[href="mobile-baldwin.html"]{order:1}
-main > .wrap > section.home-sec:only-child .quick > .quick-card[href="mobile-baldwin.html"]::after{content:"70\201390 min drive \00b7 west"}
+main > .wrap > section.home-sec:only-child .quick > .quick-card[href="mobile-baldwin.html"]::after{content:"west end of the coast"}
 main > .wrap > section.home-sec:only-child .quick > .quick-card[href="orange-beach.html"]{order:2}
-main > .wrap > section.home-sec:only-child .quick > .quick-card[href="orange-beach.html"]::after{content:"60\201380 min drive \00b7 west"}
+main > .wrap > section.home-sec:only-child .quick > .quick-card[href="orange-beach.html"]::after{content:"west, over the Alabama line"}
 main > .wrap > section.home-sec:only-child .quick > .quick-card[href="pensacola.html"]{order:3}
-main > .wrap > section.home-sec:only-child .quick > .quick-card[href="pensacola.html"]::after{content:"20\201330 min drive \00b7 west"}
+main > .wrap > section.home-sec:only-child .quick > .quick-card[href="pensacola.html"]::after{content:"the city, mid-coast"}
 main > .wrap > section.home-sec:only-child .quick > .quick-card[href="pensacola-beach.html"]{order:4}
-main > .wrap > section.home-sec:only-child .quick > .quick-card[href="pensacola-beach.html"]::after{content:"20\201335 min drive \00b7 west"}
+main > .wrap > section.home-sec:only-child .quick > .quick-card[href="pensacola-beach.html"]::after{content:"the barrier island"}
 main > .wrap > section.home-sec:only-child .quick > .quick-card[href="gulf-breeze.html"]{order:5}
-main > .wrap > section.home-sec:only-child .quick > .quick-card[href="gulf-breeze.html"]::after{content:"home base \2014 most of it under 25 min";color:var(--gold-bright)}
+main > .wrap > section.home-sec:only-child .quick > .quick-card[href="gulf-breeze.html"]::after{content:"where the coast strip starts";color:var(--gold-bright)}
 main > .wrap > section.home-sec:only-child .quick > .quick-card[href="milton-pace.html"]{order:6}
-main > .wrap > section.home-sec:only-child .quick > .quick-card[href="milton-pace.html"]::after{content:"30\201340 min drive \00b7 north"}
+main > .wrap > section.home-sec:only-child .quick > .quick-card[href="milton-pace.html"]::after{content:"inland, north of the bay"}
 main > .wrap > section.home-sec:only-child .quick > .quick-card[href="destin-fwb.html"]{order:7}
-main > .wrap > section.home-sec:only-child .quick > .quick-card[href="destin-fwb.html"]::after{content:"40\201360 min drive \00b7 east"}
+main > .wrap > section.home-sec:only-child .quick > .quick-card[href="destin-fwb.html"]::after{content:"east, past the pass"}
 main > .wrap > section.home-sec:only-child .quick > .quick-card[href="thirty-a.html"]{order:8}
-main > .wrap > section.home-sec:only-child .quick > .quick-card[href="thirty-a.html"]::after{content:"75\201395 min drive \00b7 east"}
+main > .wrap > section.home-sec:only-child .quick > .quick-card[href="thirty-a.html"]::after{content:"east end of the coast"}
 @media(max-width:559px){
   main > .wrap > section.home-sec:only-child .quick:has(> .quick-card[href="gulf-breeze.html"]) > .quick-card{
     padding-left:52px;padding-right:16px;column-gap:12px}
@@ -1697,7 +1732,11 @@ main > .wrap > section.home-sec:only-child .quick > .quick-card[href="thirty-a.h
 @media(max-width:820px){
   .site-head .bar{padding-top:2px;padding-bottom:2px}
   .site-head nav{gap:0}
-  .site-head nav a{font-size:var(--fs-small);padding:0 10px;min-height:44px}
+  /* ⚠ 08/09 — 10px each side put the fourth link past the edge at 390 and the row cut mid-word.
+     Four links at 8px, with "Free things" shortened to "Free", measure about 290px against a 350px
+     column, so the doing row FITS on a phone rather than relying on the scroll. The about row still
+     scrolls, and that is the right trade: those are secondary links and the edge fade says so. */
+  .site-head nav a{font-size:var(--fs-small);padding:0 8px;min-height:44px}
   .site-head nav a[aria-current="page"],
   .site-head nav a[aria-current="true"]{box-shadow:inset 0 -2px 0 var(--gold)}
 }
@@ -1965,15 +2004,21 @@ html[data-theme="light"]{
 /* THE PRIMARY BUTTON gets the full edge. It is the one control per page that is asking to be
    pressed, so it is the one that earns ornament; secondary and quiet buttons stay plain, which is
    what stops the system reading as decoration applied everywhere. */
+/* ⚠ 08/09 — THE ORNAMENT WAS PAINTING UNDERNEATH ITS OWN BUTTON. The gold fill was the FIRST
+   background-image layer, and the first layer is the topmost one: an opaque gradient over the
+   hairlines and beads meant nothing was visible and the whole edge was dead code. An independent
+   review at 3x zoom found a plain gold pill where the changelog claimed ornament.
+   The fill is a background-COLOR now, which always paints behind every image layer, so the order
+   cannot be got wrong again by adding a layer at the top. */
 .btn.primary{
+  background-color:var(--gold);
   background-image:
-    linear-gradient(180deg,var(--gold-bright),var(--gold) 85%),
     linear-gradient(90deg,transparent 18px,var(--accent-ink) 34px,var(--accent-ink) calc(100% - 34px),transparent calc(100% - 18px)),
     linear-gradient(90deg,transparent 18px,var(--accent-ink) 34px,var(--accent-ink) calc(100% - 34px),transparent calc(100% - 18px)),
     radial-gradient(circle, var(--accent-ink) 1.4px, transparent 1.8px),
     radial-gradient(circle, var(--accent-ink) 1.4px, transparent 1.8px);
-  background-size:100% 100%,100% 1px,100% 1px,4px 4px,4px 4px;
-  background-position:0 0,0 4px,0 calc(100% - 4px),50% 2.5px,50% calc(100% - 2.5px);
+  background-size:100% 1px,100% 1px,4px 4px,4px 4px;
+  background-position:0 4px,0 calc(100% - 4px),50% 2.5px,50% calc(100% - 2.5px);
   background-repeat:no-repeat}
 
 /* THE SCOPE TABS get the moulding course, top and bottom. R4-W1 offered the elegant borders as

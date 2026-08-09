@@ -11511,7 +11511,41 @@ function useLiveWx(){const[,bump]=useState(0);useEffect(()=>{const cb=()=>bump(n
      rose and a lollipop. The first pass drew a filled disc with a spiral inside and read as a sweet
      on a stick at every size — a flower is recognised from its petal SILHOUETTE, so the silhouette
      is where the detail goes and the spiral is a supporting stroke inside it.
-     Rose ink, because this is the one mark in the set where the colour is the meaning. */dn:React.createElement(React.Fragment,null,React.createElement("path",{className:"mm_solid mm_c4",strokeWidth:"1.2",d:"M9.58 6.90a2.42 2.42 0 1 1 4.84 .01 M12.48 4.79a2.42 2.42 0 1 1 4.84 .01 M13.60 8.24a2.42 2.42 0 1 1 4.84 .01 M9.58 10.79a2.42 2.42 0 1 1 4.84 .01 M5.56 8.24a2.42 2.42 0 1 1 4.84 .01"}),React.createElement("path",{className:"mm_key mm_c4",strokeWidth:"1.2",d:"M9.35 6.5a2.42 2.42 0 0 1 3.5-1.9"}),React.createElement("path",{strokeWidth:"1.1",d:"M13.2 8.6a1.55 1.55 0 1 0-1.2 1.5"}),React.createElement("path",{strokeWidth:"1.2",d:"M12 12.4v6.4"}),React.createElement("path",{strokeWidth:"1.15",d:"M12 16.2c-2.2-.1-3.4-1.2-3.7-2.6 1.7-.4 3.3.5 3.7 2.6Z"}),React.createElement("path",{className:"mm_water",d:"M2.4 20.6c2.4-1.3 4.8-1.3 7.2 0s4.8 1.3 7.2 0 3.6-.9 4.8-.3"})),/* ⚠ 08/09 — THE LIFESAVER, NOT THE BEACON. Gray: "Change the Beacon thing to the Lifesaver and
+     Rose ink, because this is the one mark in the set where the colour is the meaning. *//* ⚠ 08/09 — THE HAND-DRAWN ROSE IS GONE AND THE METHOD CHANGED WITH IT.
+     Gray: "no falling petal.... that rose is crap not even a 1/10. you must find a different way
+     because it is really really bad." That is the SECOND failure on this one mark — the first read
+     as a lollipop (filled disc plus spiral), the replacement as a generic five-lobe flower — and
+     the project law is explicit: after two failures on one subject, the METHOD is the suspect,
+     never the effort. He said so himself: "I thought you were NOT drawing these ICONS but you were
+     finding similar ones."
+     So the geometry is LUCIDE'S ROSE, used verbatim, not redrawn:
+       https://github.com/lucide-icons/lucide/blob/main/icons/rose.svg
+     Licence ISC, https://github.com/lucide-icons/lucide/blob/main/LICENSE — "Permission to use,
+     copy, modify, and/or distribute this software for any purpose with or without fee is hereby
+     granted, provided that the above copyright notice and this permission notice appear in all
+     copies." Copyright (c) Lucide Contributors. It is NOT on Lucide's Feather-derived list, so the
+     ISC notice alone applies.
+     ⚠ THE FIT IS A TRANSFORM, NOT A REDRAW, and that is deliberate. Lucide's rose runs to y=22 and
+     the shared waterline sits at y=20.6, so it had to come up. Retyping the coordinates would have
+     meant a path nobody can diff against the source and a licence claim nobody can check; a
+     uniform scale about the bloom keeps every number exactly as fetched. 0.8 uniform, so the
+     stroke is not distorted the way a non-uniform fit would distort it, and 1.5 x 0.8 lands at
+     1.2, which is this set's own body weight.
+     The house light law is applied on top of the borrowed geometry rather than instead of it: rose
+     ink throughout because on this one mark the colour IS the meaning, the bloom's own hip as the
+     single tinted plane, and the shared waterline underneath so it joins the set. *//* ⚠ AND THE WHOLE ROSE DID NOT SURVIVE 15px, WHICH THE CONTACT SHEET SAID IN FOUR SECONDS.
+     Lucide's rose is bloom, thorny stem and a trailing leaf across the full box. Rendered at the
+     tab rail's real 15px the two overlapping curls of the bloom merged into one spiral and the
+     leaf under it read as a foot: the mark was a SNAIL. The research that fetched it flagged
+     exactly this risk before it shipped, which is the only reason it was checked at ship size
+     first rather than admired at 200px.
+     ⚠ The fix is composition, not linework — the law this project keeps re-earning. At 15px one
+     unit of the 24 box is 0.6 of a pixel, so a bloom occupying nine units has curls a pixel wide.
+     The stem and the leaf are what were stealing the room, and they are the two parts a viewer
+     does not need: a rose is recognised from its bloom. So the BLOOM ALONE fills the box at its
+     own scale, and a two-unit stem below it stops it reading as a floating swirl.
+     Path data is still Lucide's rose.svg verbatim (ISC, see above); only the framing changed, and
+     it changed by translation, so every coordinate is still diffable against the source. */dn:React.createElement(React.Fragment,null,React.createElement("g",{transform:"translate(-4.2,1.2)"},React.createElement("path",{className:"mm_c4",d:"M17 10h-1a4 4 0 1 1 4-4v.534"}),React.createElement("path",{className:"mm_key mm_c4",d:"M17 6h1a4 4 0 0 1 1.42 7.74l-2.29.87a6 6 0 0 1-5.339-10.68l2.069-1.31"}),React.createElement("circle",{className:"mm_solid mm_c4",cx:"17",cy:"8",r:"2"})),React.createElement("path",{strokeWidth:"1.3",d:"M12.2 15.9v3"}),React.createElement("path",{className:"mm_water",d:"M2.4 20.6c2.4-1.3 4.8-1.3 7.2 0s4.8 1.3 7.2 0 3.6-.9 4.8-.3"})),/* ⚠ 08/09 — THE LIFESAVER, NOT THE BEACON. Gray: "Change the Beacon thing to the Lifesaver and
      change the Volunteer logo to something else more volunteer-like." Two rows, one swap, and they
      had to move together: Volunteer was ALREADY wearing a life ring, so giving Support one and
      stopping there would have shipped the same object on two different destinations, which is the
@@ -11549,7 +11583,22 @@ function useLiveWx(){const[,bump]=useState(0);useEffect(()=>{const cb=()=>bump(n
      symmetric arcs above a wider arc is a face before it is anything else, and no amount of
      redrawing the hands was going to beat that. Symmetry was the fault, so the fix was ONE hand,
      off-centre. This is the three-beach-chairs lesson arriving early: when a drawing reads as the
-     wrong object, suspect the composition before the linework. */volunteer:React.createElement(React.Fragment,null,React.createElement("path",{className:"mm_solid mm_c4",strokeWidth:"1.2",d:"M13.4 8.2C11.5 6.6 10.2 5.7 10.2 4.4A1.7 1.7 0 0 1 13.4 3.6A1.7 1.7 0 0 1 16.6 4.4C16.6 5.7 15.3 6.6 13.4 8.2Z"}),React.createElement("path",{className:"mm_key mm_c2",d:"M6.2 18.4V12.5a1.5 1.5 0 0 1 3 0v1.6"}),React.createElement("path",{d:"M9.2 13.6v-2.4a1.4 1.4 0 0 1 2.8 0v2.4"}),React.createElement("path",{d:"M12 13.2v-1.9a1.4 1.4 0 0 1 2.8 0v3.1"}),React.createElement("path",{d:"M14.8 14.4v-1.3a1.4 1.4 0 0 1 2.8 0v3.3c0 2.1-1.7 3.6-3.9 3.6h-2c-2.2 0-3.5-1.1-4.2-2.9"}),React.createElement("path",{className:"mm_water",d:"M2.4 20.6c2.4-1.3 4.8-1.3 7.2 0s4.8 1.3 7.2 0 3.6-.9 4.8-.3"})),sponsor:React.createElement(React.Fragment,null,/* the shack, as one eave line. It is context, not subject, so it gets one stroke. */React.createElement("path",{className:"mm_c2",d:"M2.6 6.4L12 3.4L21.4 6.4"}),/* TWO CHAINS, 8 units apart, drawn straight — real links are sub-pixel at 19px and the gap
+     wrong object, suspect the composition before the linework. *//* ⚠ 08/09 — VOLUNTEER, THIRD SUBJECT, AND THE FIRST FROM A LICENSED SOURCE.
+     Gray, on the whole icon pass: "all of those icon were not good... except for the actual
+     lifesaver one." This row has now failed twice on its own: two cupped hands read as a SMILEY
+     FACE, because two symmetric arcs above a wider arc is a face before it is anything else, and
+     the raised hand that replaced it he still rejected. Two failures, so the method changes.
+     Geometry is LUCIDE'S HAND-HEART, used verbatim:
+       https://github.com/lucide-icons/lucide/blob/main/icons/hand-heart.svg
+     Licence ISC, https://github.com/lucide-icons/lucide/blob/main/LICENSE, copyright (c) Lucide
+     Contributors; not on the Feather-derived list, so the ISC notice alone applies.
+     ⚠ WHY THIS SUBJECT SURVIVES THE SMILEY TRAP BY CONSTRUCTION: the composition is DIAGONAL and
+     asymmetric — a forearm entering from the lower left, a heart held above and to the right —
+     which is structurally the opposite of the symmetric-arcs-over-an-arc shape that failed. There
+     is no axis for a face to form on.
+     Fit is a uniform 0.82 scale about the palm, for the same reason as the rose: Lucide's art runs
+     to y=21 and the shared waterline is at 20.6. Uniform so the stroke is not distorted, and the
+     numbers stay diffable against the source. */volunteer:React.createElement(React.Fragment,null,React.createElement("g",{transform:"translate(11,12) scale(0.82) translate(-11,-12)"},React.createElement("path",{className:"mm_solid mm_c4",d:"m14.45 13.39 5.05-4.694C20.196 8 21 6.85 21 5.75a2.75 2.75 0 0 0-4.797-1.837.276.276 0 0 1-.406 0A2.75 2.75 0 0 0 11 5.75c0 1.2.802 2.248 1.5 2.946L16 11.95"}),React.createElement("path",{className:"mm_key mm_c2",d:"M11 14h2a2 2 0 0 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"}),React.createElement("path",{d:"m2 15 6 6"}),React.createElement("path",{d:"m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a1 1 0 0 0-2.75-2.91"})),React.createElement("path",{className:"mm_water",d:"M2.4 20.6c2.4-1.3 4.8-1.3 7.2 0s4.8 1.3 7.2 0 3.6-.9 4.8-.3"})),sponsor:React.createElement(React.Fragment,null,/* the shack, as one eave line. It is context, not subject, so it gets one stroke. */React.createElement("path",{className:"mm_c2",d:"M2.6 6.4L12 3.4L21.4 6.4"}),/* TWO CHAINS, 8 units apart, drawn straight — real links are sub-pixel at 19px and the gap
        between sign and roof is what says "hanging" */React.createElement("path",{d:"M8 4.9v4.3M16 4.9v4.3"}),/* THE SIGN. The accent and the one tint live here, so the eye lands on the board. */React.createElement("path",{className:"mm_solid mm_c1",d:"M6.8 9.2h10.4a1.2 1.2 0 0 1 1.2 1.2v4.6a1.2 1.2 0 0 1-1.2 1.2H6.8a1.2 1.2 0 0 1-1.2-1.2v-4.6a1.2 1.2 0 0 1 1.2-1.2z"}),/* ⚠ the lit edge is an OPEN overlay, not the whole outline — a closed path at 1.9 all the way
        round is uniform weight, which is no light direction at all, and this mark broke the very law
        the pass was named for until an independent review measured it. It stays at body weight here
