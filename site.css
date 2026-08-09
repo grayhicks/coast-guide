@@ -389,7 +389,19 @@ html[data-theme="light"] .site-head{background:rgba(238,240,239,.9)}
 /* R4-WD2 / R4-WN1 / R4-W8 — the app sits at the TOP of the left rail, and smaller. The old
    rail-card was the LAST thing in the rail, under four filter groups and a note, so on a phone
    the entire listing had to be scrolled past before it appeared at all. */
-.rail-app{margin:0 0 var(--s-4);padding:0 0 var(--s-4);border-bottom:1px solid var(--line-soft)}
+/* ⚠ 08/09 — the divider under the app block was the only horizontal rule left on this page still
+   drawn as a plain hairline, which made it the odd one out the moment every other rule became the
+   swelled rule. It is the same mark, at the same proportion, in the same token. */
+.rail-app{position:relative;margin:0 0 var(--s-4);padding:0 0 var(--s-4)}
+.rail-app::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;pointer-events:none;
+  background-color:var(--orn-rule);opacity:.55;
+  -webkit-mask-image:linear-gradient(90deg,transparent,black 14%,black 86%,transparent),var(--orn-swell);
+          mask-image:linear-gradient(90deg,transparent,black 14%,black 86%,transparent),var(--orn-swell);
+  -webkit-mask-size:100% 1px,min(90px,100%) 5px;
+          mask-size:100% 1px,min(90px,100%) 5px;
+  -webkit-mask-position:50% 2px,50% 50%;
+          mask-position:50% 2px,50% 50%;
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
 .rail-app .btn{width:100%;min-height:44px;padding:10px 16px;font-size:15px}
 .rail-app .fine{margin:8px 0 0;color:var(--ink-3)}
 /* ⚠ AND THE RAIL ITSELF SCROLLS. Gray: "also the left side needs to be scrollable". On desktop
@@ -426,17 +438,22 @@ html[data-theme="light"] .site-head{background:rgba(238,240,239,.9)}
    it was the same family but not the same mark. It is the same mark now — one rule, one bead, at
    both edges — which is what makes the header and the CTA read as one system rather than as two
    things that happen to be gold. */
+/* ⚠ 08/09 — THE HEADER'S BAR IS THE SWELLED RULE NOW, same as the button and same as the app's
+   selected tabs. It was a straight hairline carrying a separate bead at its centre; the spindle
+   carries its own centre in its silhouette, so one object replaces two and there is nothing left
+   that can drift out of register with anything else. */
 .site-head::before,.site-head::after{content:"";position:absolute;left:22px;right:22px;height:5px;
-  pointer-events:none;z-index:1;
-  background:
-    linear-gradient(90deg,transparent,var(--gold) 15%,var(--gold) 85%,transparent) no-repeat,
-    radial-gradient(circle, var(--gold) 1.5px, transparent 2px) no-repeat;
-  background-size:100% 1.5px, 5px 5px;
+  pointer-events:none;z-index:1;background-color:var(--orn-rule);
+  -webkit-mask-image:linear-gradient(90deg,transparent,black 10%,black 90%,transparent),var(--orn-swell);
+          mask-image:linear-gradient(90deg,transparent,black 10%,black 90%,transparent),var(--orn-swell);
+  -webkit-mask-size:100% 1px,min(104px,100%) 5px;
+          mask-size:100% 1px,min(104px,100%) 5px;
+  -webkit-mask-position:50% 2px,50% 50%;
+          mask-position:50% 2px,50% 50%;
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
   opacity:.72}
-/* the bead sits ON the rule: the rule is 1.5px at the outer edge, the 5px bead layer is centred
-   on it by pushing it 0.75px past, so the two share a centre line instead of stacking. */
-.site-head::before{top:0;background-position:0 0, 50% -1.75px}
-.site-head::after{bottom:0;opacity:.92;background-position:0 bottom, 50% calc(100% + 1.75px)}
+.site-head::before{top:0}
+.site-head::after{bottom:0;opacity:.92}
 @media(max-width:820px){ .site-head::before,.site-head::after{left:14px;right:14px} }
 
 /* ============================================================ THE ABOUT ROW
@@ -908,9 +925,27 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
   overflow-x:auto;scrollbar-width:none}
 html[data-theme="light"] .scope{background:linear-gradient(180deg, rgba(40,50,60,.07), rgba(40,50,60,0) 75%), var(--panel);
   box-shadow:inset 0 1px 3px rgba(40,50,60,.12)}
+/* ⚠ 08/09 — TWO BY TWO ON A PHONE, BECAUSE FOUR ACROSS NEVER FITS ONE.
+   This was a scrolling track with a fade at the right edge, and at 390 what a reader actually saw
+   was "Next 7 d" cut through by the viewport and "Next 90 days" not on screen at all. It is the
+   same fault the app's time-window row had, found the same way — by rendering the page and looking
+   at it — and it takes the same answer: a grid cannot clip, and a scope a reader cannot see is a
+   scope they do not have.
+   ⚠ IT ALSO MATTERS TO THE ORNAMENT. The swelled rule on this rail is symmetric about its own
+   centre, and a symmetric mark inside a container whose right end is cut off is shown
+   asymmetrically. Squaring the container is what lets the right taper resolve on screen. */
 @media(max-width:640px){
-  .scope{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 32px),transparent);
-    mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 32px),transparent)}
+  /* ⚠ AND THE TRACK CANNOT STAY A CAPSULE ONCE IT IS TWO ROWS TALL. --r-pill is 999, which on a
+     110px-tall box resolves to a 55px corner arc, and the top-right grid cell's square corner then
+     sits OUTSIDE that arc — rendered at 390, the selected pill visibly crossed its own track's
+     edge. One row of four can be a capsule; two rows of two is a panel, so the track takes the
+     card radius. The cells stay capsules and sit inside it, which was checked in a render.
+     ⚠ NOTHING TARGETING .scope a OR .scope::before MAY GO IN THIS BLOCK. Both are defined LOWER in
+     this file, a media query adds no specificity, and later wins — three declarations written here
+     first time round were completely inert. This block only reaches .scope itself, which is
+     declared above it. */
+  .scope{display:grid;grid-template-columns:1fr 1fr;overflow:visible;border-radius:var(--r-card);
+    -webkit-mask-image:none;mask-image:none}
 }
 .scope::-webkit-scrollbar{display:none}
 .scope a{flex:1 0 auto;display:inline-flex;align-items:center;justify-content:center;
@@ -995,7 +1030,23 @@ html[data-theme="light"] .chip.on::before{box-shadow:0 0 0 3px rgba(138,95,16,.1
   .rail-app .btn{width:100%}
   .rail-app .fine{margin:6px 0 0}
   .rail .chip-row{display:contents}
-  .rail .chip{flex:none;min-height:40px;padding:6px 14px}
+  /* ⚠ 08/09 — TWO EQUAL COLUMNS, BECAUSE THE ROW IS WRAPPING AND NOT SCROLLING.
+     This block's own comment says the rail "folds into ONE scrollable chip row," and that stopped
+     being true the moment .rail{flex-wrap:wrap} was added above to get the app block onto its own
+     line — a wrapped flex ignores overflow-x, so what actually shipped was a pile of chips at nine
+     different widths breaking into rows of one, two and three. Gray's standing hard rule is
+     "symmetrical and uniformity as always," and this was the least uniform thing on the page.
+     flex-basis at half the row less the gap gives every chip the same width, whatever the AREAS
+     data does next, and align-items:stretch keeps the two chips in a row the same height when a
+     long area name takes two lines. */
+  .rail{align-items:stretch}
+  /* ⚠ white-space:normal is load-bearing here, not tidying. The base .chip is nowrap, and a nowrap
+     label inside a box that min-width:0 lets shrink does not clip — it PRINTS OUTSIDE THE PILL.
+     Rendered at 390, "Pensacola Beach & Perdido" and "Orange Beach & Gulf Shores" both had their
+     first and last words sitting on the cream outside their own capsule. Two equal columns only
+     works if the longer names are allowed to take a second line. */
+  .rail .chip{flex:1 1 calc(50% - 4px);min-width:0;justify-content:center;text-align:center;
+    white-space:normal;line-height:1.25;min-height:44px;padding:7px 12px}
   .rail-h,.rail-note{display:none}
   .filter-group h2{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
   .filter-group.legend{display:none}
@@ -1906,6 +1957,34 @@ html[data-theme="light"]{
   --orn-ink:#12202f; --orn-hi:#0b1826; --orn-fill:#FFF6E4;
   --orn-faint:rgba(18,32,47,.26);
 }
+/* ⚠ 08/09 — THE SWELLED RULE. Gray on what shipped here: "I don't dislike the buttons you did on
+   the events page but I don't like them a whole lot either. the borders are not elegant." And
+   earlier, on the tapered hairline itself: "I like that one but... we may want to try a more
+   elegant one as an option though."
+   A straight 1px rule that fades out is the plainest member of this family. The elegant member is
+   the printer's SWELLED RULE — a spindle at full weight in its middle, tapering to a point at both
+   ends. It keeps every property the tapered hairline was chosen for (it never reaches a corner, so
+   the header cannot close into a boxed panel) and it satisfies the law the crenellation was
+   rejected under, because a spindle contains no straight segment and therefore has no masonry
+   reading at any size.
+   ⚠ THE GEOMETRY IS FETCHED, NOT DRAWN. Wikimedia Commons,
+   Decorative_text_divider_-_central_flare.svg, PUBLIC DOMAIN.
+   https://commons.wikimedia.org/wiki/File:Decorative_text_divider_-_central_flare.svg
+   The file holds the spindle and a plain hairline through its middle; only the spindle is taken,
+   path data unmodified, so it stays diffable against the source. It is the same divider collection
+   the bead came from, so this deepens the one dialect rather than starting a second.
+   ⚠ IT IS THE SAME TOKEN THE APP CARRIES as --hk-swell, off the same file. One mark, both surfaces.
+   ⚠ AND IT IS A MASK, so it paints in currentColor or a background-color and follows the theme
+   with no second definition — which is also why it can never repeat the failure where an opaque
+   background-image layer was declared first and hid the ornament underneath it. */
+/* the rule paints in its own ink rather than in --gold. On cream, gold at .72 reads as a nick in
+   the border rather than as a drawn mark — a cold grade at ship size called it exactly that — and
+   on navy the bright gold is already correct. One token, two values, no geometry difference. */
+:root{ --orn-rule:var(--gold); }
+html[data-theme="light"]{ --orn-rule:#7a4e08; }
+:root{
+  --orn-swell:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20'%3E%3Cpath d='M150 1.5c0 8.1555533-40 8.5-145 9 105 .5 145 .844447 145 9 0-8.155553 40-8.5 145-9-105-.5-145-.8444467-145-9z'/%3E%3C/svg%3E");
+}
 
 /* 1 · the divider. Both halves are the SAME gradient, the right one mirrored by
    transform, so the two ends cannot drift apart when the rule is edited. */
@@ -1962,22 +2041,15 @@ html[data-theme="light"]{
   background-repeat:no-repeat;
   opacity:.62}
 
-/* 3 · THE BUTTON EDGE — every mark is a BACKGROUND LAYER of the button itself.
-   ⚠ The old keystone was an ::after at top:-3.5px, i.e. OUTSIDE the border box, and inside the
-   site header — which clips — it detached and floated over the nav as a loose diamond. Nothing
-   here leaves the box, so it clips with the button, pixel for pixel, and the failure cannot recur.
-   Two tapered hairlines inset 4px from the top and bottom edges, fading in over 18px to 34px so
-   they stay clear of the 8px corner arcs, and one 3px bead centred exactly ON each hairline
-   (4px layer offset 2.5px puts its centre at y4.5, which is the hairline's own centre). */
-.orn-btn{
-  background-image:
-    linear-gradient(90deg,transparent 18px,var(--orn-faint) 34px,var(--orn-faint) calc(100% - 34px),transparent calc(100% - 18px)),
-    linear-gradient(90deg,transparent 18px,var(--orn-faint) 34px,var(--orn-faint) calc(100% - 34px),transparent calc(100% - 18px)),
-    radial-gradient(circle, var(--orn-ink) 1.4px, transparent 1.8px),
-    radial-gradient(circle, var(--orn-ink) 1.4px, transparent 1.8px);
-  background-size:100% 1px,100% 1px,4px 4px,4px 4px;
-  background-position:0 4px,0 calc(100% - 4px),50% 2.5px,50% calc(100% - 2.5px);
-  background-repeat:no-repeat}
+/* 3 · THE BUTTON EDGE — DELETED FROM HERE 08/09, and the deletion is the point.
+   ⚠ It was .orn-btn, a class with no element in the entire site wearing it, holding a second copy
+   of a mark that .btn.primary already drew for itself. Two definitions of one ornament is how a
+   vocabulary becomes two dialects, and a rule with nothing to style is the same defect as an
+   element with no rule. The one live definition is at .btn.primary::before, further down, and it
+   is the swelled rule. Do not restore a parallel class for it here.
+   The one thing worth carrying forward from what stood here: the old keystone was an ::after at
+   top:-3.5px, OUTSIDE the border box, and inside the site header — which clips — it detached and
+   floated over the nav as a loose diamond. Every mark on a button stays inside its own box. */
 
 /* 4 · THE TRIM — REMOVED 08/09, and the reasoning is kept because the next person will be tempted
    to rebuild it. It was an embattled fillet: a 12x4 tile, one 1px stroke, M0 .5 H3 V3.5 H9 V.5 H12,
@@ -2030,16 +2102,28 @@ html[data-theme="light"]{
    review at 3x zoom found a plain gold pill where the changelog claimed ornament.
    The fill is a background-COLOR now, which always paints behind every image layer, so the order
    cannot be got wrong again by adding a layer at the top. */
-.btn.primary{
-  background-color:var(--gold);
-  background-image:
-    linear-gradient(90deg,transparent 18px,var(--accent-ink) 34px,var(--accent-ink) calc(100% - 34px),transparent calc(100% - 18px)),
-    linear-gradient(90deg,transparent 18px,var(--accent-ink) 34px,var(--accent-ink) calc(100% - 34px),transparent calc(100% - 18px)),
-    radial-gradient(circle, var(--accent-ink) 1.4px, transparent 1.8px),
-    radial-gradient(circle, var(--accent-ink) 1.4px, transparent 1.8px);
-  background-size:100% 1px,100% 1px,4px 4px,4px 4px;
-  background-position:0 4px,0 calc(100% - 4px),50% 2.5px,50% calc(100% - 2.5px);
-  background-repeat:no-repeat}
+/* ⚠ 08/09 — AND IT IS THE SWELLED RULE NOW, ON A PSEUDO-ELEMENT.
+   The four background-image layers that used to draw it are deleted: a mask cannot be painted onto
+   an element that holds text without erasing the text, so the mark moves to ::before, which also
+   means it can never again be ordered underneath its own fill.
+   ⚠ THE BEAD IS GONE AND ITS ABSENCE IS THE POINT. The old mark was a straight hairline that
+   needed a dot to say where its centre was. A swelled rule says that with its own silhouette, and
+   a 3px dot laid on the thickest part of a 3px spindle adds a lump, not a jewel — mask layers
+   composite by union, so the two would have merged into one blob rather than reading as rule plus
+   bead. One object, and it is the same object the app draws on its selected tabs. */
+.btn.primary{position:relative;background-color:var(--gold);background-image:none}
+.btn.primary::before{content:"";position:absolute;inset:4px 14px;pointer-events:none;
+  background-color:var(--accent-ink);
+  -webkit-mask-image:linear-gradient(90deg,transparent,black 12%,black 88%,transparent),var(--orn-swell),
+    linear-gradient(90deg,transparent,black 12%,black 88%,transparent),var(--orn-swell);
+          mask-image:linear-gradient(90deg,transparent,black 12%,black 88%,transparent),var(--orn-swell),
+    linear-gradient(90deg,transparent,black 12%,black 88%,transparent),var(--orn-swell);
+  -webkit-mask-size:100% 1px,min(78px,100%) 5px,100% 1px,min(78px,100%) 5px;
+          mask-size:100% 1px,min(78px,100%) 5px,100% 1px,min(78px,100%) 5px;
+  -webkit-mask-position:50% 2px,50% 0,50% calc(100% - 2px),50% 100%;
+          mask-position:50% 2px,50% 0,50% calc(100% - 2px),50% 100%;
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+  opacity:.85}
 
 /* ⚠ 08/09 — THE CRENELLATED COURSE IS OFF THE TABS. Gray: "I hate the events page that elegant
    brick style crap I even said that when I saw it."
@@ -2053,11 +2137,20 @@ html[data-theme="light"]{
    So the tabs get the SAME rule, in the same gilt, tapering to nothing at both ends so it never
    wraps the corners. One vocabulary on both surfaces instead of two dialects, which is the whole
    point of having a system. */
-.scope{position:relative;padding-top:7px;padding-bottom:7px}
-.scope::before,.scope::after{content:"";position:absolute;left:16px;right:16px;height:1px;
-  pointer-events:none;
-  background:linear-gradient(90deg,transparent,var(--gold) 18%,var(--gold) 82%,transparent);
-  opacity:.62}
+/* ⚠ 08/09 — and the tab rail takes the swelled rule too, for the reason the paragraph above
+   gives: one vocabulary on both surfaces. It was the straight hairline, which is the plain member
+   of this family and the thing Gray said was not elegant. */
+.scope{position:relative;padding-top:9px;padding-bottom:9px}
+.scope::before,.scope::after{content:"";position:absolute;left:16px;right:16px;height:5px;
+  pointer-events:none;background-color:var(--orn-rule);
+  -webkit-mask-image:linear-gradient(90deg,transparent,black 14%,black 86%,transparent),var(--orn-swell);
+          mask-image:linear-gradient(90deg,transparent,black 14%,black 86%,transparent),var(--orn-swell);
+  -webkit-mask-size:100% 1px,min(90px,100%) 5px;
+          mask-size:100% 1px,min(90px,100%) 5px;
+  -webkit-mask-position:50% 2px,50% 50%;
+          mask-position:50% 2px,50% 50%;
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+  opacity:.72}
 .scope::before{top:0}
 .scope::after{bottom:0}
 

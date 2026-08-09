@@ -857,6 +857,41 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
   .hk_splashmark .sp_sea,.hk_splashmark .sp_sea2{ opacity:.5; }
 }
 .hk{ --hk-col:640px; }
+/* ===== THE SWELLED RULE — the app's one ornament mark, 08/09 ==================================
+   Gray asked for the elegant alternative by name after the gilt hairline shipped: "I like that one
+   but... we may want to try a more elegant one as an option though." And on the controls: "There
+   needs to be some amazing borders on the buttons... Not overkill but symmetrical and uniformity
+   as always."
+
+   THE MARK IS A SWELLED RULE — a spindle that is at its full weight in the middle and tapers to a
+   point at both ends. It is the printer's device that sits under a chapter head, and it is the
+   right answer here for three reasons that are each a law this project has already paid for:
+     · IT IS A CURVE. The crenellated fillet was rejected because a square-tooth repeat reads as
+       BRICK at 4px on a pale ground, and the rule that came out of it is that a profile must be a
+       cove, an ogee or a bead — never a step. A spindle has no straight segment in it at all.
+     · IT TAPERS TO NOTHING, so it can never wrap a corner, which is the requirement Gray stated
+       for the gold bar: "it DOES NOT connect on the sides in the middle."
+     · ITS OWN CENTRE IS ITS WIDEST POINT, so the swell IS the bead. At a 44px control a 3px rule
+       cannot also carry a 3px dot on top of it — that is grey mush at ship size, and judging at
+       ship size is the law that killed the 15px rose.
+
+   ⚠ IT STARTS FROM A LICENSED SOURCE AND THE GEOMETRY IS VERBATIM.
+     Wikimedia Commons, Decorative_text_divider_-_central_flare.svg, PUBLIC DOMAIN.
+     https://commons.wikimedia.org/wiki/File:Decorative_text_divider_-_central_flare.svg
+     Fetched from https://upload.wikimedia.org/wikipedia/commons/7/7c/Decorative_text_divider_-_central_flare.svg
+   The source is a 300x20 file holding two objects: the spindle, and a plain hairline drawn through
+   its middle. ONLY THE SPINDLE IS USED, path data unmodified, so the numbers stay diffable against
+   the file. The hairline is dropped because at a 3px render it would be a sixth of a pixel, which
+   is not a line, and because the control's own 1px border is already doing that job.
+   It is the same divider collection the website's bead came out of, so this deepens one dialect
+   rather than inventing a second — which is the whole point of having a system.
+
+   ⚠ IT IS A MASK OVER A BACKGROUND-COLOUR, not a background-image. The site shipped this ornament
+   painting UNDERNEATH its own button once, because the first background-image layer is the topmost
+   one and an opaque fill declared first hides every layer below it. A mask cannot fail that way.
+   ⚠ AND IT NEVER GOES ON AN ELEMENT THAT HOLDS TEXT — a mask would erase the label. Every use
+   below is on a pseudo-element. */
+.hk{ --hk-swell:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20'%3E%3Cpath d='M150 1.5c0 8.1555533-40 8.5-145 9 105 .5 145 .844447 145 9 0-8.155553 40-8.5 145-9-105-.5-145-.8444467-145-9z'/%3E%3C/svg%3E"); }
 .hk_wrap{ max-width:var(--hk-col); margin:0 auto; padding:0 15px 54px; }
 .disp{ font-family:Fraunces, serif; }
 .hk button{ font-family:inherit; }
@@ -1791,7 +1826,12 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
 /* 08/07 — the 08/07 pass gilded every tab INSIDE this tray and left the tray itself wearing the old
    cool blue-grey edge, so the whole assembly read half-finished. Edge only; the fill and radius are
    untouched. */
-.dock{ background:linear-gradient(180deg, rgba(34,58,80,.94), rgba(15,28,42,.96)); border:1px solid rgba(201,164,78,.3); border-top-color:rgba(232,199,123,.42); border-bottom-color:rgba(120,92,30,.4); border-radius:21px; padding:6px;
+/* ⚠ 08/09 — 18, AND THE 6px PADDING IS WHY. Every control inside this panel is at radius 12, and
+   18 minus the 6px of padding is exactly 12, so the panel's inner curve and the outer curve of the
+   button sitting in its corner are concentric by arithmetic rather than by eye. At 21 they were
+   not, and three nested radii of 21 / 15 / 11 was the fourth thing making this dock read as parts
+   from four different kits. Two radii ship now: 18 on the panel, 12 on everything in it. */
+.dock{ background:linear-gradient(180deg, rgba(34,58,80,.94), rgba(15,28,42,.96)); border:1px solid rgba(201,164,78,.3); border-top-color:rgba(232,199,123,.42); border-bottom-color:rgba(120,92,30,.4); border-radius:18px; padding:6px;
   box-shadow:0 20px 44px rgba(3,10,18,.6), 0 3px 10px rgba(3,10,18,.4), inset 0 1px 0 rgba(255,255,255,.09); backdrop-filter:blur(11px); }
 /* V14 — row 1: three pills (All Events · New & Coming Soon · Date Night). The 2×3 grid is retired. */
 .hk_pills{ display:flex; gap:5px; }
@@ -1821,16 +1861,20 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
 .flocmini{ margin-top:8px; font-size:10.5px; line-height:1.4; color:#94A2AF; }
 .frgo{ cursor:pointer; min-height:44px; padding:0 16px; border-radius:11px; font-size:12px; font-weight:800; background:#F3E7CE; color:#1a150a; border:1px solid #E8C766; -webkit-tap-highlight-color:transparent; }
 /* filters — button → grouped panel (NOT swipeable); bar lives inside the dock */
-.fbar{ display:flex; align-items:center; gap:8px; margin-top:6px; padding:7px 4px 3px; border-top:1px solid rgba(255,255,255,.09); }
-.fbtn{ cursor:pointer; min-height:44px; padding:0 15px; border-radius:999px; font-size:12px; font-weight:800; display:inline-flex; align-items:center; gap:6px;
+/* ⚠ 08/09 — THIS ROW WAS THE OTHER HALF OF THE SHAPE PROBLEM. The dock's top half was squircles
+   at 21 / 15 / 11 and its bottom half was full capsules at 999, so one panel was speaking two
+   shape languages at once. Everything in here is radius 12 now, which is the panel's own 18 less
+   its 6px of padding, and it is where the Saved control moved to. */
+.fbar{ display:flex; align-items:center; gap:8px; margin-top:8px; padding:8px 4px 3px; border-top:1px solid rgba(255,255,255,.09); }
+.fbtn{ cursor:pointer; min-height:44px; padding:0 15px; border-radius:12px; font-size:12px; font-weight:800; display:inline-flex; align-items:center; gap:6px;
   background:rgba(255,255,255,.07); color:#CFD9E4; border:1px solid rgba(255,255,255,.16); transition:transform .2s cubic-bezier(.34,1.56,.64,1); -webkit-tap-highlight-color:transparent; }
 .fbtn:active{ transform:scale(.96); }
 .fbtn .chev{ opacity:.7; font-size:10px; }
 .fbtn.on{ background:#F3E7CE; color:#1a150a; border-color:#F3E7CE; }
 .fbtn.open{ box-shadow:0 6px 16px rgba(0,0,0,.3); }
-.freset{ cursor:pointer; min-height:44px; padding:0 13px; border-radius:999px; font-size:11.5px; font-weight:800; background:transparent; color:#98A4B2; border:1px dashed rgba(255,255,255,.22); -webkit-tap-highlight-color:transparent; flex:0 0 auto; }
+.freset{ cursor:pointer; min-height:44px; padding:0 13px; border-radius:12px; font-size:11.5px; font-weight:800; background:transparent; color:#98A4B2; border:1px dashed rgba(255,255,255,.22); -webkit-tap-highlight-color:transparent; flex:0 0 auto; }
 /* the search pill — 16px input so iOS never zoom-jumps on focus */
-.sbox{ flex:1 1 auto; min-width:0; display:flex; align-items:center; gap:7px; min-height:44px; padding:0 6px 0 13px; border-radius:999px; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.16); color:#9FB0C0; }
+.sbox{ flex:1 1 auto; min-width:0; display:flex; align-items:center; gap:7px; min-height:44px; padding:0 6px 0 13px; border-radius:12px; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.16); color:#9FB0C0; }
 .sbox.on, .sbox:focus-within{ border-color:rgba(146,190,224,.5); background:rgba(255,255,255,.1); color:#CFE0EE; }
 .sbox input{ flex:1; min-width:0; background:transparent; border:0; outline:none; color:#EAF2F8; font-family:inherit; font-size:16px; font-weight:700; padding:0; }
 .sbox input::placeholder{ color:#7E93A8; font-weight:700; font-size:13px; }
@@ -5817,14 +5861,30 @@ button.dnx_tag{ margin:0; font-family:inherit; }
 .mitem .go{ margin-left:auto; color:#6E8593; }
 
 /* sticky tabs (promoted out of the filter panel) */
-.hk_tabs{ display:flex; gap:4px; padding:4px; background:#0A1F27; border:1px solid rgba(203,217,220,.12); border-radius:15px; }
-.hk_tab{ flex:1; min-height:46px; border:0; border-radius:11px; background:transparent; cursor:pointer; position:relative;
-  color:#8CA3B4; font-family:inherit; font-weight:800; font-size:11px; letter-spacing:0; white-space:nowrap; overflow:hidden;
-  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1px; transition:background .18s,color .18s; -webkit-tap-highlight-color:transparent; }
+/* ⚠ 08/09 — SIX IN A ROW NEVER FITS A PHONE, SO IT IS THREE BY TWO. This was one flex row of six
+   and it failed at every width the app actually ships to. The arithmetic, measured rather than
+   argued: at 320 the dock's inner width is 288, six cells and five gaps leave 43px of box and
+   37px of type, and "Weekend" is 41.7px at 9.5px in the shipped face. At 360 it is 43.7 against
+   43.9. At 390 the track was 326px of content in a 298px box and "Anytime" was cut in half by
+   the edge of its own tray, which is what Gray was looking at. There is no font size that fixes
+   six-across without shrinking the label below the point of reading it.
+   ⚠ THE SECOND FAILURE CHANGES METHOD, NOT SCOPE. Narrowing the type was the first repair and it
+   bought 0.2px. So the row changes shape instead: repeat(3,1fr) over two lines, which gives every
+   cell 92px of box at 320 and cannot clip at any width this app will ever see. It also removes
+   the horizontal scroll, and a time window a reader cannot see is a time window they do not have.
+
+   ⚠ AND EVERY CELL PRINTS ITS COUNT NOW. Before, .tc was hidden on every tab except the selected
+   one, so the chosen cell was the only one carrying two lines of content and its neighbours' text
+   sat on a different baseline. Hiding information to fix a layout is the wrong half of the trade:
+   the counts are the most useful thing in the row, since they say which windows have anything in
+   them before you tap. One line, label then count, identical structure in all six. */
+.hk_tabs{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; }
+.hk_tab{ min-width:0; min-height:44px; border:0; border-radius:12px; background:transparent; cursor:pointer; position:relative;
+  color:#8CA3B4; font-family:inherit; font-weight:800; font-size:11.5px; letter-spacing:0; white-space:nowrap; overflow:hidden;
+  display:flex; flex-direction:row; align-items:center; justify-content:center; gap:5px; transition:background .18s,color .18s; -webkit-tap-highlight-color:transparent; }
 .hk_tab:active{ transform:scale(.97); }
-.hk_tab .tc{ font-size:10.5px; font-weight:800; color:#6E8593; }
-.hk_tab:not(.on) .tc{ display:none; }
-.hk_tab.on{ background:linear-gradient(180deg,#1B4763,#122B45); color:#FFF6E4; box-shadow:0 0 0 1.5px #C9A44E, 0 0 11px -3px rgba(201,164,78,.42), 0 5px 16px -7px rgba(0,0,0,.65), inset 0 1px 0 rgba(255,246,228,.13); }
+.hk_tab .tc{ font-size:10.5px; font-weight:800; color:#6E8593; font-variant-numeric:tabular-nums; }
+.hk_tab.on{ background:linear-gradient(180deg,#1B4763,#122B45); color:#FFF6E4; }
 .hk_tab.on .tc{ color:#E3C471; }
 
 /* category + 21+ + age chip row (horizontal scroll) */
@@ -5867,18 +5927,25 @@ button.dnx_tag{ margin:0; font-family:inherit; }
    measured box — the standardization pass measured 2,114 controls and not one
    of them may move. Nothing here changes border-width, padding or min-height.
 
-   The rest edge sits at ~34% gilt. 20% was tried first, on the theory that
+   The rest edge sits at ~52% gilt. 20% was tried first, on the theory that
    quiet reads as elegant; rendered, 20% is invisible on navy, which is the same
    outcome as border:0 and therefore the same bug. Elegant means SEEN and
    restrained.
+   ⚠ 08/09 — 34% WAS THE SAME MISTAKE ONE STOP LATER, and it took a cold grade at
+   ship size to say so: the unselected hairlines measured 55 to 68 luminance on a
+   44 to 51 ground, which is a border you can find only if you already know it is
+   there. Gray's rule is "amazing borders on the buttons," not on the selected
+   button, and a panel where only the chosen cell has a visible edge reads as two
+   lit cells floating in a dim tray rather than as one instrument. 52%, same hue,
+   same 1px, same lit-lip relationship between the top and bottom edges.
    ⚠ Gilt at low alpha on CREAM is invisible too — the same failure that made
    four checklist items vanish on About. The paper room runs on ink-and-gilt
    values of its own and its selected tab is foil-stamped, not lamplit. That is
    a deliberate second value set, not an oversight. */
 .dock .hk_tab, .dock .hk_segb{ position:relative;
-  border:1px solid rgba(201,164,78,.34);
-  border-top-color:rgba(150,120,52,.26);
-  border-bottom-color:rgba(240,212,126,.5);
+  border:1px solid rgba(201,164,78,.52);
+  border-top-color:rgba(150,120,52,.4);
+  border-bottom-color:rgba(240,212,126,.68);
   box-shadow:inset 0 1px 1px rgba(4,16,22,.34), inset 0 -1px 0 rgba(255,246,228,.05);
   transition:border-color .18s cubic-bezier(.33,.12,.25,1), background-color .24s cubic-bezier(.33,.12,.25,1),
     box-shadow .26s cubic-bezier(.33,.12,.25,1) .02s, color .16s ease; }
@@ -5888,36 +5955,86 @@ button.dnx_tag{ margin:0; font-family:inherit; }
   border-bottom-color:rgba(240,212,126,.65);
   background:rgba(201,164,78,.09); color:#A9BDCB;
   box-shadow:inset 0 1px 1px rgba(4,16,22,.2), inset 0 -1px 0 rgba(255,246,228,.1); }
-/* the light bar — where the lamp lands on the tab that got lifted out */
+/* ⚠ 08/09 — THE LIGHT BAR IS NOW THE SWELLED RULE, AND IT RUNS ON BOTH EDGES.
+   What was here was a straight tapered gradient, 1px, along the top edge only: the right family
+   but the plain member of it, and only half a frame. It is the same mark as the site header and
+   the site's primary button now — the PD spindle declared as --hk-swell up in the root block —
+   painted at the top AND the bottom inner edge of the chosen tab, tapering to a point at both ends
+   so it never reaches a corner. That is the "more elegant option" Gray asked for, and it is one
+   pseudo-element carrying two mask layers rather than a second element, so nothing new can collide
+   with .hk_tab::before or wander outside the button's own clip. */
+/* ⚠ THE RULE IS GILT, AND IT IS A HAIRLINE WITH THE SPINDLE SITTING ON ITS CENTRE.
+   A cold grade at ship size called the first version "two faint white glints... closer to a lens
+   flare than a deliberate engraved rule," and it was right three times over.
+     · CREAM WAS THE WRONG INK. It was inherited from the straight light bar this replaced, which
+       was a lamp highlight. This is a drawn rule, not a highlight, so it takes the same gilt the
+       cell's own border is drawn in. One family, not "close to one family."
+     · A SPINDLE STRETCHED TO THE FULL WIDTH IS INVISIBLE EXCEPT AT ITS CENTRE. At 100% it ran
+       12:1 in a 67px destination cell and 24:1 in a 115px time cell — the same file rendering as
+       two different objects, and over most of that length it was under a pixel tall. Pinning the
+       width fixed the proportion and produced the opposite fault: a small mark floating in the
+       middle of a wide cell, which is an ornament, not a border, and a border is what Gray asked
+       for.
+     · ⚠ AND THE SOURCE FILE ALREADY HELD THE ANSWER. Decorative_text_divider_-_central_flare.svg
+       is TWO objects: the spindle, and a plain hairline drawn straight through its middle. The
+       first pass took the spindle and dropped the hairline, which is why it had nothing to span
+       the edge with. Both are here now — the hairline runs the width so the mark reads as a rule,
+       the spindle keeps its own 15:1 proportion so the swell reads as a swell, and they share one
+       centre line by construction: the 1px hairline is offset 2px into a 5px band, which puts its
+       centre at 2.5, which is the spindle's own centre. The hairline is drawn as a gradient rather
+       than lifted from the file because ours has to TAPER at both ends — the source's does not,
+       and an untapered rule reaches the corner, which is the one thing Gray ruled out by name. */
 .dock .hk_tab::after, .dock .hk_segb::after, .support-page.tabbed .xp_tab::after{
-  content:""; position:absolute; left:10px; right:10px; top:4px; height:1px; border-radius:1px; pointer-events:none;
-  background:linear-gradient(90deg, rgba(255,246,228,0), rgba(255,246,228,.9) 30%, #FFF4D0 50%, rgba(255,246,228,.9) 70%, rgba(255,246,228,0));
-  opacity:0; transform:scaleX(.55); transform-origin:50% 0;
+  content:""; position:absolute; left:9px; right:9px; top:4px; bottom:4px; pointer-events:none;
+  background-color:#E3C471;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,black 7px,black calc(100% - 7px),transparent 100%),var(--hk-swell),
+    linear-gradient(90deg,transparent 0,black 7px,black calc(100% - 7px),transparent 100%),var(--hk-swell);
+  mask-image:linear-gradient(90deg,transparent 0,black 7px,black calc(100% - 7px),transparent 100%),var(--hk-swell),
+    linear-gradient(90deg,transparent 0,black 7px,black calc(100% - 7px),transparent 100%),var(--hk-swell);
+  -webkit-mask-size:100% 1px,min(60px,100%) 5px,100% 1px,min(60px,100%) 5px;
+          mask-size:100% 1px,min(60px,100%) 5px,100% 1px,min(60px,100%) 5px;
+  -webkit-mask-position:50% 2px,50% 0,50% calc(100% - 2px),50% 100%;
+          mask-position:50% 2px,50% 0,50% calc(100% - 2px),50% 100%;
+  -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
+  opacity:0; transform:scaleX(.55); transform-origin:50% 50%;
   transition:opacity .26s cubic-bezier(.33,.12,.25,1) .05s, transform .34s cubic-bezier(.2,.75,.25,1) .05s; }
-.dock .hk_tab.on::after, .dock .hk_segb.on::after{ opacity:.9; transform:scaleX(1); }
-.support-page.tabbed .xp_tab.on::after{ opacity:.55; transform:scaleX(1); }
+.dock .hk_tab.on::after, .dock .hk_segb.on::after{ opacity:.92; transform:scaleX(1); }
+/* the paper room paints it in ink rather than lamplight, for the reason stated below: gilt and
+   cream at low alpha on a pale ground is invisible, which is the same outcome as drawing nothing */
+.support-page.tabbed .xp_tab::after{ background-color:#7A5E1C; }
+.support-page.tabbed .xp_tab.on::after{ opacity:.62; transform:scaleX(1); }
+/* ⚠ 08/09 — THE SELECTED CELL STOPS GROWING OUT OF ITS OWN ROW. It carried a
+   box-shadow spread of 0 0 0 1px, which paints OUTSIDE the border box, so the
+   chosen cell was a pixel larger on all four sides than the five identical
+   siblings it sits beside — measured, the boxes are the same to 0.01px, but a
+   ring painted outside one of them is not, and a cold grade at 6x found it
+   immediately: "the selected pill is visibly taller top and bottom." A selection
+   that breaks the row's edges is the exact fault this whole pass was for.
+   The ring is INSET now. It reads as the same lift and it cannot leave the cell. */
 .dock .hk_tab.on, .dock .hk_segb.on{
   border-color:#C9A44E; border-top-color:#E3C471; border-bottom-color:#8F6D26;
-  box-shadow:0 0 0 1px rgba(201,164,78,.5), 0 0 11px -3px rgba(201,164,78,.42), 0 6px 15px -8px rgba(0,0,0,.72),
+  box-shadow:inset 0 0 0 1px rgba(201,164,78,.5), 0 0 11px -3px rgba(201,164,78,.42), 0 6px 15px -8px rgba(0,0,0,.72),
     inset 0 1px 0 rgba(255,246,228,.14), inset 0 -1px 0 rgba(0,0,0,.26); }
 /* the three destinations that own a colour keep it, and each gets the same
    lit-top / shaded-base treatment in its own hue rather than a gilt ring on top
    of a coloured fill */
 .dock .hk_segb.promo.on{ border-color:#C98A2E; border-top-color:#F0C27A; border-bottom-color:#7A4E10;
-  box-shadow:0 0 0 1px rgba(240,194,122,.55), 0 0 11px -3px rgba(240,194,122,.35), 0 6px 15px -8px rgba(0,0,0,.72),
+  box-shadow:inset 0 0 0 1px rgba(240,194,122,.55), 0 0 11px -3px rgba(240,194,122,.35), 0 6px 15px -8px rgba(0,0,0,.72),
     inset 0 1px 0 rgba(255,246,228,.16), inset 0 -1px 0 rgba(0,0,0,.26); }
 .dock .hk_segb.support.on{ border-color:#2C8F77; border-top-color:#7CCDBE; border-bottom-color:#0B4A3A;
-  box-shadow:0 0 0 1px rgba(143,224,216,.5), 0 0 11px -3px rgba(143,224,216,.3), 0 6px 15px -8px rgba(0,0,0,.72),
+  box-shadow:inset 0 0 0 1px rgba(143,224,216,.5), 0 0 11px -3px rgba(143,224,216,.3), 0 6px 15px -8px rgba(0,0,0,.72),
     inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.26); }
 .dock .hk_segb.dn.on{ border-color:#C77192; border-top-color:#E9A9B9; border-bottom-color:#6E2B44;
-  box-shadow:0 0 0 1px rgba(199,113,146,.5), 0 0 11px -3px rgba(199,113,146,.35), 0 6px 15px -8px rgba(0,0,0,.72),
+  box-shadow:inset 0 0 0 1px rgba(199,113,146,.5), 0 0 11px -3px rgba(199,113,146,.35), 0 6px 15px -8px rgba(0,0,0,.72),
     inset 0 1px 0 rgba(255,233,241,.14), inset 0 -1px 0 rgba(0,0,0,.26); }
-/* the tray. Quieter than the tabs sitting in it — the 08/06 version gave the
-   container and the tabs the same hairline weight, so the row read as five
-   boxes inside a sixth box. */
-.dock .hk_tabs, .dock .hk_seg{
-  border-color:rgba(201,164,78,.22);
-  box-shadow:inset 0 1px 3px rgba(2,10,14,.55), inset 0 -1px 0 rgba(255,246,228,.04), 0 1px 0 rgba(255,246,228,.035); }
+/* ⚠ 08/09 — THE TRAY RULE IS DELETED, NOT QUIETENED. The 08/06 version gave the container and the
+   tabs the same hairline weight and the row read as five boxes inside a sixth box; the answer then
+   was to make the sixth box quieter. That was the wrong half of the problem. A container drawn
+   around controls that are already drawn carries no information at any weight, and three
+   concentric gilt curves inside twelve pixels is what Gray was looking at when he said the dock
+   "isn't symmetrical." Both trays are bare grids now — see .hk_seg and .hk_tabs — so there is no
+   border left here to tune, and a rule with no element to style is the same defect as an element
+   with no rule. */
 /* 08/07 — Gray: the Support tab "uses the background to do its bidding. It needs to slightly blend
    in while standing out." He is describing a real omission, not a taste gap. This seat was ALREADY
    opted into the tab law above, but three things every other family has were never given to it:
@@ -5967,6 +6084,20 @@ button.dnx_tag{ margin:0; font-family:inherit; }
 .promotions-page .promo_sort.on{
   border-color:#FFF0B3; border-top-color:#FFF6E4; border-bottom-color:#B4903A;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.6), inset 0 -1px 1px rgba(140,104,32,.35), 0 3px 8px -4px rgba(0,0,0,.5); }
+/* ⚠ 08/09 — THE BOTTOM OF THE DOCK JOINS THE FAMILY. Filters, Saved and the search field were the
+   only controls in this panel wearing a cool white hairline while everything above them wore gilt,
+   which at 6x reads as the lower third of the dock belonging to a different kit. They are UTILITY,
+   not navigation, so they take the same ink at a quieter weight rather than the same weight — one
+   family, three steps: .20 here, .34 on a resting tab, solid on the chosen one. Their fills are
+   untouched, which is what still tells a reader these are not destinations. */
+.dock .fbtn, .dock .sbox, .dock .hk_savedpill{
+  border-color:rgba(201,164,78,.20);
+  border-top-color:rgba(150,120,52,.16);
+  border-bottom-color:rgba(240,212,126,.34); }
+.dock .fbtn:hover, .dock .hk_savedpill:hover{ border-color:rgba(227,196,113,.42); }
+.dock .sbox.on, .dock .sbox:focus-within{ border-color:rgba(227,196,113,.55); }
+.dock .fbtn.on{ border-color:#F3E7CE; }
+.dock .hk_savedpill.on{ border-color:#C9A44E; }
 .dock .hk_tab:focus-visible, .dock .hk_segb:focus-visible, .promotions-page .promo_sort:focus-visible{
   outline:2px solid #E3C471; outline-offset:2px; }
 .support-page.tabbed .xp_tab:focus-visible{ outline:2px solid #8A6A1E; outline-offset:2px; }
@@ -5980,35 +6111,27 @@ button.dnx_tag{ margin:0; font-family:inherit; }
 .hkc:active{ transform:scale(.96); }
 .hkc.on{ background:linear-gradient(180deg,#1F4E45,#17403A); border-color:#2C7A67; color:#DFF6EE; }
 .hkc.adult.on{ background:linear-gradient(180deg,#3A2B12,#2C2010); border-color:#B47A22; color:#F3C880; }
-/* R4-A3 — the Saved chip. It wears the same shape as every other chip in this row on purpose:
-   it is a filter, not a destination, and a chip that dressed differently would imply otherwise.
-   The count rides inside it rather than beside it, so the row's gap rhythm is unchanged. */
-/* ⚠ 08/09 — AND MAKING ROOM FOR THE PILL EXPOSED A CLIP THAT WAS ALREADY THERE.
-   .hk_tab is flex:1 with overflow:hidden and white-space:nowrap, so the six time windows have
-   always divided the row equally and cut whatever did not fit — measured at 360 before this
-   change, a 43px tab was carrying a 49px word and "Weekend" was losing three pixels off each
-   end. Taking 58px for the Saved pill would have made that 33px against 49px, which is a real
-   regression on a control Gray has said he likes.
-   So the tabs stop dividing the row and start sizing to their own words: flex:1 0 auto grows
-   them to fill when there is room and never shrinks them below their label. At 360 and up the
-   row still fits with the pill in it and nothing is cut. Below that it scrolls, which loses the
-   last tab off the edge until you push it — and a word you can reach beats a word you cannot
-   read. The scrollbar is hidden because a 3px system bar under a 46px control is noise. */
-.hk_tabrow{ display:flex; align-items:stretch; gap:6px; }
-.hk_tabrow .hk_tabs{ flex:1 1 auto; min-width:0; overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none; }
-.hk_tabrow .hk_tabs::-webkit-scrollbar{ display:none; }
-.hk_tabrow .hk_tab{ flex:1 0 auto; padding:0 6px; }
-/* The Saved pill matches the tab track it stands beside — same 15px radius, same 1px hairline,
-   same navy deck — so the row reads as one control group rather than a tab strip with something
-   bolted on. It is square-ish because it carries a mark and a count, not a word: at 46px the
-   tabs already own the row's width and a fifth worded control would push the counts to wrap. */
+/* ⚠ 08/09 — SAVED MOVED OUT OF THE TIME ROW, AND GRAY ASKED FOR THE MOVE: "maybe the saved icon
+   button just needs to be somewhere else instead."
+   It was standing at the end of the tablist as a 52x56 box with a 15px radius and no gilt hairline
+   at all, beside 46px cells at 11px radius that all had one — a different size, a different shape
+   and a different border family, welded onto a uniform run. It was also the direct cause of the
+   clip: it took 58px out of a track that was already 28px short.
+   ⚠ IT BELONGS WITH FILTERS AND SEARCH, NOT WITH THE TIME WINDOWS. Saved is a scope on the result
+   list — flt.pinned, the same state the filter panel's own Saved group toggles — so it is the same
+   kind of thing as the two controls in .fbar and a different kind of thing from a time window or a
+   destination. It is 44x44 there, on the same line, at the same radius and the same hairline as
+   its two neighbours, which is the whole of what was wrong with it. The count still rides inside
+   the mark rather than beside it, so the row's gaps are unchanged. */
 .hk_savedpill{ flex:0 0 auto; display:inline-flex; align-items:center; justify-content:center; gap:3px;
-  min-width:52px; min-height:46px; padding:0 11px; border-radius:15px; cursor:pointer;
-  background:#0A1F27; border:1px solid rgba(203,217,220,.12); color:#BCD3D8; }
-.hk_savedpill:active{ transform:scale(.97); }
+  width:44px; min-width:44px; min-height:44px; padding:0; border-radius:12px; cursor:pointer;
+  background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.16); color:#BCD3D8;
+  transition:background .16s,border-color .16s,color .16s,transform .12s; -webkit-tap-highlight-color:transparent; }
+.hk_savedpill:active{ transform:scale(.96); }
 .hk_savedpill:focus-visible{ outline:2px solid #C9A44E; outline-offset:2px; }
-.hk_savedpill.on{ background:linear-gradient(180deg,#1B4763,#122B45); color:#FFF6E4;
-  box-shadow:0 0 0 1.5px #C9A44E, 0 0 11px -3px rgba(201,164,78,.42), inset 0 1px 0 rgba(255,246,228,.13); }
+/* it carries a count when there is one, so it stops being a fixed square and grows to hold it */
+.hk_savedpill.has{ width:auto; padding:0 9px; }
+.hk_savedpill.on{ background:linear-gradient(180deg,#1B4763,#122B45); border-color:#C9A44E; color:#FFF6E4; }
 .hk_savedpill.on .hkc_n{ background:rgba(227,196,113,.26); color:#F3E3BC; }
 .hkc_n{ display:inline-flex; align-items:center; justify-content:center; min-width:16px; height:16px;
   margin-left:5px; padding:0 4px; border-radius:999px; font:800 10px/1 Nunito,system-ui,sans-serif;
@@ -6019,14 +6142,14 @@ button.dnx_tag{ margin:0; font-family:inherit; }
 .hk_divc{ flex:0 0 auto; width:1px; align-self:center; height:22px; background:rgba(203,217,220,.20); margin:0 2px; }
 
 /* who's coming (party setter) + military toggle — replaces "family of 5" */
-.whobar{ display:flex; flex-wrap:wrap; align-items:center; gap:9px 14px; padding:10px 12px; border-radius:14px;
+.whobar{ display:flex; flex-wrap:wrap; align-items:center; gap:9px 14px; padding:10px 12px; border-radius:12px;
   background:linear-gradient(180deg,#10333E,#0D2A34); border:1px solid rgba(203,217,220,.20); }
 .whobar::-webkit-scrollbar{ display:none; }
 .wholab{ flex:1 0 100%; white-space:nowrap; font-size:10px; letter-spacing:1px; text-transform:uppercase; color:#D3AC5A; font-weight:800; }
 .wstep{ flex:0 0 auto; display:inline-flex; align-items:center; gap:7px; }
 .wstep .wem{ font-size:15px; }
 .wstep .who{ white-space:nowrap; font-size:11.5px; color:#C3D2D8; font-weight:800; min-width:70px; }
-.wsbtn{ width:44px; height:44px; border-radius:10px; border:1px solid rgba(203,217,220,.20); background:#0E2731; color:#EFEADF;
+.wsbtn{ width:44px; height:44px; border-radius:12px; border:1px solid rgba(203,217,220,.20); background:#0E2731; color:#EFEADF;
   font-size:17px; font-weight:800; cursor:pointer; display:grid; place-items:center; font-family:inherit; -webkit-tap-highlight-color:transparent; }
 .wsbtn:active{ transform:scale(.92); }
 .wsnum{ min-width:16px; text-align:center; font-weight:900; color:#EFEADF; font-size:14px; font-variant-numeric:tabular-nums; }
@@ -6083,34 +6206,65 @@ button.dnx_tag{ margin:0; font-family:inherit; }
 .adzone .adlbl.open{ font-weight:700; letter-spacing:.6px; opacity:.5; }
 .adzone.live{ border-style:solid; background:linear-gradient(180deg, rgba(31,169,138,.10), rgba(0,0,0,.10)); box-shadow:0 0 18px -11px var(--cacc),inset 0 1px rgba(255,255,255,.08); }
 /* ===== HEADER V2 — section bar · tidy · scroll-to-top ===== */
-.hk_seg{ display:flex; flex-wrap:nowrap; gap:6px; overflow-x:auto; overscroll-behavior-x:contain; scrollbar-width:none; padding:5px 24px 5px 5px; margin:0 0 8px; background:#0A1F27; border:1px solid rgba(203,217,220,.12); border-radius:15px; -webkit-mask-image:linear-gradient(90deg,#000 0, #000 calc(100% - 17px), transparent 100%); mask-image:linear-gradient(90deg,#000 0, #000 calc(100% - 17px), transparent 100%); }
-.hk_seg::-webkit-scrollbar{ display:none; }
-.hk_segb{ flex:0 0 auto; min-height:44px; padding:0 13px; border:0; border-radius:11px; background:transparent; cursor:pointer; color:#8CA3B4; font-family:inherit; font-weight:800; font-size:11px; letter-spacing:.1px; white-space:nowrap; display:flex; align-items:center; justify-content:center; gap:4px; transition:background .18s,color .18s,box-shadow .18s; -webkit-tap-highlight-color:transparent; }
-.hk_segb .si{ font-size:12px; line-height:1; }
+/* ⚠ 08/09 — THE TRAY IS GONE AND THE ROW IS A GRID. Gray, on the whole dock: "I hate the app
+   buttons right now on GCA... especially the way they look overall. they aren't symmetrical or
+   anything. it needs to totally be revamped and redone. find another way."
+
+   He is describing two measurable faults and neither of them is a matter of taste.
+
+   1. FIVE CELLS AT FIVE WIDTHS. This was flex:0 0 auto, so every destination sized itself to its
+      own word: 47.2 / 44 / 52 / 68.5 / 54.8 at every phone width, a 24.5px spread. A row whose
+      cells are all different sizes cannot be symmetrical no matter how well each one is drawn,
+      and "symmetrical and uniformity" is his standing hard rule. It is repeat(5,1fr) now, so the
+      five are identical at every width by construction rather than by luck.
+   2. THREE NESTED BORDERED BOXES INSIDE TWELVE PIXELS. The dock carried a gilt hairline at r21,
+      this tray carried one at r15, and each button carried one at r11 — three concentric curves
+      whose corner centres do not coincide, which is exactly what reads as drifting rather than
+      aligned. The middle one carried no information at all: it was a container drawn around
+      controls that were already drawn. So the tray keeps its job (grouping) and loses its
+      costume (border, fill, radius, scroll, mask). Two border levels ship, not three.
+
+   The horizontal scroll goes with it. A five-item rail that a reader has to discover a swipe on
+   was flagged in the 08/01 owner review; a grid cannot hide a destination, so the mask fade, the
+   overscroll containment and the scrollbar rules are all deleted rather than disabled. */
+.hk_seg{ display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:6px; margin:0 0 6px; }
+.hk_segb{ min-width:0; min-height:44px; padding:5px 3px 4px; border:0; border-radius:12px; background:transparent; cursor:pointer; color:#8CA3B4; font-family:inherit; font-weight:800; font-size:10px; letter-spacing:0; line-height:1.1; white-space:nowrap; overflow:hidden; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; transition:background .18s,color .18s,box-shadow .18s; -webkit-tap-highlight-color:transparent; }
+/* 08/06 — the marks were hidden on phones, which was right when they were EMOJI: a 12px glyph
+   beside a 10.5px label ate the row and said nothing. A 15px drawn mark STACKED over a short
+   label is the actual phone convention on both platforms, it fits, and it is the only place
+   these marks earn their keep -- a five-item rail at 390px is exactly where a reader scans
+   shape before text.
+   ⚠ 08/09 — the stack is unconditional now. It used to live only under max-width:480, so a
+   tablet got a different row layout from a phone; one geometry at every width is the whole point
+   of the change above. */
+.hk_segb .si{ display:inline-flex; align-items:center; font-size:12px; line-height:1; }
+.hk_segb .hk_tmark{ width:15px; height:15px; }
 /* Owner review 08/01: all five destinations are primary phone navigation, so none
    may depend on discovering a horizontal swipe.  The phone-only copy is shorter,
    while the full labels and icons remain intact above phone width. */
 .seg_phone{ display:none; }
 @media (max-width:480px){
-  .hk_seg{ gap:2px; justify-content:space-between; overflow-x:hidden; padding:5px; -webkit-mask-image:none; mask-image:none; }
-  .hk_segb{ min-width:44px; padding-left:6px; padding-right:6px; font-size:10.5px; letter-spacing:0; }
-  /* 08/06 — the marks were hidden on phones, which was right when they were EMOJI: a 12px glyph
-     beside a 10.5px label ate the row and said nothing. A 15px drawn mark STACKED over a short
-     label is the actual phone convention on both platforms, it fits, and it is the only place
-     these marks earn their keep -- a five-item rail at 390px is exactly where a reader scans
-     shape before text. */
-  .hk_segb{ flex-direction:column; gap:2px; padding-top:5px; padding-bottom:4px; line-height:1.1; }
-  .hk_segb .si{ display:inline-flex; }
-  .hk_segb .hk_tmark{ width:15px; height:15px; }
-  .hk_segb .seg_arr{ display:none; }
   .seg_full{ display:none; }
   .seg_phone{ display:inline; }
-  .seg_arr{ margin-left:1px; }
+}
+/* ⚠ 360 IS NOT THE FLOOR — 320 IS, AND IT IS WHERE THE ARITHMETIC BITES. At 320 the dock's inner
+   width is 288, so a fifth of it less the gaps is 52.8px and "Date Night" measures 50.8 at 10px
+   in the shipped face. That is 1px of air per side, which is not air. Half a point off the label
+   and 2px off the gaps buys 4.6px of clearance and nothing else moves. Measured in the browser
+   with document.fonts.ready awaited, not estimated from character counts. */
+@media (max-width:349px){
+  .hk_seg{ gap:4px; }
+  .hk_segb{ font-size:9.5px; padding-left:2px; padding-right:2px; }
 }
 .hk_segb:active{ transform:scale(.97); }
-.hk_segb.promo.on{ background:linear-gradient(180deg,#BC6E16,#8E4E0A); color:#FFF6E4; box-shadow:0 0 0 1px rgba(240,194,122,.58), 0 5px 14px -7px rgba(0,0,0,.7), inset 0 1px 0 rgba(255,246,228,.15); }
-.hk_segb.support.on{ background:linear-gradient(180deg,#138567,#0D614D); color:#EFFCF7; box-shadow:0 0 0 1px rgba(143,224,216,.55), 0 5px 14px -7px rgba(0,0,0,.7), inset 0 1px 0 rgba(255,255,255,.15); }
-.hk_segb.on{ background:linear-gradient(180deg,#1B4763,#122B45); color:#FFF6E4; box-shadow:0 0 0 1.5px #C9A44E, 0 0 10px -3px rgba(201,164,78,.4), inset 0 1px 0 rgba(255,246,228,.12); }
+/* ⚠ 08/09 — THE SELECTED CELL CARRIED TWO RINGS. Each of these set its own box-shadow ring, and
+   .dock .hk_segb.on eighty lines above sets a second one plus the border, so the chosen
+   destination was drawn with a heavier edge than its five siblings and read as a bigger object
+   sitting lower in the row. That is the third thing Gray was calling not symmetrical. The fill and
+   the ink stay here; the EDGE belongs to the one tab law and is set in exactly one place. */
+.hk_segb.promo.on{ background:linear-gradient(180deg,#BC6E16,#8E4E0A); color:#FFF6E4; }
+.hk_segb.support.on{ background:linear-gradient(180deg,#138567,#0D614D); color:#EFFCF7; }
+.hk_segb.on{ background:linear-gradient(180deg,#1B4763,#122B45); color:#FFF6E4; }
 .hk_segb.dn.on{ background:linear-gradient(180deg,#3A2233,#241019); color:#FFE9F1; }
 .hk_chiprow{ display:none; }
 .whobar:not(.open){ display:none; }
@@ -6128,7 +6282,6 @@ button.dnx_tag{ margin:0; font-family:inherit; }
 .hk_totop:active{ transform:scale(.9); }
 .hk_totop.dn{ border-color:#C77192; background:linear-gradient(180deg,#3A2130,#241019); color:#F3C6D5; box-shadow:0 7px 20px -5px rgba(0,0,0,.65), 0 0 13px -4px rgba(199,113,146,.55); }
 .menuwrap{ display:none !important; }
-.seg_arr{ color:#C9A44E; font-weight:900; font-size:11px; margin-left:3px; }
 .dnseg_row{ display:flex; align-items:stretch; gap:8px; margin:2px 0 4px; }
 .dnseg_row .dnseg{ flex:1; min-width:0; margin:0; }
 .dnx_backtab{ flex:0 0 auto; display:inline-flex; align-items:center; justify-content:center; gap:6px; padding:0 15px; min-height:46px; border-radius:999px; cursor:pointer; white-space:nowrap; -webkit-tap-highlight-color:transparent; font-family:'Cormorant Garamond',serif; font-weight:700; font-size:15.5px; letter-spacing:.4px; color:#D8C7A0; background:rgba(255,255,255,.045); border:1px solid rgba(201,164,78,.42); box-shadow:inset 0 1px 0 rgba(255,241,184,.07), 0 6px 16px rgba(0,0,0,.28); transition:transform .18s, color .2s; }
@@ -11211,7 +11364,7 @@ function useLiveWx(){const[,bump]=useState(0);useEffect(()=>{const cb=()=>bump(n
    the stand is the truth. A colour nobody earned is worse than no colour, which
    is the same law verifiedOn runs on.
    =========================================================================== *//* GCA_FLAG_DATA_BEGIN — one line, replaced verbatim by claude/harness/bake_beach_flag.js.
-   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-09T04:26:42.668Z","issued":"2026-08-08T20:04:00+00:00","productId":"371d6eb7-c950-4275-b1ac-2aa2db78a329","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"},"forecastSource":{"name":"NWS Mobile — Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"observed","county":{"level":2,"flags":["yellow","purple"],"risk":"Moderate","marineLife":true,"waterTempF":85,"updated":"2026-08-08T23:50:59.977Z","chance":{"green":70,"yellow":30,"red":0,"doubleRed":0,"marineLife":80},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-08","risk":"Moderate","flags":["yellow","purple"],"observedAt":"2026-08-08T23:50:59.977Z","chance":{"green":70,"yellow":30,"red":0,"doubleRed":0,"marineLife":80},"surf":"1 to 2 feet","uv":"Very High","water":"85°F","weather":"Sunny. A slight chance of showers and thunderstorms","winds":"Northeast winds around 10 mph, becoming south in the afternoon"},"outlook":[{"date":"2026-08-08","label":"Today","risk":"Moderate","flags":["yellow"],"surf":"1 to 2 feet"},{"date":"2026-08-09","label":"Sunday","risk":"Low","flags":["green"],"surf":"Around 1 foot"},{"date":"2026-08-10","label":"Monday","risk":"Low","flags":["green"],"surf":"Around 1 foot"},{"date":"2026-08-11","label":"Tuesday","risk":"Low","flags":["green"],"surf":"1 to 2 feet"},{"date":"2026-08-12","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"1 to 2 feet"}],"alerts":[]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
+   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-09T08:57:42.554Z","issued":"2026-08-09T08:03:00+00:00","productId":"dc0cfc36-b93c-4839-a8a4-5c15984cce8d","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"NWS Mobile — Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"forecastSource":{"name":"NWS Mobile — Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"forecast","county":{"level":2,"flags":["yellow","purple"],"risk":"Moderate","marineLife":true,"waterTempF":85,"updated":"2026-08-08T23:50:59.977Z","chance":{"green":70,"yellow":30,"red":0,"doubleRed":0,"marineLife":80},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-09","risk":"Low","flags":["green"],"observedAt":null,"chance":null,"surf":"Around 1 foot","uv":"Very High","water":"In the upper 80s","weather":"Mostly sunny. A slight chance of showers and thunderstorms","winds":"East winds around 5 mph, becoming southeast in the afternoon"},"outlook":[{"date":"2026-08-09","label":"Today","risk":"Low","flags":["green"],"surf":"Around 1 foot"},{"date":"2026-08-10","label":"Monday","risk":"Low","flags":["green"],"surf":"Around 1 foot"},{"date":"2026-08-11","label":"Tuesday","risk":"Low","flags":["green"],"surf":"1 to 2 feet"},{"date":"2026-08-12","label":"Wednesday","risk":"Low","flags":["green"],"surf":"1 to 2 feet"},{"date":"2026-08-13","label":"Thursday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"}],"alerts":[]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
    same words fetch_beach_flag.js emits so the two cannot drift apart. */const FLAG_INK={green:"#2E9E5B",yellow:"#E0A81F",red:"#C7202A",purple:"#7B3FA0"};const FLAG_SAY={green:["Low hazard","Calm conditions. Rip currents still run on green days."],yellow:["Medium hazard","Moderate surf or currents. Keep the little ones in reach."],red:["High hazard","High surf, strong currents, or both. Most people should stay out."],purple:["Marine life","Usually jellyfish or man o' war. It flies below a colour, never alone."]};/* THE READING — what the app is allowed to say, given the reader's own clock.
 
    ⚠ 08/08 — THE LAST FLAG IS CARRIED FORWARD NOW. It used to blank out the moment the reader's
@@ -12414,18 +12567,25 @@ const eat=ev=>{ev.stopPropagation();ev.preventDefault();};r.addEventListener("cl
      takeover. Without this row the masthead button could read "Promotions" while its own dropdown
      offered no Promotions and lit nothing — the current page missing from its own page menu. */React.createElement("button",{type:"button",role:"menuitem","data-testid":"menu-promos",className:"mitem"+(page==="promos"&&!dn?" on":""),onClick:()=>{calm();goPromos();}},React.createElement("span",{className:"mi","aria-hidden":"true"},"🏷️"),React.createElement("span",{className:"mtxt"},React.createElement("span",{className:"mt"},"Promotions"),React.createElement("span",{className:"ms"},"Real offers, each one checked with the business")),React.createElement("span",{className:"go","aria-hidden":"true"},"›")),React.createElement("button",{type:"button",role:"menuitem","data-testid":"dn-launch",className:"mitem dn"+(dn?" on":""),onClick:()=>{try{gcaScrollRef.current=window.scrollY||window.pageYOffset||0;}catch(e){}setMenuOpen(false);setDn(true);}},React.createElement("span",{className:"mi","aria-hidden":"true"},"🌹"),React.createElement("span",{className:"mtxt"},React.createElement("span",{className:"mt"},"Date Night"),React.createElement("span",{className:"ms"},"A night for two — dinner and an activity")),React.createElement("span",{className:"go","aria-hidden":"true"},"›")))),React.createElement("div",{className:"morewrap ph-"+menuPhase,"data-testid":"more-btn"},React.createElement("button",{type:"button",className:"morebtn","aria-haspopup":"true","aria-expanded":moreOpen,"aria-label":"More — pages and support",onClick:e=>{e.stopPropagation();setMoreOpen(o=>!o);}},React.createElement("span",{className:"bars","aria-hidden":"true"},React.createElement("i",null),React.createElement("i",null),React.createElement("i",null)),React.createElement("span",{className:"morelbl"},"More")),moreOpen&&React.createElement("div",{className:"moremenu",role:"menu",onClick:e=>e.stopPropagation()},MORE_ITEMS.map(([key,ic,label,sub])=>React.createElement("button",{type:"button",role:"menuitem",key:key,className:"mitem","data-testid":"more-"+key,onClick:()=>{setMoreOpen(false);/* "Advertise / Sponsor" and "Support the app" graduated from the info overlay to surfaces of
          their own — Sponsor to the Promotions scope, Support to a full-page takeover. The other
-         four rows still open the overlay. */if(key==="sponsor"){goPromos();return;}if(key==="donate"){openX("support");return;}setInfoPage(key);try{window.scrollTo({top:0});}catch(e){}}},React.createElement("span",{className:"mi","aria-hidden":"true"},MENU_MARKS[key]?React.createElement(MenuMark,{k:key}):ic),React.createElement("span",{className:"mtxt"},React.createElement("span",{className:"mt"},label),React.createElement("span",{className:"ms"},sub)),React.createElement("span",{className:"go","aria-hidden":"true"},"›"))))),infoPage&&React.createElement(InfoOverlay,{page:infoPage,onClose:()=>setInfoPage(null)}),React.createElement("div",{ref:navRef,className:"hk_nav"+(dockAway?" away":""),"data-dock-calm":dockCalmTick},React.createElement("div",{className:"dock"},React.createElement("div",{className:"hk_seg","data-testid":"section-rail",role:"tablist","aria-label":"Section",onScroll:calm},React.createElement("button",{type:"button",className:"hk_segb"+(page==="all"&&!dn?" on":""),"data-testid":"seg-events",onClick:()=>{calm();setDn(false);setPage("all");}},React.createElement("span",{className:"si","aria-hidden":"true"},React.createElement(TabMark,{k:"events"}))," Events"),React.createElement("button",{type:"button",className:"hk_segb"+(page==="new"&&!dn?" on":""),"data-testid":"seg-new",onClick:()=>{calm();setDn(false);setPage("new");}},React.createElement("span",{className:"si","aria-hidden":"true"},React.createElement(TabMark,{k:"new"})),React.createElement("span",{className:"seg_full"},"New/Upcoming"),React.createElement("span",{className:"seg_phone"},"New")),React.createElement("button",{type:"button",className:"hk_segb promo"+(page==="promos"&&!dn&&!xp?" on":""),"data-testid":"seg-promos",onClick:()=>{calm();goPromos();}},React.createElement("span",{className:"si","aria-hidden":"true"},React.createElement(TabMark,{k:"promos"})),React.createElement("span",{className:"seg_full"},"Promotions"),React.createElement("span",{className:"seg_phone"},"Promos")),React.createElement("button",{type:"button",className:"hk_segb dn"+(dn?" on":""),"data-testid":"seg-dn",onClick:()=>{try{gcaScrollRef.current=window.scrollY||0;}catch(e){}setDn(true);}},React.createElement("span",{className:"si","aria-hidden":"true"},React.createElement(TabMark,{k:"dn"}))," Date Night",React.createElement("span",{className:"seg_arr","aria-hidden":"true"},"→")),React.createElement("button",{type:"button",className:"hk_segb support"+(xp==="support"?" on":""),"data-testid":"seg-support","aria-label":"Support the creator",onClick:()=>{calm();openX("support");}},React.createElement("span",{className:"si","aria-hidden":"true"},React.createElement(TabMark,{k:"support"}))," Support")),page==="all"&&React.createElement("div",{className:"hk_tabrow"},React.createElement("div",{className:"hk_tabs","data-testid":"tabs",role:"tablist","aria-label":"Time window"},TAB_DEFS.map(([k,label,cnt])=>React.createElement("button",{type:"button",role:"tab",key:k,className:"hk_tab"+(when===k&&!range?" on":""),"aria-selected":when===k&&!range,"data-testid":"tab-"+k,onClick:()=>pickWhen(k)},React.createElement("span",null,label),React.createElement("span",{className:"tc"},cnt)))),/* R4-A3 — "saved button should be a pin or pill somewhere where the tabs are. Somewhere up
-     there." It lived only inside the filter panel, and the category chip row it would otherwise
-     have joined is display:none — a control nobody can reach is worse than no control.
-     ⚠ IT SITS BESIDE THE TABLIST, NOT INSIDE IT. .hk_tabs carries role="tablist" and every child
-     of a tablist is announced as a tab; Saved is a filter, not a time window, so putting it in
-     there would have made a screen reader call it the fifth tab. The wrapper is the whole change.
-     ⚠ AND IT DRIVES THE SAME STATE, not a second one. flt.pinned is what PinnedView reads and what
-     the panel's own Saved group toggles, so the two doors can never disagree. The count is the
-     live pin set, which lets the pill answer "have I saved anything yet" without being tapped. */React.createElement("button",{type:"button",className:"hk_savedpill"+(flt.pinned?" on":""),"data-testid":"chip-saved","aria-pressed":flt.pinned,"aria-label":pinned.size?"Saved, "+pinned.size+" items":"Saved",onClick:()=>toggleBool("pinned")},React.createElement(Ic,{k:"bookmark",s:15}),pinned.size?React.createElement("i",{className:"hkc_n"},pinned.size):null)),page!=="promos"&&React.createElement("div",{className:"hk_chiprow","data-testid":"chiprow",role:"group","aria-label":"Category and age filters"},TYPE_CHIPS.map(([k,label,ic])=>React.createElement("button",{type:"button",key:k,className:"hkc"+(flt.types.includes(k)?" on":""),"data-testid":"cat-"+k,onClick:()=>toggleIn("types",k)},React.createElement(Ic,{k:ic,s:13})," ",label)),page!=="new"&&React.createElement("i",{className:"hk_divc","aria-hidden":"true"}),page!=="new"&&React.createElement("button",{type:"button",className:"hkc adult"+(adult?" on":""),"data-testid":"chip-adult","aria-pressed":adult,onClick:toggleAdult/* 08/05 — was "🍸 21+", which the lane outgrew. Behind this one switch sit both thresholds
+         four rows still open the overlay. */if(key==="sponsor"){goPromos();return;}if(key==="donate"){openX("support");return;}setInfoPage(key);try{window.scrollTo({top:0});}catch(e){}}},React.createElement("span",{className:"mi","aria-hidden":"true"},MENU_MARKS[key]?React.createElement(MenuMark,{k:key}):ic),React.createElement("span",{className:"mtxt"},React.createElement("span",{className:"mt"},label),React.createElement("span",{className:"ms"},sub)),React.createElement("span",{className:"go","aria-hidden":"true"},"›"))))),infoPage&&React.createElement(InfoOverlay,{page:infoPage,onClose:()=>setInfoPage(null)}),React.createElement("div",{ref:navRef,className:"hk_nav"+(dockAway?" away":""),"data-dock-calm":dockCalmTick},React.createElement("div",{className:"dock"},React.createElement("div",{className:"hk_seg","data-testid":"section-rail",role:"tablist","aria-label":"Section"/* the onScroll handler that used to sit here went with the horizontal scroll — this is a
+       five-column grid now and there is nothing left for it to fire on. */},React.createElement("button",{type:"button",className:"hk_segb"+(page==="all"&&!dn?" on":""),"data-testid":"seg-events",onClick:()=>{calm();setDn(false);setPage("all");}},React.createElement("span",{className:"si","aria-hidden":"true"},React.createElement(TabMark,{k:"events"}))," Events"),React.createElement("button",{type:"button",className:"hk_segb"+(page==="new"&&!dn?" on":""),"data-testid":"seg-new",onClick:()=>{calm();setDn(false);setPage("new");}},React.createElement("span",{className:"si","aria-hidden":"true"},React.createElement(TabMark,{k:"new"})),React.createElement("span",{className:"seg_full"},"New/Upcoming"),React.createElement("span",{className:"seg_phone"},"New")),React.createElement("button",{type:"button",className:"hk_segb promo"+(page==="promos"&&!dn&&!xp?" on":""),"data-testid":"seg-promos",onClick:()=>{calm();goPromos();}},React.createElement("span",{className:"si","aria-hidden":"true"},React.createElement(TabMark,{k:"promos"})),React.createElement("span",{className:"seg_full"},"Promotions"),React.createElement("span",{className:"seg_phone"},"Promos")),React.createElement("button",{type:"button",className:"hk_segb dn"+(dn?" on":""),"data-testid":"seg-dn",onClick:()=>{try{gcaScrollRef.current=window.scrollY||0;}catch(e){}setDn(true);}},React.createElement("span",{className:"si","aria-hidden":"true"},React.createElement(TabMark,{k:"dn"}))," Date Night"),React.createElement("button",{type:"button",className:"hk_segb support"+(xp==="support"?" on":""),"data-testid":"seg-support","aria-label":"Support the creator",onClick:()=>{calm();openX("support");}},React.createElement("span",{className:"si","aria-hidden":"true"},React.createElement(TabMark,{k:"support"}))," Support")),page==="all"&&React.createElement("div",{className:"hk_tabs","data-testid":"tabs",role:"tablist","aria-label":"Time window"},TAB_DEFS.map(([k,label,cnt])=>React.createElement("button",{type:"button",role:"tab",key:k,className:"hk_tab"+(when===k&&!range?" on":""),"aria-selected":when===k&&!range,"data-testid":"tab-"+k,onClick:()=>pickWhen(k)},React.createElement("span",null,label),React.createElement("span",{className:"tc"},cnt)))),page!=="promos"&&React.createElement("div",{className:"hk_chiprow","data-testid":"chiprow",role:"group","aria-label":"Category and age filters"},TYPE_CHIPS.map(([k,label,ic])=>React.createElement("button",{type:"button",key:k,className:"hkc"+(flt.types.includes(k)?" on":""),"data-testid":"cat-"+k,onClick:()=>toggleIn("types",k)},React.createElement(Ic,{k:ic,s:13})," ",label)),page!=="new"&&React.createElement("i",{className:"hk_divc","aria-hidden":"true"}),page!=="new"&&React.createElement("button",{type:"button",className:"hkc adult"+(adult?" on":""),"data-testid":"chip-adult","aria-pressed":adult,onClick:toggleAdult/* 08/05 — was "🍸 21+", which the lane outgrew. Behind this one switch sit both thresholds
        this market actually posts: 21+ tasting nights and taprooms, and 18+ paint classes, ballroom
        nights and the jazz festival. Flora-Bama's own door policy prints both numbers. A control
-       that names one of them misdescribes the other, so it names the rule instead of a number. */},"🍸 18+ / 21+")),page!=="promos"&&React.createElement("div",{className:"whobar"+(fOpen&&page!=="new"?" open":""),"data-testid":"whobar"},React.createElement("span",{className:"wholab"},"Who’s coming?"),WHO_DEFS.map(([k,em,label])=>React.createElement("div",{className:"wstep",key:k},React.createElement("span",{className:"wem","aria-hidden":"true"},em),React.createElement("span",{className:"who"},label),React.createElement("button",{type:"button",className:"wsbtn","aria-label":"One fewer "+label,onClick:()=>bumpParty(k,-1)},"−"),React.createElement("span",{className:"wsnum","data-testid":"party-"+k},partyBase[k]),React.createElement("button",{type:"button",className:"wsbtn","aria-label":"One more "+label,onClick:()=>bumpParty(k,1)},"+"))),React.createElement("button",{type:"button",className:"wguests"+(guestsOn?" on":""),"data-testid":"guests-toggle","aria-pressed":guestsOn,onClick:toggleGuests},"🧳 Visiting guests"),guestsOn&&React.createElement("div",{className:"wguestrow","data-testid":"guest-party"},React.createElement("span",{className:"wguestlab"},"Add only the guests joining you"),WHO_DEFS.map(([k,em,label])=>React.createElement("div",{className:"wstep",key:"guest-"+k},React.createElement("span",{className:"wem","aria-hidden":"true"},em),React.createElement("span",{className:"who"},label),React.createElement("button",{type:"button",className:"wsbtn","data-testid":"guest-"+k+"-minus","aria-label":"One fewer visiting "+label,onClick:()=>bumpGuest(k,-1)},"−"),React.createElement("span",{className:"wsnum","data-testid":"guest-"+k},guests[k]),React.createElement("button",{type:"button",className:"wsbtn","data-testid":"guest-"+k+"-plus","aria-label":"One more visiting "+label,onClick:()=>bumpGuest(k,1)},"+")))),React.createElement("button",{type:"button",className:"wmil"+(mil?" on":""),"data-testid":"mil-toggle","aria-pressed":mil,onClick:toggleMil},React.createElement(Ic,{k:"medal",s:13})," Military rate")),page!=="promos"&&React.createElement("div",{className:"fbar"},React.createElement("button",{type:"button","data-testid":"filters-btn",className:"fbtn"+(activeCount?" on":"")+(fOpen?" open":""),onClick:()=>fPanel(!fOpen)},React.createElement(Ic,{k:"sliders",s:13})," Filters",activeCount>0?` · ${activeCount}`:""," ",React.createElement("span",{className:"chev"},fOpen?"▴":"▾")),React.createElement("div",{className:"sbox"+(qn?" on":"")},React.createElement(Ic,{k:"search",s:13}),React.createElement("input",{type:"search",value:q,onChange:e=>setQ(e.target.value),placeholder:"Search everything…","aria-label":"Search adventures by name",autoComplete:"off",enterKeyHint:"search","data-testid":"search-input"}),q&&React.createElement("button",{type:"button",className:"sclr","aria-label":"Clear search",onClick:()=>setQ("")},"✕")),(activeCount>0||q)&&React.createElement("button",{type:"button",className:"freset",onClick:resetAll},"Reset ✕"))),fOpen&&page!=="promos"&&React.createElement("div",{className:"fpanel","data-testid":"filters-panel"},React.createElement("button",{type:"button",className:"fclose","data-testid":"filters-close","aria-label":"Close filters",onClick:()=>fPanel(false)},"✕"),React.createElement("div",{className:"fpanel_scroll"},page!=="new"&&React.createElement("div",{className:"fgroup"},React.createElement("span",{className:"flab"},"Audience"),React.createElement("div",{className:"fchips"},React.createElement("button",{type:"button","data-testid":"audience-everyone",className:!adult?"on":"",onClick:()=>{if(adult)toggleAdult();}},React.createElement(Ic,{k:"sun",s:13})," Everyone"),React.createElement("button",{type:"button","data-testid":"audience-adult",className:adult?"on":"",onClick:()=>{if(!adult)toggleAdult();},style:adult?{background:"#3a2b12",borderColor:"#BC6E16",color:"#F0C27A"}:undefined},React.createElement(Ic,{k:"moon",s:13})," 🍸 18+ / 21+")),React.createElement("div",{style:{fontSize:11,opacity:.72,marginTop:6,lineHeight:1.45,color:"#D9D2C4"}/* 08/05 — the OFF copy used to open "Family-friendly by default," which was simply not true:
+       that names one of them misdescribes the other, so it names the rule instead of a number. */},"🍸 18+ / 21+")),page!=="promos"&&React.createElement("div",{className:"whobar"+(fOpen&&page!=="new"?" open":""),"data-testid":"whobar"},React.createElement("span",{className:"wholab"},"Who’s coming?"),WHO_DEFS.map(([k,em,label])=>React.createElement("div",{className:"wstep",key:k},React.createElement("span",{className:"wem","aria-hidden":"true"},em),React.createElement("span",{className:"who"},label),React.createElement("button",{type:"button",className:"wsbtn","aria-label":"One fewer "+label,onClick:()=>bumpParty(k,-1)},"−"),React.createElement("span",{className:"wsnum","data-testid":"party-"+k},partyBase[k]),React.createElement("button",{type:"button",className:"wsbtn","aria-label":"One more "+label,onClick:()=>bumpParty(k,1)},"+"))),React.createElement("button",{type:"button",className:"wguests"+(guestsOn?" on":""),"data-testid":"guests-toggle","aria-pressed":guestsOn,onClick:toggleGuests},"🧳 Visiting guests"),guestsOn&&React.createElement("div",{className:"wguestrow","data-testid":"guest-party"},React.createElement("span",{className:"wguestlab"},"Add only the guests joining you"),WHO_DEFS.map(([k,em,label])=>React.createElement("div",{className:"wstep",key:"guest-"+k},React.createElement("span",{className:"wem","aria-hidden":"true"},em),React.createElement("span",{className:"who"},label),React.createElement("button",{type:"button",className:"wsbtn","data-testid":"guest-"+k+"-minus","aria-label":"One fewer visiting "+label,onClick:()=>bumpGuest(k,-1)},"−"),React.createElement("span",{className:"wsnum","data-testid":"guest-"+k},guests[k]),React.createElement("button",{type:"button",className:"wsbtn","data-testid":"guest-"+k+"-plus","aria-label":"One more visiting "+label,onClick:()=>bumpGuest(k,1)},"+")))),React.createElement("button",{type:"button",className:"wmil"+(mil?" on":""),"data-testid":"mil-toggle","aria-pressed":mil,onClick:toggleMil},React.createElement(Ic,{k:"medal",s:13})," Military rate")),page!=="promos"&&React.createElement("div",{className:"fbar"},React.createElement("button",{type:"button","data-testid":"filters-btn",className:"fbtn"+(activeCount?" on":"")+(fOpen?" open":""),onClick:()=>fPanel(!fOpen)},React.createElement(Ic,{k:"sliders",s:13})," Filters",activeCount>0?` · ${activeCount}`:""," ",React.createElement("span",{className:"chev"},fOpen?"▴":"▾")),/* R4-A3 — "saved button should be a pin or pill somewhere where the tabs are. Somewhere up
+     there." It lived only inside the filter panel, and the category chip row it would otherwise
+     have joined is display:none — a control nobody can reach is worse than no control.
+     ⚠ 08/09 — IT MOVED AGAIN, AND GRAY ASKED FOR THE MOVE: "maybe the saved icon button just
+     needs to be somewhere else instead." Standing at the end of the tablist it was the one control
+     in the row with a different height, a different radius and no gilt hairline, and it was the
+     direct cause of the clip that cut "Anytime" in half. Here it is the same 44px, the same radius
+     12 and the same hairline as the two controls it now sits with.
+     ⚠ AND IT BELONGS HERE ON THE MERITS, not just for the room. Saved is a scope on the result
+     list, which is what Filters and Search are; a time window and a destination are not.
+     ⚠ IT IS OUTSIDE THE TABLIST FOR THE SAME REASON AS BEFORE. Every child of role=tablist is
+     announced as a tab, and Saved is a filter, so it must never be one of .hk_tabs children.
+     ⚠ AND IT DRIVES THE SAME STATE, not a second one. flt.pinned is what PinnedView reads and what
+     the panel's own Saved group toggles, so the two doors can never disagree. The count is the
+     live pin set, which lets the control answer "have I saved anything yet" without being tapped. */React.createElement("button",{type:"button",className:"hk_savedpill"+(pinned.size?" has":"")+(flt.pinned?" on":""),"data-testid":"chip-saved","aria-pressed":flt.pinned,"aria-label":pinned.size?"Saved, "+pinned.size+" items":"Saved",onClick:()=>toggleBool("pinned")},React.createElement(Ic,{k:"bookmark",s:15}),pinned.size?React.createElement("i",{className:"hkc_n"},pinned.size):null),React.createElement("div",{className:"sbox"+(qn?" on":"")},React.createElement(Ic,{k:"search",s:13}),React.createElement("input",{type:"search",value:q,onChange:e=>setQ(e.target.value),placeholder:"Search everything…","aria-label":"Search adventures by name",autoComplete:"off",enterKeyHint:"search","data-testid":"search-input"}),q&&React.createElement("button",{type:"button",className:"sclr","aria-label":"Clear search",onClick:()=>setQ("")},"✕")),(activeCount>0||q)&&React.createElement("button",{type:"button",className:"freset",onClick:resetAll},"Reset ✕"))),fOpen&&page!=="promos"&&React.createElement("div",{className:"fpanel","data-testid":"filters-panel"},React.createElement("button",{type:"button",className:"fclose","data-testid":"filters-close","aria-label":"Close filters",onClick:()=>fPanel(false)},"✕"),React.createElement("div",{className:"fpanel_scroll"},page!=="new"&&React.createElement("div",{className:"fgroup"},React.createElement("span",{className:"flab"},"Audience"),React.createElement("div",{className:"fchips"},React.createElement("button",{type:"button","data-testid":"audience-everyone",className:!adult?"on":"",onClick:()=>{if(adult)toggleAdult();}},React.createElement(Ic,{k:"sun",s:13})," Everyone"),React.createElement("button",{type:"button","data-testid":"audience-adult",className:adult?"on":"",onClick:()=>{if(!adult)toggleAdult();},style:adult?{background:"#3a2b12",borderColor:"#BC6E16",color:"#F0C27A"}:undefined},React.createElement(Ic,{k:"moon",s:13})," 🍸 18+ / 21+")),React.createElement("div",{style:{fontSize:11,opacity:.72,marginTop:6,lineHeight:1.45,color:"#D9D2C4"}/* 08/05 — the OFF copy used to open "Family-friendly by default," which was simply not true:
        the switch defaults ON and Gray confirmed that is what he wants. A control that misdescribes
        its own resting state is worse than one with no label. Both branches now say what is on
        screen right now, and neither claims a default.
