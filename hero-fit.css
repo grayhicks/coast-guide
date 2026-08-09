@@ -161,6 +161,33 @@ body.ph-night .scene{--skytop:#050B18}
 /* stars: static pose for reduced-motion; the live pose lives in the re-declared
    keyframes below. --stx/--sty resolve per element from the scene's scale. */
 .scene{--stx:calc(var(--us) / var(--sx));--sty:calc(var(--us) / var(--sy))}
+
+/* ------------------------------------------------- the creatures get an aspect too */
+/* ⚠ THE RIGID-BODY CORRECTION EXISTED FOR THE MOON, THE BOAT, THE STARS AND THE BEACH PROPS, AND
+   FOR NOTHING ALIVE. Gray, 08/09: "the animals look stretched. especially the bird flapping."
+   He is describing the gap exactly. The stage is scaled --sx by --sy and those two are not equal —
+   at 1750px it is 4.95 wide against 2.25 tall — so every descendant is drawn more than twice as wide
+   as it is tall unless something puts the aspect back. Four things had that something. A bird did
+   not, and a bird is the one shape on the scene whose proportions a reader knows by heart.
+
+   ⚠ THE CORRECTION GOES ON THE INNERMOST SVG, AND THAT IS NOT A STYLE CHOICE. .skbg carries the
+   flight path and .sksoar carries the soar bob, both of them animating TRANSFORM; a static transform
+   on either is overwritten the instant the animation starts, which is the same trap that stopped the
+   surf strip being widened. The svg inside them animates nothing, so it is the one free hook in the
+   chain. Measured on the rendered element, not assumed from the markup.
+
+   --uc is the creature's final scale in BOTH axes: the parent multiplies by (sx, sy) and this
+   divides it straight back out, so 1 means "the size it was drawn at, with its own proportions". */
+.scene{--uc:1}
+@media (min-width:768px){.scene{--uc:1.25}}
+@media (min-width:1024px){.scene{--uc:1.4}}
+@media (min-width:1280px){.scene{--uc:1.6}}
+@media (min-width:1536px){.scene{--uc:1.8}}
+@media (min-width:1750px){.scene{--uc:2}}
+.scene-stage .skbg > .sksoar > svg,
+.scene-stage .skbwrap svg{
+  transform:scale(calc(var(--uc) / var(--sx)),calc(var(--uc) / var(--sy)));
+  transform-origin:50% 50%}
 .scene-stage .hkn_st1,.scene-stage .hkn_st2,.scene-stage .hkn_st3{
   transform:scale(var(--stx),var(--sty))}
 
