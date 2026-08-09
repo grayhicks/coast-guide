@@ -1150,6 +1150,33 @@ a.nap-line:hover{color:var(--gold-bright)}
    otherwise sit on top of the footer's own links at the end of a long page. */
 .site-foot{padding-bottom:84px}
 
+/* ═══ SEARCH AND CLICK-FILTERS ════════════════════════════════════════
+   ⚠ HIDDEN UNTIL THE SCRIPT UNHIDES IT. A reader with JavaScript off gets
+   the complete list and no dead controls, rather than a search box that
+   does nothing. `hidden` is on the element in the emitted HTML; the script
+   removes it, so the failure mode is "no controls", never "broken ones".
+   ⚠ AND IT IS NOT A THIRD BLOCK OF CHROME. A cold grade already counted
+   three full viewports of controls before the first offer on a 390 phone,
+   so this is one row: the field, the chips beside it where there is room,
+   and a count that only speaks when it has something to say. */
+.fbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;margin:0 0 var(--s-4)}
+.fbar[hidden]{display:none}
+.fbar-q{flex:1 1 220px;min-width:0;display:block}
+.fbar-q input{width:100%;min-height:44px;padding:11px 14px;
+  border-radius:var(--r-field);border:1px solid var(--line);background:var(--field);
+  color:var(--ink);font:var(--fs-body)/1.4 var(--font-sans)}
+.fbar-q input::placeholder{color:var(--ink-3)}
+.fbar-q input:focus-visible{outline:3px solid var(--gold-bright);outline-offset:2px}
+.fbar-chips{flex:0 1 auto;margin:0}
+/* the chip is the site's own chip; pressed is the same lit state the scope
+   tabs use, so one vocabulary answers "this filter is on" everywhere */
+.fbar-chips .chip{cursor:pointer;font:600 var(--fs-small)/1 var(--font-sans)}
+.fbar-chips .chip[aria-pressed="true"]{background:var(--gold);color:var(--accent-ink);
+  border-color:var(--gold)}
+.fbar-count{flex:1 0 100%;margin:0;font:500 var(--fs-small)/1.4 var(--font-mono);color:var(--ink-3)}
+.fbar-count:empty{display:none}
+.fbar-none{margin:var(--s-5) 0;font-size:var(--fs-body);color:var(--ink-2);text-align:center}
+
 /* =================================================================== PILLS */
 .pill{display:inline-flex;align-items:center;gap:5px;border-radius:var(--r-pill);
   padding:5px 11px;font:700 var(--fs-pill)/1.3 var(--font-sans);letter-spacing:.02em;
