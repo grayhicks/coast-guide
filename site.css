@@ -61,7 +61,11 @@
      frame, things a reader is not asked to press. A CONTROL owes 3:1, so it gets its own token
      rather than a heavier --line, which would put a component's boundary weight on every hairline
      in the page. Measured: 3.78:1 on the page ground and 3.24:1 on a card's panel. */
-  --line-strong:#5a7793;
+  /* ⚠ 3.30:1 AGAINST THE BUTTON'S OWN FILL, NOT ONLY AGAINST THE PAGE. The first value cleared
+     3.78:1 outward and measured 2.94:1 against rgb(24,47,69) — the panel .btn.quiet is filled
+     with — and .btn.quiet carries box-shadow:none, so that hairline is the only inner edge the
+     control has. A boundary that separates from one side and not the other is half a boundary. */
+  --line-strong:#62809d;
   --sheen:rgba(255,255,255,.045); /* the 1px top-light every raised surface wears */
 
   /* --------------------------------------------------------------- accent
@@ -99,7 +103,16 @@
   --s-5:24px; --s-6:32px; --s-7:48px; --s-8:64px; --s-9:96px;
 
   /* ---------------------------------------------------------------- radii */
-  --r-field:10px; --r-card:14px; --r-pill:999px;
+  /* ⚠ 08/11 — CONTROLS COME ONTO THE PRINTED SYSTEM. A cold grade put the three action ranks side
+     by side in one 390px eyeful and found five of five shape-and-type properties disagreeing, with
+     border-radius running 4px / 10px / 999px — a 250x range across three sibling controls. The
+     card has been a printed ticket since round eight and the keynote's corners are square for the
+     same reason; 10px was the last soft corner left in the action system and it belonged to the
+     rank a reader presses most. 4px, which is the keynote's own, one step off the card's 3px.
+     ⚠ THE FLOAT STAYS A PILL AND THAT IS THE ONE DELIBERATE DIFFERENCE. It is not page content —
+     it rides the viewport, it is the same object on four hundred pages, and a shape nothing else
+     on the page has is how a reader knows it is chrome rather than this page's own control. */
+  --r-field:4px; --r-card:14px; --r-pill:999px;
   /* the card is a printed ticket, not a raised surface — see THE FRAME, near the foot */
   --r-ticket:3px;
 
@@ -1383,11 +1396,15 @@ a.nap-line:hover{color:var(--gold-bright)}
    ⚠ AND THE GROUND IS OPAQUE ON PURPOSE. This thing rides the viewport over whatever the reader
    has scrolled to, so a translucent or borrowed ground puts a card's own text through the label. */
 .sup-float{position:fixed;right:max(14px, env(safe-area-inset-right));
-  bottom:max(14px, env(safe-area-inset-bottom));z-index:40;
+  /* --sup-lift is the script's: the pill climbs a short ladder of rest positions and takes the
+     first clear one rather than vanishing the moment a control is under it. See supportFloat(). */
+  bottom:calc(max(14px, env(safe-area-inset-bottom)) + var(--sup-lift, 0px));z-index:40;
   display:inline-flex;align-items:center;min-height:44px;padding:11px 22px;
   border-radius:var(--r-pill);background-color:var(--panel);color:var(--gold);
   box-shadow:inset 0 0 0 1.5px var(--gold), var(--shadow-2);
-  font:800 var(--fs-small)/1 var(--font-sans);letter-spacing:.06em;text-transform:uppercase;
+  /* weight 700, not 800: the same grade counted 600 / 700 / 800 across the three ranks and the
+     float was the heaviest thing in a system it sits at the bottom of */
+  font:700 var(--fs-small)/1 var(--font-sans);letter-spacing:.06em;text-transform:uppercase;
   text-decoration:none}
 /* ⚠ AND IT DOES NOT WEAR THE SWELLED RULE, WHICH LOOKS LIKE AN OMISSION AND IS
    NOT. The rail's "Open the app" button is a gold pill with the ornament on it,
@@ -3063,6 +3080,29 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
      shipped sans, against a serif at full case, and against a sans in small caps, this is the only
      one that reads as an engraved plate rather than as an app button someone drew a frame on. */
 .btn.primary.framed{min-height:58px;padding-left:36px;padding-right:36px;
+  /* ⚠ 08/11 — THE KEYNOTE WAS TWO DIFFERENT OBJECTS IN THE DEFAULT THEME AND ON 4 OF 5 PAGES IT
+     WAS THE WRONG ONE. A cold grade measured it: inside a hero it is a GOLD plate with dark
+     foliage, rgb(217,164,65) on rgb(34,22,3); in the body of a light page it is the NEGATIVE of
+     that, a bronze plate with cream foliage, rgb(138,90,12) on rgb(255,246,228). The cause is
+     structural — .scene redeclares --gold and --accent-ink, and the light room deliberately
+     DEMOTES gilt to an ink because gilt at low alpha on cream is invisible — and both halves of
+     that are correct for what they are for. Neither is correct for the one ceremonial plate on the
+     site: it compounded until, on business.html in light, the keynote's fill and label were
+     BYTE-IDENTICAL to the plain .btn.primary beside it, leaving a frame and 10px of height to
+     carry the whole rank.
+     So the keynote declares the gilt pair on itself, the same mechanism .scene uses, in one place.
+     ⚠ AND THE RING IS WHAT MAKES IT SAFE ON PAPER. A gold plate on cream is 2.09:1 and could not
+     bound itself; the ring's DARK inner member measures 16.7:1 against that same cream, which is
+     exactly the two-tone argument the ring was built on — dark inside, cream outside, one member
+     carrying whichever surface the edge meets. The label goes the other way and gains: 7.89:1 on
+     the gilt against 5.51:1 on the bronze. */
+  --gold:#d9a441;--gold-bright:#f0c979;--gold-hover:#f0c979;--accent-ink:#221603;
+  /* ⚠ AND ITS VERTICAL PADDING IS ITS OWN. This rule set the horizontal padding and left the
+     vertical to whatever won the cascade, so .rail-app .btn{padding:10px 16px} — specificity
+     0,2,0 — supplied it on sponsors.html and the keynote computed 10px there against 12px on
+     every other page. A 16.7% difference on the one component the house rule says must measure
+     the same everywhere, arriving from a rule about a rail. */
+  padding-top:12px;padding-bottom:12px;
   /* ⚠ 08/10 — TWO SESSIONS FIXED THIS CONTROL AT THE SAME TIME AND BOTH FIXES ARE KEPT. The ring
      below came from a grade that rasterised the PLAQUE against the hero; the type below came from
      one that rasterised the LABEL against the button beside it. They are independent, and neither
@@ -3137,7 +3177,17 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
      ⚠ And full capitals are what an engraved plate actually carries. The 08/10 grade that asked
      for `small-caps` over `all-small-caps` was right that the label needed a full-height glyph in
      it; the answer it reached for gave it exactly one. */
-  font-family:var(--font-serif);font-size:clamp(15px, 4.4vw, 17px);font-weight:600;
+  /* ⚠ 08/11 LATE — 18px, AND THE COPY IS WHAT PAID FOR IT. Full capitals fixed the KIND of the
+     problem and not the size of it: a cold grade still measured 11.50px of keynote against 12.50px
+     of plain secondary at 390 and above. Size alone could not close it — 18px cost three more
+     wrapped configurations than 17px and 19px cost five — so the lever was the one this file has
+     named for two rounds and nobody had pulled: the LABELS. "Talk to us about a placement" became
+     "Talk to us" and mission's "See what is on this weekend" became "Browse this weekend", which
+     is the same URL the home page's keynote points at and was saying two different things about.
+     Across six pages at seven widths that took the wrap count from 14 of 42 to 7, which then buys
+     18px back at 9 — still five fewer wrapped configurations than the build this round started
+     with, with the letters finally ahead of the button they outrank. */
+  font-family:var(--font-serif);font-size:clamp(15px, 4.7vw, 18px);font-weight:600;
   text-transform:uppercase;letter-spacing:.05em;
   /* ⚠ LETTER-SPACING PUTS A TRACKING UNIT AFTER THE LAST GLYPH AND CENTRING COUNTS IT. The label
      is centred on a box that is one tracking unit wider than the ink, so the ink lands half a unit
@@ -3160,8 +3210,19 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
      text child is an ANONYMOUS flex item, which no declaration can address — so this rule written
      on .btn.primary.framed reached nothing at all and measured identical to no rule, which is
      exactly what the old note in this file recorded as "the trim does nothing". The generator
-     gives the keynote's label a span; see wrapKeynoteLabel in build_site_pages.js. */
-  .btn.primary.framed .btn-lab{display:block;text-box:trim-both cap alphabetic}
+     gives every button's bare-text label a span; see wrapLabels in build_site_pages.js.
+     ⚠ AND IT IS EVERY BUTTON, NOT THE KEYNOTE ALONE. A cold grade rasterised four members of this
+     system and got four different offsets with the sign flipping — keynote 0.13px, a 58px quiet
+     1.63px LOW, a plain primary 1.00px low, a 48px quiet 1.25px HIGH. Fixing one member of a set
+     is how a set stops being one. */
+  /* ⚠ WHAT IS CENTRED IS THE CAP BAND, AND A DESCENDER HANGS BELOW IT ON PURPOSE. Measured after:
+     every button's ink centre is within 0.50px except a label carrying a descender — "Plan a date
+     night" reports 1.67px low with a 15.67px ink band against 12.50px for its descender-free
+     siblings, which is half the descender and nothing else. Trimming to cap and alphabetic is what
+     makes a ROW of labels align on the same two lines, which is the uniformity rule the set is
+     held to; centring the ink BOX instead would align nothing and would move a label every time a
+     word gained a 'g'. The one control that is ceremonial is all capitals and lands exactly on it. */
+  .btn .btn-lab{display:block;text-box:trim-both cap alphabetic}
 }
 /* ⚠ AND IT ANSWERS THE POINTER. Rest, hover and press measured byte-identical fills — the whole
    press affordance on touch was a 2% scale. The most decorated control on the page was the only
