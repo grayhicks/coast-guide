@@ -52,6 +52,16 @@
   --band-line:rgba(38,66,92,.8); /* the perforation under it */
   --line:#26425c;         /* primary border */
   --line-soft:rgba(38,66,92,.55); /* section rules, quiet dividers */
+  /* ⚠ 08/11 — THE BORDER A CONTROL IS ALLOWED TO BE BOUNDED BY, AND IT IS NOT --line.
+     A cold grade rasterised .btn.quiet — four of the five non-keynote controls on this site —
+     and found its ONLY edge measuring 1.72:1 here and 1.39:1 on paper, against a 3:1 floor,
+     identically at 320/390/430/1100. Its fill does nothing either: 1.31:1 dark, 1.07:1 light.
+     The rank that carries most of this site's clicks had no visible boundary at all.
+     --line is right for what it is named for — section rules, table edges, a card's own quiet
+     frame, things a reader is not asked to press. A CONTROL owes 3:1, so it gets its own token
+     rather than a heavier --line, which would put a component's boundary weight on every hairline
+     in the page. Measured: 3.78:1 on the page ground and 3.24:1 on a card's panel. */
+  --line-strong:#5a7793;
   --sheen:rgba(255,255,255,.045); /* the 1px top-light every raised surface wears */
 
   /* --------------------------------------------------------------- accent
@@ -283,6 +293,8 @@ html[data-theme="light"]{
   --band-line:rgba(198,176,132,.75);
   --line:#e2d2ae;
   --line-soft:rgba(198,176,132,.5);
+  /* the paper room's control boundary — 3.66:1 on the page and 3.83:1 on a card's panel */
+  --line-strong:#8f7f60;
   --sheen:rgba(255,255,255,.75);
   /* gilt is DEMOTED TO ORNAMENT on this ground: rules, marks, struck corners and
      the trim. It stops being a surface colour. These two values are the ink
@@ -879,11 +891,16 @@ section.pad + section.pad{border-top:1px solid var(--line-soft)}
   font:700 16px/1.2 var(--font-sans);text-decoration:none;cursor:pointer;border:0;
   background:var(--gold);color:var(--accent-ink);box-shadow:var(--shadow-1);
   transition:transform var(--t-fast) var(--ease)}
+/* ⚠ A BUTTON IS ITS OWN HEIGHT, AND A FLEX ROW WAS OVERRULING THAT. align-items defaults to
+   stretch, so a keynote and a plain secondary sharing a row came out the SAME height — measured
+   58.00px and 58.00px on index at 1100, a 0.0% step on the control whose extra height is what pays
+   for the ornament. The ranks are 58 and 48 and they have to stay that way wherever they sit. */
+.btn{align-self:center}
 .btn:hover{transform:translateY(-1px)}
 .btn:active{transform:scale(.98)}
 .btn.primary{background:var(--gold);color:var(--accent-ink)}
 .btn.ghost{background:rgba(11,24,38,.5);color:#fff;border:1px solid rgba(240,201,121,.5);box-shadow:none}
-.btn.quiet{background:var(--panel-2);color:var(--ink);border:1px solid var(--line);box-shadow:none}
+.btn.quiet{background:var(--panel-2);color:var(--ink);border:1px solid var(--line-strong);box-shadow:none}
 html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--ink);border-color:var(--gold)}
 /* a quiet button ON the scene needs the scene treatment, not the panel one */
 .scene .btn.quiet{background:rgba(11,24,38,.5);color:#fff;border:1px solid rgba(240,201,121,.5)}
@@ -1352,12 +1369,26 @@ a.nap-line:hover{color:var(--gold-bright)}
    omission: a control that moves on every page of a four-hundred-page site
    is a distraction the fourth time you see it, and the ornament is doing
    the work of saying it is the important one. */
+/* ⚠ 08/11 — IT WAS THE KEYNOTE'S PLATE, BYTE FOR BYTE, ON EVERY PAGE. A cold grade measured a
+   171.84 x 44 pill carrying `background-color:var(--gold)` and `color:var(--accent-ink)` — the
+   exact two declarations `.btn.primary` carries — permanently in the corner of a four-hundred-page
+   site. The note below it was right that the ORNAMENT must not appear twice in one eyeful and then
+   spent the more valuable half of the same identity anyway: solid gold is what this site uses to
+   say "this is the action on THIS page", and a fixture that never goes away cannot mean that.
+   ⚠ SO THE TWO RANKS ARE THE MATERIAL, WHICH IS THE SAME ARGUMENT THE SPONSORED BLOCK IS DETACHED
+   BY. A solid gold PLATE is the page's own call to action; a gold OUTLINE on the page's own panel
+   is the standing ask. Nothing is dimmed and nothing is hidden — the pill is the same size, the
+   same place and the same hue, and the letters gain contrast rather than lose it: gold on panel
+   measures 6.78:1 in dark and 5.79:1 in light against the 4.32:1 the cream-on-gold pairing gave it.
+   ⚠ AND THE GROUND IS OPAQUE ON PURPOSE. This thing rides the viewport over whatever the reader
+   has scrolled to, so a translucent or borrowed ground puts a card's own text through the label. */
 .sup-float{position:fixed;right:max(14px, env(safe-area-inset-right));
   bottom:max(14px, env(safe-area-inset-bottom));z-index:40;
   display:inline-flex;align-items:center;min-height:44px;padding:11px 22px;
-  border-radius:var(--r-pill);background-color:var(--gold);color:var(--accent-ink);
+  border-radius:var(--r-pill);background-color:var(--panel);color:var(--gold);
+  box-shadow:inset 0 0 0 1.5px var(--gold), var(--shadow-2);
   font:800 var(--fs-small)/1 var(--font-sans);letter-spacing:.06em;text-transform:uppercase;
-  text-decoration:none;box-shadow:var(--shadow-2)}
+  text-decoration:none}
 /* ⚠ AND IT DOES NOT WEAR THE SWELLED RULE, WHICH LOOKS LIKE AN OMISSION AND IS
    NOT. The rail's "Open the app" button is a gold pill with the ornament on it,
    and at the top of a listing page the float sits a few centimetres away — two
@@ -1384,9 +1415,12 @@ a.nap-line:hover{color:var(--gold-bright)}
    worse than the 46.5% the hidden attribute was added to cure. The attribute was right and the
    cascade was never checked. */
 .sup-float[hidden]{display:none}
-.sup-float:hover{background-color:var(--gold-bright)}
+/* the press affordance moves to the OUTLINE, because the outline is now what the control is */
+.sup-float:hover{color:var(--gold-bright);box-shadow:inset 0 0 0 2px var(--gold-bright), var(--shadow-2)}
 .sup-float:focus-visible{outline:3px solid var(--focus-ink);outline-offset:3px}
 .sup-float-in{position:relative}
+/* the short form below 360 — see the note beside supportFloat() in the generator */
+@media (max-width:359px){ .sup-full{display:none} }
 /* ⚠ AND IT GETS OUT OF THE WAY OF THE FOOTER. Pinned to the viewport it would
    otherwise sit on top of the footer's own links at the end of a long page. */
 .site-foot{padding-bottom:84px}
@@ -3070,8 +3104,65 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
      this rule was changed to cure, reappearing at a mainstream phone width. 21px does not fix it
      and wraps index too. The real answer is either shorter labels or a two-rank label, and it is a
      copy decision rather than a size one — recorded in START_HERE rather than guessed at here. */
-  font-family:var(--font-serif);font-size:19px;font-weight:600;
-  font-variant-caps:small-caps;letter-spacing:.10em}
+  /* ⚠ 08/11 — THE SIZE IS FLUID NOW, AND IT COSTS NOTHING, WHICH IS THE MEASUREMENT THAT MATTERS.
+     The note above concluded "21px does not fix it and wraps index too" and stopped there. It was
+     testing size against a FIXED tracking, and in this range the tracking buys more width than the
+     size does: at padding 36 across five pages at six widths, 21px/.09em wraps 15 of 30 while
+     22px/.06em wraps 12 and 22px/.02em wraps 11 — the same eleven the shipped 19px/.10em wraps.
+     So the label can grow if the tracking pays for it. clamp(19px, 5.6vw, 22px) at .06em wraps
+     EXACTLY the eleven configurations the current build wraps, glyph for glyph: 19px below 340,
+     which is where every one of those wraps already lives, and 22px from 393 up where there is
+     room. Sixteen percent more glyph on a mainstream phone for no new wrap anywhere.
+     ⚠ THE PADDING IS NOT PART OF THE TRADE. 36px is what keeps the label out of the ornament's
+     corners — the frame owns the outer 26px — and every candidate above was measured at 36 for
+     that reason. Buying a size out of the padding buys it out of the ornament.
+     ⚠ AND IT STILL DOES NOT WIN THE TYPE CONTEST, WHICH IS RECORDED RATHER THAN CLAIMED. Small
+     capitals are about 0.46 of the size, so 22px puts the label's glyphs near 10.2px against the
+     plain secondary's 12.19px cap band. Only the initial, at full cap height, wins outright. The
+     remaining answer is the one START_HERE already names — shorter labels or a two-rank label,
+     which is a COPY decision — and it is not settled by any number in this rule. */
+  /* ⚠ 08/11, LATER — SMALL CAPITALS CANNOT WIN A GLYPH-HEIGHT CONTEST AND THE PLATE STOPPED
+     TRYING. Two independent cold grades measured the same inversion from different ends: the
+     keynote's body band ran 8.50px at 320 and 9.83px at 390 against the plain secondary's 11.17px,
+     so the box stepped +20.8% while the letters stepped MINUS 12 to MINUS 24%. Raising the size
+     cannot fix it — a small capital is about 0.46 of the font size, so even 22px lands near 10.2px
+     — and the note above chased that for two rounds.
+     ⚠ AND THE WRAPPED LINE WAS THE PROOF: only the INITIAL of a Title Case label is a full capital,
+     and it is always on line one, so a second line carried no full-height glyph anywhere in it.
+     FULL CAPITALS AT A SMALLER SIZE DELETE BOTH PROBLEMS AT ONCE: every glyph is cap height, every
+     line is, and 17px of serif caps is about 11.9px of ink against small caps' 10.2px at 22px.
+     ⚠ IT IS ALSO CHEAPER IN WIDTH, WHICH IS THE MEASUREMENT THAT DECIDED IT rather than the
+     argument. Across five pages at six widths: the small-caps clamp wraps 12 of 30 and
+     clamp(15px, 4.4vw, 17px) at .05em wraps 10 — TWO FEWER, with taller letters on every line.
+     ⚠ And full capitals are what an engraved plate actually carries. The 08/10 grade that asked
+     for `small-caps` over `all-small-caps` was right that the label needed a full-height glyph in
+     it; the answer it reached for gave it exactly one. */
+  font-family:var(--font-serif);font-size:clamp(15px, 4.4vw, 17px);font-weight:600;
+  text-transform:uppercase;letter-spacing:.05em;
+  /* ⚠ LETTER-SPACING PUTS A TRACKING UNIT AFTER THE LAST GLYPH AND CENTRING COUNTS IT. The label
+     is centred on a box that is one tracking unit wider than the ink, so the ink lands half a unit
+     LEFT of the plate's middle — measured at .06em on 22px, 0.63 to 0.91px on 15 of 15
+     configurations, in the same direction every time, which is what tells you it is arithmetic
+     rather than a font. text-indent shortens the first line by .06em and the centring then splits
+     the difference, moving the ink back right by half a unit. Measured after: within 0.30px. */
+  text-indent:.06em}
+/* ⚠ AND THE TRIM DOES SOMETHING AFTER ALL — the note two hundred lines down concluded it "does
+   nothing" and it was MEASURING THE LINE BOX WITH A RANGE, which is the trap this project has a
+   law about. Read as painted ink, by photographing the button and subtracting the same button with
+   the glyphs made transparent, the label sits 0.02 to 0.73px above its plate's centre on one line
+   and 1.06 to 1.59px above it on a WRAPPED one, in 25 of 30 configurations. A Range cannot see
+   that, because the descender space the line box reserves is exactly what small capitals never
+   use. Trimming to cap and alphabetic hands the flex centring the ink instead of the box.
+   ⚠ IT IS BEHIND @supports BECAUSE IT HAS TO BE — the trim is not universally implemented, and a
+   label that is 0.7px high is a far smaller defect than one that has lost its own line box. */
+@supports (text-box: trim-both cap alphabetic){
+  /* ⚠ ON THE LABEL'S OWN SPAN, NEVER ON THE BUTTON. .btn is an inline-flex container and a bare
+     text child is an ANONYMOUS flex item, which no declaration can address — so this rule written
+     on .btn.primary.framed reached nothing at all and measured identical to no rule, which is
+     exactly what the old note in this file recorded as "the trim does nothing". The generator
+     gives the keynote's label a span; see wrapKeynoteLabel in build_site_pages.js. */
+  .btn.primary.framed .btn-lab{display:block;text-box:trim-both cap alphabetic}
+}
 /* ⚠ AND IT ANSWERS THE POINTER. Rest, hover and press measured byte-identical fills — the whole
    press affordance on touch was a 2% scale. The most decorated control on the page was the only
    one that never responded, while the Show Support pill did. The ornament brightens rather than
