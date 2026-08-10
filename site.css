@@ -885,7 +885,10 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
      self-imposed budget does not outrank it, and 4.8% on the current card is not the 40% PART 0
      actually warns about. */
   .ev-where{min-height:32px}
-  .ev-why{min-height:39px}
+  /* ⚠ 61px, NOT 60. Two lines measure 40.30 (13px x 1.55 x 2), so the old 39px floor under-reserved
+     its own two lines by 1.30px and dropped that into the three-way auto split, which is where the
+     12.00/12.42 gap pairs across a desktop row came from. Three lines are 60.45; 61 clears them. */
+  .ev-why{min-height:61px}
   /* ⚠ THE FLOORS ARE BACK, AND THEY WORK NOW, WHICH THEY DID NOT BEFORE. They were written once
      while the cascade trap below was still live, so `align-items` was inert, they reserved space
      nothing centred in, and pulling them was right at the time. With the rank centring its own
@@ -1042,9 +1045,20 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
    hours rank's rgb(94,110,128), so the blurb and the hours were the same ink and the quieter rank
    was fractionally darker. Eight ranks were sharing four inks. 92% sits at about 5.7:1, a real step
    between the venue's 7.3 and the hours' 5.1. */
+/* ⚠ THREE LINES, AND FOUR AT THE NARROWEST WIDTH — GRAY'S CALL, 08/10: "why not just make the
+   cards slightly larger?" He is right, and the two-line clamp was being defended by a density
+   budget a previous session set for itself. What it actually cost, measured:
+     clamped to 2   places@320 89% of blurbs truncated · @390 66% · @1100 49%
+     clamped to 3   places@320 54% · @390 15% · events@390 10% · @1100 7%   (+20px)
+     clamped to 4   places@320 17% · @390 1%  · events@390 1%  · @1100 0%   (+12px more at 320)
+   The line that answers "why go" was being cut mid-clause on nine cards out of ten at 320. Three
+   lines everywhere and four below 360, which is where the measure is narrowest and the clipping
+   was worst. The card grows about 6% and that is the correct trade — a listing nobody can read the
+   reason on is not dense, it is short. */
 .ev-why{margin:6px 14px 0;padding:0 6px;font:var(--fs-small)/1.55 var(--font-serif);
   color:color-mix(in srgb, var(--ink-2) 92%, var(--panel));text-align:center;
-  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+@media(max-width:360px){.ev-why{-webkit-line-clamp:4}}
 
 /* RANK 5 — the hours, which is the half of the old schedule line that is not
    the day. Quiet, below the title, clamped: visible, which is what Gray asked
