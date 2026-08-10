@@ -80,6 +80,8 @@
 
   /* ---------------------------------------------------------------- radii */
   --r-field:10px; --r-card:14px; --r-pill:999px;
+  /* the card is a printed ticket, not a raised surface — see THE FRAME, near the foot */
+  --r-ticket:3px;
 
   /* ------------------------------------------------------------ elevation
      Shadows are tinted to the water, never pure black. Cards wear shadow-1 at
@@ -357,11 +359,15 @@ a:hover{text-decoration-thickness:2px}
      same alpha, so the blur still separates it and the colour never has to be kept in sync. */
   /* 94, not 88: at the very top of the page there is nothing behind the header, so the missing
      12% composited onto the browser canvas and read as pale grey rather than as cream paper. */
-  background:color-mix(in srgb, var(--bg) 94%, transparent);
+  /* ⚠ 96 AND A 14px BLUR, NOT 94 AND 10. A cold grade read 20px serif card titles THROUGH the
+     second nav row at roughly 30 to 40% on a dense wall at 1100, in both themes - "FINAL WEEKEND"
+     and a venue name were legible inside the nav bar. A sticky header that a listing shows through
+     is not a translucency effect, it is two layers of type on one scanline. */
+  background:color-mix(in srgb, var(--bg) 96%, transparent);
   border-bottom:0;
-  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
 }
-html[data-theme="light"] .site-head{background:rgba(238,240,239,.9)}
+html[data-theme="light"] .site-head{background:rgba(238,240,239,.97)}
 .site-head .bar{display:flex;align-items:center;gap:8px;min-height:60px;flex-wrap:nowrap}
 /* ⚠ THE NAV USED TO BE A HIDDEN-SCROLLBAR CLIP. Measured at 390: scrollWidth
    622 in a clientWidth of 350 — "New & upcoming" sliced mid-glyph, and Where /
@@ -852,7 +858,33 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
      scanline and their titles 15.6px apart, with every rank below them aligned. A rank that lands
      on its neighbour's line except at the rank the eye enters on reads as a fault, not a decision.
      The slack goes back to the one gap `margin-top:auto` already owns. */
-  .card h3{min-height:50px;display:flex;align-items:flex-start;justify-content:center}
+  /* ⚠ CENTRED, AND THAT REVERSES THE NOTE ABOVE ON A MEASUREMENT THE NOTE NEVER TOOK. Top-set was
+     chosen so two titles in a row start on one scanline, and the cost was written off as "the one
+     gap margin-top:auto owns". It is not that gap: a one-line title in a two-line floor leaves the
+     hole between the TITLE'S INK AND THE VENUE LINE — the tightest coupling on the card — and a
+     cold grade measured it at 31px against 6px on the card beside it, a 5.2x spread, on 75 of 143
+     event cards, 144 of 176 places, 201 of 283 promotions and 21 of 21 openings.
+     ⚠ AND THE EARLIER MEASUREMENT MISSED IT BECAUSE IT MEASURED THE BOX. `whereTop - h3.bottom` is
+     6.00px on every card in every configuration, because the BOX is floored at 50 whatever the ink
+     does. Measured with a Range over the title's own text it is 25px of spread. A floor makes the
+     box lie about the ink by construction; measure the ink.
+     Centring halves the hole to 12.5px and costs nothing else — the row-mate offset it reintroduces
+     is 12.5px against the 15.6px the note was written about, and every rank below the venue line
+     now holds its scanline because the VENUE is floored. */
+  .card h3{min-height:50px;display:flex;align-items:center;justify-content:center}
+  /* ⚠ AND THE VENUE FLOOR IS ACCEPTED NOW, REVERSING THE REFUSAL BELOW ON THE SAME ARITHMETIC IT
+     WAS REFUSED ON. It was declined at +10.4% against an 8% density tripwire. Two things changed.
+     First, the numbers: it is the ONE rank still free to change a card's internal geometry, and it
+     sits directly under the title, so a two-line venue drops everything below it by a full
+     line-height while its row-mate holds. Measured at 1100 with the floor on and off —
+       hours-to-ornament spread   10.22 -> 5.75 (events)   10.64 -> 5.33 (places)
+       rows with a mismatched gap 27/71 -> 9/71            13/86 -> 12/86
+       why-line row offset        15.96 -> 5.75            15.96 -> 5.33
+     Second, the ranking: the 8% tripwire is a guardrail a previous session set for itself. "Two
+     things meant to look the same must MEASURE the same" is GRAY'S rule, stated as a hard one. A
+     self-imposed budget does not outrank it, and 4.8% on the current card is not the 40% PART 0
+     actually warns about. */
+  .ev-where{min-height:32px}
   .ev-why{min-height:39px}
   /* ⚠ THE FLOORS ARE BACK, AND THEY WORK NOW, WHICH THEY DID NOT BEFORE. They were written once
      while the cascade trap below was still live, so `align-items` was inert, they reserved space
@@ -875,6 +907,30 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
      in a row is what margin-top:auto is for. Measured both ways rather than argued. */
   .ev-hours{min-height:17px}
   .ev-hours:empty{display:block}
+  /* ⚠ AND THE RESERVE IS OFF ON A WALL WHERE NOTHING FILLS IT. The floor buys row alignment: an
+     empty rank holds its line so the difference does not fall into the gap above the ornament. On
+     the promotions wall EVERY card's hours line is empty — 283 of 283 — so it bought nothing and
+     spent 17px of height on each of them, and the card's internal rhythm was a different shape at
+     desktop from at phone. `:has()` asks the grid whether anybody on this wall has hours at all. */
+  .card-grid:not(:has(.ev-hours:not(:empty))) .ev-hours:empty{display:none}
+  /* ⚠ AND THE SLACK IS SPLIT THREE WAYS NOW, WHICH REVERSES THE NOTE ABOVE ON A MEASUREMENT.
+     That note says the slack "cannot be moved" and that spreading it "makes every gap ragged".
+     Both were asserted, never measured, and the floors it chose instead did not close it: a cold
+     grade measured the gap above the ornament at 12px on 106 of 143 event cards and 26.6 to 29.2px
+     on 27 more, with one at 42.7 — 26% of a desktop wall carrying a hole at more than twice the
+     norm, next to a row-mate at the norm. The venue is the rank still varying (15.9px on 106,
+     31.9px on 37) and flooring it costs 16px of median and breaks the 8% density tripwire, which
+     is why it stays refused.
+     ⚠ FLEXBOX SPLITS FREE SPACE EQUALLY BETWEEN EVERY `margin-top:auto` IN THE COLUMN. Three of
+     them turn one 16px hole into three 5.3px ones, at exactly zero density cost, and every rank
+     below `.ev-prog` still lands on its row-mate's scanline because the auto margins above it
+     absorb the difference before it gets there. The where-line is deliberately NOT one of them:
+     title-to-venue is the tightest coupling on the card and slack there moves the rank the eye
+     enters on. Measured both ways rather than argued.
+     ⚠ THE RULES ARE NOT IN THIS BLOCK. `.ev-why` and `.ev-hours` set their own margin LOWER in
+     this file, a media query adds no specificity, and later wins — written here first time round
+     they computed to margin-top:6px and the measurement came back byte-identical. Same trap the
+     `.scope` block records. They live just after `.ev-prog`. */
   /* ⚠ THE TWO-LINE HOURS FLOOR AND THE EN-DASH ARE BOTH GONE, and both were mine. The floor
      reserved a line nothing filled, which put 33px of cream above the ornament on a desktop row
      where the phone had 16. The dash was worse: a 4px mark alone in a 60px void, on a card whose
@@ -1005,6 +1061,20 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
    That is what answers "the price moves": its seat no longer depends on how
    long anything above it happens to be. */
 .ev-prog{margin-top:auto;padding-top:12px}
+/* the three-way split of a stretched row's slack — see the long note in the
+   min-width:700 block above. It has to be down here to beat the margins those
+   two ranks set for themselves. */
+/* ⚠ AND THE 6px MOVES TO THE RANK ABOVE RATHER THAN BEING SPENT. `margin-top:auto` REPLACES a
+   margin-top, it does not add to one — written as a bare auto it took the card's own rhythm out at
+   desktop and left it at phone: where→why and why→hours measured 0.0px on 108 of 143 cards at 1100
+   against 5.9px at 390, on the one property a cold grade singled out as exactly right. Margins
+   between flex items do not collapse, so the same 6px stated as the PREVIOUS rank's margin-bottom
+   survives the auto above it, and the gap is 6px plus whatever slack the row hands down. */
+@media(min-width:700px){
+  .ev-where{margin-bottom:6px}
+  .ev-why{margin-top:auto;margin-bottom:6px}
+  .ev-hours{margin-top:auto}
+}
 
 /* THE SWELLED RULE — the house ornament, exactly once per card, inked with the
    card's own category. It never reaches a corner, so the card cannot close
@@ -1072,6 +1142,13 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
 .ev-fare.tba{color:var(--pill-tba-fg)}
 .card .ev-fare.tba{color:color-mix(in srgb, var(--pill-tba-fg) 75%, var(--panel))}
 html[data-theme="light"] .card .ev-fare.tba{color:color-mix(in srgb, var(--pill-tba-fg) 90%, var(--panel))}
+/* ⚠ AND THE WEIGHT COMES DOWN ON THE ABSENCE ONLY. Two demotions of the INK are recorded above and
+   neither touched the thing a reader actually sees first: "No published price" is eighteen
+   characters where "Free" is four, both at 700, so the absence had four times the optical mass of
+   the good news in the loudest seat on the card. Colour cannot fix mass. `is-absent` is emitted
+   only for the no-price state, never for the promotions wall's "Ends in 3 days", which is urgency
+   and has earned its weight. The 24px line box is untouched, so the rank does not move. */
+.ev-fare.is-absent{font-weight:500;letter-spacing:0}
 
 /* ═══ THE AGATE LINE ══════════════════════════════════════════════════════
    Newspaper classifieds, borrowed as a typographic convention: one ruled line
@@ -1095,7 +1172,13 @@ html[data-theme="light"] .card .ev-fare.tba{color:color-mix(in srgb, var(--pill-
    with, so a card with nothing to say about its hours simply has one rank fewer. */
 @media(max-width:699px){ .ev-hours:empty{display:none} }
 
-.ev-agate{margin:10px 14px 0;padding:8px 4px;text-align:center;
+/* ⚠ THE BAND IS FLUSH TO THE CONTENT EDGE, and it was inset 14px past it. Measured at 390: the
+   agate rules started 31.1px in from the card edge while the foot band directly beneath them
+   started at 17.1 — a 14px step with nothing else in the card aligned to it, so the rules visibly
+   began inboard of the accession number under them. The ornament's own inset is 41.2 and that one
+   is deliberate: a swelled rule must never reach a corner. Two insets in a card is a system; three,
+   one of them arbitrary, is a mistake. */
+.ev-agate{margin:10px 0 0;padding:8px 4px;text-align:center;
   font:500 var(--fs-agate)/1 var(--font-mono);color:var(--ink-2);letter-spacing:.1em;
   text-transform:uppercase;font-variant-numeric:tabular-nums;
   border-top:1px solid color-mix(in srgb, var(--cat, var(--line)) 72%, transparent);
@@ -1215,6 +1298,10 @@ a.nap-line:hover{color:var(--gold-bright)}
    already, on the card. The ornament stays with the button that is asking to be
    pressed on THIS page, and the float earns its prominence from the gold and
    from never going away. */
+/* the tucked state — see the note beside supportFloat() in the generator. Transform
+   and opacity only; `visibility` rather than `display` so the transition can run. */
+.sup-float{transition:transform var(--t-med) var(--ease), opacity var(--t-med) var(--ease)}
+.sup-float.is-tucked{transform:translateY(calc(100% + 24px));opacity:0;pointer-events:none}
 .sup-float:hover{background-color:var(--gold-bright)}
 .sup-float:focus-visible{outline:3px solid var(--gold-bright);outline-offset:3px}
 .sup-float-in{position:relative}
@@ -1284,8 +1371,16 @@ a.nap-line:hover{color:var(--gold-bright)}
    now the only green object and the only ruled mark in the foot band, which is
    what "it must outrank a tag" means in pixels. Precedent only; no Michelin
    artwork is used and the tick is this project's own path. */
-.verified{position:relative;display:inline-flex;align-items:center;gap:6px;
-  padding:7px 6px;color:var(--ok);
+/* ⚠ ONE BLOCK WIDTH, TWO CONTENTS. The two states are different words with a tick on only one of
+   them, so the stamp measured 95.8px saying VERIFIED and 68.0px saying SOURCED — and being
+   right-aligned in the foot band, its LEFT edge and both its tapered rules moved 27px card to
+   card, on a wall that alternates the states constantly (58 verified against 85 sourced on the
+   ninety-day view). A stamp is a struck mark: the die is one size and only the word in it changes.
+   97px clears the measured width of the wider state (96.6 at its widest), and the type is fixed at 11px mono so it does not
+   move with the viewport. The content centres in it, which is what makes the two rules the same
+   length as well as the same place. */
+.verified{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  min-width:97px;padding:7px 6px;color:var(--ok);
   font:700 var(--fs-kicker)/1 var(--font-mono);letter-spacing:.14em;
   text-transform:uppercase;font-variant-numeric:tabular-nums;
   transition:transform var(--t-fast) var(--ease)}
@@ -1344,8 +1439,14 @@ html[data-theme="light"] .scope{background:linear-gradient(180deg, rgba(40,50,60
      this file, a media query adds no specificity, and later wins — three declarations written here
      first time round were completely inert. This block only reaches .scope itself, which is
      declared above it. */
-  .scope{display:grid;grid-template-columns:1fr 1fr;overflow:visible;border-radius:var(--r-card);
-    -webkit-mask-image:none;mask-image:none}
+  /* ⚠ minmax(0,1fr), NOT 1fr. `1fr` is `minmax(auto,1fr)` and `auto` on a grid item resolves to
+     MIN-CONTENT — which for a nowrap label is the whole label. So the two columns sized themselves
+     to "Food and drink" and "Attractions" and pushed the document 40px wider than a 320 viewport:
+     body.scrollWidth 360 against clientWidth 320, the panel's own border ending at x=299 while its
+     chips ran off the screen edge. The whole page scrolled sideways and the primary category
+     navigation was the thing hanging off it. A zero minimum is what makes 1fr mean 1fr. */
+  .scope{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);overflow:visible;
+    border-radius:var(--r-card);-webkit-mask-image:none;mask-image:none}
 }
 .scope::-webkit-scrollbar{display:none}
 .scope a{flex:1 0 auto;display:inline-flex;align-items:center;justify-content:center;
@@ -1358,6 +1459,17 @@ html[data-theme="light"] .scope{background:linear-gradient(180deg, rgba(40,50,60
   color:var(--accent-ink);font-weight:800;
   box-shadow:0 1px 2px rgba(4,10,17,.45), 0 3px 12px rgba(217,164,65,.25)}
 .scope a:active{transform:scale(.97)}
+/* ⚠ AND THE LABEL HAS TO BE ALLOWED TO WRAP, or minmax(0,1fr) just moves the fault from "the page
+   scrolls sideways" to "the label is clipped by its own cell". At 320 the cell is 136.5px and
+   "Food and drink" sets 135.4px of nowrap text inside 36px of padding. It does not fit on one line
+   and no amount of tracking makes it. Two centred lines in the cell fit, keep the whole label, and
+   cost height the rail has — the cells are already 44px minimum and mostly one line.
+   ⚠ THIS BLOCK IS DOWN HERE ON PURPOSE. The rail's own media query sits ABOVE `.scope a`, a media
+   query adds no specificity, and later wins — three declarations written up there were completely
+   inert, which the comment on that block records. Anything targeting `.scope a` goes after it. */
+@media(max-width:400px){
+  .scope a{font-size:var(--fs-small);padding:8px 10px;letter-spacing:.005em}
+}
 
 /* ==================================================== LISTING LAYOUT + RAIL */
 .filters{margin-top:var(--s-5)}
@@ -1405,7 +1517,12 @@ html[data-theme="light"] .chip.on::before{box-shadow:0 0 0 3px rgba(138,95,16,.1
 .listing,.index-layout{margin-top:var(--s-5)}
 @media(min-width:1024px){
   .listing,.index-layout{display:grid;grid-template-columns:240px 1fr;gap:var(--s-6);align-items:start}
-  .rail,.filter-rail{position:sticky;top:76px}
+  /* ⚠ 118px, NOT 76. The sticky header is 106px tall at every width the rail is sticky at, so a
+     76px offset parked the rail 30px UNDER it and the first thing in the rail — the gold "Open the
+     app" button, the one control the rail exists to carry — was half-hidden behind the nav on
+     every desktop screenshot a cold grade took. Measured, not guessed: header 106 at 900, 1100 and
+     1440, and 146 at 700 where the rail is static and this rule does not apply. */
+  .rail,.filter-rail{position:sticky;top:118px}
   .rail .chip-row,.filter-rail .chip-row{flex-direction:column;align-items:stretch}
   /* ⚠ space-between TEARS THE DOT OFF ITS LABEL. On the desktop rail a chip is a full-width row,
      and the current-page marker is a 7px ::before dot, so space-between pushed the dot to the far
@@ -1558,7 +1675,7 @@ html[data-theme="light"] .jn{background:rgba(138,95,16,.1)}
 @media(min-width:900px){
   .detail-layout{grid-template-columns:1fr 340px;align-items:start}
   .detail-layout > article{grid-column:1;grid-row:1;min-width:0}
-  .detail-layout > .facts{grid-column:2;grid-row:1;position:sticky;top:76px}
+  .detail-layout > .facts{grid-column:2;grid-row:1;position:sticky;top:118px}
 }
 .facts{background:linear-gradient(180deg, var(--sheen), transparent 46px), var(--panel);
   border:1px solid var(--line);border-radius:var(--r-card);
@@ -1782,6 +1899,31 @@ section.band-cta.home-sec{padding:var(--s-6)}
   color:var(--ink);max-width:26em}
 .prose .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:var(--s-4)}
 .prose .grid.two{margin-top:var(--s-4)}
+/* THE CARD'S LEGEND, on the Mission page. A printed key: the mark on the left at
+   the size it actually ships, the meaning on the right, one hairline between
+   rows and none around the block. The marks come from crest(), so this is a
+   layout for a drawing rather than a second copy of one.
+   ⚠ THE MARK COLUMN IS A FIXED WIDTH. The seals are all 40px, so a column that
+   sized to its content would still be one width — but the ROWS have to agree
+   across three separate lists, and only a fixed track guarantees that. */
+/* ⚠ AND IT IS CAPPED, BECAUSE A KEY IS AN INSET OBJECT. Uncapped it inherited the
+   prose column's 820px at desktop and hung a 45-character gloss in it, so every
+   row was a short line with a rule running 400px past its last word. */
+.crest-legend{margin:var(--s-4) 0 0;max-width:520px}
+/* balanced, because at 390 every one of these heads dropped its last word onto a
+   line of its own — "is." and "own name." alone under a full measure, three
+   times down one block */
+.crest-key-head{margin:var(--s-5) 0 var(--s-2);font:600 var(--fs-body)/1.5 var(--font-serif);
+  color:var(--ink);text-wrap:balance}
+.crest-legend > .crest-key-head:first-child{margin-top:0}
+.crest-key{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-soft)}
+.crest-key li{display:grid;grid-template-columns:88px 1fr;align-items:center;
+  gap:var(--s-4);padding:10px 0;border-bottom:1px solid var(--line-soft)}
+.crest-key-mark{display:flex;justify-content:center;color:var(--cat, var(--orn-rule))}
+.crest-key-mark .ev-crest{opacity:1}
+.crest-key-txt{font-size:var(--fs-small);color:var(--ink-2);line-height:1.5}
+.crest-key-txt strong{display:block;font:700 var(--fs-kicker)/1.4 var(--font-mono);
+  letter-spacing:.13em;text-transform:uppercase;color:var(--ink)}
 .note{background:linear-gradient(180deg, var(--sheen), transparent 46px), var(--panel);
   border:1px solid var(--line);border-left:3px solid var(--gold);
   border-radius:var(--r-card);padding:var(--s-4) var(--s-5);margin:var(--s-5) 0;
@@ -2089,9 +2231,9 @@ main{flex:1 0 auto}
   --cat-movie:#8291f5;  --catw-movie:rgba(130,145,245,.09);
   --cat-event:#c8b795;  --catw-event:rgba(200,183,149,.06);
   --cat-town:#ee9b6e;   --catw-town:rgba(238,155,110,.08);
-  --cat-beach:#5fd0e8;  --catw-beach:rgba(95,208,232,.07);
-  --cat-nature:#57c46c; --catw-nature:rgba(87,196,108,.07);
-  --cat-stem:#c9e05a;   --catw-stem:rgba(201,224,90,.07);
+  --cat-beach:#2ec7e2;  --catw-beach:rgba(46,199,226,.07);
+  --cat-nature:#6cc078; --catw-nature:rgba(108,192,120,.07);
+  --cat-stem:#adbb63;   --catw-stem:rgba(173,187,99,.07);
   --cat-place:#8fa3b8;  --catw-place:rgba(143,163,184,.06);
   --cat-opening:var(--ok); --catw-opening:rgba(55,195,152,.07);
   --ok-ink:#54dbae;     /* teal bright enough to SPEAK on panel, AA-measured */
@@ -2104,7 +2246,7 @@ html[data-theme="light"]{
   --cat-town:#b55a2a;   --catw-town:rgba(181,90,42,.1);
   --cat-beach:#0e7f9b;  --catw-beach:rgba(14,127,155,.09);
   --cat-nature:#1f7a34; --catw-nature:rgba(31,122,52,.09);
-  --cat-stem:#7c8b1a;   --catw-stem:rgba(124,139,26,.1);
+  --cat-stem:#6a7616;   --catw-stem:rgba(106,118,22,.1);
   --cat-place:#5d6873;  --catw-place:rgba(93,104,115,.08);
   --ok-ink:#0c7a5a;
 }
@@ -2128,28 +2270,28 @@ html[data-theme="light"]{
    construction as light, opposite direction, because in dark the body ink is the pale one. */
 .card[data-cat]{ --cat-ink:color-mix(in srgb, var(--cat) 90%, var(--ink)) }
 html[data-theme="light"] .card[data-cat]{ --cat-ink:color-mix(in srgb, var(--cat) 72%, var(--ink)) }
-.card[data-cat="music"]  {--cat:var(--cat-music);  --catw:var(--catw-music)}
-.card[data-cat="art"]    {--cat:var(--cat-art);    --catw:var(--catw-art)}
-.card[data-cat="movie"]  {--cat:var(--cat-movie);  --catw:var(--catw-movie)}
-.card[data-cat="event"]  {--cat:var(--cat-event);  --catw:var(--catw-event)}
-.card[data-cat="town"]   {--cat:var(--cat-town);   --catw:var(--catw-town)}
-.card[data-cat="beach"]  {--cat:var(--cat-beach);  --catw:var(--catw-beach)}
-.card[data-cat="nature"] {--cat:var(--cat-nature); --catw:var(--catw-nature)}
-.card[data-cat="stem"]   {--cat:var(--cat-stem);   --catw:var(--catw-stem)}
-.card[data-cat="place"]  {--cat:var(--cat-place);  --catw:var(--catw-place)}
-.card[data-cat="opening"]{--cat:var(--cat-opening);--catw:var(--catw-opening)}
+.card[data-cat="music"],[data-seal="music"]{--cat:var(--cat-music);  --catw:var(--catw-music)}
+.card[data-cat="art"],[data-seal="art"]{--cat:var(--cat-art);    --catw:var(--catw-art)}
+.card[data-cat="movie"],[data-seal="movie"]{--cat:var(--cat-movie);  --catw:var(--catw-movie)}
+.card[data-cat="event"],[data-seal="event"]{--cat:var(--cat-event);  --catw:var(--catw-event)}
+.card[data-cat="town"],[data-seal="town"]{--cat:var(--cat-town);   --catw:var(--catw-town)}
+.card[data-cat="beach"],[data-seal="beach"]{--cat:var(--cat-beach);  --catw:var(--catw-beach)}
+.card[data-cat="nature"],[data-seal="nature"]{--cat:var(--cat-nature); --catw:var(--catw-nature)}
+.card[data-cat="stem"],[data-seal="stem"]{--cat:var(--cat-stem);   --catw:var(--catw-stem)}
+.card[data-cat="place"],[data-seal="place"]{--cat:var(--cat-place);  --catw:var(--catw-place)}
+.card[data-cat="opening"],[data-seal="opening"]{--cat:var(--cat-opening);--catw:var(--catw-opening)}
 /* ⚠ AND THE SEVEN VALUES THAT HAD NO HUE AT ALL — 704 cards, every promotion among them, painting
    the fallback gold while their crests varied by category. The promotions deck files by its own
    five-value scheme and two event values (`iconic`, `coastal`) predate this map. No twelfth hue is
    invented: each is pointed at the existing hue closest to what it means, because the job of the
    ink is to separate a card from its neighbours on the page it is actually on. */
-.card[data-cat="food"]      {--cat:var(--cat-town);   --catw:var(--catw-town)}
-.card[data-cat="activity"]  {--cat:var(--cat-nature); --catw:var(--catw-nature)}
-.card[data-cat="attraction"]{--cat:var(--cat-beach);  --catw:var(--catw-beach)}
-.card[data-cat="retail"]    {--cat:var(--cat-art);    --catw:var(--catw-art)}
-.card[data-cat="service"]   {--cat:var(--cat-place);  --catw:var(--catw-place)}
-.card[data-cat="iconic"]    {--cat:var(--cat-town);   --catw:var(--catw-town)}
-.card[data-cat="coastal"]   {--cat:var(--cat-beach);  --catw:var(--catw-beach)}
+.card[data-cat="food"],[data-seal="food"]{--cat:var(--cat-town);   --catw:var(--catw-town)}
+.card[data-cat="activity"],[data-seal="activity"]{--cat:var(--cat-nature); --catw:var(--catw-nature)}
+.card[data-cat="attraction"],[data-seal="attraction"]{--cat:var(--cat-beach);  --catw:var(--catw-beach)}
+.card[data-cat="retail"],[data-seal="retail"]{--cat:var(--cat-art);    --catw:var(--catw-art)}
+.card[data-cat="service"],[data-seal="service"]{--cat:var(--cat-place);  --catw:var(--catw-place)}
+.card[data-cat="iconic"],[data-seal="iconic"]{--cat:var(--cat-town);   --catw:var(--catw-town)}
+.card[data-cat="coastal"],[data-seal="coastal"]{--cat:var(--cat-beach);  --catw:var(--catw-beach)}
 /* ⚠ THE CATEGORY USED TO INK A DARK STUB BAND AND A 4px SPINE. Both went with
    the stub. It now inks the card's MARKS — the kicker, the swelled rule, the
    agate hairlines and the crest — which is the same signal carried by the
@@ -2317,11 +2459,14 @@ main > .wrap > section.home-sec:only-child .quick > .quick-card[href="thirty-a.h
    further the generator should stamp data-open="opened|dated|unannounced" on
    the article (and restore the price pills); the grouping styles can then key
    off it the way data-cat does. */
-main:has(.chip[aria-current="true"][href$="new/index.html"]) .new-flag{
-  background:transparent;color:var(--pill-free-fg);border:1px solid var(--pill-free-line);
-  padding:1.5px 7px}
-html[data-theme="light"] main:has(.chip[aria-current="true"][href$="new/index.html"]) .new-flag{
-  color:var(--pill-free-fg)}
+/* ⚠ AND SO IS THE ONE THAT PUT A BOX BACK ROUND THE NEW FLAG, for the same reason the comment
+   below gives and by the same measurement. On `new/index.html` only, the flag was given a border
+   and 1.5px/7px of padding, which turned a word inside a centred kicker into a boxed chip — and a
+   boxed chip inside a centred line cannot hold still: measured at 390 its left edge took seven
+   values across 21 cards, 53.8 to 104.6, a 50.8px wander down a column of identical-width cards,
+   because the box moves with the length of the words beside it. Every other page renders the flag
+   as a coloured word in the kicker, where a centred line moving is correct typography rather than
+   a wandering object. One card is one card, on every page that shows it. */
 /* ⚠ THIS FORK IS DELETED. It took the openings' kicker off the category ink and gave their blurb a
    third line, so one of the four card families was a different object at two ranks on one page.
    A card is one card. */
@@ -2575,6 +2720,38 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
   border-radius:calc(var(--r-card) - 6px);
   border:1px solid var(--orn-faint);opacity:.55}
 .card:hover::after{opacity:.9;border-color:var(--orn-ink)}
+
+/* ═══ THE FRAME, AND IT WAS THE LAST THING ON THIS CARD STILL ARGUING WITH ITSELF ═════════════
+   A cold grade that did not build this put it plainly: "read with the frame cropped off, it is
+   Michelin — the problem is entirely the frame." What it measured was a 14px radius, a two-layer
+   14px-blur ambient shadow and a hue-tinted gradient wash over a white sheen. That is a Material
+   surface, and PART 0 names it as the enemy in as many words: a bootstrap card with a tint. None
+   of the four references this card is built from — Michelin, NPS Unigrid, Criterion, letterpress
+   playbills — has a drop shadow or a 14px corner. Printed things are trimmed and they lie flat.
+
+   ⚠ AND THE WASH IS REPLACED RATHER THAN DELETED, because the category still has to be visible
+   before a word is read. NPS Unigrid is the reference PART 0 already names for exactly this: ONE
+   HEAVY IDENTIFICATION BAND, EVERYTHING ELSE HAIRLINE. A 4px band on the card's top edge says the
+   category louder than a wash ever did and closes two measured defects with it:
+     · the wash's alpha was hand-set per hue — rust .10, movie .09, beach .07 — a 43% swing in tint
+       strength between adjacent cards on one wall, which the grade could see at a glance.
+     · it terminated at a fixed 88px regardless of content, so it ended INSIDE a three-line title
+       on one card and below the venue line on the next. A band tied to the card's edge cannot
+       land on a different element card to card, because it lands on no element at all.
+
+   The lift goes with the shadow: a card that translates upward with nothing under it reads as a
+   bug. The hover is the keyline coming up and the band's own hue reaching the border, which is
+   what R4-W3 asked for — "medium to low profile border elegance... especially the Cards." */
+.card{border-radius:var(--r-ticket);box-shadow:none;
+  background:var(--panel)}
+.card[data-cat]{background:var(--panel)}
+.card::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;
+  pointer-events:none;background:var(--cat, var(--orn-rule));
+  border-radius:var(--r-ticket) var(--r-ticket) 0 0}
+.card::after{border-radius:0;inset:8px}
+.card:hover{transform:none;box-shadow:none;border-color:var(--cat, var(--orn-rule))}
+.card h3 a::before{border-radius:var(--r-ticket)}
+.card:has(h3 a:focus-visible){border-radius:var(--r-ticket)}
 
 /* THE PRIMARY BUTTON gets the full edge. It is the one control per page that is asking to be
    pressed, so it is the one that earns ornament; secondary and quiet buttons stay plain, which is
