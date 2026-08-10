@@ -59,6 +59,15 @@
      text set ON gold is always --accent-ink. No second accent exists. */
   --gold:#d9a441;
   --gold-bright:#f0c979;
+  /* ⚠ THE PLATE'S HOVER TONE IS NOT THE LINK TONE, AND A COLD GRADE MEASURED WHY.
+     The keynote hovered to --gold-bright. On the dark ground that lightens #d9a441 to #f0c979,
+     ΔE76 18.02 — fine. In the LIGHT theme gilt is demoted to ornament and both golds are ink
+     versions, so --gold-bright (#7a4e08) is DARKER than --gold (#8a5a0c): the plate moved ΔE76
+     6.55 in the wrong direction, 1.215:1 against itself, in the theme every page actually ships
+     stamped on <html>. One declaration, two opposite outcomes, which is what a token doing two
+     jobs always does. Light hovers DARKER on purpose — cream text on the plate goes 5.51:1 to
+     9.58:1 rather than thinning — at ΔE76 19.89, matched to the dark theme's own 18.02. */
+  --gold-hover:#f0c979;
   --focus-ink:var(--gold-bright);
   --accent-ink:#221603;   /* text on gold surfaces */
 
@@ -280,6 +289,7 @@ html[data-theme="light"]{
      versions of it, dark enough to read as type. */
   --gold:#8a5a0c;
   --gold-bright:#7a4e08;
+  --gold-hover:#5a3a05;   /* see the note beside --gold-hover on :root — ΔE76 19.89, cream 9.58:1 */
   --accent-ink:#fff6e4;   /* cream on gilt, not white: white on gilt reads cold */
   --ok:#0b6e52;
   --ok-line:rgba(11,110,82,.42);
@@ -412,8 +422,8 @@ html[data-theme="light"] .site-head{background:rgba(255,246,228,.97)}
      from 325px of links to 425px in a 350px box, so it cuts at every phone width the same way the
      about row always has. Two fade lengths on two rows of the same header was the divergence; one
      number is the fix. Measured: 425 in 280 at 320, in 320 at 360, in 350 at 390, in 390 at 430. */
-  -webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 56px),transparent);
-          mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 56px),transparent)}
+  -webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 36px),transparent);
+          mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 36px),transparent)}
 .site-head nav::-webkit-scrollbar{display:none}
 /* ⚠ 08/09 — THE DOING ROW WRAPS BELOW 420 AND STOPS CUTTING WORDS. A cold grade of the new
    Promotions page named this first: at 390 row one ended "Date Night Pr" and the reader was ON the
@@ -496,6 +506,17 @@ html[data-theme="light"] .site-head{background:rgba(255,246,228,.97)}
    carries the colour and a second, wider, much fainter wash under it gives it depth without adding
    contrast. Both paint in the gilt token, so they follow the theme with no second definition. */
 .site-head{position:sticky;top:0;z-index:50}
+/* ⚠ A STICKY HEADER WITH NO scroll-padding-top EATS THE TOP OF WHATEVER YOU SCROLL TO, and a cold
+   grade measured it on the keynote itself: at 1100 the header is 106px and sticky, and scrolling
+   the call to action to the top of the viewport put its top row UNDER the nav — hit-tests at its
+   top-left, top-centre and top-right returned the header's own links on five pages, in both themes.
+   ⚠ IT PASSED EVERY PHONE WIDTH AND THAT IS WHY IT SURVIVED: below the phone breakpoint the header
+   reverts to static, so 280 / 320 / 360 / 390 / 430 are all clean and a check that samples one
+   narrow width reports green. This is the second time this project has been bitten by testing at
+   the one width where two elements happen to miss each other.
+   The header's own height is the correct offset, and it is only sticky where it is tall. */
+html{scroll-padding-top:0}
+@media (min-width:730px){ html{scroll-padding-top:118px} }
 /* ⚠ AND IT CARRIES THE BEAD, because Gray asked for the button's exact treatment up here too:
    "I think on top too same exact thing not just button." The primary button's edge is a tapered
    hairline with a single bead at its centre; the header bar was the hairline without the bead, so
@@ -615,7 +636,7 @@ html[data-theme="dark"] .tt-moon{display:none}
    --focus-ink was already overridden here for exactly this reason and stopping at the ring was the
    mistake: --scene-ground exists because A TOKEN DOING TWO JOBS WILL LEAK, and a page-ground gold
    used on a surface that is never the page's ground is the same leak one layer up. */
-.scene{--focus-ink:#f0c979;--gold:#d9a441;--gold-bright:#f0c979;--accent-ink:#221603;
+.scene{--focus-ink:#f0c979;--gold:#d9a441;--gold-bright:#f0c979;--gold-hover:#f0c979;--accent-ink:#221603;
   position:relative;overflow:hidden;isolation:isolate;
   --hz:36%; --sandh:64px; --sun-x:76%; --glint-x:76%;
   background:var(--scene-ground);
@@ -804,7 +825,15 @@ html[data-theme="dark"] .tt-moon{display:none}
 .scene-copy h1,.page-title{margin:12px 0 0;font-size:var(--fs-h1);line-height:1.1;font-weight:800;
   letter-spacing:-.02em;color:#fff;text-shadow:0 3px 22px rgba(8,18,28,.65)}
 .hero h1{font-size:var(--fs-display)} /* the home hero outranks the page title */
-.scene-copy .sub,.page-sub{color:#fff;text-shadow:0 2px 12px rgba(8,18,28,.7);margin:8px 0 0;
+/* ⚠ 08/10 — `.lead` INSIDE THE SCENE WAS DARK NAVY ON THE DARK HERO, MEASURED AT 2.32:1.
+   `.lead` paints `var(--ink)`, which is correct on paper and wrong on the one surface that is dark
+   in BOTH themes. A cold grade found it on sponsors.html; it is the same defect on volunteer.html
+   and 404.html, which is three of the three pages that put a lead paragraph in the hero — the
+   grade sampled one page, exactly the way an earlier check sampled one width. The scene's copy
+   treatment already existed for `.sub`; `.lead` joins it rather than getting a second one.
+   ⚠ AND `.lead` IS ADDED TO THE SELECTOR LIST, NOT GIVEN ITS OWN RULE ABOVE IT — a comment dropped
+   between two selectors WELDS them into one descendant selector, which cost a whole mark once. */
+.scene-copy .sub,.page-sub,.scene-copy .lead{color:#fff;text-shadow:0 2px 12px rgba(8,18,28,.7);margin:8px 0 0;
   max-width:40em;font-size:var(--fs-body);line-height:1.55}
 .hero .sub{font-size:var(--fs-lead)}
 
@@ -1348,6 +1377,13 @@ a.nap-line:hover{color:var(--gold-bright)}
    classes rather than one flag, so the scroll handler and the overlap test never overwrite each
    other's decision. */
 .sup-float.is-yield{transform:translateY(calc(100% + 24px));opacity:0;pointer-events:none}
+/* ⚠ AN AUTHOR display RULE BEATS THE UA'S [hidden], AND THAT IS WHY "IT SHIPS HIDDEN" DID NOTHING.
+   .sup-float{display:inline-flex} is an author declaration and [hidden]{display:none} is the user
+   agent's, so with JavaScript off the pill computed display:flex, opacity:1, pointer-events:auto
+   and PAINTED — a cold grade rasterised it covering 52.3% of the keynote at 280 and 35.6% at 390,
+   worse than the 46.5% the hidden attribute was added to cure. The attribute was right and the
+   cascade was never checked. */
+.sup-float[hidden]{display:none}
 .sup-float:hover{background-color:var(--gold-bright)}
 .sup-float:focus-visible{outline:3px solid var(--focus-ink);outline-offset:3px}
 .sup-float-in{position:relative}
@@ -2224,8 +2260,8 @@ div.foot-fine{border-top:1px solid var(--line-soft);margin-top:var(--s-6);paddin
     rgba(6,14,24,.16) 0,
     rgba(6,14,24,.46) 26px,
     rgba(6,14,24,.60) 64px,
-    rgba(6,14,24,.60) calc(100% - 64px),
-    rgba(6,14,24,.34) calc(100% - 22px),
+    rgba(6,14,24,.60) calc(100% - 36px),
+    rgba(6,14,24,.34) calc(100% - 36px),
     rgba(6,14,24,0) 100%)}
 /* ⚠ AND THE SECOND HALF OF THE FIX IS WHERE IT STOPS, NOT HOW DARK IT IS. This box runs from
    -52vw to +40vw, i.e. across the whole viewport and past both edges, so on a wide screen it was
@@ -2243,7 +2279,7 @@ div.foot-fine{border-top:1px solid var(--line-soft);margin-top:var(--s-6);paddin
   /* the copy is bounded so a long title can never walk out of the dense middle of the wash */
   .scene-copy h1,.page-title{max-width:16ch}
   .hero h1{max-width:15ch}
-  .scene-copy .sub,.page-sub,.hero .sub,.hero-sub{max-width:44ch}
+  .scene-copy .sub,.page-sub,.hero .sub,.hero-sub,.scene-copy .lead{max-width:44ch}
   .hero-count{max-width:52ch}
   /* the tail has to be longer than the eye's ability to find an edge — a 505px falloff, not a
      100px one. A short tail is how a soft wash still ends in a visible vertical line. */
@@ -2267,7 +2303,7 @@ div.foot-fine{border-top:1px solid var(--line-soft);margin-top:var(--s-6);paddin
 }
 /* with a real wash underneath, the shadows can stop shouting */
 .scene-copy h1,.page-title{text-shadow:0 2px 10px rgba(6,14,24,.55)}
-.scene-copy .sub,.page-sub,.hero .sub,.hero-sub{text-shadow:0 1px 8px rgba(6,14,24,.5)}
+.scene-copy .sub,.page-sub,.hero .sub,.hero-sub,.scene-copy .lead{text-shadow:0 1px 8px rgba(6,14,24,.5)}
 .hero-count{text-shadow:0 1px 8px rgba(6,14,24,.6)}
 
 /* ⚠ 51px OF HORIZONTAL PAGE SCROLL AT 320px, from one declaration. `.sec-head h2
@@ -2441,7 +2477,7 @@ main > .wrap > section.home-sec:only-child .quick-card[href$=".html"]{
 main > .wrap > section.home-sec:only-child .quick:has(> .quick-card[href="gulf-breeze.html"]){
   grid-template-columns:1fr;gap:0;max-width:860px;position:relative;
   background:
-    linear-gradient(var(--line-soft),var(--line-soft)) no-repeat 31px 28px / 1px calc(100% - 56px),
+    linear-gradient(var(--line-soft),var(--line-soft)) no-repeat 31px 28px / 1px calc(100% - 36px),
     linear-gradient(180deg,var(--sheen),transparent 60px),var(--panel);
   border:1px solid var(--line);border-radius:var(--r-card);
   box-shadow:var(--shadow-1);padding:2px 0 6px}
@@ -2509,7 +2545,7 @@ main > .wrap > section.home-sec:only-child .quick > .quick-card[href="thirty-a.h
   main > .wrap > section.home-sec:only-child .quick:has(> .quick-card[href="gulf-breeze.html"]) > .quick-card::before{left:19px}
   main > .wrap > section.home-sec:only-child .quick:has(> .quick-card[href="gulf-breeze.html"]){
     background:
-      linear-gradient(var(--line-soft),var(--line-soft)) no-repeat 24px 28px / 1px calc(100% - 56px),
+      linear-gradient(var(--line-soft),var(--line-soft)) no-repeat 24px 28px / 1px calc(100% - 36px),
       linear-gradient(180deg,var(--sheen),transparent 60px),var(--panel)}
   main > .wrap > section.home-sec:only-child .quick:has(> .quick-card[href="gulf-breeze.html"])::before,
   main > .wrap > section.home-sec:only-child .quick:has(> .quick-card[href="gulf-breeze.html"])::after{
@@ -2578,7 +2614,7 @@ main > .wrap > section.home-sec:only-child .quick > .quick-card[href="thirty-a.h
 .verify-note{
   background:
     radial-gradient(circle 1.3px at 1.5px 50%,var(--ok-line) 1.05px,transparent 1.35px)
-      no-repeat 14px 7px / calc(100% - 28px) 3px,
+      no-repeat 14px 7px / calc(100% - 36px) 3px,
     linear-gradient(180deg,var(--sheen),transparent 46px),
     linear-gradient(180deg,var(--ok-wash),var(--ok-wash)),var(--panel);
   background-repeat:repeat-x,no-repeat,no-repeat;
@@ -2727,7 +2763,7 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
      shipped page: the top jewel came out 68.2 x 3.3 and the left jewel 25.9 x 1.3, a 2.5x
      difference in thickness and 6.7:1 in ink area, from one attribute nothing in the CSS could
      reach. Worse, it made the mark a CONSTANT ~70px of ink on every host, so one declared width of
-     "calc(100% - 26px)" rendered at 20.2% coverage on a 350px button and 38.9% on a 193px one.
+     "calc(100% - 36px)" rendered at 20.2% coverage on a 350px button and 38.9% on a 193px one.
      With 'none', mask-size means what it says on both axes.
      ⚠ AND THE FIGURE IS RE-CENTRED IN ITS OWN BOX. The path spans y 1.5 to 19.5, so its ink centre
      sat at 10.5 of a 20-unit viewBox — half a unit low. Painted at both ends of a frame that is
@@ -2984,19 +3020,111 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
      stops being the one rounded object in a square system.
    · no shadow: .card carries `box-shadow:none` with a comment naming the raised look as the enemy,
      and this control was wearing a two-layer ambient shadow. One material, one page.
-   · font-size 16px explicitly, because the rail's .btn sets 15px and the same component was
-     shipping 6.7% smaller on the listing pages than on the home page. */
+   · font-size pinned explicitly, because the rail's .btn sets 15px and the same component was
+     shipping 6.7% smaller on the listing pages than on the home page.
+   · ⚠ AND THE LABEL IS A SERIF IN SMALL CAPS, WHICH IS THE ONE CHANGE HERE THAT IS A TASTE CALL
+     RATHER THAN A REPAIR. A grade put it plainly: "an engraved Victorian frame around a UI
+     grotesque." It is right, and the fix is the vocabulary the CARDS already use for their
+     equivalent line — a serif, letterspaced, small caps. Rendered side by side at 3x against the
+     shipped sans, against a serif at full case, and against a sans in small caps, this is the only
+     one that reads as an engraved plate rather than as an app button someone drew a frame on. */
 .btn.primary.framed{min-height:58px;padding-left:36px;padding-right:36px;
-  border-radius:4px;box-shadow:none;font-size:16px}
+  /* ⚠ 08/10 — TWO SESSIONS FIXED THIS CONTROL AT THE SAME TIME AND BOTH FIXES ARE KEPT. The ring
+     below came from a grade that rasterised the PLAQUE against the hero; the type below came from
+     one that rasterised the LABEL against the button beside it. They are independent, and neither
+     is dropped. The box-shadow:none this rule used to carry is deliberately gone — see the ring. */
+  border-radius:4px;
+  /* ⚠ A KEYLINE, NOT THE AMBIENT SHADOW THE CARDS WERE STRIPPED OF, AND IT IS AN ACCESSIBILITY FIX.
+     WCAG 1.4.11 wants 3:1 for a component BOUNDARY, and pinning --gold on .scene only fixed the
+     plate against the hero's average. Rasterised with the button hidden and the ground behind it
+     sampled directly, the plaque measures 2.97:1 at 280px — the hero's haze is lightest exactly
+     where the narrowest viewport crops it — then 3.36 / 4.21 / 4.43 / 5.53 at 320/390/430/1100.
+     A fill cannot be made to clear 3:1 against a painted scene at every width, but a boundary can —
+     and it takes TWO tones, which the first attempt got wrong. A single dark keyline measures
+     7.89:1 against the plate and only 1.87-2.69:1 against the hero, because the hero is dark too;
+     a single light one would fail on the plate instead. So the ring is dark inside and cream
+     outside, and whichever surface it meets, one member of it carries the boundary. It is a
+     hairline, not a raised surface, so the card's own no-shadow doctrine is intact. */
+  box-shadow:0 0 0 1px var(--accent-ink), 0 0 0 2.5px rgba(255,246,228,.92);
+  /* ⚠ 08/10 — THE MOST DECORATED CONTROL ON THE PAGE HAD THE SMALLEST VOICE, AND A COLD GRADE
+     MEASURED IT OFF THE RASTER: the keynote's letters were an 8.06px cap band against the 12px caps
+     of the PLAIN secondary button sitting beside it, and 10% shorter than the body copy's own
+     lowercase x-height. A call to action whose glyphs lose to the paragraph explaining it is a
+     hierarchy inversion, however much frame is wrapped around it.
+     ⚠ THE CAUSE IS `all-small-caps`, NOT THE SIZE. It converts BOTH cases to small capitals, so
+     every letter lands at roughly 0.49 of the font size and there is no full-height glyph anywhere
+     in the label. `small-caps` leaves the INITIAL at full cap height and sets the rest as small
+     caps, which is what an engraved keynote actually is — and every label the generator emits is
+     Title Case ("Browse this weekend", "Submit an event", "Talk to us about a placement"), so the
+     initial is always there to carry it.
+     ⚠ AND THE "19px HOLDS ONE LINE" CLAIM THIS COMMENT USED TO MAKE WAS MEASURED ON ONE PAGE AND
+     IS FALSE. index.html holds one line at 320 / 390 / 1100, which is what I checked. A cold grade
+     checked the rest: business.html wraps at 280, 320, 360 AND 390 (h 69.59), sponsors.html at
+     280 / 320 / 1100 (65.59), places/s9 at 280 / 320 / 360 (92.39). Its labels are longer —
+     "Advertise on the guide", "Talk to us about a placement" — and nothing about the size stops
+     that. **One page is not a test, the same way one width is not a test**, and this project has
+     now made that mistake in both dimensions on the same day.
+     ⚠ WHAT THE WRAP COSTS, STATED SO THE NEXT SIZE DECISION IS MADE ON NUMBERS: the second line of
+     a wrapped label carries NO full-height glyph at all — it is 100% small caps at 8.81px, because
+     the only capital in a Title Case phrase is on line one. That is the `all-small-caps` failure
+     this rule was changed to cure, reappearing at a mainstream phone width. 21px does not fix it
+     and wraps index too. The real answer is either shorter labels or a two-rank label, and it is a
+     copy decision rather than a size one — recorded in START_HERE rather than guessed at here. */
+  font-family:var(--font-serif);font-size:19px;font-weight:600;
+  font-variant-caps:small-caps;letter-spacing:.10em}
 /* ⚠ AND IT ANSWERS THE POINTER. Rest, hover and press measured byte-identical fills — the whole
    press affordance on touch was a 2% scale. The most decorated control on the page was the only
    one that never responded, while the Show Support pill did. The ornament brightens rather than
    the plaque, so the feedback lands on the thing that makes this control special. */
 .btn.primary.framed::after{transition:opacity var(--t-fast) var(--ease)}
-.btn.primary.framed:hover{background-color:var(--gold-bright)}
-.btn.primary.framed:hover::after{opacity:1}
+/* ⚠ HOVER IS GUARDED BY (hover:hover), AND THAT IS A FUNCTIONALITY FIX RATHER THAN A NICETY.
+   There was not one hover-capability query in 245KB of stylesheet, so on a phone the hover state
+   LATCHES after a tap and the call to action stays in a state the reader cannot leave. The press
+   state below is unguarded on purpose: :active is exactly right on touch. */
+@media (hover:hover){
+  .btn.primary.framed:hover{background-color:var(--gold-hover)}
+  .btn.primary.framed:hover::after{opacity:1}
+}
 .btn.primary.framed:active::after{opacity:.72}
 @media (prefers-reduced-motion: reduce){.btn.primary.framed::after{transition:none}}
+/* ⚠ PRINTED, THE KEYNOTE WAS INVISIBLE. Chrome's default is backgrounds OFF, so the gold plaque
+   does not print and the label — which is the plaque's own dark ink — landed at 1.19:1 against
+   white paper on the home page and 2.45:1 on business.html. There was no @media print block
+   anywhere in 240KB of stylesheet. A reader who prints a place page to take with them is exactly
+   the reader this site is for, and the control they need is the one that vanishes.
+   The frame is kept, as a plain 1px rule: the mask is a background-colour and would not print
+   either, so the ornament is spent rather than defended. */
+@media print{
+  .btn.primary.framed{color:#000;background:none;border:1px solid #000;min-height:0;padding:8px 14px}
+  .btn.primary.framed::after{display:none}
+  .sup-float{display:none}
+}
+/* ⚠ AND IN WINDOWS HIGH CONTRAST THE ORNAMENT WAS 1.00:1 — the ::after background and the button's
+   own background both resolve to the forced Canvas colour, so the frame, the plaque and the
+   boundary all disappeared and the keynote rendered as bare link text. A mask over a
+   system-forced colour cannot be a boundary; a border can. */
+/* ⚠ 08/10 — AND THIS BLOCK USED TO SIT HERE AND LOSE, WHICH A COLD GRADE MEASURED.
+   `.btn.primary.framed::after{background-color:ButtonText}` and the unconditional
+   `.btn.primary.framed::after{...background-color:var(--accent-ink)}` are EQUAL SPECIFICITY, and
+   the unconditional one is declared later in the file, so it won — then `forced-color-adjust:none`
+   on the parent protected the authored colour from being forced. In Windows high contrast the
+   ornament painted `rgb(255,246,228)` on white ButtonFace (1.074:1) and `rgb(34,22,3)` on black
+   (1.184:1): a blank slab for half of all high-contrast users, with only the 2px border left to
+   say it was a control. A media query is not a specificity boost — it has none at all — so the
+   ::after override now lives AFTER the rule it overrides. See the block below the ornament. */
+@media (forced-colors: active){
+  .btn.primary.framed{border:2px solid ButtonText;forced-color-adjust:none;
+    background:ButtonFace;color:ButtonText}
+}
+/* ⚠ NO text-box TRIM HERE, AND THAT IS A MEASURED DECISION RATHER THAN AN OVERSIGHT. A grade
+   measured the label 0.94px above optical centre on the sans build, and the obvious cure was the
+   one the card's agate band uses — trim the line box to cap and alphabetic so the flex centring
+   works on ink. It was tried. Measured with a Range on the shipped page, with the declaration and
+   with text-box:normal forced over it, the label sits at above 19.09 / below 19.91 in BOTH cases:
+   0.82px, identical to two decimal places. The trim does nothing to a single-line flex-centred
+   control, so shipping it would be a rule with nothing to style — the same defect as an element
+   with no rule. The residual 0.82px is sub-pixel and it is LOW, not high; the serif small caps
+   changed the sign along with everything else. */
 /* ⚠ THE TOP AND BOTTOM RUNS ARE GONE FROM THIS BORDER, AND THAT IS THE FIX A COLD GRADE ASKED FOR.
    It scored 6.5 and measured the fault exactly: the frame was a CLOSED rect painted continuously
    beneath the mask, so the hairline ran straight THROUGH each volute's eye and out the other side,
@@ -3036,16 +3164,34 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
                      var(--orn-edge-t),var(--orn-edge-b),var(--orn-edge-l),var(--orn-edge-r);
           mask-image:var(--orn-corner-tl),var(--orn-corner-tr),var(--orn-corner-bl),var(--orn-corner-br),
                      var(--orn-edge-t),var(--orn-edge-b),var(--orn-edge-l),var(--orn-edge-r);
+  /* ⚠ 08/10 — 2S MINUS ONE LEFT A ZERO-INK BREAK ON EVERY SIDE, AND A COLD GRADE COUNTED FOUR OF
+     THEM ON EVERY RENDER. Measured by rasterising the ornament in isolation at 16x device scale:
+     0.250px of ABSENT ink — not thin, absent — one per side, at x=25.750 / y=32.188 on index@390
+     and in 5 of 5 configurations. The one thing this mark was asked to be is a border AROUND the
+     control, and it was severed at four points.
+     The old lap was half a pixel a side, which is less than the rasteriser's own error on a
+     fractional button width (253.41, 327.69, 208.78 all measured). The lap is 4px a side now:
+     2S - 8 rather than 2S - 1. It costs nothing, because the run IS the corner's own arm rectangle
+     drawn in the corner's own coordinate system — four extra pixels of overlap paint the identical
+     geometry, so the union saturates at 1.0 instead of landing on an antialiased edge.
+     ⚠ THE APP WAS WORSE AND NOBODY HAD LOOKED: .dnx_sealbtn used calc(100% - 36px), a lap of
+     EXACTLY ZERO. Both surfaces carry the same number now. */
   -webkit-mask-size:22px 22px,22px 22px,22px 22px,22px 22px,
-                    calc(100% - 44px) 22px,calc(100% - 44px) 22px,
-                    22px calc(100% - 44px),22px calc(100% - 44px);
+                    calc(100% - 36px) 22px,calc(100% - 36px) 22px,
+                    22px calc(100% - 36px),22px calc(100% - 36px);
           mask-size:22px 22px,22px 22px,22px 22px,22px 22px,
-                    calc(100% - 44px) 22px,calc(100% - 44px) 22px,
-                    22px calc(100% - 44px),22px calc(100% - 44px);
+                    calc(100% - 36px) 22px,calc(100% - 36px) 22px,
+                    22px calc(100% - 36px),22px calc(100% - 36px);
   -webkit-mask-position:0 0,100% 0,0 100%,100% 100%,50% 0,50% 100%,0 50%,100% 50%;
           mask-position:0 0,100% 0,0 100%,100% 100%,50% 0,50% 100%,0 50%,100% 50%;
   -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
   opacity:.92}
+/* ⚠ THE HIGH-CONTRAST ORNAMENT COLOUR, DECLARED AFTER THE RULE IT OVERRIDES — see the note beside
+   the forced-colors block above. It also drops the .92 alpha, because a forced system colour held
+   at 92% is a system colour the user did not choose. */
+@media (forced-colors: active){
+  .btn.primary.framed::after{background-color:ButtonText;opacity:1}
+}
 
 /* ⚠ 08/09 — THE CRENELLATED COURSE IS OFF THE TABS. Gray: "I hate the events page that elegant
    brick style crap I even said that when I saw it."
