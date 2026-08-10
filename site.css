@@ -486,11 +486,13 @@ html[data-theme="light"] .site-head{background:rgba(238,240,239,.9)}
    that can drift out of register with anything else. */
 .site-head::before,.site-head::after{content:"";position:absolute;left:22px;right:22px;height:5px;
   pointer-events:none;z-index:1;background-color:var(--orn-rule);
+  /* ⚠ ONE mask-image AND TWO mask-size LAYERS IS A BROKEN RULE, and it shipped. Dropping the
+     hairline layer here left the sizes behind, so the browser matched the single image against the
+     FIRST size only and painted a 13.6px speck of gold at the left of a 1600px bar. Every layered
+     property has to be cut together. */
   -webkit-mask-image:var(--orn-swell);mask-image:var(--orn-swell);
-  -webkit-mask-size:100% 1px,min(104px,100%) 5px;
-          mask-size:100% 1px,min(104px,100%) 5px;
-  -webkit-mask-position:50% 2px,50% 50%;
-          mask-position:50% 2px,50% 50%;
+  -webkit-mask-size:100% 100%;mask-size:100% 100%;
+  -webkit-mask-position:50% 50%;mask-position:50% 50%;
   -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
   opacity:.72}
 .site-head::before{top:0}
@@ -844,7 +846,13 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
   /* ⚠ AND THE FLOOR CENTRES ITS TEXT RATHER THAN TOP-SETTING IT. A one-line title in a two-line
      floor left 36.5px of nothing between the title and the venue — the tightest coupling on the
      card — which moved the hole from the ornament to the place the eye enters. Split the slack. */
-  .card h3{min-height:50px;display:flex;align-items:center;justify-content:center}
+  /* ⚠ TOP-SET, NOT CENTRED, AND THAT REVERSES AN EARLIER CALL FOR A MEASURED REASON. Centring a
+     one-line title in a two-line floor split the slack, which is what a hole under a title wants —
+     but it also moved the title itself: two cards in one row had their kickers on a single
+     scanline and their titles 15.6px apart, with every rank below them aligned. A rank that lands
+     on its neighbour's line except at the rank the eye enters on reads as a fault, not a decision.
+     The slack goes back to the one gap `margin-top:auto` already owns. */
+  .card h3{min-height:50px;display:flex;align-items:flex-start;justify-content:center}
   .ev-why{min-height:39px}
   /* ⚠ THE FLOORS ARE BACK, AND THEY WORK NOW, WHICH THEY DID NOT BEFORE. They were written once
      while the cascade trap below was still live, so `align-items` was inert, they reserved space
@@ -973,9 +981,13 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
 /* ⚠ HALF A STEP LIGHTER THAN THE VENUE, because two ranks at one ink let the bigger one win. The
    blurb and the venue were both --ink-2, so thirteen pixels over two lines out-massed eleven over
    one and rank 5 read before rank 4 — the pitch arriving before the place. Half a step is all it
-   takes; the venue must not become a second headline again. */
+   takes; the venue must not become a second headline again.
+   ⚠ AND THE FIRST VALUE LANDED ON TOP OF --ink-3: 85% computed to rgb(96,111,127) against the
+   hours rank's rgb(94,110,128), so the blurb and the hours were the same ink and the quieter rank
+   was fractionally darker. Eight ranks were sharing four inks. 92% sits at about 5.7:1, a real step
+   between the venue's 7.3 and the hours' 5.1. */
 .ev-why{margin:6px 14px 0;padding:0 6px;font:var(--fs-small)/1.55 var(--font-serif);
-  color:color-mix(in srgb, var(--ink-2) 85%, var(--panel));text-align:center;
+  color:color-mix(in srgb, var(--ink-2) 92%, var(--panel));text-align:center;
   display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
 
 /* RANK 5 — the hours, which is the half of the old schedule line that is not
@@ -1011,7 +1023,7 @@ html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--
    4px on a short span, where Gray approved the read by name; stretching the figure there would put
    a fat spindle on a small control. One vocabulary, two sizes, and the card is the one that was
    measured wrong. */
-.orn-swell-rule{height:6px;margin:0 24px;background-color:var(--cat, var(--orn-rule));
+.orn-swell-rule{height:7px;margin:0 24px;background-color:var(--cat, var(--orn-rule));
   -webkit-mask-image:var(--orn-swell);mask-image:var(--orn-swell);
   -webkit-mask-size:100% 100%;mask-size:100% 100%;
   -webkit-mask-position:50% 50%;mask-position:50% 50%;
@@ -1128,10 +1140,12 @@ html[data-theme="light"] .card .ev-fare.tba{color:color-mix(in srgb, var(--pill-
 /* an opening's kicker carries the confirmed-green: its whole claim is
    "new, and we checked" — semantic colour, not decoration */
 .card.opening .ev-kicker{color:var(--ok)}
-.new-flag{display:inline-flex;align-items:center;margin-right:6px;padding:2.5px 8px;
-  border-radius:var(--r-pill);font:800 var(--fs-kicker)/1.2 var(--font-sans);letter-spacing:.1em;
-  text-transform:uppercase;color:var(--pill-free-fg);background:var(--pill-free-bg);
-  border:1px solid var(--pill-free-line)}
+/* ⚠ THE LAST SANS ON ANY CARD AND THE LAST EXTRA ROUNDED RECTANGLE, both gone. It was a filled
+   pill in 800 sans, which made it the darkest ink on an opening's head — louder than the title —
+   and a second box on a card whose whole argument is that it has one. It is a word in the kicker's
+   own voice now, holding the confirmed green. */
+.new-flag{font:700 var(--fs-kicker)/1 var(--font-mono);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ok);margin-right:6px}
 .place-kind{font:600 var(--fs-kicker)/1.5 var(--font-mono);color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em}
 .opened-stamp{display:inline-flex;align-items:center;gap:6px;font:600 var(--fs-small)/1 var(--font-mono);
   color:var(--pill-free-fg);background:var(--pill-free-bg);border:1px solid var(--pill-free-line);
@@ -2441,19 +2455,18 @@ html[data-theme="light"]{
 :root{ --orn-rule:var(--gold); }
 html[data-theme="light"]{ --orn-rule:#7a4e08; }
 :root{
-  /* ⚠ THIS IS DRAWN, NOT TRACED, AND THE ONE IT REPLACES WAS THE WRONG ARTEFACT. The old figure
-     was Wikimedia's "Decorative text divider — CENTRAL FLARE", and its name is the diagnosis: both
-     of its control points sit within 40 units of centre on a 300-unit box, so the silhouette
-     collapses to about ±13% of the span and the remaining 87% is under one device pixel tall —
-     below the renderer's floor, so it simply is not there. Measured on the card, ink was present
-     across 22% of the rule at 390 and 19% at 1100. A flare on a hairline was the right use of that
-     file and it is not what the ornament law asks for.
-     The law asks, in its own words, for "a tapered hairline spanning the edge with a printer's
-     spindle swelling at its centre, tapering to a point at both ends". That is a SWELLED RULE, a
-     generic form of typographic furniture that predates copyright by centuries, and this is one:
-     a lens across the full span with a spindle at its middle. Same mark everywhere it is used, so
-     there is still exactly one ornament dialect on this site. */
-  --orn-swell:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20'%3E%3Cpath d='M2 10C55 8.9 100 5.6 132 4.2c6-1.4 12-2.6 18-2.6s12 1.2 18 2.6c32 1.4 77 4.7 130 5.8-53 1.1-98 4.4-130 5.8-6 1.4-12 2.6-18 2.6s-12-1.2-18-2.6C100 14.4 55 11.1 2 10z'/%3E%3C/svg%3E");
+  /* ⚠ GRAY CHOSE THIS ONE BY LOOKING, AND IT OVERRULES A GRADE. Three candidates were rendered
+     side by side — this figure stretched across the span, a drawn lens, and a lens with a spindle —
+     and two cold graders in a row called this one undersized, measuring painted ink across only
+     22% to 32% of the rule's declared span. Gray picked it anyway: "I like A most", with "you could
+     make it slightly thicker than A if needed", so the element is 7px rather than 6.
+     He is looking at the artefact and they were measuring coverage, and coverage was never the
+     brief: a fine rule with a flare at its centre is a quieter mark than a lens, and quiet is what
+     a card carrying a stamp wants. THE MEASUREMENT WAS RIGHT AND THE CONCLUSION WAS NOT.
+     PROVENANCE: Wikimedia Commons, "Decorative_text_divider_-_central_flare.svg", PUBLIC DOMAIN.
+     One mark everywhere it is used — card, primary button, tab rail, both header bars — so there is
+     exactly one ornament dialect on this site. */
+  --orn-swell:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20'%3E%3Cpath d='M150 1.5c0 8.1555533-40 8.5-145 9 105 .5 145 .844447 145 9 0-8.155553 40-8.5 145-9-105-.5-145-.8444467-145-9z'/%3E%3C/svg%3E");
 }
 
 /* 1 · the divider. Both halves are the SAME gradient, the right one mirrored by
