@@ -5,124 +5,56 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Gulf Coast: this weekend
 BEGIN:VEVENT
-UID:ev_elissa_sail250-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
-SUMMARY:1877 Tall Ship ELISSA: free deck tours
-DESCRIPTION:The ship is a National Historic Landmark\, a square-rigged iro
- n barque\, and one of only three ships of her kind left in the world that
-  still actively sails. Pensacola is the first stop on her Sail250 voyage 
- for the nation's 250th. It is only her third recorded visit ever\, after 
- 1886 and 2018. Walking her deck costs nothing. A ship-and-history kid get
- s rigging and 149 years of iron\, while the stroller rolls along the pier
- .\nPrice: Free\nArea: Pensacola\nTimes: Fri 8/7 – Sun 8/9 · free self-
- guided deck tours (hours vary by day · see watch-outs)\nChecked against 
- the venue's own page on 2026-08-05\nhttps://grayhicks.github.io/coast-gui
- de/events/ev-elissa-sail250.html
-LOCATION:Palafox Pier\, 895 S Palafox St\, Pensacola\, FL 32502
-URL:https://grayhicks.github.io/coast-guide/events/ev-elissa-sail250.html
+UID:ev_cinemas_sand_goat-2026-08-14@coast-guide
+DTSTAMP:20260814T000000Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260815
+SUMMARY:Cinemas in the Sand: “GOAT”
+DESCRIPTION:A free movie plays on the actual sand\, with towels and sandca
+ stles until the screen lights up. Next one: Hoppers on 9/11.\nPrice: Free
+ \nArea: Pensacola Beach & Perdido\nTimes: Fri 08/14/2026 · dusk\nhttps:/
+ /grayhicks.github.io/coast-guide/events/ev-cinemas-sand-goat.html
+LOCATION:Gulfside Pavilion beach screen\, Casino Beach\, 20 Casino Beach B
+ lvd\, Pensacola Beach\, FL 32561
+URL:https://grayhicks.github.io/coast-guide/events/ev-cinemas-sand-goat.ht
+ ml
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_saenger_jurassic_0809-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
-SUMMARY:Summer Movie Series: Jurassic Park (1993)
-DESCRIPTION:You can see the 1993 original on a real screen in a 1921-seat 
- 1925 movie palace\, the way it was meant to be seen. This is a dinosaur k
- id's exact wheelhouse: practical dinosaur effects\, a science plot\, and 
- a room that gasps together. It is rated PG-13 for a reason. The kitchen r
- aptor scene is genuinely tense for a six-year-old.\nPrice: not published 
- by the venue\, so confirm before you go\nArea: Pensacola\nTimes: Sunday 8
- /9 · 3:00 PM\nChecked against the venue's own page on 2026-08-05\nhttps:
- //grayhicks.github.io/coast-guide/events/ev-saenger-jurassic-0809.html
-LOCATION:Pensacola Saenger Theatre\, 118 S Palafox\, Pensacola\, FL 32501
-URL:https://grayhicks.github.io/coast-guide/events/ev-saenger-jurassic-080
- 9.html
+UID:ev_moriarty-2026-08-14@coast-guide
+DTSTAMP:20260814T000000Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260824
+SUMMARY:Stage Crafters: Ken Ludwig's “Moriarty”
+DESCRIPTION:A Sherlock Holmes comedy takes the stage. It is good for STEM-
+ minded kids\, long for the art-and-dance crowd\, and best skipped with th
+ e toddler.\nPrice: from $30\nArea: Destin & Fort Walton\nTimes: Fri/Sat 7
+ :30 PM · Sun 2 PM · two weekends (8/14-16\, 8/21-23)\nhttps://grayhicks
+ .github.io/coast-guide/events/ev-moriarty.html
+LOCATION:Fort Walton Beach Civic Auditorium\, 109 Miracle Strip Pkwy SW\, 
+ Fort Walton Beach\, FL 32548
+URL:https://grayhicks.github.io/coast-guide/events/ev-moriarty.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_plt_little_mermaid_final-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
-SUMMARY:Disney's The Little Mermaid: FINAL WEEKEND
-DESCRIPTION:A full staged Disney musical fills the Mainstage\, and it is t
- he last weekend. The run closes 8/9. It delivers a princess-and-mermaid k
- id's exact show: Ariel\, Ursula\, big costumes\, and songs they already k
- now every word to. Live community theatre keeps the seats close\, and the
-  ticket costs a fraction of a touring house.\nPrice: not published by the
-  venue\, so confirm before you go\nArea: Pensacola\nTimes: Closes Sunday 
- 8/9 · showtimes vary · confirm with the theatre\nChecked against the ve
- nue's own page on 2026-08-05\nhttps://grayhicks.github.io/coast-guide/eve
- nts/ev-plt-little-mermaid-final.html
-LOCATION:Pensacola Little Theatre\, 400 S Jefferson St\, Pensacola\, FL 32
- 502
-URL:https://grayhicks.github.io/coast-guide/events/ev-plt-little-mermaid-f
- inal.html
+UID:ev_restweek-2026-08-14@coast-guide
+DTSTAMP:20260814T000000Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260817
+SUMMARY:Summer Restaurant Week: Great Southern (Jackson's\, Fish House…)
+DESCRIPTION:Three courses run for $33 a head at Pensacola's white-tableclo
+ th flagships\, including Jackson's Steakhouse\, for date-night money you 
+ would normally spend at a chain. Atlas merged into the Fish House in Apri
+ l\, so Angelena's takes the fourth slot this year.\nPrice: from $33\nArea
+ : Pensacola\nTimes: Aug 10-16 · dinner 5-9 PM\nhttps://grayhicks.github.
+ io/coast-guide/events/ev-restweek.html
+LOCATION:Jackson's Steakhouse / Fish House / Five Sisters' / Angelena's\, 
+ 400 S Palafox St\, Pensacola\, FL 32502
+URL:https://grayhicks.github.io/coast-guide/events/ev-restweek.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_ferry-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
-SUMMARY:Ranger-Narrated Pensacola Bay Ferry to Fort Pickens
-DESCRIPTION:Boat + fort + beach without the car: ranger narration across t
- he bay\, tunnels and batteries at Fort Pickens for engineering-minded kid
- s\, then the beach stop. Strollers roll aboard.\nPrice: from $20\nArea: P
- ensacola Beach & Perdido\nTimes: Sat + Sun · runs 9 AM-6 PM\nhttps://gra
- yhicks.github.io/coast-guide/events/ev-ferry.html
-LOCATION:Downtown ferry landing → Fort Pickens → Pensacola Beach\, 700
-  S Barracks St\, Pensacola\, FL 32502
-URL:https://grayhicks.github.io/coast-guide/events/ev-ferry.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_sunmkt-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
-SUMMARY:Sunday Market on Palafox
-DESCRIPTION:The Sunday sibling of Palafox Market brings crafts\, art\, and
-  prepared food. The organization is active (site updated June 2026)\, but
-  confirm each week's market on their Facebook before driving.\nPrice: Fre
- e\nArea: Pensacola\nTimes: Sundays · ~10 AM-3 PM\nhttps://grayhicks.gith
- ub.io/coast-guide/events/ev-sunmkt.html
-LOCATION:MLK Jr. Plaza\, Downtown Pensacola\, 200 N Palafox St\, Pensacola
- \, FL 32502
-URL:https://grayhicks.github.io/coast-guide/events/ev-sunmkt.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_wahoos_mont-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
-SUMMARY:Blue Wahoos vs Montgomery: Fireworks 8/8 · Vet-Free 8/9
-DESCRIPTION:Another bayfront homestand: Saturday fireworks\, and Sunday a 
- veteran's GA is free with CAC while the kids run the bases.\nPrice: from 
- $10\nArea: Pensacola\nTimes: Aug 4-9 · Fireworks Sat 8/8 · Military Fam
- ily Sunday 8/9 (4:05 PM)\nhttps://grayhicks.github.io/coast-guide/events/
- ev-wahoos-mont.html
-LOCATION:Blue Wahoos Stadium\, 351 W Cedar St\, Pensacola\, FL 32502
-URL:https://grayhicks.github.io/coast-guide/events/ev-wahoos-mont.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_saenger_jp-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
-SUMMARY:Saenger Classic: Jurassic Park ($7)
-DESCRIPTION:Dinosaurs fill the big screen\, dino bait that is PG-13 intens
- e for art fans. Tickets start from $7.\nPrice: from $7\nArea: Pensacola\n
- Times: Sun 08/09/2026 · 3:00 PM\nhttps://grayhicks.github.io/coast-guide
- /events/ev-saenger-jp.html
-LOCATION:Saenger Theatre\, 118 S Palafox Pl\, Pensacola\, FL 32502
-URL:https://grayhicks.github.io/coast-guide/events/ev-saenger-jp.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_mancis_live-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
+UID:nl_mancis_live-2026-08-14@coast-guide
+DTSTAMP:20260814T000000Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260815
 SUMMARY:Live Music: Manci's Antique Club
 DESCRIPTION:This Daphne institution has walls of Jim Beam decanters and li
  ve local bands Thursday through Sunday. It is a grown-up night across the
@@ -133,10 +65,10 @@ LOCATION:Manci's Antique Club\, 1715 Main St\, Daphne\, AL 36526
 URL:https://grayhicks.github.io/coast-guide/events/nl-mancis-live.html
 END:VEVENT
 BEGIN:VEVENT
-UID:nl_fubar_nights-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
+UID:nl_fubar_nights-2026-08-14@coast-guide
+DTSTAMP:20260814T000000Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260815
 SUMMARY:Karaoke & DJ Nights: FUBAR Pizza Bar
 DESCRIPTION:Late-night karaoke runs five nights a week (Sun\, Tue\, Wed\, 
  Fri\, Sat) plus a DJ on Monday and Thursday\, 9 PM to 1 AM every night\, 
@@ -147,10 +79,25 @@ LOCATION:FUBAR Pizza Bar\, 114 Amberjack Dr\, Fort Walton Beach\, FL 32548
 URL:https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
 END:VEVENT
 BEGIN:VEVENT
-UID:nl_sandshaker_live-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
+UID:nl_theblock_karaoke-2026-08-14@coast-guide
+DTSTAMP:20260814T000000Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260815
+SUMMARY:Karaoke Block: The Block
+DESCRIPTION:The Sports & Karaoke room at The Block runs Wednesday through 
+ Saturday\, opening at 6 (8 on Thursday) and going late. Downtown Fort Wal
+ ton Beach\, about 50 minutes out.\nPrice: Free\nArea: Destin & Fort Walto
+ n\nTimes: Wed-Sat · from 6 PM (Thu 8 PM)\nhttps://grayhicks.github.io/co
+ ast-guide/events/nl-theblock-karaoke.html
+LOCATION:The Block\, 113 Eglin Pkwy SE\, Fort Walton Beach\, FL 32548
+URL:https://grayhicks.github.io/coast-guide/events/nl-theblock-karaoke.htm
+ l
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_sandshaker_live-2026-08-14@coast-guide
+DTSTAMP:20260814T000000Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260815
 SUMMARY:Weekend Live Music: Sandshaker Lounge
 DESCRIPTION:The Shaker\, birthplace of the Bushwacker\, has live music eve
  ry weekend and never a cover. It is a classic Pensacola Beach dive\, abou
@@ -162,10 +109,10 @@ LOCATION:Sandshaker Lounge\, 731 Pensacola Beach Blvd\, Pensacola Beach\,
 URL:https://grayhicks.github.io/coast-guide/events/nl-sandshaker-live.html
 END:VEVENT
 BEGIN:VEVENT
-UID:nl_paradise_live-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
+UID:nl_paradise_live-2026-08-14@coast-guide
+DTSTAMP:20260814T000000Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260815
 SUMMARY:Live Music: Paradise Bar & Grill
 DESCRIPTION:Beachside live music plays most nights on Pensacola Beach\, wi
  th rotating local acts starting at 5:30 (Sundays 2:30). Wine Down Wednesd
@@ -178,23 +125,44 @@ LOCATION:Paradise Bar & Grill\, 21 Via De Luna Dr\, Pensacola Beach\, FL 3
 URL:https://grayhicks.github.io/coast-guide/events/nl-paradise-live.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_jeffallen-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
-SUMMARY:Jeff Allen: Clean Comedy
-DESCRIPTION:This veteran clean\, family comedian covers marriage and paren
- ting bits\, a safe\, funny date at OWA.\nPrice: $90 for two\nArea: Orange
-  Beach & Gulf Shores\nTimes: 08/09/2026 · 6:00 PM\nhttps://grayhicks.git
- hub.io/coast-guide/events/ev-jeffallen.html
-LOCATION:OWA Theater\, 205-A N OWA Blvd\, Foley\, AL 36535
-URL:https://grayhicks.github.io/coast-guide/events/ev-jeffallen.html
+UID:ev_seville_flipquarter-2026-08-14@coast-guide
+DTSTAMP:20260814T000000Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260815
+SUMMARY:Flip My Quarter: Friday happy hour
+DESCRIPTION:Call the coin flip and the drink is free\; miss it and you pay
+ . Two hours of the week's first exhale\, in the courtyard room\, before t
+ he complex turns into a Friday night.\nPrice: not published by the venue\
+ , so confirm before you go\nArea: Pensacola\nTimes: Fridays · 6:00-8:00 
+ PM\nChecked against the venue's own page on 2026-08-08\nhttps://grayhicks
+ .github.io/coast-guide/events/ev-seville-flipquarter.html
+LOCATION:Seville Quarter\, Apple Annie's\, 130 E Government St\, Pensacola
+ \, FL 32502
+URL:https://grayhicks.github.io/coast-guide/events/ev-seville-flipquarter.
+ html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_seville_karaoke-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
+UID:ev_seville_dueling-2026-08-14@coast-guide
+DTSTAMP:20260814T000000Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260815
+SUMMARY:Rosie O'Grady's Dueling Piano Show
+DESCRIPTION:Two pianos\, requests shouted from the floor\, and a room that
+  sings back. It is loud\, and that is the point\, a date night where neit
+ her of you has to think of anything to talk about for three hours.\nPrice
+ : not published by the venue\, so confirm before you go\nArea: Pensacola\
+ nTimes: Fridays · 8:00-11:00 PM\nChecked against the venue's own page on
+  2026-08-08\nhttps://grayhicks.github.io/coast-guide/events/ev-seville-du
+ eling.html
+LOCATION:Seville Quarter\, Rosie O'Grady's\, 130 E Government St\, Pensaco
+ la\, FL 32502
+URL:https://grayhicks.github.io/coast-guide/events/ev-seville-dueling.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seville_karaoke-2026-08-14@coast-guide
+DTSTAMP:20260814T000000Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260815
 SUMMARY:Karaoke at Lili Marlene's: every night
 DESCRIPTION:Karaoke runs seven nights a week in the aviators' room\, not j
  ust on the weekend\, which makes it the answer to a Tuesday you did not p
@@ -208,10 +176,330 @@ LOCATION:Seville Quarter\, Lili Marlene's\, 130 E Government St\, Pensacol
 URL:https://grayhicks.github.io/coast-guide/events/ev-seville-karaoke.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_seville_sundaybrunch-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
+UID:ev_pwat_lavender_0814-2026-08-14@coast-guide
+DTSTAMP:20260814T000000Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260815
+SUMMARY:Paint & Play Friday: Lavender Beach
+DESCRIPTION:The Friday format adds trivia and music between painting stage
+ s\, so it moves faster and talks more than a standard class. A coastal la
+ vender landscape is the canvas.\nPrice: $70 for two\nArea: Pensacola\nTim
+ es: Fri 08/14/2026 · 6:00-8:00 PM\nChecked against the venue's own page 
+ on 2026-08-08\nhttps://grayhicks.github.io/coast-guide/events/ev-pwat-lav
+ ender-0814.html
+LOCATION:Painting with a Twist\, 4771 Bayou Blvd Suite C11\, Pensacola\, F
+ L 32503
+URL:https://grayhicks.github.io/coast-guide/events/ev-pwat-lavender-0814.h
+ tml
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_30ave_green_music-2026-08-14@coast-guide
+DTSTAMP:20260814T000000Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260815
+SUMMARY:Live music on the green: 30Avenue
+DESCRIPTION:Local players on the lawn at the 30A end of the county\, every
+  evening\, no ticket. Shops and restaurants ring the green\, so it works 
+ as the whole evening or as the thing that happens while you eat.\nPrice: 
+ Free\nArea: 30A & South Walton\nTimes: Every evening · 6:00-9:00 PM · f
+ ree\nChecked against the venue's own page on 2026-08-08\nhttps://grayhick
+ s.github.io/coast-guide/events/ev-30ave-green-music.html
+LOCATION:30Avenue\, 12805 US-98 East\, Inlet Beach\, FL 32461
+URL:https://grayhicks.github.io/coast-guide/events/ev-30ave-green-music.ht
+ ml
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_bigchill_djdan-2026-08-14@coast-guide
+DTSTAMP:20260814T000000Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260815
+SUMMARY:Friday Dance Party with DJ Dan: The Big Chill
+DESCRIPTION:The venue bills it as a family dance party\, not a club night\
+ , with kids on the floor\, parents around the edge\, and it is done by 9:
+ 30. It is three and a half hours of somebody else providing the entertain
+ ment.\nPrice: not published by the venue\, so confirm before you go\nArea
+ : 30A & South Walton\nTimes: Fridays · 6:00-9:30 PM\nChecked against the
+  venue's own page on 2026-08-08\nhttps://grayhicks.github.io/coast-guide/
+ events/ev-bigchill-djdan.html
+LOCATION:The Big Chill\, 20 Hub Lane\, Watersound Beach\, FL 32461
+URL:https://grayhicks.github.io/coast-guide/events/ev-bigchill-djdan.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_lodaartwalk_0814-2026-08-14@coast-guide
+DTSTAMP:20260814T000000Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260815
+SUMMARY:LoDa ArtWalk: downtown Mobile
+DESCRIPTION:Dauphin Street closes to cars and the galleries\, studios and 
+ shops stay open late. Free\, walkable\, and the one evening a month when 
+ downtown Mobile is unambiguously the best thing within an hour.\nPrice: F
+ ree\nArea: Mobile & Baldwin County\nTimes: Second Friday of the month · 
+ 6:00-9:00 PM · next on 08/14\nChecked against the venue's own page on 20
+ 26-08-08\nhttps://grayhicks.github.io/coast-guide/events/ev-lodaartwalk-0
+ 814.html
+LOCATION:Lower Dauphin Arts District\, Dauphin St at Cathedral Square\, Mo
+ bile\, AL 36602
+URL:https://grayhicks.github.io/coast-guide/events/ev-lodaartwalk-0814.htm
+ l
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_owa_whitetie_0814-2026-08-14@coast-guide
+DTSTAMP:20260814T000000Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260816
+SUMMARY:White Tie Rock Ensemble: A Night of Southern Rock Legends
+DESCRIPTION:A symphonic rock ensemble doing the Southern rock catalogue as
+  a full production\, two nights running. Bigger arrangement than a tribut
+ e band and staged like a show rather than a set.\nPrice: not published by
+  the venue\, so confirm before you go\nArea: Orange Beach & Gulf Shores\n
+ Times: Fri 08/14 and Sat 08/15/2026 · 7:00 PM\nChecked against the venue
+ 's own page on 2026-08-08\nhttps://grayhicks.github.io/coast-guide/events
+ /ev-owa-whitetie-0814.html
+LOCATION:OWA Theater\, 205 N OWA Blvd\, Foley\, AL 36535
+URL:https://grayhicks.github.io/coast-guide/events/ev-owa-whitetie-0814.ht
+ ml
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_palafox-2026-08-15@coast-guide
+DTSTAMP:20260815T000000Z
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+SUMMARY:Palafox Market
+DESCRIPTION:A big Saturday market fills downtown with produce\, local make
+ rs\, art\, and food. A free trolley runs between plazas. It is stroller-f
+ riendly.\nPrice: Free\nArea: Pensacola\nTimes: Saturdays · 9 AM-2 PM\nht
+ tps://grayhicks.github.io/coast-guide/events/ev-palafox.html
+LOCATION:MLK Jr. Plaza + Plaza Ferdinand\, Downtown Pensacola\, 200 N Pala
+ fox St\, Pensacola\, FL 32502
+URL:https://grayhicks.github.io/coast-guide/events/ev-palafox.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grandblvd_mkt-2026-08-15@coast-guide
+DTSTAMP:20260815T000000Z
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+SUMMARY:Grand Boulevard Farmers' Market
+DESCRIPTION:A Saturday farmers and makers market fills the Sandestin green
+ \, with local honey\, produce\, and kettle corn. Pair it with a Destin/Ba
+ ytowne day.\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Saturdays ·
+  9 AM-1 PM\nhttps://grayhicks.github.io/coast-guide/events/ev-grandblvd-m
+ kt.html
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Blvd\, Mira
+ mar Beach\, FL 32550
+URL:https://grayhicks.github.io/coast-guide/events/ev-grandblvd-mkt.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_foley_mkt-2026-08-15@coast-guide
+DTSTAMP:20260815T000000Z
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+SUMMARY:Coastal Alabama Farmers & Fishermens Market
+DESCRIPTION:The county's largest market sells fresh Gulf seafood straight 
+ from the boats plus produce and makers. It is five minutes from OWA\, so 
+ it stacks with a Tropic Falls day.\nPrice: Free\nArea: Orange Beach & Gul
+ f Shores\nTimes: Saturdays · 9 AM-2 PM\nhttps://grayhicks.github.io/coas
+ t-guide/events/ev-foley-mkt.html
+LOCATION:Coastal Alabama Market\, 781 Farmers Market Ln\, Foley\, AL 36535
+URL:https://grayhicks.github.io/coast-guide/events/ev-foley-mkt.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_parkrun-2026-08-15@coast-guide
+DTSTAMP:20260815T000000Z
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+SUMMARY:parkrun: Free Timed 5K (Rec Plex North)
+DESCRIPTION:A free\, timed\, all-comers 5K runs every Saturday. Walk\, run
+ \, or push the jogging stroller. The kids can earn official times too\, w
+ ith one-time free barcode registration.\nPrice: Free\nArea: Pensacola\nTi
+ mes: Saturdays · 7:30 AM\nhttps://grayhicks.github.io/coast-guide/events
+ /ev-parkrun.html
+LOCATION:UWF Rec Plex North Field\, 11000 University Pkwy\, Pensacola\, FL
+  32514
+URL:https://grayhicks.github.io/coast-guide/events/ev-parkrun.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_oceanhour-2026-08-15@coast-guide
+DTSTAMP:20260815T000000Z
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+SUMMARY:Ocean Hour Beach Cleanup
+DESCRIPTION:Give an hour and leave the beach better. Buckets\, grabbers\, 
+ and gloves are provided. It is a service morning that fits the family's v
+ alues and is kid-friendly.\nPrice: Free\nArea: Pensacola Beach & Perdido\
+ nTimes: Saturdays · ~8:45 AM · location rotates\nhttps://grayhicks.gith
+ ub.io/coast-guide/events/ev-oceanhour.html
+LOCATION:Rotating\, Pensacola Beach / area waterfronts\, Pensacola Beach\,
+  FL 32561
+URL:https://grayhicks.github.io/coast-guide/events/ev-oceanhour.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_ferry-2026-08-15@coast-guide
+DTSTAMP:20260815T000000Z
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+SUMMARY:Ranger-Narrated Pensacola Bay Ferry to Fort Pickens
+DESCRIPTION:Boat + fort + beach without the car: ranger narration across t
+ he bay\, tunnels and batteries at Fort Pickens for engineering-minded kid
+ s\, then the beach stop. Strollers roll aboard.\nPrice: from $20\nArea: P
+ ensacola Beach & Perdido\nTimes: Sat + Sun · runs 9 AM-6 PM\nhttps://gra
+ yhicks.github.io/coast-guide/events/ev-ferry.html
+LOCATION:Downtown ferry landing → Fort Pickens → Pensacola Beach\, 700
+  S Barracks St\, Pensacola\, FL 32502
+URL:https://grayhicks.github.io/coast-guide/events/ev-ferry.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_alabama-2026-08-15@coast-guide
+DTSTAMP:20260815T000000Z
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+SUMMARY:Alabama: Live in Concert (date night)
+DESCRIPTION:Country legends play at the Bay Center\, a night for the two o
+ f you\, not a kids' show.\nPrice: from $137\nArea: Pensacola\nTimes: Sat 
+ 08/15/2026 · 7:00 PM\nhttps://grayhicks.github.io/coast-guide/events/ev-
+ alabama.html
+LOCATION:Pensacola Bay Center\, 201 E Gregory St\, Pensacola\, FL 32502
+URL:https://grayhicks.github.io/coast-guide/events/ev-alabama.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_pwat_dandelion_0815-2026-08-15@coast-guide
+DTSTAMP:20260815T000000Z
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+SUMMARY:Saturday Social: Dandelion Skies
+DESCRIPTION:An afternoon session runs instead of an evening one\, the vers
+ ion that works when the sitter is only free until six. It features a whim
+ sical dandelion landscape in the same guided format.\nPrice: $70 for two\
+ nArea: Pensacola\nTimes: Sat 08/15/2026 · 2:00-4:00 PM\nChecked against 
+ the venue's own page on 2026-08-08\nhttps://grayhicks.github.io/coast-gui
+ de/events/ev-pwat-dandelion-0815.html
+LOCATION:Painting with a Twist\, 4771 Bayou Blvd Suite C11\, Pensacola\, F
+ L 32503
+URL:https://grayhicks.github.io/coast-guide/events/ev-pwat-dandelion-0815.
+ html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_pwat_galaxy_0815-2026-08-15@coast-guide
+DTSTAMP:20260815T000000Z
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+SUMMARY:BFF/DATE Night: Galaxy Love\, set or solo
+DESCRIPTION:Two canvases finish as one picture\, painted at the same table
+ \, or one each if you would rather not coordinate. It is the studio's des
+ ignated date-night format.\nPrice: $80 for two\nArea: Pensacola\nTimes: S
+ at 08/15/2026 · 7:00-9:00 PM\nChecked against the venue's own page on 20
+ 26-08-08\nhttps://grayhicks.github.io/coast-guide/events/ev-pwat-galaxy-0
+ 815.html
+LOCATION:Painting with a Twist\, 4771 Bayou Blvd Suite C11\, Pensacola\, F
+ L 32503
+URL:https://grayhicks.github.io/coast-guide/events/ev-pwat-galaxy-0815.htm
+ l
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_pwat_sweetgreek_0815-2026-08-15@coast-guide
+DTSTAMP:20260815T000000Z
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+SUMMARY:“Spa Weekend” Paint Party @ The Sweet Greek\, Milton
+DESCRIPTION:Painting with a Twist takes the class off-site into a Milton c
+ afé for the afternoon. Supplies and instruction come with the seat\; the
+  café's food and drink are yours to order.\nPrice: $76 for two\nArea: Mi
+ lton & Pace\nTimes: Sat 08/15/2026 · 4:00-6:00 PM\nChecked against the v
+ enue's own page on 2026-08-08\nhttps://grayhicks.github.io/coast-guide/ev
+ ents/ev-pwat-sweetgreek-0815.html
+LOCATION:The Sweet Greek\, 6776 Caroline St\, Milton\, FL 32570
+URL:https://grayhicks.github.io/coast-guide/events/ev-pwat-sweetgreek-0815
+ .html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_vinyl_emonight_0815-2026-08-15@coast-guide
+DTSTAMP:20260815T000000Z
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+SUMMARY:The Emo Night Tour: Vinyl Music Hall (18+)
+DESCRIPTION:A DJ night\, not a band\, plays the 2005 canon at volume to a 
+ room that knows every word. It is standing room\, and the singing along i
+ s the show.\nPrice: $34 for two\nArea: Pensacola\nTimes: Sat 08/15/2026 
+ · doors and show 8:00 PM\nChecked against the venue's own page on 2026-0
+ 8-08\nhttps://grayhicks.github.io/coast-guide/events/ev-vinyl-emonight-08
+ 15.html
+LOCATION:Vinyl Music Hall\, 2 S Palafox St\, Pensacola\, FL 32502
+URL:https://grayhicks.github.io/coast-guide/events/ev-vinyl-emonight-0815.
+ html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_brandonstyles_variety-2026-08-15@coast-guide
+DTSTAMP:20260815T000000Z
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+SUMMARY:The Brandon Styles Variety Show
+DESCRIPTION:Celebrity impressions\, comedy\, and magic play a purpose-buil
+ t theatre at OWA\, twice a week. It is marketed all-ages and it means it\
+ , a rare thing that a nine-year-old and two adults can all sit through ha
+ ppily.\nPrice: from $35\nArea: Orange Beach & Gulf Shores\nTimes: Tuesday
+ s and Saturdays · 7:00 PM\nChecked against the venue's own page on 2026-
+ 08-08\nhttps://grayhicks.github.io/coast-guide/events/ev-brandonstyles-va
+ riety.html
+LOCATION:Brandon Styles Theater at OWA\, 1501 S OWA Blvd\, Foley\, AL 3653
+ 5
+URL:https://grayhicks.github.io/coast-guide/events/ev-brandonstyles-variet
+ y.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_saenger_mobile_killtony_0815-2026-08-15@coast-guide
+DTSTAMP:20260815T000000Z
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+SUMMARY:Killers of Kill Tony: Saenger Theatre Mobile
+DESCRIPTION:David Lucas\, Hans Kim\, Martin Phillips\, and Pat O'Neill bri
+ ng their own sets to Mobile's 1927 Saenger. Kill Tony's orbit works blue 
+ as a matter of course\, and that is the room you are buying.\nPrice: not 
+ published by the venue\, so confirm before you go\nArea: Mobile & Baldwin
+  County\nTimes: Sat 08/15/2026 · 7:00 PM\nChecked against the venue's ow
+ n page on 2026-08-08\nhttps://grayhicks.github.io/coast-guide/events/ev-s
+ aenger-mobile-killtony-0815.html
+LOCATION:Saenger Theatre Mobile\, 6 S Joachim St\, Mobile\, AL 36602
+URL:https://grayhicks.github.io/coast-guide/events/ev-saenger-mobile-killt
+ ony-0815.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_omgitswicks_0815-2026-08-15@coast-guide
+DTSTAMP:20260815T000000Z
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+SUMMARY:OMGITSWICKS & Friends: Florida sketch comedy
+DESCRIPTION:Ninety minutes of Florida-specific sketches\, including hurric
+ ane prep\, traffic meltdowns\, and gators in the yard\, come from Josh 
+ “OMGITSWICKS” Robinson with Ken Miller and Myke Herlihy. A meet-and-g
+ reet follows at no extra charge\, which is the part a kid will talk about
+  afterwards.\nPrice: not published by the venue\, so confirm before you g
+ o\nArea: Pensacola\nTimes: Sat 08/15/2026 · 6:00 PM · 90 minutes\nCheck
+ ed against the venue's own page on 2026-08-08\nhttps://grayhicks.github.i
+ o/coast-guide/events/ev-omgitswicks-0815.html
+LOCATION:Pensacola Saenger Theatre\, 118 S Palafox St\, Pensacola\, FL 325
+ 02
+URL:https://grayhicks.github.io/coast-guide/events/ev-omgitswicks-0815.htm
+ l
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_sunmkt-2026-08-16@coast-guide
+DTSTAMP:20260816T000000Z
+DTSTART;VALUE=DATE:20260816
+DTEND;VALUE=DATE:20260817
+SUMMARY:Sunday Market on Palafox
+DESCRIPTION:The Sunday sibling of Palafox Market brings crafts\, art\, and
+  prepared food. The organization is active (site updated June 2026)\, but
+  confirm each week's market on their Facebook before driving.\nPrice: Fre
+ e\nArea: Pensacola\nTimes: Sundays · ~10 AM-3 PM\nhttps://grayhicks.gith
+ ub.io/coast-guide/events/ev-sunmkt.html
+LOCATION:MLK Jr. Plaza\, Downtown Pensacola\, 200 N Palafox St\, Pensacola
+ \, FL 32502
+URL:https://grayhicks.github.io/coast-guide/events/ev-sunmkt.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seville_sundaybrunch-2026-08-16@coast-guide
+DTSTAMP:20260816T000000Z
+DTSTART;VALUE=DATE:20260816
+DTEND;VALUE=DATE:20260817
 SUMMARY:Sunday Brunch with John Wheeler: Seville Quarter
 DESCRIPTION:Brunch in the courtyard room with John Wheeler playing through
   it. A daytime date that ends early enough to still have a Sunday afterwa
@@ -225,54 +513,22 @@ URL:https://grayhicks.github.io/coast-guide/events/ev-seville-sundaybrunch
  .html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_miracle_volleyball_0808-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
-SUMMARY:Miracle League Charity Volleyball Tournament
-DESCRIPTION:This two-day 4-on-4 beach tournament features an Open bracket 
- playing for a $1\,000 pot that grows with sponsor donations\, and an Unra
- ted bracket playing for prize packs. All the profit goes to Miracle Leagu
- e Pensacola\, which runs adaptive baseball for kids with disabilities.\nP
- rice: not published by the venue\, so confirm before you go\nArea: Pensac
- ola Beach & Perdido\nTimes: Sat 08/08 – Sun 08/09/2026 · beach courts\
- , hours not published\nChecked against the venue's own page on 2026-08-08
- \nhttps://grayhicks.github.io/coast-guide/events/ev-miracle-volleyball-08
- 08.html
-LOCATION:The Salty Rose Beach Bar & Grill\, Pensacola Beach\, FL 32561
-URL:https://grayhicks.github.io/coast-guide/events/ev-miracle-volleyball-0
- 808.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_30ave_green_music-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
-SUMMARY:Live music on the green: 30Avenue
-DESCRIPTION:Local players on the lawn at the 30A end of the county\, every
-  evening\, no ticket. Shops and restaurants ring the green\, so it works 
- as the whole evening or as the thing that happens while you eat.\nPrice: 
- Free\nArea: 30A & South Walton\nTimes: Every evening · 6:00-9:00 PM · f
- ree\nChecked against the venue's own page on 2026-08-08\nhttps://grayhick
- s.github.io/coast-guide/events/ev-30ave-green-music.html
-LOCATION:30Avenue\, 12805 US-98 East\, Inlet Beach\, FL 32461
-URL:https://grayhicks.github.io/coast-guide/events/ev-30ave-green-music.ht
- ml
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_bigchill_hoodoos_0809-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
-SUMMARY:The HooDoos live on stage: The Big Chill
-DESCRIPTION:A full band plays the venue's stage for three and a half hours
-  on a Sunday evening\, the last thing of the weekend rather than the firs
- t thing of the night.\nPrice: not published by the venue\, so confirm bef
- ore you go\nArea: 30A & South Walton\nTimes: Sun 08/09/2026 · 6:00-9:30 
- PM\nChecked against the venue's own page on 2026-08-08\nhttps://grayhicks
- .github.io/coast-guide/events/ev-bigchill-hoodoos-0809.html
-LOCATION:The Big Chill\, 20 Hub Lane\, Watersound Beach\, FL 32461
-URL:https://grayhicks.github.io/coast-guide/events/ev-bigchill-hoodoos-080
- 9.html
+UID:ev_club27_comedy_0816-2026-08-16@coast-guide
+DTSTAMP:20260816T000000Z
+DTSTART;VALUE=DATE:20260816
+DTEND;VALUE=DATE:20260817
+SUMMARY:Club 27 Comedy: “Good Cop\, Rad Cop!” (21+)
+DESCRIPTION:Stand-up plays on the first and third Sunday of the month\, an
+ d the ticket opens the whole of Seville Quarter for the night: dinner bef
+ ore\, karaoke after\, one purchase. Carson Taylor\, Ryan D. Adams\, and S
+ hane Camp are on this bill. Phones are away\, and the room enforces it.\n
+ Price: not published by the venue\, so confirm before you go\nArea: Pensa
+ cola\nTimes: Sun 08/16/2026 · doors 6:00 PM\, show 7:00 PM\nChecked agai
+ nst the venue's own page on 2026-08-08\nhttps://grayhicks.github.io/coast
+ -guide/events/ev-club27-comedy-0816.html
+LOCATION:Club 27 Comedy\, Lili Marlene's\, Seville Quarter\, 130 E Governm
+ ent St\, Pensacola\, FL 32502
+URL:https://grayhicks.github.io/coast-guide/events/ev-club27-comedy-0816.h
+ tml
 END:VEVENT
 END:VCALENDAR

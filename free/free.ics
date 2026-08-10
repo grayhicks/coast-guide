@@ -5,58 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Gulf Coast: free things
 BEGIN:VEVENT
-UID:ev_elissa_sail250-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
-SUMMARY:1877 Tall Ship ELISSA: free deck tours
-DESCRIPTION:The ship is a National Historic Landmark\, a square-rigged iro
- n barque\, and one of only three ships of her kind left in the world that
-  still actively sails. Pensacola is the first stop on her Sail250 voyage 
- for the nation's 250th. It is only her third recorded visit ever\, after 
- 1886 and 2018. Walking her deck costs nothing. A ship-and-history kid get
- s rigging and 149 years of iron\, while the stroller rolls along the pier
- .\nPrice: Free\nArea: Pensacola\nTimes: Fri 8/7 – Sun 8/9 · free self-
- guided deck tours (hours vary by day · see watch-outs)\nChecked against 
- the venue's own page on 2026-08-05\nhttps://grayhicks.github.io/coast-gui
- de/events/ev-elissa-sail250.html
-LOCATION:Palafox Pier\, 895 S Palafox St\, Pensacola\, FL 32502
-URL:https://grayhicks.github.io/coast-guide/events/ev-elissa-sail250.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_sunmkt-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
-SUMMARY:Sunday Market on Palafox
-DESCRIPTION:The Sunday sibling of Palafox Market brings crafts\, art\, and
-  prepared food. The organization is active (site updated June 2026)\, but
-  confirm each week's market on their Facebook before driving.\nPrice: Fre
- e\nArea: Pensacola\nTimes: Sundays · ~10 AM-3 PM\nhttps://grayhicks.gith
- ub.io/coast-guide/events/ev-sunmkt.html
-LOCATION:MLK Jr. Plaza\, Downtown Pensacola\, 200 N Palafox St\, Pensacola
- \, FL 32502
-URL:https://grayhicks.github.io/coast-guide/events/ev-sunmkt.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_mancis_live-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
-SUMMARY:Live Music: Manci's Antique Club
-DESCRIPTION:This Daphne institution has walls of Jim Beam decanters and li
- ve local bands Thursday through Sunday. It is a grown-up night across the
-  bay\, about 50 minutes out.\nPrice: Free\nArea: Mobile & Baldwin County\
- nTimes: Thu 6:30 · Fri-Sat 7:30 · Sun 6:00 PM\nhttps://grayhicks.github
- .io/coast-guide/events/nl-mancis-live.html
-LOCATION:Manci's Antique Club\, 1715 Main St\, Daphne\, AL 36526
-URL:https://grayhicks.github.io/coast-guide/events/nl-mancis-live.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_fubar_nights-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
+UID:nl_fubar_nights-2026-08-10@coast-guide
+DTSTAMP:20260810T000000Z
+DTSTART;VALUE=DATE:20260810
+DTEND;VALUE=DATE:20260811
 SUMMARY:Karaoke & DJ Nights: FUBAR Pizza Bar
 DESCRIPTION:Late-night karaoke runs five nights a week (Sun\, Tue\, Wed\, 
  Fri\, Sat) plus a DJ on Monday and Thursday\, 9 PM to 1 AM every night\, 
@@ -65,53 +17,6 @@ DESCRIPTION:Late-night karaoke runs five nights a week (Sun\, Tue\, Wed\,
  https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
 LOCATION:FUBAR Pizza Bar\, 114 Amberjack Dr\, Fort Walton Beach\, FL 32548
 URL:https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_sandshaker_live-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
-SUMMARY:Weekend Live Music: Sandshaker Lounge
-DESCRIPTION:The Shaker\, birthplace of the Bushwacker\, has live music eve
- ry weekend and never a cover. It is a classic Pensacola Beach dive\, abou
- t 25 minutes from the bridge.\nPrice: Free\nArea: Pensacola Beach & Perdi
- do\nTimes: Every weekend · evenings\nhttps://grayhicks.github.io/coast-g
- uide/events/nl-sandshaker-live.html
-LOCATION:Sandshaker Lounge\, 731 Pensacola Beach Blvd\, Pensacola Beach\, 
- FL 32561
-URL:https://grayhicks.github.io/coast-guide/events/nl-sandshaker-live.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_paradise_live-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
-SUMMARY:Live Music: Paradise Bar & Grill
-DESCRIPTION:Beachside live music plays most nights on Pensacola Beach\, wi
- th rotating local acts starting at 5:30 (Sundays 2:30). Wine Down Wednesd
- ay runs $3 house and $6 premium wines all day. It is about 25 minutes out
- .\nPrice: Free\nArea: Pensacola Beach & Perdido\nTimes: Tue/Fri/Sat 5:30 
- PM · Sun 2:30 PM\nhttps://grayhicks.github.io/coast-guide/events/nl-para
- dise-live.html
-LOCATION:Paradise Bar & Grill\, 21 Via De Luna Dr\, Pensacola Beach\, FL 3
- 2561
-URL:https://grayhicks.github.io/coast-guide/events/nl-paradise-live.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_30ave_green_music-2026-08-09@coast-guide
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260809
-DTEND;VALUE=DATE:20260810
-SUMMARY:Live music on the green: 30Avenue
-DESCRIPTION:Local players on the lawn at the 30A end of the county\, every
-  evening\, no ticket. Shops and restaurants ring the green\, so it works 
- as the whole evening or as the thing that happens while you eat.\nPrice: 
- Free\nArea: 30A & South Walton\nTimes: Every evening · 6:00-9:00 PM · f
- ree\nChecked against the venue's own page on 2026-08-08\nhttps://grayhick
- s.github.io/coast-guide/events/ev-30ave-green-music.html
-LOCATION:30Avenue\, 12805 US-98 East\, Inlet Beach\, FL 32461
-URL:https://grayhicks.github.io/coast-guide/events/ev-30ave-green-music.ht
- ml
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seville_barbingo-2026-08-10@coast-guide
@@ -129,6 +34,22 @@ LOCATION:Seville Quarter\, Apple Annie's\, 130 E Government St\, Pensacola
  \, FL 32502
 URL:https://grayhicks.github.io/coast-guide/events/ev-seville-barbingo.htm
  l
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_30ave_green_music-2026-08-10@coast-guide
+DTSTAMP:20260810T000000Z
+DTSTART;VALUE=DATE:20260810
+DTEND;VALUE=DATE:20260811
+SUMMARY:Live music on the green: 30Avenue
+DESCRIPTION:Local players on the lawn at the 30A end of the county\, every
+  evening\, no ticket. Shops and restaurants ring the green\, so it works 
+ as the whole evening or as the thing that happens while you eat.\nPrice: 
+ Free\nArea: 30A & South Walton\nTimes: Every evening · 6:00-9:00 PM · f
+ ree\nChecked against the venue's own page on 2026-08-08\nhttps://grayhick
+ s.github.io/coast-guide/events/ev-30ave-green-music.html
+LOCATION:30Avenue\, 12805 US-98 East\, Inlet Beach\, FL 32461
+URL:https://grayhicks.github.io/coast-guide/events/ev-30ave-green-music.ht
+ ml
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_bands_on_the_beach-2026-08-11@coast-guide
@@ -193,6 +114,22 @@ DESCRIPTION:Grab a team and a local craft pour. Coastal County runs team t
 LOCATION:Coastal County Brewing Co.\, 3041 East Olive Rd\, Pensacola\, FL 
  32514
 URL:https://grayhicks.github.io/coast-guide/events/nl-ccbrew-trivia.html
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_paradise_live-2026-08-11@coast-guide
+DTSTAMP:20260811T000000Z
+DTSTART;VALUE=DATE:20260811
+DTEND;VALUE=DATE:20260812
+SUMMARY:Live Music: Paradise Bar & Grill
+DESCRIPTION:Beachside live music plays most nights on Pensacola Beach\, wi
+ th rotating local acts starting at 5:30 (Sundays 2:30). Wine Down Wednesd
+ ay runs $3 house and $6 premium wines all day. It is about 25 minutes out
+ .\nPrice: Free\nArea: Pensacola Beach & Perdido\nTimes: Tue/Fri/Sat 5:30 
+ PM · Sun 2:30 PM\nhttps://grayhicks.github.io/coast-guide/events/nl-para
+ dise-live.html
+LOCATION:Paradise Bar & Grill\, 21 Via De Luna Dr\, Pensacola Beach\, FL 3
+ 2561
+URL:https://grayhicks.github.io/coast-guide/events/nl-paradise-live.html
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_nicevillelib_craftchat_0811-2026-08-11@coast-guide
@@ -307,6 +244,20 @@ LOCATION:Village of Baytowne Wharf\, 9100 Baytowne Blvd\, Miramar Beach\,
 URL:https://grayhicks.github.io/coast-guide/events/ev-baytowne-drone.html
 END:VEVENT
 BEGIN:VEVENT
+UID:nl_mancis_live-2026-08-13@coast-guide
+DTSTAMP:20260813T000000Z
+DTSTART;VALUE=DATE:20260813
+DTEND;VALUE=DATE:20260814
+SUMMARY:Live Music: Manci's Antique Club
+DESCRIPTION:This Daphne institution has walls of Jim Beam decanters and li
+ ve local bands Thursday through Sunday. It is a grown-up night across the
+  bay\, about 50 minutes out.\nPrice: Free\nArea: Mobile & Baldwin County\
+ nTimes: Thu 6:30 · Fri-Sat 7:30 · Sun 6:00 PM\nhttps://grayhicks.github
+ .io/coast-guide/events/nl-mancis-live.html
+LOCATION:Manci's Antique Club\, 1715 Main St\, Daphne\, AL 36526
+URL:https://grayhicks.github.io/coast-guide/events/nl-mancis-live.html
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_destinlib_puzzle_0813-2026-08-13@coast-guide
 DTSTAMP:20260813T000000Z
 DTSTART;VALUE=DATE:20260813
@@ -335,6 +286,21 @@ LOCATION:Gulfside Pavilion beach screen\, Casino Beach\, 20 Casino Beach B
  lvd\, Pensacola Beach\, FL 32561
 URL:https://grayhicks.github.io/coast-guide/events/ev-cinemas-sand-goat.ht
  ml
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_sandshaker_live-2026-08-14@coast-guide
+DTSTAMP:20260814T000000Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260815
+SUMMARY:Weekend Live Music: Sandshaker Lounge
+DESCRIPTION:The Shaker\, birthplace of the Bushwacker\, has live music eve
+ ry weekend and never a cover. It is a classic Pensacola Beach dive\, abou
+ t 25 minutes from the bridge.\nPrice: Free\nArea: Pensacola Beach & Perdi
+ do\nTimes: Every weekend · evenings\nhttps://grayhicks.github.io/coast-g
+ uide/events/nl-sandshaker-live.html
+LOCATION:Sandshaker Lounge\, 731 Pensacola Beach Blvd\, Pensacola Beach\, 
+ FL 32561
+URL:https://grayhicks.github.io/coast-guide/events/nl-sandshaker-live.html
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_lodaartwalk_0814-2026-08-14@coast-guide
@@ -426,6 +392,21 @@ DESCRIPTION:Give an hour and leave the beach better. Buckets\, grabbers\,
 LOCATION:Rotating\, Pensacola Beach / area waterfronts\, Pensacola Beach\,
   FL 32561
 URL:https://grayhicks.github.io/coast-guide/events/ev-oceanhour.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_sunmkt-2026-08-16@coast-guide
+DTSTAMP:20260816T000000Z
+DTSTART;VALUE=DATE:20260816
+DTEND;VALUE=DATE:20260817
+SUMMARY:Sunday Market on Palafox
+DESCRIPTION:The Sunday sibling of Palafox Market brings crafts\, art\, and
+  prepared food. The organization is active (site updated June 2026)\, but
+  confirm each week's market on their Facebook before driving.\nPrice: Fre
+ e\nArea: Pensacola\nTimes: Sundays · ~10 AM-3 PM\nhttps://grayhicks.gith
+ ub.io/coast-guide/events/ev-sunmkt.html
+LOCATION:MLK Jr. Plaza\, Downtown Pensacola\, 200 N Palafox St\, Pensacola
+ \, FL 32502
+URL:https://grayhicks.github.io/coast-guide/events/ev-sunmkt.html
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_bubbly_baytowne-2026-08-20@coast-guide

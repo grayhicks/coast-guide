@@ -1485,6 +1485,58 @@ html[data-theme="light"] .scope{background:linear-gradient(180deg, rgba(40,50,60
   .scope a{font-size:var(--fs-small);padding:8px 10px;letter-spacing:.005em}
 }
 
+/* ═══ THE IN-FEED PAID PLACEMENT ══════════════════════════════════════════
+   ⚠ DETACHED BY MATERIAL, NOT BY A MARK. It has NO panel, NO card border, NO
+   card radius, no identification band, no seal and no stamp — it sits on the
+   page ground, and nothing that reads as a card is part of the ad. That is the
+   whole design and it came out of two corrections to Gray's first sketch:
+     · 1px is a hairline, not separation. The card's own internal padding is
+       17px, so the gap has to EXCEED that or the eye files the block as a
+       section OF the card. This clears it by 32px top and bottom.
+     · cut marks are already the card's vocabulary for a division INSIDE one
+       object. Reusing them for "a different object" is the one-mark-two-
+       meanings failure.
+   The only rules on it are a hairline above and below — the newspaper answer to
+   "this is not editorial", set in the quiet line colour rather than in gold, so
+   it never competes with a card's own category band. */
+.feed-ad{grid-column:1/-1;margin:var(--s-6) 0;padding:var(--s-4) 0;
+  border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);
+  background:none;box-shadow:none;border-radius:0}
+/* the word first, before the business, because the disclosure is not a footnote */
+/* ⚠ CENTRED ON THE CARD'S OWN AXIS — Gray, 08/10: "sponsor may as well go in the
+   middle then." Every rank on a card is centred, and left-set this block was the
+   only ragged-right object on the wall, which reads as a mistake rather than as a
+   different kind of thing. It is still not a card: the material detachment does
+   that job, and sharing the axis makes the wall calmer rather than blurring them. */
+.feed-ad{text-align:center}
+.fad-mark{margin:0 0 10px;font:700 var(--fs-kicker)/1 var(--font-mono);
+  letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
+/* ⚠ THE LOGO STACKS ON THE AXIS RATHER THAN SITTING BESIDE THE TEXT. Set as a
+   centred ROW it left the mark stranded off to one side while the words centred
+   under it, which is the worst of both — neither a left-set block nor a centred
+   one. Column, everything on one axis, like every rank of the card beside it. */
+.fad-body{display:flex;flex-direction:column;align-items:center;gap:10px}
+.fad-fine{margin-left:auto;margin-right:auto}
+/* ⚠ THE LOGO IS DRAWN FROM THE NAME UNTIL AN ADVERTISER SUPPLIES ONE. The site
+   makes zero network requests, so a remote logo is not an option, and inventing
+   artwork for a real business is worse than initials. */
+.fad-logo{flex:none;width:48px;height:48px;border-radius:2px;object-fit:contain}
+.fad-mono{display:flex;align-items:center;justify-content:center;
+  background:var(--gold);color:var(--accent-ink);
+  font:800 15px/1 var(--font-mono);letter-spacing:.06em}
+.fad-txt{min-width:0}
+.fad-name{margin:0;font:700 var(--fs-body)/1.3 var(--font-sans);color:var(--ink)}
+.fad-name a{color:inherit;text-decoration:none}
+.fad-name a:hover{color:var(--gold-bright);text-decoration:underline}
+.fad-say{margin:4px 0 0;font:var(--fs-small)/1.5 var(--font-sans);color:var(--ink-2)}
+/* the citation, which is the thing a placement is actually selling */
+.fad-nap{margin:6px auto 0;font:500 var(--fs-agate)/1.6 var(--font-mono);
+  color:var(--ink-3);font-style:normal;letter-spacing:.04em}
+.fad-nap .nap-line{display:block}
+.fad-nap a.nap-line{color:inherit;text-decoration:none}
+.fad-nap a.nap-line:hover{color:var(--gold-bright);text-decoration:underline}
+.fad-fine{margin:12px 0 0;font-size:var(--fs-fine);color:var(--ink-3);max-width:52ch}
+
 /* ==================================================== LISTING LAYOUT + RAIL */
 .filters{margin-top:var(--s-5)}
 .chip-row{display:flex;flex-wrap:wrap;gap:8px}
