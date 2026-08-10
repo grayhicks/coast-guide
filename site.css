@@ -1315,7 +1315,13 @@ a.nap-line:hover{color:var(--gold-bright)}
 /* the tucked state — see the note beside supportFloat() in the generator. Transform
    and opacity only; `visibility` rather than `display` so the transition can run. */
 .sup-float{transition:transform var(--t-med) var(--ease), opacity var(--t-med) var(--ease)}
-.sup-float.is-tucked{transform:translateY(calc(100% + 24px));opacity:0;pointer-events:none}
+.sup-float.is-tucked,
+/* ⚠ .is-yield IS THE SAME RETREAT FOR A DIFFERENT REASON: the pill is standing on the page's
+   primary button. See the note beside supportFloat() in build_site_pages.js — on a place page at
+   390 it covered the right 55% of the call to action, label, ornament and tap area alike. Two
+   classes rather than one flag, so the scroll handler and the overlap test never overwrite each
+   other's decision. */
+.sup-float.is-yield{transform:translateY(calc(100% + 24px));opacity:0;pointer-events:none}
 .sup-float:hover{background-color:var(--gold-bright)}
 .sup-float:focus-visible{outline:3px solid var(--gold-bright);outline-offset:3px}
 .sup-float-in{position:relative}
@@ -2678,6 +2684,49 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
      One mark everywhere it is used — card, primary button, tab rail, both header bars — so there is
      exactly one ornament dialect on this site. */
   --orn-swell:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20'%3E%3Cpath d='M150 1.5c0 8.1555533-40 8.5-145 9 105 .5 145 .844447 145 9 0-8.155553 40-8.5 145-9-105-.5-145-.8444467-145-9z'/%3E%3C/svg%3E");
+  /* ⚠ 08/10 — THE SAME PATH STOOD ON ITS END, NOT A SECOND DRAWING. Gray asked for the gold border
+     to go "AROUND the whole button but fancy", which needs a member on the left and right edges as
+     well as the top and bottom. The byte sequence inside both paths below is IDENTICAL to the one
+     above; only the viewBox and the transforms differ, so the members can never drift into two
+     shapes the way a hand-rotated copy would.
+     rotate(90) maps (x,y) to (-y,x), which puts the figure at x in [-19.5,-1.5]; the translate
+     brings it back into the box. SVG transform lists apply right to left, so the rotate is first.
+     PROVENANCE, unchanged: Wikimedia Commons, "Decorative_text_divider_-_central_flare.svg",
+     PUBLIC DOMAIN.
+
+     ⚠ preserveAspectRatio='none' IS THE WHOLE POINT OF THESE TWO, AND ITS ABSENCE WAS THE SINGLE
+     ROOT CAUSE OF EVERY DEFECT A COLD GRADE FOUND IN THE FIRST FRAME. An SVG used as a mask
+     defaults to xMidYMid MEET, which FITS the viewBox inside the mask box instead of filling it —
+     so `mask-size` was dead code and the browser scaled by min(boxW/300, boxH/20). Measured on the
+     shipped page: the top jewel came out 68.2 x 3.3 and the left jewel 25.9 x 1.3, a 2.5x
+     difference in thickness and 6.7:1 in ink area, from one attribute nothing in the CSS could
+     reach. Worse, it made the mark a CONSTANT ~70px of ink on every host, so one declared width of
+     "calc(100% - 26px)" rendered at 20.2% coverage on a 350px button and 38.9% on a 193px one.
+     With 'none', mask-size means what it says on both axes.
+     ⚠ AND THE FIGURE IS RE-CENTRED IN ITS OWN BOX. The path spans y 1.5 to 19.5, so its ink centre
+     sat at 10.5 of a 20-unit viewBox — half a unit low. Painted at both ends of a frame that is
+     not mirrored, that half unit lands INBOARD at the top and OUTBOARD at the bottom, which is a
+     0.25px asymmetry between two marks that must measure the same. translate(0 -.5) puts the ink
+     on 1..19, centred on 10, with a unit of air at each end for antialiasing. */
+  --orn-swell-c:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20' preserveAspectRatio='none'%3E%3Cg transform='translate(0 -.5)'%3E%3Cpath d='M150 1.5c0 8.1555533-40 8.5-145 9 105 .5 145 .844447 145 9 0-8.155553 40-8.5 145-9-105-.5-145-.8444467-145-9z'/%3E%3C/g%3E%3C/svg%3E");
+  /* ⚠ 08/10 — THE SWIRL, THIRD BUILD, AND THE ONE THING THAT CHANGED IS ITS TAILS.
+     Gray: "those swirls suck, I want the lines running into them and the lines moving", then
+     "you were doing better with the swirls... if you kept trying to figure it out you would."
+     Build one drew the volutes on a FULL-WIDTH rule and painted a second line beside the frame's
+     own border — a doubling. Build two deleted the rule entirely and the curls floated with
+     nothing reaching them, which is the version he was looking at when he said the lines should
+     run in. Build three keeps SHORT TAILS ONLY: each volute unwinds into a 9-unit straight stub
+     that runs out to the figure's own edge, on the frame's centre line, so where the mask ends the
+     border carries on along exactly the same line. Line, into curl, into curl, into line.
+     ⚠ AND IT KEEPS preserveAspectRatio's DEFAULT `meet`, unlike the lozenge which needs `none`.
+     A curl distorted by its host's aspect is a different curl on every button; a lens stretched
+     along one axis is still a lens. Same file, two correct answers.
+     Spiral: r = a·e^(b·t), b = 0.175 over 2.15 turns, outer radius SOLVED at R = 8.4, eyes at ±19
+     of a 120 box. Public-domain mathematics, mirrored about the centre line, nothing traced —
+     his reference board is watermarked stock and is a taste signal only. */
+  --orn-swirl:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='22.2 8.1 75.6 15.8'%3E%3Cpath d='M22.6 16 L32.6 16M97.4 16 L87.4 16M32.6 16L32.9 14.7L33.4 13.6L34.1 12.6L34.8 11.7L35.7 10.9L36.7 10.3L37.7 9.9L38.7 9.6L39.8 9.5L40.8 9.6L41.7 9.8L42.6 10.1L43.4 10.6L44.2 11.2L44.8 11.8L45.2 12.5L45.6 13.3L45.8 14.1L45.9 14.9L45.9 15.6L45.8 16.4L45.5 17.1L45.2 17.7L44.8 18.3L44.3 18.8L43.8 19.1L43.2 19.4L42.6 19.6L42 19.7L41.4 19.7L40.8 19.6L40.3 19.5L39.8 19.2L39.4 18.9L39 18.6L38.7 18.2L38.4 17.8L38.3 17.3L38.2 16.9L38.2 16.4L38.2 16L38.3 15.6L38.5 15.2L38.7 14.8M87.4 16L87.1 17.3L86.6 18.4L85.9 19.4L85.2 20.3L84.3 21.1L83.3 21.7L82.3 22.1L81.3 22.4L80.2 22.5L79.2 22.4L78.3 22.2L77.4 21.9L76.6 21.4L75.8 20.8L75.2 20.2L74.8 19.5L74.4 18.7L74.2 17.9L74.1 17.1L74.1 16.4L74.2 15.6L74.5 14.9L74.8 14.3L75.2 13.7L75.7 13.2L76.2 12.9L76.8 12.6L77.4 12.4L78 12.3L78.6 12.3L79.2 12.4L79.7 12.5L80.2 12.8L80.6 13.1L81 13.4L81.3 13.8L81.6 14.2L81.7 14.7L81.8 15.1L81.8 15.6L81.8 16L81.7 16.4L81.5 16.8L81.3 17.2' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  --orn-swirl-f:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='22.2 8.1 75.6 15.8'%3E%3Cg transform='translate(0 32) scale(1 -1)'%3E%3Cpath d='M22.6 16 L32.6 16M97.4 16 L87.4 16M32.6 16L32.9 14.7L33.4 13.6L34.1 12.6L34.8 11.7L35.7 10.9L36.7 10.3L37.7 9.9L38.7 9.6L39.8 9.5L40.8 9.6L41.7 9.8L42.6 10.1L43.4 10.6L44.2 11.2L44.8 11.8L45.2 12.5L45.6 13.3L45.8 14.1L45.9 14.9L45.9 15.6L45.8 16.4L45.5 17.1L45.2 17.7L44.8 18.3L44.3 18.8L43.8 19.1L43.2 19.4L42.6 19.6L42 19.7L41.4 19.7L40.8 19.6L40.3 19.5L39.8 19.2L39.4 18.9L39 18.6L38.7 18.2L38.4 17.8L38.3 17.3L38.2 16.9L38.2 16.4L38.2 16L38.3 15.6L38.5 15.2L38.7 14.8M87.4 16L87.1 17.3L86.6 18.4L85.9 19.4L85.2 20.3L84.3 21.1L83.3 21.7L82.3 22.1L81.3 22.4L80.2 22.5L79.2 22.4L78.3 22.2L77.4 21.9L76.6 21.4L75.8 20.8L75.2 20.2L74.8 19.5L74.4 18.7L74.2 17.9L74.1 17.1L74.1 16.4L74.2 15.6L74.5 14.9L74.8 14.3L75.2 13.7L75.7 13.2L76.2 12.9L76.8 12.6L77.4 12.4L78 12.3L78.6 12.3L79.2 12.4L79.7 12.5L80.2 12.8L80.6 13.1L81 13.4L81.3 13.8L81.6 14.2L81.7 14.7L81.8 15.1L81.8 15.6L81.8 16L81.7 16.4L81.5 16.8L81.3 17.2' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E");
+  --orn-swell-v:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 300' preserveAspectRatio='none'%3E%3Cg transform='translate(20.5 0) rotate(90)'%3E%3Cpath d='M150 1.5c0 8.1555533-40 8.5-145 9 105 .5 145 .844447 145 9 0-8.155553 40-8.5 145-9-105-.5-145-.8444467-145-9z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 /* 1 · the divider. Both halves are the SAME gradient, the right one mirrored by
@@ -2837,15 +2886,96 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
    a 3px dot laid on the thickest part of a 3px spindle adds a lump, not a jewel — mask layers
    composite by union, so the two would have merged into one blob rather than reading as rule plus
    bead. One object, and it is the same object the app draws on its selected tabs. */
+/* ⚠ 08/10 — AND IT CLOSES NOW. GRAY ASKED FOR IT TWICE AND IT IS THE THIRD ORNAMENT CONVERSATION.
+   His words: "I would like this golden border to be AROUND the whole button but fancy." What
+   shipped was two horizontal swells at inset 4px 14px and nothing at all on the left and right
+   edges, so the control read as a gold pill with a mark above and below the label rather than as a
+   framed one. The eight references he circled are consistent about the family: a closed thin frame,
+   corners joined, and a lozenge at the middle of each long side.
+
+   ⚠ THE METHOD CHANGED RATHER THAN THE SCALE, WHICH IS THE LESSON OF THE TWO SHAPES HE TURNED DOWN.
+   A hand-drawn rose and a crenellated fillet both failed, so nothing here is drawn. The frame is
+   TWO EXISTING PIECES COMPOSED, and neither is new vocabulary:
+     · the closure is a plain concentric hairline, the same member the card already wears at
+       .card::after and the same arithmetic that keeps it from notching a rounded corner;
+     · the four jewels are the swelled rule itself, one per side, the vertical pair being the
+       identical path standing on its end (see --orn-swell-v).
+   So there is still exactly ONE ornament dialect on this site. Nothing was invented to satisfy a
+   request for something fancier.
+
+   ⚠ WHY THE HAIRLINE CLOSES IT AND THE SWELL DOES NOT. PART 0's rule is that the swelled rule never
+   reaches a corner, so a surface can never close into a boxed panel — and that rule is kept: each
+   lens still tapers to a point well short of both ends of its own side. Gray asked for closure, and
+   closure is the hairline's job. Two members, two jobs, and the law survives the request.
+
+   ⚠ AND IT IS HUNG ON ONE SURFACE ON THIS SITE, DELIBERATELY. "A mark used twice in one eyeful is
+   wallpaper", and four jewels on each of four hundred cards is confetti — the note that killed the
+   corner beads on the card keyline is still right. The primary button is the one control per page
+   asking to be pressed, so it is the one that earns the frame. The cards keep their plain keyline.
+
+   TWO PSEUDO-ELEMENTS BECAUSE A MASK CANNOT COEXIST WITH A BORDER ON ONE BOX: a mask clips the
+   element it is set on, border included, so the hairline would be eaten by the same mask that
+   carves the jewels. ::before is the frame, ::after is the jewels, both inside the button's own box
+   — the old keystone sat at top:-3.5px, outside the border box, and detached into a loose diamond
+   floating over the nav inside the clipping site header. Every mark on a button stays in its box. */
 .btn.primary{position:relative;background-color:var(--gold);background-image:none}
-.btn.primary::before{content:"";position:absolute;inset:4px 14px;pointer-events:none;
+/* ⚠ THE TOP AND BOTTOM RUNS ARE GONE FROM THIS BORDER, AND THAT IS THE FIX A COLD GRADE ASKED FOR.
+   It scored 6.5 and measured the fault exactly: the frame was a CLOSED rect painted continuously
+   beneath the mask, so the hairline ran straight THROUGH each volute's eye and out the other side,
+   with 19.00px of the 54px ornament being bare frame line between the two curls. The read was "a
+   line with two eyelets threaded on it", not line into curl into curl into line. And the flourish's
+   own tail sat 0.500px BELOW that rule in 12 of 12 configurations, at 2.11x its ink — a second,
+   heavier line lying half a pixel under the one it was supposed to BE.
+   Both faults have one cause and one cure: the horizontal runs are no longer a border at all. The
+   flourish's own tails ARE the top and bottom lines, extended to the corners by two gradient mask
+   layers that live in the same box and therefore cannot be half a pixel off. Only the left and
+   right runs remain a border, because nothing crosses them. */
+/* ⚠ THE SIDE RUNS START WHERE THE HORIZONTALS SIT, OR THE FRAME DOES NOT CLOSE. The horizontal
+   line is the flourish's own tail, which lives 5.5px down inside the ::after box at inset 4 — so
+   absolutely 9.5px from the button's edge. A side border spanning the full box left a gap at each
+   corner and two bars overshooting past the rule. Inset 9.5px vertically and they meet it exactly. */
+.btn.primary::before{content:"";position:absolute;inset:9.5px 4px;pointer-events:none;
+  border-left:1px solid var(--accent-ink);border-right:1px solid var(--accent-ink);
+  border-radius:0;
+  opacity:.62}
+/* ⚠ THE JEWEL BOX SITS 2px OUTSIDE THE FRAME BOX, AND THAT IS ARITHMETIC RATHER THAN TASTE.
+   ::before is inset 4px and carries a 1px border, so the hairline's CENTRE LINE is 4.5px in from
+   the button's edge. ::after is inset 2px, so a 5px jewel band placed flush against its own edge
+   spans 2..7px from the button's edge and is centred on 4.5px — exactly on the rule, with nothing
+   clipped. The first version put the band at inset 4px and pulled it 1px outward with
+   mask-position, which sliced the lens flat where it crossed the box edge: a cold grade
+   photographed the spindle's outer contour as a straight cut rather than a point, and measured the
+   two horizontal jewels 3.3px and 3.0px thick because the two clips took different bites out of an
+   off-centre figure. A mark that must not be clipped is given a box it fits in. */
+/* ⚠ INTEGER INSET, INTEGER BAND. At a 6px band the inset had to be 1.5px to centre on a
+   hairline 4.5px in, and the half pixel split under rasterisation — the gate measured the top
+   jewel 1.50px off the frame and the bottom 2.50px, on a mark that is symmetric by construction.
+   A 7px band at inset 1px centres on the same 4.5px with nothing fractional anywhere. */
+/* a 12px band centred on a hairline 4.5px in spans -1.5 to 10.5, so the box starts 1.5px outside
+   the button. Nothing clips: .btn sets no overflow. */
+.btn.primary::after{content:"";position:absolute;inset:4px;pointer-events:none;
   background-color:var(--accent-ink);
-  -webkit-mask-image:var(--orn-swell),var(--orn-swell);
-          mask-image:var(--orn-swell),var(--orn-swell);
-  -webkit-mask-size:100% 5px,100% 5px;mask-size:100% 5px,100% 5px;
-  -webkit-mask-position:50% 0,50% 100%;mask-position:50% 0,50% 100%;
+  /* ⚠ SIX LAYERS, ONE LINE. Per edge: the swirl centred, then a gradient stub running from the
+     figure's end out to each corner. All three sit in the SAME box at the same centre, so the tail
+     and the run it continues are collinear by construction rather than by arithmetic — which is
+     what the 0.500px step was. The bottom uses the MIRRORED figure so the pair is symmetric about
+     the button's own axis; the previous build translated the same figure, so its error went the
+     same screen direction on both edges and left the bottom curl hanging 1.167px off the gold
+     against the top's 0.167px. */
+  -webkit-mask-image:var(--orn-swirl),linear-gradient(#000,#000),linear-gradient(#000,#000),
+                     var(--orn-swirl-f),linear-gradient(#000,#000),linear-gradient(#000,#000);
+          mask-image:var(--orn-swirl),linear-gradient(#000,#000),linear-gradient(#000,#000),
+                     var(--orn-swirl-f),linear-gradient(#000,#000),linear-gradient(#000,#000);
+  -webkit-mask-size:54px 12px,calc(50% - 27px) 1px,calc(50% - 27px) 1px,
+                    54px 12px,calc(50% - 27px) 1px,calc(50% - 27px) 1px;
+          mask-size:54px 12px,calc(50% - 27px) 1px,calc(50% - 27px) 1px,
+                    54px 12px,calc(50% - 27px) 1px,calc(50% - 27px) 1px;
+  -webkit-mask-position:50% 0,0 5.5px,100% 5.5px,50% 100%,0 calc(100% - 5.5px),100% calc(100% - 5.5px);
+          mask-position:50% 0,0 5.5px,100% 5.5px,50% 100%,0 calc(100% - 5.5px),100% calc(100% - 5.5px);
   -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
-  opacity:.85}
+  /* ⚠ SAME INK WEIGHT AS THE SIDE RUNS. At .62 against the border's .44 the tail was a different
+     member of the line even where it was collinear. One opacity, one line. */
+  opacity:.62}
 
 /* ⚠ 08/09 — THE CRENELLATED COURSE IS OFF THE TABS. Gray: "I hate the events page that elegant
    brick style crap I even said that when I saw it."
