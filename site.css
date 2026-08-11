@@ -112,6 +112,12 @@
      ⚠ THE FLOAT STAYS A PILL AND THAT IS THE ONE DELIBERATE DIFFERENCE. It is not page content —
      it rides the viewport, it is the same object on four hundred pages, and a shape nothing else
      on the page has is how a reader knows it is chrome rather than this page's own control. */
+  /* ⚠ 08/11 — THE SCROLLBAR IS PART OF THE PAGE AND IT WAS THE ONLY WHITE THING ON A NAVY ONE.
+     Gray, on the live site: "On dark mode the scroll down is still vividly white." A UA scrollbar
+     is painted by the browser and takes no notice of a stylesheet unless the page declares what
+     ROOM it is in. color-scheme is that declaration, and it also fixes every native control at
+     once — form fields, the caret, the resize grip — rather than one bar at a time. */
+  color-scheme:dark;
   --r-field:4px; --r-card:14px; --r-pill:999px;
   /* the card is a printed ticket, not a raised surface — see THE FRAME, near the foot */
   --r-ticket:3px;
@@ -304,6 +310,7 @@ html[data-theme="light"]{
   --field:#ffffff;
   --band:#f7ebd4;         /* the ticket header, one step warmer than the card */
   --band-line:rgba(198,176,132,.75);
+  color-scheme:light;
   --line:#e2d2ae;
   --line-soft:rgba(198,176,132,.5);
   /* the paper room's control boundary — 3.66:1 on the page and 3.83:1 on a card's panel */
@@ -1715,7 +1722,16 @@ html[data-theme="light"] .chip.on::before{box-shadow:0 0 0 3px rgba(138,95,16,.1
      app" button, the one control the rail exists to carry — was half-hidden behind the nav on
      every desktop screenshot a cold grade took. Measured, not guessed: header 106 at 900, 1100 and
      1440, and 146 at 700 where the rail is static and this rule does not apply. */
-  .rail,.filter-rail{position:sticky;top:118px}
+  /* ⚠ 08/11 — AND THE max-height HAD TO MOVE WITH IT. Gray, looking at the live site: "the scroll
+     down bar on the left needs to be where people can scroll down more because on my computer it
+     stops right at promotions... I cant see the text below or anything." The offset above was
+     raised from 76 to 118 to clear the header and the height it was subtracting from the viewport
+     was left alone at `100vh - 32px`, so the rail's bottom landed at 118 + (100vh - 32) — measured
+     EXACTLY 86px below the fold at 1280x720, 1440x900 and 1920x1080. The last 86px of the rail
+     could never be reached by scrolling the rail, because that part of it was off the screen, and
+     the rail's own overflow was 436px at 1280. Two numbers describing one box, and only one of
+     them was corrected. It is expressed off the offset now so they cannot drift apart again. */
+  .rail,.filter-rail{position:sticky;top:118px;max-height:calc(100vh - 118px - var(--s-5))}
   .rail .chip-row,.filter-rail .chip-row{flex-direction:column;align-items:stretch}
   /* ⚠ space-between TEARS THE DOT OFF ITS LABEL. On the desktop rail a chip is a full-width row,
      and the current-page marker is a 7px ::before dot, so space-between pushed the dot to the far
@@ -2091,6 +2107,24 @@ section.band-cta.home-sec{padding:var(--s-6)}
 .prose .pull{font-size:var(--fs-h2);font-weight:750;letter-spacing:-.01em;line-height:1.35;
   color:var(--ink);max-width:26em}
 .prose .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:var(--s-4)}
+/* ═════ THE OPTIONAL THANK-YOU ROW — see the note beside it in web/pages/support.html.
+   ⚠ IT IS A CHOOSER, NOT A TILL. There is no backend and no payment path here, so the row carries
+   an amount into the app and the page says so in words. The amounts and their order are the app's
+   own, because a reader who sees $1/$5/$10/$50/$100 here and something else there is being shown
+   two products. */
+.give{margin-top:var(--s-4)}
+.give-cue{margin:0 0 10px;color:var(--ink-2);font-size:var(--fs-small)}
+.give-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+@media (max-width:479px){ .give-row{grid-template-columns:repeat(3,minmax(0,1fr))} }
+.give-amt{min-width:0;min-height:48px;border-radius:var(--r-field);cursor:pointer;
+  background:var(--panel-2);color:var(--ink);border:1px solid var(--line-strong);
+  font:700 16px/1 var(--font-sans);
+  transition:transform var(--t-fast) var(--ease), background var(--t-fast) var(--ease)}
+.give-amt:hover{transform:translateY(-1px)}
+.give-amt:active{transform:scale(.98)}
+/* the chosen one takes the house gilt, which is the same thing selection means everywhere else here */
+.give-amt.on{background:var(--gold);color:var(--accent-ink);border-color:var(--gold)}
+.give-status{margin:10px 0 0;min-height:1.4em;color:var(--ink-2);font-size:var(--fs-small)}
 .prose .grid.two{margin-top:var(--s-4)}
 /* THE CARD'S LEGEND, on the Mission page. A printed key: the mark on the left at
    the size it actually ships, the meaning on the right, one hairline between
@@ -3137,7 +3171,15 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
      a single light one would fail on the plate instead. So the ring is dark inside and cream
      outside, and whichever surface it meets, one member of it carries the boundary. It is a
      hairline, not a raised surface, so the card's own no-shadow doctrine is intact. */
-  box-shadow:0 0 0 1px var(--accent-ink), 0 0 0 2.5px rgba(255,246,228,.92);
+  /* ⚠ 08/11 — THE CREAM OUTER MEMBER IS THE HERO'S, AND OFF THE HERO IT WAS A HALO. Gray, on the
+     live site: "the open the app shows an oddly placed white around that button." He is right and
+     the arithmetic agrees. The pair exists because a fill cannot clear 3:1 against a PAINTED SCENE
+     at every width — dark inside, cream outside, one member carrying whichever surface the edge
+     meets. Off the scene there is no painted scene: on cream paper the plate is 2.09:1 and the
+     DARK member carries it at 16.7:1, and on the dark rail panel the gold plate carries it itself
+     at 6.78:1 while the cream member has nothing to do but ring the button in white. So the
+     two-tone ring stays where it earns its keep and the rest of the site gets the keyline alone. */
+  box-shadow:0 0 0 1px var(--accent-ink);
   /* ⚠ 08/10 — THE MOST DECORATED CONTROL ON THE PAGE HAD THE SMALLEST VOICE, AND A COLD GRADE
      MEASURED IT OFF THE RASTER: the keynote's letters were an 8.06px cap band against the 12px caps
      of the PLAIN secondary button sitting beside it, and 10% shorter than the body copy's own
@@ -3246,6 +3288,8 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
    press affordance on touch was a 2% scale. The most decorated control on the page was the only
    one that never responded, while the Show Support pill did. The ornament brightens rather than
    the plaque, so the feedback lands on the thing that makes this control special. */
+/* the hero is a painted scene and is dark in BOTH themes — the only place the cream member works */
+.scene .btn.primary.framed{box-shadow:0 0 0 1px var(--accent-ink), 0 0 0 2.5px rgba(255,246,228,.92)}
 .btn.primary.framed::after{transition:opacity var(--t-fast) var(--ease)}
 /* ⚠ HOVER IS GUARDED BY (hover:hover), AND THAT IS A FUNCTIONALITY FIX RATHER THAN A NICETY.
    There was not one hover-capability query in 245KB of stylesheet, so on a phone the hover state
