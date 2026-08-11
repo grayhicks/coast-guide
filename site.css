@@ -86,6 +86,50 @@
   --accent-ink:#221603;   /* text on gold surfaces */
   --kicker-ink:#ffedc4;   /* the ceremonial kicker's engraved ink, on its dark plate only */
 
+  /* --------------------------------------------------------- action colour
+     ⚠ 08/11 — GRAY FREED THE PALETTE: "it does not have to be yellow or gold." The honest version
+     of his "statistically best colour" ask is ISOLATION, not hue folklore: a gold button on a page
+     built of navy, cream and gold has nothing to be isolated against — measured 2.09:1 against the
+     cream it sat on. So ONE colour is reserved for the act of pressing, and it appears nowhere
+     else: not a heading, not a rule, not an ornament. Deep coral, because every other coastal
+     family is spoken for by something that MEANS: green is the verification stamp and Free, amber
+     is TBA, navy is the page, gold is the brand's own ornament, the rose and teal belong to
+     category stripes. The nearest neighbour is the town stripe (#ee9b6e / #b55a2a, worn only as a
+     4px stub edge and a 6% wash); the plate sits 13 degrees redder and far more saturated, and a
+     sea-green candidate was measured and rejected — 3.98:1 label contrast in light, and it reads
+     as the verified stamp's colour on a control, which is a status lie.
+     MEASURED, both grounds: dark plate #e85d4a — 5.20:1 against the dark page, label 5.18:1;
+     light plate #b3402c — 5.30:1 against the cream page, label (cream) 5.30:1. The keynote pins
+     the dark pair on itself the way it always pinned gilt, and on cream that plate self-bounds at
+     3.21:1 where gold managed 2.09. --act-line is the ring's dark member and stays dark in both
+     themes; a cream member off the hero is the halo Gray already caught once.
+     ⚠ 08/11 LATER — GRAY REOPENED GOLD ("gold is perfectly doable") AND THE ANSWER IS SPLIT, SO
+     THE NEXT PASS DOES NOT RE-LITIGATE IT: gold is TRUE FOR THE TRIM and FALSE FOR THE MAIN
+     PLATE. On a navy-and-cream site a gold PLATE has nothing to be isolated against — 2.09:1 on
+     the cream it sits on, measured, which is why gold-on-gold failed before — but gold as
+     ORNAMENT is the house's own metal: 7.96:1 on the dark page, 6.77:1 on the navy house plate,
+     4.07:1 against the hero ground it rings. So the site is TWO FAMILIES now, which is the shape
+     Gray asked for ("the navy and gold elegant trimwork and then the main button be different
+     colored with an even nicer trimwork"): the --house-* tokens below are the ordinary elegant
+     button — navy plate, gold trimwork, tiers two and three — and --act is worn by exactly ONE
+     control per page, the framed keynote. That isolation is the whole mechanism.
+     ⚠ AND PEACH IS ON THE TABLE — his own word, "maybe even a peach color since it is beachy".
+     Measured against the shipped coral, candidate #f3a284 with the dark ink label on BOTH grounds:
+     label 8.77:1 (beats coral's 5.18/5.30), 8.79:1 against the dark page, 4.50:1 against the hero
+     — but it self-bounds on cream at 1.90:1 where coral holds 3.21:1, so in the light theme the
+     plate leans on its dark keyline the way gold did. Rendered side by side for Gray both ways;
+     coral stays shipped until he calls it. */
+  --act:#e85d4a; --act-hover:#f47b66; --act-ink:#2a1008; --act-line:rgba(42,16,8,.9);
+
+  /* ------------------------------------------------- the house button, navy and gold
+     The ordinary elegant button: a navy plate wearing the brand's own gilt as trim. The plate is
+     NAVY IN BOTH THEMES on purpose — on cream paper it is the object (14.18:1 against the page,
+     cream label 14.18:1), on the dark page the plate recedes (1.18:1) and the gold keyline is the
+     boundary (7.96:1 on the page, 6.77:1 against the plate's own fill). These are the TRUE-GILT
+     values, not the light theme's bronze inks, because gilt on navy reads the same in either room
+     — so the tokens are declared once and never re-declared in the light block. */
+  --house:#13273a; --house-hover:#1d3a55; --house-ink:#fff6e4; --house-line:#d9a441;
+
   /* ---------------------------------------------------------- state colors
      Green means confirmed. Amber means unconfirmed. These are semantic:
      never used decoratively, never swapped for taste. */
@@ -168,8 +212,8 @@
         13  small     (meta, pills, chips)   +18%
         11  micro     (kickers, stamps)
      Nothing else exists. A new style picks a step; it does not invent 14.5. */
-  --fs-display:clamp(34px, 3.2vw + 22px, 54px); /* hero only, w800, ls -0.025em, lh 1.04 */
-  --fs-h1:clamp(30px, 2vw + 12px, 40px);        /* page title, w800, ls -0.02em, lh 1.1 */
+  --fs-display:clamp(34px, 3.2vw + 22px, 54px); /* hero only, serif w700, ls -0.01em, lh 1.08 */
+  --fs-h1:clamp(30px, 2vw + 12px, 40px);        /* page title, serif w700, ls -0.01em, lh 1.12 */
   --fs-h2:clamp(26px, 1.5vw + 20px, 32px);   /* section, w800, ls -0.015em, lh 1.15 */
   --fs-h3:20px;   /* card title, w700, lh 1.3 */
   --fs-lead:clamp(17px, 1vw + 6px, 20px); /* intro paragraph, w400, lh 1.55 */
@@ -325,6 +369,10 @@ html[data-theme="light"]{
   --gold-bright:#7a4e08;
   --gold-hover:#5a3a05;   /* see the note beside --gold-hover on :root — ΔE76 19.89, cream 9.58:1 */
   --accent-ink:#fff6e4;   /* cream on gilt, not white: white on gilt reads cold */
+  /* the action pair on paper: a deeper coral so the CREAM label clears the floor (5.30:1), and
+     the hover goes DARKER for the same reason the gilt hover does — cream text gains rather than
+     thins. --act-line is not re-declared; the ring's member is dark on every ground. */
+  --act:#b3402c; --act-hover:#8f2f1f; --act-ink:#fff6e4;
   --kicker-ink:#5d3f06;   /* engraved brown on the paper plate — 8.85:1 on the cream stub */
   --ok:#0b6e52;
   --ok-line:rgba(11,110,82,.42);
@@ -429,64 +477,51 @@ a:hover{text-decoration-thickness:2px}
    says the header should be "the page's own ground at the same alpha, so the colour never has to
    be kept in sync" — the dark theme does exactly that and the light one had a literal. */
 html[data-theme="light"] .site-head{background:rgba(255,246,228,.97)}
-.site-head .bar{display:flex;align-items:center;gap:8px;min-height:60px;flex-wrap:nowrap}
-/* ⚠ THE NAV USED TO BE A HIDDEN-SCROLLBAR CLIP. Measured at 390: scrollWidth
-   622 in a clientWidth of 350 — "New & upcoming" sliced mid-glyph, and Where /
-   Places / Date Night simply did not exist for anyone who didn't think to drag
-   a nav bar. No scrollbar, no chevron, and the edge-fade sat under an
-   820px media query the phone never told anyone about. A nav that hides
-   two-thirds of the product is not navigation. It now WRAPS: every link is on
-   screen at every width, full stop. The wrap only engages when the row is
-   genuinely out of room, so wide viewports see the same single row as before. */
-/* ⚠ 08/09 — THIS CLASS IS CALLED nav-scroll AND IT WAS SET TO WRAP. With six links it wrapped to
-   two lines on a phone; with the about row added on top of that the header measured 470px at 390,
-   which is a fifth of the viewport spent on chrome before a single event is visible. It scrolls
-   now, which is what the class name has always claimed. The scrollbar is hidden because a system
-   bar under a 44px row is noise, and the row is still fully reachable by swipe. */
-.site-head nav{display:flex;align-items:center;gap:2px;flex:1 1 auto;min-width:0;
-  flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
-  /* ⚠ A SCROLLING ROW THAT ENDS MID-WORD READS AS BROKEN, NOT AS SCROLLABLE. At 390 row one cut
-     at "Date N" and row two at "Volu", and a truncated word in the first row of pixels is the
-     fastest way a site looks unfinished. The mask fades the last 56px to nothing, so the cut
-     always lands on a gradient rather than on a letter, and the fade itself is the affordance
-     that says there is more to the right. The rows still scroll; they just stop lying about it.
-     ⚠ 08/09 — 56px, NOT 28, AND IT IS ONE NUMBER FOR BOTH ROWS NOW. The about row was moved to 56
-     first, with the finding written beside it: at 28px the last word is sliced through its
-     letterforms while the fade has barely started, and a cold read of the page called it a
-     truncation bug. The doing row then took a fifth destination (Promotions, R4-11.5) and went
-     from 325px of links to 425px in a 350px box, so it cuts at every phone width the same way the
-     about row always has. Two fade lengths on two rows of the same header was the divergence; one
-     number is the fix. Measured: 425 in 280 at 320, in 320 at 360, in 350 at 390, in 390 at 430. */
-  -webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 36px),transparent);
-          mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 36px),transparent)}
-.site-head nav::-webkit-scrollbar{display:none}
-/* ⚠ 08/09 — THE DOING ROW WRAPS BELOW 420 AND STOPS CUTTING WORDS. A cold grade of the new
-   Promotions page named this first: at 390 row one ended "Date Night Pr" and the reader was ON the
-   Promotions page, so its own active state was off screen. A fade is the right affordance for a
-   strip you swipe; it is the wrong answer for the PRIMARY row, where the destination you are
-   standing on can end up past the edge.
-   Measured at 390: five links are 425px of content in a 350px box at 11px of side padding and
-   385px at 7px, so seven still overflows and wrapping is what actually fixes it. Wrapping costs
-   one 44px line on a phone and nothing at all from 420 up, where the row fits again. The about
-   row keeps scrolling — it is secondary, nobody navigates from it under pressure, and a third
-   stacked row is the cost the last pass correctly refused to pay. */
-/* ⚠ AND A WRAPPED HEADER MUST NOT ALSO BE STICKY. Both rows wrapping costs 234px at 390 and
-   326px at 320, which as a sticky bar is a quarter to a third of the phone permanently gone — the
-   exact objection the last pass raised against wrapping, and it was right about the cost while
-   being wrong about which half to give up. A half-rendered word is a defect a reader sees on every
-   page; a header that scrolls away is a header. So below 460 the rows wrap AND the bar releases,
-   which buys the whole nav being legible for nothing but a swipe back to the top. From 460 up it
-   is one line, it stays stuck, and nothing changes. */
-@media (max-width:459px){
-  .site-head .nav-scroll,.site-head .nav-about{flex-wrap:wrap;overflow-x:visible;
-    -webkit-mask-image:none;mask-image:none}
-  .site-head{position:static}
-  /* ⚠ A WRAPPED FLEX ROW PACKS GREEDILY AND STRANDS THE LAST LINK ALONE. Five destinations are
-     424px in a 350px column, so four fit the first line and "Promotions" sat by itself on the
-     second, where a cold grade read it as a section heading rather than as a nav item. A three
-     column grid splits them three and two by construction, at every width, with no measuring. */
-  .site-head .nav-scroll{display:grid;grid-template-columns:repeat(3,auto);justify-content:center}
-}
+/* ═══ 08/11 — THE HEADER'S TWO ROWS, ARRANGED INSTEAD OF LEFT TO WRAP ═══════════════════════════
+   Gray: "the tabs above support/the buttons seem like they are just scattered everywhere at the
+   top... probably every page... they should be better arranged.. meaning, button symmetry,
+   something..." and then "but beautiful....".
+
+   WHAT WAS ACTUALLY WRONG, MEASURED ON THE OLD BUILD, because "scattered" is a feeling with a
+   cause. The doing row lived INSIDE the brand bar, so it was centred on whatever the wordmark and
+   the two buttons left over, while the about row was a full-width strip that started hard against
+   the left padding. At 1100 the doing row's midpoint sat 31.6px left of the page's own axis and
+   the about row's sat 215.7px left of it — two rows of one navigation on two different axes. At
+   390 the four resulting lines had left edges of 65.3, 65.3, 20.0 and 20.0 and right margins of
+   65.3, 113.4, 78.5 and 128.2: no axis, no repeating margin, no relationship between any two
+   lines. That is what reads as accidental.
+
+   THE ARRANGEMENT. Three bands, and each one is a designed unit:
+     .bar        the masthead. Wordmark at the left edge, the theme control and Submit at the right.
+                 Measured 239.3px against 246.7px, so the two ends carry the same optical weight
+                 and the bar reads as framed rather than as left-loaded.
+     .bar-do     row one, WHAT YOU CAME TO DO, centred on the page's own axis.
+     .bar-about  row two, WHAT THIS IS, centred on the same axis, quieter and smaller.
+   Centring is by construction rather than by measurement: each row is its own full-width band with
+   justify-content:center, so its left and right margins are equal at every width and its midpoint
+   is the page's midpoint. Where a row has more links than the width can hold it breaks into lines
+   that are each centred the same way, so a two-line row is a symmetrical pair rather than a full
+   line and a stub.
+
+   WHY ROW ONE CANNOT LIVE IN THE BAR, since that would have been one band cheaper: at 1100 the
+   wordmark and the buttons leave 566.6px between them and seven links measure 755.3px. A row
+   centred in that gap has to be cut, scrolled or shrunk, which is the same defect wearing a hat.
+
+   THE TWO ROWS READ AS TWO KINDS OF THING, and it is done with the type rather than with a rule or
+   a border. Row one is body size at 600 in the primary ink and it leads; row two is the fine step,
+   tracked, in the quiet ink. Nothing new is drawn here. The only ornament in this header is the
+   swelled rule it already carried at both edges, which is the same mark the primary button wears.
+
+   ⚠ AND NOTHING SCROLLS SIDEWAYS ANY MORE. The mask-fade and the hidden scrollbar that used to
+   hold these rows are gone: a fade is the right affordance for a strip you swipe and the wrong one
+   for the row carrying the page you are standing on, which is how "Promotions" ended up off screen
+   while the reader was on it. Every link is on screen at every width. */
+.site-head .bar{display:flex;align-items:center;justify-content:space-between;gap:8px;
+  min-height:52px;flex-wrap:nowrap}
+.bar-end{display:flex;align-items:center;gap:8px;flex:none}
+.site-head .bar-do{display:flex;justify-content:center;min-height:44px;padding-bottom:2px}
+.site-head nav{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;
+  gap:0 2px;min-width:0;max-width:100%}
 .site-head nav a{
   color:var(--ink-2);text-decoration:none;font-size:var(--fs-body);font-weight:600;
   padding:0 7px;min-height:44px;display:inline-flex;align-items:center;
@@ -496,7 +531,7 @@ html[data-theme="light"] .site-head{background:rgba(255,246,228,.97)}
 .site-head nav a:hover{color:var(--ink)}
 .site-head nav a[aria-current="page"],
 .site-head nav a[aria-current="true"]{color:var(--gold-bright);box-shadow:inset 0 -2px 0 var(--gold)}
-.head-cta{margin-left:auto;flex:none;white-space:nowrap;padding:10px 16px}
+.head-cta{flex:none;white-space:nowrap;padding:10px 16px}
 
 /* R4-WD2 / R4-WN1 / R4-W8 — the app sits at the TOP of the left rail, and smaller. The old
    rail-card was the LAST thing in the rail, under four filter groups and a note, so on a phone
@@ -556,7 +591,13 @@ html[data-theme="light"] .site-head{background:rgba(255,246,228,.97)}
    the one width where two elements happen to miss each other.
    The header's own height is the correct offset, and it is only sticky where it is tall. */
 html{scroll-padding-top:0}
-@media (min-width:730px){ html{scroll-padding-top:118px} }
+/* ⚠ 08/11 — 821, NOT 730, AND 152 RATHER THAN 118. Two numbers moved together and both were
+   already wrong before the header changed. The header releases at 820, so between 730 and 820 this
+   was reserving 118px above an anchor under a header that is not there. And the header is three
+   bands now, measured at 144px from 821 up, so the offset that clears it is 152. An offset shorter
+   than the header puts the thing you jumped to underneath it, which is the defect the note above
+   was written about. */
+@media (min-width:821px){ html{scroll-padding-top:152px} }
 /* ⚠ AND IT CARRIES THE BEAD, because Gray asked for the button's exact treatment up here too:
    "I think on top too same exact thing not just button." The primary button's edge is a tapered
    hairline with a single bead at its centre; the header bar was the hairline without the bead, so
@@ -586,26 +627,29 @@ html{scroll-padding-top:0}
    R4-W6 asked for Support to sit up top with Mission and Volunteer; R4-WW5 said there are already
    too many links up there. They are not in conflict once you notice they are two kinds of link:
    the first row is what you came to do, the second is what this is and how to help. Splitting them
-   let the doing row get SHORTER while three about-links came up out of the footer. */
-.site-head .bar-about{display:flex;align-items:center;min-height:34px;padding-top:0;padding-bottom:2px}
-/* ⚠ 08/09 — THE FADE IS 56px, NOT 28. At 390 this row carries 533px of links in a 350px box, so
-   something is always cut; the question is only whether the cut reads as "swipe for more" or as a
-   rendering fault. At 28px the last word was sliced through its letterforms with the fade barely
-   started, and a cold read of the page called it a truncation bug. Over 56px the final label
-   visibly dissolves, which is the affordance doing its job.
-   ⚠ WRAPPING THIS ROW IS THE OTHER ANSWER AND IT IS GRAY'S CALL, NOT MINE: it would cost a third
-   row on a sticky header that is already 146px tall on a 390 phone, which is a fifth of the
-   screen before any content. Recorded rather than decided. */
-.nav-about{display:flex;align-items:center;gap:2px;flex-wrap:nowrap;min-width:0;
-  overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
-.nav-about::-webkit-scrollbar{display:none}
+   let the doing row get SHORTER while three about-links came up out of the footer.
+   ⚠ 08/11 — AND IT ONLY HOLDS ABOUT-LINKS NOW. "By area" and "New & upcoming" were browse
+   destinations sitting in the about row, which is why the row was 533px of links in a 350px box
+   and had to scroll behind a fade. They are in row one where they belong; this row is five links
+   about the guide itself and it wraps into centred lines instead of hiding its tail. */
+.site-head .bar-about{display:flex;justify-content:center;align-items:center;min-height:32px;
+  padding-top:0;padding-bottom:2px}
 .nav-about a{
   color:var(--ink-3);text-decoration:none;font-size:var(--fs-fine);font-weight:600;
   letter-spacing:.3px;padding:0 9px;min-height:32px;display:inline-flex;align-items:center;
   border-radius:var(--r-field);white-space:nowrap;
 }
 .nav-about a:hover{color:var(--ink-2)}
-.nav-about a[aria-current="page"]{color:var(--gold-bright)}
+/* ⚠ THE ABOUT ROW MARKS ITS CURRENT PAGE IN COLOUR ALONE, AND THAT IS BOTH A FIX AND THE POINT.
+   This rule has always said colour only, and `.site-head nav a[aria-current="page"]` outscored it
+   by one attribute selector, so the about row was also drawing the doing row's 2px inset underline.
+   On the last line of the row that underline lands 2px above the header's own bottom edge, inside
+   the 5px swelled rule that finishes the header, so on every page whose entry sits in the about row
+   the marker was painted over the ornament in both themes and at both widths.
+   Restoring colour-only settles it without spending 6px of header height on clearance, and it
+   sharpens the distinction the two rows are supposed to carry: row one leads and wears the
+   underline, row two answers in the quiet ink and simply lights up. */
+.site-head .nav-about a[aria-current="page"]{color:var(--gold-bright);box-shadow:none}
 
 /* ------------------------------------------------------------ THEME TOGGLE
    R4-11.6. Both marks are always in the DOM and the theme decides which one is shown, so the
@@ -631,22 +675,25 @@ html{scroll-padding-top:0}
 .tt-sun{display:none}
 html[data-theme="dark"] .tt-sun{display:block}
 html[data-theme="dark"] .tt-moon{display:none}
-@media(max-width:820px){ .site-head .bar-about{min-height:30px} .nav-about a{padding:0 7px} }
+@media(max-width:820px){ .site-head .bar-about{min-height:32px} .nav-about a{padding:0 7px;min-height:30px} }
 
 .nav-submit{display:none}
 @media(max-width:820px){
-  .site-head .bar{padding-top:6px;padding-bottom:4px;flex-wrap:wrap}
-  /* the brand keeps its own line but the theme control rides ON it rather than taking a third
-     row: order puts it after the brand, and margin-left:auto pins it to the right edge */
-  .site-head .brand{flex:1 1 auto;min-height:44px;width:auto}
-  .site-head .theme-toggle{order:0;margin-left:auto;width:40px;height:40px}
-  .site-head nav{order:1;width:100%;flex-basis:100%}
-  .site-head .bar-about{padding-top:0}
-  .site-head .head-cta.btn{display:none} /* Submit lives in footer on phones */
+  /* The masthead keeps the same shape it has at every width, brand at one edge and the control at
+     the other; only the Submit button leaves, because a phone header cannot afford a 195px button
+     and Submit is in the footer, on the business page and on the home page's own band. */
+  .site-head .bar{padding-top:4px;padding-bottom:2px;min-height:48px}
+  .site-head .brand{min-height:44px}
+  .site-head .theme-toggle{width:40px;height:40px}
+  .site-head .head-cta.btn{display:none}
   .nav-submit{display:inline-flex}
-  /* a two-row wrapped nav under a sticky header would eat a third of a phone
-     viewport; the header rides at the top of the page instead */
+  /* ⚠ A HEADER THAT TAKES MORE THAN ONE LINE MUST NOT ALSO BE STICKY. Seven destinations measure
+     636.4px of links against a 350px column at 390, so row one is two centred lines on any phone
+     and no amount of arrangement changes that arithmetic. Two lines pinned to the top of a phone
+     is a fifth of the screen permanently gone, so the header rides at the top of the page instead
+     and comes back with a swipe. From 821 up it is one line per row and it stays stuck. */
   .site-head{position:static}
+  .site-head .bar-do{min-height:0;padding-bottom:0}
 }
 
 /* ============================================================== THE SCENE
@@ -678,6 +725,8 @@ html[data-theme="dark"] .tt-moon{display:none}
    used on a surface that is never the page's ground is the same leak one layer up. */
 .scene{--focus-ink:#f0c979;--gold:#d9a441;--gold-bright:#f0c979;--gold-hover:#f0c979;--accent-ink:#221603;
   --kicker-ink:#ffedc4;
+  --act:#e85d4a;--act-hover:#f47b66;--act-ink:#2a1008; /* the scene is dark in both themes, so the
+     action plate is the dark pair here whatever the page theme says */
   position:relative;overflow:hidden;isolation:isolate;
   --hz:36%; --sandh:64px; --sun-x:76%; --glint-x:76%;
   background:var(--scene-ground);
@@ -878,17 +927,49 @@ html[data-theme="dark"] .tt-moon{display:none}
   background:color-mix(in srgb, var(--scene-ground) 62%, transparent);
   border-color:color-mix(in srgb, var(--gold-bright) 75%, transparent);
   box-shadow:0 0 0 1px rgba(8,17,28,.9)}
-.hero h1,.hero-title{margin:18px 0 0;font-size:var(--fs-display);line-height:1.04;font-weight:800;
-  letter-spacing:-.025em;color:#fff;text-shadow:0 3px 26px rgba(8,18,28,.65);max-width:13em}
+/* ⚠ a wrapped ticket stub is a torn ticket. At 320 the 30-glyph tagline at .26em measures wider
+   than the 280px column, so the stub broke onto two lines on the smallest phones. The tracking
+   pays, not the copy and not the size: .10em holds one line at 320 with the same 12px caps. */
+@media(max-width:359px){
+  .eyebrow,.hero-kicker{letter-spacing:.1em;padding-left:calc(13px + .1em)}
+}
+/* ⚠ 08/11 — THE DISPLAY VOICE IS THE SERIF, AND THE CARDS ALREADY SAID SO. The card title rule
+   calls itself "the card's one display moment, and the only serif on it", the kicker stub is
+   engraved serif caps, and the keynote plate is engraved serif caps — while the largest display
+   moment on the site, the hero's own headline, wore the interface sans at w800. That is the app's
+   voice on the guide's masthead. The hero and the page titles take the serif the rest of the
+   printed vocabulary already speaks: one display family, from the stub through the headline to the
+   plate. Weight drops to 700 because ui-serif faces carry more ink per stroke than the sans did,
+   and the tight -.025em tracking (a sans convention) eases to -.01em, which is as far as a serif
+   closes before its serifs collide. */
+.hero h1,.hero-title{margin:18px 0 0;font-size:var(--fs-display);line-height:1.08;font-weight:700;
+  font-family:var(--font-serif);
+  letter-spacing:-.01em;color:#fff;text-shadow:0 3px 26px rgba(8,18,28,.65);max-width:13em}
 .hero-title .brand-line::after{content:var(--brand-name)}
 .hero .sub,.hero-sub{font-size:var(--fs-lead);line-height:1.6;color:#fff;margin:14px 0 0;max-width:30em;
   text-shadow:0 2px 14px rgba(8,18,28,.75)}
 .scene .cta,.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
-.hero-count{margin:22px 0 0;font:500 var(--fs-small)/1.6 var(--font-mono);color:#e8dcc4;
+/* ⚠ 08/11 — THE COUNT LINE IS A LEDGER ROW, NOT A SENTENCE OF TERMINAL TEXT. It was one wrapping
+   mono string, which read as a console log under the most designed copy on the site. The three
+   facts it carries are the guide's proudest numbers, so they are set the way the cards set a fare:
+   the FIGURE in the display serif at gilt, the words underneath it at meta size, each pair its own
+   column. The gold hairline above it is the site's owned mark for a gilt rule on a dark member
+   (the header wears the same pair); it fades to nothing so it can never close into a box.
+   The class name is load-bearing — gate_site_mast reads .hero-count's ink — so the container
+   keeps it and only the interior changed. */
+.hero-count{margin:28px 0 0;padding-top:16px;position:relative;
+  display:flex;flex-wrap:wrap;column-gap:34px;row-gap:12px;
+  font:500 var(--fs-small)/1.35 var(--font-sans);color:#e8dcc4;
   font-variant-numeric:tabular-nums;text-shadow:0 2px 10px rgba(8,18,28,.8)}
-.hero-count strong{color:#ffe9b8;font-weight:700}
-.scene-copy h1,.page-title{margin:12px 0 0;font-size:var(--fs-h1);line-height:1.1;font-weight:800;
-  letter-spacing:-.02em;color:#fff;text-shadow:0 3px 22px rgba(8,18,28,.65)}
+.hero-count::before{content:"";position:absolute;top:0;left:0;height:1px;width:min(100%, 380px);
+  background:linear-gradient(90deg, rgba(240,201,121,.85), rgba(240,201,121,0))}
+/* flex:none — a column keeps its own width and the ROW wraps, so a label is never broken
+   mid-phrase just because a neighbour was wide */
+.hero-count .hc{display:flex;flex:none;flex-direction:column;gap:3px;max-width:19em}
+.hero-count strong{color:#ffe9b8;font:700 clamp(22px, 1vw + 18px, 26px)/1 var(--font-serif)}
+.scene-copy h1,.page-title{margin:12px 0 0;font-size:var(--fs-h1);line-height:1.12;font-weight:700;
+  font-family:var(--font-serif);
+  letter-spacing:-.01em;color:#fff;text-shadow:0 3px 22px rgba(8,18,28,.65)}
 .hero h1{font-size:var(--fs-display)} /* the home hero outranks the page title */
 /* ⚠ 08/10 — `.lead` INSIDE THE SCENE WAS DARK NAVY ON THE DARK HERO, MEASURED AT 2.32:1.
    `.lead` paints `var(--ink)`, which is correct on paper and wrong on the one surface that is dark
@@ -904,7 +985,11 @@ html[data-theme="dark"] .tt-moon{display:none}
 
 /* ==================================================================== TYPE */
 h1,h2,h3{margin:0;color:var(--ink)}
-h2{font-size:var(--fs-h2);font-weight:800;letter-spacing:-.015em;line-height:1.15}
+/* section heads join the display serif — one display family from the hero through the section
+   phrase on its hairline to the card titles; the sans stays the working voice of body, nav and
+   furniture. Serif carries more ink, so the weight steps to 700 and the tracking eases. */
+h2{font-size:var(--fs-h2);font-weight:700;font-family:var(--font-serif);
+  letter-spacing:-.01em;line-height:1.18}
 h3{font-size:var(--fs-h3);font-weight:700;line-height:1.3;letter-spacing:-.01em}
 p{margin:0 0 1em;color:var(--ink-2)}
 p:last-child{margin-bottom:0}
@@ -924,7 +1009,10 @@ section.pad + section.pad{border-top:1px solid var(--line-soft)}
   background:linear-gradient(90deg,var(--line),transparent)}
 .strip-head .rule{order:1;flex:1 1 40px;height:1px;align-self:center;
   background:linear-gradient(90deg,var(--line),transparent)}
-.sec-head .more,.strip-head .more{order:2;flex:none;font:700 var(--fs-body)/1.2 var(--font-sans);
+/* TIER 4 — the text control. No plate to compete with the ranks above; its elegance is the same
+   engraved letter the kicker stub wears, tracked, at a 44px target. */
+.sec-head .more,.strip-head .more{order:2;flex:none;font:700 12px/1.2 var(--font-serif);
+  letter-spacing:.14em;text-transform:uppercase;
   white-space:nowrap;min-height:44px;display:inline-flex;align-items:center}
 .count{font:500 var(--fs-small)/1.6 var(--font-mono);color:var(--ink-3);margin:10px 0 0;
   font-variant-numeric:tabular-nums}
@@ -938,12 +1026,40 @@ section.pad + section.pad{border-top:1px solid var(--line-soft)}
    label sits outside the shape.
    ⚠ Fixed at the BUTTON rather than in the data, because shortening the labels would be rewriting
    what a venue calls its own page, and the next long one would break it again. */
+/* ═══ 08/11 — THE BUTTON SYSTEM, STATED AS A LADDER. Gray: "the elegant buttons were fantastic
+   ... I don't think we should have any like super plain buttons, I think they all should have a
+   sense of Elegance, one of them that stands above the rest." And his own trap, honoured: "if
+   we've made a seven and it's currently our best we shouldn't name that a nine and then make the
+   others slightly worse."
+   ⚠ 08/11 LATER — AND HE CAUGHT THE VERSION OF THIS THAT CHEATED. The first ladder read "no
+   ornament" at tier two and called it restraint; on the live hero the second button sat under the
+   keynote as a bare outlined rectangle, and Gray named it at once: "the button below it does not
+   have the elegant design its a plain button." A ladder is four tiers of EMPHASIS, not four tiers
+   of decoration down to none — every rung has to look made. So the system is TWO FAMILIES now,
+   which is the shape he described ("the navy and gold elegant trimwork and then the main button
+   be different colored with an even nicer trimwork"):
+     THE MAIN BUTTON — the action colour, one per page, the richest trim:
+     1 KEYNOTE   .btn.primary.framed — coral plate, dark foliage corners, a gilt fillet ringing
+                 the frame, 58px, 18px engraved caps. The generator stamps it (build_site_pages.js)
+                 and the coral appears NOWHERE else — the isolation is the mechanism.
+     THE HOUSE BUTTON — navy and gold, the ordinary elegant button:
+     2 PRIMARY   .btn.primary — navy plate, gold keyline, an inset gilt rule (the engraved mat),
+                 48px, cream engraved caps.
+     3 SECONDARY .btn.quiet — paper plate, the control hairline, the same inset rule in the quiet
+                 ink; on the scene its plate is the hero's own glass and the rules go gilt.
+     4 TERTIARY  .more / .take-b / .give-amt — text controls and small plates; serif tracked caps,
+                 44px targets, no plate competition with the tiers above. Its elegance is the
+                 letterform — a plate or a rule at this rank would compete with tier three.
+   The ambient --shadow-1 the base used to carry is gone: the cards' own doctrine is no raised
+   surfaces, one material per page, and the keynote shed the same shadow a round ago. */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
   min-height:48px;padding:12px 22px;border-radius:var(--r-field);
   max-width:100%;text-align:center;overflow-wrap:anywhere;
-  font:700 16px/1.2 var(--font-sans);text-decoration:none;cursor:pointer;border:0;
-  background:var(--gold);color:var(--accent-ink);box-shadow:var(--shadow-1);
-  transition:transform var(--t-fast) var(--ease)}
+  font-family:var(--font-serif);font-size:15px;font-weight:600;line-height:1.3;
+  text-transform:uppercase;letter-spacing:.05em;text-indent:.05em;
+  text-decoration:none;cursor:pointer;border:0;
+  background:var(--gold);color:var(--accent-ink);
+  transition:transform var(--t-fast) var(--ease), background-color var(--t-fast) var(--ease)}
 /* ⚠ A BUTTON IS ITS OWN HEIGHT, AND A FLEX ROW WAS OVERRULING THAT. align-items defaults to
    stretch, so a keynote and a plain secondary sharing a row came out the SAME height — measured
    58.00px and 58.00px on index at 1100, a 0.0% step on the control whose extra height is what pays
@@ -951,12 +1067,33 @@ section.pad + section.pad{border-top:1px solid var(--line-soft)}
 .btn{align-self:center}
 .btn:hover{transform:translateY(-1px)}
 .btn:active{transform:scale(.98)}
-.btn.primary{background:var(--gold);color:var(--accent-ink)}
+/* TIER 2 — THE PRIMARY, THE HOUSE BUTTON. Navy plate, gold trim: the keyline is the boundary
+   (7.96:1 on the dark page where the navy fill recedes, 6.77:1 against the plate's own fill) and
+   the inset gilt rule below is the trimwork — a double-ruled engraved mat, the certificate's own
+   vocabulary, not the keynote's foliage, so the one-mark-per-eyeful law holds. The plate is navy
+   in BOTH themes; see the --house-* note in :root. The cream label measures 14.18:1 on it.
+   ⚠ THE ACTION COLOUR IS DELIBERATELY NOT HERE. This rank used to wear the coral, which put the
+   "one colour reserved for pressing" on two and three controls per page — the same dilution that
+   sank gold-on-gold. Only the framed keynote wears --act now; it re-declares its own plate and
+   ink below. Hover is a plate-colour move, guarded so it cannot latch on touch. */
+.btn.primary{background:var(--house);color:var(--house-ink);box-shadow:0 0 0 1px var(--house-line)}
+@media (hover:hover){.btn.primary:not(.framed):hover{background:var(--house-hover)}}
+/* the inset gilt rule — inset 4px so it sits one step inside the keyline, radius one step inside
+   the plate's 4px. 55% gilt: trim, not a second boundary — the keyline already carries 3:1. */
+.btn.primary:not(.framed)::after{content:"";position:absolute;inset:4px;pointer-events:none;
+  border:1px solid color-mix(in srgb, var(--house-line) 55%, transparent);border-radius:2px}
 /* ⚠ .btn.ghost IS DELETED — 3 declarations styling 0 elements. A cold grade counted it: the class
    appears nowhere in the shipped HTML, and a rule with no element left to style is the same defect
    as an element with no rule. Its scene treatment survives on .scene .btn.quiet below, which is
    what the pages actually use. */
-.btn.quiet{background:var(--panel-2);color:var(--ink);border:1px solid var(--line-strong);box-shadow:none}
+.btn.quiet{background:var(--panel-2);color:var(--ink);border:1px solid var(--line-strong);box-shadow:none;
+  position:relative}
+/* TIER 3's OWN TRIM — the same inset rule as tier two, in the quiet ink instead of gilt. Gray's
+   law is "no super plain buttons... they all should have a sense of Elegance", and a single
+   hairline rectangle is a plain button whatever rank it holds. The double rule is emphasis-neutral:
+   it adds no colour and no boundary weight, it only makes the plate read as a made object. */
+.btn.quiet::after{content:"";position:absolute;inset:4px;pointer-events:none;
+  border:1px solid var(--line-soft);border-radius:2px}
 /* a quiet button ON the scene needs the scene treatment, not the panel one.
    ⚠ 08/11 — AND ITS HAIRLINE WAS THE ONLY BOUNDARY IT HAD, AT 2.26:1. A cold grade sampled the
    painted edge of "Plan a date night" against the hero immediately outside it: 2.26:1 at 320,
@@ -965,6 +1102,9 @@ section.pad + section.pad{border-top:1px solid var(--line-soft)}
    DARKER than the ground behind it, so the fill cannot bound the control, and the hairline at half
    alpha could not either. The hairline goes to .92, which is the only member left that can. */
 .scene .btn.quiet{background:rgba(11,24,38,.5);color:#fff;border:1px solid rgba(240,201,121,.92)}
+/* on the hero glass the inset rule goes gilt — the quiet ink hairline is invisible on a painted
+   scene, and the gold pair is the trim the scene's boundary member already speaks */
+.scene .btn.quiet::after{border-color:rgba(240,201,121,.45)}
 
 .field{width:100%;min-height:48px;padding:12px 14px;border-radius:var(--r-field);
   border:1px solid var(--line);background:var(--field);color:var(--ink);
@@ -2070,7 +2210,10 @@ main > .wrap > section.home-sec:only-child .quick-card:focus-visible .q-t::after
   opacity:1;transform:none}
 /* trust panels */
 .grid.two{display:grid;gap:var(--s-4);margin-top:var(--s-5)}
-@media(min-width:700px){.grid.two{grid-template-columns:1fr 1fr}}
+@media(min-width:700px){.grid.two{grid-template-columns:1fr 1fr}
+  /* an odd count used to leave the last panel beside a hole — all the row's slack in one visible
+     gap, the exact defect the card grid's own comment names. The odd last panel spans the row. */
+  .grid.two > .panel:last-child:nth-child(odd){grid-column:1 / -1}}
 .panel{background:linear-gradient(180deg, var(--sheen), transparent 46px), var(--panel);
   border:1px solid var(--line);border-radius:var(--r-card);padding:var(--s-4) var(--s-5);
   box-shadow:var(--shadow-1)}
@@ -2255,14 +2398,20 @@ section.band-cta.home-sec{padding:var(--s-6)}
    ⚠ AND THE CHOSEN ONE GETS THE KEYNOTE'S OWN TWO-TONE RING, at chip scale — dark inside, light
    outside — which is the site's settled answer to "make an edge that reads on any ground", and
    using it HERE costs nothing in wallpaper because exactly one chip in the row can wear it. */
-.give-amt{min-width:0;min-height:48px;border-radius:var(--r-field);cursor:pointer;
+/* ⚠ AND THE PLATE IS A RANK NOW, NOT ONE PAGE'S CHIP. The detail page's Share, Copy and Download
+   controls are the same rank as an amount chip — quieter than a gold button, never a plain one —
+   so they take the same declarations rather than a fifth button style written to look similar.
+   One definition, two users. .take-b is the detail page; see THE FOUR THINGS below. */
+.give-amt,.take-b{min-width:0;min-height:48px;border-radius:var(--r-field);cursor:pointer;
   background:var(--panel-2);color:var(--ink);border:1px solid var(--line-strong);
   box-shadow:inset 0 0 0 1px var(--sheen), inset 0 0 0 2px rgba(0,0,0,.04);
-  font:700 16px/1 var(--font-sans);
+  /* the tier-4 letter: the engraved serif the whole button ladder speaks. Uppercase is a no-op on
+     the .give-amt dollar figures and puts "Share" / "Copy details" in the family's own caps. */
+  font:600 14px/1 var(--font-serif);letter-spacing:.05em;text-transform:uppercase;text-indent:.05em;
   transition:transform var(--t-fast) var(--ease), background var(--t-fast) var(--ease),
     box-shadow var(--t-fast) var(--ease)}
-.give-amt:hover{transform:translateY(-1px);border-color:var(--gold)}
-.give-amt:active{transform:scale(.98)}
+.give-amt:hover,.take-b:hover{transform:translateY(-1px);border-color:var(--gold)}
+.give-amt:active,.take-b:active{transform:scale(.98)}
 /* ⚠ AND THE OUTER MEMBER IS A TOKEN, NOT THE HERO'S CREAM. This rule first copied the keynote's
    ring literally — `0 0 0 1px rgba(255,246,228,.92)` — an hour after that exact cream member was
    removed from the keynote for being a WHITE HALO anywhere but the hero. Gray caught it in dark
@@ -2273,6 +2422,86 @@ section.band-cta.home-sec{padding:var(--s-6)}
   box-shadow:inset 0 0 0 2px var(--gold), inset 0 0 0 3px var(--accent-ink),
     0 0 0 1px var(--line-strong)}
 .give-status{margin:10px 0 0;min-height:1.4em;color:var(--ink-2);font-size:var(--fs-small)}
+
+/* ═════ THE FOUR THINGS A READER CAN DO WITH A LISTING — calendar, share, copy, download.
+   It sits HERE rather than up in the DETAIL PAGE section on purpose: .take-b borrows the plate
+   above it, and a rule of equal specificity written earlier in the file would lose to it. The
+   cascade is part of the definition, so the two live together.
+   ⚠ THE RANKS ARE FOUR AND THEY ARE VISIBLE AT A GLANCE: the gold Add to calendar on its own full
+   width, two plates sharing a line, and the guide on a line of its own because its label is a
+   phrase and a squeezed phrase wraps to two lines beside a one-word neighbour. Every control
+   clears 48px, which is above the 44px floor a thumb needs. */
+.take{margin-top:var(--s-4);padding-top:var(--s-4);border-top:1px solid var(--line-soft)}
+.take-h{margin:0 0 10px;font:800 var(--fs-kicker)/1 var(--font-sans);letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-3)}
+.take .btn{margin-top:0}
+.take-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:8px}
+/* ⚠ AND THE PAIR BECOMES A COLUMN BELOW 390, MEASURED RATHER THAN GUESSED. At 320 the panel gives
+   each half 111px and both labels wrapped to two lines; with a share sheet present the left one is
+   the single word Share, so the row would have shipped one line beside two in the same eyeful.
+   Full width at that size costs nothing and every label lands on one line. */
+@media (max-width:389px){ .take-row{grid-template-columns:minmax(0,1fr)} }
+.take-b{display:inline-flex;align-items:center;justify-content:center;
+  padding:10px 8px;line-height:1.2;text-align:center;text-decoration:none;overflow-wrap:anywhere}
+.take-b.wide{grid-column:1 / -1}
+.take-say{margin:8px 0 0;min-height:1.4em;color:var(--ink-2);font-size:var(--fs-small)}
+/* ═════ TWO PIECES THAT WERE THE SUPPORT PAGE'S AND ARE NOW THE PROSE SET'S — the programme card
+   and the keyed row list. Both were written for the one page the floating pill sends everybody to,
+   and both were named .sup-* for it.
+   ⚠ 08/11 — RENAMED, BECAUSE NEITHER LIVES ONLY THERE ANY MORE. Gray moved the methodology off
+   Support ("support is about us... not the customer"), so the programme card is good-to-know.html's
+   opening section and is .acts-*; the keyed row list now opens business.html as well, so it is
+   .keyrow*. The .sup-float pill below keeps its prefix and is the only thing that should still
+   carry it. A class whose name says where it lives is a class that lies the day it moves.
+   ⚠ THE PROGRAMME CARD IS A PRINTED OBJECT: ticket radius, the card's own concentric keyline, no
+   shadow — the same material law the cards follow. The swelled rule appears ONCE on this page,
+   here, at a short centred span so the spindle keeps its figure instead of stretching fat. The
+   keynote frame is the page's other ornament and it sits on the one control asking to be pressed;
+   two marks, two objects, neither repeated in one eyeful. Tokens only, so both rooms inherit. */
+.acts-bill{position:relative;margin-top:var(--s-4);padding:var(--s-5) var(--s-5) var(--s-4);
+  background:linear-gradient(180deg, var(--sheen), transparent 46px), var(--panel);
+  border:1px solid var(--line);border-radius:var(--r-ticket)}
+.acts-bill::after{content:"";position:absolute;inset:5px;border:1px solid var(--line-soft);
+  border-radius:2px;pointer-events:none}
+.acts-bill .orn-swell-rule{height:5px;max-width:240px;margin:2px auto var(--s-2)}
+/* playbill centre axis: act names in engraved serif caps, roman act numbers in the quiet ink,
+   hairlines between acts and nothing around them — the letterpress reference, at card scale */
+.acts-list{list-style:none;margin:0;padding:0;counter-reset:act}
+.acts-list li{padding:var(--s-4) var(--s-2);text-align:center}
+.acts-list li + li{border-top:1px solid var(--line-soft)}
+.acts-name{display:block;margin-bottom:6px;counter-increment:act;
+  font:700 12px/1 var(--font-serif);letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.acts-name::before{content:counter(act, upper-roman) "\A0\B7\A0\A0";color:var(--ink-3);letter-spacing:.14em}
+.acts-list p{margin:0 auto;max-width:30em;font-size:var(--fs-body);line-height:1.6;color:var(--ink-2)}
+.acts-tally{margin:var(--s-2) 0 4px;padding-top:var(--s-4);border-top:1px solid var(--line-soft);
+  text-align:center;font-size:var(--fs-small);color:var(--ink-3)}
+/* ═════ THE WAYS LIST. Each favor is ONE ROW AND THE ROW IS THE CONTROL — a keyed pictogram on a
+   plate (the give-chip's own double member: boundary plus inset keyline), the ask in words, and a
+   serif chevron that answers the hover. Four stacked .btn.quiet ended here for the same reason the
+   numbered kickers did: a column of identical plain controls reads as a form, and this page is an
+   argument. */
+.keyrows{list-style:none;margin:var(--s-4) 0 0;padding:0;display:grid;gap:10px}
+.keyrows a{display:grid;grid-template-columns:40px 1fr 14px;gap:var(--s-4);align-items:center;
+  padding:12px var(--s-4);text-decoration:none;
+  background:linear-gradient(180deg, var(--sheen), transparent 46px), var(--panel);
+  border:1px solid var(--line);border-radius:var(--r-ticket);
+  transition:transform var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease)}
+.keyrow-ic{display:flex;align-items:center;justify-content:center;width:40px;height:40px;
+  border:1px solid var(--line-strong);border-radius:var(--r-field);
+  background:var(--band);color:var(--gold);box-shadow:inset 0 0 0 1px var(--sheen)}
+.keyrow-ic .k-ic{width:18px;height:18px}
+.keyrow-tx{min-width:0}
+.keyrow-tx strong{display:block;margin-bottom:2px;font:700 var(--fs-body)/1.35 var(--font-sans);
+  color:var(--ink)}
+.keyrow-tx span{display:block;font-size:var(--fs-small);line-height:1.5;color:var(--ink-2)}
+.keyrows a::after{content:"\203A";justify-self:end;font:400 22px/1 var(--font-serif);
+  color:var(--gold);transition:transform var(--t-fast) var(--ease)}
+.keyrows a:hover{border-color:var(--gold);transform:translateY(-1px)}
+.keyrows a:hover::after{transform:translateX(3px)}
+.keyrows a:active{transform:scale(.995)}
+@media (prefers-reduced-motion:reduce){
+  .keyrows a,.keyrows a::after{transition:none}
+}
 .prose .grid.two{margin-top:var(--s-4)}
 /* THE CARD'S LEGEND, on the Mission page. A printed key: the mark on the left at
    the size it actually ships, the meaning on the right, one hairline between
@@ -2543,7 +2772,9 @@ div.foot-fine{border-top:1px solid var(--line-soft);margin-top:var(--s-6);paddin
   .scene-copy h1,.page-title{max-width:16ch}
   .hero h1{max-width:15ch}
   .scene-copy .sub,.page-sub,.hero .sub,.hero-sub,.scene-copy .lead{max-width:44ch}
-  .hero-count{max-width:52ch}
+  /* the ledger is a flex row of three figure columns now; a ch cap on it was for the old
+     one-line sentence and only forces a wrap the columns do not need */
+  .hero-count{max-width:none}
   /* the tail has to be longer than the eye's ability to find an edge — a 505px falloff, not a
      100px one. A short tail is how a soft wash still ends in a visible vertical line. */
   /* ⚠ 08/09 — AND THIS IS THE RULE THAT WAS ACTUALLY WINNING ON DESKTOP, WHICH IS THE TRAP
@@ -2598,7 +2829,7 @@ div.foot-fine{border-top:1px solid var(--line-soft);margin-top:var(--s-6);paddin
      919/~780/~640 at 2560). The ch caps keep every line inside the wash's dense band, and the
      copy stays far under the 63-69cpl the prose pages were rebuilt to. */
   .scene-copy .sub,.page-sub,.hero .sub,.hero-sub,.scene-copy .lead{max-width:54ch}
-  .hero-count{max-width:64ch}
+  .hero-count{max-width:none}
   /* the home display line joins deliberately — at 68px a 15ch pyramid would spend the new scale
      on height (three 68px lines) instead of width, which is buying beauty with height. Stated
      here rather than inherited from .scene-copy by declaration order, so the cascade reads as a
@@ -2895,16 +3126,39 @@ main > .wrap > section.home-sec:only-child .quick > .quick-card[href="thirty-a.h
    the brand row that is ~138px of chrome — a third less — and nothing hidden,
    nothing scrolling, nothing clipped. */
 @media(max-width:820px){
-  .site-head .bar{padding-top:2px;padding-bottom:2px}
   .site-head nav{gap:0}
   /* ⚠ 08/09 — 10px each side put the fourth link past the edge at 390 and the row cut mid-word.
      Four links at 8px, with "Free things" shortened to "Free", measure about 290px against a 350px
      column, so the doing row FITS on a phone rather than relying on the scroll. The about row still
-     scrolls, and that is the right trade: those are secondary links and the edge fade says so. */
+     scrolls, and that is the right trade: those are secondary links and the edge fade says so.
+     ⚠ 08/11 — NOTHING SCROLLS NOW AND THE PADDING IS WHAT SETS THE LINE SPLIT. At 8px a side the
+     seven doing links measure 636.4px and break 4 and 3 at 390 (324.8 then 311.6, each centred,
+     12.6px and 19.2px of margin); the five about links measure 503.3px and break 3 and 2. Both
+     splits are the same at 360 and 430. Shrinking the padding to force one line would need 50px a
+     link, which is less than the word. */
   .site-head nav a{font-size:var(--fs-small);padding:0 8px;min-height:44px}
   .site-head nav a[aria-current="page"],
   .site-head nav a[aria-current="true"]{box-shadow:inset 0 -2px 0 var(--gold)}
 }
+
+/* ⚠ AND THE NARROWEST PHONE GETS ITS OWN STEP, BECAUSE A CENTRED WRAP CAN STILL STRAND ONE WORD.
+   At 320 the about row broke 2, 2 and then "Contact" alone on a line of its own, which reads as a
+   heading rather than as the fifth link in a row. One step down in size and padding repacks it as
+   2 and 3 with nothing stranded, and takes row one from three lines to three shorter ones. */
+@media(max-width:359px){
+  .site-head nav a{font-size:12px;padding:0 5px}
+  .nav-about a{padding:0 5px}
+}
+
+/* ⚠ AND TWO BANDS BETWEEN PHONE AND DESKTOP WHERE A CENTRED WRAP STRANDS ITS LAST LINK. A row
+   breaks badly whenever the width left over is just under one link, so the fault is a band rather
+   than a width and it has to be measured as one. Swept at 20px steps: the about row put "Contact"
+   alone from 470 to 543, and the doing row put "By area" alone from 605 to 676. A single centred
+   word on its own line reads as a heading, which a cold grade has already caught once on this
+   header. Capping the row just under the width that strands it makes the break 3 and 2, and 5 and
+   2, at every width in the band rather than only at the ones anybody happened to open. */
+@media(min-width:460px) and (max-width:559px){ .site-head .nav-about{max-width:360px} }
+@media(min-width:560px) and (max-width:679px){ .site-head .nav-scroll{max-width:500px} }
 
 /* ------------------------------------------------- 3 · NEW/ — 21 ≠ 1 × 21
    On a page where EVERYTHING is new, a shouting NEW badge 21 times is noise —
@@ -3327,7 +3581,11 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
    plus the 6px the rest of the button already breathes at.
    This is the one control per surface that wears the frame — three tiers, so a mark used twice in
    one eyeful never becomes wallpaper. */
-.btn.primary{position:relative;background-color:var(--gold);background-image:none}
+.btn.primary{position:relative;background-image:none}
+/* ⚠ THE ACTION PLATE LIVES HERE, ON THE FRAMED KEYNOTE ALONE — tier two is the navy house button
+   now (see the ladder), so var(--act) is worn by exactly one control per page. The ink rides the
+   same token pair: dark ink on the dark plate, cream on the light one, 5.18/5.30 measured. */
+.btn.primary.framed{background-color:var(--act);color:var(--act-ink)}
 /* ⚠ ONE CONTROL PER PAGE WEARS THE FRAME AND build_site_pages.js DECIDES WHICH. A cold grade
    measured the home page framing both "Browse this weekend" and "Submit an event", and
    business.html framing two of its own prose buttons — the "a mark used twice in one eyeful is
@@ -3369,7 +3627,14 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
      exactly the two-tone argument the ring was built on — dark inside, cream outside, one member
      carrying whichever surface the edge meets. The label goes the other way and gains: 7.89:1 on
      the gilt against 5.51:1 on the bronze. */
-  --gold:#d9a441;--gold-bright:#f0c979;--gold-hover:#f0c979;--accent-ink:#221603;
+  /* ⚠ 08/11 — THE PLATE THE KEYNOTE PINS IS THE ACTION COLOUR NOW, on Gray's release of the gold
+     requirement. Same mechanism as before — the ceremonial plate declares its pair on itself so it
+     is ONE object on every ground — only the values moved. The internals below still speak the
+     gold-named tokens, so the pin re-points them rather than renaming forty declarations: the
+     foliage and keyline read --accent-ink (the coral's dark ink), the hover reads --gold-hover.
+     On cream this plate self-bounds at 3.21:1 where the gilt managed 2.09, and the dark keyline
+     still carries 16.6:1 for the engraved read. */
+  --gold:#e85d4a;--gold-bright:#f47b66;--gold-hover:#f47b66;--accent-ink:#2a1008;
   /* ⚠ AND ITS VERTICAL PADDING IS ITS OWN. This rule set the horizontal padding and left the
      vertical to whatever won the cascade, so .rail-app .btn{padding:10px 16px} — specificity
      0,2,0 — supplied it on sponsors.html and the keynote computed 10px there against 12px on
@@ -3410,7 +3675,19 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
      DARK member carries it at 16.7:1, and on the dark rail panel the gold plate carries it itself
      at 6.78:1 while the cream member has nothing to do but ring the button in white. So the
      two-tone ring stays where it earns its keep and the rest of the site gets the keyline alone. */
-  box-shadow:0 0 0 1px var(--accent-ink);
+  /* ⚠ 08/11 LATER — AND ON THE CORAL PLATE THE CREAM MEMBER WAS THE HALO AGAIN, ON THE HERO
+     ITSELF THIS TIME. Gray: "the red one has white behind it.... so not all of the pixels are
+     correct." Rasterised at 4x and sampled: ground rgb(55,73,82) -> a 1.5px CREAM band
+     rgb(239,232,216) -> the dark keyline -> the coral plate, in both themes. The cream member was
+     load-bearing when the plate was GOLD — gold could not clear 3:1 against the hero's lightest
+     haze — but the coral plate clears the hero on its own (5.20:1 dark, 4.07:1 at the sampled
+     worst) and cream against coral is nothing but white pixels behind a red button.
+     THE OUTER MEMBER IS GILT NOW, AND IT IS THE KEYNOTE'S RICHER TRIM rather than a boundary
+     patch: true gilt #d9a441, LITERAL because this rule pins the gold-named tokens to the coral
+     pair — measured 4.07:1 against the sampled hero ground, 7.96:1 on the dark page, and on cream
+     it is ornament at 2.09:1 while the dark member carries the boundary at 16.7:1. One object on
+     every ground, so the scene no longer needs its own ring rule. */
+  box-shadow:0 0 0 1px var(--accent-ink), 0 0 0 2.5px #d9a441;
   /* ⚠ 08/10 — THE MOST DECORATED CONTROL ON THE PAGE HAD THE SMALLEST VOICE, AND A COLD GRADE
      MEASURED IT OFF THE RASTER: the keynote's letters were an 8.06px cap band against the 12px caps
      of the PLAIN secondary button sitting beside it, and 10% shorter than the body copy's own
@@ -3519,15 +3796,19 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
    press affordance on touch was a 2% scale. The most decorated control on the page was the only
    one that never responded, while the Show Support pill did. The ornament brightens rather than
    the plaque, so the feedback lands on the thing that makes this control special. */
-/* the hero is a painted scene and is dark in BOTH themes — the only place the cream member works */
-.scene .btn.primary.framed{box-shadow:0 0 0 1px var(--accent-ink), 0 0 0 2.5px rgba(255,246,228,.92)}
+/* ⚠ the scene's own ring rule is GONE — the gilt fillet above is one object on every ground.
+   The cream member it replaced is the white halo Gray caught twice; see the note on the ring. */
 .btn.primary.framed::after{transition:opacity var(--t-fast) var(--ease)}
 /* ⚠ HOVER IS GUARDED BY (hover:hover), AND THAT IS A FUNCTIONALITY FIX RATHER THAN A NICETY.
    There was not one hover-capability query in 245KB of stylesheet, so on a phone the hover state
    LATCHES after a tap and the call to action stays in a state the reader cannot leave. The press
    state below is unguarded on purpose: :active is exactly right on touch. */
 @media (hover:hover){
-  .btn.primary.framed:hover{background-color:var(--gold-hover)}
+  /* var(--act-hover), not the pinned --gold-hover: the pin holds the DARK pair, so on a light-page
+     keynote off the scene a --gold-hover hover lightened the plate under a cream label (2.48:1).
+     --act-hover is theme-correct in both rooms: #f47b66 on the dark plate, #8f2f1f — darker, the
+     cream label GAINS — on the light one. */
+  .btn.primary.framed:hover{background-color:var(--act-hover)}
   .btn.primary.framed:hover::after{opacity:1}
 }
 .btn.primary.framed:active::after{opacity:.72}
@@ -3540,8 +3821,11 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
    The frame is kept, as a plain 1px rule: the mask is a background-colour and would not print
    either, so the ornament is spent rather than defended. */
 @media print{
-  .btn.primary.framed{color:#000;background:none;border:1px solid #000;min-height:0;padding:8px 14px}
-  .btn.primary.framed::after{display:none}
+  /* every plate tier, not the keynote alone — neither the coral nor the navy fill prints */
+  .btn.primary{color:#000;background:none;border:1px solid #000;min-height:0;padding:8px 14px}
+  /* all three inset marks: the keynote's foliage mask and BOTH tiers' inset rules are
+     background/border colour and would print as grey boxes on the plain 1px print rule */
+  .btn.primary::after,.btn.quiet::after{display:none}
   .sup-float{display:none}
 }
 /* ⚠ AND IN WINDOWS HIGH CONTRAST THE ORNAMENT WAS 1.00:1 — the ::after background and the button's
