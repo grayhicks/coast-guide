@@ -2094,8 +2094,34 @@ section.band-cta.home-sec{padding:var(--s-6)}
 
 /* =============================================== PROSE PAGES + SUBMIT FORM */
 .wrap.prose{max-width:860px;padding-top:var(--s-6);padding-bottom:var(--s-5)}
-.prose section{padding:var(--s-6) 0;border-top:1px solid var(--line-soft)}
+/* ⚠ 08/11 — THE PROSE PAGES OPENED EVERY SECTION WITH THE SAME HAIRLINE AND NOTHING ELSE. Gray, on
+   the live site: "for contact us and support, the pages are super plain and ordinary. A solid
+   3/10... they need some better separators or something?" He is right, and the reference set this
+   project already uses answers it: NPS Unigrid runs ONE heavy identification band and keeps
+   everything else hairline, and a letterpress playbill sets a rule between acts. So the rule stays
+   a hairline across the measure and gains a short heavy stub at the left, in the gilt, sitting on
+   it — the section number then reads as hanging off a mark rather than floating above a line.
+   ⚠ IT IS DELIBERATELY NOT THE SWELLED RULE. That is the house ornament and it is hung on ONE
+   control per surface; six spindles down one prose page is exactly the "a mark used twice in one
+   eyeful is wallpaper" failure this project has already paid for on the card. A plain heavy stub
+   is a different object and can repeat, which is what a section rule has to do.
+   ⚠ AND THE FIRST SECTION KEEPS NEITHER. A rule at the top of a page separates nothing. */
+/* ⚠ 08/11, SECOND PASS — GRAY: "sections still stink for that page.... could be more elegant."
+   The stub was structure and not much else. This is an OXFORD RULE, which is the printer's answer
+   and has been for two hundred years: a heavier rule and a lighter one, set close, with daylight
+   between them. It carries far more ceremony than a single line at any weight, it repeats without
+   becoming wallpaper because it is a RULE rather than a mark, and it is still not the swelled
+   spindle — that stays hung on one control per surface.
+   ⚠ AND THE HEAVY MEMBER IS THE GILT, THE LIGHT ONE THE PAPER'S OWN HAIRLINE. That ordering is the
+   whole effect: gilt on top reads as the section opening, and reversing it reads as the section
+   above closing. Rendered both ways before choosing. */
+.prose section{position:relative;padding:var(--s-6) 0;border-top:0}
+.prose section::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;
+  pointer-events:none;background:
+    linear-gradient(to bottom, var(--gold) 0 2px, transparent 2px 3px, var(--line-soft) 3px 4px)}
+/* the first section opens the page and has nothing above it to be separated from */
 .prose section:first-child{padding-top:0}
+.prose section:first-child::before{display:none}
 .prose h2{margin-bottom:var(--s-3)}
 .prose h2 .k{display:block;font:800 var(--fs-kicker)/1 var(--font-sans);letter-spacing:.18em;
   text-transform:uppercase;color:var(--gold);margin-bottom:8px}
@@ -2116,14 +2142,26 @@ section.band-cta.home-sec{padding:var(--s-6)}
 .give-cue{margin:0 0 10px;color:var(--ink-2);font-size:var(--fs-small)}
 .give-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
 @media (max-width:479px){ .give-row{grid-template-columns:repeat(3,minmax(0,1fr))} }
+/* ⚠ 08/11 — GRAY: "make all of those buttons borders better and more elegant? at least for the one
+   that is currently selected you know? or all? you tell me." BOTH, and they are different jobs.
+   Every chip becomes a PLATE: the boundary plus an inset keyline a pixel inside it, which is the
+   same double member the Support back tab was given when a 1px border at 40% gilt over a 7% white
+   fill turned out to be nothing on cream. Two lines close together read as engraving; one line
+   reads as a box.
+   ⚠ AND THE CHOSEN ONE GETS THE KEYNOTE'S OWN TWO-TONE RING, at chip scale — dark inside, light
+   outside — which is the site's settled answer to "make an edge that reads on any ground", and
+   using it HERE costs nothing in wallpaper because exactly one chip in the row can wear it. */
 .give-amt{min-width:0;min-height:48px;border-radius:var(--r-field);cursor:pointer;
   background:var(--panel-2);color:var(--ink);border:1px solid var(--line-strong);
+  box-shadow:inset 0 0 0 1px var(--sheen), inset 0 0 0 2px rgba(0,0,0,.04);
   font:700 16px/1 var(--font-sans);
-  transition:transform var(--t-fast) var(--ease), background var(--t-fast) var(--ease)}
-.give-amt:hover{transform:translateY(-1px)}
+  transition:transform var(--t-fast) var(--ease), background var(--t-fast) var(--ease),
+    box-shadow var(--t-fast) var(--ease)}
+.give-amt:hover{transform:translateY(-1px);border-color:var(--gold)}
 .give-amt:active{transform:scale(.98)}
-/* the chosen one takes the house gilt, which is the same thing selection means everywhere else here */
-.give-amt.on{background:var(--gold);color:var(--accent-ink);border-color:var(--gold)}
+.give-amt.on{background:var(--gold);color:var(--accent-ink);border-color:var(--accent-ink);
+  box-shadow:inset 0 0 0 2px var(--gold), inset 0 0 0 3px var(--accent-ink),
+    0 0 0 1px rgba(255,246,228,.92)}
 .give-status{margin:10px 0 0;min-height:1.4em;color:var(--ink-2);font-size:var(--fs-small)}
 .prose .grid.two{margin-top:var(--s-4)}
 /* THE CARD'S LEGEND, on the Mission page. A printed key: the mark on the left at
