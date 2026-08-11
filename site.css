@@ -2159,9 +2159,15 @@ section.band-cta.home-sec{padding:var(--s-6)}
     box-shadow var(--t-fast) var(--ease)}
 .give-amt:hover{transform:translateY(-1px);border-color:var(--gold)}
 .give-amt:active{transform:scale(.98)}
+/* ⚠ AND THE OUTER MEMBER IS A TOKEN, NOT THE HERO'S CREAM. This rule first copied the keynote's
+   ring literally — `0 0 0 1px rgba(255,246,228,.92)` — an hour after that exact cream member was
+   removed from the keynote for being a WHITE HALO anywhere but the hero. Gray caught it in dark
+   theme the same day. The lesson did not travel because a hardcoded colour cannot carry it: the
+   outer ring's job is to separate from the PAGE, so it takes --line-strong, which is defined per
+   room for exactly that (3.66:1 on paper, 3.78:1 in dark) and cannot be a white line in either. */
 .give-amt.on{background:var(--gold);color:var(--accent-ink);border-color:var(--accent-ink);
   box-shadow:inset 0 0 0 2px var(--gold), inset 0 0 0 3px var(--accent-ink),
-    0 0 0 1px rgba(255,246,228,.92)}
+    0 0 0 1px var(--line-strong)}
 .give-status{margin:10px 0 0;min-height:1.4em;color:var(--ink-2);font-size:var(--fs-small)}
 .prose .grid.two{margin-top:var(--s-4)}
 /* THE CARD'S LEGEND, on the Mission page. A printed key: the mark on the left at
