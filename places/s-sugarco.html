@@ -24,9 +24,9 @@
 <link rel="stylesheet" href="../site.css">
 <link rel="stylesheet" href="../hero.css">
 <link rel="stylesheet" href="../hero-fit.css">
-<script>(function(){var D=document.documentElement;function lbl(){var d=D.getAttribute('data-theme')==='dark';var b=document.querySelector('[data-theme-toggle]');if(b){b.setAttribute('aria-label',d?'Switch to the light theme':'Switch to the dark theme');b.setAttribute('aria-pressed',d?'true':'false');}}try{var t=localStorage.getItem('gca-theme');if(t==='dark'||t==='light')D.setAttribute('data-theme',t);}catch(e){}document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-theme-toggle]');if(!b)return;var n=D.getAttribute('data-theme')==='dark'?'light':'dark';D.setAttribute('data-theme',n);try{localStorage.setItem('gca-theme',n);}catch(x){}lbl();});document.addEventListener('DOMContentLoaded',lbl);})();</script>
+<script>(function(){var D=document.documentElement;function lbl(){var d=D.getAttribute('data-theme')==='dark';var b=document.querySelector('[data-theme-toggle]');if(b){b.setAttribute('aria-label',d?'Switch to the light theme':'Switch to the dark theme');b.setAttribute('aria-pressed',d?'true':'false');}}try{var t=localStorage.getItem('gca-theme');if(t==='dark'||t==='light')D.setAttribute('data-theme',t);}catch(e){}document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-theme-toggle]');if(!b)return;var n=D.getAttribute('data-theme')==='dark'?'light':'dark';D.setAttribute('data-theme',n);try{localStorage.setItem('gca-theme',n);}catch(x){}lbl();});document.addEventListener('DOMContentLoaded',lbl);var nc=document.getElementById('nav-open');if(nc){var nb=document.querySelector('.nav-btn');function nx(){nc.setAttribute('aria-expanded',nc.checked?'true':'false');if(nb)nb.setAttribute('aria-expanded',nc.checked?'true':'false');}nc.addEventListener('change',nx);nx();document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nc.checked){nc.checked=false;nx();if(nb)nb.focus();}});}})();</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://grayhicks.github.io/coast-guide/"},{"@type":"ListItem","position":2,"name":"Open any day","item":"https://grayhicks.github.io/coast-guide/places/index.html"},{"@type":"ListItem","position":3,"name":"Sugar & Co. Dessert Shop","item":"https://grayhicks.github.io/coast-guide/places/s-sugarco.html"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Sugar & Co. Dessert Shop","description":"Two dozen ice-cream flavors (vegan + gluten-free too), dirty sodas, and ice-cream tacos in downtown FWB. A sweet finish on an Okaloosa Island or FWB day.","url":"https://grayhicks.github.io/coast-guide/places/s-sugarco.html","telephone":"(850) 460-0639","address":{"@type":"PostalAddress","streetAddress":"118 Miracle Strip Pkwy SE"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Sugar & Co. Dessert Shop","description":"Two dozen ice-cream flavors (vegan + gluten-free too), dirty sodas, and ice-cream tacos in downtown FWB. A sweet finish on an Okaloosa Island or FWB day.","url":"https://grayhicks.github.io/coast-guide/places/s-sugarco.html","telephone":"(850) 460-0639","address":{"@type":"PostalAddress","streetAddress":"118 Miracle Strip Pkwy SE"},"sdPublisher":{"@type":"Organization","name":"Gulf Coast Adventures","url":"https://grayhicks.github.io/coast-guide/"},"sdLicense":"https://creativecommons.org/licenses/by/4.0/"}</script>
 </head>
 <body class="ph-day">
 <a class="skip" href="#main">Skip to content</a>
@@ -44,9 +44,12 @@
     <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch to dark theme">
       <span class="tt-sun" aria-hidden="true"></span><span class="tt-moon" aria-hidden="true"></span>
     </button>
+    <input type="checkbox" id="nav-open" class="nav-check" aria-label="Show the navigation menu">
+    <label class="nav-btn" for="nav-open"><span class="nav-btn-mark" aria-hidden="true"></span><span class="sr">Menu</span></label>
     <a class="btn quiet head-cta" href="../submit.html"><span class="btn-lab">Submit an event</span></a>
   </div>
 </div>
+<div class="nav-panel">
 <div class="wrap bar-do">
   <nav aria-label="Primary" class="nav-scroll">
     <a href="../events/this-weekend.html">Events</a>
@@ -66,6 +69,7 @@
     <a href="../business.html">For business</a>
     <a href="../contact.html">Contact</a>
   </nav>
+</div>
 </div></header>
 <!-- ⚠ THE SCENE IS INSIDE main, AND IT USED TO BE OUTSIDE IT. A cold grade found that "Skip to
      content" jumped PAST the page's own h1 and its primary call to action: on index.html the
@@ -215,19 +219,11 @@
      Hiding is what happens when none of them is, which on these pages is rare — and it is still
      the right answer then, because a floating link over a control the reader is reaching for is
      worse than no float at all. */
-  var LIFTS=[0,56,112,168,224];
-  var overlaps=function(r){
-    /* ⚠ IT YIELDS TO ANY CONTROL, NOT ONLY THE PRIMARY. A cold grade measured the pill covering
-       55.0% of a filter chip on the events index at 390, at full opacity with pointer events on —
-       the test only ever scanned .btn.primary, so every chip, every quiet button and every input
-       was unprotected. A floating link that hides a control the reader is reaching for is the same
-       defect whichever control it is. */
-    var b=document.querySelectorAll(".btn, .chip, .fbar-q input, .fbar-d input"), i, q;
-    for(i=0;i<b.length;i++){ q=b[i].getBoundingClientRect();
-      if(q.width<1||q.height<1) continue;
-      if(q.bottom>r.top-8&&q.top<r.bottom+8&&q.right>r.left-8&&q.left<r.right+8) return true; }
-    return hitsText(r);
-  };
+  /* ⚠ IT YIELDS TO ANY CONTROL, NOT ONLY THE PRIMARY. A cold grade measured the pill covering
+     55.0% of a filter chip on the events index at 390, at full opacity with pointer events on —
+     the test only ever scanned .btn.primary, so every chip, every quiet button and every input
+     was unprotected. A floating link that hides a control the reader is reaching for is the same
+     defect whichever control it is. The control list lives in gather() below. */
   /* ⚠ AND IT YIELDS TO THE SENTENCE THE READER IS READING, NOT ONLY TO CONTROLS. A cold grade
      measured the pill sitting on running body copy at FIRST PAINT on six of the seven prose pages
      — 13.2% of a paragraph on contact.html at 390, over the words themselves — because the test
@@ -243,37 +239,94 @@
      all genuinely empty, and the ladder can find them. Measure the ink, not the box.
      ⚠ THE BOX IS STILL THE PRE-FILTER, because a Range per paragraph on every scroll event is not
      free. Only the few elements whose box already intersects the pill are ever ranged. */
-  var TEXTSEL=".prose p,.prose li,.prose h1,.prose h2,.prose h3,.prose blockquote,.lead,.page-sub";
-  var hitsText=function(r){
-    var n=document.querySelectorAll(TEXTSEL), i, j, q, rects, g=6;
-    for(i=0;i<n.length;i++){
-      q=n[i].getBoundingClientRect();
-      if(!(q.bottom>r.top-g&&q.top<r.bottom+g&&q.right>r.left-g&&q.left<r.right+g)) continue;
-      try{
-        var rg=document.createRange(); rg.selectNodeContents(n[i]);
-        rects=rg.getClientRects();
-      }catch(e){ return true; }
-      for(j=0;j<rects.length;j++){ q=rects[j];
-        if(q.width<1||q.height<1) continue;
-        if(q.bottom>r.top-g&&q.top<r.bottom+g&&q.right>r.left-g&&q.left<r.right+g) return true; }
-    }
-    return false;
-  };
+  /* ⚠ 08/14 — AND THE CARD WALLS WERE NOT IN THIS LIST AT ALL, WHICH IS MOST OF THE SITE. The
+     yield knew about controls and about PROSE, so on the pages that are nothing but cards it had
+     nothing to yield to and parked wherever the ladder's rung zero landed. Measured on the shipped
+     bytes, at rest — scrolled down, then released the tuck the way a reader who stops and drifts
+     back does — at 160px steps on four card walls at 320/390/430: THE PILL SAT ON PAINTED CARD INK
+     AT 408 OF 643 REST POSITIONS, worst 8,184px² across a venue line at 390. Gray found it on the
+     home page sitting on a card's PRICE, which is .ev-fare and is the single most load-bearing
+     fact on the card.
+     ⚠ THE FIRST RUN OF THAT PROBE REPORTED THE OPPOSITE AND THE INSTRUMENT WAS THE FAULT. Scrolling
+     only downward keeps is-tucked applied, so it read the pill mid-retract and called it hidden
+     at 621 of 643 positions — the tuck working, not the pill missing. The tuck is not the rest
+     position.
+     One vocabulary covers every wall: p, h3 and .ev-foot are the only text-bearing shapes in an
+     event card, a place card, an opening card and a promo card alike. Ranged for LINE rects like
+     everything else here — a card p box is full-column and testing boxes would hide the pill on
+     every listing page forever.
+     ⚠ AND THIS COMMENT IS INSIDE A TEMPLATE LITERAL, so it carried no backticks. The first version
+     of it had five and took the whole site build down with "SyntaxError: Unexpected identifier".
+     The law was already written for FONT_CSS and it is the same law here. */
+  var TEXTSEL=".prose p,.prose li,.prose h1,.prose h2,.prose h3,.prose blockquote,.lead,.page-sub" +
+    ",.card p,.card h3,.card .ev-foot";
+  /* ⚠ 08/14 — THE FIVE-RUNG LADDER WAS NOT ENOUGH ONCE THE CARDS WERE IN THE YIELD, AND THE FIRST
+     FIX TRADED ONE DEFECT FOR THE OTHER ONE THIS CONTROL ALREADY HAS A HISTORY OF. Adding the card
+     text took the overlap from 408 of 643 rest positions to ZERO — and the pill hidden from 6 of
+     643 to 449, which at 390 on the events wall is 55 of 57. "Persistent" was being overstated
+     again, in the same words as 08/11. A control that answers "never cover anything" by never
+     appearing has not been fixed, it has been deleted.
+     So the ladder gains a SECOND AXIS, which is the pill's own width. The short form already
+     exists — it ships below 360, and the app's rail solves the identical problem with the same
+     .seg_full / .seg_phone pair — so a pill that cannot find a clear rest at 171.8px tries again
+     at 110.5px before it gives up. Against centred card text that is most of the difference: the
+     full pill spans the right 172px of a 350px column and a centred line reaches into it, while
+     the short one clears the same line entirely.
+     ⚠ AND THE COST IS PAID BACK, NOT ADDED TO. The old loop asked the browser for a rect at every
+     rung, which is a forced layout per rung and the same shape as the 122.38ms measure this
+     project has already shipped once. The obstacles are gathered ONCE per call now — controls and
+     ranged text lines, pre-filtered to the band the ladder can reach — and every rung after that
+     is arithmetic. Two layouts per call instead of one per rung, and the ladder got finer at the
+     same time: nine rungs, not five. */
+  var LADDER=[0,28,56,84,112,140,168,196,224,252,280,308,336];
   var yield_=function(){
-    var t0=f.style.transform, s0=f.style.transition, l0=f.style.getPropertyValue("--sup-lift");
+    var t0=f.style.transform, s0=f.style.transition;
     f.style.transition="none"; f.style.transform="none";
-    var clear=-1, i, r;
-    for(i=0;i<LIFTS.length;i++){
-      f.style.setProperty("--sup-lift", LIFTS[i]+"px");
-      r=f.getBoundingClientRect();
-      /* a lift that pushes the pill off the top of the viewport is not a rest position */
-      if(r.top<8) break;
-      if(!overlaps(r)){ clear=i; break; }
+    var i,j,q,n,rects,obst=[],base,top,bot,g=6;
+    var reach=LADDER[LADDER.length-1];
+    var read=function(){
+      f.style.setProperty("--sup-lift","0px");
+      base=f.getBoundingClientRect();
+      top=base.top-reach-g; bot=base.bottom+g;
+    };
+    var gather=function(){
+      obst.length=0;
+      var b=document.querySelectorAll(".btn, .chip, .fbar-q input, .fbar-d input");
+      for(i=0;i<b.length;i++){ q=b[i].getBoundingClientRect();
+        if(q.width<1||q.height<1) continue;
+        if(q.bottom>top-8&&q.top<bot+8&&q.right>base.left-8) obst.push([q.top-8,q.bottom+8,q.left-8,q.right+8]); }
+      n=document.querySelectorAll(TEXTSEL);
+      for(i=0;i<n.length;i++){ q=n[i].getBoundingClientRect();
+        if(!(q.bottom>top&&q.top<bot&&q.right>base.left-g)) continue;
+        try{ var rg=document.createRange(); rg.selectNodeContents(n[i]); rects=rg.getClientRects(); }
+        catch(e){ continue; }
+        for(j=0;j<rects.length;j++){ q=rects[j];
+          if(q.width<1||q.height<1) continue;
+          if(q.bottom>top&&q.top<bot&&q.right>base.left-g) obst.push([q.top-g,q.bottom+g,q.left-g,q.right+g]); }
+      }
+    };
+    /* a rung is clear when the pill, shifted up by it, misses every gathered obstacle */
+    var clearAt=function(lift){
+      var t=base.top-lift, b2=base.bottom-lift, k;
+      if(t<8) return false;
+      for(k=0;k<obst.length;k++){
+        if(obst[k][1]>t&&obst[k][0]<b2&&obst[k][3]>base.left&&obst[k][2]<base.right) return false; }
+      return true;
+    };
+    var found=-1, shortForm=false, k;
+    f.classList.remove("is-short");
+    read(); gather();
+    for(k=0;k<LADDER.length;k++){ if(clearAt(LADDER[k])){ found=LADDER[k]; break; } }
+    if(found<0){
+      /* the same ladder again, at the narrower width — the obstacles have not moved, only the pill */
+      f.classList.add("is-short"); shortForm=true;
+      read();
+      for(k=0;k<LADDER.length;k++){ if(clearAt(LADDER[k])){ found=LADDER[k]; break; } }
     }
-    f.style.setProperty("--sup-lift", (clear<0?0:LIFTS[clear])+"px");
+    if(found<0 && shortForm) f.classList.remove("is-short");
+    f.style.setProperty("--sup-lift",(found<0?0:found)+"px");
     f.style.transform=t0; f.style.transition=s0;
-    if(l0==="") { /* nothing to restore beyond what was just set */ }
-    f.classList.toggle("is-yield", clear<0);
+    f.classList.toggle("is-yield", found<0);
   };
   window.addEventListener("scroll",function(){
     var n=window.pageYOffset||0;

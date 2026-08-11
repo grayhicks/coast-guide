@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="site.css">
 <link rel="stylesheet" href="hero.css">
 <link rel="stylesheet" href="hero-fit.css">
-<script>(function(){var D=document.documentElement;function lbl(){var d=D.getAttribute('data-theme')==='dark';var b=document.querySelector('[data-theme-toggle]');if(b){b.setAttribute('aria-label',d?'Switch to the light theme':'Switch to the dark theme');b.setAttribute('aria-pressed',d?'true':'false');}}try{var t=localStorage.getItem('gca-theme');if(t==='dark'||t==='light')D.setAttribute('data-theme',t);}catch(e){}document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-theme-toggle]');if(!b)return;var n=D.getAttribute('data-theme')==='dark'?'light':'dark';D.setAttribute('data-theme',n);try{localStorage.setItem('gca-theme',n);}catch(x){}lbl();});document.addEventListener('DOMContentLoaded',lbl);})();</script>
+<script>(function(){var D=document.documentElement;function lbl(){var d=D.getAttribute('data-theme')==='dark';var b=document.querySelector('[data-theme-toggle]');if(b){b.setAttribute('aria-label',d?'Switch to the light theme':'Switch to the dark theme');b.setAttribute('aria-pressed',d?'true':'false');}}try{var t=localStorage.getItem('gca-theme');if(t==='dark'||t==='light')D.setAttribute('data-theme',t);}catch(e){}document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-theme-toggle]');if(!b)return;var n=D.getAttribute('data-theme')==='dark'?'light':'dark';D.setAttribute('data-theme',n);try{localStorage.setItem('gca-theme',n);}catch(x){}lbl();});document.addEventListener('DOMContentLoaded',lbl);var nc=document.getElementById('nav-open');if(nc){var nb=document.querySelector('.nav-btn');function nx(){nc.setAttribute('aria-expanded',nc.checked?'true':'false');if(nb)nb.setAttribute('aria-expanded',nc.checked?'true':'false');}nc.addEventListener('change',nx);nx();document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nc.checked){nc.checked=false;nx();if(nb)nb.focus();}});}})();</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://grayhicks.github.io/coast-guide/"},{"@type":"ListItem","position":2,"name":"Support this guide","item":"https://grayhicks.github.io/coast-guide/support.html"}]}</script>
 </head>
 <body class="ph-day">
@@ -43,9 +43,12 @@
     <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch to dark theme">
       <span class="tt-sun" aria-hidden="true"></span><span class="tt-moon" aria-hidden="true"></span>
     </button>
+    <input type="checkbox" id="nav-open" class="nav-check" aria-label="Show the navigation menu">
+    <label class="nav-btn" for="nav-open"><span class="nav-btn-mark" aria-hidden="true"></span><span class="sr">Menu</span></label>
     <a class="btn quiet head-cta" href="submit.html"><span class="btn-lab">Submit an event</span></a>
   </div>
 </div>
+<div class="nav-panel">
 <div class="wrap bar-do">
   <nav aria-label="Primary" class="nav-scroll">
     <a href="events/this-weekend.html">Events</a>
@@ -65,6 +68,7 @@
     <a href="business.html">For business</a>
     <a href="contact.html">Contact</a>
   </nav>
+</div>
 </div></header>
 <!-- ⚠ THE SCENE IS INSIDE main, AND IT USED TO BE OUTSIDE IT. A cold grade found that "Skip to
      content" jumped PAST the page's own h1 and its primary call to action: on index.html the
