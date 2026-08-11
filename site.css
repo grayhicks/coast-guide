@@ -912,11 +912,19 @@ section.pad + section.pad{border-top:1px solid var(--line-soft)}
 .btn:hover{transform:translateY(-1px)}
 .btn:active{transform:scale(.98)}
 .btn.primary{background:var(--gold);color:var(--accent-ink)}
-.btn.ghost{background:rgba(11,24,38,.5);color:#fff;border:1px solid rgba(240,201,121,.5);box-shadow:none}
+/* ⚠ .btn.ghost IS DELETED — 3 declarations styling 0 elements. A cold grade counted it: the class
+   appears nowhere in the shipped HTML, and a rule with no element left to style is the same defect
+   as an element with no rule. Its scene treatment survives on .scene .btn.quiet below, which is
+   what the pages actually use. */
 .btn.quiet{background:var(--panel-2);color:var(--ink);border:1px solid var(--line-strong);box-shadow:none}
-html[data-theme="light"] .btn.ghost{background:rgba(255,255,255,.6);color:var(--ink);border-color:var(--gold)}
-/* a quiet button ON the scene needs the scene treatment, not the panel one */
-.scene .btn.quiet{background:rgba(11,24,38,.5);color:#fff;border:1px solid rgba(240,201,121,.5)}
+/* a quiet button ON the scene needs the scene treatment, not the panel one.
+   ⚠ 08/11 — AND ITS HAIRLINE WAS THE ONLY BOUNDARY IT HAD, AT 2.26:1. A cold grade sampled the
+   painted edge of "Plan a date night" against the hero immediately outside it: 2.26:1 at 320,
+   2.77 at 390, 2.33 at 1100 — 24.7% short of the floor at the worst width, in BOTH themes, because
+   the hero is dark in both. Neither member of the pair carried it: the rgba(11,24,38,.5) fill is
+   DARKER than the ground behind it, so the fill cannot bound the control, and the hairline at half
+   alpha could not either. The hairline goes to .92, which is the only member left that can. */
+.scene .btn.quiet{background:rgba(11,24,38,.5);color:#fff;border:1px solid rgba(240,201,121,.92)}
 
 .field{width:100%;min-height:48px;padding:12px 14px;border-radius:var(--r-field);
   border:1px solid var(--line);background:var(--field);color:var(--ink);
@@ -3102,7 +3110,17 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
      0,2,0 — supplied it on sponsors.html and the keynote computed 10px there against 12px on
      every other page. A 16.7% difference on the one component the house rule says must measure
      the same everywhere, arriving from a rule about a rail. */
-  padding-top:12px;padding-bottom:12px;
+  /* ⚠ 22px, AND IT IS WHAT MAKES A WRAPPED PLATE THE SAME OBJECT AS AN UNWRAPPED ONE. A cold grade
+     measured the interior air — painted ink to the frame's own rule — at 17.38px on one line and
+     7.38px on two, a 57.5% collapse, because min-height:58px was acting as a CEILING: two trimmed
+     lines fit inside it, so the label compressed instead of the plate growing. The stylesheet's own
+     note buys "a 10px channel between foliage and glyph" and the shipped worst was 7.38.
+     At 22px the padding is what binds on two lines and min-height still binds on one, so the
+     channel comes out 17.4px against 16.7px — the same object at both. It costs 20px of height on
+     the 9 of 42 configurations that wrap and nothing at all on the other 33, which is the right
+     way round: a wrapped keynote is already the exception, and buying the channel back with height
+     THERE is not buying beauty with height everywhere. */
+  padding-top:22px;padding-bottom:22px;
   /* ⚠ 08/10 — TWO SESSIONS FIXED THIS CONTROL AT THE SAME TIME AND BOTH FIXES ARE KEPT. The ring
      below came from a grade that rasterised the PLAQUE against the hero; the type below came from
      one that rasterised the LABEL against the button beside it. They are independent, and neither
