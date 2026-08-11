@@ -84,6 +84,7 @@
   --gold-hover:#f0c979;
   --focus-ink:var(--gold-bright);
   --accent-ink:#221603;   /* text on gold surfaces */
+  --kicker-ink:#ffedc4;   /* the ceremonial kicker's engraved ink, on its dark plate only */
 
   /* ---------------------------------------------------------- state colors
      Green means confirmed. Amber means unconfirmed. These are semantic:
@@ -182,7 +183,8 @@
      catalogue number are FURNITURE rather than voice, so they take a step below micro. It holds the
      10px mono floor exactly, and both measure over 7:1 in either theme. */
   --fs-agate:10px;
-  --fs-kicker:11px;/* the one uppercase kicker style, w800, ls .18em */
+  --fs-kicker:11px;/* the working uppercase kicker style, w800, ls .18em — the one ceremonial
+     exception is .eyebrow, the hero's ticket stub, at 12px serif caps (see BUBBLE_PLAN.md) */
 
   /* ============================================================= THE SCENE
      Geometry lives on .scene (--hz, --sandh, --sun-x); the LIGHT lives here,
@@ -323,6 +325,7 @@ html[data-theme="light"]{
   --gold-bright:#7a4e08;
   --gold-hover:#5a3a05;   /* see the note beside --gold-hover on :root — ΔE76 19.89, cream 9.58:1 */
   --accent-ink:#fff6e4;   /* cream on gilt, not white: white on gilt reads cold */
+  --kicker-ink:#5d3f06;   /* engraved brown on the paper plate — 8.85:1 on the cream stub */
   --ok:#0b6e52;
   --ok-line:rgba(11,110,82,.42);
   --ok-wash:rgba(11,110,82,.06);
@@ -514,8 +517,13 @@ html[data-theme="light"] .site-head{background:rgba(255,246,228,.97)}
    it sticks under the header and scrolls on its own axis, so a long area list can never push the
    app link out of reach; on a phone it is a normal block above the listing. */
 @media(min-width:1000px){
+  /* ⚠ 08/11 — AND THE THUMB IS NAMED RATHER THAN LEFT TO `auto`. Gray saw a vividly white scroll
+     bar in dark theme and remembered one of them being "on the left hand side scroll down", which
+     is this. `color-scheme` fixes the UA default and is the right first move, but `auto` still
+     hands the decision to the platform, and Windows and macOS do not agree about what a thin
+     scrollbar looks like in a dark room. Naming the pair removes the doubt on both. */
   .rail{position:sticky;top:var(--s-5);max-height:calc(100vh - var(--s-6));overflow-y:auto;
-    scrollbar-width:thin;padding-right:6px}
+    scrollbar-width:thin;scrollbar-color:var(--line-strong) transparent;padding-right:6px}
 }
 
 /* ═════════════════════════════════════════════ R4-W1 — THE GOLD BAR, TOP AND BOTTOM
@@ -669,6 +677,7 @@ html[data-theme="dark"] .tt-moon{display:none}
    mistake: --scene-ground exists because A TOKEN DOING TWO JOBS WILL LEAK, and a page-ground gold
    used on a surface that is never the page's ground is the same leak one layer up. */
 .scene{--focus-ink:#f0c979;--gold:#d9a441;--gold-bright:#f0c979;--gold-hover:#f0c979;--accent-ink:#221603;
+  --kicker-ink:#ffedc4;
   position:relative;overflow:hidden;isolation:isolate;
   --hz:36%; --sandh:64px; --sun-x:76%; --glint-x:76%;
   background:var(--scene-ground);
@@ -841,10 +850,34 @@ html[data-theme="dark"] .tt-moon{display:none}
     radial-gradient(145% 105% at 50% 36%, transparent 60%, rgba(4,11,19,.3) 100%)}
 
 /* ------------------------------------------- copy that sits ON the scene */
-.eyebrow,.hero-kicker{display:inline-block;font:800 var(--fs-kicker)/1 var(--font-sans);
-  letter-spacing:.18em;text-transform:uppercase;color:#ffedc4;
-  background:rgba(11,24,38,.55);border:1px solid rgba(240,201,121,.5);
-  border-radius:var(--r-pill);padding:9px 14px}
+/* ⚠ 08/11 — THE KICKER IS A TICKET STUB, NOT A PILL. The incumbent pill's boundary measured
+   1.78:1 on the golden hero and 1.83:1 on cream, under the 3:1 floor — a gate, not a taste call
+   (claude/design/BUBBLE_PLAN.md, K0 vs K3) — and since the radii decision r999 is the Show
+   Support float's identity, not page furniture. The one ceremonial kicker (index hero, sponsors
+   band, nowhere else) is re-cut into the printed vocabulary the site already speaks: ticket
+   corners, one hairline, the card frame's struck corner dots, engraved serif caps. The extra
+   left padding compensates the tracking's phantom space after the last glyph; the quarter-pixel
+   split centres the 12px caps' ink, re-trimmed on the shipped raster at dsf 2. */
+.eyebrow,.hero-kicker{--stub-dot:color-mix(in srgb, var(--gold) 85%, transparent);
+  display:inline-block;position:relative;font:700 12px/1 var(--font-serif);
+  letter-spacing:.26em;text-transform:uppercase;color:var(--kicker-ink);
+  background:color-mix(in srgb, var(--panel) 70%, transparent);border:1px solid var(--line-strong);
+  border-radius:var(--r-ticket);padding:7.75px 13px 8.25px calc(13px + .26em)}
+.eyebrow::after,.hero-kicker::after{content:"";position:absolute;inset:0;pointer-events:none;
+  border-radius:var(--r-ticket);background-repeat:no-repeat;background-image:
+    radial-gradient(circle at 3.5px 3.5px, var(--stub-dot) 1.1px, transparent 1.6px),
+    radial-gradient(circle at calc(100% - 3.5px) 3.5px, var(--stub-dot) 1.1px, transparent 1.6px),
+    radial-gradient(circle at 3.5px calc(100% - 3.5px), var(--stub-dot) 1.1px, transparent 1.6px),
+    radial-gradient(circle at calc(100% - 3.5px) calc(100% - 3.5px), var(--stub-dot) 1.1px, transparent 1.6px)}
+/* on the scene — dark in BOTH themes — the plate is dark and the keynote ring's two-member
+   argument applies inverted: gold hairline inside, dark outer member outside, so wherever the
+   painted sky runs gold-on-gold behind the hairline the dark ring carries the 3:1 boundary.
+   Scene only: on the page ground --line-strong alone clears the floor and a second ring would
+   be ornament with no job. */
+.scene .eyebrow,.scene .hero-kicker{--stub-dot:color-mix(in srgb, var(--gold-bright) 90%, transparent);
+  background:color-mix(in srgb, var(--scene-ground) 62%, transparent);
+  border-color:color-mix(in srgb, var(--gold-bright) 75%, transparent);
+  box-shadow:0 0 0 1px rgba(8,17,28,.9)}
 .hero h1,.hero-title{margin:18px 0 0;font-size:var(--fs-display);line-height:1.04;font-weight:800;
   letter-spacing:-.025em;color:#fff;text-shadow:0 3px 26px rgba(8,18,28,.65);max-width:13em}
 .hero-title .brand-line::after{content:var(--brand-name)}
@@ -2093,7 +2126,45 @@ section.band-cta.home-sec{padding:var(--s-6)}
 .nl-form .fine{flex-basis:100%;margin:6px 0 0}
 
 /* =============================================== PROSE PAGES + SUBMIT FORM */
-.wrap.prose{max-width:860px;padding-top:var(--s-6);padding-bottom:var(--s-5)}
+/* ⚠ 08/11 — THE MEASURE IS SET NOW, AND IT USED TO BE WHATEVER THE WRAP HAPPENED TO BE. A cold
+   grade measured the running column at 820px on a 1100 viewport, which is 101 characters per
+   line on contact and terms against a ~75 editorial ceiling, and it reproduced on six of the
+   seven prose pages. 632 minus the wrap's own 40px of padding is a 592px column, which the same
+   instrument reads back at ~73 characters per line in the body size, worst paragraph on the set.
+   ⚠ AND CAPPING IT IS NOT ONLY TYPOGRAPHY: at desktop the cap opens a right gutter, which is
+   where two things that used to fight the text now live. The section jump list hangs in it, and
+   the Show Support float finally has ground of its own to rest on instead of the reader's
+   sentence — the float was hiding at 1100 on mission.html because a 820px column left it no
+   clear rest position. The gutter and the rail only exist from 1000px up; below that the page is
+   a single capped column and the rail is not rendered as a phone element at all. */
+/* ⚠ 592px, NOT 632px, AND THE RE-GRADE IS WHY. The rebuild claimed the measure was "under ~75
+   characters per line on all seven pages"; a second cold grader measured the widest painted LINE
+   BOX with canvas glyph metrics rather than a box average and found business.html at 77 and
+   mission.html at 76, with support and terms sitting exactly ON 75. Four of seven were not under
+   it. ⚠ The claim was not a lie, it was a different instrument: an average over lines is not the
+   worst line, and the worst line is the one a reader actually meets. 40px comes off. */
+.wrap.prose{max-width:592px;padding-top:var(--s-6);padding-bottom:var(--s-5)}
+@media(min-width:1000px){
+  .wrap.prose{max-width:900px;padding-right:328px;position:relative}
+}
+/* THE JUMP LIST — the gutter's tenant. One quiet ledger of the page's own sections, sticky under
+   the 106px header, set in the same small caps the kicker system uses so it reads as furniture of
+   the same publication. Hidden below 1000px: on a phone there is no gutter and a list of anchors
+   above the content it anchors is height spent twice. */
+.prose-rail{display:none}
+@media(min-width:1000px){
+  .prose-rail{display:block;position:absolute;top:var(--s-6);bottom:0;right:20px;width:252px}
+  .prose-rail-in{position:sticky;top:122px;padding-left:var(--s-4);border-left:1px solid var(--line-soft)}
+  .prose-rail-h{margin:0 0 10px;font:800 var(--fs-kicker)/1 var(--font-sans);letter-spacing:.18em;
+    text-transform:uppercase;color:var(--ink-3)}
+  .prose-rail ol{list-style:none;margin:0;padding:0}
+  .prose-rail li+li{margin-top:2px}
+  .prose-rail a{display:block;padding:5px 0;color:var(--ink-2);text-decoration:none;
+    font:500 var(--fs-small)/1.4 var(--font-sans)}
+  .prose-rail a:hover{color:var(--gold-bright);text-decoration:underline}
+}
+/* the sticky header is 106px; an anchor jump that lands a heading under it has not landed */
+.prose section[id]{scroll-margin-top:122px}
 /* ⚠ 08/11 — THE PROSE PAGES OPENED EVERY SECTION WITH THE SAME HAIRLINE AND NOTHING ELSE. Gray, on
    the live site: "for contact us and support, the pages are super plain and ordinary. A solid
    3/10... they need some better separators or something?" He is right, and the reference set this
@@ -2122,9 +2193,21 @@ section.band-cta.home-sec{padding:var(--s-6)}
 /* the first section opens the page and has nothing above it to be separated from */
 .prose section:first-child{padding-top:0}
 .prose section:first-child::before{display:none}
+/* small print reads at 13px, so a column sized for 16px body is ~90 characters of it; the cap
+   is written in the small print's own em so it can never drift from the size it serves */
+.prose .fine{max-width:37em}
 .prose h2{margin-bottom:var(--s-3)}
-.prose h2 .k{display:block;font:800 var(--fs-kicker)/1 var(--font-sans);letter-spacing:.18em;
-  text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+/* ⚠ 08/11 — ONE KICKER CONVENTION ON ALL SEVEN PROSE PAGES. A cold grade found it split three
+   ways: numbered 01 to 05 on contact and support, unnumbered phrases on volunteer, business and
+   mission, and nothing at all on terms. The phrase kicker wins because three pages already spoke
+   it and a number implies an order these sections do not have. Each kicker now leads with a small
+   pictogram in the same gilt — the marks are the APP'S OWN, lifted through site_data.marks() the
+   same way the card seals are, so their licences live beside them in the app and a second set of
+   drawings never exists to drift. Different glyph per section, NPS Unigrid style: a keyed
+   pictogram is information, which is what keeps a repeated small mark from being wallpaper. */
+.prose h2 .k{display:flex;align-items:center;gap:8px;font:800 var(--fs-kicker)/1 var(--font-sans);
+  letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.prose h2 .k .k-ic{width:16px;height:16px;flex:none}
 .prose blockquote{margin:var(--s-4) 0 0;padding:var(--s-3) var(--s-5);
   border-left:3px solid var(--gold);color:var(--ink-2);font-style:italic;background:var(--panel);
   border-radius:0 var(--r-field) var(--r-field) 0}
@@ -2133,6 +2216,27 @@ section.band-cta.home-sec{padding:var(--s-6)}
 .prose .pull{font-size:var(--fs-h2);font-weight:750;letter-spacing:-.01em;line-height:1.35;
   color:var(--ink);max-width:26em}
 .prose .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:var(--s-4)}
+/* ═════ THE STANDING ASK, IN THE PAGE'S OWN FLOW — every prose page ends on it (except
+   support.html, which IS the ask). The float is the right ambient control and the wrong only
+   one: at phone widths a prose page is wall to wall text, no rest position clears, and the
+   float correctly hides — which left the site's one standing request absent exactly where most
+   readers are. This band is the copy of the ask that cannot be scrolled onto a sentence,
+   because it is a sentence. It is emitted once, by the generator, for every prose page.
+   ⚠ ITS COPY IS BOUND BY THE PATRONAGE LAWS on the app's support surface: never the word
+   "Donate", never a cause, never a name. It points at the Support page and claims nothing. */
+.patron{background:linear-gradient(180deg, var(--sheen), transparent 46px), var(--panel);
+  border:1px solid var(--line);border-radius:var(--r-card);box-shadow:var(--shadow-1);
+  padding:var(--s-5);margin-top:var(--s-6)}
+/* it is a panel, not a section break — the Oxford rule stays off it */
+.prose section.patron{padding:var(--s-5)}
+.prose section.patron::before{display:none}
+.patron .patron-mk{display:none;width:44px;height:44px}
+.patron h2{font-size:var(--fs-h3)}
+.patron p{color:var(--ink-2)}
+@media(min-width:560px){
+  .patron{display:grid;grid-template-columns:44px 1fr;gap:var(--s-4);align-items:start}
+  .patron .patron-mk{display:block;margin-top:2px}
+}
 /* ═════ THE OPTIONAL THANK-YOU ROW — see the note beside it in web/pages/support.html.
    ⚠ IT IS A CHOOSER, NOT A TILL. There is no backend and no payment path here, so the row carries
    an amount into the app and the page says so in words. The amounts and their order are the app's
