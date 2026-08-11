@@ -164,6 +164,25 @@ body.ph-night .scene{--skytop:#050B18}
 @media (max-width:900px){.scene.band{--moonr:80px;--seat:4px}}
 @media (min-width:901px){.scene.band{--seat:10px}}
 
+/* ⚠ 08/11 — PAST 1440 THE SCENE STOPPED COMPOSING AND STARTED STRETCHING. The stage is
+   right-anchored, so as the viewport grows the moon-lane-sloop event stays glued to the corner
+   while the copy stays inside the centered 1200px wrap — at 2560 the gap between them measured
+   991px, 38.7% of the scene, against 300px / 27.3% at 1100. Same scene, wider hole.
+   So on wide canvases the right-hand event slides INBOARD, on the two knobs that already exist
+   for exactly this (--moonr, and --boatr introduced beside it): the group re-seats toward the
+   upper-third point the 1100/1440 composition already uses, and the surplus water moves to the
+   OUTSIDE of the frame, where open sea reads as the scene continuing rather than as a hole
+   between the words and the subject. The lane, the reflection and the hull shimmer all ride the
+   same two variables, so nothing is re-tuned by hand. Values are stage-logical px (multiplied by
+   --sx on screen: at 2560 the tall group sits ~500 real px in from the corner). */
+@media (min-width:1536px){.scene.tall{--moonr:40px;--boatr:30px}}
+@media (min-width:1750px){.scene.tall{--moonr:56px;--boatr:42px}}
+@media (min-width:2100px){.scene.tall{--moonr:84px;--boatr:64px}}
+/* the band's moon is already inboard (130 logical at 1280+); only the sloop needs to leave the
+   corner, and only once the canvas is wide enough that the corner is a long way from the lane */
+@media (min-width:1750px){.scene.band{--boatr:40px}}
+@media (min-width:2100px){.scene.band{--moonr:150px;--boatr:66px}}
+
 /* ------------------------------------- rigid bodies: aspect put back, sized */
 
 /* the moon: right edge and top stay put, the disc returns to a circle at --um.
@@ -181,7 +200,7 @@ body.ph-night .scene{--skytop:#050B18}
    picks up its own shimmer. */
 .scene{--k:calc(var(--um) / var(--sx));--kb:calc(var(--ub) / var(--sx));
   --lcx:calc(var(--moonr,28px) + 47px * var(--k));
-  --bcx:calc(18px + 49px * var(--kb))}
+  --bcx:calc(var(--boatr,18px) + 49px * var(--kb))}
 
 /* The lane itself: a masked radial falloff, brightest at the horizon directly
    under the moon, dissolving toward the viewer, with the sloop's water inside
@@ -201,10 +220,17 @@ body.ph-night .scene{--skytop:#050B18}
     rgba(0,0,0,1) 0%,rgba(0,0,0,.88) 18%,rgba(0,0,0,.62) 40%,
     rgba(0,0,0,.38) 62%,rgba(0,0,0,.16) 82%,transparent 98%)}
 
-/* the sloop: hull stays on its waterline at the right, boat returns to shape */
-.scene-stage .hk_boat{transform-origin:100% 74%;
+/* the sloop: hull stays on its waterline at the right, boat returns to shape.
+   ⚠ 08/11 — --boatr is the sloop's column, in stage-logical px, exactly as --moonr is the
+   moon's. It exists because past 1440 the right-hand event was pinned in the corner while the
+   copy stayed inside the centered 1200px wrap, and everything between them was open water —
+   measured at 39.3% of the scene at 2560 on the home hero. The !important is required: the
+   sloop's right:18px is an inline style from the lifted app hero, the same reason the mobile
+   top override above uses one. The reflection and the hull's water shimmer (--bcx above)
+   follow the same variable, so the boat never sails away from its own light. */
+.scene-stage .hk_boat{transform-origin:100% 74%;right:var(--boatr,18px) !important;
   transform:scale(calc(var(--ub) / var(--sx)),calc(var(--ub) / var(--sy)))}
-.scene-stage .boat-refl{transform-origin:100% 50%;right:22px}
+.scene-stage .boat-refl{transform-origin:100% 50%;right:calc(var(--boatr,18px) + 4px)}
 
 /* stars: static pose for reduced-motion; the live pose lives in the re-declared
    keyframes below. --stx/--sty resolve per element from the scene's scale. */

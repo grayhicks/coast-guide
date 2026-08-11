@@ -2299,6 +2299,28 @@ section.band-cta.home-sec{padding:var(--s-6)}
 .crest-key-txt{font-size:var(--fs-small);color:var(--ink-2);line-height:1.5}
 .crest-key-txt strong{display:block;font:700 var(--fs-kicker)/1.4 var(--font-mono);
   letter-spacing:.13em;text-transform:uppercase;color:var(--ink)}
+/* ⚠ 08/11 — THE KEY, ONE CLICK OFF THE FRONT PAGE. Gray asked for the marks' legend "on the front
+   page somewhere... maybe a click of a button on the side or something", so the home page mounts
+   the same crestLegend() the mission key uses inside a native <dialog>, triggered from the weekend
+   section head — beside the first crests a reader ever sees. Native dialog: Esc, focus trapping
+   and inertness come from the platform, not from code that would have to re-earn them. */
+button.key-btn{background:none;border:0;padding:0;cursor:pointer;
+  color:var(--gold-bright);text-decoration:underline;text-underline-offset:3px;
+  text-decoration-thickness:1px}
+.crest-dialog{border:1px solid var(--line-strong);border-radius:var(--r-card);
+  background:var(--panel);color:var(--ink);padding:var(--s-5);
+  width:min(600px, calc(100vw - 32px));max-height:min(82vh, 760px);
+  overflow:auto;box-shadow:var(--shadow-2);margin:auto}
+.crest-dialog::backdrop{background:rgba(6,14,24,.55)}
+.crest-dialog-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.crest-dialog-head h2{font-size:var(--fs-h3)}
+/* the close control keeps the 44px target the chrome holds everywhere else */
+.crest-dialog-x{flex:none;min-width:44px;min-height:44px;margin:-10px -10px 0 0;
+  background:none;border:0;cursor:pointer;color:var(--ink-2);
+  font:400 26px/1 var(--font-sans);border-radius:var(--r-field)}
+.crest-dialog-x:hover{color:var(--ink)}
+.crest-dialog-lede{margin:var(--s-3) 0 0;font-size:var(--fs-small);color:var(--ink-2);line-height:1.55}
+.crest-dialog .crest-legend{margin-top:var(--s-2)}
 .note{background:linear-gradient(180deg, var(--sheen), transparent 46px), var(--panel);
   border:1px solid var(--line);border-left:3px solid var(--gold);
   border-radius:var(--r-card);padding:var(--s-4) var(--s-5);margin:var(--s-5) 0;
@@ -2541,6 +2563,67 @@ div.foot-fine{border-top:1px solid var(--line-soft);margin-top:var(--s-6);paddin
     rgba(6,14,24,.18) 70%,
     rgba(6,14,24,.06) 85%,
     rgba(6,14,24,0) 100%)}
+}
+/* ⚠ 08/11 — DEAD WATER PAST 1440. Measured on the shipped pages: the headline box was 445px at
+   1440, 1920 AND 2560 — zero growth across a 78% wider viewport — because --fs-h1 tops out at
+   40px by vw=1400 and the 16ch cap did the rest. The only thing that grew was the gap between the
+   copy and the sloop: 300px (27.3% of the scene) at 1100 up to 991px (38.7%) at 2560. Past 1440
+   it was not a bigger scene, it was the same scene with a wider hole in the middle.
+   THE FIX IS SCALE, NOT MEASURE. The prose pages just proved 101 characters per line is a defect,
+   so the column does not get wider in ch to soak up pixels — the TYPE keeps growing where the
+   clamps had quietly stopped, on the masthead only. The tokens are re-declared at .scene scope so
+   every page below the fold keeps its density; each continuation clamp starts exactly where the
+   root clamp ends (40 at 1440, 54, 20, 16), so no width anywhere sees a jump.
+   The one measure change is 16ch -> 22ch on the band h1, and it is line-count, not prose: the
+   long venue titles ("Holland Farms Pumpkin Patch & Corn Maze…", 64ch) wrap to FOUR lines in
+   16ch at every desktop width, and 22ch resolves them to three. A 22ch headline is half of a
+   short prose measure. The wash still holds: at 1441 the dense band of the desktop mask reaches
+   ~67vw (966px) and a 22ch/40px title ends at ~780px; gate_site_wash keeps measuring the real
+   ground under the real copy either way. */
+@media (min-width:1441px){
+  .scene{
+    --fs-display:clamp(54px, 1.25vw + 36px, 68px);
+    --fs-h1:clamp(40px, .9vw + 27px, 50px);
+    --fs-lead:clamp(20px, .36vw + 14.9px, 24px);
+    --fs-body:clamp(16px, .27vw + 12.2px, 19px);
+    /* the stat line and the crumbs ride the same tide — a 13px mono wrapping three times under
+       a 68px banner was the dead-water defect one rank down, measured at 43% of the headline's
+       ink at 2560 against 73% at 1100 */
+    --fs-small:clamp(13px, .18vw + 10.4px, 15px)}
+  .scene-copy h1,.page-title{max-width:22ch}
+  /* ⚠ THE BLOCKS UNDER THE HEADLINE KEEP THEIR 1100 PROPORTIONS, MEASURED, NOT FELT. At 1100 the
+     h1/sub/count inks are 547/460/398 — 84% and 73%. The first pass scaled only the h1 and at
+     2560 the trio read 919/649/398 — 71% and 43% — a banner over a whisper. The subs' and the
+     count's measures widen with their own grown glyphs until the ratios hold again (re-measured
+     919/~780/~640 at 2560). The ch caps keep every line inside the wash's dense band, and the
+     copy stays far under the 63-69cpl the prose pages were rebuilt to. */
+  .scene-copy .sub,.page-sub,.hero .sub,.hero-sub,.scene-copy .lead{max-width:54ch}
+  .hero-count{max-width:64ch}
+  /* the home display line joins deliberately — at 68px a 15ch pyramid would spend the new scale
+     on height (three 68px lines) instead of width, which is buying beauty with height. Stated
+     here rather than inherited from .scene-copy by declaration order, so the cascade reads as a
+     decision: the wide-canvas hero is a two-line banner. */
+  .hero h1{max-width:22ch}
+  /* ⚠ AND THE WASH GROWS WITH THE WORDS IT PROTECTS, MEASURED ON A DAY CAPTURE BEFORE IT WAS
+     TOUCHED. The night build hides this entirely: white on night sky passes anywhere. On a
+     transplanted ph-day hero (gate_site_hero's own move) the banner headline's right tail
+     measured 2.68:1 at 2560 and 2.94:1 at 1920 against the 3:1 large-text floor, because the
+     tail now reaches x-positions where the 901px radial has fallen to ~.13 — the 1440/16ch
+     design never sent words there, so the wash never covered it. The radial is re-cut for wide
+     canvases: reach follows the copy (~.4 under the tail at 2560, re-measured 4.8:1 on the same
+     day capture), and the falloff still runs its whole outer slope so no edge exists. The mask's
+     dense run extends the same way. The sloop and the night moon sit past 79% of the radius
+     where the veil is under .15, and gate_site_wash keeps holding floor AND ceiling. */
+  .scene-copy::before{background:radial-gradient(58% 94% at 31% 50%,
+    rgba(6,14,24,.62) 0%,
+    rgba(6,14,24,.60) 28%,
+    rgba(6,14,24,.52) 46%,
+    rgba(6,14,24,.40) 60%,
+    rgba(6,14,24,.26) 72%,
+    rgba(6,14,24,.10) 86%,
+    rgba(6,14,24,0) 100%);
+    -webkit-mask-image:linear-gradient(90deg,#000 0,#000 70%,rgba(0,0,0,.35) 83%,transparent 95%);
+            mask-image:linear-gradient(90deg,#000 0,#000 70%,rgba(0,0,0,.35) 83%,transparent 95%)}
 }
 /* with a real wash underneath, the shadows can stop shouting */
 .scene-copy h1,.page-title{text-shadow:0 2px 10px rgba(6,14,24,.55)}
