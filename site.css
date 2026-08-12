@@ -139,7 +139,7 @@
   --pill-free-bg:#0f3527;  --pill-free-fg:#8beebc;  --pill-free-line:#1d5c42;
   --pill-tba-bg:#3b2c10;   --pill-tba-fg:#f2cd7e;   --pill-tba-line:#6b5122;
   --pill-price-bg:#1a2f44; --pill-price-fg:#f2ead9; --pill-price-line:#2c4a66;
-  --pill-age-bg:#3c2030;   --pill-age-fg:#f3bcd0;   --pill-age-line:#63374d;
+  --pill-age-bg:#3c2030;   --pill-age-fg:#f3bcd0;   --pill-age-line:#d1789b;
   --tag-fg:#c7bba7;       --tag-line:#31506e;
   --sponsor-fg:#dcc79b;   /* the word "Sponsored" */
 
@@ -380,7 +380,7 @@ html[data-theme="light"]{
   --pill-free-bg:#e2f2e4;  --pill-free-fg:#0b5c3e;  --pill-free-line:#a9d8bd;
   --pill-tba-bg:#f9edd2;   --pill-tba-fg:#6b4c05;   --pill-tba-line:#dcc490;
   --pill-price-bg:#f0e9da; --pill-price-fg:#1a2c3e; --pill-price-line:#ddd0b6;
-  --pill-age-bg:#f8e4ea;   --pill-age-fg:#7c2c4e;   --pill-age-line:#e3bfcb;
+  --pill-age-bg:#f8e4ea;   --pill-age-fg:#7c2c4e;   --pill-age-line:#a04468;
   --tag-fg:#44566a;        --tag-line:#d9c9a6;
   --sponsor-fg:#6e5a2e;
   /* shadows warm to the paper. A neutral grey shadow on cream reads as dirt. */
@@ -1519,6 +1519,14 @@ section.pad + section.pad{border-top:1px solid var(--line-soft)}
    head rather than on the plain panel it was checked against. The quiet half of
    a rank is still text. */
 .ev-kicker .thru{color:var(--ink-2);text-transform:none;letter-spacing:0;font-weight:500}
+/* THE AGE BAND LEADS THE KICKER — Gray, 08/15, "right in front of the date range". It was in the
+   agate line beside the price, four ranks down, which is where a parent reads it last. It is a
+   plate rather than a rank because it has to be found at a glance in a line of dates, and it is
+   the ONLY plate left on this card: the boxes went for a reason, and one of them coming back has
+   to earn it. --pill-age-* is the trio the detail page's pill already uses, so the two agree. */
+.ev-kicker .age{display:inline-block;margin-right:6px;padding:0 5px 1px;border-radius:3px;
+  background:var(--pill-age-bg);color:var(--pill-age-fg);border:1px solid var(--pill-age-line);
+  font-weight:800;letter-spacing:.04em}
 
 /* RANK 1 — the title. The card's one display moment, and the only serif on it. */
 /* a centred title that drops one word onto its own line is a widow, and three
@@ -1720,7 +1728,6 @@ html[data-theme="light"] .card .ev-fare.tba{color:color-mix(in srgb, var(--pill-
   .ev-agate{text-box:trim-both cap alphabetic;padding:9px 4px}
 }
 .ev-agate .dot{color:var(--ink-3);padding:0 3px;font-style:normal}
-.ev-agate .age{color:var(--pill-age-fg);font-weight:800}
 
 /* THE FOOT BAND — accession number · the crest on the centre axis · the stamp.
    Fixed height, so the sponsored state is the same object at the same size
