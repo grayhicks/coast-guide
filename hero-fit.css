@@ -328,8 +328,53 @@ body.ph-night .scene{--skytop:#050B18}
 /* the yacht, the paddle boarder and the night fishing poles: three block children of full-width
    static wrappers, so their own left edge and baseline are what holds them. None animates
    transform anywhere in its subtree — checked in the browser, not assumed from the markup. */
-.scene-stage .adyacht > svg,.scene-stage .supw > svg,.scene-stage .npw > svg{transform-origin:0 100%;
-  transform:scale(calc(var(--up) / var(--sx)),calc(var(--up) / var(--sy)))}
+/* ⚠ 08/15 — THIS CORRECTION WAS WRITTEN AS `transform` AND THE PADDLER'S OWN ANIMATION ATE IT.
+   `.supw svg` runs `hk_supbob`, which animates `transform`, and an animation REPLACES the static
+   transform for the whole cycle rather than composing with it — so the paddler kept the raw stage
+   anisotropy at every desktop width in day, dawn and golden while the rule sat in the stylesheet
+   looking applied. Measured on the shipped bytes at 1100: `div.supw 72.5x42, iso 1.450`, which is
+   --sx/--sy to three decimals and is the exact "before" number the 08/11 table recorded — the fix
+   never painted once. It passed at night only because the paddler is not out after dark, which is
+   the same "no creatures in this phase capture" blind spot this gate has already been caught by.
+   The yacht and the poles were fine for one reason: their animations sit on the WRAPPER, not on
+   the svg the correction lands on.
+   ⚠ THE FIX IS THE `scale` PROPERTY RATHER THAN A `transform` FUNCTION. The individual transform
+   properties apply BEFORE `transform` in the same matrix, so an animated `transform` composes
+   with them instead of overwriting them. All three take it, not just the broken one: a rule that
+   only works while nobody animates the element it is on is a rule waiting to fail again. */
+/* ⚠ 08/15 — AND THREE MORE PROPS HAD NO CORRECTION AT ALL, TWO OF THEM DRAWN THE DAY BEFORE.
+   They hid behind the paddleboarder for four days because the gate truncated its offender list at
+   four entries and `supw` sorted first: the real counts are 3 bodies off in day, 23 in dawn and
+   80 in golden. Measured 1100 -> 2560, raw --sx/--sy to three decimals in every case, which is
+   the same tell as the yacht's: no correction, not a wrong one.
+     · .adparasail (dawn) — the tow drawn 08/14. 191.4 x 120 at 1100, 396 x 135 at 2560.
+     · .adcart (golden) — the ice-cream cart. 278.4 x 168 at 1100, 576 x 189 at 2560.
+     · .pipsh — the sandpiper SHADOWS. Their birds were corrected on 08/11 and the shadows under
+       them were not, so a 66px smear sat under a 56px bird at 2560. A shadow is not a glint: it
+       is read against the body directly above it, so it takes the bird's own --uc ladder rather
+       than the props' --up, and its origin is its own centre-bottom so it cannot drift off the
+       feet it belongs to.
+   The two new props take the props' ladder and the left-baseline origin, which is their own
+   anchor: the cart is `bottom:3px; left:-90px` and the parasail hangs off a tow to its left. */
+.scene-stage .adyacht > svg,.scene-stage .supw > svg,.scene-stage .npw > svg,
+.scene-stage .adparasail > svg,.scene-stage .adcart > svg{transform-origin:0 100%;
+  scale:calc(var(--up) / var(--sx)) calc(var(--up) / var(--sy))}
+.scene-stage .pipw .pipsh{transform-origin:50% 100%;
+  scale:calc(var(--uc) / var(--sx)) calc(var(--uc) / var(--sy))}
+
+/* ⚠ 08/12 — THE SPONSORED PILL TAKES THE PROPS' OWN LADDER, AND IT IS THE FIRST TYPE IN THIS FILE
+   TO NEED THE CORRECTION. Every rule above corrects a DRAWING, where a wrong scale reads as a
+   stretched bird. This is a legal disclosure set at 6.5px, and uncorrected it is multiplied by the
+   stage's --sx across and --sy down — a caption several times its drawn size, stretched on top of
+   it, on a masthead where the props it labels are corrected back to theirs.
+   ⚠ THE CONSTRUCTION IS UNIFORM EVEN THOUGH IT LOOKS ANISOTROPIC, and that is the whole reason it
+   is written this way: the stage multiplies by (--sx, --sy) and the pill divides by them, so the
+   NET is --up on both axes and the letterforms are never squashed.
+   ⚠ AND translate IS USED FOR THE CENTRING RATHER THAN transform, because the two are separate
+   properties and the app centres this pill with transform:translateX(-50%). Writing the counter-
+   scale into `transform` would replace that centring outright; `scale` composes with it. */
+.scene-stage .hero_sponsor .adlbl,.scene-stage .hero_slot .adlbl{transform-origin:50% 0;
+  scale:calc(var(--up) / var(--sx)) calc(var(--up) / var(--sy))}
 
 /* the sand and its wet sheen were drawn 87% wide — on the 430 card the last 56px
    read as the beach easing into water; stretched to a masthead the mismatch with
@@ -465,8 +510,13 @@ body.ph-night .scene{--skytop:#050B18}
 /* The home copy wrap carries the literal class `hero`, so the generated app rules for the app's
    own hero box land on it: a phase sky background, negative card margins, a 298px min-height.
    Neutralize exactly that contamination; layout, wash and type stay site.css's business. */
+/* ⚠ 08/15 — THE LEFT/RIGHT PADDING TAKES THE SHARED TOKEN, NOT A LITERAL 20. This rule exists to
+   undo the app's hero box, not to set the site's gutter, and the literal quietly made the home
+   hero the one wrap on the site that could not widen its gutter — measured 20px at 1280 and 1440
+   where every other page had already opened to 50.2 and 60.6. A token doing one job in two files
+   is the same defect this project has already paid for once. */
 .scene .wrap.hero{margin:0 auto;min-height:0;background:none;overflow:visible;
-  padding-left:20px;padding-right:20px}
+  padding-left:var(--wrap-gutter);padding-right:var(--wrap-gutter)}
 
 /* ------------------------------------------------------------ still, please */
 /* hero.css's own reduced-motion collapse is scoped under the app's `.hk` root, which does not

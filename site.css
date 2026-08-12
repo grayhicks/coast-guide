@@ -436,7 +436,21 @@ a:hover{text-decoration-thickness:2px}
    squares off whatever it focuses — it made a 10px-radius button a 4px one for as long as it held
    focus. Outlines follow the element's own radius; nothing needs to be declared. */
 :focus-visible{outline:3px solid var(--focus-ink);outline-offset:2px}
-.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+/* ⚠ 08/15 — EVERY VIEWPORT FROM 320 TO 1180 WAS GETTING A PHONE MARGIN, and the 08/14 cold grade
+   measured it: the gutter is 20px at 1100 — the SAME 20px a 320px phone gets — and only opens to
+   140px at 1440, where the 1200px cap finally binds. A desktop page with a phone's gutter reads as
+   a phone layout stretched, which is what the grade actually saw.
+   ⚠ THE GUTTER IS FLUID NOW AND THE TWO ENDS ARE UNCHANGED ON PURPOSE, so this is an opening of
+   the dead middle rather than a re-layout: `6.5vw - 33px` is 20px at every phone width (it stays
+   under the floor until 815) and reaches 60.6px at 1440, where `1160px + 2 x 60.6` caps the box at
+   1281.2 and the total gutter measures 140.0px — the same 140.0 the 1200px cap produced. The
+   content column is therefore byte-identical at 320, 390, 430 and 1440+ and only opens between:
+   1100 goes 20.0 -> 38.5, 1280 goes 20.0 -> 50.2.
+   ⚠ AND THE CAP IS WRITTEN AS `1160px + 2 x gutter` RATHER THAN AS A FLAT 1200 BECAUSE THE BOX IS
+   `border-box` here — the flat number silently meant "1160 of content" and would have started
+   eating the column the moment the padding grew. */
+.wrap{--wrap-gutter:clamp(20px, 6.5vw - 33px, 64px);
+  max-width:calc(1160px + 2 * var(--wrap-gutter));margin:0 auto;padding:0 var(--wrap-gutter)}
 .wrap.narrow{max-width:820px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .skip{position:absolute;left:12px;top:-64px;z-index:100;background:var(--gold);
@@ -688,6 +702,19 @@ html[data-theme="dark"] .tt-moon{display:none}
   .site-head .bar{padding-top:4px;padding-bottom:2px;min-height:48px}
   .site-head .brand{min-height:44px}
   .site-head .theme-toggle{width:40px;height:40px}
+  /* ⚠ 08/15 — THE TOUCH TARGET WAS SMALLER ON THE TOUCH DEVICE, and that is the one functional
+     defect the 08/14 cold grade found on this page. Both masthead controls are 44x44 from 821 up
+     and were cut to 40x40 below it, against a 44px floor.
+     ⚠ THE INK STAYS 40px BECAUSE THE ARITHMETIC THAT PUT IT THERE IS MEASURED, NOT A PREFERENCE:
+     at 320 the wordmark asks 162.0px and the row leaves it 170.0, so eight more pixels of control
+     is the identity ellipsing to buy a number. So the HIT AREA grows and the drawing does not,
+     which is this project's own answer to the same problem on the Date Night verify pill — a 21px
+     tag with a 45px target, and "that is what the 44px law is actually about".
+     `inset:-2px` on a 40px circle is exactly 44x44, and the two pads finish 2px apart inside the
+     row's own 6px gap, so neither control can ever steal the other's thumb. */
+  .site-head .theme-toggle,.site-head .nav-btn{position:relative}
+  .site-head .theme-toggle::after,.site-head .nav-btn::after{
+    content:"";position:absolute;inset:-2px;border-radius:999px}
   .site-head .head-cta.btn{display:none}
   .nav-submit{display:inline-flex}
   /* ⚠ A HEADER THAT TAKES MORE THAN ONE LINE MUST NOT ALSO BE STICKY. Seven destinations measure
@@ -834,6 +861,94 @@ html[data-theme="dark"] .tt-moon{display:none}
   --hz:36%; --sandh:64px; --sun-x:76%; --glint-x:76%;
   background:var(--scene-ground);
   box-shadow:0 18px 40px -18px rgba(3,8,14,.6)}
+
+/* ═══ 08/15 — THE ACTION COLOUR MOVES WITH THE SKY. Gray's own ask ═══════════════════════════════
+   "Maybe we even change the colors of the buttons with the time of day. Like at night a chiller
+   darker color. Perfect color for right now and day time a better color... and dawn."
+
+   ⚠ IT LANDS ON THE SCENE, NOT ON THE PAGE, and that is the honest scope rather than a shortcut.
+   The phase is a property of the SKY, so the button that follows it is the one standing on the
+   sky. It is also the only place the family survives measurement: rendered on cream, the four
+   phases' dark-page equivalents fall to 9.7 and 12.2 dE apart, which is a change nobody could
+   see, and the dawn plate drops to 28.3 dE from the light gold where the shipped coral holds
+   33.7. A change too small to read, bought at the cost of the trim separation, is not a feature.
+   The scene already pins the dark pair in both themes, so this needs no cream half at all.
+
+   ⚠ GOLDEN IS UNCHANGED BECAUSE HE SAID IT IS RIGHT. "Perfect color for right now" was said
+   looking at ph-golden, so coral is the anchor and the other three are drawn around it rather
+   than the set being re-opened. The 08/13 measurement that chose coral is not re-litigated.
+
+   MEASURED IN PLACE, each plate against the ground its OWN phase actually paints behind the
+   keynote (sampled off a render with the button hidden, never off a swatch):
+
+     phase   plate     label  hero ground  dark page  dE gold  dE stamp
+     dawn    #f2836a   7.00   4.63         6.21       39.1     89.9
+     day     #4da8e0   6.73   4.79         6.04       84.0     60.4
+     golden  #f3a284   8.77   6.21         7.79        n/a      75.7
+     night   #6f7db6   4.74   4.35         3.99        n/a      95.8
+
+   ⚠ NIGHT WAS DRAWN A FOURTH TIME AND THE NOTE WAS GRAY'S: "I don't like the white on the purple
+   maybe it needs to be a better blend with nighttime." He is right, and it was not a taste slip so
+   much as a corner the depth painted us into — a MID-TONE plate can only carry a near-white or a
+   near-black label, because 4.5:1 has nowhere else to go, and every deeper plate that lets a gold
+   or a moonlight label clear the floor drops the plate itself under 3:1 against its own sky
+   (#4a5896 reads 2.58, #414d85 reads 2.16). So the plate steps one notch lighter instead and the
+   label goes to near-black navy. There is no white on the control at all now.
+   ⚠ AND IT MAKES NIGHT STOP BEING THE ODD ONE OUT: all four phases now carry a dark ink and dark
+   foliage, so the engraved read is the same object four times in different light, which is the
+   uniformity rule this house runs on.
+
+   ⚠ THE GOLD COLUMN READS n/a FOR TWO OF THEM AND THAT IS THE POINT — THE FRAME IS NOT GOLD ANY
+   MORE, IT FOLLOWS THE PLATE. See the pin on .btn.primary.framed. Peach was refused twice for
+   sitting 16.7 to 29.7 dE from a gold trim, and the trim was the thing that could move: Gray asked
+   for a peachy-orange sunset twice, and once the frame is drawn from the plate's own family there
+   is no gold left on the control for peach to merge into. It clears everything else with the
+   widest margins in the set — label 8.77, sky 6.21, page 7.79.
+   ⚠ AND NIGHT IS MUTED RATHER THAN RE-HUED. The first indigo measured a CIELAB chroma of 72.4 and
+   read electric beside the trimwork, which is a taste call I owed him out loud rather than a
+   number. #5f6ea8 halves it to 34.4 and IMPROVES every floor at the same time — label 4.58 against
+   4.79's 4.79, sky 3.53 against 3.37, page 3.23 against 3.09. It is still his "dark blueish".
+
+   ⚠ 08/15 LATER — GRAY REFINED IT AND THE REFINEMENT IS BETTER: "match the skys beauty... night is
+   dark so a dark blueish or purplish... full blueish for the day". Day and night now take the
+   sky's OWN family rather than a contrasting warm, and the numbers say that is allowed HERE even
+   though this project's standing note says a blue on a navy page is camouflage. Both are true:
+   that note is about the PAGE, and the ground behind this button is not the page — it is the copy
+   scrim, which is dark in every phase. Measured, a full azure clears its own sky at 4.79 and the
+   dark page at 6.04, and a dark indigo clears at 3.37 and 3.09. The camouflage argument does not
+   reach a control standing on a scrim.
+   ⚠ AND TWO OF HIS FOUR ARE REFUSED ON MEASUREMENT, WHICH IS WORTH WRITING DOWN SO IT IS NOT
+   RE-TRIED: he asked for a PEACHY ORANGE at sunset and an orangish morning. Peach and apricot sit
+   16.7 to 29.7 dE from the gold trim this button wears, so they MERGE INTO THEIR OWN FRAME —
+   the identical failure that killed terracotta at 22 and persimmon at 19. Dawn keeps a warm coral
+   (39.1 dE, the closest to peach that still separates) and sunset keeps the coral he already
+   called right. A true peach is available only if the golden frame stops being gold, which is a
+   bigger decision than a token and is HIS.
+
+   ⚠ NIGHT WAS DRAWN TWICE AND THE FIRST ONE WAS COOLER WITHOUT BEING DARKER, which is half his
+   note. #d4566f cleared every fence comfortably and then rendered as a bright candy rose on navy
+   — the LIGHTEST-looking plate of the four against its own ground, when the brief was "a chiller
+   DARKER color". So it dropped to #c04060 and the label flipped to cream, which is what buys the
+   depth: a dark ink cannot survive on a plate this deep. Its margins are the tightest in the set
+   at 3.41 and 3.13 and both are above the 3.0 floor, measured, not estimated.
+   The set now reads as a lightness ramp down the day, which is the honest form of what he asked
+   for — CIELAB L* of 66.6 dawn, 63.3 day, 57.5 golden, 46.6 night. Night is 11 L* below coral.
+
+   Floors: label 4.5, ground 3.0. Every phase clears both, and the two hue fences this project
+   already paid for hold everywhere — far enough from the gold trim that the plate cannot merge
+   into its own frame, and nowhere near the verification stamp, so a button can never be read as
+   a status.
+   ⚠ AND THE FOUR ARE FAR ENOUGH APART TO BE THE POINT: round the clock the adjacent distances are
+   24.9, 15.3, 30.4 and 33.2 dE. A contrast ratio cannot see hue, so the spread is measured in
+   CIELAB — the same instrument that killed terracotta at 22 and passed bougainvillea at 53.
+   The read now follows the sky itself: a warm coral morning, a full blue day, the coral sunset
+   he asked for, and a moonlit blue-violet night. L* runs 66.6, 65.7, 72.2, 53.0 — sunset is the
+   brightest hour on the ramp now, which is what a sunset is,
+   which is the measured form of "a chiller darker color" at night. */
+body.ph-dawn .scene{--act:#f2836a;--act-hover:#f79a86;--act-ink:#2a1008}
+body.ph-day .scene{--act:#4da8e0;--act-hover:#6ec6e8;--act-ink:#0d1a22}
+body.ph-golden .scene{--act:#f3a284;--act-hover:#f7b79f;--act-ink:#2a1008}
+body.ph-night .scene{--act:#6f7db6;--act-hover:#8290c6;--act-ink:#0b1024}
 .scene.tall{min-height:600px}
 .scene.tall > .wrap{padding-top:84px;padding-bottom:120px}
 .scene.band{min-height:320px}
@@ -1060,15 +1175,32 @@ html[data-theme="dark"] .tt-moon{display:none}
    (the header wears the same pair); it fades to nothing so it can never close into a box.
    The class name is load-bearing — gate_site_mast reads .hero-count's ink — so the container
    keeps it and only the interior changed. */
+/* ⚠ 08/15 — THE LEDGER BROKE 2+1 AT EVERY PHONE WIDTH, the 08/14 grade's third finding: three
+   columns at their own natural widths, wrapping, so the third fact was stranded on its own line
+   with about 160px of dead space beside the second at 320, 390 AND 430. A wrapping flex row is
+   what makes that unavoidable — the columns measured roughly 130 / 110 / 190 and no two of them
+   agreed, which is the symmetry rule broken before it is a layout problem.
+   ⚠ SO IT IS A GRID AND THE THREE COLUMNS MEASURE THE SAME. Three facts in one line is the read;
+   an orphan is not. The labels wrap inside their own column instead of the ROW wrapping, which
+   also spends LESS height than the 2+1 it replaces — two stacked pairs plus a row gap is taller
+   than one row of three. Below 360 there is genuinely not room for three columns, so it becomes
+   one column and three rows: no orphan and no dead space either way. */
 .hero-count{margin:28px 0 0;padding-top:16px;position:relative;
-  display:flex;flex-wrap:wrap;column-gap:34px;row-gap:12px;
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:16px;row-gap:12px;
   font:500 var(--fs-small)/1.35 var(--font-sans);color:#e8dcc4;
   font-variant-numeric:tabular-nums;text-shadow:0 2px 10px rgba(8,18,28,.8)}
 .hero-count::before{content:"";position:absolute;top:0;left:0;height:1px;width:min(100%, 380px);
   background:linear-gradient(90deg, rgba(240,201,121,.85), rgba(240,201,121,0))}
-/* flex:none — a column keeps its own width and the ROW wraps, so a label is never broken
-   mid-phrase just because a neighbour was wide */
-.hero-count .hc{display:flex;flex:none;flex-direction:column;gap:3px;max-width:19em}
+.hero-count .hc{display:flex;flex-direction:column;gap:3px;max-width:19em;min-width:0}
+/* ⚠ Below 360 there is no room for three columns, so the ledger turns on its side: one fact per
+   row, figure and words on ONE line rather than stacked. Measured at 320 — stacking three pairs
+   costs 167.6px against the 2+1 orphan's ~134, which is buying a symmetry fix with height and
+   density is a feature here. Laid on their sides the same three facts cost 102px. */
+@media(max-width:359px){
+  .hero-count{grid-template-columns:1fr;row-gap:8px}
+  .hero-count .hc{flex-direction:row;align-items:baseline;gap:8px;max-width:none}
+}
+@media(min-width:901px){.hero-count{column-gap:34px}}
 .hero-count strong{color:#ffe9b8;font:700 clamp(22px, 1vw + 18px, 26px)/1 var(--font-serif)}
 .scene-copy h1,.page-title{margin:12px 0 0;font-size:var(--fs-h1);line-height:1.12;font-weight:700;
   font-family:var(--font-serif);
@@ -2890,7 +3022,22 @@ div.foot-fine{border-top:1px solid var(--line-soft);margin-top:var(--s-6);paddin
 @media (min-width:901px){
   /* the copy is bounded so a long title can never walk out of the dense middle of the wash */
   .scene-copy h1,.page-title{max-width:16ch}
-  .hero h1{max-width:15ch}
+  /* ⚠ 08/15 — THE HOME HEADLINE WAS THE NARROWEST THING IN ITS OWN HERO, which is the 08/14 cold
+     grade's second finding and it measured: 405px wide and 54px at BOTH 1100 and 1440, under a
+     17px lede painting 542px. The subordinate element overhung the dominant one by 137px, and a
+     display line that is identical across a 340px range of viewport is not a display line, it is
+     a fixed asset. Both halves are fixed here and neither is new vocabulary.
+     · THE MEASURE. 15ch at 54px is 405px. 22ch is already the decision above 1441 — "the
+       wide-canvas hero is a two-line banner" — so the cap simply starts where the wide canvas
+       does rather than at 1441, and the headline clears its own lede at every desktop width.
+     · THE SCALE. The root clamp topped out at 54px by vw=1000, so 1000 to 1440 was dead water on
+       the one line the page is built around. This continuation starts exactly where the root
+       clamp ends — 50.83px at 901, which is what `3.2vw + 22px` pays there — so no width sees a
+       jump, and it reaches 60px at 1440. That is the same construction the 1441 block already
+       uses, declared at the same `.scene` scope so every page below the fold keeps its density,
+       and that clamp is re-anchored to 60 so the two still meet. */
+  .scene{--fs-display:clamp(50.8px, 1.7vw + 35.5px, 60px)}
+  .hero h1{max-width:22ch}
   .scene-copy .sub,.page-sub,.hero .sub,.hero-sub,.scene-copy .lead{max-width:44ch}
   /* the ledger is a flex row of three figure columns now; a ch cap on it was for the old
      one-line sentence and only forces a wrap the columns do not need */
@@ -2933,7 +3080,12 @@ div.foot-fine{border-top:1px solid var(--line-soft);margin-top:var(--s-6);paddin
    ground under the real copy either way. */
 @media (min-width:1441px){
   .scene{
-    --fs-display:clamp(54px, 1.25vw + 36px, 68px);
+    /* ⚠ 08/15 — RE-ANCHORED FROM 54 TO 60 because the 901 continuation now reaches 60px at 1440,
+       and this file's own law is that each continuation starts exactly where the one below it
+       ends. The ceiling is deliberately untouched: 68px still lands at 2560, which is the width
+       the wash was re-cut against and the one measurement in this hero that has already breached
+       a contrast floor once. Only the interior moves — 1920 goes 60.0 -> 63.4. */
+    --fs-display:clamp(60px, .72vw + 49.6px, 68px);
     --fs-h1:clamp(40px, .9vw + 27px, 50px);
     --fs-lead:clamp(20px, .36vw + 14.9px, 24px);
     --fs-body:clamp(16px, .27vw + 12.2px, 19px);
@@ -2948,7 +3100,18 @@ div.foot-fine{border-top:1px solid var(--line-soft);margin-top:var(--s-6);paddin
      count's measures widen with their own grown glyphs until the ratios hold again (re-measured
      919/~780/~640 at 2560). The ch caps keep every line inside the wash's dense band, and the
      copy stays far under the 63-69cpl the prose pages were rebuilt to. */
-  .scene-copy .sub,.page-sub,.hero .sub,.hero-sub,.scene-copy .lead{max-width:54ch}
+  /* ⚠ 08/15 — THE HOME LEDE HOLDS 44ch PAST 1441 AND THE BAND PAGES KEEP 54ch, and the split is
+     the point rather than an inconsistency. The 08/14 grade's finding was that the HOME hero's
+     lede overhangs its own headline, and it did so at every wide width: h1/sub inks of 622/674 at
+     1441, 658/731 at 1920 and 705/805 at 2560 — the subordinate element 8 to 14% WIDER than the
+     banner above it. Holding 44ch reads 622/549, 658/596 and 705/656, so the headline leads.
+     ⚠ AND THE FIRST VERSION OF THIS APPLIED IT TO THE BAND PAGES TOO, WHICH BROKE A DIFFERENT
+     RULE — gate_site_mast went red at 37.9% against a 36% ceiling on events/index.html at 1920,
+     because a narrower lede on a band page hands its width straight to the copy-to-sloop gap.
+     A band page's headline is --fs-h1, not --fs-display, so it was never in the inversion this
+     was fixing. Fix the surface you measured. */
+  .scene-copy .sub,.page-sub,.scene-copy .lead{max-width:54ch}
+  .hero .sub,.hero-sub{max-width:44ch}
   .hero-count{max-width:none}
   /* the home display line joins deliberately — at 68px a 15ch pyramid would spend the new scale
      on height (three 68px lines) instead of width, which is buying beauty with height. Stated
@@ -3754,7 +3917,16 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
      foliage and keyline read --accent-ink (the coral's dark ink), the hover reads --gold-hover.
      On cream this plate self-bounds at 3.21:1 where the gilt managed 2.09, and the dark keyline
      still carries 16.6:1 for the engraved read. */
-  --gold:#e85d4a;--gold-bright:#f47b66;--gold-hover:#f47b66;--accent-ink:#2a1008;
+  /* ⚠ 08/15 — THESE FOUR WERE HARDCODED CORAL AND SO THE FRAME NEVER FOLLOWED THE PHASE. The
+     plate moved with the sky and its own foliage, keyline and ring stayed the coral they were
+     pinned to, which is a control wearing two different decisions at once — and it is what
+     blocked a peachy sunset, because a peach plate inside a fixed gold-family frame sits 27 dE
+     from its own trim and merges into it. Pointing the pins at the action tokens makes the frame
+     the plate's own family in every phase, which is what "the main button be different colored
+     with an even nicer trimwork" actually asks for. The two-family law is untouched: navy and
+     gold still carry tiers two to four, and this is still the one control per page that does not. */
+  --gold:var(--act);--gold-bright:var(--act-hover);--gold-hover:var(--act-hover);
+  --accent-ink:var(--act-ink);
   /* ⚠ AND ITS VERTICAL PADDING IS ITS OWN. This rule set the horizontal padding and left the
      vertical to whatever won the cascade, so .rail-app .btn{padding:10px 16px} — specificity
      0,2,0 — supplied it on sponsors.html and the keynote computed 10px there against 12px on
