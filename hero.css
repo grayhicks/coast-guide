@@ -32,7 +32,7 @@
 .glit .lane { position: absolute; inset: 0px; opacity: var(--laneo,.12); filter: blur(6px); background: linear-gradient(180deg, var(--glitc) 4%, transparent 92%); }
 .gl { position: absolute; height: 2.2px; border-radius: 3px; background: var(--glitc); opacity: 0; transform: scaleX(0.25); animation: auto ease-in-out 0s infinite normal none running hk_gl; }
 .ph-night .glit { right: 6px; --laneo: .26; }
-.hfp { position: absolute; left: 9px; bottom: 8px; z-index: 3; display: block; padding: 0px; margin: 0px; border: 0px; background: none; cursor: pointer; appearance: none; filter: drop-shadow(rgba(6, 20, 32, 0.34) 0px 2px 5px); transition: transform 0.18s, filter 0.18s; }
+.hfp { position: absolute; left: 20px; bottom: 8px; z-index: 3; display: block; padding: 0px; margin: 0px; border: 0px; background: none; cursor: pointer; appearance: none; filter: drop-shadow(rgba(6, 20, 32, 0.34) 0px 2px 5px); transition: transform 0.18s, filter 0.18s; }
 .hfp:hover { transform: translateY(-1px); filter: drop-shadow(rgba(6, 20, 32, 0.42) 0px 3px 8px); }
 .hfp:active { transform: translateY(0px) scale(0.97); }
 .hfp:focus-visible { outline: rgb(255, 233, 196) solid 2px; outline-offset: 3px; border-radius: 6px; }
@@ -47,7 +47,7 @@
 .hfp_ping ellipse { fill: none; stroke-width: 1.05; opacity: 0; transform-box: fill-box; transform-origin: center center; }
 .hfp_ping1 { stroke: rgb(255, 244, 208); animation: 18s linear 0s infinite normal none running hfp_ping; }
 .hfp_ping2 { stroke: rgb(227, 196, 113); animation: 18s linear 0.55s infinite normal none running hfp_ping; }
-.ph-night .hfp_cloth, .ph-night .hfp_word { filter: brightness(0.62) saturate(0.8); }
+.ph-night .hfp_cloth, .ph-night .hfp_word { filter: brightness(0.7) saturate(0.8); }
 .ph-night .hfp_staff { stroke: rgb(201, 214, 222); }
 .ph-dawn .hfp_cloth, .ph-golden .hfp_cloth { filter: saturate(1.06); }
 @media (prefers-reduced-motion: reduce){.hfp { transition: none; }}
@@ -152,10 +152,10 @@
 .hero-datebtn:hover { background: rgba(12, 42, 58, 0.48); border-color: rgba(255, 233, 196, 0.52); }
 .hero-datebtn:active { transform: scale(0.97); }
 .hero-datebtn:focus-visible { outline: rgb(255, 233, 196) solid 2px; outline-offset: 2px; }
-.hero-datebtn .hk_mmark { width: 14px; height: 14px; flex: 0 0 auto; opacity: 0.92; }
+.hero-datebtn .hk_mmark { width: 14px; height: 14px; flex: 0 0 auto; opacity: 0.92; transform: translateX(3px); }
 .hero-datebtn .hk_mmark { --mm4: var(--flagink,#FFF9EC); }
 .hero-datebtn .hk_mmark .mm_water { display: none; }
-.hero-datebtn .hk_mmark .mm_flagcloth { fill: var(--mm4); fill-opacity: 0.9; }
+.hero-datebtn .hk_mmark .mm_c4.mm_solid { fill: var(--mm4); fill-opacity: 0.9; }
 .hk_mmark .mm_fill4 { fill: var(--mm4); stroke: none; }
 @media (prefers-reduced-motion: reduce){.hero-datebtn { transition: none; }}
 .hero-sub { font-size: 12.5px; color: rgba(255, 251, 244, 0.94); margin-top: 14px; line-height: 1.5; max-width: 300px; position: relative; z-index: 2; text-wrap: balance; }
@@ -315,6 +315,8 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
 .xsky_star.s2 { left: 140px; top: 11px; animation: 3s ease-in-out 0s infinite normal none running xskyTwinkle; }
 .xps_star.s1 { left: 24px; top: 12px; opacity: 0.3; }
 .xps_star.s2 { left: 138px; top: 7px; animation: 3s ease-in-out 0s infinite normal none running xpsTwinkle; }
+.xp_supportstage.reviewing .xps_star { animation: auto ease 0s 1 normal none running none; opacity: 0.55; }
+.xp_supportstage.reviewing .xps_hairline { opacity: 0.85; }
 @keyframes hk_drift { 
   0% { transform: translateX(0px); opacity: 0; }
   7% { opacity: var(--clo,.18); }

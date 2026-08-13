@@ -2692,8 +2692,19 @@ section.band-cta.home-sec{padding:var(--s-6)}
    two products. */
 .give{margin-top:var(--s-4)}
 .give-cue{margin:0 0 10px;color:var(--ink-2);font-size:var(--fs-small)}
-.give-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+/* ⚠ 08/16 — SIX CHIPS NOW, CUSTOM BEING THE SIXTH. repeat(6,...) keeps the row on one line from
+   480 up the same way repeat(5,...) did; the 3-column mobile floor below turns 6 into two even
+   rows of 3 where it used to be an awkward 3-then-2. */
+.give-row{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
 @media (max-width:479px){ .give-row{grid-template-columns:repeat(3,minmax(0,1fr))} }
+/* ⚠ THE CUSTOM FIELD IS A PLAIN SITE FORM FIELD, NOT A PAYMENT FIELD. It takes the exact same
+   `.prose input` rule every contact, submit and apply form on this site already uses — same
+   height, same border, same background token — on purpose: a field that looked like a card
+   entry would be a stronger promise than a chooser that hands off to the app is allowed to make.
+   No value or placeholder here is a number, because a filled-in figure would read as a suggested
+   or recommended amount and none is claimed. */
+.give-custom{margin-top:10px;max-width:260px}
+.give-custom-lb{display:block;margin:0 0 6px;color:var(--ink-2);font-size:var(--fs-small)}
 /* ⚠ 08/11 — GRAY: "make all of those buttons borders better and more elegant? at least for the one
    that is currently selected you know? or all? you tell me." BOTH, and they are different jobs.
    Every chip becomes a PLATE: the boundary plus an inset keyline a pixel inside it, which is the
