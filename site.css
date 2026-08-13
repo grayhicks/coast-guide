@@ -143,6 +143,14 @@
   --tag-fg:#c7bba7;       --tag-line:#31506e;
   --sponsor-fg:#dcc79b;   /* the word "Sponsored" */
 
+  /* ------------------------------------------------------- the beach flag
+     The county's own flag colours, the same four the app's FLAG_INK carries.
+     ⚠ DELIBERATELY NOT REDEFINED IN THE LIGHT BLOCK — a flag's colour is the
+     flag's fact, not the theme's, and the swatch that wears these is a bordered
+     chip (.fsw) so its edge, not its fill, carries the 3:1 graphics floor. The
+     WORD beside it always names the colour; the ink is never the only carrier. */
+  --flag-green:#2e9e5b; --flag-yellow:#e0a81f; --flag-red:#c7202a; --flag-purple:#7b3fa0;
+
   /* -------------------------------------------------------------- spacing */
   --s-1:4px; --s-2:8px; --s-3:12px; --s-4:16px;
   --s-5:24px; --s-6:32px; --s-7:48px; --s-8:64px; --s-9:96px;
@@ -1772,6 +1780,44 @@ html[data-theme="light"] .card .ev-fare.tba{color:color-mix(in srgb, var(--pill-
 .opened-stamp{display:inline-flex;align-items:center;gap:6px;font:600 var(--fs-small)/1 var(--font-mono);
   color:var(--pill-free-fg);background:var(--pill-free-bg);border:1px solid var(--pill-free-line);
   border-radius:var(--r-pill);padding:6px 10px;font-variant-numeric:tabular-nums}
+
+/* ═══ THE CARD'S QUICK ACTIONS — calendar · save · share · website · maps ═══════════════════
+   The app card's control row, on the site's own terms: no plates and no boxes, because the card's
+   whole argument is one rounded rectangle — five small marks from the app's own IC_PATHS, lifted,
+   each with an aria-label (the app's icon-only convention) and a title.
+   ⚠ position:relative + z-index, because the title's stretched link (.card h3 a::before) covers
+   the whole card and would otherwise swallow every tap in this row.
+   ⚠ THE HIT AREA IS THE PSEUDO-ELEMENT, NOT THE INK — the 44px law is about what a thumb hits,
+   so ::after grows each control to 44x44 while the drawn mark stays 17px.
+   ⚠ Links (calendar, website, maps) ship visible and work with scripting off; the save star and
+   the share control ship hidden in the markup and are revealed by the script that gives them
+   their behaviour — the filter bar's law, so nothing on a JS-off page is a dead control. */
+.ev-act{position:relative;z-index:2;display:flex;justify-content:center;align-items:center;
+  gap:10px;margin-top:8px;border-top:1px solid var(--line-soft);padding-top:6px}
+.ev-act .ea{display:inline-flex;align-items:center;justify-content:center;position:relative;
+  width:38px;height:32px;padding:0;background:none;border:0;border-radius:var(--r-field);
+  color:var(--ink-3);cursor:pointer;text-decoration:none;
+  transition:transform var(--t-fast) var(--ease)}
+.ev-act .ea::after{content:"";position:absolute;inset:-6px -3px}
+.ev-act .ea:hover{color:var(--gold-bright);transform:translateY(-1px)}
+.ev-act .ea:focus-visible{outline:2px solid var(--focus-ink);outline-offset:2px}
+.ea-ic{width:17px;height:17px}
+/* the saved state is shown back, on this card and every copy of it: gilt ink, filled star */
+.ea-save[aria-pressed="true"]{color:var(--gold)}
+.ea-save[aria-pressed="true"] .ea-ic{fill:color-mix(in srgb, var(--gold) 35%, transparent)}
+/* the copy-link acknowledgement — the confirmed green, briefly, plus the live-region sentence */
+.ea-share.did{color:var(--ok)}
+@media (prefers-reduced-motion:reduce){ .ev-act .ea{transition:none} }
+
+/* the agate's two condition cells: the baked weather, and the flag with its bordered swatch */
+.ev-agate .wx{color:var(--ink-2)}
+.ev-agate .flag{color:var(--ink-2)}
+.fsw{display:inline-block;width:9px;height:9px;margin-right:5px;border-radius:2px;
+  border:1px solid var(--line-strong);background:var(--ink-3);vertical-align:-1px}
+.fsw.f-green{background:var(--flag-green)}
+.fsw.f-yellow{background:var(--flag-yellow)}
+.fsw.f-red{background:var(--flag-red)}
+.fsw.f-purple{background:var(--flag-purple)}
 
 /* sponsored: the word appears, in that word, every time */
 .card.sponsored{border-color:rgba(217,164,65,.45)}
