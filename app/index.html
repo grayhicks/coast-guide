@@ -11647,7 +11647,7 @@ body:has(.promotions-page) .hk_supportfloat{ opacity:0; pointer-events:none; tra
    the one place this fact already lives rather than a colour invented for this card. */
 .hk_sc.card{
   --hk-sc-ink:#0e2436; --hk-sc-ink2:#44566a; --hk-sc-ink3:#5e6e80;
-  --hk-sc-panel:#fffcf4; --hk-sc-line:#e2d2ae; --hk-sc-sheen:rgba(255,255,255,.75);
+  --hk-sc-panel:#fffdf8; --hk-sc-line:#e2d2ae; --hk-sc-sheen:rgba(255,255,255,.75);
   --hk-sc-gold:#8a5a0c; --hk-sc-goldb:#7a4e08; --hk-sc-ok:#0b6e52;
   --hk-sc-serif:GcaEmoji, ui-serif, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
   --hk-sc-mono:GcaEmoji, ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace;
@@ -11703,7 +11703,7 @@ body:has(.promotions-page) .hk_supportfloat{ opacity:0; pointer-events:none; tra
 /* ⚠ THE HEAD CIRCLES NEED THE SAME PALE-CARD FIX THE DAY THEMES ALREADY CARRY (see the block
    beside .t-movie/.t-art/.t-comedy/.t-lab, further up this file) — the base rule fills them with
    rgba(255,255,255,.08) on the assumption of a dark panel, which is a hairline of near-white on
-   near-white here. This card's own paper (#fffcf4) matches that cream family, not the cooler
+   near-white here. This card's own paper (#fffdf8) matches that cream family, not the cooler
    town/coastal one, so it takes the same values verbatim: pin, share, web, phone (the fifth in the
    same series once a record carries one) and copy all read as one warm-cream button chrome. */
 .hk_sc .pin, .hk_sc .cardshare, .hk_sc .cardweb, .hk_sc .cardphoneact, .hk_sc .cardcopyact{
@@ -11912,6 +11912,33 @@ body:has(.promotions-page) .hk_supportfloat{ opacity:0; pointer-events:none; tra
   inset:0; border-radius:inherit;
   background: linear-gradient(152deg, var(--bk-rake-hi), transparent 44%),
               linear-gradient(332deg, var(--bk-rake-sh), transparent 52%); }
+
+/* ===== 08/16 — ONE ORNAMENT, THREE PLACEMENTS. Gray picked this off a mock sheet after four
+   pattern attempts were rejected: "There s just too many of them it should be more like a design."
+   He also asked whether it should be one treatment or several and answered it himself — F, one.
+   ⚠ THAT ANSWER IS ALSO THE LAW: CLAUDE.md 2.2 law 8 says ONE MARK, NOT A FAMILY. Four different
+   arrangements down a 24-card column would read as inconsistency, not as design.
+   ⚠ IT IS A RHYTHM, NOT A TILE, AND THAT IS THE WHOLE POINT OF THE REJECTIONS BEFORE IT. Three
+   placements of ONE drawn vine — as drawn, mirrored, and turned — spaced so no two crowd each
+   other and none sits under the price or the foot controls. Nothing repeats on a grid.
+   ⚠ THE FIGURE IS DRAWN HERE, not taken from his reference images: three of those are watermarked
+   stock tiles and the fourth is a live trademark. Strokes and small leaves, engraved rather than
+   stamped, which is what made the earlier filled blobs read as slapped on.
+   ⚠ IT RIDES THE EXISTING z-index:-1 LAYER, so it is behind every glyph and every control by
+   construction and can never be the thing a thumb hits. The raked light he approved stays on top
+   of it in the same stack, and the emboss shadow agrees with that light: a white offset below-right
+   of each stroke, so the vine reads pressed into the paper rather than printed on it. */
+.hk .hk_sc.card:not(.promo-card)::after{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 120 120%27%3E%3Cg%3E%3Cpath d=%27M8,112 C8,86 20,74 34,64 C48,54 58,42 56,28 C55,17 45,10 35,13 C26,16 23,27 30,33 C35,37 43,35 44,29%27 fill=%27none%27 stroke=%27rgba(139,118,72,0.26)%27 stroke-width=%272.1%27 stroke-linecap=%27round%27/%3E%3Cpath d=%27M34,64 C48,66 62,62 72,52 C82,42 86,28 82,18%27 fill=%27none%27 stroke=%27rgba(139,118,72,0.26)%27 stroke-width=%271.7%27 stroke-linecap=%27round%27/%3E%3Cpath d=%27M82,18 C79,26 82,33 89,35 C96,37 101,31 98,25%27 fill=%27none%27 stroke=%27rgba(139,118,72,0.26)%27 stroke-width=%271.5%27 stroke-linecap=%27round%27/%3E%3Cpath d=%27M34,64 C40,52 52,46 62,48 C54,60 42,66 34,64 Z%27 fill=%27rgba(139,118,72,0.26)%27/%3E%3Cpath d=%27M45,55 C44,43 51,33 61,30 C61,42 55,52 45,55 Z%27 fill=%27rgba(139,118,72,0.26)%27/%3E%3Cpath d=%27M20,86 C28,77 40,74 48,78 C39,88 27,91 20,86 Z%27 fill=%27rgba(139,118,72,0.26)%27/%3E%3Cpath d=%27M62,55 C71,50 82,51 88,57 C79,63 68,62 62,55 Z%27 fill=%27rgba(139,118,72,0.26)%27/%3E%3Ccircle cx=%2744%27 cy=%2729%27 r=%272.4%27 fill=%27rgba(139,118,72,0.26)%27/%3E%3Ccircle cx=%2798%27 cy=%2725%27 r=%272%27 fill=%27rgba(139,118,72,0.26)%27/%3E%3C/g%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 120 120%27%3E%3Cg transform=%27translate(120,0) scale(-1,1)%27%3E%3Cpath d=%27M8,112 C8,86 20,74 34,64 C48,54 58,42 56,28 C55,17 45,10 35,13 C26,16 23,27 30,33 C35,37 43,35 44,29%27 fill=%27none%27 stroke=%27rgba(139,118,72,0.26)%27 stroke-width=%272.1%27 stroke-linecap=%27round%27/%3E%3Cpath d=%27M34,64 C48,66 62,62 72,52 C82,42 86,28 82,18%27 fill=%27none%27 stroke=%27rgba(139,118,72,0.26)%27 stroke-width=%271.7%27 stroke-linecap=%27round%27/%3E%3Cpath d=%27M82,18 C79,26 82,33 89,35 C96,37 101,31 98,25%27 fill=%27none%27 stroke=%27rgba(139,118,72,0.26)%27 stroke-width=%271.5%27 stroke-linecap=%27round%27/%3E%3Cpath d=%27M34,64 C40,52 52,46 62,48 C54,60 42,66 34,64 Z%27 fill=%27rgba(139,118,72,0.26)%27/%3E%3Cpath d=%27M45,55 C44,43 51,33 61,30 C61,42 55,52 45,55 Z%27 fill=%27rgba(139,118,72,0.26)%27/%3E%3Cpath d=%27M20,86 C28,77 40,74 48,78 C39,88 27,91 20,86 Z%27 fill=%27rgba(139,118,72,0.26)%27/%3E%3Cpath d=%27M62,55 C71,50 82,51 88,57 C79,63 68,62 62,55 Z%27 fill=%27rgba(139,118,72,0.26)%27/%3E%3Ccircle cx=%2744%27 cy=%2729%27 r=%272.4%27 fill=%27rgba(139,118,72,0.26)%27/%3E%3Ccircle cx=%2798%27 cy=%2725%27 r=%272%27 fill=%27rgba(139,118,72,0.26)%27/%3E%3C/g%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 120 120%27%3E%3Cg transform=%27translate(120,120) rotate(180)%27%3E%3Cpath d=%27M8,112 C8,86 20,74 34,64 C48,54 58,42 56,28 C55,17 45,10 35,13 C26,16 23,27 30,33 C35,37 43,35 44,29%27 fill=%27none%27 stroke=%27rgba(139,118,72,0.26)%27 stroke-width=%272.1%27 stroke-linecap=%27round%27/%3E%3Cpath d=%27M34,64 C48,66 62,62 72,52 C82,42 86,28 82,18%27 fill=%27none%27 stroke=%27rgba(139,118,72,0.26)%27 stroke-width=%271.7%27 stroke-linecap=%27round%27/%3E%3Cpath d=%27M82,18 C79,26 82,33 89,35 C96,37 101,31 98,25%27 fill=%27none%27 stroke=%27rgba(139,118,72,0.26)%27 stroke-width=%271.5%27 stroke-linecap=%27round%27/%3E%3Cpath d=%27M34,64 C40,52 52,46 62,48 C54,60 42,66 34,64 Z%27 fill=%27rgba(139,118,72,0.26)%27/%3E%3Cpath d=%27M45,55 C44,43 51,33 61,30 C61,42 55,52 45,55 Z%27 fill=%27rgba(139,118,72,0.26)%27/%3E%3Cpath d=%27M20,86 C28,77 40,74 48,78 C39,88 27,91 20,86 Z%27 fill=%27rgba(139,118,72,0.26)%27/%3E%3Cpath d=%27M62,55 C71,50 82,51 88,57 C79,63 68,62 62,55 Z%27 fill=%27rgba(139,118,72,0.26)%27/%3E%3Ccircle cx=%2744%27 cy=%2729%27 r=%272.4%27 fill=%27rgba(139,118,72,0.26)%27/%3E%3Ccircle cx=%2798%27 cy=%2725%27 r=%272%27 fill=%27rgba(139,118,72,0.26)%27/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(152deg, var(--bk-rake-hi), transparent 44%),
+    linear-gradient(332deg, var(--bk-rake-sh), transparent 52%);
+  background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,no-repeat;
+  background-position:-12px -10px, right -14px top 58%, left 30px bottom -12px, 0 0, 0 0;
+  background-size:70px 70px, 70px 70px, 70px 70px, auto, auto;
+  opacity:1; }
+/* the press. A single white offset copy under the ink is all an indent is at this scale. */
+.hk .hk_sc.card{ --hk-orn-press:drop-shadow(.9px 1.2px 0 rgba(255,255,255,.98)); }
+.hk .hk_sc.card:not(.promo-card)::after{ filter:var(--hk-orn-press); }
 /* the promotions page already defines its own .card::after and must not be fought over it */
 .promotions-page .card::after{ background:none; }
 /* the 1px lit rim paints OUTSIDE the top edge, onto the page, which is the one cue a world tint
@@ -11923,13 +11950,6 @@ body:has(.promotions-page) .hk_supportfloat{ opacity:0; pointer-events:none; tra
 .hk_sc .cardfoot .cardmap, .hk_sc .cardfoot .tap{ min-height:44px; }
 /* the tap affordance takes a whole line of its own rather than clipping at the card edge when the
    call, map and calendar controls leave it under 140px */
-.hk_sc .cardfoot .tap{ flex:1 1 140px; }
-/* ⚠ 08/16 pm — THE PRESSED PLATE IS REVERTED. Gray, looking at it: "I don t like the card
-   thing. I like the first one." The raked light above stands alone, which is what he approved.
-   ⛔ AND THE REAL BRIEF, IN HIS WORDS, IS NOT WHAT WAS BUILT: "I want it to be white ish in the
-   background or cream, but INDENTED like the LV photo." That is a debossed tone-on-tone MOTIF on a
-   near-white ground — the leather-monogram reference, not a keyline ring and not the house rule
-   grown full width. Build that; do not rebuild this. ⚠ His references may not be traced. */
 `;const AUD_LABEL={family:"Family of 5 · admission",adults:"For 2 · date night",kids:"Per kid · admission"};/* 07/28 — Gray: "the price is for 2 people yet the price on the card still states whole family…
    That needs to change to 2… Same for all party of 2s. And the logic has to be nailed down because
    this is for everyone."
@@ -13491,7 +13511,7 @@ function useLiveWx(){const[,bump]=useState(0);useEffect(()=>{const cb=()=>bump(n
    the stand is the truth. A colour nobody earned is worse than no colour, which
    is the same law verifiedOn runs on.
    =========================================================================== *//* GCA_FLAG_DATA_BEGIN — one line, replaced verbatim by claude/harness/bake_beach_flag.js.
-   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-16T14:43:41.931Z","issued":"2026-08-16T12:59:00+00:00","productId":"56c4e5a4-3a15-491a-949e-91fce6b594c3","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"},"forecastSource":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"observed","county":{"level":1,"flags":["green","purple"],"risk":"Low","marineLife":true,"waterTempF":86,"updated":"2026-08-16T14:34:39.827Z","chance":{"green":50,"yellow":50,"red":0,"doubleRed":0,"marineLife":70},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-16","risk":"Low","flags":["green","purple"],"observedAt":"2026-08-16T14:34:39.827Z","chance":{"green":50,"yellow":50,"red":0,"doubleRed":0,"marineLife":70},"surf":"Around 1 foot","uv":"Very High","water":"86°F","weather":"Mostly sunny. A chance of showers and thunderstorms","winds":"West winds around 5 mph, becoming southwest in the afternoon"},"outlook":[{"date":"2026-08-16","label":"Today","risk":"Low","flags":["green"],"surf":"Around 1 foot"},{"date":"2026-08-17","label":"Monday","risk":"Moderate","flags":["yellow"],"surf":"1 to 2 feet"},{"date":"2026-08-18","label":"Tuesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-19","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-20","label":"Thursday","risk":"Low","flags":["green"],"surf":"1 to 2 feet"}],"alerts":[{"event":"Heat Advisory","headline":"Heat Advisory issued August 16 at 7:54AM CDT until August 16 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...Heat index values up to 111 expected.\n\n* WHERE...Portions of south central and southwest Alabama, northwest\nFlorida, and southeast Mississippi.\n\n* WHEN...From 11 AM this morning to 8 PM CDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.","severity":"Moderate","onset":"2026-08-16T11:00:00-05:00","ends":"2026-08-16T20:00:00-05:00"}]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
+   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-16T15:41:17.332Z","issued":"2026-08-16T12:59:00+00:00","productId":"56c4e5a4-3a15-491a-949e-91fce6b594c3","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"},"forecastSource":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"observed","county":{"level":1,"flags":["green","purple"],"risk":"Low","marineLife":true,"waterTempF":86,"updated":"2026-08-16T14:34:39.827Z","chance":{"green":50,"yellow":50,"red":0,"doubleRed":0,"marineLife":70},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-16","risk":"Low","flags":["green","purple"],"observedAt":"2026-08-16T14:34:39.827Z","chance":{"green":50,"yellow":50,"red":0,"doubleRed":0,"marineLife":70},"surf":"Around 1 foot","uv":"Very High","water":"86°F","weather":"Mostly sunny. A chance of showers and thunderstorms","winds":"West winds around 5 mph, becoming southwest in the afternoon"},"outlook":[{"date":"2026-08-16","label":"Today","risk":"Low","flags":["green"],"surf":"Around 1 foot"},{"date":"2026-08-17","label":"Monday","risk":"Moderate","flags":["yellow"],"surf":"1 to 2 feet"},{"date":"2026-08-18","label":"Tuesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-19","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-20","label":"Thursday","risk":"Low","flags":["green"],"surf":"1 to 2 feet"}],"alerts":[{"event":"Heat Advisory","headline":"Heat Advisory issued August 16 at 7:54AM CDT until August 16 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...Heat index values up to 111 expected.\n\n* WHERE...Portions of south central and southwest Alabama, northwest\nFlorida, and southeast Mississippi.\n\n* WHEN...From 11 AM this morning to 8 PM CDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.","severity":"Moderate","onset":"2026-08-16T11:00:00-05:00","ends":"2026-08-16T20:00:00-05:00"}]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
    same words fetch_beach_flag.js emits so the two cannot drift apart.
    ⚠ 08/13 — GREEN WAS #2E9E5B AND GRAY COULD NOT SEE IT: "not able to be seen very vividly.
    Needs to be filled it i guess or more vivid less dark green." Measured, he is right by a
