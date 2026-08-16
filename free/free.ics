@@ -1,172 +1,9 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Gulf Coast Adventures//Gulf Coast events//EN
+PRODID:-//Next Up//Gulf Coast events//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Gulf Coast: free things
-BEGIN:VEVENT
-UID:ev_palafox-2026-08-15@coast-guide
-DTSTAMP:20260815T000000Z
-DTSTART:20260815T090000
-DTEND:20260815T110000
-SUMMARY:Palafox Market
-DESCRIPTION:A big Saturday market fills downtown with produce\, local make
- rs\, art\, and food. A free trolley runs between plazas. It is stroller-f
- riendly.\nPrice: Free\nArea: Pensacola\nTimes: Saturdays · 9 AM-2 PM\nht
- tps://grayhicks.github.io/coast-guide/events/ev-palafox.html
-LOCATION:MLK Jr. Plaza + Plaza Ferdinand\, Downtown Pensacola\, 200 N Pala
- fox St\, Pensacola\, FL 32502
-URL:https://grayhicks.github.io/coast-guide/events/ev-palafox.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_grandblvd_mkt-2026-08-15@coast-guide
-DTSTAMP:20260815T000000Z
-DTSTART:20260815T090000
-DTEND:20260815T110000
-SUMMARY:Grand Boulevard Farmers' Market
-DESCRIPTION:A Saturday farmers and makers market fills the Sandestin green
- \, with local honey\, produce\, and kettle corn. Pair it with a Destin/Ba
- ytowne day.\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Saturdays ·
-  9 AM-1 PM\nhttps://grayhicks.github.io/coast-guide/events/ev-grandblvd-m
- kt.html
-LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Blvd\, Mira
- mar Beach\, FL 32550
-URL:https://grayhicks.github.io/coast-guide/events/ev-grandblvd-mkt.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_foley_mkt-2026-08-15@coast-guide
-DTSTAMP:20260815T000000Z
-DTSTART:20260815T090000
-DTEND:20260815T110000
-SUMMARY:Coastal Alabama Farmers & Fishermens Market
-DESCRIPTION:The county's largest market sells fresh Gulf seafood straight 
- from the boats plus produce and makers. It is five minutes from OWA\, so 
- it stacks with a Tropic Falls day.\nPrice: Free\nArea: Orange Beach & Gul
- f Shores\nTimes: Saturdays · 9 AM-2 PM\nhttps://grayhicks.github.io/coas
- t-guide/events/ev-foley-mkt.html
-LOCATION:Coastal Alabama Market\, 781 Farmers Market Ln\, Foley\, AL 36535
-URL:https://grayhicks.github.io/coast-guide/events/ev-foley-mkt.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_parkrun-2026-08-15@coast-guide
-DTSTAMP:20260815T000000Z
-DTSTART:20260815T073000
-DTEND:20260815T093000
-SUMMARY:parkrun: Free Timed 5K (Rec Plex North)
-DESCRIPTION:A free\, timed\, all-comers 5K runs every Saturday. Walk\, run
- \, or push the jogging stroller. The kids can earn official times too\, w
- ith one-time free barcode registration.\nPrice: Free\nArea: Pensacola\nTi
- mes: Saturdays · 7:30 AM\nhttps://grayhicks.github.io/coast-guide/events
- /ev-parkrun.html
-LOCATION:UWF Rec Plex North Field\, 11000 University Pkwy\, Pensacola\, FL
-  32514
-URL:https://grayhicks.github.io/coast-guide/events/ev-parkrun.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_oceanhour-2026-08-15@coast-guide
-DTSTAMP:20260815T000000Z
-DTSTART:20260815T084500
-DTEND:20260815T104500
-SUMMARY:Ocean Hour Beach Cleanup
-DESCRIPTION:Give an hour and leave the beach better. Buckets\, grabbers\, 
- and gloves are provided. It is a service morning that fits the family's v
- alues and is kid-friendly.\nPrice: Free\nArea: Pensacola Beach & Perdido\
- nTimes: Saturdays · ~8:45 AM · location rotates\nhttps://grayhicks.gith
- ub.io/coast-guide/events/ev-oceanhour.html
-LOCATION:Rotating\, Pensacola Beach / area waterfronts\, Pensacola Beach\,
-  FL 32561
-URL:https://grayhicks.github.io/coast-guide/events/ev-oceanhour.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_mancis_live-2026-08-15@coast-guide
-DTSTAMP:20260815T000000Z
-DTSTART:20260815T180000
-DTEND:20260815T200000
-SUMMARY:Live Music: Manci's Antique Club
-DESCRIPTION:This Daphne institution has walls of Jim Beam decanters and li
- ve local bands Thursday through Sunday. It is a grown-up night across the
-  bay\, about 50 minutes out.\nPrice: Free\nArea: Mobile & Baldwin County\
- nTimes: Thu 6:30 · Fri-Sat 7:30 · Sun 6:00 PM\nhttps://grayhicks.github
- .io/coast-guide/events/nl-mancis-live.html
-LOCATION:Manci's Antique Club\, 1715 Main St\, Daphne\, AL 36526
-URL:https://grayhicks.github.io/coast-guide/events/nl-mancis-live.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_fubar_nights-2026-08-15@coast-guide
-DTSTAMP:20260815T000000Z
-DTSTART:20260815T210000
-DTEND:20260815T230000
-SUMMARY:Karaoke & DJ Nights: FUBAR Pizza Bar
-DESCRIPTION:Late-night karaoke runs five nights a week (Sun\, Tue\, Wed\, 
- Fri\, Sat) plus a DJ on Monday and Thursday\, 9 PM to 1 AM every night\, 
- with pizza till close. It is in Fort Walton Beach\, about 50 minutes east
- .\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Nightly · 9 PM-1 AM\n
- https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
-LOCATION:FUBAR Pizza Bar\, 114 Amberjack Dr\, Fort Walton Beach\, FL 32548
-URL:https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_theblock_karaoke-2026-08-15@coast-guide
-DTSTAMP:20260815T000000Z
-DTSTART:20260815T180000
-DTEND:20260815T200000
-SUMMARY:Karaoke Block: The Block
-DESCRIPTION:The Sports & Karaoke room at The Block runs Wednesday through 
- Saturday\, opening at 6 (8 on Thursday) and going late. Downtown Fort Wal
- ton Beach\, about 50 minutes out.\nPrice: Free\nArea: Destin & Fort Walto
- n\nTimes: Wed-Sat · from 6 PM (Thu 8 PM)\nhttps://grayhicks.github.io/co
- ast-guide/events/nl-theblock-karaoke.html
-LOCATION:The Block\, 113 Eglin Pkwy SE\, Fort Walton Beach\, FL 32548
-URL:https://grayhicks.github.io/coast-guide/events/nl-theblock-karaoke.htm
- l
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_sandshaker_live-2026-08-15@coast-guide
-DTSTAMP:20260815T000000Z
-DTSTART;VALUE=DATE:20260815
-DTEND;VALUE=DATE:20260816
-SUMMARY:Weekend Live Music: Sandshaker Lounge
-DESCRIPTION:The Shaker\, birthplace of the Bushwacker\, has live music eve
- ry weekend and never a cover. It is a classic Pensacola Beach dive\, abou
- t 25 minutes from the bridge.\nPrice: Free\nArea: Pensacola Beach & Perdi
- do\nTimes: Every weekend · evenings\nhttps://grayhicks.github.io/coast-g
- uide/events/nl-sandshaker-live.html
-LOCATION:Sandshaker Lounge\, 731 Pensacola Beach Blvd\, Pensacola Beach\, 
- FL 32561
-URL:https://grayhicks.github.io/coast-guide/events/nl-sandshaker-live.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_paradise_live-2026-08-15@coast-guide
-DTSTAMP:20260815T000000Z
-DTSTART:20260815T173000
-DTEND:20260815T193000
-SUMMARY:Live Music: Paradise Bar & Grill
-DESCRIPTION:Beachside live music plays most nights on Pensacola Beach\, wi
- th rotating local acts starting at 5:30 (Sundays 2:30). Wine Down Wednesd
- ay runs $3 house and $6 premium wines all day. It is about 25 minutes out
- .\nPrice: Free\nArea: Pensacola Beach & Perdido\nTimes: Tue/Fri/Sat 5:30 
- PM · Sun 2:30 PM\nhttps://grayhicks.github.io/coast-guide/events/nl-para
- dise-live.html
-LOCATION:Paradise Bar & Grill\, 21 Via De Luna Dr\, Pensacola Beach\, FL 3
- 2561
-URL:https://grayhicks.github.io/coast-guide/events/nl-paradise-live.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_30ave_green_music-2026-08-15@coast-guide
-DTSTAMP:20260815T000000Z
-DTSTART:20260815T180000
-DTEND:20260815T210000
-SUMMARY:Live music on the green: 30Avenue
-DESCRIPTION:Local players on the lawn at the 30A end of the county\, every
-  evening\, no ticket. Shops and restaurants ring the green\, so it works 
- as the whole evening or as the thing that happens while you eat.\nPrice: 
- Free\nArea: 30A & South Walton\nTimes: Every evening · 6:00-9:00 PM · f
- ree\nChecked against the venue's own page on 2026-08-08\nhttps://grayhick
- s.github.io/coast-guide/events/ev-30ave-green-music.html
-LOCATION:30Avenue\, 12805 US-98 East\, Inlet Beach\, FL 32461
-URL:https://grayhicks.github.io/coast-guide/events/ev-30ave-green-music.ht
- ml
-END:VEVENT
 BEGIN:VEVENT
 UID:ev_sunmkt-2026-08-16@coast-guide
 DTSTAMP:20260816T000000Z
@@ -181,6 +18,81 @@ DESCRIPTION:The Sunday sibling of Palafox Market brings crafts\, art\, and
 LOCATION:MLK Jr. Plaza\, Downtown Pensacola\, 200 N Palafox St\, Pensacola
  \, FL 32502
 URL:https://grayhicks.github.io/coast-guide/events/ev-sunmkt.html
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_mancis_live-2026-08-16@coast-guide
+DTSTAMP:20260816T000000Z
+DTSTART:20260816T180000
+DTEND:20260816T200000
+SUMMARY:Live Music: Manci's Antique Club
+DESCRIPTION:This Daphne institution has walls of Jim Beam decanters and li
+ ve local bands Thursday through Sunday. It is a grown-up night across the
+  bay\, about 50 minutes out.\nPrice: Free\nArea: Mobile & Baldwin County\
+ nTimes: Thu 6:30 · Fri-Sat 7:30 · Sun 6:00 PM\nhttps://grayhicks.github
+ .io/coast-guide/events/nl-mancis-live.html
+LOCATION:Manci's Antique Club\, 1715 Main St\, Daphne\, AL 36526
+URL:https://grayhicks.github.io/coast-guide/events/nl-mancis-live.html
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_fubar_nights-2026-08-16@coast-guide
+DTSTAMP:20260816T000000Z
+DTSTART:20260816T210000
+DTEND:20260816T230000
+SUMMARY:Karaoke & DJ Nights: FUBAR Pizza Bar
+DESCRIPTION:Late-night karaoke runs five nights a week (Sun\, Tue\, Wed\, 
+ Fri\, Sat) plus a DJ on Monday and Thursday\, 9 PM to 1 AM every night\, 
+ with pizza till close. It is in Fort Walton Beach\, about 50 minutes east
+ .\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Nightly · 9 PM-1 AM\n
+ https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
+LOCATION:FUBAR Pizza Bar\, 114 Amberjack Dr\, Fort Walton Beach\, FL 32548
+URL:https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_sandshaker_live-2026-08-16@coast-guide
+DTSTAMP:20260816T000000Z
+DTSTART;VALUE=DATE:20260816
+DTEND;VALUE=DATE:20260817
+SUMMARY:Weekend Live Music: Sandshaker Lounge
+DESCRIPTION:The Shaker\, birthplace of the Bushwacker\, has live music eve
+ ry weekend and never a cover. It is a classic Pensacola Beach dive\, abou
+ t 25 minutes from the bridge.\nPrice: Free\nArea: Pensacola Beach & Perdi
+ do\nTimes: Every weekend · evenings\nhttps://grayhicks.github.io/coast-g
+ uide/events/nl-sandshaker-live.html
+LOCATION:Sandshaker Lounge\, 731 Pensacola Beach Blvd\, Pensacola Beach\, 
+ FL 32561
+URL:https://grayhicks.github.io/coast-guide/events/nl-sandshaker-live.html
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_paradise_live-2026-08-16@coast-guide
+DTSTAMP:20260816T000000Z
+DTSTART:20260816T173000
+DTEND:20260816T193000
+SUMMARY:Live Music: Paradise Bar & Grill
+DESCRIPTION:Beachside live music plays most nights on Pensacola Beach\, wi
+ th rotating local acts starting at 5:30 (Sundays 2:30). Wine Down Wednesd
+ ay runs $3 house and $6 premium wines all day. It is about 25 minutes out
+ .\nPrice: Free\nArea: Pensacola Beach & Perdido\nTimes: Tue/Fri/Sat 5:30 
+ PM · Sun 2:30 PM\nhttps://grayhicks.github.io/coast-guide/events/nl-para
+ dise-live.html
+LOCATION:Paradise Bar & Grill\, 21 Via De Luna Dr\, Pensacola Beach\, FL 3
+ 2561
+URL:https://grayhicks.github.io/coast-guide/events/nl-paradise-live.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_30ave_green_music-2026-08-16@coast-guide
+DTSTAMP:20260816T000000Z
+DTSTART:20260816T180000
+DTEND:20260816T210000
+SUMMARY:Live music on the green: 30Avenue
+DESCRIPTION:Local players on the lawn at the 30A end of the county\, every
+  evening\, no ticket. Shops and restaurants ring the green\, so it works 
+ as the whole evening or as the thing that happens while you eat.\nPrice: 
+ Free\nArea: 30A & South Walton\nTimes: Every evening · 6:00-9:00 PM · f
+ ree\nChecked against the venue's own page on 2026-08-08\nhttps://grayhick
+ s.github.io/coast-guide/events/ev-30ave-green-music.html
+LOCATION:30Avenue\, 12805 US-98 East\, Inlet Beach\, FL 32461
+URL:https://grayhicks.github.io/coast-guide/events/ev-30ave-green-music.ht
+ ml
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seville_barbingo-2026-08-17@coast-guide
@@ -295,6 +207,21 @@ LOCATION:AJ's Oyster Shanty\, 108 Santa Rosa Blvd\, Fort Walton Beach\, FL
 URL:https://grayhicks.github.io/coast-guide/events/nl-ajs-karaoke.html
 END:VEVENT
 BEGIN:VEVENT
+UID:nl_theblock_karaoke-2026-08-19@coast-guide
+DTSTAMP:20260819T000000Z
+DTSTART:20260819T180000
+DTEND:20260819T200000
+SUMMARY:Karaoke Block: The Block
+DESCRIPTION:The Sports & Karaoke room at The Block runs Wednesday through 
+ Saturday\, opening at 6 (8 on Thursday) and going late. Downtown Fort Wal
+ ton Beach\, about 50 minutes out.\nPrice: Free\nArea: Destin & Fort Walto
+ n\nTimes: Wed-Sat · from 6 PM (Thu 8 PM)\nhttps://grayhicks.github.io/co
+ ast-guide/events/nl-theblock-karaoke.html
+LOCATION:The Block\, 113 Eglin Pkwy SE\, Fort Walton Beach\, FL 32548
+URL:https://grayhicks.github.io/coast-guide/events/nl-theblock-karaoke.htm
+ l
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_bubbly_baytowne-2026-08-20@coast-guide
 DTSTAMP:20260820T000000Z
 DTSTART:20260820T170000
@@ -353,6 +280,79 @@ DESCRIPTION:Materials out\, instructions on the table\, make something you
 LOCATION:Destin Library\, 150 Sibert Ave\, Destin\, FL 32541
 URL:https://grayhicks.github.io/coast-guide/events/ev-destinlib-craft-0821
  .html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_palafox-2026-08-22@coast-guide
+DTSTAMP:20260822T000000Z
+DTSTART:20260822T090000
+DTEND:20260822T110000
+SUMMARY:Palafox Market
+DESCRIPTION:A big Saturday market fills downtown with produce\, local make
+ rs\, art\, and food. A free trolley runs between plazas. It is stroller-f
+ riendly.\nPrice: Free\nArea: Pensacola\nTimes: Saturdays · 9 AM-2 PM\nht
+ tps://grayhicks.github.io/coast-guide/events/ev-palafox.html
+LOCATION:MLK Jr. Plaza + Plaza Ferdinand\, Downtown Pensacola\, 200 N Pala
+ fox St\, Pensacola\, FL 32502
+URL:https://grayhicks.github.io/coast-guide/events/ev-palafox.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grandblvd_mkt-2026-08-22@coast-guide
+DTSTAMP:20260822T000000Z
+DTSTART:20260822T090000
+DTEND:20260822T110000
+SUMMARY:Grand Boulevard Farmers' Market
+DESCRIPTION:A Saturday farmers and makers market fills the Sandestin green
+ \, with local honey\, produce\, and kettle corn. Pair it with a Destin/Ba
+ ytowne day.\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Saturdays ·
+  9 AM-1 PM\nhttps://grayhicks.github.io/coast-guide/events/ev-grandblvd-m
+ kt.html
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Blvd\, Mira
+ mar Beach\, FL 32550
+URL:https://grayhicks.github.io/coast-guide/events/ev-grandblvd-mkt.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_foley_mkt-2026-08-22@coast-guide
+DTSTAMP:20260822T000000Z
+DTSTART:20260822T090000
+DTEND:20260822T110000
+SUMMARY:Coastal Alabama Farmers & Fishermens Market
+DESCRIPTION:The county's largest market sells fresh Gulf seafood straight 
+ from the boats plus produce and makers. It is five minutes from OWA\, so 
+ it stacks with a Tropic Falls day.\nPrice: Free\nArea: Orange Beach & Gul
+ f Shores\nTimes: Saturdays · 9 AM-2 PM\nhttps://grayhicks.github.io/coas
+ t-guide/events/ev-foley-mkt.html
+LOCATION:Coastal Alabama Market\, 781 Farmers Market Ln\, Foley\, AL 36535
+URL:https://grayhicks.github.io/coast-guide/events/ev-foley-mkt.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_parkrun-2026-08-22@coast-guide
+DTSTAMP:20260822T000000Z
+DTSTART:20260822T073000
+DTEND:20260822T093000
+SUMMARY:parkrun: Free Timed 5K (Rec Plex North)
+DESCRIPTION:A free\, timed\, all-comers 5K runs every Saturday. Walk\, run
+ \, or push the jogging stroller. The kids can earn official times too\, w
+ ith one-time free barcode registration.\nPrice: Free\nArea: Pensacola\nTi
+ mes: Saturdays · 7:30 AM\nhttps://grayhicks.github.io/coast-guide/events
+ /ev-parkrun.html
+LOCATION:UWF Rec Plex North Field\, 11000 University Pkwy\, Pensacola\, FL
+  32514
+URL:https://grayhicks.github.io/coast-guide/events/ev-parkrun.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_oceanhour-2026-08-22@coast-guide
+DTSTAMP:20260822T000000Z
+DTSTART:20260822T084500
+DTEND:20260822T104500
+SUMMARY:Ocean Hour Beach Cleanup
+DESCRIPTION:Give an hour and leave the beach better. Buckets\, grabbers\, 
+ and gloves are provided. It is a service morning that fits the family's v
+ alues and is kid-friendly.\nPrice: Free\nArea: Pensacola Beach & Perdido\
+ nTimes: Saturdays · ~8:45 AM · location rotates\nhttps://grayhicks.gith
+ ub.io/coast-guide/events/ev-oceanhour.html
+LOCATION:Rotating\, Pensacola Beach / area waterfronts\, Pensacola Beach\,
+  FL 32561
+URL:https://grayhicks.github.io/coast-guide/events/ev-oceanhour.html
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_owa_safety-2026-08-22@coast-guide

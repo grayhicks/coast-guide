@@ -15,14 +15,16 @@
    (:root) so an unstamped page still renders the brand dusk.
 
    THE NAME
-   The product name is unchosen. It renders from --brand-name and NOWHERE else
-   (wordmark in header, hero, footer). When the real name lands, change the one
-   string below plus each page's <title>. Done.
+   Chosen 08/16: Next Up. It renders from --brand-name and NOWHERE else
+   (wordmark in header, hero, footer), so the name moves in one string.
+   ⚠ The descender line under the wordmark is a COVERAGE CLAIM, not decoration,
+   and it is why "Emerald Coast Events" was not taken: that name means Pensacola
+   to Panama City, and this guide runs out to Mobile and Baldwin County.
    ============================================================================ */
 
 :root{
   /* ------------------------------------------------------------ brand name */
-  --brand-name:"Gulf Coast Adventures";      /* WORKING TITLE — swap here */
+  --brand-name:"Next Up";
 
   /* ------------------------------------------------------------------ ink
      Warm paper-white ink family on deep water. Measured in contrast.js:
@@ -2904,7 +2906,13 @@ html[data-theme="light"] .site-foot{background:linear-gradient(180deg,transparen
 .site-foot::before{content:"";display:block;height:12px;border-top:1px solid var(--line-soft);
   background:radial-gradient(11px 9px at 11px -2px, transparent 6.5px, rgba(217,164,65,.3) 7px, transparent 9px) repeat-x;
   background-size:22px 12px}
-.site-foot .inner{padding:var(--s-7) 0 var(--s-6)}
+/* ⚠ LONGHANDS, NOT THE SHORTHAND. `.wrap` sets `padding:0 var(--wrap-gutter)` and a
+   four-value shorthand here silently reset the horizontal half to zero, so every footer
+   link sat flush against the left edge of the phone at 320 and 390 — the whole column
+   Gray asked to be "brought slightly to the right". Same trap as the `background`
+   shorthand in CLAUDE.md 8.3: equal specificity, one property quietly overwriting
+   another. Set only the axis this rule means to set. */
+.site-foot .inner{padding-top:var(--s-7);padding-bottom:var(--s-6)}
 @media(min-width:1024px){
   .site-foot .inner{display:grid;grid-template-columns:minmax(280px,1.1fr) 2fr;
     gap:var(--s-5) var(--s-7);align-items:start}
