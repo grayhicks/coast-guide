@@ -12190,7 +12190,8 @@ body:has(.promotions-page) .hk_supportfloat{ opacity:0; pointer-events:none; tra
    t-sunset joined this list when Section 2 built its day skin: a day world is a light card and
    takes the paper finish; every remaining world joins here as its day skin lands. */
 .hk_day .t-town, .hk_day .t-coastal, .hk_day .t-art, .hk_day .t-movie, .hk_day .t-lab,
-.hk_day .t-comedy, .hk_day .t-sunset, .hk_day .hk_sc.card{
+.hk_day .t-comedy, .hk_day .t-sunset, .hk_day .t-midnight, .hk_day .t-emerald, .hk_day .t-rom, .hk_day .t-artNight,
+.hk_day .t-cosmic, .hk_day .t-townNight, .hk_day .t-movieNight, .hk_day .t-coastalNight, .hk_day .t-labNight, .hk_day .t-comedyNight, .hk_day .hk_sc.card{
   --cfinish: inset 0 2px 0 rgba(255,255,255,1), inset 2px 0 0 rgba(255,255,255,.85),
              inset 0 -2px 0 rgba(96,72,32,.38), inset -2px 0 0 rgba(96,72,32,.22); }
 /* the today card's amber lamp-glow is a literal on .card.is-today far above, not a token, so it
@@ -12316,6 +12317,22 @@ body:has(.promotions-page) .hk_supportfloat{ opacity:0; pointer-events:none; tra
      silhouette is TONE-ON-TONE, not ink — lift the stroke to a soft warm mid of the world's shadow
      hue, chosen so body ink still clears 4.5 where the shape crosses a line of copy (composite the
      stroke at its own opacity over the darkest bg stop, then measure the ink on that).
+     ⭐ AND A SILHOUETTE CAN BE A FILLED SHAPE, NOT ONLY A STROKE — batch 1 met the first one and
+     the rule did not reach it. t-midnight's whale and dolphin pod are solid forms; the sea-oat
+     example above describes a stroke and says nothing about a fill. Same law, both halves: lift
+     the FILL to a tone-on-tone mid of the world's shadow hue and let the STROKE carry the
+     definition, with the stroke still lighter than --cink so the creature never out-inks the
+     headline. A filled shape left at night value is a hole in the paper, exactly as a night wire
+     was a scratch across it.
+   ⛔ NOT EVERY DARK COLOUR IS A NIGHT VALUE, AND THIS IS THE DISTINCTION THE LAYER CLASSES DO NOT
+     STATE. A layer qualifies for conversion because it was painted to read AGAINST A DARK GROUND —
+     a glow, a wash, a lit object, a near-black line. NATURALISTIC ILLUSTRATION COLOUR IS NONE OF
+     THOSE and must be left exactly as it is: t-emerald's heron is blue-grey with a tan beak and a
+     near-black eye because that is what a heron looks like, in daylight as much as at night, and
+     "converting" it would repaint a bird for no reason. In the same world the dragonfly and the
+     fireflies DO convert, because they are lit objects glowing out of the dark.
+     THE TEST: ask what the colour was chosen FOR. Chosen to glow, to veil, or to read against
+     black — convert it. Chosen because that is the colour the thing is — leave it.
    INK LINE (the festoon wire, bulb ties; the town's cables, the cinema's frame, the lab's
      tubing): NOT "unchanged" — lap 3 paid for that word. Two laws. VALUE: night draws these
      lines near-black so they read against glow; on paper the darkest mark on the card wins
@@ -12423,6 +12440,370 @@ body:has(.promotions-page) .hk_supportfloat{ opacity:0; pointer-events:none; tra
 .hk_day .t-sunset .dnote{ color:#A3491C; text-shadow:0 0 6px rgba(226,132,48,.28); }
 .hk_day .t-sunset .snote{ text-shadow:0 0 6px rgba(226,132,48,.28); }
 .hk_day .t-sunset .dbloom{ background:radial-gradient(50% 50% at 50% 50%, rgba(255,206,140,.28), transparent 66%); }
+
+/* ===== DAY MODE, SECTION 2b — t-midnight, "the deep" by day. Scene grammar: open-water light
+   shafts + a slow-drifting whale and dolphin pod behind the card, rising bubbles (both the sig()
+   wobble-bubbles and the ambient .fld field). Night's --cbg was re-based 08/16 to the lighter navy
+   pair (#2D4E78/#213B60, "one notch lighter per Gray") — that pair, not the original, is the hue
+   story retold here. Darkest paper stop #C8DCF0 (L .698) sits at or above sunset's own darkest
+   stop, satisfied by construction. */
+.hk_day .t-midnight{ --cbg:linear-gradient(165deg,#F5FAFF 0%,#C8DCF0 100%); --cbd:#BFD7EE;
+  --bk-rake-hi:rgba(255,255,255,.95); --bk-rake-sh:rgba(200,220,240,.55);
+  --cacc:linear-gradient(90deg,#3A7BC4,#1D4E86); --cacc2:#1B4A82; --cgold:#446384; --cink:#16273F; --cbody:#3D5670; --csoft:#4A6178; --cspk:#5F87B5;
+  --cico:linear-gradient(152deg,#FFFFFF,#EAF3FC); --cicobd:rgba(120,165,215,.5);
+  --cdate:#DCEAFB; --cdatef:#1D4E86; --cdatebd:#B7D2ED; --cambBg:#FBEACC; --cambBd:#EAC488; --camb:#8A5410; --cambTx:#7A4E10; --credBg:#F8DED8; --credBd:#E2A79E; --cred:#AE342E; --credTx:#7E2B26;
+  --cchip:rgba(26,38,30,.14); --cchipf:#3D5670; --cchipbd:rgba(26,38,30,.30); --cmil:#DBF0F0; --cmilf:#0A5C64; --cmilbd:#A6D8D2;
+  --cconf:#DEF1E3; --cconff:#22643E; --cconfbd:#A5D4B4; --ctap:#E7F0FB; --ctapf:#1D4E86;
+  --cbase:#E3EEFA; --ctixnotch:#E3EEFA; --cgoldA:#B98A2A; --cgoldB:#8A6410; --cgoldC:#A97C1C;
+  /* the ambient particle field (bubbles) drinks ink, not glow, or it vanishes into the paper */
+  --fbub:rgba(50,90,128,.55); }
+/* the icon chip's night ring punched a dark hole through the scene; on paper the ring is the
+   page's own cream, and the ink-blue rim replaces the pale night border */
+.hk_day .t-midnight .ico{ border-color:rgba(58,123,196,.5); box-shadow:0 0 0 3.5px rgba(255,246,228,.92), 0 0 10px rgba(60,90,130,.18); }
+/* light shafts through the water: a GLOW BAND, so it stays light-valued and brighter than the
+   paper it crosses rather than the pale-on-dark streak night draws */
+.hk_day .t-midnight .ray{ background:linear-gradient(180deg, rgba(255,255,255,.42), rgba(255,255,255,0) 78%); }
+/* the open-water wash: the cyan glow stays a glow, lifted slightly for presence; the near-black
+   navy pool (a dark layer at low alpha, the one law over all of them) is replaced by a light tint
+   of the same navy hue so it can only brighten the paper, never dip it */
+.hk_day .t-midnight .deepsea{ background:radial-gradient(75% 48% at 76% 12%,rgba(140,220,235,.24),transparent 74%),radial-gradient(62% 42% at 8% 90%,rgba(190,215,240,.38),transparent 76%); }
+.hk_day .t-midnight .dwglow{ background:radial-gradient(ellipse at 50% 52%,rgba(160,225,240,.30),rgba(130,195,225,.14) 42%,transparent 72%); }
+/* the whale and the dolphin pod are SILHOUETTES crossing the card: on paper a silhouette is
+   tone-on-tone, not the near-black fill night draws at low opacity (that fill is exactly the dark-
+   layer-at-low-alpha trap) — the body lifts to a soft mid blue-grey and the stroke carries the
+   definition, kept clearly lighter than --cink so it never out-inks the title */
+.hk_day .t-midnight .dwgiant{ fill:#8FADC9; stroke:#2E4E70; }
+.hk_day .t-midnight .dwgiant .dwfluke{ fill:#7C9CBC; stroke:#2E4E70; }
+.hk_day .t-midnight .dwgiant .dwfin{ fill:#7A9AB8; stroke:#4A7396; }
+.hk_day .t-midnight .dwgiant .dwbelly{ stroke:rgba(46,78,112,.55); }
+.hk_day .t-midnight .dwpod{ fill:#7C9CBC; stroke:rgba(46,78,112,.65); }
+/* the rising bubbles (sig()'s wobble-bubbles): a glass sphere on paper reads by its highlight and
+   rim, not by a pale-on-dark glow, so the shine stays bright white and the rim becomes ink-blue */
+.hk_day .t-midnight .bub{ background:radial-gradient(circle at 35% 35%, rgba(255,255,255,.9), rgba(180,205,230,.2)); border:1px solid rgba(60,95,130,.45); }
+
+/* ===== DAY MODE, SECTION 2c — t-emerald, "the canopy" by day. Scene grammar: light through the
+   canopy, a heron standing in the grass, a swallowtail crossing, fireflies and drifting leaves. */
+.hk_day .t-emerald{ --cbg:linear-gradient(165deg,#F3FAF4 0%,#C4E4D0 100%); --cbd:#CCE0D3;
+  --bk-rake-hi:rgba(255,255,255,.95); --bk-rake-sh:rgba(196,228,208,.55);
+  --cacc:linear-gradient(90deg,#8A6410,#1F7A54); --cacc2:#1B6B49; --cgold:#83630F; --cink:#152E20; --cbody:#385B45; --csoft:#436454; --cspk:#A67F26;
+  --cico:linear-gradient(152deg,#FFFFFF,#E4F5E8); --cicobd:rgba(212,175,55,.45);
+  --cdate:#D9F0E1; --cdatef:#1B6B49; --cdatebd:#A9D6BC; --cambBg:#FBEACC; --cambBd:#EAC488; --camb:#8A5410; --cambTx:#7A4E10; --credBg:#F8DED8; --credBd:#E2A79E; --cred:#AE342E; --credTx:#7E2B26;
+  --cchip:rgba(26,38,30,.14); --cchipf:#385B45; --cchipbd:rgba(26,38,30,.30); --cmil:#DBF0F0; --cmilf:#0A5C64; --cmilbd:#A6D8D2;
+  --cconf:#DEF1E3; --cconff:#22643E; --cconfbd:#A5D4B4; --ctap:#E2F3E8; --ctapf:#1B6B49;
+  --cbase:#DEF0E5; --ctixnotch:#DEF0E5; --cgoldA:#B98A2A; --cgoldB:#8A6410; --cgoldC:#A97C1C;
+  /* the ambient particle field (leaves, fireflies) drinks ink, not glow, or it vanishes into the paper */
+  --fleaf:#3F7A50; --fleaf2:#2F7A52; --fmote:#83630F; }
+.hk_day .t-emerald .ico{ border-color:rgba(131,99,15,.5); box-shadow:0 0 0 3.5px rgba(255,246,228,.92), 0 0 10px rgba(56,91,69,.18); }
+/* the fern: a low-alpha light-green outline at night, which on paper is a light layer on light
+   paper — lifted to a soft mid green, tone-on-tone with the ground it sits against */
+.hk_day .t-emerald .fern{ stroke:rgba(70,130,95,.35); }
+/* canopy light and the light shaft stay GLOW BAND — light-valued, brighter than the ground */
+.hk_day .t-emerald .em_can{ background:linear-gradient(180deg, rgba(200,255,210,.30), rgba(190,245,205,.12) 46%, rgba(190,245,205,0) 84%); }
+.hk_day .t-emerald .em_shaft{ background:linear-gradient(96deg, rgba(210,255,220,.22), rgba(210,255,220,.05) 46%, transparent 74%); }
+/* the grass at the card's foot is a SILHOUETTE: the pale night stroke would vanish into pale-green
+   paper, so it lifts to a soft ink green */
+.hk_day .t-emerald .em_bl{ stroke:rgba(70,130,95,.5); }
+/* the dragonfly is a LIT OBJECT (glowing mint body, night-only-visible wings) — it gains body: the
+   palest stops deepen to a shape on the paper rather than a pale hole */
+.hk_day .t-emerald .em_fly .em_bod{ fill:#2F7A52; }
+.hk_day .t-emerald .em_fly .em_hd{ fill:#256644; }
+.hk_day .t-emerald .em_fly .em_wg{ fill:rgba(60,110,90,.4); }
+/* fireflies (both the ambient field and sig()'s pair): glowing type becomes ink type — the colour
+   drops to a mid ink green, the halo keeps its radius and loses half its alpha */
+.hk_day .t-emerald .fld.f-fly{ background:#2F7A52; box-shadow:0 0 8px rgba(63,122,80,.38); }
+.hk_day .t-emerald .fly{ background:#2F7A52; box-shadow:0 0 8px 2px rgba(63,122,80,.4); }
+
+/* ===== DAY MODE, SECTION 2d — t-rom, "Candlelight" by day. Scene grammar: a bistro string-light
+   swag across the top band, a pair of candles with breathing flames and rising smoke, floating
+   hearts and gold motes. The 3-stop 168deg gradient keeps its shape (light, darkest at the true
+   middle, back to light), each stop re-lit to a pale lavender tint of its own hue. */
+.hk_day .t-rom{ --cbg:linear-gradient(168deg,#FBF6FC 0%,#E6D9EE 50%,#F5EBF7 100%); --cbd:#DCCEE6;
+  --bk-rake-hi:rgba(255,255,255,.95); --bk-rake-sh:rgba(230,217,238,.55);
+  --cacc:linear-gradient(90deg,#8A6410,#8A3C54); --cacc2:#7A5A0E; --cgold:#83630F; --cink:#2A1833; --cbody:#5C4568; --csoft:#6C5578; --cspk:#A6832E;
+  --cico:linear-gradient(152deg,#FFFFFF,#F3E8F5); --cicobd:rgba(232,199,123,.5);
+  --cdate:#F6ECD4; --cdatef:#7A5A0E; --cdatebd:#E4CC9C; --cambBg:#FBEACC; --cambBd:#EAC488; --camb:#8A5410; --cambTx:#7A4E10; --credBg:#F8DED8; --credBd:#E2A79E; --cred:#AE342E; --credTx:#7E2B26;
+  --cchip:rgba(26,38,30,.14); --cchipf:#5C4568; --cchipbd:rgba(26,38,30,.30); --cmil:#DBF0F0; --cmilf:#0A5C64; --cmilbd:#A6D8D2;
+  --cconf:#DEF1E3; --cconff:#22643E; --cconfbd:#A5D4B4; --ctap:#F8F0E0; --ctapf:#7A5A0E;
+  --cbase:#F8F0FA; --ctixnotch:#F8F0FA; --cgoldA:#B98A2A; --cgoldB:#8A6410; --cgoldC:#A97C1C;
+  /* the ambient particle field (hearts, motes) drinks ink, not glow, or it vanishes into the paper */
+  --fheart:#8A3C54; --fmote:#83630F; }
+.hk_day .t-rom .ico{ border-color:rgba(122,90,14,.5); box-shadow:0 0 0 3.5px rgba(255,246,228,.92), 0 0 12px rgba(92,69,104,.2); }
+/* the bottom vignette wash stays a wash: a rose glow of the same hue, re-based to a light tint so
+   it can only warm the paper, never dip it */
+.hk_day .t-rom .rvig{ background:radial-gradient(120% 70% at 50% 108%, rgba(230,170,190,.22), transparent 58%); }
+/* the bistro swag's wire is an INK LINE: night draws it near-invisible against its own glow, but
+   on paper the darkest mark on the card wins the eye, so it re-bases to a warm mid of the world's
+   shadow hue, clearly lighter than --cink so it never out-inks the title */
+.hk_day .t-rom .rm_wire{ stroke:#9A6A56; }
+/* the bulbs are LIT OBJECTS: they stay lit but gain body — the palest stop deepens toward mid
+   amber so each bulb is a shape on the paper, and the halo lightens in hue and drops in alpha */
+.hk_day .t-rom .rm_bulb{ background:radial-gradient(circle at 38% 34%, #FFE7B0, #E0973E 68%, rgba(224,151,62,.15) 100%); box-shadow:0 0 7px 2px rgba(224,151,62,.30); }
+/* the candle: wax is a LIT OBJECT too — night's pale cream reads as a hole on paper, so it gains
+   body as a warm mid tan; the flame deepens the same way and its halo lightens and drops alpha */
+.hk_day .t-rom .rcandle svg path:not(.rflame){ fill:#9C7650; }
+.hk_day .t-rom .rflame{ fill:#B86F22; }
+.hk_day .t-rom .rflame.rfin{ fill:#D89A4E; }
+.hk_day .t-rom .rhalo{ background:radial-gradient(50% 50% at 50% 50%, rgba(255,220,170,.30), rgba(255,220,170,.06) 55%, transparent 74%); }
+/* the smoke wisp is a SILHOUETTE (a thin drawn line), so the pale night stroke lifts to a soft
+   warm-grey ink instead of vanishing into light paper */
+.hk_day .t-rom .rsmokew svg{ stroke:rgba(140,119,110,.5); }
+/* the smoke heart is an ANIMATED MOTE: glowing type becomes ink type, the halo keeps its radius
+   and loses half its alpha */
+.hk_day .t-rom .rsheart{ stroke:rgba(168,72,100,.85); filter:drop-shadow(0 0 5px rgba(168,72,100,.28)); }
+/* the floating hearts and the gold motes are the same MOTE treatment */
+.hk_day .t-rom .rheart{ color:#8A3C54; text-shadow:0 0 8px rgba(138,60,84,.18); }
+.hk_day .t-rom .rmote{ background:#83630F; box-shadow:0 0 7px 1px rgba(131,99,15,.35); }
+
+/* ===== DAY MODE, SECTION 2e — t-artNight, "Gallery Night" by day. Scene grammar: the daubs of wet
+   paint, a wandering brush stroke and drip, hung frames, a palette and easel, drifting orb motes —
+   the same .agal decor tree t-art already wears in daylight, here overriding only the .nite modifier
+   rules that repaint it neon for the after-dark event. The 3-stop 168deg gradient keeps its shape,
+   darkest at the true 55% stop (matching night's own darkest position). */
+.hk_day .t-artNight{ --cbg:linear-gradient(168deg,#FDF5FA 0%,#EAD9EC 55%,#F6E9F4 100%); --cbd:#E0CCE3;
+  --bk-rake-hi:rgba(255,255,255,.95); --bk-rake-sh:rgba(234,217,236,.55);
+  --cacc:linear-gradient(90deg,#A83A5A,#7038A8 55%,#1B7FA0); --cacc2:#9C3454; --cgold:#93506A; --cink:#2E1738; --cbody:#664670; --csoft:#78567F; --cspk:#C06886;
+  --cico:linear-gradient(152deg,#FFFFFF,#F9EBF5); --cicobd:rgba(255,110,140,.5);
+  --cdate:#FBE3EA; --cdatef:#9C3454; --cdatebd:#E8B7C8; --cambBg:#FBEACC; --cambBd:#EAC488; --camb:#8A5410; --cambTx:#7A4E10; --credBg:#F8DED8; --credBd:#E2A79E; --cred:#AE342E; --credTx:#7E2B26;
+  --cchip:rgba(26,38,30,.14); --cchipf:#5E3F68; --cchipbd:rgba(26,38,30,.30); --cmil:#DBF0F0; --cmilf:#0A5C64; --cmilbd:#A6D8D2;
+  --cconf:#DEF1E3; --cconff:#22643E; --cconfbd:#A5D4B4; --ctap:#FCE9EF; --ctapf:#9C3454;
+  --cbase:#FAEFF7; --ctixnotch:#FAEFF7; --cgoldA:#B98A2A; --cgoldB:#8A6410; --cgoldC:#A97C1C; }
+.hk_day .t-artNight .ico{ border-color:rgba(156,52,84,.5); box-shadow:0 0 0 3.5px rgba(255,246,228,.92), 0 0 12px rgba(102,70,112,.2); }
+/* the two wandering brush strokes are INK LINES: night draws them near the glow, on paper they
+   re-base to a warm mid of the world's own hue (pink, then purple for the crossing second stroke),
+   clearly lighter than --cink */
+.hk_day .t-artNight .agal.nite .astroke path{ stroke:#A83A5A; }
+.hk_day .t-artNight .agal.nite .astroke.a2 path{ stroke:#7038A8; }
+.hk_day .t-artNight .agal.nite .abrush .adraw{ stroke:#A83A5A; filter:none; }
+/* the two paint beads are LIT OBJECTS running down the card: they gain body in the same two hues */
+.hk_day .t-artNight .agal.nite .adrip.p1{ background:linear-gradient(180deg,#C4577A,#9C3454); }
+.hk_day .t-artNight .agal.nite .adrip.p2{ background:linear-gradient(180deg,#9058C8,#7038A8); }
+/* the frame corners and the daubs: the night-only glow (drop-shadow, extra opacity) is a light
+   layer that would only muddy the paper, so it resets to the plain daylight daub t-art already
+   ships, and the corner ink tints to the world's own hue instead of art's brown */
+.hk_day .t-artNight .agal.nite .afr{ border-color:rgba(138,85,104,.5); box-shadow:none; }
+.hk_day .t-artNight .agal.nite .adaub{ opacity:.42; filter:blur(.4px); animation:hk_adaub 7s ease-in-out infinite alternate; }
+/* the diagonal gallery-light sweep stays a GLOW BAND, lifted for presence on paper */
+.hk_day .t-artNight .agal.nite .agallight{ background:linear-gradient(103deg, transparent 34%, rgba(200,90,130,.14) 44%, rgba(150,90,200,.20) 50%, rgba(200,90,130,.12) 56%, transparent 66%); }
+/* the hung frames: wire and mat tint to the world's own hue instead of falling back to art's brown */
+.hk_day .t-artNight .agal.nite .ahang i{ background:linear-gradient(180deg, rgba(138,85,104,.5), rgba(138,85,104,.18)); }
+.hk_day .t-artNight .agal.nite .ahang b{ border-color:rgba(156,52,84,.4); background:linear-gradient(148deg, rgba(251,227,234,.7), rgba(234,217,236,.4)); box-shadow:none; }
+/* the easel and palette: no more night glow, and the canvas tints to a pale wash of the world hue */
+.hk_day .t-artNight .agal.nite .aeasel{ opacity:.4; }
+.hk_day .t-artNight .agal.nite .aeasel .aleg{ stroke:#8A5568; }
+.hk_day .t-artNight .agal.nite .aeasel .acan{ fill:rgba(251,227,234,.6); stroke:#8A5568; }
+.hk_day .t-artNight .agal.nite .apal_b, .hk_day .t-artNight .agal.nite .apal_hole{ stroke:#8A5568; }
+/* the two paint ribbons stay INK LINES in the same two hues as the brush strokes */
+.hk_day .t-artNight .agal.nite .aribbon.rb1{ stroke:#A83A5A; opacity:.42; }
+.hk_day .t-artNight .agal.nite .aribbon.rb2{ stroke:#7038A8; opacity:.42; }
+
+/* ===== DAY MODE, SECTION 2f — t-cosmic, "the observatory" by day. Scene grammar: a drifting
+   nebula wash, two shooting-star streaks, a constellation of connected dots, an ambient star/mote
+   field. No day counterpart exists to fall back on (cosmic has no light-mode sibling), so this is a
+   full build off the night run, same shape as midnight/emerald/rom in batch 1. The 2-stop 165deg
+   gradient keeps its angle and count, darkest at 100% same as night. */
+.hk_day .t-cosmic{ --cbg:linear-gradient(165deg,#FAF8FF 0%,#D6CEF0 100%); --cbd:#C7BCE6;
+  --bk-rake-hi:rgba(255,255,255,.95); --bk-rake-sh:rgba(214,206,240,.55);
+  --cacc:linear-gradient(90deg,#7259C9,#3F5FC4); --cacc2:#5A3FB8; --cgold:#5F4AA0; --cink:#211A38; --cbody:#4A4166; --csoft:#5E5578; --cspk:#7A6BB0;
+  --cico:linear-gradient(152deg,#FFFFFF,#F2ECFC); --cicobd:rgba(90,63,184,.5);
+  --cdate:#E9E4F8; --cdatef:#5A3FB8; --cdatebd:#C7B8E8; --cambBg:#FBEACC; --cambBd:#EAC488; --camb:#8A5410; --cambTx:#7A4E10; --credBg:#F8DED8; --credBd:#E2A79E; --cred:#AE342E; --credTx:#7E2B26;
+  --cchip:rgba(26,38,30,.14); --cchipf:#4A4166; --cchipbd:rgba(26,38,30,.30); --cmil:#DBF0F0; --cmilf:#0A5C64; --cmilbd:#A6D8D2;
+  --cconf:#DEF1E3; --cconff:#22643E; --cconfbd:#A5D4B4; --ctap:#F1ECFA; --ctapf:#6B57B0;
+  --cbase:#E9E4F8; --ctixnotch:#E9E4F8; --cgoldA:#B98A2A; --cgoldB:#8A6410; --cgoldC:#A97C1C;
+  /* the ambient particle field (stars, motes) drinks ink, not glow, or it vanishes into the paper */
+  --fstar:#6B57B0; --fmote:#5F4AA0; }
+.hk_day .t-cosmic .ico{ border-color:rgba(90,63,184,.5); box-shadow:0 0 0 3.5px rgba(255,246,228,.92), 0 0 10px rgba(90,70,140,.18); }
+/* the nebula is a WASH: the same drifting blur, re-based to a light tint of its violet-blue hue so
+   it can only lighten the paper, never dip it (a dark layer at low alpha still darkens) */
+.hk_day .t-cosmic .cs_neb{ background:radial-gradient(50% 50% at 50% 50%, rgba(224,214,255,.38), rgba(200,210,255,.18) 52%, transparent 74%); }
+/* the shooting stars are an ANIMATED MOTE (a spark, not text): the near-white streak drops to a mid
+   violet ink so it reads as a line crossing the paper rather than a stray white mark, motion kept */
+.hk_day .t-cosmic .cs_shoot{ background:linear-gradient(90deg, transparent, rgba(96,74,182,.82), transparent); }
+/* the constellation: the connecting paths are an INK LINE (a warm mid of the shadow hue, clearly
+   lighter than --cink), and the two dot kinds are LIT OBJECTS that gain body instead of glowing */
+.hk_day .t-cosmic .constel{ stroke:rgba(122,99,214,.4); }
+.hk_day .t-cosmic .constel circle{ fill:#5F4AA0; }
+.hk_day .t-cosmic .constel .cnode{ fill:#6B57B0; }
+
+/* ===== DAY MODE, SECTION 2g — t-townNight, "Hometown after dark" by day. Scene grammar: theme
+   townNight renders the SAME .htown tree t-town's own day skin wears, with a "nite" class appended
+   — a modifier on a shared decor tree, same shape as artNight in batch 1. A wide slab of elements
+   (moon, bridge, ferry, car, night clouds, shooting stars, lit windows) exist ONLY under nite, no
+   day fallback to inherit from, so those get a full build; the handful that already carry a light-
+   valued colour (the lighthouse beam, its lamp core) are left alone. The 3-stop 178deg gradient
+   keeps its shape, re-lit lightest at 0% (night's own darkest stop) to deepest at 100%. */
+.hk_day .t-townNight{ --cbg:linear-gradient(178deg,#F7FBFF 0%,#E3EEFA 55%,#C9DCF2 100%); --cbd:#BDD1EA;
+  --bk-rake-hi:rgba(255,255,255,.95); --bk-rake-sh:rgba(201,220,242,.55);
+  --cacc:linear-gradient(90deg,#7A5410,#1B6E7E); --cacc2:#7A5410; --cgold:#7A5410; --cink:#17263A; --cbody:#3D4E60; --csoft:#4A5C6E; --cspk:#71809A;
+  --cico:linear-gradient(152deg,#FFFFFF,#EAF3FC); --cicobd:rgba(122,84,16,.5);
+  --cdate:#F6E8CE; --cdatef:#7A5410; --cdatebd:#E0C48C; --cambBg:#FBEACC; --cambBd:#EAC488; --camb:#8A5410; --cambTx:#7A4E10; --credBg:#F8DED8; --credBd:#E2A79E; --cred:#AE342E; --credTx:#7E2B26;
+  --cchip:rgba(26,38,30,.14); --cchipf:#3D4E60; --cchipbd:rgba(26,38,30,.30); --cmil:#DBF0F0; --cmilf:#0A5C64; --cmilbd:#A6D8D2;
+  --cconf:#DEF1E3; --cconff:#22643E; --cconfbd:#A5D4B4; --ctap:#F2E6CC; --ctapf:#7A5410;
+  --cbase:#EDF4FC; --ctixnotch:#EDF4FC; --cgoldA:#B98A2A; --cgoldB:#8A6410; --cgoldC:#A97C1C;
+  /* the ambient star field drinks ink, not glow, or it vanishes into the paper */
+  --fstar:#5A6E82; }
+.hk_day .t-townNight .ico{ border-radius:14px; border-color:rgba(122,84,16,.5); box-shadow:0 0 0 3.5px rgba(255,246,228,.92), 0 0 10px rgba(90,74,40,.18); }
+/* the moon is a LIT OBJECT: night's pale-cream crescent is a hole on paper, so it gains body as a
+   mid gold-ink shape, and its outer glow lightens in hue and drops alpha */
+.hk_day .t-townNight .htown.nite .hmoon{ box-shadow:inset -4px 2px 0 0 #C9A24E, 0 0 10px rgba(201,162,78,.22); }
+/* the ambient moonlight wash and the drifting night clouds stay a WASH: light tints of the same
+   cool-warm story, re-based so they can only brighten the paper (a dark layer at low alpha still
+   darkens, and 255,211,126 measured only a hair lighter than the paper itself) */
+.hk_day .t-townNight .htown.nite .hsun{ background:radial-gradient(38% 26% at 82% 10%, rgba(255,255,255,.4), transparent 72%); }
+.hk_day .t-townNight .htown.nite .hglow{ background:linear-gradient(180deg, transparent, rgba(255,215,154,.14) 58%, rgba(255,215,154,.24)); }
+.hk_day .t-townNight .htown.nite .hncl{ background:radial-gradient(64% 100% at 50% 68%, rgba(255,224,180,.35), rgba(210,228,248,.20) 58%, transparent); }
+/* the water ribbon under the boats: the night mid-stop (90,150,200 at .22) is dark enough to dip
+   the paper, so it lifts to a pale blue tint of the same hue */
+.hk_day .t-townNight .htown.nite .hrib{ background:linear-gradient(180deg, rgba(255,224,180,.10), rgba(200,224,248,.32) 55%, rgba(200,224,248,.08)); }
+/* the skyline is a SILHOUETTE (the recipe's own named example): tone-on-tone, not ink */
+.hk_day .t-townNight .htown.nite .hsil{ fill:#5A7290; stroke:#5A7290; }
+/* the lit windows and the lamp core are LIT OBJECTS: they keep flashing but gain body */
+.hk_day .t-townNight .htown.nite .hwin rect{ fill:#C9922E; }
+.hk_day .t-townNight .htown.nite .hlamp{ fill:#D9AE52; }
+/* the moon-path glint on the water is a SHIMMER: it stays parked on the water and deepens to an
+   amber-ink glint of the same family instead of the pale night gold */
+.hk_day .t-townNight .htown.nite .hmpath{ background:repeating-linear-gradient(90deg, rgba(122,84,16,.5) 0 2px, transparent 2px 5px); }
+/* the bridge is a SILHOUETTE too ("skylines, props elsewhere") — its lamps are LIT OBJECTS */
+.hk_day .t-townNight .htown.nite .hbridge.nb{ stroke:rgba(90,114,144,.55); }
+.hk_day .t-townNight .htown.nite .hbridge.nb .deck{ stroke:rgba(90,114,144,.7); }
+.hk_day .t-townNight .htown.nite .hbridge.nb .span{ stroke:rgba(90,114,144,.45); }
+.hk_day .t-townNight .htown.nite .hbridge.nb .blamp circle{ fill:#D9AE52; filter:drop-shadow(0 0 2px rgba(201,162,78,.5)); }
+/* the crossing car is a LIT OBJECT: the streak gains body, its glow lightens and drops alpha */
+.hk_day .t-townNight .htown.nite .hcar{ background:linear-gradient(90deg, rgba(122,84,16,0), #B98A2A); box-shadow:0 0 6px 1px rgba(185,138,42,.32); }
+/* the ferry hull and cabin are a FILLED SILHOUETTE (the whale's law): fill lifts to tone-on-tone
+   mid blue-grey; the cabin windows are LIT OBJECTS; the running lights are ANIMATED MOTES — small
+   pinpoint colour, not a body, so the colour itself drops to ink and the halo halves its alpha;
+   the wake reflection is already a light warm wash and needs no change */
+.hk_day .t-townNight .htown.nite .hferry .fhull{ fill:#4A6280; }
+.hk_day .t-townNight .htown.nite .hferry .fcab{ fill:#5A7290; }
+.hk_day .t-townNight .htown.nite .hferry .fmast{ stroke:#5A7290; }
+.hk_day .t-townNight .htown.nite .hferry .fwin rect{ fill:#C9922E; }
+.hk_day .t-townNight .htown.nite .hferry .flt.r{ fill:#B04A42; color:#B04A42; box-shadow:none; filter:drop-shadow(0 0 2px rgba(176,74,66,.4)); }
+.hk_day .t-townNight .htown.nite .hferry .flt.g{ fill:#2E8F63; color:#2E8F63; filter:drop-shadow(0 0 2px rgba(46,143,99,.4)); }
+.hk_day .t-townNight .htown.nite .hferry .flt.m{ fill:#8A6A2A; color:#8A6A2A; filter:drop-shadow(0 0 2px rgba(138,106,42,.4)); }
+/* the shooting stars are an ANIMATED MOTE: the near-white streak drops to a mid gold ink */
+.hk_day .t-townNight .htown.nite .hshoot{ background:linear-gradient(90deg, rgba(255,255,255,0), rgba(122,84,16,.75)); }
+
+/* ===== DAY MODE, SECTION 2h — t-movieNight, "the drive-in after dark" by day. Scene grammar: the
+   SAME .cine tree t-movie's day skin already wears, "nite" appended. t-movie ships its own
+   .cine:not(.nite) day overrides for .mthrow/.mscreen, but that selector never matches this
+   world (movieNight always carries .nite), so this world needs its own day statement wherever the
+   base/.nite value is unsafe on paper; several base values (the beam, the first screen stop, the
+   marquee bulbs) already measure lighter than the chosen paper and are left untouched. The 3-stop
+   170deg gradient keeps its shape, re-lit lightest at 0% to deepest at 100%, kept a shade cooler
+   and greyer than t-movie's own warm sepia paper so the two read as different rooms. */
+.hk_day .t-movieNight{ --cbg:linear-gradient(170deg,#FAF7F2 0%,#ECE4D6 55%,#DDD0BC 100%); --cbd:#D0C2A6;
+  --bk-rake-hi:rgba(255,255,255,.95); --bk-rake-sh:rgba(221,208,188,.55);
+  --cacc:linear-gradient(90deg,#8A6414,#8A2A1C); --cacc2:#725014; --cgold:#725014; --cink:#211D18; --cbody:#4A4238; --csoft:#5C5346; --cspk:#8A6C30;
+  --cico:linear-gradient(152deg,#FFFFFF,#F1E9D8); --cicobd:rgba(114,80,20,.5);
+  --cdate:#F1E4C4; --cdatef:#725014; --cdatebd:#DEC28C; --cambBg:#FBEACC; --cambBd:#EAC488; --camb:#8A5410; --cambTx:#7A4E10; --credBg:#F8DED8; --credBd:#E2A79E; --cred:#AE342E; --credTx:#7E2B26;
+  --cchip:rgba(26,38,30,.14); --cchipf:#4A4238; --cchipbd:rgba(26,38,30,.30); --cmil:#DBF0F0; --cmilf:#0A5C64; --cmilbd:#A6D8D2;
+  --cconf:#DEF1E3; --cconff:#22643E; --cconfbd:#A5D4B4; --ctap:#F1E4D2; --ctapf:#725014;
+  --cbase:#F4EDE1; --ctixnotch:#F4EDE1; --cgoldA:#B98A2A; --cgoldB:#8A6410; --cgoldC:#A97C1C; }
+.hk_day .t-movieNight .ico{ border-color:rgba(114,80,20,.5); box-shadow:0 0 0 3.5px rgba(255,246,228,.92), 0 0 10px rgba(90,68,30,.18); }
+/* the sprocket strip carries its colour as an embedded SVG data URI, not a CSS colour, so it is
+   re-encoded with the same 10x20 rect at movieNight's own ink gold instead of t-movie's brown */
+.hk_day .t-movieNight .cine.nite .msprk{ opacity:.22; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20'%3E%3Crect x='2.5' y='6' width='5' height='8' rx='1.6' fill='%23725014'/%3E%3C/svg%3E"); }
+/* the marquee ring is a LIT OBJECT: the bulbs gain body as a solid ink-gold dot, the travelling
+   glow lightens and drops alpha, the heavy night drop-shadow eases to a soft paper shadow */
+.hk_day .t-movieNight .cine.nite .mrail{ --mbulb:#8A6414; --mglow:rgba(255,238,196,.55); filter:drop-shadow(0 0 2px rgba(138,100,20,.3)); }
+/* the projector body and reel are an INK LINE: night's pale amber outline deepens to the world's
+   own ink gold so it reads as drawn line rather than vanishing on light paper */
+.hk_day .t-movieNight .cine.nite .mp_body{ stroke:#725014; }
+.hk_day .t-movieNight .cine.nite .mp_reel{ stroke:#725014; }
+/* the screen's first gradient stop is already light-valued and left alone; the second stop
+   (210,190,150 at .14 alpha) measured darker than the paper, so it lifts to a pale tan tint */
+.hk_day .t-movieNight .cine.nite .mscreen{ border-color:rgba(114,80,20,.5); background:linear-gradient(160deg, rgba(255,246,222,.30), rgba(240,225,195,.35)); }
+
+/* ===== DAY MODE, SECTION 2i — t-coastalNight, "the beach after dark" by day. Scene grammar: the
+   SAME .shal tree t-coastal's day skin already shows (sand texture, castle/prop set, ghost crabs)
+   with the ".nite" modifier applying only a brightness/opacity DIM plus a moon and its glow — no
+   parallel scene to build, just the dim to undo and the moon to convert. The 3-stop 172deg
+   gradient keeps its shape, re-lit lightest at 0% to deepest at 100%. */
+.hk_day .t-coastalNight{ --cbg:linear-gradient(172deg,#FBF8FF 0%,#EDE6F4 48%,#DED0E8 100%); --cbd:#D2C0DC;
+  --bk-rake-hi:rgba(255,255,255,.95); --bk-rake-sh:rgba(222,208,232,.55);
+  --cacc:linear-gradient(90deg,#8A6A1E,#6E5028); --cacc2:#6B4E0C; --cgold:#6B4E0C; --cink:#2B2138; --cbody:#564A64; --csoft:#5E5270; --cspk:#9A7C3A;
+  --cico:linear-gradient(152deg,#FFFFFF,#F4EEFA); --cicobd:rgba(107,78,12,.5);
+  --cdate:#F2E6C8; --cdatef:#6B4E0C; --cdatebd:#DEC48C; --cambBg:#FBEACC; --cambBd:#EAC488; --camb:#8A5410; --cambTx:#7A4E10; --credBg:#F8DED8; --credBd:#E2A79E; --cred:#AE342E; --credTx:#7E2B26;
+  --cchip:rgba(26,38,30,.14); --cchipf:#564A64; --cchipbd:rgba(26,38,30,.30); --cmil:#DBF0F0; --cmilf:#0A5C64; --cmilbd:#A6D8D2;
+  --cconf:#DEF1E3; --cconff:#22643E; --cconfbd:#A5D4B4; --ctap:#F0E4EC; --ctapf:#6B4E0C;
+  --cbase:#F4EEFA; --ctixnotch:#F4EEFA; --cgoldA:#B98A2A; --cgoldB:#8A6410; --cgoldC:#A97C1C; }
+.hk_day .t-coastalNight .ico{ border-color:rgba(107,78,12,.5); box-shadow:0 0 0 3.5px rgba(255,246,228,.92), 0 0 10px rgba(90,74,40,.18); }
+/* the three night dims are FILTERS, not colours -- reset each to its day/base value, since the
+   props underneath (sand texture, castle set) are the same naturalistic beach colours t-coastal's
+   own day skin already shows correctly */
+.hk_day .t-coastalNight .shal.nite .bprops{ filter:none; opacity:1; }
+.hk_day .t-coastalNight .shal.nite .sandg{ opacity:.44; }
+.hk_day .t-coastalNight .shal.nite .ccrab{ opacity:1; }
+/* the moon is a LIT OBJECT: its crescent is drawn as a solid inset-shadow fill, so even at a value
+   lighter than the paper it reads as a hole rather than a shape -- it gains body as a mid gold-ink
+   crescent, and the outer glow lightens further and drops alpha */
+.hk_day .t-coastalNight .shal.nite .cmoon{ box-shadow:inset -3.6px 1.8px 0 0 #C9A24E, 0 0 10px rgba(201,162,78,.22); }
+
+/* ===== DAY MODE, SECTION 2j — t-labNight, "the after-hours lab" by day. Scene grammar: the SAME
+   .ldec tree t-lab's day skin uses, "nite" appended. The STEM prop set (rocket, gears, robot arm,
+   telescope, fossil dig, orbit, DNA) all reads its colour from three shared custom properties on
+   .lx, so one rule converts the whole set; the oscilloscope, flask, atom model and DNA helix each
+   carry their own separate override. The 3-stop 168deg gradient keeps its shape, re-lit lightest
+   at 0% to deepest at 100%, kept greener/mintier than t-lab's own greyer-teal paper. */
+.hk_day .t-labNight{ --cbg:linear-gradient(168deg,#F5FCFA 0%,#E2F3EC 55%,#CDE8DC 100%); --cbd:#C0DACC;
+  --bk-rake-hi:rgba(255,255,255,.95); --bk-rake-sh:rgba(205,232,220,.55);
+  --cacc:linear-gradient(90deg,#0E8A5C,#106E82); --cacc2:#0A6644; --cgold:#0A6644; --cink:#0F2B25; --cbody:#2E4E44; --csoft:#3E6156; --cspk:#2E9678;
+  --cico:linear-gradient(152deg,#FFFFFF,#EBF7F1); --cicobd:rgba(10,102,68,.5);
+  --cdate:#DCF0E6; --cdatef:#0A6644; --cdatebd:#A8D8C0; --cambBg:#FBEACC; --cambBd:#EAC488; --camb:#8A5410; --cambTx:#7A4E10; --credBg:#F8DED8; --credBd:#E2A79E; --cred:#AE342E; --credTx:#7E2B26;
+  --cchip:rgba(26,38,30,.14); --cchipf:#2E4E44; --cchipbd:rgba(26,38,30,.30); --cmil:#DBF0F0; --cmilf:#0A5C64; --cmilbd:#A6D8D2;
+  --cconf:#DEF1E3; --cconff:#22643E; --cconfbd:#A5D4B4; --ctap:#E2F0EA; --ctapf:#0A6644;
+  --cbase:#EDF7F2; --ctixnotch:#EDF7F2; --cgoldA:#B98A2A; --cgoldB:#8A6410; --cgoldC:#A97C1C; }
+.hk_day .t-labNight .ico{ border-radius:14px; border-color:rgba(10,102,68,.5); box-shadow:0 0 0 3.5px rgba(255,246,228,.92), 0 0 10px rgba(20,80,60,.18); }
+/* the spark colour (a token used outside .ldec) is an ANIMATED MOTE: glowing type becomes ink
+   type, the shadow keeps its radius and loses half its alpha */
+.hk_day .t-labNight .lspk{ color:#0A6644; text-shadow:0 0 6px rgba(10,102,68,.25); }
+/* the whole STEM prop set (rocket, gears, robot arm, telescope, dig, orbit, DNA/bird) reads these
+   three custom properties, so one rule gives every prop a body instead of a glow */
+.hk_day .t-labNight .ldec.nite .lx{ --lxink:#0A6644; --lxink2:#106E82; --lxwarm:#B5562E; opacity:.7; }
+/* the oscilloscope trace is an INK LINE; the cursor dot is a LIT OBJECT that gains body */
+.hk_day .t-labNight .ldec.nite .lscope{ opacity:.5; }
+.hk_day .t-labNight .ldec.nite .lsc_t{ stroke:#0A6644; filter:drop-shadow(0 0 2px rgba(10,102,68,.3)); }
+.hk_day .t-labNight .ldec .lsc_cur::after{ background:#0A6644; box-shadow:0 0 6px 2px rgba(10,102,68,.3); }
+/* the flask: the liquid is a LIT OBJECT, the glass outline is an INK LINE */
+.hk_day .t-labNight .ldec.nite .lliq{ fill:#0A6644; opacity:.6; filter:drop-shadow(0 0 2px rgba(10,102,68,.25)); }
+.hk_day .t-labNight .ldec.nite .lglass{ stroke:#2E4E44; opacity:.7; }
+/* the atom model: the orbit rings are an INK LINE, the electron and nucleus are LIT OBJECTS, and
+   the nucleus glow is a WASH -- 82,229,163 at .28 alpha measures darker than the paper, so it
+   lifts to a light mint tint instead of a scaled-down night colour */
+.hk_day .t-labNight .ldec.nite .lring{ border-color:rgba(10,102,68,.5); }
+.hk_day .t-labNight .ldec.nite .lel{ background:#0A6644; box-shadow:0 0 3px 1px rgba(10,102,68,.3); }
+.hk_day .t-labNight .ldec.nite .lnuc{ background:#106E82; box-shadow:0 0 4px 1.2px rgba(16,110,130,.3); }
+.hk_day .t-labNight .ldec .lnglow{ background:radial-gradient(50% 50% at 50% 50%, rgba(200,240,220,.4), transparent 72%); }
+/* the DNA helix carries its colour as an embedded SVG data URI, not a CSS colour, so it is
+   re-encoded with the same rungs at the world's own ink teal instead of night's bright mint */
+.hk_day .t-labNight .ldec.nite .ldna{ opacity:.5; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='28'%3E%3Cg fill='none' stroke='%230A6644' stroke-width='1' stroke-linecap='round'%3E%3Cpath d='M2.5,0 C9.5,4.7 9.5,9.3 2.5,14 C9.5,18.7 9.5,23.3 2.5,28'/%3E%3Cpath d='M9.5,0 C2.5,4.7 2.5,9.3 9.5,14 C2.5,18.7 2.5,23.3 9.5,28'/%3E%3Cline x1='4.4' y1='3.5' x2='7.6' y2='3.5'/%3E%3Cline x1='4.4' y1='10.5' x2='7.6' y2='10.5'/%3E%3Cline x1='4.4' y1='17.5' x2='7.6' y2='17.5'/%3E%3Cline x1='4.4' y1='24.5' x2='7.6' y2='24.5'/%3E%3C/g%3E%3C/svg%3E"); }
+
+/* ===== DAY MODE, SECTION 2k — t-comedyNight, "the club after dark" by day, the last of eleven.
+   Scene grammar: the SAME .cmdy tree t-comedy's day skin uses, "nite" appended — brick wall,
+   swinging spotlight cone and pool, a mic on its stand, a stool, laugh-mark motes. Several night
+   overrides here already measure safe on paper as-is and are left untouched rather than "fixed"
+   for no reason; checked by script, not by eye. The 3-stop 172deg gradient keeps its shape, re-lit
+   lightest at 0% to deepest at 100%, kept cooler and greyer (a taupe) than t-comedy's own warmer
+   tan paper, leaning the accent toward gold rather than comedy's terracotta-red. */
+.hk_day .t-comedyNight{ --cbg:linear-gradient(172deg,#FAF8F6 0%,#EAE2D8 52%,#DCCEBE 100%); --cbd:#D0C0AA;
+  --bk-rake-hi:rgba(255,255,255,.95); --bk-rake-sh:rgba(220,206,190,.55);
+  --cacc:linear-gradient(90deg,#8A6414,#8A3A26); --cacc2:#6B4E0E; --cgold:#6B4E0E; --cink:#221A14; --cbody:#4A3C30; --csoft:#5E4E40; --cspk:#9A7A3E;
+  --cico:linear-gradient(152deg,#FFFFFF,#F2EAE0); --cicobd:rgba(107,78,14,.5);
+  --cdate:#F0E2C4; --cdatef:#6B4E0E; --cdatebd:#DCC086; --cambBg:#FBEACC; --cambBd:#EAC488; --camb:#8A5410; --cambTx:#7A4E10; --credBg:#F8DED8; --credBd:#E2A79E; --cred:#AE342E; --credTx:#7E2B26;
+  --cchip:rgba(26,38,30,.14); --cchipf:#4A3C30; --cchipbd:rgba(26,38,30,.30); --cmil:#DBF0F0; --cmilf:#0A5C64; --cmilbd:#A6D8D2;
+  --cconf:#DEF1E3; --cconff:#22643E; --cconfbd:#A5D4B4; --ctap:#F0E2D2; --ctapf:#6B4E0E;
+  --cbase:#F2ECE2; --ctixnotch:#F2ECE2; --cgoldA:#B98A2A; --cgoldB:#8A6410; --cgoldC:#A97C1C; }
+.hk_day .t-comedyNight .ico{ border-radius:13px; border-color:rgba(107,78,14,.5); box-shadow:0 0 0 3.5px rgba(255,246,228,.92), 0 0 10px rgba(90,68,20,.18); }
+/* the brick wall carries its colour as an embedded SVG data URI; reused verbatim from t-comedy's
+   own day brick (a neutral architectural texture, not a hue-story element) rather than re-derive */
+.hk_day .t-comedyNight .cmdy.nite .cm_brick{ opacity:.5; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='24'%3E%3Cg stroke='%238A5230' stroke-opacity='.20' stroke-width='1' fill='none'%3E%3Cpath d='M0 .5h44M0 12.5h44'/%3E%3Cpath d='M11 0v12M33 0v12M0 12v12M22 12v12M44 12v12'/%3E%3C/g%3E%3C/svg%3E"); }
+/* the mic stand and the stool are an INK LINE: night's pale tan strokes deepen to the world's ink */
+.hk_day .t-comedyNight .cmdy.nite .cm_base, .hk_day .t-comedyNight .cmdy.nite .cm_boom{ stroke:#5C4726; }
+.hk_day .t-comedyNight .cmdy.nite .cm_sp{ stroke:#5C4726; }
+/* the mic mesh dots measured only a hair darker than the paper; nudged to a clean deeper tone */
+.hk_day .t-comedyNight .cmdy .cm_mesh{ stroke:#6B5A46; }
+/* the laugh mark is an ANIMATED MOTE: glowing type becomes ink type */
+.hk_day .t-comedyNight .cmdy.nite .fw_ha .fld.f-laugh{ color:#6B4E0E; --fo:.5; }
 `;const AUD_LABEL={family:"Family of 5 · admission",adults:"For 2 · date night",kids:"Per kid · admission"};/* 07/28 — Gray: "the price is for 2 people yet the price on the card still states whole family…
    That needs to change to 2… Same for all party of 2s. And the logic has to be nailed down because
    this is for everyone."
@@ -14013,7 +14394,7 @@ function useLiveWx(){const[,bump]=useState(0);useEffect(()=>{const cb=()=>bump(n
    the stand is the truth. A colour nobody earned is worse than no colour, which
    is the same law verifiedOn runs on.
    =========================================================================== *//* GCA_FLAG_DATA_BEGIN — one line, replaced verbatim by claude/harness/bake_beach_flag.js.
-   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-16T22:41:52.290Z","issued":"2026-08-16T20:04:00+00:00","productId":"7c2a8495-97f6-419f-9506-054e60e44442","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"},"forecastSource":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"observed","county":{"level":1,"flags":["green","purple"],"risk":"Low","marineLife":true,"waterTempF":86,"updated":"2026-08-16T14:34:39.827Z","chance":{"green":50,"yellow":50,"red":0,"doubleRed":0,"marineLife":70},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-16","risk":"Low","flags":["green","purple"],"observedAt":"2026-08-16T14:34:39.827Z","chance":{"green":50,"yellow":50,"red":0,"doubleRed":0,"marineLife":70},"surf":"Around 1 foot","uv":"Very High","water":"86°F","weather":"Sunny. A slight chance of showers and thunderstorms","winds":"Northwest winds around 5 mph, becoming southwest in the afternoon"},"outlook":[{"date":"2026-08-16","label":"Today","risk":"Low","flags":["green"],"surf":"Around 1 foot"},{"date":"2026-08-17","label":"Monday","risk":"Moderate","flags":["yellow"],"surf":"1 to 2 feet"},{"date":"2026-08-18","label":"Tuesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-19","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-20","label":"Thursday","risk":"Low","flags":["green"],"surf":"Around 1 foot"}],"alerts":[{"event":"Heat Advisory","headline":"Heat Advisory issued August 16 at 11:09AM CDT until August 16 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...For the first Heat Advisory, heat index values up to 110\nexpected. For the second Heat Advisory, heat index values up to 110\nexpected.\n\n* WHERE...Portions of south central and southwest Alabama, northwest\nFlorida, and southeast Mississippi.\n\n* WHEN...For the first Heat Advisory, until 8 PM CDT this evening.\nFor the second Heat Advisory, from 11 AM to 8 PM CDT Monday.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.","severity":"Moderate","onset":"2026-08-16T11:09:00-05:00","ends":"2026-08-16T20:00:00-05:00"},{"event":"Heat Advisory","headline":"Heat Advisory issued August 16 at 11:09AM CDT until August 17 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...For the first Heat Advisory, heat index values up to 110\nexpected. For the second Heat Advisory, heat index values up to 110\nexpected.\n\n* WHERE...Portions of south central and southwest Alabama, northwest\nFlorida, and southeast Mississippi.\n\n* WHEN...For the first Heat Advisory, until 8 PM CDT this evening.\nFor the second Heat Advisory, from 11 AM to 8 PM CDT Monday.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.","severity":"Moderate","onset":"2026-08-17T11:00:00-05:00","ends":"2026-08-17T20:00:00-05:00"}]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
+   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-16T23:39:15.629Z","issued":"2026-08-16T20:04:00+00:00","productId":"7c2a8495-97f6-419f-9506-054e60e44442","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"},"forecastSource":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"observed","county":{"level":2,"flags":["yellow","purple"],"risk":"Moderate","marineLife":true,"waterTempF":86,"updated":"2026-08-16T23:13:21.29Z","chance":{"green":50,"yellow":50,"red":0,"doubleRed":0,"marineLife":70},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-16","risk":"Moderate","flags":["yellow","purple"],"observedAt":"2026-08-16T23:13:21.29Z","chance":{"green":50,"yellow":50,"red":0,"doubleRed":0,"marineLife":70},"surf":"Around 1 foot","uv":"Very High","water":"86°F","weather":"Sunny. A slight chance of showers and thunderstorms","winds":"Northwest winds around 5 mph, becoming southwest in the afternoon"},"outlook":[{"date":"2026-08-16","label":"Today","risk":"Low","flags":["green"],"surf":"Around 1 foot"},{"date":"2026-08-17","label":"Monday","risk":"Moderate","flags":["yellow"],"surf":"1 to 2 feet"},{"date":"2026-08-18","label":"Tuesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-19","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-20","label":"Thursday","risk":"Low","flags":["green"],"surf":"Around 1 foot"}],"alerts":[{"event":"Heat Advisory","headline":"Heat Advisory issued August 16 at 11:09AM CDT until August 16 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...For the first Heat Advisory, heat index values up to 110\nexpected. For the second Heat Advisory, heat index values up to 110\nexpected.\n\n* WHERE...Portions of south central and southwest Alabama, northwest\nFlorida, and southeast Mississippi.\n\n* WHEN...For the first Heat Advisory, until 8 PM CDT this evening.\nFor the second Heat Advisory, from 11 AM to 8 PM CDT Monday.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.","severity":"Moderate","onset":"2026-08-16T11:09:00-05:00","ends":"2026-08-16T20:00:00-05:00"},{"event":"Heat Advisory","headline":"Heat Advisory issued August 16 at 11:09AM CDT until August 17 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...For the first Heat Advisory, heat index values up to 110\nexpected. For the second Heat Advisory, heat index values up to 110\nexpected.\n\n* WHERE...Portions of south central and southwest Alabama, northwest\nFlorida, and southeast Mississippi.\n\n* WHEN...For the first Heat Advisory, until 8 PM CDT this evening.\nFor the second Heat Advisory, from 11 AM to 8 PM CDT Monday.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.","severity":"Moderate","onset":"2026-08-17T11:00:00-05:00","ends":"2026-08-17T20:00:00-05:00"}]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
    same words fetch_beach_flag.js emits so the two cannot drift apart.
    ⚠ 08/13 — GREEN WAS #2E9E5B AND GRAY COULD NOT SEE IT: "not able to be seen very vividly.
    Needs to be filled it i guess or more vivid less dark green." Measured, he is right by a
