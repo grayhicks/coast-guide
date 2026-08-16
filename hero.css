@@ -4,7 +4,7 @@
    scene rather than written down, so web/hero-fit.css can continue the sky past the stage at
    any phase without being re-keyed every time the capture lands after dark. */
 :root{--hero-sky-top:rgba(0, 0, 0, 0);--hero-sky-edge:rgba(0, 0, 0, 0);}
-.hero { position: relative; overflow: hidden; margin: 0px -15px 14px; padding: 22px 22px 38px; min-height: 248px; background: var(--sky); }
+.hero { position: relative; overflow: hidden; margin: 0 calc(-1*var(--hk-gutter)) 14px; padding: 22px 22px 38px; min-height: 248px; background: var(--sky); }
 .hero.ph-day { --sky: radial-gradient(135% 92% at 81% 37%, rgba(255,233,166,.92) 0%, rgba(255,208,124,.30) 26%, rgba(255,190,110,0) 52%), radial-gradient(120% 70% at 26% 10%, rgba(255,255,255,.15), transparent 56%), linear-gradient(177deg,#4FA5D2 0%,#6FBEDF 16%,#9AD4EA 32%,#C2E7F3 44%,#2B90B5 52%,#137194 72%,#0C5E7A 88%,#0A4E66 100%); --scrimA: .46; --glitc: rgba(255,240,202,.85); --laneo: .16; --hzc: rgba(255,255,255,.11); }
 .hero.ph-dawn { --sky: radial-gradient(130% 90% at 81% 38%, rgba(255,216,176,.88) 0%, rgba(255,190,152,.30) 28%, rgba(255,172,140,0) 54%), linear-gradient(177deg,#6D83AE 0%,#9A93BC 14%,#CBA3BC 28%,#EEB8A6 40%,#FBD9B8 50%,#42799F 60%,#1A6C8E 76%,#0C5B76 90%,#0A4E66 100%); --scrimA: .52; --glitc: rgba(255,218,192,.72); --laneo: .10; --hzc: rgba(255,224,205,.16); }
 .hero.ph-golden { --sky: radial-gradient(135% 95% at 81% 45%, rgba(255,215,122,.95) 0%, rgba(255,178,92,.44) 26%, rgba(255,160,80,0) 55%), linear-gradient(177deg,#5F7CA8 0%,#98859F 13%,#C98B72 25%,#EFA063 34%,#FFCE8F 42%,#DA7D53 46%,#8E6678 61%,#3D6684 75%,#135E7E 89%,#0A4E66 100%); --scrimA: .50; --glitc: rgba(255,206,126,.92); --laneo: .19; --hzc: rgba(255,206,150,.22); }
@@ -316,6 +316,8 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
 .xps_star.s2 { left: 138px; top: 7px; animation: 3s ease-in-out 0s infinite normal none running xpsTwinkle; }
 .xp_supportstage.reviewing .xps_star { animation: auto ease 0s 1 normal none running none; opacity: 0.55; }
 .xp_supportstage.reviewing .xps_hairline { opacity: 0.85; }
+.hk_day .dock .hk_mmark, .hk_day .dock .hk_menumark { --mm1: #7E420C; --mm2: #14625B; --mm3: #5F4A2C; --mm4: #992743; }
+.hk_day .dock .hk_tab.on .hk_mmark, .hk_day .dock .hk_segb.on .hk_mmark, .hk_day .dock .hk_tab.on .hk_menumark, .hk_day .dock .hk_segb.on .hk_menumark { --mm1: #fff6e4; --mm2: #fff6e4; --mm3: #fff6e4; --mm4: #fff6e4; }
 @keyframes hk_drift { 
   0% { transform: translateX(0px); opacity: 0; }
   7% { opacity: var(--clo,.18); }

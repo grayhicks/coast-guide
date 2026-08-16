@@ -921,7 +921,11 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
   .hk_splashmark .sp_star{ opacity:.95; } .hk_splashmark .sp_tick{ opacity:.7; }
   .hk_splashmark .sp_sea,.hk_splashmark .sp_sea2{ opacity:.5; }
 }
-.hk{ --hk-col:640px; }
+.hk{ --hk-col:640px; --hk-gutter:17px; }
+/* 08/16 — THE GUTTER IS ONE NUMBER NOW. The wrap padded 17px a side while the hero pulled back
+   15px, so a 2px strip of page ground ran down both sides of the scene at every width — invisible
+   on navy, obvious on cream. Two readers, one token: the wrap pads with the token, anything
+   full-bleed negates it. Nothing that means to span the column may write its own gutter number. */
 /* ===== THE SWELLED RULE — the app's one ornament mark, 08/09 ==================================
    Gray asked for the elegant alternative by name after the gilt hairline shipped: "I like that one
    but... we may want to try a more elegant one as an option though." And on the controls: "There
@@ -1016,7 +1020,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
    pattern on the website footer silently reset a gutter to zero and put every link hard against
    the phone edge. Set the axis you mean to set. */
 .hk_wrap{ max-width:var(--hk-col); margin:0 auto;
-  padding-top:0; padding-left:17px; padding-right:17px; padding-bottom:54px; }
+  padding-top:0; padding-left:var(--hk-gutter); padding-right:var(--hk-gutter); padding-bottom:54px; }
 .disp{ font-family:Fraunces, serif; }
 .hk button{ font-family:inherit; }
 .hk button:focus-visible, .hk [role="button"]:focus-visible, .hk a:focus-visible{ outline:2px solid #8FC0F0; outline-offset:2px; }
@@ -1027,7 +1031,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
    Time-of-day phases (ph-dawn / ph-day / ph-golden / ph-night) computed from the device clock
    via a NOAA sunrise/sunset calc for Gulf Breeze; tap the sun (or moon) to preview each phase.
    Every animation is transform/opacity only. Grain jitters via steps() transform. */
-.hero{ position:relative; overflow:hidden; margin:0 -15px 14px; padding:22px 22px 38px; min-height:248px; background:var(--sky); }
+.hero{ position:relative; overflow:hidden; margin:0 calc(-1*var(--hk-gutter)) 14px; padding:22px 22px 38px; min-height:248px; background:var(--sky); }
 /* ---- 08/07 THE THREE DAYTIME SKIES WERE LIT UPSIDE DOWN.
    All three ramps put the palest, warmest colour at the ZENITH and darkened toward the horizon.
    Real atmosphere is the reverse — you look through more air toward the horizon, so the horizon is
@@ -5333,7 +5337,7 @@ a.hero_sponsor:focus-visible > *{ outline:3px solid #F2C43C; outline-offset:4px;
 .fclose:active{ transform:scale(.92); }
 
 /* the page — plum grounds, candle-glow, gilt */
-.dnx{ position:relative; margin:0 -15px; padding:8px 16px 64px; min-height:100vh; overflow:hidden; color:#F7EFE1;
+.dnx{ position:relative; margin:0 calc(-1*var(--hk-gutter)); padding:8px 16px 64px; min-height:100vh; overflow:hidden; color:#F7EFE1;
   background:radial-gradient(120% 30% at 50% 0%, rgba(255,190,120,.10) 0%, transparent 58%),
              radial-gradient(80% 22% at 88% 30%, rgba(232,199,123,.05) 0%, transparent 50%),
              linear-gradient(180deg,#1E1233 0%,#241536 40%,#2A1838 72%,#221430 100%); }
@@ -7543,8 +7547,10 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
 
 /* EDGE TO EDGE. --hk-col is the one column width the whole app measures against, so widening the
    card means widening that, not reaching into a card rule. */
-.hk_wide{ --hk-col:100vw; }
-.hk_wide .hk_wrap{ padding-left:0; padding-right:0; }
+.hk_wide{ --hk-col:100vw; --hk-gutter:0px; }
+/* the wrap's own padding reads the gutter token, so zeroing the token IS the edge-to-edge rule —
+   and it also zeroes the hero's and Date Night's negative margins, which used to overhang the
+   viewport by 15px a side in this mode. Full bleed now means exactly the viewport. */
 .hk_totop.dn{ border-color:#C77192; background:linear-gradient(180deg,#3A2130,#241019); color:#F3C6D5; box-shadow:0 7px 20px -5px rgba(0,0,0,.65), 0 0 13px -4px rgba(199,113,146,.55); }
 .menuwrap{ display:none !important; }
 .dnseg_row{ display:flex; align-items:stretch; gap:8px; margin:2px 0 4px; }
@@ -11963,6 +11969,197 @@ body:has(.promotions-page) .hk_supportfloat{ opacity:0; pointer-events:none; tra
 .hk_sc .cardfoot .cardmap, .hk_sc .cardfoot .tap{ min-height:44px; }
 /* the tap affordance takes a whole line of its own rather than clipping at the card edge when the
    call, map and calendar controls leave it under 140px */
+
+/* ===== DAY MODE, SECTION 1: THE SHELL (08/16) ==================================================
+   The Day/Night dial puts hk_day on the app root; this block is the first paint of Day and covers
+   the SHELL only: the page ground, the dock and everything in it, the section head, the count
+   line, the show-everything bar and the corner menu button. The hero scene, the cards and the
+   twelve card worlds are deliberately untouched, exactly as the website leaves its own scene
+   token alone in the light theme.
+
+   EVERY VALUE HERE IS THE WEBSITE'S LIGHT PALETTE, LIFTED FROM web/site.css html[data-theme=light]
+   AND NOT INVENTED, so the app and the site cannot drift into two different light themes:
+   ink 0e2436 / 44566a / 5e6e80 · page fff6e4 · panel fffcf4 · panel-2 and field ffffff ·
+   band f7ebd4 · band-line rgba(198,176,132,.75) · line e2d2ae · line-soft rgba(198,176,132,.5) ·
+   line-strong 8f7f60 · demoted gilt 8a5a0c / 7a4e08 / 5a3a05 · accent-ink fff6e4 ·
+   kicker ink 5d3f06 · ok 0b6e52 · the four pill token sets · warm shadows rgba(74,58,28,x).
+   Alpha variants of those hues are used the same way night uses alphas of its own golds; no new
+   hue appears anywhere in this block.
+
+   THE THREE DECISIONS A FUTURE SECTION WOULD OTHERWISE RE-LITIGATE:
+   1. GILT IS DEMOTED TO INK. The night chrome is built on bright gold, and bright gold on cream
+      fails contrast and reads washed out. On paper, gold stops being a surface colour and becomes
+      ornament ink: 8a5a0c and 7a4e08 for anything that carries type or must be seen, and the
+      accent ink on a gilt fill is CREAM fff6e4, never white, because white on gilt reads cold.
+   2. THE SELECTED STATE IS FOIL-STAMPED, NOT LAMPLIT. The one-tab-law comment far above already
+      rules it: gilt at low alpha on cream is invisible. So the chosen cell is a solid gilt-ink
+      plate, 8a5a0c lit top to 7a4e08 base, cream ink on it, cream engraved swelled rules instead
+      of gold ones, and a warm drop shadow. That is also the site's own light-theme primary
+      button, so the two surfaces share one answer for what pressed means on paper. Promotions
+      folds into the same plate here: its night warmth was an amber EDGE, and an amber edge on a
+      gilt-ink plate is a fourth gold inside three golds, the exact fault the cream-mark fix
+      named. One selected costume on paper.
+   3. SHADOWS ARE WARM. A neutral grey shadow on cream reads as dirt, so every shadow in this
+      block is the paper umber rgba(74,58,28,x), the site's own shadow-1 and shadow-2 pair.
+
+   WHAT MUST MEASURE IDENTICALLY BETWEEN THEMES: everything. This block is colour only —
+   background, color, border-color, box-shadow, opacity and the mark tokens. No padding, margin,
+   width, height, radius, font or border-width appears in it, so every 44px target and every card
+   height is byte-identical between Day and Night.
+
+   IT SITS AT THE VERY END OF FONT_CSS ON PURPOSE: source order is what lets it also win over the
+   hk_sitecards block, because Day overrides the website-construction colours too — sitecards
+   keeps its SHAPES (capsule cells, panelled trays, rail-level swelled rules) and this block
+   repaints their ink for paper. Where a sitecards selector outranks a plain hk_day one, the
+   matching higher-specificity selector is written out below; do not simplify those away. */
+
+/* the ground and the body ink. Flat cream, the same value as the info paper, and no gilt glow:
+   the night radial is a lamp in a dark room, and paper does not carry a lamp. */
+.hk.hk_day{ background:#fff6e4; color:#0e2436; }
+
+/* THE DOCK — still a raised panel, not a flat rectangle. Night raises it with a navy gradient and
+   three gilt border weights; Day keeps the same logic in paper terms: lit white top falling to
+   the panel cream, a soft lit top edge, hairline sides, a strong shaded bottom edge, the warm
+   shadow-2 pair, and a white sheen on the inner top lip. */
+.hk_day .dock{ background:linear-gradient(180deg,#ffffff,#fffcf4);
+  border-color:#e2d2ae; border-top-color:rgba(198,176,132,.5); border-bottom-color:#8f7f60;
+  box-shadow:0 2px 4px rgba(74,58,28,.12), 0 12px 32px rgba(74,58,28,.10), inset 0 1px 0 rgba(255,255,255,.75); }
+.hk_day .fbar{ border-top-color:rgba(198,176,132,.5); }
+
+/* RESTING CELLS — blank ticket stubs, not outlined boxes. The first pass drew every resting cell
+   in line-strong with letterpress shading and Gray rejected it: ten hard-outlined rectangles in
+   two stacked grids read as a form, not a control rail. Three treatments were rendered side by
+   side before this one shipped: an umber wash (computes to near-neutral grey over the white dock,
+   so the chips read cold), bare type on the paper (elegant, but ten resting controls stopped
+   looking tappable at all), and this — the site's own ticket-band cream as a flat stub fill with
+   ONE hairline shelf at the foot, so each cell reads as a blank stub lying on the counter. No
+   outline, no bevel, no inner light; the row reads the Unigrid way round, the gilt plate the one
+   heavy band and everything beside it quiet paper. The borders stay 1px and go transparent rather
+   than 0, so no cell changes size. Labels and counts are both ink-2: the counts were ink-3, which
+   measures 4.43:1 on the band — under the 4.5 floor — and the site has no ink between its steps,
+   so the counts take ink-2 and keep their smaller size and lighter weight as the hierarchy.
+   Hover deepens the same band under an umber breath rather than switching hue. */
+.hk_day .dock .hk_tab, .hk_day .dock .hk_segb{
+  border-color:transparent;
+  background:#f7ebd4;
+  box-shadow:inset 0 -1px 0 rgba(143,127,96,.55); }
+.hk_day .hk_tab, .hk_day .hk_segb{ color:#44566a; }
+.hk_day .hk_tab .tc{ color:#44566a; }
+.hk_day .dock .hk_tab:hover:not(.on), .hk_day .dock .hk_segb:hover:not(.on){
+  border-color:transparent;
+  background:linear-gradient(0deg, rgba(74,58,28,.07), rgba(74,58,28,.07)), #f7ebd4; color:#0e2436;
+  box-shadow:inset 0 -1px 0 rgba(143,127,96,.65); }
+
+/* THE SELECTED CELL — the foil stamp. Gilt-ink plate, cream ink, cream engraved rules. The base
+   navy .on fills are overridden here at both the bare and the dock level so the plate wins in
+   the plain style and in sitecards, and the .tc rule is written at dock depth because the
+   sitecards block owns a five-class selector for it. */
+.hk_day .hk_tab.on, .hk_day .hk_segb.on{ background:linear-gradient(180deg,#8a5a0c,#7a4e08); color:#fff6e4; }
+.hk_day .dock .hk_tab.on, .hk_day .dock .hk_segb.on{
+  border-color:#7a4e08; border-top-color:#8a5a0c; border-bottom-color:#5a3a05;
+  box-shadow:inset 0 0 0 1px rgba(255,246,228,.22), 0 2px 4px rgba(74,58,28,.18), 0 6px 15px -8px rgba(74,58,28,.4),
+    inset 0 1px 0 rgba(255,246,228,.28), inset 0 -1px 0 rgba(90,58,5,.45); }
+.hk_day .hk_tab.on .tc, .hk_day .dock .hk_tab.on .tc{ color:#f7ebd4; }
+/* the swelled rules inside the chosen cell go cream: gilt rules on a gilt plate is the same
+   yellows-blend failure Gray already called on the marks, and cream on the plate is 5.5:1. */
+.hk_day .dock .hk_tab::after, .hk_day .dock .hk_segb::after{ background-color:#fff6e4; }
+
+/* THE RAIL MARKS on paper take the set's own paper inks, the ones the info pages already use for
+   exactly this ground, and the structural stroke and the calendar date take ink-2 beside the
+   ink-2 label. On the chosen plate all four tokens go cream so the whole drawing is foil content
+   inside the gilt frame; the on-state structural cream from the night rule already matches. The
+   selectors are written at the sitecards block's own depth so they win there too. */
+.hk_day .dock .hk_mmark, .hk_day .dock .hk_menumark{ --mm1:#7E420C; --mm2:#14625B; --mm3:#5F4A2C; --mm4:#992743; }
+.hk_day .hk_segb .hk_tmark{ color:#44566a; }
+.hk_day .hk_segb .hk_tabday{ color:#44566a; }
+/* the two rest-ink rules above sit later in the sheet than the night on-state cream at the same
+   specificity, so without these the chosen seat kept its REST ink and painted a navy calendar on
+   the gilt plate at 1.5:1 — seen in the first render, not in review. The on-state is restated
+   here so source order lands where the night block intends it. */
+.hk_day .hk_segb.on .hk_tmark{ color:#fff6e4; }
+.hk_day .hk_segb.on .hk_tabday{ color:#fff6e4; }
+.hk_day .dock .hk_tab.on .hk_mmark, .hk_day .dock .hk_segb.on .hk_mmark,
+.hk_day .dock .hk_tab.on .hk_menumark, .hk_day .dock .hk_segb.on .hk_menumark{
+  --mm1:#fff6e4; --mm2:#fff6e4; --mm3:#fff6e4; --mm4:#fff6e4; }
+.hk_day .hk_segb .seg_beta{ color:#44566a; }
+.hk_day .hk_segb.on .seg_beta{ color:#f7ebd4; }
+
+/* UTILITY ROW — Filters, search, Saved, reset. White field fills on the cream panel, the same
+   gilt-ink hairlines one step quieter than the navigation cells, keeping night's three-weight
+   family: quiet on utility, full on a resting tab, solid on the chosen plate. */
+.hk_day .fbtn{ background:#ffffff; color:#44566a; }
+.hk_day .fbtn.on{ background:#8a5a0c; color:#fff6e4; }
+.hk_day .fbtn.open{ box-shadow:0 6px 16px rgba(74,58,28,.25); }
+.hk_day .freset{ color:#44566a; border-color:rgba(143,127,96,.6); }
+.hk_day .sbox{ background:#ffffff; color:#5e6e80; }
+.hk_day .sbox.on, .hk_day .sbox:focus-within{ background:#ffffff; color:#0e2436; }
+.hk_day .sbox input{ color:#0e2436; }
+.hk_day .sbox input::placeholder{ color:#5e6e80; }
+.hk_day .sclr{ background:rgba(14,36,54,.10); color:#0e2436; }
+.hk_day .hk_savedpill{ background:#ffffff; color:#44566a; }
+.hk_day .hk_savedpill.on{ background:linear-gradient(180deg,#8a5a0c,#7a4e08); border-color:#7a4e08; color:#fff6e4; }
+.hk_day .hkc_n{ background:rgba(14,36,54,.10); }
+.hk_day .hk_savedpill.on .hkc_n{ background:rgba(255,246,228,.26); color:#fff6e4; }
+.hk_day .dock .fbtn, .hk_day .dock .sbox, .hk_day .dock .hk_savedpill{
+  border-color:rgba(143,127,96,.55);
+  border-top-color:rgba(90,58,5,.4);
+  border-bottom-color:rgba(198,176,132,.8); }
+.hk_day .dock .fbtn:hover, .hk_day .dock .hk_savedpill:hover{ border-color:rgba(138,90,12,.6); }
+.hk_day .dock .sbox.on, .hk_day .dock .sbox:focus-within{ border-color:#8a5a0c; }
+.hk_day .dock .fbtn.on{ border-color:#7a4e08; }
+.hk_day .dock .hk_savedpill.on{ border-color:#7a4e08; }
+/* keyboard ring in gilt ink rather than lamplight gold, on both focus rules */
+.hk_day .dock .hk_tab:focus-visible, .hk_day .dock .hk_segb:focus-visible{ outline-color:#8a5a0c; }
+.hk_day .hk_savedpill:focus-visible{ outline-color:#8a5a0c; }
+
+/* SITECARDS + DAY — the website-construction style keeps its shapes and takes paper ink. The
+   trays become the ticket band recessed into the page, the rail-level swelled rules go gilt-ink
+   at a weight that survives cream, and the capsule cells and plates are already repainted by the
+   rules above winning on source order. */
+.hk_day.hk_sitecards .hk_tabs, .hk_day.hk_sitecards .hk_seg{
+  background:linear-gradient(180deg, rgba(74,58,28,.07), rgba(74,58,28,0) 75%), #f7ebd4;
+  border-color:#e2d2ae;
+  box-shadow:inset 0 1px 4px rgba(74,58,28,.14); }
+.hk_day .hk_tabs::before, .hk_day .hk_tabs::after,
+.hk_day .hk_seg::before, .hk_day .hk_seg::after{ background-color:#8a5a0c; opacity:.75; }
+
+/* THE TAB-CONTENT PANEL DISSOLVES ON PAPER. Its blue-grey wash, blue hairline and inset sheen
+   exist to lift a panel off a navy page; on cream they read as a distinct grey-blue slab with a
+   visible rounded edge floating above the cards — a container the reader was never meant to
+   notice. On paper the deck sits directly on the page, so the panel keeps every millimetre of its
+   geometry (padding, margin, radius — card positions must not move) and gives up all of its paint:
+   no fill, no edge, no sheen. Border-color goes transparent rather than the border going, because
+   removing a 1px border would move the cards 1px. */
+.hk_day .tabpanel{ background:none; border-color:transparent; box-shadow:none; }
+
+/* SECTION HEAD — navy title on the paper, ink-3 count line (the site's fine-print floor, 4.87:1
+   on the cream), and the kickers stop being saturated plates with light ink: on paper a pill is
+   a pale field with dark ink, which is the site's own shipped pill grammar. Each night kicker
+   maps to the site pill token set nearest its meaning — the three gold kickers take the ticket
+   band with the engraved kicker ink, the green spot takes the free pill, the blue month takes
+   the price pill, the orange plan takes the TBA pill. The ring is an inset shadow, not a border,
+   because these pills ship borderless and a new border would change their height. */
+.hk_day .sectitle{ color:#0e2436; }
+.hk_day .scount{ color:#5e6e80; }
+/* the count NUMBER ships with an inline style of night cream on its b element, which no plain
+   rule can reach, so on paper the one number the line exists to carry was its palest word.
+   The important flag exists only to outrank that inline style; it is ink, one step darker than
+   the line around it, the same emphasis the night inline value gives it on navy. */
+.hk_day .scount b{ color:#0e2436 !important; }
+.hk_day .seckick{ background:#f7ebd4; color:#5d3f06; box-shadow:inset 0 0 0 1px rgba(198,176,132,.75); }
+.hk_day .seckick.spot{ background:#e2f2e4; color:#0b5c3e; box-shadow:inset 0 0 0 1px #a9d8bd; }
+.hk_day .seckick.month{ background:#f0e9da; color:#1a2c3e; box-shadow:inset 0 0 0 1px #ddd0b6; }
+.hk_day .seckick.plan{ background:#f9edd2; color:#6b4c05; box-shadow:inset 0 0 0 1px #dcc490; }
+
+/* the filtered-Anytime show-everything bar takes the site's ok triple verbatim: 5.81:1 ink on
+   the paper, the ok-line edge, the ok-wash fill. */
+.hk_day .evbar{ color:#0b6e52; background:rgba(11,110,82,.06); border-color:rgba(11,110,82,.42); }
+
+/* the corner menu button floats over the hero, which stays dark in both themes, so on Day it
+   reads as a paper chip on the night sky rather than as smoked glass: cream fill, navy ink,
+   line-strong edge. The important flags only match the weight of the night rule they override. */
+.hk_day .menubtn{ background:rgba(255,246,228,.92) !important; border-color:rgba(143,127,96,.65) !important;
+  color:#0e2436 !important; box-shadow:0 4px 14px rgba(74,58,28,.3); }
 `;const AUD_LABEL={family:"Family of 5 · admission",adults:"For 2 · date night",kids:"Per kid · admission"};/* 07/28 — Gray: "the price is for 2 people yet the price on the card still states whole family…
    That needs to change to 2… Same for all party of 2s. And the logic has to be nailed down because
    this is for everyone."
@@ -13553,7 +13750,7 @@ function useLiveWx(){const[,bump]=useState(0);useEffect(()=>{const cb=()=>bump(n
    the stand is the truth. A colour nobody earned is worse than no colour, which
    is the same law verifiedOn runs on.
    =========================================================================== *//* GCA_FLAG_DATA_BEGIN — one line, replaced verbatim by claude/harness/bake_beach_flag.js.
-   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-16T18:50:56.794Z","issued":"2026-08-16T16:14:00+00:00","productId":"5c3c93d9-b869-48ec-a4ef-1922a74245c7","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"},"forecastSource":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"observed","county":{"level":1,"flags":["green","purple"],"risk":"Low","marineLife":true,"waterTempF":86,"updated":"2026-08-16T14:34:39.827Z","chance":{"green":50,"yellow":50,"red":0,"doubleRed":0,"marineLife":70},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-16","risk":"Low","flags":["green","purple"],"observedAt":"2026-08-16T14:34:39.827Z","chance":{"green":50,"yellow":50,"red":0,"doubleRed":0,"marineLife":70},"surf":"Around 1 foot","uv":"Very High","water":"86°F","weather":"Mostly sunny. A chance of showers and thunderstorms","winds":"West winds around 5 mph, becoming southwest in the afternoon"},"outlook":[{"date":"2026-08-16","label":"Today","risk":"Low","flags":["green"],"surf":"Around 1 foot"},{"date":"2026-08-17","label":"Monday","risk":"Moderate","flags":["yellow"],"surf":"1 to 2 feet"},{"date":"2026-08-18","label":"Tuesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-19","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-20","label":"Thursday","risk":"Low","flags":["green"],"surf":"1 to 2 feet"}],"alerts":[{"event":"Heat Advisory","headline":"Heat Advisory issued August 16 at 11:09AM CDT until August 16 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...For the first Heat Advisory, heat index values up to 110\nexpected. For the second Heat Advisory, heat index values up to 110\nexpected.\n\n* WHERE...Portions of south central and southwest Alabama, northwest\nFlorida, and southeast Mississippi.\n\n* WHEN...For the first Heat Advisory, until 8 PM CDT this evening.\nFor the second Heat Advisory, from 11 AM to 8 PM CDT Monday.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.","severity":"Moderate","onset":"2026-08-16T11:09:00-05:00","ends":"2026-08-16T20:00:00-05:00"},{"event":"Heat Advisory","headline":"Heat Advisory issued August 16 at 11:09AM CDT until August 17 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...For the first Heat Advisory, heat index values up to 110\nexpected. For the second Heat Advisory, heat index values up to 110\nexpected.\n\n* WHERE...Portions of south central and southwest Alabama, northwest\nFlorida, and southeast Mississippi.\n\n* WHEN...For the first Heat Advisory, until 8 PM CDT this evening.\nFor the second Heat Advisory, from 11 AM to 8 PM CDT Monday.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.","severity":"Moderate","onset":"2026-08-17T11:00:00-05:00","ends":"2026-08-17T20:00:00-05:00"}]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
+   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-16T19:39:57.864Z","issued":"2026-08-16T16:14:00+00:00","productId":"5c3c93d9-b869-48ec-a4ef-1922a74245c7","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"},"forecastSource":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"observed","county":{"level":1,"flags":["green","purple"],"risk":"Low","marineLife":true,"waterTempF":86,"updated":"2026-08-16T14:34:39.827Z","chance":{"green":50,"yellow":50,"red":0,"doubleRed":0,"marineLife":70},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-16","risk":"Low","flags":["green","purple"],"observedAt":"2026-08-16T14:34:39.827Z","chance":{"green":50,"yellow":50,"red":0,"doubleRed":0,"marineLife":70},"surf":"Around 1 foot","uv":"Very High","water":"86°F","weather":"Mostly sunny. A chance of showers and thunderstorms","winds":"West winds around 5 mph, becoming southwest in the afternoon"},"outlook":[{"date":"2026-08-16","label":"Today","risk":"Low","flags":["green"],"surf":"Around 1 foot"},{"date":"2026-08-17","label":"Monday","risk":"Moderate","flags":["yellow"],"surf":"1 to 2 feet"},{"date":"2026-08-18","label":"Tuesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-19","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-20","label":"Thursday","risk":"Low","flags":["green"],"surf":"1 to 2 feet"}],"alerts":[{"event":"Heat Advisory","headline":"Heat Advisory issued August 16 at 11:09AM CDT until August 16 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...For the first Heat Advisory, heat index values up to 110\nexpected. For the second Heat Advisory, heat index values up to 110\nexpected.\n\n* WHERE...Portions of south central and southwest Alabama, northwest\nFlorida, and southeast Mississippi.\n\n* WHEN...For the first Heat Advisory, until 8 PM CDT this evening.\nFor the second Heat Advisory, from 11 AM to 8 PM CDT Monday.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.","severity":"Moderate","onset":"2026-08-16T11:09:00-05:00","ends":"2026-08-16T20:00:00-05:00"},{"event":"Heat Advisory","headline":"Heat Advisory issued August 16 at 11:09AM CDT until August 17 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...For the first Heat Advisory, heat index values up to 110\nexpected. For the second Heat Advisory, heat index values up to 110\nexpected.\n\n* WHERE...Portions of south central and southwest Alabama, northwest\nFlorida, and southeast Mississippi.\n\n* WHEN...For the first Heat Advisory, until 8 PM CDT this evening.\nFor the second Heat Advisory, from 11 AM to 8 PM CDT Monday.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.","severity":"Moderate","onset":"2026-08-17T11:00:00-05:00","ends":"2026-08-17T20:00:00-05:00"}]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
    same words fetch_beach_flag.js emits so the two cannot drift apart.
    ⚠ 08/13 — GREEN WAS #2E9E5B AND GRAY COULD NOT SEE IT: "not able to be seen very vividly.
    Needs to be filled it i guess or more vivid less dark green." Measured, he is right by a
