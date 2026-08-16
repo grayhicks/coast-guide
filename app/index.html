@@ -8499,10 +8499,9 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
 @keyframes skb_glint{ 0%,100%{ opacity:.15; transform:scaleX(.6);} 50%{ opacity:.75; transform:scaleX(1);} }
 .skb_sign{ position:absolute; right:24px; top:18px; z-index:4; animation:skb_signbob 3.4s ease-in-out infinite; }
 @keyframes skb_signbob{ 0%,100%{ transform:translateY(0) rotate(-2deg);} 50%{ transform:translateY(2.4px) rotate(2.2deg);} }
-/* the board's jolt at each bonk — transform only, host-locked, composing with the sign's bob.
-   The 87.2 dip is the tease payoff: the sign leans down and taps the waiting dolphin. */
-.skboat .skb_board{ animation:skb_boardhit var(--skd,18s) linear infinite var(--sko,0s); }
-@keyframes skb_boardhit{ 0%,29.1%{ transform:translateY(0) rotate(0); } 29.7%{ transform:translateY(-3px) rotate(2.2deg); } 30.7%{ transform:translateY(1px) rotate(-1.1deg); } 31.7%,62.4%{ transform:translateY(0) rotate(0); } 63.1%{ transform:translateY(-4.5px) rotate(-2.8deg); } 64.2%{ transform:translateY(1.5px) rotate(1.5deg); } 65.4%,86.4%{ transform:translateY(0) rotate(0); } 87.2%{ transform:translateY(2.5px) rotate(.8deg); } 88.4%,100%{ transform:translateY(0) rotate(0); } }
+/* 08/16 SECOND RESTAGE — the board's bonk jolt (skb_boardhit) and the 87.2 sign-tap tease are
+   DELETED, not retimed: Gray's correction moved the beating off the dolphin, so nothing strikes
+   the sign any more and the sign strikes nobody. It keeps only its idle bob above. */
 .skb_board{ position:relative; display:block; width:128px; height:24px; border-radius:5px; background:linear-gradient(180deg,#F2E9D2,#DCCCA4); border:1.5px solid #8A6A3C; box-shadow:0 2px 5px rgba(6,26,34,.5), inset 0 1px 0 rgba(255,252,240,.7); }
 .skb_board .skadtxt.sea{ position:absolute; inset:0; box-sizing:border-box; display:flex; align-items:center; justify-content:center; font-family:Georgia,'Times New Roman',serif; font-weight:800; font-size:9.5px; letter-spacing:.9px; color:#544522; white-space:nowrap; overflow:hidden; padding:0 8px; }
 .skb_float{ position:absolute; left:50%; bottom:-7px; width:26px; height:7px; margin-left:-13px; border-radius:4px; background:linear-gradient(180deg,#C74B3C,#9E352A); box-shadow:0 1px 3px rgba(6,26,34,.5); }
@@ -8511,135 +8510,142 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
    the spy-hop (.skb_spy, DolphinSpy) are DELETED from this skit; the rig dolphin does its own
    entering by surfacing. The window works like the old spy window: overflow:hidden with a water
    sheen at its foot, so the crop IS the waterline and a rise into the box reads as coming out
-   of the water. It sits UNDER the sponsor's sign on purpose — the sign's float is the ceiling
-   the dolphin keeps hitting.
-   GEOMETRY, measured: stage is 66px tall; the sign board runs y18-42 and its red float hangs
-   to y49. Window y20-64, dolphin element 48x27 inside it (56 was cut: at that size the head is
-   14px crown-to-jaw against the 15px of water under the float, so the singing jaw drowned
-   under the window crop); the crown sits 6.1px below the element top, so translateY ~22 puts
-   the crown ON the float (the bonk), ~28 with the 19deg nose-up serenade tilt is the
-   singing height with the open jaw above the crop, and 46 is fully submerged. The window
-   sits at right:44 so the crown lands under the FLOAT, not beside it. The dolphin never crosses
-   the sign visually: the sign is z-index 4, the window 2.
+   of the water.
+   08/16 SECOND RESTAGE, from Gray's rejection verbatim: "the dolphin is not the one getting
+   beat up." So the window moved out from under the sign and now sits UNDER THE PUFFERFISH —
+   the fish floating at the surface is the ceiling the dolphin keeps hitting, and the dolphin
+   is the cheerful oblivious one who never notices. All the injuries are the FISH'S now.
+   GEOMETRY, measured: stage is 66px tall; the sign board runs y18-42 at right 24-152 and does
+   not move. The fish floats at right:168, y12-36, head (it is mirrored to face right) around
+   x right-175. Window right:140, y22-66, dolphin element 48x27 inside it; the melon top sits
+   ~6px below the element top at the element x that lands under the fish's head, and the
+   fish's painted ink stops at y~32 (its 24px box runs to 36, but the art has margin), so
+   translateY ~3 puts the melon INTO the fish's underside (the bonk), ~19 with the 19deg
+   nose-up serenade tilt is the singing height in clear water below the fish, and 44 is fully
+   submerged. z-order: fish 4 over window 2, so the crown clips BEHIND the fish at contact,
+   which is what contact looks like at this size.
    THE BEAT SHEET (host %, phase-locked to the FX windows below):
-     7.5-13    rise 1, nose-up, settle at singing height
+     7.5-13    rise 1, nose-up, settle at singing height — the fish leans away, wary
      11.1-22.2 SINGS (jaw open, notes window — exactly two 2s note cycles)
      24.5      slides under
-     27.6-29.1 fast rise, overshooting — 29.17 BONK on the float: squash 1.07/.88, sign kicks,
-               X eyes in, the KNOT arrives on his crown and stays
-     31-35     dazed low float (squiggle mouth), sinks at 37
-     42.6-45.6 rise 2 — oblivious, bump and all — SINGS again 44.4-55.5
-     61-62.4   biggest rise, 62.5 BONK 2, harder: bandaid latches ON the knot, X eyes longer,
-               and the PUFFERFISH goes to the full ball (its own block below)
-     72.5-80   shakes it off, smile back
-     82.5-86.4 the tease: rises to ONE pixel under the float and holds — and at 87.2 the sign's
-               own bob dips and taps him anyway (the small outlandish twist)
-     88.6-90   ouch-blink, sinks; 92-100 empty water, FX reset while nothing is visible */
-.skb_dolphw{ position:absolute; right:44px; top:20px; width:64px; height:46px; z-index:2; overflow:hidden; padding:0 4px; }
+     27.6-29.1 fast rise, overshooting — 29.17 BONK on the fish: squash 1.07/.88, the FISH
+               jolts up, ITS X eyes go in, the KNOT arrives on ITS crown and stays; the
+               dolphin keeps smiling and sails back down, none the wiser
+     31-37     dolphin bobs happily, sinks at 37; fish dazed, O mouth, shock burst
+     42.6-45.6 rise 2 — oblivious — SINGS again 44.4-55.5
+     61-62.4   biggest rise, 62.5 BONK 2, harder: the bandaid latches ON the fish's knot, its
+               X eyes hold longer, and it goes to the full trembling ball (its block below)
+     72.5-80   dolphin does a happy surface wiggle, still smiling
+     82.5-86.4 the fake-out: rises to a few px short of the fish and hovers — the fish
+               flinches hard at 87.2 and nothing touches it (the twist: fear without contact)
+     88.6-90   dolphin blinks, sinks; 92-100 empty water, FX reset while nothing is visible */
+.skb_dolphw{ position:absolute; right:140px; top:22px; width:64px; height:44px; z-index:2; overflow:hidden; padding:0 4px; }
 .skb_dolphw::after{ content:""; position:absolute; left:6px; right:6px; bottom:1px; height:5px; border-radius:50%; border-top:1.2px solid rgba(210,241,247,.55); background:radial-gradient(ellipse at 50% 0%,rgba(181,225,236,.22),transparent 68%); pointer-events:none; }
-.skb_dolph{ position:absolute; left:8px; top:0; width:48px; height:27px; transform:translateY(46px); animation:skb_dolph var(--skd,18s) linear infinite var(--sko,0s); }
+.skb_dolph{ position:absolute; left:8px; top:0; width:48px; height:27px; transform:translateY(44px); animation:skb_dolph var(--skd,18s) linear infinite var(--sko,0s); }
 /* ⚠ ROTATION SIGN, learned by rendering: CSS positive rotation is clockwise, and for a
    LEFT-FACING animal that lifts the NOSE (a left-of-origin point moves up under clockwise).
    So rises and the serenade are POSITIVE angles here, dives negative — the first cut had them
    backwards and the singer drowned his own jaw. */
 @keyframes skb_dolph{
-  0%,6%{ transform:translateY(46px) rotate(0) scale(1,1); }
-  7.5%{ transform:translateY(45px) rotate(4deg) scale(1,1); animation-timing-function:cubic-bezier(.2,.7,.35,1); }
-  10%{ transform:translateY(29px) rotate(14deg) scale(1,1); }
-  11.1%{ transform:translateY(28px) rotate(19deg) scale(1,1); }
-  13%{ transform:translateY(28.7px) rotate(17deg) scale(1,1); }
-  17%{ transform:translateY(28.1px) rotate(19deg) scale(1,1); }
-  21%{ transform:translateY(28.5px) rotate(17deg) scale(1,1); }
-  22.5%{ transform:translateY(27.5px) rotate(-3deg) scale(1,1); animation-timing-function:cubic-bezier(.5,.05,.7,.4); }
-  24.5%{ transform:translateY(46px) rotate(-9deg) scale(1,1); }
-  26.5%{ transform:translateY(46px) rotate(0) scale(1,1); }
-  27.6%{ transform:translateY(42px) rotate(8deg) scale(1,1); animation-timing-function:cubic-bezier(.2,.7,.35,1); }
-  28.7%{ transform:translateY(24.5px) rotate(5deg) scale(1,1); }
-  29.17%{ transform:translateY(21.9px) rotate(0) scale(1.07,.88); }
-  29.9%{ transform:translateY(26.5px) rotate(-4deg) scale(.96,1.05); }
-  31%{ transform:translateY(28px) rotate(-2deg) scale(1,1); }
-  35%{ transform:translateY(28.5px) rotate(-3deg) scale(1,1); animation-timing-function:cubic-bezier(.5,.05,.7,.4); }
-  37%{ transform:translateY(46px) rotate(-9deg) scale(1,1); }
-  40%{ transform:translateY(46px) rotate(0) scale(1,1); }
-  42.6%{ transform:translateY(43px) rotate(6deg) scale(1,1); animation-timing-function:cubic-bezier(.2,.7,.35,1); }
-  44.44%{ transform:translateY(29px) rotate(14deg) scale(1,1); }
-  45.6%{ transform:translateY(28px) rotate(19deg) scale(1,1); }
-  50%{ transform:translateY(28.5px) rotate(17deg) scale(1,1); }
-  55%{ transform:translateY(28.1px) rotate(19deg) scale(1,1); }
-  56.6%{ transform:translateY(27.5px) rotate(-3deg) scale(1,1); animation-timing-function:cubic-bezier(.5,.05,.7,.4); }
-  58.5%{ transform:translateY(46px) rotate(-9deg) scale(1,1); }
-  60.2%{ transform:translateY(46px) rotate(0) scale(1,1); }
-  61%{ transform:translateY(41px) rotate(9deg) scale(1,1); animation-timing-function:cubic-bezier(.2,.7,.35,1); }
-  62%{ transform:translateY(24.5px) rotate(4deg) scale(1,1); }
-  62.5%{ transform:translateY(21.6px) rotate(0) scale(1.1,.84); }
-  63.4%{ transform:translateY(27.5px) rotate(-5deg) scale(.95,1.06); }
-  64.5%{ transform:translateY(29px) rotate(-3deg) scale(1,1); }
-  70%{ transform:translateY(29px) rotate(-4deg) scale(1,1); }
-  72.5%{ transform:translateY(28px) rotate(0) scale(1,1); }
-  73.5%{ transform:translateY(27.6px) rotate(2deg) scale(1,1); }
-  74.5%{ transform:translateY(28.2px) rotate(-2deg) scale(1,1); }
-  75.5%{ transform:translateY(28px) rotate(0) scale(1,1); }
-  80%{ transform:translateY(27.8px) rotate(0) scale(1,1); }
-  82.5%{ transform:translateY(24.6px) rotate(2deg) scale(1,1); }
-  85%,86.4%{ transform:translateY(24px) rotate(0) scale(1,1); }
-  87.2%{ transform:translateY(25.6px) rotate(-1deg) scale(1.03,.95); }
-  88.6%{ transform:translateY(29px) rotate(-4deg) scale(1,1); animation-timing-function:cubic-bezier(.5,.05,.7,.4); }
-  90%{ transform:translateY(46px) rotate(-10deg) scale(1,1); }
-  100%{ transform:translateY(46px) rotate(0) scale(1,1); }
+  0%,6%{ transform:translateY(44px) rotate(0) scale(1,1); }
+  7.5%{ transform:translateY(43px) rotate(4deg) scale(1,1); animation-timing-function:cubic-bezier(.2,.7,.35,1); }
+  10%{ transform:translateY(20.5px) rotate(14deg) scale(1,1); }
+  11.1%{ transform:translateY(19px) rotate(19deg) scale(1,1); }
+  13%{ transform:translateY(19.7px) rotate(17deg) scale(1,1); }
+  17%{ transform:translateY(19.1px) rotate(19deg) scale(1,1); }
+  21%{ transform:translateY(19.5px) rotate(17deg) scale(1,1); }
+  22.5%{ transform:translateY(18.5px) rotate(-3deg) scale(1,1); animation-timing-function:cubic-bezier(.5,.05,.7,.4); }
+  24.5%{ transform:translateY(44px) rotate(-9deg) scale(1,1); }
+  26.5%{ transform:translateY(44px) rotate(0) scale(1,1); }
+  27.6%{ transform:translateY(40px) rotate(8deg) scale(1,1); animation-timing-function:cubic-bezier(.2,.7,.35,1); }
+  28.7%{ transform:translateY(6px) rotate(5deg) scale(1,1); }
+  29.17%{ transform:translateY(3px) rotate(0) scale(1.07,.88); }
+  29.9%{ transform:translateY(14px) rotate(-4deg) scale(.96,1.05); }
+  31%{ transform:translateY(18.5px) rotate(-2deg) scale(1,1); }
+  35%{ transform:translateY(19.2px) rotate(-3deg) scale(1,1); animation-timing-function:cubic-bezier(.5,.05,.7,.4); }
+  37%{ transform:translateY(44px) rotate(-9deg) scale(1,1); }
+  40%{ transform:translateY(44px) rotate(0) scale(1,1); }
+  42.6%{ transform:translateY(41px) rotate(6deg) scale(1,1); animation-timing-function:cubic-bezier(.2,.7,.35,1); }
+  44.44%{ transform:translateY(20px) rotate(14deg) scale(1,1); }
+  45.6%{ transform:translateY(19px) rotate(19deg) scale(1,1); }
+  50%{ transform:translateY(19.5px) rotate(17deg) scale(1,1); }
+  55%{ transform:translateY(19.1px) rotate(19deg) scale(1,1); }
+  56.6%{ transform:translateY(18.5px) rotate(-3deg) scale(1,1); animation-timing-function:cubic-bezier(.5,.05,.7,.4); }
+  58.5%{ transform:translateY(44px) rotate(-9deg) scale(1,1); }
+  60.2%{ transform:translateY(44px) rotate(0) scale(1,1); }
+  61%{ transform:translateY(39px) rotate(9deg) scale(1,1); animation-timing-function:cubic-bezier(.2,.7,.35,1); }
+  62%{ transform:translateY(9.5px) rotate(4deg) scale(1,1); }
+  62.5%{ transform:translateY(6px) rotate(0) scale(1.1,.84); }
+  63.4%{ transform:translateY(15px) rotate(-5deg) scale(.95,1.06); }
+  64.5%{ transform:translateY(19.5px) rotate(-3deg) scale(1,1); }
+  70%{ transform:translateY(19.5px) rotate(-4deg) scale(1,1); }
+  72.5%{ transform:translateY(19px) rotate(0) scale(1,1); }
+  73.5%{ transform:translateY(18.6px) rotate(2deg) scale(1,1); }
+  74.5%{ transform:translateY(19.2px) rotate(-2deg) scale(1,1); }
+  75.5%{ transform:translateY(19px) rotate(0) scale(1,1); }
+  80%{ transform:translateY(18.8px) rotate(0) scale(1,1); }
+  82.5%{ transform:translateY(9.5px) rotate(2deg) scale(1,1); }
+  85%,86.4%{ transform:translateY(7.5px) rotate(0) scale(1,1); }
+  87.2%{ transform:translateY(8.6px) rotate(-1deg) scale(1,1); }
+  88.6%{ transform:translateY(19px) rotate(-4deg) scale(1,1); animation-timing-function:cubic-bezier(.5,.05,.7,.4); }
+  90%{ transform:translateY(44px) rotate(-10deg) scale(1,1); }
+  100%{ transform:translateY(44px) rotate(0) scale(1,1); }
 }
 /* ---- the rig's own styling. Joints are viewBox coordinates — see the DolphinActor comment. */
 .skb_dphart{ position:absolute; inset:0; width:100%; height:100%; overflow:visible; filter:drop-shadow(0 1px 2px rgba(5,29,38,.5));
   --hke-lid:#48B7DB; --hke-line:#2E85A8; --hke-crease:#1D5F7A; }
 .skb_dphart *{ transform-box:view-box; }
 .skb_dphsway{ transform-origin:44px 24px; animation:skb_dphsway 3.6s cubic-bezier(.42,0,.35,1) infinite; }
-.skb_dphtail{ transform-origin:74px 23px; animation:skb_dphtailbeat 1.15s ease-in-out infinite .09s; }
-.skb_dphpec{ transform-origin:30px 29px; animation:skb_dphpecbeat 1.7s ease-in-out infinite .12s; }
-.skb_dphbrow{ transform-origin:23.5px 14.6px; }
+.skb_dphtail{ transform-origin:71.5px 24px; animation:skb_dphtailbeat 1.15s ease-in-out infinite .09s; }
+.skb_dphpec{ transform-origin:27px 28.5px; animation:skb_dphpecbeat 1.7s ease-in-out infinite .12s; }
+.skb_dphbrow{ transform-origin:24.8px 17.4px; }
 @keyframes skb_dphsway{ 0%,100%{ transform:rotate(-1.1deg) translateY(.4px);} 44%{ transform:rotate(1.3deg) translateY(-.5px);} 58%{ transform:rotate(1.1deg) translateY(-.5px);} }
 @keyframes skb_dphtailbeat{ 0%,100%{ transform:rotate(-8deg);} 50%{ transform:rotate(8deg);} }
 @keyframes skb_dphpecbeat{ 0%,100%{ transform:rotate(0);} 50%{ transform:rotate(13deg);} }
 .skb_dphbody{ fill:#57C4E5; stroke:#3898BC; stroke-width:.9; stroke-linejoin:round; }
 .skb_dphbelly{ fill:#EFFAFD; opacity:.95; }
-.skb_dphdorsal,.skb_dphpecfin,.skb_dphtailfin{ fill:#46B2D6; stroke:#368FB4; stroke-width:.7; stroke-linejoin:round; }
-.skb_dphhi{ fill:none; stroke:#DFF6FF; stroke-width:1.8; stroke-linecap:round; opacity:.4; }
-.skb_dphmline{ fill:none; stroke:#1F5E77; stroke-width:1.9; stroke-linecap:round; stroke-linejoin:round; }
+/* THE CAPE — the dark grey-blue back every real dolphin wears, over the cyan base and above
+   the pale belly. It is what makes the flat silhouette read dolphin-dark-over-light at 48px.
+   The dorsal and the flukes take the cape's tone (they grow out of the cape); the flipper
+   stays the mid tone because it roots on the flank below the cape line. */
+.skb_dphcape{ fill:#3E89A8; opacity:.92; }
+.skb_dphdorsal,.skb_dphtailfin{ fill:#3E89A8; stroke:#2E7391; stroke-width:.7; stroke-linejoin:round; }
+.skb_dphpecfin{ fill:#46B2D6; stroke:#368FB4; stroke-width:.7; stroke-linejoin:round; }
+.skb_dphhi{ fill:none; stroke:#DFF6FF; stroke-width:1.6; stroke-linecap:round; opacity:.45; }
+/* the rostrum crease — the step that separates beak from melon, the strongest dolphin cue */
+.skb_dphmline{ fill:none; stroke:#1F5E77; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
 .skb_dphmdark{ fill:#1E4A5E; stroke:#16394A; stroke-width:.7; }
 .skb_dphtongue{ fill:#E58AA0; opacity:.9; }
-.skb_dphbrowline{ fill:none; stroke:#1F5E77; stroke-width:2; stroke-linecap:round; }
-.skb_dphsing,.skb_dphdaze{ opacity:0; }
-/* THE THREE MOUTHS SWAP on the host clock — shape changes, never size (the pufferfish law) */
+/* lifted 1.2px clear of the bigger eye and taken down from 2px/solid to 1.6px at .72 — the brow
+   should suggest an expression, not underline one */
+.skb_dphbrowline{ fill:none; stroke:#2A6B85; stroke-width:1.6; stroke-linecap:round; opacity:.72; }
+.skb_dphsing{ opacity:0; }
+/* THE TWO MOUTHS SWAP on the host clock — shape changes, never size (the pufferfish law).
+   08/16 second restage: the dazed squiggle mouth is DELETED with the rest of his injuries —
+   this dolphin is never hurt, so he owns only the smile and the singing jaw. */
 .skb_dphsmile{ animation:skb_dphsmilew var(--skd,18s) linear infinite var(--sko,0s); }
 .skb_dphsing{ animation:skb_dphsingw var(--skd,18s) linear infinite var(--sko,0s); }
-.skb_dphdaze{ animation:skb_dphdazew var(--skd,18s) linear infinite var(--sko,0s); }
-@keyframes skb_dphsmilew{ 0%,10.6%{ opacity:1;} 11.1%,22.2%{ opacity:0;} 23%,28.9%{ opacity:1;} 29.3%,35.5%{ opacity:0;} 36.2%,43.9%{ opacity:1;} 44.44%,55.5%{ opacity:0;} 56.2%,62.2%{ opacity:1;} 62.6%,72%{ opacity:0;} 72.8%,100%{ opacity:1;} }
+@keyframes skb_dphsmilew{ 0%,10.6%{ opacity:1;} 11.1%,22.2%{ opacity:0;} 23%,43.9%{ opacity:1;} 44.44%,55.5%{ opacity:0;} 56.2%,100%{ opacity:1;} }
 @keyframes skb_dphsingw{ 0%,10.7%{ opacity:0;} 11.1%,22.2%{ opacity:1;} 22.9%,44%{ opacity:0;} 44.44%,55.5%{ opacity:1;} 56.1%,100%{ opacity:0;} }
-@keyframes skb_dphdazew{ 0%,29.2%{ opacity:0;} 29.4%,35.4%{ opacity:1;} 36%,62.5%{ opacity:0;} 62.7%,71.8%{ opacity:1;} 72.6%,100%{ opacity:0;} }
-/* THE EYE, on the shared module: blinks mid-song, X eyes at each bonk (the X lives inside the
-   eye's clip, so the EYE changes rather than a sticker landing on it), an ouch-squeeze when
-   the sign taps him. Travel is in the eye's own --ry, like every rig. */
+/* THE EYE, on the shared module: blinks mid-song and a quick contented blink after the last
+   hover. NO X eyes, NO gaze-out — those are the fish's now; his hke_x part stays at its base
+   opacity 0, unused here by design. Travel is in the eye's own --ry, like every rig. */
 .skb_dpheyew .hke_lidT{ animation:skb_dpheyeT var(--skd,18s) cubic-bezier(.2,.9,.3,1.4) infinite var(--sko,0s); }
 .skb_dpheyew .hke_lidB{ animation:skb_dpheyeB var(--skd,18s) cubic-bezier(.2,.9,.3,1.4) infinite var(--sko,0s); }
-@keyframes skb_dpheyeT{ 0%,18.6%{ transform:translateY(calc(var(--ry) * -0.34));} 19.1%,19.5%{ transform:translateY(calc(var(--ry) * 1.05));} 20.1%,52.6%{ transform:translateY(calc(var(--ry) * -0.34));} 53.1%,53.5%{ transform:translateY(calc(var(--ry) * 1.05));} 54.1%,86.8%{ transform:translateY(calc(var(--ry) * -0.34));} 87.2%,88.4%{ transform:translateY(calc(var(--ry) * 0.85));} 89.4%,100%{ transform:translateY(calc(var(--ry) * -0.34));} }
-@keyframes skb_dpheyeB{ 0%,18.6%{ transform:translateY(calc(var(--ry) * 0.30));} 19.1%,19.5%{ transform:translateY(calc(var(--ry) * -0.9));} 20.1%,52.6%{ transform:translateY(calc(var(--ry) * 0.30));} 53.1%,53.5%{ transform:translateY(calc(var(--ry) * -0.9));} 54.1%,86.8%{ transform:translateY(calc(var(--ry) * 0.30));} 87.2%,88.4%{ transform:translateY(calc(var(--ry) * -0.7));} 89.4%,100%{ transform:translateY(calc(var(--ry) * 0.30));} }
-.skb_dpheyew .hke_gaze{ animation:skb_dphgaze var(--skd,18s) linear infinite var(--sko,0s); }
-@keyframes skb_dphgaze{ 0%,29.2%{ opacity:1;} 29.4%,32.6%{ opacity:0;} 33.4%,62.5%{ opacity:1;} 62.7%,70.3%{ opacity:0;} 71.2%,100%{ opacity:1;} }
-.skb_dpheyew .hke_x{ animation:skb_dphxeye var(--skd,18s) cubic-bezier(.2,.9,.3,1.6) infinite var(--sko,0s); }
-@keyframes skb_dphxeye{ 0%,29.2%{ opacity:0; transform:scale(.3) rotate(-40deg);} 29.7%{ opacity:1; transform:scale(1.35) rotate(9deg);} 30.4%,32.6%{ opacity:1; transform:scale(1) rotate(0);} 33.4%,62.5%{ opacity:0; transform:scale(.3) rotate(-40deg);} 63%{ opacity:1; transform:scale(1.35) rotate(-9deg);} 63.8%,70.3%{ opacity:1; transform:scale(1) rotate(0);} 71.2%,100%{ opacity:0; transform:scale(.3) rotate(-40deg);} }
-/* brows: lifted while he sings (delight), dropped-in while dazed (ow), neutral otherwise */
+@keyframes skb_dpheyeT{ 0%,18.6%{ transform:translateY(calc(var(--ry) * -0.34));} 19.1%,19.5%{ transform:translateY(calc(var(--ry) * 1.05));} 20.1%,52.6%{ transform:translateY(calc(var(--ry) * -0.34));} 53.1%,53.5%{ transform:translateY(calc(var(--ry) * 1.05));} 54.1%,86.8%{ transform:translateY(calc(var(--ry) * -0.34));} 87.2%,87.6%{ transform:translateY(calc(var(--ry) * 1.05));} 88.6%,100%{ transform:translateY(calc(var(--ry) * -0.34));} }
+@keyframes skb_dpheyeB{ 0%,18.6%{ transform:translateY(calc(var(--ry) * 0.30));} 19.1%,19.5%{ transform:translateY(calc(var(--ry) * -0.9));} 20.1%,52.6%{ transform:translateY(calc(var(--ry) * 0.30));} 53.1%,53.5%{ transform:translateY(calc(var(--ry) * -0.9));} 54.1%,86.8%{ transform:translateY(calc(var(--ry) * 0.30));} 87.2%,87.6%{ transform:translateY(calc(var(--ry) * -0.9));} 88.6%,100%{ transform:translateY(calc(var(--ry) * 0.30));} }
+/* brows: lifted while he sings (delight), a small lift again at the playful hover — never
+   dropped, because nothing ever hurts him */
 .skb_dphbrow{ animation:skb_dphbroww var(--skd,18s) cubic-bezier(.2,.9,.3,1.4) infinite var(--sko,0s); }
-@keyframes skb_dphbroww{ 0%,10.7%{ transform:rotate(0) translateY(0);} 11.5%,22%{ transform:rotate(6deg) translateY(-1.3px);} 23.2%,29.2%{ transform:rotate(0) translateY(0);} 29.6%,35.2%{ transform:rotate(-9deg) translateY(.9px);} 36.4%,44%{ transform:rotate(0) translateY(0);} 44.9%,55.3%{ transform:rotate(6deg) translateY(-1.3px);} 56.4%,62.4%{ transform:rotate(0) translateY(0);} 62.9%,71.6%{ transform:rotate(-9deg) translateY(.9px);} 73%,100%{ transform:rotate(0) translateY(0);} }
-/* THE BUMP AND ITS BANDAID — his, not the fish's. Crown-anchored, riding the jump element so
-   they leap with him and can never orbit. Knot from bonk 1, bandaid latched ON it from bonk 2,
-   both reset in the 92-100 dark. --fxd divides --skd exactly (gate_fx's law). */
-.skb_dolph .hkfx_dknot{ left:2px; top:-5px; z-index:6; --fxd:calc(var(--skd,18s) / 8); --fxo:calc(var(--sko,0s) + var(--skd,18s) * 29.5 / 100); animation:skb_fxdknot var(--skd,18s) linear infinite var(--sko,0s); }
-@keyframes skb_fxdknot{ 0%,29.3%{ opacity:0;} 29.8%,91.5%{ opacity:1;} 92.5%,100%{ opacity:0;} }
-.skb_dolph .hkfx_dband{ left:4px; top:-3px; z-index:7; --fxo:calc(var(--sko,0s) + var(--skd,18s) * 62.9 / 100); animation:skb_fxdband var(--skd,18s) linear infinite var(--sko,0s); }
-@keyframes skb_fxdband{ 0%,62.6%{ opacity:0;} 63.1%,91.5%{ opacity:1;} 92.5%,100%{ opacity:0;} }
+@keyframes skb_dphbroww{ 0%,10.7%{ transform:rotate(0) translateY(0);} 11.5%,22%{ transform:rotate(6deg) translateY(-1.3px);} 23.2%,44%{ transform:rotate(0) translateY(0);} 44.9%,55.3%{ transform:rotate(6deg) translateY(-1.3px);} 56.4%,82%{ transform:rotate(0) translateY(0);} 82.5%,86.4%{ transform:rotate(4deg) translateY(-.9px);} 88%,100%{ transform:rotate(0) translateY(0);} }
+/* 08/16 second restage — the dolphin's knot and bandaid overlays (.hkfx_dknot/.hkfx_dband)
+   are DELETED, not hidden: the beating moved to the pufferfish, whose FX block sits with its
+   rig below. */
 .skb_ring{ position:absolute; left:0; right:0; bottom:2px; height:5px; border-radius:50%; border:1.4px solid rgba(224,246,252,.65); opacity:0; animation:skb_ring var(--skd,18s) linear infinite var(--sko,0s); }
 @keyframes skb_ring{ 0%,8.5%{ opacity:0; transform:scale(.4);} 10.5%{ opacity:.8; transform:scale(.9);} 13.5%{ opacity:0; transform:scale(1.5);} 28.4%{ opacity:0; transform:scale(.5);} 29.9%{ opacity:.85; transform:scale(1.1);} 33%{ opacity:0; transform:scale(1.7);} 43.6%{ opacity:0; transform:scale(.5);} 45.4%{ opacity:.7; transform:scale(1);} 48.4%{ opacity:0; transform:scale(1.6);} 61.8%{ opacity:0; transform:scale(.5);} 63.2%{ opacity:.9; transform:scale(1.15);} 66.4%{ opacity:0; transform:scale(1.75);} 88%{ opacity:0; transform:scale(.5);} 89.8%{ opacity:.7; transform:scale(1.1);} 92.6%{ opacity:0; transform:scale(1.6);} 100%{ opacity:0;} }
 .skb_splash{ position:absolute; width:16px; height:9px; border-radius:50%; background:radial-gradient(ellipse at 50% 90%, rgba(234,246,250,.9), rgba(234,246,250,0) 72%); opacity:0; }
-.skb_splash.s1{ right:98px; top:26px; animation:skb_spl1 var(--skd,18s) linear infinite var(--sko,0s); }
-.skb_splash.s2{ right:50px; top:28px; animation:skb_spl2 var(--skd,18s) linear infinite var(--sko,0s); }
+.skb_splash.s1{ right:170px; top:54px; animation:skb_spl1 var(--skd,18s) linear infinite var(--sko,0s); }
+.skb_splash.s2{ right:146px; top:56px; animation:skb_spl2 var(--skd,18s) linear infinite var(--sko,0s); }
 @keyframes skb_spl1{ 0%,8.8%{ opacity:0; transform:scale(.4);} 10.5%{ opacity:.95; transform:scale(1.15);} 13.5%{ opacity:0; transform:scale(1.5);} 100%{ opacity:0;} }
 @keyframes skb_spl2{ 0%,88.6%{ opacity:0; transform:scale(.4);} 90.4%{ opacity:.95; transform:scale(1.2);} 93.4%{ opacity:0; transform:scale(1.55);} 100%{ opacity:0;} }
 /* ---- THE PUFFERFISH RIG (08/04) — the drawing is PufferFish(); this is its rig --------
@@ -8647,11 +8653,13 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
    part that rotates about its own middle is the fastest way to make a drawing look like a
    cutout on a brad. Transform and opacity only, everywhere.
 
-   .skb_puffer stays purely the positioned stage element. 08/16 RESTAGE (Gray): the fish is
-   the AUDIENCE now, not the ball. It floats stage-left for the whole act, scared of the
-   dolphin — wary lean at the first surfacing (10%), a hop-back startle at bonk 1 (29.3%),
-   and the full ball with trembling at bonk 2 (62.6%), deflating relieved from 84%. It is
-   never touched, never bounced, never dazed: the bump, bandaid and X eyes are the DOLPHIN'S.
+   .skb_puffer stays purely the positioned stage element. 08/16 SECOND RESTAGE, from Gray's
+   rejection verbatim: "the dolphin is not the one getting beat up." The fish is the VICTIM
+   now, not just the audience. It floats at the surface directly over the porpoising window,
+   and the dolphin clonks it on every way up — wary lean at the first surfacing (10.6%),
+   knocked upward with the knot and short X eyes at bonk 1 (29.9%), the full trembling ball
+   with the bandaid and long X eyes at bonk 2 (63.1%), a hard flinch at the 87.2% fake-out
+   that never touches it. The bump, the bandaid, the X eyes and the daze are ALL ITS.
 
    THE .e1/.e2/b OVERLAYS ARE GONE, with their three keyframe sets. Three absolutely-
    positioned boxes laid over the face were exactly the "addition on top of the eye" that
@@ -8659,7 +8667,7 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
    thing you placed on them is terrible ... and the actual eye is what needs to change shape
    and all. Not some addition." The eye is part of the drawing now (the module), the mouth
    is two real shapes that swap, and the skit drives both on its own percentages. */
-.skb_puffer{ position:absolute; right:170px; top:26px; z-index:4; width:40px; height:24px; opacity:0; animation:skb_pufferplay var(--skd,18s) linear infinite var(--sko,0s); }
+.skb_puffer{ position:absolute; right:168px; top:12px; z-index:4; width:40px; height:24px; opacity:0; animation:skb_pufferplay var(--skd,18s) linear infinite var(--sko,0s); }
 .skb_pufart{ position:absolute; inset:0; width:100%; height:100%; overflow:visible; transform:scaleX(-1); filter:drop-shadow(0 1px 2px rgba(5,29,38,.5));
   --hke-lid:#D8B072; --hke-line:#9C7B44; --hke-crease:#7A5B2A; }
 .skb_pufart *{ transform-box:view-box; }
@@ -8740,10 +8748,23 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
 @keyframes skb_pufeyeB{ 0%,19.4%{ transform:translateY(calc(var(--ry) * 0.30));} 19.9%,20.3%{ transform:translateY(calc(var(--ry) * -0.9));} 20.9%,9.8%{ transform:translateY(calc(var(--ry) * 0.30));} 10.6%,14%{ transform:translateY(calc(var(--ry) * 0.55));} 22%,29.3%{ transform:translateY(calc(var(--ry) * 0.38));} 29.9%,36%{ transform:translateY(calc(var(--ry) * 1.1));} 38%,49.4%{ transform:translateY(calc(var(--ry) * 0.48));} 50%,50.4%{ transform:translateY(calc(var(--ry) * -0.9));} 51.2%,62.2%{ transform:translateY(calc(var(--ry) * 0.44));} 62.8%,80%{ transform:translateY(calc(var(--ry) * 1.1));} 84%,88%{ transform:translateY(calc(var(--ry) * 0.18));} 92%,100%{ transform:translateY(calc(var(--ry) * 0.30));} }
 @keyframes skb_pufeyepop{ 0%,29.3%{ transform:scale(1);} 29.9%,36%{ transform:scale(1.08);} 38%,62.2%{ transform:scale(1);} 62.8%,82%{ transform:scale(1.14);} 86%,100%{ transform:scale(1);} }
 @keyframes skb_pufpin{ 0%,29.3%{ transform:scale(1);} 29.9%{ transform:scale(.55);} 33%{ transform:scale(.7);} 36%,48%{ transform:scale(.88);} 60%,62.2%{ transform:scale(.9);} 62.8%{ transform:scale(.42);} 70%{ transform:scale(.6);} 80%{ transform:scale(.6);} 86%{ transform:scale(.85);} 92%,100%{ transform:scale(1);} }
-/* 08/16 — the fish's dazed face (gaze-out, X eyes) and its crown knot+bandaid are DELETED, not
-   retimed: in the restaged act nothing ever hits the pufferfish, so it has nothing to be dazed
-   about. The X, the knot and the bandaid all moved to the dolphin (see .skb_dolph's FX block).
-   The eye module still carries its hke_x part at base opacity 0, unused here by design. */
+/* 08/16 SECOND RESTAGE — the fish's dazed face and crown FX are RESTORED, because the beating
+   is its again (Gray: "the dolphin is not the one getting beat up"). X eyes swap in for the
+   pupil at each bonk — short after bonk 1, held all the way through the ball after bonk 2, so
+   the deflate at the end reads as despair rather than relief. The X lives inside the eye's
+   clip, so the EYE changes rather than a sticker landing on it. */
+.skb_pufeyew .hke_gaze{ animation:skb_pufgaze var(--skd,18s) linear infinite var(--sko,0s); }
+@keyframes skb_pufgaze{ 0%,29.3%{ opacity:1;} 29.5%,32.8%{ opacity:0;} 33.6%,62.6%{ opacity:1;} 62.8%,88%{ opacity:0;} 89%,100%{ opacity:1;} }
+.skb_pufeyew .hke_x{ animation:skb_pufxeye var(--skd,18s) cubic-bezier(.2,.9,.3,1.6) infinite var(--sko,0s); }
+@keyframes skb_pufxeye{ 0%,29.3%{ opacity:0; transform:scale(.3) rotate(-40deg);} 29.8%{ opacity:1; transform:scale(1.35) rotate(9deg);} 30.5%,32.8%{ opacity:1; transform:scale(1) rotate(0);} 33.6%,62.6%{ opacity:0; transform:scale(.3) rotate(-40deg);} 63.1%{ opacity:1; transform:scale(1.35) rotate(-9deg);} 63.9%,88%{ opacity:1; transform:scale(1) rotate(0);} 89%,100%{ opacity:0; transform:scale(.3) rotate(-40deg);} }
+/* THE BUMP AND ITS BANDAID — the fish's, per the correction. Crown-anchored on the stage
+   element (which carries every knock), so they ride each jolt and can never orbit. Knot from
+   bonk 1, bandaid latched ON the knot from bonk 2, both reset in the 92-100 dark while the
+   fish is fading out. --fxd divides --skd exactly (gate_fx's law). */
+.skb_puffer .hkfx_pknot{ left:23px; top:-6px; z-index:6; --fxd:calc(var(--skd,18s) / 8); --fxo:calc(var(--sko,0s) + var(--skd,18s) * 29.5 / 100); animation:skb_fxpknot var(--skd,18s) linear infinite var(--sko,0s); }
+@keyframes skb_fxpknot{ 0%,29.3%{ opacity:0;} 29.8%,91.5%{ opacity:1;} 92.5%,100%{ opacity:0;} }
+.skb_puffer .hkfx_pband{ left:25px; top:-6px; z-index:7; --fxo:calc(var(--sko,0s) + var(--skd,18s) * 62.9 / 100); animation:skb_fxpband var(--skd,18s) linear infinite var(--sko,0s); }
+@keyframes skb_fxpband{ 0%,62.6%{ opacity:0;} 63.1%,91.5%{ opacity:1;} 92.5%,100%{ opacity:0;} }
 /* THE MOUTH CHANGES SHAPE, NOT SIZE, on the original 50-59% window. An O is a different
    SHAPE, so it is a different drawing that swaps in — a squashed curve is not an O, and the
    O is what says fear rather than delight. */
@@ -8754,15 +8775,14 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
 /* the brows go UP AND IN — that is startled. Down and in would be angry. */
 .skb_pufbrow{ animation:skb_pufbrowup var(--skd,18s) cubic-bezier(.2,.9,.3,1.4) infinite var(--sko,0s); }
 @keyframes skb_pufbrowup{ 0%,9.8%{ transform:rotate(0) translateY(0);} 10.6%,14%{ transform:rotate(-8deg) translateY(-.9px);} 20%,29.3%{ transform:rotate(-3deg) translateY(-.3px);} 29.9%,36%{ transform:rotate(-14deg) translateY(-1.6px);} 40%,62.2%{ transform:rotate(-5deg) translateY(-.5px);} 62.8%,82%{ transform:rotate(-16deg) translateY(-1.8px);} 84%,88%{ transform:rotate(9deg) translateY(1px);} 92%,100%{ transform:rotate(0) translateY(0);} }
-/* THE AUDIENCE TRACK — the fish's whole travel, on the host's 18s clock. 08/16: the volleyball
-   act (bounce, twirl, knot, bandaid — Gray's 08/04 staging) is REPLACED, per Gray: "Just remove
-   the pufferfish and put him on the skit of the dolphin jumping in and out of the water and
-   singing. Just have the pufferfish scared of the dolphin... And scared face. But not what he's
-   doing." So the fish drifts in by 8%, holds its water stage-left, and reacts: a wary lean when
-   the dolphin first surfaces (10.6), a hop-back with pinhole pupils and the O mouth at bonk 1
-   (29.9), the full ball with a shiver at bonk 2 (63.1 — the jitter frames 66-74 ARE the fear),
-   easing back relieved from 86. The spin wrapper (.skb_pufspin) is deleted with the twirl. */
-@keyframes skb_pufferplay{ 0%{ opacity:0; transform:translate(10px,4px);} 3%{ opacity:1; transform:translate(5px,2px);} 8%,9.8%{ opacity:1; transform:translate(0,0);} 10.6%{ transform:translate(-2px,-.5px);} 14%{ transform:translate(-2px,0);} 22%{ transform:translate(-.5px,.5px);} 29.3%{ transform:translate(0,.5px);} 29.9%{ transform:translate(-5px,-1.5px);} 31.5%{ transform:translate(-4.5px,-.5px);} 40%{ transform:translate(-2.5px,0);} 41%{ transform:translate(-3px,.3px);} 42%{ transform:translate(-2.5px,0);} 50%{ transform:translate(-2px,.5px);} 62.4%{ transform:translate(-2px,.5px);} 63.1%{ transform:translate(-9px,-2px);} 66%{ transform:translate(-8.4px,-1.6px);} 67%{ transform:translate(-9.2px,-2.2px);} 68.5%{ transform:translate(-8.5px,-1.7px);} 70%{ transform:translate(-9.1px,-2.1px);} 72%{ transform:translate(-8.6px,-1.7px);} 74%{ transform:translate(-9px,-2px);} 80%{ transform:translate(-8.8px,-1.9px);} 86%{ transform:translate(-5px,-.5px);} 92%,94%{ opacity:1; transform:translate(-1px,.5px);} 98%,100%{ opacity:0; transform:translate(3px,3px);} }
+/* THE VICTIM TRACK — the fish's whole travel, on the host's 18s clock. 08/16 second restage,
+   per Gray's correction: the fish floats over the porpoising window and TAKES the hits. It
+   drifts in by 8%, then: a wary lean when the dolphin first surfaces below it (10.6), knocked
+   UPWARD off the water at bonk 1 (29.9) settling in two shrinking bounces, knocked higher at
+   bonk 2 (63.1) where it stays up trembling as the ball (the jitter frames 66-80 ARE the
+   fear), easing down slowly — and one hard contactless flinch at the 87.2 fake-out, because
+   by now it flinches at the dolphin merely rising. Fades out in the 92-100 dark. */
+@keyframes skb_pufferplay{ 0%{ opacity:0; transform:translate(10px,4px);} 3%{ opacity:1; transform:translate(5px,2px);} 8%,9.8%{ opacity:1; transform:translate(0,0);} 10.6%{ transform:translate(-1px,-1px);} 14%{ transform:translate(-1px,-.5px);} 22%{ transform:translate(0,0);} 29.3%{ transform:translate(0,.5px);} 29.9%{ transform:translate(0,-5px);} 30.8%{ transform:translate(0,-1.5px);} 32%{ transform:translate(0,-3px);} 33.5%{ transform:translate(0,-2px);} 40%{ transform:translate(-.5px,-.5px);} 50%{ transform:translate(0,0);} 62.4%{ transform:translate(0,.5px);} 63.1%{ transform:translate(-1px,-7px);} 66%{ transform:translate(-.6px,-6.6px);} 67%{ transform:translate(-1.4px,-7.2px);} 68.5%{ transform:translate(-.7px,-6.7px);} 70%{ transform:translate(-1.3px,-7.1px);} 72%{ transform:translate(-.8px,-6.7px);} 74%{ transform:translate(-1.2px,-7px);} 80%{ transform:translate(-1px,-6.9px);} 86%{ transform:translate(-.5px,-3px);} 87.2%{ transform:translate(-2px,-4.5px);} 89%{ transform:translate(-1px,-2.5px);} 92%,94%{ opacity:1; transform:translate(0,-.5px);} 98%,100%{ opacity:0; transform:translate(2px,2px);} }
 
 /* ---- PIER: the pelican & the banner (fly in with the roll → drop → unfurl → land → gulp) ---- */
 .skpier{ background:linear-gradient(180deg,#132C38 0%, #1C4250 52%, #16505E 78%, #123844 100%); }
@@ -9111,9 +9131,12 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
    rightward in reduced motion.  The turnaround is already a side view, so it must
    be excluded or it lies on its back. */
 .skst.still .skn_turtle.still .tcv:not(.t360){ transform:rotate(90deg); }
-/* still pose sits LEFT of the sign — under it (the animated resting spot) the board covers the
-   whole animal, and a reduced-motion reader would get an empty sea */
-.skst.still .skb_dolphw.still{ position:absolute; right:180px; top:26px; overflow:visible; width:48px; height:27px; }
+/* 08/16 second restage of the still: the reduced-motion frame is the STORY at rest — the
+   pufferfish floating at the surface, the dolphin surfaced just below and beside it, sign
+   untouched. The fish's base rule is opacity 0 (its entrance owns that), so the still pins
+   it on; the dolphin window loses its crop so the whole animal shows. */
+.skst.still .skb_dolphw.still{ position:absolute; right:150px; top:34px; overflow:visible; width:48px; height:27px; }
+.skst.still .skb_puffer{ opacity:1; animation:none; }
 /* reduced motion killed the ad text with the animation that raises it — the words are the
    sponsor's whole slot, so the still frame pins them on */
 .skst.still .skadtxt{ opacity:1; animation:none; }
@@ -9415,12 +9438,12 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
    the dolphin looking at the boat or head out of water." They ride the WORLD anchor, as a
    root sibling of the skit rather than a child of the porpoising window — partly because the
    notes must not tilt with the serenade, and partly because .skb_dolphw carries
-   overflow:hidden and would have clipped them off at the waterline. They rise from BEHIND the
-   sign (z below the board) so a low note never prints across the sponsor's words.
+   overflow:hidden and would have clipped them off at the waterline. They rise BEHIND the fish
+   and behind the sign's edge (z 3 under both at 4), so a note never prints across either.
 
    THE PUFFERFISH gets the shock lines, on the HEAD anchor, inside .skb_puffer — which
-   moves with the startle, so the burst rides the hop instead of sitting flat behind it.
-   08/16: the fish is startled TWICE now (each dolphin bonk), so the window opens for one
+   moves with the knock, so the burst rides the jolt instead of sitting flat behind it.
+   08/16: the fish is HIT twice (each dolphin bonk), so the window opens for one
    full burst at each — both aligned to the same 1.5s division.
 
    Each host writes exactly ONE windowing rule against its own --skd/--sko. That is the whole
@@ -9437,7 +9460,7 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
    whole, so this cannot silently rot back.
    A STREAM (the notes) needs none of this — drift between three staggered risers is invisible,
    and strictly it is better, because it stops the stream repeating identically every cycle. */
-.skboat .hkfx_dnotes{ right:96px; top:2px; z-index:3; --fxd:calc(var(--skd,18s) / 9); --fxo:calc(var(--sko,0s) + var(--skd,18s) * 1 / 9); animation:skb_fxnotes var(--skd,18s) linear infinite var(--sko,0s); }
+.skboat .hkfx_dnotes{ right:150px; top:0; z-index:3; --fxd:calc(var(--skd,18s) / 9); --fxo:calc(var(--sko,0s) + var(--skd,18s) * 1 / 9); animation:skb_fxnotes var(--skd,18s) linear infinite var(--sko,0s); }
 /* THE HUMMING BEAT, 08/16 cut: the dolphin sings BETWEEN bonks, so the notes own the two
    singing holds — 11.11%-22.22% and 44.44%-55.55%, each exactly two 2s note cycles opening on
    a cycle edge (--fxd = --skd/9, --fxo = --sko + skd/9), so the window can never open on a
@@ -12953,30 +12976,47 @@ function useLiveWx(){const[,bump]=useState(0);useEffect(()=>{const cb=()=>bump(n
    anatomical positions, the shared CreatureEye for the eye, the shared FX layer for the knot,
    the bandaid and the X. It exists ONLY here; DolphinEmoji and DolphinSpy keep their hero,
    support-stage and 360 jobs untouched (one creature at a time — Gray's standing law).
-   ART LOCK kept: cyan over a WHITE belly, glossy, plump, blunt snout — the emoji reading — but
-   the bead eye gives way to the eye module, because a bead cannot act and acting is the brief.
+   ART LOCK kept: cyan base over a WHITE belly, glossy — but 08/16 SECOND PASS, from Gray's
+   rejection verbatim: "the dolphin looks like a [fish] not a dolphin." The first rig was a
+   smooth pale torpedo, and a dolphin silhouette is carried by four things, none optional:
+     THE ROSTRUM  a distinct beak, set off from the head by a crease  (x3-13, crease at 12.5)
+     THE MELON    a forehead dome bulging above and behind the beak   (crest y11 over x20-30)
+     THE DORSAL   a backswept falcate hook breaking the top line      (base 37.5-44, tip 47.5,1.6)
+     THE FLUKES   two swept-back lobes with a NOTCH at the middle, on a narrow tail stock —
+                  never a fish's fan (notch points body-ward at 78.6,22.8)
+   plus the dark CAPE over the back above the pale belly, the eye set behind and slightly
+   below the crease, and the mouthline curving back from the beak so he can smile.
+   Judged by the flat-fill silhouette at ship size, per the rejection.
    PROPORTIONS taken (three numbers, then the photo is closed): body length : depth ~3 : 1
-   (plump cartoon, real animals run ~4.5), dorsal at ~55% of length, eye just above the gape
-   behind the melon crease. Everything else is drawn.
+   (plump cartoon, real animals run ~4.5), dorsal base at ~55% of length, eye behind the
+   crease just above the gape. Everything else is drawn.
    THE PART LIST — every transform-origin is a JOINT in viewBox units (88x48, authored facing
-   LEFT so it faces the pufferfish without a mirror):
+   LEFT so it faces up-stage without a mirror):
      skb_dphsway   whole animal      origin 44,24   idle sway only, own clock
-       skb_dphtail flukes            origin 74,23   beats on its own clock, lags the body
-       hull        body+belly+dorsal+highlight     (no inflation here — dolphins do not puff)
-       skb_dphpec  flipper           origin 30,29   the SHOULDER, drawn in front of the hull
+       skb_dphtail flukes            origin 71.5,24 the peduncle joint, lags the body
+       hull        body+cape+belly+dorsal+highlight (no inflation — dolphins do not puff)
+       skb_dphpec  flipper           origin 27,28.5 the SHOULDER, drawn in front of the hull
        skb_dphface everything that carries expression
-         three mouths that SWAP (shape changes, never size): smile / open singing jaw / dazed
-         squiggle — the same law as the pufferfish's lip-vs-O
-         CreatureEye at 17,21 (r 4.6x4.8)
-         skb_dphbrow origin 23.5,14.6 — the OUTER end, so the inner end can drop
-   The knot and the bandaid ride the STAGE element (.skb_dolph) as head-anchored FX overlays,
-   exactly like the pufferfish's did, so they jump with every leap and can never orbit. */function DolphinActor({eid}){const e=React.createElement;return e("svg",{className:"skb_dphart",viewBox:"0 0 88 48","aria-hidden":"true"},e("g",{className:"skb_dphsway"},e("g",{className:"skb_dphtail"},e("path",{className:"skb_dphtailfin",d:"M73,22.5 C78,17.5 83,15 85.6,15.8 C83.8,19.2 83.4,22.4 84.6,25.8 C81.6,27.2 77,26.2 73,24.5 Z"})),e("path",{className:"skb_dphbody",d:"M3,25 C4.5,22.2 7.5,19.8 12,17.4 C19,13.6 28,11 37,10.6 C46,10.2 56,12 64,15.2 C69,17.2 73,19.4 75.5,21.6 L75.5,24.4 C70,27.8 62,31.2 52,33.2 C42,35.2 30,35 21,32 C13,29.4 6,27.6 3,25 Z"}),e("path",{className:"skb_dphbelly",d:"M4.5,26.2 C10,29.8 19,32.8 30,33.9 C42,35 54,33.4 64,29.8 C56,34.4 42,36.4 30,35.2 C19,34.1 9.5,30.6 4.5,26.2 Z"}),e("path",{className:"skb_dphdorsal",d:"M37,10.7 C38.6,6.2 43,2.6 47.2,2 C46.2,5.8 45.2,9 43.8,11.2 Z"}),e("path",{className:"skb_dphhi",d:"M13,16.4 C22,12.6 34,10.8 46,11.6"}),e("g",{className:"skb_dphpec"},e("path",{className:"skb_dphpecfin",d:"M30,29 C33.6,33.6 39.6,36.6 43.6,36 C42,31.4 36.6,28 30,29 Z"})),e("g",{className:"skb_dphface"},/* THE MOUTH CHANGES SHAPE, NOT SIZE — three drawings that swap. */e("g",{className:"skb_dphsmile"},e("path",{className:"skb_dphmline",d:"M4,26 C7.5,28.2 12.5,28.8 16.5,28 C17.6,27.7 18.4,27.2 19,26.6"})),e("g",{className:"skb_dphsing"},e("path",{className:"skb_dphmdark",d:"M3.8,25 C7.5,26.2 12.5,26.4 16.6,25.5 C15.2,32.4 7.6,34 4.4,30 C3.4,28.6 3.2,26.4 3.8,25 Z"}),e("ellipse",{className:"skb_dphtongue",cx:"9.6",cy:"30",rx:"3.1",ry:"1.7"})),e("g",{className:"skb_dphdaze"},e("path",{className:"skb_dphmline",d:"M4.6,27.4 L7.2,26.4 L9.8,27.8 L12.4,26.6 L15,27.9"})),e(CreatureEye,{id:"dph"+(eid||"0"),cx:17,cy:21,rx:4.6,ry:4.8,cls:"skb_dpheyew"}),e("g",{className:"skb_dphbrow"},e("path",{className:"skb_dphbrowline",d:"M11.5,14.9 C15,13 20.5,13 23.5,14.6"})))));}function DolphinSkit({ad,idx}){/* 08/16 — THE ACT IS RESTAGED (Gray). The spy-hop, the arc-in cameo and the pufferfish
-     volleyball are gone. The new act: the rig dolphin porpoises in place under the sponsor's
-     floating sign, SINGING between leaps — and keeps braining himself on the sign's float.
-     THE INJURIES ARE HIS: the bump, the bandaid and the X eyes all land on the DOLPHIN.
-     THE FEAR IS THE PUFFERFISH'S: it floats stage-left, watching, and every surfacing scares
-     it worse — the second bonk startles it into the full ball. It is never touched, never
-     bounced, never bumped. Beat sheet beside the .skb_dolph CSS. */const off=-((idx||0)*2.9%18).toFixed(1)+"s";const sign=React.createElement("span",{className:"skb_sign"},React.createElement(SkitSponsorLink,{ad:ad,className:"skb_board",label:"Open sponsored message"},React.createElement("b",{className:"skadtxt sea"},ad&&(ad.title||ad.name)||"")),React.createElement("i",{className:"skb_float"}));if(REDUCE)return React.createElement("div",{className:"skst skboat still"},React.createElement("i",{className:"skb_horiz"}),sign,React.createElement("span",{className:"skb_dolphw still"},React.createElement(DolphinActor,{eid:"r"+(idx||0)})));return React.createElement("div",{className:"skst skboat",style:{"--skd":"18s","--sko":off}},React.createElement("i",{className:"skb_horiz"}),React.createElement("span",{className:"skb_band bd1"}),React.createElement("span",{className:"skb_band bd2"}),React.createElement("i",{className:"skb_glint g1"}),React.createElement("i",{className:"skb_glint g2"}),React.createElement("i",{className:"skb_glint g3"}),sign,React.createElement("span",{className:"skb_puffer","aria-hidden":"true"},React.createElement(PufferFish,{eid:String(idx||0)}),React.createElement(CreatureFx,{anchor:"head",on:"shock",w:30,cls:"hkfx_pshock"})),React.createElement(CreatureFx,{anchor:"world",on:"notes",w:38,cls:"hkfx_dnotes"}),React.createElement("span",{className:"skb_dolphw"},React.createElement("span",{className:"skb_dolph"},React.createElement(DolphinActor,{eid:String(idx||0)}),React.createElement(CreatureFx,{anchor:"head",on:"knot",w:20,cls:"hkfx_dknot"}),React.createElement(CreatureFx,{anchor:"head",on:"bandaid",w:16,cls:"hkfx_dband"})),React.createElement("i",{className:"skb_ring"}),React.createElement("i",{className:"skb_drip dr1"}),React.createElement("i",{className:"skb_drip dr2"})),React.createElement("span",{className:"skb_splash s1"}),React.createElement("span",{className:"skb_splash s2"}));}function PelicanSkit({ad,idx}){const off=-((idx||0)*3.1%20).toFixed(1)+"s";const banner=React.createElement("span",{className:"skp_banner"},React.createElement("i",{className:"skp_ropeL"}),React.createElement("i",{className:"skp_ropeR"}),React.createElement(SkitSponsorLink,{ad:ad,className:"skp_cloth",label:"Open sponsored message"},React.createElement("b",{className:"skadtxt pier"},ad&&(ad.title||ad.name)||"")));if(REDUCE)return React.createElement("div",{className:"skst skpier still"},React.createElement("span",{className:"skp_post p1"}),React.createElement("span",{className:"skp_post p2"}),React.createElement("span",{className:"skp_rail"}),banner,React.createElement("span",{className:"skp_pelsit still"},React.createElement(PelicanPerch,{w:24})));return React.createElement("div",{className:"skst skpier",style:{"--skd":"20s","--sko":off}},React.createElement("i",{className:"skp_sun"}),React.createElement("span",{className:"skp_post p1"}),React.createElement("span",{className:"skp_post p2"}),React.createElement("span",{className:"skp_rail"}),React.createElement("i",{className:"skp_water"}),banner,React.createElement("i",{className:"skp_fish","aria-hidden":"true"}),React.createElement("span",{className:"skp_pelfly"},React.createElement("span",{className:"skp_flyin"},React.createElement(PelicanFly,{w:44}))),React.createElement("span",{className:"skp_pelsit"},React.createElement(PelicanPerch,{w:24})));}/* Bay Osprey gives the previous generic sky/misc sponsor strip an actual Pensacola skit; every mapping remains shared by slot, never by one card. */const SKIT_SLOTS={beach:CrabSkit,nature:TurtleSkit,boat:DolphinSkit,pier:PelicanSkit,sky:BayOspreySkit,misc:BayOspreySkit};/* hero ambient — the manta's shore run: in from the deep, cruise the shoreline,
+         two mouths that SWAP (shape changes, never size): smile / open singing jaw — the
+         dazed squiggle is deleted with the rest of his injuries
+         CreatureEye at 19,22.6 (r 4.1x4.3)
+         skb_dphbrow origin 25,16.2 — the OUTER end, so the inner end can drop
+   He carries NO FX overlays any more: the knot and the bandaid moved to the pufferfish. */function DolphinActor({eid}){const e=React.createElement;return e("svg",{className:"skb_dphart",viewBox:"0 0 88 48","aria-hidden":"true"},e("g",{className:"skb_dphsway"},e("g",{className:"skb_dphtail"},/* FLUKES: two sickle lobes off a narrow stock, tips swept back, deep notch pointing
+           at the body — the second-strongest cue, and the one the old vertical fan broke */e("path",{className:"skb_dphtailfin",d:"M71.5,23.2 C73.5,20.5 76.5,17 80.5,14.2 C83.5,12.1 86.8,10.8 88,10.6 C86.6,13.4 83.8,16.6 80.2,19.4 C79,20.3 77.8,21.2 76.8,22.2 L76.4,23.8 C77.6,24.6 79,25.7 80.4,27 C83,29.4 85.2,31.8 86.4,34 C84.4,33.4 81.4,31.8 78.6,29.8 C76,27.9 73.5,25.8 71.5,24.6 Z"})),/* BODY: beak from the nose tip to the crease at x12.5, then the melon dome UP to the
+         crest, the flat back, the taper to a narrow peduncle, and the belly line home */e("path",{className:"skb_dphbody",d:"M3,25 C5,23.6 8.5,22.8 12.5,22.4 C13.5,18.3 16.5,13.2 22,11.5 C28,9.9 35,10 41,11 C50,12.4 59,15 66,18.6 C69,19.9 71.2,20.8 72.5,21.5 L72.5,24.4 C69,25.8 64,28 57,30.2 C48,33 37,34.3 28,33.3 C21,32.5 14.5,30.6 10,28.3 C7,26.9 4.6,26 3,25 Z"}),/* THE CAPE — dark back over pale belly, following the melon and back line down to the
+         flank; its front edge lands at the crease so the beak stays light */e("path",{className:"skb_dphcape",d:"M12.5,22.4 C13.5,18.3 16.5,13.2 22,11.5 C28,9.9 35,10 41,11 C50,12.4 59,15 66,18.6 C69,19.9 71.2,20.8 72.5,21.5 L72.5,23 C66,22 58,21.4 50,21.2 C40,21.1 30,21.7 22,22.5 C18,22.9 14.8,22.9 12.5,22.4 Z"}),e("path",{className:"skb_dphbelly",d:"M8,27.2 C13.5,29.8 20.5,31.9 28,32.7 C38,33.7 48,32.6 56,30.4 C48,33.8 37,34.9 27.5,33.8 C19.5,32.9 12.5,30.4 8,27.2 Z"}),/* DORSAL: falcate — leading edge climbs back to the tip, trailing edge hooks concave */e("path",{className:"skb_dphdorsal",d:"M37.5,11.4 C39,6.8 42.5,2.9 47.5,1.6 C47,5.4 45.8,8.9 43.9,11.9 Z"}),e("path",{className:"skb_dphhi",d:"M15,15.6 C21,12.5 30,11.4 38,11.9"}),e("g",{className:"skb_dphpec"},e("path",{className:"skb_dphpecfin",d:"M27,28.5 C30,33.5 35.5,37 40,36.4 C38.8,31.4 33.6,27.6 27,28.5 Z"})),e("g",{className:"skb_dphface"},/* ⚠ 08/16 — THE DRAWN CREASE IS GONE. Gray: "don t make the beak or nose of the dolphin
+           separate so remove that one line." It was added to force the beak-to-melon step to read
+           at 48px, and it read as a SEAM instead — a line across the face that made the beak look
+           stuck on. The step is carried by the outline alone now, which is where a real one is. *//* THE MOUTH CHANGES SHAPE, NOT SIZE — two drawings that swap. The smile runs back
+           from the beak and turns up at its end, which is the dolphin's whole reputation. */e("g",{className:"skb_dphsmile"},e("path",{className:"skb_dphmline",d:"M4,26.4 C7,28.2 11,28.9 15,28.3 C16.6,28 17.9,27.3 18.8,26.4"})),e("g",{className:"skb_dphsing"},e("path",{className:"skb_dphmdark",d:"M3.8,25.2 C7,26.3 11.5,26.5 15.6,25.8 C14.8,31.8 8.2,34.4 4.6,30.8 C3.2,29.2 3,26.8 3.8,25.2 Z"}),e("ellipse",{className:"skb_dphtongue",cx:"9.4",cy:"30",rx:"2.9",ry:"1.6"})),/* ⚠ 08/16 — A FRIENDLIER EYE, and it is three things, not one. Gray: "make the eyes more
+           friendly." Bigger and rounder reads younger and warmer at every size; a warm iris ramp
+           stops it being a flat dark hole; and the brow below is lifted and lightened, because a
+           heavy line sitting straight on an eye reads stern no matter how the eye is drawn. */e(CreatureEye,{id:"dph"+(eid||"0"),cx:19,cy:22.6,rx:4.8,ry:5.05,cls:"skb_dpheyew",iris:[[0,"#4E7FA0"],[.58,"#2B4E68"],[1,"#16303F"]]}),e("g",{className:"skb_dphbrow"},e("path",{className:"skb_dphbrowline",d:"M13.9,16.6 C17.1,14.9 22.1,14.8 25,16.2"})))));}function DolphinSkit({ad,idx}){/* 08/16 SECOND RESTAGE, from Gray's rejection verbatim: "the dolphin is not the one getting
+     beat up." The act, corrected: the rig dolphin porpoises in place UNDER the floating
+     pufferfish, singing between leaps, happy and oblivious — and clonks the fish on every way
+     up without ever noticing. THE INJURIES ARE THE FISH'S: the bump, the bandaid, the X eyes,
+     the daze and the trembling ball all land on the PUFFERFISH. The dolphin keeps only his
+     smile, his song and his blinks. Beat sheet beside the .skb_dolph CSS. */const off=-((idx||0)*2.9%18).toFixed(1)+"s";const sign=React.createElement("span",{className:"skb_sign"},React.createElement(SkitSponsorLink,{ad:ad,className:"skb_board",label:"Open sponsored message"},React.createElement("b",{className:"skadtxt sea"},ad&&(ad.title||ad.name)||"")),React.createElement("i",{className:"skb_float"}));if(REDUCE)return React.createElement("div",{className:"skst skboat still"},React.createElement("i",{className:"skb_horiz"}),sign,React.createElement("span",{className:"skb_puffer","aria-hidden":"true"},React.createElement(PufferFish,{eid:"r"+(idx||0)})),React.createElement("span",{className:"skb_dolphw still"},React.createElement(DolphinActor,{eid:"r"+(idx||0)})));return React.createElement("div",{className:"skst skboat",style:{"--skd":"18s","--sko":off}},React.createElement("i",{className:"skb_horiz"}),React.createElement("span",{className:"skb_band bd1"}),React.createElement("span",{className:"skb_band bd2"}),React.createElement("i",{className:"skb_glint g1"}),React.createElement("i",{className:"skb_glint g2"}),React.createElement("i",{className:"skb_glint g3"}),sign,React.createElement("span",{className:"skb_puffer","aria-hidden":"true"},React.createElement(PufferFish,{eid:String(idx||0)}),React.createElement(CreatureFx,{anchor:"head",on:"shock",w:30,cls:"hkfx_pshock"}),React.createElement(CreatureFx,{anchor:"head",on:"knot",w:20,cls:"hkfx_pknot"}),React.createElement(CreatureFx,{anchor:"head",on:"bandaid",w:16,cls:"hkfx_pband"})),React.createElement(CreatureFx,{anchor:"world",on:"notes",w:38,cls:"hkfx_dnotes"}),React.createElement("span",{className:"skb_dolphw"},React.createElement("span",{className:"skb_dolph"},React.createElement(DolphinActor,{eid:String(idx||0)})),React.createElement("i",{className:"skb_ring"}),React.createElement("i",{className:"skb_drip dr1"}),React.createElement("i",{className:"skb_drip dr2"})),React.createElement("span",{className:"skb_splash s1"}),React.createElement("span",{className:"skb_splash s2"}));}function PelicanSkit({ad,idx}){const off=-((idx||0)*3.1%20).toFixed(1)+"s";const banner=React.createElement("span",{className:"skp_banner"},React.createElement("i",{className:"skp_ropeL"}),React.createElement("i",{className:"skp_ropeR"}),React.createElement(SkitSponsorLink,{ad:ad,className:"skp_cloth",label:"Open sponsored message"},React.createElement("b",{className:"skadtxt pier"},ad&&(ad.title||ad.name)||"")));if(REDUCE)return React.createElement("div",{className:"skst skpier still"},React.createElement("span",{className:"skp_post p1"}),React.createElement("span",{className:"skp_post p2"}),React.createElement("span",{className:"skp_rail"}),banner,React.createElement("span",{className:"skp_pelsit still"},React.createElement(PelicanPerch,{w:24})));return React.createElement("div",{className:"skst skpier",style:{"--skd":"20s","--sko":off}},React.createElement("i",{className:"skp_sun"}),React.createElement("span",{className:"skp_post p1"}),React.createElement("span",{className:"skp_post p2"}),React.createElement("span",{className:"skp_rail"}),React.createElement("i",{className:"skp_water"}),banner,React.createElement("i",{className:"skp_fish","aria-hidden":"true"}),React.createElement("span",{className:"skp_pelfly"},React.createElement("span",{className:"skp_flyin"},React.createElement(PelicanFly,{w:44}))),React.createElement("span",{className:"skp_pelsit"},React.createElement(PelicanPerch,{w:24})));}/* Bay Osprey gives the previous generic sky/misc sponsor strip an actual Pensacola skit; every mapping remains shared by slot, never by one card. */const SKIT_SLOTS={beach:CrabSkit,nature:TurtleSkit,boat:DolphinSkit,pier:PelicanSkit,sky:BayOspreySkit,misc:BayOspreySkit};/* hero ambient — the manta's shore run: in from the deep, cruise the shoreline,
    fade back into deeper water. Species contract: giant oceanic manta, Mobula
    birostris, in a dorsal/slight three-quarter bearing. The broad triangular
    pectorals make a recognizably wide disc, paired cephalic lobes project beside the
@@ -13427,7 +13467,7 @@ function useLiveWx(){const[,bump]=useState(0);useEffect(()=>{const cb=()=>bump(n
    the stand is the truth. A colour nobody earned is worse than no colour, which
    is the same law verifiedOn runs on.
    =========================================================================== *//* GCA_FLAG_DATA_BEGIN — one line, replaced verbatim by claude/harness/bake_beach_flag.js.
-   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-16T11:40:02.769Z","issued":"2026-08-16T08:04:00+00:00","productId":"599d3ab8-85e5-48da-b7fd-fe08f77cadf4","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"forecastSource":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"forecast","county":{"level":2,"flags":["yellow","purple"],"risk":"Moderate","marineLife":true,"waterTempF":86,"updated":"2026-08-15T23:09:59.8Z","chance":{"green":50,"yellow":50,"red":0,"doubleRed":0,"marineLife":70},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-16","risk":"Low","flags":["green"],"observedAt":null,"chance":null,"surf":"Around 1 foot","uv":"Very High","water":"In the upper 80s","weather":"Mostly sunny. A chance of showers and thunderstorms","winds":"West winds around 5 mph, becoming southwest in the afternoon"},"outlook":[{"date":"2026-08-16","label":"Today","risk":"Low","flags":["green"],"surf":"Around 1 foot"},{"date":"2026-08-17","label":"Monday","risk":"Moderate","flags":["yellow"],"surf":"1 to 2 feet"},{"date":"2026-08-18","label":"Tuesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-19","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-20","label":"Thursday","risk":"Low","flags":["green"],"surf":"1 to 2 feet"}],"alerts":[{"event":"Heat Advisory","headline":"Heat Advisory issued August 15 at 11:28PM CDT until August 16 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...Heat index values of 108 to 111 expected.\n\n* WHERE...Portions of south central and southwest Alabama, northwest\nFlorida, and southeast Mississippi.\n\n* WHEN...From 11 AM to 8 PM CDT Sunday.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.","severity":"Moderate","onset":"2026-08-16T11:00:00-05:00","ends":"2026-08-16T20:00:00-05:00"}]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
+   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-16T13:05:33.542Z","issued":"2026-08-16T12:59:00+00:00","productId":"56c4e5a4-3a15-491a-949e-91fce6b594c3","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"forecastSource":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"forecast","county":{"level":2,"flags":["yellow","purple"],"risk":"Moderate","marineLife":true,"waterTempF":86,"updated":"2026-08-15T23:09:59.8Z","chance":{"green":50,"yellow":50,"red":0,"doubleRed":0,"marineLife":70},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-16","risk":"Low","flags":["green"],"observedAt":null,"chance":null,"surf":"Around 1 foot","uv":"Very High","water":"In the upper 80s","weather":"Mostly sunny. A chance of showers and thunderstorms","winds":"West winds around 5 mph, becoming southwest in the afternoon"},"outlook":[{"date":"2026-08-16","label":"Today","risk":"Low","flags":["green"],"surf":"Around 1 foot"},{"date":"2026-08-17","label":"Monday","risk":"Moderate","flags":["yellow"],"surf":"1 to 2 feet"},{"date":"2026-08-18","label":"Tuesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-19","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-20","label":"Thursday","risk":"Low","flags":["green"],"surf":"1 to 2 feet"}],"alerts":[{"event":"Heat Advisory","headline":"Heat Advisory issued August 16 at 7:54AM CDT until August 16 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...Heat index values up to 111 expected.\n\n* WHERE...Portions of south central and southwest Alabama, northwest\nFlorida, and southeast Mississippi.\n\n* WHEN...From 11 AM this morning to 8 PM CDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.","severity":"Moderate","onset":"2026-08-16T11:00:00-05:00","ends":"2026-08-16T20:00:00-05:00"}]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
    same words fetch_beach_flag.js emits so the two cannot drift apart.
    ⚠ 08/13 — GREEN WAS #2E9E5B AND GRAY COULD NOT SEE IT: "not able to be seen very vividly.
    Needs to be filled it i guess or more vivid less dark green." Measured, he is right by a
@@ -15059,8 +15099,8 @@ const eat=ev=>{ev.stopPropagation();ev.preventDefault();};r.addEventListener("cl
        So the state carries a dwell: once it flips, it holds for HOLD_MS before it may flip back.
        Kept as a timestamp rather than a timer, so nothing is scheduled, nothing needs clearing, and
        a stale hold simply resolves on the next frame the reader produces. */const HOLD_MS=420;let heldYield=null,heldAt=0;/* the rung's own dwell — see the long note at the commit site. 260ms is longer than the 220ms
-       flip, so a move always finishes before another may start. The margin is in painted px^2 of
-       text: below it the two rungs are the same answer and swapping between them is chatter. */const LIFT_HOLD_MS=260,LIFT_MARGIN_PX2=900;let liftAt=0;/* ⚠ 08/16 — THE FLIP OPENED A 220ms MIS-TAP WINDOW AND THIS TIMER CLOSES IT. Animating the
+       flip, so a move always finishes before another may start. The interval is the WHOLE dwell:
+       an area margin that used to sit beside it pinned the ladder to rung 0 and was deleted. */const LIFT_HOLD_MS=260;let liftAt=0;/* ⚠ 08/16 — THE FLIP OPENED A 220ms MIS-TAP WINDOW AND THIS TIMER CLOSES IT. Animating the
        rung change fixed the teleport, but while the pill is mid-flight it is sitting over ground
        it was never cleared for — gate_support_float measured 5 offences at 320 the day the flip
        landed. A moving control is not a target, so both riders are transparent to taps for
@@ -15166,16 +15206,29 @@ const eat=ev=>{ev.stopPropagation();ev.preventDefault();};r.addEventListener("cl
          one is still running is cancelled by its own `transition:none` write, so on a fast scroll
          the pill snapped between rungs many times a second. Animating a value that changes every
          frame animates nothing.
-         ⭐ SO THE RUNG GETS A DWELL, exactly like the show/hide flip above it already has. Two
-         conditions, and both are needed: a MINIMUM INTERVAL so a rung has time to finish moving,
-         and a MARGIN so a new rung must be meaningfully better rather than merely different —
-         without the margin the ladder chatters between two rungs whose text areas differ by a
-         pixel, and the interval alone would only slow the chatter down.
+         ⭐ SO THE RUNG GETS A DWELL, exactly like the show/hide flip above it already has: a
+         MINIMUM INTERVAL, and only that. The interval alone does the job — it rate-limits rung
+         changes to roughly four a second, so each 220ms animation finishes before the next begins.
+         ⚠ 08/16, THIRD PASS — THE AREA MARGIN THAT USED TO SIT BESIDE THE INTERVAL IS DELETED,
+         NOT TUNED. It was meant to stop chatter between two near-equally-good rungs, but 900px^2
+         is larger than the difference between most rungs, so it blocked almost every legitimate
+         climb and pinned the pill to rung 0 — gate_support_float read 100% of visible positions
+         resting on the floor at all three widths, and the visible count collapsed (40/36/28 ->
+         19/3/7) because a pill stuck over text yields and hides. A guard that prevents the
+         correct answer is worse than the chatter it was added to prevent.
          ⚠ THE ONE EXCEPTION IS SAFETY, AND IT IS NOT NEGOTIABLE: a rung that is not CLEAR is taken
          immediately, dwell or no dwell. Holding a stale rung to look smooth would park the pill on
          a control, and that is the exact defect this whole ladder exists to prevent. Same asymmetry
-         the yield dwell already makes, for the same reason. */const nextRaw=rung<0?0:LIFTS[rung];const prevLift=parseFloat(root.style.getPropertyValue("--sup-lift"))||0;let nextLift=nextRaw;if(nextRaw!==prevLift){const settled=nowMs-liftAt>=LIFT_HOLD_MS;/* bestArea is the painted text the chosen rung sits on; prevArea is what the rung we are
-           already on would cost now. Only move if the gain clears the margin. */const prevIdx=LIFTS.indexOf(prevLift);const prevRect=prevIdx>=0?rectAt(prevIdx):null;const prevClear=prevRect?clear(prevRect,ctl,8)&&clear(prevRect,paid,0)&&prevRect.top-sy>=8:false;const prevArea=prevRect&&prevClear?textArea(prevRect):Infinity;const better=bestArea+LIFT_MARGIN_PX2<prevArea;/* prevClear === false means the rung we are on is no longer safe: move now. */if(prevClear&&!(settled&&better))nextLift=prevLift;}if(nextLift!==prevLift)liftAt=nowMs;root.style.setProperty("--sup-lift",nextLift+"px");if(nextLift!==prevLift){/* A rising lift moves the box UP, so the flip starts DOWN by the same amount and returns
+         the yield dwell already makes, for the same reason. *//* one clock for BOTH dwells (rung and yield) — declared here, above the first reader,
+         because it used to sit below the rung dwell and threw a TDZ ReferenceError every time
+         the ladder tried to climb. Do not move it back down or split it into two timestamps. */const nowMs=typeof performance!=="undefined"&&performance.now?performance.now():Date.now();const nextRaw=rung<0?0:LIFTS[rung];const prevLift=parseFloat(root.style.getPropertyValue("--sup-lift"))||0;let nextLift=nextRaw;if(nextRaw!==prevLift){const settled=nowMs-liftAt>=LIFT_HOLD_MS;const prevIdx=LIFTS.indexOf(prevLift);const prevRect=prevIdx>=0?rectAt(prevIdx):null;/* ⚠ THE FAB'S BOX WAS ADDED TO THIS TEST AND THEN TAKEN BACK OUT, MEASURED BOTH WAYS.
+           The theory was sound — the scroll-to-top button rides the same --sup-lift and the
+           selection loop above tests both boxes — so a dwell holding a rung on the pill's
+           clearance alone should have let the FAB drift onto a control. It did not: with both
+           boxes tested, gate_support_float went 1/0/1 offences to 2/1/2. Worse, not better, so
+           the theory is wrong and the extra test is not carried on a guess. **The residual
+           offences are the dwell itself**, not which box it consults, and that is written down in
+           QUEUE.md rather than papered over here. */const prevClear=prevRect?clear(prevRect,ctl,8)&&clear(prevRect,paid,0)&&prevRect.top-sy>=8:false;/* prevClear === false means the rung we are on is no longer safe: move now. */if(prevClear&&!settled)nextLift=prevLift;}if(nextLift!==prevLift)liftAt=nowMs;root.style.setProperty("--sup-lift",nextLift+"px");if(nextLift!==prevLift){/* A rising lift moves the box UP, so the flip starts DOWN by the same amount and returns
            to zero. Both controls ride one variable because both read the same --sup-lift.
            ⚠ THE DURATION IS A VARIABLE BECAUSE THE FIRST WRITE MUST NOT ANIMATE. Setting the flip
            to the delta with the transition live would slide the pill TO the old position and then
@@ -15190,7 +15243,7 @@ const eat=ev=>{ev.stopPropagation();ev.preventDefault();};r.addEventListener("cl
            @property would also work and is worse: a feature dependency bought for nothing.
            An inline value change on the element transitions the ordinary way. */const flip=nextLift-prevLift+"px";const riders=[pill];const fab=document.querySelector(".hk_totop");if(fab)riders.push(fab);/* pointer-events off for the flight: the pill is transparent to taps ONLY while it is
            visibly moving (the 220ms translate), because a moving control is not a target */riders.forEach(function(el){el.style.transition="none";el.style.translate="0 "+flip;el.style.pointerEvents="none";});/* one forced reflow so the start position lands before the transition is re-armed —
-           without it the browser coalesces both writes and nothing moves */if(pill.offsetHeight>=0){riders.forEach(function(el){el.style.transition="";el.style.translate="0 0px";});}if(flipGuard)win.clearTimeout(flipGuard);flipRiders=riders;flipGuard=win.setTimeout(flipLand,240);}const rest=rectAt(rung<0?0:rung);/* the retreat is still classed by CAUSE, so the DOM stays honest about which one won */const hitsPaid=rung<0&&!clear(rest,paid,0);const wants=rung<0;/* the dwell: a flip is honoured only if the last one is older than HOLD_MS */const nowMs=typeof performance!=="undefined"&&performance.now?performance.now():Date.now();/* ⚠ AND THE DWELL IS ASYMMETRIC, BECAUSE A SYMMETRIC ONE TRADED A FLICKER FOR A MIS-TAP.
+           without it the browser coalesces both writes and nothing moves */if(pill.offsetHeight>=0){riders.forEach(function(el){el.style.transition="";el.style.translate="0 0px";});}if(flipGuard)win.clearTimeout(flipGuard);flipRiders=riders;flipGuard=win.setTimeout(flipLand,240);}const rest=rectAt(rung<0?0:rung);/* the retreat is still classed by CAUSE, so the DOM stays honest about which one won */const hitsPaid=rung<0&&!clear(rest,paid,0);const wants=rung<0;/* the dwell: a flip is honoured only if the last one is older than HOLD_MS *//* ⚠ AND THE DWELL IS ASYMMETRIC, BECAUSE A SYMMETRIC ONE TRADED A FLICKER FOR A MIS-TAP.
          The first version held BOTH directions for HOLD_MS, and gate_support_float caught what that
          costs: 1 offence across 46 visible positions at 320, where the pill stayed visible over a
          control for up to 420ms after the ladder had already decided to yield. Yielding is a safety
