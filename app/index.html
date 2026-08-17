@@ -2212,7 +2212,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
    ⚠ The hero still sleeps when it is genuinely off screen — that is the zzz observer, a different
    mechanism, untouched. */
 html.hkscroll .tdec *, html.hkscroll .tdec *::before, html.hkscroll .tdec *::after,
-html.hkscroll .fldw *, html.hkscroll .bawrap, html.hkscroll .hk_hspk{ animation-play-state:paused !important; }
+html.hkscroll .fldw *, html.hkscroll .bawrap, html.hkscroll .hk_aurd{ animation-play-state:paused !important; }
 /* Scene layers do not need to be composited during a flick either. */
 html.hkscroll .tdec{ will-change:auto; }
 /* off-screen cards + hero sleep — IntersectionObserver toggles .zzz to pause their animations */
@@ -7324,70 +7324,86 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
     0 0 12px -1px color-mix(in srgb, var(--au-a) 55%, transparent),
     2px 3px 5px color-mix(in srgb, var(--au-c) 14%, rgba(4,3,1,.45)),
     5px 9px 12px -8px color-mix(in srgb, var(--au-c) 16%, rgba(4,3,1,.72)); }
-/* ═══ THE HOLO FOIL — 08/17 (Gray: "a slight sparkle animation like the card is a rare /
-   platinum type of thing. Like in pokemon the super rares are shiny and they sparkle... but not
-   tooo overdone.") ══════════════════════════════════════════════════════════════════════════════
-   What makes a Pokemon holo read as rare, stated so nobody adds to this: the foil sits UNDER the
-   artwork and the ink never shimmers; it answers MOVEMENT (flat on a table it is calm, tilted it
-   comes alive); and its sparkle is sparse and irregular, never a glitter field. All three are
-   structural here. The foil is the sponsored card's FIRST CHILD at z-index:0 — above the world's
-   --cbg, one plane under the scene art (z1), three under every word (z3) — so no glyph anywhere
-   sits on moving light. The sheen has NO clock: its position is written from the reader's own
-   scroll progress by the Card effect (the tilt, translated — the card a reader is not moving past
-   is still), so it is exempt from the html.hkscroll pause by construction. The three sparkle
-   glyphs reuse the cosmic world's ✦/✧ vocabulary and its frame law (DECOR MAY NOT TOUCH TEXT —
-   they live in the side gutters), on three long coprime-ish periods with STATIC offsets (changing
-   a delay on a running element restarts its timeline) so no two ever fire in the same second.
-   ⚠ THIS IS NOT THE 08/07 CARD SHEEN COMING BACK. That was ~300 animated nodes, every card, on a
-   clock, forever, below perception — deleted rightly. This is ONE card in a deck (the bought
-   one), zero animation at rest, and being visibly special is the entire job of the surface.
-   Golds are the unit's own --au-* tokens, so day's dark gilts and night's light ones both read;
-   the teal/rose fringes are the iridescent hint at single-digit alpha, fixed literals because no
-   world owns "iridescence". Intensity was chosen from three rendered candidates at ship size —
-   see claude/data/sponsored_holo_progress.md. Sparkles pause during scroll with the rest of the
-   decor (they are in the hkscroll list); reduced-motion and Stillness park the sheen mid-card
-   with the transform !important below (the JS keeps writing inline transforms, and an !important
-   declaration is what outranks an inline style) and blank the sparkles. */
-.card > .hk_holo{ position:absolute; inset:0; z-index:0; pointer-events:none; overflow:hidden;
-  border-radius:inherit; }
-/* ⚠ THE AMPLITUDE IS A MEASURED CAP, NOT A TASTE DIAL. The sheen PARKS wherever the reader stops
-   scrolling, so whatever strength it rests at must hold the body-ink floors indefinitely —
-   computed on t-sunset night's lightest stop under its cream body ink, a white core past ~.15 or
-   a gold flank past ~.22 takes the blurb under 4.5:1. At those caps the band is invisible on a
-   light world, which was the first render's failure. So the two states are split: at REST the
-   layer sits at opacity .35 (white .40x.35=.14, gold .38x.35=.13 — computed 4.78+ everywhere)
-   and it goes to 1 only while the scroll handler holds .lit, dropped 160ms after the last scroll
-   event. That is also the truer holo: flat on the table it is quiet, tilted it flares. */
-.hk_hsheen{ position:absolute; top:-30%; bottom:-30%; left:18%; width:30%;
-  opacity:.35; transition:opacity .5s ease; will-change:transform;
-  transform:translate3d(-160%,0,0) rotate(16deg);
-  background:linear-gradient(90deg, transparent 0%,
-    rgba(96,200,170,.18) 16%,
-    color-mix(in srgb, var(--au-b,#E8C766) 38%, transparent) 38%,
-    rgba(255,255,255,.4) 50%,
-    color-mix(in srgb, var(--au-b,#E8C766) 38%, transparent) 62%,
-    rgba(205,110,170,.18) 84%,
-    transparent 100%); }
-/* the flare is quick and the settle is slow, which is how a tilted card actually catches light */
-.hk_holo.lit .hk_hsheen{ opacity:1; transition-duration:.14s; }
-/* 13/10/11px, not the 8-10 first tried: at 8px the glyph is the half-pixel trap (§9.6) and the
-   first peak render simply did not contain it. right:8px because 5 clipped the glyph's box on
-   the card edge. --au-b runs the right way on both grounds: dark gold on light worlds, light
-   gold on dark. */
-.hk_hspk{ position:absolute; line-height:1; font-size:13px; color:var(--au-b,#E8C766);
-  opacity:0; transform:scale(.5); animation:hk_holotw 12.9s linear infinite; }
-.hk_hspk.a{ left:5px; top:31%; animation-duration:8.7s; }
-.hk_hspk.b{ right:8px; top:56%; font-size:10px; animation-delay:4.2s; }
-.hk_hspk.c{ left:6px; top:77%; font-size:11px; animation-duration:17.3s; animation-delay:9.1s; }
-@keyframes hk_holotw{ 0%,86%,100%{ opacity:0; transform:scale(.5) rotate(0deg); }
-  89%{ opacity:.9; transform:scale(1.15) rotate(18deg); }
-  93%{ opacity:.35; transform:scale(.85) rotate(26deg); } }
+/* ═══ THE AURORA FOIL — lap 3, 08/17 (Gray picked it from four rendered treatments: "I like 3 & 4.
+   Anyway to combine them make it 3 but 4 stand out a little more in the background slightly and
+   the aurora moving.") ═════════════════════════════════════════════════════════════════════════
+   #3 (aurora foil) is the treatment; #4 (in-hand) survives as DEPTH IN THE BACKGROUND: the foil
+   plate alone answers the reader's scroll with a small parallax tilt — about a third of the
+   mock's amplitude, written by the Card/PromotedBlock effects — while every word sits still on
+   top of it. Copy that does not move can never be skewed or blurred out of contrast. This
+   replaces the lap-1 scroll sheen (.hk_holo family), deleted with it. Three layers, none of
+   which a glyph ever rides:
+   · the UNDER-FOIL (.hk_aur): two aurora washes. In the card it is a first child at z0 — above
+     the world's --cbg, one plane under the scene art (z1), three under every word (z3) — and it
+     is OVERSIZED (inset:-8%) because the card clips its own children, so the parallax slide
+     never exposes bare ground. In the block the text is static flow, so a positive-z child would
+     paint OVER it: z-index:0 on .hk_promoted.live forces a stacking context and the foil sits at
+     z:-1, clipping ITSELF (the block has no overflow) — which is why the JS only tilts the
+     block's foil and never translates it. The block's foil is also MASKED out of the disclosure
+     corner: shine is never a label (§9.9), so "Sponsored" keeps its photographed ground at every
+     drift phase.
+   · the FRAME RING (.hk_aurring): the same aurora at full saturation, XOR-masked to the outer
+     13px (10px on the block), so it reads as lit foil metal on the frame and can never cross a
+     word — the band lives entirely in the padding no text enters.
+   · EIGHT DUST GLYPHS (.hk_aurd) in the text-free gutters, pastel opal colours, long twinkles on
+     static negative delays (a delay on a running element must never be rewritten — set once at
+     mount). They join the hkscroll pause list where the lap-1 sparkles were.
+   THE AURORA MOVES AT REST — that is the ask, said twice — so the washes carry their own
+   compositor animations (transform-only: an ease-in-out drift plus a slow conic turn) and no JS
+   has to run for the unit to be alive. Wash and ring ALPHAS ARE THE MOCK'S OWN, floor-measured
+   at four drift phases in lap 2 (worst persistent 5.24 night / 4.62 day — see
+   claude/data/sponsored_holo_progress.md); the drift PERIODS are shortened from the mock's
+   46s/80s/23s/41s because at those speeds the motion did not read as motion at ship size, and a
+   period changes nothing a contrast floor can see. Reduced-motion parks every layer below;
+   .hk_still pins the container transform with !important, which is what outranks the JS's inline
+   writes. */
+.hk_aur{ position:absolute; pointer-events:none; will-change:transform; }
+.card > .hk_aur{ inset:-8%; z-index:0; }
+.hk_promoted.live{ z-index:0; }
+.hk_promoted > .hk_aur{ inset:0; z-index:-1; overflow:hidden;
+  -webkit-mask-image:radial-gradient(ellipse 180px 50px at 36px 17px, transparent 50%, #000 86%);
+  mask-image:radial-gradient(ellipse 180px 50px at 36px 17px, transparent 50%, #000 86%); }
+.hk_aura{ position:absolute; inset:-40%; will-change:transform;
+  background:linear-gradient(115deg, transparent 6%, rgba(64,224,190,.15) 18%, transparent 32%,
+    rgba(150,120,255,.13) 47%, transparent 60%, rgba(255,110,180,.14) 72%,
+    color-mix(in srgb, var(--au-b,#E8C766) 22%, transparent) 84%, transparent 95%);
+  animation:hk_aurdrift 16s ease-in-out infinite alternate; }
+.hk_aurb{ position:absolute; inset:-60%; will-change:transform;
+  background:conic-gradient(from 30deg, transparent, rgba(64,224,190,.09) 60deg, transparent 110deg,
+    rgba(150,120,255,.09) 170deg, transparent 230deg, rgba(255,150,190,.09) 290deg, transparent 340deg);
+  animation:hk_aurspin 44s linear infinite; }
+@keyframes hk_aurdrift{ from{ transform:translate3d(-7%,0,0); } to{ transform:translate3d(7%,2%,0); } }
+@keyframes hk_aurspin{ to{ transform:rotate(360deg); } }
+.hk_aurring{ position:absolute; inset:0; z-index:4; padding:13px; pointer-events:none;
+  border-radius:inherit; overflow:hidden;
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite:exclude; }
+.hk_promoted > .hk_aurring{ padding:10px; border-radius:0; }
+.hk_aurra{ position:absolute; inset:-45%; will-change:transform;
+  background:linear-gradient(115deg, transparent 4%, rgba(84,235,205,.55) 16%, transparent 30%,
+    rgba(168,140,255,.48) 45%, transparent 58%, rgba(255,130,195,.5) 70%,
+    color-mix(in srgb, var(--au-a,#F6E4B5) 65%, transparent) 83%, transparent 94%);
+  animation:hk_aurdrift 10s ease-in-out infinite alternate; }
+.hk_aurrb{ position:absolute; inset:-65%; will-change:transform;
+  background:conic-gradient(from 190deg, transparent, rgba(255,252,240,.5) 40deg, transparent 80deg,
+    rgba(84,235,205,.35) 150deg, transparent 200deg, rgba(255,130,195,.35) 280deg, transparent 330deg);
+  animation:hk_aurspin 24s linear infinite; }
+.hk_aurd{ position:absolute; line-height:1; z-index:5; pointer-events:none; opacity:0;
+  transform:scale(.5); font-family:GcaEmoji, Nunito, sans-serif;
+  text-shadow:0 0 3px rgba(255,255,250,.95), 0 0 8px rgba(255,252,240,.85), 0 0 16px currentColor;
+  animation:hk_aurtw 9s linear infinite; }
+@keyframes hk_aurtw{ 0%,76%,100%{ opacity:0; transform:scale(.5) rotate(0deg); }
+  84%{ opacity:1; transform:scale(1.25) rotate(18deg); }
+  92%{ opacity:.45; transform:scale(.9) rotate(30deg); } }
 @media (prefers-reduced-motion: reduce){
-  .hk_hspk{ animation:none !important; opacity:0; }
-  .hk_hsheen{ transform:translate3d(-30%,0,0) rotate(16deg) !important; }
+  .hk_aura, .hk_aurb, .hk_aurra, .hk_aurrb{ animation:none !important; }
+  .hk_aurd{ animation:none !important; opacity:0; }
+  .hk_aur{ transform:none !important; }
 }
-.hk_still .hk_hspk{ opacity:0; }
-.hk_still .hk_hsheen{ transform:translate3d(-30%,0,0) rotate(16deg) !important; opacity:.35 !important; }
+.hk_still .hk_aurd{ opacity:0; }
+.hk_still .hk_aur{ transform:none !important; }
 /* ⚠ THE DASHED BORDER WAS THE AD-SLOT TELL AND IT IS GONE WITH THE LABEL. A dashed rectangle with
    small caps in its corner is the universal drawing of an empty advert, and that is exactly what
    this shelf is NOT any more: it is the app's own illustration, one act per card, and the paid unit
@@ -13069,7 +13085,39 @@ if(/&|\bboth\b|\btwo\b|couple|family|bundle|group|per family/.test(lab))continue
 
    ⚠ AND THE TAP GOES TO THE SPECIFIC PLACE, NEVER THE BRAND'S FRONT DOOR. A sponsor with no safe
    absolute https URL renders as text rather than as a dead link, which is the same rule the website
-   applies to its own feed ad. */const promoInitials=name=>String(name||"").split(/\s+/).filter(Boolean).slice(0,2).map(w=>w[0].toUpperCase()).join("")||"\u2022";function PromotedBlock({ad,index,slot}){const name=ad&&(ad.title||ad.name)||"";const href=sponsorHref(ad);const say=ad&&(ad.tagline||ad.blurb)||"";const where=ad&&(ad.address||ad.area)||"";const phone=ad&&ad.phone||"";const sold=!!(ad&&name);const head=sold&&href?React.createElement("a",{href:href,target:"_blank",rel:"noreferrer sponsored","aria-label":sponsorLabel(ad,"Open sponsor")},name):sold?name:"This space is for sale";return React.createElement("aside",{className:"hk_promoted"+(sold?" live":" open"),"data-adzone":true,/* the slot travels with the block, because the act on its stage is the slot's act and every
+   applies to its own feed ad. */const promoInitials=name=>String(name||"").split(/\s+/).filter(Boolean).slice(0,2).map(w=>w[0].toUpperCase()).join("")||"\u2022";/* \u2550\u2550\u2550 AURORA FOIL, the shared pieces \u2014 lap 3, 08/17 (see the CSS block by .hk_aur for the whole
+   design). One builder and one binder because the treatment ships on BOTH paid shapes \u2014 the
+   sponsored card and the sold promoted block \u2014 and two hand-copied versions of this exact
+   structure is how drift starts. The dust table is the lap-2 mock's own geometry verbatim:
+   glyph, size, colour, left, top, right \u2014 sizes 10-16px because 8px pastels on textured ground
+   are the half-pixel trap this feature has now hit three times. Delays are NEGATIVE and STATIC:
+   set once at mount so the eight twinkles are desynchronised from the first paint, and never
+   rewritten, because changing a delay on a running element restarts its timeline. */const AUR_DUST=[["\u2726",16,"#FFF6D8","3px","9%",""],["\u2727",11,"#8CE8D2","","16%","4px"],["\u22c6",10,"#D9C6FF","4px","34%",""],["\u2726",14,"#FFD9EC","","46%","3px"],["\u2727",10,"#FFF6D8","3px","58%",""],["\u22c6",12,"#8CE8D2","","70%","4px"],["\u2726",11,"#D9C6FF","4px","84%",""],["\u2727",15,"#FFF6D8","","92%","4px"]];const auroraFoil=ref=>React.createElement(React.Fragment,null,React.createElement("span",{className:"hk_aur","aria-hidden":"true",ref:ref},React.createElement("i",{className:"hk_aura"}),React.createElement("i",{className:"hk_aurb"})),React.createElement("span",{className:"hk_aurring","aria-hidden":"true"},React.createElement("i",{className:"hk_aurra"}),React.createElement("i",{className:"hk_aurrb"})),AUR_DUST.map((d,i)=>React.createElement("i",{key:"d"+i,className:"hk_aurd","aria-hidden":"true",style:Object.assign({fontSize:d[1]+"px",color:d[2],top:d[4],animationDuration:(6.1+i*1.7).toFixed(1)+"s",animationDelay:(-i*2.9).toFixed(1)+"s"},d[3]?{left:d[3]}:{right:d[5]})},d[0])));/* #4, DIALLED BACK — the depth binder. The foil PLATE alone answers the reader's scroll; no
+   word ever tilts. Amplitude is about a third of the lap-2 mock's #4 (its card tilt peaked at
+   5deg from scroll plus ~1.9deg idle sway; this peaks at 1.7deg, and the block at .55 of that,
+   the mock's own card:block ratio). Two inputs, one write:
+   · scroll VELOCITY (smoothed) -> rotateX, so the plate leans away from the motion and eases
+     back upright when the reader stops — the in-hand read;
+   · scroll POSITION (the unit's progress p through the viewport, from cached geometry) ->
+     rotateY sway and, on the card only, a translate parallax (±7px). The card's foil is
+     oversized inset:-8% under the card's own clip so the slide never exposes ground; the block's
+     foil clips ITSELF, so it is tilted but NEVER translated (para=false).
+   THE COST DISCIPLINE IS §9.0.1's, same as the lap-1 binding this replaces: geometry is
+   measured ONCE (plus resize, plus one re-measure when a scroll settles, because an expanded
+   card above moves everything) — per frame it is one scrollY read, arithmetic, and ONE inline
+   transform write per visible unit. Zero layout reads in the frame path. The rAF loop only runs
+   while the reader scrolls or the plate is still easing home (it parks itself when the deltas
+   die), an IntersectionObserver gates offscreen units, and REDUCE means this never binds at
+   all — at rest the compositor CSS is the whole show. Every listener, observer, rAF and timeout
+   created here is cleared in the returned cleanup. */const bindAurora=(aur,host,amp,para)=>{let docTop=0,unitH=1,vh=window.innerHeight||844,seen=true;let raf=0,calm=null,moving=false;let rx=0,ry=0,lastY=window.scrollY||0,lastT=0,vSm=0;const measure=()=>{const r=host.getBoundingClientRect();docTop=r.top+(window.scrollY||0);unitH=r.height||1;vh=window.innerHeight||844;};const frame=now=>{raf=0;const y=window.scrollY||0;if(!lastT){lastT=now;lastY=y;}const dt=Math.min(0.05,Math.max(0.001,(now-lastT)/1000||0.016));lastT=now;/* every decay and easing here is dt-BASED, never per-frame: headless and low-power
+       displays run rAF well under 60fps, and a per-frame factor at 17fps was measured leaving
+       the plate visibly leaned for ~4s after the reader stopped. Math.pow(k,dt) settles in the
+       same wall-clock time at any frame rate. */if(moving){const v=(y-lastY)/dt;vSm+=(v-vSm)*Math.min(1,dt*8);}else{vSm*=Math.pow(0.01,dt);if(Math.abs(vSm)<1)vSm=0;}lastY=y;const p=Math.max(0,Math.min(1,(y+vh-docTop)/(vh+unitH)));const tx=Math.max(-1.7,Math.min(1.7,vSm*-0.0038))*amp;const ts=(p-0.5)*2.2*amp;const k=1-Math.pow(0.0006,dt);rx+=(tx-rx)*k;ry+=(ts-ry)*k;const ty=para?((p-0.5)*14).toFixed(1):"0";aur.style.transform="perspective(700px) rotateX("+rx.toFixed(2)+"deg) rotateY("+ry.toFixed(2)+"deg) translate3d(0,"+ty+"px,0)";if(seen&&(moving||Math.abs(rx-tx)+Math.abs(ry-ts)>0.02||Math.abs(vSm)>1)){raf=requestAnimationFrame(frame);}};const queue=()=>{if(!raf)raf=requestAnimationFrame(frame);};const onScroll=()=>{if(!seen)return;moving=true;queue();if(calm)clearTimeout(calm);/* the reader stopped: their velocity is GONE, so the lean's target goes home immediately
+       (a residual vSm was measured holding the tail open for seconds at low frame rates) */calm=setTimeout(()=>{moving=false;vSm*=0.25;measure();queue();},160);};const onResize=()=>{measure();queue();};let io=null;if(typeof IntersectionObserver!=="undefined"){io=new IntersectionObserver(es=>{seen=es.some(e=>e.isIntersecting);if(seen){measure();queue();}});io.observe(host);}measure();queue();window.addEventListener("scroll",onScroll,{passive:true});window.addEventListener("resize",onResize);return()=>{if(io)io.disconnect();window.removeEventListener("scroll",onScroll);window.removeEventListener("resize",onResize);if(raf)cancelAnimationFrame(raf);if(calm)clearTimeout(calm);};};function PromotedBlock({ad,index,slot}){const name=ad&&(ad.title||ad.name)||"";const href=sponsorHref(ad);const say=ad&&(ad.tagline||ad.blurb)||"";const where=ad&&(ad.address||ad.area)||"";const phone=ad&&ad.phone||"";const sold=!!(ad&&name);/* the aurora foil rides ONLY the sold block — an unsold "This space is for sale" slot must
+     never shimmer as though somebody bought it. The decor is appended LAST in the children so
+     "Sponsored" stays the block's first text for a screen reader; z-index puts the foil under
+     the copy regardless of DOM order. */const aurRef=useRef(null);useEffect(()=>{const aur=aurRef.current;if(!sold||!aur||REDUCE||typeof window==="undefined")return;/* .55 of the card's amplitude (the mock's own card:block ratio), and never translated —
+       the block's foil is its own clip box, see bindAurora */return bindAurora(aur,aur.parentElement,0.55,false);},[sold]);const head=sold&&href?React.createElement("a",{href:href,target:"_blank",rel:"noreferrer sponsored","aria-label":sponsorLabel(ad,"Open sponsor")},name):sold?name:"This space is for sale";return React.createElement("aside",{className:"hk_promoted"+(sold?" live":" open"),"data-adzone":true,/* the slot travels with the block, because the act on its stage is the slot's act and every
        probe that asks "which creature is holding this sponsor's words" asks by slot */"data-adslot":slot,"data-sponsored":sold?"true":"false","data-placement-index":index,"aria-label":sold?"Sponsored":"Sponsor slot, unsold"},React.createElement("p",{className:"adlbl"+(sold?"":" open")},sold?"Sponsored":"Sponsor slot"),React.createElement("div",{className:"hk_pmbody"},/* ⚠ 08/12 — A SOLD BLOCK CARRIES THE BUSINESS'S OWN MARK, NOT ITS INITIALS. Gray asked for a
          "fake logo" and two letters in a rounded square is a fallback wearing a logo's position:
          it says nothing about the business and it is identical for every advertiser whose name
@@ -13080,7 +13128,7 @@ if(/&|\bboth\b|\btwo\b|couple|family|bundle|group|per family/.test(lab))continue
        when the shelf became illustration those props had nothing to hold. They belong here, on the
        one block a business actually buys, which is also the only place a creature holding somebody's
        name is an honest picture rather than a decoration pretending to be one. An unsold block gets
-       no act at all: an empty stage is the truthful drawing of an empty stage. */sold&&React.createElement("div",{className:"hk_pmstage","aria-hidden":"true"},React.createElement(SKIT_SLOTS[slot]||SKIT_SLOTS.misc,{ad:ad,idx:index})),React.createElement("p",{className:"hk_pmfine"},sold?"Paid placement. It buys space on this page and nothing else. Not a listing, not a better one, and never the verification stamp.":"Nobody has bought this space. When somebody does it says Sponsored, in that word, every time. What money never buys is a place on the honest list."));}/* Paid inventory never displaces a real card. It may decorate only the sixth
+       no act at all: an empty stage is the truthful drawing of an empty stage. */sold&&React.createElement("div",{className:"hk_pmstage","aria-hidden":"true"},React.createElement(SKIT_SLOTS[slot]||SKIT_SLOTS.misc,{ad:ad,idx:index})),React.createElement("p",{className:"hk_pmfine"},sold?"Paid placement. It buys space on this page and nothing else. Not a listing, not a better one, and never the verification stamp.":"Nobody has bought this space. When somebody does it says Sponsored, in that word, every time. What money never buys is a place on the honest list."),sold&&auroraFoil(aurRef));}/* Paid inventory never displaces a real card. It may decorate only the sixth
    physical card in a rendered run, and the neutral scene keeps identical
    geometry when no approved payload is supplied. *//* ⚠ ONE CADENCE, NAMED ONCE, AND IT MATCHES THE WEBSITE'S AD_EVERY. The app used to imply two: a
    shelf under every card that said "Sponsor slot", and an eligibility rule that admitted every
@@ -13270,18 +13318,10 @@ if(/&|\bboth\b|\btwo\b|couple|family|bundle|group|per family/.test(lab))continue
      being thrown away */const wxLine=wxShort&&w.note&&wxShort!==w.note?`${seasonalIcon(w.note)} ${w.note}`:null;const cardWatch=wxLine&&!watch0.includes(wxLine)?[...watch0,wxLine]:watch0;/* One dedup pass over the status row's worded tags (the wallpaper rule on words — see keepTagMask
      by LANE_META). The weather tag goes first so it wins any tie; membership data is untouched. */const laneKeys=lanePills(item);const inoutTagLabel=item.promo?"":item.inout==="Indoor"?"Indoor":"Outdoor";const wxTagLabel=w.seasonal?String(wxShort||w.note):"";const rowKeep=keepTagMask([wxTagLabel,inoutTagLabel,...laneKeys.map(k=>LANE_META[k][0])]);const keepInout=rowKeep[1];const keptLanes=laneKeys.filter((k,i)=>rowKeep[i+2]);const stub=theme.startsWith("coastal")&&!!item.date;const isWahoos=/^Blue Wahoos/.test(item.title||"");const timeDetailText=timeDetail(item);const timeLines=timeDetailLines(timeDetailText);const hoursRows=hoursRowsFor(item,timeLines);/* 08/13 v4 — the fixed header band is gone with the pill furniture: the head is natural flow
      (whisper line, floated date rail, display-size name), so --header-clear and its constant are
-     deleted rather than left as a token nothing reads. */const sleepRef=useSleepy();useEffect(()=>{if(!burst)return;const t=setTimeout(()=>setBurst(0),750);return()=>clearTimeout(t);},[burst]);/* THE HOLO SHEEN IS DRIVEN BY THE READER'S OWN SCROLL — the Pokemon tilt, translated (see the
-     holo foil block in FONT_CSS). Sweep position is the card's progress through the viewport, so
-     the sheen crosses the plate exactly once as the reader scrolls past. THE COST DISCIPLINE IS
-     §9.0.1's: a card's document position does not change while the reader scrolls, so docTop is
-     measured ONCE (plus on resize, plus one re-measure 160ms after a scroll settles, because an
-     expanded card ABOVE this one does move it between scrolls) and each frame is one scrollY
-     read, one clamp, one inline transform write — rAF-throttled, and only while an
-     IntersectionObserver says the card is actually on screen. No getBoundingClientRect in the
-     scroll path. REDUCE never binds any of it; .hk_still outranks the inline transform in CSS. */const holoRef=useRef(null);useEffect(()=>{const holo=holoRef.current;if(!sponsored||!holo||REDUCE||typeof window==="undefined")return;const sheen=holo.querySelector(".hk_hsheen");const cardNode=holo.parentElement;if(!sheen||!cardNode)return;let docTop=0,cardH=1,vh=window.innerHeight||844,seen=true,raf=0,calm=null;const measure=()=>{const r=cardNode.getBoundingClientRect();docTop=r.top+(window.scrollY||0);cardH=r.height||1;vh=window.innerHeight||844;};const apply=()=>{raf=0;const p=Math.max(0,Math.min(1,((window.scrollY||0)+vh-docTop)/(vh+cardH)));sheen.style.transform="translate3d("+(p*320-160).toFixed(1)+"%,0,0) rotate(16deg)";};const queue=()=>{if(!raf)raf=requestAnimationFrame(apply);};const onScroll=()=>{if(!seen)return;/* .lit holds the sheen at full strength only while the reader is actually moving — the
-         rest-state amplitude is a measured contrast cap, see the note over .hk_hsheen */holo.classList.add("lit");queue();if(calm)clearTimeout(calm);calm=setTimeout(()=>{holo.classList.remove("lit");measure();queue();},160);};const onResize=()=>{measure();queue();};let io=null;if(typeof IntersectionObserver!=="undefined"){io=new IntersectionObserver(es=>{seen=es.some(e=>e.isIntersecting);if(seen){measure();queue();}});io.observe(cardNode);}measure();queue();window.addEventListener("scroll",onScroll,{passive:true});window.addEventListener("resize",onResize);return()=>{if(io)io.disconnect();window.removeEventListener("scroll",onScroll);window.removeEventListener("resize",onResize);if(raf)cancelAnimationFrame(raf);if(calm)clearTimeout(calm);};},[sponsored]);/* the foil itself — built once, first child of whichever card branch renders, so it paints
-     above the world's ground and under everything else. ✦/✧ are the cosmic sparks' own glyphs,
-     as JSX text in aria-hidden decor (never content:, which would be copy). */const holoEl=sponsored?React.createElement("span",{className:"hk_holo","aria-hidden":"true",ref:holoRef},React.createElement("i",{className:"hk_hsheen"}),React.createElement("i",{className:"hk_hspk a"},"✦"),React.createElement("i",{className:"hk_hspk b"},"✧"),React.createElement("i",{className:"hk_hspk c"},"✦")):null;const cardStyle=index<10&&!REDUCE?{animationDelay:index*55+"ms"}:{animation:"none"};if(isPromo){cardStyle["--promo-accent"]=item.promoAccent||"#7EC2F5";cardStyle["--promo-bg1"]=item.promoBg1||"#12507F";cardStyle["--promo-bg2"]=item.promoBg2||"#0A3151";}/* THE AGE CELL WIDENS THE DATE RAIL, AND THE EYEBROW'S CLEARANCE IS A CONSTANT, SO IT HAS TO BE
+     deleted rather than left as a token nothing reads. */const sleepRef=useSleepy();useEffect(()=>{if(!burst)return;const t=setTimeout(()=>setBurst(0),750);return()=>clearTimeout(t);},[burst]);/* the aurora foil (lap 3 — see the CSS block by .hk_aur and the shared builder by AUR_DUST).
+     First children of whichever card branch renders: the under-foil paints above the world's
+     ground and under everything else, the ring and dust live in the frame band and gutters no
+     text enters. The ref is the under-foil container — the plate the depth effect tilts. */const aurRef=useRef(null);useEffect(()=>{const aur=aurRef.current;if(!sponsored||!aur||REDUCE||typeof window==="undefined")return;return bindAurora(aur,aur.parentElement,1,true);},[sponsored]);const aurEl=sponsored?auroraFoil(aurRef):null;const cardStyle=index<10&&!REDUCE?{animationDelay:index*55+"ms"}:{animation:"none"};if(isPromo){cardStyle["--promo-accent"]=item.promoAccent||"#7EC2F5";cardStyle["--promo-bg1"]=item.promoBg1||"#12507F";cardStyle["--promo-bg2"]=item.promoBg2||"#0A3151";}/* THE AGE CELL WIDENS THE DATE RAIL, AND THE EYEBROW'S CLEARANCE IS A CONSTANT, SO IT HAS TO BE
      TOLD. --cat-clear is what keeps .ebcat off the absolutely-positioned .meta block; it was a flat
      126px (104 narrow) chosen against the widest rail there was, and a third cell moves the rail's
      left edge ~37px further in. Raising the constant for every card would spend the category
@@ -13375,7 +13415,7 @@ if(/&|\bboth\b|\btwo\b|couple|family|bundle|group|per family/.test(lab))continue
        plan label) that has to match on every card. .cardphoneact already exists as the fifth head
        circle in this exact series (pin, copy, share, web, phone — see its own right: calc chain
        beside .cardweb's) and already has a narrow-width slot reserved for it in the 380px rule
-       that hides Copy, so this is the SAME control finally rendered rather than a new one. */const phoneBtn=onPin&&item.phone&&React.createElement("a",{className:"cardphoneact",href:telHref(item.phone),onClick:e=>e.stopPropagation(),title:"Call "+(item.venue||item.title)+" at "+item.phone,"aria-label":"Call "+(item.venue||item.title)},React.createElement(Ic,{k:"phone",s:17,sw:1.9}));const siteEl=React.createElement("div",{ref:sleepRef,className:"card hk_sc"+(isToday?" is-today":"")+(open?" is-open":""),"data-card-id":sponsored?undefined:item.id||"","data-card-index":sponsored?undefined:index,"data-sponsored-card":sponsored?"true":undefined,"data-cat":catKey,"data-support-world":supportWorldForCard(item,theme),style:cardStyle},holoEl,pinBtn,shareBtn,onPin&&React.createElement(CardWebBtn,{item:item}),phoneBtn,React.createElement("div",{className:"cardbtn inner",role:"button",tabIndex:0,onClick:onToggle},onPin&&React.createElement(CardActions,{item:item,variant:"top"}),React.createElement("p",{className:"hk_sck"},!!adultPill&&React.createElement("span",{className:"hk_scage"},adultPill),isToday?"Today · ":null,item.date?datePillNodes(item):kick||"",/* The badge's middot rides INSIDE the span and the word-space stays OUTSIDE it, so the glyph
+       that hides Copy, so this is the SAME control finally rendered rather than a new one. */const phoneBtn=onPin&&item.phone&&React.createElement("a",{className:"cardphoneact",href:telHref(item.phone),onClick:e=>e.stopPropagation(),title:"Call "+(item.venue||item.title)+" at "+item.phone,"aria-label":"Call "+(item.venue||item.title)},React.createElement(Ic,{k:"phone",s:17,sw:1.9}));const siteEl=React.createElement("div",{ref:sleepRef,className:"card hk_sc"+(isToday?" is-today":"")+(open?" is-open":""),"data-card-id":sponsored?undefined:item.id||"","data-card-index":sponsored?undefined:index,"data-sponsored-card":sponsored?"true":undefined,"data-cat":catKey,"data-support-world":supportWorldForCard(item,theme),style:cardStyle},aurEl,pinBtn,shareBtn,onPin&&React.createElement(CardWebBtn,{item:item}),phoneBtn,React.createElement("div",{className:"cardbtn inner",role:"button",tabIndex:0,onClick:onToggle},onPin&&React.createElement(CardActions,{item:item,variant:"top"}),React.createElement("p",{className:"hk_sck"},!!adultPill&&React.createElement("span",{className:"hk_scage"},adultPill),isToday?"Today · ":null,item.date?datePillNodes(item):kick||"",/* The badge's middot rides INSIDE the span and the word-space stays OUTSIDE it, so the glyph
        stream is unchanged on one line (" " + "· badge" is " · badge") while the wrapped kicker
        below 380px breaks BEFORE the unit: line 1 ends clean on the date with no dangling
        separator, and line 2 is the whole badge behind its middot, never a mid-phrase orphan
@@ -13383,7 +13423,7 @@ if(/&|\bboth\b|\btwo\b|couple|family|bundle|group|per family/.test(lab))continue
        itself is the .hk_sckb rule in the max-width:380 block. */bm&&bm.tone!=="gold"&&React.createElement(React.Fragment,null," ",React.createElement("span",{className:"hk_sckb tone-"+bm.tone},"· "+badgeText))),React.createElement("div",{className:"hk_sct"},React.createElement(TitleLink,{item:item})),React.createElement("p",{className:"hk_scw"},React.createElement("span",null,venueFirst+(venueSecond?" · "+venueSecond:"")+(driveLabel(item.drive)?" · "+driveLabel(item.drive):""))),item.blurb&&React.createElement(SiteBlurb,{text:item.blurb}),hoursTx&&React.createElement("p",{className:"hk_sch"},hoursTx),hoursHedge&&React.createElement("p",{className:"hk_sch hk_schb"},hoursHedge),React.createElement("div",{className:"hk_scprog"},React.createElement("div",{className:"hk_scrule","aria-hidden":"true"}),React.createElement("div",{className:"moneywrap"},React.createElement(Money,{cost:item.cost,audience:audienceOf(item),watch:cardWatch,passNote:passNote,mustPay:mustPay,heads:heads,stub:false,onHeads:e=>{e.stopPropagation();setHeads(h=>!h);}})),heads&&cardWatch.length>0&&React.createElement("ul",{className:"hpanel"+(mustPay?" must":"")},cardWatch.map((x,i)=>React.createElement("li",{key:i},x.replace(/^[⚠️\s]+/,"")))),agateCells.length>0&&React.createElement("p",{className:"hk_scagate"},agateCells.map((c,i)=>React.createElement(React.Fragment,{key:i},i>0&&React.createElement("i",{className:"hk_scdot","aria-hidden":"true"},"·"),React.createElement("span",{className:"hk_sccell"+c.cls},c.t)))),React.createElement("div",{className:"hk_scfoot"},React.createElement("span",{className:"hk_scfcat"},ebLabel),React.createElement("span",{className:"hk_sccrest","aria-hidden":"true"},React.createElement(CatGlyph,{it:item})),React.createElement("span",{className:"hk_scfwx"+(warn?" warn":""),title:wxTitle},wxText))),React.createElement("div",{className:"cardfoot"/* 08/16 — the phone circle left this row for the head (see phoneBtn above), so the pair
          below is always exactly two painted boxes: the address pill and the plan label. */},!item.mapDisabled&&gcaMapHref(item)&&React.createElement("a",{className:"cardmap",href:gcaMapHref(item),target:"_blank",rel:"noreferrer","data-testid":"cardmap-"+item.id,onClick:e=>e.stopPropagation(),"aria-label":"Open "+(item.address||item.venue||item.title)+" in the Maps app",title:item.address||"Open in the Maps app"},React.createElement(Ic,{k:"pinloc",s:14,sw:2}),React.createElement("span",{className:"cardmaptx"},mapStreet(item))),React.createElement(CardCalControl,{item:item}),React.createElement("span",{className:"tap"},open?"Hide the plan ▴":"Tap for the full plan ▾")),open&&React.createElement(Detail,{item:item})));return React.createElement(React.Fragment,null,siteEl,adBelow);}const cardEl=React.createElement("div",{ref:sleepRef,className:"card t-"+theme+(isPromo?" promo-card":"")+(isToday?" is-today":"")+(accent?" acc-"+accent:"")+(open?" is-open":"")+(heads?" has-heads":""),/* ⛔ A BOUGHT CARD CARRIES NO CARD ID. Every count the app prints is summed from the genuine
        arrays before a run renders, so a paid card is already outside them; dropping the id closes
-       the other door, where something walks the DOM and counts .card[data-card-id]. */"data-card-id":sponsored?undefined:item.id||"","data-card-index":sponsored?undefined:index,"data-sponsored-card":sponsored?"true":undefined,"data-promo-id":item.promo?item.promo.id:undefined,"data-support-world":supportWorldForCard(item,theme),style:cardStyle},holoEl,isPromo&&React.createElement("span",{className:"motif","data-promo-motif":promoMotif,"aria-hidden":"true",dangerouslySetInnerHTML:motifArt?{__html:motifArt}:undefined}),isPromo&&item.promo.mil&&React.createElement("span",{className:"wm","data-promo-watermark":true,"aria-hidden":"true",dangerouslySetInnerHTML:emblemArt?{__html:emblemArt}:undefined}),React.createElement("div",{className:"sig"},sig(theme)),React.createElement(ThemeDecor,{theme:theme,idx:index,open:open,crabs:crabby}),accent==="rom"&&React.createElement(RomAccent,{idx:index}),item.fireworks&&React.createElement(FwBursts,{idx:index}),React.createElement("div",{className:"accent"}),pinBtn,shareBtn,onPin&&React.createElement(CardWebBtn,{item:item}),React.createElement("div",{className:"cardbtn inner",role:"button",tabIndex:0,onClick:onToggle},onPin&&React.createElement(CardActions,{item:item,variant:"top"}),React.createElement("div",{className:"top"},React.createElement("div",{className:"icoW"},React.createElement("div",{className:"ico"+(item.icon2?" ico2x":"")},gcaIcon(item)),theme==="cosmic"&&React.createElement("span",{className:"orb","aria-hidden":"true"},React.createElement("i",null))),React.createElement("div",{className:"hbody"},React.createElement("div",{className:"eyebrow"},React.createElement("span",{className:"ebcat"},(()=>{/* Gray: "Attraction with the Star. The star is not in the right spot. Below it. Needs to be
+       the other door, where something walks the DOM and counts .card[data-card-id]. */"data-card-id":sponsored?undefined:item.id||"","data-card-index":sponsored?undefined:index,"data-sponsored-card":sponsored?"true":undefined,"data-promo-id":item.promo?item.promo.id:undefined,"data-support-world":supportWorldForCard(item,theme),style:cardStyle},aurEl,isPromo&&React.createElement("span",{className:"motif","data-promo-motif":promoMotif,"aria-hidden":"true",dangerouslySetInnerHTML:motifArt?{__html:motifArt}:undefined}),isPromo&&item.promo.mil&&React.createElement("span",{className:"wm","data-promo-watermark":true,"aria-hidden":"true",dangerouslySetInnerHTML:emblemArt?{__html:emblemArt}:undefined}),React.createElement("div",{className:"sig"},sig(theme)),React.createElement(ThemeDecor,{theme:theme,idx:index,open:open,crabs:crabby}),accent==="rom"&&React.createElement(RomAccent,{idx:index}),item.fireworks&&React.createElement(FwBursts,{idx:index}),React.createElement("div",{className:"accent"}),pinBtn,shareBtn,onPin&&React.createElement(CardWebBtn,{item:item}),React.createElement("div",{className:"cardbtn inner",role:"button",tabIndex:0,onClick:onToggle},onPin&&React.createElement(CardActions,{item:item,variant:"top"}),React.createElement("div",{className:"top"},React.createElement("div",{className:"icoW"},React.createElement("div",{className:"ico"+(item.icon2?" ico2x":"")},gcaIcon(item)),theme==="cosmic"&&React.createElement("span",{className:"orb","aria-hidden":"true"},React.createElement("i",null))),React.createElement("div",{className:"hbody"},React.createElement("div",{className:"eyebrow"},React.createElement("span",{className:"ebcat"},(()=>{/* Gray: "Attraction with the Star. The star is not in the right spot. Below it. Needs to be
        beside it." The glyph is an inline sibling, so on 87 cards it wrapped onto a line of its own.
        Binding it to the LAST WORD in a nowrap span keeps them together wherever the label breaks. */const label=item.catLabel||CAT_LABEL[item.cat]||"Adventure";const cut=label.lastIndexOf(" ");const head=cut>0?label.slice(0,cut+1):"";const tail=cut>0?label.slice(cut+1):label;return React.createElement(React.Fragment,null,head,React.createElement("span",{className:"ebtail"},tail,React.createElement(CatGlyph,{it:item})));})()),(isToday||!!(bm&&bm.tone==="gold"))&&React.createElement(React.Fragment,null,React.createElement("span",{className:"ebbreak","aria-hidden":"true"}),React.createElement("span",{className:"ebrow2"},bm&&bm.tone==="gold"&&React.createElement("span",{className:"cmpill",/* Below 400px the token stops printing entirely (visually hidden, never trimmed to a
        half-phrase — see the 400px .cmpill rule); the pill keeps the whole phrase for a screen
@@ -14496,7 +14536,7 @@ function useLiveWx(){const[,bump]=useState(0);useEffect(()=>{const cb=()=>bump(n
    the stand is the truth. A colour nobody earned is worse than no colour, which
    is the same law verifiedOn runs on.
    =========================================================================== *//* GCA_FLAG_DATA_BEGIN — one line, replaced verbatim by claude/harness/bake_beach_flag.js.
-   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-17T16:04:59.414Z","issued":"2026-08-17T15:37:00+00:00","productId":"2cb79e80-7726-4667-b5af-2b72f14b918c","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"},"forecastSource":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"observed","county":{"level":1,"flags":["green","purple"],"risk":"Low","marineLife":true,"waterTempF":87,"updated":"2026-08-17T14:39:08.18Z","chance":{"green":60,"yellow":40,"red":0,"doubleRed":0,"marineLife":70},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-17","risk":"Low","flags":["green","purple"],"observedAt":"2026-08-17T14:39:08.18Z","chance":{"green":60,"yellow":40,"red":0,"doubleRed":0,"marineLife":70},"surf":"1 to 2 feet","uv":"Very High","water":"87°F","weather":"Mostly sunny. A slight chance of showers and thunderstorms","winds":"West winds 10 to 15 mph"},"outlook":[{"date":"2026-08-17","label":"Today","risk":"Moderate","flags":["yellow"],"surf":"1 to 2 feet"},{"date":"2026-08-18","label":"Tuesday","risk":"Moderate","flags":["yellow"],"surf":"2 to 3 feet"},{"date":"2026-08-19","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-20","label":"Thursday","risk":"Low","flags":["green"],"surf":"1 to 2 feet"},{"date":"2026-08-21","label":"Friday","risk":"Low","flags":["green"],"surf":"Around 1 foot"}],"alerts":[{"event":"Heat Advisory","headline":"Heat Advisory issued August 17 at 7:26AM CDT until August 17 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...Heat index values up to 112 expected.\n\n* WHERE...Portions of south central and southwest Alabama, northwest\nFlorida, and southeast Mississippi.\n\n* WHEN...From 11 AM this morning to 8 PM CDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.","severity":"Moderate","onset":"2026-08-17T11:00:00-05:00","ends":"2026-08-17T20:00:00-05:00"}]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
+   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-17T16:50:19.149Z","issued":"2026-08-17T15:37:00+00:00","productId":"2cb79e80-7726-4667-b5af-2b72f14b918c","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"},"forecastSource":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"observed","county":{"level":1,"flags":["green","purple"],"risk":"Low","marineLife":true,"waterTempF":87,"updated":"2026-08-17T14:39:08.18Z","chance":{"green":60,"yellow":40,"red":0,"doubleRed":0,"marineLife":70},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-17","risk":"Low","flags":["green","purple"],"observedAt":"2026-08-17T14:39:08.18Z","chance":{"green":60,"yellow":40,"red":0,"doubleRed":0,"marineLife":70},"surf":"1 to 2 feet","uv":"Very High","water":"87°F","weather":"Mostly sunny. A slight chance of showers and thunderstorms","winds":"West winds 10 to 15 mph"},"outlook":[{"date":"2026-08-17","label":"Today","risk":"Moderate","flags":["yellow"],"surf":"1 to 2 feet"},{"date":"2026-08-18","label":"Tuesday","risk":"Moderate","flags":["yellow"],"surf":"2 to 3 feet"},{"date":"2026-08-19","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-20","label":"Thursday","risk":"Low","flags":["green"],"surf":"1 to 2 feet"},{"date":"2026-08-21","label":"Friday","risk":"Low","flags":["green"],"surf":"Around 1 foot"}],"alerts":[{"event":"Extreme Heat Warning","headline":"Extreme Heat Warning issued August 17 at 11:48AM CDT until August 18 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...For the Heat Advisory, heat index values up to 112. For the\nExtreme Heat Warning, dangerously hot conditions with heat index\nvalues up to 115 expected.\n\n* WHERE...In Alabama, Baldwin Central, Baldwin Coastal, Mobile\nCentral, and Mobile Coastal Counties. In Florida, Escambia Coastal,\nOkaloosa Coastal, and Santa Rosa Coastal Counties.\n\n* WHEN...For the Heat Advisory, until 8 PM CDT this evening. For the\nExtreme Heat Warning, from 11 AM to 8 PM CDT Tuesday.\n\n* IMPACTS...Heat related illnesses increase significantly during\nextreme heat and high humidity events. Hot temperatures and high\nhumidity may cause heat illnesses.","severity":"Severe","onset":"2026-08-18T11:00:00-05:00","ends":"2026-08-18T20:00:00-05:00"},{"event":"Heat Advisory","headline":"Heat Advisory issued August 17 at 11:48AM CDT until August 17 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...For the Heat Advisory, heat index values up to 112. For the\nExtreme Heat Warning, dangerously hot conditions with heat index\nvalues up to 115 expected.\n\n* WHERE...In Alabama, Baldwin Central, Baldwin Coastal, Mobile\nCentral, and Mobile Coastal Counties. In Florida, Escambia Coastal,\nOkaloosa Coastal, and Santa Rosa Coastal Counties.\n\n* WHEN...For the Heat Advisory, until 8 PM CDT this evening. For the\nExtreme Heat Warning, from 11 AM to 8 PM CDT Tuesday.\n\n* IMPACTS...Heat related illnesses increase significantly during\nextreme heat and high humidity events. Hot temperatures and high\nhumidity may cause heat illnesses.","severity":"Moderate","onset":"2026-08-17T11:48:00-05:00","ends":"2026-08-17T20:00:00-05:00"}]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
    same words fetch_beach_flag.js emits so the two cannot drift apart.
    ⚠ 08/13 — GREEN WAS #2E9E5B AND GRAY COULD NOT SEE IT: "not able to be seen very vividly.
    Needs to be filled it i guess or more vivid less dark green." Measured, he is right by a
