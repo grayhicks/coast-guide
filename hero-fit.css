@@ -8,7 +8,16 @@
 body.ph-day .scene{--skytop:#4FA5D2}
 body.ph-dawn .scene{--skytop:#6D83AE}
 body.ph-golden .scene{--skytop:#5F7CA8}
-body.ph-night .scene{--skytop:#050B18}
+body.ph-night .scene{--skytop:#16294A}
+
+
+.scene-stage .hero.ph-night{
+  --sky:
+    radial-gradient(52% 40% at 84% 22%, rgba(214,230,248,.30) 0%, rgba(196,216,240,.11) 46%, rgba(180,204,232,0) 68%),
+    radial-gradient(40% 9% at 10% 44.5%, rgba(255,178,106,.26) 0%, rgba(255,164,92,.09) 55%, rgba(255,160,90,0) 100%),
+    radial-gradient(24% 6.5% at 42% 44.8%, rgba(255,190,128,.10) 0%, rgba(255,190,128,0) 100%),
+    linear-gradient(180deg, rgba(126,196,204,0) 39.5%, rgba(126,196,204,.05) 43%, rgba(150,206,214,.045) 44.2%, rgba(126,196,204,0) 47%),
+    linear-gradient(177deg,#16294A 0%,#1D3357 14%,#24406A 28%,#2A4C78 42%,#123A50 62%,#0E4359 80%,#0B4A61 92%,#0A4E66 100%)}
 
 .scene-stage .hero{position:absolute;right:0;bottom:0;width:430px;height:298px;
   margin:0;padding:0;min-height:0;overflow:visible;
@@ -337,3 +346,51 @@ html, body { overflow-x: clip; }
 /* the short detail masthead is only ~176px tall — a 64px fade would eat a third
    of it, so it gets a proportionate one */
 .scene.band.short::before{height:38px}
+
+/* ============================================================================
+   THE PAID PLANE'S FLIGHT LANE ON PHONE BAND PAGES — 08/17, measured, not reasoned.
+   Gray: "I only see some of the plane and banner... Barely." On publish/business.html at 390
+   the .adplane painted y38.1->71.3 under a 50px sticky header: 11.9px of a 33.2px paid unit
+   gone, 36%. The mechanism is the band's own top crop, not the header per se: the stage pins
+   BOTTOM, so the plane's altitude versus the band TOP is (B - 298*--sy + top*--sy), a function
+   of each page's band height B. Surveyed across ALL 384 published pages: .scene.band runs
+   B 200->272.4 below 768 (min-height 200 floors 38 of 41 pages), so the authored top:21 puts
+   the plane 12->47px above the band's visible top edge. No fixed altitude can serve a variable
+   B, and a 33px plane cannot fit the 24px of sky above the copy. So below 768:
+   · THE BAND HEIGHT IS NORMALIZED. min-height 310 >= the tallest phone-band copy measured
+     anywhere below 768 (272.4 at 320/390, +34 shift, 3.6 slack), so every band page is one
+     height and the flight lane is one altitude. This is Gray's own instinct — "the hero
+     shifted down slightly" — the copy drops 34px and the sky above it becomes a real lane.
+   · --sy RISES TO 310/298 = 1.0403 SO THE STAGE EXACTLY FILLS THE BAND: crop 0, no flat
+     backstop strip, and the plane, the stars and the clouds fly in the drawn sky. The scene
+     is LESS stretched than before (1.35/1.04 against 1.35/0.83); every rigid body reads its
+     own --sy so nothing else moves.
+   · THE PLANE FLIES AT top:6px — screen 6.2 below the band top (4.8 at the bob's crest),
+     bottom 47.8, its Sponsor label INSIDE that box (label top is +11 of the plane's own top),
+     10px clear of the copy at 58. The plane is never resized: it is ~25% taller here than the
+     state Gray graded, because it rides the raised --sy like every other resident.
+   ⚠ THE COPY SHIFT IS A MARGIN, NOT PADDING, because the wash (.scene-copy::before) hangs off
+   the copy block's border box and must follow it down. And the wash's own -52px top bleed
+   would have laid .16-.60 alpha across the new lane — a paid unit behind a veil is the defect
+   this block exists to end — so the bleed is cut at the box top and the ramp is restated in
+   box coordinates: transparent where the plane flies (plane bottom = box+13.8 at ~.07),
+   dense by the crumb's ink (box+30) exactly as the authored ramp had it by the crumb's ink.
+   ⚠ DESKTOP IS DELIBERATELY UNTOUCHED. At >=768 the stage is 268.2 tall against real pages'
+   B >= 256, so the plane already clears the band top everywhere but 404.html — the occlusion
+   defect lives entirely below 768, and the desktop composition was not re-opened for it. */
+@media (max-width:767px){
+  .scene.band:not(.short){--sy:1.0403;min-height:310px}
+  .scene.band:not(.short) > .wrap{margin-top:34px}
+  .scene.band:not(.short) .scene-copy::before{top:0;
+    background:linear-gradient(180deg,
+      rgba(6,14,24,0) 0,
+      rgba(6,14,24,.07) 12px,
+      rgba(6,14,24,.5) 26px,
+      rgba(6,14,24,.6) 62px,
+      rgba(6,14,24,.6) calc(100% - 36px),
+      rgba(6,14,24,.34) calc(100% - 36px),
+      rgba(6,14,24,0) 100%)}
+  .scene.band:not(.short) .adplane{top:6px}
+}
+
+.scene.band.short .adplane{display:none}

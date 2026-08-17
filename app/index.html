@@ -760,7 +760,17 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
        algorithm put them under it. */React.createElement("g",{transform:"translate(-4.6,0.72)"},React.createElement("g",{className:"ba_flip"},React.createElement("text",{className:"ba_num"},String(num)),React.createElement("text",{className:"ba_num ba_numgl",x:"-.045",y:"-.062"},String(num))))));return React.createElement("svg",{viewBox:"-74 -30 156 60","aria-hidden":"true"},jet(44,0,1.22,"j0",1),jet(19,-11,1.16,"j1",2),jet(19,11,1.16,"j2",3),jet(-8,-21,1.08,"j3",4),jet(-8,0,1.08,"j4",5),jet(-8,21,1.08,"j5",6));}function BlueAngels({idx=0,n=1}){const s=(idx||0)*6+3;return React.createElement(React.Fragment,null,Array.from({length:n},(_,k)=>{const a=fRand(k,s),b=fRand(k+31,s);return React.createElement("span",{key:"ba"+k,className:"bawrap",style:{top:(9+a*26).toFixed(1)+"%",width:(156+b*64).toFixed(0)+"px",height:(70+b*29).toFixed(0)+"px","--cross":(12+b*5).toFixed(1)+"s","--gap":(9+a*6).toFixed(1)+"s",/* 07/28 R9 — the delay has to be a fraction of the REAL cycle (cross + gap) or the phase
            spread lies: it used to seed off (30 + b*9) while the cycle was (13+9b)+(17+16a), so every
            card started at nearly the same point of the loop and a reader could sit through a full
-           empty-sky gap. The gap also came down — 17-33s of nothing is how you miss a flyby. */animationDelay:(-(a*(12+b*5+9+a*6))).toFixed(1)+"s"}},React.createElement(BlueAngelsSvg,null));}));}function BirdSvg(){return React.createElement("svg",{viewBox:"0 0 60 30","aria-hidden":"true"},React.createElement("g",{className:"bd_lift"},React.createElement("path",{className:"bd_body",d:"M20,17.4 C24,15.2 31,14.4 37,15.2 C40.6,15.7 43,16.4 45.2,17.2 C46.6,16.4 48.2,16 49.8,16.1 C48.9,16.8 48.3,17.5 48,18.2 C48.4,18.9 48.3,19.4 47.6,19.6 C45.4,20.2 42.4,20.4 39,20.1 C33,19.6 25.6,19.2 20,17.4 Z"}),React.createElement("path",{className:"bd_body",d:"M20,17.4 C16.4,17.9 13,18.9 10,20.4 C13.4,19 17,18 20.6,17.6 Z"}),React.createElement("path",{className:"bd_wing bd_wl",d:"M31,16.6 C27,11.4 21.6,7.2 15,4.6 C21.8,5.2 27.6,8 32.4,12.4 C33.6,13.6 33.6,15.2 32.6,16.2 Z"}),React.createElement("path",{className:"bd_wing bd_wr",d:"M31,18.4 C27.6,23.2 22.8,26.6 17,28.6 C22.8,27.4 28,24.6 32.2,20.6 C33.4,19.5 33.4,18.4 32.6,17.8 Z"})));}function BirdFlock({n=3,idx=0,cls=""}){const s=(idx||0)*4+1;return React.createElement(React.Fragment,null,Array.from({length:n},(_,k)=>{const a=fRand(k,s),b=fRand(k+23,s),c=fRand(k+57,s);const rtl=k%2===1;return React.createElement("span",{key:"b"+k,className:"brd"+(rtl?" rtl":"")+(cls?" "+cls:""),style:{[rtl?"right":"left"]:"-64px",top:(7+(k+0.2+a*0.6)/n*46).toFixed(1)+"%",width:(30+b*26).toFixed(0)+"px",height:(15+b*13).toFixed(0)+"px","--cross":(19+c*15).toFixed(1)+"s","--flap":(0.46+b*0.32).toFixed(2)+"s","--bs":(0.88+c*0.42).toFixed(2),"--bo":(0.72+b*0.28).toFixed(2),animationDelay:(-(a*(19+c*15))).toFixed(1)+"s"}},React.createElement(BirdSvg,null));}));}/* A crab that actually walks: jointed legs alternate, the claws work, the eyestalks bob. *//* ---------- THE GHOST CRAB — canonical art, 07/29 redraw ----------
+           empty-sky gap. The gap also came down — 17-33s of nothing is how you miss a flyby. */animationDelay:(-(a*(12+b*5+9+a*6))).toFixed(1)+"s"}},React.createElement(BlueAngelsSvg,null));}));}function BirdSvg(){return React.createElement("svg",{viewBox:"0 0 60 30","aria-hidden":"true"},React.createElement("g",{className:"bd_lift"},/* 08/17, SECOND CORRECTION, GRAY'S OWN CONSTRUCTION — "Two arms. Two sides on the
+         body. Both do the exact same thing at the same time. But you only see some of
+         the far wing." Profile bird (head at the RIGHT — the flock flies rightward), so
+         both wings are the SAME tapered blade extending out from the shoulder across the body
+         (32,16.4): the FAR one first in paint order so the torso crops its inner half,
+         with a small static tail-ward offset (never vertical — that is the rejected
+         "one farther up"), the NEAR one last and fully visible. One gull_flap keyframe
+         set on one clock drives both; depth is z-order plus the far wing's lower
+         opacity, nothing else. The old bd_wr origin (12% 62% of its fill box) was the
+         wing TIP — the root swung 8.6px off the body every beat — and the old pair ran
+         sign-mirrored keyframes that scissored. Both defects die here. */React.createElement("g",{transform:"translate(-3,0)"},React.createElement("path",{className:"bd_wing bd_wr",d:"M32,14.9 C25.5,15 18.5,16.2 12.9,18.2 C11.8,18.6 11.8,19.4 12.8,19.6 C19.5,20.6 26.8,19.7 31.6,18 C32.3,17 32.4,15.8 32,14.9 Z"})),React.createElement("path",{className:"bd_body",d:"M20,17.4 C24,15.2 31,14.4 37,15.2 C40.6,15.7 43,16.4 45.2,17.2 C46.6,16.4 48.2,16 49.8,16.1 C48.9,16.8 48.3,17.5 48,18.2 C48.4,18.9 48.3,19.4 47.6,19.6 C45.4,20.2 42.4,20.4 39,20.1 C33,19.6 25.6,19.2 20,17.4 Z"}),React.createElement("path",{className:"bd_body",d:"M20,17.4 C16.4,17.9 13,18.9 10,20.4 C13.4,19 17,18 20.6,17.6 Z"}),React.createElement("path",{className:"bd_wing bd_wl",d:"M32,14.9 C25.5,15 18.5,16.2 12.9,18.2 C11.8,18.6 11.8,19.4 12.8,19.6 C19.5,20.6 26.8,19.7 31.6,18 C32.3,17 32.4,15.8 32,14.9 Z"})));}function BirdFlock({n=3,idx=0,cls=""}){const s=(idx||0)*4+1;return React.createElement(React.Fragment,null,Array.from({length:n},(_,k)=>{const a=fRand(k,s),b=fRand(k+23,s),c=fRand(k+57,s);const rtl=k%2===1;return React.createElement("span",{key:"b"+k,className:"brd"+(rtl?" rtl":"")+(cls?" "+cls:""),style:{[rtl?"right":"left"]:"-64px",top:(7+(k+0.2+a*0.6)/n*46).toFixed(1)+"%",width:(30+b*26).toFixed(0)+"px",height:(15+b*13).toFixed(0)+"px","--cross":(19+c*15).toFixed(1)+"s","--flap":(0.46+b*0.32).toFixed(2)+"s","--bs":(0.88+c*0.42).toFixed(2),"--bo":(0.72+b*0.28).toFixed(2),animationDelay:(-(a*(19+c*15))).toFixed(1)+"s"}},React.createElement(BirdSvg,null));}));}/* A crab that actually walks: jointed legs alternate, the claws work, the eyestalks bob. *//* ---------- THE GHOST CRAB — canonical art, 07/29 redraw ----------
    Animation rides GROUP WRAPPERS, never the drawing elements, so any
    placement transform on a parent survives (contract 3).  The pincer
    snips via a SMIL `d` morph whose command structure is identical in
@@ -1162,7 +1172,11 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
    flap ANIMATION_VOCABULARY 2 names as the reason a bird reads mechanical. Same pivots, same
    amplitude, same silhouette — gate_birds pins all three and none of them moved. What changed is
    where the time goes: 34% down, 66% back up, roughly the 1:2 a real wingbeat runs. */
-.hkop .osp_wing_back,.hkop .osp_wing_front{ transform-box:view-box; transform-origin:53px 22px; animation:osp_flap .52s cubic-bezier(.36,.05,.28,1) infinite; }
+/* each wing pivots at ITS OWN root (far blade is authored 6 units tail-ward), so the
+   origins live on the wing classes once; these context rules carry only the beat */
+.osp_wing_back{ transform-box:view-box; transform-origin:50px 19.5px; }
+.osp_wing_front{ transform-box:view-box; transform-origin:44px 19.5px; }
+.hkop .osp_wing_back,.hkop .osp_wing_front{ animation:osp_flap .52s cubic-bezier(.36,.05,.28,1) infinite; }
 .hkop .osp_head{ transform-box:view-box; transform-origin:29.5px 27.5px; animation:hk_osp_look 4.8s ease-in-out infinite; }
 .hkop .osp_tail{ transform-box:fill-box; transform-origin:84% 55%; animation:hk_osp_tail 1.6s ease-in-out infinite alternate; }
 .hkop .osp_fish{ opacity:0; animation:hk_osp_prize 26s linear infinite; animation-delay:-9.2s; }
@@ -1185,25 +1199,34 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
   92%{ opacity:.5; transform:translate3d(-80px,-8px,0) rotate(6deg) scale(.30); }
   100%{ opacity:0; transform:translate3d(-124px,-4px,0) rotate(7deg) scale(.26); }
 }
-/* 08/17 — ONE FLAP FOR THE WHOLE APP. The wings are geometric mirrors about the
-   shoulder (a static mirror wrapper in the SVG), so ONE keyframe set drives both:
-   identical computed transforms, mirrored on screen, no second clock to drift.
-   Authored for the RIGHT wing (extends +x from the shoulder at 49,22): negative
-   rotation raises the tip, positive drops it. Fast downstroke (0-38%, ending full
-   chord, tips below the body line — the shallow M in the reference filmstrips), slow
-   recovery (38-100%) with the chord thinning to scale(1,.5) at the top — the
-   near-line frame at the top of a real upstroke is most of what sells the flap.
-   Mid-stroke (~20%, ~74%) the wings pass through horizontal: one straight line
-   across the body, which is the pose Gray named. The torso never moves. */
+/* 08/17 — ONE FLAP FOR THE WHOLE APP, on a PROFILE bird. Near and far wing are the
+   SAME blade with the SAME keyframes on the SAME clock (Gray: "Both do the exact
+   same thing at the same time") — the near/far difference is z-order and fill only,
+   see the sprite. THE STROKE IS VERTICAL (Gray: "the wings are flapping backwards
+   they need to flap sideways" — the earlier band swept the tip fore-and-aft along
+   the spine, a rowing stroke). The blade rests extending OUT from the shoulder
+   (44,19.5) ON the back ridge, across the body and past its outline, ~3deg below
+   horizontal; the band -38..+69 sits about that rest — the bottom is driven near vertical
+   because the seat-to-belly depth (23.5 units) eats most of the blade before it can
+   show below the bird: balanced extremes need the deep bottom, and the down-max is
+   the most dramatic frame of the reference cycle, so the tip rises into a shallow V above
+   the back, falls into a shallow M below the belly, and passes through one straight
+   span across the body at mid-stroke — tip travel is ~4.5x more vertical than
+   horizontal. 08/17 later, Gray: "make it go up and down more" — the seat moved up
+   onto the ridge and the blade grew from 32 to 39 units, which buys the extra V/M
+   clearance without widening the fore-aft sweep as fast as more rotation would
+   (horizontal shrink goes as 1-cos). Fast downstroke (0-36%), slow recovery (36-100%)
+   with the chord thinning to scale(1,.5) at the top — the near-line frame at the
+   top of a real upstroke is most of what sells the flap. The torso never moves. */
 @keyframes osp_flap{
-  0%{ transform:rotate(-40deg) scale(1,.5); }
-  10%{ transform:rotate(-20deg) scale(1,.85); }
-  22%{ transform:rotate(24deg) scale(1,1.04); }
-  36%{ transform:rotate(58deg) scale(1,1.08); }
-  48%{ transform:rotate(42deg) scale(1,.95); }
-  60%{ transform:rotate(12deg) scale(1,.72); }
-  78%{ transform:rotate(-18deg) scale(1,.6); }
-  100%{ transform:rotate(-40deg) scale(1,.5); }
+  0%{ transform:rotate(-38deg) scale(1,.5); }
+  10%{ transform:rotate(-22deg) scale(1,.85); }
+  22%{ transform:rotate(12deg) scale(1,1.04); }
+  36%{ transform:rotate(69deg) scale(1,1.08); }
+  48%{ transform:rotate(50deg) scale(1,.95); }
+  62%{ transform:rotate(6deg) scale(1,.72); }
+  80%{ transform:rotate(-24deg) scale(1,.6); }
+  100%{ transform:rotate(-38deg) scale(1,.5); }
 }
 @keyframes hk_osp_look{ 0%,100%{ transform:rotate(0); } 42%{ transform:rotate(-4deg); } 56%{ transform:rotate(3deg); } }
 @keyframes hk_osp_tail{ from{ transform:rotate(-3deg); } to{ transform:rotate(5deg); } }
@@ -4871,15 +4894,23 @@ a.hero_sponsor:focus-visible > *{ outline:3px solid #F2C43C; outline-offset:4px;
 .brd{ position:absolute; will-change:transform; pointer-events:none; }
 .brd svg{ width:100%; height:100%; display:block; overflow:visible; }
 .brd .bd_body{ fill:currentColor; opacity:.92; }
-.brd .bd_wing{ fill:currentColor; opacity:.86; transform-box:fill-box; }
-@keyframes hk_bdwl{
-  0%{ transform:rotate(-52deg) scaleY(.94); } 22%{ transform:rotate(-8deg) scaleY(1); }
-  38%{ transform:rotate(30deg) scaleY(1.06); } 52%{ transform:rotate(34deg) scaleY(1.04); }
-  78%{ transform:rotate(-30deg) scaleY(.96); } 100%{ transform:rotate(-52deg) scaleY(.94); } }
-@keyframes hk_bdwr{
-  0%{ transform:rotate(52deg) scaleY(.94); } 22%{ transform:rotate(8deg) scaleY(1); }
-  38%{ transform:rotate(-30deg) scaleY(1.06); } 52%{ transform:rotate(-34deg) scaleY(1.04); }
-  78%{ transform:rotate(30deg) scaleY(.96); } 100%{ transform:rotate(52deg) scaleY(.94); } }
+.brd .bd_wing{ fill:currentColor; opacity:.86; }
+/* 08/17 — one flap for both gull wings (see the .bd_wl rule): near and far are the
+   same blade on the same clock, z-order apart (see BirdSvg). The blade rests OUT from
+   the shoulder across the body (~8deg down); positive rotation raises the tip, and the
+   band +52..-44 sits about the rest so the stroke is VERTICAL and clears the body
+   both ways (blade lengthened 18->20 units for the same reason as the osprey's) — V above, one
+   straight span across the body, M below — not a fore-and-aft row. Fast downstroke to
+   38% (in phase with hk_bdlift raising the body on the downbeat), slow recovery with
+   the chord thinning — the same beat grammar as osp_flap, scaled to a smaller bird. */
+@keyframes gull_flap{
+  0%{ transform:rotate(52deg) scale(1,.55); }
+  12%{ transform:rotate(28deg) scale(1,.85); }
+  38%{ transform:rotate(-44deg) scale(1,1.06); }
+  52%{ transform:rotate(-30deg) scale(1,.92); }
+  76%{ transform:rotate(30deg) scale(1,.68); }
+  100%{ transform:rotate(52deg) scale(1,.55); }
+}
 @keyframes hk_bdlift{ 0%{ transform:translateY(1.1px); } 38%{ transform:translateY(-1.4px); } 60%{ transform:translateY(-.6px); } 100%{ transform:translateY(1.1px); } }
 /* the crossing — a long arc with a bank into the turn, not a straight slide */
 @keyframes hk_bdfly{
@@ -9235,19 +9266,31 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
    label's band now carries y at least +4, which keeps the highest wing ink below y 14;
    the bird leaves and returns LOW, over the water, and only climbs where the label is
    not. The label itself has not moved. */
+/* 08/17 — THE TALLER FLAP MEETS THE LABEL. The rebuilt wing's upstroke crests ~2 units
+   above the svg top, so the 08/16 y>=+4 rule is no longer enough where the bird's x
+   overlaps the label band: measured ink crossed BEHIND the plate by up to 6px at the
+   old 22/65/68/96 frames. Same fix as 08/16, one step further: every in-band flight
+   keyframe now carries y>=13 (the PLATE, added after the 08/16 note, reaches ~17.5px
+   deep — deeper than the 13.5 that note assumed), and the bird LEAVES and MEETS the post with wings
+   FOLDED (see the pose cuts) — it drops off the perch before the flap unfolds and
+   tucks before the final approach, which is also what the animal does. Measured
+   after: wing ink clears the pill at every sampled frame of all three windows. */
 @keyframes sko_osprey{
-  0%,20%{ opacity:1; transform:translate(2.8px,1.1px) rotate(24deg) scale(.94); }
-  22%{ transform:translate(-6px,6px) rotate(4deg) scale(.97); }
-  26%{ transform:translate(-32px,6px) rotate(-14deg) scale(1); }
+  0%,19.5%{ opacity:1; transform:translate(2.8px,1.1px) rotate(24deg) scale(.94); }
+  20%{ transform:translate(0px,17.5px) rotate(10deg) scale(.96); }
+  22%{ transform:translate(-6px,18px) rotate(4deg) scale(.97); }
+  26%{ transform:translate(-32px,16.5px) rotate(-14deg) scale(1); }
   31%{ opacity:1; transform:translate(-71px,9px) rotate(-31deg) scale(.98); }
   34%{ opacity:0; transform:translate(-95px,30px) rotate(-37deg) scale(.9); }
   56%{ opacity:0; transform:translate(115px,8px) rotate(-6deg) scale(.82); }
   59%{ opacity:1; transform:translate(72px,7px) rotate(-4deg) scale(.88); }
-  65%{ transform:translate(20px,6px) rotate(2deg) scale(.95); }
-  68%{ transform:translate(2px,5.5px) rotate(14deg) scale(.96); }
-  72%,93%{ opacity:1; transform:translate(2.8px,1.1px) rotate(24deg) scale(.94); }
-  96%{ opacity:1; transform:translate(24px,6px) rotate(4deg) scale(.9); }
-  100%{ opacity:0; transform:translate(48px,14px) rotate(10deg) scale(.84); }
+  65%{ transform:translate(20px,14px) rotate(2deg) scale(.95); }
+  68%{ transform:translate(2px,14.5px) rotate(14deg) scale(.96); }
+  69.5%{ transform:translate(2.4px,14px) rotate(18deg) scale(.95); }
+  72%,92.3%{ opacity:1; transform:translate(2.8px,1.1px) rotate(24deg) scale(.94); }
+  93%{ opacity:1; transform:translate(4px,14px) rotate(8deg) scale(.94); }
+  96%{ opacity:1; transform:translate(24px,14.5px) rotate(4deg) scale(.9); }
+  100%{ opacity:0; transform:translate(48px,20px) rotate(10deg) scale(.84); }
 }
 /* 08/17 — THE TWO-BONE RIG IS GONE (Gray, after four rejected variants: "It just needs
    to flap. And look like one wing not 2 bones"... "symmetrically in a straight line
@@ -9261,14 +9304,14 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
    in a separate .osp_wfly rule of equal specificity later in the sheet, and its
    animation shorthand REPLACED the flap outright — the animation property is not
    additive across rules. */
-.sko_osprey .osp_wing_back,.sko_osprey .osp_wing_front{ transform-box:view-box; transform-origin:53px 22px;
+.sko_osprey .osp_wing_back,.sko_osprey .osp_wing_front{
   animation:osp_flap .48s cubic-bezier(.36,.05,.28,1) infinite,
             osp_posefly var(--skd,24s) steps(1,end) infinite var(--sko,0s); }
 /* the two wing SETS, hard-cut on the stage clock — opacity only, so nothing pops in size */
 .osp_wperch{ opacity:0; }
 .sko_osprey .osp_wperch{ animation:osp_poseperch var(--skd,24s) steps(1,end) infinite var(--sko,0s); }
-@keyframes osp_poseperch{ 0%,19.5%{ opacity:1;} 19.8%,72.4%{ opacity:0;} 72.7%,92.3%{ opacity:1;} 92.6%,100%{ opacity:0;} }
-@keyframes osp_posefly{   0%,19.5%{ opacity:0;} 19.8%,72.4%{ opacity:1;} 72.7%,92.3%{ opacity:0;} 92.6%,100%{ opacity:1;} }
+@keyframes osp_poseperch{ 0%,19.9%{ opacity:1;} 20.2%,68.4%{ opacity:0;} 68.7%,92.7%{ opacity:1;} 93%,100%{ opacity:0;} }
+@keyframes osp_posefly{   0%,19.9%{ opacity:0;} 20.2%,68.4%{ opacity:1;} 68.7%,92.7%{ opacity:0;} 93%,100%{ opacity:1;} }
 /* FEET OUT (Gray).  An osprey leads with its feet: the legs swing forward and the toes
    splay as it drops onto the fish, and again on the landing approach.  Hinged at the hip
    (42.5, 40).  Positive rotation swings them forward here — measured, not assumed: the
@@ -11457,23 +11500,29 @@ a.xp_ctab{ text-decoration:none; }
      it the shared centre pivot swung both wings around a point that is neither wing's shoulder.
 
    The replacement is not new. .brd — the hero flock, built when Gray said "birds need to be
-   better. Way better." — already carries the flap ANIMATION_VOCABULARY 2 asks for: fast downstroke
-   into a slower recovery (0-38% down, 38-100% back), a scaleY through the beat so the wing bends
-   instead of swinging rigid, independent shoulder pivots at 88%/12%, and hk_bdlift raising the BODY
-   on the downbeat and not on the up. Reusing it means one flap grammar in the app instead of two,
-   which is the point. Only the tempo differs, and each bird gets its own so the flock is not a
+   better. Way better." — carries the flap ANIMATION_VOCABULARY 2 asks for: fast downstroke
+   into a slower recovery (0-38% down, 38-100% back), a scale through the beat so the wing
+   thins on the rise instead of swinging rigid, and hk_bdlift raising the BODY on the downbeat
+   and not on the up. Reusing it means one flap grammar in the app instead of two, which is
+   the point. Only the tempo differs, and each bird gets its own so the flock is not a
    metronome — the "cycle is not perfectly regular" note, spent where it is cheapest. */
-.brd .bd_wl,.xps_shorebird .bd_wl,.promo_gull .bd_wl{ transform-origin:88% 62%; animation:hk_bdwl var(--flap,.62s) cubic-bezier(.36,.05,.28,1) infinite; }
-.brd .bd_wr,.xps_shorebird .bd_wr,.promo_gull .bd_wr{ transform-origin:12% 62%; animation:hk_bdwr var(--flap,.62s) cubic-bezier(.36,.05,.28,1) infinite; }
+/* 08/17 — one rule for both wings: same blade, same shoulder root (32,16.4 in the
+   60x30 view box), one origin, ONE keyframe set, zero phase offset. The old bd_wr
+   origin (12% 62% of its fill box) was the wing TIP — the root swung 8.6px off the
+   body every flap. view-box units, not fill-box percentages, so the origin cannot
+   wander with the path it measures (bug #12 again). */
+.brd .bd_wl,.brd .bd_wr,.xps_shorebird .bd_wl,.xps_shorebird .bd_wr,.promo_gull .bd_wl,.promo_gull .bd_wr{ transform-box:view-box; transform-origin:32px 16.4px; animation:gull_flap var(--flap,.62s) cubic-bezier(.36,.05,.28,1) infinite; }
+/* the far wing sits behind the torso; the lighter ink is depth, not a different wing */
+.brd .bd_wr,.xps_shorebird .bd_wr,.promo_gull .bd_wr{ opacity:.58; }
 .brd .bd_lift,.xps_shorebird .bd_lift,.promo_gull .bd_lift{ transform-box:fill-box; transform-origin:50% 50%; animation:hk_bdlift var(--flap,.62s) ease-in-out infinite; }
-.xps_shorebird .bd_wing{ fill:currentColor; opacity:.86; transform-box:fill-box; }
+.xps_shorebird .bd_wing{ fill:currentColor; opacity:.86; }
 .xps_shorebird{ --flap:.74s; } .xps_shorebird.b2{ --flap:.61s; }
 /* The pelican and the osprey were drifting sideways with their wings nailed open — their flap rules
    are scoped to .pelw and .hkop, neither of which exists on this page. Same keyframes, same pivots,
    a tempo that suits a bird crossing a 176px scene rather than the whole hero. */
 .xps_pelican .pel_wingT{ transform-box:fill-box; transform-origin:78% 92%; animation:hk_pflapT 2.6s ease-in-out infinite; }
 .xps_pelican .pel_wingB{ transform-box:fill-box; transform-origin:64% 8%; animation:hk_pflapB 2.6s ease-in-out infinite; }
-.xps_osprey .osp_wing_back,.xps_osprey .osp_wing_front{ transform-box:view-box; transform-origin:53px 22px; animation:osp_flap .62s cubic-bezier(.36,.05,.28,1) infinite; }
+.xps_osprey .osp_wing_back,.xps_osprey .osp_wing_front{ animation:osp_flap .62s cubic-bezier(.36,.05,.28,1) infinite; }
 .xps_osprey .osp_wperch{ opacity:0; }
 @keyframes xps_turtlelook{ 0%,100%{transform:rotate(-2deg) translateY(0)} 27%{transform:rotate(8deg) translateY(-.8px)} 57%{transform:rotate(-6deg) translateY(.35px)} 79%{transform:rotate(3deg) translateY(-.5px)} }
 /* The baby's rest transform is scale(.82) on .xps_baby, and a CSS animation REPLACES a static
@@ -11709,7 +11758,7 @@ body:has(.support-page) .hk_totop{ display:none; }
 .promo_gull.g2{ top:33%; left:-14%; width:18px; height:9px; opacity:.58; animation:promo_cross 34s linear infinite; animation-delay:-11s; }
 .promo_gull.g3{ top:16%; left:-14%; width:14px; height:7px; opacity:.44; animation:promo_cross 41s linear infinite; animation-delay:-24s; }
 .promo_gull .bd_body{ fill:currentColor; opacity:.92; }
-.promo_gull .bd_wing{ fill:currentColor; opacity:.86; transform-box:fill-box; }
+.promo_gull .bd_wing{ fill:currentColor; opacity:.86; }
 .promo_gull{ --flap:.72s; }
 .promo_gull.g2{ --flap:.58s; }
 .promo_gull.g3{ --flap:.86s; }
@@ -14271,33 +14320,28 @@ function useLiveWx(){const[,bump]=useState(0);useEffect(()=>{const cb=()=>bump(n
          eye (23.7 + 0.72 = 24.42) and the membrane grows leftward.  Mirroring the
          origin instead of copying it is the whole point: medial is a fact about the
          animal, not a number to paste. */React.createElement("ellipse",{className:"pel_nict",cx:"23.7",cy:"3.3",rx:".72",ry:".72",fill:"#C7DAD6",opacity:".82"})),React.createElement("path",{d:"M12.4,35 L11.6,39.6 M10,39.8 L11.6,39.6 L13.2,40.2 M16.2,35.4 L16.6,39.8 M14.8,40.4 L16.6,39.8 L18.2,40.3",fill:"none",stroke:"#8A6A34",strokeWidth:"1",strokeLinecap:"round",strokeLinejoin:"round"}));}/* Gulf Coast osprey: layered wing planes, white head mask, hooked beak, talons, and the prize fish.
-   It faces left so a perched bird can launch naturally toward the leaping mullet in the bay skit. */function OspreySvg({w=52}){return React.createElement("svg",{viewBox:"0 0 88 58",className:"ospreyv",style:{width:w,height:Math.round(w*58/88),display:"block",overflow:"visible"},"aria-hidden":"true"},React.createElement("g",{className:"osp_tail"},React.createElement("path",{d:"M59,28 L82,20 L74,30 L87,33 L71,38 L58,36 Z",fill:"#4B403A",stroke:"#292521",strokeWidth:"1",strokeLinejoin:"round"}),React.createElement("path",{d:"M63,30 L80,25 M64,33 L81,33",stroke:"#B9A99B",strokeWidth:"1.1",opacity:".72",strokeLinecap:"round"})),React.createElement("path",{className:"osp_body",d:"M29,25 C35,18 46,16 57,20 C64,22 67,28 65,33 C62,39 54,43 43,42 C34,42 27,38 24,32 Z",fill:"#6A5C50",stroke:"#2E2924",strokeWidth:"1.25",strokeLinejoin:"round"}),React.createElement("path",{d:"M28,31 C36,35 47,38 60,32 C58,38 51,41 43,41 C35,41 29,38 26,33 Z",fill:"#E6DED1",opacity:".96"}),React.createElement("path",{d:"M32,25 C39,19 48,19 56,22 C50,22 41,24 34,29 Z",fill:"#9B8878",opacity:".85"}),React.createElement("path",{d:"M31,33 C38,37 48,39 57,34",fill:"none",stroke:"#FFFFFF",strokeWidth:"1.05",opacity:".55",strokeLinecap:"round"}),/* THE PERCH POSE (Gray, 07/31: "we need him to actually flap his wings like a real
+   It faces left so a perched bird can launch naturally toward the leaping mullet in the bay skit. */function OspreySvg({w=52}){return React.createElement("svg",{viewBox:"0 0 88 58",className:"ospreyv",style:{width:w,height:Math.round(w*58/88),display:"block",overflow:"visible"},"aria-hidden":"true"},React.createElement("g",{className:"osp_tail"},React.createElement("path",{d:"M59,28 L82,20 L74,30 L87,33 L71,38 L58,36 Z",fill:"#4B403A",stroke:"#292521",strokeWidth:"1",strokeLinejoin:"round"}),React.createElement("path",{d:"M63,30 L80,25 M64,33 L81,33",stroke:"#B9A99B",strokeWidth:"1.1",opacity:".72",strokeLinecap:"round"})),/* 08/17, THIRD CONSTRUCTION AND THE ONE GRAY HIMSELF SPECIFIED — "Two arms. Two
+       sides on the body. Both do the exact same thing at the same time. But you only
+       see some of the far wing. So it has to be cropped or something."
+       The bird stays in PROFILE. TWO IDENTICAL WINGS — same blade path, same length,
+       same chord, same keyframes (osp_flap), same clock, zero phase offset — differing
+       ONLY in depth: THIS one is the FAR wing, painted BEFORE the torso so the torso
+       CROPS its inner half and only the outer part shows past the body outline; the
+       near wing is the last element in the sprite and is fully visible in front.
+       The far wing's path is authored 6 units tail-ward of the near one — with no along-body
+       offset two identical wings are pixel-coincident and the far one would never
+       show — and NEVER a vertical offset (that is the "one farther up on the flap" Gray
+       rejected). It also wears a darker, cooler fill: ordinary depth shading, not a
+       timing or shape difference. The blade itself is the 08/17 rebuild: ONE
+       continuous tapered surface, root chord on the shoulder, no elbow, no second
+       bone (claude/design/OSPREY_REFERENCE_FLAP_FRAMES*.png); the chord thins to
+       scale(1,.5) at the top of the upstroke, where a real wing is nearly a line. */React.createElement("g",{className:"osp_wing_back osp_wfly"},React.createElement("path",{d:"M50,17.5 C60,16.5 73,17.1 88,20.6 C89.5,21.1 89.6,22 88.4,22.4 C77,25.8 62.5,26 51.7,24.9 C50.3,23.7 49.6,20.3 50,17.5 Z",fill:"#322B25",stroke:"#1B1714",strokeWidth:"1",strokeLinejoin:"round"}),React.createElement("path",{d:"M53.9,23.4 C65.4,23.7 76.4,22.7 85.4,21.4 M52.9,20.2 C63.4,20.3 74.4,20.5 83.4,20.6",fill:"none",stroke:"#6E6156",strokeWidth:".8",opacity:".5",strokeLinecap:"round"})),React.createElement("path",{className:"osp_body",d:"M29,25 C35,18 46,16 57,20 C64,22 67,28 65,33 C62,39 54,43 43,42 C34,42 27,38 24,32 Z",fill:"#6A5C50",stroke:"#2E2924",strokeWidth:"1.25",strokeLinejoin:"round"}),React.createElement("path",{d:"M28,31 C36,35 47,38 60,32 C58,38 51,41 43,41 C35,41 29,38 26,33 Z",fill:"#E6DED1",opacity:".96"}),React.createElement("path",{d:"M32,25 C39,19 48,19 56,22 C50,22 41,24 34,29 Z",fill:"#9B8878",opacity:".85"}),React.createElement("path",{d:"M31,33 C38,37 48,39 57,34",fill:"none",stroke:"#FFFFFF",strokeWidth:"1.05",opacity:".55",strokeLinecap:"round"}),/* THE PERCH POSE (Gray, 07/31: "we need him to actually flap his wings like a real
        bird" + "I would think it needs both. The perch and the wings flapping").
        A bird on a piling has its wings FOLDED, so the sprite now carries both sets and
        the stage clock hard-cuts between them - opacity only, never interpolated, the
        same discrete-slot trick the turtle turnaround uses, so nothing scales at the cut.
        The folded wing lies along the flank and its primaries overhang the tail base,
-       which is where a real closed wing ends. */React.createElement("g",{className:"osp_wperch"},React.createElement("path",{d:"M33.6,23 C41,20.8 49.4,21.6 56.4,24.8 C61.6,27.2 64.8,30.2 66,33 C62,34.2 56.4,33.8 50.6,32 C43.4,29.8 37.4,26.4 33.6,25.2 Z",fill:"#5E5147",stroke:"#2E2924",strokeWidth:"1.1",strokeLinejoin:"round"}),React.createElement("path",{d:"M37,24.6 C43.6,25.6 50.6,27.6 57.4,30.6 M36.6,26.4 C42.6,28 48.8,30 54.6,32.4",fill:"none",stroke:"#A79687",strokeWidth:".85",opacity:".6",strokeLinecap:"round"}),React.createElement("path",{d:"M60,30.6 C64.4,31.8 68.8,33.4 72.6,35.6 C68.6,36.6 63.8,36 59.6,34.2 Z",fill:"#4B403A",stroke:"#28241F",strokeWidth:"1",strokeLinejoin:"round"})),/* 08/17 — THE FLIGHT WING, REBUILT AS ONE SURFACE. Gray, after rejecting four
-       variants of the arm+hand rig: "It just needs to flap. And look like one wing not
-       2 bones" — and then: "symmetrically in a straight line across the body", which
-       killed the near/far perspective pair outright. So: ONE tapered blade, authored
-       ONCE (the right wing, root chord ON the near shoulder at x 52.6-54.7, tip at 86),
-       widest at the root, pointed at the tip — the Cornell filmstrip silhouette
-       (claude/design/OSPREY_REFERENCE_FLAP_FRAMES*.png). The left wing is the SAME
-       path inside a static mirror wrapper about the body's mid-axis x=49, so the two wings
-       are geometric mirrors by construction and both carry the SAME animation
-       (osp_flap): identical computed transforms, mirror on screen, zero lag possible.
-       Roots sit at the two shoulders (screen x 45 and 53, mirror-equal about 49); the
-       origin is stated in each wing's own user units, so the mirrored copy pivots at
-       its own root.
-       Foreshortening is the flap's own, not a view-angle trick: scale(1,.5) thins the
-       chord at the top of the upstroke (the near-line frame in the reference), full
-       chord at the bottom of the downstroke. One fill on both wings — straight on,
-       both catch the same light — and it is a step DARKER than the back (#463B32 on
-       #6A5C50): the wing crosses the body twice a beat, and matching tones there is
-       what made an earlier pass read as a slab lying on the bird. Drawn OVER the body and UNDER the head: the wings
-       must cross the body to read attached, and the head stays proud so the eye and
-       bill are never covered mid-beat. */React.createElement("g",{transform:"matrix(-1,0,0,1,98,0)"},React.createElement("g",{className:"osp_wing_back osp_wfly"},React.createElement("path",{d:"M53,20 C61.4,16.9 72.4,15.2 85.8,15.9 C87.3,16.1 87.6,17 86.5,17.9 C76.9,24.4 64.4,27 54.7,27.4 C53.3,26.2 52.6,22.8 53,20 Z",fill:"#463B32",stroke:"#221D19",strokeWidth:"1",strokeLinejoin:"round"}),React.createElement("path",{d:"M56.9,25.4 C66.4,23.8 75.4,20.8 82.4,17.8 M55.9,22.7 C64.4,21.2 73.4,18.9 80.4,17.2",fill:"none",stroke:"#B8A793",strokeWidth:".8",opacity:".62",strokeLinecap:"round"}))),React.createElement("g",{className:"osp_wing_front osp_wfly"},React.createElement("path",{d:"M53,20 C61.4,16.9 72.4,15.2 85.8,15.9 C87.3,16.1 87.6,17 86.5,17.9 C76.9,24.4 64.4,27 54.7,27.4 C53.3,26.2 52.6,22.8 53,20 Z",fill:"#463B32",stroke:"#221D19",strokeWidth:"1",strokeLinejoin:"round"}),React.createElement("path",{d:"M56.9,25.4 C66.4,23.8 75.4,20.8 82.4,17.8 M55.9,22.7 C64.4,21.2 73.4,18.9 80.4,17.2",fill:"none",stroke:"#B8A793",strokeWidth:".8",opacity:".62",strokeLinecap:"round"})),React.createElement("g",{className:"osp_head"},/* the YAW layer (Gray: "head moving side to side from time to time").  A bird turning
+       which is where a real closed wing ends. */React.createElement("g",{className:"osp_wperch"},React.createElement("path",{d:"M33.6,23 C41,20.8 49.4,21.6 56.4,24.8 C61.6,27.2 64.8,30.2 66,33 C62,34.2 56.4,33.8 50.6,32 C43.4,29.8 37.4,26.4 33.6,25.2 Z",fill:"#5E5147",stroke:"#2E2924",strokeWidth:"1.1",strokeLinejoin:"round"}),React.createElement("path",{d:"M37,24.6 C43.6,25.6 50.6,27.6 57.4,30.6 M36.6,26.4 C42.6,28 48.8,30 54.6,32.4",fill:"none",stroke:"#A79687",strokeWidth:".85",opacity:".6",strokeLinecap:"round"}),React.createElement("path",{d:"M60,30.6 C64.4,31.8 68.8,33.4 72.6,35.6 C68.6,36.6 63.8,36 59.6,34.2 Z",fill:"#4B403A",stroke:"#28241F",strokeWidth:"1",strokeLinejoin:"round"})),React.createElement("g",{className:"osp_head"},/* the YAW layer (Gray: "head moving side to side from time to time").  A bird turning
          its head toward you does not slide - it FORESHORTENS, so the yaw is a scaleX about
          the NECK JOINT, which is also why the join edge cannot move and the head cannot
          come off the shoulders while it turns. Separate element from the pitch rotate:
@@ -14340,7 +14384,10 @@ function useLiveWx(){const[,bump]=useState(0);useEffect(()=>{const cb=()=>bump(n
        against a white belly they also had nothing to separate them from the bird.
        The talons carry their own dark stroke - "their talons are perfectly round" and "all
        four of its toes are the same length" (Dyfi Osprey Project), which is also why the
-       strike splays rather than curls. */React.createElement("g",{className:"osp_legs",stroke:"#9FB4BF",strokeWidth:"1.15",strokeLinecap:"round"},React.createElement("path",{d:"M41,40 L39.5,47 L37.5,48.5 M44,40 L44.5,47 L46.4,48.5"}),React.createElement("path",{className:"osp_talon",d:"M37.5,48.5 L35.8,47.6 M46.4,48.5 L48.1,47.8",stroke:"#2B3339"})),React.createElement("g",{className:"osp_fish"},React.createElement("path",{d:"M38,48.2 C41,45.3 46.4,45.4 49.2,48.1 C46.7,50.6 41.2,50.8 38,48.2 Z",fill:"#8FD1D1",stroke:"#2E6975",strokeWidth:".75"}),React.createElement("path",{d:"M48.5,48.1 L52.2,45.9 L51.5,48.2 L52.2,50.4 Z",fill:"#7AB9C0",stroke:"#2E6975",strokeWidth:".65",strokeLinejoin:"round"}),React.createElement("circle",{cx:"41.5",cy:"47.6",r:".55",fill:"#1D3940"}),React.createElement("path",{d:"M43.4,46.4 L45.5,49.7",stroke:"#D9F3EE",strokeWidth:".55",opacity:".8"})));}/* One original, non-interactive hero story: a local fish hawk glides, splashes, and returns with its prize.
+       strike splays rather than curls. */React.createElement("g",{className:"osp_legs",stroke:"#9FB4BF",strokeWidth:"1.15",strokeLinecap:"round"},React.createElement("path",{d:"M41,40 L39.5,47 L37.5,48.5 M44,40 L44.5,47 L46.4,48.5"}),React.createElement("path",{className:"osp_talon",d:"M37.5,48.5 L35.8,47.6 M46.4,48.5 L48.1,47.8",stroke:"#2B3339"})),React.createElement("g",{className:"osp_fish"},React.createElement("path",{d:"M38,48.2 C41,45.3 46.4,45.4 49.2,48.1 C46.7,50.6 41.2,50.8 38,48.2 Z",fill:"#8FD1D1",stroke:"#2E6975",strokeWidth:".75"}),React.createElement("path",{d:"M48.5,48.1 L52.2,45.9 L51.5,48.2 L52.2,50.4 Z",fill:"#7AB9C0",stroke:"#2E6975",strokeWidth:".65",strokeLinejoin:"round"}),React.createElement("circle",{cx:"41.5",cy:"47.6",r:".55",fill:"#1D3940"}),React.createElement("path",{d:"M43.4,46.4 L45.5,49.7",stroke:"#D9F3EE",strokeWidth:".55",opacity:".8"})),/* the NEAR wing — the same blade as the far one in every respect (path, root
+       height, keyframes, clock), LAST in document order so it is the one complete,
+       fully visible wing in front of the body. Depth is the z-order and the far
+       wing's darker fill, nothing else. */React.createElement("g",{className:"osp_wing_front osp_wfly"},React.createElement("path",{d:"M44,17.5 C54,16.5 67,17.1 82,20.6 C83.5,21.1 83.6,22 82.4,22.4 C71,25.8 56.5,26 45.7,24.9 C44.3,23.7 43.6,20.3 44,17.5 Z",fill:"#463B32",stroke:"#221D19",strokeWidth:"1",strokeLinejoin:"round"}),React.createElement("path",{d:"M47.9,23.4 C59.4,23.7 70.4,22.7 79.4,21.4 M46.9,20.2 C57.4,20.3 68.4,20.5 77.4,20.6",fill:"none",stroke:"#B8A793",strokeWidth:".8",opacity:".62",strokeLinecap:"round"})));}/* One original, non-interactive hero story: a local fish hawk glides, splashes, and returns with its prize.
    It reuses the detailed bird art from the shared card skit, rather than introducing a one-off asset. */function HeroOspreyPass({phase}){if(REDUCE||phase==="night")return null;return React.createElement("span",{className:"hkop","aria-hidden":"true"},React.createElement("span",{className:"hkop_bird"},React.createElement("span",{className:"hkop_in"},React.createElement(OspreySvg,{w:74}))),React.createElement("span",{className:"hkop_splash"},React.createElement("i",{className:"hkop_ring1"}),React.createElement("i",{className:"hkop_ring2"}),React.createElement("i",{className:"hkop_spray1"}),React.createElement("i",{className:"hkop_spray2"})));}function MulletSvg({w=32}){/* A Gulf striped mullet is stout and silver-green rather than a generic blue fish: dark back,
      pale belly, two separated dorsals, longitudinal flank stripes and a compact forked tail.
      The tail stays
@@ -14978,7 +15025,7 @@ function useLiveWx(){const[,bump]=useState(0);useEffect(()=>{const cb=()=>bump(n
    the stand is the truth. A colour nobody earned is worse than no colour, which
    is the same law verifiedOn runs on.
    =========================================================================== *//* GCA_FLAG_DATA_BEGIN — one line, replaced verbatim by claude/harness/bake_beach_flag.js.
-   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-17T23:04:07.718Z","issued":"2026-08-17T20:05:00+00:00","productId":"17ee71c3-9b80-4777-ac17-475aeb294673","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"},"forecastSource":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"observed","county":{"level":1,"flags":["green","purple"],"risk":"Low","marineLife":true,"waterTempF":87,"updated":"2026-08-17T14:39:08.18Z","chance":{"green":60,"yellow":40,"red":0,"doubleRed":0,"marineLife":70},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-17","risk":"Low","flags":["green","purple"],"observedAt":"2026-08-17T14:39:08.18Z","chance":{"green":60,"yellow":40,"red":0,"doubleRed":0,"marineLife":70},"surf":"1 to 2 feet","uv":"Very High","water":"87°F","weather":"Sunny. A slight chance of showers and thunderstorms","winds":"West winds 10 to 15 mph"},"outlook":[{"date":"2026-08-17","label":"Today","risk":"Moderate","flags":["yellow"],"surf":"1 to 2 feet"},{"date":"2026-08-18","label":"Tuesday","risk":"Moderate","flags":["yellow"],"surf":"2 to 3 feet"},{"date":"2026-08-19","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-20","label":"Thursday","risk":"Low","flags":["green"],"surf":"1 to 2 feet"},{"date":"2026-08-21","label":"Friday","risk":"Low","flags":["green"],"surf":"Around 1 foot"}],"alerts":[{"event":"Extreme Heat Warning","headline":"Extreme Heat Warning issued August 17 at 11:48AM CDT until August 18 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...For the Heat Advisory, heat index values up to 112. For the\nExtreme Heat Warning, dangerously hot conditions with heat index\nvalues up to 115 expected.\n\n* WHERE...In Alabama, Baldwin Central, Baldwin Coastal, Mobile\nCentral, and Mobile Coastal Counties. In Florida, Escambia Coastal,\nOkaloosa Coastal, and Santa Rosa Coastal Counties.\n\n* WHEN...For the Heat Advisory, until 8 PM CDT this evening. For the\nExtreme Heat Warning, from 11 AM to 8 PM CDT Tuesday.\n\n* IMPACTS...Heat related illnesses increase significantly during\nextreme heat and high humidity events. Hot temperatures and high\nhumidity may cause heat illnesses.","severity":"Severe","onset":"2026-08-18T11:00:00-05:00","ends":"2026-08-18T20:00:00-05:00"},{"event":"Heat Advisory","headline":"Heat Advisory issued August 17 at 11:48AM CDT until August 17 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...For the Heat Advisory, heat index values up to 112. For the\nExtreme Heat Warning, dangerously hot conditions with heat index\nvalues up to 115 expected.\n\n* WHERE...In Alabama, Baldwin Central, Baldwin Coastal, Mobile\nCentral, and Mobile Coastal Counties. In Florida, Escambia Coastal,\nOkaloosa Coastal, and Santa Rosa Coastal Counties.\n\n* WHEN...For the Heat Advisory, until 8 PM CDT this evening. For the\nExtreme Heat Warning, from 11 AM to 8 PM CDT Tuesday.\n\n* IMPACTS...Heat related illnesses increase significantly during\nextreme heat and high humidity events. Hot temperatures and high\nhumidity may cause heat illnesses.","severity":"Moderate","onset":"2026-08-17T11:48:00-05:00","ends":"2026-08-17T20:00:00-05:00"}]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
+   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-17T23:41:42.478Z","issued":"2026-08-17T20:05:00+00:00","productId":"17ee71c3-9b80-4777-ac17-475aeb294673","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"},"forecastSource":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"observed","county":{"level":2,"flags":["yellow","purple"],"risk":"Moderate","marineLife":true,"waterTempF":87,"updated":"2026-08-17T23:04:38.59Z","chance":{"green":50,"yellow":50,"red":0,"doubleRed":0,"marineLife":30},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-17","risk":"Moderate","flags":["yellow","purple"],"observedAt":"2026-08-17T23:04:38.59Z","chance":{"green":50,"yellow":50,"red":0,"doubleRed":0,"marineLife":30},"surf":"1 to 2 feet","uv":"Very High","water":"87°F","weather":"Sunny. A slight chance of showers and thunderstorms","winds":"West winds 10 to 15 mph"},"outlook":[{"date":"2026-08-17","label":"Today","risk":"Moderate","flags":["yellow"],"surf":"1 to 2 feet"},{"date":"2026-08-18","label":"Tuesday","risk":"Moderate","flags":["yellow"],"surf":"2 to 3 feet"},{"date":"2026-08-19","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-20","label":"Thursday","risk":"Low","flags":["green"],"surf":"1 to 2 feet"},{"date":"2026-08-21","label":"Friday","risk":"Low","flags":["green"],"surf":"Around 1 foot"}],"alerts":[{"event":"Extreme Heat Warning","headline":"Extreme Heat Warning issued August 17 at 11:48AM CDT until August 18 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...For the Heat Advisory, heat index values up to 112. For the\nExtreme Heat Warning, dangerously hot conditions with heat index\nvalues up to 115 expected.\n\n* WHERE...In Alabama, Baldwin Central, Baldwin Coastal, Mobile\nCentral, and Mobile Coastal Counties. In Florida, Escambia Coastal,\nOkaloosa Coastal, and Santa Rosa Coastal Counties.\n\n* WHEN...For the Heat Advisory, until 8 PM CDT this evening. For the\nExtreme Heat Warning, from 11 AM to 8 PM CDT Tuesday.\n\n* IMPACTS...Heat related illnesses increase significantly during\nextreme heat and high humidity events. Hot temperatures and high\nhumidity may cause heat illnesses.","severity":"Severe","onset":"2026-08-18T11:00:00-05:00","ends":"2026-08-18T20:00:00-05:00"},{"event":"Heat Advisory","headline":"Heat Advisory issued August 17 at 11:48AM CDT until August 17 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...For the Heat Advisory, heat index values up to 112. For the\nExtreme Heat Warning, dangerously hot conditions with heat index\nvalues up to 115 expected.\n\n* WHERE...In Alabama, Baldwin Central, Baldwin Coastal, Mobile\nCentral, and Mobile Coastal Counties. In Florida, Escambia Coastal,\nOkaloosa Coastal, and Santa Rosa Coastal Counties.\n\n* WHEN...For the Heat Advisory, until 8 PM CDT this evening. For the\nExtreme Heat Warning, from 11 AM to 8 PM CDT Tuesday.\n\n* IMPACTS...Heat related illnesses increase significantly during\nextreme heat and high humidity events. Hot temperatures and high\nhumidity may cause heat illnesses.","severity":"Moderate","onset":"2026-08-17T11:48:00-05:00","ends":"2026-08-17T20:00:00-05:00"}]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
    same words fetch_beach_flag.js emits so the two cannot drift apart.
    ⚠ 08/13 — GREEN WAS #2E9E5B AND GRAY COULD NOT SEE IT: "not able to be seen very vividly.
    Needs to be filled it i guess or more vivid less dark green." Measured, he is right by a
