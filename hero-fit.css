@@ -1,31 +1,9 @@
-/* HERO FIT — geometry only.
-   web/hero.css is GENERATED from the app and must never be hand-edited. This file is the one
-   place the lifted hero is adapted to web widths: size, crop, layer scale, breakpoints, and the
-   relationship between the scene and the copy over it. Nothing else belongs here.
 
-   THE ELASTIC STAGE. The hero was authored on a 430x298 phone card. Here it becomes a full-bleed
-   masthead by scaling that stage NON-UNIFORMLY — X to the viewport (--sx), Y to the masthead
-   height (--sy) — because the scene is mostly fluids: sky gradients, sea bands, sand and surf all
-   read BETTER stretched wide. The rigid bodies that would distort (moon, sloop, stars, beach
-   props, shore lights) are counter-scaled back to a uniform size of their own (--um, --ub, --us,
-   --up), each about the anchor that must not move. Where a rigid body's transform is animated by
-   a generated @keyframes, that keyframe set is re-declared here with the counter-scale baked into
-   every frame — last declaration wins, so hero.css needs no edit.
 
-   Anchoring: the stage pins BOTTOM-RIGHT. Bottom, so the beach always hugs the masthead's foot;
-   right, so the moon / glitter lane / sloop — the right-hand event — never crop, and any excess
-   stage crops on the left, under the copy's dark wash where nothing is lost. Left-anchored
-   residents (beach props, shore lights) are re-shifted to the VISIBLE left edge with --vwl, the
-   viewport width expressed in stage-logical px, so they never fall into the crop. */
 
-/* ---------------------------------------------------------------- the stage */
 
 .scene-stage{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;
-  /* safety net: if copy ever outgrows the stage, the sliver above the stage
-     continues the sky instead of showing the page background. The phase floats
-     with the deploy clock, so the backstop is keyed per phase off each sky
-     gradient's 0% stop — one hard-coded night blue leaked a midnight ceiling
-     onto a noon sky the day the cron ran at 10am. */
+  
   background:var(--skytop,#050B18)}
 body.ph-day .scene{--skytop:#4FA5D2}
 body.ph-dawn .scene{--skytop:#6D83AE}
@@ -36,15 +14,12 @@ body.ph-night .scene{--skytop:#050B18}
   margin:0;padding:0;min-height:0;overflow:visible;
   transform:scale(var(--sx),var(--sy));transform-origin:100% 100%}
 
-/* when the copy runs taller than the stage, the sliver above it continues the
-   stage's own top-of-sky color, attached to the stage so the joint cannot show. */
+
 .scene-stage .hero::before{content:"";position:absolute;bottom:100%;left:0;
   width:100%;height:340px;background:var(--skytop,#050B18)}
 
-/* -------------------------------------------------- the scale, per viewport */
-/* --sx makes the 430px stage cover (and slightly overshoot) the viewport; --vwl is the viewport
-   width in stage-logical px (100vw / --sx, kept as a literal division so no var-math is needed).
-   On phones --sx runs ~1.35x so the scene CROPS into its left field rather than shrinking. */
+
+
 
 .scene{--sx:1.35;--vwl:calc(100vw / 1.35)}
 @media (min-width:431px){.scene{--sx:1.45;--vwl:calc(100vw / 1.45)}}
@@ -57,12 +32,8 @@ body.ph-night .scene{--skytop:#050B18}
 @media (min-width:1750px){.scene{--sx:4.95;--vwl:calc(100vw / 4.95)}}
 @media (min-width:2100px){.scene{--sx:6;--vwl:calc(100vw / 6)}}
 
-/* ------------------------------------------- the two sizes, and their crops */
-/* TALL (home): the full 298 logical rows, stretched — masthead height IS 298 x --sy.
-   BAND (interior): a fixed quiet height; the stage keeps ~natural vertical scale and the surplus
-   sky crops off the TOP (the stage is bottom-anchored), so interior pages keep horizon, sea and
-   sand and give up only empty sky. The moon is re-seated lower so it rides just above the
-   horizon inside the crop window. */
+
+
 
 .scene.tall{--sy:2.1;--um:1.2;--us:1.25;--ub:1.15;--up:1.05;
   min-height:calc(298px * var(--sy))}
@@ -71,20 +42,8 @@ body.ph-night .scene{--skytop:#050B18}
 @media (min-width:1280px){.scene.tall{--sy:2.2;--um:2.1;--us:1.9;--ub:1.9;--up:1.6}}
 @media (min-width:1536px){.scene.tall{--sy:2.25;--um:2.3;--us:2.05;--ub:2.05;--up:1.75}}
 
-/* ------------------------------------------- the tall masthead under 901px */
-/* Below 901px site.css swaps the copy's radial wash for a full-width vertical
-   veil at .88 alpha, dense from the scene's top edge to the copy block's
-   bottom. NOTHING behind that veil can exceed ~1.3:1 — measured, not guessed:
-   a pure-white sail composites to rgb(36,43,52) against the veiled sky. The
-   only honest light on a phone is the veil's own tail: it falls to .52 by
-   copy-bottom+42px and to zero at +64px. So under 901 the stage grows past the
-   copy, slides down 57 logical rows so the beach (which would otherwise put
-   the sloop on wet sand) crops off the bottom, and the sloop drops to ride the
-   open water inside that clear strip — moonlit, unveiled, whole. The moon
-   itself lifts mostly above the top crop: a lower limb and its halo in the
-   one sliver of sky the copy doesn't own, with the lane running down from it.
-   The bottom of the phone masthead stops being 180px of black and becomes the
-   scene: glade, glints, swells, sloop. */
+
+
 @media (max-width:900px){
   .scene.tall{--sy:2.72;--um:.85;--us:1.25;--ub:1.3;--up:1.05;--moonr:2px;
     min-height:calc(298px * 2.72)}
@@ -93,22 +52,15 @@ body.ph-night .scene{--skytop:#050B18}
   .scene.tall .sunb{top:-66px}
   .scene.tall .hk_boat{top:157px !important}
   .scene.tall .boat-refl{top:214px}
-  /* unveiled water gets the lane at full song — but the 2.7x vertical stretch
-     turns crisp facets into stacked beads, so the melt is a touch heavier */
+  
   .scene.tall .glit{top:148px;height:100px}
   .scene.tall .glit .lane{filter:blur(1.3px);opacity:.95}
 }
 
-/* ⚠ 08/11 — --up WAS MISSING FROM EVERY BAND STEP, SO ON ~590 INTERIOR PAGES `calc(var(--up) /
-   var(--sx))` WAS INVALID AND THE WHOLE `transform` DECLARATION FELL AWAY. The beach props have
-   carried a rigid-body correction since 08/09 and got none of it anywhere but the home page —
-   silently, because an invalid var does not warn, it just leaves `transform:none`. It sits on the
-   same ladder as --ub, ~0.85 of it, which is the ratio the tall steps already hold. */
+
 .scene.band{--sy:.83;--um:1;--us:1.05;--ub:1.05;--up:.9;min-height:200px}
 @media (min-width:768px){.scene.band{--sy:.9;--um:1.35;--us:1.2;--ub:1.25;--up:1.05;min-height:232px}}
-/* only move the moon off the sloop's column once the copy wash goes radial
-   (site.css switches at 901px); under the narrow full-width wash a mid-sky
-   moon reads as a dark ghost behind the veil */
+
 @media (min-width:901px){.scene.band{--moonr:110px}}
 @media (min-width:1280px){.scene.band{--sy:1;--um:1.6;--us:1.35;--ub:1.45;--up:1.2;min-height:264px;--moonr:130px}}
 
@@ -116,99 +68,35 @@ body.ph-night .scene{--skytop:#050B18}
 @media (min-width:768px){.scene.band.short{--sy:.78;--um:1.1;--up:.95;min-height:200px}}
 @media (min-width:1280px){.scene.band.short{--sy:.84;--um:1.15;--up:1.05;min-height:216px}}
 
-/* the band's moon self-seats: its lower limb held a fixed clearance above the
-   horizon (drawn at 145 logical), whatever the crop and stretch — 26px keeps it
-   off the sloop's mast tip when the two share the right edge */
+
 .scene.band .sunb{top:calc(145px - (60px * var(--um) + var(--seat,26px)) / var(--sy))}
 
-/* ⚠ 08/11 — THE SEAT WAS SOLVING FOR THE HORIZON AND NOTHING WAS SOLVING FOR THE CROP, so on the
-   band pages whose headline is one line the moon rose straight into the top edge. Measured on
-   publish/mission.html, contact.html, support.html and terms.html — sky above the moon's own top:
 
-     320    430      901     1024    1280    1440+
-     4.4    -13.0    21.9    24.6    -0.1    2.6      (px, negative = the crown is cut off)
 
-   A whole disc tangent to an edge already reads as sliced, so 2.6px is not a pass either. The
-   pages with more headline are fine at every width (this-weekend 37-85, sponsors 66-91): the band
-   grows with its copy, so the SHORT pages get the tight crop and nobody had looked at them.
-
-   ⚠ AND THE SAME MEASUREMENT FOUND A SECOND ONE THE SCREENSHOT MAKES OBVIOUS AND THE NUMBER
-   NAMES: at 320 and 430 the moon OVERLAPPED THE SLOOP by 1,811px² on the band pages and 2,547px²
-   on the short band — a dark disc behind a lit mainsail. That is precisely what the 26px seat was
-   written to prevent, and it was never going to, because the two share the right edge only below
-   901px and the seat moves the moon VERTICALLY.
-
-   THE FIX IS THE ONE THE FILE ALREADY USES ABOVE 901, APPLIED WHERE IT WAS MISSING. --moonr moves
-   the moon off the sloop's column; below 901 it was left at the 28px default, so it sat directly
-   over the mast. 100px clears it and there is room, because the visible stage at 430 is 297
-   logical px wide.
-   ⚠ AND THE SEAT COMES DOWN RATHER THAN THE BAND GROWING TALLER. Buying 16px of sky by raising
-   min-height would spend a reader's density on ~590 interior pages to fix a moon. Lowering the
-   seat costs nothing and puts the moon nearer the horizon, which is what the band was always
-   described as doing. The 26px mast clearance is not lost by this: above 901 --moonr has already
-   taken the moon out of the sloop's column, so the number was guarding a collision that cannot
-   happen there, and below 901 --moonr now does the same job properly.
-
-   After: 26.4 / 9.0 / 37.9 / 40.6 / 15.9 / 18.6 px of sky, and ZERO overlap with the sloop at
-   every width on every band page. gate_site_hero holds both. */
-/* ⚠ 80px, NOT 100px, AND GRAY PICKED IT OFF THE RENDER: "Think the moon should be slightly right
-   a little and the light reflecting off the water?" 100px cleared the sloop by the widest margin
-   and read as the moon retreating into the copy's half of the frame. 80px puts its centre at x=272
-   of 430 — between the headline and the sail, with open water under it. He looked again at the
-   desktop band and left it where it is.
-   ⚠ AND THE LANE FOLLOWS IT FOR FREE, which is the answer to the second half of his note: --lcx is
-   `--moonr + 47px * --k`, so the glitter's mask re-centres on whatever column the moon is in and
-   the reflection arrives UNDER the moon rather than beside it. Measured: the lane's width tracks
-   --moonr, 272px at 100 down to 239px at 76. Nothing about the reflection is hand-placed and
-   nothing about it needed touching. */
 @media (max-width:900px){.scene.band{--moonr:80px;--seat:4px}}
 @media (min-width:901px){.scene.band{--seat:10px}}
 
-/* ⚠ 08/11 — PAST 1440 THE SCENE STOPPED COMPOSING AND STARTED STRETCHING. The stage is
-   right-anchored, so as the viewport grows the moon-lane-sloop event stays glued to the corner
-   while the copy stays inside the centered 1200px wrap — at 2560 the gap between them measured
-   991px, 38.7% of the scene, against 300px / 27.3% at 1100. Same scene, wider hole.
-   So on wide canvases the right-hand event slides INBOARD, on the two knobs that already exist
-   for exactly this (--moonr, and --boatr introduced beside it): the group re-seats toward the
-   upper-third point the 1100/1440 composition already uses, and the surplus water moves to the
-   OUTSIDE of the frame, where open sea reads as the scene continuing rather than as a hole
-   between the words and the subject. The lane, the reflection and the hull shimmer all ride the
-   same two variables, so nothing is re-tuned by hand. Values are stage-logical px (multiplied by
-   --sx on screen: at 2560 the tall group sits ~500 real px in from the corner). */
+
 @media (min-width:1536px){.scene.tall{--moonr:40px;--boatr:30px}}
 @media (min-width:1750px){.scene.tall{--moonr:56px;--boatr:42px}}
 @media (min-width:2100px){.scene.tall{--moonr:84px;--boatr:64px}}
-/* the band's moon is already inboard (130 logical at 1280+); only the sloop needs to leave the
-   corner, and only once the canvas is wide enough that the corner is a long way from the lane */
+
 @media (min-width:1750px){.scene.band{--boatr:40px}}
 @media (min-width:2100px){.scene.band{--moonr:150px;--boatr:66px}}
 
-/* ------------------------------------- rigid bodies: aspect put back, sized */
 
-/* the moon: right edge and top stay put, the disc returns to a circle at --um.
-   --moonr lets a layout move the moon off the sloop's column (the two share the
-   right edge in the authored card, which is a totem pole at band heights). */
+
+
 .scene-stage .sunb{transform-origin:100% 0;right:var(--moonr,28px);
   transform:scale(calc(var(--um) / var(--sx)),calc(var(--um) / var(--sy)))}
 
-/* ------------------------------------------------------- the moon's lane */
-/* Ratios the lane math leans on: --k is a rigid-body px expressed in stage px
-   (moon family), --kb the same for the boat. --lcx is the moon disc's centre
-   measured from the stage's right edge, in stage px — the one x that the lane's
-   core, its mask and the moon itself must agree on at every breakpoint. --bcx
-   is the sloop's mast foot from the right edge, where the water under the hull
-   picks up its own shimmer. */
+
+
 .scene{--k:calc(var(--um) / var(--sx));--kb:calc(var(--ub) / var(--sx));
   --lcx:calc(var(--moonr,28px) + 47px * var(--k));
   --bcx:calc(var(--boatr,18px) + 49px * var(--kb))}
 
-/* The lane itself: a masked radial falloff, brightest at the horizon directly
-   under the moon, dissolving toward the viewer, with the sloop's water inside
-   its reach — the container runs from the stage's right edge (under the sloop)
-   left past the moon's column, and the mask is the only outline it has: an
-   ellipse of alpha centred on the moon's column at the horizon, so intensity
-   falls off in every direction and no edge exists anywhere. The generated
-   clip-path trapezoid is removed outright. */
+
 .scene-stage .glit{
   top:145px;right:0;height:96px;
   width:calc(var(--moonr,28px) + 118px * var(--k) + 14px);
@@ -220,50 +108,23 @@ body.ph-night .scene{--skytop:#050B18}
     rgba(0,0,0,1) 0%,rgba(0,0,0,.88) 18%,rgba(0,0,0,.62) 40%,
     rgba(0,0,0,.38) 62%,rgba(0,0,0,.16) 82%,transparent 98%)}
 
-/* the sloop: hull stays on its waterline at the right, boat returns to shape.
-   ⚠ 08/11 — --boatr is the sloop's column, in stage-logical px, exactly as --moonr is the
-   moon's. It exists because past 1440 the right-hand event was pinned in the corner while the
-   copy stayed inside the centered 1200px wrap, and everything between them was open water —
-   measured at 39.3% of the scene at 2560 on the home hero. The !important is required: the
-   sloop's right:18px is an inline style from the lifted app hero, the same reason the mobile
-   top override above uses one. The reflection and the hull's water shimmer (--bcx above)
-   follow the same variable, so the boat never sails away from its own light. */
+
 .scene-stage .hk_boat{transform-origin:100% 74%;right:var(--boatr,18px) !important;
   transform:scale(calc(var(--ub) / var(--sx)),calc(var(--ub) / var(--sy)))}
 .scene-stage .boat-refl{transform-origin:100% 50%;right:calc(var(--boatr,18px) + 4px)}
 
-/* stars: static pose for reduced-motion; the live pose lives in the re-declared
-   keyframes below. --stx/--sty resolve per element from the scene's scale. */
+
 .scene{--stx:calc(var(--us) / var(--sx));--sty:calc(var(--us) / var(--sy))}
 
-/* ------------------------------------------------- the creatures get an aspect too */
-/* ⚠ THE RIGID-BODY CORRECTION EXISTED FOR THE MOON, THE BOAT, THE STARS AND THE BEACH PROPS, AND
-   FOR NOTHING ALIVE. Gray, 08/09: "the animals look stretched. especially the bird flapping."
-   He is describing the gap exactly. The stage is scaled --sx by --sy and those two are not equal —
-   at 1750px it is 4.95 wide against 2.25 tall — so every descendant is drawn more than twice as wide
-   as it is tall unless something puts the aspect back. Four things had that something. A bird did
-   not, and a bird is the one shape on the scene whose proportions a reader knows by heart.
 
-   ⚠ THE CORRECTION GOES ON THE INNERMOST SVG, AND THAT IS NOT A STYLE CHOICE. .skbg carries the
-   flight path and .sksoar carries the soar bob, both of them animating TRANSFORM; a static transform
-   on either is overwritten the instant the animation starts, which is the same trap that stopped the
-   surf strip being widened. The svg inside them animates nothing, so it is the one free hook in the
-   chain. Measured on the rendered element, not assumed from the markup.
 
-   --uc is the creature's final scale in BOTH axes: the parent multiplies by (sx, sy) and this
-   divides it straight back out, so 1 means "the size it was drawn at, with its own proportions". */
 .scene{--uc:1}
 @media (min-width:768px){.scene{--uc:1.25}}
 @media (min-width:1024px){.scene{--uc:1.4}}
 @media (min-width:1280px){.scene{--uc:1.6}}
 @media (min-width:1536px){.scene{--uc:1.8}}
 @media (min-width:1750px){.scene{--uc:2}}
-/* ⚠ 08/11 — THE SANDPIPERS WERE NEVER IN THIS SELECTOR AND THEY ARE THE CREATURE GRAY NAMED.
-   `svg.pipbird` measured 56.0 x 29.0 at 1100 and 115.9 x 32.6 at 2560 — 107% wider and 12% taller,
-   drawn at 1.84x its own aspect — while the two gull selectors beside it were provably correct.
-   It hid because the trot runs on `.pip` and the flap on `.pipin`, so a diagnostic that reported
-   only the OUTERMOST anisotropic box named the full-width `.pipw` wrapper and stopped there. The
-   svg is the free hook in this chain exactly as it is in the gulls'. */
+
 .scene-stage .skbg > .sksoar > svg,
 .scene-stage .pipw svg,
 .scene-stage .skbwrap svg{
@@ -272,128 +133,33 @@ body.ph-night .scene{--skytop:#050B18}
 .scene-stage .hkn_st1,.scene-stage .hkn_st2,.scene-stage .hkn_st3{
   transform:scale(var(--stx),var(--sty))}
 
-/* beach props sit at the VISIBLE left edge, not the stage's cropped one */
+
 .scene-stage .beachprops{transform-origin:0 100%;
   transform:translateX(calc(430px - var(--vwl)))
     scale(calc(var(--up) / var(--sx)),calc(var(--up) / var(--sy)))}
 
-/* the three far shore lights follow the visible edge too, dots kept round-ish */
+
 .scene-stage .hkn_tl{
   transform:translateX(calc(430px - var(--vwl))) scaleX(calc(var(--sy) / var(--sx)))}
 
-/* ⚠ 08/11 — THE DAY PHASES CARRIED FOUR MORE RIGID BODIES AND NOBODY HAD LOOKED, BECAUSE THE
-   CAPTURE THAT HAPPENED TO SHIP WAS A NIGHT ONE AND THREE OF THE FOUR DO NOT EXIST AFTER DARK.
-   Gray, 08/11: "the hero is still extremely stretched for the website and that needs to be
-   fixed... it needs to be corrected for windows/website".
 
-   Measured on a DAY capture of publish/index.html at 430/1100/1440/1920/2560, walking the
-   accumulated scale to the document root (never getBoundingClientRect on a rotating body):
 
-     | body                     | 1100          | 2560           | aspect 1100 -> 2560 |
-     | .adyacht svg (the yacht) | 249.4 x 62.0  | 516.0 x 69.8   |  4.02 ->  7.40 |
-     | .supw svg (the paddler)  |  25.7 x 26.3  |  53.2 x 29.6   |  0.98 ->  1.80 |
 
-   Both are the raw stage anisotropy --sx/--sy — 1.450 at 1100, 2.667 at 2560 — to three decimals,
-   which is the tell that they simply had no correction at all. The moon, the sloop, the stars, the
-   beach props and the creatures each already had one.
 
-   ⚠ AND THE FIRST PASS WROTE TWO MORE RULES THAT STYLED NOTHING, WHICH IS WORTH THE INK BECAUSE
-   THE MISTAKE IS EASY TO REPEAT. The beach flag (.hfp, measured 0.82 -> 1.52) and the date pill
-   (.hero-date, 5.63 -> 10.35) are stretched in the APP'S hero and are not in the WEBSITE'S: both
-   carry a data-testid, and HERO_STRIP takes `[data-testid]` out of the lift. They were measured on
-   a transplant of the raw app hero rather than on the site's own, which is the same shape of error
-   as measuring the instrument instead of the thing. gate_site_hero uses HERO_STRIP now so the two
-   can never diverge again.
-
-   ⚠ WHAT DELIBERATELY DOES NOT GET ONE, BECAUSE THE LINE IS THE WHOLE DESIGN DECISION.
-   A resident with a silhouette a reader knows by heart gets its aspect back. A LANDSCAPE BAND
-   does not: the sky, the horizon, the surf, the swell, the sand, the wet sheen, the copy scrim
-   and the moon lane are all drawn to span the masthead and are SUPPOSED to widen with it —
-   correcting them would leave a 300px-wide sea in a 2580px window. Nor do the abstract lights:
-   .gl on the lane and .rrip on the ripple field are 2-4px sparks whose entire read is "a glint",
-   a longer glint is still a glint, and .cl is a soft radial blob with no aspect a reader could
-   name — at day it is not separable from the sky gradient at all. Correcting those three would
-   spend the lane's tuning to fix nothing anybody can see.
-
-   ⚠ AND THE SCALE IS --up, NOT A SIXTH LADDER. These are props; --up is the props' ladder and it
-   already steps 1.05 -> 1.75 across the tall breakpoints. A new variable here would be a second
-   way to say something this file already says once.
-
-   ⚠ THE ORIGINS ARE EACH THE ANCHOR THAT MUST NOT MOVE, read off the authored positioning:
-   .hfp is left/bottom (a pole planted in sand), .hero-date is top/right (chrome in a corner),
-   and the two svgs are block children of full-width static wrappers, so their own left edge and
-   baseline are what holds them. None of the four animates transform anywhere in its subtree
-   except .hfp's two ping ellipses, which scale about their own origin and so ride the parent
-   correction without fighting it — checked in the browser, not assumed from the markup. */
-/* the yacht, the paddle boarder and the night fishing poles: three block children of full-width
-   static wrappers, so their own left edge and baseline are what holds them. None animates
-   transform anywhere in its subtree — checked in the browser, not assumed from the markup. */
-/* ⚠ 08/15 — THIS CORRECTION WAS WRITTEN AS `transform` AND THE PADDLER'S OWN ANIMATION ATE IT.
-   `.supw svg` runs `hk_supbob`, which animates `transform`, and an animation REPLACES the static
-   transform for the whole cycle rather than composing with it — so the paddler kept the raw stage
-   anisotropy at every desktop width in day, dawn and golden while the rule sat in the stylesheet
-   looking applied. Measured on the shipped bytes at 1100: `div.supw 72.5x42, iso 1.450`, which is
-   --sx/--sy to three decimals and is the exact "before" number the 08/11 table recorded — the fix
-   never painted once. It passed at night only because the paddler is not out after dark, which is
-   the same "no creatures in this phase capture" blind spot this gate has already been caught by.
-   The yacht and the poles were fine for one reason: their animations sit on the WRAPPER, not on
-   the svg the correction lands on.
-   ⚠ THE FIX IS THE `scale` PROPERTY RATHER THAN A `transform` FUNCTION. The individual transform
-   properties apply BEFORE `transform` in the same matrix, so an animated `transform` composes
-   with them instead of overwriting them. All three take it, not just the broken one: a rule that
-   only works while nobody animates the element it is on is a rule waiting to fail again. */
-/* ⚠ 08/15 — AND THREE MORE PROPS HAD NO CORRECTION AT ALL, TWO OF THEM DRAWN THE DAY BEFORE.
-   They hid behind the paddleboarder for four days because the gate truncated its offender list at
-   four entries and `supw` sorted first: the real counts are 3 bodies off in day, 23 in dawn and
-   80 in golden. Measured 1100 -> 2560, raw --sx/--sy to three decimals in every case, which is
-   the same tell as the yacht's: no correction, not a wrong one.
-     · .adparasail (dawn) — the tow drawn 08/14. 191.4 x 120 at 1100, 396 x 135 at 2560.
-     · .adcart (golden) — the ice-cream cart. 278.4 x 168 at 1100, 576 x 189 at 2560.
-     · .pipsh — the sandpiper SHADOWS. Their birds were corrected on 08/11 and the shadows under
-       them were not, so a 66px smear sat under a 56px bird at 2560. A shadow is not a glint: it
-       is read against the body directly above it, so it takes the bird's own --uc ladder rather
-       than the props' --up, and its origin is its own centre-bottom so it cannot drift off the
-       feet it belongs to.
-   The two new props take the props' ladder and the left-baseline origin, which is their own
-   anchor: the cart is `bottom:3px; left:-90px` and the parasail hangs off a tow to its left. */
 .scene-stage .adyacht > svg,.scene-stage .supw > svg,.scene-stage .npw > svg,
 .scene-stage .adparasail > svg,.scene-stage .adcart > svg{transform-origin:0 100%;
   scale:calc(var(--up) / var(--sx)) calc(var(--up) / var(--sy))}
 .scene-stage .pipw .pipsh{transform-origin:50% 100%;
   scale:calc(var(--uc) / var(--sx)) calc(var(--uc) / var(--sy))}
 
-/* ⚠ 08/12 — THE SPONSORED PILL TAKES THE PROPS' OWN LADDER, AND IT IS THE FIRST TYPE IN THIS FILE
-   TO NEED THE CORRECTION. Every rule above corrects a DRAWING, where a wrong scale reads as a
-   stretched bird. This is a legal disclosure set at 6.5px, and uncorrected it is multiplied by the
-   stage's --sx across and --sy down — a caption several times its drawn size, stretched on top of
-   it, on a masthead where the props it labels are corrected back to theirs.
-   ⚠ THE CONSTRUCTION IS UNIFORM EVEN THOUGH IT LOOKS ANISOTROPIC, and that is the whole reason it
-   is written this way: the stage multiplies by (--sx, --sy) and the pill divides by them, so the
-   NET is --up on both axes and the letterforms are never squashed.
-   ⚠ AND translate IS USED FOR THE CENTRING RATHER THAN transform, because the two are separate
-   properties and the app centres this pill with transform:translateX(-50%). Writing the counter-
-   scale into `transform` would replace that centring outright; `scale` composes with it. */
+
 .scene-stage .hero_sponsor .adlbl,.scene-stage .hero_slot .adlbl{transform-origin:50% 0;
   scale:calc(var(--up) / var(--sx)) calc(var(--up) / var(--sy))}
 
-/* the sand and its wet sheen were drawn 87% wide — on the 430 card the last 56px
-   read as the beach easing into water; stretched to a masthead the mismatch with
-   the 100%-wide surf becomes a bright wedge in the corner. Run them full width;
-   preserveAspectRatio="none" makes the drawn coast simply reach the edge. */
+
 .scene-stage .hero-sand,.scene-stage .hkn_wet{width:100%}
 
-/* What the mask shapes, this paints: the water inside the lane. Not a beam —
-   a field of facets. A hot blaze at the horizon directly under the disc, a
-   column that loosens as it comes forward, a broad body of lit water leaning
-   out to the sloop, and ~25 hand-placed glints — jittered depths, no two the
-   same width, size or offset, every one an ellipse that fades before it ends.
-   Offsets ride --k / --kb so the scatter hangs under the moon and under the
-   hull at every breakpoint; colour rides --glitc through color-mix so a phase
-   re-capture re-tints the whole lane.
-   ⚠ site.css carries a GLOBAL `.lane` for its own drawn scene — width:190px,
-   margin-left:-95px, blur(17px). Those laid the hero's lane 95 stage-px left
-   of its box and were why nothing painted where the math said it would.
-   width:auto / margin:0 below neutralize them; hero.css's inset:0 does the rest. */
+
 .scene-stage .glit .lane{width:auto;margin:0;opacity:1;filter:blur(.7px);background:
   radial-gradient(26px 2.6px at right var(--lcx) top 2px,color-mix(in srgb,var(--glitc) 100%,transparent),transparent 72%),
   radial-gradient(48px 6px at right calc(var(--lcx) - 3px * var(--k)) top 3px,color-mix(in srgb,var(--glitc) 72%,transparent),transparent 74%),
@@ -428,9 +194,7 @@ body.ph-night .scene{--skytop:#050B18}
   radial-gradient(20px 2.8px at right calc(var(--bcx) + 2px * var(--kb)) top 66px,color-mix(in srgb,var(--glitc) 20%,transparent),transparent 70%),
   radial-gradient(16px 2.8px at right calc(var(--bcx) - 6px * var(--kb)) top 76px,color-mix(in srgb,var(--glitc) 16%,transparent),transparent 70%)}
 
-/* the travelling sparks that ride the lane: thinner, softly bloomed, and no
-   two on the same axis — the rebuilt hk_gl below folds each one's cant and
-   thickness into its blink so transform stays the only thing animating */
+
 .scene-stage .gl{height:1.6px;filter:blur(.5px)}
 .scene-stage .glit .gl:nth-of-type(2n){--gr:1.6deg;--gsy:.75}
 .scene-stage .glit .gl:nth-of-type(3n){--gr:-1.3deg;--gsy:1.3}
@@ -441,36 +205,27 @@ body.ph-night .scene{--skytop:#050B18}
   45%,55%{opacity:min(calc(var(--glo,.6) * .8),.5);transform:scale(1,var(--gsy,1)) rotate(var(--gr,0deg))}
 }
 
-/* the sloop sits inside the lane now, so it is lit by it: full opacity (the
-   authored .82 is baked inline, hence the important), sails holding a faint
-   wash of moon, and its dark water-shadow put back under the hull to seat it */
+
 .scene-stage .hk_boat{opacity:1 !important}
 .scene-stage .hk_boat .sails path{fill:#C9D8E6}
 .scene-stage .hk_boat .sails path[fill="url(#hk_maing)"]{fill:#D3E0EC}
 .scene-stage .boat-refl{display:block;opacity:.5}
 
-/* re-lit night shore: the captured scene was tuned for a 298px phone card and
-   its night floor crushes to black once a masthead veil sits over it — lift
-   the sand, props and surf toward moonlight instead of letting them die */
+
 .scene-stage .hero-sand{opacity:.92;filter:brightness(.68) saturate(.75)}
 .scene-stage .beachprops{opacity:.95;filter:brightness(.72) saturate(.78)}
 .scene-stage .hero-surf{opacity:.62}
 .scene-stage .hk_swellw{opacity:.66}
 
-/* film grain: tile size held at true pixels so it never smears */
+
 .scene-stage .grain{background-size:calc(160px / var(--sx)) calc(160px / var(--sy))}
 
-/* the sail carries a placeholder sponsor name in the app; the site masthead is
-   not an ad surface */
+
 .scene-stage .adboatname{display:none}
 
-/* -------------------- re-declared keyframes (last declaration wins) --------
-   Only the sets that animate `transform` on a counter-scaled body, plus the
-   cloud drift whose travel was written in stage px + real vw. Transform and
-   opacity only, exactly like the originals. */
 
-/* clouds: same fade law, travel restated in logical units so a cloud crosses
-   the whole masthead once per loop instead of vanishing off a 3x-scaled vw */
+
+
 @keyframes hk_drift{
   0%{transform:translateX(0);opacity:0}
   7%{opacity:var(--clo,.18)}
@@ -478,7 +233,7 @@ body.ph-night .scene{--skytop:#050B18}
   100%{transform:translateX(calc(480px + var(--vwl)));opacity:0}
 }
 
-/* star twinkle, with the aspect correction folded into every frame */
+
 @keyframes hk_ntw1{
   0%,100%{opacity:.86;transform:scale(var(--stx),var(--sty))}
   50%{opacity:1;transform:scale(calc(var(--stx) * 1.06),calc(var(--sty) * 1.06))}
@@ -492,7 +247,7 @@ body.ph-night .scene{--skytop:#050B18}
   55%{opacity:.7;transform:scale(var(--stx),var(--sty))}
 }
 
-/* the sloop's bob, in its corrected frame */
+
 .scene{--btx:calc(var(--ub) / var(--sx));--bty:calc(var(--ub) / var(--sy))}
 @keyframes hk_sailbob{
   0%{transform:scale(var(--btx),var(--bty)) translateY(2.5px) rotate(1.1deg)}
@@ -506,22 +261,14 @@ body.ph-night .scene{--skytop:#050B18}
   50%{transform:scale(var(--btx),var(--bty)) scaleX(.86);opacity:.36}
 }
 
-/* ------------------------------------------------ the copy over the scene */
-/* The home copy wrap carries the literal class `hero`, so the generated app rules for the app's
-   own hero box land on it: a phase sky background, negative card margins, a 298px min-height.
-   Neutralize exactly that contamination; layout, wash and type stay site.css's business. */
-/* ⚠ 08/15 — THE LEFT/RIGHT PADDING TAKES THE SHARED TOKEN, NOT A LITERAL 20. This rule exists to
-   undo the app's hero box, not to set the site's gutter, and the literal quietly made the home
-   hero the one wrap on the site that could not widen its gutter — measured 20px at 1280 and 1440
-   where every other page had already opened to 50.2 and 60.6. A token doing one job in two files
-   is the same defect this project has already paid for once. */
+
+
+
 .scene .wrap.hero{margin:0 auto;min-height:0;background:none;overflow:visible;
   padding-left:var(--wrap-gutter);padding-right:var(--wrap-gutter)}
 
-/* ------------------------------------------------------------ still, please */
-/* hero.css's own reduced-motion collapse is scoped under the app's `.hk` root, which does not
-   exist on the site — so the collapse is restated here for the lifted scene. Everything freezes;
-   travellers that would freeze mid-sky are removed; clouds take fixed, spread positions. */
+
+
 @media (prefers-reduced-motion:reduce){
   .scene-stage .hero *,
   .scene-stage .hero *::before,
@@ -530,15 +277,9 @@ body.ph-night .scene{--skytop:#050B18}
   .scene-stage .clm1{transform:translateX(300px)}
   .scene-stage .clm2{transform:translateX(150px)}
   .scene-stage .cln1{transform:translateX(430px)}
-  /* the lane's static facets carry the texture; frozen sparks would be the
-     old row-of-bars ghost, so they go */
+  
   .scene-stage .gl{display:none}
-  /* ⚠ THE SAILS AND BURGEE ARE SMIL. The luff of the jib, the belly of the
-     main and the flap of the burgee are <animate attributeName="d"> INSIDE the
-     boat SVG — animation:none cannot touch them and they were the last 925
-     moving pixels under reduce. SMIL sits in the cascade as an override sheet
-     that only !important author declarations outrank, and `d` is a real CSS
-     property in Chromium — so each path is pinned to its authored rest shape. */
+  
   .scene-stage .hk_boat .sails path[fill="url(#hk_jibg)"]{
     d:path("M66,15 L27,72.5 L59,71 C62.5,52 64.5,33 66,15 Z") !important}
   .scene-stage .hk_boat .sails path[fill="url(#hk_maing)"]{
@@ -546,9 +287,7 @@ body.ph-night .scene{--skytop:#050B18}
   .scene-stage .hk_boat path[fill="#C74B3C"]{
     d:path("M69,7.4 L77.5,9.6 L69,12.2 Z") !important}
   .scene-stage .boat-refl{opacity:.4}
-  /* the breaking surf frozen mid-cycle is a bright foam sheet nailed across the
-     shore — the app removes the travelling pieces under reduced motion and
-     keeps a calm swell line at low opacity; do the same */
+  
   .scene-stage .swash,
   .scene-stage .swash_lip,
   .scene-stage .backwash,
@@ -561,54 +300,18 @@ body.ph-night .scene{--skytop:#050B18}
   .scene-stage .swl_body{opacity:.4}
 }
 
-/* ⚠ THE STAGE MUST CLIP. A scaled 430px stage is wider than its box by design — that is how the
-   surplus crops under the copy — but a cloud drifting off the right edge at 768 pushed the whole
-   document 20px wide and gave every detail page a horizontal scrollbar. The scene clips; so does
-   the stage inside it. */
+
 .scene, .scene-stage { overflow: hidden; }
 .scene-stage { contain: paint; }
 
-/* ⚠ AND THE STAGE'S BLEED STILL REACHED THE DOCUMENT. At 768 the detail-page masthead pushed the
-   page 20px wide and it really scrolled — window.scrollX reached 20. Four candidate fixes were
-   measured and only this one worked: `contain: layout paint` on the scene, `overflow: clip` on the
-   scene, on the stage, and on both, all left the 20px. A transformed, absolutely-positioned
-   descendant contributes to the DOCUMENT's scrollable overflow even where an ancestor clips it.
-   Before reaching for this, everything outside `.scene` was measured at 768 and nothing overflows —
-   so this hides no content. `clip`, not `hidden`: `hidden` would make the root a scroll container
-   and break position:sticky on the header. */
+
 html, body { overflow-x: clip; }
 
-/* ============================================================================
-   TWO EDGES, BOTH MEASURED OFF A RENDERED PNG RATHER THAN REASONED ABOUT.
-   ============================================================================ */
 
-/* 1 · THE NOTCH AT THE RIGHT EDGE — MEASURED, NOT FIXED. Recorded so the next
-   pass starts from the measurement instead of re-taking it.
-   At 1920 the surf line measures x-305 w2129 right1823 against a 1920 viewport:
-   the SVG is exactly stage-width, so the moment `hk_wv` translates it left, its
-   right end leaves the frame and a ~35x23px wedge of open water shows where the
-   dark swash should be. Nothing is wrong at t=0, which is why every static review
-   passed it. The obvious repair — widening the strip in percent — does not take:
-   computed width stays 430px against a 430px containing block, so a percentage
-   override is silently lost somewhere in the lifted cascade, and a `transform`
-   override cannot be used because `hk_wv` already animates transform on this
-   element. The honest next move is to change the ANIMATION to translate a wider
-   strip rather than to fight the width. Left as measured rather than shipped as a
-   rule that does nothing, per "assert what must be true, not the characters that
-   currently make it true". */
 
-/* 2 · THE BOTTOM EDGE, WHICH WAS A CUT.
-   The masthead ended on a ruler-straight horizontal line: lit sand above, flat
-   page below, at full contrast across the whole width. Every other boundary in
-   this scene is atmospheric — the horizon melts, the swells fade, the sky runs
-   through four stops — and then the thing that frames all of it ended like a
-   crop mark. Sixty-four pixels of the scene's own page color, rising from
-   nothing, dissolve the sand into the page instead of severing it.
 
-   z-index 2 is the load-bearing number: above the stage (0) so it can act on the
-   sand, below `.wrap` (20) so it never touches a word or dims a button. And it
-   is painted in `--bg`, the page's own ground, so it stays correct in the light
-   theme and at every one of the four sky phases without being re-keyed. */
+
+
    ⚠ 08/09 — AND IT WAS PAINTING AT THE TOP OF EVERY SCENE, NOT THE BOTTOM, SINCE THE DAY IT
    SHIPPED. It was written as .scene::after, and site.css ALSO has a .scene::after — the vignette,
    declared with inset:0. This file loads second, so its background won; but `inset:0` had already

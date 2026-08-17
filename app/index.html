@@ -1162,8 +1162,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
    flap ANIMATION_VOCABULARY 2 names as the reason a bird reads mechanical. Same pivots, same
    amplitude, same silhouette — gate_birds pins all three and none of them moved. What changed is
    where the time goes: 34% down, 66% back up, roughly the 1:2 a real wingbeat runs. */
-.hkop .osp_wing_back{ transform-box:view-box; transform-origin:52px 31px; animation:hk_osp_backwing 1.04s cubic-bezier(.36,.05,.28,1) infinite; }
-.hkop .osp_wing_front{ transform-box:view-box; transform-origin:52px 31px; animation:hk_osp_frontwing 1.04s cubic-bezier(.36,.05,.28,1) infinite; }
+.hkop .osp_wing_back,.hkop .osp_wing_front{ transform-box:view-box; transform-origin:53px 22px; animation:osp_flap .52s cubic-bezier(.36,.05,.28,1) infinite; }
 .hkop .osp_head{ transform-box:view-box; transform-origin:29.5px 27.5px; animation:hk_osp_look 4.8s ease-in-out infinite; }
 .hkop .osp_tail{ transform-box:fill-box; transform-origin:84% 55%; animation:hk_osp_tail 1.6s ease-in-out infinite alternate; }
 .hkop .osp_fish{ opacity:0; animation:hk_osp_prize 26s linear infinite; animation-delay:-9.2s; }
@@ -1186,14 +1185,26 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
   92%{ opacity:.5; transform:translate3d(-80px,-8px,0) rotate(6deg) scale(.30); }
   100%{ opacity:0; transform:translate3d(-124px,-4px,0) rotate(7deg) scale(.26); }
 }
-/* Owner-approved July 31 hero beat: the far and near wings keep their original
-   independent rooted arcs and opposite playback directions. */
-/* the 12% overshoot-and-settle at 34-46% is the wingtip arriving after the shoulder — the bend that
-   stops a wing from swinging like a rigid plank. Amplitudes are the owner-approved ones, untouched. */
-/* 08/16 — the wings are a mirrored pair about the shoulder now, so BOTH run the same
-   values: one rotation is one beat for a mirrored pair, and opposing values scissor. */
-@keyframes hk_osp_backwing{ 0%{ transform:rotate(6deg) scale(1,1.06); } 34%{ transform:rotate(-30deg) scale(.78,.52); } 46%{ transform:rotate(-26deg) scale(.82,.6); } 100%{ transform:rotate(6deg) scale(1,1.06); } }
-@keyframes hk_osp_frontwing{ 0%{ transform:rotate(30deg) scale(.85,.6); } 34%{ transform:rotate(-14deg) scale(1.06,1.14); } 46%{ transform:rotate(-10deg) scale(1.03,1.08); } 100%{ transform:rotate(30deg) scale(.85,.6); } }
+/* 08/17 — ONE FLAP FOR THE WHOLE APP. The wings are geometric mirrors about the
+   shoulder (a static mirror wrapper in the SVG), so ONE keyframe set drives both:
+   identical computed transforms, mirrored on screen, no second clock to drift.
+   Authored for the RIGHT wing (extends +x from the shoulder at 49,22): negative
+   rotation raises the tip, positive drops it. Fast downstroke (0-38%, ending full
+   chord, tips below the body line — the shallow M in the reference filmstrips), slow
+   recovery (38-100%) with the chord thinning to scale(1,.5) at the top — the
+   near-line frame at the top of a real upstroke is most of what sells the flap.
+   Mid-stroke (~20%, ~74%) the wings pass through horizontal: one straight line
+   across the body, which is the pose Gray named. The torso never moves. */
+@keyframes osp_flap{
+  0%{ transform:rotate(-40deg) scale(1,.5); }
+  10%{ transform:rotate(-20deg) scale(1,.85); }
+  22%{ transform:rotate(24deg) scale(1,1.04); }
+  36%{ transform:rotate(58deg) scale(1,1.08); }
+  48%{ transform:rotate(42deg) scale(1,.95); }
+  60%{ transform:rotate(12deg) scale(1,.72); }
+  78%{ transform:rotate(-18deg) scale(1,.6); }
+  100%{ transform:rotate(-40deg) scale(1,.5); }
+}
 @keyframes hk_osp_look{ 0%,100%{ transform:rotate(0); } 42%{ transform:rotate(-4deg); } 56%{ transform:rotate(3deg); } }
 @keyframes hk_osp_tail{ from{ transform:rotate(-3deg); } to{ transform:rotate(5deg); } }
 @keyframes hk_osp_prize{ 0%,55%{ opacity:0; } 58%,91%{ opacity:1; } 95%,100%{ opacity:0; } }
@@ -9238,45 +9249,20 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
   96%{ opacity:1; transform:translate(24px,6px) rotate(4deg) scale(.9); }
   100%{ opacity:0; transform:translate(48px,14px) rotate(10deg) scale(.84); }
 }
-/* THE WINGS WERE HINGED OUT ALONG THEIR OWN SPAN, AND THEY SCISSORED.
-   transform-origin:72% 68% of the back wing's fill box lands at (71.9, 25.1) — twenty
-   units outboard of the shoulder — so the "wing" pivoted about a point in mid-air near its
-   own tip.  Worse, the two wings ran OPPOSITE keyframes (-9->18 against 8->-18), so the
-   bird scissored: a real bird beats both wings together.  That is what Gray meant by
-   "actually flap his wings like a real bird".
-   Both wing paths root at their M/L edge around (52, 31), so that is the shoulder, stated
-   in user units on view-box (bug #12).
-   THE BEAT SHAPE is a real one: a SHORT fast powerful downstroke (32% of the beat) with the
-   wing EXTENDED (scaleY 1.07), then a longer recovery with the wing FLEXED (0.90) — that
-   asymmetry is what separates a flap from a metronome, and the old rig was a symmetric sine.
-   HONEST GAP: I could not reach an authoritative wingbeat frequency for Pandion haliaetus —
-   the one paper that would carry it sits behind a CAPTCHA.  2.6 Hz is a staging choice and
-   is NOT presented as measured.  The keyframes below are GENERATED from that single number
-   plus the beat shape, so re-deriving them is one edit, not eighty.
-   The far wing carries NO phase lag: a lag reads as exactly the scissor this was fixing.
-   Nothing beats while the bird is perched: the flap only exists inside the three flight
-   windows, and the folded-wing pose is showing the rest of the time.
-   08/16 — GEOMETRY PASS 4, METHOD CHANGE (Gray: wings "backwards... not symmetrical...
-   outwards from the body... 180 degrees away from each other"): pass 3 mirrored one
-   shape across the body axis, which is right for a bird seen from below and WRONG for
-   this bird, which is in PROFILE — a mirror keeps both wings in the picture plane and
-   that is what produced two parallel swept-back blades. The wings are now two DIFFERENT
-   drawings: near wing a broad short foreshortened paddle IN FRONT of the torso, far
-   wing a narrower shorter blade BEHIND it, both hinged at the shoulder (49,22). The two
-   keyframe sets are ANTI-PHASE ON SCREEN and deliberately NOT equal: while the near
-   wing swings down-toward-viewer (grows, drops), the far wing shrinks and rakes
-   up-forward — one physical beat seen from the side. The oscillating scale, opposite in
-   sign between the wings, is the foreshortening; the far wing stays smaller than the
-   near wing at every instant, and that size gap is the depth cue. */
-/* BOTH animations in ONE declaration, deliberately. The pose cross-fade lived in a separate
-   .osp_wfly rule of equal specificity that came later in the sheet, so its animation
-   shorthand REPLACED the flap outright and the wings rendered frozen — a silent clobber the
-   gate caught as "0.0deg of swing". The animation property is not additive across rules. */
-.sko_osprey .osp_wing_back{ transform-box:view-box; transform-origin:49px 22px;
-  animation:osp_backwing var(--skd,24s) cubic-bezier(.3,.7,.35,1) infinite var(--sko,0s),
-            osp_posefly var(--skd,24s) steps(1,end) infinite var(--sko,0s); }
-.sko_osprey .osp_wing_front{ transform-box:view-box; transform-origin:49px 22px;
-  animation:osp_frontwing var(--skd,24s) cubic-bezier(.3,.7,.35,1) infinite var(--sko,0s),
+/* 08/17 — THE TWO-BONE RIG IS GONE (Gray, after four rejected variants: "It just needs
+   to flap. And look like one wing not 2 bones"... "symmetrically in a straight line
+   across the body"). The wings are ONE tapered blade authored once, mirrored about the
+   shoulder by a static wrapper in the SVG, and BOTH run the same osp_flap keyframes —
+   see the osp_flap block for the beat shape. The flap free-runs on its own short loop;
+   osp_posefly still hard-cuts the flight wings out while the bird is perched, so the
+   free-running beat is never visible at the wrong time, and the takeoff no longer needs
+   eighty generated stage-clock keyframes to stay in phase.
+   BOTH animations stay in ONE declaration, deliberately: the pose cross-fade once lived
+   in a separate .osp_wfly rule of equal specificity later in the sheet, and its
+   animation shorthand REPLACED the flap outright — the animation property is not
+   additive across rules. */
+.sko_osprey .osp_wing_back,.sko_osprey .osp_wing_front{ transform-box:view-box; transform-origin:53px 22px;
+  animation:osp_flap .48s cubic-bezier(.36,.05,.28,1) infinite,
             osp_posefly var(--skd,24s) steps(1,end) infinite var(--sko,0s); }
 /* the two wing SETS, hard-cut on the stage clock — opacity only, so nothing pops in size */
 .osp_wperch{ opacity:0; }
@@ -9370,8 +9356,6 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
 }
 .sko_osprey .osp_tail{ transform-box:fill-box; transform-origin:84% 55%; animation:osp_tail 1.1s ease-in-out infinite alternate; }
 .sko_osprey .osp_fish{ opacity:0; animation:osp_fishgrab var(--skd,24s) linear infinite var(--sko,0s); }
-@keyframes osp_backwing{ 0%{ transform:rotate(-6deg) scale(.96,.9); } 19.5%{ transform:rotate(-6deg) scale(.96,.9); } 19.8%{ transform:rotate(6deg) scale(1,1.06); } 20.3128%{ transform:rotate(-30deg) scale(.78,.52); } 20.7936%{ transform:rotate(-12deg) scale(.9,.76); } 21.4026%{ transform:rotate(6deg) scale(1,1.06); } 21.9154%{ transform:rotate(-30deg) scale(.78,.52); } 22.3962%{ transform:rotate(-12deg) scale(.9,.76); } 23.0051%{ transform:rotate(6deg) scale(1,1.06); } 23.5179%{ transform:rotate(-30deg) scale(.78,.52); } 23.9987%{ transform:rotate(-12deg) scale(.9,.76); } 24.6077%{ transform:rotate(6deg) scale(1,1.06); } 25.1205%{ transform:rotate(-30deg) scale(.78,.52); } 25.6013%{ transform:rotate(-12deg) scale(.9,.76); } 26.2103%{ transform:rotate(6deg) scale(1,1.06); } 26.7231%{ transform:rotate(-30deg) scale(.78,.52); } 27.2038%{ transform:rotate(-12deg) scale(.9,.76); } 27.8128%{ transform:rotate(6deg) scale(1,1.06); } 28.3256%{ transform:rotate(-30deg) scale(.78,.52); } 28.8064%{ transform:rotate(-12deg) scale(.9,.76); } 29.4154%{ transform:rotate(6deg) scale(1,1.06); } 29.9282%{ transform:rotate(-30deg) scale(.78,.52); } 30.409%{ transform:rotate(-12deg) scale(.9,.76); } 31.0179%{ transform:rotate(6deg) scale(1,1.06); } 31.5308%{ transform:rotate(-30deg) scale(.78,.52); } 32.0115%{ transform:rotate(-12deg) scale(.9,.76); } 32.6205%{ transform:rotate(-6deg) scale(.96,.9); } 34.3%{ transform:rotate(-6deg) scale(.96,.9); } 55.7%{ transform:rotate(-6deg) scale(.96,.9); } 56%{ transform:rotate(6deg) scale(1,1.06); } 56.5128%{ transform:rotate(-30deg) scale(.78,.52); } 56.9936%{ transform:rotate(-12deg) scale(.9,.76); } 57.6026%{ transform:rotate(6deg) scale(1,1.06); } 58.1154%{ transform:rotate(-30deg) scale(.78,.52); } 58.5962%{ transform:rotate(-12deg) scale(.9,.76); } 59.2051%{ transform:rotate(6deg) scale(1,1.06); } 59.7179%{ transform:rotate(-30deg) scale(.78,.52); } 60.1987%{ transform:rotate(-12deg) scale(.9,.76); } 60.8077%{ transform:rotate(6deg) scale(1,1.06); } 61.3205%{ transform:rotate(-30deg) scale(.78,.52); } 61.8013%{ transform:rotate(-12deg) scale(.9,.76); } 62.4103%{ transform:rotate(6deg) scale(1,1.06); } 62.9231%{ transform:rotate(-30deg) scale(.78,.52); } 63.4038%{ transform:rotate(-12deg) scale(.9,.76); } 64.0128%{ transform:rotate(6deg) scale(1,1.06); } 64.5256%{ transform:rotate(-30deg) scale(.78,.52); } 65.0064%{ transform:rotate(-12deg) scale(.9,.76); } 65.6154%{ transform:rotate(6deg) scale(1,1.06); } 66.1282%{ transform:rotate(-30deg) scale(.78,.52); } 66.609%{ transform:rotate(-12deg) scale(.9,.76); } 67.2179%{ transform:rotate(6deg) scale(1,1.06); } 67.7308%{ transform:rotate(-30deg) scale(.78,.52); } 68.2115%{ transform:rotate(-12deg) scale(.9,.76); } 68.8205%{ transform:rotate(6deg) scale(1,1.06); } 69.3333%{ transform:rotate(-30deg) scale(.78,.52); } 69.8141%{ transform:rotate(-12deg) scale(.9,.76); } 70.4231%{ transform:rotate(6deg) scale(1,1.06); } 70.9359%{ transform:rotate(-30deg) scale(.78,.52); } 71.4167%{ transform:rotate(-12deg) scale(.9,.76); } 72.0256%{ transform:rotate(-6deg) scale(.96,.9); } 72.7%{ transform:rotate(-6deg) scale(.96,.9); } 92.3%{ transform:rotate(-6deg) scale(.96,.9); } 92.6%{ transform:rotate(6deg) scale(1,1.06); } 93.1128%{ transform:rotate(-30deg) scale(.78,.52); } 93.5936%{ transform:rotate(-12deg) scale(.9,.76); } 94.2026%{ transform:rotate(6deg) scale(1,1.06); } 94.7154%{ transform:rotate(-30deg) scale(.78,.52); } 95.1962%{ transform:rotate(-12deg) scale(.9,.76); } 95.8051%{ transform:rotate(6deg) scale(1,1.06); } 96.3179%{ transform:rotate(-30deg) scale(.78,.52); } 96.7987%{ transform:rotate(-12deg) scale(.9,.76); } 97.4077%{ transform:rotate(6deg) scale(1,1.06); } 97.9205%{ transform:rotate(-30deg) scale(.78,.52); } 98.4013%{ transform:rotate(-12deg) scale(.9,.76); } 99.0103%{ transform:rotate(-6deg) scale(.96,.9); } 100%{ transform:rotate(-6deg) scale(.96,.9); } }
-@keyframes osp_frontwing{ 0%{ transform:rotate(10deg) scale(.98,.9); } 19.5%{ transform:rotate(10deg) scale(.98,.9); } 19.8%{ transform:rotate(30deg) scale(.85,.6); } 20.3128%{ transform:rotate(-14deg) scale(1.06,1.14); } 20.7936%{ transform:rotate(8deg) scale(.97,.9); } 21.4026%{ transform:rotate(30deg) scale(.85,.6); } 21.9154%{ transform:rotate(-14deg) scale(1.06,1.14); } 22.3962%{ transform:rotate(8deg) scale(.97,.9); } 23.0051%{ transform:rotate(30deg) scale(.85,.6); } 23.5179%{ transform:rotate(-14deg) scale(1.06,1.14); } 23.9987%{ transform:rotate(8deg) scale(.97,.9); } 24.6077%{ transform:rotate(30deg) scale(.85,.6); } 25.1205%{ transform:rotate(-14deg) scale(1.06,1.14); } 25.6013%{ transform:rotate(8deg) scale(.97,.9); } 26.2103%{ transform:rotate(30deg) scale(.85,.6); } 26.7231%{ transform:rotate(-14deg) scale(1.06,1.14); } 27.2038%{ transform:rotate(8deg) scale(.97,.9); } 27.8128%{ transform:rotate(30deg) scale(.85,.6); } 28.3256%{ transform:rotate(-14deg) scale(1.06,1.14); } 28.8064%{ transform:rotate(8deg) scale(.97,.9); } 29.4154%{ transform:rotate(30deg) scale(.85,.6); } 29.9282%{ transform:rotate(-14deg) scale(1.06,1.14); } 30.409%{ transform:rotate(8deg) scale(.97,.9); } 31.0179%{ transform:rotate(30deg) scale(.85,.6); } 31.5308%{ transform:rotate(-14deg) scale(1.06,1.14); } 32.0115%{ transform:rotate(8deg) scale(.97,.9); } 32.6205%{ transform:rotate(10deg) scale(.98,.9); } 34.3%{ transform:rotate(10deg) scale(.98,.9); } 55.7%{ transform:rotate(10deg) scale(.98,.9); } 56%{ transform:rotate(30deg) scale(.85,.6); } 56.5128%{ transform:rotate(-14deg) scale(1.06,1.14); } 56.9936%{ transform:rotate(8deg) scale(.97,.9); } 57.6026%{ transform:rotate(30deg) scale(.85,.6); } 58.1154%{ transform:rotate(-14deg) scale(1.06,1.14); } 58.5962%{ transform:rotate(8deg) scale(.97,.9); } 59.2051%{ transform:rotate(30deg) scale(.85,.6); } 59.7179%{ transform:rotate(-14deg) scale(1.06,1.14); } 60.1987%{ transform:rotate(8deg) scale(.97,.9); } 60.8077%{ transform:rotate(30deg) scale(.85,.6); } 61.3205%{ transform:rotate(-14deg) scale(1.06,1.14); } 61.8013%{ transform:rotate(8deg) scale(.97,.9); } 62.4103%{ transform:rotate(30deg) scale(.85,.6); } 62.9231%{ transform:rotate(-14deg) scale(1.06,1.14); } 63.4038%{ transform:rotate(8deg) scale(.97,.9); } 64.0128%{ transform:rotate(30deg) scale(.85,.6); } 64.5256%{ transform:rotate(-14deg) scale(1.06,1.14); } 65.0064%{ transform:rotate(8deg) scale(.97,.9); } 65.6154%{ transform:rotate(30deg) scale(.85,.6); } 66.1282%{ transform:rotate(-14deg) scale(1.06,1.14); } 66.609%{ transform:rotate(8deg) scale(.97,.9); } 67.2179%{ transform:rotate(30deg) scale(.85,.6); } 67.7308%{ transform:rotate(-14deg) scale(1.06,1.14); } 68.2115%{ transform:rotate(8deg) scale(.97,.9); } 68.8205%{ transform:rotate(30deg) scale(.85,.6); } 69.3333%{ transform:rotate(-14deg) scale(1.06,1.14); } 69.8141%{ transform:rotate(8deg) scale(.97,.9); } 70.4231%{ transform:rotate(30deg) scale(.85,.6); } 70.9359%{ transform:rotate(-14deg) scale(1.06,1.14); } 71.4167%{ transform:rotate(8deg) scale(.97,.9); } 72.0256%{ transform:rotate(10deg) scale(.98,.9); } 72.7%{ transform:rotate(10deg) scale(.98,.9); } 92.3%{ transform:rotate(10deg) scale(.98,.9); } 92.6%{ transform:rotate(30deg) scale(.85,.6); } 93.1128%{ transform:rotate(-14deg) scale(1.06,1.14); } 93.5936%{ transform:rotate(8deg) scale(.97,.9); } 94.2026%{ transform:rotate(30deg) scale(.85,.6); } 94.7154%{ transform:rotate(-14deg) scale(1.06,1.14); } 95.1962%{ transform:rotate(8deg) scale(.97,.9); } 95.8051%{ transform:rotate(30deg) scale(.85,.6); } 96.3179%{ transform:rotate(-14deg) scale(1.06,1.14); } 96.7987%{ transform:rotate(8deg) scale(.97,.9); } 97.4077%{ transform:rotate(30deg) scale(.85,.6); } 97.9205%{ transform:rotate(-14deg) scale(1.06,1.14); } 98.4013%{ transform:rotate(8deg) scale(.97,.9); } 99.0103%{ transform:rotate(10deg) scale(.98,.9); } 100%{ transform:rotate(10deg) scale(.98,.9); } }
 @keyframes osp_look{ 0%,21%,100%{ transform:rotate(0); } 7%{ transform:rotate(-7deg); } 14%{ transform:rotate(5deg); } 28%,75%{ transform:rotate(-8deg); } }
 @keyframes osp_tail{ from{ transform:rotate(-2deg); } to{ transform:rotate(4deg); } }
 @keyframes osp_fishgrab{ 0%,57%{ opacity:0; transform:translate(0,0) rotate(0); } 59%{ opacity:1; transform:translate(0,0) rotate(-9deg); } 68%,91%{ opacity:1; transform:translate(0,0) rotate(-9deg); } 94%,100%{ opacity:0; } }
@@ -11112,7 +11096,7 @@ a.xp_ctab{ text-decoration:none; }
    dark outline around a dark fill, which paints nothing a reader can see, while every bright
    stroke — including any a future creature brings with it — goes dark automatically. */
 .xps_scene .xps_cast :is(path,circle,ellipse,rect,polygon,polyline,line,g){ stroke:#0A1822 !important; }
-.xps_scene .xps_cast :is(.apt_flipper,.tc_head,.pel_wingT,.osp_wing_front,.bd_wing,.scl_armL,.scl_armR){ fill:#13232F !important; }
+.xps_scene .xps_cast :is(.apt_flipper,.tc_head,.pel_wingT,.osp_wing_back,.osp_wing_front,.bd_wing,.scl_armL,.scl_armR){ fill:#13232F !important; }
 .xps_scene .xps_dolphin :is(path,circle,ellipse){ fill:#0F1F2A !important; }
 .xps_scene .xps_cast :is(.scl_pup,.hke_glint,.pel_fly_eye){ fill:#243B4A !important; }
 /* THE THREE SHORE LANTERNS - placement only (the lantern drawing and its light-up transitions
@@ -11489,8 +11473,7 @@ a.xp_ctab{ text-decoration:none; }
    a tempo that suits a bird crossing a 176px scene rather than the whole hero. */
 .xps_pelican .pel_wingT{ transform-box:fill-box; transform-origin:78% 92%; animation:hk_pflapT 2.6s ease-in-out infinite; }
 .xps_pelican .pel_wingB{ transform-box:fill-box; transform-origin:64% 8%; animation:hk_pflapB 2.6s ease-in-out infinite; }
-.xps_osprey .osp_wing_back{ transform-box:view-box; transform-origin:49px 22px; animation:hk_osp_backwing 1.22s cubic-bezier(.36,.05,.28,1) infinite; }
-.xps_osprey .osp_wing_front{ transform-box:view-box; transform-origin:49px 22px; animation:hk_osp_frontwing 1.22s cubic-bezier(.36,.05,.28,1) infinite; }
+.xps_osprey .osp_wing_back,.xps_osprey .osp_wing_front{ transform-box:view-box; transform-origin:53px 22px; animation:osp_flap .62s cubic-bezier(.36,.05,.28,1) infinite; }
 .xps_osprey .osp_wperch{ opacity:0; }
 @keyframes xps_turtlelook{ 0%,100%{transform:rotate(-2deg) translateY(0)} 27%{transform:rotate(8deg) translateY(-.8px)} 57%{transform:rotate(-6deg) translateY(.35px)} 79%{transform:rotate(3deg) translateY(-.5px)} }
 /* The baby's rest transform is scale(.82) on .xps_baby, and a CSS animation REPLACES a static
@@ -12059,12 +12042,24 @@ body:has(.promo_filtersheet) .hk_totop{ display:none; }
    opacities live on the groups in the artwork, which is what lets them read as uneven. */
 .motif svg{ position:absolute; inset:0; width:100%; height:100%; opacity:1; }
 .promotions-page .promo-card:hover .motif svg{ opacity:.3; }
-/* 08/06 — THE SHOW SUPPORT PILL LEAVES THE PROMOTIONS PAGE. Punchlist section 3 item 6, found
-   in the pricing thread and open since: it sits over the promo card footer and covers the Map
-   link, which is a floating element stealing a real tap target. That is a defect on any page,
-   and this is the one page that is nothing but cards. Support is still one tap away in the
-   menu, so nothing is lost by standing it down here. */
-body:has(.promotions-page) .hk_supportfloat{ opacity:0; pointer-events:none; transform:translateY(6px); }
+/* ⛔⛔ 08/17 — THE THIRD HIDE PATH IS DELETED AND THIS COMMENT IS THE STONE OVER ITS GRAVE.
+   The rule that stood here was written 08/06 and read
+   body:has(.promotions-page) .hk_supportfloat{ opacity:0; pointer-events:none; transform:translateY(6px); }
+   Its reasoning was sound for 08/06 and is dead now: the pill sat over the promo card footer and
+   covered the Map link, and at that time the ladder did not exist, so hiding was the only answer
+   to an overlap. THE LADDER IS THE ANSWER NOW — it moves the pill off a control instead of
+   deleting it — and Gray abolished hiding outright: "Show support pill is never hidden save with
+   the up to the top button/pill/arrow." He then found this one himself, on the surface where it
+   matters most: "I refreshed the promo page and the show support pill is still glitching and
+   disappearing." Measured on the shipped bytes before this deletion, Promotions at 390: the pill
+   was painted on 0.0% of 194 scroll frames, at opacity 0, while the ladder underneath it went on
+   picking rungs and moving an invisible box up to 112px in a single frame.
+   ⚠ AND DELETING THE HIDE IS HALF THE FIX. A promo card speaks its own vocabulary — .promo-map
+   and .promo-tap — and neither had a name in the ladder's control list, so the ladder would have
+   agreed those controls were not there and reproduced the exact 08/06 overlap that justified
+   hiding in the first place. Both names are in CTL_IN and in gate_support_float's own copy now.
+   ⚠ THIS IS A MONEY SURFACE (§9.0.1): Promotions is nothing but paid and verified-deal cards, and
+   the pill is the one control on it asking for support. */
 /* Launch promo contract: same card root and toggle model, with a compact offer-first body. */
 .promotions-page .promo-reference-card{ min-height:199px; padding:0; border-radius:15px; background:#161B21; border-color:rgba(255,255,255,.09); box-shadow:0 1px 0 rgba(255,255,255,.045) inset,0 7px 22px rgba(0,0,0,.34); color:#EEF2F6; }
 .promotions-page .promo-reference-card::after{ content:none; animation:none; }
@@ -14276,33 +14271,33 @@ function useLiveWx(){const[,bump]=useState(0);useEffect(()=>{const cb=()=>bump(n
          eye (23.7 + 0.72 = 24.42) and the membrane grows leftward.  Mirroring the
          origin instead of copying it is the whole point: medial is a fact about the
          animal, not a number to paste. */React.createElement("ellipse",{className:"pel_nict",cx:"23.7",cy:"3.3",rx:".72",ry:".72",fill:"#C7DAD6",opacity:".82"})),React.createElement("path",{d:"M12.4,35 L11.6,39.6 M10,39.8 L11.6,39.6 L13.2,40.2 M16.2,35.4 L16.6,39.8 M14.8,40.4 L16.6,39.8 L18.2,40.3",fill:"none",stroke:"#8A6A34",strokeWidth:"1",strokeLinecap:"round",strokeLinejoin:"round"}));}/* Gulf Coast osprey: layered wing planes, white head mask, hooked beak, talons, and the prize fish.
-   It faces left so a perched bird can launch naturally toward the leaping mullet in the bay skit. */function OspreySvg({w=52}){return React.createElement("svg",{viewBox:"0 0 88 58",className:"ospreyv",style:{width:w,height:Math.round(w*58/88),display:"block",overflow:"visible"},"aria-hidden":"true"},React.createElement("g",{className:"osp_tail"},React.createElement("path",{d:"M59,28 L82,20 L74,30 L87,33 L71,38 L58,36 Z",fill:"#4B403A",stroke:"#292521",strokeWidth:"1",strokeLinejoin:"round"}),React.createElement("path",{d:"M63,30 L80,25 M64,33 L81,33",stroke:"#B9A99B",strokeWidth:"1.1",opacity:".72",strokeLinecap:"round"})),/* 08/16 — FOURTH PASS, AND THE METHOD CHANGES AGAIN: THIS IS A DEPTH PROBLEM, NOT A
-       SYMMETRY PROBLEM. Gray: "the direction is still backwards. And not symmetrical.
-       It needs to be outwards from the body... one side directly at the user/phone
-       screen and the other at the background... 180 degrees away from each other."
-       The bird is in PROFILE, so the two wings are two DIFFERENT projections of one
-       wing and cannot be a mirrored pair: a mirror keeps both copies in the picture
-       plane, which is exactly what produced two parallel swept-back blades. So the two
-       shapes are now authored separately:
-       - FAR WING (this group): the wing going AWAY from the viewer. A NARROW, SHORT
-         blade behind the torso, tip vanishing up past the far side of the body. It is
-         smaller than the near wing at every instant of the beat — the size difference
-         IS the depth cue — and it wears the darker, duller fill because it sits in the
-         body's shadow.
-       - NEAR WING (last in document order, below): the same wing coming AT the viewer,
-         heavily foreshortened — broad, short and blunt, overlapping the torso.
-       Both hinge at the shoulder (49,22) on the back. The beat is ANTI-PHASE on
-       screen: as the near wing swings down-toward-viewer it grows and drops, the far
-       wing simultaneously shrinks and rakes up-forward — an oscillating scale composed
-       with the rotation, opposite in sign between the two, sells the foreshortening
-       with transforms only. */React.createElement("g",{className:"osp_wing_back osp_wfly"},React.createElement("path",{d:"M46.5,23.5 C48,16 50.5,9.5 54,5.5 C56.5,8.5 56,15.5 52.5,22 L49,24.5 Z",fill:"#4E443C",stroke:"#26221E",strokeWidth:"1",strokeLinejoin:"round"}),React.createElement("path",{d:"M49.5,19 C51,14 52.5,10 54,7",fill:"none",stroke:"#9C8B7C",strokeWidth:".9",opacity:".55",strokeLinecap:"round"})),/* The body is the visual seam between the wing planes: far wing -> body -> near wing.
-       Keep this hook so the rendered regression can prove the near wing crosses the animal. */React.createElement("path",{className:"osp_body",d:"M29,25 C35,18 46,16 57,20 C64,22 67,28 65,33 C62,39 54,43 43,42 C34,42 27,38 24,32 Z",fill:"#6A5C50",stroke:"#2E2924",strokeWidth:"1.25",strokeLinejoin:"round"}),React.createElement("path",{d:"M28,31 C36,35 47,38 60,32 C58,38 51,41 43,41 C35,41 29,38 26,33 Z",fill:"#E6DED1",opacity:".96"}),React.createElement("path",{d:"M32,25 C39,19 48,19 56,22 C50,22 41,24 34,29 Z",fill:"#9B8878",opacity:".85"}),React.createElement("path",{d:"M31,33 C38,37 48,39 57,34",fill:"none",stroke:"#FFFFFF",strokeWidth:"1.05",opacity:".55",strokeLinecap:"round"}),/* THE PERCH POSE (Gray, 07/31: "we need him to actually flap his wings like a real
+   It faces left so a perched bird can launch naturally toward the leaping mullet in the bay skit. */function OspreySvg({w=52}){return React.createElement("svg",{viewBox:"0 0 88 58",className:"ospreyv",style:{width:w,height:Math.round(w*58/88),display:"block",overflow:"visible"},"aria-hidden":"true"},React.createElement("g",{className:"osp_tail"},React.createElement("path",{d:"M59,28 L82,20 L74,30 L87,33 L71,38 L58,36 Z",fill:"#4B403A",stroke:"#292521",strokeWidth:"1",strokeLinejoin:"round"}),React.createElement("path",{d:"M63,30 L80,25 M64,33 L81,33",stroke:"#B9A99B",strokeWidth:"1.1",opacity:".72",strokeLinecap:"round"})),React.createElement("path",{className:"osp_body",d:"M29,25 C35,18 46,16 57,20 C64,22 67,28 65,33 C62,39 54,43 43,42 C34,42 27,38 24,32 Z",fill:"#6A5C50",stroke:"#2E2924",strokeWidth:"1.25",strokeLinejoin:"round"}),React.createElement("path",{d:"M28,31 C36,35 47,38 60,32 C58,38 51,41 43,41 C35,41 29,38 26,33 Z",fill:"#E6DED1",opacity:".96"}),React.createElement("path",{d:"M32,25 C39,19 48,19 56,22 C50,22 41,24 34,29 Z",fill:"#9B8878",opacity:".85"}),React.createElement("path",{d:"M31,33 C38,37 48,39 57,34",fill:"none",stroke:"#FFFFFF",strokeWidth:"1.05",opacity:".55",strokeLinecap:"round"}),/* THE PERCH POSE (Gray, 07/31: "we need him to actually flap his wings like a real
        bird" + "I would think it needs both. The perch and the wings flapping").
        A bird on a piling has its wings FOLDED, so the sprite now carries both sets and
        the stage clock hard-cuts between them - opacity only, never interpolated, the
        same discrete-slot trick the turtle turnaround uses, so nothing scales at the cut.
        The folded wing lies along the flank and its primaries overhang the tail base,
-       which is where a real closed wing ends. */React.createElement("g",{className:"osp_wperch"},React.createElement("path",{d:"M33.6,23 C41,20.8 49.4,21.6 56.4,24.8 C61.6,27.2 64.8,30.2 66,33 C62,34.2 56.4,33.8 50.6,32 C43.4,29.8 37.4,26.4 33.6,25.2 Z",fill:"#5E5147",stroke:"#2E2924",strokeWidth:"1.1",strokeLinejoin:"round"}),React.createElement("path",{d:"M37,24.6 C43.6,25.6 50.6,27.6 57.4,30.6 M36.6,26.4 C42.6,28 48.8,30 54.6,32.4",fill:"none",stroke:"#A79687",strokeWidth:".85",opacity:".6",strokeLinecap:"round"}),React.createElement("path",{d:"M60,30.6 C64.4,31.8 68.8,33.4 72.6,35.6 C68.6,36.6 63.8,36 59.6,34.2 Z",fill:"#4B403A",stroke:"#28241F",strokeWidth:"1",strokeLinejoin:"round"})),React.createElement("g",{className:"osp_head"},/* the YAW layer (Gray: "head moving side to side from time to time").  A bird turning
+       which is where a real closed wing ends. */React.createElement("g",{className:"osp_wperch"},React.createElement("path",{d:"M33.6,23 C41,20.8 49.4,21.6 56.4,24.8 C61.6,27.2 64.8,30.2 66,33 C62,34.2 56.4,33.8 50.6,32 C43.4,29.8 37.4,26.4 33.6,25.2 Z",fill:"#5E5147",stroke:"#2E2924",strokeWidth:"1.1",strokeLinejoin:"round"}),React.createElement("path",{d:"M37,24.6 C43.6,25.6 50.6,27.6 57.4,30.6 M36.6,26.4 C42.6,28 48.8,30 54.6,32.4",fill:"none",stroke:"#A79687",strokeWidth:".85",opacity:".6",strokeLinecap:"round"}),React.createElement("path",{d:"M60,30.6 C64.4,31.8 68.8,33.4 72.6,35.6 C68.6,36.6 63.8,36 59.6,34.2 Z",fill:"#4B403A",stroke:"#28241F",strokeWidth:"1",strokeLinejoin:"round"})),/* 08/17 — THE FLIGHT WING, REBUILT AS ONE SURFACE. Gray, after rejecting four
+       variants of the arm+hand rig: "It just needs to flap. And look like one wing not
+       2 bones" — and then: "symmetrically in a straight line across the body", which
+       killed the near/far perspective pair outright. So: ONE tapered blade, authored
+       ONCE (the right wing, root chord ON the near shoulder at x 52.6-54.7, tip at 86),
+       widest at the root, pointed at the tip — the Cornell filmstrip silhouette
+       (claude/design/OSPREY_REFERENCE_FLAP_FRAMES*.png). The left wing is the SAME
+       path inside a static mirror wrapper about the body's mid-axis x=49, so the two wings
+       are geometric mirrors by construction and both carry the SAME animation
+       (osp_flap): identical computed transforms, mirror on screen, zero lag possible.
+       Roots sit at the two shoulders (screen x 45 and 53, mirror-equal about 49); the
+       origin is stated in each wing's own user units, so the mirrored copy pivots at
+       its own root.
+       Foreshortening is the flap's own, not a view-angle trick: scale(1,.5) thins the
+       chord at the top of the upstroke (the near-line frame in the reference), full
+       chord at the bottom of the downstroke. One fill on both wings — straight on,
+       both catch the same light — and it is a step DARKER than the back (#463B32 on
+       #6A5C50): the wing crosses the body twice a beat, and matching tones there is
+       what made an earlier pass read as a slab lying on the bird. Drawn OVER the body and UNDER the head: the wings
+       must cross the body to read attached, and the head stays proud so the eye and
+       bill are never covered mid-beat. */React.createElement("g",{transform:"matrix(-1,0,0,1,98,0)"},React.createElement("g",{className:"osp_wing_back osp_wfly"},React.createElement("path",{d:"M53,20 C61.4,16.9 72.4,15.2 85.8,15.9 C87.3,16.1 87.6,17 86.5,17.9 C76.9,24.4 64.4,27 54.7,27.4 C53.3,26.2 52.6,22.8 53,20 Z",fill:"#463B32",stroke:"#221D19",strokeWidth:"1",strokeLinejoin:"round"}),React.createElement("path",{d:"M56.9,25.4 C66.4,23.8 75.4,20.8 82.4,17.8 M55.9,22.7 C64.4,21.2 73.4,18.9 80.4,17.2",fill:"none",stroke:"#B8A793",strokeWidth:".8",opacity:".62",strokeLinecap:"round"}))),React.createElement("g",{className:"osp_wing_front osp_wfly"},React.createElement("path",{d:"M53,20 C61.4,16.9 72.4,15.2 85.8,15.9 C87.3,16.1 87.6,17 86.5,17.9 C76.9,24.4 64.4,27 54.7,27.4 C53.3,26.2 52.6,22.8 53,20 Z",fill:"#463B32",stroke:"#221D19",strokeWidth:"1",strokeLinejoin:"round"}),React.createElement("path",{d:"M56.9,25.4 C66.4,23.8 75.4,20.8 82.4,17.8 M55.9,22.7 C64.4,21.2 73.4,18.9 80.4,17.2",fill:"none",stroke:"#B8A793",strokeWidth:".8",opacity:".62",strokeLinecap:"round"})),React.createElement("g",{className:"osp_head"},/* the YAW layer (Gray: "head moving side to side from time to time").  A bird turning
          its head toward you does not slide - it FORESHORTENS, so the yaw is a scaleX about
          the NECK JOINT, which is also why the join edge cannot move and the head cannot
          come off the shoulders while it turns. Separate element from the pitch rotate:
@@ -14345,13 +14340,7 @@ function useLiveWx(){const[,bump]=useState(0);useEffect(()=>{const cb=()=>bump(n
        against a white belly they also had nothing to separate them from the bird.
        The talons carry their own dark stroke - "their talons are perfectly round" and "all
        four of its toes are the same length" (Dyfi Osprey Project), which is also why the
-       strike splays rather than curls. */React.createElement("g",{className:"osp_legs",stroke:"#9FB4BF",strokeWidth:"1.15",strokeLinecap:"round"},React.createElement("path",{d:"M41,40 L39.5,47 L37.5,48.5 M44,40 L44.5,47 L46.4,48.5"}),React.createElement("path",{className:"osp_talon",d:"M37.5,48.5 L35.8,47.6 M46.4,48.5 L48.1,47.8",stroke:"#2B3339"})),React.createElement("g",{className:"osp_fish"},React.createElement("path",{d:"M38,48.2 C41,45.3 46.4,45.4 49.2,48.1 C46.7,50.6 41.2,50.8 38,48.2 Z",fill:"#8FD1D1",stroke:"#2E6975",strokeWidth:".75"}),React.createElement("path",{d:"M48.5,48.1 L52.2,45.9 L51.5,48.2 L52.2,50.4 Z",fill:"#7AB9C0",stroke:"#2E6975",strokeWidth:".65",strokeLinejoin:"round"}),React.createElement("circle",{cx:"41.5",cy:"47.6",r:".55",fill:"#1D3940"}),React.createElement("path",{d:"M43.4,46.4 L45.5,49.7",stroke:"#D9F3EE",strokeWidth:".55",opacity:".8"})),/* the NEAR wing — NOT a mirror of osp_wing_back (see the depth note above). The same
-       wing pointed AT the viewer, so it is foreshortened: a broad blunt paddle, wider and
-       larger than the far blade at every instant, rooted on the back and OVERLAPPING the
-       torso. LAST in document order on purpose: it reaches toward the viewer, so it must
-       pass in front of the body, the trailing legs and the carried fish, the same law
-       that moved the pufferfish pectoral in front of the head. Lighter fill than the far
-       wing — it is the one catching the light. */React.createElement("g",{className:"osp_wing_front osp_wfly"},React.createElement("path",{d:"M44,22.5 C36,26 30,33.5 29,46 C34.5,50 44,47.5 50.5,40 C54.5,35 55.5,28 54.5,23.5 Z",fill:"#7B6A5C",stroke:"#2F2A24",strokeWidth:"1.1",strokeLinejoin:"round"}),React.createElement("path",{d:"M46,26.5 C39.5,30.5 34.5,37 32,45.5 M50.5,28 C46,33 41.5,39 38.5,45.5",fill:"none",stroke:"#CBB9A7",strokeWidth:".9",opacity:".6",strokeLinecap:"round"})));}/* One original, non-interactive hero story: a local fish hawk glides, splashes, and returns with its prize.
+       strike splays rather than curls. */React.createElement("g",{className:"osp_legs",stroke:"#9FB4BF",strokeWidth:"1.15",strokeLinecap:"round"},React.createElement("path",{d:"M41,40 L39.5,47 L37.5,48.5 M44,40 L44.5,47 L46.4,48.5"}),React.createElement("path",{className:"osp_talon",d:"M37.5,48.5 L35.8,47.6 M46.4,48.5 L48.1,47.8",stroke:"#2B3339"})),React.createElement("g",{className:"osp_fish"},React.createElement("path",{d:"M38,48.2 C41,45.3 46.4,45.4 49.2,48.1 C46.7,50.6 41.2,50.8 38,48.2 Z",fill:"#8FD1D1",stroke:"#2E6975",strokeWidth:".75"}),React.createElement("path",{d:"M48.5,48.1 L52.2,45.9 L51.5,48.2 L52.2,50.4 Z",fill:"#7AB9C0",stroke:"#2E6975",strokeWidth:".65",strokeLinejoin:"round"}),React.createElement("circle",{cx:"41.5",cy:"47.6",r:".55",fill:"#1D3940"}),React.createElement("path",{d:"M43.4,46.4 L45.5,49.7",stroke:"#D9F3EE",strokeWidth:".55",opacity:".8"})));}/* One original, non-interactive hero story: a local fish hawk glides, splashes, and returns with its prize.
    It reuses the detailed bird art from the shared card skit, rather than introducing a one-off asset. */function HeroOspreyPass({phase}){if(REDUCE||phase==="night")return null;return React.createElement("span",{className:"hkop","aria-hidden":"true"},React.createElement("span",{className:"hkop_bird"},React.createElement("span",{className:"hkop_in"},React.createElement(OspreySvg,{w:74}))),React.createElement("span",{className:"hkop_splash"},React.createElement("i",{className:"hkop_ring1"}),React.createElement("i",{className:"hkop_ring2"}),React.createElement("i",{className:"hkop_spray1"}),React.createElement("i",{className:"hkop_spray2"})));}function MulletSvg({w=32}){/* A Gulf striped mullet is stout and silver-green rather than a generic blue fish: dark back,
      pale belly, two separated dorsals, longitudinal flank stripes and a compact forked tail.
      The tail stays
@@ -14989,7 +14978,7 @@ function useLiveWx(){const[,bump]=useState(0);useEffect(()=>{const cb=()=>bump(n
    the stand is the truth. A colour nobody earned is worse than no colour, which
    is the same law verifiedOn runs on.
    =========================================================================== *//* GCA_FLAG_DATA_BEGIN — one line, replaced verbatim by claude/harness/bake_beach_flag.js.
-   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-17T22:04:09.525Z","issued":"2026-08-17T20:05:00+00:00","productId":"17ee71c3-9b80-4777-ac17-475aeb294673","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"},"forecastSource":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"observed","county":{"level":1,"flags":["green","purple"],"risk":"Low","marineLife":true,"waterTempF":87,"updated":"2026-08-17T14:39:08.18Z","chance":{"green":60,"yellow":40,"red":0,"doubleRed":0,"marineLife":70},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-17","risk":"Low","flags":["green","purple"],"observedAt":"2026-08-17T14:39:08.18Z","chance":{"green":60,"yellow":40,"red":0,"doubleRed":0,"marineLife":70},"surf":"1 to 2 feet","uv":"Very High","water":"87°F","weather":"Sunny. A slight chance of showers and thunderstorms","winds":"West winds 10 to 15 mph"},"outlook":[{"date":"2026-08-17","label":"Today","risk":"Moderate","flags":["yellow"],"surf":"1 to 2 feet"},{"date":"2026-08-18","label":"Tuesday","risk":"Moderate","flags":["yellow"],"surf":"2 to 3 feet"},{"date":"2026-08-19","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-20","label":"Thursday","risk":"Low","flags":["green"],"surf":"1 to 2 feet"},{"date":"2026-08-21","label":"Friday","risk":"Low","flags":["green"],"surf":"Around 1 foot"}],"alerts":[{"event":"Special Weather Statement","headline":"Special Weather Statement issued August 17 at 4:42PM CDT by NWS Mobile AL","description":"At 442 PM CDT, Doppler radar was tracking a strong thunderstorm 5\nmiles southwest of Molino, or 6 miles northwest of Gonzalez, moving\nsouth at 10 mph.\n\nHAZARD...Wind gusts up to 50 mph.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects.\n\nLocations impacted include...\nPensacola, Ferry Pass, Brent, West Pensacola, Ensley, Gonzalez, and\nGoulding.","severity":"Moderate","onset":"2026-08-17T16:42:00-05:00","ends":"2026-08-17T17:30:00-05:00"},{"event":"Extreme Heat Warning","headline":"Extreme Heat Warning issued August 17 at 11:48AM CDT until August 18 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...For the Heat Advisory, heat index values up to 112. For the\nExtreme Heat Warning, dangerously hot conditions with heat index\nvalues up to 115 expected.\n\n* WHERE...In Alabama, Baldwin Central, Baldwin Coastal, Mobile\nCentral, and Mobile Coastal Counties. In Florida, Escambia Coastal,\nOkaloosa Coastal, and Santa Rosa Coastal Counties.\n\n* WHEN...For the Heat Advisory, until 8 PM CDT this evening. For the\nExtreme Heat Warning, from 11 AM to 8 PM CDT Tuesday.\n\n* IMPACTS...Heat related illnesses increase significantly during\nextreme heat and high humidity events. Hot temperatures and high\nhumidity may cause heat illnesses.","severity":"Severe","onset":"2026-08-18T11:00:00-05:00","ends":"2026-08-18T20:00:00-05:00"},{"event":"Heat Advisory","headline":"Heat Advisory issued August 17 at 11:48AM CDT until August 17 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...For the Heat Advisory, heat index values up to 112. For the\nExtreme Heat Warning, dangerously hot conditions with heat index\nvalues up to 115 expected.\n\n* WHERE...In Alabama, Baldwin Central, Baldwin Coastal, Mobile\nCentral, and Mobile Coastal Counties. In Florida, Escambia Coastal,\nOkaloosa Coastal, and Santa Rosa Coastal Counties.\n\n* WHEN...For the Heat Advisory, until 8 PM CDT this evening. For the\nExtreme Heat Warning, from 11 AM to 8 PM CDT Tuesday.\n\n* IMPACTS...Heat related illnesses increase significantly during\nextreme heat and high humidity events. Hot temperatures and high\nhumidity may cause heat illnesses.","severity":"Moderate","onset":"2026-08-17T11:48:00-05:00","ends":"2026-08-17T20:00:00-05:00"}]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
+   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-17T22:44:55.042Z","issued":"2026-08-17T20:05:00+00:00","productId":"17ee71c3-9b80-4777-ac17-475aeb294673","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"},"forecastSource":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"observed","county":{"level":1,"flags":["green","purple"],"risk":"Low","marineLife":true,"waterTempF":87,"updated":"2026-08-17T14:39:08.18Z","chance":{"green":60,"yellow":40,"red":0,"doubleRed":0,"marineLife":70},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-17","risk":"Low","flags":["green","purple"],"observedAt":"2026-08-17T14:39:08.18Z","chance":{"green":60,"yellow":40,"red":0,"doubleRed":0,"marineLife":70},"surf":"1 to 2 feet","uv":"Very High","water":"87°F","weather":"Sunny. A slight chance of showers and thunderstorms","winds":"West winds 10 to 15 mph"},"outlook":[{"date":"2026-08-17","label":"Today","risk":"Moderate","flags":["yellow"],"surf":"1 to 2 feet"},{"date":"2026-08-18","label":"Tuesday","risk":"Moderate","flags":["yellow"],"surf":"2 to 3 feet"},{"date":"2026-08-19","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-20","label":"Thursday","risk":"Low","flags":["green"],"surf":"1 to 2 feet"},{"date":"2026-08-21","label":"Friday","risk":"Low","flags":["green"],"surf":"Around 1 foot"}],"alerts":[{"event":"Extreme Heat Warning","headline":"Extreme Heat Warning issued August 17 at 11:48AM CDT until August 18 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...For the Heat Advisory, heat index values up to 112. For the\nExtreme Heat Warning, dangerously hot conditions with heat index\nvalues up to 115 expected.\n\n* WHERE...In Alabama, Baldwin Central, Baldwin Coastal, Mobile\nCentral, and Mobile Coastal Counties. In Florida, Escambia Coastal,\nOkaloosa Coastal, and Santa Rosa Coastal Counties.\n\n* WHEN...For the Heat Advisory, until 8 PM CDT this evening. For the\nExtreme Heat Warning, from 11 AM to 8 PM CDT Tuesday.\n\n* IMPACTS...Heat related illnesses increase significantly during\nextreme heat and high humidity events. Hot temperatures and high\nhumidity may cause heat illnesses.","severity":"Severe","onset":"2026-08-18T11:00:00-05:00","ends":"2026-08-18T20:00:00-05:00"},{"event":"Heat Advisory","headline":"Heat Advisory issued August 17 at 11:48AM CDT until August 17 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...For the Heat Advisory, heat index values up to 112. For the\nExtreme Heat Warning, dangerously hot conditions with heat index\nvalues up to 115 expected.\n\n* WHERE...In Alabama, Baldwin Central, Baldwin Coastal, Mobile\nCentral, and Mobile Coastal Counties. In Florida, Escambia Coastal,\nOkaloosa Coastal, and Santa Rosa Coastal Counties.\n\n* WHEN...For the Heat Advisory, until 8 PM CDT this evening. For the\nExtreme Heat Warning, from 11 AM to 8 PM CDT Tuesday.\n\n* IMPACTS...Heat related illnesses increase significantly during\nextreme heat and high humidity events. Hot temperatures and high\nhumidity may cause heat illnesses.","severity":"Moderate","onset":"2026-08-17T11:48:00-05:00","ends":"2026-08-17T20:00:00-05:00"}]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
    same words fetch_beach_flag.js emits so the two cannot drift apart.
    ⚠ 08/13 — GREEN WAS #2E9E5B AND GRAY COULD NOT SEE IT: "not able to be seen very vividly.
    Needs to be filled it i guess or more vivid less dark green." Measured, he is right by a
@@ -16735,7 +16724,12 @@ const eat=ev=>{ev.stopPropagation();ev.preventDefault();};r.addEventListener("cl
          hidden, at 390 and 430, while `gate_support_float` read 0 offences over 51 positions: the
          gate carried the same list, so both sides were blind to the same three selectors. The head
          row's `.cardweb` and `.cardcopyact` join for the same reason; `.cardshare` and `.cardpin`
-         were listed and their two neighbours were not. */const CTL_IN=".cardfoot .tap, .cardfoot a, .chip, .cardshare, .cardpin,"+" .cardweb, .cardcopyact, .hpill,"+" .adlbl, .hk_pmname, .hk_pmfine";/* ⚠ AND THE TEXT TEST MEASURES PAINTED LINES, NOT BOXES. A blurb box runs the full card
+         were listed and their two neighbours were not. *//* ⚠ 08/17 — .promo-map AND .promo-tap JOIN, AND THEY ARE THE PRICE OF DELETING THE THIRD
+         HIDE PATH. The Promotions page used to stand the pill down entirely because it covered a
+         promo card's Map link; that rule is gone (see the gravestone in FONT_CSS beside
+         .promotions-page .promo-card .motif). A promo card IS a .card, so the host sweep already
+         finds it, but its two controls are named nothing this list knew — and a control with no
+         name here is a control the ladder agrees is not there, which is the 08/12 lesson exactly. */const CTL_IN=".cardfoot .tap, .cardfoot a, .chip, .cardshare, .cardpin,"+" .cardweb, .cardcopyact, .hpill,"+" .promo-map, .promo-tap,"+" .adlbl, .hk_pmname, .hk_pmfine";/* ⚠ AND THE TEXT TEST MEASURES PAINTED LINES, NOT BOXES. A blurb box runs the full card
          width and stacks against its neighbours, so testing boxes reports a hit at every rung on
          every card and the pill simply never appears again — that is a deletion wearing a fix's
          clothes. A Range returns the LINE rects, so a short last line and the gutter beside a price
