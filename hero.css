@@ -245,11 +245,6 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
 @media (prefers-reduced-motion: reduce){.acart_tdrop1, .acart_tdrop2, .acart_tgrunt, .acart_tsand1, .acart_tsand2, .acart_tsand3, .acart_tdripb { opacity: 0; }}
 .adboatname { position: absolute; top: 192px; right: 34px; z-index: 2; width: 82px; pointer-events: none; animation: 5.5s ease-in-out 0s infinite normal none running hk_sailbob; }
 .adboatname_bd { display: block; font-family: Arial, Helvetica, sans-serif; font-weight: 800; font-size: 8px; letter-spacing: 0.4px; line-height: 1.2; text-align: center; padding: 2px 3px; border-radius: 2.5px; border: 1px solid rgb(201, 162, 78); color: rgb(243, 231, 206); background: rgb(36, 69, 90); box-shadow: rgba(10, 20, 30, 0.45) 0px 1px 2px; transform: rotate(-1.5deg); }
-.rplfield { position: absolute; inset: 0px; z-index: 1; pointer-events: none; }
-.rrip { position: absolute; border: 0px; border-radius: 50%; transform: translate(-50%, -50%) scale(0.25); opacity: 0; will-change: transform, opacity; background: radial-gradient(rgba(226, 244, 251, 0) 30%, rgba(232, 248, 253, 0.2) 52%, rgba(240, 252, 255, 0.46) 68%, rgba(206, 238, 250, 0.22) 84%, rgba(180, 222, 238, 0) 100%); animation: auto ease-out 0s 1 normal forwards running hk_rrip; }
-.ph-night .rrip { background: radial-gradient(rgba(150, 208, 255, 0) 30%, rgba(158, 214, 255, 0.17) 52%, rgba(178, 224, 255, 0.44) 68%, rgba(130, 196, 240, 0.18) 84%, rgba(110, 178, 228, 0) 100%); }
-.ph-golden .rrip { background: radial-gradient(rgba(255, 234, 200, 0) 30%, rgba(255, 238, 208, 0.19) 52%, rgba(255, 246, 224, 0.5) 68%, rgba(255, 220, 176, 0.2) 84%, rgba(255, 206, 158, 0) 100%); }
-.rrip.bio { background: radial-gradient(rgba(120, 224, 255, 0) 28%, rgba(140, 232, 255, 0.26) 50%, rgba(176, 244, 255, 0.66) 68%, rgba(110, 206, 246, 0.24) 84%, rgba(100, 196, 240, 0) 100%); box-shadow: rgba(120, 224, 255, 0.28) 0px 0px 7px; }
 @media (prefers-reduced-motion: reduce){.hk .flyby, .hk .grain, .hk .baw, .hk .gullw, .hk .ccrab, .hk .snote, .hk .hpel, .hk .fwx, .hk .aspl, .hk .rheart, .hk .lspk, .hk .dnm_bok, .hk .tdust, .hk .fly, .hk .skbwrap, .hk .pipw, .hk .dnx_rolled, .hk .trtw, .hk .htchw, .hk .kitew, .hk .rplfield, .hk .shw, .hk .hcw, .hk .tgw, .hk .whw, .hk .d2bw, .hk .pelw, .hk .rayw, .hk .dcw, .hk .hkop, .hk .dwgiant, .hk .dwpod, .hk .dwglow, .hk .hboat, .hk .dnote, .hk .dbloom, .hk .rmote, .hk .rsmokew .hk .supw, .hk .fld, .hk .crbw, .hk .crbh, .hk .htchf, .hk .lx_rock, .hk .lx_dig, .hk .mstrip, .hk .mbeam, .hk .cm_cone, .hk .cm_pool, .hk .romacc .racc_wash, .hk .em_fly, .hk .cs_shoot, .hk .cs_neb, .hk .brd, .hk .mthrow, .hk .mgrain, .hk .bawrap, .hk .popf, .hk .rm_bulb, .hk .cm_laugh, .hk .cm_cable, .hk .adrip, .hk .lsc_cur, .hk .swash, .hk .swash_lip, .hk .backwash, .hk .vwkw, .hk .vwk, .hk .fprt, .hk .swl_crest { display: none !important; }}
 @media (prefers-reduced-motion: reduce){.hk .swg, .hk .sw_heave { animation: auto ease 0s 1 normal none running none !important; }}
 @media (prefers-reduced-motion: reduce){.hk .swl_body { animation: auto ease 0s 1 normal none running none !important; opacity: 0.4 !important; }}
@@ -313,8 +308,6 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
 .xsky_star.s2 { left: 140px; top: 11px; animation: 3s ease-in-out 0s infinite normal none running xskyTwinkle; }
 .xps_star.s1 { left: 24px; top: 12px; opacity: 0.3; }
 .xps_star.s2 { left: 138px; top: 7px; animation: 3s ease-in-out 0s infinite normal none running xpsTwinkle; }
-.xp_supportstage.reviewing .xps_star { animation: auto ease 0s 1 normal none running none; opacity: 0.55; }
-.xp_supportstage.reviewing .xps_hairline { opacity: 0.85; }
 .hk_day .dock .hk_mmark, .hk_day .dock .hk_menumark { --mm1: #7E420C; --mm2: #14625B; --mm3: #5F4A2C; --mm4: #992743; }
 .hk_day .hk_promoted .adlbl.open { opacity: 0.7; }
 .hk_day .skitz .adlbl { color: rgb(68, 86, 106); opacity: 1; text-shadow: none; padding: 2px 5px; border-radius: 4px; background: rgba(255, 246, 228, 0.92); box-shadow: rgba(138, 90, 12, 0.4) 0px 0px 0px 1px inset; }
@@ -739,12 +732,6 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
   62% { opacity: 0.8; transform: translateY(0.4px); }
   85% { opacity: 0.6; transform: translateY(2.4px); }
   92%, 100% { opacity: 0; transform: translateY(3.2px); }
-}
-@keyframes hk_rrip { 
-  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.25); }
-  20% { opacity: 0.82; }
-  54% { opacity: 0.56; }
-  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.7); }
 }
 @keyframes hk_hshim { 
   0% { opacity: 0.18; transform: translateX(-7px) scaleX(0.85); }
