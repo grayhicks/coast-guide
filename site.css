@@ -25,6 +25,11 @@
 :root{
   /* ------------------------------------------------------------ brand name */
   --brand-name:"Next Up";
+  /* ⚠ THE DESCENDER LINE GETS A TOKEN FOR THE SAME REASON THE NAME DID. It had ONE consumer on
+     this side — build_og.js drew "Gulf Coast Events" into the share card as a hardcoded string —
+     which is a second home for a brand string the one-name law gives one home. The coverage claim
+     in the comment above is only worth making if it moves in one place. */
+  --brand-tag:"Gulf Coast Events";
 
   /* ------------------------------------------------------------------ ink
      Warm paper-white ink family on deep water. Measured in contrast.js:
