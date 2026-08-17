@@ -305,8 +305,8 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
 .hk_promoted .adlbl { display: block; margin: 0px 0px 8px; font: 800 9.5px / 1 Nunito, system-ui, sans-serif; letter-spacing: 1.1px; text-transform: uppercase; color: var(--csoft); opacity: 0.85; }
 .hk_promoted .adlbl.open { font-weight: 700; letter-spacing: 0.9px; opacity: 0.55; }
 .hk_promocard .adlbl { display: block; margin: 0px 0px 5px; font: 800 9.5px / 1 Nunito, system-ui, sans-serif; letter-spacing: 1.1px; text-transform: uppercase; color: var(--csoft); opacity: 0.85; }
-.skitz .adlbl { position: absolute; top: 5px; right: 8px; z-index: 9; font: 800 8.5px / 1 Nunito, system-ui, sans-serif; letter-spacing: 0.8px; text-transform: uppercase; color: var(--csoft); opacity: 0.75; text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px; }
-.skitz .adlbl.open { font-weight: 700; letter-spacing: 0.6px; opacity: 0.55; }
+.skitz .adlbl { position: absolute; top: 5px; right: 8px; z-index: 9; font: 800 8.5px / 1 Nunito, system-ui, sans-serif; letter-spacing: 0.8px; text-transform: uppercase; color: var(--csoft); opacity: 1; padding: 2px 5px; border-radius: 4px; background: rgba(8, 20, 30, 0.92); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--au-b) 45%, transparent); }
+.skitz .adlbl.open { font-weight: 700; letter-spacing: 0.6px; opacity: 0.85; }
 .skb_splash.s1 { right: 170px; top: 54px; animation: skb_spl1 var(--skd,18s) linear infinite var(--sko,0s); }
 .skb_splash.s2 { right: 146px; top: 56px; animation: skb_spl2 var(--skd,18s) linear infinite var(--sko,0s); }
 .xsky_star.s1 { left: 28px; top: 18px; opacity: 0.3; }
@@ -317,8 +317,7 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
 .xp_supportstage.reviewing .xps_hairline { opacity: 0.85; }
 .hk_day .dock .hk_mmark, .hk_day .dock .hk_menumark { --mm1: #7E420C; --mm2: #14625B; --mm3: #5F4A2C; --mm4: #992743; }
 .hk_day .hk_promoted .adlbl.open { opacity: 0.7; }
-.hk_day .skitz .adlbl { color: rgb(68, 86, 106); opacity: 1; text-shadow: none; padding: 2px 5px; border-radius: 4px; background: rgba(255, 246, 228, 0.92); box-shadow: rgba(138, 90, 12, 0.4) 0px 0px 0px 1px inset; }
-.hk_day .skitz .adlbl.open { opacity: 0.85; }
+.hk_day .skitz .adlbl { color: rgb(68, 86, 106); background: rgba(255, 246, 228, 0.92); box-shadow: rgba(138, 90, 12, 0.4) 0px 0px 0px 1px inset; }
 @keyframes hk_drift { 
   0% { transform: translateX(0px); opacity: 0; }
   7% { opacity: var(--clo,.18); }
