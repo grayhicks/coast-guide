@@ -7199,7 +7199,9 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
    raised toward the reader and tipped up-and-left: its top and left hairlines turn polished gold
    and carry a hard 1px rim of light with a soft gilt bloom beyond them — the highlight falls away
    around the bottom-right rather than ringing the unit evenly (an even ring reads as a sticker; a
-   directional one reads as a solid object in real light) — and the CAST SHADOW, a soft dark drop,
+   directional one reads as a solid object in real light; the SPONSORED CARD alone carries a dim
+   bounce of the same light round its far edges as of 08/17, Gray asking for the whole card to
+   glow — see its own rule below, still key-lit upper-left) — and the CAST SHADOW, a soft dark drop,
    falls down and to the right beneath it, deep enough to separate the unit from the page and
    nowhere near modal-deep. Sold units get the full light-and-lift; .open keeps only a dry-gold
    whisper, so an empty slot still plainly reads as an empty slot. It applies to the three paid
@@ -7210,8 +7212,9 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
    ENTIRELY STATIC: every part of this is a border colour or a box-shadow, nothing here moves, and
    a box-shadow must never be animated — so there is nothing for the reduced-motion block to catch.
    Reach stays inside the gutters and off every neighbour's text: worst painted extent is 12px of
-   shadow below a card (14px gutter), 9px of bloom up-left, and 5px above the shelf whose gutter is
-   6 (the card above keeps 12px of padding between its edge and its own text). */
+   shadow below a card (14px gutter), 11px of bloom round the sponsored card (key bloom up-left
+   plus the 08/17 all-round bounce bloom, 12px blur minus 1px spread), and 5px above the shelf
+   whose gutter is 6 (the card above keeps 12px of padding between its edge and its own text). */
 .hk_promoted, .skitz, .hk_promocard, .card[data-sponsored-card="true"]{
   --au-a:var(--cgoldA,#F6E4B5); --au-b:var(--cgoldB,#E8C766); --au-c:var(--cgoldC,#D4AF37); }
 /* ═══ THE PROMOTED SECTION — 08/12 ══════════════════════════════════════════════════════════════
@@ -7294,19 +7297,31 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
 .hk_pcst.wc{ border-color:rgba(240,196,110,.5); }
 .hk_pcst.disc{ border-color:var(--cbd); opacity:.8; }
 .hk_pcsay{ flex:1 1 200px; min-width:0; }
-/* the sponsored card — light + lift on the whole rounded plate: gilt rim and bloom on the top and
-   left edges (falling away round the bottom-right), cast shadow down-right beneath it, so the
-   bought card reads as raised off the page toward the reader. This replaces the world's --cshadow
-   on the one card that is bought (the aura IS its shadow), and being the later rule at equal
-   specificity it also holds through :hover and .is-today. Static, like the rest of the aura. The
-   card keeps its own world and every card rule; only its edge and its lift say what it is. */
+/* the sponsored card — light + lift on the WHOLE rounded plate (08/17, Gray: "You can make the
+   whole card glow... I wanted it to be 3D like" — the old edge light died into a dark hole at the
+   bottom-right corner, which is the exact complaint). The light stays DIRECTIONAL so the card
+   still reads as a solid object rather than a sticker: the key light off-page upper-left keeps
+   the bright rim and bloom on the top and left edges, and the far edges now carry BOUNCE light
+   instead of falling to nothing — the right and bottom borders rise from 45% dry gold to 75%
+   gilt, a 1px dim-gold bounce rim sits on the shadow side painted OVER the cast shadow (earlier
+   box-shadow layers paint on top; a gilt edge catches light exactly where it meets its own
+   shade), and a faint even bloom rings all four edges at roughly half the key bloom's weight.
+   Painted reach is 11px (12px blur minus 1px spread), inside every gutter, so the neighbouring
+   cards stay dry. In day the tokens swap to the dark golds and the same rule reads as a full
+   gilt frame over cream, which is the day answer to the same ask. This replaces the world's
+   --cshadow on the one card that is bought (the aura IS its shadow), and being the later rule at
+   equal specificity it also holds through :hover and .is-today. Static, like the rest of the
+   aura. The card keeps its own world and every card rule; only its edge and its lift say what
+   it is. */
 .card[data-sponsored-card="true"]{
-  border-color:color-mix(in srgb, var(--au-c) 45%, transparent);
-  border-top-color:color-mix(in srgb, var(--au-b) 92%, transparent);
-  border-left-color:color-mix(in srgb, var(--au-b) 92%, transparent);
+  border-color:color-mix(in srgb, var(--au-b) 75%, transparent);
+  border-top-color:color-mix(in srgb, var(--au-b) 95%, transparent);
+  border-left-color:color-mix(in srgb, var(--au-b) 95%, transparent);
   box-shadow:
     -1px -1px 0 color-mix(in srgb, var(--au-b) 95%, transparent),
-    -4px -4px 9px -2px color-mix(in srgb, var(--au-a) 78%, transparent),
+    1px 1px 0 color-mix(in srgb, var(--au-b) 70%, transparent),
+    -4px -4px 10px -2px color-mix(in srgb, var(--au-a) 80%, transparent),
+    0 0 12px -1px color-mix(in srgb, var(--au-a) 55%, transparent),
     2px 3px 5px color-mix(in srgb, var(--au-c) 14%, rgba(4,3,1,.45)),
     5px 9px 12px -8px color-mix(in srgb, var(--au-c) 16%, rgba(4,3,1,.72)); }
 /* ⚠ THE DASHED BORDER WAS THE AD-SLOT TELL AND IT IS GONE WITH THE LABEL. A dashed rectangle with
@@ -14374,7 +14389,7 @@ function useLiveWx(){const[,bump]=useState(0);useEffect(()=>{const cb=()=>bump(n
    the stand is the truth. A colour nobody earned is worse than no colour, which
    is the same law verifiedOn runs on.
    =========================================================================== *//* GCA_FLAG_DATA_BEGIN — one line, replaced verbatim by claude/harness/bake_beach_flag.js.
-   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-17T12:13:32.009Z","issued":"2026-08-17T07:40:00+00:00","productId":"8b2b792d-3d02-4652-981b-14a6d4423ba8","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"forecastSource":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"forecast","county":{"level":2,"flags":["yellow","purple"],"risk":"Moderate","marineLife":true,"waterTempF":86,"updated":"2026-08-16T23:13:21.29Z","chance":{"green":50,"yellow":50,"red":0,"doubleRed":0,"marineLife":70},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-17","risk":"Moderate","flags":["yellow"],"observedAt":null,"chance":null,"surf":"1 to 2 feet","uv":"Very High","water":"In the upper 80s","weather":"Mostly sunny. A slight chance of showers and thunderstorms","winds":"West winds 10 to 15 mph"},"outlook":[{"date":"2026-08-17","label":"Today","risk":"Moderate","flags":["yellow"],"surf":"1 to 2 feet"},{"date":"2026-08-18","label":"Tuesday","risk":"Moderate","flags":["yellow"],"surf":"2 to 3 feet"},{"date":"2026-08-19","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-20","label":"Thursday","risk":"Low","flags":["green"],"surf":"1 to 2 feet"},{"date":"2026-08-21","label":"Friday","risk":"Low","flags":["green"],"surf":"Around 1 foot"}],"alerts":[{"event":"Heat Advisory","headline":"Heat Advisory issued August 16 at 11:38PM CDT until August 17 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...Heat index values up to 112 expected.\n\n* WHERE...Portions of south central and southwest Alabama, northwest\nFlorida, and southeast Mississippi.\n\n* WHEN...From 11 AM to 8 PM CDT Monday.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.","severity":"Moderate","onset":"2026-08-17T11:00:00-05:00","ends":"2026-08-17T20:00:00-05:00"}]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
+   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-17T13:10:52.021Z","issued":"2026-08-17T12:53:00+00:00","productId":"02528cb1-a478-49ad-a881-ae7637d738e1","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"forecastSource":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"forecast","county":{"level":2,"flags":["yellow","purple"],"risk":"Moderate","marineLife":true,"waterTempF":86,"updated":"2026-08-16T23:13:21.29Z","chance":{"green":50,"yellow":50,"red":0,"doubleRed":0,"marineLife":70},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-17","risk":"Moderate","flags":["yellow"],"observedAt":null,"chance":null,"surf":"1 to 2 feet","uv":"Very High","water":"In the upper 80s","weather":"Mostly sunny. A slight chance of showers and thunderstorms","winds":"West winds 10 to 15 mph"},"outlook":[{"date":"2026-08-17","label":"Today","risk":"Moderate","flags":["yellow"],"surf":"1 to 2 feet"},{"date":"2026-08-18","label":"Tuesday","risk":"Moderate","flags":["yellow"],"surf":"2 to 3 feet"},{"date":"2026-08-19","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-20","label":"Thursday","risk":"Low","flags":["green"],"surf":"1 to 2 feet"},{"date":"2026-08-21","label":"Friday","risk":"Low","flags":["green"],"surf":"Around 1 foot"}],"alerts":[{"event":"Heat Advisory","headline":"Heat Advisory issued August 17 at 7:26AM CDT until August 17 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...Heat index values up to 112 expected.\n\n* WHERE...Portions of south central and southwest Alabama, northwest\nFlorida, and southeast Mississippi.\n\n* WHEN...From 11 AM this morning to 8 PM CDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.","severity":"Moderate","onset":"2026-08-17T11:00:00-05:00","ends":"2026-08-17T20:00:00-05:00"}]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
    same words fetch_beach_flag.js emits so the two cannot drift apart.
    ⚠ 08/13 — GREEN WAS #2E9E5B AND GRAY COULD NOT SEE IT: "not able to be seen very vividly.
    Needs to be filled it i guess or more vivid less dark green." Measured, he is right by a
