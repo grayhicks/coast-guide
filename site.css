@@ -1908,16 +1908,25 @@ a.nap-line:hover{color:var(--gold-bright)}
    already, on the card. The ornament stays with the button that is asking to be
    pressed on THIS page, and the float earns its prominence from the gold and
    from never going away. */
-/* the tucked state — see the note beside supportFloat() in the generator. Transform
-   and opacity only; `visibility` rather than `display` so the transition can run. */
-.sup-float{transition:transform var(--t-med) var(--ease), opacity var(--t-med) var(--ease)}
-.sup-float.is-tucked,
-/* ⚠ .is-yield IS THE SAME RETREAT FOR A DIFFERENT REASON: the pill is standing on the page's
-   primary button. See the note beside supportFloat() in build_site_pages.js — on a place page at
-   390 it covered the right 55% of the call to action, label, ornament and tap area alike. Two
-   classes rather than one flag, so the scroll handler and the overlap test never overwrite each
-   other's decision. */
-.sup-float.is-yield{transform:translateY(calc(100% + 24px));opacity:0;pointer-events:none}
+/* ⛔ 08/17 — THE PILL NEVER HIDES, BY GRAY'S STANDING LAW: "Show support pill is never hidden
+   save with the up to the top button/pill/arrow." The .is-tucked and .is-yield retreats that used
+   to live here both translated the pill off the bottom of the viewport, and on his phone that
+   read as "glitches all up and down the right side... disappears otherwise". Both are DELETED —
+   script and style, see the note beside supportFloat() in build_site_pages.js — so no rule
+   remains that can take the pill off screen. The only motion this stylesheet owns is the rung
+   glide, and it rides the `translate` PROPERTY, not `bottom` and not `transform` — the app paid
+   for both halves of that choice: an unregistered custom property feeding a transitionable
+   property is substituted at computed-value time, so transitioning `bottom` through
+   `var(--sup-lift)` never interpolates (it jumps at the end); and `transform` belongs to the
+   scroll drift, an inline per-frame write that a transition would fight and animate nothing.
+   The script flips the rung change onto `translate` and releases it to zero through this rule.
+   ⚠ 360ms AND THE APP PILL'S OWN SINE-LIKE BEZIER, NOT --t-med AND --ease, MEASURED: --ease
+   (.2,.7,.25,1) front-loads to ~3.5x its linear speed, and a 140px rung flight at 240ms peaked at
+   54px in a single frame — smooth on paper, a lurch to the eye. The app's glide curve
+   (.445,.05,.55,.95) peaks near 1.8x, which holds the same flight under ~12px a frame. The
+   generator's dwell (HOLD) must stay >= this duration so each flight lands before the next may
+   begin. */
+.sup-float{transition:translate 360ms cubic-bezier(.445,.05,.55,.95)}
 /* ⚠ AN AUTHOR display RULE BEATS THE UA'S [hidden], AND THAT IS WHY "IT SHIPS HIDDEN" DID NOTHING.
    .sup-float{display:inline-flex} is an author declaration and [hidden]{display:none} is the user
    agent's, so with JavaScript off the pill computed display:flex, opacity:1, pointer-events:auto
@@ -1929,14 +1938,28 @@ a.nap-line:hover{color:var(--gold-bright)}
 .sup-float:hover{color:var(--gold-bright);box-shadow:inset 0 0 0 2px var(--gold-bright), var(--shadow-2)}
 .sup-float:focus-visible{outline:3px solid var(--focus-ink);outline-offset:3px}
 .sup-float-in{position:relative}
-/* the short form below 360 — see the note beside supportFloat() in the generator */
-@media (max-width:359px){ .sup-full{display:none} }
-/* ⚠ 08/14 — AND THE SHORT FORM IS THE LADDER'S SECOND AXIS NOW, NOT ONLY A NARROW-PHONE STEP.
-   Once the card walls entered the yield the pill had no clear rest at 171.8px on a listing page and
-   hid at 449 of 643 measured positions. It tries the same nine rungs at 110.5px before it gives up,
-   which against centred card text is most of the difference: the full pill reaches 172px into a
-   350px column and a centred line reaches back, while the short one clears the same line entirely.
-   The word that survives is the one that names the destination, same as the rail's .seg_phone. */
+/* ⭐ THE HEART — his spec, verbatim: "It also needs a slight animation, heart or something there.
+   Floating". SLIGHT is his word, so it is a 2.5px bob over 3.6 seconds on the glyph alone —
+   never on the pill's own box, which the placement script must be able to measure at rest and
+   the drift already owns. Defined under no-preference, the same door every other animation on
+   this site walks through. */
+.sup-heart{position:relative;z-index:4;display:inline-block;margin-right:7px;font-size:12px;line-height:1}
+@media (prefers-reduced-motion:no-preference){
+  .sup-heart{animation:sup-heart-bob 3.6s ease-in-out infinite}
+  @keyframes sup-heart-bob{0%,100%{transform:translateY(.6px)}50%{transform:translateY(-1.9px)}}
+}
+/* the short form on phones — below 360 originally as a coverage fix (see the note beside
+   supportFloat() in the generator), widened to below 400 when the heart landed: the glyph's
+   width is paid for by the dropped word, and a narrower pill finds a clear rung far more often
+   at 390, the width the owner's screenshots were taken at. */
+@media (max-width:399px){ .sup-full{display:none} }
+/* ⚠ 08/14 — AND THE SHORT FORM IS THE LADDER'S SECOND AXIS, NOT ONLY A NARROW-PHONE STEP.
+   Once the card walls entered the placement test the pill had no clear rest at 171.8px on a
+   listing page, so it tries the same capped rungs again at 110.5px — which against centred card
+   text is most of the difference: the full pill reaches 172px into a 350px column and a centred
+   line reaches back, while the short one clears the same line entirely. When even that finds
+   nothing clear it takes the least-covered rung; it never hides (see supportFloat()). The word
+   that survives is the one that names the destination, same as the rail's .seg_phone. */
 .sup-float.is-short .sup-full{display:none}
 /* ⚠ AND IT GETS OUT OF THE WAY OF THE FOOTER. Pinned to the viewport it would
    otherwise sit on top of the footer's own links at the end of a long page. */
