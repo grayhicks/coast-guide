@@ -7666,6 +7666,25 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
   /* lap-5 logo-seat ground (see the .hk_slot block below): the opaque plate under the top-left
      mark. Night: deep harbour neutral; day re-inks to cream in the .hk_day paid override. */
   --slotg:#0F1E28; }
+/* ═══ THE SHELF'S FRAME WEARS THE SIGN'S OWN COLOUR (08/18) ═══════════════════════════════════
+   Gray, from a live phone screenshot: "the sponsor shelf the colors on the side... Maybe just
+   make the color on the side the full scroll color idk... Trying to make it fluent I guess." He
+   is right that the frame and the sign read as two materials right now — the frame above wears
+   the SITE's generic gold aura (--cgoldA/B/C, shared with the promoted block and the sponsored
+   card, neither of which carries a parchment sign of its own) while the sign sitting on it is
+   painted from its own act-specific parchment gradient, so the two edges of one object are two
+   different golds. Fixed HERE ONLY, scoped by the shelf's own data-adslot attribute (never a new class,
+   and never touching --au-a/b/c for the promoted block or the sponsored card, which have no sign
+   to match): each act's frame is re-inked from the exact three stops its own sign already paints
+   — .skparch for the crab, .skn_floatad's .skparch.nat for the turtle, .skb_board for the
+   dolphin, .skp_cloth for the pelican, .sko_board for the osprey — so the frame IS the sign's
+   colour, not a coordinating one. UNSOLD (.open) is deliberately left on the generic gold: an
+   empty slot should read as "any empty slot," never pre-tinted toward a sign that is not there. */
+.skitz.live[data-adslot="beach"]{ --au-a:#F3E4BE; --au-b:#E6CE97; --au-c:#C9A85E; }
+.skitz.live[data-adslot="nature"]{ --au-a:#F2E9D2; --au-b:#D6C38E; --au-c:#9B793D; }
+.skitz.live[data-adslot="boat"]{ --au-a:#F2E9D2; --au-b:#DCCCA4; --au-c:#8A6A3C; }
+.skitz.live[data-adslot="pier"]{ --au-a:#F4EDD8; --au-b:#E2D5B2; --au-c:#B9A87E; }
+.skitz.live[data-adslot="sky"],.skitz.live[data-adslot="misc"]{ --au-a:#F9E9C3; --au-b:#DFB978; --au-c:#BC864E; }
 /* ═══ THE PROMOTED SECTION — 08/12 ══════════════════════════════════════════════════════════════
    It must not read as a card, at any width. A block sized and framed like a card, sitting in a run
    of cards, reads as one — which is the exact confusion a disclosure exists to prevent. So it is
@@ -8981,24 +9000,39 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
   100%{ transform:translate(-46px,2px) rotate(-9deg) scale(1,1); opacity:0; }
 }
 .skc_scroll{ position:absolute; left:0; bottom:9px; z-index:3; transform-origin:50% 60%; animation:skc_scroll var(--skd,26s) linear infinite var(--sko,0s); }
+/* ⚠ 08/18 — THE SCROLL NO LONGER LEAVES THE STAGE, AND NEVER TRAVELS SIDEWAYS AT ALL. Gray, with a
+   photograph: "a sponsor skit rendered as a BLANK GOLD BAR with a crab and no sign at all" — this
+   used to shoot the scroll out to translate(624px,...) at 73.4-82.4% of the loop, painting nobody
+   for close to 30% of every cycle. Gray's SECOND report, four live phone screenshots: even the
+   shove this replaced it with — a bounded few-px shift right — still clipped the name at BOTH
+   ends on three of four shots ("ulf Coast Beach Rental"), because gate_skit_paid.js measures
+   OVERHANG past the shelf's own clip box, not just whether the box is present. The fix that
+   actually holds: the impact is ROTATION AND A VERTICAL BOB ONLY, never an X translate, so the
+   sign's left and right edges never move from their resting x=90 — the read of a hit survives
+   (kick, wobble) and the box can never overhang either side at any phone width. The CRAB alone
+   still travels, chasing off the right edge on its own unchanged timeline above. THE CLOCK IS
+   STILL 26s. Timeline, in host %:
+     0-100    the scroll and the sponsor's words are on stage, at rest (x=90), for the whole loop
+     30-32    one settle wobble so the parch is not a sticker
+     64-72.6  the crab skids in tucked at ~50px/s, claws braced, teeth gritted, dust behind him
+     73.2     CONTACT: squash 1.18/.82 against the scroll's end, X eyes snap in, claws fling up
+     73.4-76  the scroll takes the hit as a kick and a bob, rotation and Y only, then settles back
+              to rest without ever moving in X
+     74.6-80  dazed hold; X eyes clear at 79.6, a double blink, pupils track right after it
+     81.5     one sweat bead - he realises what he has done
+     83-95.6  bouncy panic chase off the right edge; the CRAB fades at the fixed-% exit the
+              other skits use (phone-first: on a 600px card the fade lands mid-flight) */
 @keyframes skc_scroll{
-  0%{ transform:translate(90px,18px) rotate(0deg); opacity:0; }
-  1.6%{ transform:translate(90px,6px) rotate(0deg); opacity:1; }
-  30%{ transform:translate(90px,6px) rotate(0deg); }
+  0%,72.9%{ transform:translate(90px,6px) rotate(0deg); }
   30.9%{ transform:translate(90px,5.4px) rotate(.9deg); }
-  31.8%{ transform:translate(90px,6px) rotate(0deg); }
-  72.9%{ transform:translate(90px,6px) rotate(0deg); }
-  73.4%{ transform:translate(97px,3px) rotate(2.6deg); }
-  74.4%{ transform:translate(126px,5px) rotate(-1deg); }
-  76.2%{ transform:translate(216px,6px) rotate(.6deg); }
-  78.2%{ transform:translate(338px,6px) rotate(0deg); }
-  80.6%{ transform:translate(492px,6px) rotate(.4deg); opacity:1; }
-  82.4%{ transform:translate(624px,6px) rotate(0deg); opacity:0; }
-  100%{ transform:translate(90px,18px) rotate(0deg); opacity:0; }
+  73.4%{ transform:translate(90px,3px) rotate(2.6deg); }
+  74.4%{ transform:translate(90px,7px) rotate(-1.4deg); }
+  75.2%{ transform:translate(90px,5px) rotate(.6deg); }
+  76%,100%{ transform:translate(90px,6px) rotate(0deg); }
 }
-/* opacity only - the parch is fully unrolled the whole act, so the words never animate spacing */
-.skc_scroll .skadtxt{ opacity:0; animation:skc_adtxt var(--skd,26s) linear infinite var(--sko,0s); }
-@keyframes skc_adtxt{ 0%,1.8%{ opacity:0;} 3%,79%{ opacity:1;} 81%,100%{ opacity:0;} }
+/* the parch is fully unrolled and on stage the whole act — the words never fade and the box never
+   moves in X, so the sign can neither vanish nor shear at either end (gate_skit_paid.js). */
+.skc_scroll .skadtxt{ opacity:1; }
 
 .skc_crab .scl_lids{ animation:skc_lids var(--skd,26s) linear infinite var(--sko,0s); }
 @keyframes skc_lids{ 0%,79.7%{ opacity:0;} 79.9%,80.2%{ opacity:1;} 80.4%,80.7%{ opacity:0;} 80.9%,81.2%{ opacity:1;} 81.4%,100%{ opacity:0;} }
@@ -9701,13 +9735,18 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
    real edges wherever they land. Measured before: the cloth cut "Gulf Coast Beach Rentals" at
    130.6px inside a 126.1px box — over by 4.6px at BOTH ends of a centred nowrap clip. */
 .skp_banner{ position:absolute; left:70px; bottom:6px; width:max-content; min-width:128px; height:22px; z-index:2; }
-.skp_ropeL,.skp_ropeR{ position:absolute; top:-8px; width:1.5px; height:9px; background:#C9BCA0; opacity:0; animation:skp_rope var(--skd,20s) linear infinite var(--sko,0s); }
+/* ⚠ 08/18 — THE BANNER STOPS FURLING TO NOTHING. Measured (gate_skit_paid.js): the old skp_unfurl
+   scaled the cloth to scaleY(0) for 0-28% and 95-100% of every loop — the sponsor's name at zero
+   height for close to a third of the cycle. The cloth and its ropes are a permanent fixture now,
+   always fully up, never moving in X or scale — only a small ROTATION sway, which cannot overhang
+   the shelf's clip box the way a scale or a translate can. The PELICAN's fly-in, perch and gulp
+   are what carry the arrival. */
+.skp_ropeL,.skp_ropeR{ position:absolute; top:-8px; width:1.5px; height:9px; background:#C9BCA0; opacity:.9; }
 .skp_ropeL{ left:5px; transform:rotate(14deg); } .skp_ropeR{ right:5px; transform:rotate(-14deg); }
-@keyframes skp_rope{ 0%,29%{ opacity:0;} 31%,92%{ opacity:.9;} 94%,100%{ opacity:0;} }
 .skp_cloth{ position:relative; display:flex; align-items:center; justify-content:center; box-sizing:border-box; width:max-content; min-width:128px; height:100%; border-radius:4px; background:linear-gradient(180deg,#F4EDD8,#E2D5B2); border:1px solid #B9A87E; box-shadow:0 2px 6px rgba(6,20,26,.45), inset 0 1px 0 rgba(255,252,240,.7);
-  transform-origin:50% 0; transform:scaleY(0); animation:skp_unfurl var(--skd,20s) cubic-bezier(.34,1.3,.5,1) infinite var(--sko,0s); }
+  transform-origin:50% 0; animation:skp_sway 4.2s ease-in-out infinite; }
 .skp_cloth .skadtxt.pier{ box-sizing:border-box; font-family:Georgia,'Times New Roman',serif; font-weight:800; font-size:9.5px; letter-spacing:1.1px; color:#6A5626; white-space:nowrap; padding:0 8px; }
-@keyframes skp_unfurl{ 0%,28%{ transform:scaleY(0) rotate(0);} 31.5%{ transform:scaleY(1.12) rotate(0);} 33.5%{ transform:scaleY(.96) rotate(.4deg);} 36%{ transform:scaleY(1.02) rotate(-.4deg);} 38%{ transform:scaleY(1) rotate(0);} 55%{ transform:scaleY(1) rotate(.5deg);} 72%{ transform:scaleY(1) rotate(-.5deg);} 91%{ transform:scaleY(1) rotate(0);} 95%,100%{ transform:scaleY(0) rotate(0);} }
+@keyframes skp_sway{ 0%,100%{ transform:rotate(-.6deg);} 50%{ transform:rotate(.6deg);} }
 .skp_pelfly{ position:absolute; left:-56px; top:4px; z-index:5; animation:skp_pelfly var(--skd,20s) linear infinite var(--sko,0s); opacity:0; }
 @keyframes skp_pelfly{
   0%{ opacity:0; transform:translate(0,6px) rotate(-2deg); }
@@ -15772,7 +15811,7 @@ function useLiveWx(){const[,bump]=useState(0);useEffect(()=>{const cb=()=>bump(n
    the stand is the truth. A colour nobody earned is worse than no colour, which
    is the same law verifiedOn runs on.
    =========================================================================== *//* GCA_FLAG_DATA_BEGIN — one line, replaced verbatim by claude/harness/bake_beach_flag.js.
-   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-18T12:15:37.033Z","issued":"2026-08-18T07:52:00+00:00","productId":"f8548f20-9ee2-4467-9aed-ab7570874d95","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"forecastSource":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"forecast","county":{"level":2,"flags":["yellow","purple"],"risk":"Moderate","marineLife":true,"waterTempF":87,"updated":"2026-08-17T23:04:38.59Z","chance":{"green":50,"yellow":50,"red":0,"doubleRed":0,"marineLife":30},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-18","risk":"Moderate","flags":["yellow"],"observedAt":null,"chance":null,"surf":"Around 2 feet","uv":"Very High","water":"In the upper 80s","weather":"Mostly sunny. A chance of showers and thunderstorms","winds":"West winds 10 to 15 mph"},"outlook":[{"date":"2026-08-18","label":"Today","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-19","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-20","label":"Thursday","risk":"Moderate","flags":["yellow"],"surf":"Around 1 foot"},{"date":"2026-08-21","label":"Friday","risk":"Low","flags":["green"],"surf":"Around 1 foot"},{"date":"2026-08-22","label":"Saturday","risk":"Low","flags":["green"],"surf":"Around 1 foot"}],"alerts":[{"event":"Extreme Heat Warning","headline":"Extreme Heat Warning issued August 17 at 8:51PM CDT until August 18 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...Dangerously hot conditions with heat index values up to 115\nexpected.\n\n* WHERE...In Alabama, Baldwin Central, Baldwin Coastal, Mobile\nCentral, and Mobile Coastal Counties. In Florida, Escambia Coastal,\nOkaloosa Coastal, and Santa Rosa Coastal Counties.\n\n* WHEN...From 11 AM to 8 PM CDT Tuesday.\n\n* IMPACTS...Heat related illnesses increase significantly during\nextreme heat and high humidity events.","severity":"Severe","onset":"2026-08-18T11:00:00-05:00","ends":"2026-08-18T20:00:00-05:00"}]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
+   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-18T13:13:47.901Z","issued":"2026-08-18T07:52:00+00:00","productId":"f8548f20-9ee2-4467-9aed-ab7570874d95","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"forecastSource":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"forecast","county":{"level":2,"flags":["yellow","purple"],"risk":"Moderate","marineLife":true,"waterTempF":87,"updated":"2026-08-17T23:04:38.59Z","chance":{"green":50,"yellow":50,"red":0,"doubleRed":0,"marineLife":30},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-18","risk":"Moderate","flags":["yellow"],"observedAt":null,"chance":null,"surf":"Around 2 feet","uv":"Very High","water":"In the upper 80s","weather":"Mostly sunny. A chance of showers and thunderstorms","winds":"West winds 10 to 15 mph"},"outlook":[{"date":"2026-08-18","label":"Today","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-19","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-20","label":"Thursday","risk":"Moderate","flags":["yellow"],"surf":"Around 1 foot"},{"date":"2026-08-21","label":"Friday","risk":"Low","flags":["green"],"surf":"Around 1 foot"},{"date":"2026-08-22","label":"Saturday","risk":"Low","flags":["green"],"surf":"Around 1 foot"}],"alerts":[{"event":"Extreme Heat Warning","headline":"Extreme Heat Warning issued August 17 at 8:51PM CDT until August 18 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...Dangerously hot conditions with heat index values up to 115\nexpected.\n\n* WHERE...In Alabama, Baldwin Central, Baldwin Coastal, Mobile\nCentral, and Mobile Coastal Counties. In Florida, Escambia Coastal,\nOkaloosa Coastal, and Santa Rosa Coastal Counties.\n\n* WHEN...From 11 AM to 8 PM CDT Tuesday.\n\n* IMPACTS...Heat related illnesses increase significantly during\nextreme heat and high humidity events.","severity":"Severe","onset":"2026-08-18T11:00:00-05:00","ends":"2026-08-18T20:00:00-05:00"}]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
    same words fetch_beach_flag.js emits so the two cannot drift apart.
    ⚠ 08/13 — GREEN WAS #2E9E5B AND GRAY COULD NOT SEE IT: "not able to be seen very vividly.
    Needs to be filled it i guess or more vivid less dark green." Measured, he is right by a
@@ -17924,10 +17963,24 @@ const eat=ev=>{ev.stopPropagation();ev.preventDefault();};r.addEventListener("cl
        arithmetic, and it inherits the scope crossfade off `key` for free. */},page==="promos"?React.createElement(PromotionsPage,null):qn?React.createElement(SearchView,{q:q.trim(),evs:POOL.filter(notPast).filter(match),spots:SPOTS.filter(match),openings:OPENINGS.filter(o=>inNewComing(o)&&hitsQO(o)&&openDist(o)&&(!flt.opened&&!flt.coming||flt.opened&&isJustOpened(o)||flt.coming&&isComing(o)&&!isJustOpened(o))),open:open,onToggle:onT,pinned:pinned,onPin:togglePin}):flt.pinned?React.createElement(PinnedView,{items:pinnedItems,open:open,onToggle:onT,pinned:pinned,onPin:togglePin}):flt.opened||flt.coming?React.createElement(NewComingView,{openings:OPENINGS.filter(o=>inNewComing(o)&&openDist(o)&&(flt.opened&&isJustOpened(o)||flt.coming&&isComing(o)&&!isJustOpened(o)))}):page==="new"?React.createElement(NewComingView,{openings:OPENINGS.filter(inNewComing).filter(hitsQO).filter(openDist)}):range?React.createElement(EventsSpotsView,{/* A range wider than a fortnight is a browse, not a plan — collapse it like the 90-day view. */events:(list=>(parseISO(range.to)-parseISO(range.from))/86400000>14?collapseSeries(list):list)(POOL.filter(it=>inRangeOf(it,range.from,range.to)).filter(match)),scope:"Your dates · "+rangeLabel,nextUp:nextUp,tone:"month",open:open,onToggle:onT,pinned:pinned,onPin:togglePin}):when==="everything"?React.createElement(EverythingView,{evs:POOL.filter(notPast).filter(match),spots:SPOTS.filter(match),filtered:activeCount>0,open:open,onToggle:onT,pinned:pinned,onPin:togglePin}):when==="ninety"?React.createElement(NinetyView,{items:POOL.filter(inNinety).filter(match),planAhead:POOL.filter(inPlanAhead).filter(match),open:open,onToggle:onT,pinned:pinned,onPin:togglePin}):when==="anytime"?React.createElement(React.Fragment,null,(()=>{const n=SPOTS.filter(match).length;return React.createElement("div",{className:"scount"},React.createElement(Ic,{k:"compass",s:12})," ",React.createElement("b",{style:{color:"#EDE8DC"}},n)," ",n===1?"card":"cards"," to explore");})(),React.createElement(SectionHead,{title:"Things to Do",scope:"🧭 Anytime, go any day",tone:"spot"}),(flt.types.length>0||flt.settings.length>0||flt.free||flt.core)&&(()=>{const evsM=POOL.filter(notPast).filter(match);const seen=new Set();let n=0;for(const it of evsM){const k=(it.title||"")+"|"+(it.venue||"");if(!seen.has(k)){seen.add(k);n++;}}return n>0?React.createElement("button",{type:"button",className:"evbar","data-testid":"anytime-evbar",onClick:()=>pickWhen("everything")},React.createElement(Ic,{k:"compass",s:13})," ",n," dated ",n===1?"event matches":"events match"," too. Show everything."):null;})(),React.createElement("div",{style:{marginTop:14}},(()=>{const list=SPOTS.filter(match);return list.length?React.createElement(CardRun,{items:list,open:open,onToggle:onT,pinned:pinned,onPin:togglePin}):React.createElement("div",{className:"emptybox"},React.createElement("b",null,"No matches here.")," Adjust the filters or tap Reset ✕.");})())):when==="week"?React.createElement(EventsSpotsView,{events:POOL.filter(inWeek).filter(match),scope:"Next 7 Days",nextUp:nextUp,tone:"month",open:open,onToggle:onT,pinned:pinned,onPin:togglePin}):when==="month"?React.createElement(EventsSpotsView,{events:collapseSeries(POOL.filter(inMonth).filter(match)),scope:"This Month",nextUp:nextUp,tone:"month",open:open,onToggle:onT,pinned:pinned,onPin:togglePin}):when==="today"?React.createElement(EventsSpotsView,{events:POOL.filter(coversToday).filter(match),scope:"Happening Today",nextUp:nextUp,tone:"ev",open:open,onToggle:onT,pinned:pinned,onPin:togglePin}):React.createElement(EventsSpotsView,{events:POOL.filter(inWeekend).filter(match),scope:"This Weekend",nextUp:nextUp,tone:"spot",open:open,onToggle:onT,pinned:pinned,onPin:togglePin})),page!=="promos"&&React.createElement(SponsorsSection,null),page!=="promos"&&React.createElement("div",{className:"foot"},React.createElement("b",null,"How to read it.")," One ",React.createElement("b",{style:{color:"#EDE8DC"}},"Free")," per card, in the price box. Red ",React.createElement("b",{style:{color:"#EFA295"}},"Heads up")," = something you must know (a parking fee, a scrub risk); amber = verify. Cards wear their category's mood: warm coastal for family days, deeper tones for beach, nature, sky, and date night. The sky up top follows the real time of day. Tap the sun or moon to preview. Always confirm at the venue before you drive."),page!=="promos"&&React.createElement("div",{className:"xp_doors","data-testid":"page-doors"},React.createElement("button",{type:"button",className:"xp_door","data-testid":"door-support",onClick:()=>openX("support")},React.createElement("span",{className:"xd","aria-hidden":"true"},"❤️")," Support"),React.createElement("button",{type:"button",className:"xp_door","data-testid":"door-promos",onClick:()=>goPromos()},React.createElement("span",{className:"xd","aria-hidden":"true"},"🏷️")," Promotions"))))))));}ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(HicksWeekend));</script><script>
 /* Registration is guarded three ways: the API may not exist, the page may be opened from file://
    where registration throws, and a failure must never take the app down with it. The app works
-   perfectly without a service worker — this only makes the SECOND visit work with no signal. */
+   perfectly without a service worker — this only makes a later visit open on the current build
+   instead of whatever was cached last, with no signal required. */
 if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) {
   window.addEventListener("load", function () {
-    try { navigator.serviceWorker.register("./sw.js", { scope: "./" }); } catch (e) {}
+    var hadController = !!navigator.serviceWorker.controller;
+    var reloaded = false;
+    navigator.serviceWorker.addEventListener("controllerchange", function () {
+      if (!hadController || reloaded) return;
+      reloaded = true;
+      location.reload();
+    });
+    navigator.serviceWorker.register("./sw.js", { scope: "./" }).then(function (reg) {
+      /* update() returns its own promise; a transient network blip must not surface as an
+         unhandled rejection, so it is caught here rather than only guarding the sync call. A
+         failed check here just means this open still shows the current cache — no worse than
+         before this fix — and the NEXT open tries again. */
+      reg.update().catch(function () {});
+    }).catch(function () {});
   });
 }
 </script></body></html>
