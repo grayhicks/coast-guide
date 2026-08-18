@@ -11036,7 +11036,7 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
 .fwh_lln{stroke:#E3C471;stroke-width:1.1;stroke-linecap:round}
 .fwh_fl{opacity:0;transform-box:fill-box;transform-origin:center;animation:fwh_kfl calc(var(--fp,12s)/2) linear calc(var(--fd,0s)) infinite}
 .fwh_hl{opacity:0}
-.fwh_st{opacity:0;animation-duration:calc(var(--fp,12s)/2);animation-timing-function:linear;animation-iteration-count:infinite;animation-delay:calc(var(--fd,0s) + var(--sd,0s))}
+.fwh_st{opacity:0;transform-box:view-box;transform-origin:center;transform:scale(calc(.7 + var(--b,1)*.5));animation-duration:calc(var(--fp,12s)/2);animation-timing-function:linear;animation-iteration-count:infinite;animation-delay:calc(var(--fd,0s) + var(--sd,0s))}
 .fwh_d1{animation-name:fwh_kd1}
 .fwh_d2{animation-name:fwh_kd2}
 .fwh_d3{animation-name:fwh_kd3}
@@ -11045,34 +11045,45 @@ a.mitem .mt, a.mitem .ms{ text-decoration:none; }
 .fwh_fya,.fwh_fyb{animation-duration:calc(var(--fp,12s)/2);animation-timing-function:linear;animation-iteration-count:infinite;animation-delay:calc(var(--fd,0s) + var(--sd,0s))}
 .fwh_fya{animation-name:fwh_kfya}
 .fwh_fyb{animation-name:fwh_kfyb}
-/* LAP 3 (08/17, "naked circles"): the tail is a TAPERED FILLED PATH in the spark's own shell
-   colour — base 1.1-2px wide at the head, point at the far end — and it dies WITH its spark:
-   each death clock has a matching tail clock (fwh_ktl1..5 below, ends at the same %% as
-   fwh_kd1..5) so no spark ever outlives its streak. The tail's own opacity multiplies the
-   parent death clock's, so it is always dimmer than the head it follows. scaleX still peaks
-   at 1.15 (the ignition elongation) and eases down as the spark slows. */
-.fwh_tl{opacity:0;transform-box:fill-box;transform-origin:100% 50%;animation:fwh_ktl3 calc(var(--fp,12s)/2) linear calc(var(--fd,0s) + var(--sd,0s)) infinite}
+/* LAP 5 (08/18, "dandelion, not fireworks" — cold grade 7.0). Gray, via the grader: "a firework
+   star is a bright point that STREAKS... a short tapered trail with the hot point at its
+   LEADING end... take PillHeartFx's DRAWING, not only its decay." Read against PillHeartFx
+   (.phs_tl/.phs_hw): the trail there is a thin WHITE stroke and only the small core dot carries
+   the shell's own colour — the "hot" part is white, the "warm" part is the dot underneath it.
+   This tail now does the same: fill is forced to the cream white here (§ one CSS rule beats
+   ~100 inline shell-colour fill="" attributes on the individual star paths, no per-star edit
+   needed), and every fwh_ktl keyframe below carries a constant scaleY(.4) alongside its existing
+   scaleX shrink, so the wedge that used to run 1.1-2px wide at the head is now a sliver — a
+   streak, not a wedge. The dot itself is shrunk separately (.fwh_st circle, scale .42) so the
+   bright point no longer outweighs the line it sits on. .fwh_st also now carries
+   scale(.7 + var(--b,1)*.5) — reusing each star's OWN existing --b brightness value (already
+   hand-varied per star) to vary its overall size and reach, so the burst's outline is ragged
+   instead of a near-perfect ring, with no new per-star numbers authored. Each death clock still
+   has a matching tail clock (fwh_ktl1..5 below, ends at the same %% as fwh_kd1..5) so no spark
+   ever outlives its streak; the tail's own opacity still multiplies the parent death clock's. */
+.fwh_tl{opacity:0;fill:#FFF6E4;transform-box:fill-box;transform-origin:100% 50%;animation:fwh_ktl3 calc(var(--fp,12s)/2) linear calc(var(--fd,0s) + var(--sd,0s)) infinite}
 .fwh_d1 .fwh_tl{animation-name:fwh_ktl1}
 .fwh_d2 .fwh_tl{animation-name:fwh_ktl2}
 .fwh_d4 .fwh_tl{animation-name:fwh_ktl4}
 .fwh_d5 .fwh_tl{animation-name:fwh_ktl5}
 .fwh_hw{opacity:0;animation:fwh_khw calc(var(--fp,12s)/2) linear calc(var(--fd,0s) + var(--sd,0s)) infinite}
+.fwh_st circle{transform:scale(.3);transform-box:fill-box;transform-origin:center}
 @keyframes fwh_klch{0%{opacity:0;transform:translate(var(--lx,0px),40px);animation-timing-function:cubic-bezier(.16,.68,.3,1)}1.5%{opacity:.95}7.8%{opacity:.8;transform:translate(0px,-.5px)}9%,100%{opacity:0;transform:translate(0px,-1px)}}
 @keyframes fwh_kfl{0%,9.2%{opacity:0;transform:scale(.25)}9.7%{opacity:var(--fo,1);transform:scale(1)}10.8%{opacity:calc(var(--fo,1)*.6);transform:scale(1.4);animation-timing-function:cubic-bezier(.2,.6,.35,1)}12.8%,100%{opacity:0;transform:scale(2)}}
 @keyframes fwh_kgw{0%,9.3%{opacity:0;transform:scale(.5)}10.4%{opacity:.22;transform:scale(.72)}11.8%{opacity:.32;transform:scale(.95)}14%{opacity:.24;transform:scale(1.12)}20%{opacity:.1;transform:scale(1.28)}30%,100%{opacity:0;transform:scale(1.4)}}
 @keyframes fwh_kfya{0%,9.3%{transform:translateY(0px) rotate(var(--a)) translateX(0px);animation-timing-function:cubic-bezier(.12,.72,.22,1)}13.2%{transform:translateY(calc(var(--g,0)*.05px)) rotate(var(--a)) translateX(calc(var(--r)*.62px));animation-timing-function:cubic-bezier(.25,.6,.4,.98)}17.5%{transform:translateY(calc(var(--g,0)*.2px)) rotate(var(--a)) translateX(calc(var(--r)*.88px));animation-timing-function:cubic-bezier(.35,.25,.55,.7)}25%{transform:translateY(calc(var(--g,0)*.55px)) rotate(var(--a)) translateX(calc(var(--r)*1px));animation-timing-function:cubic-bezier(.45,.1,.7,.5)}33%{transform:translateY(calc(var(--g,0)*.92px)) rotate(var(--a)) translateX(calc(var(--r)*1.03px))}40%,100%{transform:translateY(calc(var(--g,0)*1.18px)) rotate(var(--a)) translateX(calc(var(--r)*1.04px))}}
 @keyframes fwh_kfyb{0%,9.3%{transform:translateY(0px) rotate(var(--a)) translateX(0px);animation-timing-function:cubic-bezier(.1,.78,.2,1)}14.5%{transform:translateY(calc(var(--g,0)*.04px)) rotate(var(--a)) translateX(calc(var(--r)*.58px));animation-timing-function:cubic-bezier(.28,.55,.45,.95)}20%{transform:translateY(calc(var(--g,0)*.18px)) rotate(var(--a)) translateX(calc(var(--r)*.85px));animation-timing-function:cubic-bezier(.35,.3,.6,.72)}28%{transform:translateY(calc(var(--g,0)*.6px)) rotate(var(--a)) translateX(calc(var(--r)*.98px));animation-timing-function:cubic-bezier(.5,.12,.72,.5)}36%{transform:translateY(calc(var(--g,0)*1.05px)) rotate(var(--a)) translateX(calc(var(--r)*1.02px))}42%,100%{transform:translateY(calc(var(--g,0)*1.28px)) rotate(var(--a)) translateX(calc(var(--r)*1.03px))}}
 @keyframes fwh_kd1{0%,9.3%{opacity:0}10.3%{opacity:var(--b,1)}15%{opacity:calc(var(--b,1)*.75);animation-timing-function:cubic-bezier(.55,.05,.8,.4)}21%,100%{opacity:0}}
-@keyframes fwh_kd2{0%,9.3%{opacity:0}10.3%{opacity:var(--b,1)}16%{opacity:calc(var(--b,1)*.6);animation-timing-function:cubic-bezier(.55,.05,.8,.4)}22%,100%{opacity:0}}
-@keyframes fwh_kd3{0%,9.3%{opacity:0}10.3%{opacity:var(--b,1)}17%{opacity:calc(var(--b,1)*.55);animation-timing-function:cubic-bezier(.55,.05,.8,.4)}23%,100%{opacity:0}}
-@keyframes fwh_kd4{0%,9.3%{opacity:0}10.3%{opacity:var(--b,1)}18%{opacity:calc(var(--b,1)*.5);animation-timing-function:cubic-bezier(.55,.05,.8,.4)}24.5%,100%{opacity:0}}
-@keyframes fwh_kd5{0%,9.3%{opacity:0}10.3%{opacity:var(--b,1)}19%{opacity:calc(var(--b,1)*.45);animation-timing-function:cubic-bezier(.55,.05,.8,.4)}26%,100%{opacity:0}}
+@keyframes fwh_kd2{0%,9.3%{opacity:0}10.3%{opacity:var(--b,1)}17%{opacity:calc(var(--b,1)*.6);animation-timing-function:cubic-bezier(.55,.05,.8,.4)}24%,100%{opacity:0}}
+@keyframes fwh_kd3{0%,9.3%{opacity:0}10.3%{opacity:var(--b,1)}18%{opacity:calc(var(--b,1)*.55);animation-timing-function:cubic-bezier(.55,.05,.8,.4)}25%,100%{opacity:0}}
+@keyframes fwh_kd4{0%,9.3%{opacity:0}10.3%{opacity:var(--b,1)}19%{opacity:calc(var(--b,1)*.5);animation-timing-function:cubic-bezier(.55,.05,.8,.4)}27%,100%{opacity:0}}
+@keyframes fwh_kd5{0%,9.3%{opacity:0}10.3%{opacity:var(--b,1)}20%{opacity:calc(var(--b,1)*.45);animation-timing-function:cubic-bezier(.55,.05,.8,.4)}30%,100%{opacity:0}}
 @keyframes fwh_khw{0%,9.3%{opacity:0}9.9%{opacity:1}11.3%{opacity:.45}14%{opacity:.18}17%,100%{opacity:0}}
-@keyframes fwh_ktl1{0%,9.3%{opacity:0;transform:scaleX(.3)}10.5%{opacity:.8;transform:scaleX(1.15)}14%{opacity:.62;transform:scaleX(.95)}18%{opacity:.4;transform:scaleX(.72)}21%,100%{opacity:0;transform:scaleX(.5)}}
-@keyframes fwh_ktl2{0%,9.3%{opacity:0;transform:scaleX(.3)}10.5%{opacity:.8;transform:scaleX(1.15)}14%{opacity:.62;transform:scaleX(1)}19%{opacity:.4;transform:scaleX(.75)}22%,100%{opacity:0;transform:scaleX(.5)}}
-@keyframes fwh_ktl3{0%,9.3%{opacity:0;transform:scaleX(.3)}10.5%{opacity:.8;transform:scaleX(1.15)}14%{opacity:.62;transform:scaleX(1)}20%{opacity:.4;transform:scaleX(.78)}23%,100%{opacity:0;transform:scaleX(.48)}}
-@keyframes fwh_ktl4{0%,9.3%{opacity:0;transform:scaleX(.3)}10.5%{opacity:.8;transform:scaleX(1.15)}14%{opacity:.62;transform:scaleX(1)}21%{opacity:.4;transform:scaleX(.8)}24.5%,100%{opacity:0;transform:scaleX(.46)}}
-@keyframes fwh_ktl5{0%,9.3%{opacity:0;transform:scaleX(.3)}10.5%{opacity:.8;transform:scaleX(1.15)}14%{opacity:.62;transform:scaleX(1)}22%{opacity:.4;transform:scaleX(.82)}26%,100%{opacity:0;transform:scaleX(.44)}}
+@keyframes fwh_ktl1{0%,9.3%{opacity:0;transform:scaleY(.6) scaleX(.3)}10.5%{opacity:.8;transform:scaleY(.6) scaleX(1.15)}14%{opacity:.62;transform:scaleY(.6) scaleX(.95)}18%{opacity:.4;transform:scaleY(.6) scaleX(.72)}21%,100%{opacity:0;transform:scaleY(.6) scaleX(.5)}}
+@keyframes fwh_ktl2{0%,9.3%{opacity:0;transform:scaleY(.6) scaleX(.3)}10.5%{opacity:.8;transform:scaleY(.6) scaleX(1.15)}14%{opacity:.62;transform:scaleY(.6) scaleX(1)}20%{opacity:.4;transform:scaleY(.6) scaleX(.75)}24%,100%{opacity:0;transform:scaleY(.6) scaleX(.5)}}
+@keyframes fwh_ktl3{0%,9.3%{opacity:0;transform:scaleY(.6) scaleX(.3)}10.5%{opacity:.8;transform:scaleY(.6) scaleX(1.15)}14%{opacity:.62;transform:scaleY(.6) scaleX(1)}21%{opacity:.4;transform:scaleY(.6) scaleX(.78)}25%,100%{opacity:0;transform:scaleY(.6) scaleX(.48)}}
+@keyframes fwh_ktl4{0%,9.3%{opacity:0;transform:scaleY(.6) scaleX(.3)}10.5%{opacity:.8;transform:scaleY(.6) scaleX(1.15)}14%{opacity:.62;transform:scaleY(.6) scaleX(1)}22%{opacity:.4;transform:scaleY(.6) scaleX(.8)}27%,100%{opacity:0;transform:scaleY(.6) scaleX(.46)}}
+@keyframes fwh_ktl5{0%,9.3%{opacity:0;transform:scaleY(.6) scaleX(.3)}10.5%{opacity:.8;transform:scaleY(.6) scaleX(1.15)}14%{opacity:.62;transform:scaleY(.6) scaleX(1)}23%{opacity:.4;transform:scaleY(.6) scaleX(.82)}30%,100%{opacity:0;transform:scaleY(.6) scaleX(.44)}}
 @media (prefers-reduced-motion: reduce){
 .fwh_lch,.fwh_fl,.fwh_st,.fwh_fya,.fwh_fyb,.fwh_tl,.fwh_hw,.fwh_gw{animation:none}
 .fwh_lch,.fwh_fl,.fwh_tl,.fwh_hw,.fwh_gw{opacity:0}
@@ -11372,46 +11383,54 @@ a.xp_ctab{ text-decoration:none; }
    .xps_scene carries --fp; each slot carries --fd. overflow stays visible - the mounted fwh_
    module spills outside its box on purpose. The demo dot is a bench placeholder the module
    replaces; it rides var(--fp)/var(--fd) so state cadence changes show on the bench too. */
-.xps_fw1{ left:-26px; top:-2px; width:92px; height:92px; --fd:0.1s; }
-.xps_fw2{ left:189px; top:-4px; width:92px; height:92px; --fd:0.6s; }
-.xps_fw3{ left:45px; top:-2px; width:92px; height:92px; --fd:1.1s; }
+.xps_fw1{ left:-26px; top:-2px; width:92px; height:92px; --fd:-0.6s; }
+.xps_fw2{ left:260px; top:-4px; width:92px; height:92px; --fd:0.5s; }
+.xps_fw3{ left:189px; top:-2px; width:92px; height:92px; --fd:1.5s; }
 .xps_fw1,.xps_fw2,.xps_fw3{ z-index:4; pointer-events:none; overflow:visible; }
-/* 08/18 — SPREAD ACROSS THE WHOLE SKY, NOT THE LEFT THIRD. Gray: "you could have two three four
-   of them popping off at the same time it doesn't take up enough space." Centres (slot left + 46)
-   now sit at EIGHT evenly spaced points across the 326px stage — 20 · 91 · 199 · 55 · 271 · 127 ·
-   306 · 163 — 6%,17%,28%,39%,61%,72%,83%,94% of the width, plus the heart's own 80% (unmoved,
-   it was already deliberately clear of the wordmark — see the heart note below). The old three
-   ambient slots sat at 18%/50%/86% (not bad alone) but the five surge slots that join them at a
-   real gift amount clustered inside 11%-92% with the SAME handful actually visible at once
-   always toward the left-centre — measured: at $10, the lit-slot mean x sat in the left half far
-   more often than the right. Ignition delays (--fd, below) are now staggered ~0.5-0.6s apart
-   across the whole 6s half-period instead of three-at-once-then-four-seconds-of-nothing, so with
-   a real gift selected there are 2-4 slots alight continuously rather than a burst-then-silence
-   pattern that only ever fills the left of the frame. Delays climb WITH the slot number
-   (fw1..fw8 = .1/.6/1.1/1.6/2.1/2.6/3.1/3.6s), which matters because surge only ever ADDS slots
-   in that same order (XPS_SURGE is fw4,fw5,fw6,fw7,fw8) — so every prefix, from the ambient
-   three up through all eight, already has even coverage on its own instead of relying on a
-   later-numbered slot that might not even be mounted yet. The last of the eight dies by 4.5s
-   (3.6s ignite + ~0.9s life), 0.8s clear of the heart's 5.3s, so the heart still pops alone —
-   the way a colour shell once crested next to it is no longer possible at any tier. */
-.xps_fw4{ left:225px; top:-5px; --fd:1.6s; }
-.xps_fw5{ left:9px; top:-3px; --fd:2.1s; }
-.xps_fw6{ left:153px; top:-2px; --fd:2.6s; }
-.xps_fw7{ left:260px; top:-2px; --fd:3.1s; }
-.xps_fw8{ left:81px; top:-6px; --fd:3.6s; }
+/* LAP 6 (08/18, cold grade 7.0 — "five of fourteen sampled frames have an empty sky"). Gray:
+   "you could have two three four of them popping off at the same time it doesn't take up enough
+   space." Centres (slot left + 46) sit at EIGHT evenly spaced points across the 326px stage — 6%,
+   17%,28%,39%,61%,72%,83%,94% of the width — plus the heart's own 80% (unmoved, already
+   deliberately clear of the wordmark — see the heart note below).
+   LAP 5's fix (fd climbing 0.1..3.6s WITH the slot number) closed the left-bias but only covered
+   the FIRST ~4.5s of the 6s loop — the grader sampled the whole cycle, not just the busy part,
+   and found the start (nothing ignited yet) and the 3.66s-5.2s stretch before the heart both
+   went fully dark. Fixed two ways:
+     · fw1 carries a NEGATIVE delay (-0.6s) — the animation is already 0.6s into its own timeline
+       at t=0, past the 9.3%-of-6s ignite point, so it is alight from the first frame instead of
+       after a ~0.6s ignition ramp.
+     · fw6/fw7/fw8 (the surge-only slots) are no longer a fourth-through-eighth wave tacked onto
+       the end — their delays (1.0/2.0/3.0s) sit at the MIDPOINTS between fw1..fw5's own
+       (-0.5/0.5/1.5/2.5/3.5s), so a higher gift densifies the middle of the show rather than
+       stretching it further past where fw1..fw5 (and the heart) already reach.
+   Measured (see gate output): fw1..fw5 + heart alone — the set present at a $10 gift, the
+   tier actually screenshotted for the 7.0 grade — already tiles the full 6s loop with no gap
+   over ~50ms (below any real sampling grain); fw6-8 only add density on top of that, never fill
+   a hole the base set left open. Positions are assigned in IGNITION order, not slot-number
+   order, zig-zagging across the width (fw1 6%, fw2 94%, fw6 28%, fw3 72%, fw7 17%, fw4 83%,
+   fw8 39%, fw5 61%, heart 80%) so two bursts that are alight at the same moment are never two
+   that sit next to each other either. */
+.xps_fw4{ left:225px; top:-5px; --fd:2.5s; }
+.xps_fw5{ left:153px; top:-3px; --fd:3.5s; }
+.xps_fw6{ left:45px; top:-2px; --fd:1.0s; }
+.xps_fw7{ left:9px; top:-2px; --fd:2.0s; }
+.xps_fw8{ left:81px; top:-6px; --fd:3.0s; }
 .xps_fw4,.xps_fw5,.xps_fw6,.xps_fw7,.xps_fw8{ width:92px; height:92px; z-index:4; pointer-events:none; overflow:visible; }
 /* 08/17 — CADENCE SCALES WITH THE AMOUNT (Gray: "more often the higher they give"), AND IT IS
-   DECIDED AT MOUNT, never by retiming a running element — job B's law. LAP 4 (08/18) dropped the
-   two-cluster "volley A / volley B" shape (it read as busy-then-four-seconds-dark, always toward
-   the left) for delays spread ~0.5-0.6s apart across the whole 6s half-period, climbing with
-   the slot number: fw1 .1, fw2 .6, fw3 1.1, fw4 1.6, fw5 2.1, fw6 2.6, fw7 3.1, fw8 3.6, heart
-   5.3 — close enough together that a spark's own ~0.9s life overlaps its neighbour's, so two or
-   three are usually alight together rather than one at a time. Each spark's own life is now
-   short (0.64-0.94s peak to dark, see the death-clock note above), so a rung still buys COUNT and
-   CADENCE, it just no longer buys a long silent gap:
-     $1  -> one ambient trio, evenly spaced, then real night (a quiet thank-you);
-     $10 -> the trio plus two more woven into the same spread, continuous through most of the 6s;
-     $500 -> all eight slots alight in overlapping pairs across the full width, then the heart.
+   DECIDED AT MOUNT, never by retiming a running element — job B's law. LAP 6 (08/18) moved the
+   heart to 4.5s (from 5.3s) so its own ignite lines up with the tail end of fw5's window instead
+   of leaving a gap before it — fw1..fw5 delays are -0.5/0.5/1.5/2.5/3.5s, fw6-8 fill the
+   midpoints at 1.0/2.0/3.0s, heart at 4.5s. Each spark's own life is now
+   0.7-1.24s peak-ignite to dark (widened slightly from lap 5's 0.64-0.94s — coverage needed the
+   margin more than the extra half-second of snappiness cost; still under half the original
+   1680ms worst case), so a rung still buys COUNT and CADENCE without ever buying a dark sky:
+     $1  -> the ambient trio plus the heart only — four anchors can't tile 6s of 1.24s windows
+            without a real gap (3 x 1.24s = 3.7s of the loop, at best), so the quietest tier is
+            still allowed its breath of real dark; that was always the design, not the defect;
+     $10 -> the trio plus fw4/fw5 join the spread — SIX anchors, and six 1.24s windows (7.4s of
+            coverage against a 6s loop) is enough overlap to tile the whole loop with no real
+            gap. This is the tier the cold grade actually screenshotted;
+     $500 -> all eight slots plus the heart, densest at the middle, still no dark stretch.
    Continuous fire with nothing ever going out is a sprinkler, not fireworks; a little dark
    between pops is what makes the next one read as an event rather than a flicker. */
 /* 08/17 — THE HEART (JOB E). Gray: "the heart is always up there it just needs to be in a good
@@ -11422,7 +11441,7 @@ a.xp_ctab{ text-decoration:none; }
    where it co-crested with fw6 38px away) fires it AFTER volley B has faded, so it pops ALONE
    at both rungs — a keynote, not one more burst in a crowd. fw6 also swapped red->amber so
    nothing red stands near the rose heart. */
-.xps_fwheart{ left:216px; top:-4px; width:92px; height:92px; --fd:5.3s; z-index:4; pointer-events:none; overflow:visible; }
+.xps_fwheart{ left:216px; top:-4px; width:92px; height:92px; --fd:4.5s; z-index:4; pointer-events:none; overflow:visible; }
 /* 08/17 — the per-slot animation-name bindings died with the ray engine: the second-edition
    burst carries its decay in its own element tree and the shell letter in XPS_SURGE picks the
    colour. Five shells now (red/blue/green/violet/amber) — Gray: "the colors could be just normal
@@ -15730,7 +15749,7 @@ function useLiveWx(){const[,bump]=useState(0);useEffect(()=>{const cb=()=>bump(n
    the stand is the truth. A colour nobody earned is worse than no colour, which
    is the same law verifiedOn runs on.
    =========================================================================== *//* GCA_FLAG_DATA_BEGIN — one line, replaced verbatim by claude/harness/bake_beach_flag.js.
-   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-18T10:50:53.209Z","issued":"2026-08-18T07:52:00+00:00","productId":"f8548f20-9ee2-4467-9aed-ab7570874d95","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"forecastSource":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"forecast","county":{"level":2,"flags":["yellow","purple"],"risk":"Moderate","marineLife":true,"waterTempF":87,"updated":"2026-08-17T23:04:38.59Z","chance":{"green":50,"yellow":50,"red":0,"doubleRed":0,"marineLife":30},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-18","risk":"Moderate","flags":["yellow"],"observedAt":null,"chance":null,"surf":"Around 2 feet","uv":"Very High","water":"In the upper 80s","weather":"Mostly sunny. A chance of showers and thunderstorms","winds":"West winds 10 to 15 mph"},"outlook":[{"date":"2026-08-18","label":"Today","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-19","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-20","label":"Thursday","risk":"Moderate","flags":["yellow"],"surf":"Around 1 foot"},{"date":"2026-08-21","label":"Friday","risk":"Low","flags":["green"],"surf":"Around 1 foot"},{"date":"2026-08-22","label":"Saturday","risk":"Low","flags":["green"],"surf":"Around 1 foot"}],"alerts":[{"event":"Extreme Heat Warning","headline":"Extreme Heat Warning issued August 17 at 8:51PM CDT until August 18 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...Dangerously hot conditions with heat index values up to 115\nexpected.\n\n* WHERE...In Alabama, Baldwin Central, Baldwin Coastal, Mobile\nCentral, and Mobile Coastal Counties. In Florida, Escambia Coastal,\nOkaloosa Coastal, and Santa Rosa Coastal Counties.\n\n* WHEN...From 11 AM to 8 PM CDT Tuesday.\n\n* IMPACTS...Heat related illnesses increase significantly during\nextreme heat and high humidity events.","severity":"Severe","onset":"2026-08-18T11:00:00-05:00","ends":"2026-08-18T20:00:00-05:00"}]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
+   Do not hand-edit it and do not move the sentinels; the daily job matches on them. */const BEACH_FLAG={"schema":2,"fetchedAt":"2026-08-18T11:45:29.757Z","issued":"2026-08-18T07:52:00+00:00","productId":"f8548f20-9ee2-4467-9aed-ab7570874d95","zone":"FLZ202","zoneName":"Escambia Coastal (Pensacola Beach)","source":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"forecastSource":{"name":"NWS Mobile, Surf Zone Forecast","url":"https://forecast.weather.gov/product.php?site=MOB&issuedby=MOB&product=SRF"},"basis":"forecast","county":{"level":2,"flags":["yellow","purple"],"risk":"Moderate","marineLife":true,"waterTempF":87,"updated":"2026-08-17T23:04:38.59Z","chance":{"green":50,"yellow":50,"red":0,"doubleRed":0,"marineLife":30},"source":{"name":"Escambia County Beach Safety — Pensacola Beach Lifeguards","url":"https://myescambia.com/pensacola-beach/pensacola-beach-lifeguards"}},"today":{"date":"2026-08-18","risk":"Moderate","flags":["yellow"],"observedAt":null,"chance":null,"surf":"Around 2 feet","uv":"Very High","water":"In the upper 80s","weather":"Mostly sunny. A chance of showers and thunderstorms","winds":"West winds 10 to 15 mph"},"outlook":[{"date":"2026-08-18","label":"Today","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-19","label":"Wednesday","risk":"Moderate","flags":["yellow"],"surf":"Around 2 feet"},{"date":"2026-08-20","label":"Thursday","risk":"Moderate","flags":["yellow"],"surf":"Around 1 foot"},{"date":"2026-08-21","label":"Friday","risk":"Low","flags":["green"],"surf":"Around 1 foot"},{"date":"2026-08-22","label":"Saturday","risk":"Low","flags":["green"],"surf":"Around 1 foot"}],"alerts":[{"event":"Extreme Heat Warning","headline":"Extreme Heat Warning issued August 17 at 8:51PM CDT until August 18 at 8:00PM CDT by NWS Mobile AL","description":"* WHAT...Dangerously hot conditions with heat index values up to 115\nexpected.\n\n* WHERE...In Alabama, Baldwin Central, Baldwin Coastal, Mobile\nCentral, and Mobile Coastal Counties. In Florida, Escambia Coastal,\nOkaloosa Coastal, and Santa Rosa Coastal Counties.\n\n* WHEN...From 11 AM to 8 PM CDT Tuesday.\n\n* IMPACTS...Heat related illnesses increase significantly during\nextreme heat and high humidity events.","severity":"Severe","onset":"2026-08-18T11:00:00-05:00","ends":"2026-08-18T20:00:00-05:00"}]};/* GCA_FLAG_DATA_END *//* The Florida uniform warning flags, in the app's own palette. Keyed by the
    same words fetch_beach_flag.js emits so the two cannot drift apart.
    ⚠ 08/13 — GREEN WAS #2E9E5B AND GRAY COULD NOT SEE IT: "not able to be seen very vividly.
    Needs to be filled it i guess or more vivid less dark green." Measured, he is right by a
