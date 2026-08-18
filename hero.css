@@ -84,7 +84,7 @@
 .ph-dawn .hk_boat .sails path[fill="url(#hk_jibg)"] { fill: rgb(238, 218, 207); }
 .ph-golden .hk_boat .sails path[fill="url(#hk_maing)"] { fill: rgb(251, 228, 188); }
 .ph-golden .hk_boat .sails path[fill="url(#hk_jibg)"] { fill: rgb(239, 213, 178); }
-.boat-refl { position: absolute; top: 206px; right: 29px; width: 88px; height: 11px; border-radius: 50%; pointer-events: none; z-index: 1; background: radial-gradient(50% 58% at 50% 45%, rgba(6, 34, 46, 0.46) 0%, rgba(6, 34, 46, 0.2) 45%, rgba(6, 34, 46, 0) 78%); animation: 5.5s ease-in-out -5.15s infinite normal none running hk_refl; }
+.boat-refl { position: absolute; top: 206px; right: 42px; width: 88px; height: 11px; border-radius: 50%; pointer-events: none; z-index: 1; background: radial-gradient(50% 58% at 50% 45%, rgba(6, 34, 46, 0.46) 0%, rgba(6, 34, 46, 0.2) 45%, rgba(6, 34, 46, 0) 78%); animation: 5.5s ease-in-out -5.15s infinite normal none running hk_refl; }
 .ph-night .boat-refl { display: none; }
 .beachprops { position: absolute; left: 26px; bottom: 12px; width: 186px; height: 31px; z-index: 1; pointer-events: none; opacity: 0.95; }
 .ph-golden .beachprops { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
@@ -240,7 +240,7 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
 @media (prefers-reduced-motion: reduce){.acart_tbrow { transform: translateY(0.34px); }}
 @media (prefers-reduced-motion: reduce){.acart_tcheek { opacity: 0.6; }}
 @media (prefers-reduced-motion: reduce){.acart_tdrop1, .acart_tdrop2, .acart_tgrunt, .acart_tsand1, .acart_tsand2, .acart_tsand3, .acart_tdripb { opacity: 0; }}
-.adboatname { position: absolute; top: 192px; right: 34px; z-index: 2; width: 82px; pointer-events: none; animation: 5.5s ease-in-out 0s infinite normal none running hk_sailbob; }
+.adboatname { position: absolute; top: 189px; right: 45px; z-index: 2; width: 82px; pointer-events: none; animation: 5.5s ease-in-out 0s infinite normal none running hk_sailbob; }
 .adboatname_bd { display: block; font-family: Arial, Helvetica, sans-serif; font-weight: 800; font-size: 8px; letter-spacing: 0.4px; line-height: 1.2; text-align: center; padding: 2px 3px; border-radius: 2.5px; border: 1px solid rgb(201, 162, 78); color: rgb(243, 231, 206); background: rgb(36, 69, 90); box-shadow: rgba(10, 20, 30, 0.45) 0px 1px 2px; transform: rotate(-1.5deg); }
 @media (prefers-reduced-motion: reduce){.hk .flyby, .hk .grain, .hk .baw, .hk .gullw, .hk .ccrab, .hk .snote, .hk .hpel, .hk .fwx, .hk .aspl, .hk .rheart, .hk .lspk, .hk .dnm_bok, .hk .tdust, .hk .fly, .hk .skbwrap, .hk .pipw, .hk .dnx_rolled, .hk .trtw, .hk .htchw, .hk .kitew, .hk .rplfield, .hk .shw, .hk .hcw, .hk .tgw, .hk .whw, .hk .d2bw, .hk .pelw, .hk .rayw, .hk .dcw, .hk .hkop, .hk .dwgiant, .hk .dwpod, .hk .dwglow, .hk .hboat, .hk .dnote, .hk .dbloom, .hk .rmote, .hk .rsmokew .hk .supw, .hk .fld, .hk .crbw, .hk .crbh, .hk .htchf, .hk .lx_rock, .hk .lx_dig, .hk .mstrip, .hk .mbeam, .hk .cm_cone, .hk .cm_pool, .hk .romacc .racc_wash, .hk .em_fly, .hk .cs_shoot, .hk .cs_neb, .hk .brd, .hk .mthrow, .hk .mgrain, .hk .bawrap, .hk .popf, .hk .rm_bulb, .hk .cm_laugh, .hk .cm_cable, .hk .adrip, .hk .lsc_cur, .hk .swash, .hk .swash_lip, .hk .backwash, .hk .vwkw, .hk .vwk, .hk .fprt, .hk .swl_crest { display: none !important; }}
 @media (prefers-reduced-motion: reduce){.hk .swg, .hk .sw_heave { animation: auto ease 0s 1 normal none running none !important; }}
