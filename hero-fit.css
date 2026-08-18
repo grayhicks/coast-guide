@@ -59,8 +59,10 @@ body.ph-night .scene{--skytop:#16294A}
   .scene.tall .scene-stage .hero{
     transform:scale(var(--sx),var(--sy)) translateY(57px)}
   .scene.tall .sunb{top:-66px}
-  .scene.tall .hk_boat{top:157px !important}
-  .scene.tall .boat-refl{top:214px}
+  
+  .scene.tall .hk_boat{top:138px !important}
+  .scene.tall .boat-refl{top:195px}
+  .scene.tall{--ub:1.5}
   
   .scene.tall .glit{top:148px;height:100px}
   .scene.tall .glit .lane{filter:blur(1.3px);opacity:.95}
