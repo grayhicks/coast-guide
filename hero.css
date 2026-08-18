@@ -274,6 +274,8 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
 .xsky_star.s2 { left: 140px; top: 11px; animation: 3s ease-in-out 0s infinite normal none running xskyTwinkle; }
 .xps_star.s1 { left: 24px; top: 12px; opacity: 0.3; }
 .xps_star.s2 { left: 138px; top: 7px; animation: 3s ease-in-out 0s infinite normal none running xpsTwinkle; }
+.xp_supportstage.reviewing .xps_star { animation: auto ease 0s 1 normal none running none; opacity: 0.55; }
+.xp_supportstage.reviewing .xps_hairline { opacity: 0.85; }
 .hk_day .dock .hk_mmark, .hk_day .dock .hk_menumark { --mm1: #7E420C; --mm2: #14625B; --mm3: #5F4A2C; --mm4: #992743; }
 .hk_day .hk_promoted .adlbl.open { opacity: 0.7; }
 .hk_day .skitz .adlbl { color: rgb(68, 86, 106); background: rgba(255, 246, 228, 0.92); box-shadow: rgba(138, 90, 12, 0.4) 0px 0px 0px 1px inset; }
