@@ -235,6 +235,9 @@ body.ph-night .scene{--skytop:#16294A}
 .scene-stage .adboatname{display:none}
 
 
+.scene-stage .adyacht,.scene-stage .adparasail,.scene-stage .adcart{display:none}
+
+
 
 
 @keyframes hk_drift{
