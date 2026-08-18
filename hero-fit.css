@@ -321,21 +321,8 @@ html, body { overflow-x: clip; }
 
 
 
-   ⚠ 08/09 — AND IT WAS PAINTING AT THE TOP OF EVERY SCENE, NOT THE BOTTOM, SINCE THE DAY IT
-   SHIPPED. It was written as .scene::after, and site.css ALSO has a .scene::after — the vignette,
-   declared with inset:0. This file loads second, so its background won; but `inset:0` had already
-   set top:0, and this rule never reset it. With top:0, bottom:0 AND height:64px present, top plus
-   height wins, so the "dissolve into the page" gradient has always been a 64px band across the
-   TOP of the masthead.
-   It was invisible for as long as --bg was navy: navy fading into a navy sky is nothing. The
-   moment the content surfaces went cream it became a hard cream strip across the top of every
-   interior page above a night sky, and Gray saw it within minutes: "I don't like the weekend pic
-   that's terrible not elegant." The flip did not cause this. It revealed it.
-   ⚠ AND THE SECOND DEFECT IN THE SAME PLACE: because this rule replaced site.css's background
-   wholesale, the vignette and text scrim that rule exists to paint have never rendered either.
-   Both are fixed by giving the two layers two pseudo-elements instead of fighting over one. The
-   fade moves to ::before; site.css keeps ::after for the vignette. z-index 2 is unchanged and is
-   still the load-bearing number: above the stage at 0, below .wrap at 20. */
+
+
 .scene::before{content:"";position:absolute;left:0;right:0;bottom:0;height:64px;
   z-index:2;pointer-events:none;
   background:linear-gradient(180deg,
@@ -343,41 +330,10 @@ html, body { overflow-x: clip; }
     color-mix(in srgb, var(--bg) 34%, transparent) 42%,
     color-mix(in srgb, var(--bg) 78%, transparent) 76%,
     var(--bg) 100%)}
-/* the short detail masthead is only ~176px tall — a 64px fade would eat a third
-   of it, so it gets a proportionate one */
+
 .scene.band.short::before{height:38px}
 
-/* ============================================================================
-   THE PAID PLANE'S FLIGHT LANE ON PHONE BAND PAGES — 08/17, measured, not reasoned.
-   Gray: "I only see some of the plane and banner... Barely." On publish/business.html at 390
-   the .adplane painted y38.1->71.3 under a 50px sticky header: 11.9px of a 33.2px paid unit
-   gone, 36%. The mechanism is the band's own top crop, not the header per se: the stage pins
-   BOTTOM, so the plane's altitude versus the band TOP is (B - 298*--sy + top*--sy), a function
-   of each page's band height B. Surveyed across ALL 384 published pages: .scene.band runs
-   B 200->272.4 below 768 (min-height 200 floors 38 of 41 pages), so the authored top:21 puts
-   the plane 12->47px above the band's visible top edge. No fixed altitude can serve a variable
-   B, and a 33px plane cannot fit the 24px of sky above the copy. So below 768:
-   · THE BAND HEIGHT IS NORMALIZED. min-height 310 >= the tallest phone-band copy measured
-     anywhere below 768 (272.4 at 320/390, +34 shift, 3.6 slack), so every band page is one
-     height and the flight lane is one altitude. This is Gray's own instinct — "the hero
-     shifted down slightly" — the copy drops 34px and the sky above it becomes a real lane.
-   · --sy RISES TO 310/298 = 1.0403 SO THE STAGE EXACTLY FILLS THE BAND: crop 0, no flat
-     backstop strip, and the plane, the stars and the clouds fly in the drawn sky. The scene
-     is LESS stretched than before (1.35/1.04 against 1.35/0.83); every rigid body reads its
-     own --sy so nothing else moves.
-   · THE PLANE FLIES AT top:6px — screen 6.2 below the band top (4.8 at the bob's crest),
-     bottom 47.8, its Sponsor label INSIDE that box (label top is +11 of the plane's own top),
-     10px clear of the copy at 58. The plane is never resized: it is ~25% taller here than the
-     state Gray graded, because it rides the raised --sy like every other resident.
-   ⚠ THE COPY SHIFT IS A MARGIN, NOT PADDING, because the wash (.scene-copy::before) hangs off
-   the copy block's border box and must follow it down. And the wash's own -52px top bleed
-   would have laid .16-.60 alpha across the new lane — a paid unit behind a veil is the defect
-   this block exists to end — so the bleed is cut at the box top and the ramp is restated in
-   box coordinates: transparent where the plane flies (plane bottom = box+13.8 at ~.07),
-   dense by the crumb's ink (box+30) exactly as the authored ramp had it by the crumb's ink.
-   ⚠ DESKTOP IS DELIBERATELY UNTOUCHED. At >=768 the stage is 268.2 tall against real pages'
-   B >= 256, so the plane already clears the band top everywhere but 404.html — the occlusion
-   defect lives entirely below 768, and the desktop composition was not re-opened for it. */
+
 @media (max-width:767px){
   .scene.band:not(.short){--sy:1.0403;min-height:310px}
   .scene.band:not(.short) > .wrap{margin-top:34px}
@@ -393,4 +349,32 @@ html, body { overflow-x: clip; }
   .scene.band:not(.short) .adplane{top:6px}
 }
 
-.scene.band.short .adplane{display:none}
+.scene.band.short .adplane{top:auto;bottom:24px}
+
+
+.scene-stage .adbonfire{left:200px}
+
+
+
+@keyframes hk_adyacht{
+  0%{ opacity:0; transform:translateX(292px); }
+  9%,91%{ opacity:1; }
+  100%{ opacity:0; transform:translateX(312px); }
+}
+@keyframes hk_adcart{
+  0%{ opacity:0; transform:translateX(288px); }
+  7%,93%{ opacity:1; }
+  100%{ opacity:0; transform:translateX(416px); }
+}
+@keyframes hk_adplane{
+  0%{ opacity:0; transform:translateX(-230px); }
+  12%,88%{ opacity:1; }
+  100%{ opacity:0; transform:translateX(560px); }
+}
+
+
+.scene-stage .adcart{bottom:6px}
+.scene-stage .adbonfire{bottom:6px}
+.scene-stage .adyacht{top:auto;bottom:12px}
+.scene.band:not(.short) .adplane{top:auto;bottom:20px}
+@media (max-width:767px){ .scene-stage .adparasail{display:none} }

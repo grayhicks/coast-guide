@@ -451,13 +451,19 @@ body.ph-night .scene{--act:#6f7db6;--act-hover:#8290c6;--act-ink:#0b1024}
 
 .scene.band.short{--sandh:38px;min-height:0}
 .scene.band.short > .wrap{padding-top:14px;padding-bottom:66px}
+
+.scene.band .hkn_tl{left:416.5px!important;transform:scaleX(calc(var(--sy) / var(--sx)))}
+.scene.band .hkn_tl + .hkn_tl{left:421px!important}
+.scene.band .hkn_tl + .hkn_tl + .hkn_tl{left:426px!important}
 @media(max-width:640px){
   .scene{--sandh:44px}
   .scene.tall{min-height:520px}
   .scene.tall > .wrap{padding-top:52px;padding-bottom:96px}
   .scene.band > .wrap{padding-top:12px;padding-bottom:58px}
   .scene.band.short{--sandh:26px}
-  .scene.band.short > .wrap{padding-top:8px;padding-bottom:46px}
+  
+  .scene.band > .wrap{padding-bottom:96px}
+  .scene.band.short > .wrap{padding-top:8px;padding-bottom:96px}
 }
 .scene .wrap{position:relative;z-index:20}
 
@@ -870,10 +876,17 @@ html[data-theme="light"] .card .ev-fare.tba{color:color-mix(in srgb, var(--pill-
 
 .ev-crest{flex:none;color:var(--cat, var(--orn-rule));opacity:.9}
 
-.spon{display:flex;flex-direction:column;gap:3px;min-width:0}
-.spon-name{font:600 var(--fs-small)/1.2 var(--font-sans);color:var(--ink-2);
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.spon-mark{font:700 var(--fs-kicker)/1 var(--font-mono);color:var(--ink-3);
+
+.ev-foot.is-spon{grid-template-rows:auto 40px;row-gap:2px;height:auto}
+.ev-foot.is-spon .spon-name{grid-row:1;grid-column:1 / -1;justify-self:stretch;
+  text-align:center;min-width:0}
+.ev-foot.is-spon .spon-mark{grid-row:2;grid-column:1;justify-self:start}
+.ev-foot.is-spon .ev-crest{grid-row:2;grid-column:2}
+.ev-foot.is-spon .verified{grid-row:2;grid-column:3}
+.spon-name{font:600 var(--fs-small)/1.35 var(--font-sans);color:var(--ink-2);
+  overflow-wrap:anywhere}
+
+.spon-mark{font:700 var(--fs-kicker)/1 var(--font-mono);color:var(--sponsor-fg);
   text-transform:uppercase;letter-spacing:.13em;white-space:nowrap}
 
 
@@ -958,6 +971,8 @@ a.nap-line:hover{color:var(--gold-bright)}
 .sup-float{transition:translate 360ms cubic-bezier(.445,.05,.55,.95)}
 
 .sup-float[hidden]{display:none}
+
+[hidden]{display:none !important}
 
 .sup-float:hover{color:var(--gold-bright);box-shadow:inset 0 0 0 2px var(--gold-bright), var(--shadow-2)}
 .sup-float:focus-visible{outline:3px solid var(--focus-ink);outline-offset:3px}
@@ -1760,17 +1775,32 @@ div.foot-fine{border-top:1px solid var(--line-soft);margin-top:var(--s-6);paddin
 
 .scene-copy::before{content:"";position:absolute;z-index:-1;
   
-  top:-52px;bottom:-64px;left:-52vw;right:-40vw;pointer-events:none;
-  
-  
-  
-  background:linear-gradient(180deg,
-    rgba(6,14,24,.16) 0,
-    rgba(6,14,24,.46) 26px,
-    rgba(6,14,24,.60) 64px,
-    rgba(6,14,24,.60) calc(100% - 36px),
-    rgba(6,14,24,.34) calc(100% - 36px),
-    rgba(6,14,24,0) 100%)}
+  top:-52px;bottom:-64px;left:-52vw;right:-40vw;pointer-events:none}
+
+
+@media (max-width:900px){
+  .scene-copy::before{top:0;bottom:auto;height:760px;left:-45vw;right:-45vw;
+    background:
+      radial-gradient(ellipse 120vw 300px at 50% 212px,
+        rgba(6,14,24,.46) 0%,
+        rgba(6,14,24,.44) 42%,
+        rgba(6,14,24,.30) 62%,
+        rgba(6,14,24,.14) 80%,
+        rgba(6,14,24,.05) 92%,
+        rgba(6,14,24,0) 100%),
+      radial-gradient(ellipse 130vw 200px at 50% 505px,
+        rgba(6,14,24,.20) 0%,
+        rgba(6,14,24,.18) 40%,
+        rgba(6,14,24,.08) 72%,
+        rgba(6,14,24,0) 100%)}
+}
+
+
+@media (max-width:900px){
+  .scene.band .scene-copy h1,
+  .scene.band .scene-copy .sub,
+  .scene.band .scene-copy .lead{max-width:calc(100% - 142px)}
+}
 
 @media (min-width:901px){
   .scene-copy::before{
@@ -1889,24 +1919,43 @@ html[data-theme="light"]{
 
 .card[data-cat]{ --cat-ink:color-mix(in srgb, var(--cat) 90%, var(--ink)) }
 html[data-theme="light"] .card[data-cat]{ --cat-ink:color-mix(in srgb, var(--cat) 72%, var(--ink)) }
-.card[data-cat="music"],[data-seal="music"]{--cat:var(--cat-music);  --catw:var(--catw-music)}
-.card[data-cat="art"],[data-seal="art"]{--cat:var(--cat-art);    --catw:var(--catw-art)}
-.card[data-cat="movie"],[data-seal="movie"]{--cat:var(--cat-movie);  --catw:var(--catw-movie)}
-.card[data-cat="event"],[data-seal="event"]{--cat:var(--cat-event);  --catw:var(--catw-event)}
-.card[data-cat="town"],[data-seal="town"]{--cat:var(--cat-town);   --catw:var(--catw-town)}
-.card[data-cat="beach"],[data-seal="beach"]{--cat:var(--cat-beach);  --catw:var(--catw-beach)}
-.card[data-cat="nature"],[data-seal="nature"]{--cat:var(--cat-nature); --catw:var(--catw-nature)}
-.card[data-cat="stem"],[data-seal="stem"]{--cat:var(--cat-stem);   --catw:var(--catw-stem)}
-.card[data-cat="place"],[data-seal="place"]{--cat:var(--cat-place);  --catw:var(--catw-place)}
-.card[data-cat="opening"],[data-seal="opening"]{--cat:var(--cat-opening);--catw:var(--catw-opening)}
 
-.card[data-cat="food"],[data-seal="food"]{--cat:var(--cat-town);   --catw:var(--catw-town)}
-.card[data-cat="activity"],[data-seal="activity"]{--cat:var(--cat-nature); --catw:var(--catw-nature)}
-.card[data-cat="attraction"],[data-seal="attraction"]{--cat:var(--cat-beach);  --catw:var(--catw-beach)}
-.card[data-cat="retail"],[data-seal="retail"]{--cat:var(--cat-art);    --catw:var(--catw-art)}
-.card[data-cat="service"],[data-seal="service"]{--cat:var(--cat-place);  --catw:var(--catw-place)}
-.card[data-cat="iconic"],[data-seal="iconic"]{--cat:var(--cat-town);   --catw:var(--catw-town)}
-.card[data-cat="coastal"],[data-seal="coastal"]{--cat:var(--cat-beach);  --catw:var(--catw-beach)}
+.card[data-cat="music"]{--cat:var(--cat-music);  --catw:var(--catw-music)}
+.card[data-cat="art"]{--cat:var(--cat-art);    --catw:var(--catw-art)}
+.card[data-cat="movie"]{--cat:var(--cat-movie);  --catw:var(--catw-movie)}
+.card[data-cat="event"]{--cat:var(--cat-event);  --catw:var(--catw-event)}
+.card[data-cat="town"]{--cat:var(--cat-town);   --catw:var(--catw-town)}
+.card[data-cat="beach"]{--cat:var(--cat-beach);  --catw:var(--catw-beach)}
+.card[data-cat="nature"]{--cat:var(--cat-nature); --catw:var(--catw-nature)}
+.card[data-cat="stem"]{--cat:var(--cat-stem);   --catw:var(--catw-stem)}
+.card[data-cat="place"]{--cat:var(--cat-place);  --catw:var(--catw-place)}
+.card[data-cat="opening"]{--cat:var(--cat-opening);--catw:var(--catw-opening)}
+
+.card[data-cat="food"]{--cat:var(--cat-town);   --catw:var(--catw-town)}
+.card[data-cat="activity"]{--cat:var(--cat-nature); --catw:var(--catw-nature)}
+.card[data-cat="attraction"]{--cat:var(--cat-beach);  --catw:var(--catw-beach)}
+.card[data-cat="retail"]{--cat:var(--cat-art);    --catw:var(--catw-art)}
+.card[data-cat="service"]{--cat:var(--cat-place);  --catw:var(--catw-place)}
+.card[data-cat="iconic"]{--cat:var(--cat-town);   --catw:var(--catw-town)}
+.card[data-cat="coastal"]{--cat:var(--cat-beach);  --catw:var(--catw-beach)}
+
+.crest-key li[data-seal="screen"]   {--cat:var(--cat-movie);  --catw:var(--catw-movie)}
+.crest-key li[data-seal="music"]    {--cat:var(--cat-music);  --catw:var(--catw-music)}
+.crest-key li[data-seal="stage"]    {--cat:var(--cat-art);    --catw:var(--catw-art)}
+.crest-key li[data-seal="spectacle"]{--cat:var(--cat-event);  --catw:var(--catw-event)}
+.crest-key li[data-seal="heritage"] {--cat:var(--cat-event);  --catw:var(--catw-event)}
+.crest-key li[data-seal="festival"] {--cat:var(--cat-town);   --catw:var(--catw-town)}
+.crest-key li[data-seal="table"]    {--cat:var(--cat-town);   --catw:var(--catw-town)}
+.crest-key li[data-seal="water"]    {--cat:var(--cat-beach);  --catw:var(--catw-beach)}
+.crest-key li[data-seal="boat"]     {--cat:var(--cat-beach);  --catw:var(--catw-beach)}
+.crest-key li[data-seal="shore"]    {--cat:var(--cat-nature); --catw:var(--catw-nature)}
+.crest-key li[data-seal="sport"]    {--cat:var(--cat-nature); --catw:var(--catw-nature)}
+.crest-key li[data-seal="learn"]    {--cat:var(--cat-stem);   --catw:var(--catw-stem)}
+.crest-key li[data-seal="service"]  {--cat:var(--cat-place);  --catw:var(--catw-place)}
+.crest-key li[data-seal="night"]    {--cat:var(--cat-place);  --catw:var(--catw-place)}
+.crest-key li[data-seal="listing"]  {--cat:var(--cat-place);  --catw:var(--catw-place)}
+.crest-key li[data-seal="play"]     {--cat:var(--cat-opening);--catw:var(--catw-opening)}
+.crest-key li[data-seal="retail"]   {--cat:var(--cat-art);    --catw:var(--catw-art)}
 
 .card[data-cat]{background:linear-gradient(180deg, var(--catw), transparent 88px),
   linear-gradient(180deg, var(--sheen), transparent 46px), var(--panel)}

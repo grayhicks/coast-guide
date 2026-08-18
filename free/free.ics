@@ -5,53 +5,6 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Gulf Coast: free things
 BEGIN:VEVENT
-UID:nl_fubar_nights-2026-08-17@coast-guide
-DTSTAMP:20260817T000000Z
-DTSTART:20260817T210000
-DTEND:20260817T230000
-SUMMARY:Karaoke & DJ Nights: FUBAR Pizza Bar
-DESCRIPTION:Late-night karaoke runs five nights a week (Sun\, Tue\, Wed\, 
- Fri\, Sat) plus a DJ on Monday and Thursday\, 9 PM to 1 AM every night\, 
- with pizza till close. It is in Fort Walton Beach\, about 50 minutes east
- .\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Nightly · 9 PM-1 AM\n
- https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
-LOCATION:FUBAR Pizza Bar\, 114 Amberjack Dr\, Fort Walton Beach\, FL 32548
-URL:https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_seville_barbingo-2026-08-17@coast-guide
-DTSTAMP:20260817T000000Z
-DTSTART:20260817T200000
-DTEND:20260817T220000
-SUMMARY:Bar Bingo: Seville Quarter
-DESCRIPTION:A free-to-play bingo night runs in Apple Annie's courtyard roo
- m\, inside the 1871 warehouse block that has been Pensacola's night-out a
- ddress for fifty years. Low stakes\, no ticket\, and you can leave after 
- a card if it is not landing.\nPrice: Free\nArea: Pensacola\nTimes: Monday
- s · 8:00-10:00 PM\nChecked against the venue's own page on 2026-08-08\nh
- ttps://grayhicks.github.io/coast-guide/events/ev-seville-barbingo.html
-LOCATION:Seville Quarter\, Apple Annie's\, 130 E Government St\, Pensacola
- \, FL 32502
-URL:https://grayhicks.github.io/coast-guide/events/ev-seville-barbingo.htm
- l
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_30ave_green_music-2026-08-17@coast-guide
-DTSTAMP:20260817T000000Z
-DTSTART:20260817T180000
-DTEND:20260817T210000
-SUMMARY:Live music on the green: 30Avenue
-DESCRIPTION:Local players take the lawn at the 30A end of the county\, eve
- ry evening\, no ticket. Shops and restaurants ring the green\, so it work
- s as the whole evening or as the thing that happens while you eat.\nPrice
- : Free\nArea: 30A & South Walton\nTimes: Every evening · 6:00-9:00 PM ·
-  free\nChecked against the venue's own page on 2026-08-08\nhttps://grayhi
- cks.github.io/coast-guide/events/ev-30ave-green-music.html
-LOCATION:30Avenue\, 12805 US-98 East\, Inlet Beach\, FL 32461
-URL:https://grayhicks.github.io/coast-guide/events/ev-30ave-green-music.ht
- ml
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_bands_on_the_beach-2026-08-18@coast-guide
 DTSTAMP:20260818T000000Z
 DTSTART:20260818T190000
@@ -99,6 +52,20 @@ LOCATION:Coastal County Brewing Co.\, 3041 East Olive Rd\, Pensacola\, FL
 URL:https://grayhicks.github.io/coast-guide/events/nl-ccbrew-trivia.html
 END:VEVENT
 BEGIN:VEVENT
+UID:nl_fubar_nights-2026-08-18@coast-guide
+DTSTAMP:20260818T000000Z
+DTSTART:20260818T210000
+DTEND:20260818T230000
+SUMMARY:Karaoke & DJ Nights: FUBAR Pizza Bar
+DESCRIPTION:Late-night karaoke runs five nights a week (Sun\, Tue\, Wed\, 
+ Fri\, Sat) plus a DJ on Monday and Thursday\, 9 PM to 1 AM every night\, 
+ with pizza till close. It is in Fort Walton Beach\, about 50 minutes east
+ .\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Nightly · 9 PM-1 AM\n
+ https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
+LOCATION:FUBAR Pizza Bar\, 114 Amberjack Dr\, Fort Walton Beach\, FL 32548
+URL:https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
+END:VEVENT
+BEGIN:VEVENT
 UID:nl_paradise_live-2026-08-18@coast-guide
 DTSTAMP:20260818T000000Z
 DTSTART:20260818T173000
@@ -113,6 +80,22 @@ DESCRIPTION:Beachside live music plays most nights on Pensacola Beach\, wi
 LOCATION:Paradise Bar & Grill\, 21 Via De Luna Dr\, Pensacola Beach\, FL 3
  2561
 URL:https://grayhicks.github.io/coast-guide/events/nl-paradise-live.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_30ave_green_music-2026-08-18@coast-guide
+DTSTAMP:20260818T000000Z
+DTSTART:20260818T180000
+DTEND:20260818T210000
+SUMMARY:Live music on the green: 30Avenue
+DESCRIPTION:Local players take the lawn at the 30A end of the county\, eve
+ ry evening\, no ticket. Shops and restaurants ring the green\, so it work
+ s as the whole evening or as the thing that happens while you eat.\nPrice
+ : Free\nArea: 30A & South Walton\nTimes: Every evening · 6:00-9:00 PM ·
+  free\nChecked against the venue's own page on 2026-08-08\nhttps://grayhi
+ cks.github.io/coast-guide/events/ev-30ave-green-music.html
+LOCATION:30Avenue\, 12805 US-98 East\, Inlet Beach\, FL 32461
+URL:https://grayhicks.github.io/coast-guide/events/ev-30ave-green-music.ht
+ ml
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_baytowne_wed-2026-08-19@coast-guide
@@ -365,6 +348,23 @@ DESCRIPTION:The Sunday sibling of Palafox Market brings crafts\, art\, and
 LOCATION:MLK Jr. Plaza\, Downtown Pensacola\, 200 N Palafox St\, Pensacola
  \, FL 32502
 URL:https://grayhicks.github.io/coast-guide/events/ev-sunmkt.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seville_barbingo-2026-08-24@coast-guide
+DTSTAMP:20260824T000000Z
+DTSTART:20260824T200000
+DTEND:20260824T220000
+SUMMARY:Bar Bingo: Seville Quarter
+DESCRIPTION:A free-to-play bingo night runs in Apple Annie's courtyard roo
+ m\, inside the 1871 warehouse block that has been Pensacola's night-out a
+ ddress for fifty years. Low stakes\, no ticket\, and you can leave after 
+ a card if it is not landing.\nPrice: Free\nArea: Pensacola\nTimes: Monday
+ s · 8:00-10:00 PM\nChecked against the venue's own page on 2026-08-08\nh
+ ttps://grayhicks.github.io/coast-guide/events/ev-seville-barbingo.html
+LOCATION:Seville Quarter\, Apple Annie's\, 130 E Government St\, Pensacola
+ \, FL 32502
+URL:https://grayhicks.github.io/coast-guide/events/ev-seville-barbingo.htm
+ l
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blues_0722-2026-08-26@coast-guide
