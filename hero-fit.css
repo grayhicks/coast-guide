@@ -232,10 +232,24 @@ body.ph-night .scene{--skytop:#16294A}
 .scene-stage .grain{background-size:calc(160px / var(--sx)) calc(160px / var(--sy))}
 
 
-.scene-stage .adboatname{display:none}
+.scene-stage .hero_slot .adboatname,.scene-stage .hero_slot .adyacht,
+.scene-stage .hero_slot .adparasail,.scene-stage .hero_slot .adcart,
+.scene-stage .hero_slot .adplane{display:none}
 
 
-.scene-stage .adyacht,.scene-stage .adparasail,.scene-stage .adcart{display:none}
+.spec-stage{position:relative;inset:auto;width:430px;height:298px;max-width:100%;
+  --sx:1;--sy:1;--um:1;--us:1;--ub:1;--up:1;--uc:1;--vwl:430px}
+.spec-stage .hero{right:0;bottom:0}
+.spec-stage .hero_slot .adboatname,.spec-stage .hero_slot .adyacht,
+.spec-stage .hero_slot .adparasail,.spec-stage .hero_slot .adcart,
+.spec-stage .hero_slot .adplane{display:block}
+
+
+
+.spec-stage .hero-wave{animation-delay:0s;animation-play-state:paused}
+.spec-stage .adplane{animation-delay:-15s;animation-play-state:paused}
+.spec-stage .adparasail,.spec-stage .adyacht{animation-delay:-28s;animation-play-state:paused}
+.spec-stage .adcart{animation-delay:-6s;animation-play-state:paused}
 
 
 

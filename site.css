@@ -1414,6 +1414,16 @@ main > .wrap > section.home-sec:only-child .quick-card:focus-visible .q-t::after
 .chk{color:var(--ok);font-weight:800}
 .no{color:var(--gold);font-weight:800}
 
+
+.spec{margin:var(--s-5) 0 0}
+.spec-frame{width:max-content;max-width:100%;overflow:hidden;
+  border:1px solid var(--line);border-radius:var(--r-card);box-shadow:var(--shadow-1);
+  background:var(--scene-ground,#0b1c2c);line-height:0}
+.spec > figcaption{margin:10px 0 0;font:var(--fs-small)/1.55 var(--font-sans);color:var(--ink-2);
+  max-width:52ch}
+
+.spec-flat .feed-ad{margin-top:0}
+
 .band-cta{background:linear-gradient(180deg, var(--sheen), transparent 60px), linear-gradient(180deg,var(--panel-2),var(--panel));
   border:1px solid var(--line);border-radius:var(--r-card);box-shadow:var(--shadow-1);
   padding:var(--s-6) var(--s-6);margin-top:var(--s-7);margin-bottom:var(--s-7)}
