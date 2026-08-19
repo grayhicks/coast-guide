@@ -1,8 +1,8 @@
-/* Next Up — offline shell. Cache-only: no analytics, no push, no
+/* Coastal Eventures — offline shell. Cache-only: no analytics, no push, no
    background sync, no external origin. It precaches three same-origin files and serves them back.
    Nothing here reports anything anywhere, which is a product guarantee, not an implementation
    detail — gate_pwa.js asserts it against this file. */
-const CACHE = "gca-f9fe1cf0bdf19dff";
+const CACHE = "gca-56bdf098893362a5";
 const SHELL = ["./", "./index.html", "./app.webmanifest"];
 
 self.addEventListener("install", e => {

@@ -2,7 +2,10 @@
 
 :root{
   
-  --brand-name:"Next Up";
+  --brand-name:"Coastal Eventures";
+  
+  --brand-w1:"Coastal";
+  --brand-w2:"Eventures";
   
   --brand-tag:"Gulf Coast Events";
 
@@ -250,9 +253,11 @@ a:hover{text-decoration-thickness:2px}
 .mark .swash{stroke:var(--gold)}
 .mark .curl{stroke:var(--gold-bright)}
 .mark .spray{fill:var(--gold-bright)}
+
 .brand-name{font-weight:800;font-size:16px;letter-spacing:-.01em;color:var(--ink);
-  line-height:1.1;white-space:nowrap}
-.brand-name::after{content:var(--brand-name)}
+  line-height:1.06;white-space:nowrap}
+.brand-name::before{content:var(--brand-w1);display:block}
+.brand-name::after{content:var(--brand-w2);display:block;margin-left:.42em}
 .brand:hover .brand-name{color:var(--gold-bright)}
 
 
@@ -635,7 +640,9 @@ body.ph-night .scene{--act:#6f7db6;--act-hover:#8290c6;--act-ink:#0b1024}
 .hero h1,.hero-title{margin:18px 0 0;font-size:var(--fs-display);line-height:1.08;font-weight:700;
   font-family:var(--font-serif);
   letter-spacing:-.01em;color:#fff;text-shadow:0 3px 26px rgba(8,18,28,.65);max-width:13em}
-.hero-title .brand-line::after{content:var(--brand-name)}
+
+.hero-title .brand-line::before{content:var(--brand-w1);display:block}
+.hero-title .brand-line::after{content:var(--brand-w2);display:block;margin-left:.42em}
 .hero .sub,.hero-sub{font-size:var(--fs-lead);line-height:1.6;color:#fff;margin:14px 0 0;max-width:30em;
   text-shadow:0 2px 14px rgba(8,18,28,.75)}
 .scene .cta,.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
@@ -1701,8 +1708,10 @@ html[data-theme="light"] .site-foot{background:linear-gradient(180deg,transparen
 }
 .foot-brand{display:flex;align-items:flex-start;gap:16px;margin-bottom:var(--s-5)}
 .foot-brand .mark{width:56px;height:56px;flex:none}
-.foot-brand .brand-name{font-size:20px;white-space:normal}
-.foot-name{font-weight:800;font-size:20px;letter-spacing:-.01em;color:var(--ink);margin:6px 0 0}
+
+.foot-name{font-weight:800;font-size:20px;line-height:1.06;letter-spacing:-.01em;color:var(--ink);margin:6px 0 0}
+.bsw{display:block}
+.bsw + .bsw{margin-left:.42em}
 .foot-brand .fine{margin-top:6px;max-width:26em}
 .foot-cols{display:grid;gap:var(--s-5);margin-bottom:var(--s-5)}
 @media(min-width:640px){.foot-cols{grid-template-columns:repeat(3,1fr)}}
