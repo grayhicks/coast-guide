@@ -240,18 +240,12 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
 @media (prefers-reduced-motion: reduce){.acart_tbrow { transform: translateY(0.34px); }}
 @media (prefers-reduced-motion: reduce){.acart_tcheek { opacity: 0.6; }}
 @media (prefers-reduced-motion: reduce){.acart_tdrop1, .acart_tdrop2, .acart_tgrunt, .acart_tsand1, .acart_tsand2, .acart_tsand3, .acart_tdripb { opacity: 0; }}
-.adboatname { position: absolute; top: 195px; right: 48.5px; z-index: 2; width: 82px; pointer-events: none; animation: 5.5s ease-in-out 0s infinite normal none running hk_sailbob; }
+.adboatname { position: absolute; top: 197.5px; right: 46.5px; z-index: 2; width: 82px; pointer-events: none; animation: 5.5s ease-in-out 0s infinite normal none running hk_sailbob; }
 .adboatname_bd { position: relative; display: block; height: 8px; overflow: visible; padding: 0px; border: 0px; border-radius: 0px; box-shadow: none; font-family: Arial, Helvetica, sans-serif; font-weight: 800; font-size: 7px; line-height: 8px; letter-spacing: 2.2px; text-indent: 2.2px; text-align: center; white-space: nowrap; color: rgb(243, 231, 206); text-shadow: rgba(15, 22, 28, 0.6) 0px 1px 1px, rgba(15, 22, 28, 0.38) 0px 0px 2px; }
-.adboatname_bd::before { content: ""; position: absolute; left: 5px; right: 5px; top: -2.6px; height: 1.3px; background: var(--adplate,#24455A); opacity: 0.95; }
 .adboatname .adlbl:empty { display: none; }
 .adboatname .adlbl { display: block; position: static; width: max-content; margin: 4px auto 0px; font-style: normal; font-size: 5.5px; font-weight: 700; letter-spacing: 0.7px; line-height: 1.3; padding: 1px 3px; border-radius: 2px; text-align: center; color: rgb(236, 243, 248); background: rgba(9, 20, 30, 0.75); }
 .ph-dawn .adboatname_bd, .ph-golden .adboatname_bd { text-shadow: rgba(20, 14, 8, 0.7) 0px 1px 1px, rgba(20, 14, 8, 0.5) 0px 0px 2px; }
 .ph-night .adboatname_bd { text-shadow: rgba(0, 0, 0, 0.85) 0px 1px 1px, rgba(0, 0, 0, 0.7) 0px 0px 2px, rgba(0, 0, 0, 0.55) 0px 0px 3.5px, rgba(255, 244, 214, 0.35) 0px 0px 1px; }
-.rplfield { position: absolute; inset: 0px; z-index: 1; pointer-events: none; }
-.rrip { position: absolute; border: 0px; border-radius: 50%; transform: translate(-50%, -50%) scale(0.25); opacity: 0; will-change: transform, opacity; background: radial-gradient(rgba(226, 244, 251, 0) 30%, rgba(232, 248, 253, 0.2) 52%, rgba(240, 252, 255, 0.46) 68%, rgba(206, 238, 250, 0.22) 84%, rgba(180, 222, 238, 0) 100%); animation: auto ease-out 0s 1 normal forwards running hk_rrip; }
-.ph-night .rrip { background: radial-gradient(rgba(150, 208, 255, 0) 30%, rgba(158, 214, 255, 0.17) 52%, rgba(178, 224, 255, 0.44) 68%, rgba(130, 196, 240, 0.18) 84%, rgba(110, 178, 228, 0) 100%); }
-.ph-golden .rrip { background: radial-gradient(rgba(255, 234, 200, 0) 30%, rgba(255, 238, 208, 0.19) 52%, rgba(255, 246, 224, 0.5) 68%, rgba(255, 220, 176, 0.2) 84%, rgba(255, 206, 158, 0) 100%); }
-.rrip.bio { background: radial-gradient(rgba(120, 224, 255, 0) 28%, rgba(140, 232, 255, 0.26) 50%, rgba(176, 244, 255, 0.66) 68%, rgba(110, 206, 246, 0.24) 84%, rgba(100, 196, 240, 0) 100%); box-shadow: rgba(120, 224, 255, 0.28) 0px 0px 7px; }
 @media (prefers-reduced-motion: reduce){.hk .flyby, .hk .grain, .hk .baw, .hk .gullw, .hk .ccrab, .hk .snote, .hk .hpel, .hk .fwx, .hk .aspl, .hk .rheart, .hk .lspk, .hk .dnm_bok, .hk .tdust, .hk .fly, .hk .skbwrap, .hk .pipw, .hk .dnx_rolled, .hk .trtw, .hk .htchw, .hk .kitew, .hk .rplfield, .hk .shw, .hk .hcw, .hk .tgw, .hk .whw, .hk .d2bw, .hk .pelw, .hk .rayw, .hk .dcw, .hk .hkop, .hk .dwgiant, .hk .dwpod, .hk .dwglow, .hk .hboat, .hk .dnote, .hk .dbloom, .hk .rmote, .hk .rsmokew .hk .supw, .hk .fld, .hk .crbw, .hk .crbh, .hk .htchf, .hk .lx_rock, .hk .lx_dig, .hk .mstrip, .hk .mbeam, .hk .cm_cone, .hk .cm_pool, .hk .romacc .racc_wash, .hk .em_fly, .hk .cs_shoot, .hk .cs_neb, .hk .brd, .hk .mthrow, .hk .mgrain, .hk .bawrap, .hk .popf, .hk .rm_bulb, .hk .cm_laugh, .hk .cm_cable, .hk .adrip, .hk .lsc_cur, .hk .swash, .hk .swash_lip, .hk .backwash, .hk .vwkw, .hk .vwk, .hk .fprt, .hk .swl_crest { display: none !important; }}
 @media (prefers-reduced-motion: reduce){.hk .swg, .hk .sw_heave { animation: auto ease 0s 1 normal none running none !important; }}
 @media (prefers-reduced-motion: reduce){.hk .swl_body { animation: auto ease 0s 1 normal none running none !important; opacity: 0.4 !important; }}
@@ -742,12 +736,6 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
   62% { opacity: 0.8; transform: translateY(0.4px); }
   85% { opacity: 0.6; transform: translateY(2.4px); }
   92%, 100% { opacity: 0; transform: translateY(3.2px); }
-}
-@keyframes hk_rrip { 
-  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.25); }
-  20% { opacity: 0.82; }
-  54% { opacity: 0.56; }
-  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.7); }
 }
 @keyframes hk_hshim { 
   0% { opacity: 0.18; transform: translateX(-7px) scaleX(0.85); }
