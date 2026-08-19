@@ -5,212 +5,6 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Gulf Coast: the next seven days
 BEGIN:VEVENT
-UID:ev_bands_on_the_beach-2026-08-18@coast-guide
-DTSTAMP:20260818T000000Z
-DTSTART:20260818T190000
-DTEND:20260818T210000
-SUMMARY:Bands on the Beach: free Gulfside concert
-DESCRIPTION:Live music beside the Gulf every Tuesday evening\, free\, with
-  the sand right there. Bring chairs or a blanket\, grab dinner on the boa
- rdwalk\, let the kids run while the band plays. 8/11 is The New Cahoots.\
- nPrice: Free\nArea: Pensacola Beach & Perdido\nTimes: Tuesdays · 7:00-9:
- 00 PM\nChecked against the venue's own page on 2026-08-05\nhttps://grayhi
- cks.github.io/coast-guide/events/ev-bands-on-the-beach.html
-LOCATION:Gulfside Pavilion\, Pensacola Beach\, 735 Pensacola Beach Blvd\, 
- Pensacola Beach\, FL 32561
-URL:https://grayhicks.github.io/coast-guide/events/ev-bands-on-the-beach.h
- tml
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_bands-2026-08-18@coast-guide
-DTSTAMP:20260818T000000Z
-DTSTART:20260818T190000
-DTEND:20260818T210000
-SUMMARY:Bands on the Beach
-DESCRIPTION:A free beach concert plays every Tuesday. Coming up are 8/4 Th
- e New Cahoots\, 8/11 9th Avenue Brass\, 8/18 Paperchase\, and 8/25 Mass K
- unfuzion. The full lineup runs to 10/27.\nPrice: Free\nArea: Pensacola Be
- ach & Perdido\nTimes: Tuesdays · 7:00-9:00 PM\nhttps://grayhicks.github.
- io/coast-guide/events/ev-bands.html
-LOCATION:Gulfside Pavilion at Casino Beach\, 20 Casino Beach Blvd\, Pensac
- ola Beach\, FL 32561
-URL:https://grayhicks.github.io/coast-guide/events/ev-bands.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_moriarty-2026-08-18@coast-guide
-DTSTAMP:20260818T000000Z
-DTSTART;VALUE=DATE:20260818
-DTEND;VALUE=DATE:20260824
-SUMMARY:Stage Crafters: Ken Ludwig's “Moriarty”
-DESCRIPTION:A Sherlock Holmes comedy takes the stage. It is good for STEM-
- minded kids\, long for the art-and-dance crowd\, and best skipped with th
- e toddler.\nPrice: from $30\nArea: Destin & Fort Walton\nTimes: Fri/Sat 7
- :30 PM · Sun 2 PM · two weekends (8/14-16\, 8/21-23)\nhttps://grayhicks
- .github.io/coast-guide/events/ev-moriarty.html
-LOCATION:Fort Walton Beach Civic Auditorium\, 109 Miracle Strip Pkwy SW\, 
- Fort Walton Beach\, FL 32548
-URL:https://grayhicks.github.io/coast-guide/events/ev-moriarty.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_wahoos_knox-2026-08-18@coast-guide
-DTSTAMP:20260818T000000Z
-DTSTART;VALUE=DATE:20260818
-DTEND;VALUE=DATE:20260824
-SUMMARY:Blue Wahoos vs Knoxville: Fireworks 8/22 · Vet-Free 8/23
-DESCRIPTION:The last big August homestand runs the same playbook: Saturday
-  fireworks\, and a free-vet Sunday with run-the-bases.\nPrice: from $10\n
- Area: Pensacola\nTimes: Aug 18-23 · Fireworks Sat 8/22 · Military Famil
- y Sunday 8/23\nhttps://grayhicks.github.io/coast-guide/events/ev-wahoos-k
- nox.html
-LOCATION:Blue Wahoos Stadium\, 351 W Cedar St\, Pensacola\, FL 32502
-URL:https://grayhicks.github.io/coast-guide/events/ev-wahoos-knox.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_solyluna-2026-08-18@coast-guide
-DTSTAMP:20260818T000000Z
-DTSTART:20260818T183000
-DTEND:20260818T200000
-SUMMARY:Wine\, Cheese & Sunset Dolphin Cruise: SOL y LUNA
-DESCRIPTION:SOLARIS's little sister offers a 1.5-hour sunset cruise with t
- wo wine pours and a cheese pairing each\, dolphins likely. It is the ligh
- ter\, cheaper way to get the yacht date without the full dinner-cruise ev
- ening.\nPrice: not published by the venue\, so confirm before you go\nAre
- a: Destin & Fort Walton\nTimes: Tuesdays + Thursdays · 6:30 PM · 1.5 hr
- \nhttps://grayhicks.github.io/coast-guide/events/ev-solyluna.html
-LOCATION:SOL y LUNA\, Baytowne Marina\, Sandestin\, 8330 Mike Hayes Dr\, M
- iramar Beach\, FL 32550
-URL:https://grayhicks.github.io/coast-guide/events/ev-solyluna.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_ccbrew_trivia-2026-08-18@coast-guide
-DTSTAMP:20260818T000000Z
-DTSTART:20260818T183000
-DTEND:20260818T203000
-SUMMARY:Team Trivia Night: Coastal County Brewing
-DESCRIPTION:Grab a team and a local craft pour. Coastal County runs team t
- rivia every Tuesday at 6:30 in the taproom. It is a low-key adult night o
- ut\, about 25 minutes from the bridge.\nPrice: Free\nArea: Pensacola\nTim
- es: Tuesdays · 6:30 PM\nhttps://grayhicks.github.io/coast-guide/events/n
- l-ccbrew-trivia.html
-LOCATION:Coastal County Brewing Co.\, 3041 East Olive Rd\, Pensacola\, FL 
- 32514
-URL:https://grayhicks.github.io/coast-guide/events/nl-ccbrew-trivia.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_fubar_nights-2026-08-18@coast-guide
-DTSTAMP:20260818T000000Z
-DTSTART:20260818T210000
-DTEND:20260818T230000
-SUMMARY:Karaoke & DJ Nights: FUBAR Pizza Bar
-DESCRIPTION:Late-night karaoke runs five nights a week (Sun\, Tue\, Wed\, 
- Fri\, Sat) plus a DJ on Monday and Thursday\, 9 PM to 1 AM every night\, 
- with pizza till close. It is in Fort Walton Beach\, about 50 minutes east
- .\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Nightly · 9 PM-1 AM\n
- https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
-LOCATION:FUBAR Pizza Bar\, 114 Amberjack Dr\, Fort Walton Beach\, FL 32548
-URL:https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_paradise_live-2026-08-18@coast-guide
-DTSTAMP:20260818T000000Z
-DTSTART:20260818T173000
-DTEND:20260818T193000
-SUMMARY:Live Music: Paradise Bar & Grill
-DESCRIPTION:Beachside live music plays most nights on Pensacola Beach\, wi
- th rotating local acts starting at 5:30 (Sundays 2:30). Wine Down Wednesd
- ay runs $3 house and $6 premium wines all day. It is about 25 minutes out
- .\nPrice: Free\nArea: Pensacola Beach & Perdido\nTimes: Tue/Fri/Sat 5:30 
- PM · Sun 2:30 PM\nhttps://grayhicks.github.io/coast-guide/events/nl-para
- dise-live.html
-LOCATION:Paradise Bar & Grill\, 21 Via De Luna Dr\, Pensacola Beach\, FL 3
- 2561
-URL:https://grayhicks.github.io/coast-guide/events/nl-paradise-live.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_seville_karaoke-2026-08-18@coast-guide
-DTSTAMP:20260818T000000Z
-DTSTART:20260818T200000
-DTEND:20260818T230000
-SUMMARY:Karaoke at Lili Marlene's: every night
-DESCRIPTION:Karaoke runs seven nights a week in the aviators' room\, not j
- ust on the weekend\, which makes it the answer to a Tuesday you did not p
- lan. It has a supportive room\, a real sound system\, and no sign-up fee 
- posted.\nPrice: not published by the venue\, so confirm before you go\nAr
- ea: Pensacola\nTimes: Every night · 8:00-11:00 PM\nChecked against the v
- enue's own page on 2026-08-08\nhttps://grayhicks.github.io/coast-guide/ev
- ents/ev-seville-karaoke.html
-LOCATION:Seville Quarter\, Lili Marlene's\, 130 E Government St\, Pensacol
- a\, FL 32502
-URL:https://grayhicks.github.io/coast-guide/events/ev-seville-karaoke.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_bodacious_ferment_0818-2026-08-18@coast-guide
-DTSTAMP:20260818T000000Z
-DTSTART:20260818T120000
-DTEND:20260818T130000
-SUMMARY:Lunch & Learn: Fermentation
-DESCRIPTION:This one-hour session\, over lunch\, covers how fermentation a
- ctually works: kraut\, kimchi\, and the chemistry underneath. It is a mid
- day date\, or a genuinely useful hour on your own.\nPrice: $80 for two\nA
- rea: Pensacola\nTimes: Tue 08/18/2026 · 12:00-1:00 PM\nChecked against t
- he venue's own page on 2026-08-08\nhttps://grayhicks.github.io/coast-guid
- e/events/ev-bodacious-ferment-0818.html
-LOCATION:Bodacious Shops of Palafox\, 407 S Palafox St\, Pensacola\, FL 32
- 502
-URL:https://grayhicks.github.io/coast-guide/events/ev-bodacious-ferment-08
- 18.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_alys_winesong-2026-08-18@coast-guide
-DTSTAMP:20260818T000000Z
-DTSTART:20260818T170000
-DTEND:20260818T190000
-SUMMARY:Wine + Song at NEAT: Alys Beach
-DESCRIPTION:Four wines and a live guitarist fill two hours in Alys Beach's
-  tasting room\, at a fixed price\, a fixed length\, and a drive that is g
- enuinely part of the evening. Max McCann plays the 11th.\nPrice: from $30
- \nArea: 30A & South Walton\nTimes: Tuesdays · 5:00-7:00 PM · thru 8/25\
- nChecked against the venue's own page on 2026-08-08\nhttps://grayhicks.gi
- thub.io/coast-guide/events/ev-alys-winesong.html
-LOCATION:NEAT Tasting Room & Bottle Shop\, 11 N Castle Harbour Dr\, Alys B
- each\, FL 32461
-URL:https://grayhicks.github.io/coast-guide/events/ev-alys-winesong.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_30ave_green_music-2026-08-18@coast-guide
-DTSTAMP:20260818T000000Z
-DTSTART:20260818T180000
-DTEND:20260818T210000
-SUMMARY:Live music on the green: 30Avenue
-DESCRIPTION:Local players take the lawn at the 30A end of the county\, eve
- ry evening\, no ticket. Shops and restaurants ring the green\, so it work
- s as the whole evening or as the thing that happens while you eat.\nPrice
- : Free\nArea: 30A & South Walton\nTimes: Every evening · 6:00-9:00 PM ·
-  free\nChecked against the venue's own page on 2026-08-08\nhttps://grayhi
- cks.github.io/coast-guide/events/ev-30ave-green-music.html
-LOCATION:30Avenue\, 12805 US-98 East\, Inlet Beach\, FL 32461
-URL:https://grayhicks.github.io/coast-guide/events/ev-30ave-green-music.ht
- ml
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_brandonstyles_variety-2026-08-18@coast-guide
-DTSTAMP:20260818T000000Z
-DTSTART:20260818T190000
-DTEND:20260818T210000
-SUMMARY:The Brandon Styles Variety Show
-DESCRIPTION:Celebrity impressions\, comedy\, and magic play a purpose-buil
- t theatre at OWA\, twice a week. It is marketed all-ages and it means it\
- , a rare thing that a nine-year-old and two adults can all sit through ha
- ppily.\nPrice: from $35\nArea: Orange Beach & Gulf Shores\nTimes: Tuesday
- s and Saturdays · 7:00 PM\nChecked against the venue's own page on 2026-
- 08-08\nhttps://grayhicks.github.io/coast-guide/events/ev-brandonstyles-va
- riety.html
-LOCATION:Brandon Styles Theater at OWA\, 1501 S OWA Blvd\, Foley\, AL 3653
- 5
-URL:https://grayhicks.github.io/coast-guide/events/ev-brandonstyles-variet
- y.html
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_baytowne_wed-2026-08-19@coast-guide
 DTSTAMP:20260819T000000Z
 DTSTART:20260819T190000
@@ -226,6 +20,35 @@ DESCRIPTION:A free lawn concert fills the village\, where kids dance up fr
 LOCATION:Village of Baytowne Wharf\, Sandestin\, 9100 Baytowne Blvd\, Mira
  mar Beach\, FL 32550
 URL:https://grayhicks.github.io/coast-guide/events/ev-baytowne-wed.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_moriarty-2026-08-19@coast-guide
+DTSTAMP:20260819T000000Z
+DTSTART;VALUE=DATE:20260819
+DTEND;VALUE=DATE:20260824
+SUMMARY:Stage Crafters: Ken Ludwig's “Moriarty”
+DESCRIPTION:A Sherlock Holmes comedy takes the stage. It is good for STEM-
+ minded kids\, long for the art-and-dance crowd\, and best skipped with th
+ e toddler.\nPrice: from $30\nArea: Destin & Fort Walton\nTimes: Fri/Sat 7
+ :30 PM · Sun 2 PM · two weekends (8/14-16\, 8/21-23)\nhttps://grayhicks
+ .github.io/coast-guide/events/ev-moriarty.html
+LOCATION:Fort Walton Beach Civic Auditorium\, 109 Miracle Strip Pkwy SW\, 
+ Fort Walton Beach\, FL 32548
+URL:https://grayhicks.github.io/coast-guide/events/ev-moriarty.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_wahoos_knox-2026-08-19@coast-guide
+DTSTAMP:20260819T000000Z
+DTSTART;VALUE=DATE:20260819
+DTEND;VALUE=DATE:20260824
+SUMMARY:Blue Wahoos vs Knoxville: Fireworks 8/22 · Vet-Free 8/23
+DESCRIPTION:The last big August homestand runs the same playbook: Saturday
+  fireworks\, and a free-vet Sunday with run-the-bases.\nPrice: from $10\n
+ Area: Pensacola\nTimes: Aug 18-23 · Fireworks Sat 8/22 · Military Famil
+ y Sunday 8/23\nhttps://grayhicks.github.io/coast-guide/events/ev-wahoos-k
+ nox.html
+LOCATION:Blue Wahoos Stadium\, 351 W Cedar St\, Pensacola\, FL 32502
+URL:https://grayhicks.github.io/coast-guide/events/ev-wahoos-knox.html
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_ballroom-2026-08-19@coast-guide
@@ -258,6 +81,20 @@ URL:https://grayhicks.github.io/coast-guide/events/nl-florabama-ladies.htm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:nl_fubar_nights-2026-08-19@coast-guide
+DTSTAMP:20260819T000000Z
+DTSTART:20260819T210000
+DTEND:20260819T230000
+SUMMARY:Karaoke & DJ Nights: FUBAR Pizza Bar
+DESCRIPTION:Late-night karaoke runs five nights a week (Sun\, Tue\, Wed\, 
+ Fri\, Sat) plus a DJ on Monday and Thursday\, 9 PM to 1 AM every night\, 
+ with pizza till close. It is in Fort Walton Beach\, about 50 minutes east
+ .\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Nightly · 9 PM-1 AM\n
+ https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
+LOCATION:FUBAR Pizza Bar\, 114 Amberjack Dr\, Fort Walton Beach\, FL 32548
+URL:https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
+END:VEVENT
+BEGIN:VEVENT
 UID:nl_ajs_karaoke-2026-08-19@coast-guide
 DTSTAMP:20260819T000000Z
 DTSTART:20260819T180000
@@ -288,6 +125,39 @@ URL:https://grayhicks.github.io/coast-guide/events/nl-theblock-karaoke.htm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_seville_karaoke-2026-08-19@coast-guide
+DTSTAMP:20260819T000000Z
+DTSTART:20260819T200000
+DTEND:20260819T230000
+SUMMARY:Karaoke at Lili Marlene's: every night
+DESCRIPTION:Karaoke runs seven nights a week in the aviators' room\, not j
+ ust on the weekend\, which makes it the answer to a Tuesday you did not p
+ lan. It has a supportive room\, a real sound system\, and no sign-up fee 
+ posted.\nPrice: not published by the venue\, so confirm before you go\nAr
+ ea: Pensacola\nTimes: Every night · 8:00-11:00 PM\nChecked against the v
+ enue's own page on 2026-08-08\nhttps://grayhicks.github.io/coast-guide/ev
+ ents/ev-seville-karaoke.html
+LOCATION:Seville Quarter\, Lili Marlene's\, 130 E Government St\, Pensacol
+ a\, FL 32502
+URL:https://grayhicks.github.io/coast-guide/events/ev-seville-karaoke.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_30ave_green_music-2026-08-19@coast-guide
+DTSTAMP:20260819T000000Z
+DTSTART:20260819T180000
+DTEND:20260819T210000
+SUMMARY:Live music on the green: 30Avenue
+DESCRIPTION:Local players take the lawn at the 30A end of the county\, eve
+ ry evening\, no ticket. Shops and restaurants ring the green\, so it work
+ s as the whole evening or as the thing that happens while you eat.\nPrice
+ : Free\nArea: 30A & South Walton\nTimes: Every evening · 6:00-9:00 PM ·
+  free\nChecked against the venue's own page on 2026-08-08\nhttps://grayhi
+ cks.github.io/coast-guide/events/ev-30ave-green-music.html
+LOCATION:30Avenue\, 12805 US-98 East\, Inlet Beach\, FL 32461
+URL:https://grayhicks.github.io/coast-guide/events/ev-30ave-green-music.ht
+ ml
+END:VEVENT
+BEGIN:VEVENT
 UID:nl_seville_nochetropical-2026-08-19@coast-guide
 DTSTAMP:20260819T000000Z
 DTSTART:20260819T190000
@@ -304,6 +174,22 @@ LOCATION:Seville Quarter\, Phineas Phogg's\, 130 E Government St\, Pensaco
  la\, FL 32502
 URL:https://grayhicks.github.io/coast-guide/events/nl-seville-nochetropica
  l.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_solyluna-2026-08-20@coast-guide
+DTSTAMP:20260820T000000Z
+DTSTART:20260820T183000
+DTEND:20260820T200000
+SUMMARY:Wine\, Cheese & Sunset Dolphin Cruise: SOL y LUNA
+DESCRIPTION:SOLARIS's little sister offers a 1.5-hour sunset cruise with t
+ wo wine pours and a cheese pairing each\, dolphins likely. It is the ligh
+ ter\, cheaper way to get the yacht date without the full dinner-cruise ev
+ ening.\nPrice: not published by the venue\, so confirm before you go\nAre
+ a: Destin & Fort Walton\nTimes: Tuesdays + Thursdays · 6:30 PM · 1.5 hr
+ \nhttps://grayhicks.github.io/coast-guide/events/ev-solyluna.html
+LOCATION:SOL y LUNA\, Baytowne Marina\, Sandestin\, 8330 Mike Hayes Dr\, M
+ iramar Beach\, FL 32550
+URL:https://grayhicks.github.io/coast-guide/events/ev-solyluna.html
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_bubbly_baytowne-2026-08-20@coast-guide
@@ -410,6 +296,22 @@ DESCRIPTION:The Shaker\, birthplace of the Bushwacker\, has live music eve
 LOCATION:Sandshaker Lounge\, 731 Pensacola Beach Blvd\, Pensacola Beach\, 
  FL 32561
 URL:https://grayhicks.github.io/coast-guide/events/nl-sandshaker-live.html
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_paradise_live-2026-08-21@coast-guide
+DTSTAMP:20260821T000000Z
+DTSTART:20260821T173000
+DTEND:20260821T193000
+SUMMARY:Live Music: Paradise Bar & Grill
+DESCRIPTION:Beachside live music plays most nights on Pensacola Beach\, wi
+ th rotating local acts starting at 5:30 (Sundays 2:30). Wine Down Wednesd
+ ay runs $3 house and $6 premium wines all day. It is about 25 minutes out
+ .\nPrice: Free\nArea: Pensacola Beach & Perdido\nTimes: Tue/Fri/Sat 5:30 
+ PM · Sun 2:30 PM\nhttps://grayhicks.github.io/coast-guide/events/nl-para
+ dise-live.html
+LOCATION:Paradise Bar & Grill\, 21 Via De Luna Dr\, Pensacola Beach\, FL 3
+ 2561
+URL:https://grayhicks.github.io/coast-guide/events/nl-paradise-live.html
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seville_flipquarter-2026-08-21@coast-guide
@@ -661,6 +563,24 @@ LOCATION:The Wharf Amphitheater\, Orange Beach\, 23101 Canal Rd\, Orange B
 URL:https://grayhicks.github.io/coast-guide/events/ev-googoo.html
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_brandonstyles_variety-2026-08-22@coast-guide
+DTSTAMP:20260822T000000Z
+DTSTART:20260822T190000
+DTEND:20260822T210000
+SUMMARY:The Brandon Styles Variety Show
+DESCRIPTION:Celebrity impressions\, comedy\, and magic play a purpose-buil
+ t theatre at OWA\, twice a week. It is marketed all-ages and it means it\
+ , a rare thing that a nine-year-old and two adults can all sit through ha
+ ppily.\nPrice: from $35\nArea: Orange Beach & Gulf Shores\nTimes: Tuesday
+ s and Saturdays · 7:00 PM\nChecked against the venue's own page on 2026-
+ 08-08\nhttps://grayhicks.github.io/coast-guide/events/ev-brandonstyles-va
+ riety.html
+LOCATION:Brandon Styles Theater at OWA\, 1501 S OWA Blvd\, Foley\, AL 3653
+ 5
+URL:https://grayhicks.github.io/coast-guide/events/ev-brandonstyles-variet
+ y.html
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_ussalabama_livinghistory_0822-2026-08-22@coast-guide
 DTSTAMP:20260822T000000Z
 DTSTART:20260822T080000
@@ -761,5 +681,100 @@ LOCATION:Seville Quarter\, Lili Marlene's\, 130 E Government St\, Pensacol
  a\, FL 32502
 URL:https://grayhicks.github.io/coast-guide/events/ev-seville-mondayblues.
  html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_bands_on_the_beach-2026-08-25@coast-guide
+DTSTAMP:20260825T000000Z
+DTSTART:20260825T190000
+DTEND:20260825T210000
+SUMMARY:Bands on the Beach: free Gulfside concert
+DESCRIPTION:Live music beside the Gulf every Tuesday evening\, free\, with
+  the sand right there. Bring chairs or a blanket\, grab dinner on the boa
+ rdwalk\, let the kids run while the band plays. 8/11 is The New Cahoots.\
+ nPrice: Free\nArea: Pensacola Beach & Perdido\nTimes: Tuesdays · 7:00-9:
+ 00 PM\nChecked against the venue's own page on 2026-08-05\nhttps://grayhi
+ cks.github.io/coast-guide/events/ev-bands-on-the-beach.html
+LOCATION:Gulfside Pavilion\, Pensacola Beach\, 735 Pensacola Beach Blvd\, 
+ Pensacola Beach\, FL 32561
+URL:https://grayhicks.github.io/coast-guide/events/ev-bands-on-the-beach.h
+ tml
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_bands-2026-08-25@coast-guide
+DTSTAMP:20260825T000000Z
+DTSTART:20260825T190000
+DTEND:20260825T210000
+SUMMARY:Bands on the Beach
+DESCRIPTION:A free beach concert plays every Tuesday. Coming up are 8/4 Th
+ e New Cahoots\, 8/11 9th Avenue Brass\, 8/18 Paperchase\, and 8/25 Mass K
+ unfuzion. The full lineup runs to 10/27.\nPrice: Free\nArea: Pensacola Be
+ ach & Perdido\nTimes: Tuesdays · 7:00-9:00 PM\nhttps://grayhicks.github.
+ io/coast-guide/events/ev-bands.html
+LOCATION:Gulfside Pavilion at Casino Beach\, 20 Casino Beach Blvd\, Pensac
+ ola Beach\, FL 32561
+URL:https://grayhicks.github.io/coast-guide/events/ev-bands.html
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_ccbrew_trivia-2026-08-25@coast-guide
+DTSTAMP:20260825T000000Z
+DTSTART:20260825T183000
+DTEND:20260825T203000
+SUMMARY:Team Trivia Night: Coastal County Brewing
+DESCRIPTION:Grab a team and a local craft pour. Coastal County runs team t
+ rivia every Tuesday at 6:30 in the taproom. It is a low-key adult night o
+ ut\, about 25 minutes from the bridge.\nPrice: Free\nArea: Pensacola\nTim
+ es: Tuesdays · 6:30 PM\nhttps://grayhicks.github.io/coast-guide/events/n
+ l-ccbrew-trivia.html
+LOCATION:Coastal County Brewing Co.\, 3041 East Olive Rd\, Pensacola\, FL 
+ 32514
+URL:https://grayhicks.github.io/coast-guide/events/nl-ccbrew-trivia.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_alys_winesong-2026-08-25@coast-guide
+DTSTAMP:20260825T000000Z
+DTSTART:20260825T170000
+DTEND:20260825T190000
+SUMMARY:Wine + Song at NEAT: Alys Beach
+DESCRIPTION:Four wines and a live guitarist fill two hours in Alys Beach's
+  tasting room\, at a fixed price\, a fixed length\, and a drive that is g
+ enuinely part of the evening. Max McCann plays the 11th.\nPrice: from $30
+ \nArea: 30A & South Walton\nTimes: Tuesdays · 5:00-7:00 PM · thru 8/25\
+ nChecked against the venue's own page on 2026-08-08\nhttps://grayhicks.gi
+ thub.io/coast-guide/events/ev-alys-winesong.html
+LOCATION:NEAT Tasting Room & Bottle Shop\, 11 N Castle Harbour Dr\, Alys B
+ each\, FL 32461
+URL:https://grayhicks.github.io/coast-guide/events/ev-alys-winesong.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_blues_0722-2026-08-26@coast-guide
+DTSTAMP:20260826T000000Z
+DTSTART:20260826T103000
+DTEND:20260826T123000
+SUMMARY:Blue Angels Practice + AUTOGRAPHS
+DESCRIPTION:The Wednesday practice comes with pilot autographs after. Brin
+ g a hat or program for a STEM fan to get signed.\nPrice: Free\nArea: Pens
+ acola\nTimes: 08/26/2026 · Wednesday's practice ~10:30 AM · autographs 
+ after\nChecked against the venue's own page on 2026-08-05\nhttps://grayhi
+ cks.github.io/coast-guide/events/ev-blues-0722.html
+LOCATION:National Naval Aviation Museum\, 1750 Radford Blvd\, NAS Pensacol
+ a\, FL 32508
+URL:https://grayhicks.github.io/coast-guide/events/ev-blues-0722.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_jackjohnson_0826-2026-08-26@coast-guide
+DTSTAMP:20260826T000000Z
+DTSTART:20260826T193000
+DTEND:20260826T213000
+SUMMARY:Jack Johnson: The Wharf Amphitheater
+DESCRIPTION:The most on-brand booking the Gulf Coast will get all summer\,
+  outdoors on the Intracoastal. It falls on a Wednesday\, so it will not e
+ at the weekend.\nPrice: not published by the venue\, so confirm before yo
+ u go\nArea: Orange Beach & Gulf Shores\nTimes: Wed 08/26/2026 · 7:30 PM\
+ nChecked against the venue's own page on 2026-08-08\nhttps://grayhicks.gi
+ thub.io/coast-guide/events/ev-jackjohnson-0826.html
+LOCATION:The Wharf Amphitheater\, 23325 Wharf Lane\, Orange Beach\, AL 365
+ 61
+URL:https://grayhicks.github.io/coast-guide/events/ev-jackjohnson-0826.htm
+ l
 END:VEVENT
 END:VCALENDAR
