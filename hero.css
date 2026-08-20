@@ -61,18 +61,18 @@
 .ph-night .hk_boat .hk_bm2 { opacity: 0.22; }
 .ph-night .hk_boat .hk_bm { opacity: 0.3; }
 .ph-night .hk_boat .hk_bc { opacity: 0.76; }
-.hk_boat .hk_mbands { opacity: 0; }
+.hk_boat .hk_mbands { opacity: 0.9; }
 .ph-night .hk_boat .hk_mbands { opacity: 0.62; }
 .hk_boat .hk_bglow { opacity: 0; }
-.ph-dawn .hk_boat .hk_bglow { opacity: 0.72; stroke: rgb(255, 234, 214); }
-.ph-golden .hk_boat .hk_bglow { opacity: 0.85; stroke: rgb(255, 243, 214); }
+.ph-dawn .hk_boat .hk_bglow { opacity: 0.72; stroke: rgb(242, 250, 255); }
+.ph-golden .hk_boat .hk_bglow { opacity: 0.85; stroke: rgb(246, 251, 255); }
 .ph-night .hk_boat .hk_veil { fill: url("#hk_vlN"); }
 .ph-night .hk_boat .hk_sglow { opacity: 0.85; }
 .ph-night .hk_boat .hk_shadem { fill: url("#hk_shdMN"); }
 .ph-night .hk_boat .hk_shadej { fill: url("#hk_shdJN"); }
 .ph-night .hk_boat .hk_luffm { fill: url("#hk_lfMN"); }
 .ph-night .hk_boat .hk_luffj { fill: url("#hk_lfJN"); }
-.hk_boat .hk_veil.hk_veilm { opacity: 0; }
+.hk_boat .hk_veil.hk_veilm { opacity: 0.42; }
 .ph-night .hk_boat .hk_veil.hk_veilm { opacity: 0.55; }
 .ph-night .hk_boat .hk_crease { stroke: rgb(12, 24, 52); opacity: 0.42; }
 .ph-night .hk_boat .hk_creasel { stroke: rgb(185, 210, 240); opacity: 0.28; }
@@ -104,7 +104,7 @@
 .ph-golden .hk_boat .sails path[fill="url(#hk_maing)"] { fill: rgb(255, 245, 224); }
 .ph-golden .hk_boat .sails path[fill="url(#hk_jibg)"] { fill: rgb(249, 236, 208); }
 .ph-dawn .hk_boat .hk_veil { opacity: 0.8; }
-.ph-dawn .hk_boat .hk_veil.hk_veilm { opacity: 0; }
+.ph-dawn .hk_boat .hk_veil.hk_veilm { opacity: 0.38; }
 .ph-golden .hk_boat .hk_bcore { stroke: url("#hk_aurG"); }
 .ph-golden .hk_boat .hk_veil { fill: url("#hk_vlG"); }
 .ph-dawn .hk_boat .hk_bcore { stroke: url("#hk_aurD"); }
@@ -185,10 +185,10 @@
 .bswash { position: absolute; left: 6px; top: 30px; width: 86px; height: 14px; overflow: visible; pointer-events: none; filter: drop-shadow(rgba(8, 22, 34, 0.38) 0px 2px 8px) drop-shadow(rgba(8, 22, 34, 0.5) 0px 6px 28px); }
 .bswash path { fill: currentcolor; }
 .bsw + .bsw { margin-left: 0.42em; }
-.hero-title { --bt-a: #FFFDF8; --bt-b: #D2A052; }
+.hero-title { --bt-a: #FFFDF8; --bt-b: #E3BE74; }
 .ph-night .hero-title { --bt-b: #E8C078; }
-.ph-dawn .hero-title { --bt-b: #C08A3E; }
-.ph-golden .hero-title { --bt-b: #7E5526; }
+.ph-dawn .hero-title { --bt-b: #D6A75F; }
+.ph-golden .hero-title { --bt-b: #A8763A; }
 .hero-title .bt_a { color: var(--bt-a); }
 .hero-title .bt_b { color: var(--bt-b); }
 .hero-title .bt_tail { opacity: 0.78; }
@@ -259,9 +259,9 @@ a.hero_sponsor > ::after { content: ""; position: absolute; left: 50%; top: 50%;
 a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline-offset: 4px; border-radius: 4px; }
 .hero_sponsor .adlbl, .hero_slot .adlbl { position: absolute; left: 50%; top: 100%; margin-top: 2px; transform: translateX(-50%); font: 800 6.5px / 1 Nunito, system-ui, sans-serif; letter-spacing: 0.5px; text-transform: uppercase; color: rgb(242, 247, 250); background: rgba(14, 26, 36, 0.66); padding: 2px 4.5px; border-radius: 5px; white-space: nowrap; pointer-events: none; }
 .hero_sponsor .adlbl, .hero_slot .adlbl { background: rgba(8, 20, 30, 0.86); box-shadow: rgba(242, 196, 60, 0.5) 0px 0px 0px 1px inset; }
-.adboatname { position: absolute; top: 191px; right: 47.8px; z-index: 2; width: 96px; pointer-events: none; animation: 5.5s ease-in-out 0s infinite normal none running hk_sailbob; }
+.adboatname { position: absolute; top: 191px; right: 45.4px; z-index: 2; width: 96px; pointer-events: none; animation: 5.5s ease-in-out 0s infinite normal none running hk_sailbob; }
 .bnl { display: inline-block; }
-.adboatname_bd { position: relative; display: block; height: 6.3px; overflow: visible; padding: 0px; border: 0px; border-radius: 0px; box-shadow: none; font-family: Nunito, system-ui, sans-serif; font-weight: 800; font-size: 8.6px; line-height: 6.3px; letter-spacing: 0.3px; text-indent: 0.3px; text-transform: uppercase; transform: none; transform-origin: 50% 50%; text-align: center; white-space: nowrap; color: rgb(255, 246, 228); text-shadow: rgba(30, 15, 4, 0.92) 0px -0.5px 0px, rgba(255, 234, 190, 0.46) 0px 0.5px 0px; }
+.adboatname_bd { position: relative; display: block; height: 6.3px; overflow: visible; padding: 0px; border: 0px; border-radius: 0px; box-shadow: none; font-family: Nunito, system-ui, sans-serif; font-weight: 800; font-size: 7.8px; line-height: 6.3px; letter-spacing: 0.3px; text-indent: 0.3px; text-transform: uppercase; transform: none; transform-origin: 50% 50%; text-align: center; white-space: nowrap; color: rgb(255, 246, 228); text-shadow: rgba(30, 15, 4, 0.92) 0px -0.5px 0px, rgba(255, 234, 190, 0.46) 0px 0.5px 0px; }
 .adboatname_bd .bnsp { margin: 0px 0.7px; }
 .adboatname .adlbl:empty { display: none; }
 .adboatname .adlbl { display: block; position: static; width: max-content; margin: 4px auto 0px; font-style: normal; font-size: 5.5px; font-weight: 700; letter-spacing: 0.7px; line-height: 1.3; padding: 1px 3px; border-radius: 2px; text-align: center; color: rgb(236, 243, 248); background: rgba(9, 20, 30, 0.75); }
