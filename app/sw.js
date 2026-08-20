@@ -2,7 +2,7 @@
    background sync, no external origin. It precaches three same-origin files and serves them back.
    Nothing here reports anything anywhere, which is a product guarantee, not an implementation
    detail — gate_pwa.js asserts it against this file. */
-const CACHE = "gca-866c8562df7d6605";
+const CACHE = "gca-6a5ed554af350f24";
 
 /* ⚠ 08/20 — THE APP IS ONE 4.5MB DOCUMENT AND THIS USED TO DOWNLOAD IT TWICE. The precache list
    was ["./", "./index.html", "./app.webmanifest"] fed to cache.addAll(). The first two are the
