@@ -1842,6 +1842,8 @@ div.foot-fine{border-top:1px solid var(--line-soft);margin-top:var(--s-6);paddin
   .scene-copy h1,.page-title{max-width:16ch}
   
   .scene{--fs-display:clamp(50.8px, 1.7vw + 35.5px, 60px)}
+  
+  .hero-count strong{font-size:clamp(26px, .742vw + 19.31px, 30px)}
   .hero h1{max-width:22ch}
   .scene-copy .sub,.page-sub,.hero .sub,.hero-sub,.scene-copy .lead{max-width:44ch}
   
@@ -1867,6 +1869,8 @@ div.foot-fine{border-top:1px solid var(--line-soft);margin-top:var(--s-6);paddin
     --fs-body:clamp(16px, .27vw + 12.2px, 19px);
     
     --fs-small:clamp(13px, .18vw + 10.4px, 15px)}
+  
+  .hero-count strong{font-size:clamp(30px, .1787vw + 27.42px, 32px)}
   .scene-copy h1,.page-title{max-width:22ch}
   
   
