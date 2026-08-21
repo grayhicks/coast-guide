@@ -153,7 +153,6 @@
 .skbg.rev { animation-name: hk_skgR; }
 .sksoar { display: block; will-change: transform; animation: auto ease-in-out 0s infinite normal none running hk_sksoar; }
 .sksoar.big { animation-name: hk_sksoarB; }
-.skbnear.rev { animation-name: hk_gullnearR; }
 .grain { position: absolute; inset: -12%; z-index: 3; pointer-events: none; opacity: 0.028; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E"); background-size: 160px 160px; animation: 2.4s steps(1) 0s infinite normal none running hk_grain; }
 .ph-night .grain { opacity: 0.045; }
 .hero-eyebrow { display: inline-flex; align-items: center; gap: 7px; padding: 5px 14px; border-radius: 999px; font-family: "Cormorant Garamond", Georgia, serif; font-size: 11.5px; font-weight: 600; letter-spacing: 3.4px; color: rgb(255, 249, 236); text-transform: uppercase; background: rgba(12, 42, 58, 0.3); border: 1px solid rgba(255, 255, 255, 0.34); backdrop-filter: blur(2px); text-shadow: rgba(8, 24, 36, 0.4) 0px 1px 6px; }
@@ -164,6 +163,7 @@
 .bsw_sw { position: relative; }
 .bswash { position: absolute; left: 6px; top: 30px; width: 86px; height: 14px; overflow: visible; pointer-events: none; filter: drop-shadow(rgba(8, 22, 34, 0.38) 0px 2px 8px) drop-shadow(rgba(8, 22, 34, 0.5) 0px 6px 28px); }
 .bswash path { fill: currentcolor; }
+html.gca_cold .bswash { opacity: 0; }
 .bsw + .bsw { margin-left: 0.42em; }
 .hero-title { --bt-a: #FFFDF8; --bt-b: #E3BE74; }
 .ph-night .hero-title { --bt-b: #E8C078; }
@@ -171,7 +171,7 @@
 .ph-golden .hero-title { --bt-b: #A8763A; }
 .hero-title .bt_a { color: var(--bt-a); }
 .hero-title .bt_b { color: var(--bt-b); }
-.hero-title .bt_tail { opacity: 0.78; }
+.hero-title .bt_tail { opacity: 1; }
 .hero-title .bt_a { -webkit-text-stroke: .35px var(--bt-a); }
 .hero-title .bswash path { fill: var(--bt-a); }
 .hero-title { font-family: Fraunces, serif; font-weight: 600; font-size: 36px; line-height: 0.98; letter-spacing: -0.02em; color: rgb(255, 253, 248); margin: 18px 0px 0px; text-shadow: rgba(8, 22, 34, 0.38) 0px 2px 8px, rgba(8, 22, 34, 0.5) 0px 6px 28px; }
@@ -191,6 +191,8 @@
 .hero-sub { font-size: 12.5px; color: rgba(255, 251, 244, 0.94); margin-top: 14px; line-height: 1.5; max-width: 300px; position: relative; z-index: 2; text-wrap: balance; }
 .hero-sub b { color: rgb(255, 255, 255); }
 .hero-in { position: relative; z-index: 4; }
+.hero-in { pointer-events: none; }
+.hero-in > * { pointer-events: auto; }
 .hero-in.centered { display: flex; flex-direction: column; align-items: center; text-align: center; }
 .hero-in.centered .hero-script { margin-left: 0px; }
 .hero-in.centered .hero-rule { margin-left: auto; margin-right: auto; }
@@ -238,6 +240,8 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
 .ph-night .rrip { background: radial-gradient(rgba(150, 208, 255, 0) 30%, rgba(158, 214, 255, 0.17) 52%, rgba(178, 224, 255, 0.44) 68%, rgba(130, 196, 240, 0.18) 84%, rgba(110, 178, 228, 0) 100%); }
 .ph-golden .rrip { background: radial-gradient(rgba(255, 234, 200, 0) 30%, rgba(255, 238, 208, 0.19) 52%, rgba(255, 246, 224, 0.5) 68%, rgba(255, 220, 176, 0.2) 84%, rgba(255, 206, 158, 0) 100%); }
 .rrip.bio { background: radial-gradient(rgba(120, 224, 255, 0) 28%, rgba(140, 232, 255, 0.26) 50%, rgba(176, 244, 255, 0.66) 68%, rgba(110, 206, 246, 0.24) 84%, rgba(100, 196, 240, 0) 100%); box-shadow: rgba(120, 224, 255, 0.28) 0px 0px 7px; }
+.npw { position: absolute; left: 58px; bottom: 6px; z-index: 2; pointer-events: none; }
+.npw .np_glow { transform-box: fill-box; transform-origin: center center; animation: 2.6s ease-in-out 0s infinite normal none running hk_npglow; }
 @media (prefers-reduced-motion: reduce){.hk .flyby, .hk .grain, .hk .baw, .hk .gullw, .hk .ccrab, .hk .snote, .hk .hpel, .hk .fwx, .hk .aspl, .hk .rheart, .hk .lspk, .hk .dnm_bok, .hk .tdust, .hk .fly, .hk .skbwrap, .hk .pipw, .hk .dnx_rolled, .hk .trtw, .hk .htchw, .hk .kitew, .hk .rplfield, .hk .shw, .hk .hcw, .hk .tgw, .hk .whw, .hk .d2bw, .hk .pelw, .hk .rayw, .hk .dcw, .hk .hkop, .hk .dwgiant, .hk .dwpod, .hk .dwglow, .hk .hboat, .hk .dnote, .hk .dbloom, .hk .rmote, .hk .rsmokew .hk .supw, .hk .fld, .hk .crbw, .hk .crbh, .hk .htchf, .hk .lx_rock, .hk .lx_dig, .hk .mstrip, .hk .mbeam, .hk .cm_cone, .hk .cm_pool, .hk .romacc .racc_wash, .hk .em_fly, .hk .cs_shoot, .hk .cs_neb, .hk .brd, .hk .mthrow, .hk .mgrain, .hk .bawrap, .hk .popf, .hk .rm_bulb, .hk .cm_laugh, .hk .cm_cable, .hk .adrip, .hk .lsc_cur, .hk .swash, .hk .swash_lip, .hk .backwash, .hk .vwkw, .hk .vwk, .hk .fprt, .hk .swl_crest { display: none !important; }}
 @media (prefers-reduced-motion: reduce){.hk .swg, .hk .sw_heave { animation: auto ease 0s 1 normal none running none !important; }}
 @media (prefers-reduced-motion: reduce){.hk .swl_body { animation: auto ease 0s 1 normal none running none !important; opacity: 0.4 !important; }}
@@ -394,8 +398,6 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
 .xsky_star.s2 { left: 140px; top: 11px; animation: 3s ease-in-out 0s infinite normal none running xskyTwinkle; }
 .xps_star.s1 { left: 24px; top: 12px; opacity: 0.3; }
 .xps_star.s2 { left: 138px; top: 7px; animation: 3s ease-in-out 0s infinite normal none running xpsTwinkle; }
-.xp_supportstage.reviewing .xps_star { animation: auto ease 0s 1 normal none running none; opacity: 0.55; }
-.xp_supportstage.reviewing .xps_hairline { opacity: 0.85; }
 .hk_day .dock .hk_mmark, .hk_day .dock .hk_menumark { --mm1: #7E420C; --mm2: #14625B; --mm3: #5F4A2C; --mm4: #992743; }
 .hk_day .hk_promoted .adlbl.open { opacity: 0.7; }
 .hk_day .skitz .adlbl { color: rgb(68, 86, 106); background: rgba(255, 246, 228, 0.92); box-shadow: rgba(138, 90, 12, 0.4) 0px 0px 0px 1px inset; }
@@ -569,12 +571,6 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
   62% { transform: translateY(3px) rotate(1.5deg); }
   82% { transform: translateY(-2px) rotate(-2deg); }
 }
-@keyframes hk_gullnearR { 
-  0%, 55% { transform: translate(452px, 6px); }
-  70% { transform: translate(242px, -2px); }
-  84% { transform: translate(62px, 3px); }
-  100% { transform: translate(-90px, -4px); }
-}
 @keyframes hk_grain { 
   0% { transform: translate(0px, 0px); }
   12% { transform: translate(-2.2%, 1.4%); }
@@ -651,6 +647,11 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
   20% { opacity: 0.82; }
   54% { opacity: 0.56; }
   100% { opacity: 0; transform: translate(-50%, -50%) scale(1.7); }
+}
+@keyframes hk_npglow { 
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  45% { opacity: 1; transform: scale(1.12); }
+  70% { opacity: 0.7; transform: scale(0.96); }
 }
 @keyframes hk_hshim { 
   0% { opacity: 0.18; transform: translateX(-7px) scaleX(0.85); }

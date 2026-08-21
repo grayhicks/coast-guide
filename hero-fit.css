@@ -220,6 +220,8 @@ body.ph-night .scene{--skytop:#16294A}
 .scene-stage .hk_boat{opacity:1 !important}
 .scene-stage .hk_boat .sails path{fill:#C9D8E6}
 .scene-stage .hk_boat .sails path[fill="url(#hk_maing)"]{fill:#D3E0EC}
+
+.scene-stage .hk_boat .sails path[fill="url(#hk_jibg)"]{fill:#C2D2E2}
 .scene-stage .boat-refl{display:block;opacity:.5}
 
 
