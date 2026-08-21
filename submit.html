@@ -29,6 +29,7 @@
 <link rel="stylesheet" href="site.css">
 <link rel="stylesheet" href="hero.css">
 <link rel="stylesheet" href="hero-fit.css">
+
 <script>(function(){var D=document.documentElement;function lbl(){var d=D.getAttribute('data-theme')==='dark';var b=document.querySelector('[data-theme-toggle]');if(b){b.setAttribute('aria-label',d?'Switch to the light theme':'Switch to the dark theme');b.setAttribute('aria-pressed',d?'true':'false');}}try{var t=localStorage.getItem('gca-theme');if(t==='dark'||t==='light')D.setAttribute('data-theme',t);}catch(e){}document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-theme-toggle]');if(!b)return;var n=D.getAttribute('data-theme')==='dark'?'light':'dark';D.setAttribute('data-theme',n);try{localStorage.setItem('gca-theme',n);}catch(x){}lbl();});document.addEventListener('DOMContentLoaded',lbl);var nc=document.getElementById('nav-open');if(nc){var nb=document.querySelector('.nav-btn');function nx(){nc.setAttribute('aria-expanded',nc.checked?'true':'false');if(nb)nb.setAttribute('aria-expanded',nc.checked?'true':'false');}nc.addEventListener('change',nx);nx();document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nc.checked){nc.checked=false;nx();if(nb)nb.focus();}});}})();</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://coastaleventures.com/"},{"@type":"ListItem","position":2,"name":"Submit an event","item":"https://coastaleventures.com/submit.html"}]}</script>
 </head>
@@ -128,12 +129,7 @@
     <p class="sub">Free to list, free to stay listed, and nobody buys their way on</p>
   </div>
 </div><div class="wrap prose">
-<!-- The form renders only when INBOX is set, the same guard apply.html uses. IF_INBOX keeps its
-     contents when the constant is set, IFN_INBOX when it is not. Reasoning is in the commit. -->
-
-
-
-  <div class="note">
+<div class="note">
     <strong>Submissions open shortly.</strong> We don't have a public inbox yet, so this page does
     not show a form that cannot send anywhere. A form that thanks you and quietly drops what you
     wrote is worse than no form.

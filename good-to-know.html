@@ -29,6 +29,7 @@
 <link rel="stylesheet" href="site.css">
 <link rel="stylesheet" href="hero.css">
 <link rel="stylesheet" href="hero-fit.css">
+
 <script>(function(){var D=document.documentElement;function lbl(){var d=D.getAttribute('data-theme')==='dark';var b=document.querySelector('[data-theme-toggle]');if(b){b.setAttribute('aria-label',d?'Switch to the light theme':'Switch to the dark theme');b.setAttribute('aria-pressed',d?'true':'false');}}try{var t=localStorage.getItem('gca-theme');if(t==='dark'||t==='light')D.setAttribute('data-theme',t);}catch(e){}document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-theme-toggle]');if(!b)return;var n=D.getAttribute('data-theme')==='dark'?'light':'dark';D.setAttribute('data-theme',n);try{localStorage.setItem('gca-theme',n);}catch(x){}lbl();});document.addEventListener('DOMContentLoaded',lbl);var nc=document.getElementById('nav-open');if(nc){var nb=document.querySelector('.nav-btn');function nx(){nc.setAttribute('aria-expanded',nc.checked?'true':'false');if(nb)nb.setAttribute('aria-expanded',nc.checked?'true':'false');}nc.addEventListener('change',nx);nx();document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nc.checked){nc.checked=false;nx();if(nb)nb.focus();}});}})();</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://coastaleventures.com/"},{"@type":"ListItem","position":2,"name":"Good to know","item":"https://coastaleventures.com/good-to-know.html"}]}</script>
 </head>
@@ -128,33 +129,13 @@
     <p class="sub">The answers that did not fit on a card</p>
   </div>
 </div><div class="wrap prose">
-<!-- ⚠ 08/11 — THIS PAGE IS A CONTAINER, NOT AN ESSAY, AND THE SHAPE IS GRAY'S.
-     He asked for "a more information type of page... and i feel like lots of things could go
-     there", then corrected the working title twice: "not a how it works page, additional
-     information page" and "it doesnt have to say that, but it does have to mean that". So the
-     name says Good to know and the page MEANS additional information, which is the one thing a
-     filing-cabinet heading would have said out loud and lost.
-     THE LAYOUT LAW THAT FOLLOWS FROM IT: every section answers one question, stands on its own,
-     and depends on nothing above it. A tenth section is a tenth <section> and nothing else moves.
-     sectionRail() already turns three or more h2s into the jump list in the desktop gutter, so
-     the page's own scannability grows with it rather than needing a redesign.
-     ⚠ AND NOTHING HERE IS INVENTED. Every claim below is behaviour this build already has, taken
-     from business.html's "What we do", claude/SOURCE_LEDGER_SPEC.md, claude/BUSINESS_MODEL.md §6,
-     and the home page's own verification panel. -->
-
 <section>
 <p class="lead">None of this is needed to use the guide. It is here for the reader who wants to know
 how the list is put together before they trust a price on it. Every section stands on its own, so
 read the one you came for and leave the rest.</p>
 </section>
 
-<!-- ⚠ MOVED OFF support.html ON 08/11, WHOLE, WITH ITS STYLING RENAMED FROM .sup-* TO .acts-*.
-     Gray: "how a listing finds its place should not be on the support page... support is about
-     us... not the customer." The card was teaching methodology to a reader on a page whose job is
-     to say who does this and why somebody would back them, which is two jobs on one page.
-     Every claim in it is real behaviour of the build, and the tally is deliberately rounded DOWN
-     from the live counts (583 across the four pools at this writing) so it cannot rot into a lie
-     between sweeps. -->
+
 <section id="how-a-listing-earns-its-place">
 <h2><span class="k"><svg class="k-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9.4" r="5.8"/><path d="M9.2 14.6L7.6 21.2 12 18.6l4.4 2.6-1.6-6.6"/></svg>The work</span>How a listing earns its place</h2>
 <div class="acts-bill">
