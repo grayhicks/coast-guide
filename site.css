@@ -1453,7 +1453,8 @@ main > .wrap > section.home-sec:only-child .quick-card:focus-visible .q-t::after
 .spec > figcaption{margin:10px 0 0;font:var(--fs-small)/1.55 var(--font-sans);color:var(--ink-2);
   max-width:52ch}
 
-.spec-flat .feed-ad{margin-top:0}
+
+.spec-flat .feed-ad{margin-top:0;margin-bottom:0}
 
 
 
