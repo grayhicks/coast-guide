@@ -5,81 +5,6 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Gulf Coast: free things
 BEGIN:VEVENT
-UID:ev_bubbly_baytowne-2026-08-20@coast-guide
-DTSTAMP:20260820T000000Z
-DTSTART:20260820T170000
-DTEND:20260820T190000
-SUMMARY:Bubbly Baytowne: Free Champagne Sip & Shop (21+)
-DESCRIPTION:A free evening stroll winds through the village with complimen
- tary bubbly pours at the merchants\, a browse-and-taste date that costs n
- othing unless something in a shop window wins. It runs again 9/17.\nPrice
- : Free\nArea: Destin & Fort Walton\nTimes: Thu 08/20/2026 · 5:00-7:00 PM
-  · also 9/17\nhttps://grayhicks.github.io/coast-guide/events/ev-bubbly-b
- aytowne.html
-LOCATION:Village of Baytowne Wharf\, Sandestin\, 9300 Emerald Coast Pkwy W
- \, Miramar Beach\, FL 32550
-URL:https://grayhicks.github.io/coast-guide/events/ev-bubbly-baytowne.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_mancis_live-2026-08-20@coast-guide
-DTSTAMP:20260820T000000Z
-DTSTART:20260820T180000
-DTEND:20260820T200000
-SUMMARY:Live Music: Manci's Antique Club
-DESCRIPTION:This Daphne institution has walls of Jim Beam decanters and li
- ve local bands Thursday through Sunday. It is a grown-up night across the
-  bay\, about 50 minutes out.\nPrice: Free\nArea: Mobile & Baldwin County\
- nTimes: Thu 6:30 · Fri-Sat 7:30 · Sun 6:00 PM\nhttps://grayhicks.github
- .io/coast-guide/events/nl-mancis-live.html
-LOCATION:Manci's Antique Club\, 1715 Main St\, Daphne\, AL 36526
-URL:https://grayhicks.github.io/coast-guide/events/nl-mancis-live.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_fubar_nights-2026-08-20@coast-guide
-DTSTAMP:20260820T000000Z
-DTSTART:20260820T210000
-DTEND:20260820T230000
-SUMMARY:Karaoke & DJ Nights: FUBAR Pizza Bar
-DESCRIPTION:Late-night karaoke runs five nights a week (Sun\, Tue\, Wed\, 
- Fri\, Sat) plus a DJ on Monday and Thursday\, 9 PM to 1 AM every night\, 
- with pizza till close. It is in Fort Walton Beach\, about 50 minutes east
- .\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Nightly · 9 PM-1 AM\n
- https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
-LOCATION:FUBAR Pizza Bar\, 114 Amberjack Dr\, Fort Walton Beach\, FL 32548
-URL:https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_theblock_karaoke-2026-08-20@coast-guide
-DTSTAMP:20260820T000000Z
-DTSTART:20260820T180000
-DTEND:20260820T200000
-SUMMARY:Karaoke Block: The Block
-DESCRIPTION:The Sports & Karaoke room at The Block runs Wednesday through 
- Saturday\, opening at 6 (8 on Thursday) and going late. It is downtown Fo
- rt Walton Beach\, about 50 minutes out.\nPrice: Free\nArea: Destin & Fort
-  Walton\nTimes: Wed-Sat · from 6 PM (Thu 8 PM)\nhttps://grayhicks.github
- .io/coast-guide/events/nl-theblock-karaoke.html
-LOCATION:The Block\, 113 Eglin Pkwy SE\, Fort Walton Beach\, FL 32548
-URL:https://grayhicks.github.io/coast-guide/events/nl-theblock-karaoke.htm
- l
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_30ave_green_music-2026-08-20@coast-guide
-DTSTAMP:20260820T000000Z
-DTSTART:20260820T180000
-DTEND:20260820T210000
-SUMMARY:Live music on the green: 30Avenue
-DESCRIPTION:Local players take the lawn at the 30A end of the county\, eve
- ry evening\, no ticket. Shops and restaurants ring the green\, so it work
- s as the whole evening or as the thing that happens while you eat.\nPrice
- : Free\nArea: 30A & South Walton\nTimes: Every evening · 6:00-9:00 PM ·
-  free\nChecked against the venue's own page on 2026-08-08\nhttps://grayhi
- cks.github.io/coast-guide/events/ev-30ave-green-music.html
-LOCATION:30Avenue\, 12805 US-98 East\, Inlet Beach\, FL 32461
-URL:https://grayhicks.github.io/coast-guide/events/ev-30ave-green-music.ht
- ml
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_gallery_carshow-2026-08-21@coast-guide
 DTSTAMP:20260821T000000Z
 DTSTART:20260821T170000
@@ -106,6 +31,49 @@ DESCRIPTION:The hometown county movie night returns\; the title posts clos
 LOCATION:Tiger Point Park\, Gulf Breeze\, 1370 Tiger Park Ln\, Gulf Breeze
  \, FL 32563
 URL:https://grayhicks.github.io/coast-guide/events/ev-mitp-tiger-aug.html
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_mancis_live-2026-08-21@coast-guide
+DTSTAMP:20260821T000000Z
+DTSTART:20260821T180000
+DTEND:20260821T200000
+SUMMARY:Live Music: Manci's Antique Club
+DESCRIPTION:This Daphne institution has walls of Jim Beam decanters and li
+ ve local bands Thursday through Sunday. It is a grown-up night across the
+  bay\, about 50 minutes out.\nPrice: Free\nArea: Mobile & Baldwin County\
+ nTimes: Thu 6:30 · Fri-Sat 7:30 · Sun 6:00 PM\nhttps://grayhicks.github
+ .io/coast-guide/events/nl-mancis-live.html
+LOCATION:Manci's Antique Club\, 1715 Main St\, Daphne\, AL 36526
+URL:https://grayhicks.github.io/coast-guide/events/nl-mancis-live.html
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_fubar_nights-2026-08-21@coast-guide
+DTSTAMP:20260821T000000Z
+DTSTART:20260821T210000
+DTEND:20260821T230000
+SUMMARY:Karaoke & DJ Nights: FUBAR Pizza Bar
+DESCRIPTION:Late-night karaoke runs five nights a week (Sun\, Tue\, Wed\, 
+ Fri\, Sat) plus a DJ on Monday and Thursday\, 9 PM to 1 AM every night\, 
+ with pizza till close. It is in Fort Walton Beach\, about 50 minutes east
+ .\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Nightly · 9 PM-1 AM\n
+ https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
+LOCATION:FUBAR Pizza Bar\, 114 Amberjack Dr\, Fort Walton Beach\, FL 32548
+URL:https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_theblock_karaoke-2026-08-21@coast-guide
+DTSTAMP:20260821T000000Z
+DTSTART:20260821T180000
+DTEND:20260821T200000
+SUMMARY:Karaoke Block: The Block
+DESCRIPTION:The Sports & Karaoke room at The Block runs Wednesday through 
+ Saturday\, opening at 6 (8 on Thursday) and going late. It is downtown Fo
+ rt Walton Beach\, about 50 minutes out.\nPrice: Free\nArea: Destin & Fort
+  Walton\nTimes: Wed-Sat · from 6 PM (Thu 8 PM)\nhttps://grayhicks.github
+ .io/coast-guide/events/nl-theblock-karaoke.html
+LOCATION:The Block\, 113 Eglin Pkwy SE\, Fort Walton Beach\, FL 32548
+URL:https://grayhicks.github.io/coast-guide/events/nl-theblock-karaoke.htm
+ l
 END:VEVENT
 BEGIN:VEVENT
 UID:nl_sandshaker_live-2026-08-21@coast-guide
@@ -137,6 +105,22 @@ DESCRIPTION:Beachside live music plays most nights on Pensacola Beach\, wi
 LOCATION:Paradise Bar & Grill\, 21 Via De Luna Dr\, Pensacola Beach\, FL 3
  2561
 URL:https://grayhicks.github.io/coast-guide/events/nl-paradise-live.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_30ave_green_music-2026-08-21@coast-guide
+DTSTAMP:20260821T000000Z
+DTSTART:20260821T180000
+DTEND:20260821T210000
+SUMMARY:Live music on the green: 30Avenue
+DESCRIPTION:Local players take the lawn at the 30A end of the county\, eve
+ ry evening\, no ticket. Shops and restaurants ring the green\, so it work
+ s as the whole evening or as the thing that happens while you eat.\nPrice
+ : Free\nArea: 30A & South Walton\nTimes: Every evening · 6:00-9:00 PM ·
+  free\nChecked against the venue's own page on 2026-08-08\nhttps://grayhi
+ cks.github.io/coast-guide/events/ev-30ave-green-music.html
+LOCATION:30Avenue\, 12805 US-98 East\, Inlet Beach\, FL 32461
+URL:https://grayhicks.github.io/coast-guide/events/ev-30ave-green-music.ht
+ ml
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_destinlib_craft_0821-2026-08-21@coast-guide

@@ -5,9 +5,9 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Gulf Coast: the next ninety days
 BEGIN:VEVENT
-UID:ev_moriarty-2026-08-20@coast-guide
-DTSTAMP:20260820T000000Z
-DTSTART;VALUE=DATE:20260820
+UID:ev_moriarty-2026-08-21@coast-guide
+DTSTAMP:20260821T000000Z
+DTSTART;VALUE=DATE:20260821
 DTEND;VALUE=DATE:20260824
 SUMMARY:Stage Crafters: Ken Ludwig's “Moriarty”
 DESCRIPTION:A Sherlock Holmes comedy takes the stage. It is good for STEM-
@@ -18,145 +18,6 @@ DESCRIPTION:A Sherlock Holmes comedy takes the stage. It is good for STEM-
 LOCATION:Fort Walton Beach Civic Auditorium\, 109 Miracle Strip Pkwy SW\, 
  Fort Walton Beach\, FL 32548
 URL:https://grayhicks.github.io/coast-guide/events/ev-moriarty.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_wahoos_knox-2026-08-20@coast-guide
-DTSTAMP:20260820T000000Z
-DTSTART;VALUE=DATE:20260820
-DTEND;VALUE=DATE:20260824
-SUMMARY:Blue Wahoos vs Knoxville
-DESCRIPTION:The last big August homestand runs the same playbook: Saturday
-  fireworks\, and a free-vet Sunday with run-the-bases.\nPrice: from $10\n
- Area: Pensacola\nTimes: Aug 18-23 · Fireworks Sat 8/22 · Military Famil
- y Sunday 8/23\nhttps://grayhicks.github.io/coast-guide/events/ev-wahoos-k
- nox.html
-LOCATION:Blue Wahoos Stadium\, 351 W Cedar St\, Pensacola\, FL 32502
-URL:https://grayhicks.github.io/coast-guide/events/ev-wahoos-knox.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_solyluna-2026-08-20@coast-guide
-DTSTAMP:20260820T000000Z
-DTSTART:20260820T183000
-DTEND:20260820T200000
-SUMMARY:Wine\, Cheese & Sunset Dolphin Cruise: SOL y LUNA
-DESCRIPTION:SOLARIS's little sister offers a 1.5-hour sunset cruise with t
- wo wine pours and a cheese pairing each\, dolphins likely. It is the ligh
- ter\, cheaper way to get the yacht date without the full dinner-cruise ev
- ening.\nPrice: not published by the venue\, so confirm before you go\nAre
- a: Destin & Fort Walton\nTimes: Tuesdays + Thursdays · 6:30 PM · 1.5 hr
- \nhttps://grayhicks.github.io/coast-guide/events/ev-solyluna.html
-LOCATION:SOL y LUNA\, Baytowne Marina\, Sandestin\, 8330 Mike Hayes Dr\, M
- iramar Beach\, FL 32550
-URL:https://grayhicks.github.io/coast-guide/events/ev-solyluna.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_bubbly_baytowne-2026-08-20@coast-guide
-DTSTAMP:20260820T000000Z
-DTSTART:20260820T170000
-DTEND:20260820T190000
-SUMMARY:Bubbly Baytowne: Free Champagne Sip & Shop (21+)
-DESCRIPTION:A free evening stroll winds through the village with complimen
- tary bubbly pours at the merchants\, a browse-and-taste date that costs n
- othing unless something in a shop window wins. It runs again 9/17.\nPrice
- : Free\nArea: Destin & Fort Walton\nTimes: Thu 08/20/2026 · 5:00-7:00 PM
-  · also 9/17\nhttps://grayhicks.github.io/coast-guide/events/ev-bubbly-b
- aytowne.html
-LOCATION:Village of Baytowne Wharf\, Sandestin\, 9300 Emerald Coast Pkwy W
- \, Miramar Beach\, FL 32550
-URL:https://grayhicks.github.io/coast-guide/events/ev-bubbly-baytowne.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_mancis_live-2026-08-20@coast-guide
-DTSTAMP:20260820T000000Z
-DTSTART:20260820T180000
-DTEND:20260820T200000
-SUMMARY:Live Music: Manci's Antique Club
-DESCRIPTION:This Daphne institution has walls of Jim Beam decanters and li
- ve local bands Thursday through Sunday. It is a grown-up night across the
-  bay\, about 50 minutes out.\nPrice: Free\nArea: Mobile & Baldwin County\
- nTimes: Thu 6:30 · Fri-Sat 7:30 · Sun 6:00 PM\nhttps://grayhicks.github
- .io/coast-guide/events/nl-mancis-live.html
-LOCATION:Manci's Antique Club\, 1715 Main St\, Daphne\, AL 36526
-URL:https://grayhicks.github.io/coast-guide/events/nl-mancis-live.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_fubar_nights-2026-08-20@coast-guide
-DTSTAMP:20260820T000000Z
-DTSTART:20260820T210000
-DTEND:20260820T230000
-SUMMARY:Karaoke & DJ Nights: FUBAR Pizza Bar
-DESCRIPTION:Late-night karaoke runs five nights a week (Sun\, Tue\, Wed\, 
- Fri\, Sat) plus a DJ on Monday and Thursday\, 9 PM to 1 AM every night\, 
- with pizza till close. It is in Fort Walton Beach\, about 50 minutes east
- .\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Nightly · 9 PM-1 AM\n
- https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
-LOCATION:FUBAR Pizza Bar\, 114 Amberjack Dr\, Fort Walton Beach\, FL 32548
-URL:https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_theblock_karaoke-2026-08-20@coast-guide
-DTSTAMP:20260820T000000Z
-DTSTART:20260820T180000
-DTEND:20260820T200000
-SUMMARY:Karaoke Block: The Block
-DESCRIPTION:The Sports & Karaoke room at The Block runs Wednesday through 
- Saturday\, opening at 6 (8 on Thursday) and going late. It is downtown Fo
- rt Walton Beach\, about 50 minutes out.\nPrice: Free\nArea: Destin & Fort
-  Walton\nTimes: Wed-Sat · from 6 PM (Thu 8 PM)\nhttps://grayhicks.github
- .io/coast-guide/events/nl-theblock-karaoke.html
-LOCATION:The Block\, 113 Eglin Pkwy SE\, Fort Walton Beach\, FL 32548
-URL:https://grayhicks.github.io/coast-guide/events/nl-theblock-karaoke.htm
- l
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_seville_karaoke-2026-08-20@coast-guide
-DTSTAMP:20260820T000000Z
-DTSTART:20260820T200000
-DTEND:20260820T230000
-SUMMARY:Karaoke at Lili Marlene's: every night
-DESCRIPTION:Karaoke runs seven nights a week in the aviators' room\, not j
- ust on the weekend\, which makes it the answer to a Tuesday you did not p
- lan. It has a supportive room\, a real sound system\, and no sign-up fee 
- posted.\nPrice: not published by the venue\, so confirm before you go\nAr
- ea: Pensacola\nTimes: Every night · 8:00-11:00 PM\nChecked against the v
- enue's own page on 2026-08-08\nhttps://grayhicks.github.io/coast-guide/ev
- ents/ev-seville-karaoke.html
-LOCATION:Seville Quarter\, Lili Marlene's\, 130 E Government St\, Pensacol
- a\, FL 32502
-URL:https://grayhicks.github.io/coast-guide/events/ev-seville-karaoke.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_30ave_green_music-2026-08-20@coast-guide
-DTSTAMP:20260820T000000Z
-DTSTART:20260820T180000
-DTEND:20260820T210000
-SUMMARY:Live music on the green: 30Avenue
-DESCRIPTION:Local players take the lawn at the 30A end of the county\, eve
- ry evening\, no ticket. Shops and restaurants ring the green\, so it work
- s as the whole evening or as the thing that happens while you eat.\nPrice
- : Free\nArea: 30A & South Walton\nTimes: Every evening · 6:00-9:00 PM ·
-  free\nChecked against the venue's own page on 2026-08-08\nhttps://grayhi
- cks.github.io/coast-guide/events/ev-30ave-green-music.html
-LOCATION:30Avenue\, 12805 US-98 East\, Inlet Beach\, FL 32461
-URL:https://grayhicks.github.io/coast-guide/events/ev-30ave-green-music.ht
- ml
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_seville_collegenight-2026-08-20@coast-guide
-DTSTAMP:20260820T000000Z
-DTSTART:20260820T200000
-DTEND:20260820T220000
-SUMMARY:College Night: Seville Quarter (18+)
-DESCRIPTION:The Gulf Coast's oldest Thursday tradition\, in the club room 
- of an 1871 warehouse block. It is heavily collegiate and heavily crowded.
-  Carding here is enforced because it is real and priced\, not because it 
- suits everybody.\nPrice: from $5\nArea: Pensacola\nTimes: Thursdays · fr
- om 8:00 PM\nChecked against the venue's own page on 2026-08-08\nhttps://g
- rayhicks.github.io/coast-guide/events/nl-seville-collegenight.html
-LOCATION:Seville Quarter\, Phineas Phogg's\, 130 E Government St\, Pensaco
- la\, FL 32502
-URL:https://grayhicks.github.io/coast-guide/events/nl-seville-collegenight
- .html
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_gallery_carshow-2026-08-21@coast-guide
@@ -187,6 +48,20 @@ LOCATION:Tiger Point Park\, Gulf Breeze\, 1370 Tiger Park Ln\, Gulf Breeze
 URL:https://grayhicks.github.io/coast-guide/events/ev-mitp-tiger-aug.html
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_wahoos_knox-2026-08-21@coast-guide
+DTSTAMP:20260821T000000Z
+DTSTART;VALUE=DATE:20260821
+DTEND;VALUE=DATE:20260824
+SUMMARY:Blue Wahoos vs Knoxville
+DESCRIPTION:The last big August homestand runs the same playbook: Saturday
+  fireworks\, and a free-vet Sunday with run-the-bases.\nPrice: from $10\n
+ Area: Pensacola\nTimes: Aug 18-23 · Fireworks Sat 8/22 · Military Famil
+ y Sunday 8/23\nhttps://grayhicks.github.io/coast-guide/events/ev-wahoos-k
+ nox.html
+LOCATION:Blue Wahoos Stadium\, 351 W Cedar St\, Pensacola\, FL 32502
+URL:https://grayhicks.github.io/coast-guide/events/ev-wahoos-knox.html
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_plt_dracula-2026-08-21@coast-guide
 DTSTAMP:20260821T000000Z
 DTSTART;VALUE=DATE:20260821
@@ -201,6 +76,49 @@ DESCRIPTION:A laugh-out-loud stage spoof of Dracula takes the stage. PLT b
 LOCATION:Pensacola Little Theatre\, 400 S Jefferson St\, Pensacola\, FL 32
  502
 URL:https://grayhicks.github.io/coast-guide/events/ev-plt-dracula.html
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_mancis_live-2026-08-21@coast-guide
+DTSTAMP:20260821T000000Z
+DTSTART:20260821T180000
+DTEND:20260821T200000
+SUMMARY:Live Music: Manci's Antique Club
+DESCRIPTION:This Daphne institution has walls of Jim Beam decanters and li
+ ve local bands Thursday through Sunday. It is a grown-up night across the
+  bay\, about 50 minutes out.\nPrice: Free\nArea: Mobile & Baldwin County\
+ nTimes: Thu 6:30 · Fri-Sat 7:30 · Sun 6:00 PM\nhttps://grayhicks.github
+ .io/coast-guide/events/nl-mancis-live.html
+LOCATION:Manci's Antique Club\, 1715 Main St\, Daphne\, AL 36526
+URL:https://grayhicks.github.io/coast-guide/events/nl-mancis-live.html
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_fubar_nights-2026-08-21@coast-guide
+DTSTAMP:20260821T000000Z
+DTSTART:20260821T210000
+DTEND:20260821T230000
+SUMMARY:Karaoke & DJ Nights: FUBAR Pizza Bar
+DESCRIPTION:Late-night karaoke runs five nights a week (Sun\, Tue\, Wed\, 
+ Fri\, Sat) plus a DJ on Monday and Thursday\, 9 PM to 1 AM every night\, 
+ with pizza till close. It is in Fort Walton Beach\, about 50 minutes east
+ .\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Nightly · 9 PM-1 AM\n
+ https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
+LOCATION:FUBAR Pizza Bar\, 114 Amberjack Dr\, Fort Walton Beach\, FL 32548
+URL:https://grayhicks.github.io/coast-guide/events/nl-fubar-nights.html
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_theblock_karaoke-2026-08-21@coast-guide
+DTSTAMP:20260821T000000Z
+DTSTART:20260821T180000
+DTEND:20260821T200000
+SUMMARY:Karaoke Block: The Block
+DESCRIPTION:The Sports & Karaoke room at The Block runs Wednesday through 
+ Saturday\, opening at 6 (8 on Thursday) and going late. It is downtown Fo
+ rt Walton Beach\, about 50 minutes out.\nPrice: Free\nArea: Destin & Fort
+  Walton\nTimes: Wed-Sat · from 6 PM (Thu 8 PM)\nhttps://grayhicks.github
+ .io/coast-guide/events/nl-theblock-karaoke.html
+LOCATION:The Block\, 113 Eglin Pkwy SE\, Fort Walton Beach\, FL 32548
+URL:https://grayhicks.github.io/coast-guide/events/nl-theblock-karaoke.htm
+ l
 END:VEVENT
 BEGIN:VEVENT
 UID:nl_sandshaker_live-2026-08-21@coast-guide
@@ -266,6 +184,39 @@ DESCRIPTION:Two pianos take requests shouted from the floor\, and the room
 LOCATION:Seville Quarter\, Rosie O'Grady's\, 130 E Government St\, Pensaco
  la\, FL 32502
 URL:https://grayhicks.github.io/coast-guide/events/ev-seville-dueling.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seville_karaoke-2026-08-21@coast-guide
+DTSTAMP:20260821T000000Z
+DTSTART:20260821T200000
+DTEND:20260821T230000
+SUMMARY:Karaoke at Lili Marlene's: every night
+DESCRIPTION:Karaoke runs seven nights a week in the aviators' room\, not j
+ ust on the weekend\, which makes it the answer to a Tuesday you did not p
+ lan. It has a supportive room\, a real sound system\, and no sign-up fee 
+ posted.\nPrice: not published by the venue\, so confirm before you go\nAr
+ ea: Pensacola\nTimes: Every night · 8:00-11:00 PM\nChecked against the v
+ enue's own page on 2026-08-08\nhttps://grayhicks.github.io/coast-guide/ev
+ ents/ev-seville-karaoke.html
+LOCATION:Seville Quarter\, Lili Marlene's\, 130 E Government St\, Pensacol
+ a\, FL 32502
+URL:https://grayhicks.github.io/coast-guide/events/ev-seville-karaoke.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_30ave_green_music-2026-08-21@coast-guide
+DTSTAMP:20260821T000000Z
+DTSTART:20260821T180000
+DTEND:20260821T210000
+SUMMARY:Live music on the green: 30Avenue
+DESCRIPTION:Local players take the lawn at the 30A end of the county\, eve
+ ry evening\, no ticket. Shops and restaurants ring the green\, so it work
+ s as the whole evening or as the thing that happens while you eat.\nPrice
+ : Free\nArea: 30A & South Walton\nTimes: Every evening · 6:00-9:00 PM ·
+  free\nChecked against the venue's own page on 2026-08-08\nhttps://grayhi
+ cks.github.io/coast-guide/events/ev-30ave-green-music.html
+LOCATION:30Avenue\, 12805 US-98 East\, Inlet Beach\, FL 32461
+URL:https://grayhicks.github.io/coast-guide/events/ev-30ave-green-music.ht
+ ml
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_bigchill_djdan-2026-08-21@coast-guide
@@ -635,6 +586,22 @@ LOCATION:Gulfside Pavilion at Casino Beach\, 20 Casino Beach Blvd\, Pensac
 URL:https://grayhicks.github.io/coast-guide/events/ev-bands.html
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_solyluna-2026-08-25@coast-guide
+DTSTAMP:20260825T000000Z
+DTSTART:20260825T183000
+DTEND:20260825T200000
+SUMMARY:Wine\, Cheese & Sunset Dolphin Cruise: SOL y LUNA
+DESCRIPTION:SOLARIS's little sister offers a 1.5-hour sunset cruise with t
+ wo wine pours and a cheese pairing each\, dolphins likely. It is the ligh
+ ter\, cheaper way to get the yacht date without the full dinner-cruise ev
+ ening.\nPrice: not published by the venue\, so confirm before you go\nAre
+ a: Destin & Fort Walton\nTimes: Tuesdays + Thursdays · 6:30 PM · 1.5 hr
+ \nhttps://grayhicks.github.io/coast-guide/events/ev-solyluna.html
+LOCATION:SOL y LUNA\, Baytowne Marina\, Sandestin\, 8330 Mike Hayes Dr\, M
+ iramar Beach\, FL 32550
+URL:https://grayhicks.github.io/coast-guide/events/ev-solyluna.html
+END:VEVENT
+BEGIN:VEVENT
 UID:nl_ccbrew_trivia-2026-08-25@coast-guide
 DTSTAMP:20260825T000000Z
 DTSTART:20260825T183000
@@ -792,6 +759,23 @@ DESCRIPTION:Mellow acoustic surf-rock plays at sunset\, about as low-key a
 LOCATION:The Wharf Amphitheater\, Orange Beach\, 23101 Canal Rd\, Orange B
  each\, AL 36561
 URL:https://grayhicks.github.io/coast-guide/events/ev-jackjohnson.html
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_seville_collegenight-2026-08-27@coast-guide
+DTSTAMP:20260827T000000Z
+DTSTART:20260827T200000
+DTEND:20260827T220000
+SUMMARY:College Night: Seville Quarter (18+)
+DESCRIPTION:The Gulf Coast's oldest Thursday tradition\, in the club room 
+ of an 1871 warehouse block. It is heavily collegiate and heavily crowded.
+  Carding here is enforced because it is real and priced\, not because it 
+ suits everybody.\nPrice: from $5\nArea: Pensacola\nTimes: Thursdays · fr
+ om 8:00 PM\nChecked against the venue's own page on 2026-08-08\nhttps://g
+ rayhicks.github.io/coast-guide/events/nl-seville-collegenight.html
+LOCATION:Seville Quarter\, Phineas Phogg's\, 130 E Government St\, Pensaco
+ la\, FL 32502
+URL:https://grayhicks.github.io/coast-guide/events/nl-seville-collegenight
+ .html
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_moonclimb_aug-2026-08-28@coast-guide
@@ -1787,5 +1771,20 @@ DESCRIPTION:The 'Whose Line' improv cast performs live\, fast\, clean\, au
  .github.io/coast-guide/events/ev-whoselive.html
 LOCATION:Saenger Theatre\, 118 S Palafox Pl\, Pensacola\, FL 32502
 URL:https://grayhicks.github.io/coast-guide/events/ev-whoselive.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_fabfour-2026-11-19@coast-guide
+DTSTAMP:20261119T000000Z
+DTSTART:20261119T200000
+DTEND:20261119T220000
+SUMMARY:The Fab Four: Saenger Theatre
+DESCRIPTION:This Emmy-winning Beatles tribute plays note-for-note in perio
+ d costume\, an all-ages-friendly night that plays great as a date. It is 
+ downtown at the Saenger.\nPrice: not published by the venue\, so confirm 
+ before you go\nArea: Pensacola\nTimes: Thu 11/19/2026 · 8 PM\nhttps://gr
+ ayhicks.github.io/coast-guide/events/ev-fabfour.html
+LOCATION:Saenger Theatre\, Pensacola\, 118 S Palafox Pl\, Pensacola\, FL 3
+ 2502
+URL:https://grayhicks.github.io/coast-guide/events/ev-fabfour.html
 END:VEVENT
 END:VCALENDAR
