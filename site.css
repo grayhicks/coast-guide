@@ -654,6 +654,21 @@ body.ph-night .scene{--act:#6f7db6;--act-hover:#8290c6;--act-ink:#0b1024}
   font-variant-numeric:tabular-nums;text-shadow:0 2px 10px rgba(8,18,28,.8)}
 .hero-count::before{content:"";position:absolute;top:0;left:0;height:1px;width:min(100%, 380px);
   background:linear-gradient(90deg, rgba(240,201,121,.85), rgba(240,201,121,0))}
+
+@media(max-width:900px){
+  
+  
+  .hero-count::after{content:"";position:absolute;z-index:-1;inset:-16px -34px -22px -34px;
+    background:radial-gradient(84% 118% at 46% 50%,
+      rgba(6,14,24,.66) 0%,
+      rgba(6,14,24,.62) 40%,
+      rgba(6,14,24,.50) 62%,
+      rgba(6,14,24,.30) 80%,
+      rgba(6,14,24,.10) 92%,
+      rgba(6,14,24,0) 100%);
+    -webkit-mask-image:linear-gradient(180deg, transparent 0, #000 20%, #000 80%, transparent 100%);
+            mask-image:linear-gradient(180deg, transparent 0, #000 20%, #000 80%, transparent 100%)}
+}
 .hero-count .hc{display:flex;flex-direction:column;gap:3px;max-width:19em;min-width:0}
 
 @media(max-width:359px){
