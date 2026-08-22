@@ -27,7 +27,6 @@
 .glit { position: absolute; top: 153px; right: 24px; width: 104px; height: 82px; z-index: 1; pointer-events: none; clip-path: polygon(35% 0px, 65% 0px, 100% 100%, 0% 100%); mask-image: linear-gradient(rgba(0, 0, 0, 0.95), rgb(0, 0, 0) 30%, rgba(0, 0, 0, 0.72)); }
 .gl { position: absolute; height: 2.2px; border-radius: 3px; background: var(--glitc); opacity: 0; transform: scaleX(0.25); animation: auto ease-in-out 0s infinite normal none running hk_gl; }
 .ph-night .glit { right: 6px; }
-.ph-night .hkop { display: none; }
 .hfp { position: absolute; left: 20px; bottom: 8px; z-index: 3; display: block; padding: 0px; margin: 0px; border: 0px; background: none; cursor: pointer; appearance: none; filter: drop-shadow(rgba(6, 20, 32, 0.34) 0px 2px 5px); transition: transform 0.18s, filter 0.18s; }
 .hfp:hover { transform: translateY(-1px); filter: drop-shadow(rgba(6, 20, 32, 0.42) 0px 3px 8px); }
 .hfp:active { transform: translateY(0px) scale(0.97); }
@@ -80,8 +79,24 @@
 .ph-night .hk_boat .hk_crease { stroke: rgb(12, 24, 52); opacity: 0.42; }
 .ph-night .hk_boat .hk_creasel { stroke: rgb(185, 210, 240); opacity: 0.28; }
 .ph-golden .hk_strake { opacity: 0.68; }
+.ph-golden .adyacht path[fill="#F5F7F8"] { fill: rgb(247, 221, 174); }
+.ph-golden .adyacht g[fill="#EEF1F3"] { fill: rgb(242, 214, 168); }
+.ph-golden .adyacht path[fill="#2B4E63"] { fill: rgb(78, 66, 86); }
+.ph-golden .adyacht path[fill="#24455A"] { fill: rgb(67, 55, 73); }
+.ph-golden .adyacht line[stroke="#AEB9C1"], .ph-golden .adyacht path[stroke="#AEB9C1"] { stroke: rgb(194, 163, 126); }
+.ph-dawn .adyacht path[fill="#F5F7F8"] { fill: rgb(236, 213, 199); }
+.ph-dawn .adyacht g[fill="#EEF1F3"] { fill: rgb(230, 207, 194); }
+.ph-dawn .adyacht line[stroke="#AEB9C1"], .ph-dawn .adyacht path[stroke="#AEB9C1"] { stroke: rgb(172, 154, 150); }
+.ph-golden .adyacht .adyacht_paint { filter: saturate(1.04) brightness(1.04); }
+.ph-dawn .adyacht .adyacht_paint { filter: saturate(0.96) brightness(1); }
 .ph-golden .skbg path { fill: rgb(75, 56, 43); }
+.ph-golden .skbnear path[fill="#2A363F"] { fill: rgb(65, 48, 38); }
+.ph-golden .skbnear path[fill="#26313A"] { fill: rgb(58, 43, 34); }
+.ph-golden .skbnear path[stroke="#F2F6F1"] { stroke: rgb(255, 223, 176); }
 .ph-dawn .skbg path { fill: rgb(70, 65, 79); }
+.ph-dawn .skbnear path[fill="#2A363F"] { fill: rgb(61, 57, 69); }
+.ph-dawn .skbnear path[fill="#26313A"] { fill: rgb(55, 51, 63); }
+.ph-dawn .skbnear path[stroke="#F2F6F1"] { stroke: rgb(240, 219, 210); }
 .ph-night .skbnear path[fill="#2A363F"] { fill: rgb(36, 46, 56); }
 .ph-night .skbnear path[stroke="#F2F6F1"] { stroke: rgb(159, 180, 196); }
 .ph-golden .hero-wave path { fill: rgb(36, 31, 48); }
@@ -115,45 +130,28 @@
 .ph-golden .beachprops { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
 .ph-dawn .beachprops { filter: sepia(0.18) saturate(1.05); }
 .ph-night .beachprops { filter: brightness(0.5) saturate(0.65); }
+.supw { position: absolute; top: 168px; left: 10%; z-index: 3; pointer-events: none; opacity: 0.95; animation: 12s ease-in-out 0s infinite alternate none running hk_supdrift; }
+.supw svg { animation: 2.9s ease-in-out 0s infinite normal none running hk_supbob; }
+.paddle { transform-box: fill-box; transform-origin: 42% 40%; animation: 1.7s ease-in-out 0s infinite normal none running hk_paddle; }
+.paddler { transform-box: fill-box; transform-origin: 50% 95%; animation: 1.7s ease-in-out 0s infinite normal none running hk_supbody; }
+.ph-dawn .supw { opacity: 0.72; }
+.ph-dawn .podw { opacity: 0.8; }
 .hero .stars span { position: absolute; border-radius: 50%; background: rgb(234, 242, 251); }
 .hero .stars .bright { box-shadow: rgba(220, 236, 252, 0.7) 0px 0px 5px 1px, rgba(190, 215, 245, 0.22) 0px 0px 12px 3px; }
-.hkn_st1 { animation: 6.5s ease-in-out 0s infinite normal none running hk_ntw1; }
-.hkn_st2 { animation: 4.5s ease-in-out 0s infinite normal none running hk_ntw2; }
-.hkn_st3 { animation: 2.8s ease-in-out 0s infinite normal none running hk_ntw3; }
-.ph-night .hkn_sea { position: absolute; left: 0px; right: 0px; top: 150px; height: 126px; pointer-events: none; overflow: hidden; }
-.ph-night .hkn_tr { position: absolute; inset: 0px; background: linear-gradient(rgba(168, 206, 232, 0.06) 0%, rgba(168, 206, 232, 0.02) 5%, rgba(120, 170, 200, 0) 16%, rgba(10, 26, 40, 0) 45%, rgba(8, 22, 34, 0.22) 76%, rgba(5, 16, 26, 0.38) 100%); }
-.ph-night .hkn_sw { position: absolute; will-change: transform, opacity; opacity: 0; background: radial-gradient(50% 50%, rgba(200, 224, 244, 0.08) 0%, rgba(192, 218, 240, 0.04) 45%, rgba(190, 216, 238, 0) 72%); }
-.ph-night .hkn_swA { left: 70px; top: 20px; width: 150px; height: 6px; animation: 21s linear 0s infinite normal none running hk_nswA; }
-.ph-night .hkn_swB { left: 30px; top: 59px; width: 205px; height: 8px; animation: 15s linear -6s infinite normal none running hk_nswB; }
-.ph-night .hkn_swC { left: -4px; top: 94px; width: 265px; height: 11px; animation: 11s linear -3.2s infinite normal none running hk_nswC; }
-.ph-night .hkn_swd { position: absolute; will-change: transform, opacity; opacity: 0; background: radial-gradient(50% 50%, rgba(6, 18, 30, 0.09) 0%, rgba(6, 18, 30, 0.05) 48%, rgba(6, 18, 30, 0) 74%); }
-.ph-night .hkn_swdA { left: 40px; top: 38px; width: 290px; height: 12px; animation: 21s linear -10.5s infinite normal none running hk_nswA; }
-.ph-night .hkn_swdB { left: 10px; top: 76px; width: 330px; height: 16px; animation: 15s linear -12s infinite normal none running hk_nswB; }
-.ph-night .hkn_tl { position: absolute; width: 1.7px; height: 1.3px; border-radius: 50%; background: rgb(255, 201, 138); box-shadow: rgba(255, 180, 110, 0.45) 0px 0px 2.5px 0.5px; animation: 5s ease-in-out 0s infinite normal none running hk_ntl; }
-.ph-night .hkn_wet { position: absolute; left: 0px; bottom: -1px; width: 87%; height: 57px; z-index: 1; pointer-events: none; }
-.ph-night .hkn_wetg2 { animation: 13s ease-in-out 0s infinite normal none running hk_nwetadv; }
-.ph-night .hkn_wetgl { animation: 13s ease-in-out 0s infinite normal none running hk_nwetgl; opacity: 0.3; }
-@media (prefers-reduced-motion: reduce){.hkn_halo { animation: auto ease 0s 1 normal none running none; opacity: 1; }}
-@media (prefers-reduced-motion: reduce){.hkn_st1 { animation: auto ease 0s 1 normal none running none; opacity: 0.95; }}
-@media (prefers-reduced-motion: reduce){.hkn_st2 { animation: auto ease 0s 1 normal none running none; opacity: 0.68; }}
-@media (prefers-reduced-motion: reduce){.hkn_st3 { animation: auto ease 0s 1 normal none running none; opacity: 0.4; }}
-@media (prefers-reduced-motion: reduce){.ph-night .hkn_sw, .ph-night .hkn_swd { animation: auto ease 0s 1 normal none running none; opacity: 0.6; }}
-@media (prefers-reduced-motion: reduce){.ph-night .hkn_tl { animation: auto ease 0s 1 normal none running none; opacity: 0.7; }}
-@media (prefers-reduced-motion: reduce){.ph-night .hkn_wetg2 { animation: auto ease 0s 1 normal none running none; }}
-@media (prefers-reduced-motion: reduce){.ph-night .hkn_wetgl { animation: auto ease 0s 1 normal none running none; opacity: 0.6; }}
-.moon { position: absolute; width: 60px; height: 60px; pointer-events: none; }
-.hkn_halo { position: absolute; inset: -46px; border-radius: 50%; will-change: transform, opacity; background: radial-gradient(50% 50%, rgba(224, 238, 252, 0.34) 0%, rgba(205, 226, 248, 0.17) 25%, rgba(190, 215, 242, 0.08) 45%, rgba(180, 208, 238, 0.03) 62%, rgba(180, 208, 238, 0) 76%); animation: 7s ease-in-out 0s infinite normal none running hk_nhalo; }
-.hkn_mface { position: absolute; inset: 0px; width: 60px; height: 60px; display: block; }
 .sunb { color-scheme: unset; forced-color-adjust: unset; math-depth: unset; position-anchor: unset; text-size-adjust: unset; appearance: unset; color: unset; font: unset; font-palette: unset; font-synthesis: unset; position-area: unset; text-orientation: unset; text-rendering: unset; text-spacing-trim: unset; -webkit-font-smoothing: unset; -webkit-locale: unset; -webkit-text-orientation: unset; -webkit-writing-mode: unset; writing-mode: unset; zoom: unset; accent-color: unset; place-content: unset; place-items: unset; place-self: unset; alignment-baseline: unset; anchor-name: unset; anchor-scope: unset; animation-composition: unset; animation: unset; animation-trigger: unset; app-region: unset; aspect-ratio: unset; backdrop-filter: unset; backface-visibility: unset; background: unset; background-blend-mode: unset; baseline-shift: unset; baseline-source: unset; block-size: unset; border-block: unset; border: unset; border-radius: unset; border-collapse: unset; border-end-end-radius: unset; border-end-start-radius: unset; border-inline: unset; border-shape: unset; border-start-end-radius: unset; border-start-start-radius: unset; bottom: unset; box-decoration-break: unset; box-shadow: unset; box-sizing: unset; break-after: unset; break-before: unset; break-inside: unset; buffered-rendering: unset; caption-side: unset; caret-animation: unset; caret-color: unset; caret-shape: unset; clear: unset; clip: unset; clip-path: unset; clip-rule: unset; color-interpolation: unset; color-interpolation-filters: unset; color-rendering: unset; columns: unset; column-fill: unset; gap: unset; rule-break: unset; rule: unset; rule-inset: unset; rule-visibility-items: unset; column-span: unset; contain: unset; contain-intrinsic-block-size: unset; contain-intrinsic-size: unset; contain-intrinsic-inline-size: unset; container: unset; content: unset; content-visibility: unset; corner-shape: unset; corner-block-end-shape: unset; corner-block-start-shape: unset; counter-increment: unset; counter-reset: unset; counter-set: unset; cx: unset; cy: unset; d: unset; display: unset; dominant-baseline: unset; dynamic-range-limit: unset; empty-cells: unset; field-sizing: unset; fill: unset; fill-opacity: unset; fill-rule: unset; filter: unset; flex: unset; flex-flow: unset; flex-line-count: unset; float: unset; flood-color: unset; flood-opacity: unset; grid: unset; grid-area: unset; hyphenate-character: unset; hyphenate-limit-chars: unset; hyphens: unset; image-orientation: unset; image-rendering: unset; initial-letter: unset; inline-size: unset; inset-block: unset; inset-inline: unset; interactivity: unset; interest-delay: unset; interpolate-size: unset; isolation: unset; left: unset; letter-spacing: unset; lighting-color: unset; line-break: unset; list-style: unset; margin-block: unset; margin: unset; margin-inline: unset; marker: unset; mask: unset; mask-type: unset; math-shift: unset; math-style: unset; max-block-size: unset; max-height: unset; max-inline-size: unset; max-width: unset; min-block-size: unset; min-height: unset; min-inline-size: unset; min-width: unset; mix-blend-mode: unset; object-fit: unset; object-position: unset; object-view-box: unset; offset: unset; opacity: unset; order: unset; orphans: unset; outline: unset; outline-offset: unset; overflow-anchor: unset; overflow-block: unset; overflow-clip-margin: unset; overflow-inline: unset; overflow-wrap: unset; overflow: unset; overlay: unset; overscroll-behavior-block: unset; overscroll-behavior-inline: unset; overscroll-behavior: unset; padding-block: unset; padding: unset; padding-inline: unset; page: unset; page-margin-safety: unset; page-orientation: unset; paint-order: unset; perspective: unset; perspective-origin: unset; pointer-events: unset; position-try: unset; position-visibility: unset; print-color-adjust: unset; quotes: unset; r: unset; reading-flow: unset; reading-order: unset; resize: unset; rotate: unset; ruby-align: unset; ruby-overhang: unset; ruby-position: unset; rule-overlap: unset; rx: unset; ry: unset; scale: unset; scroll-behavior: unset; scroll-initial-target: unset; scroll-margin-block: unset; scroll-margin: unset; scroll-margin-inline: unset; scroll-marker-group: unset; scroll-padding-block: unset; scroll-padding: unset; scroll-padding-inline: unset; scroll-snap-align: unset; scroll-snap-stop: unset; scroll-snap-type: unset; scroll-target-group: unset; scroll-timeline: unset; scrollbar-color: unset; scrollbar-gutter: unset; scrollbar-width: unset; shape-image-threshold: unset; shape-margin: unset; shape-outside: unset; shape-rendering: unset; size: unset; speak: unset; stop-color: unset; stop-opacity: unset; stroke: unset; stroke-dasharray: unset; stroke-dashoffset: unset; stroke-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: unset; stroke-opacity: unset; stroke-width: unset; tab-size: unset; table-layout: unset; text-align: unset; text-align-last: unset; text-anchor: unset; text-autospace: unset; text-box: unset; text-combine-upright: unset; text-decoration: unset; text-decoration-skip-ink: unset; text-emphasis: unset; text-emphasis-position: unset; text-fit: unset; text-indent: unset; text-justify: unset; text-overflow: unset; text-shadow: unset; text-transform: unset; text-underline-offset: unset; text-underline-position: unset; text-wrap: unset; timeline-scope: unset; timeline-trigger: unset; touch-action: unset; transform: unset; transform-box: unset; transform-origin: unset; transform-style: unset; transition: unset; translate: unset; trigger-scope: unset; user-select: unset; vector-effect: unset; vertical-align: unset; view-timeline: unset; view-transition-class: unset; view-transition-group: unset; view-transition-name: unset; view-transition-scope: unset; visibility: unset; border-spacing: unset; -webkit-box-align: unset; -webkit-box-decoration-break: unset; -webkit-box-direction: unset; -webkit-box-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orient: unset; -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-line-break: unset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webkit-text-combine: unset; -webkit-text-decorations-in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-security: unset; -webkit-text-stroke: unset; -webkit-user-drag: unset; white-space-collapse: unset; widows: unset; will-change: unset; word-break: unset; word-spacing: unset; x: unset; y: unset; position: absolute; z-index: 2; cursor: pointer; -webkit-tap-highlight-color: transparent; width: 94px; height: 94px; top: 24px; right: 28px; }
 .ph-dawn .sunb { top: 66px; }
 .ph-golden .sunb { top: 88px; }
 .hero .sun { position: absolute; inset: 0px; border-radius: 50%; background: radial-gradient(circle, rgba(255, 244, 214, 0.95), rgba(255, 214, 140, 0.5) 45%, rgba(255, 200, 120, 0) 72%); animation: 6s ease-in-out 0s infinite normal none running hk_glow; }
+.ph-dawn .sun { background: radial-gradient(circle, rgba(255, 236, 214, 0.92), rgba(255, 204, 160, 0.48) 46%, rgba(255, 190, 140, 0) 72%); }
+.ph-golden .sun { background: radial-gradient(circle at 50% 52%, rgba(255, 238, 196, 0.98), rgba(255, 188, 110, 0.62) 44%, rgba(255, 170, 90, 0) 74%); }
 .skbwrap { position: absolute; top: 0px; left: 0px; right: 0px; height: 100px; z-index: 1; pointer-events: none; }
 .skbg { position: absolute; left: 0px; will-change: transform; animation: auto linear 0s infinite normal none running hk_skg; }
 .skbg.rev { animation-name: hk_skgR; }
 .sksoar { display: block; will-change: transform; animation: auto ease-in-out 0s infinite normal none running hk_sksoar; }
 .sksoar.big { animation-name: hk_sksoarB; }
+.skbnear { position: absolute; left: 0px; opacity: 0.85; will-change: transform; animation: auto linear 0s infinite normal none running hk_gullnear; }
 .skbnear.rev { animation-name: hk_gullnearR; }
+.ph-dawn .pipw { filter: sepia(0.18) saturate(1.05); }
 .grain { position: absolute; inset: -12%; z-index: 3; pointer-events: none; opacity: 0.028; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E"); background-size: 160px 160px; animation: 2.4s steps(1) 0s infinite normal none running hk_grain; }
 .ph-night .grain { opacity: 0.045; }
 .hero-eyebrow { display: inline-flex; align-items: center; gap: 7px; padding: 5px 14px; border-radius: 999px; font-family: "Cormorant Garamond", Georgia, serif; font-size: 11.5px; font-weight: 600; letter-spacing: 3.4px; color: rgb(255, 249, 236); text-transform: uppercase; background: rgba(12, 42, 58, 0.3); border: 1px solid rgba(255, 255, 255, 0.34); backdrop-filter: blur(2px); text-shadow: rgba(8, 24, 36, 0.4) 0px 1px 6px; }
@@ -218,17 +216,31 @@ html.gca_cold .bswash { opacity: 0; }
 .swg.s3 .sw_heave { animation-duration: 6.3s; animation-delay: -3.4s; }
 .ph-night .hk_swellw { opacity: 0.55; }
 .ph-dawn .hk_swellw { opacity: 0.8; }
-.ph-night .vwk path { fill: rgba(150, 208, 244, 0.44); }
-.ph-night .fprt { background: radial-gradient(at 50% 45%, rgba(150, 212, 255, 0.26) 0%, rgba(120, 190, 240, 0.13) 46%, rgba(110, 180, 230, 0) 72%); }
+.ph-dawn .vwk path { fill: rgba(226, 226, 250, 0.52); }
+.itin .big { font-family: Newsreader, serif; font-weight: 600; font-size: 23px; line-height: 1.08; }
 .skbwrap.nite .skbg { filter: brightness(0.8) saturate(0.65); }
+.ph-dawn .trtw { filter: sepia(0.18) saturate(1.05); }
+.ph-dawn .htchw { filter: sepia(0.18) saturate(1.05); }
+.ph-dawn .kitew { filter: sepia(0.18) saturate(1.05); }
+.adparasail { position: absolute; top: 77px; left: -94px; z-index: 3; will-change: transform; opacity: 0.99; animation: 56s linear 0s infinite normal none running hk_adyacht; }
+.adparasail_rig { transform-box: view-box; transform-origin: 100px 92px; will-change: transform; animation: 7.6s ease-in-out 0s infinite normal none running hk_adparasway; }
 .adlbl:empty { display: none; }
+.adplane { position: absolute; top: 21px; left: 0px; z-index: 1; will-change: transform; animation: 34s linear 0s infinite normal none running hk_adplane; }
+.adplane_bob { transform-box: view-box; transform-origin: 174px 18px; animation: 5.2s ease-in-out 0s infinite normal none running hk_adplanebob; }
+.adplane_ban { transform-box: view-box; transform-origin: 140px 20px; animation: 3.4s ease-in-out 0s infinite normal none running hk_adbanflut; }
+.adplane_prop { transform-box: fill-box; transform-origin: 50% 50%; animation: 0.46s linear 0s infinite normal none running hk_adprop; }
+.ph-golden .adparasail, .ph-golden .adplane { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
+.ph-dawn .adparasail, .ph-dawn .adplane { filter: sepia(0.18) saturate(1.05); }
+@media (prefers-reduced-motion: reduce){.hk .adparasail { animation: auto ease 0s 1 normal none running none !important; transform: none !important; left: calc(30% - 94px) !important; }}
+@media (prefers-reduced-motion: reduce){.hk .adplane { animation: auto ease 0s 1 normal none running none !important; transform: none !important; left: auto !important; right: 24% !important; }}
+@media (prefers-reduced-motion: reduce){.hk .adparasail_rig, .hk .adplane_bob, .hk .adplane_ban, .hk .adplane_prop { animation: auto ease 0s 1 normal none running none !important; }}
+.adyacht { position: absolute; top: 132px; left: 0px; z-index: 0; pointer-events: none; will-change: transform; opacity: 1; animation: 56s linear 0s infinite normal none running hk_adyacht; }
 .hero_sponsor { display: contents; }
 a.hero_sponsor > * { pointer-events: auto; cursor: pointer; }
 a.hero_sponsor > ::after { content: ""; position: absolute; left: 50%; top: 50%; width: max(100%, 44px); height: max(100%, 44px); transform: translate(-50%, -50%); }
 a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline-offset: 4px; border-radius: 4px; }
 .hero_sponsor .adlbl, .hero_slot .adlbl { position: absolute; left: 50%; top: 100%; margin-top: 2px; transform: translateX(-50%); font: 800 6.5px / 1 Nunito, system-ui, sans-serif; letter-spacing: 0.5px; text-transform: uppercase; color: rgb(242, 247, 250); background: rgba(14, 26, 36, 0.66); padding: 2px 4.5px; border-radius: 5px; white-space: nowrap; pointer-events: none; }
 .hero_sponsor .adlbl, .hero_slot .adlbl { background: rgba(8, 20, 30, 0.86); box-shadow: rgba(242, 196, 60, 0.5) 0px 0px 0px 1px inset; }
-.ph-night .adbuoy .adbuoy_lt { animation: 1.6s ease-in-out 0s infinite normal none running hk_adbuoyglow; }
 .adboatname { position: absolute; top: 191px; right: 45.4px; z-index: 2; width: 96px; pointer-events: none; animation: 5.5s ease-in-out 0s infinite normal none running hk_sailbob_nm; }
 .bnl { display: inline-block; }
 .adboatname_bd { position: relative; display: block; height: 6.3px; overflow: visible; padding: 0px; border: 0px; border-radius: 0px; box-shadow: none; font-family: Nunito, system-ui, sans-serif; font-weight: 800; font-size: 7.2px; line-height: 6.3px; letter-spacing: 0.3px; text-indent: 0.3px; text-transform: uppercase; transform: none; transform-origin: 50% 50%; text-align: center; white-space: nowrap; color: rgb(255, 246, 228); text-shadow: rgba(30, 15, 4, 0.92) 0px -0.5px 0px, rgba(255, 234, 190, 0.46) 0px 0.5px 0px; }
@@ -242,8 +254,6 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
 .ph-night .rrip { background: radial-gradient(rgba(150, 208, 255, 0) 30%, rgba(158, 214, 255, 0.17) 52%, rgba(178, 224, 255, 0.44) 68%, rgba(130, 196, 240, 0.18) 84%, rgba(110, 178, 228, 0) 100%); }
 .ph-golden .rrip { background: radial-gradient(rgba(255, 234, 200, 0) 30%, rgba(255, 238, 208, 0.19) 52%, rgba(255, 246, 224, 0.5) 68%, rgba(255, 220, 176, 0.2) 84%, rgba(255, 206, 158, 0) 100%); }
 .rrip.bio { background: radial-gradient(rgba(120, 224, 255, 0) 28%, rgba(140, 232, 255, 0.26) 50%, rgba(176, 244, 255, 0.66) 68%, rgba(110, 206, 246, 0.24) 84%, rgba(100, 196, 240, 0) 100%); box-shadow: rgba(120, 224, 255, 0.28) 0px 0px 7px; }
-.npw { position: absolute; left: 58px; bottom: 6px; z-index: 2; pointer-events: none; }
-.npw .np_glow { transform-box: fill-box; transform-origin: center center; animation: 2.6s ease-in-out 0s infinite normal none running hk_npglow; }
 @media (prefers-reduced-motion: reduce){.hk .flyby, .hk .grain, .hk .baw, .hk .gullw, .hk .ccrab, .hk .snote, .hk .hpel, .hk .fwx, .hk .aspl, .hk .rheart, .hk .lspk, .hk .dnm_bok, .hk .tdust, .hk .fly, .hk .skbwrap, .hk .pipw, .hk .dnx_rolled, .hk .trtw, .hk .htchw, .hk .kitew, .hk .rplfield, .hk .shw, .hk .hcw, .hk .tgw, .hk .whw, .hk .d2bw, .hk .pelw, .hk .rayw, .hk .dcw, .hk .hkop, .hk .dwgiant, .hk .dwpod, .hk .dwglow, .hk .hboat, .hk .dnote, .hk .dbloom, .hk .rmote, .hk .rsmokew .hk .supw, .hk .fld, .hk .crbw, .hk .crbh, .hk .htchf, .hk .lx_rock, .hk .lx_dig, .hk .mstrip, .hk .mbeam, .hk .cm_cone, .hk .cm_pool, .hk .romacc .racc_wash, .hk .em_fly, .hk .cs_shoot, .hk .cs_neb, .hk .brd, .hk .mthrow, .hk .mgrain, .hk .bawrap, .hk .popf, .hk .rm_bulb, .hk .cm_laugh, .hk .cm_cable, .hk .adrip, .hk .lsc_cur, .hk .swash, .hk .swash_lip, .hk .backwash, .hk .vwkw, .hk .vwk, .hk .fprt, .hk .swl_crest { display: none !important; }}
 @media (prefers-reduced-motion: reduce){.hk .swg, .hk .sw_heave { animation: auto ease 0s 1 normal none running none !important; }}
 @media (prefers-reduced-motion: reduce){.hk .swl_body { animation: auto ease 0s 1 normal none running none !important; opacity: 0.4 !important; }}
@@ -252,110 +262,13 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
 @media (prefers-reduced-motion: reduce){.hk .clm1 { transform: translateX(300px); }}
 @media (prefers-reduced-motion: reduce){.hk .clm2 { transform: translateX(150px); }}
 @media (prefers-reduced-motion: reduce){.hk .cln1 { transform: translateX(430px); }}
-.cmdy.nite .cm_ring { border-color: rgba(255, 214, 140, 0.6); }
-.cmdy.nite .cm_cord { stroke: rgb(169, 138, 108); opacity: 0.5; }
-.agal.nite .adrip.p1 { background: linear-gradient(rgb(255, 143, 176), rgb(210, 84, 126)); }
-.agal.nite .adrip.p2 { background: linear-gradient(rgb(201, 160, 255), rgb(139, 92, 214)); }
-.ldec.nite .lscope { opacity: 0.62; }
-.ldec.nite .lsc_t { stroke: rgb(89, 231, 200); filter: drop-shadow(rgba(89, 231, 200, 0.7) 0px 0px 4px); }
-.ldec:not(.nite) .lsc_cur::after { background: rgb(18, 149, 158); box-shadow: rgba(18, 149, 158, 0.45) 0px 0px 8px 3px; }
-.htown.nite .hsil { fill: rgb(10, 19, 34); stroke: rgb(10, 19, 34); opacity: 0.94; }
+@media (prefers-reduced-motion: reduce){.hk .adyacht { transform: none !important; left: 30% !important; }}
 .htown .hshim.s1 { left: 16%; width: 42%; bottom: 23px; animation: 4.2s ease-in-out 0s infinite alternate none running hk_hshim; }
 .htown .hshim.s2 { right: 14%; width: 30%; bottom: 31px; opacity: 0.7; animation: 5.6s ease-in-out 0s infinite alternate none running hk_hshim; }
-.agal.nite .afr { border-color: rgba(255, 180, 130, 0.6); box-shadow: rgba(255, 160, 110, 0.22) 0px 0px 8px; }
-.agal.nite .adaub { opacity: 0.7; filter: blur(0.4px) drop-shadow(currentcolor 0px 0px 7px); animation: 11s ease-in-out 0s infinite alternate none running hk_adaub, 6.8s ease-in-out 0s infinite alternate none running hk_aglow; }
-.agal.nite .astroke path { stroke: rgb(255, 143, 168); }
-.agal.nite .agallight { background: linear-gradient(103deg, transparent 34%, rgba(255, 150, 190, 0.16) 44%, rgba(214, 150, 255, 0.26) 50%, rgba(255, 150, 190, 0.14) 56%, transparent 66%); }
-.agal.nite .ahang i { background: linear-gradient(rgba(255, 180, 130, 0.6), rgba(255, 180, 130, 0.2)); }
-.agal.nite .ahang b { border-color: rgba(255, 150, 190, 0.55); background: linear-gradient(148deg, rgba(255, 150, 190, 0.16), rgba(199, 125, 255, 0.1)); box-shadow: rgba(255, 140, 180, 0.28) 0px 0px 9px; }
-.agal.nite .aeasel { opacity: 0.5; }
-.agal.nite .aeasel .aleg { stroke: rgb(255, 169, 196); }
-.agal.nite .aeasel .acan { fill: rgba(199, 125, 255, 0.16); stroke: rgb(255, 169, 196); }
-.agal.nite .abrush .adraw { stroke: rgb(255, 143, 168); filter: drop-shadow(rgba(255, 143, 168, 0.6) 0px 0px 5px); }
-.agal.nite .amote { box-shadow: currentcolor 0px 0px 7px; }
-@media (prefers-reduced-motion: reduce){.lx_g1, .lx_g2, .lx_arm, .lx_pl1, .lx_pl2, .lx_stube, .lx_cell, .lx_bone, .lx_brush, .lx_flame, .lx_bkb, .lx_steam, .crb_lgA, .crb_lgB, .crb_clw, .crb_eye, .crb_shl, .crbb, .h_fl, .h_fr, .h_rl, .h_rr, .h_all, .cm_head, .cm_glint, .htown .hbeam, .htown .hbeam::after, .romacc .racc_candle .rflame, .romacc .racc_halo, .em_bl, .em_shaft, .htown.nite .hferry .fwin rect, .htown.nite .hferry .flt, .htown.nite .hferry .frefl, .htown.nite .hbridge.nb .blamp circle { animation: auto ease 0s 1 normal none running none !important; }}
-@media (prefers-reduced-motion: reduce){.htown.nite .hferry, .htown.nite .hcar, .htown.nite .hshoot, .emrl .em_bfly { display: none !important; }}
-@media (prefers-reduced-motion: reduce){.htown.nite .hncl { animation: auto ease 0s 1 normal none running none !important; }}
-.cine.nite .msprk { opacity: 0.22; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20'%3E%3Crect x='2.5' y='6' width='5' height='8' rx='1.6' fill='%23EFC46A'/%3E%3C/svg%3E"); }
-.cine.nite .mrail { --mbulb: rgba(255,225,160,.34); --mglow: rgba(255,238,196,1); filter: drop-shadow(rgba(255, 214, 138, 0.55) 0px 0px 4px); }
-.cine.nite .mpop .puff { fill: rgb(239, 230, 210); stroke: rgb(184, 164, 126); opacity: 0.72; }
-.shal.nite .bprops { filter: brightness(0.6) saturate(0.7); opacity: 0.85; }
-.shal.nite .sandg { opacity: 0.16; }
-.shal.nite .ccrab { opacity: 0.8; }
-.ldec.nite .lgrid { opacity: 0.8; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg stroke='%2352E5A3' stroke-opacity='.07' stroke-width='1'%3E%3Cline x1='.5' y1='0' x2='.5' y2='24'/%3E%3Cline x1='0' y1='.5' x2='24' y2='.5'/%3E%3C/g%3E%3C/svg%3E"); }
-.ldec.nite .lliq { fill: rgb(82, 229, 163); opacity: 0.75; filter: drop-shadow(rgba(82, 229, 163, 0.65) 0px 0px 3px); }
-.ldec.nite .lglass { stroke: rgb(159, 232, 203); opacity: 0.7; }
-.ldec.nite .lring { border-color: rgba(82, 229, 163, 0.6); }
-.ldec.nite .lel { background: rgb(82, 229, 163); box-shadow: rgba(82, 229, 163, 0.6) 0px 0px 4px 1px; }
-.ldec.nite .lnuc { background: rgb(127, 233, 184); box-shadow: rgba(82, 229, 163, 0.55) 0px 0px 5px 1.4px; }
-.ldec.nite .ldna { opacity: 0.58; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='28'%3E%3Cg fill='none' stroke='%2352E5A3' stroke-width='1' stroke-linecap='round'%3E%3Cpath d='M2.5,0 C9.5,4.7 9.5,9.3 2.5,14 C9.5,18.7 9.5,23.3 2.5,28'/%3E%3Cpath d='M9.5,0 C2.5,4.7 2.5,9.3 9.5,14 C2.5,18.7 2.5,23.3 9.5,28'/%3E%3Cline x1='4.4' y1='3.5' x2='7.6' y2='3.5'/%3E%3Cline x1='4.4' y1='10.5' x2='7.6' y2='10.5'/%3E%3Cline x1='4.4' y1='17.5' x2='7.6' y2='17.5'/%3E%3Cline x1='4.4' y1='24.5' x2='7.6' y2='24.5'/%3E%3C/g%3E%3C/svg%3E"); }
-.cmdy.nite .cm_brick { opacity: 0.62; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='24'%3E%3Cg stroke='%23F0BA6A' stroke-opacity='.11' stroke-width='1' fill='none'%3E%3Cpath d='M0 .5h44M0 12.5h44'/%3E%3Cpath d='M11 0v12M33 0v12M0 12v12M22 12v12M44 12v12'/%3E%3C/g%3E%3C/svg%3E"); }
-.cmdy.nite .cm_cone { background: linear-gradient(rgba(255, 236, 190, 0.4), rgba(255, 224, 160, 0.14) 58%, rgba(255, 216, 140, 0.04)); }
-.cmdy.nite .cm_base, .cmdy.nite .cm_boom { stroke: rgb(201, 163, 117); opacity: 0.8; }
-.cmdy.nite .cm_grip { fill: rgb(42, 30, 24); }
-.cmdy.nite .cm_ball { fill: rgb(156, 129, 104); }
-.cmdy.nite .cm_sp { stroke: rgb(201, 163, 117); }
-.cmdy.nite .cm_seat { fill: rgb(156, 129, 104); }
-.cmdy.nite .fw_ha .fld.f-laugh { color: rgb(240, 186, 106); --fo: .5; }
-.htown.nite .ba_num { fill: rgb(255, 211, 77); stroke: rgb(6, 21, 43); }
-.htown.nite .ba_navy { fill: rgb(255, 211, 77); }
-.htown.nite .ba_vfin { fill: rgb(18, 41, 77); }
-.htown.nite .ba_vfar { fill: rgb(11, 29, 56); }
-.htown.nite .ba_body { fill: rgb(14, 37, 68); }
-.htown.nite .ba_wing { fill: rgb(20, 51, 92); }
-.cine.nite .mp_body { stroke: rgb(232, 181, 74); }
-.cine.nite .mp_reel { stroke: rgb(232, 181, 74); }
-.cine:not(.nite) .mthrow { background: linear-gradient(90deg, rgba(150, 120, 60, 0.16), rgba(150, 120, 60, 0.06) 60%, transparent); }
-.cine:not(.nite) .mscreen { border-color: rgba(120, 92, 44, 0.45); background: linear-gradient(160deg, rgba(255, 252, 242, 0.75), rgba(226, 212, 182, 0.5)); }
-.cine:not(.nite) .fw_beam .fld.f-dust { background: rgba(120, 92, 44, 0.55); --fo: .6; }
-.htown.nite .brd { color: rgb(12, 26, 43); }
-.agal.nite .aribbon.rb1 { stroke: rgb(255, 126, 156); opacity: 0.5; }
-.agal.nite .apal_b { fill: rgb(42, 26, 51); }
-.agal.nite .apal_b, .agal.nite .apal_hole { stroke: rgb(217, 188, 140); }
-.cmdy.nite .cm_brick { opacity: 0.75; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='24'%3E%3Cg stroke='%23F0BA6A' stroke-opacity='.16' stroke-width='1' fill='none'%3E%3Cpath d='M0 .5h44M0 12.5h44'/%3E%3Cpath d='M11 0v12M33 0v12M0 12v12M22 12v12M44 12v12'/%3E%3C/g%3E%3C/svg%3E"); }
-.cmdy.nite .cm_base, .cmdy.nite .cm_boom { stroke: rgb(228, 192, 140); }
-.cmdy.nite .cm_grip { fill: rgb(31, 22, 16); }
-.cmdy.nite .cm_ball { fill: rgb(183, 147, 110); }
-.cmdy.nite .cm_sp { stroke: rgb(228, 192, 140); }
-.cmdy.nite .cm_seat { fill: rgb(183, 147, 110); }
-.htown.nite .hsun { background: radial-gradient(38% 26% at 82% 10%, rgba(190, 214, 255, 0.16), transparent 72%); }
 .cosm .cs_shoot.s2 { left: 30%; top: auto; bottom: 6px; width: 46px; animation-duration: 23s; }
-.ldec.nite .lx { --lxink: #52E5A3; --lxink2: #7FE9B8; --lxwarm: #F0A868; opacity: 0.8; }
-.cine:not(.nite) .mbeam { background: linear-gradient(270deg, rgba(200, 150, 60, 0.14), transparent 72%); }
-.cine.nite .mstrip { opacity: 0.5; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='13'%3E%3Cg fill='%23E8B54A' fill-opacity='.5'%3E%3Crect x='1' y='1' width='4' height='3' rx='.8'/%3E%3Crect x='1' y='9' width='4' height='3' rx='.8'/%3E%3Crect x='16' y='1' width='4' height='3' rx='.8'/%3E%3Crect x='16' y='9' width='4' height='3' rx='.8'/%3E%3C/g%3E%3Crect x='7' y='2' width='8' height='9' fill='%23E8B54A' fill-opacity='.16'/%3E%3Crect x='22' y='2' width='8' height='9' fill='%23E8B54A' fill-opacity='.16'/%3E%3C/svg%3E"); }
-.htown.nite .hbridge.nb { position: absolute; right: 11px; bottom: 31px; width: 134px; height: 28px; fill: none; stroke: rgba(120, 168, 205, 0.3); stroke-width: 1.25; opacity: 0.9; }
-.htown.nite .hbridge.nb .deck { stroke-width: 1.8; stroke: rgba(138, 182, 215, 0.36); }
-.htown.nite .hbridge.nb .span { stroke: rgba(120, 168, 205, 0.24); stroke-width: 0.85; }
-.htown.nite .hbridge.nb .blamp circle { fill: rgb(255, 227, 168); stroke: none; opacity: 0.75; filter: drop-shadow(rgba(255, 220, 150, 0.8) 0px 0px 3px); animation: 5.6s ease-in-out 0s infinite normal none running hk_blamp; }
-.htown.nite .hbridge.nb .blamp circle:nth-child(2) { animation-delay: 1.4s; }
-.htown.nite .hbridge.nb .blamp circle:nth-child(3) { animation-delay: 2.8s; }
-.htown.nite .hbridge.nb .blamp circle:nth-child(4) { animation-delay: 4.2s; }
-.htown.nite .hcar { position: absolute; z-index: 2; right: 16px; bottom: 50px; width: 8px; height: 3px; border-radius: 2px; background: linear-gradient(90deg, rgba(255, 241, 204, 0), rgb(255, 243, 212)); box-shadow: rgba(255, 226, 152, 0.5) 0px 0px 8px 2px; opacity: 0; animation: 21s linear 0s infinite normal none running hk_hcar; will-change: transform, opacity; }
-.htown.nite .hferry { position: absolute; z-index: 1; bottom: 136px; left: -52px; width: 44px; height: 20px; opacity: 1; animation: 64s linear 0s infinite normal none running hk_hboat; will-change: transform; }
-.htown.nite .hferry svg { width: 100%; height: 100%; display: block; overflow: visible; }
-.htown.nite .hferry .fhull { fill: rgb(8, 19, 31); }
-.htown.nite .hferry .fcab { fill: rgb(14, 33, 53); }
-.htown.nite .hferry .fmast { stroke: rgb(14, 33, 53); stroke-width: 1; }
-.htown.nite .hferry .fwin rect { fill: rgb(255, 215, 154); opacity: 0.92; animation: 5.2s ease-in-out 0s infinite normal none running hk_fwin; }
-.htown.nite .hferry .fwin .fw1 { animation-delay: 1.7s; }
-.htown.nite .hferry .fwin .fw2 { animation-delay: 3.4s; }
-.htown.nite .hferry .flt { filter: drop-shadow(currentcolor 0px 0px 3px); }
-.htown.nite .hferry .flt.r { fill: rgb(255, 122, 122); color: rgb(255, 122, 122); animation: 2.6s ease-in-out 0s infinite normal none running hk_flt; }
-.htown.nite .hferry .flt.g { fill: rgb(107, 233, 175); color: rgb(107, 233, 175); animation: 2.6s ease-in-out 0.9s infinite normal none running hk_flt; }
-.htown.nite .hferry .flt.m { fill: rgb(255, 246, 222); color: rgb(255, 246, 222); animation: 3.4s ease-in-out 0.4s infinite normal none running hk_flt; }
-.htown.nite .hferry .frefl { position: absolute; left: 7px; right: 7px; top: 100%; height: 10px; border-radius: 50%; background: linear-gradient(rgba(255, 215, 154, 0.38), rgba(255, 215, 154, 0)); filter: blur(1.5px); animation: 2.9s ease-in-out 0s infinite alternate none running hk_frefl; }
-.htown.nite .hbeam { height: calc(100% - 54px); width: 96px; margin-left: -48px; background: linear-gradient(to top, rgba(255, 232, 168, 0.34), rgba(255, 232, 168, 0.13) 34%, rgba(255, 232, 168, 0.05) 62%, rgba(255, 232, 168, 0) 88%); }
-.htown.nite .hbeam.hbeam2 { margin-left: 0px; margin-right: -48px; background: linear-gradient(to top, rgba(186, 222, 255, 0.3), rgba(186, 222, 255, 0.12) 34%, rgba(186, 222, 255, 0.04) 62%, rgba(186, 222, 255, 0) 88%); }
-.htown.nite .hncl { position: absolute; border-radius: 999px; pointer-events: none; filter: blur(6px); background: radial-gradient(64% 100% at 50% 68%, rgba(255, 214, 150, 0.2), rgba(120, 160, 215, 0.1) 58%, rgba(120, 160, 215, 0)); }
-.htown.nite .hncl.n1 { top: 16%; left: -96px; width: 118px; height: 26px; opacity: 0.9; animation: 74s linear 0s infinite normal none running hk_hncl; }
-.htown.nite .hncl.n2 { top: 34%; left: -140px; width: 86px; height: 20px; opacity: 0.7; animation: 104s linear 0s infinite normal none running hk_hncl; }
-.htown.nite .hshoot { position: absolute; width: 74px; height: 1.6px; border-radius: 2px; opacity: 0; pointer-events: none; background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 252, 238, 0.95)); filter: drop-shadow(rgba(255, 246, 214, 0.8) 0px 0px 4px); animation: 14s ease-in 0s infinite normal none running hk_hshoot; will-change: transform, opacity; }
 .htown.nite .hshoot.s2 { animation-duration: 19s; animation-delay: 6s; width: 54px; }
-.htown.nite .hrib { background: linear-gradient(rgba(255, 211, 126, 0.04), rgba(90, 150, 200, 0.22) 55%, rgba(90, 150, 200, 0.05)); }
 .htown .hshim.s1 { bottom: 139px; }
 .htown .hshim.s2 { bottom: 143px; }
-.htown.nite .hbeam { animation-name: hk_hbeamBright; }
-.htown.nite .hbeam.hbeam2 { animation-name: hk_hbeam2; }
 .sunb { top: 64px; }
 .hero-scrim { top: 90px; }
 .hero { min-height: 298px; padding-top: 10px; }
@@ -363,6 +276,10 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
 .ph-night .navrg { opacity: 1; }
 .dnm_glow.gl1 { left: -40px; top: 34px; width: 230px; height: 170px; background: radial-gradient(closest-side, rgba(255, 190, 120, 0.13), transparent); }
 .dnm_glow.gl2 { right: -50px; top: 96px; width: 210px; height: 190px; background: radial-gradient(closest-side, rgba(232, 199, 123, 0.1), transparent); }
+.dnx_vb.big { width: 18px; height: 18px; font-size: 10px; }
+.dnx_tag.sun { color: rgb(248, 196, 107); border-color: rgba(244, 169, 59, 0.4); }
+.dnx_ssearch.big { margin: 12px 0px 4px; position: relative; z-index: 2; }
+.dnx_empty.big { padding: 44px 20px; font-size: 14px; margin-top: 14px; }
 .mitem .hk_mmark { width: 19px; height: 19px; display: block; }
 .hk_mmark .mm_key { stroke-width: 1.9; }
 .hk_mmark { --mm1: #F09D52; --mm2: #2FA8A0; --mm3: #F2D89B; --mm4: #E8748C; }
@@ -380,17 +297,12 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
 .hk_menumark .mm_key { stroke-width: 2.5; }
 .hk_menumark { --mm2: #3CBDB4; --mm4: #F28CA0; }
 .hk_segb.on .hk_tmark .mm_solid { fill: currentcolor; fill-opacity: 0.26; }
-.morewrap.ph-night .morebtn { color: rgb(227, 196, 113); border-color: rgba(227, 196, 113, 0.6); background: linear-gradient(rgba(16, 44, 58, 0.58), rgba(8, 26, 36, 0.68)); box-shadow: rgba(255, 241, 184, 0.14) 0px 1px 0px inset, rgba(0, 0, 0, 0.42) 0px 6px 18px; }
-.morewrap.ph-night .morebtn:hover { color: rgb(244, 223, 168); border-color: rgb(227, 196, 113); box-shadow: rgba(255, 241, 184, 0.2) 0px 1px 0px inset, rgba(0, 0, 0, 0.46) 0px 8px 22px, rgba(227, 196, 113, 0.8) 0px 0px 16px -6px; }
+.morewrap.ph-day .morebtn, .morewrap.ph-dawn .morebtn, .morewrap.ph-golden .morebtn { color: rgb(255, 253, 248); border-color: rgba(255, 253, 248, 0.58); background: linear-gradient(rgba(10, 34, 48, 0.4), rgba(6, 22, 32, 0.54)); box-shadow: rgba(255, 255, 255, 0.22) 0px 1px 0px inset, rgba(0, 0, 0, 0.34) 0px 6px 18px, rgba(0, 0, 0, 0.5) 0px 1px 2px; }
+.morewrap.ph-day .morebtn:hover, .morewrap.ph-dawn .morebtn:hover, .morewrap.ph-golden .morebtn:hover { color: rgb(255, 255, 255); border-color: rgb(255, 253, 248); box-shadow: rgba(255, 255, 255, 0.3) 0px 1px 0px inset, rgba(0, 0, 0, 0.4) 0px 8px 22px, rgba(255, 253, 248, 0.75) 0px 0px 16px -6px; }
 .hk_infoic .hk_mmark { width: 46px; height: 46px; margin: 0px auto; stroke-width: 1.25; }
 .hk_promoted .adlbl { display: block; margin: 0px 0px 8px; font: 800 9.5px / 1 Nunito, system-ui, sans-serif; letter-spacing: 1.1px; text-transform: uppercase; color: var(--csoft); opacity: 0.85; }
 .hk_promoted .adlbl.open { font-weight: 700; letter-spacing: 0.9px; opacity: 0.55; }
 .hk_promocard .adlbl { display: block; margin: 0px 0px 5px; font: 800 9.5px / 1 Nunito, system-ui, sans-serif; letter-spacing: 1.1px; text-transform: uppercase; color: var(--csoft); opacity: 0.85; }
-.ph-night .hcv { filter: drop-shadow(rgba(0, 0, 0, 0.45) 0px 0.8px 0.6px) brightness(1.06); }
-.ph-night .htchw .tcv { filter: brightness(0.82) saturate(0.85); }
-.ph-night .htnest { filter: brightness(0.72) saturate(0.85); }
-.ph-night .httrail { opacity: 0.85; }
-.ph-night .sailad text { fill: rgb(94, 108, 122); }
 .skitz .adlbl { position: absolute; top: 5px; right: 8px; z-index: 9; font: 800 8.5px / 1 Nunito, system-ui, sans-serif; letter-spacing: 0.8px; text-transform: uppercase; color: var(--csoft); opacity: 1; padding: 2px 5px; border-radius: 4px; background: rgba(8, 20, 30, 0.92); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--au-b) 45%, transparent); }
 .skitz .adlbl.open { font-weight: 700; letter-spacing: 0.6px; opacity: 0.85; }
 .skb_splash.s1 { left: 52px; top: 32px; animation: skb_spl1 var(--skd,18s) linear infinite var(--sko,0s); }
@@ -399,70 +311,10 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
 .xsky_star.s2 { left: 140px; top: 11px; animation: 3s ease-in-out 0s infinite normal none running xskyTwinkle; }
 .xps_star.s1 { left: 24px; top: 12px; opacity: 0.3; }
 .xps_star.s2 { left: 138px; top: 7px; animation: 3s ease-in-out 0s infinite normal none running xpsTwinkle; }
-.xp_supportstage.reviewing .xps_star { animation: auto ease 0s 1 normal none running none; opacity: 0.55; }
-.xp_supportstage.reviewing .xps_hairline { opacity: 0.85; }
 .hk_day .dock .hk_mmark, .hk_day .dock .hk_menumark { --mm1: #7E420C; --mm2: #14625B; --mm3: #5F4A2C; --mm4: #992743; }
 .hk_day .hk_tmark .mm_hand, .hk_day .hk_mmark .mm_hand { stroke-width: 2.5; }
 .hk_day .hk_promoted .adlbl.open { opacity: 0.7; }
 .hk_day .skitz .adlbl { color: rgb(68, 86, 106); background: rgba(255, 246, 228, 0.92); box-shadow: rgba(138, 90, 12, 0.4) 0px 0px 0px 1px inset; }
-.hk_day .t-artNight .agal.nite .astroke path { stroke: rgb(168, 58, 90); }
-.hk_day .t-artNight .agal.nite .abrush .adraw { stroke: rgb(168, 58, 90); filter: none; }
-.hk_day .t-artNight .agal.nite .adrip.p1 { background: linear-gradient(rgb(196, 87, 122), rgb(156, 52, 84)); }
-.hk_day .t-artNight .agal.nite .adrip.p2 { background: linear-gradient(rgb(144, 88, 200), rgb(112, 56, 168)); }
-.hk_day .t-artNight .agal.nite .afr { border-color: rgba(138, 85, 104, 0.5); box-shadow: none; }
-.hk_day .t-artNight .agal.nite .adaub { opacity: 0.42; filter: blur(0.4px); animation: 11s ease-in-out 0s infinite alternate none running hk_adaub; }
-.hk_day .t-artNight .agal.nite .agallight { background: linear-gradient(103deg, transparent 34%, rgba(200, 90, 130, 0.14) 44%, rgba(150, 90, 200, 0.2) 50%, rgba(200, 90, 130, 0.12) 56%, transparent 66%); }
-.hk_day .t-artNight .agal.nite .ahang i { background: linear-gradient(rgba(138, 85, 104, 0.5), rgba(138, 85, 104, 0.18)); }
-.hk_day .t-artNight .agal.nite .ahang b { border-color: rgba(156, 52, 84, 0.4); background: linear-gradient(148deg, rgba(251, 227, 234, 0.7), rgba(234, 217, 236, 0.4)); box-shadow: none; }
-.hk_day .t-artNight .agal.nite .aeasel { opacity: 0.4; }
-.hk_day .t-artNight .agal.nite .aeasel .aleg { stroke: rgb(138, 85, 104); }
-.hk_day .t-artNight .agal.nite .aeasel .acan { fill: rgba(251, 227, 234, 0.6); stroke: rgb(138, 85, 104); }
-.hk_day .t-artNight .agal.nite .apal_b { fill: rgb(251, 227, 234); }
-.hk_day .t-artNight .agal.nite .apal_b, .hk_day .t-artNight .agal.nite .apal_hole { stroke: rgb(138, 85, 104); }
-.hk_day .t-artNight .agal.nite .aribbon.rb1 { stroke: rgb(168, 58, 90); opacity: 0.42; }
-.hk_day .t-townNight .htown.nite .hmoon { box-shadow: rgb(201, 162, 78) -4px 2px 0px 0px inset, rgba(201, 162, 78, 0.22) 0px 0px 10px; }
-.hk_day .t-townNight .htown.nite .hsun { background: radial-gradient(38% 26% at 82% 10%, rgba(255, 255, 255, 0.4), transparent 72%); }
-.hk_day .t-townNight .htown.nite .hglow { background: linear-gradient(transparent, rgba(255, 215, 154, 0.14) 58%, rgba(255, 215, 154, 0.24)); }
-.hk_day .t-townNight .htown.nite .hncl { background: radial-gradient(64% 100% at 50% 68%, rgba(255, 224, 180, 0.35), rgba(210, 228, 248, 0.2) 58%, transparent); }
-.hk_day .t-townNight .htown.nite .hrib { background: linear-gradient(rgba(255, 224, 180, 0.1), rgba(200, 224, 248, 0.32) 55%, rgba(200, 224, 248, 0.08)); }
-.hk_day .t-townNight .htown.nite .hsil { fill: rgb(90, 114, 144); stroke: rgb(90, 114, 144); }
-.hk_day .t-townNight .htown.nite .hwin rect { fill: rgb(201, 146, 46); }
-.hk_day .t-townNight .htown.nite .hlamp { fill: rgb(217, 174, 82); }
-.hk_day .t-townNight .htown.nite .hbridge.nb { stroke: rgba(90, 114, 144, 0.55); }
-.hk_day .t-townNight .htown.nite .hbridge.nb .deck { stroke: rgba(90, 114, 144, 0.7); }
-.hk_day .t-townNight .htown.nite .hbridge.nb .span { stroke: rgba(90, 114, 144, 0.45); }
-.hk_day .t-townNight .htown.nite .hbridge.nb .blamp circle { fill: rgb(217, 174, 82); filter: drop-shadow(rgba(201, 162, 78, 0.5) 0px 0px 2px); }
-.hk_day .t-townNight .htown.nite .hcar { background: linear-gradient(90deg, rgba(122, 84, 16, 0), rgb(185, 138, 42)); box-shadow: rgba(185, 138, 42, 0.32) 0px 0px 6px 1px; }
-.hk_day .t-townNight .htown.nite .hferry .fhull { fill: rgb(74, 98, 128); }
-.hk_day .t-townNight .htown.nite .hferry .fcab { fill: rgb(90, 114, 144); }
-.hk_day .t-townNight .htown.nite .hferry .fmast { stroke: rgb(90, 114, 144); }
-.hk_day .t-townNight .htown.nite .hferry .fwin rect { fill: rgb(201, 146, 46); }
-.hk_day .t-townNight .htown.nite .hferry .flt.r { fill: rgb(176, 74, 66); color: rgb(176, 74, 66); box-shadow: none; filter: drop-shadow(rgba(176, 74, 66, 0.4) 0px 0px 2px); }
-.hk_day .t-townNight .htown.nite .hferry .flt.g { fill: rgb(46, 143, 99); color: rgb(46, 143, 99); filter: drop-shadow(rgba(46, 143, 99, 0.4) 0px 0px 2px); }
-.hk_day .t-townNight .htown.nite .hferry .flt.m { fill: rgb(138, 106, 42); color: rgb(138, 106, 42); filter: drop-shadow(rgba(138, 106, 42, 0.4) 0px 0px 2px); }
-.hk_day .t-townNight .htown.nite .hshoot { background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(122, 84, 16, 0.75)); }
-.hk_day .t-movieNight .cine.nite .msprk { opacity: 0.22; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20'%3E%3Crect x='2.5' y='6' width='5' height='8' rx='1.6' fill='%23725014'/%3E%3C/svg%3E"); }
-.hk_day .t-movieNight .cine.nite .mrail { --mbulb: #8A6414; --mglow: rgba(255,238,196,.55); filter: drop-shadow(rgba(138, 100, 20, 0.3) 0px 0px 2px); }
-.hk_day .t-movieNight .cine.nite .mp_body { stroke: rgb(114, 80, 20); }
-.hk_day .t-movieNight .cine.nite .mp_reel { stroke: rgb(114, 80, 20); }
-.hk_day .t-movieNight .cine.nite .mscreen { border-color: rgba(114, 80, 20, 0.5); background: linear-gradient(160deg, rgba(255, 246, 222, 0.3), rgba(240, 225, 195, 0.35)); }
-.hk_day .t-coastalNight .shal.nite .bprops { filter: none; opacity: 1; }
-.hk_day .t-coastalNight .shal.nite .sandg { opacity: 0.44; }
-.hk_day .t-coastalNight .shal.nite .ccrab { opacity: 1; }
-.hk_day .t-coastalNight .shal.nite .cmoon { box-shadow: rgb(201, 162, 78) -3.6px 1.8px 0px 0px inset, rgba(201, 162, 78, 0.22) 0px 0px 10px; }
-.hk_day .t-labNight .ldec.nite .lx { --lxink: #0A6644; --lxink2: #106E82; --lxwarm: #B5562E; opacity: 0.7; }
-.hk_day .t-labNight .ldec.nite .lscope { opacity: 0.5; }
-.hk_day .t-labNight .ldec.nite .lsc_t { stroke: rgb(10, 102, 68); filter: drop-shadow(rgba(10, 102, 68, 0.3) 0px 0px 2px); }
-.hk_day .t-labNight .ldec.nite .lliq { fill: rgb(10, 102, 68); opacity: 0.6; filter: drop-shadow(rgba(10, 102, 68, 0.25) 0px 0px 2px); }
-.hk_day .t-labNight .ldec.nite .lglass { stroke: rgb(46, 78, 68); opacity: 0.7; }
-.hk_day .t-labNight .ldec.nite .lring { border-color: rgba(10, 102, 68, 0.5); }
-.hk_day .t-labNight .ldec.nite .lel { background: rgb(10, 102, 68); box-shadow: rgba(10, 102, 68, 0.3) 0px 0px 3px 1px; }
-.hk_day .t-labNight .ldec.nite .lnuc { background: rgb(16, 110, 130); box-shadow: rgba(16, 110, 130, 0.3) 0px 0px 4px 1.2px; }
-.hk_day .t-labNight .ldec.nite .ldna { opacity: 0.5; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='28'%3E%3Cg fill='none' stroke='%230A6644' stroke-width='1' stroke-linecap='round'%3E%3Cpath d='M2.5,0 C9.5,4.7 9.5,9.3 2.5,14 C9.5,18.7 9.5,23.3 2.5,28'/%3E%3Cpath d='M9.5,0 C2.5,4.7 2.5,9.3 9.5,14 C2.5,18.7 2.5,23.3 9.5,28'/%3E%3Cline x1='4.4' y1='3.5' x2='7.6' y2='3.5'/%3E%3Cline x1='4.4' y1='10.5' x2='7.6' y2='10.5'/%3E%3Cline x1='4.4' y1='17.5' x2='7.6' y2='17.5'/%3E%3Cline x1='4.4' y1='24.5' x2='7.6' y2='24.5'/%3E%3C/g%3E%3C/svg%3E"); }
-.hk_day .t-comedyNight .cmdy.nite .cm_brick { opacity: 0.5; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='24'%3E%3Cg stroke='%238A5230' stroke-opacity='.20' stroke-width='1' fill='none'%3E%3Cpath d='M0 .5h44M0 12.5h44'/%3E%3Cpath d='M11 0v12M33 0v12M0 12v12M22 12v12M44 12v12'/%3E%3C/g%3E%3C/svg%3E"); }
-.hk_day .t-comedyNight .cmdy.nite .cm_base, .hk_day .t-comedyNight .cmdy.nite .cm_boom { stroke: rgb(92, 71, 38); }
-.hk_day .t-comedyNight .cmdy.nite .cm_sp { stroke: rgb(92, 71, 38); }
-.hk_day .t-comedyNight .cmdy.nite .fw_ha .fld.f-laugh { color: rgb(107, 78, 14); --fo: .5; }
 @keyframes hk_drift { 
   0% { transform: translateX(0px); opacity: 0; }
   7% { opacity: var(--clo,.18); }
@@ -495,60 +347,28 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
   0%, 100% { transform: scaleX(1); opacity: 0.85; }
   50% { transform: scaleX(0.9); opacity: 0.62; }
 }
-@keyframes hk_ntw1 { 
-  0%, 100% { opacity: 0.86; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.06); }
+@keyframes hk_supdrift { 
+  0% { transform: translate(0px, 0px); }
+  100% { transform: translate(9px, 1.5px); }
 }
-@keyframes hk_ntw2 { 
-  0%, 100% { opacity: 0.5; transform: scale(0.92); }
-  50% { opacity: 0.95; transform: scale(1); }
+@keyframes hk_supbob { 
+  0%, 100% { transform: translateY(0px) rotate(-0.6deg); }
+  50% { transform: translateY(1.4px) rotate(0.7deg); }
 }
-@keyframes hk_ntw3 { 
-  0%, 100% { opacity: 0.14; transform: scale(0.75); }
-  55% { opacity: 0.7; transform: scale(1); }
+@keyframes hk_paddle { 
+  0%, 5% { transform: rotate(5deg); }
+  11% { transform: rotate(0deg); }
+  30% { transform: rotate(-24deg); }
+  34% { transform: rotate(-29deg); }
+  44% { transform: rotate(-27deg); }
+  96%, 100% { transform: rotate(5deg); }
 }
-@keyframes hk_nswA { 
-  0% { transform: translate3d(-300px, 0px, 0px); opacity: 0; }
-  20% { opacity: 0.5; }
-  40% { opacity: 1; }
-  60% { opacity: 1; }
-  80% { opacity: 0.5; }
-  100% { transform: translate3d(330px, 0px, 0px); opacity: 0; }
-}
-@keyframes hk_nswB { 
-  0% { transform: translate3d(-330px, 0px, 0px); opacity: 0; }
-  20% { opacity: 0.5; }
-  40% { opacity: 1; }
-  60% { opacity: 1; }
-  80% { opacity: 0.5; }
-  100% { transform: translate3d(380px, 0px, 0px); opacity: 0; }
-}
-@keyframes hk_nswC { 
-  0% { transform: translate3d(-330px, 0px, 0px); opacity: 0; }
-  20% { opacity: 0.5; }
-  40% { opacity: 1; }
-  60% { opacity: 1; }
-  80% { opacity: 0.5; }
-  100% { transform: translate3d(430px, 0px, 0px); opacity: 0; }
-}
-@keyframes hk_ntl { 
-  0%, 100% { opacity: 0.45; }
-  50% { opacity: 0.85; }
-}
-@keyframes hk_nwetadv { 
-  0%, 52% { transform: translateY(0px); }
-  68% { transform: translateY(-1.3px); }
-  100% { transform: translateY(0px); }
-}
-@keyframes hk_nwetgl { 
-  0%, 52% { opacity: 0.3; }
-  66% { opacity: 0.95; }
-  74% { opacity: 0.72; }
-  88%, 100% { opacity: 0.3; }
-}
-@keyframes hk_nhalo { 
-  0%, 100% { opacity: 0.82; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.035); }
+@keyframes hk_supbody { 
+  0%, 5% { transform: rotate(4deg); }
+  22% { transform: rotate(1deg); }
+  34% { transform: rotate(-3.4deg); }
+  48% { transform: rotate(-2deg); }
+  100% { transform: rotate(4deg); }
 }
 @keyframes hk_glow { 
   0%, 100% { opacity: 0.85; transform: scale(1); }
@@ -573,6 +393,12 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
   30% { transform: translateY(-7px) rotate(-4.5deg); }
   62% { transform: translateY(3px) rotate(1.5deg); }
   82% { transform: translateY(-2px) rotate(-2deg); }
+}
+@keyframes hk_gullnear { 
+  0%, 55% { transform: translate(-90px, 6px); }
+  70% { transform: translate(120px, -2px); }
+  84% { transform: translate(300px, 3px); }
+  100% { transform: translate(452px, -4px); }
 }
 @keyframes hk_gullnearR { 
   0%, 55% { transform: translate(452px, 6px); }
@@ -640,9 +466,29 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
   0% { transform: translateY(-1.1px) scaleY(0.92); }
   100% { transform: translateY(1.4px) scaleY(1.1); }
 }
-@keyframes hk_adbuoyglow { 
-  0%, 100% { opacity: 0.55; filter: drop-shadow(rgb(242, 196, 60) 0px 0px 1px); }
-  50% { opacity: 1; filter: drop-shadow(rgb(242, 196, 60) 0px 0px 4px); }
+@keyframes hk_adyacht { 
+  0% { transform: translateX(-110px); }
+  100% { transform: translateX(575px); }
+}
+@keyframes hk_adparasway { 
+  0%, 100% { transform: rotate(-2.1deg); }
+  55% { transform: rotate(1.7deg); }
+}
+@keyframes hk_adplane { 
+  0% { transform: translateX(-230px); }
+  100% { transform: translateX(560px); }
+}
+@keyframes hk_adplanebob { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.4px); }
+}
+@keyframes hk_adbanflut { 
+  0%, 100% { transform: rotate(0.9deg) translateY(0.2px); }
+  50% { transform: rotate(-0.8deg) translateY(-0.3px); }
+}
+@keyframes hk_adprop { 
+  0%, 100% { transform: scaleY(1); opacity: 0.55; }
+  50% { transform: scaleY(0.45); opacity: 0.8; }
 }
 @keyframes hk_sailbob_nm { 
   0% { transform: translateY(2.5px) rotate(0.39deg); }
@@ -657,70 +503,9 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
   54% { opacity: 0.56; }
   100% { opacity: 0; transform: translate(-50%, -50%) scale(1.7); }
 }
-@keyframes hk_npglow { 
-  0%, 100% { opacity: 0.85; transform: scale(1); }
-  45% { opacity: 1; transform: scale(1.12); }
-  70% { opacity: 0.7; transform: scale(0.96); }
-}
 @keyframes hk_hshim { 
   0% { opacity: 0.18; transform: translateX(-7px) scaleX(0.85); }
   100% { opacity: 0.85; transform: translateX(7px) scaleX(1); }
-}
-@keyframes hk_adaub { 
-  0% { transform: translateY(0px) rotate(0deg); }
-  100% { transform: translateY(-4px) rotate(7deg); }
-}
-@keyframes hk_aglow { 
-  0% { opacity: 0.5; }
-  100% { opacity: 0.92; }
-}
-@keyframes hk_blamp { 
-  0%, 100% { opacity: 0.55; }
-  50% { opacity: 0.95; }
-}
-@keyframes hk_hcar { 
-  0% { transform: translate(0px, 0px); opacity: 0; }
-  5% { opacity: 0.9; }
-  24% { transform: translate(-58px, 2px); }
-  46% { transform: translate(-116px, -2px); opacity: 0.9; }
-  53% { transform: translate(-130px, -3px); opacity: 0; }
-  100% { transform: translate(-130px, -3px); opacity: 0; }
-}
-@keyframes hk_hboat { 
-  0% { transform: translate3d(0px, 0px, 0px); }
-  100% { transform: translate3d(460px, 0px, 0px); }
-}
-@keyframes hk_fwin { 
-  0%, 100% { opacity: 0.9; }
-  44% { opacity: 0.45; }
-}
-@keyframes hk_flt { 
-  0%, 100% { opacity: 0.45; }
-  50% { opacity: 1; }
-}
-@keyframes hk_frefl { 
-  0% { opacity: 0.35; transform: scaleX(0.86); }
-  100% { opacity: 0.75; transform: scaleX(1.12); }
-}
-@keyframes hk_hncl { 
-  0% { transform: translateX(0px); }
-  100% { transform: translateX(calc(100% + 460px)); }
-}
-@keyframes hk_hshoot { 
-  0% { transform: translate(0px, 0px) rotate(4deg); opacity: 0; }
-  2% { opacity: 0.95; }
-  9% { transform: translate(230px, 4px) rotate(4deg); opacity: 0; }
-  100% { transform: translate(230px, 4px) rotate(4deg); opacity: 0; }
-}
-@keyframes hk_hbeamBright { 
-  0% { transform: rotate(-26deg); opacity: 0.55; }
-  50% { opacity: 1; }
-  100% { transform: rotate(26deg); opacity: 0.55; }
-}
-@keyframes hk_hbeam2 { 
-  0% { transform: rotate(24deg); opacity: 0.45; }
-  50% { opacity: 0.9; }
-  100% { transform: rotate(-24deg); opacity: 0.45; }
 }
 @keyframes skb_spl1 { 
   0%, 8.8% { opacity: 0; transform: scale(0.4); }
