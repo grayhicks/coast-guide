@@ -130,14 +130,155 @@
   </div>
 </div><div class="wrap prose">
 <div class="note">
-    <strong>Submissions open shortly.</strong> We don't have a public inbox yet, so this page does
-    not show a form that cannot send anywhere. A form that thanks you and quietly drops what you
-    wrote is worse than no form.
+    We don't charge for inclusion, we don't rank paying venues higher, and we'll never leave a real
+    family event off the list because nobody paid us. We verify everything against your own page
+    before it goes live, so the more you give us here, the faster it lands.
     <br><br>
-    Nothing about the list is waiting on it. Every event and place here is already free to be on,
-    it stays free, and nobody can buy their way onto it or pay to rank higher. When the inbox opens,
-    this page becomes the form and the same promise applies to everything sent through it.
+    <strong>Nonprofits, churches, schools and libraries:</strong> same form, same free listing,
+    same treatment.
   </div>
+
+  <div class="err" id="err" role="alert" aria-live="assertive"></div>
+
+  <form id="f" novalidate>
+
+    <fieldset>
+      <legend>The event</legend>
+      <label><span class="lb">Event name <span class="req">*</span></span><input name="Event name" required></label>
+      <label><span class="lb">Venue name <span class="req">*</span></span><input name="Venue name" required></label>
+      <label><span class="lb">Street address <span class="req">*</span>
+        <span class="hint">Full address. We geocode it on our end.</span></span><input name="Street address" required></label>
+      <div class="row">
+        <label><span class="lb">Date <span class="req">*</span></span><input type="date" name="Date" id="d1" required></label>
+        <label><span class="lb">End date <span class="hint">Multi-day events only</span></span><input type="date" name="End date"></label>
+      </div>
+      <div class="row">
+        <label><span class="lb">Start time <span class="req">*</span></span><input type="time" name="Start time" required></label>
+        <label><span class="lb">Recurring?</span>
+          <select name="Recurring" id="rec">
+            <option value="One-time">One-time</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Monthly">Monthly</option>
+            <option value="Other">Other</option>
+          </select></label>
+      </div>
+      <label id="endWrap" style="display:none"><span class="lb">If recurring, when does the series end? <span class="req">*</span>
+        <span class="hint">The field nobody fills in and everybody needs. An unbounded series is how a calendar rots.</span></span>
+        <input type="date" name="Series ends" id="d2"></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>What it costs</legend>
+      <label><span class="lb">Cost, adults <span class="req">*</span>
+        <span class="hint">"Free" is a valid answer. "They have not published one" is too. Empty is not.</span></span><input name="Cost adults" required></label>
+      <label><span class="lb">Cost, children <span class="req">*</span>
+        <span class="hint">Include the age cut-off, e.g. "$8, ages 3-12"</span></span><input name="Cost children" required></label>
+      <div class="row">
+        <label><span class="lb">Are under-2s free?</span>
+          <select name="Under 2 free"><option>N/A</option><option>Yes</option><option>No</option></select></label>
+        <label><span class="lb">Military or veteran rate?
+          <span class="hint">Amount or code. Ask us why and we'll tell you: it's what families here look for first.</span></span>
+          <input name="Military rate"></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Who it's for</legend>
+      <div class="row">
+        <label><span class="lb">Age range <span class="req">*</span>
+          <span class="hint">"All ages" is fine</span></span><input name="Age range" required></label>
+        <label><span class="lb">Indoor or outdoor <span class="req">*</span></span>
+          <select name="Indoor or outdoor" required><option>Indoor</option><option>Outdoor</option><option>Both</option></select></label>
+      </div>
+      <div class="row">
+        <label><span class="lb">Stroller accessible?</span>
+          <select name="Stroller accessible"><option>Yes</option><option>No</option><option>Partly</option></select></label>
+        <label><span class="lb">Published minimum age
+          <span class="hint">Only if you post one, such as 18+ or 21+. Leave blank otherwise.</span></span>
+          <input name="Minimum age"></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Where we verify it</legend>
+      <label><span class="lb">Ticket or info link <span class="req">*</span>
+        <span class="hint">Your own website. We verify against your page. A Facebook link is a lead, not a source.</span></span>
+        <input type="url" name="Ticket or info link" id="url" placeholder="https://" required></label>
+      <label><span class="lb">One or two sentences about it <span class="req">*</span>
+        <span class="hint">300 characters</span></span>
+        <textarea name="About" maxlength="300" required></textarea></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>You</legend>
+      <div class="row">
+        <label><span class="lb">Your name <span class="req">*</span></span><input name="Your name" required></label>
+        <label><span class="lb">Your role <span class="req">*</span>
+          <span class="hint">Owner, staff, organizer, volunteer</span></span><input name="Your role" required></label>
+      </div>
+      <div class="row">
+        <label><span class="lb">Email <span class="req">*</span>
+          <span class="hint">Verification contact only</span></span><input type="email" name="Email" required></label>
+        <label><span class="lb">Phone
+          <span class="hint">Faster for us when something doesn't match</span></span><input type="tel" name="Phone"></label>
+      </div>
+    </fieldset>
+
+    <button class="btn primary framed" type="submit"><span class="btn-lab">Send it</span></button>
+    <p class="fine" style="margin-top:12px">
+      This opens your email app with everything above already filled in. No account, no tracking,
+      nothing stored on a server. This whole site makes zero network calls.</p>
+  </form>
+
+  <div class="ok" id="ok">
+    <h2>Got it, and thank you.</h2>
+    <p>We check every submission against your own page before it goes live, usually within a few
+      days. If something doesn't line up we'll email you rather than guess.</p>
+    <p style="margin-bottom:0"><strong>Listing is free. It stays free.</strong></p>
+  </div>
+
+<script>
+  var TO = 'hello@coastaleventures.com'; /* The submissions inbox. Swap it the day a branded address exists — it is written here and in index.html, nowhere else. */
+  var rec = document.getElementById('rec'), endWrap = document.getElementById('endWrap');
+  rec.addEventListener('change', function(){
+    var on = rec.value !== 'One-time';
+    endWrap.style.display = on ? 'block' : 'none';
+    document.getElementById('d2').required = on;
+  });
+  document.getElementById('f').addEventListener('submit', function(e){
+    e.preventDefault();
+    var err = document.getElementById('err'); err.style.display = 'none';
+    var f = e.target, problems = [];
+
+    /* the four validations the spec names, done here so a bad lead never reaches the queue */
+    var u = document.getElementById('url').value.trim();
+    if(/facebook\.com|instagram\.com|fb\.me|tiktok\.com/i.test(u))
+      problems.push('We verify against your own page. A social link is a lead, not a source. Do you have a website URL?');
+    var d1 = document.getElementById('d1').value;
+    if(d1 && new Date(d1 + 'T23:59:59') < new Date()) problems.push('That date has already passed.');
+    if(rec.value !== 'One-time' && !document.getElementById('d2').value)
+      problems.push('A recurring series needs an end date. An unbounded series is how a calendar rots.');
+    [].forEach.call(f.querySelectorAll('[required]'), function(el){
+      if(el.offsetParent !== null && !el.value.trim()) problems.push('Missing: ' + (el.name || 'a required field'));
+    });
+
+    if(problems.length){
+      err.innerHTML = problems.map(function(p){ return '• ' + p; }).join('<br>');
+      err.style.display = 'block';
+      err.scrollIntoView({behavior:'smooth', block:'center'});
+      return;
+    }
+
+    var lines = [];
+    [].forEach.call(f.querySelectorAll('input,select,textarea'), function(el){
+      if(el.name && el.value.trim()) lines.push(el.name + ': ' + el.value.trim());
+    });
+    var subj = encodeURIComponent('Event submission: ' + (f.querySelector('[name="Event name"]').value || 'untitled'));
+    window.location.href = 'mailto:' + TO + '?subject=' + subj + '&body=' + encodeURIComponent(lines.join('\n'));
+    f.style.display = 'none';
+    document.getElementById('ok').style.display = 'block';
+  });
+</script>
 
 <section class="patron" id="help-keep-it-checked">
   <svg class="mark patron-mk" viewBox="0 0 48 48" aria-hidden="true">
@@ -151,7 +292,7 @@
     <p>One family reads every venue&rsquo;s own page before a listing ships, and no reader is ever
       charged for any of it. If this guide has earned a place in your weekend, the Support page
       lists the ways to help, and most of them cost nothing.</p>
-    <p><a class="btn primary framed" href="support.html"><span class="btn-lab">Support this guide</span></a></p>
+    <p><a class="btn primary" href="support.html"><span class="btn-lab">Support this guide</span></a></p>
   </div>
 </section>
 

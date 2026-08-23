@@ -141,15 +141,142 @@
 </div>
 
 
+  <div class="err" id="err" role="alert" aria-live="assertive"></div>
 
+  <form id="f" novalidate>
 
-  <div class="note">
-    <strong>Applications open shortly.</strong> The application inbox is not open yet, so this page
-    does not show a form that cannot send anywhere.
-    <br><br>
-    Until it is, tell us directly on <a href="contact.html">Contact us</a> and say what you want, or
-    see what is for sale first on <a href="business.html">For local business</a>.
+    <fieldset>
+      <legend>Your business</legend>
+      <label><span class="lb">Business name <span class="req">*</span></span><input name="Business name" required></label>
+      <div class="row">
+        <label><span class="lb">Contact name <span class="req">*</span></span><input name="Contact name" required></label>
+        <label><span class="lb">Your role
+          <span class="hint">Owner, manager, marketing</span></span><input name="Your role"></label>
+      </div>
+      <div class="row">
+        <label><span class="lb">Email <span class="req">*</span></span><input type="email" name="Email" required></label>
+        <label><span class="lb">Phone</span><input type="tel" name="Phone"></label>
+      </div>
+      <label><span class="lb">Venue or address <span class="req">*</span>
+        <span class="hint">Where the business actually is.</span></span><input name="Venue or address" required></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>What you want</legend>
+      <label><span class="lb">Which placement <span class="req">*</span></span>
+        <select name="Placement" id="pl" required>
+          <option value="">Choose one</option>
+          <option>The shelf, under a card</option>
+          <option>The section, every sixth card</option>
+          <option>A promoted card for a real event</option>
+          <option>A directory citation</option>
+          <option>Not sure yet</option>
+        </select></label>
+      <label><span class="lb">Roughly how long <span class="req">*</span></span>
+        <select name="Roughly how long" required>
+          <option value="">Choose one</option>
+          <option>A week</option>
+          <option>A month</option>
+          <option>A season, about 3 months</option>
+          <option>A year</option>
+          <option>Not sure yet</option>
+        </select></label>
+      <label><span class="lb">Anything else you want to say
+        <span class="hint">An event, an offer, a date, a question. Whatever is useful.</span></span>
+        <textarea name="Anything else" maxlength="500"></textarea></label>
+      <label><span class="lb">How did you hear about us?</span>
+        <select name="How you heard">
+          <option value="">Choose one</option>
+          <option>Read the guide</option>
+          <option>Another business</option>
+          <option>Social media</option>
+          <option>Word of mouth</option>
+          <option>A search engine</option>
+          <option>Other</option>
+        </select></label>
+    </fieldset>
+
+    <div class="cta">
+      <a class="btn primary framed" id="send" href="mailto:hello@coastaleventures.com?subject=Sponsorship%20application&amp;body=Business%20name%3A%20%0AContact%20name%3A%20%0AEmail%3A%20%0APhone%3A%20%0AVenue%20or%20address%3A%20%0APlacement%20wanted%3A%20%0ARoughly%20how%20long%3A%20%0AAnything%20else%3A%20%0AHow%20they%20heard%20about%20us%3A%20"><span class="btn-lab">Email your application</span></a>
+      <button class="btn quiet" type="button" id="copy" hidden><span class="btn-lab">Copy it instead</span></button>
+    </div>
+    <p class="fine" id="copied" hidden>Copied. Paste it into an email to us.</p>
+    <p class="fine" style="margin-top:12px">
+      This opens your email app with everything above already filled in. No account, no tracking,
+      nothing stored on a server. This whole site makes zero network calls.</p>
+  </form>
+
+  <div class="ok" id="ok">
+    <h2>Got it, and thank you.</h2>
+    <p>We will follow up with what it costs and when it can start. Founding rates are set with
+      each business rather than printed off a chart.</p>
+    <p style="margin-bottom:0"><strong>Your free listing does not depend on this either way.</strong></p>
   </div>
+
+  <script>
+    var f = document.getElementById('f'), send = document.getElementById('send');
+    var BASE_SUBJ = 'Sponsorship application', BASE_TO = 'hello@coastaleventures.com';
+    /* ⚠ THE LINK IS A REAL LINK FIRST. Its href above is a complete mailto with a blank, labelled
+       template, so a reader with JavaScript disabled still gets a usable control: it opens their
+       mail app with every field named and ready to fill in by hand. Everything below only makes
+       that same link carry what has actually been typed, the way submit.html's script upgrades a
+       plain page rather than being the only thing that makes it work. */
+    function composed(){
+      var lines = [], subjBiz = '';
+      [].forEach.call(f.querySelectorAll('input,select,textarea'), function(el){
+        if(!el.name) return;
+        var v = (el.value || '').trim();
+        if(el.name === 'Business name') subjBiz = v;
+        lines.push(el.name + ': ' + v);
+      });
+      return {
+        subject: BASE_SUBJ + (subjBiz ? ': ' + subjBiz : ''),
+        body: lines.join('\n')
+      };
+    }
+    function sync(){
+      var c = composed();
+      send.href = 'mailto:' + BASE_TO + '?subject=' + encodeURIComponent(c.subject) +
+        '&body=' + encodeURIComponent(c.body);
+      send.setAttribute('data-subject', c.subject);
+      send.setAttribute('data-body', c.body);
+    }
+    f.addEventListener('input', sync);
+    f.addEventListener('change', sync);
+    sync();
+
+    send.addEventListener('click', function(e){
+      var err = document.getElementById('err'); err.style.display = 'none';
+      var problems = [];
+      [].forEach.call(f.querySelectorAll('[required]'), function(el){
+        if(el.offsetParent !== null && !el.value.trim()) problems.push('Missing: ' + (el.name || 'a required field'));
+      });
+      if(problems.length){
+        e.preventDefault();
+        err.innerHTML = problems.map(function(p){ return '• ' + p; }).join('<br>');
+        err.style.display = 'block';
+        err.scrollIntoView({behavior:'smooth', block:'center'});
+        return;
+      }
+      sync();
+      document.getElementById('ok').style.display = 'block';
+    });
+
+    /* ⚠ THE COPY BUTTON SHIPS hidden AND SCRIPT UNHIDES IT, THE SAME LAW EVERY OTHER CONTROL ON
+       THIS SITE FOLLOWS: the failure mode is "no control", never "a control that does nothing".
+       It exists for a phone with no mail app wired up, which the mailto link alone cannot reach. */
+    var copyBtn = document.getElementById('copy');
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      copyBtn.hidden = false;
+      copyBtn.addEventListener('click', function(){
+        sync();
+        var text = 'Subject: ' + send.getAttribute('data-subject') + '\n\n' + send.getAttribute('data-body');
+        navigator.clipboard.writeText(text).then(function(){
+          document.getElementById('copied').hidden = false;
+        }).catch(function(){});
+      });
+    }
+  </script>
 
 <section class="patron" id="help-keep-it-checked">
   <svg class="mark patron-mk" viewBox="0 0 48 48" aria-hidden="true">
@@ -163,7 +290,7 @@
     <p>One family reads every venue&rsquo;s own page before a listing ships, and no reader is ever
       charged for any of it. If this guide has earned a place in your weekend, the Support page
       lists the ways to help, and most of them cost nothing.</p>
-    <p><a class="btn primary framed" href="support.html"><span class="btn-lab">Support this guide</span></a></p>
+    <p><a class="btn primary" href="support.html"><span class="btn-lab">Support this guide</span></a></p>
   </div>
 </section>
 

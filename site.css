@@ -945,7 +945,9 @@ html[data-theme="light"] .card .ev-fare.tba{color:color-mix(in srgb, var(--pill-
 .fsw{display:inline-block;width:9px;height:9px;margin-right:5px;border-radius:2px;
   border:1px solid var(--line-strong);background:var(--ink-3);vertical-align:-1px}
 
+
 .ev-agate .fsw{box-sizing:border-box;width:.72em;height:.72em;vertical-align:baseline}
+.ev-agate .fsw{width:1cap;height:1cap}
 .fsw.f-green{background:var(--flag-green)}
 .fsw.f-yellow{background:var(--flag-yellow)}
 .fsw.f-red{background:var(--flag-red)}
