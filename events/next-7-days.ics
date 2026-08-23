@@ -5,82 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Gulf Coast: the next seven days
 BEGIN:VEVENT
-UID:ev_palafox-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART:20260822T090000
-DTEND:20260822T110000
-SUMMARY:Palafox Market
-DESCRIPTION:A big Saturday market fills downtown with produce\, local make
- rs\, art\, and food. A free trolley runs between plazas. It is stroller-f
- riendly.\nPrice: Free\nArea: Pensacola\nTimes: Saturdays · 9 AM-2 PM\nht
- tps://coastaleventures.com/events/ev-palafox.html
-LOCATION:MLK Jr. Plaza + Plaza Ferdinand\, Downtown Pensacola\, 200 N Pala
- fox St\, Pensacola\, FL 32502
-URL:https://coastaleventures.com/events/ev-palafox.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_grandblvd_mkt-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART:20260822T090000
-DTEND:20260822T110000
-SUMMARY:Grand Boulevard Farmers' Market
-DESCRIPTION:A Saturday farmers and makers market fills the Sandestin green
- \, with local honey\, produce\, and kettle corn. Pair it with a Destin/Ba
- ytowne day.\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Saturdays ·
-  9 AM-1 PM\nhttps://coastaleventures.com/events/ev-grandblvd-mkt.html
-LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Blvd\, Mira
- mar Beach\, FL 32550
-URL:https://coastaleventures.com/events/ev-grandblvd-mkt.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_foley_mkt-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART:20260822T090000
-DTEND:20260822T110000
-SUMMARY:Coastal Alabama Farmers & Fishermens Market
-DESCRIPTION:The county's largest market sells fresh Gulf seafood straight 
- from the boats plus produce and makers. It is five minutes from OWA\, so 
- it stacks with a Tropic Falls day.\nPrice: Free\nArea: Orange Beach & Gul
- f Shores\nTimes: Saturdays · 9 AM-2 PM\nhttps://coastaleventures.com/eve
- nts/ev-foley-mkt.html
-LOCATION:Coastal Alabama Market\, 781 Farmers Market Ln\, Foley\, AL 36535
-URL:https://coastaleventures.com/events/ev-foley-mkt.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_parkrun-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART:20260822T073000
-DTEND:20260822T093000
-SUMMARY:parkrun: Free Timed 5K (Rec Plex North)
-DESCRIPTION:A free\, timed\, all-comers 5K runs every Saturday. Walk\, run
- \, or push the jogging stroller. The kids can earn official times too\, w
- ith one-time free barcode registration.\nPrice: Free\nArea: Pensacola\nTi
- mes: Saturdays · 7:30 AM\nhttps://coastaleventures.com/events/ev-parkrun
- .html
-LOCATION:UWF Rec Plex North Field\, 11000 University Pkwy\, Pensacola\, FL
-  32514
-URL:https://coastaleventures.com/events/ev-parkrun.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_oceanhour-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART:20260822T084500
-DTEND:20260822T104500
-SUMMARY:Ocean Hour Beach Cleanup
-DESCRIPTION:Give an hour and leave the beach better. Buckets\, grabbers\, 
- and gloves are provided. It is a service morning that fits the family's v
- alues and is kid-friendly.\nPrice: Free\nArea: Pensacola Beach & Perdido\
- nTimes: Saturdays · ~8:45 AM · location rotates\nhttps://coastaleventur
- es.com/events/ev-oceanhour.html
-LOCATION:Rotating\, Pensacola Beach / area waterfronts\, Pensacola Beach\,
-  FL 32561
-URL:https://coastaleventures.com/events/ev-oceanhour.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_ferry-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART:20260822T090000
-DTEND:20260822T110000
+UID:ev_ferry-2026-08-23@coast-guide
+DTSTAMP:20260823T000000Z
+DTSTART:20260823T090000
+DTEND:20260823T110000
 SUMMARY:Pensacola Bay Ferry to Fort Pickens
 DESCRIPTION:Boat + fort + beach without the car: ranger narration across t
  he bay\, tunnels and batteries at Fort Pickens for engineering-minded kid
@@ -90,263 +18,6 @@ DESCRIPTION:Boat + fort + beach without the car: ranger narration across t
 LOCATION:Downtown ferry landing → Fort Pickens → Pensacola Beach\, 700
   S Barracks St\, Pensacola\, FL 32502
 URL:https://coastaleventures.com/events/ev-ferry.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_moriarty-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART;VALUE=DATE:20260822
-DTEND;VALUE=DATE:20260824
-SUMMARY:Stage Crafters: Ken Ludwig's “Moriarty”
-DESCRIPTION:A Sherlock Holmes comedy takes the stage. It is good for STEM-
- minded kids\, long for the art-and-dance crowd\, and best skipped with a 
- toddler.\nPrice: from $30\nArea: Destin & Fort Walton\nTimes: Fri/Sat 7:3
- 0 PM · Sun 2 PM · two weekends (8/14-16\, 8/21-23)\nhttps://coastaleven
- tures.com/events/ev-moriarty.html
-LOCATION:Fort Walton Beach Civic Auditorium\, 109 Miracle Strip Pkwy SW\, 
- Fort Walton Beach\, FL 32548
-URL:https://coastaleventures.com/events/ev-moriarty.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_wahoos_knox-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART;VALUE=DATE:20260822
-DTEND;VALUE=DATE:20260824
-SUMMARY:Blue Wahoos vs Knoxville
-DESCRIPTION:The last big August homestand runs the same playbook: Saturday
-  fireworks\, and a free-vet Sunday with run-the-bases.\nPrice: from $10\n
- Area: Pensacola\nTimes: Aug 18-23 · Fireworks Sat 8/22 · Military Famil
- y Sunday 8/23\nhttps://coastaleventures.com/events/ev-wahoos-knox.html
-LOCATION:Blue Wahoos Stadium\, 351 W Cedar St\, Pensacola\, FL 32502
-URL:https://coastaleventures.com/events/ev-wahoos-knox.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_owa_safety-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART:20260822T140000
-DTEND:20260822T180000
-SUMMARY:OWA Community Safety Day
-DESCRIPTION:First responders\, K-9 demos\, and trucks to climb fill OWA's 
- free district\, big for both big kids\, and the fountain show follows at 
- 6.\nPrice: Free\nArea: Orange Beach & Gulf Shores\nTimes: Sat 08/22/2026 
- · 2:00-6:00 PM\nhttps://coastaleventures.com/events/ev-owa-safety.html
-LOCATION:Downtown OWA\, Foley\, 101 S OWA Blvd\, Foley\, AL 36535
-URL:https://coastaleventures.com/events/ev-owa-safety.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_plt_dracula-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART;VALUE=DATE:20260822
-DTEND;VALUE=DATE:20260831
-SUMMARY:Dracula: A Comedy of Terrors
-DESCRIPTION:A laugh-out-loud stage spoof of Dracula takes the stage. PLT b
- ills it family-safe\, which makes it the rare theatre date that is genuin
- ely clean. A Sunday matinee works if the sitter falls through.\nPrice: $5
- 0 for two\nArea: Pensacola\nTimes: Fri/Sat 7:30 PM · Sun 2:30 PM · two 
- weekends\nhttps://coastaleventures.com/events/ev-plt-dracula.html
-LOCATION:Pensacola Little Theatre\, 400 S Jefferson St\, Pensacola\, FL 32
- 502
-URL:https://coastaleventures.com/events/ev-plt-dracula.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_vincegill-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART;VALUE=DATE:20260822
-DTEND;VALUE=DATE:20260823
-SUMMARY:Vince Gill: 50 Years From Home Tour
-DESCRIPTION:Country royalty plays in the historic Saenger\, gospel-friendl
- y\, completely clean\, and about as elegant as a date night gets in this 
- town.\nPrice: not published by the venue\, so confirm before you go\nArea
- : Pensacola\nTimes: Sat 08/22/2026 · evening (time TBA)\nhttps://coastal
- eventures.com/events/ev-vincegill.html
-LOCATION:Saenger Theatre\, 118 S Palafox Pl\, Pensacola\, FL 32502
-URL:https://coastaleventures.com/events/ev-vincegill.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_erskine-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART:20260822T190000
-DTEND:20260822T203000
-SUMMARY:Kellen Erskine: CLEAN Stand-Up (Mattie Kelly)
-DESCRIPTION:A Dry Bar-style comic takes the stage\, billed by the venue as
-  all-ages clean\, the rare comedy night that needs zero content asterisks
- . An early 7 PM start means home by 10:30 even from Niceville.\nPrice: $5
- 0 for two\nArea: Destin & Fort Walton\nTimes: Sat 08/22/2026 · 7:00-8:30
-  PM\nhttps://coastaleventures.com/events/ev-erskine.html
-LOCATION:Mattie Kelly Arts Center\, Sprint Theater\, 100 College Blvd E\, 
- Niceville\, FL 32578
-URL:https://coastaleventures.com/events/ev-erskine.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_googoo-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART;VALUE=DATE:20260822
-DTEND;VALUE=DATE:20260823
-SUMMARY:Goo Goo Dolls: Wharf Amphitheater
-DESCRIPTION:"Iris" plays under the open sky\, 90s/2000s nostalgia built fo
- r a 32-year-old couple. The Wharf's fall run also has TOTO on 8/4\, Jason
-  Aldean on 8/30\, and Ty Myers on 9/13 on the venue calendar.\nPrice: not
-  published by the venue\, so confirm before you go\nArea: Orange Beach & 
- Gulf Shores\nTimes: Sat 08/22/2026 · evening (time TBA)\nhttps://coastal
- eventures.com/events/ev-googoo.html
-LOCATION:The Wharf Amphitheater\, Orange Beach\, 23101 Canal Rd\, Orange B
- each\, AL 36561
-URL:https://coastaleventures.com/events/ev-googoo.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_mancis_live-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART:20260822T180000
-DTEND:20260822T200000
-SUMMARY:Live Music: Manci's Antique Club
-DESCRIPTION:This Daphne institution has walls of Jim Beam decanters and li
- ve local bands Thursday through Sunday. It is a grown-up night across the
-  bay\, about 50 minutes out.\nPrice: Free\nArea: Mobile & Baldwin County\
- nTimes: Thu 6:30 · Fri-Sat 7:30 · Sun 6:00 PM\nhttps://coastaleventures
- .com/events/nl-mancis-live.html
-LOCATION:Manci's Antique Club\, 1715 Main St\, Daphne\, AL 36526
-URL:https://coastaleventures.com/events/nl-mancis-live.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_fubar_nights-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART:20260822T210000
-DTEND:20260822T230000
-SUMMARY:Karaoke & DJ Nights: FUBAR Pizza Bar
-DESCRIPTION:Late-night karaoke runs five nights a week (Sun\, Tue\, Wed\, 
- Fri\, Sat) plus a DJ on Monday and Thursday\, 9 PM to 1 AM every night\, 
- with pizza till close. It is in Fort Walton Beach\, about 50 minutes east
- .\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Nightly · 9 PM-1 AM\n
- https://coastaleventures.com/events/nl-fubar-nights.html
-LOCATION:FUBAR Pizza Bar\, 114 Amberjack Dr\, Fort Walton Beach\, FL 32548
-URL:https://coastaleventures.com/events/nl-fubar-nights.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_theblock_karaoke-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART:20260822T180000
-DTEND:20260822T200000
-SUMMARY:Karaoke Block: The Block
-DESCRIPTION:The Sports & Karaoke room at The Block runs Wednesday through 
- Saturday\, opening at 6 (8 on Thursday) and going late. It is downtown Fo
- rt Walton Beach\, about 50 minutes out.\nPrice: Free\nArea: Destin & Fort
-  Walton\nTimes: Wed-Sat · from 6 PM (Thu 8 PM)\nhttps://coastaleventures
- .com/events/nl-theblock-karaoke.html
-LOCATION:The Block\, 113 Eglin Pkwy SE\, Fort Walton Beach\, FL 32548
-URL:https://coastaleventures.com/events/nl-theblock-karaoke.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_sandshaker_live-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART;VALUE=DATE:20260822
-DTEND;VALUE=DATE:20260823
-SUMMARY:Weekend Live Music: Sandshaker Lounge
-DESCRIPTION:The Shaker\, birthplace of the Bushwacker\, has live music eve
- ry weekend and never a cover. It is a classic Pensacola Beach dive\, abou
- t 25 minutes from the bridge.\nPrice: Free\nArea: Pensacola Beach & Perdi
- do\nTimes: Every weekend · evenings\nhttps://coastaleventures.com/events
- /nl-sandshaker-live.html
-LOCATION:Sandshaker Lounge\, 731 Pensacola Beach Blvd\, Pensacola Beach\, 
- FL 32561
-URL:https://coastaleventures.com/events/nl-sandshaker-live.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_paradise_live-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART:20260822T173000
-DTEND:20260822T193000
-SUMMARY:Live Music: Paradise Bar & Grill
-DESCRIPTION:Beachside live music plays most nights on Pensacola Beach\, wi
- th rotating local acts starting at 5:30 (Sundays 2:30). Wine Down Wednesd
- ay runs $3 house and $6 premium wines all day. It is about 25 minutes out
- .\nPrice: Free\nArea: Pensacola Beach & Perdido\nTimes: Tue/Fri/Sat 5:30 
- PM · Sun 2:30 PM\nhttps://coastaleventures.com/events/nl-paradise-live.h
- tml
-LOCATION:Paradise Bar & Grill\, 21 Via De Luna Dr\, Pensacola Beach\, FL 3
- 2561
-URL:https://coastaleventures.com/events/nl-paradise-live.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_seville_karaoke-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART:20260822T200000
-DTEND:20260822T230000
-SUMMARY:Karaoke at Lili Marlene's: every night
-DESCRIPTION:Karaoke runs seven nights a week in the aviators' room\, not j
- ust on the weekend\, which makes it the answer to a Tuesday you did not p
- lan. It has a supportive room\, a real sound system\, and no sign-up fee 
- posted.\nPrice: not published by the venue\, so confirm before you go\nAr
- ea: Pensacola\nTimes: Every night · 8:00-11:00 PM\nChecked against the v
- enue's own page on 2026-08-08\nhttps://coastaleventures.com/events/ev-sev
- ille-karaoke.html
-LOCATION:Seville Quarter\, Lili Marlene's\, 130 E Government St\, Pensacol
- a\, FL 32502
-URL:https://coastaleventures.com/events/ev-seville-karaoke.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_30ave_green_music-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART:20260822T180000
-DTEND:20260822T210000
-SUMMARY:Live music on the green: 30Avenue
-DESCRIPTION:Local players take the lawn at the 30A end of the county\, eve
- ry evening\, no ticket. Shops and restaurants ring the green\, so it work
- s as the whole evening or as the thing that happens while you eat.\nPrice
- : Free\nArea: 30A & South Walton\nTimes: Every evening · 6:00-9:00 PM ·
-  free\nChecked against the venue's own page on 2026-08-08\nhttps://coasta
- leventures.com/events/ev-30ave-green-music.html
-LOCATION:30Avenue\, 12805 US-98 East\, Inlet Beach\, FL 32461
-URL:https://coastaleventures.com/events/ev-30ave-green-music.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_brandonstyles_variety-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART:20260822T190000
-DTEND:20260822T210000
-SUMMARY:The Brandon Styles Variety Show
-DESCRIPTION:Celebrity impressions\, comedy\, and magic play a purpose-buil
- t theatre at OWA\, twice a week. It is marketed all-ages and it means it\
- , a rare thing that a nine-year-old and two adults can all sit through ha
- ppily.\nPrice: from $35\nArea: Orange Beach & Gulf Shores\nTimes: Tuesday
- s and Saturdays · 7:00 PM\nChecked against the venue's own page on 2026-
- 08-08\nhttps://coastaleventures.com/events/ev-brandonstyles-variety.html
-LOCATION:Brandon Styles Theater at OWA\, 1501 S OWA Blvd\, Foley\, AL 3653
- 5
-URL:https://coastaleventures.com/events/ev-brandonstyles-variety.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_ussalabama_livinghistory_0822-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART:20260822T080000
-DTEND:20260822T100000
-SUMMARY:August Living History Drill: USS ALABAMA
-DESCRIPTION:WWII re-enactors run drills aboard the battleship and the subm
- arine USS Drum while the park is open\, so the ship you are walking throu
- gh is crewed instead of empty. Self-guided\, all day\, and it is the same
-  park admission either way.\nPrice: not published by the venue\, so confi
- rm before you go\nArea: Mobile & Baldwin County\nTimes: Sat 08/22/2026 ·
-  8:00 AM-3:00 PM\nChecked against the venue's own page on 2026-08-08\nhtt
- ps://coastaleventures.com/events/ev-ussalabama-livinghistory-0822.html
-LOCATION:USS ALABAMA Battleship Memorial Park\, 2703 Battleship Pkwy\, Mob
- ile\, AL 36602
-URL:https://coastaleventures.com/events/ev-ussalabama-livinghistory-0822.h
- tml
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_baycenter_islandfights_0822-2026-08-22@coast-guide
-DTSTAMP:20260822T000000Z
-DTSTART:20260822T190000
-DTEND:20260822T210000
-SUMMARY:Island Fights 57: The Forgotten Show
-DESCRIPTION:Pensacola's long-running professional MMA card takes place in 
- the arena. It draws a real crowd and is a real local institution\, built 
- around two people hitting each other\, which is the whole point and the r
- eason it sits behind the age gate.\nPrice: not published by the venue\, s
- o confirm before you go\nArea: Pensacola\nTimes: Sat 08/22/2026 · 7:00 P
- M\nChecked against the venue's own page on 2026-08-08\nhttps://coastaleve
- ntures.com/events/nl-baycenter-islandfights-0822.html
-LOCATION:Pensacola Bay Center\, 201 E Gregory St\, Pensacola\, FL 32502
-URL:https://coastaleventures.com/events/nl-baycenter-islandfights-0822.htm
- l
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_sunmkt-2026-08-23@coast-guide
@@ -363,6 +34,125 @@ LOCATION:MLK Jr. Plaza\, Downtown Pensacola\, 200 N Palafox St\, Pensacola
 URL:https://coastaleventures.com/events/ev-sunmkt.html
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_moriarty-2026-08-23@coast-guide
+DTSTAMP:20260823T000000Z
+DTSTART:20260823T193000
+DTEND:20260823T213000
+SUMMARY:Stage Crafters: Ken Ludwig's “Moriarty”
+DESCRIPTION:A Sherlock Holmes comedy takes the stage. It is good for STEM-
+ minded kids\, long for the art-and-dance crowd\, and best skipped with a 
+ toddler.\nPrice: from $30\nArea: Destin & Fort Walton\nTimes: Fri/Sat 7:3
+ 0 PM · Sun 2 PM · two weekends (8/14-16\, 8/21-23)\nhttps://coastaleven
+ tures.com/events/ev-moriarty.html
+LOCATION:Fort Walton Beach Civic Auditorium\, 109 Miracle Strip Pkwy SW\, 
+ Fort Walton Beach\, FL 32548
+URL:https://coastaleventures.com/events/ev-moriarty.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_wahoos_knox-2026-08-23@coast-guide
+DTSTAMP:20260823T000000Z
+DTSTART;VALUE=DATE:20260823
+DTEND;VALUE=DATE:20260824
+SUMMARY:Blue Wahoos vs Knoxville
+DESCRIPTION:The last big August homestand runs the same playbook: Saturday
+  fireworks\, and a free-vet Sunday with run-the-bases.\nPrice: from $10\n
+ Area: Pensacola\nTimes: Aug 18-23 · Fireworks Sat 8/22 · Military Famil
+ y Sunday 8/23\nhttps://coastaleventures.com/events/ev-wahoos-knox.html
+LOCATION:Blue Wahoos Stadium\, 351 W Cedar St\, Pensacola\, FL 32502
+URL:https://coastaleventures.com/events/ev-wahoos-knox.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_plt_dracula-2026-08-23@coast-guide
+DTSTAMP:20260823T000000Z
+DTSTART;VALUE=DATE:20260823
+DTEND;VALUE=DATE:20260831
+SUMMARY:Dracula: A Comedy of Terrors
+DESCRIPTION:A laugh-out-loud stage spoof of Dracula takes the stage. PLT b
+ ills it family-safe\, which makes it the rare theatre date that is genuin
+ ely clean. A Sunday matinee works if the sitter falls through.\nPrice: $5
+ 0 for two\nArea: Pensacola\nTimes: Fri/Sat 7:30 PM · Sun 2:30 PM · two 
+ weekends\nhttps://coastaleventures.com/events/ev-plt-dracula.html
+LOCATION:Pensacola Little Theatre\, 400 S Jefferson St\, Pensacola\, FL 32
+ 502
+URL:https://coastaleventures.com/events/ev-plt-dracula.html
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_mancis_live-2026-08-23@coast-guide
+DTSTAMP:20260823T000000Z
+DTSTART:20260823T180000
+DTEND:20260823T200000
+SUMMARY:Live Music: Manci's Antique Club
+DESCRIPTION:This Daphne institution has walls of Jim Beam decanters and li
+ ve local bands Thursday through Sunday. It is a grown-up night across the
+  bay\, about 50 minutes out.\nPrice: Free\nArea: Mobile & Baldwin County\
+ nTimes: Thu 6:30 · Fri-Sat 7:30 · Sun 6:00 PM\nhttps://coastaleventures
+ .com/events/nl-mancis-live.html
+LOCATION:Manci's Antique Club\, 1715 Main St\, Daphne\, AL 36526
+URL:https://coastaleventures.com/events/nl-mancis-live.html
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_fubar_nights-2026-08-23@coast-guide
+DTSTAMP:20260823T000000Z
+DTSTART:20260823T210000
+DTEND:20260823T230000
+SUMMARY:Karaoke & DJ Nights: FUBAR Pizza Bar
+DESCRIPTION:Late-night karaoke runs five nights a week (Sun\, Tue\, Wed\, 
+ Fri\, Sat) plus a DJ on Monday and Thursday\, 9 PM to 1 AM every night\, 
+ with pizza till close. It is in Fort Walton Beach\, about 50 minutes east
+ .\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Nightly · 9 PM-1 AM\n
+ https://coastaleventures.com/events/nl-fubar-nights.html
+LOCATION:FUBAR Pizza Bar\, 114 Amberjack Dr\, Fort Walton Beach\, FL 32548
+URL:https://coastaleventures.com/events/nl-fubar-nights.html
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_sandshaker_live-2026-08-23@coast-guide
+DTSTAMP:20260823T000000Z
+DTSTART;VALUE=DATE:20260823
+DTEND;VALUE=DATE:20260824
+SUMMARY:Weekend Live Music: Sandshaker Lounge
+DESCRIPTION:The Shaker\, birthplace of the Bushwacker\, has live music eve
+ ry weekend and never a cover. It is a classic Pensacola Beach dive\, abou
+ t 25 minutes from the bridge.\nPrice: Free\nArea: Pensacola Beach & Perdi
+ do\nTimes: Every weekend · evenings\nhttps://coastaleventures.com/events
+ /nl-sandshaker-live.html
+LOCATION:Sandshaker Lounge\, 731 Pensacola Beach Blvd\, Pensacola Beach\, 
+ FL 32561
+URL:https://coastaleventures.com/events/nl-sandshaker-live.html
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_paradise_live-2026-08-23@coast-guide
+DTSTAMP:20260823T000000Z
+DTSTART:20260823T173000
+DTEND:20260823T193000
+SUMMARY:Live Music: Paradise Bar & Grill
+DESCRIPTION:Beachside live music plays most nights on Pensacola Beach\, wi
+ th rotating local acts starting at 5:30 (Sundays 2:30). Wine Down Wednesd
+ ay runs $3 house and $6 premium wines all day. It is about 25 minutes out
+ .\nPrice: Free\nArea: Pensacola Beach & Perdido\nTimes: Tue/Fri/Sat 5:30 
+ PM · Sun 2:30 PM\nhttps://coastaleventures.com/events/nl-paradise-live.h
+ tml
+LOCATION:Paradise Bar & Grill\, 21 Via De Luna Dr\, Pensacola Beach\, FL 3
+ 2561
+URL:https://coastaleventures.com/events/nl-paradise-live.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seville_karaoke-2026-08-23@coast-guide
+DTSTAMP:20260823T000000Z
+DTSTART:20260823T200000
+DTEND:20260823T230000
+SUMMARY:Karaoke at Lili Marlene's: every night
+DESCRIPTION:Karaoke runs seven nights a week in the aviators' room\, not j
+ ust on the weekend\, which makes it the answer to a Tuesday you did not p
+ lan. It has a supportive room\, a real sound system\, and no sign-up fee 
+ posted.\nPrice: not published by the venue\, so confirm before you go\nAr
+ ea: Pensacola\nTimes: Every night · 8:00-11:00 PM\nChecked against the v
+ enue's own page on 2026-08-08\nhttps://coastaleventures.com/events/ev-sev
+ ille-karaoke.html
+LOCATION:Seville Quarter\, Lili Marlene's\, 130 E Government St\, Pensacol
+ a\, FL 32502
+URL:https://coastaleventures.com/events/ev-seville-karaoke.html
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_seville_sundaybrunch-2026-08-23@coast-guide
 DTSTAMP:20260823T000000Z
 DTSTART:20260823T110000
@@ -377,6 +167,21 @@ DESCRIPTION:Brunch runs in the courtyard room while John Wheeler plays thr
 LOCATION:Seville Quarter\, Apple Annie's\, 130 E Government St\, Pensacola
  \, FL 32502
 URL:https://coastaleventures.com/events/ev-seville-sundaybrunch.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_30ave_green_music-2026-08-23@coast-guide
+DTSTAMP:20260823T000000Z
+DTSTART:20260823T180000
+DTEND:20260823T210000
+SUMMARY:Live music on the green: 30Avenue
+DESCRIPTION:Local players take the lawn at the 30A end of the county\, eve
+ ry evening\, no ticket. Shops and restaurants ring the green\, so it work
+ s as the whole evening or as the thing that happens while you eat.\nPrice
+ : Free\nArea: 30A & South Walton\nTimes: Every evening · 6:00-9:00 PM ·
+  free\nChecked against the venue's own page on 2026-08-08\nhttps://coasta
+ leventures.com/events/ev-30ave-green-music.html
+LOCATION:30Avenue\, 12805 US-98 East\, Inlet Beach\, FL 32461
+URL:https://coastaleventures.com/events/ev-30ave-green-music.html
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seville_barbingo-2026-08-24@coast-guide
@@ -490,6 +295,22 @@ LOCATION:NEAT Tasting Room & Bottle Shop\, 11 N Castle Harbour Dr\, Alys B
 URL:https://coastaleventures.com/events/ev-alys-winesong.html
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_brandonstyles_variety-2026-08-25@coast-guide
+DTSTAMP:20260825T000000Z
+DTSTART:20260825T190000
+DTEND:20260825T210000
+SUMMARY:The Brandon Styles Variety Show
+DESCRIPTION:Celebrity impressions\, comedy\, and magic play a purpose-buil
+ t theatre at OWA\, twice a week. It is marketed all-ages and it means it\
+ , a rare thing that a nine-year-old and two adults can all sit through ha
+ ppily.\nPrice: from $35\nArea: Orange Beach & Gulf Shores\nTimes: Tuesday
+ s and Saturdays · 7:00 PM\nChecked against the venue's own page on 2026-
+ 08-08\nhttps://coastaleventures.com/events/ev-brandonstyles-variety.html
+LOCATION:Brandon Styles Theater at OWA\, 1501 S OWA Blvd\, Foley\, AL 3653
+ 5
+URL:https://coastaleventures.com/events/ev-brandonstyles-variety.html
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_baytowne_wed-2026-08-26@coast-guide
 DTSTAMP:20260826T000000Z
 DTSTART:20260826T190000
@@ -563,6 +384,20 @@ DESCRIPTION:Early-evening karaoke runs on Okaloosa Island every Wednesday
 LOCATION:AJ's Oyster Shanty\, 108 Santa Rosa Blvd\, Fort Walton Beach\, FL
   32548
 URL:https://coastaleventures.com/events/nl-ajs-karaoke.html
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_theblock_karaoke-2026-08-26@coast-guide
+DTSTAMP:20260826T000000Z
+DTSTART:20260826T180000
+DTEND:20260826T200000
+SUMMARY:Karaoke Block: The Block
+DESCRIPTION:The Sports & Karaoke room at The Block runs Wednesday through 
+ Saturday\, opening at 6 (8 on Thursday) and going late. It is downtown Fo
+ rt Walton Beach\, about 50 minutes out.\nPrice: Free\nArea: Destin & Fort
+  Walton\nTimes: Wed-Sat · from 6 PM (Thu 8 PM)\nhttps://coastaleventures
+ .com/events/nl-theblock-karaoke.html
+LOCATION:The Block\, 113 Eglin Pkwy SE\, Fort Walton Beach\, FL 32548
+URL:https://coastaleventures.com/events/nl-theblock-karaoke.html
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_jackjohnson_0826-2026-08-26@coast-guide
@@ -692,6 +527,78 @@ DESCRIPTION:The venue bills it as a family dance party\, not a club night\
  igchill-djdan.html
 LOCATION:The Big Chill\, 20 Hub Lane\, Watersound Beach\, FL 32461
 URL:https://coastaleventures.com/events/ev-bigchill-djdan.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_palafox-2026-08-29@coast-guide
+DTSTAMP:20260829T000000Z
+DTSTART:20260829T090000
+DTEND:20260829T110000
+SUMMARY:Palafox Market
+DESCRIPTION:A big Saturday market fills downtown with produce\, local make
+ rs\, art\, and food. A free trolley runs between plazas. It is stroller-f
+ riendly.\nPrice: Free\nArea: Pensacola\nTimes: Saturdays · 9 AM-2 PM\nht
+ tps://coastaleventures.com/events/ev-palafox.html
+LOCATION:MLK Jr. Plaza + Plaza Ferdinand\, Downtown Pensacola\, 200 N Pala
+ fox St\, Pensacola\, FL 32502
+URL:https://coastaleventures.com/events/ev-palafox.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grandblvd_mkt-2026-08-29@coast-guide
+DTSTAMP:20260829T000000Z
+DTSTART:20260829T090000
+DTEND:20260829T110000
+SUMMARY:Grand Boulevard Farmers' Market
+DESCRIPTION:A Saturday farmers and makers market fills the Sandestin green
+ \, with local honey\, produce\, and kettle corn. Pair it with a Destin/Ba
+ ytowne day.\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Saturdays ·
+  9 AM-1 PM\nhttps://coastaleventures.com/events/ev-grandblvd-mkt.html
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Blvd\, Mira
+ mar Beach\, FL 32550
+URL:https://coastaleventures.com/events/ev-grandblvd-mkt.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_foley_mkt-2026-08-29@coast-guide
+DTSTAMP:20260829T000000Z
+DTSTART:20260829T090000
+DTEND:20260829T110000
+SUMMARY:Coastal Alabama Farmers & Fishermens Market
+DESCRIPTION:The county's largest market sells fresh Gulf seafood straight 
+ from the boats plus produce and makers. It is five minutes from OWA\, so 
+ it stacks with a Tropic Falls day.\nPrice: Free\nArea: Orange Beach & Gul
+ f Shores\nTimes: Saturdays · 9 AM-2 PM\nhttps://coastaleventures.com/eve
+ nts/ev-foley-mkt.html
+LOCATION:Coastal Alabama Market\, 781 Farmers Market Ln\, Foley\, AL 36535
+URL:https://coastaleventures.com/events/ev-foley-mkt.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_parkrun-2026-08-29@coast-guide
+DTSTAMP:20260829T000000Z
+DTSTART:20260829T073000
+DTEND:20260829T093000
+SUMMARY:parkrun: Free Timed 5K (Rec Plex North)
+DESCRIPTION:A free\, timed\, all-comers 5K runs every Saturday. Walk\, run
+ \, or push the jogging stroller. The kids can earn official times too\, w
+ ith one-time free barcode registration.\nPrice: Free\nArea: Pensacola\nTi
+ mes: Saturdays · 7:30 AM\nhttps://coastaleventures.com/events/ev-parkrun
+ .html
+LOCATION:UWF Rec Plex North Field\, 11000 University Pkwy\, Pensacola\, FL
+  32514
+URL:https://coastaleventures.com/events/ev-parkrun.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_oceanhour-2026-08-29@coast-guide
+DTSTAMP:20260829T000000Z
+DTSTART:20260829T084500
+DTEND:20260829T104500
+SUMMARY:Ocean Hour Beach Cleanup
+DESCRIPTION:Give an hour and leave the beach better. Buckets\, grabbers\, 
+ and gloves are provided. It is a service morning that fits the family's v
+ alues and is kid-friendly.\nPrice: Free\nArea: Pensacola Beach & Perdido\
+ nTimes: Saturdays · ~8:45 AM · location rotates\nhttps://coastaleventur
+ es.com/events/ev-oceanhour.html
+LOCATION:Rotating\, Pensacola Beach / area waterfronts\, Pensacola Beach\,
+  FL 32561
+URL:https://coastaleventures.com/events/ev-oceanhour.html
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_aldean_wharf-2026-08-29@coast-guide
