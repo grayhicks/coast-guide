@@ -89,6 +89,8 @@
 .ph-dawn .adyacht line[stroke="#AEB9C1"], .ph-dawn .adyacht path[stroke="#AEB9C1"] { stroke: rgb(172, 154, 150); }
 .ph-golden .adyacht .adyacht_paint { filter: saturate(1.04) brightness(1.04); }
 .ph-dawn .adyacht .adyacht_paint { filter: saturate(0.96) brightness(1); }
+.ph-golden .jskw path[fill="#E9EEF2"] { fill: rgb(240, 210, 162); }
+.ph-golden .jskw g[fill="#EAF4F8"] { fill: rgb(255, 226, 180); }
 .ph-golden .skbg path { fill: rgb(75, 56, 43); }
 .ph-golden .skbnear path[fill="#2A363F"] { fill: rgb(65, 48, 38); }
 .ph-golden .skbnear path[fill="#26313A"] { fill: rgb(58, 43, 34); }
@@ -101,6 +103,12 @@
 .ph-night .skbnear path[stroke="#F2F6F1"] { stroke: rgb(159, 180, 196); }
 .ph-golden .hero-wave path { fill: rgb(36, 31, 48); }
 .ph-night .hero-wave path { fill: rgb(11, 21, 32); }
+.ph-golden .shw path[fill="#EAF4F1"] { fill: rgb(239, 213, 188); }
+.ph-golden .shw path[fill="#93A4A9"] { fill: rgb(160, 139, 132); }
+.ph-golden .shw path[fill="#33454F"] { fill: rgb(74, 60, 66); }
+.ph-golden .shw path[fill="#344550"] { fill: rgb(75, 61, 67); }
+.ph-golden .shw path[fill="#2D3E48"] { fill: rgb(67, 54, 61); }
+.ph-golden .shw path[fill="#40545F"] { fill: rgb(86, 70, 80); }
 .ph-golden .adcart { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
 .ph-dawn .hk_boat .sails path[fill="url(#hk_maing)"] { fill: rgb(253, 243, 233); }
 .ph-dawn .hk_boat .sails path[fill="url(#hk_jibg)"] { fill: rgb(248, 235, 223); }
@@ -136,6 +144,7 @@
 .paddle { transform-box: fill-box; transform-origin: 42% 40%; animation: 1.7s ease-in-out 0s infinite normal none running hk_paddle; }
 .paddler { transform-box: fill-box; transform-origin: 50% 95%; animation: 1.7s ease-in-out 0s infinite normal none running hk_supbody; }
 .ph-dawn .supw { opacity: 0.72; }
+.ph-golden .baw { filter: sepia(0.22) saturate(1.12) brightness(1.04); }
 .hero .stars span { position: absolute; border-radius: 50%; background: rgb(234, 242, 251); }
 .hero .stars .bright { box-shadow: rgba(220, 236, 252, 0.7) 0px 0px 5px 1px, rgba(190, 215, 245, 0.22) 0px 0px 12px 3px; }
 .sunb { color-scheme: unset; forced-color-adjust: unset; math-depth: unset; position-anchor: unset; text-size-adjust: unset; appearance: unset; color: unset; font: unset; font-palette: unset; font-synthesis: unset; position-area: unset; text-orientation: unset; text-rendering: unset; text-spacing-trim: unset; -webkit-font-smoothing: unset; -webkit-locale: unset; -webkit-text-orientation: unset; -webkit-writing-mode: unset; writing-mode: unset; zoom: unset; accent-color: unset; place-content: unset; place-items: unset; place-self: unset; alignment-baseline: unset; anchor-name: unset; anchor-scope: unset; animation-composition: unset; animation: unset; animation-trigger: unset; app-region: unset; aspect-ratio: unset; backdrop-filter: unset; backface-visibility: unset; background: unset; background-blend-mode: unset; baseline-shift: unset; baseline-source: unset; block-size: unset; border-block: unset; border: unset; border-radius: unset; border-collapse: unset; border-end-end-radius: unset; border-end-start-radius: unset; border-inline: unset; border-shape: unset; border-start-end-radius: unset; border-start-start-radius: unset; bottom: unset; box-decoration-break: unset; box-shadow: unset; box-sizing: unset; break-after: unset; break-before: unset; break-inside: unset; buffered-rendering: unset; caption-side: unset; caret-animation: unset; caret-color: unset; caret-shape: unset; clear: unset; clip: unset; clip-path: unset; clip-rule: unset; color-interpolation: unset; color-interpolation-filters: unset; color-rendering: unset; columns: unset; column-fill: unset; gap: unset; rule-break: unset; rule: unset; rule-inset: unset; rule-visibility-items: unset; column-span: unset; contain: unset; contain-intrinsic-block-size: unset; contain-intrinsic-size: unset; contain-intrinsic-inline-size: unset; container: unset; content: unset; content-visibility: unset; corner-shape: unset; corner-block-end-shape: unset; corner-block-start-shape: unset; counter-increment: unset; counter-reset: unset; counter-set: unset; cx: unset; cy: unset; d: unset; display: unset; dominant-baseline: unset; dynamic-range-limit: unset; empty-cells: unset; field-sizing: unset; fill: unset; fill-opacity: unset; fill-rule: unset; filter: unset; flex: unset; flex-flow: unset; flex-line-count: unset; float: unset; flood-color: unset; flood-opacity: unset; grid: unset; grid-area: unset; hyphenate-character: unset; hyphenate-limit-chars: unset; hyphens: unset; image-orientation: unset; image-rendering: unset; initial-letter: unset; inline-size: unset; inset-block: unset; inset-inline: unset; interactivity: unset; interest-delay: unset; interpolate-size: unset; isolation: unset; left: unset; letter-spacing: unset; lighting-color: unset; line-break: unset; list-style: unset; margin-block: unset; margin: unset; margin-inline: unset; marker: unset; mask: unset; mask-type: unset; math-shift: unset; math-style: unset; max-block-size: unset; max-height: unset; max-inline-size: unset; max-width: unset; min-block-size: unset; min-height: unset; min-inline-size: unset; min-width: unset; mix-blend-mode: unset; object-fit: unset; object-position: unset; object-view-box: unset; offset: unset; opacity: unset; order: unset; orphans: unset; outline: unset; outline-offset: unset; overflow-anchor: unset; overflow-block: unset; overflow-clip-margin: unset; overflow-inline: unset; overflow-wrap: unset; overflow: unset; overlay: unset; overscroll-behavior-block: unset; overscroll-behavior-inline: unset; overscroll-behavior: unset; padding-block: unset; padding: unset; padding-inline: unset; page: unset; page-margin-safety: unset; page-orientation: unset; paint-order: unset; perspective: unset; perspective-origin: unset; pointer-events: unset; position-try: unset; position-visibility: unset; print-color-adjust: unset; quotes: unset; r: unset; reading-flow: unset; reading-order: unset; resize: unset; rotate: unset; ruby-align: unset; ruby-overhang: unset; ruby-position: unset; rule-overlap: unset; rx: unset; ry: unset; scale: unset; scroll-behavior: unset; scroll-initial-target: unset; scroll-margin-block: unset; scroll-margin: unset; scroll-margin-inline: unset; scroll-marker-group: unset; scroll-padding-block: unset; scroll-padding: unset; scroll-padding-inline: unset; scroll-snap-align: unset; scroll-snap-stop: unset; scroll-snap-type: unset; scroll-target-group: unset; scroll-timeline: unset; scrollbar-color: unset; scrollbar-gutter: unset; scrollbar-width: unset; shape-image-threshold: unset; shape-margin: unset; shape-outside: unset; shape-rendering: unset; size: unset; speak: unset; stop-color: unset; stop-opacity: unset; stroke: unset; stroke-dasharray: unset; stroke-dashoffset: unset; stroke-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: unset; stroke-opacity: unset; stroke-width: unset; tab-size: unset; table-layout: unset; text-align: unset; text-align-last: unset; text-anchor: unset; text-autospace: unset; text-box: unset; text-combine-upright: unset; text-decoration: unset; text-decoration-skip-ink: unset; text-emphasis: unset; text-emphasis-position: unset; text-fit: unset; text-indent: unset; text-justify: unset; text-overflow: unset; text-shadow: unset; text-transform: unset; text-underline-offset: unset; text-underline-position: unset; text-wrap: unset; timeline-scope: unset; timeline-trigger: unset; touch-action: unset; transform: unset; transform-box: unset; transform-origin: unset; transform-style: unset; transition: unset; translate: unset; trigger-scope: unset; user-select: unset; vector-effect: unset; vertical-align: unset; view-timeline: unset; view-transition-class: unset; view-transition-group: unset; view-transition-name: unset; view-transition-scope: unset; visibility: unset; border-spacing: unset; -webkit-box-align: unset; -webkit-box-decoration-break: unset; -webkit-box-direction: unset; -webkit-box-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orient: unset; -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-line-break: unset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webkit-text-combine: unset; -webkit-text-decorations-in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-security: unset; -webkit-text-stroke: unset; -webkit-user-drag: unset; white-space-collapse: unset; widows: unset; will-change: unset; word-break: unset; word-spacing: unset; x: unset; y: unset; position: absolute; z-index: 2; cursor: pointer; -webkit-tap-highlight-color: transparent; width: 94px; height: 94px; top: 24px; right: 28px; }
@@ -151,6 +160,7 @@
 .sksoar.big { animation-name: hk_sksoarB; }
 .skbnear { position: absolute; left: 0px; opacity: 0.85; will-change: transform; animation: auto linear 0s infinite normal none running hk_gullnear; }
 .skbnear.rev { animation-name: hk_gullnearR; }
+.ph-golden .pipw { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
 .grain { position: absolute; inset: -12%; z-index: 3; pointer-events: none; opacity: 0.028; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E"); background-size: 160px 160px; animation: 2.4s steps(1) 0s infinite normal none running hk_grain; }
 .ph-night .grain { opacity: 0.045; }
 .hero-eyebrow { display: inline-flex; align-items: center; gap: 7px; padding: 5px 14px; border-radius: 999px; font-family: "Cormorant Garamond", Georgia, serif; font-size: 11.5px; font-weight: 600; letter-spacing: 3.4px; color: rgb(255, 249, 236); text-transform: uppercase; background: rgba(12, 42, 58, 0.3); border: 1px solid rgba(255, 255, 255, 0.34); backdrop-filter: blur(2px); text-shadow: rgba(8, 24, 36, 0.4) 0px 1px 6px; }
@@ -215,8 +225,12 @@ html.gca_cold .bswash { opacity: 0; }
 .swg.s3 .sw_heave { animation-duration: 6.3s; animation-delay: -3.4s; }
 .ph-night .hk_swellw { opacity: 0.55; }
 .ph-dawn .hk_swellw { opacity: 0.8; }
+.ph-golden .vwk path { fill: rgba(255, 236, 204, 0.6); }
 .itin .big { font-family: Newsreader, serif; font-weight: 600; font-size: 23px; line-height: 1.08; }
 .skbwrap.nite .skbg { filter: brightness(0.8) saturate(0.65); }
+.ph-golden .trtw { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
+.ph-golden .htchw { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
+.ph-golden .kitew { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
 .adparasail { position: absolute; top: 77px; left: -94px; z-index: 3; will-change: transform; opacity: 0.99; animation: 56s linear 0s infinite normal none running hk_adyacht; }
 .adparasail_rig { transform-box: view-box; transform-origin: 100px 92px; will-change: transform; animation: 7.6s ease-in-out 0s infinite normal none running hk_adparasway; }
 .adlbl:empty { display: none; }
@@ -236,6 +250,9 @@ a.hero_sponsor > ::after { content: ""; position: absolute; left: 50%; top: 50%;
 a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline-offset: 4px; border-radius: 4px; }
 .hero_sponsor .adlbl, .hero_slot .adlbl { position: absolute; left: 50%; top: 100%; margin-top: 2px; transform: translateX(-50%); font: 800 6.5px / 1 Nunito, system-ui, sans-serif; letter-spacing: 0.5px; text-transform: uppercase; color: rgb(242, 247, 250); background: rgba(14, 26, 36, 0.66); padding: 2px 4.5px; border-radius: 5px; white-space: nowrap; pointer-events: none; }
 .hero_sponsor .adlbl, .hero_slot .adlbl { background: rgba(8, 20, 30, 0.86); box-shadow: rgba(242, 196, 60, 0.5) 0px 0px 0px 1px inset; }
+.adbonfire { position: absolute; bottom: 6px; left: 68px; z-index: 2; pointer-events: none; }
+.adbonfire_fl { transform-box: fill-box; transform-origin: 50% 100%; animation: 0.9s ease-in-out 0s infinite normal none running hk_adflame; }
+.ph-golden .adbonfire { filter: drop-shadow(rgba(242, 160, 60, 0.6) 0px 0px 7px); }
 .adcart { --acw: 2.87s; position: absolute; bottom: 3px; left: -90px; z-index: 2; pointer-events: none; will-change: transform; animation: 59s linear 0s infinite normal none running hk_adcart; }
 .adcart_art { display: block; }
 .adcart_fig { transform-box: view-box; }
@@ -282,11 +299,7 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
 .adboatname .adlbl { display: block; position: static; width: max-content; margin: 4px auto 0px; font-style: normal; font-size: 5.5px; font-weight: 700; letter-spacing: 0.7px; line-height: 1.3; padding: 1px 3px; border-radius: 2px; text-align: center; color: rgb(236, 243, 248); background: rgba(9, 20, 30, 0.75); }
 .ph-dawn .adboatname_bd, .ph-golden .adboatname_bd { text-shadow: rgba(26, 12, 3, 0.88) 0px -0.5px 0px, rgba(255, 220, 160, 0.5) 0px 0.5px 0px; }
 .ph-night .adboatname_bd { text-shadow: rgba(0, 0, 0, 0.92) 0px -0.5px 0px, rgba(255, 236, 190, 0.3) 0px 0.5px 0px; }
-.rplfield { position: absolute; inset: 0px; z-index: 1; pointer-events: none; }
-.rrip { position: absolute; border: 0px; border-radius: 50%; transform: translate(-50%, -50%) scale(0.25); opacity: 0; will-change: transform, opacity; background: radial-gradient(rgba(226, 244, 251, 0) 30%, rgba(232, 248, 253, 0.2) 52%, rgba(240, 252, 255, 0.46) 68%, rgba(206, 238, 250, 0.22) 84%, rgba(180, 222, 238, 0) 100%); animation: auto ease-out 0s 1 normal forwards running hk_rrip; }
-.ph-night .rrip { background: radial-gradient(rgba(150, 208, 255, 0) 30%, rgba(158, 214, 255, 0.17) 52%, rgba(178, 224, 255, 0.44) 68%, rgba(130, 196, 240, 0.18) 84%, rgba(110, 178, 228, 0) 100%); }
 .ph-golden .rrip { background: radial-gradient(rgba(255, 234, 200, 0) 30%, rgba(255, 238, 208, 0.19) 52%, rgba(255, 246, 224, 0.5) 68%, rgba(255, 220, 176, 0.2) 84%, rgba(255, 206, 158, 0) 100%); }
-.rrip.bio { background: radial-gradient(rgba(120, 224, 255, 0) 28%, rgba(140, 232, 255, 0.26) 50%, rgba(176, 244, 255, 0.66) 68%, rgba(110, 206, 246, 0.24) 84%, rgba(100, 196, 240, 0) 100%); box-shadow: rgba(120, 224, 255, 0.28) 0px 0px 7px; }
 @media (prefers-reduced-motion: reduce){.hk .flyby, .hk .grain, .hk .baw, .hk .gullw, .hk .ccrab, .hk .snote, .hk .hpel, .hk .fwx, .hk .aspl, .hk .rheart, .hk .lspk, .hk .dnm_bok, .hk .tdust, .hk .fly, .hk .skbwrap, .hk .pipw, .hk .dnx_rolled, .hk .trtw, .hk .htchw, .hk .kitew, .hk .rplfield, .hk .shw, .hk .hcw, .hk .tgw, .hk .whw, .hk .d2bw, .hk .pelw, .hk .rayw, .hk .dcw, .hk .hkop, .hk .dwgiant, .hk .dwpod, .hk .dwglow, .hk .hboat, .hk .dnote, .hk .dbloom, .hk .rmote, .hk .rsmokew .hk .supw, .hk .fld, .hk .crbw, .hk .crbh, .hk .htchf, .hk .lx_rock, .hk .lx_dig, .hk .mstrip, .hk .mbeam, .hk .cm_cone, .hk .cm_pool, .hk .romacc .racc_wash, .hk .em_fly, .hk .cs_shoot, .hk .cs_neb, .hk .brd, .hk .mthrow, .hk .mgrain, .hk .bawrap, .hk .popf, .hk .rm_bulb, .hk .cm_laugh, .hk .cm_cable, .hk .adrip, .hk .lsc_cur, .hk .swash, .hk .swash_lip, .hk .backwash, .hk .vwkw, .hk .vwk, .hk .fprt, .hk .swl_crest { display: none !important; }}
 @media (prefers-reduced-motion: reduce){.hk .swg, .hk .sw_heave { animation: auto ease 0s 1 normal none running none !important; }}
 @media (prefers-reduced-motion: reduce){.hk .swl_body { animation: auto ease 0s 1 normal none running none !important; opacity: 0.4 !important; }}
@@ -332,12 +345,12 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
 .hk_menumark { --mm2: #3CBDB4; --mm4: #F28CA0; }
 .hk_segb.on .hk_tmark .mm_solid { fill: currentcolor; fill-opacity: 0.26; }
 .morewrap.ph-day .morebtn, .morewrap.ph-dawn .morebtn, .morewrap.ph-golden .morebtn { color: rgb(255, 253, 248); border-color: rgba(255, 253, 248, 0.58); background: linear-gradient(rgba(10, 34, 48, 0.4), rgba(6, 22, 32, 0.54)); box-shadow: rgba(255, 255, 255, 0.22) 0px 1px 0px inset, rgba(0, 0, 0, 0.34) 0px 6px 18px, rgba(0, 0, 0, 0.5) 0px 1px 2px; }
-.morewrap.ph-day .morebtn { border-color: rgba(255, 253, 248, 0.66); background: linear-gradient(rgba(8, 30, 44, 0.5), rgba(5, 20, 30, 0.62)); }
 .morewrap.ph-day .morebtn:hover, .morewrap.ph-dawn .morebtn:hover, .morewrap.ph-golden .morebtn:hover { color: rgb(255, 255, 255); border-color: rgb(255, 253, 248); box-shadow: rgba(255, 255, 255, 0.3) 0px 1px 0px inset, rgba(0, 0, 0, 0.4) 0px 8px 22px, rgba(255, 253, 248, 0.75) 0px 0px 16px -6px; }
 .hk_infoic .hk_mmark { width: 46px; height: 46px; margin: 0px auto; stroke-width: 1.25; }
 .hk_promoted .adlbl { display: block; margin: 0px 0px 8px; font: 800 11px / 1 Nunito, system-ui, sans-serif; letter-spacing: 1.1px; text-transform: uppercase; color: var(--csoft); opacity: 0.85; }
 .hk_promoted .adlbl.open { font-weight: 700; letter-spacing: 0.9px; opacity: 0.55; }
 .hk_promocard .adlbl { display: block; margin: 0px 0px 5px; font: 800 11px / 1 Nunito, system-ui, sans-serif; letter-spacing: 1.1px; text-transform: uppercase; color: var(--csoft); opacity: 0.85; }
+.ph-golden .hgulw { filter: sepia(0.24) saturate(1.12) brightness(1.02); }
 .skitz .adlbl { position: absolute; top: 5px; right: 8px; z-index: 9; font: 800 11px / 1 Nunito, system-ui, sans-serif; letter-spacing: 0.8px; text-transform: uppercase; color: var(--csoft); opacity: 1; padding: 2px 5px; border-radius: 4px; background: rgba(8, 20, 30, 0.92); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--au-b) 45%, transparent); }
 .skitz .adlbl.open { font-weight: 700; letter-spacing: 0.6px; opacity: 0.85; }
 .skb_splash.s1 { left: 52px; top: 32px; animation: skb_spl1 var(--skd,18s) linear infinite var(--sko,0s); }
@@ -529,6 +542,10 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
   0%, 100% { transform: scaleY(1); opacity: 0.55; }
   50% { transform: scaleY(0.45); opacity: 0.8; }
 }
+@keyframes hk_adflame { 
+  0%, 100% { transform: scale(1, 1); opacity: 0.95; }
+  50% { transform: scale(1.06, 1.12); opacity: 1; }
+}
 @keyframes hk_adcart { 
   0%, 13% { transform: translateX(-20px); opacity: 0; }
   17% { transform: translateX(0px); opacity: 1; }
@@ -638,12 +655,6 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
   44% { transform: translateY(0.1px) rotate(-0.42deg); }
   62% { transform: translateY(0.3px) rotate(-0.37deg); }
   100% { transform: translateY(2.5px) rotate(0.39deg); }
-}
-@keyframes hk_rrip { 
-  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.25); }
-  20% { opacity: 0.82; }
-  54% { opacity: 0.56; }
-  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.7); }
 }
 @keyframes hk_hshim { 
   0% { opacity: 0.18; transform: translateX(-7px) scaleX(0.85); }
