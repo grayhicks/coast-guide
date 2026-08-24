@@ -985,7 +985,7 @@ a.nap-line:hover{color:var(--gold-bright)}
 
 .sup-float{position:fixed;right:max(14px, env(safe-area-inset-right));
   
-  bottom:calc(max(14px, env(safe-area-inset-bottom)) + var(--sup-lift, 0px));z-index:40;
+  bottom:max(14px, env(safe-area-inset-bottom));z-index:40;
   display:inline-flex;align-items:center;min-height:44px;padding:11px 22px;
   border-radius:var(--r-pill);background-color:var(--panel);color:var(--gold);
   box-shadow:inset 0 0 0 1.5px var(--gold), var(--shadow-2);
@@ -994,9 +994,6 @@ a.nap-line:hover{color:var(--gold-bright)}
   text-decoration:none}
 
 
-.sup-float{transition:translate 360ms cubic-bezier(.445,.05,.55,.95)}
-
-.sup-float[hidden]{display:none}
 
 [hidden]{display:none !important}
 
@@ -1012,7 +1009,6 @@ a.nap-line:hover{color:var(--gold-bright)}
 
 @media (max-width:399px){ .sup-full{display:none} }
 
-.sup-float.is-short .sup-full{display:none}
 
 .site-foot{padding-bottom:84px}
 
