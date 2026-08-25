@@ -105,6 +105,7 @@
 .ph-night .skbnear path[stroke="#F2F6F1"] { stroke: rgb(159, 180, 196); }
 .ph-golden .hero-wave path { fill: rgb(36, 31, 48); }
 .ph-night .hero-wave path { fill: rgb(11, 21, 32); }
+.ph-golden .adcart { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
 .ph-dawn .hk_boat .sails path[fill="url(#hk_maing)"] { fill: rgb(253, 243, 233); }
 .ph-dawn .hk_boat .sails path[fill="url(#hk_jibg)"] { fill: rgb(248, 235, 223); }
 .ph-golden .hk_boat .sails path[fill="url(#hk_maing)"] { fill: rgb(255, 245, 224); }
@@ -139,7 +140,6 @@
 .paddle { transform-box: fill-box; transform-origin: 42% 40%; animation: 1.7s ease-in-out 0s infinite normal none running hk_paddle; }
 .paddler { transform-box: fill-box; transform-origin: 50% 95%; animation: 1.7s ease-in-out 0s infinite normal none running hk_supbody; }
 .ph-dawn .supw { opacity: 0.72; }
-.ph-dawn .podw { opacity: 0.8; }
 .hero .stars span { position: absolute; border-radius: 50%; background: rgb(234, 242, 251); }
 .hero .stars .bright { box-shadow: rgba(220, 236, 252, 0.7) 0px 0px 5px 1px, rgba(190, 215, 245, 0.22) 0px 0px 12px 3px; }
 .hero .stars .hkn_sheet { position: absolute; left: 0px; top: 0px; width: 1320px; height: 150px; pointer-events: none; will-change: transform; animation: 21541s linear 0s infinite normal none running hkn_drift; }
@@ -158,7 +158,6 @@
 .sksoar.big { animation-name: hk_sksoarB; }
 .skbnear { position: absolute; left: 0px; opacity: 0.85; will-change: transform; animation: auto linear 0s infinite normal none running hk_gullnear; }
 .skbnear.rev { animation-name: hk_gullnearR; }
-.ph-dawn .pipw { filter: sepia(0.18) saturate(1.05); }
 .grain { position: absolute; inset: -12%; z-index: 3; pointer-events: none; opacity: 0.028; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E"); background-size: 160px 160px; animation: 2.4s steps(1) 0s infinite normal none running hk_grain; }
 .ph-night .grain { opacity: 0.045; }
 .hero-eyebrow { display: inline-flex; align-items: center; gap: 7px; padding: 5px 14px; border-radius: 999px; font-family: "Cormorant Garamond", Georgia, serif; font-size: 11.5px; font-weight: 600; letter-spacing: 3.4px; color: rgb(255, 249, 236); text-transform: uppercase; background: rgba(12, 42, 58, 0.3); border: 1px solid rgba(255, 255, 255, 0.34); backdrop-filter: blur(2px); text-shadow: rgba(8, 24, 36, 0.4) 0px 1px 6px; }
@@ -221,12 +220,8 @@ html.gca_cold .bswash { opacity: 0; }
 .swg.s3 .sw_heave { animation-duration: 6.3s; animation-delay: -3.4s; }
 .ph-night .hk_swellw { opacity: 0.55; }
 .ph-dawn .hk_swellw { opacity: 0.8; }
-.ph-dawn .vwk path { fill: rgba(226, 226, 250, 0.52); }
 .itin .big { font-family: Newsreader, serif; font-weight: 600; font-size: 23px; line-height: 1.08; }
 .skbwrap.nite .skbg { filter: brightness(0.8) saturate(0.65); }
-.ph-dawn .trtw { filter: sepia(0.18) saturate(1.05); }
-.ph-dawn .htchw { filter: sepia(0.18) saturate(1.05); }
-.ph-dawn .kitew { filter: sepia(0.18) saturate(1.05); }
 .adparasail { position: absolute; top: 77px; left: -94px; z-index: 3; will-change: transform; opacity: 0.99; animation: 56s linear 0s infinite normal none running hk_adyacht; }
 .adparasail_rig { transform-box: view-box; transform-origin: 100px 92px; will-change: transform; animation: 7.6s ease-in-out 0s infinite normal none running hk_adparasway; }
 .adlbl:empty { display: none; }
@@ -246,6 +241,44 @@ a.hero_sponsor > ::after { content: ""; position: absolute; left: 50%; top: 50%;
 a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline-offset: 4px; border-radius: 4px; }
 .hero_sponsor .adlbl, .hero_slot .adlbl { position: absolute; left: 50%; top: 100%; margin-top: 2px; transform: translateX(-50%); font: 800 6.5px / 1 Nunito, system-ui, sans-serif; letter-spacing: 0.5px; text-transform: uppercase; color: rgb(242, 247, 250); background: rgba(14, 26, 36, 0.66); padding: 2px 4.5px; border-radius: 5px; white-space: nowrap; pointer-events: none; }
 .hero_sponsor .adlbl, .hero_slot .adlbl { background: rgba(8, 20, 30, 0.86); box-shadow: rgba(242, 196, 60, 0.5) 0px 0px 0px 1px inset; }
+.adcart { --acw: 2.87s; position: absolute; bottom: 3px; left: -90px; z-index: 2; pointer-events: none; will-change: transform; animation: 59s linear 0s infinite normal none running hk_adcart; }
+.adcart_art { display: block; }
+.adcart_fig { transform-box: view-box; }
+.acart_turt { transform-box: view-box; }
+.acart_turt { animation: hk_tpush var(--acw,2.87s) cubic-bezier(.4,.02,.35,1) infinite; transform-origin: 7.5px 30px; }
+.acart_tshell { transform-box: view-box; transform-origin: 7.2px 29.2px; animation: hk_tshell var(--acw,2.87s) ease-in-out infinite; }
+.acart_thead { transform-box: view-box; transform-origin: 18.3px 29.4px; animation: hk_thead var(--acw,2.87s) cubic-bezier(.4,.02,.35,1) infinite; }
+.acart_tneck { transform-box: view-box; transform-origin: 11.4px 29.2px; animation: hk_tneck var(--acw,2.87s) cubic-bezier(.4,.02,.35,1) infinite; }
+.acart_tflipR { transform-box: view-box; transform-origin: 5.2px 30.2px; animation: hk_tflipr var(--acw,2.87s) cubic-bezier(.35,0,.3,1) infinite; }
+.acart_tflipF { transform-box: view-box; transform-origin: 11.2px 30.6px; animation: hk_tflipf var(--acw,2.87s) ease-in-out infinite; }
+.acart_tsand1, .acart_tsand2, .acart_tsand3 { transform-box: view-box; opacity: 0; }
+.acart_tsand1 { animation: hk_tsand var(--acw,2.87s) linear infinite; }
+.acart_tsand2 { animation-duration: ; animation-timing-function: ; animation-iteration-count: ; animation-direction: ; animation-fill-mode: ; animation-play-state: ; animation-name: ; animation-timeline: ; animation-range-start: ; animation-range-end: ; animation-delay: calc(var(--acw,2.87s) * -.05); }
+.acart_tsand3 { animation-duration: ; animation-timing-function: ; animation-iteration-count: ; animation-direction: ; animation-fill-mode: ; animation-play-state: ; animation-name: ; animation-timeline: ; animation-range-start: ; animation-range-end: ; animation-delay: calc(var(--acw,2.87s) * -.11); }
+.acart_teye { transform-box: view-box; transform-origin: 15.8px 28.86px; animation: hk_tsquint var(--acw,2.87s) ease-in-out infinite; }
+.acart_teyeb { transform-box: view-box; transform-origin: 15.8px 28.8px; animation: hk_teyeb var(--acw,2.87s) ease-in-out infinite; }
+.acart_tbrow { transform-box: view-box; transform-origin: 15.4px 26.6px; animation: hk_tbrow var(--acw,2.87s) ease-in-out infinite; }
+.acart_tcheek { opacity: 0.34; animation: hk_tcheek var(--acw,2.87s) ease-in-out infinite; }
+.acart_tdrop1, .acart_tdrop2 { transform-box: view-box; opacity: 0; }
+.acart_tdrop1 { transform-origin: 15.05px 26.9px; animation: hk_tdrop calc(var(--acw,2.87s) * 2) ease-out infinite; }
+.acart_tdrop2 { transform-origin: 14.35px 27.23px; animation-duration: ; animation-timing-function: ; animation-iteration-count: ; animation-direction: ; animation-fill-mode: ; animation-play-state: ; animation-name: ; animation-timeline: ; animation-range-start: ; animation-range-end: ; animation-delay: calc(var(--acw,2.87s) * -.72); }
+.acart_tgrunt { opacity: 0; animation: hk_tgrunt var(--acw,2.87s) ease-out infinite; }
+.acart_tshine { animation: hk_tshine calc(var(--acw,2.87s) * 2.3) ease-in-out infinite; }
+.acart_wspinA { transform-box: view-box; transform-origin: 23.5px 36px; animation: hk_twheel calc(var(--acw,2.87s) * 1.161) linear infinite; }
+.acart_wspinB { transform-box: view-box; transform-origin: 37.5px 36px; animation: hk_twheel calc(var(--acw,2.87s) * 1.161) linear infinite; }
+.acart_tdripb { transform-box: view-box; opacity: 0; animation: hk_tdripb calc(var(--acw,2.87s) * 3) linear infinite; }
+@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .acart_turt, html:not(.hk_mo) .acart_tshell, html:not(.hk_mo) .acart_thead, html:not(.hk_mo) .acart_tneck, html:not(.hk_mo) .acart_tflipR, html:not(.hk_mo) .acart_tflipF, html:not(.hk_mo) .acart_teye, html:not(.hk_mo) .acart_teyeb, html:not(.hk_mo) .acart_tbrow, html:not(.hk_mo) .acart_tcheek, html:not(.hk_mo) .acart_tdrop1, html:not(.hk_mo) .acart_tdrop2, html:not(.hk_mo) .acart_tgrunt, html:not(.hk_mo) .acart_tshine, html:not(.hk_mo) .acart_tsand1, html:not(.hk_mo) .acart_tsand2, html:not(.hk_mo) .acart_tsand3, html:not(.hk_mo) .acart_wspinA, html:not(.hk_mo) .acart_wspinB, html:not(.hk_mo) .acart_tdripb { animation: auto ease 0s 1 normal none running none; }}
+@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .acart_turt { transform: translate(0.45px, 0.16px); }}
+@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .acart_tshell { transform: rotate(1.6deg); }}
+@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .acart_thead { transform: scaleX(0.92) translateY(0.24px); }}
+@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .acart_tneck { transform: scaleX(0.91); }}
+@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .acart_tflipR { transform: rotate(-22deg); }}
+@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .acart_tflipF { transform: rotate(12deg); }}
+@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .acart_teye { transform: scaleY(0.55); }}
+@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .acart_teyeb { transform: scaleY(0.6); }}
+@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .acart_tbrow { transform: translateY(0.34px); }}
+@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .acart_tcheek { opacity: 0.6; }}
+@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .acart_tdrop1, html:not(.hk_mo) .acart_tdrop2, html:not(.hk_mo) .acart_tgrunt, html:not(.hk_mo) .acart_tsand1, html:not(.hk_mo) .acart_tsand2, html:not(.hk_mo) .acart_tsand3, html:not(.hk_mo) .acart_tdripb { opacity: 0; }}
 .adboatname { position: absolute; top: 191px; right: 45.4px; z-index: 2; width: 96px; pointer-events: none; animation: 5.5s ease-in-out 0s infinite normal none running hk_sailbob_nm; }
 .bnl { display: inline-block; }
 .adboatname_bd { position: relative; display: block; height: 6.83px; overflow: visible; padding: 0px; border: 0px; border-radius: 0px; box-shadow: none; font-family: Nunito, system-ui, sans-serif; font-weight: 800; font-size: 7.8px; line-height: 6.83px; letter-spacing: 0.3px; text-indent: 0.3px; text-transform: uppercase; transform: none; transform-origin: 50% 50%; text-align: center; white-space: nowrap; color: rgb(255, 246, 228); text-shadow: rgba(30, 15, 4, 0.92) 0px -0.5px 0px, rgba(255, 234, 190, 0.46) 0px 0.5px 0px; }
@@ -263,6 +296,7 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .clm2 { transform: translateX(150px); }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .cln1 { transform: translateX(430px); }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .adyacht { transform: none !important; left: 30% !important; }}
+@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .adcart { transform: none !important; left: 14% !important; opacity: 1 !important; }}
 .htown .hshim.s1 { left: 16%; width: 42%; bottom: 23px; animation: 4.2s ease-in-out 0s infinite alternate none running hk_hshim; }
 .htown .hshim.s2 { right: 14%; width: 30%; bottom: 31px; opacity: 0.7; animation: 5.6s ease-in-out 0s infinite alternate none running hk_hshim; }
 .cosm .cs_shoot.s2 { left: 30%; top: auto; bottom: 6px; width: 46px; animation-duration: 23s; }
@@ -297,6 +331,7 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
 .hk_menumark { --mm2: #3CBDB4; --mm4: #F28CA0; }
 .hk_segb.on .hk_tmark .mm_solid { fill: currentcolor; fill-opacity: 0.26; }
 .morewrap.ph-day .morebtn, .morewrap.ph-dawn .morebtn, .morewrap.ph-golden .morebtn { color: rgb(255, 253, 248); border-color: rgba(255, 253, 248, 0.58); background: linear-gradient(rgba(10, 34, 48, 0.4), rgba(6, 22, 32, 0.54)); box-shadow: rgba(255, 255, 255, 0.22) 0px 1px 0px inset, rgba(0, 0, 0, 0.34) 0px 6px 18px, rgba(0, 0, 0, 0.5) 0px 1px 2px; }
+.morewrap.ph-day .morebtn { border-color: rgba(255, 253, 248, 0.66); background: linear-gradient(rgba(8, 30, 44, 0.5), rgba(5, 20, 30, 0.62)); }
 .morewrap.ph-day .morebtn:hover, .morewrap.ph-dawn .morebtn:hover, .morewrap.ph-golden .morebtn:hover { color: rgb(255, 255, 255); border-color: rgb(255, 253, 248); box-shadow: rgba(255, 255, 255, 0.3) 0px 1px 0px inset, rgba(0, 0, 0, 0.4) 0px 8px 22px, rgba(255, 253, 248, 0.75) 0px 0px 16px -6px; }
 .hk_infoic .hk_mmark { width: 46px; height: 46px; margin: 0px auto; stroke-width: 1.25; }
 .hk_promoted .adlbl { display: block; margin: 0px 0px 8px; font: 800 11px / 1 Nunito, system-ui, sans-serif; letter-spacing: 1.1px; text-transform: uppercase; color: var(--csoft); opacity: 0.85; }
@@ -502,6 +537,109 @@ a.hero_sponsor:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline
 @keyframes hk_adprop { 
   0%, 100% { transform: scaleY(1); opacity: 0.55; }
   50% { transform: scaleY(0.45); opacity: 0.8; }
+}
+@keyframes hk_adcart { 
+  0%, 13% { transform: translateX(-20px); opacity: 0; }
+  17% { transform: translateX(0px); opacity: 1; }
+  97% { transform: translateX(560px); opacity: 1; }
+  100% { transform: translateX(580px); opacity: 0; }
+}
+@keyframes hk_tpush { 
+  0% { transform: translate(0px, 0px); }
+  22% { transform: translate(-0.28px, -0.14px); }
+  46% { transform: translate(0.5px, 0.2px); }
+  62% { transform: translate(0.62px, 0.14px); }
+  100% { transform: translate(0px, 0px); }
+}
+@keyframes hk_tshell { 
+  0% { transform: rotate(0deg); }
+  28% { transform: rotate(-2.4deg); }
+  56% { transform: rotate(2.2deg); }
+  78% { transform: rotate(0.6deg); }
+  100% { transform: rotate(0deg); }
+}
+@keyframes hk_thead { 
+  0% { transform: scaleX(1) translateY(0px); }
+  18% { transform: scaleX(0.985) translateY(0.1px); }
+  42% { transform: scaleX(0.9) translateY(0.32px); }
+  58% { transform: scaleX(0.93) translateY(0.22px); }
+  100% { transform: scaleX(1) translateY(0px); }
+}
+@keyframes hk_tneck { 
+  0% { transform: scaleX(1); }
+  24% { transform: scaleX(0.97); }
+  50% { transform: scaleX(0.88); }
+  64% { transform: scaleX(0.93); }
+  100% { transform: scaleX(1); }
+}
+@keyframes hk_tflipr { 
+  0% { transform: rotate(0deg); }
+  30% { transform: rotate(-30deg); }
+  52% { transform: rotate(16deg); }
+  78% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+@keyframes hk_tflipf { 
+  0% { transform: rotate(0deg); }
+  28% { transform: rotate(15deg); }
+  56% { transform: rotate(-12deg); }
+  80% { transform: rotate(-3deg); }
+  100% { transform: rotate(0deg); }
+}
+@keyframes hk_tsand { 
+  0%, 32% { opacity: 0; transform: translate(0px, 0px); }
+  40% { opacity: 1; transform: translate(-1.3px, -1.8px); }
+  54% { opacity: 0.85; transform: translate(-2.9px, -1.2px); }
+  68%, 100% { opacity: 0; transform: translate(-4px, 0.6px); }
+}
+@keyframes hk_tsquint { 
+  0% { transform: scaleY(1); }
+  46% { transform: scaleY(0.45); }
+  70% { transform: scaleY(0.8); }
+  100% { transform: scaleY(1); }
+}
+@keyframes hk_teyeb { 
+  0% { transform: scaleY(1); }
+  46% { transform: scaleY(0.5); }
+  70% { transform: scaleY(0.85); }
+  100% { transform: scaleY(1); }
+}
+@keyframes hk_tbrow { 
+  0% { transform: translateY(0px); }
+  46% { transform: translateY(0.42px); }
+  100% { transform: translateY(0px); }
+}
+@keyframes hk_tcheek { 
+  0% { opacity: 0.3; }
+  48% { opacity: 0.78; }
+  76% { opacity: 0.5; }
+  100% { opacity: 0.3; }
+}
+@keyframes hk_tdrop { 
+  0%, 26% { opacity: 0; transform: translate(0px, 0px) scale(0.7); }
+  32% { opacity: 0.9; transform: translate(-0.06px, 0.12px) scale(1); }
+  46% { opacity: 0.55; transform: translate(-0.5px, 1.1px) scale(0.92); }
+  56%, 100% { opacity: 0; transform: translate(-0.9px, 2.1px) scale(0.7); }
+}
+@keyframes hk_tgrunt { 
+  0%, 30% { opacity: 0; }
+  44% { opacity: 0.9; }
+  66% { opacity: 0.25; }
+  100% { opacity: 0; }
+}
+@keyframes hk_tshine { 
+  0%, 100% { opacity: 0.26; }
+  45% { opacity: 0.5; }
+}
+@keyframes hk_twheel { 
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes hk_tdripb { 
+  0%, 55% { opacity: 0; transform: translateY(0px); }
+  62% { opacity: 0.8; transform: translateY(0.4px); }
+  85% { opacity: 0.6; transform: translateY(2.4px); }
+  92%, 100% { opacity: 0; transform: translateY(3.2px); }
 }
 @keyframes hk_sailbob_nm { 
   0% { transform: translateY(2.5px) rotate(0.39deg); }
