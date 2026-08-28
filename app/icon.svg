@@ -1,16 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
-    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#123C4A"/><stop offset="1" stop-color="#08181F"/>
+    <linearGradient id="jibg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#EDE3CE"/>
     </linearGradient>
-    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#F6E7A8"/><stop offset="1" stop-color="#E4C766"/>
-    </linearGradient>
+    <path id="hk_arcT" fill="none" d="M38.15,44.8 A27.3,27.3 0 0 1 62.25,44.8"/>
+    <path id="hk_arcB" fill="none" d="M34.83,55.15 A35.06,35.06 0 0 0 65.57,55.15"/>
   </defs>
-  <rect width="512" height="512" rx="112" fill="url(#sea)"/>
-  <circle cx="256" cy="228" r="96" fill="url(#sun)"/>
-  <path d="M64,330 C112,306 160,306 208,330 C256,354 304,354 352,330 C400,306 432,306 448,318"
-        fill="none" stroke="#E4C766" stroke-width="26" stroke-linecap="round" opacity=".95"/>
-  <path d="M64,400 C112,376 160,376 208,400 C256,424 304,424 352,400 C400,376 432,376 448,388"
-        fill="none" stroke="#E4C766" stroke-width="20" stroke-linecap="round" opacity=".6"/>
+  <rect width="512" height="512" rx="112" fill="url(#jibg)"/>
+  <g transform="translate(-607.24,-592.43) scale(17.1951)">
+    <g transform="translate(-1.8,-3)">
+      <circle cx="52" cy="52" r="5" fill="none" stroke="#C7202A" stroke-width=".7"/>
+      <path fill="#C7202A" opacity=".55" d="M54.05,49.95 L52.8,52 L54.05,54.05 L52,52.8 L49.95,54.05 L51.2,52 L49.95,49.95 L52,51.2 Z"/>
+      <path fill="#C7202A" d="M52,47.6 L52.67,51.33 L56.4,52 L52.67,52.67 L52,56.4 L51.33,52.67 L47.6,52 L51.33,51.33 Z"/>
+      <circle cx="52" cy="52" r=".5" fill="#FFFDF6"/>
+    </g>
+    <text font-size="3.8" text-anchor="middle" style="font-family:Georgia,serif;font-weight:700;fill:#123C4A;letter-spacing:.1px"><textPath href="#hk_arcT" startOffset="50%">COASTAL</textPath></text>
+    <text font-size="3.8" text-anchor="middle" style="font-family:Georgia,serif;font-weight:700;fill:#123C4A;letter-spacing:.1px"><textPath href="#hk_arcB" startOffset="50%">EVENTURES</textPath></text>
+  </g>
 </svg>
