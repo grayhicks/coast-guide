@@ -98,6 +98,9 @@ body.ph-night .scene{--skytop:#16294A}
 
 
 
+
+@media (max-width:1023px){.scene.tall{--moondrop:34px}}
+.scene-stage .sunb{translate:0 calc(var(--moondrop,0px) / var(--sy))}
 .scene-stage .sunb{transform-origin:100% 0;right:var(--moonr,28px);
   transform:scale(calc(var(--um) / var(--sx)),calc(var(--um) / var(--sy)))}
 
@@ -161,6 +164,10 @@ body.ph-night .scene{--skytop:#16294A}
 .scene-stage .adparasail > svg,.scene-stage .adcart > svg{transform-origin:0 100%;
   scale:calc(var(--up) / var(--sx)) calc(var(--up) / var(--sy))}
 .scene-stage .pipw .pipsh{transform-origin:50% 100%;
+  scale:calc(var(--uc) / var(--sx)) calc(var(--uc) / var(--sy))}
+
+
+.scene-stage .crabw > svg{transform-origin:50% 100%;
   scale:calc(var(--uc) / var(--sx)) calc(var(--uc) / var(--sy))}
 
 
@@ -410,3 +417,19 @@ html, body { overflow-x: clip; }
 .scene-stage .adyacht{top:auto;bottom:12px}
 .scene.band:not(.short) .adplane{top:auto;bottom:20px}
 @media (max-width:767px){ .scene-stage .adparasail{display:none} }
+
+
+.scene .hk_skybtn{position:absolute;z-index:13;min-width:44px;min-height:44px;
+  padding:0;border:0;background:none;border-radius:50%;cursor:pointer;
+  -webkit-tap-highlight-color:transparent}
+.scene .hk_skybtn:focus-visible{outline:2px solid var(--hero-focus,#F2DFAE);outline-offset:3px}
+
+
+.scene .hk_skypanel{position:absolute;z-index:14;right:14px;top:0;max-width:min(320px,calc(100% - 28px));
+  translate:0 calc(var(--moondrop,0px) + 8px)}
+.scene .hk_skypanel .phchip{position:static;right:auto;bottom:auto;max-width:100%}
+
+.scene .hk_skypanel .phchip{background:linear-gradient(180deg,rgba(9,27,40,.975),rgba(6,20,31,.985));
+  border:1px solid rgba(232,196,95,.34);box-shadow:0 18px 46px rgba(3,10,16,.55)}
+@supports (backdrop-filter:blur(2px)){.scene .hk_skypanel .phchip{backdrop-filter:blur(7px)}}
+@media (min-width:1024px){.scene .hk_skypanel{right:calc(var(--moonr,28px) + 10px)}}
