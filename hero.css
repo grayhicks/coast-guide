@@ -98,6 +98,8 @@
 .ph-dawn .adyacht line[stroke="#AEB9C1"], .ph-dawn .adyacht path[stroke="#AEB9C1"] { stroke: rgb(172, 154, 150); }
 .ph-golden .adyacht .adyacht_paint { filter: saturate(1.04) brightness(1.04); }
 .ph-dawn .adyacht .adyacht_paint { filter: saturate(0.96) brightness(1); }
+.ph-golden .jskw path[fill="#E9EEF2"] { fill: rgb(240, 210, 162); }
+.ph-golden .jskw g[fill="#EAF4F8"] { fill: rgb(255, 226, 180); }
 .ph-golden .skbg path { fill: rgb(75, 56, 43); }
 .ph-golden .skbnear path[fill="#2A363F"] { fill: rgb(65, 48, 38); }
 .ph-golden .skbnear path[fill="#26313A"] { fill: rgb(58, 43, 34); }
@@ -151,6 +153,7 @@
 .ripl { position: absolute; left: 0px; right: 0px; bottom: 0.5px; height: 1.6px; border-radius: 50%; background: rgb(234, 246, 250); opacity: 0; animation: auto ease-in-out 0s infinite normal none running hk_ripl; }
 .jskw.rtl { left: auto; right: -70px; animation-name: hk_jskR; }
 .baw.rtl { left: auto; right: -175px; animation-name: hk_baR; }
+.ph-golden .baw { filter: sepia(0.22) saturate(1.12) brightness(1.04); }
 .hero .stars span { position: absolute; border-radius: 50%; background: rgb(234, 242, 251); }
 .hero .stars .bright { box-shadow: rgba(220, 236, 252, 0.7) 0px 0px 5px 1px, rgba(190, 215, 245, 0.22) 0px 0px 12px 3px; }
 .hero .stars .hkn_sheet { position: absolute; left: 0px; top: 0px; width: 1320px; height: 150px; pointer-events: none; will-change: transform; animation: hkn_drift calc(21541s * var(--gca-calm)) linear infinite; }
@@ -197,6 +200,7 @@
 .sksoar.big { animation-name: hk_sksoarB; }
 .skbnear { position: absolute; left: 0px; opacity: 0.85; will-change: transform; animation: auto linear 0s infinite normal none running hk_gullnear; }
 .skbnear.rev { animation-name: hk_gullnearR; }
+.ph-golden .pipw { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
 .grain { position: absolute; inset: -12%; z-index: 3; pointer-events: none; opacity: 0.028; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E"); background-size: 160px 160px; animation: hk_grain calc(2.4s * var(--gca-calm)) steps(1) infinite; }
 .ph-night .grain { opacity: 0.045; }
 .hero-eyebtn { border: 1px solid rgba(255, 255, 255, 0.34); cursor: pointer; position: relative; font-family: "Cormorant Garamond", Georgia, serif; -webkit-tap-highlight-color: transparent; transition: border-color 0.2s, box-shadow 0.2s; }
@@ -307,6 +311,7 @@ html.gca_cold .bswash { opacity: 0; }
 .swg.s3 .sw_heave { animation-duration: calc(6.3s * var(--gca-calm)); animation-delay: -3.4s; }
 .ph-night .hk_swellw { opacity: 0.55; }
 .ph-dawn .hk_swellw { opacity: 0.8; }
+.ph-golden .vwk path { fill: rgba(255, 236, 204, 0.6); }
 .blurb.railclear::before { content: ""; float: right; width: 140px; height: calc(var(--blurb-rail-lines) * 1.52em); margin-left: 12px; pointer-events: none; }
 .itin .big { font-family: Newsreader, serif; font-weight: 600; font-size: 23px; line-height: 1.08; }
 .rays { overflow: hidden; border-radius: 14px; }
@@ -318,6 +323,9 @@ html.gca_cold .bswash { opacity: 0; }
 .gullw.rtl { left: auto; right: -80px; animation-name: hk_gullpr; }
 .skbwrap.nite .skbg { filter: brightness(0.8) saturate(0.65); }
 .trtw.rtl .trtb { animation-name: hk_trtupR; }
+.ph-golden .trtw { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
+.ph-golden .htchw { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
+.ph-golden .kitew { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
 .adparasail { position: absolute; top: 110px; left: -94px; z-index: 3; will-change: transform; opacity: 0.99; animation: hk_adyacht calc(56s * var(--gca-calm)) linear -14s infinite; }
 .adparasail_rig { transform-box: view-box; transform-origin: 100px 92px; will-change: transform; animation: hk_adparasway calc(7.6s * var(--gca-calm)) ease-in-out infinite; }
 .adlbl:empty { display: none; }
@@ -343,6 +351,9 @@ html:not(.hk_mo) .sunb::after { animation: auto ease 0s 1 normal none running no
 html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house > ::before { opacity: 0.035; animation: auto ease 0s 1 normal none running none !important; }
 .hero_sponsor .adlbl, .hero_slot .adlbl, .hero-eyespon .adlbl { position: absolute; left: 50%; top: 100%; margin-top: 2px; transform: translateX(-50%); font: 800 6.5px / 1 Nunito, system-ui, sans-serif; letter-spacing: 0.5px; text-transform: uppercase; color: rgb(242, 247, 250); background: rgba(14, 26, 36, 0.66); padding: 2px 4.5px; border-radius: 5px; white-space: nowrap; pointer-events: none; }
 .hero_sponsor .adlbl, .hero_slot .adlbl, .hero-eyespon .adlbl { background: rgba(8, 20, 30, 0.86); box-shadow: rgba(242, 196, 60, 0.5) 0px 0px 0px 1px inset; }
+.adbonfire { position: absolute; bottom: 6px; left: 68px; z-index: 2; pointer-events: none; }
+.adbonfire_fl { transform-box: fill-box; transform-origin: 50% 100%; animation: hk_adflame calc(.9s * var(--gca-calm)) ease-in-out infinite; }
+.ph-golden .adbonfire { filter: drop-shadow(rgba(242, 160, 60, 0.6) 0px 0px 7px); }
 .adcart { --acw: 2.87s; position: absolute; bottom: 3px; left: -90px; z-index: 2; pointer-events: none; will-change: transform; animation: hk_adcart calc(59s * var(--gca-calm)) linear infinite; }
 .adcart_art { display: block; }
 .adcart_fig { transform-box: view-box; }
@@ -557,14 +568,11 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .hk_menumark { --mm2: #3CBDB4; --mm4: #F28CA0; }
 .hk_segb.on .hk_tmark .mm_solid { fill: currentcolor; fill-opacity: 0.26; }
 .morewrap.ph-day .morebtn, .morewrap.ph-dawn .morebtn, .morewrap.ph-golden .morebtn { color: rgb(255, 253, 248); border-color: rgba(255, 253, 248, 0.58); background: linear-gradient(rgba(10, 34, 48, 0.4), rgba(6, 22, 32, 0.54)); box-shadow: rgba(255, 255, 255, 0.22) 0px 1px 0px inset, rgba(0, 0, 0, 0.34) 0px 6px 18px, rgba(0, 0, 0, 0.5) 0px 1px 2px; }
-.morewrap.ph-day .morebtn { border-color: rgba(255, 253, 248, 0.66); background: linear-gradient(rgba(8, 30, 44, 0.5), rgba(5, 20, 30, 0.62)); }
 .morewrap.ph-day .morebtn:hover, .morewrap.ph-dawn .morebtn:hover, .morewrap.ph-golden .morebtn:hover { color: rgb(255, 255, 255); border-color: rgb(255, 253, 248); box-shadow: rgba(255, 255, 255, 0.3) 0px 1px 0px inset, rgba(0, 0, 0, 0.4) 0px 8px 22px, rgba(255, 253, 248, 0.75) 0px 0px 16px -6px; }
 .hk_infoic .hk_mmark { width: 46px; height: 46px; margin: 0px auto; stroke-width: 1.25; }
 .hk_promoted .adlbl { display: block; margin: 0px 0px 8px; font: 800 11px / 1 Nunito, system-ui, sans-serif; letter-spacing: 1.1px; text-transform: uppercase; color: var(--csoft); opacity: 0.85; }
 .hk_promoted .adlbl.open { font-weight: 700; letter-spacing: 0.9px; opacity: 0.55; }
 .hk_promocard .adlbl { display: block; margin: 0px 0px 5px; font: 800 11px / 1 Nunito, system-ui, sans-serif; letter-spacing: 1.1px; text-transform: uppercase; color: var(--csoft); opacity: 0.85; }
-.t360w.mir { transform: scaleX(-1); }
-.dph360w.mir { transform: scaleX(-1); }
 .gul360w { position: relative; pointer-events: none; }
 .gul360w.mir { transform: scaleX(-1); }
 .gul360w > svg.gul360 { width: 100%; height: 100%; display: block; overflow: visible; }
@@ -595,8 +603,6 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .apt.swim .apt_flipper.rear { transform-origin: 8% 16%; }
 .apt.swim .apt_flipper.rear.far { animation: apt_sea_rudder_far calc(4.2s * var(--gca-calm)) ease-in-out infinite var(--apto,0s); }
 .apt.swim .apt_flipper.rear.near { animation: apt_sea_rudder_near calc(4.2s * var(--gca-calm)) ease-in-out infinite var(--apto,0s); }
-.apt_body .t360w.mir ~ .hkfx-head { left: auto; right: -8%; }
-.apt_body .t360w.mir ~ .aptfx_vein { left: auto; right: 7%; }
 .skn_bub.b1 { left: 168px; bottom: 32px; animation: skn_bub1 var(--skd,28s) linear infinite var(--sko,0s); }
 .skn_bub.b2 { left: 176px; bottom: 28px; width: 3px; height: 3px; animation: skn_bub2 var(--skd,28s) linear infinite var(--sko,0s); }
 .skn_bub.b3 { left: 162px; bottom: 26px; width: 5px; height: 5px; animation: skn_bub3 var(--skd,28s) linear infinite var(--sko,0s); }
@@ -649,7 +655,6 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .xps_shorebird.b2 { --flap: .61s; }
 .xp_supportstage.cheering .xps_crab .crb_pup, .xp_supportstage.verified .xps_crab .crb_pup { transform-box: fill-box; transform-origin: center center; animation: xps_crabglee calc(1.24s * var(--gca-calm)) cubic-bezier(.3,0,.25,1) infinite; }
 .xp_supportstage .dph_gaze, .xp_supportstage .crb_pup, .xp_supportstage .pel_fly_eye { transform-box: fill-box; transform-origin: 50% 50%; transition: transform 0.3s cubic-bezier(0.22, 0.8, 0.3, 1); }
-.xp_supportstage.gazing .t360w.mir .hke_gaze { transform: translate(calc(var(--gx) * -.5px),calc(var(--gy) * .38px)); }
 .xp_supportstage.gazing .crb_pup { transform: translate(calc(var(--gx) * .55px),calc(var(--gy) * .4px)); }
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .xp_supportstage.gazing .hke_gaze, html:not(.hk_mo) .xp_supportstage.gazing .dph_gaze, html:not(.hk_mo) .xp_supportstage.gazing .crb_pup, html:not(.hk_mo) .xp_supportstage.gazing .pel_fly_eye, html:not(.hk_mo) .xp_supportstage.gazing .osp_yaw { transform: none; }}
 .promo_bulb.b1 { animation-delay: -1.3s; }
@@ -934,6 +939,10 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 @keyframes hk_tapring_sun { 
   0%, 100% { opacity: 0.05; }
   50% { opacity: 0.09; }
+}
+@keyframes hk_adflame { 
+  0%, 100% { transform: scale(1, 1); opacity: 0.95; }
+  50% { transform: scale(1.06, 1.12); opacity: 1; }
 }
 @keyframes hk_adcart { 
   0%, 13% { transform: translateX(-20px); opacity: 0; }
