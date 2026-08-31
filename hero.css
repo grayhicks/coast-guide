@@ -194,6 +194,9 @@
 .ph-dawn .hero-eyebrow:not(.hero-eyecast), .ph-golden .hero-eyebrow:not(.hero-eyecast) { background: linear-gradient(rgba(255, 238, 220, 0.1), rgba(255, 238, 220, 0) 55%) rgba(46, 29, 36, 0.5); border-color: rgba(246, 214, 164, 0.55); }
 .hero .hero-eyebrow:not(.hero-eyecast), .hero .hero-date, .morewrap .morebtn { border-color: rgba(255, 253, 248, 0.72); background: rgba(9, 32, 46, 0.34); box-shadow: rgba(9, 32, 46, 0.42) 0px 0px 0px 1px inset, rgba(255, 253, 248, 0.26) 0px 0px 0px 2px inset; }
 .hero .hero-eyebrow:not(.hero-eyecast) { min-height: 25px; box-sizing: border-box; top: -3px; line-height: 1; }
+.hk.hk .hero-eyebrow:not(.hero-eyecast), .hk.hk .hero-date, .hk.hk .morewrap .morebtn { color: rgb(255, 249, 236); font-size: 12.5px; letter-spacing: 0.5px; text-transform: none; padding: 4px 9px; backdrop-filter: blur(3px); line-height: 1; min-height: 25px; box-sizing: border-box; }
+.hk.hk .hero-eyebrow:not(.hero-eyecast) .eyb_t { letter-spacing: 0.5px; margin-right: -0.5px; }
+.hk.hk .hero-eyebtn::after, .hk.hk .hero-datebtn::after, .hk.hk .morebtn::after { content: ""; position: absolute; inset: -10px 0px; height: auto; transform: none; border-radius: 999px; }
 .hero-eyemast .eyb_short { display: none; }
 .hero-eyebtn .eyb_short, .hero-eyebtn .eyb_tiny { display: none; }
 @media (max-width: 399px){.hero-eyebtn .eyb_full { display: none; }}
@@ -287,11 +290,11 @@ button.hero_house { border: 0px; padding: 0px; margin: 0px; background: none; fo
 a.hero_sponsor > *, button.hero_house > * { pointer-events: auto; cursor: pointer; }
 a.hero_sponsor > ::after, button.hero_house > ::after { content: ""; position: absolute; left: 50%; top: 50%; width: max(100%, 44px); height: max(100%, 44px); transform: translate(-50%, -50%); }
 a.hero_sponsor:focus-visible > *, button.hero_house:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline-offset: 4px; border-radius: 4px; }
-a.hero_sponsor > ::after, button.hero_house > ::after, .sunb::after { border-radius: 14px; box-shadow: rgba(255, 255, 255, 0.09) 0px 0px 0px 1px; animation: hk_tapring calc(5.5s * var(--gca-calm)) ease-in-out infinite; }
-.sunb::after { content: ""; position: absolute; left: 50%; top: 50%; width: max(100%, 44px); height: max(100%, 44px); transform: translate(-50%, -50%); border-radius: 50%; pointer-events: none; box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px; }
-.sunb::after { animation-name: hk_tapring_sun; }
-html:not(.hk_mo) .sunb::after { box-shadow: rgba(255, 255, 255, 0.22) 0px 0px 0px 1px; }
-html:not(.hk_mo) a.hero_sponsor > ::after, html:not(.hk_mo) button.hero_house > ::after, html:not(.hk_mo) .sunb::after { box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 0px 1px; animation: auto ease 0s 1 normal none running none !important; }
+a.hero_sponsor > ::before, button.hero_house > ::before { content: ""; position: absolute; left: 50%; top: 50%; width: calc(100% + 6px); height: calc(100% + 6px); transform: translate(-50%, -50%); border-radius: 14px; pointer-events: none; box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px; opacity: 0.05; animation: hk_tapring calc(5.5s * var(--gca-calm)) ease-in-out infinite; }
+.sunb::after { content: ""; position: absolute; left: 50%; top: 50%; width: max(100%, 44px); height: max(100%, 44px); transform: translate(-50%, -50%); border-radius: 50%; pointer-events: none; box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px; opacity: 0.07; animation: hk_tapring_sun calc(5.5s * var(--gca-calm)) ease-in-out infinite; }
+.ph-night .sunb::after { left: 64px; top: 26px; width: 68px; height: 68px; }
+html:not(.hk_mo) .sunb::after { animation: auto ease 0s 1 normal none running none; opacity: 0.07; }
+html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house > ::before { opacity: 0.05; animation: auto ease 0s 1 normal none running none !important; }
 .hero_sponsor .adlbl, .hero_slot .adlbl, .hero-eyespon .adlbl { position: absolute; left: 50%; top: 100%; margin-top: 2px; transform: translateX(-50%); font: 800 6.5px / 1 Nunito, system-ui, sans-serif; letter-spacing: 0.5px; text-transform: uppercase; color: rgb(242, 247, 250); background: rgba(14, 26, 36, 0.66); padding: 2px 4.5px; border-radius: 5px; white-space: nowrap; pointer-events: none; }
 .hero_sponsor .adlbl, .hero_slot .adlbl, .hero-eyespon .adlbl { background: rgba(8, 20, 30, 0.86); box-shadow: rgba(242, 196, 60, 0.5) 0px 0px 0px 1px inset; }
 .ph-night .adbuoy .adbuoy_lt { animation: hk_adbuoyglow calc(1.6s * var(--gca-calm)) ease-in-out infinite; }
@@ -311,6 +314,8 @@ html:not(.hk_mo) a.hero_sponsor > ::after, html:not(.hk_mo) button.hero_house > 
 .hcw.esc .hcrab .legsA, .hcw.esc .hcrab .legsB, .hcw.esc .hcrab .crb_lgA, .hcw.esc .hcrab .crb_lgB { animation-duration: 0.12s; }
 .tgw.rtl .tgjelly { animation-name: hk_tgjellyR; }
 .tgw.rtl .tgturtle { margin-left: 96px; animation-name: hk_tgturtleR; }
+.npw { position: absolute; left: 58px; bottom: 6px; z-index: 2; pointer-events: none; }
+.npw .np_glow { transform-box: fill-box; transform-origin: center center; animation: hk_npglow calc(2.6s * var(--gca-calm)) ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .flyby, html:not(.hk_mo) .hk .grain, html:not(.hk_mo) .hk .baw, html:not(.hk_mo) .hk .gullw, html:not(.hk_mo) .hk .ccrab, html:not(.hk_mo) .hk .snote, html:not(.hk_mo) .hk .hpel, html:not(.hk_mo) .hk .fwx, html:not(.hk_mo) .hk .aspl, html:not(.hk_mo) .hk .rheart, html:not(.hk_mo) .hk .lspk, html:not(.hk_mo) .hk .dnm_bok, html:not(.hk_mo) .hk .tdust, html:not(.hk_mo) .hk .fly, html:not(.hk_mo) .hk .skbwrap, html:not(.hk_mo) .hk .pipw, html:not(.hk_mo) .hk .dnx_rolled, html:not(.hk_mo) .hk .trtw, html:not(.hk_mo) .hk .htchw, html:not(.hk_mo) .hk .kitew, html:not(.hk_mo) .hk .rplfield, html:not(.hk_mo) .hk .hcw, html:not(.hk_mo) .hk .tgw, html:not(.hk_mo) .hk .d2bw, html:not(.hk_mo) .hk .pelw, html:not(.hk_mo) .hk .dcw, html:not(.hk_mo) .hk .hkop, html:not(.hk_mo) .hk .dwgiant, html:not(.hk_mo) .hk .dwpod, html:not(.hk_mo) .hk .dwglow, html:not(.hk_mo) .hk .hboat, html:not(.hk_mo) .hk .dnote, html:not(.hk_mo) .hk .dbloom, html:not(.hk_mo) .hk .rmote, html:not(.hk_mo) .hk .rsmokew .hk .supw, html:not(.hk_mo) .hk .fld, html:not(.hk_mo) .hk .crbw, html:not(.hk_mo) .hk .crbh, html:not(.hk_mo) .hk .htchf, html:not(.hk_mo) .hk .lx_rock, html:not(.hk_mo) .hk .lx_dig, html:not(.hk_mo) .hk .mstrip, html:not(.hk_mo) .hk .mbeam, html:not(.hk_mo) .hk .cm_cone, html:not(.hk_mo) .hk .cm_pool, html:not(.hk_mo) .hk .romacc .racc_wash, html:not(.hk_mo) .hk .em_fly, html:not(.hk_mo) .hk .cs_shoot, html:not(.hk_mo) .hk .cs_neb, html:not(.hk_mo) .hk .brd, html:not(.hk_mo) .hk .mthrow, html:not(.hk_mo) .hk .mgrain, html:not(.hk_mo) .hk .bawrap, html:not(.hk_mo) .hk .popf, html:not(.hk_mo) .hk .rm_bulb, html:not(.hk_mo) .hk .cm_laugh, html:not(.hk_mo) .hk .cm_cable, html:not(.hk_mo) .hk .adrip, html:not(.hk_mo) .hk .lsc_cur, html:not(.hk_mo) .hk .swash, html:not(.hk_mo) .hk .swash_lip, html:not(.hk_mo) .hk .backwash, html:not(.hk_mo) .hk .vwkw, html:not(.hk_mo) .hk .vwk, html:not(.hk_mo) .hk .fprt, html:not(.hk_mo) .hk .swl_crest { display: none !important; }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .swg, html:not(.hk_mo) .hk .sw_heave { animation: auto ease 0s 1 normal none running none !important; }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .swl_body { animation: auto ease 0s 1 normal none running none !important; opacity: 0.4 !important; }}
@@ -924,12 +929,12 @@ html:not(.hk_mo) a.hero_sponsor > ::after, html:not(.hk_mo) button.hero_house > 
   100% { transform: translateY(114%) rotate(-6deg); }
 }
 @keyframes hk_tapring { 
-  0%, 100% { box-shadow: rgba(255, 255, 255, 0.06) 0px 0px 0px 1px; }
-  50% { box-shadow: rgba(255, 255, 255, 0.14) 0px 0px 0px 1px; }
+  0%, 100% { opacity: 0.04; }
+  50% { opacity: 0.07; }
 }
 @keyframes hk_tapring_sun { 
-  0%, 100% { box-shadow: rgba(255, 255, 255, 0.14) 0px 0px 0px 1px; }
-  50% { box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0px 1px; }
+  0%, 100% { opacity: 0.05; }
+  50% { opacity: 0.09; }
 }
 @keyframes hk_adbuoyglow { 
   0%, 100% { opacity: 0.55; filter: drop-shadow(rgb(242, 196, 60) 0px 0px 1px); }
@@ -974,6 +979,11 @@ html:not(.hk_mo) a.hero_sponsor > ::after, html:not(.hk_mo) button.hero_house > 
   73% { transform: translateX(-79px); }
   86% { transform: translateX(-96px); opacity: 0.9; }
   100% { transform: translateX(-116px); opacity: 0; }
+}
+@keyframes hk_npglow { 
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  45% { opacity: 1; transform: scale(1.12); }
+  70% { opacity: 0.7; transform: scale(0.96); }
 }
 @keyframes hk_rmsway { 
   0% { transform: translateY(-1px) rotate(-0.32deg); }
