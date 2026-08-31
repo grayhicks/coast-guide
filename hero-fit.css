@@ -2,6 +2,10 @@
 
 
 
+
+.scene-stage{--gca-calm-base:1.5;--gca-master:1;--gca-g-hero:1;
+  --gca-calm:calc(var(--gca-calm-base) * var(--gca-master) * var(--gca-g-hero))}
+
 .scene-stage{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;
   
   background:var(--skytop,#050B18)}
@@ -426,6 +430,10 @@ html, body { overflow-x: clip; }
 .scene-stage .adbonfire{bottom:6px}
 .scene-stage .adyacht{top:auto;bottom:12px}
 .scene.band:not(.short) .adplane{top:auto;bottom:20px}
+
+
+@media (max-width:900px){ .scene.tall .adplane{translate:0 calc(-242px / var(--sy))} }
+@media (min-width:901px) and (max-width:1023px){ .scene.tall .adplane{translate:0 calc(-120px / var(--sy))} }
 @media (max-width:767px){ .scene-stage .adparasail{display:none} }
 
 

@@ -2382,7 +2382,8 @@ html.hkflick .tdec, html.hkflick .sig, html.hkflick .spdec{ visibility:hidden; }
 @keyframes hk_adparasway{ 0%,100%{ transform:rotate(-2.1deg); } 55%{ transform:rotate(1.7deg); } }
 
 .adlbl:empty{ display:none; }
-.adplane{ position:absolute; top:21px; left:0; z-index:1; will-change:transform; animation:hk_adplane calc(34s * var(--gca-calm)) linear infinite; }
+
+.adplane{ position:absolute; top:21px; left:0; z-index:1; will-change:transform; animation:hk_adplane calc(34s * var(--gca-calm)) linear calc(-19.4s * var(--gca-calm)) infinite; }
 @keyframes hk_adplane{ 0%{ transform:translateX(-230px); } 100%{ transform:translateX(560px); } }
 .adplane_bob{ transform-box:view-box; transform-origin:174px 18px; animation:hk_adplanebob calc(5.2s * var(--gca-calm)) ease-in-out infinite; }
 @keyframes hk_adplanebob{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-1.4px); } }
