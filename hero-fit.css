@@ -399,10 +399,12 @@ html, body { overflow-x: clip; }
       rgba(6,14,24,.6) calc(100% - 36px),
       rgba(6,14,24,.34) calc(100% - 36px),
       rgba(6,14,24,0) 100%)}
-  .scene.band:not(.short) .adplane{top:6px}
+  
+  
 }
 
-.scene.band.short .adplane{top:auto;bottom:24px}
+
+
 
 
 .scene-stage .adbonfire{left:200px}
@@ -429,7 +431,11 @@ html, body { overflow-x: clip; }
 .scene-stage .adcart{bottom:6px}
 .scene-stage .adbonfire{bottom:6px}
 .scene-stage .adyacht{top:auto;bottom:12px}
-.scene.band:not(.short) .adplane{top:auto;bottom:20px}
+
+
+
+.scene.band .adplane{display:none}
+
 
 
 @media (max-width:900px){ .scene.tall .adplane{translate:0 calc(-242px / var(--sy))} }
