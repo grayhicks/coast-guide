@@ -60,14 +60,17 @@
 .ph-night .hero-sand { filter: brightness(0.5) saturate(0.65); }
 .sswp { animation: hk_sswp calc(13s * var(--gca-calm)) ease-in-out infinite; }
 .hk_boat { animation: hk_sailbob calc(5.5s * var(--gca-calm)) ease-in-out infinite; z-index: 1; }
+.hk_boat .hk_rig { transform-box: view-box; transform-origin: 66.6px 81.5px; animation: hk_rigrock calc(7.3s * var(--gca-calm)) ease-in-out infinite; }
+.ph-night .hk_boat .hk_sheen { opacity: 1; }
+.ph-night .hk_boat .hk_hullsh { opacity: 0.3; }
+.ph-golden .hk_boat .hk_sheen { opacity: 0.75; }
+@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk_boat .hk_rig { animation: auto ease 0s 1 normal none running none; }}
 .hk_sglow { opacity: 0; }
 .ph-night .hk_boat .sails path[fill="url(#hk_maing)"] { fill: url("#hk_maingN"); }
 .ph-night .hk_boat .sails path[fill="url(#hk_jibg)"] { fill: url("#hk_jibgN"); }
 .ph-night .hk_boat .hk_bcore { stroke: url("#hk_aurN"); }
 .ph-night .hk_boat .hk_bh { opacity: 0.15; }
-.ph-night .hk_boat .hk_bm2 { opacity: 0.22; }
-.ph-night .hk_boat .hk_bm { opacity: 0.3; }
-.ph-night .hk_boat .hk_bc { opacity: 0.76; }
+.ph-night .hk_boat .hk_bc { opacity: 0.5; }
 .hk_boat .hk_mbands { opacity: 0.9; }
 .ph-night .hk_boat .hk_mbands { opacity: 0.62; }
 .hk_boat .hk_bglow { opacity: 0; }
@@ -79,9 +82,9 @@
 .ph-night .hk_boat .hk_shadej { fill: url("#hk_shdJN"); }
 .ph-night .hk_boat .hk_luffm { fill: url("#hk_lfMN"); }
 .ph-night .hk_boat .hk_luffj { fill: url("#hk_lfJN"); }
-.hk_boat .hk_veil { opacity: 0.42; }
+.hk_boat .hk_veil { opacity: 0.72; }
 .ph-night .hk_boat .hk_veil { opacity: 1; }
-.hk_boat .hk_veil.hk_veilm { opacity: 0.42; }
+.hk_boat .hk_veil.hk_veilm { opacity: 0.6; }
 .ph-night .hk_boat .hk_veil.hk_veilm { opacity: 0.55; }
 .ph-night .hk_boat .hk_crease { stroke: rgb(12, 24, 52); opacity: 0.42; }
 .ph-night .hk_boat .hk_creasel { stroke: rgb(185, 210, 240); opacity: 0.28; }
@@ -92,12 +95,12 @@
 .ph-night .skbnear path[stroke="#F2F6F1"] { stroke: rgb(159, 180, 196); }
 .ph-golden .hero-wave path { fill: rgb(36, 31, 48); }
 .ph-night .hero-wave path { fill: rgb(11, 21, 32); }
-.ph-dawn .hk_boat .sails path[fill="url(#hk_maing)"] { fill: rgb(253, 243, 233); }
-.ph-dawn .hk_boat .sails path[fill="url(#hk_jibg)"] { fill: rgb(248, 235, 223); }
-.ph-golden .hk_boat .sails path[fill="url(#hk_maing)"] { fill: rgb(255, 245, 224); }
-.ph-golden .hk_boat .sails path[fill="url(#hk_jibg)"] { fill: rgb(249, 236, 208); }
-.ph-dawn .hk_boat .hk_veil { opacity: 0.38; }
-.ph-dawn .hk_boat .hk_veil.hk_veilm { opacity: 0.38; }
+.ph-dawn .hk_boat .sails path[fill="url(#hk_maing)"] { fill: url("#hk_maingD"); }
+.ph-dawn .hk_boat .sails path[fill="url(#hk_jibg)"] { fill: url("#hk_jibgD"); }
+.ph-golden .hk_boat .sails path[fill="url(#hk_maing)"] { fill: url("#hk_maingG"); }
+.ph-golden .hk_boat .sails path[fill="url(#hk_jibg)"] { fill: url("#hk_jibgG"); }
+.ph-dawn .hk_boat .hk_veil { opacity: 0.55; }
+.ph-dawn .hk_boat .hk_veil.hk_veilm { opacity: 0.55; }
 .ph-golden .hk_boat .hk_bcore { stroke: url("#hk_aurG"); }
 .ph-golden .hk_boat .hk_veil { fill: url("#hk_vlG"); }
 .ph-dawn .hk_boat .hk_bcore { stroke: url("#hk_aurD"); }
@@ -108,10 +111,8 @@
 .ph-golden .hk_boat rect[fill="url(#hk_glowM)"] { fill: url("#hk_glowMGo"); }
 .ph-golden .hk_boat rect[fill="url(#hk_glowJ)"] { fill: url("#hk_glowJGo"); }
 .ph-golden .hk_boat .hk_sglow { opacity: 0.9; }
-.ph-golden .hk_boat .hk_bh { opacity: 0.3; }
-.ph-golden .hk_boat .hk_bm2 { opacity: 0.45; }
-.ph-golden .hk_boat .hk_bm { opacity: 0.6; }
-.ph-golden .hk_boat .hk_bc { opacity: 1; }
+.ph-golden .hk_boat .hk_bh { opacity: 0.16; }
+.ph-golden .hk_boat .hk_bc { opacity: 0.55; }
 .ph-dawn .hk_boat .hk_sshade { opacity: 0.8; }
 .ph-golden .hk_boat .hk_sshade { opacity: 0.75; }
 .boat-refl { position: absolute; top: 204.5px; right: 52.5px; width: 103px; height: 13px; border-radius: 50%; pointer-events: none; z-index: 1; background: radial-gradient(50% 62% at 50% 40%, rgba(5, 28, 40, 0.64) 0%, rgba(5, 28, 40, 0.34) 46%, rgba(5, 28, 40, 0) 74%); animation-duration: ; animation-timing-function: ; animation-iteration-count: ; animation-direction: ; animation-fill-mode: ; animation-play-state: ; animation-name: ; animation-timeline: ; animation-range-start: ; animation-range-end: ; animation-delay: -5.15s; }
@@ -562,8 +563,6 @@ html:not(.hk_mo) a.hero_sponsor > ::after, html:not(.hk_mo) button.hero_house > 
 .tgw.rtl .tgtin { animation-name: hk_tgnomR; }
 .dcw.rtl { animation-name: hk_dcruiseR; }
 .pelw.rtl { left: auto; right: -84px; animation-name: hk_pelpassR; }
-.sailad text { font-family: Georgia, serif; font-weight: 700; fill: rgb(74, 90, 104); letter-spacing: 0.35px; }
-.ph-night .sailad text { fill: rgb(62, 78, 96); }
 .skitz .adlbl { position: absolute; top: 5px; right: 8px; z-index: 9; font: 800 11px / 1 Nunito, system-ui, sans-serif; letter-spacing: 0.8px; text-transform: uppercase; color: var(--csoft); opacity: 1; padding: 2px 5px; border-radius: 4px; background: rgba(8, 20, 30, 0.92); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--au-b) 45%, transparent); }
 .skitz .adlbl.open { font-weight: 700; letter-spacing: 0.6px; opacity: 0.85; }
 .skbeach .legsA, .skbeach .crb_lgA { animation-duration: 0.34s; }
@@ -717,6 +716,10 @@ html:not(.hk_mo) a.hero_sponsor > ::after, html:not(.hk_mo) button.hero_house > 
   44% { transform: translateY(0.1px) rotate(-1.2deg); }
   62% { transform: translateY(0.3px) rotate(-1.05deg); }
   100% { transform: translateY(2.5px) rotate(1.1deg); }
+}
+@keyframes hk_rigrock { 
+  0%, 100% { transform: rotate(0.5deg); }
+  55% { transform: rotate(-0.45deg); }
 }
 @keyframes hk_crabL { 
   0% { transform: translate(0px, 0px); }
