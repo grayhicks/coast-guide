@@ -1,6 +1,6 @@
 # Coastal Eventures
 
-> A free, hand-verified guide to real things to do on the Gulf Coast — from Gulf Breeze out to
+> A free, hand-verified guide to real things to do on the Gulf Coast, from Gulf Breeze out to
 > Mobile and Destin. Every event and place is checked against the venue's own page by a person, and
 > stamped with the date it was read.
 
@@ -8,9 +8,9 @@
 
 Prices, hours and dates here are not scraped or estimated. Each record carries:
 
-- `sdDatePublished` — the day that record was last checked against the source.
-- `citation` — the venue's own page(s) the facts were read off, by name and URL.
-- `sdPublisher` and `sdLicense` — who compiled it and what may be done with it.
+- `sdDatePublished`: the day that record was last checked against the source.
+- `citation`: the venue's own page(s) the facts were read off, by name and URL.
+- `sdPublisher` and `sdLicense`: who compiled it and what may be done with it.
 
 Where a price has not been verified, the record says so and carries no price rather than a guess.
 A record with no checked date carries no checked date. Nothing here is filled in to look complete.
@@ -18,7 +18,7 @@ A record with no checked date carries no checked date. Nothing here is filled in
 ## Where the structured data is
 
 Every event and place page carries schema.org JSON-LD (`Event`, `LocalBusiness`) in the page head,
-including the provenance fields above. There is no separate API — this static site is the machine
+including the provenance fields above. There is no separate API. This static site is the machine
 surface.
 
 - Full page index: https://coastaleventures.com/sitemap.xml
@@ -29,7 +29,7 @@ surface.
 
 Data is published under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Reuse is welcome with attribution to
 Coastal Eventures (https://coastaleventures.com/). If you quote a price or an opening time, please carry the checked date with
-it — a price without its date is the thing this guide exists to avoid.
+it. A price without its date is the thing this guide exists to avoid.
 
 ## Corrections
 

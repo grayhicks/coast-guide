@@ -5,82 +5,24 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Gulf Coast: free things
 BEGIN:VEVENT
-UID:ev_palafox-2026-08-29@coast-guide
-DTSTAMP:20260829T000000Z
-DTSTART:20260829T090000
-DTEND:20260829T110000
-SUMMARY:Palafox Market
-DESCRIPTION:A big Saturday market fills downtown with produce\, local make
- rs\, art\, and food. A free trolley runs between plazas. It is stroller-f
- riendly.\nPrice: Free\nArea: Pensacola\nTimes: Saturdays · 9 AM-2 PM\nht
- tps://coastaleventures.com/events/ev-palafox.html
-LOCATION:MLK Jr. Plaza + Plaza Ferdinand\, Downtown Pensacola\, 200 N Pala
- fox St\, Pensacola\, FL 32502
-URL:https://coastaleventures.com/events/ev-palafox.html
+UID:ev_sunmkt-2026-08-30@coast-guide
+DTSTAMP:20260830T000000Z
+DTSTART:20260830T100000
+DTEND:20260830T120000
+SUMMARY:Sunday Market on Palafox
+DESCRIPTION:The Sunday sibling of Palafox Market brings crafts\, art\, and
+  prepared food. Confirm each week's market on their Facebook page before 
+ driving.\nPrice: Free\nArea: Pensacola\nTimes: Sundays · ~10 AM-3 PM\nht
+ tps://coastaleventures.com/events/ev-sunmkt.html
+LOCATION:MLK Jr. Plaza\, Downtown Pensacola\, 200 N Palafox St\, Pensacola
+ \, FL 32502
+URL:https://coastaleventures.com/events/ev-sunmkt.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_grandblvd_mkt-2026-08-29@coast-guide
-DTSTAMP:20260829T000000Z
-DTSTART:20260829T090000
-DTEND:20260829T110000
-SUMMARY:Grand Boulevard Farmers' Market
-DESCRIPTION:A Saturday farmers and makers market fills the Sandestin green
- \, with local honey\, produce\, and kettle corn. Pair it with a Destin/Ba
- ytowne day.\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Saturdays ·
-  9 AM-1 PM\nhttps://coastaleventures.com/events/ev-grandblvd-mkt.html
-LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Blvd\, Mira
- mar Beach\, FL 32550
-URL:https://coastaleventures.com/events/ev-grandblvd-mkt.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_foley_mkt-2026-08-29@coast-guide
-DTSTAMP:20260829T000000Z
-DTSTART:20260829T090000
-DTEND:20260829T110000
-SUMMARY:Coastal Alabama Farmers & Fishermens Market
-DESCRIPTION:The county's largest market sells fresh Gulf seafood straight 
- from the boats plus produce and makers. It is five minutes from OWA\, so 
- it stacks with a Tropic Falls day.\nPrice: Free\nArea: Orange Beach & Gul
- f Shores\nTimes: Saturdays · 9 AM-2 PM\nhttps://coastaleventures.com/eve
- nts/ev-foley-mkt.html
-LOCATION:Coastal Alabama Market\, 781 Farmers Market Ln\, Foley\, AL 36535
-URL:https://coastaleventures.com/events/ev-foley-mkt.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_parkrun-2026-08-29@coast-guide
-DTSTAMP:20260829T000000Z
-DTSTART:20260829T073000
-DTEND:20260829T093000
-SUMMARY:parkrun: Free Timed 5K (Rec Plex North)
-DESCRIPTION:A free\, timed\, all-comers 5K runs every Saturday. Walk\, run
- \, or push the jogging stroller. The kids can earn official times too\, w
- ith one-time free barcode registration.\nPrice: Free\nArea: Pensacola\nTi
- mes: Saturdays · 7:30 AM\nhttps://coastaleventures.com/events/ev-parkrun
- .html
-LOCATION:UWF Rec Plex North Field\, 11000 University Pkwy\, Pensacola\, FL
-  32514
-URL:https://coastaleventures.com/events/ev-parkrun.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_oceanhour-2026-08-29@coast-guide
-DTSTAMP:20260829T000000Z
-DTSTART:20260829T084500
-DTEND:20260829T104500
-SUMMARY:Ocean Hour Beach Cleanup
-DESCRIPTION:Give an hour and leave the beach better. Buckets\, grabbers\, 
- and gloves are provided. It is a service morning that fits the family's v
- alues and is kid-friendly.\nPrice: Free\nArea: Pensacola Beach & Perdido\
- nTimes: Saturdays · ~8:45 AM · location rotates\nhttps://coastaleventur
- es.com/events/ev-oceanhour.html
-LOCATION:Rotating\, Pensacola Beach / area waterfronts\, Pensacola Beach\,
-  FL 32561
-URL:https://coastaleventures.com/events/ev-oceanhour.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_mancis_live-2026-08-29@coast-guide
-DTSTAMP:20260829T000000Z
-DTSTART:20260829T180000
-DTEND:20260829T200000
+UID:nl_mancis_live-2026-08-30@coast-guide
+DTSTAMP:20260830T000000Z
+DTSTART:20260830T180000
+DTEND:20260830T200000
 SUMMARY:Live Music: Manci's Antique Club
 DESCRIPTION:This Daphne institution has walls of Jim Beam decanters and li
  ve local bands Thursday through Sunday. It is a grown-up night across the
@@ -91,10 +33,10 @@ LOCATION:Manci's Antique Club\, 1715 Main St\, Daphne\, AL 36526
 URL:https://coastaleventures.com/events/nl-mancis-live.html
 END:VEVENT
 BEGIN:VEVENT
-UID:nl_fubar_nights-2026-08-29@coast-guide
-DTSTAMP:20260829T000000Z
-DTSTART:20260829T210000
-DTEND:20260829T230000
+UID:nl_fubar_nights-2026-08-30@coast-guide
+DTSTAMP:20260830T000000Z
+DTSTART:20260830T210000
+DTEND:20260830T230000
 SUMMARY:Karaoke & DJ Nights: FUBAR Pizza Bar
 DESCRIPTION:Late-night karaoke runs five nights a week (Sun\, Tue\, Wed\, 
  Fri\, Sat) plus a DJ on Monday and Thursday\, 9 PM to 1 AM every night\, 
@@ -105,24 +47,10 @@ LOCATION:FUBAR Pizza Bar\, 114 Amberjack Dr\, Fort Walton Beach\, FL 32548
 URL:https://coastaleventures.com/events/nl-fubar-nights.html
 END:VEVENT
 BEGIN:VEVENT
-UID:nl_theblock_karaoke-2026-08-29@coast-guide
-DTSTAMP:20260829T000000Z
-DTSTART:20260829T180000
-DTEND:20260829T200000
-SUMMARY:Karaoke Block: The Block
-DESCRIPTION:The Sports & Karaoke room at The Block runs Wednesday through 
- Saturday\, opening at 6 (8 on Thursday) and going late. It is downtown Fo
- rt Walton Beach\, about 50 minutes out.\nPrice: Free\nArea: Destin & Fort
-  Walton\nTimes: Wed-Sat · from 6 PM (Thu 8 PM)\nhttps://coastaleventures
- .com/events/nl-theblock-karaoke.html
-LOCATION:The Block\, 113 Eglin Pkwy SE\, Fort Walton Beach\, FL 32548
-URL:https://coastaleventures.com/events/nl-theblock-karaoke.html
-END:VEVENT
-BEGIN:VEVENT
-UID:nl_sandshaker_live-2026-08-29@coast-guide
-DTSTAMP:20260829T000000Z
-DTSTART;VALUE=DATE:20260829
-DTEND;VALUE=DATE:20260830
+UID:nl_sandshaker_live-2026-08-30@coast-guide
+DTSTAMP:20260830T000000Z
+DTSTART;VALUE=DATE:20260830
+DTEND;VALUE=DATE:20260831
 SUMMARY:Weekend Live Music: Sandshaker Lounge
 DESCRIPTION:The Shaker\, birthplace of the Bushwacker\, has live music eve
  ry weekend and never a cover. It is a classic Pensacola Beach dive\, abou
@@ -134,10 +62,10 @@ LOCATION:Sandshaker Lounge\, 731 Pensacola Beach Blvd\, Pensacola Beach\,
 URL:https://coastaleventures.com/events/nl-sandshaker-live.html
 END:VEVENT
 BEGIN:VEVENT
-UID:nl_paradise_live-2026-08-29@coast-guide
-DTSTAMP:20260829T000000Z
-DTSTART:20260829T173000
-DTEND:20260829T193000
+UID:nl_paradise_live-2026-08-30@coast-guide
+DTSTAMP:20260830T000000Z
+DTSTART:20260830T173000
+DTEND:20260830T193000
 SUMMARY:Live Music: Paradise Bar & Grill
 DESCRIPTION:Beachside live music plays most nights on Pensacola Beach\, wi
  th rotating local acts starting at 5:30 (Sundays 2:30). Wine Down Wednesd
@@ -150,10 +78,10 @@ LOCATION:Paradise Bar & Grill\, 21 Via De Luna Dr\, Pensacola Beach\, FL 3
 URL:https://coastaleventures.com/events/nl-paradise-live.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_30ave_green_music-2026-08-29@coast-guide
-DTSTAMP:20260829T000000Z
-DTSTART:20260829T180000
-DTEND:20260829T210000
+UID:ev_30ave_green_music-2026-08-30@coast-guide
+DTSTAMP:20260830T000000Z
+DTSTART:20260830T180000
+DTEND:20260830T210000
 SUMMARY:Live music on the green: 30Avenue
 DESCRIPTION:Local players take the lawn at the 30A end of the county\, eve
  ry evening\, no ticket. Shops and restaurants ring the green\, so it work
@@ -165,65 +93,9 @@ LOCATION:30Avenue\, 12805 US-98 East\, Inlet Beach\, FL 32461
 URL:https://coastaleventures.com/events/ev-30ave-green-music.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_bodenhamer_recreation_center_membership_driv_0829-2026-08-29@coast-
- guide
-DTSTAMP:20260829T000000Z
-DTSTART:20260829T080000
-DTEND:20260829T100000
-SUMMARY:Bodenhamer Recreation Center Membership Drive & Open House
-DESCRIPTION:The David L. Bodenhamer Recreation Center throws an open house
-  with free admission for new guests\, who normally pay $10 for a day pass
- . Fitness classes run back to back all morning\, from cardio dance at 8:1
- 5 AM through chair fitness at 11:30 AM\, and Kona Ice is free for everyon
- e. New guests also get a free goodie bag while supplies last\, and food-t
- ruck purchases are separate.\nPrice: Free\nArea: Orange Beach & Gulf Shor
- es\nTimes: Saturday 8/29 · 8:00 AM to 12:00 PM\nChecked against the venu
- e's own page on 2026-08-22\nhttps://coastaleventures.com/events/ev-bodenh
- amer-recreation-center-membership-driv-0829.html
-LOCATION:David L. Bodenhamer Recreation Center\, 310 West 19th Avenue\, Gu
- lf Shores\, AL 36542
-URL:https://coastaleventures.com/events/ev-bodenhamer-recreation-center-me
- mbership-driv-0829.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_customer_appreciation_day_0829-2026-08-29@coast-guide
-DTSTAMP:20260829T000000Z
-DTSTART;VALUE=DATE:20260829
-DTEND;VALUE=DATE:20260830
-SUMMARY:Coastal County Brewing: Customer Appreciation Day
-DESCRIPTION:Coastal County Brewing throws its customer appreciation day on
-  the last Saturday in August\, and the brewery's own calendar lists it as
-  an all day event. Bounce houses\, games and activities run alongside foo
- d specials and live music\, and getting in costs nothing. The taproom sit
- s on East Olive Road with a large outdoor yard\, which is where most of t
- he day happens.\nPrice: Free\nArea: Pensacola\nTimes: Saturday 8/29\nChec
- ked against the venue's own page on 2026-08-23\nhttps://coastaleventures.
- com/events/ev-customer-appreciation-day-0829.html
-LOCATION:Coastal County Brewing Company\, 3041 E Olive Rd\, Pensacola\, FL
-  32514
-URL:https://coastaleventures.com/events/ev-customer-appreciation-day-0829.
- html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_blippi_mobile-2026-08-29@coast-guide
-DTSTAMP:20260829T000000Z
-DTSTART:20260829T170000
-DTEND:20260829T190000
-SUMMARY:Gulf Coast Grooves: Be Like Blippi Tour
-DESCRIPTION:The City of Mobile's Kids Edition brings the Be Like Blippi To
- ur to Medal of Honor Park for a free family music event. Gates open at 5 
- PM and the performance starts at 6 PM. The city says tents\, glass bottle
- s and alcohol are not allowed.\nPrice: Free\nArea: Mobile & Baldwin Count
- y\nTimes: Sat 8/29 · gates 5 PM\, show 6 PM\nChecked against the venue's
-  own page on 2026-08-24\nhttps://coastaleventures.com/events/ev-blippi-mo
- bile.html
-LOCATION:Medal of Honor Park\, 1711 Hillcrest Rd\, Mobile\, AL 36609
-URL:https://coastaleventures.com/events/ev-blippi-mobile.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_mobile_museum_make_take_art-2026-08-29@coast-guide
-DTSTAMP:20260829T000000Z
-DTSTART;VALUE=DATE:20260829
+UID:ev_mobile_museum_make_take_art-2026-08-30@coast-guide
+DTSTAMP:20260830T000000Z
+DTSTART;VALUE=DATE:20260830
 DTEND;VALUE=DATE:20261016
 SUMMARY:Make & Take Art: weekly drop-in art sessions
 DESCRIPTION:The museum runs a free Thursday afternoon art session most wee
@@ -238,20 +110,6 @@ DESCRIPTION:The museum runs a free Thursday afternoon art session most wee
 LOCATION:Mobile Museum of Art\, 4850 Museum Drive\, Mobile\, AL 36608
 URL:https://coastaleventures.com/events/ev-mobile-museum-make-take-art.htm
  l
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_sunmkt-2026-08-30@coast-guide
-DTSTAMP:20260830T000000Z
-DTSTART:20260830T100000
-DTEND:20260830T120000
-SUMMARY:Sunday Market on Palafox
-DESCRIPTION:The Sunday sibling of Palafox Market brings crafts\, art\, and
-  prepared food. Confirm each week's market on their Facebook page before 
- driving.\nPrice: Free\nArea: Pensacola\nTimes: Sundays · ~10 AM-3 PM\nht
- tps://coastaleventures.com/events/ev-sunmkt.html
-LOCATION:MLK Jr. Plaza\, Downtown Pensacola\, 200 N Palafox St\, Pensacola
- \, FL 32502
-URL:https://coastaleventures.com/events/ev-sunmkt.html
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_crosspoint_parenting_sunde-2026-08-30@coast-guide
@@ -397,6 +255,20 @@ LOCATION:AJ's Oyster Shanty\, 108 Santa Rosa Blvd\, Fort Walton Beach\, FL
 URL:https://coastaleventures.com/events/nl-ajs-karaoke.html
 END:VEVENT
 BEGIN:VEVENT
+UID:nl_theblock_karaoke-2026-09-02@coast-guide
+DTSTAMP:20260902T000000Z
+DTSTART:20260902T180000
+DTEND:20260902T200000
+SUMMARY:Karaoke Block: The Block
+DESCRIPTION:The Sports & Karaoke room at The Block runs Wednesday through 
+ Saturday\, opening at 6 (8 on Thursday) and going late. It is downtown Fo
+ rt Walton Beach\, about 50 minutes out.\nPrice: Free\nArea: Destin & Fort
+  Walton\nTimes: Wed-Sat · from 6 PM (Thu 8 PM)\nhttps://coastaleventures
+ .com/events/nl-theblock-karaoke.html
+LOCATION:The Block\, 113 Eglin Pkwy SE\, Fort Walton Beach\, FL 32548
+URL:https://coastaleventures.com/events/nl-theblock-karaoke.html
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_sunset_series_chubby_carrier_and_the_bayou_s_0903-2026-09-03@coast-
  guide
 DTSTAMP:20260903T000000Z
@@ -524,6 +396,78 @@ DESCRIPTION:Immanuel Baptist Church throws a free after party following Pa
 LOCATION:Immanuel Baptist Church\, Student Center\, 4187 US-90\, Pace\, FL
   32571
 URL:https://coastaleventures.com/events/ev-ibcpace-5thquarter-0904.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_palafox-2026-09-05@coast-guide
+DTSTAMP:20260905T000000Z
+DTSTART:20260905T090000
+DTEND:20260905T110000
+SUMMARY:Palafox Market
+DESCRIPTION:A big Saturday market fills downtown with produce\, local make
+ rs\, art\, and food. A free trolley runs between plazas. It is stroller-f
+ riendly.\nPrice: Free\nArea: Pensacola\nTimes: Saturdays · 9 AM-2 PM\nht
+ tps://coastaleventures.com/events/ev-palafox.html
+LOCATION:MLK Jr. Plaza + Plaza Ferdinand\, Downtown Pensacola\, 200 N Pala
+ fox St\, Pensacola\, FL 32502
+URL:https://coastaleventures.com/events/ev-palafox.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grandblvd_mkt-2026-09-05@coast-guide
+DTSTAMP:20260905T000000Z
+DTSTART:20260905T090000
+DTEND:20260905T110000
+SUMMARY:Grand Boulevard Farmers' Market
+DESCRIPTION:A Saturday farmers and makers market fills the Sandestin green
+ \, with local honey\, produce\, and kettle corn. Pair it with a Destin/Ba
+ ytowne day.\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Saturdays ·
+  9 AM-1 PM\nhttps://coastaleventures.com/events/ev-grandblvd-mkt.html
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Blvd\, Mira
+ mar Beach\, FL 32550
+URL:https://coastaleventures.com/events/ev-grandblvd-mkt.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_foley_mkt-2026-09-05@coast-guide
+DTSTAMP:20260905T000000Z
+DTSTART:20260905T090000
+DTEND:20260905T110000
+SUMMARY:Coastal Alabama Farmers & Fishermens Market
+DESCRIPTION:The county's largest market sells fresh Gulf seafood straight 
+ from the boats plus produce and makers. It is five minutes from OWA\, so 
+ it stacks with a Tropic Falls day.\nPrice: Free\nArea: Orange Beach & Gul
+ f Shores\nTimes: Saturdays · 9 AM-2 PM\nhttps://coastaleventures.com/eve
+ nts/ev-foley-mkt.html
+LOCATION:Coastal Alabama Market\, 781 Farmers Market Ln\, Foley\, AL 36535
+URL:https://coastaleventures.com/events/ev-foley-mkt.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_parkrun-2026-09-05@coast-guide
+DTSTAMP:20260905T000000Z
+DTSTART:20260905T073000
+DTEND:20260905T093000
+SUMMARY:Parkrun: Free Timed 5K (Rec Plex North)
+DESCRIPTION:A free\, timed\, all-comers 5K runs every Saturday. Walk\, run
+ \, or push the jogging stroller. The kids can earn official times too\, w
+ ith one-time free barcode registration.\nPrice: Free\nArea: Pensacola\nTi
+ mes: Saturdays · 7:30 AM\nhttps://coastaleventures.com/events/ev-parkrun
+ .html
+LOCATION:UWF Rec Plex North Field\, 11000 University Pkwy\, Pensacola\, FL
+  32514
+URL:https://coastaleventures.com/events/ev-parkrun.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_oceanhour-2026-09-05@coast-guide
+DTSTAMP:20260905T000000Z
+DTSTART:20260905T084500
+DTEND:20260905T104500
+SUMMARY:Ocean Hour Beach Cleanup
+DESCRIPTION:Give an hour and leave the beach better. Buckets\, grabbers\, 
+ and gloves are provided. It is a service morning that fits the family's v
+ alues and is kid-friendly.\nPrice: Free\nArea: Pensacola Beach & Perdido\
+ nTimes: Saturdays · ~8:45 AM · location rotates\nhttps://coastaleventur
+ es.com/events/ev-oceanhour.html
+LOCATION:Rotating\, Pensacola Beach / area waterfronts\, Pensacola Beach\,
+  FL 32561
+URL:https://coastaleventures.com/events/ev-oceanhour.html
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_free_first_sunday_0906-2026-09-06@coast-guide
