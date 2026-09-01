@@ -2377,7 +2377,7 @@ html.hkflick .tdec, html.hkflick .sig, html.hkflick .spdec{ visibility:hidden; }
 .ph-golden .kitew{ filter:sepia(.28) saturate(1.15) brightness(1.03); }
 .ph-dawn .kitew{ filter:sepia(.18) saturate(1.05); }
 
-.adparasail{ position:absolute; top:110px; left:-94px; z-index:3; will-change:transform; opacity:.99; animation:hk_adyacht calc(56s * var(--gca-calm)) linear -14s infinite; }
+.adparasail{ position:absolute; top:110px; left:-94px; z-index:3; will-change:transform; opacity:.99; animation:hk_adyacht calc(56s * var(--gca-calm)) linear calc(-21.3s * var(--gca-calm)) infinite; }
 .adparasail_rig{ transform-box:view-box; transform-origin:100px 92px; will-change:transform; animation:hk_adparasway calc(7.6s * var(--gca-calm)) ease-in-out infinite; }
 @keyframes hk_adparasway{ 0%,100%{ transform:rotate(-2.1deg); } 55%{ transform:rotate(1.7deg); } }
 
@@ -2399,7 +2399,7 @@ html.hkflick .tdec, html.hkflick .sig, html.hkflick .spdec{ visibility:hidden; }
   html:not(.hk_mo) .hk .adparasail_rig, html:not(.hk_mo) .hk .adplane_bob, html:not(.hk_mo) .hk .adplane_ban, html:not(.hk_mo) .hk .adplane_prop{ animation:none !important; }
 }
 
-.adyacht{ position:absolute; top:132px; left:0; z-index:0; pointer-events:none; will-change:transform; opacity:1; animation:hk_adyacht calc(56s * var(--gca-calm)) linear -14s infinite; }
+.adyacht{ position:absolute; top:132px; left:0; z-index:0; pointer-events:none; will-change:transform; opacity:1; animation:hk_adyacht calc(56s * var(--gca-calm)) linear calc(-21.3s * var(--gca-calm)) infinite; }
 
 @keyframes hk_adyacht{ 0%{ transform:translateX(-110px); } 100%{ transform:translateX(575px); } }
 

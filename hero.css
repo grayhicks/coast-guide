@@ -326,7 +326,7 @@ html.gca_cold .bswash { opacity: 0; }
 .ph-golden .trtw { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
 .ph-golden .htchw { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
 .ph-golden .kitew { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
-.adparasail { position: absolute; top: 110px; left: -94px; z-index: 3; will-change: transform; opacity: 0.99; animation: hk_adyacht calc(56s * var(--gca-calm)) linear -14s infinite; }
+.adparasail { position: absolute; top: 110px; left: -94px; z-index: 3; will-change: transform; opacity: 0.99; animation: hk_adyacht calc(56s * var(--gca-calm)) linear calc(-21.3s * var(--gca-calm)) infinite; }
 .adparasail_rig { transform-box: view-box; transform-origin: 100px 92px; will-change: transform; animation: hk_adparasway calc(7.6s * var(--gca-calm)) ease-in-out infinite; }
 .adlbl:empty { display: none; }
 .adplane { position: absolute; top: 21px; left: 0px; z-index: 1; will-change: transform; animation: hk_adplane calc(34s * var(--gca-calm)) linear calc(-19.4s * var(--gca-calm)) infinite; }
@@ -338,7 +338,7 @@ html.gca_cold .bswash { opacity: 0; }
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .adparasail { animation: auto ease 0s 1 normal none running none !important; transform: none !important; left: calc(30% - 94px) !important; }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .adplane { animation: auto ease 0s 1 normal none running none !important; transform: none !important; left: auto !important; right: 24% !important; }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .adparasail_rig, html:not(.hk_mo) .hk .adplane_bob, html:not(.hk_mo) .hk .adplane_ban, html:not(.hk_mo) .hk .adplane_prop { animation: auto ease 0s 1 normal none running none !important; }}
-.adyacht { position: absolute; top: 132px; left: 0px; z-index: 0; pointer-events: none; will-change: transform; opacity: 1; animation: hk_adyacht calc(56s * var(--gca-calm)) linear -14s infinite; }
+.adyacht { position: absolute; top: 132px; left: 0px; z-index: 0; pointer-events: none; will-change: transform; opacity: 1; animation: hk_adyacht calc(56s * var(--gca-calm)) linear calc(-21.3s * var(--gca-calm)) infinite; }
 .hero_sponsor { display: contents; }
 button.hero_house { border: 0px; padding: 0px; margin: 0px; background: none; font: inherit; color: inherit; -webkit-tap-highlight-color: transparent; }
 a.hero_sponsor > *, button.hero_house > * { pointer-events: auto; cursor: pointer; }
@@ -573,6 +573,8 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .hk_promoted .adlbl { display: block; margin: 0px 0px 8px; font: 800 11px / 1 Nunito, system-ui, sans-serif; letter-spacing: 1.1px; text-transform: uppercase; color: var(--csoft); opacity: 0.85; }
 .hk_promoted .adlbl.open { font-weight: 700; letter-spacing: 0.9px; opacity: 0.55; }
 .hk_promocard .adlbl { display: block; margin: 0px 0px 5px; font: 800 11px / 1 Nunito, system-ui, sans-serif; letter-spacing: 1.1px; text-transform: uppercase; color: var(--csoft); opacity: 0.85; }
+.t360w.mir { transform: scaleX(-1); }
+.dph360w.mir { transform: scaleX(-1); }
 .gul360w { position: relative; pointer-events: none; }
 .gul360w.mir { transform: scaleX(-1); }
 .gul360w > svg.gul360 { width: 100%; height: 100%; display: block; overflow: visible; }
@@ -603,6 +605,8 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .apt.swim .apt_flipper.rear { transform-origin: 8% 16%; }
 .apt.swim .apt_flipper.rear.far { animation: apt_sea_rudder_far calc(4.2s * var(--gca-calm)) ease-in-out infinite var(--apto,0s); }
 .apt.swim .apt_flipper.rear.near { animation: apt_sea_rudder_near calc(4.2s * var(--gca-calm)) ease-in-out infinite var(--apto,0s); }
+.apt_body .t360w.mir ~ .hkfx-head { left: auto; right: -8%; }
+.apt_body .t360w.mir ~ .aptfx_vein { left: auto; right: 7%; }
 .skn_bub.b1 { left: 168px; bottom: 32px; animation: skn_bub1 var(--skd,28s) linear infinite var(--sko,0s); }
 .skn_bub.b2 { left: 176px; bottom: 28px; width: 3px; height: 3px; animation: skn_bub2 var(--skd,28s) linear infinite var(--sko,0s); }
 .skn_bub.b3 { left: 162px; bottom: 26px; width: 5px; height: 5px; animation: skn_bub3 var(--skd,28s) linear infinite var(--sko,0s); }
@@ -655,6 +659,7 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .xps_shorebird.b2 { --flap: .61s; }
 .xp_supportstage.cheering .xps_crab .crb_pup, .xp_supportstage.verified .xps_crab .crb_pup { transform-box: fill-box; transform-origin: center center; animation: xps_crabglee calc(1.24s * var(--gca-calm)) cubic-bezier(.3,0,.25,1) infinite; }
 .xp_supportstage .dph_gaze, .xp_supportstage .crb_pup, .xp_supportstage .pel_fly_eye { transform-box: fill-box; transform-origin: 50% 50%; transition: transform 0.3s cubic-bezier(0.22, 0.8, 0.3, 1); }
+.xp_supportstage.gazing .t360w.mir .hke_gaze { transform: translate(calc(var(--gx) * -.5px),calc(var(--gy) * .38px)); }
 .xp_supportstage.gazing .crb_pup { transform: translate(calc(var(--gx) * .55px),calc(var(--gy) * .4px)); }
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .xp_supportstage.gazing .hke_gaze, html:not(.hk_mo) .xp_supportstage.gazing .dph_gaze, html:not(.hk_mo) .xp_supportstage.gazing .crb_pup, html:not(.hk_mo) .xp_supportstage.gazing .pel_fly_eye, html:not(.hk_mo) .xp_supportstage.gazing .osp_yaw { transform: none; }}
 .promo_bulb.b1 { animation-delay: -1.3s; }
