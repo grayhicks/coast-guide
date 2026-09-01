@@ -435,6 +435,10 @@ html, body { overflow-x: clip; }
 .scene-stage .adbonfire{bottom:6px}
 .scene-stage .adyacht{top:auto;bottom:12px}
 
+.scene.band .adyacht{top:132px;bottom:auto}
+
+.scene-stage .adparasail{left:calc(-94px / var(--sx))}
+
 
 
 
@@ -475,6 +479,10 @@ html, body { overflow-x: clip; }
 
 
 
+
+@media (min-width:901px){
+  .scene-stage .hero{--sunshift:-27px}
+}
 @media (min-width:1220px){
   .scene-copy::before{
     -webkit-mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.10) 8%,rgba(0,0,0,.26) 15%,rgba(0,0,0,.48) 22%,rgba(0,0,0,.72) 29%,rgba(0,0,0,.90) 35%,#000 42%,#000 62%,rgba(0,0,0,.35) 78%,transparent 92%);

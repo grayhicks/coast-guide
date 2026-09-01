@@ -3,7 +3,7 @@
 .hk .hero { --gca-calm: calc(var(--gca-calm-base) * var(--gca-master) * var(--gca-g-hero)); }
 .hk[data-calmoff~="hero"] .hero *, .hk[data-calmoff~="world"] .tdec *, .hk[data-calmoff~="field"] .fldw *, .hk[data-calmoff~="mark"] .spdec *, .hk[data-calmoff~="sheen"] .sig * { animation-play-state: paused !important; }
 .hero { position: relative; overflow: hidden; margin: 0 calc(-1*var(--hk-gutter)) 14px; padding: 22px 22px 38px; min-height: 248px; background: var(--sky); }
-.hero { --sunlane: 8px; --sun-cx: calc(100% - 44px - (1 - var(--sunu,.15))*var(--sunlane)); --sun-cy: max(44px, 140px - var(--sunfy,.27)*106px); }
+.hero { --sunlane: 8px; --sun-cx: calc(100% - 26px + var(--sunshift,0px) - (1 - var(--sunu,.15))*var(--sunlane)); --sun-cy: max(44px, 140px - var(--sunfy,.27)*106px); }
 @media (min-width: 390px){.hero { --sunlane: 34px; }}
 @media (min-width: 430px){.hero { --sunlane: 54px; }}
 @media (min-width: 660px){.hero { --sunlane: 100px; }}
@@ -65,8 +65,8 @@
 .hk_sglow { opacity: 0; }
 .ph-night .hk_boat .sails path[fill="url(#hk_maing)"] { fill: url("#hk_maingN"); }
 .ph-night .hk_boat .sails path[fill="url(#hk_jibg)"] { fill: url("#hk_jibgN"); }
-.hk_boat .sails .hk_scloth { stroke-opacity: 0.92; }
-.ph-night .hk_boat .sails .hk_scloth { stroke-opacity: 0.8; }
+.hk_boat .sails .hk_scloth { stroke-opacity: 0.46; }
+.ph-night .hk_boat .sails .hk_scloth { stroke-opacity: 0.36; }
 .ph-night .hk_boat .hk_bnd_bj0 { stroke: url("#hk_aurN_bj0"); }
 .ph-night .hk_boat .hk_bnd_bj1 { stroke: url("#hk_aurN_bj1"); }
 .ph-night .hk_boat .hk_bnd_bj2 { stroke: url("#hk_aurN_bj2"); }
@@ -91,6 +91,9 @@
 .ph-night .hk_boat .hk_veil { opacity: 1; }
 .hk_boat .hk_veil.hk_veilm { opacity: 0.6; }
 .ph-night .hk_boat .hk_veil.hk_veilm { opacity: 0.55; }
+.hk_boat .hk_veil.hk_veilj { opacity: 0.61; }
+.ph-dawn .hk_boat .hk_veil.hk_veilj { opacity: 0.47; }
+.ph-night .hk_boat .hk_veil.hk_veilj { opacity: 0.85; }
 .ph-night .hk_boat .hk_crease { stroke: rgb(12, 24, 52); opacity: 0.42; }
 .ph-night .hk_boat .hk_creasel { stroke: rgb(185, 210, 240); opacity: 0.28; }
 .ph-golden .hk_strake { opacity: 0.68; }
@@ -161,7 +164,7 @@
 .ph-night .beachprops { filter: brightness(0.5) saturate(0.65); }
 .crabw { position: absolute; left: 8px; bottom: 30px; z-index: 1; pointer-events: none; will-change: transform; animation: auto linear 0s 1 normal forwards running hk_crabL; }
 .crabw.rtl { animation-name: hk_crabR; }
-.supw { position: absolute; top: 168px; left: 10%; z-index: 3; pointer-events: none; opacity: 0.95; animation: hk_supdrift calc(12s * var(--gca-calm)) ease-in-out infinite alternate; }
+.supw { position: absolute; top: 199px; left: 30%; z-index: 3; pointer-events: none; opacity: 0.95; animation: hk_supdrift calc(12s * var(--gca-calm)) ease-in-out infinite alternate; }
 .supw svg { animation: hk_supbob calc(2.9s * var(--gca-calm)) ease-in-out infinite; }
 .paddle { transform-box: fill-box; transform-origin: 42% 40%; animation: hk_paddle calc(1.7s * var(--gca-calm)) ease-in-out infinite; }
 .paddler { transform-box: fill-box; transform-origin: 50% 95%; animation: hk_supbody calc(1.7s * var(--gca-calm)) ease-in-out infinite; }
@@ -336,7 +339,7 @@ html.gca_cold .bswash { opacity: 0; }
 .gullw.rtl { left: auto; right: -80px; animation-name: hk_gullpr; }
 .skbwrap.nite .skbg { filter: brightness(0.8) saturate(0.65); }
 .trtw.rtl .trtb { animation-name: hk_trtupR; }
-.adparasail { position: absolute; top: 110px; left: -94px; z-index: 3; will-change: transform; opacity: 0.99; animation: hk_adyacht calc(56s * var(--gca-calm)) linear calc(-21.3s * var(--gca-calm)) infinite; }
+.adparasail { position: absolute; top: 110px; left: -94px; z-index: 3; will-change: transform; opacity: 0.99; animation: hk_adyacht calc(56s * var(--gca-calm)) linear calc(-17.2s * var(--gca-calm)) infinite; }
 .adparasail_rig { transform-box: view-box; transform-origin: 100px 92px; will-change: transform; animation: hk_adparasway calc(7.6s * var(--gca-calm)) ease-in-out infinite; }
 .adlbl:empty { display: none; }
 .adplane { position: absolute; top: 21px; left: 0px; z-index: 1; will-change: transform; animation: hk_adplane calc(34s * var(--gca-calm)) linear calc(-19.4s * var(--gca-calm)) infinite; }
@@ -348,13 +351,14 @@ html.gca_cold .bswash { opacity: 0; }
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .adparasail { animation: auto ease 0s 1 normal none running none !important; transform: none !important; left: calc(30% - 94px) !important; }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .adplane { animation: auto ease 0s 1 normal none running none !important; transform: none !important; left: auto !important; right: 24% !important; }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .adparasail_rig, html:not(.hk_mo) .hk .adplane_bob, html:not(.hk_mo) .hk .adplane_ban, html:not(.hk_mo) .hk .adplane_prop { animation: auto ease 0s 1 normal none running none !important; }}
-.adyacht { position: absolute; top: 132px; left: 0px; z-index: 0; pointer-events: none; will-change: transform; opacity: 1; animation: hk_adyacht calc(56s * var(--gca-calm)) linear calc(-21.3s * var(--gca-calm)) infinite; }
+.adyacht { position: absolute; top: 132px; left: 0px; z-index: 0; pointer-events: none; will-change: transform; opacity: 1; animation: hk_adyacht calc(56s * var(--gca-calm)) linear calc(-17.2s * var(--gca-calm)) infinite; }
 .hero_sponsor { display: contents; }
 button.hero_house { border: 0px; padding: 0px; margin: 0px; background: none; font: inherit; color: inherit; -webkit-tap-highlight-color: transparent; }
 a.hero_sponsor > *, button.hero_house > * { pointer-events: auto; cursor: pointer; }
 a.hero_sponsor > ::after, button.hero_house > ::after { content: ""; position: absolute; left: 50%; top: 50%; width: max(100%, 44px); height: max(100%, 44px); transform: translate(-50%, -50%); }
 a.hero_sponsor:focus-visible > *, button.hero_house:focus-visible > * { outline: rgb(242, 196, 60) solid 3px; outline-offset: 4px; border-radius: 4px; }
 a.hero_sponsor > ::before, button.hero_house > ::before { content: ""; position: absolute; left: 50%; top: 50%; width: calc(100% + 6px); height: calc(100% + 6px); transform: translate(-50%, -50%); border-radius: 14px; pointer-events: none; box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px; opacity: 0.035; animation: hk_tapring calc(5.5s * var(--gca-calm)) ease-in-out infinite; }
+a.hero_sponsor > .adparasail::before, button.hero_house > .adparasail::before { box-shadow: none; animation: auto ease 0s 1 normal none running none; }
 .sunb::after { content: ""; position: absolute; left: 50%; top: 50%; width: max(100%, 44px); height: max(100%, 44px); transform: translate(-50%, -50%); border-radius: 50%; pointer-events: none; box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px; opacity: 0.07; animation: hk_tapring_sun calc(5.5s * var(--gca-calm)) ease-in-out infinite; }
 .ph-night .sunb::after { left: 64px; top: 26px; width: 68px; height: 68px; }
 html:not(.hk_mo) .sunb::after { animation: auto ease 0s 1 normal none running none; opacity: 0.07; }
