@@ -437,7 +437,16 @@ html, body { overflow-x: clip; }
 
 
 
+
 .scene.band .adplane{display:none}
+@media (min-width:1024px){
+  
+  .scene.band .adplane{display:block; left:auto; right:72px; top:2px; animation:none}
+  
+  .scene.band .adplane > svg{transform-origin:100% 50%}
+}
+
+@media (min-width:2100px){ .scene.band .adplane{right:150px} }
 
 
 
