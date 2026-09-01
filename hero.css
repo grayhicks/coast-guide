@@ -60,14 +60,20 @@
 .sswp { animation: hk_sswp calc(13s * var(--gca-calm)) ease-in-out infinite; }
 .hk_boat { animation: hk_sailbob calc(5.5s * var(--gca-calm)) ease-in-out infinite; z-index: 1; }
 .hk_boat .hk_rig { transform-box: view-box; transform-origin: 66.6px 81.5px; animation: hk_rigrock calc(7.3s * var(--gca-calm)) ease-in-out infinite; }
-.ph-night .hk_boat .hk_sheen { opacity: 1; }
 .ph-night .hk_boat .hk_hullsh { opacity: 0.3; }
-.ph-golden .hk_boat .hk_sheen { opacity: 0.75; }
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk_boat .hk_rig { animation: auto ease 0s 1 normal none running none; }}
 .hk_sglow { opacity: 0; }
 .ph-night .hk_boat .sails path[fill="url(#hk_maing)"] { fill: url("#hk_maingN"); }
 .ph-night .hk_boat .sails path[fill="url(#hk_jibg)"] { fill: url("#hk_jibgN"); }
-.ph-night .hk_boat .hk_bcore { stroke: url("#hk_aurN"); }
+.hk_boat .sails .hk_scloth { stroke-opacity: 0.92; }
+.ph-night .hk_boat .sails .hk_scloth { stroke-opacity: 0.8; }
+.ph-night .hk_boat .hk_bnd_bj0 { stroke: url("#hk_aurN_bj0"); }
+.ph-night .hk_boat .hk_bnd_bj1 { stroke: url("#hk_aurN_bj1"); }
+.ph-night .hk_boat .hk_bnd_bj2 { stroke: url("#hk_aurN_bj2"); }
+.ph-night .hk_boat .hk_bnd_bj3 { stroke: url("#hk_aurN_bj3"); }
+.ph-night .hk_boat .hk_bnd_bm0 { stroke: url("#hk_aurN_bm0"); }
+.ph-night .hk_boat .hk_bnd_bm1 { stroke: url("#hk_aurN_bm1"); }
+.ph-night .hk_boat .hk_bnd_bm2 { stroke: url("#hk_aurN_bm2"); }
 .ph-night .hk_boat .hk_bh { opacity: 0.15; }
 .ph-night .hk_boat .hk_bc { opacity: 0.5; }
 .hk_boat .hk_mbands { opacity: 0.9; }
@@ -116,9 +122,21 @@
 .ph-golden .hk_boat .sails path[fill="url(#hk_jibg)"] { fill: url("#hk_jibgG"); }
 .ph-dawn .hk_boat .hk_veil { opacity: 0.55; }
 .ph-dawn .hk_boat .hk_veil.hk_veilm { opacity: 0.55; }
-.ph-golden .hk_boat .hk_bcore { stroke: url("#hk_aurG"); }
+.ph-golden .hk_boat .hk_bnd_bj0 { stroke: url("#hk_aurG_bj0"); }
+.ph-golden .hk_boat .hk_bnd_bj1 { stroke: url("#hk_aurG_bj1"); }
+.ph-golden .hk_boat .hk_bnd_bj2 { stroke: url("#hk_aurG_bj2"); }
+.ph-golden .hk_boat .hk_bnd_bj3 { stroke: url("#hk_aurG_bj3"); }
+.ph-golden .hk_boat .hk_bnd_bm0 { stroke: url("#hk_aurG_bm0"); }
+.ph-golden .hk_boat .hk_bnd_bm1 { stroke: url("#hk_aurG_bm1"); }
+.ph-golden .hk_boat .hk_bnd_bm2 { stroke: url("#hk_aurG_bm2"); }
 .ph-golden .hk_boat .hk_veil { fill: url("#hk_vlG"); }
-.ph-dawn .hk_boat .hk_bcore { stroke: url("#hk_aurD"); }
+.ph-dawn .hk_boat .hk_bnd_bj0 { stroke: url("#hk_aurD_bj0"); }
+.ph-dawn .hk_boat .hk_bnd_bj1 { stroke: url("#hk_aurD_bj1"); }
+.ph-dawn .hk_boat .hk_bnd_bj2 { stroke: url("#hk_aurD_bj2"); }
+.ph-dawn .hk_boat .hk_bnd_bj3 { stroke: url("#hk_aurD_bj3"); }
+.ph-dawn .hk_boat .hk_bnd_bm0 { stroke: url("#hk_aurD_bm0"); }
+.ph-dawn .hk_boat .hk_bnd_bm1 { stroke: url("#hk_aurD_bm1"); }
+.ph-dawn .hk_boat .hk_bnd_bm2 { stroke: url("#hk_aurD_bm2"); }
 .ph-dawn .hk_boat .hk_veil { fill: url("#hk_vlD"); }
 .ph-golden .hk_boat { z-index: 2; }
 .ph-dawn .hk_boat { z-index: 2; }
