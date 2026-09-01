@@ -92,7 +92,8 @@ body.ph-night .scene{--skytop:#16294A}
 
 
 
-@media (max-width:900px){.scene.band{--moonr:80px;--seat:4px}}
+
+@media (max-width:900px){.scene.band{--moonr:110px;--seat:4px}}
 @media (min-width:901px){.scene.band{--seat:10px}}
 
 
