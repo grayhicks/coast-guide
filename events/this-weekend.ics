@@ -174,8 +174,8 @@ BEGIN:VEVENT
 UID:ev_concerts_at_the_landing_heart_of_glass_and_s_0904-2026-09-04@coast-
  guide
 DTSTAMP:20260904T000000Z
-DTSTART:20260904T180000
-DTEND:20260904T200000
+DTSTART;VALUE=DATE:20260904
+DTEND;VALUE=DATE:20261024
 SUMMARY:Concerts at The Landing: Heart of Glass & Subliminal Doubt
 DESCRIPTION:Fort Walton Beach Landing hosts Heart of Glass and Subliminal 
  Doubt for a free evening of live music\, one date in the city's Fall 2026

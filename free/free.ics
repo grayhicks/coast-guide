@@ -537,8 +537,8 @@ BEGIN:VEVENT
 UID:ev_concerts_at_the_landing_heart_of_glass_and_s_0904-2026-09-04@coast-
  guide
 DTSTAMP:20260904T000000Z
-DTSTART:20260904T180000
-DTEND:20260904T200000
+DTSTART;VALUE=DATE:20260904
+DTEND;VALUE=DATE:20261024
 SUMMARY:Concerts at The Landing: Heart of Glass & Subliminal Doubt
 DESCRIPTION:Fort Walton Beach Landing hosts Heart of Glass and Subliminal 
  Doubt for a free evening of live music\, one date in the city's Fall 2026
@@ -1900,7 +1900,7 @@ DESCRIPTION:The Wharf hosts this free city festival with the Bama Coast Cr
  aturday 9/19 · 9:00 AM to 5:00 PM\nChecked against the venue's own page 
  on 2026-08-30\nhttps://coastaleventures.com/events/ev-orange-beach-freedo
  m-fest-2026-0919.html
-LOCATION:The Wharf
+LOCATION:The Wharf\, 23101 Canal Road\, Orange Beach\, AL 36561
 URL:https://coastaleventures.com/events/ev-orange-beach-freedom-fest-2026-
  0919.html
 END:VEVENT
@@ -2106,12 +2106,12 @@ DTSTART:20260926T110000
 DTEND:20260926T130000
 SUMMARY:Opera at the Library: Hansel & Gretel vs. The Witch (Bellview)
 DESCRIPTION:Pensacola Opera brings its touring kids' adaptation\, Hansel &
-  Gretel vs. The Witch\, to Bellview Library for a free performance. No ti
- cket is required. This is one of two library stops on the current tour\; 
- the other lands at Tryon Library the following week.\nPrice: Free\nArea: 
- Pensacola\nTimes: Sat 9/26 · 11:00 AM\nChecked against the venue's own p
- age on 2026-08-24\nhttps://coastaleventures.com/events/ev-bellview-librar
- y-hanselgretel.html
+  Gretel vs. The Witch\, to Bellview Library for a free performance. The p
+ rogram runs about 35 minutes and no ticket is required. This is one of tw
+ o library stops on the current tour\; the other lands at Tryon Library th
+ e following week.\nPrice: Free\nArea: Pensacola\nTimes: Sat 9/26 · 11:00
+  AM\nChecked against the venue's own page on 2026-08-24\nhttps://coastale
+ ventures.com/events/ev-bellview-library-hanselgretel.html
 LOCATION:Bellview Library\, 6425 Mobile Highway\, Pensacola\, FL 32526
 URL:https://coastaleventures.com/events/ev-bellview-library-hanselgretel.h
  tml
