@@ -6,7 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Coastal Events">
-<meta name="mobile-web-app-capable" content="yes"><script>window.__GCA_BUILD="ac778f8e1112eec0"</script></head><body><div id="root"></div><script>/**
+<meta name="mobile-web-app-capable" content="yes"><script>window.__GCA_BUILD="1407f080749db6d5"</script></head><body><div id="root"></div><script>/**
  * @license React
  * react.production.min.js
  *
@@ -1679,6 +1679,11 @@ html.hkflick .tdec, html.hkflick .sig, html.hkflick .spdec{ visibility:hidden; }
 .status{ display:flex; flex-wrap:wrap; align-items:center; gap:3px 10px; margin:8px 0 0; }
 
 .statusseal{ order:99; margin-left:auto; flex:0 0 auto; display:block; }
+
+@supports selector(:has(*)){
+  .status:has(.lanerow) .statusseal{ order:-2; }
+  .status:has(.lanerow)::before{ content:""; order:-1; flex:0 0 100%; height:0; }
+}
 .promo-cardfoot .promoseal{ flex:0 0 auto; }
 .status > .chip:first-child{ order:0; }
 .status > .chip.mil{ order:1; }
