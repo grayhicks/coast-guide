@@ -495,3 +495,41 @@ html, body { overflow-x: clip; }
     -webkit-mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.10) 8%,rgba(0,0,0,.26) 15%,rgba(0,0,0,.48) 22%,rgba(0,0,0,.72) 29%,rgba(0,0,0,.90) 35%,#000 42%,#000 62%,rgba(0,0,0,.35) 78%,transparent 92%);
             mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.10) 8%,rgba(0,0,0,.26) 15%,rgba(0,0,0,.48) 22%,rgba(0,0,0,.72) 29%,rgba(0,0,0,.90) 35%,#000 42%,#000 62%,rgba(0,0,0,.35) 78%,transparent 92%)}
 }
+
+
+@keyframes hk_adyacht_wide{
+  0%{ opacity:0; transform:translateX(var(--yx0,292px)); }
+  2%,97%{ opacity:1; }
+  100%{ opacity:0; transform:translateX(var(--yx1,312px)); }
+}
+
+
+@media (min-width:1024px){
+  .scene.band .adyacht,.scene.band .adparasail{
+    animation-name:hk_adyacht_wide;
+    --yx0:calc(292px + 40px / var(--sx));
+    --yx1:calc(292px - 30px / var(--sx)); animation-duration:24s}
+}
+@media (min-width:1440px){
+  .scene.band .adyacht,.scene.band .adparasail{
+    --yx0:calc(292px + 90px / var(--sx));
+    --yx1:calc(292px - 40px / var(--sx)); animation-duration:44s}
+}
+@media (min-width:1900px){
+  .scene.band .adyacht,.scene.band .adparasail{
+    --yx0:calc(292px + 120px / var(--sx));
+    --yx1:calc(292px - 20px / var(--sx)); animation-duration:48s}
+}
+@media (min-width:2400px){
+  .scene.band .adyacht,.scene.band .adparasail{
+    --yx0:calc(292px + 90px / var(--sx));
+    --yx1:calc(292px - 30px / var(--sx)); animation-duration:40s}
+}
+
+
+@media (min-width:1024px){
+  .scene.band{--pb:1.34}
+  .scene.band .adyacht > svg,.scene.band .adparasail > svg{
+    scale:calc(var(--up) * var(--pb) / var(--sx)) calc(var(--up) * var(--pb) / var(--sy))}
+  .scene.band .adparasail{left:calc(-94px * var(--pb) / var(--sx))}
+}
