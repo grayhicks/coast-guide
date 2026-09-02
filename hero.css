@@ -256,7 +256,7 @@
 html.gca_cold .bswash { opacity: 0; }
 .bsw + .bsw { margin-left: 0.42em; }
 .hero-titlelink { display: contents; text-decoration: none; color: inherit; -webkit-tap-highlight-color: transparent; }
-.hero-title { --bt-a: #FFFDF8; --bt-b: #E8C078; }
+.hero-title { --bt-a: #FFFDF8; --bt-b: #E8C078; transform: translateY(-6px); }
 .hero-title .bt_a { color: var(--bt-a); }
 .hero-title .bt_b { color: var(--bt-b); }
 .hero-title .bt_tail { opacity: 1; }
