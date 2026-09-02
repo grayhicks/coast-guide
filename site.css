@@ -1258,6 +1258,8 @@ html[data-theme="light"] .jn{background:rgba(138,95,16,.1)}
 .crumbs [aria-current="page"]{color:var(--ink-2)}
 
 .scene .crumbs, .scene .crumbs a{color:#f0e6d0}
+
+.scene.band .crumbs, .scene.band .crumbs a{color:#f7f0e2}
 .scene .crumbs [aria-current="page"]{color:#fff}
 .scene .crumbs .sep{color:rgba(255,244,220,.55)}
 
@@ -1932,11 +1934,34 @@ div.foot-fine{border-top:1px solid var(--line-soft);margin-top:var(--s-6);paddin
     -webkit-mask-image:linear-gradient(90deg,#000 0,#000 53%,rgba(0,0,0,.35) 59%,transparent 66%);
             mask-image:linear-gradient(90deg,#000 0,#000 53%,rgba(0,0,0,.35) 59%,transparent 66%)}
 }
+
+@media (min-width:901px){
+  .scene.band .scene-copy::before{opacity:.68;
+    background:radial-gradient(52% 66% at 30% 34%,
+      rgba(10,52,70,.76) 0%,
+      rgba(10,52,70,.74) 26%,
+      rgba(10,52,70,.62) 44%,
+      rgba(10,52,70,.42) 58%,
+      rgba(10,52,70,.22) 72%,
+      rgba(10,52,70,.07) 86%,
+      rgba(10,52,70,0) 100%)}
+}
 @media (min-width:1220px){
   
   .scene.band .scene-copy::before{
     -webkit-mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.10) 8%,rgba(0,0,0,.26) 15%,rgba(0,0,0,.48) 22%,rgba(0,0,0,.72) 29%,rgba(0,0,0,.90) 35%,#000 42%,#000 53%,rgba(0,0,0,.35) 59%,transparent 66%);
             mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.10) 8%,rgba(0,0,0,.26) 15%,rgba(0,0,0,.48) 22%,rgba(0,0,0,.72) 29%,rgba(0,0,0,.90) 35%,#000 42%,#000 53%,rgba(0,0,0,.35) 59%,transparent 66%)}
+}
+@media (min-width:1441px){
+  
+  .scene.band .scene-copy::before{background:radial-gradient(58% 66% at 31% 34%,
+    rgba(10,52,70,.76) 0%,
+    rgba(10,52,70,.74) 30%,
+    rgba(10,52,70,.64) 48%,
+    rgba(10,52,70,.48) 62%,
+    rgba(10,52,70,.30) 74%,
+    rgba(10,52,70,.11) 87%,
+    rgba(10,52,70,0) 100%)}
 }
 @media (min-width:1441px){
   
@@ -1947,6 +1972,11 @@ div.foot-fine{border-top:1px solid var(--line-soft);margin-top:var(--s-6);paddin
 
 .scene-copy h1,.page-title{text-shadow:0 2px 10px rgba(6,14,24,.55)}
 .scene-copy .sub,.page-sub,.hero .sub,.hero-sub,.scene-copy .lead{text-shadow:0 1px 8px rgba(6,14,24,.5)}
+
+.scene.band .scene-copy h1,.scene.band .page-title{
+  text-shadow:0 0 1px rgba(6,15,24,.95),0 0 2px rgba(6,15,24,.85),0 0 4px rgba(6,15,24,.6),0 2px 10px rgba(6,14,24,.55)}
+.scene.band .scene-copy .sub,.scene.band .page-sub,.scene.band .scene-copy .lead{
+  text-shadow:0 0 1px rgba(6,15,24,.95),0 0 2px rgba(6,15,24,.8),0 0 4px rgba(6,15,24,.55),0 1px 8px rgba(6,14,24,.5)}
 .hero-count{text-shadow:0 1px 8px rgba(6,14,24,.6)}
 
 
