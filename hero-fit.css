@@ -115,6 +115,9 @@ body.ph-night .scene{--skytop:#16294A}
 .scene-stage .sunb{transform-origin:100% 0;right:var(--moonr,28px);
   transform:scale(calc(var(--um) / var(--sx)),calc(var(--um) / var(--sy)))}
 
+.scene-stage .sun{transform-origin:100% 0;
+  scale:calc(var(--um) / var(--sx)) calc(var(--um) / var(--sy))}
+
 
 
 .scene{--k:calc(var(--um) / var(--sx));--kb:calc(var(--ub) / var(--sx));
@@ -439,6 +442,8 @@ html, body { overflow-x: clip; }
 
 
 .scene-stage .adparasail{left:calc(-94px / var(--sx))}
+
+.scene.tall .scene-stage .adparasail{top:calc(110px + 92px)}
 
 
 
