@@ -33,7 +33,6 @@
 .glit { position: absolute; top: 153px; left: calc(var(--sun-cx) - 52px); width: 104px; height: 82px; z-index: 1; pointer-events: none; clip-path: polygon(35% 0px, 65% 0px, 100% 100%, 0% 100%); mask-image: linear-gradient(rgba(0, 0, 0, 0.95), rgb(0, 0, 0) 30%, rgba(0, 0, 0, 0.72)); }
 .gl { position: absolute; height: 2.2px; border-radius: 3px; background: var(--glitc); opacity: 0; transform: scaleX(0.25); animation: auto ease-in-out 0s infinite normal none running hk_gl; }
 .ph-night .glit { left: auto; right: 6px; }
-.ph-night .hkop { display: none; }
 .hfp { position: absolute; left: 20px; bottom: 8px; z-index: 3; display: block; padding: 0px; margin: 0px; border: 0px; background: none; cursor: pointer; appearance: none; filter: drop-shadow(rgba(6, 20, 32, 0.34) 0px 2px 5px); transition: transform 0.18s, filter 0.18s; }
 .hfp:hover { transform: translateY(-1px); filter: drop-shadow(rgba(6, 20, 32, 0.42) 0px 3px 8px); }
 .hfp:active { transform: translateY(0px) scale(0.97); }
@@ -98,8 +97,28 @@
 .ph-night .hk_boat .hk_crease { stroke: rgb(12, 24, 52); opacity: 0.42; }
 .ph-night .hk_boat .hk_creasel { stroke: rgb(185, 210, 240); opacity: 0.28; }
 .ph-golden .hk_strake { opacity: 0.68; }
+.ph-golden .adyacht path[fill="#F5F7F8"] { fill: rgb(247, 221, 174); }
+.ph-golden .adyacht g[fill="#EEF1F3"] { fill: rgb(242, 214, 168); }
+.ph-golden .adyacht path[fill="#2B4E63"] { fill: rgb(78, 66, 86); }
+.ph-golden .adyacht path[fill="#24455A"] { fill: rgb(67, 55, 73); }
+.ph-golden .adyacht line[stroke="#AEB9C1"], .ph-golden .adyacht path[stroke="#AEB9C1"] { stroke: rgb(194, 163, 126); }
+.ph-golden .adyacht g[stroke="#93A3AE"] { stroke: rgb(179, 154, 122); }
+.ph-golden .adyacht g[fill="#EDF2F4"] { fill: rgb(245, 216, 166); stroke: rgb(245, 216, 166); }
+.ph-dawn .adyacht path[fill="#F5F7F8"] { fill: rgb(236, 213, 199); }
+.ph-dawn .adyacht g[fill="#EEF1F3"] { fill: rgb(230, 207, 194); }
+.ph-dawn .adyacht line[stroke="#AEB9C1"], .ph-dawn .adyacht path[stroke="#AEB9C1"] { stroke: rgb(172, 154, 150); }
+.ph-dawn .adyacht g[stroke="#93A3AE"] { stroke: rgb(169, 151, 154); }
+.ph-dawn .adyacht g[fill="#EDF2F4"] { fill: rgb(234, 210, 198); stroke: rgb(234, 210, 198); }
+.ph-golden .adyacht .adyacht_paint { filter: saturate(1.04) brightness(1.04); }
+.ph-dawn .adyacht .adyacht_paint { filter: saturate(0.96) brightness(1); }
 .ph-golden .skbg path { fill: rgb(75, 56, 43); }
+.ph-golden .skbnear path[fill="#2A363F"] { fill: rgb(65, 48, 38); }
+.ph-golden .skbnear path[fill="#26313A"] { fill: rgb(58, 43, 34); }
+.ph-golden .skbnear path[stroke="#F2F6F1"] { stroke: rgb(255, 223, 176); }
 .ph-dawn .skbg path { fill: rgb(70, 65, 79); }
+.ph-dawn .skbnear path[fill="#2A363F"] { fill: rgb(61, 57, 69); }
+.ph-dawn .skbnear path[fill="#26313A"] { fill: rgb(55, 51, 63); }
+.ph-dawn .skbnear path[stroke="#F2F6F1"] { stroke: rgb(240, 219, 210); }
 .ph-night .skbnear path[fill="#2A363F"] { fill: rgb(36, 46, 56); }
 .ph-night .skbnear path[stroke="#F2F6F1"] { stroke: rgb(159, 180, 196); }
 .ph-golden .hero-wave path { fill: rgb(36, 31, 48); }
@@ -148,48 +167,41 @@
 .ph-night .beachprops { filter: brightness(0.5) saturate(0.65); }
 .crabw { position: absolute; left: 8px; bottom: 30px; z-index: 1; pointer-events: none; will-change: transform; animation: auto linear 0s 1 normal forwards running hk_crabL; }
 .crabw.rtl { animation-name: hk_crabR; }
+.supw { position: absolute; top: 211px; left: 30%; z-index: 3; pointer-events: none; opacity: 0.95; animation: hk_supdrift calc(12s * var(--gca-calm)) ease-in-out infinite alternate; }
+.supw svg { animation: hk_supbob calc(2.9s * var(--gca-calm)) ease-in-out infinite; }
+.paddle { transform-box: fill-box; transform-origin: 42% 40%; animation: hk_paddle calc(1.7s * var(--gca-calm)) ease-in-out infinite; }
+.paddler { transform-box: fill-box; transform-origin: 50% 95%; animation: hk_supbody calc(1.7s * var(--gca-calm)) ease-in-out infinite; }
+.ph-dawn .supw { opacity: 0.72; }
 .ripl { position: absolute; left: 0px; right: 0px; bottom: 0.5px; height: 1.6px; border-radius: 50%; background: rgb(234, 246, 250); opacity: 0; animation: auto ease-in-out 0s infinite normal none running hk_ripl; }
+.ph-dawn .podw { opacity: 0.8; }
 .jskw.rtl { left: auto; right: -70px; animation-name: hk_jskR; }
 .baw.rtl { left: auto; right: -175px; animation-name: hk_baR; }
 .hero .stars span { position: absolute; border-radius: 50%; background: rgb(234, 242, 251); }
 .hero .stars .bright { box-shadow: rgba(220, 236, 252, 0.7) 0px 0px 5px 1px, rgba(190, 215, 245, 0.22) 0px 0px 12px 3px; }
 .hero .stars .hkn_sheet { position: absolute; left: 0px; top: 0px; width: 1320px; height: 150px; pointer-events: none; will-change: transform; animation: hkn_drift calc(21541s * var(--gca-calm)) linear infinite; }
 .hero .stars .hkn_tile { position: absolute; top: 0px; width: 660px; height: 150px; }
-.hkn_st1 { animation: hk_ntw1 calc(6.5s * var(--gca-calm)) ease-in-out infinite; }
-.hkn_st2 { animation: hk_ntw2 calc(4.5s * var(--gca-calm)) ease-in-out infinite; }
-.hkn_st3 { animation: hk_ntw3 calc(2.8s * var(--gca-calm)) ease-in-out infinite; }
-.ph-night .hkn_sea { position: absolute; left: 0px; right: 0px; top: 150px; height: 126px; pointer-events: none; overflow: hidden; }
-.ph-night .hkn_tr { position: absolute; inset: 0px; background: linear-gradient(rgba(168, 206, 232, 0.06) 0%, rgba(168, 206, 232, 0.02) 5%, rgba(120, 170, 200, 0) 16%, rgba(10, 26, 40, 0) 45%, rgba(8, 22, 34, 0.22) 76%, rgba(5, 16, 26, 0.38) 100%); }
-.ph-night .hkn_sw { position: absolute; will-change: transform, opacity; opacity: 0; background: radial-gradient(50% 50%, rgba(200, 224, 244, 0.08) 0%, rgba(192, 218, 240, 0.04) 45%, rgba(190, 216, 238, 0) 72%); }
-.ph-night .hkn_swA { left: 70px; top: 20px; width: 150px; height: 6px; animation: hk_nswA calc(21s * var(--gca-calm)) linear infinite; }
-.ph-night .hkn_swB { left: 30px; top: 59px; width: 205px; height: 8px; animation-duration: ; animation-timing-function: ; animation-iteration-count: ; animation-direction: ; animation-fill-mode: ; animation-play-state: ; animation-name: ; animation-timeline: ; animation-range-start: ; animation-range-end: ; animation-delay: -6s; }
-.ph-night .hkn_swC { left: -4px; top: 94px; width: 265px; height: 11px; animation-duration: ; animation-timing-function: ; animation-iteration-count: ; animation-direction: ; animation-fill-mode: ; animation-play-state: ; animation-name: ; animation-timeline: ; animation-range-start: ; animation-range-end: ; animation-delay: -3.2s; }
-.ph-night .hkn_swd { position: absolute; will-change: transform, opacity; opacity: 0; background: radial-gradient(50% 50%, rgba(6, 18, 30, 0.09) 0%, rgba(6, 18, 30, 0.05) 48%, rgba(6, 18, 30, 0) 74%); }
-.ph-night .hkn_swdA { left: 40px; top: 38px; width: 290px; height: 12px; animation-duration: ; animation-timing-function: ; animation-iteration-count: ; animation-direction: ; animation-fill-mode: ; animation-play-state: ; animation-name: ; animation-timeline: ; animation-range-start: ; animation-range-end: ; animation-delay: -10.5s; }
-.ph-night .hkn_swdB { left: 10px; top: 76px; width: 330px; height: 16px; animation-duration: ; animation-timing-function: ; animation-iteration-count: ; animation-direction: ; animation-fill-mode: ; animation-play-state: ; animation-name: ; animation-timeline: ; animation-range-start: ; animation-range-end: ; animation-delay: -12s; }
-.ph-night .hkn_tl { position: absolute; width: 1.7px; height: 1.3px; border-radius: 50%; background: rgb(255, 201, 138); box-shadow: rgba(255, 180, 110, 0.45) 0px 0px 2.5px 0.5px; animation: hk_ntl calc(5s * var(--gca-calm)) ease-in-out infinite; }
-.ph-night .hkn_wet { position: absolute; left: 0px; bottom: -1px; width: 87%; height: 57px; z-index: 1; pointer-events: none; }
-.ph-night .hkn_wetg2 { animation: hk_nwetadv calc(13s * var(--gca-calm)) ease-in-out infinite; }
-.ph-night .hkn_wetgl { animation: hk_nwetgl calc(13s * var(--gca-calm)) ease-in-out infinite; opacity: 0.3; }
-@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hkn_halo { animation: auto ease 0s 1 normal none running none; opacity: 1; }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hero .sun { animation: auto ease 0s 1 normal none running none; opacity: 1; }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hero .stars .hkn_sheet { animation: auto ease 0s 1 normal none running none; }}
-@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hkn_st1 { animation: auto ease 0s 1 normal none running none; opacity: 0.95; }}
-@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hkn_st2 { animation: auto ease 0s 1 normal none running none; opacity: 0.68; }}
-@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hkn_st3 { animation: auto ease 0s 1 normal none running none; opacity: 0.4; }}
-@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .ph-night .hkn_sw, html:not(.hk_mo) .ph-night .hkn_swd { animation: auto ease 0s 1 normal none running none; opacity: 0.6; }}
-@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .ph-night .hkn_tl { animation: auto ease 0s 1 normal none running none; opacity: 0.7; }}
-@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .ph-night .hkn_wetg2 { animation: auto ease 0s 1 normal none running none; }}
-@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .ph-night .hkn_wetgl { animation: auto ease 0s 1 normal none running none; opacity: 0.6; }}
-.moon { position: absolute; width: 60px; height: 60px; pointer-events: none; }
-.hkn_halo { position: absolute; inset: -46px; border-radius: 50%; will-change: transform, opacity; background: radial-gradient(50% 50%, rgba(224, 238, 252, 0.34) 0%, rgba(205, 226, 248, 0.17) 25%, rgba(190, 215, 242, 0.08) 45%, rgba(180, 208, 238, 0.03) 62%, rgba(180, 208, 238, 0) 76%); animation: hk_nhalo calc(7s * var(--gca-calm)) ease-in-out infinite; }
-.hkn_mface { position: absolute; inset: 0px; width: 60px; height: 60px; display: block; }
 .phchip.phc_moon { display: block; position: relative; line-height: 1.45; padding: 8px 40px 8px 13px; border-radius: 14px; max-width: min(288px, -20px + 100vw); width: max-content; margin-left: auto; margin-right: 10px; }
 .phc_x { position: absolute; top: 5px; right: 5px; width: 26px; height: 26px; padding: 0px; cursor: pointer; display: flex; align-items: center; justify-content: center; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.26); background: rgba(255, 255, 255, 0.09); color: rgb(234, 242, 246); font: 800 12px / 1 system-ui, sans-serif; -webkit-tap-highlight-color: transparent; }
 .phc_x::after { content: ""; position: absolute; inset: -9px; }
+.phc_sunline { display: flex; align-items: center; gap: 5px; white-space: nowrap; }
+.phc_sunline b { font-weight: 900; }
+.phc_sunsub { display: block; margin: 6px 0px 0px; font-weight: 700; opacity: 0.72; font-size: 9.5px; line-height: 1.45; letter-spacing: 0px; white-space: normal; }
+.phc_sunpk { display: block; margin: 3px 0px 0px; font-weight: 700; letter-spacing: 0px; white-space: normal; }
+.phc_sunpk b { font-weight: 900; }
 .phchip .phc_uv { height: auto; margin: 8px 0px 0px; padding: 0px 0px 12px; gap: 2px; }
 .phchip .phc_uv .uvh_bar { flex: 1 1 auto; width: auto; min-width: 5px; max-width: 22px; }
 .phchip .phc_uv .uvh_bar i { font-size: 8px; font-weight: 800; letter-spacing: 0px; color: rgba(234, 242, 246, 0.72); }
+.phc_note { display: block; margin: 1px 0px 0px; font-size: 9.5px; line-height: 1.45; font-weight: 700; letter-spacing: 0px; opacity: 0.72; white-space: normal; }
+.phc_wx { display: flex; align-items: flex-end; justify-content: space-between; gap: 2px; margin: 9px 0px 0px; padding-top: 7px; border-top: 1px solid rgba(255, 255, 255, 0.16); }
+.phc_wxc { flex: 1 1 0px; min-width: 0px; text-align: center; letter-spacing: 0px; }
+.phc_wxc i { display: block; font-style: normal; font-size: 8px; font-weight: 800; opacity: 0.72; }
+.phc_wxc b { display: block; font-size: 11px; font-weight: 900; }
+.phc_water { display: block; margin: 3px 0px 0px; font-weight: 700; letter-spacing: 0px; white-space: normal; line-height: 1.45; }
+.phc_water b { font-weight: 900; }
+.phc_water:first-of-type { margin-top: 9px; padding-top: 7px; border-top: 1px solid rgba(255, 255, 255, 0.16); }
+.phc_wxc u { display: block; text-decoration: none; font-size: 8px; font-weight: 800; color: rgb(143, 195, 232); }
 .phc_moonline { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
 .phc_moonline b { font-weight: 800; }
 .phc_moonrow { display: flex; align-items: center; gap: 11px; margin-top: 5px; padding-top: 5px; border-top: 1px solid rgba(255, 255, 255, 0.16); flex-wrap: wrap; }
@@ -199,6 +211,8 @@
 .sunb { color-scheme: unset; forced-color-adjust: unset; math-depth: unset; position-anchor: unset; text-size-adjust: unset; appearance: unset; color: unset; font: unset; font-palette: unset; font-synthesis: unset; position-area: unset; text-orientation: unset; text-rendering: unset; text-spacing-trim: unset; -webkit-font-smoothing: unset; -webkit-locale: unset; -webkit-text-orientation: unset; -webkit-writing-mode: unset; writing-mode: unset; zoom: unset; accent-color: unset; place-content: unset; place-items: unset; place-self: unset; alignment-baseline: unset; anchor-name: unset; anchor-scope: unset; animation-composition: unset; animation: unset; animation-trigger: unset; app-region: unset; aspect-ratio: unset; backdrop-filter: unset; backface-visibility: unset; background: unset; background-blend-mode: unset; baseline-shift: unset; baseline-source: unset; block-size: unset; border-block: unset; border: unset; border-radius: unset; border-collapse: unset; border-end-end-radius: unset; border-end-start-radius: unset; border-inline: unset; border-shape: unset; border-start-end-radius: unset; border-start-start-radius: unset; bottom: unset; box-decoration-break: unset; box-shadow: unset; box-sizing: unset; break-after: unset; break-before: unset; break-inside: unset; buffered-rendering: unset; caption-side: unset; caret-animation: unset; caret-color: unset; caret-shape: unset; clear: unset; clip: unset; clip-path: unset; clip-rule: unset; color-interpolation: unset; color-interpolation-filters: unset; color-rendering: unset; columns: unset; column-fill: unset; gap: unset; rule-break: unset; rule: unset; rule-inset: unset; rule-visibility-items: unset; column-span: unset; contain: unset; contain-intrinsic-block-size: unset; contain-intrinsic-size: unset; contain-intrinsic-inline-size: unset; container: unset; content: unset; content-visibility: unset; corner-shape: unset; corner-block-end-shape: unset; corner-block-start-shape: unset; counter-increment: unset; counter-reset: unset; counter-set: unset; cx: unset; cy: unset; d: unset; display: unset; dominant-baseline: unset; dynamic-range-limit: unset; empty-cells: unset; field-sizing: unset; fill: unset; fill-opacity: unset; fill-rule: unset; filter: unset; flex: unset; flex-flow: unset; flex-line-count: unset; float: unset; flood-color: unset; flood-opacity: unset; grid: unset; grid-area: unset; hyphenate-character: unset; hyphenate-limit-chars: unset; hyphens: unset; image-orientation: unset; image-rendering: unset; initial-letter: unset; inline-size: unset; inset-block: unset; inset-inline: unset; interactivity: unset; interest-delay: unset; interpolate-size: unset; isolation: unset; letter-spacing: unset; lighting-color: unset; line-break: unset; list-style: unset; margin-block: unset; margin: unset; margin-inline: unset; marker: unset; mask: unset; mask-type: unset; math-shift: unset; math-style: unset; max-block-size: unset; max-height: unset; max-inline-size: unset; max-width: unset; min-block-size: unset; min-height: unset; min-inline-size: unset; min-width: unset; mix-blend-mode: unset; object-fit: unset; object-position: unset; object-view-box: unset; offset: unset; opacity: unset; order: unset; orphans: unset; outline: unset; outline-offset: unset; overflow-anchor: unset; overflow-block: unset; overflow-clip-margin: unset; overflow-inline: unset; overflow-wrap: unset; overflow: unset; overlay: unset; overscroll-behavior-block: unset; overscroll-behavior-inline: unset; overscroll-behavior: unset; padding-block: unset; padding: unset; padding-inline: unset; page: unset; page-margin-safety: unset; page-orientation: unset; paint-order: unset; perspective: unset; perspective-origin: unset; pointer-events: unset; position-try: unset; position-visibility: unset; print-color-adjust: unset; quotes: unset; r: unset; reading-flow: unset; reading-order: unset; resize: unset; right: unset; rotate: unset; ruby-align: unset; ruby-overhang: unset; ruby-position: unset; rule-overlap: unset; rx: unset; ry: unset; scale: unset; scroll-behavior: unset; scroll-initial-target: unset; scroll-margin-block: unset; scroll-margin: unset; scroll-margin-inline: unset; scroll-marker-group: unset; scroll-padding-block: unset; scroll-padding: unset; scroll-padding-inline: unset; scroll-snap-align: unset; scroll-snap-stop: unset; scroll-snap-type: unset; scroll-target-group: unset; scroll-timeline: unset; scrollbar-color: unset; scrollbar-gutter: unset; scrollbar-width: unset; shape-image-threshold: unset; shape-margin: unset; shape-outside: unset; shape-rendering: unset; size: unset; speak: unset; stop-color: unset; stop-opacity: unset; stroke: unset; stroke-dasharray: unset; stroke-dashoffset: unset; stroke-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: unset; stroke-opacity: unset; stroke-width: unset; tab-size: unset; table-layout: unset; text-align: unset; text-align-last: unset; text-anchor: unset; text-autospace: unset; text-box: unset; text-combine-upright: unset; text-decoration: unset; text-decoration-skip-ink: unset; text-emphasis: unset; text-emphasis-position: unset; text-fit: unset; text-indent: unset; text-justify: unset; text-overflow: unset; text-shadow: unset; text-transform: unset; text-underline-offset: unset; text-underline-position: unset; text-wrap: unset; timeline-scope: unset; timeline-trigger: unset; touch-action: unset; transform: unset; transform-box: unset; transform-origin: unset; transform-style: unset; transition: unset; translate: unset; trigger-scope: unset; user-select: unset; vector-effect: unset; vertical-align: unset; view-timeline: unset; view-transition-class: unset; view-transition-group: unset; view-transition-name: unset; view-transition-scope: unset; visibility: unset; border-spacing: unset; -webkit-box-align: unset; -webkit-box-decoration-break: unset; -webkit-box-direction: unset; -webkit-box-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orient: unset; -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-line-break: unset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webkit-text-combine: unset; -webkit-text-decorations-in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-security: unset; -webkit-text-stroke: unset; -webkit-user-drag: unset; white-space-collapse: unset; widows: unset; will-change: unset; word-break: unset; word-spacing: unset; x: unset; y: unset; position: absolute; z-index: 2; cursor: pointer; -webkit-tap-highlight-color: transparent; width: 94px; height: 94px; left: calc(var(--sun-cx) - 47px); top: calc(var(--sun-cy) - 47px); }
 .ph-night .sunb { left: auto; right: 28px; top: 64px; }
 .hero .sun { position: absolute; z-index: 0; pointer-events: none; width: 94px; height: 94px; left: calc(var(--sun-cx) - 47px); top: calc(var(--sun-cy) - 47px); border-radius: 50%; background: radial-gradient(circle, rgba(255, 244, 214, 0.95), rgba(255, 214, 140, 0.5) 45%, rgba(255, 200, 120, 0) 72%); animation: hk_glow calc(6s * var(--gca-calm)) ease-in-out infinite; }
+.ph-dawn .sun { background: radial-gradient(circle, rgba(255, 236, 214, 0.92), rgba(255, 204, 160, 0.48) 46%, rgba(255, 190, 140, 0) 72%); }
+.ph-golden .sun { background: radial-gradient(circle at 50% 52%, rgba(255, 238, 196, 0.98), rgba(255, 188, 110, 0.62) 44%, rgba(255, 170, 90, 0) 74%); }
 .phchip { position: absolute; left: auto; right: 10px; bottom: 46px; z-index: 5; display: inline-flex; align-items: center; gap: 6px; background: rgba(8, 22, 34, 0.66); color: rgb(234, 242, 246); font-size: 10.5px; font-weight: 800; letter-spacing: 0.3px; padding: 6px 12px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.26); backdrop-filter: blur(4px); animation: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0s 1 normal none running hk_pop; }
 .flyby.rtl { left: auto; right: -64px; animation-name: hk_flyR; }
 .skbwrap { position: absolute; top: 0px; left: 0px; right: 0px; height: 100px; z-index: 1; pointer-events: none; }
@@ -206,7 +220,9 @@
 .skbg.rev { animation-name: hk_skgR; }
 .sksoar { display: block; will-change: transform; animation: auto ease-in-out 0s infinite normal none running hk_sksoar; }
 .sksoar.big { animation-name: hk_sksoarB; }
+.skbnear { position: absolute; left: 0px; opacity: 0.85; will-change: transform; animation: auto linear 0s infinite normal none running hk_gullnear; }
 .skbnear.rev { animation-name: hk_gullnearR; }
+.ph-dawn .pipw { filter: sepia(0.18) saturate(1.05); }
 .grain { position: absolute; inset: -12%; z-index: 3; pointer-events: none; opacity: 0.028; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E"); background-size: 160px 160px; animation: hk_grain calc(2.4s * var(--gca-calm)) steps(1) infinite; }
 .ph-night .grain { opacity: 0.045; }
 .hero-eyebtn { border: 1px solid rgba(255, 255, 255, 0.34); cursor: pointer; position: relative; font-family: "Cormorant Garamond", Georgia, serif; -webkit-tap-highlight-color: transparent; transition: border-color 0.2s, box-shadow 0.2s; }
@@ -279,6 +295,17 @@ html.gca_cold .bswash { opacity: 0; }
 .hero-datebtn .hk_mmark .mm_c4.mm_solid { fill: var(--mm4); fill-opacity: 0.9; }
 .hk_mmark .mm_fill4 { fill: var(--mm4); stroke: none; }
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hero-datebtn { transition: none; }}
+.uvh_strip { display: flex; align-items: flex-end; gap: 2px; height: 64px; margin: 0px 0px 22px; padding: 0px 1px 14px; box-sizing: content-box; overflow: auto visible; scrollbar-width: none; }
+.uvh_strip::-webkit-scrollbar { display: none; }
+.uvh_bar { position: relative; flex: 0 0 auto; width: 7px; border-radius: 2px 2px 0px 0px; background: var(--ip-bd,rgba(180,144,58,.3)); }
+.uvh_bar.b0 { background: rgba(140, 140, 140, 0.25); }
+.uvh_bar.b1 { background: rgb(78, 154, 106); }
+.uvh_bar.b2 { background: rgb(201, 162, 51); }
+.uvh_bar.b3 { background: rgb(213, 119, 46); }
+.uvh_bar.b4 { background: rgb(196, 64, 47); }
+.uvh_bar.b5 { background: rgb(126, 59, 156); }
+.uvh_bar.nx { opacity: 0.55; }
+.uvh_bar i { position: absolute; left: 50%; top: 100%; transform: translateX(-50%); margin-top: 3px; font: 700 8.5px / 1 Nunito, system-ui, sans-serif; letter-spacing: 0.2px; white-space: nowrap; color: var(--ip-soft,#8A6A22); }
 .hero-sub { font-size: 12.5px; color: rgba(255, 251, 244, 0.94); margin-top: 14px; line-height: 1.5; max-width: 300px; position: relative; z-index: 2; text-wrap: balance; }
 .hero-sub b { color: rgb(255, 255, 255); }
 .hero-in { position: relative; z-index: 4; }
@@ -306,9 +333,9 @@ html.gca_cold .bswash { opacity: 0; }
 .swg.s3 .sw_heave { animation-duration: calc(6.3s * var(--gca-calm)); animation-delay: -3.4s; }
 .ph-night .hk_swellw { opacity: 0.55; }
 .ph-dawn .hk_swellw { opacity: 0.8; }
-.ph-night .vwk path { fill: rgba(150, 208, 244, 0.44); }
-.ph-night .fprt { background: radial-gradient(at 50% 45%, rgba(150, 212, 255, 0.26) 0%, rgba(120, 190, 240, 0.13) 46%, rgba(110, 180, 230, 0) 72%); }
+.ph-dawn .vwk path { fill: rgba(226, 226, 250, 0.52); }
 .blurb.railclear::before { content: ""; float: right; width: 140px; height: calc(var(--blurb-rail-lines) * 1.52em); margin-left: 12px; pointer-events: none; }
+.itin .big { font-family: Newsreader, serif; font-weight: 600; font-size: 23px; line-height: 1.08; }
 .rays { overflow: hidden; border-radius: 14px; }
 .ray { position: absolute; top: -30%; width: 34px; height: 150%; transform: skewX(-16deg); background: linear-gradient(rgba(160, 200, 240, 0.15), rgba(160, 200, 240, 0) 78%); mask-image: linear-gradient(90deg, transparent 0%, rgb(0, 0, 0) 22%, rgb(0, 0, 0) 78%, transparent 100%); animation: hk_ray calc(9s * var(--gca-calm)) ease-in-out infinite; }
 .ray.r1 { left: 16%; }
@@ -318,7 +345,23 @@ html.gca_cold .bswash { opacity: 0; }
 .gullw.rtl { left: auto; right: -80px; animation-name: hk_gullpr; }
 .skbwrap.nite .skbg { filter: brightness(0.8) saturate(0.65); }
 .trtw.rtl .trtb { animation-name: hk_trtupR; }
+.ph-dawn .trtw { filter: sepia(0.18) saturate(1.05); }
+.ph-dawn .htchw { filter: sepia(0.18) saturate(1.05); }
+.ph-dawn .kitew { filter: sepia(0.18) saturate(1.05); }
+.adparasail { position: absolute; top: 118px; left: -90px; z-index: 3; will-change: transform, opacity; animation: hk_adyacht calc(56s * var(--gca-calm)) linear calc(-34s * var(--gca-calm)) infinite; }
+.adparasail > svg { opacity: 0.92; }
+.adparasail_rig { transform-box: view-box; transform-origin: 99.5px 63px; will-change: transform; animation: hk_adparasway calc(7.6s * var(--gca-calm)) ease-in-out infinite; }
 .adlbl:empty { display: none; }
+.adplane { position: absolute; top: 21px; left: 0px; z-index: 1; will-change: transform; animation: hk_adplane calc(34s * var(--gca-calm)) linear calc(-19.4s * var(--gca-calm)) infinite; }
+.adplane_bob { transform-box: view-box; transform-origin: 174px 18px; animation: hk_adplanebob calc(5.2s * var(--gca-calm)) ease-in-out infinite; }
+.adplane_ban { transform-box: view-box; transform-origin: 140px 20px; animation: hk_adbanflut calc(3.4s * var(--gca-calm)) ease-in-out infinite; }
+.adplane_prop { transform-box: fill-box; transform-origin: 50% 50%; animation: hk_adprop calc(.46s * var(--gca-calm)) linear infinite; }
+.ph-golden .adparasail, .ph-golden .adplane { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
+.ph-dawn .adparasail, .ph-dawn .adplane { filter: sepia(0.18) saturate(1.05); }
+@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .adparasail { animation: auto ease 0s 1 normal none running none !important; transform: none !important; left: calc(30% - 90px) !important; }}
+@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .adplane { animation: auto ease 0s 1 normal none running none !important; transform: none !important; left: auto !important; right: 24% !important; }}
+@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .adparasail_rig, html:not(.hk_mo) .hk .adplane_bob, html:not(.hk_mo) .hk .adplane_ban, html:not(.hk_mo) .hk .adplane_prop { animation: auto ease 0s 1 normal none running none !important; }}
+.adyacht { position: absolute; top: 156px; left: 0px; z-index: 0; pointer-events: none; will-change: transform, opacity; opacity: 1; animation: hk_adyacht calc(56s * var(--gca-calm)) linear calc(-34s * var(--gca-calm)) infinite; }
 .hero_sponsor { display: contents; }
 button.hero_house { border: 0px; padding: 0px; margin: 0px; background: none; font: inherit; color: inherit; -webkit-tap-highlight-color: transparent; }
 a.hero_sponsor > *, button.hero_house > * { pointer-events: auto; cursor: pointer; }
@@ -332,7 +375,6 @@ html:not(.hk_mo) .sunb::after { animation: auto ease 0s 1 normal none running no
 html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house > ::before { opacity: 0.035; animation: auto ease 0s 1 normal none running none !important; }
 .hero_sponsor .adlbl, .hero_slot .adlbl, .hero-eyespon .adlbl { position: absolute; left: 50%; top: 100%; margin-top: 2px; transform: translateX(-50%); font: 800 6.5px / 1 Nunito, system-ui, sans-serif; letter-spacing: 0.5px; text-transform: uppercase; color: rgb(242, 247, 250); background: rgba(14, 26, 36, 0.66); padding: 2px 4.5px; border-radius: 5px; white-space: nowrap; pointer-events: none; }
 .hero_sponsor .adlbl, .hero_slot .adlbl, .hero-eyespon .adlbl { background: rgba(8, 20, 30, 0.86); box-shadow: rgba(242, 196, 60, 0.5) 0px 0px 0px 1px inset; }
-.ph-night .adbuoy .adbuoy_lt { animation: hk_adbuoyglow calc(1.6s * var(--gca-calm)) ease-in-out infinite; }
 .adboatname { position: absolute; top: 192px; right: 53.4px; z-index: 2; width: 96px; pointer-events: none; animation: hk_sailbob_nmflat calc(5.5s * var(--gca-calm)) ease-in-out infinite; }
 .bnl { display: inline-block; }
 .adboatname_bd { position: relative; display: block; height: 6.83px; overflow: visible; padding: 0px; border: 0px; border-radius: 0px; box-shadow: none; font-family: Nunito, system-ui, sans-serif; font-weight: 800; font-size: 7.8px; line-height: 6.83px; letter-spacing: 0.3px; text-indent: 0.3px; text-transform: uppercase; transform: none; transform-origin: 50% 50%; text-align: center; white-space: nowrap; color: rgb(255, 246, 228); text-shadow: rgba(30, 15, 4, 0.92) 0px -0.5px 0px, rgba(255, 234, 190, 0.62) 0px 0.5px 0px; }
@@ -349,8 +391,6 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .hcw.esc .hcrab .legsA, .hcw.esc .hcrab .legsB, .hcw.esc .hcrab .crb_lgA, .hcw.esc .hcrab .crb_lgB { animation-duration: 0.12s; }
 .tgw.rtl .tgjelly { animation-name: hk_tgjellyR; }
 .tgw.rtl .tgturtle { margin-left: 96px; animation-name: hk_tgturtleR; }
-.npw { position: absolute; left: 58px; bottom: 6px; z-index: 2; pointer-events: none; }
-.npw .np_glow { transform-box: fill-box; transform-origin: center center; animation: hk_npglow calc(2.6s * var(--gca-calm)) ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .flyby, html:not(.hk_mo) .hk .grain, html:not(.hk_mo) .hk .baw, html:not(.hk_mo) .hk .gullw, html:not(.hk_mo) .hk .ccrab, html:not(.hk_mo) .hk .snote, html:not(.hk_mo) .hk .hpel, html:not(.hk_mo) .hk .fwx, html:not(.hk_mo) .hk .aspl, html:not(.hk_mo) .hk .rheart, html:not(.hk_mo) .hk .lspk, html:not(.hk_mo) .hk .dnm_bok, html:not(.hk_mo) .hk .tdust, html:not(.hk_mo) .hk .fly, html:not(.hk_mo) .hk .skbwrap, html:not(.hk_mo) .hk .pipw, html:not(.hk_mo) .hk .dnx_rolled, html:not(.hk_mo) .hk .trtw, html:not(.hk_mo) .hk .htchw, html:not(.hk_mo) .hk .kitew, html:not(.hk_mo) .hk .rplfield, html:not(.hk_mo) .hk .hcw, html:not(.hk_mo) .hk .tgw, html:not(.hk_mo) .hk .d2bw, html:not(.hk_mo) .hk .pelw, html:not(.hk_mo) .hk .dcw, html:not(.hk_mo) .hk .hkop, html:not(.hk_mo) .hk .dwgiant, html:not(.hk_mo) .hk .dwpod, html:not(.hk_mo) .hk .dwglow, html:not(.hk_mo) .hk .hboat, html:not(.hk_mo) .hk .dnote, html:not(.hk_mo) .hk .dbloom, html:not(.hk_mo) .hk .rmote, html:not(.hk_mo) .hk .rsmokew .hk .supw, html:not(.hk_mo) .hk .fld, html:not(.hk_mo) .hk .crbw, html:not(.hk_mo) .hk .crbh, html:not(.hk_mo) .hk .htchf, html:not(.hk_mo) .hk .lx_rock, html:not(.hk_mo) .hk .lx_dig, html:not(.hk_mo) .hk .mstrip, html:not(.hk_mo) .hk .mbeam, html:not(.hk_mo) .hk .cm_cone, html:not(.hk_mo) .hk .cm_pool, html:not(.hk_mo) .hk .romacc .racc_wash, html:not(.hk_mo) .hk .em_fly, html:not(.hk_mo) .hk .cs_shoot, html:not(.hk_mo) .hk .cs_neb, html:not(.hk_mo) .hk .brd, html:not(.hk_mo) .hk .mthrow, html:not(.hk_mo) .hk .mgrain, html:not(.hk_mo) .hk .bawrap, html:not(.hk_mo) .hk .popf, html:not(.hk_mo) .hk .rm_bulb, html:not(.hk_mo) .hk .cm_laugh, html:not(.hk_mo) .hk .cm_cable, html:not(.hk_mo) .hk .adrip, html:not(.hk_mo) .hk .lsc_cur, html:not(.hk_mo) .hk .swash, html:not(.hk_mo) .hk .swash_lip, html:not(.hk_mo) .hk .backwash, html:not(.hk_mo) .hk .vwkw, html:not(.hk_mo) .hk .vwk, html:not(.hk_mo) .hk .fprt, html:not(.hk_mo) .hk .swl_crest { display: none !important; }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .swg, html:not(.hk_mo) .hk .sw_heave { animation: auto ease 0s 1 normal none running none !important; }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .swl_body { animation: auto ease 0s 1 normal none running none !important; opacity: 0.4 !important; }}
@@ -360,20 +400,13 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .clm1 { transform: translateX(300px); }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .clm2 { transform: translateX(150px); }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .cln1 { transform: translateX(430px); }}
+@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .adyacht { transform: none !important; left: 30% !important; }}
 .rdec .rm_swag { position: absolute; left: 0px; right: 0px; top: 4px; height: 46px; pointer-events: none; opacity: 0.85; transform-origin: 50% 0px; animation: hk_rmsway calc(9.4s * var(--gca-calm)) ease-in-out infinite alternate; }
 .rdec .rm_swag svg { position: absolute; inset: 0px; width: 100%; height: 100%; display: block; }
 .rdec .rm_wire { fill: none; stroke: rgba(240, 214, 160, 0.3); stroke-width: 1.1; stroke-linecap: round; }
 .rdec .rm_bulb { position: absolute; width: 5px; height: 5px; margin-left: -2.5px; margin-top: -2.5px; border-radius: 50%; background: radial-gradient(circle at 38% 34%, rgb(255, 246, 222), rgb(243, 195, 120) 62%, rgba(243, 195, 120, 0.1) 100%); box-shadow: rgba(255, 206, 132, 0.42) 0px 0px 7px 2px; will-change: opacity, transform; animation: hk_rmbulb calc(4.6s * var(--gca-calm)) ease-in-out infinite; }
-.cmdy.nite .cm_ring { border-color: rgba(255, 214, 140, 0.6); }
 .cmdy .cm_ring.r2 { animation-delay: 0.42s; }
 .cmdy .cm_ring.r3 { animation-delay: 0.84s; }
-.cmdy.nite .cm_cord { stroke: rgb(169, 138, 108); opacity: 0.5; }
-.agal.nite .adrip.p1 { background: linear-gradient(rgb(255, 143, 176), rgb(210, 84, 126)); }
-.agal.nite .adrip.p2 { background: linear-gradient(rgb(201, 160, 255), rgb(139, 92, 214)); }
-.ldec.nite .lscope { opacity: 0.62; }
-.ldec.nite .lsc_t { stroke: rgb(89, 231, 200); filter: drop-shadow(rgba(89, 231, 200, 0.7) 0px 0px 4px); }
-.ldec:not(.nite) .lsc_cur::after { background: rgb(18, 149, 158); box-shadow: rgba(18, 149, 158, 0.45) 0px 0px 8px 3px; }
-.htown.nite .hsil { fill: rgb(10, 19, 34); stroke: rgb(10, 19, 34); opacity: 0.94; }
 .htown .hpel.rtl { left: auto; right: -64px; animation-name: hk_hpelr; }
 .htown .hshim.s1 { left: 16%; width: 42%; bottom: 23px; animation: hk_hshim calc(4.2s * var(--gca-calm)) ease-in-out infinite alternate; }
 .htown .hshim.s2 { right: 14%; width: 30%; bottom: 31px; opacity: 0.7; animation: hk_hshim calc(5.6s * var(--gca-calm)) ease-in-out infinite alternate; }
@@ -411,35 +444,11 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .rdec .rmote.m5 { left: 78%; bottom: calc(var(--card-ad-clear) + 64px); }
 .rdec .rmote.m6 { left: 88%; bottom: calc(var(--card-ad-clear) + 30px); }
 .rdec .rmote.m7 { left: 95%; bottom: calc(var(--card-ad-clear) + 56px); }
-.agal.nite .afr { border-color: rgba(255, 180, 130, 0.6); box-shadow: rgba(255, 160, 110, 0.22) 0px 0px 8px; }
-.agal.nite .adaub { opacity: 0.7; filter: blur(0.4px) drop-shadow(currentcolor 0px 0px 7px); animation: hk_adaub calc(11s * var(--gca-calm)) ease-in-out infinite alternate, hk_aglow 6.8s ease-in-out infinite alternate; }
-.agal.nite .astroke path { stroke: rgb(255, 143, 168); }
-.agal.nite .agallight { background: linear-gradient(103deg, transparent 34%, rgba(255, 150, 190, 0.16) 44%, rgba(214, 150, 255, 0.26) 50%, rgba(255, 150, 190, 0.14) 56%, transparent 66%); }
-.agal.nite .ahang i { background: linear-gradient(rgba(255, 180, 130, 0.6), rgba(255, 180, 130, 0.2)); }
-.agal.nite .ahang b { border-color: rgba(255, 150, 190, 0.55); background: linear-gradient(148deg, rgba(255, 150, 190, 0.16), rgba(199, 125, 255, 0.1)); box-shadow: rgba(255, 140, 180, 0.28) 0px 0px 9px; }
-.agal.nite .aeasel { opacity: 0.5; }
-.agal.nite .aeasel .aleg { stroke: rgb(255, 169, 196); }
-.agal.nite .aeasel .acan { fill: rgba(199, 125, 255, 0.16); stroke: rgb(255, 169, 196); }
-.agal.nite .abrush .adraw { stroke: rgb(255, 143, 168); filter: drop-shadow(rgba(255, 143, 168, 0.6) 0px 0px 5px); }
-.agal.nite .amote { box-shadow: currentcolor 0px 0px 7px; }
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .lx_g1, html:not(.hk_mo) .lx_g2, html:not(.hk_mo) .lx_arm, html:not(.hk_mo) .lx_pl1, html:not(.hk_mo) .lx_pl2, html:not(.hk_mo) .lx_stube, html:not(.hk_mo) .lx_cell, html:not(.hk_mo) .lx_bone, html:not(.hk_mo) .lx_brush, html:not(.hk_mo) .lx_flame, html:not(.hk_mo) .lx_bkb, html:not(.hk_mo) .lx_steam, html:not(.hk_mo) .crb_lgA, html:not(.hk_mo) .crb_lgB, html:not(.hk_mo) .crb_clw, html:not(.hk_mo) .crb_eye, html:not(.hk_mo) .crb_shl, html:not(.hk_mo) .crbb, html:not(.hk_mo) .h_fl, html:not(.hk_mo) .h_fr, html:not(.hk_mo) .h_rl, html:not(.hk_mo) .h_rr, html:not(.hk_mo) .h_all, html:not(.hk_mo) .cm_head, html:not(.hk_mo) .cm_glint, html:not(.hk_mo) .htown .hbeam, html:not(.hk_mo) .htown .hbeam::after, html:not(.hk_mo) .romacc .racc_candle .rflame, html:not(.hk_mo) .romacc .racc_halo, html:not(.hk_mo) .em_bl, html:not(.hk_mo) .em_shaft, html:not(.hk_mo) .htown.nite .hferry .fwin rect, html:not(.hk_mo) .htown.nite .hferry .flt, html:not(.hk_mo) .htown.nite .hferry .frefl, html:not(.hk_mo) .htown.nite .hbridge.nb .blamp circle { animation: auto ease 0s 1 normal none running none !important; }}
-@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .htown.nite .hferry, html:not(.hk_mo) .htown.nite .hcar, html:not(.hk_mo) .htown.nite .hshoot, html:not(.hk_mo) .emrl .em_bfly { display: none !important; }}
-@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .htown.nite .hncl { animation: auto ease 0s 1 normal none running none !important; }}
-.cine.nite .msprk { opacity: 0.22; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20'%3E%3Crect x='2.5' y='6' width='5' height='8' rx='1.6' fill='%23EFC46A'/%3E%3C/svg%3E"); }
-.cine.nite .mrail { --mbulb: rgba(255,225,160,.34); --mglow: rgba(255,238,196,1); filter: drop-shadow(rgba(255, 214, 138, 0.55) 0px 0px 4px); }
-.cine.nite .mpop .puff { fill: rgb(239, 230, 210); stroke: rgb(184, 164, 126); opacity: 0.72; }
-.shal.nite .bprops { filter: brightness(0.6) saturate(0.7); opacity: 0.85; }
-.shal.nite .sandg { opacity: 0.16; }
-.shal.nite .ccrab { opacity: 0.8; }
-.ldec.nite .lgrid { opacity: 0.8; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg stroke='%2352E5A3' stroke-opacity='.07' stroke-width='1'%3E%3Cline x1='.5' y1='0' x2='.5' y2='24'/%3E%3Cline x1='0' y1='.5' x2='24' y2='.5'/%3E%3C/g%3E%3C/svg%3E"); }
-.ldec.nite .lliq { fill: rgb(82, 229, 163); opacity: 0.75; filter: drop-shadow(rgba(82, 229, 163, 0.65) 0px 0px 3px); }
-.ldec.nite .lglass { stroke: rgb(159, 232, 203); opacity: 0.7; }
+.ldec .lfb.b2 { animation-delay: 0.9s; }
+.ldec .lfb.b3 { animation-delay: 1.6s; }
 .ldec .lring.r2 { transform: rotate(-58deg) scaleY(0.42); }
 .ldec .lring.r2 .lel { top: auto; bottom: -1.9px; }
-.ldec.nite .lring { border-color: rgba(82, 229, 163, 0.6); }
-.ldec.nite .lel { background: rgb(82, 229, 163); box-shadow: rgba(82, 229, 163, 0.6) 0px 0px 4px 1px; }
-.ldec.nite .lnuc { background: rgb(127, 233, 184); box-shadow: rgba(82, 229, 163, 0.55) 0px 0px 5px 1.4px; }
-.ldec.nite .ldna { opacity: 0.58; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='28'%3E%3Cg fill='none' stroke='%2352E5A3' stroke-width='1' stroke-linecap='round'%3E%3Cpath d='M2.5,0 C9.5,4.7 9.5,9.3 2.5,14 C9.5,18.7 9.5,23.3 2.5,28'/%3E%3Cpath d='M9.5,0 C2.5,4.7 2.5,9.3 9.5,14 C2.5,18.7 2.5,23.3 9.5,28'/%3E%3Cline x1='4.4' y1='3.5' x2='7.6' y2='3.5'/%3E%3Cline x1='4.4' y1='10.5' x2='7.6' y2='10.5'/%3E%3Cline x1='4.4' y1='17.5' x2='7.6' y2='17.5'/%3E%3Cline x1='4.4' y1='24.5' x2='7.6' y2='24.5'/%3E%3C/g%3E%3C/svg%3E"); }
 .rdec .rvig { position: absolute; inset: 0px; background: radial-gradient(120% 70% at 50% 108%, rgba(212, 137, 158, 0.13), transparent 58%); animation: hk_rvig calc(9s * var(--gca-calm)) ease-in-out infinite alternate; }
 .rdec .rcandle { position: absolute; bottom: var(--card-ad-clear); width: 13px; height: 21px; }
 .rdec .rcandle.cR { right: 1px; }
@@ -457,14 +466,6 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .romacc .racc_halo { width: 24px; height: 24px; margin-left: -12px; top: -4px; }
 .romacc .fld.f-heart { --fo: .38; }
 .romacc .fld.f-mote { --fo: .55; }
-.cmdy.nite .cm_brick { opacity: 0.62; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='24'%3E%3Cg stroke='%23F0BA6A' stroke-opacity='.11' stroke-width='1' fill='none'%3E%3Cpath d='M0 .5h44M0 12.5h44'/%3E%3Cpath d='M11 0v12M33 0v12M0 12v12M22 12v12M44 12v12'/%3E%3C/g%3E%3C/svg%3E"); }
-.cmdy.nite .cm_cone { background: linear-gradient(rgba(255, 236, 190, 0.4), rgba(255, 224, 160, 0.14) 58%, rgba(255, 216, 140, 0.04)); }
-.cmdy.nite .cm_base, .cmdy.nite .cm_boom { stroke: rgb(201, 163, 117); opacity: 0.8; }
-.cmdy.nite .cm_grip { fill: rgb(42, 30, 24); }
-.cmdy.nite .cm_ball { fill: rgb(156, 129, 104); }
-.cmdy.nite .cm_sp { stroke: rgb(201, 163, 117); }
-.cmdy.nite .cm_seat { fill: rgb(156, 129, 104); }
-.cmdy.nite .fw_ha .fld.f-laugh { color: rgb(240, 186, 106); --fo: .5; }
 .crb { width: 26px; height: 19px; display: block; overflow: visible; }
 .crb_sh { fill: rgb(122, 74, 32); opacity: 0.2; }
 .crb_bod { fill: rgb(194, 96, 63); stroke: rgb(142, 61, 36); stroke-width: 0.7; }
@@ -500,80 +501,37 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .crbh .crbh_up { animation: hk_crbpop calc(19s * var(--gca-calm)) ease-in-out infinite; }
 .t-coastalNight .crb_bod { fill: rgb(142, 69, 48); stroke: rgb(94, 39, 24); }
 .t-coastalNight .crbw, .t-coastalNight .crbh { opacity: 0.62; }
-.htown.nite .ba_num { fill: rgb(255, 211, 77); stroke: rgb(6, 21, 43); }
 .baw.rtl .ba_flip { transform-box: fill-box; transform-origin: 50% 50%; transform: scaleX(-1); }
-.htown.nite .ba_navy { fill: rgb(255, 211, 77); }
-.htown.nite .ba_vfin { fill: rgb(18, 41, 77); }
-.htown.nite .ba_vfar { fill: rgb(11, 29, 56); }
-.htown.nite .ba_body { fill: rgb(14, 37, 68); }
-.htown.nite .ba_wing { fill: rgb(20, 51, 92); }
-.cine.nite .mp_body { stroke: rgb(232, 181, 74); }
-.cine.nite .mp_reel { stroke: rgb(232, 181, 74); }
 .cine .mp_reel.r2 { animation-duration: calc(4.6s * var(--gca-calm)); animation-direction: reverse; }
-.cine:not(.nite) .mthrow { background: linear-gradient(90deg, rgba(150, 120, 60, 0.16), rgba(150, 120, 60, 0.06) 60%, transparent); }
-.cine:not(.nite) .mscreen { border-color: rgba(120, 92, 44, 0.45); background: linear-gradient(160deg, rgba(255, 252, 242, 0.75), rgba(226, 212, 182, 0.5)); }
-.cine:not(.nite) .fw_beam .fld.f-dust { background: rgba(120, 92, 44, 0.55); --fo: .6; }
 .brd.rtl { animation-name: hk_bdflyR; }
-.htown.nite .brd { color: rgb(12, 26, 43); }
 .agal .aribbon.rb1 { stroke: rgb(232, 93, 117); animation: hk_arib calc(26s * var(--gca-calm)) ease-in-out infinite alternate; }
 .agal.nite .aribbon.rb1 { stroke: rgb(255, 126, 156); opacity: 0.5; }
-.agal.nite .apal_b { fill: rgb(42, 26, 51); }
-.agal.nite .apal_b, .agal.nite .apal_hole { stroke: rgb(217, 188, 140); }
-.cmdy.nite .cm_brick { opacity: 0.75; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='24'%3E%3Cg stroke='%23F0BA6A' stroke-opacity='.16' stroke-width='1' fill='none'%3E%3Cpath d='M0 .5h44M0 12.5h44'/%3E%3Cpath d='M11 0v12M33 0v12M0 12v12M22 12v12M44 12v12'/%3E%3C/g%3E%3C/svg%3E"); }
-.cmdy.nite .cm_base, .cmdy.nite .cm_boom { stroke: rgb(228, 192, 140); }
-.cmdy.nite .cm_grip { fill: rgb(31, 22, 16); }
-.cmdy.nite .cm_ball { fill: rgb(183, 147, 110); }
-.cmdy.nite .cm_sp { stroke: rgb(228, 192, 140); }
-.cmdy.nite .cm_seat { fill: rgb(183, 147, 110); }
-.htown.nite .hsun { background: radial-gradient(38% 26% at 82% 10%, rgba(190, 214, 255, 0.16), transparent 72%); }
 .emrl .em_heron.rtl { left: auto; right: -13px; transform: scaleX(-1); }
+.emrl .em_bl.b1 { stroke-width: 1.1; stroke-opacity: 0.7; animation-duration: calc(6.4s * var(--gca-calm)); }
+.emrl .em_bl.b2 { stroke-width: 1.8; stroke-opacity: 0.5; animation-duration: calc(4.4s * var(--gca-calm)); }
 .cosm .cs_shoot.s2 { left: 30%; top: auto; bottom: 6px; width: 46px; animation-duration: calc(23s * var(--gca-calm)); }
-.ldec.nite .lx { --lxink: #52E5A3; --lxink2: #7FE9B8; --lxwarm: #F0A868; opacity: 0.8; }
-.cine:not(.nite) .mbeam { background: linear-gradient(270deg, rgba(200, 150, 60, 0.14), transparent 72%); }
-.cine.nite .mstrip { opacity: 0.5; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='13'%3E%3Cg fill='%23E8B54A' fill-opacity='.5'%3E%3Crect x='1' y='1' width='4' height='3' rx='.8'/%3E%3Crect x='1' y='9' width='4' height='3' rx='.8'/%3E%3Crect x='16' y='1' width='4' height='3' rx='.8'/%3E%3Crect x='16' y='9' width='4' height='3' rx='.8'/%3E%3C/g%3E%3Crect x='7' y='2' width='8' height='9' fill='%23E8B54A' fill-opacity='.16'/%3E%3Crect x='22' y='2' width='8' height='9' fill='%23E8B54A' fill-opacity='.16'/%3E%3C/svg%3E"); }
-.htown.nite .hbridge.nb { position: absolute; right: 11px; bottom: 31px; width: 134px; height: 28px; fill: none; stroke: rgba(120, 168, 205, 0.3); stroke-width: 1.25; opacity: 0.9; }
-.htown.nite .hbridge.nb .deck { stroke-width: 1.8; stroke: rgba(138, 182, 215, 0.36); }
-.htown.nite .hbridge.nb .span { stroke: rgba(120, 168, 205, 0.24); stroke-width: 0.85; }
-.htown.nite .hbridge.nb .blamp circle { fill: rgb(255, 227, 168); stroke: none; opacity: 0.75; filter: drop-shadow(rgba(255, 220, 150, 0.8) 0px 0px 3px); animation: hk_blamp calc(5.6s * var(--gca-calm)) ease-in-out infinite; }
-.htown.nite .hbridge.nb .blamp circle:nth-child(2) { animation-delay: 1.4s; }
-.htown.nite .hbridge.nb .blamp circle:nth-child(3) { animation-delay: 2.8s; }
-.htown.nite .hbridge.nb .blamp circle:nth-child(4) { animation-delay: 4.2s; }
-.htown.nite .hcar { position: absolute; z-index: 2; right: 16px; bottom: 50px; width: 8px; height: 3px; border-radius: 2px; background: linear-gradient(90deg, rgba(255, 241, 204, 0), rgb(255, 243, 212)); box-shadow: rgba(255, 226, 152, 0.5) 0px 0px 8px 2px; opacity: 0; animation: hk_hcar calc(21s * var(--gca-calm)) linear infinite; will-change: transform, opacity; }
-.htown.nite .hferry { position: absolute; z-index: 1; bottom: 136px; left: -52px; width: 44px; height: 20px; opacity: 1; animation: hk_hboat calc(64s * var(--gca-calm)) linear infinite; will-change: transform; }
-.htown.nite .hferry svg { width: 100%; height: 100%; display: block; overflow: visible; }
-.htown.nite .hferry .fhull { fill: rgb(8, 19, 31); }
-.htown.nite .hferry .fcab { fill: rgb(14, 33, 53); }
-.htown.nite .hferry .fmast { stroke: rgb(14, 33, 53); stroke-width: 1; }
-.htown.nite .hferry .fwin rect { fill: rgb(255, 215, 154); opacity: 0.92; animation: hk_fwin calc(5.2s * var(--gca-calm)) ease-in-out infinite; }
-.htown.nite .hferry .fwin .fw1 { animation-delay: 1.7s; }
-.htown.nite .hferry .fwin .fw2 { animation-delay: 3.4s; }
-.htown.nite .hferry .flt { filter: drop-shadow(currentcolor 0px 0px 3px); }
+.lx_bone.b1 { animation-delay: 3.4s; }
+.lx_bone.b2 { animation-delay: 7.1s; }
 .htown.nite .hferry .flt.r { fill: rgb(255, 122, 122); color: rgb(255, 122, 122); animation: hk_flt calc(2.6s * var(--gca-calm)) ease-in-out infinite; }
-.htown.nite .hferry .flt.g { fill: rgb(107, 233, 175); color: rgb(107, 233, 175); animation: hk_flt calc(2.6s * var(--gca-calm)) ease-in-out infinite .9s; }
-.htown.nite .hferry .flt.m { fill: rgb(255, 246, 222); color: rgb(255, 246, 222); animation: hk_flt calc(3.4s * var(--gca-calm)) ease-in-out infinite .4s; }
-.htown.nite .hferry .frefl { position: absolute; left: 7px; right: 7px; top: 100%; height: 10px; border-radius: 50%; background: linear-gradient(rgba(255, 215, 154, 0.38), rgba(255, 215, 154, 0)); filter: blur(1.5px); animation: hk_frefl calc(2.9s * var(--gca-calm)) ease-in-out infinite alternate; }
-.htown.nite .hbeam { height: calc(100% - 54px); width: 96px; margin-left: -48px; background: linear-gradient(to top, rgba(255, 232, 168, 0.34), rgba(255, 232, 168, 0.13) 34%, rgba(255, 232, 168, 0.05) 62%, rgba(255, 232, 168, 0) 88%); }
-.htown.nite .hbeam.hbeam2 { margin-left: 0px; margin-right: -48px; background: linear-gradient(to top, rgba(186, 222, 255, 0.3), rgba(186, 222, 255, 0.12) 34%, rgba(186, 222, 255, 0.04) 62%, rgba(186, 222, 255, 0) 88%); }
-.htown.nite .hncl { position: absolute; border-radius: 999px; pointer-events: none; filter: blur(6px); background: radial-gradient(64% 100% at 50% 68%, rgba(255, 214, 150, 0.2), rgba(120, 160, 215, 0.1) 58%, rgba(120, 160, 215, 0)); }
-.htown.nite .hncl.n1 { top: 16%; left: -96px; width: 118px; height: 26px; opacity: 0.9; animation: hk_hncl calc(74s * var(--gca-calm)) linear infinite; }
-.htown.nite .hncl.n2 { top: 34%; left: -140px; width: 86px; height: 20px; opacity: 0.7; animation: hk_hncl calc(104s * var(--gca-calm)) linear infinite; }
-.htown.nite .hshoot { position: absolute; width: 74px; height: 1.6px; border-radius: 2px; opacity: 0; pointer-events: none; background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 252, 238, 0.95)); filter: drop-shadow(rgba(255, 246, 214, 0.8) 0px 0px 4px); animation: hk_hshoot calc(14s * var(--gca-calm)) ease-in infinite; will-change: transform, opacity; }
 .htown.nite .hshoot.s2 { animation-duration: calc(19s * var(--gca-calm)); animation-delay: 6s; width: 54px; }
-.htown.nite .hrib { background: linear-gradient(rgba(255, 211, 126, 0.04), rgba(90, 150, 200, 0.22) 55%, rgba(90, 150, 200, 0.05)); }
-.htown .hshim.s1 { bottom: 139px; }
-.htown .hshim.s2 { bottom: 143px; }
-.htown.nite .hbeam { animation-name: hk_hbeamBright; }
-.htown.nite .hbeam.hbeam2 { animation-name: hk_hbeam2; }
+.htown .hshim.s1 { bottom: 165px; }
+.htown .hshim.s2 { bottom: 169px; }
 .hero-scrim { top: 90px; }
 .hero { min-height: 298px; padding-top: 10px; }
 .navrg { opacity: 0; }
 .ph-night .navrg { opacity: 1; }
 .dnm_glow.gl1 { left: -40px; top: 34px; width: 230px; height: 170px; background: radial-gradient(closest-side, rgba(255, 190, 120, 0.13), transparent); }
 .dnm_glow.gl2 { right: -50px; top: 96px; width: 210px; height: 190px; background: radial-gradient(closest-side, rgba(232, 199, 123, 0.1), transparent); }
-.dnmoon { display: block; }
+.dnm_bok.b1 { left: 9%; bottom: 26px; width: 11px; height: 11px; }
+.dnm_bok.b2 { left: 30%; bottom: 14px; width: 8px; height: 8px; animation-delay: 2.4s; animation-duration: calc(15s * var(--gca-calm)); }
+.dnm_bok.b3 { left: 52%; bottom: 30px; width: 13px; height: 13px; animation-delay: 4.8s; animation-duration: calc(12s * var(--gca-calm)); }
+.dnx_vb.big { width: 18px; height: 18px; font-size: 10px; }
 .dnx_res.required { background: rgba(136, 19, 55, 0.34); color: rgb(254, 205, 211); border-color: rgba(225, 29, 72, 0.5); }
 .dnx_res.recommended { background: rgba(120, 53, 15, 0.34); color: rgb(253, 230, 138); border-color: rgba(217, 119, 6, 0.5); }
+.dnx_tag.sun { color: rgb(248, 196, 107); border-color: rgba(244, 169, 59, 0.4); }
 .dnx_bt.route { background: rgba(232, 199, 123, 0.1); color: rgb(244, 228, 168); border: 1px solid rgb(201, 164, 78); box-shadow: rgba(255, 241, 184, 0.12) 0px 1px 0px inset; }
+.dnx_ssearch.big { margin: 12px 0px 4px; position: relative; z-index: 2; }
+.dnx_empty.big { padding: 44px 20px; font-size: 14px; margin-top: 14px; }
 .mitem .hk_mmark { width: 19px; height: 19px; display: block; }
 .hk_mmark .mm_key { stroke-width: 1.9; }
 .hk_mmark { --mm1: #F09D52; --mm2: #2FA8A0; --mm3: #F2D89B; --mm4: #E8748C; }
@@ -592,21 +550,19 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .hk_menumark { --mm2: #3CBDB4; --mm4: #F28CA0; }
 .hk_segb.on .hk_mmark { --mm2: #3CBDB4; --mm4: #F28CA0; }
 .hk_segb.on .hk_tmark .mm_solid { fill: currentcolor; fill-opacity: 0.26; }
-.morewrap.ph-night .morebtn { color: rgb(227, 196, 113); border-color: rgba(227, 196, 113, 0.6); background: linear-gradient(rgba(16, 44, 58, 0.58), rgba(8, 26, 36, 0.68)); box-shadow: rgba(255, 241, 184, 0.14) 0px 1px 0px inset, rgba(0, 0, 0, 0.42) 0px 6px 18px; }
-.morewrap.ph-night .morebtn:hover { color: rgb(244, 223, 168); border-color: rgb(227, 196, 113); box-shadow: rgba(255, 241, 184, 0.2) 0px 1px 0px inset, rgba(0, 0, 0, 0.46) 0px 8px 22px, rgba(227, 196, 113, 0.8) 0px 0px 16px -6px; }
+.morewrap.ph-day .morebtn, .morewrap.ph-dawn .morebtn, .morewrap.ph-golden .morebtn { color: rgb(255, 253, 248); border-color: rgba(255, 253, 248, 0.58); background: linear-gradient(rgba(10, 34, 48, 0.4), rgba(6, 22, 32, 0.54)); box-shadow: rgba(255, 255, 255, 0.22) 0px 1px 0px inset, rgba(0, 0, 0, 0.34) 0px 6px 18px, rgba(0, 0, 0, 0.5) 0px 1px 2px; }
+.morewrap.ph-day .morebtn:hover, .morewrap.ph-dawn .morebtn:hover, .morewrap.ph-golden .morebtn:hover { color: rgb(255, 255, 255); border-color: rgb(255, 253, 248); box-shadow: rgba(255, 255, 255, 0.3) 0px 1px 0px inset, rgba(0, 0, 0, 0.4) 0px 8px 22px, rgba(255, 253, 248, 0.75) 0px 0px 16px -6px; }
 .hk_infoic .hk_mmark { width: 46px; height: 46px; margin: 0px auto; stroke-width: 1.25; }
 .hk_promoted .adlbl { display: block; margin: 0px 0px 8px; font: 800 11px / 1 Nunito, system-ui, sans-serif; letter-spacing: 1.1px; text-transform: uppercase; color: var(--csoft); opacity: 0.85; }
 .hk_promoted .adlbl.open { font-weight: 700; letter-spacing: 0.9px; opacity: 0.55; }
 .hk_promocard .adlbl { display: block; margin: 0px 0px 5px; font: 800 11px / 1 Nunito, system-ui, sans-serif; letter-spacing: 1.1px; text-transform: uppercase; color: var(--csoft); opacity: 0.85; }
-.ph-night .hcv { filter: drop-shadow(rgba(0, 0, 0, 0.45) 0px 0.8px 0.6px) brightness(1.06); }
-.ph-night .htchw .tcv { filter: brightness(0.82) saturate(0.85); }
-.ph-night .htnest { filter: brightness(0.72) saturate(0.85); }
-.ph-night .httrail { opacity: 0.85; }
 .tgw.rtl .tgtin { animation-name: hk_tgnomR; }
 .dcw.rtl { animation-name: hk_dcruiseR; }
 .pelw.rtl { left: auto; right: -84px; animation-name: hk_pelpassR; }
 .skitz .adlbl { position: absolute; top: 5px; right: 8px; z-index: 9; font: 800 11px / 1 Nunito, system-ui, sans-serif; letter-spacing: 0.8px; text-transform: uppercase; color: var(--csoft); opacity: 1; padding: 2px 5px; border-radius: 4px; background: rgba(8, 20, 30, 0.92); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--au-b) 45%, transparent); }
 .skitz .adlbl.open { font-weight: 700; letter-spacing: 0.6px; opacity: 0.85; }
+.skc_oats .b1 { stroke: var(--skb_oat1,#B79A5C); animation-duration: calc(5.1s * var(--gca-calm)); }
+.skc_oats .b2 { stroke: var(--skb_oat2,#9C844A); animation-duration: calc(3.8s * var(--gca-calm)); }
 .skbeach .legsA, .skbeach .crb_lgA { animation-duration: 0.34s; }
 .skbeach .legsB, .skbeach .crb_lgB { animation-duration: 0.34s; }
 .skcrabv.crb { width: auto; height: auto; }
@@ -615,6 +571,9 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .apt.swim .apt_flipper.rear { transform-origin: 8% 16%; }
 .apt.swim .apt_flipper.rear.far { animation: apt_sea_rudder_far calc(4.2s * var(--gca-calm)) ease-in-out infinite var(--apto,0s); }
 .apt.swim .apt_flipper.rear.near { animation: apt_sea_rudder_near calc(4.2s * var(--gca-calm)) ease-in-out infinite var(--apto,0s); }
+.skn_bub.b1 { left: 168px; bottom: 32px; animation: skn_bub1 var(--skd,28s) linear infinite var(--sko,0s); }
+.skn_bub.b2 { left: 176px; bottom: 28px; width: 3px; height: 3px; animation: skn_bub2 var(--skd,28s) linear infinite var(--sko,0s); }
+.skn_bub.b3 { left: 162px; bottom: 26px; width: 5px; height: 5px; animation: skn_bub3 var(--skd,28s) linear infinite var(--sko,0s); }
 .skb_splash.s1 { left: 52px; top: 32px; animation: skb_spl1 var(--skd,18s) linear infinite var(--sko,0s); }
 .skb_splash.s2 { left: 28px; top: 34px; animation: skb_spl2 var(--skd,18s) linear infinite var(--sko,0s); }
 .xsky_star.s1 { left: 28px; top: 18px; opacity: 0.3; }
@@ -622,6 +581,9 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .xsky_ref.r1 { left: 73px; --fd: 0.5s; --rd: -1.2s; }
 .xsky_ref.r2 { left: 249px; --fd: 0.7s; --rd: -3.6s; }
 .xsky_ref.r3 { left: 163px; --fd: 1.3s; --rd: -2.4s; }
+.xsky_ref .b1 { left: 13px; top: 2px; width: 2px; height: 16px; animation: xskyWob calc(2s * var(--gca-calm)) ease-in-out infinite; }
+.xsky_ref .b2 { left: 8px; top: 11px; width: 2px; height: 10px; opacity: 0.7; animation: xskyWob calc(3s * var(--gca-calm)) ease-in-out -1s infinite; }
+.xsky_ref .b3 { left: 18px; top: 17px; width: 1.6px; height: 14px; opacity: 0.55; animation: xskyWob calc(2.4s * var(--gca-calm)) ease-in-out -.7s infinite; }
 .xps_star.s1 { left: 24px; top: 12px; opacity: 0.3; }
 .xps_star.s2 { left: 138px; top: 7px; animation: xpsTwinkle calc(3s * var(--gca-calm)) ease-in-out infinite; }
 .xps_ref.r1 { left: 148px; --fd: -0.6s; --rd: -1.2s; --refc: rgba(255,130,116,.62); }
@@ -633,6 +595,9 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .xps_ref.r7 { left: 40px; --fd: 2.0s; --rd: -0.9s; --refc: rgba(126,178,255,.6); }
 .xps_ref.r8 { left: 112px; --fd: 3.0s; --rd: -3.3s; --refc: rgba(110,226,164,.6); }
 .xps_ref.rh { left: 247px; --fd: 4.5s; --rd: -2.1s; --refc: rgba(255,124,156,.62); }
+.xps_ref .b1 { left: 13px; top: 2px; width: 2px; height: 15px; animation: xpsWob calc(2s * var(--gca-calm)) ease-in-out infinite; }
+.xps_ref .b2 { left: 8px; top: 9px; width: 2px; height: 9px; opacity: 0.7; animation: xpsWob calc(3s * var(--gca-calm)) ease-in-out -1s infinite; }
+.xps_ref .b3 { left: 18px; top: 14px; width: 1.6px; height: 11px; opacity: 0.55; animation: xpsWob calc(2.4s * var(--gca-calm)) ease-in-out -.7s infinite; }
 .xps_ref.r2 .b1, .xps_ref.r8 .b1 { left: 10px; top: 3px; height: 12px; }
 .xps_ref.r2 .b2, .xps_ref.r8 .b2 { left: 16px; top: 7px; height: 10px; width: 1.7px; }
 .xps_ref.r2 .b3, .xps_ref.r8 .b3 { left: 6px; top: 15px; height: 8px; }
@@ -649,17 +614,27 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .xps_ref.r5 .b2 { left: 8px; top: 8px; height: 14px; width: 1.6px; }
 .xps_ref.r5 .b3 { left: 18px; top: 17px; height: 7px; }
 .xps_ref.r5 .b4 { display: none; }
+.xps_dolphin.b2 { left: 250px; top: 101px; z-index: 4; opacity: 0.72; animation-delay: -3.1s; }
+.xps_shorebird.b2 { top: 33px; width: 7px; --x0: 356px; --xd: -402px; }
 .xp_supportstage.reviewing .xps_star { animation: auto ease 0s 1 normal none running none; opacity: 0.55; }
 .xp_supportstage.reviewing .xps_hairline { opacity: 0.85; }
+.xps_shorebird.b2 { animation-duration: calc(47s * var(--gca-calm)); animation-delay: -33s; }
+.xp_supportstage.verified .xps_dolphin.b2 .xps_joyw { animation-delay: 0.55s; }
+.xps_shorebird.b2 { --flap: .61s; }
 .xp_supportstage.cheering .xps_crab .crb_pup, .xp_supportstage.verified .xps_crab .crb_pup { transform-box: fill-box; transform-origin: center center; animation: xps_crabglee calc(1.24s * var(--gca-calm)) cubic-bezier(.3,0,.25,1) infinite; }
 .xp_supportstage .dph_gaze, .xp_supportstage .crb_pup, .xp_supportstage .pel_fly_eye { transform-box: fill-box; transform-origin: 50% 50%; transition: transform 0.3s cubic-bezier(0.22, 0.8, 0.3, 1); }
 .xp_supportstage.gazing .crb_pup { transform: translate(calc(var(--gx) * .55px),calc(var(--gy) * .4px)); }
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .xp_supportstage.gazing .hke_gaze, html:not(.hk_mo) .xp_supportstage.gazing .dph_gaze, html:not(.hk_mo) .xp_supportstage.gazing .crb_pup, html:not(.hk_mo) .xp_supportstage.gazing .pel_fly_eye, html:not(.hk_mo) .xp_supportstage.gazing .osp_yaw { transform: none; }}
+.promo_bulb.b1 { animation-delay: -1.3s; }
+.promo_bulb.b2 { animation-delay: -2.6s; }
+.promo_bulb.b3 { animation-delay: -3.9s; }
 .promo_gca .bt_a { color: var(--bt-a); -webkit-text-stroke: .35px var(--bt-a); }
 .promo_gca .bt_b { color: var(--bt-b); }
 .promo_gca .bt_tail { opacity: 1; }
 .promo_gca .bswash path { fill: var(--bt-a); }
 .promo-urgency.red { color: rgb(255, 168, 168); background: rgba(140, 34, 34, 0.44); border: 1px solid rgba(232, 132, 132, 0.5); }
+.promo-dow.red { color: rgb(255, 168, 168); background: rgba(140, 34, 34, 0.44); border-color: rgba(232, 132, 132, 0.5); }
+.hk_day .promo-dow.red { color: rgb(122, 31, 31); background: rgba(160, 52, 52, 0.14); border-color: rgba(122, 31, 31, 0.4); }
 .hk.glass-drift .card:not(.promo-card) > .inner::before { content: ""; position: absolute; z-index: -1; pointer-events: none; top: 0px; bottom: 0px; left: 0px; width: 220%; background-image: linear-gradient(100deg, rgba(255, 192, 110, 0.1) 6%, rgba(255, 150, 170, 0.09) 26%, rgba(150, 210, 255, 0.1) 48%, rgba(255, 214, 140, 0.08) 70%, rgba(255, 166, 150, 0.09) 88%); animation: hk_glassdrift calc(150s * var(--gca-calm)) ease-in-out infinite alternate; }
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .glass-drift .card > .inner::before { animation: auto ease 0s 1 normal none running none !important; }}
 .hk_day .hero { border-bottom: 2px solid rgb(138, 106, 34); }
@@ -679,64 +654,8 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .hk_day .t-rom .rsheart { stroke: rgba(168, 72, 100, 0.85); filter: drop-shadow(rgba(168, 72, 100, 0.28) 0px 0px 5px); }
 .hk_day .t-rom .rheart { color: rgb(138, 60, 84); text-shadow: rgba(138, 60, 84, 0.18) 0px 0px 8px; }
 .hk_day .t-rom .rmote { background: rgb(131, 99, 15); box-shadow: rgba(131, 99, 15, 0.35) 0px 0px 7px 1px; }
-.hk_day .t-artNight .agal.nite .astroke path { stroke: rgb(168, 58, 90); }
-.hk_day .t-artNight .agal.nite .abrush .adraw { stroke: rgb(168, 58, 90); filter: none; }
-.hk_day .t-artNight .agal.nite .adrip.p1 { background: linear-gradient(rgb(196, 87, 122), rgb(156, 52, 84)); }
-.hk_day .t-artNight .agal.nite .adrip.p2 { background: linear-gradient(rgb(144, 88, 200), rgb(112, 56, 168)); }
-.hk_day .t-artNight .agal.nite .afr { border-color: rgba(138, 85, 104, 0.5); box-shadow: none; }
-.hk_day .t-artNight .agal.nite .adaub { opacity: 0.42; filter: blur(0.4px); animation: hk_adaub calc(11s * var(--gca-calm)) ease-in-out infinite alternate; }
-.hk_day .t-artNight .agal.nite .agallight { background: linear-gradient(103deg, transparent 34%, rgba(200, 90, 130, 0.14) 44%, rgba(150, 90, 200, 0.2) 50%, rgba(200, 90, 130, 0.12) 56%, transparent 66%); }
-.hk_day .t-artNight .agal.nite .ahang i { background: linear-gradient(rgba(138, 85, 104, 0.5), rgba(138, 85, 104, 0.18)); }
-.hk_day .t-artNight .agal.nite .ahang b { border-color: rgba(156, 52, 84, 0.4); background: linear-gradient(148deg, rgba(251, 227, 234, 0.7), rgba(234, 217, 236, 0.4)); box-shadow: none; }
-.hk_day .t-artNight .agal.nite .aeasel { opacity: 0.4; }
-.hk_day .t-artNight .agal.nite .aeasel .aleg { stroke: rgb(138, 85, 104); }
-.hk_day .t-artNight .agal.nite .aeasel .acan { fill: rgba(251, 227, 234, 0.6); stroke: rgb(138, 85, 104); }
-.hk_day .t-artNight .agal.nite .apal_b { fill: rgb(251, 227, 234); }
-.hk_day .t-artNight .agal.nite .apal_b, .hk_day .t-artNight .agal.nite .apal_hole { stroke: rgb(138, 85, 104); }
 .hk_day .t-artNight .agal.nite .aribbon.rb1 { stroke: rgb(168, 58, 90); opacity: 0.42; }
-.hk_day .t-townNight .htown.nite .hmoon { box-shadow: rgb(201, 162, 78) -4px 2px 0px 0px inset, rgba(201, 162, 78, 0.22) 0px 0px 10px; }
-.hk_day .t-townNight .htown.nite .hsun { background: radial-gradient(38% 26% at 82% 10%, rgba(255, 255, 255, 0.4), transparent 72%); }
-.hk_day .t-townNight .htown.nite .hglow { background: linear-gradient(transparent, rgba(255, 215, 154, 0.14) 58%, rgba(255, 215, 154, 0.24)); }
-.hk_day .t-townNight .htown.nite .hncl { background: radial-gradient(64% 100% at 50% 68%, rgba(255, 224, 180, 0.35), rgba(210, 228, 248, 0.2) 58%, transparent); }
-.hk_day .t-townNight .htown.nite .hrib { background: linear-gradient(rgba(255, 224, 180, 0.1), rgba(200, 224, 248, 0.32) 55%, rgba(200, 224, 248, 0.08)); }
-.hk_day .t-townNight .htown.nite .hsil { fill: rgb(90, 114, 144); stroke: rgb(90, 114, 144); }
-.hk_day .t-townNight .htown.nite .hwin rect { fill: rgb(201, 146, 46); }
-.hk_day .t-townNight .htown.nite .hlamp { fill: rgb(217, 174, 82); }
-.hk_day .t-townNight .htown.nite .hbridge.nb { stroke: rgba(90, 114, 144, 0.55); }
-.hk_day .t-townNight .htown.nite .hbridge.nb .deck { stroke: rgba(90, 114, 144, 0.7); }
-.hk_day .t-townNight .htown.nite .hbridge.nb .span { stroke: rgba(90, 114, 144, 0.45); }
-.hk_day .t-townNight .htown.nite .hbridge.nb .blamp circle { fill: rgb(217, 174, 82); filter: drop-shadow(rgba(201, 162, 78, 0.5) 0px 0px 2px); }
-.hk_day .t-townNight .htown.nite .hcar { background: linear-gradient(90deg, rgba(122, 84, 16, 0), rgb(185, 138, 42)); box-shadow: rgba(185, 138, 42, 0.32) 0px 0px 6px 1px; }
-.hk_day .t-townNight .htown.nite .hferry .fhull { fill: rgb(74, 98, 128); }
-.hk_day .t-townNight .htown.nite .hferry .fcab { fill: rgb(90, 114, 144); }
-.hk_day .t-townNight .htown.nite .hferry .fmast { stroke: rgb(90, 114, 144); }
-.hk_day .t-townNight .htown.nite .hferry .fwin rect { fill: rgb(201, 146, 46); }
 .hk_day .t-townNight .htown.nite .hferry .flt.r { fill: rgb(176, 74, 66); color: rgb(176, 74, 66); box-shadow: none; filter: drop-shadow(rgba(176, 74, 66, 0.4) 0px 0px 2px); }
-.hk_day .t-townNight .htown.nite .hferry .flt.g { fill: rgb(46, 143, 99); color: rgb(46, 143, 99); filter: drop-shadow(rgba(46, 143, 99, 0.4) 0px 0px 2px); }
-.hk_day .t-townNight .htown.nite .hferry .flt.m { fill: rgb(138, 106, 42); color: rgb(138, 106, 42); filter: drop-shadow(rgba(138, 106, 42, 0.4) 0px 0px 2px); }
-.hk_day .t-townNight .htown.nite .hshoot { background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(122, 84, 16, 0.75)); }
-.hk_day .t-movieNight .cine.nite .msprk { opacity: 0.22; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20'%3E%3Crect x='2.5' y='6' width='5' height='8' rx='1.6' fill='%23725014'/%3E%3C/svg%3E"); }
-.hk_day .t-movieNight .cine.nite .mrail { --mbulb: #8A6414; --mglow: rgba(255,238,196,.55); filter: drop-shadow(rgba(138, 100, 20, 0.3) 0px 0px 2px); }
-.hk_day .t-movieNight .cine.nite .mp_body { stroke: rgb(114, 80, 20); }
-.hk_day .t-movieNight .cine.nite .mp_reel { stroke: rgb(114, 80, 20); }
-.hk_day .t-movieNight .cine.nite .mscreen { border-color: rgba(114, 80, 20, 0.5); background: linear-gradient(160deg, rgba(255, 246, 222, 0.3), rgba(240, 225, 195, 0.35)); }
-.hk_day .t-coastalNight .shal.nite .bprops { filter: none; opacity: 1; }
-.hk_day .t-coastalNight .shal.nite .sandg { opacity: 0.44; }
-.hk_day .t-coastalNight .shal.nite .ccrab { opacity: 1; }
-.hk_day .t-coastalNight .shal.nite .cmoon { box-shadow: rgb(201, 162, 78) -3.6px 1.8px 0px 0px inset, rgba(201, 162, 78, 0.22) 0px 0px 10px; }
-.hk_day .t-labNight .ldec.nite .lx { --lxink: #0A6644; --lxink2: #106E82; --lxwarm: #B5562E; opacity: 0.7; }
-.hk_day .t-labNight .ldec.nite .lscope { opacity: 0.5; }
-.hk_day .t-labNight .ldec.nite .lsc_t { stroke: rgb(10, 102, 68); filter: drop-shadow(rgba(10, 102, 68, 0.3) 0px 0px 2px); }
-.hk_day .t-labNight .ldec.nite .lliq { fill: rgb(10, 102, 68); opacity: 0.6; filter: drop-shadow(rgba(10, 102, 68, 0.25) 0px 0px 2px); }
-.hk_day .t-labNight .ldec.nite .lglass { stroke: rgb(46, 78, 68); opacity: 0.7; }
-.hk_day .t-labNight .ldec.nite .lring { border-color: rgba(10, 102, 68, 0.5); }
-.hk_day .t-labNight .ldec.nite .lel { background: rgb(10, 102, 68); box-shadow: rgba(10, 102, 68, 0.3) 0px 0px 3px 1px; }
-.hk_day .t-labNight .ldec.nite .lnuc { background: rgb(16, 110, 130); box-shadow: rgba(16, 110, 130, 0.3) 0px 0px 4px 1.2px; }
-.hk_day .t-labNight .ldec.nite .ldna { opacity: 0.5; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='28'%3E%3Cg fill='none' stroke='%230A6644' stroke-width='1' stroke-linecap='round'%3E%3Cpath d='M2.5,0 C9.5,4.7 9.5,9.3 2.5,14 C9.5,18.7 9.5,23.3 2.5,28'/%3E%3Cpath d='M9.5,0 C2.5,4.7 2.5,9.3 9.5,14 C2.5,18.7 2.5,23.3 9.5,28'/%3E%3Cline x1='4.4' y1='3.5' x2='7.6' y2='3.5'/%3E%3Cline x1='4.4' y1='10.5' x2='7.6' y2='10.5'/%3E%3Cline x1='4.4' y1='17.5' x2='7.6' y2='17.5'/%3E%3Cline x1='4.4' y1='24.5' x2='7.6' y2='24.5'/%3E%3C/g%3E%3C/svg%3E"); }
-.hk_day .t-comedyNight .cmdy.nite .cm_brick { opacity: 0.5; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='24'%3E%3Cg stroke='%238A5230' stroke-opacity='.20' stroke-width='1' fill='none'%3E%3Cpath d='M0 .5h44M0 12.5h44'/%3E%3Cpath d='M11 0v12M33 0v12M0 12v12M22 12v12M44 12v12'/%3E%3C/g%3E%3C/svg%3E"); }
-.hk_day .t-comedyNight .cmdy.nite .cm_base, .hk_day .t-comedyNight .cmdy.nite .cm_boom { stroke: rgb(92, 71, 38); }
-.hk_day .t-comedyNight .cmdy.nite .cm_sp { stroke: rgb(92, 71, 38); }
-.hk_day .t-comedyNight .cmdy.nite .fw_ha .fld.f-laugh { color: rgb(107, 78, 14); --fo: .5; }
 @keyframes hk_gl { 
   0%, 100% { opacity: 0; transform: scaleX(0.25); }
   45%, 55% { opacity: var(--glo,.6); transform: scaleX(1); }
@@ -779,6 +698,29 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
   74% { transform: translate(42px, 4px); }
   100% { transform: translate(0px, 0px); }
 }
+@keyframes hk_supdrift { 
+  0% { transform: translate(0px, 0px); }
+  100% { transform: translate(9px, 1.5px); }
+}
+@keyframes hk_supbob { 
+  0%, 100% { transform: translateY(0px) rotate(-0.6deg); }
+  50% { transform: translateY(1.4px) rotate(0.7deg); }
+}
+@keyframes hk_paddle { 
+  0%, 5% { transform: rotate(5deg); }
+  11% { transform: rotate(0deg); }
+  30% { transform: rotate(-24deg); }
+  34% { transform: rotate(-29deg); }
+  44% { transform: rotate(-27deg); }
+  96%, 100% { transform: rotate(5deg); }
+}
+@keyframes hk_supbody { 
+  0%, 5% { transform: rotate(4deg); }
+  22% { transform: rotate(1deg); }
+  34% { transform: rotate(-3.4deg); }
+  48% { transform: rotate(-2deg); }
+  100% { transform: rotate(4deg); }
+}
 @keyframes hk_ripl { 
   0%, 100% { opacity: 0; transform: scaleX(0.5); }
   42% { opacity: 0.26; transform: scaleX(1); }
@@ -797,45 +739,6 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 @keyframes hkn_drift { 
   0% { transform: translate3d(-50%, 0px, 0px); }
   100% { transform: translate3d(0px, 0px, 0px); }
-}
-@keyframes hk_ntw1 { 
-  0%, 100% { opacity: 0.86; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.06); }
-}
-@keyframes hk_ntw2 { 
-  0%, 100% { opacity: 0.5; transform: scale(0.92); }
-  50% { opacity: 0.95; transform: scale(1); }
-}
-@keyframes hk_ntw3 { 
-  0%, 100% { opacity: 0.14; transform: scale(0.75); }
-  55% { opacity: 0.7; transform: scale(1); }
-}
-@keyframes hk_nswA { 
-  0% { transform: translate3d(-300px, 0px, 0px); opacity: 0; }
-  20% { opacity: 0.5; }
-  40% { opacity: 1; }
-  60% { opacity: 1; }
-  80% { opacity: 0.5; }
-  100% { transform: translate3d(330px, 0px, 0px); opacity: 0; }
-}
-@keyframes hk_ntl { 
-  0%, 100% { opacity: 0.45; }
-  50% { opacity: 0.85; }
-}
-@keyframes hk_nwetadv { 
-  0%, 52% { transform: translateY(0px); }
-  68% { transform: translateY(-1.3px); }
-  100% { transform: translateY(0px); }
-}
-@keyframes hk_nwetgl { 
-  0%, 52% { opacity: 0.3; }
-  66% { opacity: 0.95; }
-  74% { opacity: 0.72; }
-  88%, 100% { opacity: 0.3; }
-}
-@keyframes hk_nhalo { 
-  0%, 100% { opacity: 0.82; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.035); }
 }
 @keyframes hk_glow { 
   0%, 100% { opacity: 0.85; transform: scale(1); }
@@ -873,6 +776,12 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
   30% { transform: translateY(-7px) rotate(-4.5deg); }
   62% { transform: translateY(3px) rotate(1.5deg); }
   82% { transform: translateY(-2px) rotate(-2deg); }
+}
+@keyframes hk_gullnear { 
+  0%, 55% { transform: translate(-90px, 6px); }
+  70% { transform: translate(120px, -2px); }
+  84% { transform: translate(300px, 3px); }
+  100% { transform: translate(452px, -4px); }
 }
 @keyframes hk_gullnearR { 
   0%, 55% { transform: translate(452px, 6px); }
@@ -969,6 +878,31 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
   80% { transform: translateY(37%) rotate(-2deg); }
   100% { transform: translateY(114%) rotate(-6deg); }
 }
+@keyframes hk_adyacht { 
+  0% { opacity: 0; transform: translateX(-150px); }
+  6%, 73% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(250px); }
+}
+@keyframes hk_adparasway { 
+  0%, 100% { transform: rotate(-2.1deg); }
+  55% { transform: rotate(1.7deg); }
+}
+@keyframes hk_adplane { 
+  0% { transform: translateX(-230px); }
+  100% { transform: translateX(560px); }
+}
+@keyframes hk_adplanebob { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.4px); }
+}
+@keyframes hk_adbanflut { 
+  0%, 100% { transform: rotate(0.9deg) translateY(0.2px); }
+  50% { transform: rotate(-0.8deg) translateY(-0.3px); }
+}
+@keyframes hk_adprop { 
+  0%, 100% { transform: scaleY(1); opacity: 0.55; }
+  50% { transform: scaleY(0.45); opacity: 0.8; }
+}
 @keyframes hk_tapring { 
   0%, 100% { opacity: 0.028; }
   50% { opacity: 0.05; }
@@ -976,10 +910,6 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 @keyframes hk_tapring_sun { 
   0%, 100% { opacity: 0.05; }
   50% { opacity: 0.09; }
-}
-@keyframes hk_adbuoyglow { 
-  0%, 100% { opacity: 0.55; filter: drop-shadow(rgb(242, 196, 60) 0px 0px 1px); }
-  50% { opacity: 1; filter: drop-shadow(rgb(242, 196, 60) 0px 0px 4px); }
 }
 @keyframes hk_sailbob_nmflat { 
   0% { transform: translateY(2.5px); }
@@ -1020,11 +950,6 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
   73% { transform: translateX(-79px); }
   86% { transform: translateX(-96px); opacity: 0.9; }
   100% { transform: translateX(-116px); opacity: 0; }
-}
-@keyframes hk_npglow { 
-  0%, 100% { opacity: 0.85; transform: scale(1); }
-  45% { opacity: 1; transform: scale(1.12); }
-  70% { opacity: 0.7; transform: scale(0.96); }
 }
 @keyframes hk_rmsway { 
   0% { transform: translateY(-1px) rotate(-0.32deg); }
@@ -1074,14 +999,6 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
   30% { opacity: 0.85; }
   70% { opacity: 0.5; transform: translate3d(5px, -26px, 0px); }
   100% { opacity: 0; transform: translate3d(-2px, -46px, 0px); }
-}
-@keyframes hk_adaub { 
-  0% { transform: translateY(0px) rotate(0deg); }
-  100% { transform: translateY(-4px) rotate(7deg); }
-}
-@keyframes hk_aglow { 
-  0% { opacity: 0.5; }
-  100% { opacity: 0.92; }
 }
 @keyframes hk_rvig { 
   0% { opacity: 0.62; }
@@ -1172,53 +1089,9 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
   0% { transform: translate3d(0px, -10px, 0px) scaleX(0.9); opacity: 0.24; }
   100% { transform: translate3d(0px, 10px, 0px) scaleX(1.1); opacity: 0.55; }
 }
-@keyframes hk_blamp { 
-  0%, 100% { opacity: 0.55; }
-  50% { opacity: 0.95; }
-}
-@keyframes hk_hcar { 
-  0% { transform: translate(0px, 0px); opacity: 0; }
-  5% { opacity: 0.9; }
-  24% { transform: translate(-58px, 2px); }
-  46% { transform: translate(-116px, -2px); opacity: 0.9; }
-  53% { transform: translate(-130px, -3px); opacity: 0; }
-  100% { transform: translate(-130px, -3px); opacity: 0; }
-}
-@keyframes hk_hboat { 
-  0% { transform: translate3d(0px, 0px, 0px); }
-  100% { transform: translate3d(460px, 0px, 0px); }
-}
-@keyframes hk_fwin { 
-  0%, 100% { opacity: 0.9; }
-  44% { opacity: 0.45; }
-}
 @keyframes hk_flt { 
   0%, 100% { opacity: 0.45; }
   50% { opacity: 1; }
-}
-@keyframes hk_frefl { 
-  0% { opacity: 0.35; transform: scaleX(0.86); }
-  100% { opacity: 0.75; transform: scaleX(1.12); }
-}
-@keyframes hk_hncl { 
-  0% { transform: translateX(0px); }
-  100% { transform: translateX(calc(100% + 460px)); }
-}
-@keyframes hk_hshoot { 
-  0% { transform: translate(0px, 0px) rotate(4deg); opacity: 0; }
-  2% { opacity: 0.95; }
-  9% { transform: translate(230px, 4px) rotate(4deg); opacity: 0; }
-  100% { transform: translate(230px, 4px) rotate(4deg); opacity: 0; }
-}
-@keyframes hk_hbeamBright { 
-  0% { transform: rotate(-26deg); opacity: 0.55; }
-  50% { opacity: 1; }
-  100% { transform: rotate(26deg); opacity: 0.55; }
-}
-@keyframes hk_hbeam2 { 
-  0% { transform: rotate(24deg); opacity: 0.45; }
-  50% { opacity: 0.9; }
-  100% { transform: rotate(-24deg); opacity: 0.45; }
 }
 @keyframes hk_tgnomR { 
   0%, 44% { transform: rotate(0deg) scale(1); }
@@ -1272,6 +1145,39 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
   34% { transform: rotate(1deg); }
   68% { transform: rotate(8deg); }
 }
+@keyframes skn_bub1 { 
+  0%, 29.5% { opacity: 0; transform: translate(0px, 0px); }
+  30.5% { opacity: 0.9; transform: translate(0.5px, -3px); }
+  34% { opacity: 0.85; transform: translate(-1px, -10px); }
+  37% { opacity: 0; transform: translate(1px, -17px); }
+  57.5% { opacity: 0; transform: translate(0px, 0px); }
+  58.5% { opacity: 0.9; transform: translate(-0.5px, -4px); }
+  62% { opacity: 0.8; transform: translate(1px, -11px); }
+  65% { opacity: 0; transform: translate(-1px, -18px); }
+  100% { opacity: 0; }
+}
+@keyframes skn_bub2 { 
+  0%, 32% { opacity: 0; transform: translate(0px, 0px); }
+  33% { opacity: 0.85; transform: translate(-0.5px, -3px); }
+  36.5% { opacity: 0.8; transform: translate(1px, -9px); }
+  40% { opacity: 0; transform: translate(-1px, -15px); }
+  59.5% { opacity: 0; transform: translate(0px, 0px); }
+  60.5% { opacity: 0.85; transform: translate(0.5px, -3px); }
+  64% { opacity: 0.8; transform: translate(-1px, -10px); }
+  67% { opacity: 0; transform: translate(1px, -16px); }
+  100% { opacity: 0; }
+}
+@keyframes skn_bub3 { 
+  0%, 35% { opacity: 0; transform: translate(0px, 0px); }
+  36% { opacity: 0.8; transform: translate(1px, -2px); }
+  39.5% { opacity: 0.75; transform: translate(-1px, -8px); }
+  43% { opacity: 0; transform: translate(0.5px, -14px); }
+  61.5% { opacity: 0; transform: translate(0px, 0px); }
+  62.5% { opacity: 0.8; transform: translate(-0.5px, -3px); }
+  66% { opacity: 0.75; transform: translate(1px, -9px); }
+  69% { opacity: 0; transform: translate(-0.5px, -15px); }
+  100% { opacity: 0; }
+}
 @keyframes skb_spl1 { 
   0%, 8.8% { opacity: 0; transform: scale(0.4); }
   10.5% { opacity: 0.95; transform: scale(1.15); }
@@ -1288,9 +1194,17 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
   0%, 100% { opacity: 0.25; }
   50% { opacity: 0.75; }
 }
+@keyframes xskyWob { 
+  0%, 100% { transform: scaleY(1) translateX(0px); }
+  50% { transform: scaleY(0.72) translateX(0.7px); }
+}
 @keyframes xpsTwinkle { 
   0%, 100% { opacity: 0.25; }
   50% { opacity: 0.75; }
+}
+@keyframes xpsWob { 
+  0%, 100% { transform: scaleY(1) translateX(0px); }
+  50% { transform: scaleY(0.72) translateX(0.7px); }
 }
 @keyframes xps_crabglee { 
   0%, 100% { transform: translate(0px, 0px) scale(1, 1); }
