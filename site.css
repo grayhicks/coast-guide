@@ -609,6 +609,9 @@ body.ph-night .scene{--act:#6f7db6;--act-hover:#8290c6;--act-ink:#0b1024}
 @keyframes twinkle{0%,100%{opacity:calc(var(--star-o)*.6)}50%{opacity:var(--star-o)}}
 
 
+.scene .adbonfire{display:none}
+
+
 .scene::after{content:"";position:absolute;inset:0;z-index:10;pointer-events:none;
   background:
     radial-gradient(58% 66% at 22% 36%, rgba(5,15,25,var(--scrimA)), transparent 72%),

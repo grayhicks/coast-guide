@@ -475,7 +475,22 @@ html, body { overflow-x: clip; }
     scale:calc(var(--up) * var(--pbp) / var(--sx)) calc(var(--up) * var(--pbp) / var(--sy))}
   .scene.band:not(.short) .adparasail{left:calc(-94px * var(--pbp) / var(--sx))}
   
-  .scene.band .hk_boat{right:6px}
+  .scene.band:not(.short){--boatr:-10px}
+  
+  
+  
+  .scene.band:not(.short) .adyacht,.scene.band:not(.short) .adparasail{
+    animation-name:hk_adyacht_wide;
+    --yx0:calc(292px - 5px / var(--sx));
+    --yx1:calc(292px - 15px / var(--sx));
+    animation-duration:26s}
+  
+  .scene.band:not(.short) .scene-copy .sub{max-width:184px}
+  .scene.band:not(.short) .adyacht{top:113px}
+  
+  .scene.band:not(.short) .adparasail{top:55px;
+    --yx0:calc(292px + 15px / var(--sx));
+    --yx1:calc(292px + 5px / var(--sx))}
 }
 
 
