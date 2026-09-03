@@ -488,6 +488,8 @@ html, body { overflow-x: clip; }
   .scene.band:not(.short) .scene-copy .sub{max-width:184px}
   .scene.band:not(.short) .adyacht{top:113px}
   
+  
+  .scene.band:not(.short) .sun{translate:0 calc(-45px / var(--sy))}
   .scene.band:not(.short) .adparasail{top:55px;
     --yx0:calc(292px + 15px / var(--sx));
     --yx1:calc(292px + 5px / var(--sx))}
