@@ -3,7 +3,7 @@
    plus a version.txt probe it deliberately never caches (see the note in the fetch handler).
    Nothing here reports anything anywhere, which is a product guarantee, not an implementation
    detail — gate_pwa.js asserts it against this file. */
-const CACHE = "gca-0270355f6b9ec717";
+const CACHE = "gca-07782d1e19ea359e";
 
 /* ⚠ 08/20 — THE APP IS ONE 4.5MB DOCUMENT AND THIS USED TO DOWNLOAD IT TWICE. The precache list
    was ["./", "./index.html", "./app.webmanifest"] fed to cache.addAll(). The first two are the
