@@ -5,6 +5,22 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Gulf Coast: this weekend
 BEGIN:VEVENT
+UID:ev_proof_youth_group_gbpc-2026-09-04@coast-guide
+DTSTAMP:20260904T000000Z
+DTSTART:20260904T183000
+DTEND:20260904T203000
+SUMMARY:Proof Youth Group
+DESCRIPTION:Gulf Breeze Presbyterian Church runs its Proof Youth Group on 
+ Fridays from 6:30 to 9:05 PM\, at the church on Andrew Jackson Trail. The
+  group is open to the public and meets every week.\nPrice: not published 
+ by the venue\, so confirm before you go\nArea: Gulf Breeze & Navarre\nTim
+ es: Friday 9/4 · 6:30 PM to 9:05 PM\nhttps://coastaleventures.com/events
+ /ev-proof-youth-group-gbpc.html
+LOCATION:Gulf Breeze Presbyterian Church\, 100 Andrew Jackson Trail\, Gulf
+  Breeze\, FL
+URL:https://coastaleventures.com/events/ev-proof-youth-group-gbpc.html
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_baytowne_chalk-2026-09-04@coast-guide
 DTSTAMP:20260904T000000Z
 DTSTART;VALUE=DATE:20260904
@@ -501,12 +517,11 @@ DTSTART:20260904T190000
 DTEND:20260904T210000
 SUMMARY:Karaoke at American Legion Post 296
 DESCRIPTION:Karaoke runs Friday night at Davis-Sikes Post 296 on Main Stre
- et\, from 7 to 11 PM. No admission price is published in the sources read
-  for this event. The karaoke night repeats on a recurring basis at the po
- st.\nPrice: not published by the venue\, so confirm before you go\nArea: 
- Destin & Fort Walton\nTimes: Friday 9/4 · 7:00 PM to 11:00 PM\nhttps://c
- oastaleventures.com/events/ev-karaoke-at-american-legion-post-296-0904.ht
- ml
+ et\, from 7 to 11 PM. No cover charge is posted for karaoke night. The ka
+ raoke night repeats on a recurring basis at the post.\nPrice: not publish
+ ed by the venue\, so confirm before you go\nArea: Destin & Fort Walton\nT
+ imes: Friday 9/4 · 7:00 PM to 11:00 PM\nhttps://coastaleventures.com/eve
+ nts/ev-karaoke-at-american-legion-post-296-0904.html
 LOCATION:Davis-Sikes Post 296 (American Legion Post 296)\, 311 Main St\, D
  estin
 URL:https://coastaleventures.com/events/ev-karaoke-at-american-legion-post
@@ -1133,10 +1148,10 @@ DESCRIPTION:Fort Valley State and Tuskegee meet at Ladd-Peebles Stadium fo
  r the fourth Port City Classic\, an HBCU football weekend that also runs 
  a summit\, a parade and other entertainment. The organizer's official FAQ
   publishes a clear-bag policy for the stadium but does not publish a nume
- ric ticket price on the pages available.\nPrice: not published by the ven
- ue\, so confirm before you go\nArea: Mobile & Baldwin County\nTimes: Satu
- rday 9/5 · 4:00 PM\nChecked against the venue's own page on 2026-08-24\n
- https://coastaleventures.com/events/ev-port-city-classic-0905.html
+ ric ticket price.\nPrice: not published by the venue\, so confirm before 
+ you go\nArea: Mobile & Baldwin County\nTimes: Saturday 9/5 · 4:00 PM\nCh
+ ecked against the venue's own page on 2026-08-24\nhttps://coastaleventure
+ s.com/events/ev-port-city-classic-0905.html
 LOCATION:Ladd-Peebles Stadium\, 1621 Virginia Street\, Mobile\, AL 36604
 URL:https://coastaleventures.com/events/ev-port-city-classic-0905.html
 END:VEVENT
