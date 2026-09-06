@@ -631,6 +631,16 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .skbeach .legsA, .skbeach .crb_lgA { animation-duration: 0.34s; }
 .skbeach .legsB, .skbeach .crb_lgB { animation-duration: 0.34s; }
 .skcrabv.crb { width: auto; height: auto; }
+.crbl_lgA { animation: 0.34s ease-in-out 0s infinite alternate none running gcl_crbleg2; }
+.crbl_lgB { animation: 0.34s ease-in-out 0s infinite alternate-reverse none running gcl_crbleg2; }
+.crbl_hi { animation: gcl_shellglow calc(2.6s * var(--gca-calm)) ease-in-out infinite; }
+.crbl_armL { animation: skc_arms var(--skd,26s) ease-in-out infinite var(--sko,0s); }
+.crbl_armR { animation: skc_armsR var(--skd,26s) ease-in-out infinite var(--sko,0s); }
+.crbl_clw { animation: hk_crbclaw2 calc(2.6s * var(--gca-calm)) ease-in-out infinite; }
+.crbl_clwR { animation-delay: 0.9s; }
+.crbl_eye { animation: gcl_crbeye2 calc(4.9s * var(--gca-calm)) ease-in-out infinite; }
+.crbl_pup { animation: gcl_eyebob calc(3.8s * var(--gca-calm)) ease-in-out infinite; }
+.crbl_swt { opacity: 0; animation: gcl_swt var(--skd,26s) linear infinite var(--sko,0s); }
 .apt.land-rig .apt_flipper.rear.diag-a { animation: apt_scoot_a_rear calc(2.4s * var(--gca-calm)) cubic-bezier(.45,.04,.42,.98) infinite; }
 .apt.land-rig .apt_flipper.rear.diag-b { animation: apt_scoot_b_rear calc(2.4s * var(--gca-calm)) cubic-bezier(.45,.04,.42,.98) infinite; }
 .apt.swim .apt_flipper.rear { transform-origin: 8% 16%; }
@@ -1305,6 +1315,52 @@ html.hk_diag_nohero .hero, html.hk_diag_nohero .hero::before, html.hk_diag_noher
   76% { transform: translate(-392px, 6px); }
   94% { opacity: 0.96; }
   100% { transform: translate(-560px, -2px); opacity: 0; }
+}
+@keyframes gcl_crbleg2 { 
+  0% { transform: translateY(calc(.2px * var(--gcs))) rotate(-3.2deg); }
+  100% { transform: translateY(calc(-.9px * var(--gcs))) rotate(3.2deg); }
+}
+@keyframes gcl_shellglow { 
+  0%, 100% { opacity: 0.24; transform: translateX(calc(-.5px * var(--gcs))); }
+  46% { opacity: 0.7; transform: translateX(calc(.75px * var(--gcs))); }
+}
+@keyframes skc_arms { 
+  0%, 64% { transform: rotate(0deg); }
+  66%, 72.6% { transform: rotate(-36deg); }
+  73.2% { transform: rotate(-8deg); }
+  73.9% { transform: rotate(-66deg); }
+  75% { transform: rotate(-30deg); }
+  76.4% { transform: rotate(-44deg); }
+  80.2% { transform: rotate(-42deg); }
+  82% { transform: rotate(-8deg); }
+  84%, 94% { transform: rotate(-20deg); }
+  96%, 100% { transform: rotate(0deg); }
+}
+@keyframes skc_armsR { 
+  0%, 64% { transform: rotate(0deg); }
+  66%, 72.6% { transform: rotate(36deg); }
+  73.2% { transform: rotate(8deg); }
+  73.9% { transform: rotate(66deg); }
+  75% { transform: rotate(30deg); }
+  76.4% { transform: rotate(44deg); }
+  80.2% { transform: rotate(42deg); }
+  82% { transform: rotate(8deg); }
+  84%, 94% { transform: rotate(20deg); }
+  96%, 100% { transform: rotate(0deg); }
+}
+@keyframes gcl_crbeye2 { 
+  0%, 62%, 100% { transform: translateY(0px) rotate(0deg); }
+  70% { transform: translateY(calc(-.5px * var(--gcs))) rotate(-5deg); }
+  84% { transform: translateY(calc(-.5px * var(--gcs))) rotate(5deg); }
+}
+@keyframes gcl_eyebob { 
+  0%, 100% { transform: translateY(0px); }
+  47% { transform: translateY(calc(-.32px * var(--gcs))); }
+}
+@keyframes gcl_swt { 
+  0%, 81.2% { opacity: 0; transform: translate(0px, 0px); }
+  81.9% { opacity: 0.95; transform: translate(calc(.5px * var(--gcs)),calc(.7px * var(--gcs))); }
+  82.6%, 100% { opacity: 0; transform: translate(calc(1.2px * var(--gcs)),calc(2.6px * var(--gcs))); }
 }
 @keyframes apt_scoot_a_rear { 
   0%, 8% { transform: rotate(-10deg); }
