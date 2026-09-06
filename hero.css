@@ -568,7 +568,7 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .lx_bone.b1 { animation-delay: 3.4s; }
 .lx_bone.b2 { animation-delay: 7.1s; }
 .htown.nite .hferry .flt.r { fill: rgb(255, 122, 122); color: rgb(255, 122, 122); animation: hk_flt calc(2.6s * var(--gca-calm)) ease-in-out infinite; }
-.htown.nite .hshoot.s2 { animation-duration: calc(19s * var(--gca-calm)); animation-delay: 6s; width: 54px; }
+.htown.nite .hshoot.s2 { animation-duration: calc(1.9s * var(--gca-calm)); width: 54px; }
 .htown .hshim.s1 { bottom: 165px; }
 .htown .hshim.s2 { bottom: 169px; }
 .hero-scrim { top: 90px; }
@@ -650,7 +650,7 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .crbl_armL { animation: skc_arms var(--skd,26s) ease-in-out infinite var(--sko,0s); }
 .crbl_armR { animation: skc_armsR var(--skd,26s) ease-in-out infinite var(--sko,0s); }
 .crbl_clw { animation: hk_crbclaw2 calc(2.6s * var(--gca-calm)) ease-in-out infinite; }
-.crbl_clwR { animation-delay: 0.9s; }
+.crbl_clwR { animation: auto ease 0s 1 normal none running none; }
 .crbl_eye { animation: gcl_crbeye2 calc(4.9s * var(--gca-calm)) ease-in-out infinite; }
 .crbl_pup { animation: gcl_eyebob calc(3.8s * var(--gca-calm)) ease-in-out infinite; }
 .crbl_swt { opacity: 0; animation: gcl_swt var(--skd,26s) linear infinite var(--sko,0s); }
