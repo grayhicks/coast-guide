@@ -759,6 +759,7 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .hk_day .t-comedyNight .cmdy.nite .cm_base, .hk_day .t-comedyNight .cmdy.nite .cm_boom { stroke: rgb(92, 71, 38); }
 .hk_day .t-comedyNight .cmdy.nite .cm_sp { stroke: rgb(92, 71, 38); }
 .hk_day .t-comedyNight .cmdy.nite .fw_ha .fld.f-laugh { color: rgb(107, 78, 14); --fo: .5; }
+html.hk_diag_nohero .hero, html.hk_diag_nohero .hero::before, html.hk_diag_nohero .hero::after, html.hk_diag_nohero .hero *, html.hk_diag_nohero .hero ::before, html.hk_diag_nohero .hero ::after, html.hk_diag_nohero .dnmwrap, html.hk_diag_nohero .dnmwrap::before, html.hk_diag_nohero .dnmwrap::after, html.hk_diag_nohero .dnmwrap *, html.hk_diag_nohero .dnmwrap ::before, html.hk_diag_nohero .dnmwrap ::after { animation: auto ease 0s 1 normal none running none !important; transition: none !important; }
 @keyframes hk_gl { 
   0%, 100% { opacity: 0; transform: scaleX(0.25); }
   45%, 55% { opacity: var(--glo,.6); transform: scaleX(1); }
