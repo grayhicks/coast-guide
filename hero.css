@@ -459,7 +459,8 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .rdec .rm_swag { position: absolute; left: 0px; right: 0px; top: 4px; height: 46px; pointer-events: none; opacity: 0.85; transform-origin: 50% 0px; animation: hk_rmsway calc(9.4s * var(--gca-calm)) ease-in-out infinite alternate; }
 .rdec .rm_swag svg { position: absolute; inset: 0px; width: 100%; height: 100%; display: block; }
 .rdec .rm_wire { fill: none; stroke: rgba(240, 214, 160, 0.3); stroke-width: 1.1; stroke-linecap: round; }
-.rdec .rm_bulb { position: absolute; width: 5px; height: 5px; margin-left: -2.5px; margin-top: -2.5px; border-radius: 50%; background: radial-gradient(circle at 38% 34%, rgb(255, 246, 222), rgb(243, 195, 120) 62%, rgba(243, 195, 120, 0.1) 100%); box-shadow: rgba(255, 206, 132, 0.42) 0px 0px 7px 2px; will-change: opacity, transform; animation: hk_rmbulb calc(4.6s * var(--gca-calm)) ease-in-out infinite; }
+.rdec .rm_bulb { position: absolute; width: 5px; height: 5px; margin-left: -2.5px; margin-top: -2.5px; border-radius: 50%; background: radial-gradient(circle at 38% 34%, rgb(255, 246, 222), rgb(243, 195, 120) 62%, rgba(243, 195, 120, 0.1) 100%); box-shadow: rgba(255, 206, 132, 0.42) 0px 0px 7px 2px; }
+.rdec .rm_bg { position: absolute; inset: 0px; animation: hk_rmbulb calc(4.6s * var(--gca-calm)) ease-in-out infinite; }
 .cmdy .cm_ring.r2 { animation-delay: 0.42s; }
 .cmdy .cm_ring.r3 { animation-delay: 0.84s; }
 .htown .hpel.rtl { left: auto; right: -64px; animation-name: hk_hpelr; }
@@ -470,13 +471,15 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .rdec .rcandle.rsm.cR { right: 2px; }
 .rdec .rcandle.rsm .rhalo { width: 24px; height: 24px; margin-left: -12px; top: -4px; }
 .rdec .rhearts { position: absolute; inset: 0px; overflow: hidden; }
-.rdec .rheart { position: absolute; bottom: calc(var(--card-ad-clear) + 8px); font-style: normal; font-size: 11px; line-height: 1; color: rgb(233, 169, 184); text-shadow: rgba(214, 124, 150, 0.45) 0px 0px 8px; opacity: 0; will-change: transform, opacity; animation: hk_rheartA calc(12.6s * var(--gca-calm)) ease-in-out infinite; }
+.rdec .rheart { position: absolute; bottom: calc(var(--card-ad-clear) + 8px); font-style: normal; font-size: 11px; line-height: 1; color: rgb(233, 169, 184); text-shadow: rgba(214, 124, 150, 0.45) 0px 0px 8px; opacity: 0.5; animation: auto ease 0s 1 normal none running none; }
 .rdec .rheart.h0 { left: 1px; font-size: 10px; }
-.rdec .rheart.h1 { left: calc(100% - 14px); font-size: 11px; animation-name: hk_rheartB; }
+.rdec .rheart.h1 { left: calc(100% - 14px); font-size: 11px; }
 .rdec .rheart.h2 { left: 2px; font-size: 9px; }
-.rdec .rheart.h3 { left: calc(100% - 15px); font-size: 11px; animation-name: hk_rheartB; }
+.rdec .rheart.h3 { left: calc(100% - 15px); font-size: 11px; }
 .rdec .rheart.h4 { left: 1px; font-size: 10px; }
-.rdec .rheart.h5 { left: calc(100% - 13px); font-size: 11px; animation-name: hk_rheartB; }
+.rdec .rheart.h5 { left: calc(100% - 13px); font-size: 11px; }
+.rdec .rhg { position: absolute; inset: 0px; animation: hk_rheartA calc(12.6s * var(--gca-calm)) ease-in-out infinite; }
+.rdec .rhg.b { animation-name: hk_rheartB; }
 .rdec .rsmokew { position: absolute; bottom: calc(var(--card-ad-clear) + 17px); width: 16px; height: 96px; pointer-events: none; }
 .rdec .rsmokew.sR { right: 0px; }
 .rdec .rsmokew.sL { left: 0px; }
@@ -489,8 +492,8 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .rdec .rsmokew.sm svg { width: 13px; }
 .rdec .rsmokew.sm .rwisp { animation-duration: calc(9.4s * var(--gca-calm)); animation-delay: -3.1s; }
 .rdec .rsheart { stroke: rgba(240, 178, 193, 0.95); stroke-width: 1.35; stroke-dasharray: 44; stroke-dashoffset: 44; filter: drop-shadow(rgba(214, 124, 150, 0.55) 0px 0px 5px); transform-box: fill-box; transform-origin: 50% 60%; opacity: 0; animation: hk_rsheart calc(11s * var(--gca-calm)) ease-in-out infinite; will-change: stroke-dashoffset, opacity, transform; }
-.rdec .rmotes { position: absolute; inset: 0px; overflow: hidden; }
-.rdec .rmote { position: absolute; width: 2.6px; height: 2.6px; border-radius: 50%; background: rgb(243, 217, 160); box-shadow: rgba(243, 217, 160, 0.7) 0px 0px 7px 1px; opacity: 0; will-change: transform, opacity; animation: hk_rmote calc(7.4s * var(--gca-calm)) ease-in-out infinite; }
+.rdec .rmotes { position: absolute; inset: 0px; animation: hk_rmote calc(7.4s * var(--gca-calm)) ease-in-out infinite; }
+.rdec .rmote { position: absolute; width: 2.6px; height: 2.6px; border-radius: 50%; background: rgb(243, 217, 160); box-shadow: rgba(243, 217, 160, 0.7) 0px 0px 7px 1px; opacity: 0.85; }
 .rdec .rmote.m0 { left: 8%; bottom: calc(var(--card-ad-clear) + 34px); }
 .rdec .rmote.m1 { left: 22%; bottom: calc(var(--card-ad-clear) + 60px); }
 .rdec .rmote.m2 { left: 37%; bottom: calc(var(--card-ad-clear) + 28px); }
@@ -511,7 +514,8 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .rdec .rflame { transform-box: fill-box; transform-origin: 50% 100%; animation: hk_rflame calc(1.15s * var(--gca-calm)) ease-in-out infinite; }
 .rdec .rfin { animation-duration: calc(.9s * var(--gca-calm)); }
 .rdec .rhalo { position: absolute; left: 50%; top: -5px; width: 34px; height: 34px; margin-left: -17px; border-radius: 50%; background: radial-gradient(50% 50%, rgba(255, 207, 142, 0.4), rgba(255, 207, 142, 0.08) 55%, transparent 74%); animation: hk_rhalo calc(5s * var(--gca-calm)) ease-in-out infinite alternate; }
-.rheart { position: absolute; color: rgb(212, 137, 158); font-size: 10.5px; line-height: 1; opacity: 0; animation: hk_rheart calc(11.5s * var(--gca-calm)) ease-in-out infinite; text-shadow: rgba(212, 137, 158, 0.35) 0px 0px 8px; }
+.rheart { position: absolute; color: rgb(212, 137, 158); font-size: 10.5px; line-height: 1; opacity: 0.5; text-shadow: rgba(212, 137, 158, 0.35) 0px 0px 8px; }
+.rhsg { position: absolute; inset: 0px; pointer-events: none; animation: hk_rheart calc(11.5s * var(--gca-calm)) ease-in-out infinite; }
 .romacc { z-index: 1; }
 .romacc .racc_wash { position: absolute; inset: 0px; background: radial-gradient(120% 62% at 50% 108%, rgba(212, 137, 158, 0.1), transparent 56%); animation: hk_rvig calc(9s * var(--gca-calm)) ease-in-out infinite alternate; }
 .t-town .romacc .racc_wash, .t-art .romacc .racc_wash, .t-movie .romacc .racc_wash, .t-coastal .romacc .racc_wash, .t-lab .romacc .racc_wash, .t-comedy .romacc .racc_wash { background: radial-gradient(120% 62% at 50% 108%, rgba(196, 86, 120, 0.11), transparent 58%); }
@@ -567,7 +571,7 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .cosm .cs_shoot.s2 { left: 30%; top: auto; bottom: 6px; width: 46px; animation-duration: calc(23s * var(--gca-calm)); }
 .lx_bone.b1 { animation-delay: 3.4s; }
 .lx_bone.b2 { animation-delay: 7.1s; }
-.htown.nite .hferry .flt.r { fill: rgb(255, 122, 122); color: rgb(255, 122, 122); animation: hk_flt calc(2.6s * var(--gca-calm)) ease-in-out infinite; }
+.htown.nite .hferry .flt.r { fill: rgb(255, 122, 122); color: rgb(255, 122, 122); }
 .htown.nite .hshoot.s2 { animation-duration: calc(1.9s * var(--gca-calm)); width: 54px; }
 .htown .hshim.s1 { bottom: 165px; }
 .htown .hshim.s2 { bottom: 169px; }
@@ -1180,8 +1184,8 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
   100% { transform: translateY(1.5px) rotate(0.32deg); }
 }
 @keyframes hk_rmbulb { 
-  0%, 100% { opacity: 0.38; transform: scale(0.86); }
-  46% { opacity: 1; transform: scale(1.14); }
+  0%, 100% { opacity: 0.38; }
+  46% { opacity: 1; }
 }
 @keyframes hk_hpelr { 
   0%, 55% { opacity: 0; transform: translate3d(0px, 0px, 0px) scaleX(-1); }
@@ -1194,16 +1198,16 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
   100% { opacity: 0.85; transform: translateX(7px) scaleX(1); }
 }
 @keyframes hk_rheartA { 
-  0% { opacity: 0; transform: translate3d(0px, 0px, 0px) scale(0.7); }
-  15% { opacity: 0.55; }
-  65% { opacity: 0.32; transform: translate3d(2px, -72px, 0px) scale(1); }
-  100% { opacity: 0; transform: translate3d(1px, -120px, 0px) scale(1.06); }
+  0% { opacity: 0; transform: translate3d(0px, 0px, 0px); }
+  15% { opacity: 1; }
+  65% { opacity: 0.6; transform: translate3d(2px, -72px, 0px); }
+  100% { opacity: 0; transform: translate3d(1px, -120px, 0px); }
 }
 @keyframes hk_rheartB { 
-  0% { opacity: 0; transform: translate3d(0px, 0px, 0px) scale(0.72); }
-  17% { opacity: 0.5; }
-  62% { opacity: 0.3; transform: translate3d(-3px, -78px, 0px) scale(1.02); }
-  100% { opacity: 0; transform: translate3d(-1px, -128px, 0px) scale(1.08); }
+  0% { opacity: 0; transform: translate3d(0px, 0px, 0px); }
+  17% { opacity: 1; }
+  62% { opacity: 0.6; transform: translate3d(-3px, -78px, 0px); }
+  100% { opacity: 0; transform: translate3d(-1px, -128px, 0px); }
 }
 @keyframes hk_rwisp { 
   0% { stroke-dashoffset: 70; opacity: 0; transform: translateY(0px) scaleX(1); }
@@ -1239,11 +1243,11 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
   100% { opacity: 1; }
 }
 @keyframes hk_rheart { 
-  0% { transform: translateY(0px) translateX(0px) scale(0.9); opacity: 0; }
-  10% { opacity: 0.5; }
-  50% { transform: translateY(-34px) translateX(3px) scale(1); }
-  62% { opacity: 0.38; }
-  100% { transform: translateY(-66px) translateX(-2px) scale(1.04); opacity: 0; }
+  0% { transform: translateY(0px) translateX(0px); opacity: 0; }
+  10% { opacity: 1; }
+  50% { transform: translateY(-34px) translateX(3px); }
+  62% { opacity: 0.76; }
+  100% { transform: translateY(-66px) translateX(-2px); opacity: 0; }
 }
 @keyframes hk_crbleg2 { 
   0% { transform: translateY(0.2px) rotate(-3.2deg); }
@@ -1312,10 +1316,6 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
 @keyframes hk_arib { 
   0% { transform: translate3d(0px, -10px, 0px) scaleX(0.9); opacity: 0.24; }
   100% { transform: translate3d(0px, 10px, 0px) scaleX(1.1); opacity: 0.55; }
-}
-@keyframes hk_flt { 
-  0%, 100% { opacity: 0.45; }
-  50% { opacity: 1; }
 }
 @keyframes gul_idle { 
   0%, 72% { transform: rotate(0deg) translateY(0px); }
