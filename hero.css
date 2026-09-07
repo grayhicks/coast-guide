@@ -287,12 +287,7 @@
 .bstack { display: inline-block; text-align: left; }
 .bsw { display: block; }
 .bsw_sw { position: relative; }
-.bswash { position: absolute; left: 2px; top: 29px; width: 94px; height: 11px; overflow: visible; pointer-events: none; }
-.bsw_sw { isolation: isolate; }
-.bswash_sh { position: absolute; overflow: visible; pointer-events: none; z-index: -1; }
-.bswash_sh path { fill: rgba(8, 22, 34, 0.38); filter: blur(4px); transform: translateY(2px); }
-.bswash_sh path.sh2 { fill: rgba(8, 22, 34, 0.5); filter: blur(14px); transform: translateY(6px); }
-html.gca_cold .bswash_sh { opacity: 0; }
+.bswash { position: absolute; left: 7px; top: 29px; width: 91px; height: 12px; overflow: visible; pointer-events: none; filter: drop-shadow(rgba(8, 22, 34, 0.38) 0px 2px 8px) drop-shadow(rgba(8, 22, 34, 0.5) 0px 6px 28px); }
 .bswash path { fill: currentcolor; }
 html.gca_cold .bswash { opacity: 0; }
 .bsw + .bsw { margin-left: 0.42em; }
@@ -304,8 +299,6 @@ html.gca_cold .bswash { opacity: 0; }
 .hero-title .bt_a { -webkit-text-stroke: .35px var(--bt-a); }
 .hk:not(.ph-night) .hero-title .bt_a, .hk:not(.ph-night) .hero-title .bt_b { -webkit-text-stroke: 0.5px rgba(28, 18, 8, 0.65); paint-order: stroke; }
 .hero-title .bswash path { fill: var(--bt-a); }
-.hk:not(.ph-night) .hero-title .bswash path { stroke: rgba(28, 18, 8, 0.65); stroke-width: 0.5px; paint-order: stroke; }
-.hk .hero-title .bswash path.bsw_cap.bsw_cap { stroke: none; }
 .hero-title { font-family: Fraunces, serif; font-weight: 600; font-size: 36px; line-height: 0.98; letter-spacing: -0.02em; color: rgb(255, 253, 248); margin: 18px 0px 0px; text-shadow: rgba(8, 22, 34, 0.38) 0px 2px 8px, rgba(8, 22, 34, 0.5) 0px 6px 28px; }
 @media (max-width: 379px){.hero-title { transform: translateX(-16px); }}
 @media (max-width: 355px){.hero-title { transform: translateX(-30px); }}
@@ -629,6 +622,8 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .hk_promoted .adlbl { display: block; margin: 0px 0px 8px; font: 800 11px / 1 Nunito, system-ui, sans-serif; letter-spacing: 1.1px; text-transform: uppercase; color: var(--csoft); opacity: 0.85; }
 .hk_promoted .adlbl.open { font-weight: 700; letter-spacing: 0.9px; opacity: 0.55; }
 .hk_promocard .adlbl { display: block; margin: 0px 0px 5px; font: 800 11px / 1 Nunito, system-ui, sans-serif; letter-spacing: 1.1px; text-transform: uppercase; color: var(--csoft); opacity: 0.85; }
+.t360w.mir { transform: scaleX(-1); }
+.dph360w.mir { transform: scaleX(-1); }
 .gul360w { position: relative; pointer-events: none; }
 .gul360w.mir { transform: scaleX(-1); }
 .gul360w > svg.gul360 { width: 100%; height: 100%; display: block; overflow: visible; }
@@ -675,6 +670,8 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .apt.swim .apt_flipper.rear { transform-origin: 8% 16%; }
 .apt.swim .apt_flipper.rear.far { animation: apt_sea_rudder_far calc(4.2s * var(--gca-calm)) ease-in-out infinite var(--apto,0s); }
 .apt.swim .apt_flipper.rear.near { animation: apt_sea_rudder_near calc(4.2s * var(--gca-calm)) ease-in-out infinite var(--apto,0s); }
+.apt_body .t360w.mir ~ .hkfx-head { left: auto; right: -8%; }
+.apt_body .t360w.mir ~ .aptfx_vein { left: auto; right: 7%; }
 .skn_bub.b1 { left: 168px; bottom: 32px; animation: skn_bub1 var(--skd,28s) linear infinite var(--sko,0s); }
 .skn_bub.b2 { left: 176px; bottom: 28px; width: 3px; height: 3px; animation: skn_bub2 var(--skd,28s) linear infinite var(--sko,0s); }
 .skn_bub.b3 { left: 162px; bottom: 26px; width: 5px; height: 5px; animation: skn_bub3 var(--skd,28s) linear infinite var(--sko,0s); }
@@ -729,6 +726,7 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .xps_shorebird.b2 { --flap: .61s; }
 .xp_supportstage.cheering .xps_crab .crb_pup, .xp_supportstage.verified .xps_crab .crb_pup { transform-box: fill-box; transform-origin: center center; animation: xps_crabglee calc(1.24s * var(--gca-calm)) cubic-bezier(.3,0,.25,1) infinite; }
 .xp_supportstage .dph_gaze, .xp_supportstage .crb_pup, .xp_supportstage .pel_fly_eye { transform-box: fill-box; transform-origin: 50% 50%; transition: transform 0.3s cubic-bezier(0.22, 0.8, 0.3, 1); }
+.xp_supportstage.gazing .t360w.mir .hke_gaze { transform: translate(calc(var(--gx) * -.5px),calc(var(--gy) * .38px)); }
 .xp_supportstage.gazing .crb_pup { transform: translate(calc(var(--gx) * .55px),calc(var(--gy) * .4px)); }
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .xp_supportstage.gazing .hke_gaze, html:not(.hk_mo) .xp_supportstage.gazing .dph_gaze, html:not(.hk_mo) .xp_supportstage.gazing .crb_pup, html:not(.hk_mo) .xp_supportstage.gazing .pel_fly_eye, html:not(.hk_mo) .xp_supportstage.gazing .osp_yaw { transform: none; }}
 .promo_bulb.b1 { animation-delay: -1.3s; }
