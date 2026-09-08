@@ -436,6 +436,23 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .rdec .rhalo { position: absolute; left: 50%; top: -5px; width: 34px; height: 34px; margin-left: -17px; border-radius: 50%; background: radial-gradient(50% 50%, rgba(255, 207, 142, 0.4), rgba(255, 207, 142, 0.08) 55%, transparent 74%); opacity: 0.75; }
 .rheart { position: absolute; color: rgb(212, 137, 158); font-size: 10.5px; line-height: 1; opacity: 0.5; text-shadow: rgba(212, 137, 158, 0.35) 0px 0px 8px; }
 .rhsg { position: absolute; inset: 0px; pointer-events: none; animation: hk_rheart calc(11.5s * var(--gca-calm)) ease-in-out infinite; }
+html:not(.hk_diag_livedec) .t-rom .rdec .rvig { display: none; }
+html:not(.hk_diag_livedec) .t-rom .rhsg { display: none; }
+html:not(.hk_diag_livedec) .t-rom .rdec .rheart { bottom: auto; font-size: 10px; opacity: 0.62; text-shadow: none; transform: translateX(0.3px); }
+html:not(.hk_diag_livedec) .t-rom .rdec .rheart.h0 { top: calc(17% - 4px); left: 1.85px; }
+html:not(.hk_diag_livedec) .t-rom .rdec .rheart.h2 { top: calc(39% - 4px); left: 1.85px; }
+html:not(.hk_diag_livedec) .t-rom .rdec .rheart.h4 { top: calc(61% - 4px); left: 1.85px; }
+html:not(.hk_diag_livedec) .t-rom .rdec .rheart.h1, html:not(.hk_diag_livedec) .t-rom .rdec .rheart.h3, html:not(.hk_diag_livedec) .t-rom .rdec .rheart.h5 { display: none; }
+html:not(.hk_diag_livedec) .t-rom .rdec .rmote { width: 4px; height: 4px; bottom: auto; left: auto; right: 6.5px; transform: translateX(-0.5px); box-shadow: rgba(243, 217, 160, 0.6) 0px 0px 3px 0.5px; }
+html:not(.hk_diag_livedec) .t-rom .rdec .rmote.m0 { top: calc(28% - 2px); }
+html:not(.hk_diag_livedec) .t-rom .rdec .rmote.m2 { top: calc(50% - 2px); }
+html:not(.hk_diag_livedec) .t-rom .rdec .rmote.m4 { top: calc(94% - 2px); }
+html:not(.hk_diag_livedec) .t-rom .rdec .rmote.m1, html:not(.hk_diag_livedec) .t-rom .rdec .rmote.m3, html:not(.hk_diag_livedec) .t-rom .rdec .rmote.m5, html:not(.hk_diag_livedec) .t-rom .rdec .rmote.m6, html:not(.hk_diag_livedec) .t-rom .rdec .rmote.m7 { display: none; }
+html:not(.hk_diag_livedec) .t-rom .rdec .rwisp, html:not(.hk_diag_livedec) .t-rom .rdec .rsheart { display: none; }
+html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew { --rpx: 7.5px; --rpw: 5px; --rph: 9px; --rpy: 11px; --rp1: rgba(240,226,206,.30); --rp2: rgba(240,226,206,.12); background: radial-gradient(var(--rpw) var(--rph) at var(--rpx) calc(100% - var(--rpy)), var(--rp1), var(--rp2) 50%, transparent 100%); }
+html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew.sR { --rpx: 9.5px; }
+html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew.sm { --rpx: 6px; --rpw: 4px; --rph: 7px; --rpy: 6px; opacity: 0.7; }
+html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew.sm.sR { --rpx: 7px; }
 .romacc { z-index: 1; }
 .romacc .racc_wash { position: absolute; inset: 0px; background: radial-gradient(120% 62% at 50% 108%, rgba(212, 137, 158, 0.1), transparent 56%); animation: hk_rvig calc(9s * var(--gca-calm)) ease-in-out infinite alternate; }
 .t-town .romacc .racc_wash, .t-art .romacc .racc_wash, .t-movie .romacc .racc_wash, .t-coastal .romacc .racc_wash, .t-lab .romacc .racc_wash, .t-comedy .romacc .racc_wash { background: radial-gradient(120% 62% at 50% 108%, rgba(196, 86, 120, 0.11), transparent 58%); }
@@ -620,6 +637,8 @@ html:not(.hk_mo) a.hero_sponsor > ::before, html:not(.hk_mo) button.hero_house >
 .hk_day .t-rom .rflame.rfin { fill: rgb(216, 154, 78); }
 .hk_day .t-rom .rhalo { background: radial-gradient(50% 50%, rgba(255, 220, 170, 0.3), rgba(255, 220, 170, 0.06) 55%, transparent 74%); }
 .hk_day .t-rom .rsmokew svg { stroke: rgba(140, 119, 110, 0.5); }
+html:not(.hk_diag_livedec) .hk_day .t-rom .rdec .rsmokew { --rp1: rgba(140,119,110,.24); --rp2: rgba(140,119,110,.09); }
+html:not(.hk_diag_livedec) .hk_day .t-rom .rdec .rmote { box-shadow: rgba(131, 99, 15, 0.32) 0px 0px 3px 0.5px; }
 .hk_day .t-rom .rsheart { stroke: rgba(168, 72, 100, 0.85); filter: drop-shadow(rgba(168, 72, 100, 0.28) 0px 0px 5px); }
 .hk_day .t-rom .rheart { color: rgb(138, 60, 84); text-shadow: rgba(138, 60, 84, 0.18) 0px 0px 8px; }
 .hk_day .t-rom .rmote { background: rgb(131, 99, 15); box-shadow: rgba(131, 99, 15, 0.35) 0px 0px 7px 1px; }
@@ -649,6 +668,18 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
 :where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .rdec .rhalo:where(:not(.promo-card, .promo-card *)) { border-radius: 50%; background: radial-gradient(50% 50%, rgba(255, 209, 138, 0.4), rgba(255, 209, 138, 0.08) 55%, transparent 74%); }
 :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .rheart:where(:not(.promo-card, .promo-card *)) { color: rgb(233, 146, 170); text-shadow: rgba(233, 146, 170, 0.35) 0px 0px 8px; }
 :where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .rheart:where(:not(.promo-card, .promo-card *)) { color: rgb(218, 136, 159); text-shadow: rgba(218, 136, 159, 0.35) 0px 0px 8px; }
+:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) html:not(.hk_diag_livedec) .t-rom .rdec .rheart:where(:not(.promo-card, .promo-card *)) { text-shadow: none; }
+:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) html:not(.hk_diag_livedec) .t-rom .rdec .rheart:where(:not(.promo-card, .promo-card *)) { text-shadow: none; }
+:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) html:not(.hk_diag_livedec) .t-rom .rdec .rmote:where(:not(.promo-card, .promo-card *)) { box-shadow: rgba(255, 235, 168, 0.6) 0px 0px 3px 0.5px; }
+:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) html:not(.hk_diag_livedec) .t-rom .rdec .rmote:where(:not(.promo-card, .promo-card *)) { box-shadow: rgba(248, 220, 157, 0.6) 0px 0px 3px 0.5px; }
+:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew:where(:not(.promo-card, .promo-card *)) { --rpx: 7.5px; --rpw: 5px; --rph: 9px; --rpy: 11px; --rp1: rgba(255,245,222,0.3); --rp2: rgba(255,245,222,0.12); background: radial-gradient(var(--rpw) var(--rph) at var(--rpx) calc(100% - var(--rpy)), var(--rp1), var(--rp2) 50%, transparent 100%); }
+:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew:where(:not(.promo-card, .promo-card *)) { --rpx: 7.5px; --rpw: 5px; --rph: 9px; --rpy: 11px; --rp1: rgba(244,229,207,0.3); --rp2: rgba(244,229,207,0.12); background: radial-gradient(var(--rpw) var(--rph) at var(--rpx) calc(100% - var(--rpy)), var(--rp1), var(--rp2) 50%, transparent 100%); }
+:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew.sR:where(:not(.promo-card, .promo-card *)) { --rpx: 9.5px; }
+:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew.sR:where(:not(.promo-card, .promo-card *)) { --rpx: 9.5px; }
+:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew.sm:where(:not(.promo-card, .promo-card *)) { --rpx: 6px; --rpw: 4px; --rph: 7px; --rpy: 6px; }
+:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew.sm:where(:not(.promo-card, .promo-card *)) { --rpx: 6px; --rpw: 4px; --rph: 7px; --rpy: 6px; }
+:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew.sm.sR:where(:not(.promo-card, .promo-card *)) { --rpx: 7px; }
+:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew.sm.sR:where(:not(.promo-card, .promo-card *)) { --rpx: 7px; }
 :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .romacc .racc_wash:where(:not(.promo-card, .promo-card *)) { background: radial-gradient(120% 62% at 50% 108%, rgba(233, 146, 170, 0.1), transparent 56%); }
 :where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .romacc .racc_wash:where(:not(.promo-card, .promo-card *)) { background: radial-gradient(120% 62% at 50% 108%, rgba(218, 136, 159, 0.1), transparent 56%); }
 :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .t-town .romacc .racc_wash:where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .t-art .romacc .racc_wash:where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .t-movie .romacc .racc_wash:where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .t-coastal .romacc .racc_wash:where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .t-lab .romacc .racc_wash:where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .t-comedy .romacc .racc_wash:where(:not(.promo-card, .promo-card *)) { background: radial-gradient(120% 62% at 50% 108%, rgba(217, 89, 129, 0.11), transparent 58%); }
@@ -717,6 +748,10 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
 :where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .hk_day .t-rom .rhalo:where(:not(.promo-card, .promo-card *)) { background: radial-gradient(50% 50%, rgba(255, 223, 168, 0.3), rgba(255, 223, 168, 0.06) 55%, transparent 74%); }
 :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .hk_day .t-rom .rsmokew svg:where(:not(.promo-card, .promo-card *)) { stroke: rgba(151, 127, 116, 0.5); }
 :where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .hk_day .t-rom .rsmokew svg:where(:not(.promo-card, .promo-card *)) { stroke: rgba(141, 119, 109, 0.5); }
+:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) html:not(.hk_diag_livedec) .hk_day .t-rom .rdec .rsmokew:where(:not(.promo-card, .promo-card *)) { --rp1: rgba(151,127,116,0.24); --rp2: rgba(151,127,116,0.09); }
+:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) html:not(.hk_diag_livedec) .hk_day .t-rom .rdec .rsmokew:where(:not(.promo-card, .promo-card *)) { --rp1: rgba(141,119,109,0.24); --rp2: rgba(141,119,109,0.09); }
+:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) html:not(.hk_diag_livedec) .hk_day .t-rom .rdec .rmote:where(:not(.promo-card, .promo-card *)) { box-shadow: rgba(142, 105, 7, 0.32) 0px 0px 3px 0.5px; }
+:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) html:not(.hk_diag_livedec) .hk_day .t-rom .rdec .rmote:where(:not(.promo-card, .promo-card *)) { box-shadow: rgba(133, 98, 6, 0.32) 0px 0px 3px 0.5px; }
 :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .hk_day .t-rom .rsheart:where(:not(.promo-card, .promo-card *)) { stroke: rgba(186, 74, 106, 0.85); filter: drop-shadow(rgba(186, 74, 106, 0.28) 0px 0px 5px); }
 :where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .hk_day .t-rom .rsheart:where(:not(.promo-card, .promo-card *)) { stroke: rgba(174, 69, 100, 0.85); filter: drop-shadow(rgba(174, 69, 100, 0.28) 0px 0px 5px); }
 :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .hk_day .t-rom .rheart:where(:not(.promo-card, .promo-card *)) { color: rgb(152, 61, 89); text-shadow: rgba(152, 61, 89, 0.18) 0px 0px 8px; }
