@@ -503,6 +503,7 @@ html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew.sm.sR { --rpx: 7px; }
 .agal .aribbon.rb1 { stroke: rgb(232, 93, 117); animation: hk_arib calc(26s * var(--gca-calm)) ease-in-out infinite alternate; }
 .agal.nite .aribbon.rb1 { stroke: rgb(255, 126, 156); opacity: 0.5; }
 .emrl .em_heron.rtl { left: auto; right: -13px; transform: scaleX(-1); }
+html:not(.hk_diag_livedec) .emrl .em_heron, html:not(.hk_diag_livedec) .emrl .em_heron.rtl { inset: auto auto 16px 3.3px; width: 13px; height: 24.05px; opacity: 1; transform: translateX(0.6px); }
 .cosm .cs_shoot.s2 { left: 30%; top: auto; bottom: 6px; width: 46px; animation-duration: calc(23s * var(--gca-calm)); }
 .htown.nite .hferry .flt.r { fill: rgb(255, 122, 122); color: rgb(255, 122, 122); }
 .htown.nite .hshoot.s2 { animation-duration: calc(1.9s * var(--gca-calm)); width: 54px; }
