@@ -1568,6 +1568,14 @@ html.hkscroll .tdec{ will-change:auto; }
 
 @keyframes hk_bub{ 0%{transform:translateY(0) scale(.7); opacity:0;} 7%{opacity:.6;} 88%{opacity:.4;} 100%{transform:translateY(-272px) scale(1.2); opacity:0;} }
 @keyframes hk_bubwob{ from{ transform:translateX(calc(var(--wob) * -1)); } to{ transform:translateX(var(--wob)); } }
+
+html:not(.hk_diag_livedec) .t-midnight .bubw{ bottom:auto; opacity:.62; }
+html:not(.hk_diag_livedec) .t-midnight .bub{ border-color:var(--fbub); }
+html:not(.hk_diag_livedec) .t-midnight .bubw:nth-child(1){ top:calc(83% - 1.5px); left:7px !important; right:auto !important; }
+html:not(.hk_diag_livedec) .t-midnight .bubw:nth-child(2){ top:calc(28% - 2px); left:auto !important; right:6.5px !important; transform:translateX(-.5px); }
+html:not(.hk_diag_livedec) .t-midnight .bubw:nth-child(3){ top:calc(61% - 1.5px); left:auto !important; right:7px !important; }
+html:not(.hk_diag_livedec) .t-midnight .bubw:nth-child(4){ top:calc(17% - 2.5px); left:6px !important; right:auto !important; }
+html:not(.hk_diag_livedec) .t-midnight .bubw:nth-child(5){ top:calc(39% - 2px); left:6.5px !important; right:auto !important; transform:translateX(-.5px); }
 .fly{ position:absolute; width:4px; height:4px; border-radius:50%; background:#A9F0A0; box-shadow:0 0 8px 2px rgba(158,242,152,.75); animation:hk_fly calc(6.2s * var(--gca-calm)) ease-in-out infinite; }
 @keyframes hk_fly{ 0%,100%{opacity:0; transform:translate(0,0);} 20%{opacity:.95;} 45%{opacity:.4; transform:translate(12px,-10px);} 70%{opacity:.85; transform:translate(-9px,-19px);} }
 
