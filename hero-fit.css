@@ -112,6 +112,12 @@ body.ph-night .scene{--skytop:#16294A}
 
 @media (max-width:1023px){.scene.tall{--moondrop:34px}}
 .scene-stage .sunb{translate:0 calc(var(--moondrop,0px) / var(--sy))}
+
+
+@media (min-width:901px){
+  .scene-stage .ph-night .sunb{right:150.8px}
+  .scene:not(.band) .scene-stage .ph-night .sunb{translate:0 calc(-50px / var(--sy))}
+}
 .scene-stage .sunb{transform-origin:100% 0;right:var(--moonr,28px);
   transform:scale(calc(var(--um) / var(--sx)),calc(var(--um) / var(--sy)))}
 
