@@ -3,23 +3,22 @@ VERSION:2.0
 PRODID:-//Coastal Eventures//Gulf Coast events//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Fear Fest: Exploreum 2026 series
+X-WR-CALNAME:Fear Fest
 BEGIN:VEVENT
-UID:ev_fear_fest_exploreum_2026_series_1003-2026-10-03@coast-guide
-DTSTAMP:20261003T000000Z
-DTSTART;VALUE=DATE:20261003
-DTEND;VALUE=DATE:20261025
-SUMMARY:Fear Fest: Exploreum 2026 series
-DESCRIPTION:Fear Fest brings an R-rated horror film to the Exploreum Scien
- ce Center on Saturday\, October 3\, with doors from 5 PM to 9 PM. The fil
- m starts at 6:30 PM. The museum recommends the event for guests 17 and ol
- der\, and anyone younger should be accompanied by a parent or legal guard
- ian. Admission runs $12 for members and $15 for non-members. The series r
- epeats on October 10 and October 24\, same 6:30 PM screening.\nPrice: not
-  published by the venue\, so confirm before you go\nTimes: Saturday 10/3 
- · 5:00 PM to 9:00 PM\nhttps://coastaleventures.com/events/ev-fear-fest-e
- xploreum-2026-series-1003.html
-LOCATION:Exploreum Science Center\, 65 Government St.
+UID:ev_fear_fest_exploreum_2026_series_1003-2026-10-24@coast-guide
+DTSTAMP:20261024T000000Z
+DTSTART:20261024T170000
+DTEND:20261024T190000
+SUMMARY:Fear Fest
+DESCRIPTION:Fear Fest closes its October run at the Exploreum Science Cent
+ er on Saturday\, October 24\, with a 6:30 PM screening of Poltergeist. Do
+ ors are open from 5 PM to 9 PM and the immersive Fear exhibit is open alo
+ ngside it. The film is rated R\, the museum recommends the evening for gu
+ ests 17 and older\, and anyone younger should come with a parent or legal
+  guardian.\nPrice: from $15\nArea: Mobile & Baldwin County\nTimes: Saturd
+ ay 10/24 · 5:00 PM to 9:00 PM\nhttps://coastaleventures.com/events/ev-fe
+ ar-fest-exploreum-2026-series-1003.html
+LOCATION:Exploreum Science Center\, 65 Government St.\, Mobile\, AL 36602
 URL:https://coastaleventures.com/events/ev-fear-fest-exploreum-2026-series
  -1003.html
 END:VEVENT
