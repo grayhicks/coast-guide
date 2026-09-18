@@ -521,8 +521,8 @@ html:not(.hk_diag_livedec) .emrl .em_heron, html:not(.hk_diag_livedec) .emrl .em
 @media (prefers-reduced-motion: reduce){.hk_fme.l, .hk_fme.r { animation: auto ease 0s 1 normal none running none; opacity: 0.85; transform: none; }}
 .hk_day .hk_fme.r { background: linear-gradient(270deg, rgba(255, 252, 244, 0.62), rgba(255, 252, 244, 0)); }
 .hk_gr_dark .hk_fme.r { background: linear-gradient(270deg, rgba(4, 6, 10, 0.5), rgba(4, 6, 10, 0)); }
-@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk_sw_fly.r, html:not(.hk_mo) .hk_sw_fly.l { animation: auto ease 0s 1 normal none running none; opacity: 0; }}
-.hk_still .hk_sw_fly.r, .hk_still .hk_sw_fly.l { animation: auto ease 0s 1 normal none running none; opacity: 0; }
+@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk_sw_fly.r, html:not(.hk_mo) .hk_sw_fly.l { animation: 0.16s linear 0s 1 normal both running hk_swFade; }}
+.hk_still .hk_sw_fly.r, .hk_still .hk_sw_fly.l { animation: 0.16s linear 0s 1 normal both running hk_swFade; }
 .hero-scrim { top: 90px; }
 .hero { min-height: 298px; padding-top: 10px; }
 .navrg { opacity: 0; }
@@ -1218,6 +1218,9 @@ html:not(.hk_diag_livedec) .hk.hk .ccrab.rtl { left: auto; right: 74px; }
   0%, 34% { opacity: 0.3; transform: translate3d(0px, 0px, 0px); }
   50%, 59% { opacity: 1; transform: translate3d(2px, 0px, 0px); }
   84%, 100% { opacity: 0.3; transform: translate3d(0px, 0px, 0px); }
+}
+@keyframes hk_swFade { 
+  100% { opacity: 0; }
 }
 @keyframes hk_tgnomR { 
   0%, 44% { transform: rotate(0deg) scale(1); }
