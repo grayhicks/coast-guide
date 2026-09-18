@@ -592,7 +592,7 @@ html:not(.hk_diag_livedec) .emrl .em_heron, html:not(.hk_diag_livedec) .emrl .em
 .htown.nite .hshoot.s2 { animation-duration: calc(1.9s * var(--gca-calm)); width: 54px; }
 .htown .hshim.s1 { bottom: 165px; }
 .htown .hshim.s2 { bottom: 169px; }
-.hk_sw_fly.r { animation: 0.34s cubic-bezier(0.35, 0.02, 0.72, 0.32) 0s 1 normal both running hk_swFlyR; }
+.hk_sw_fly.r { animation: 0.42s cubic-bezier(0.17, 0.72, 0.31, 1) 0s 1 normal both running hk_swFlyR; }
 .hk_fme.r { right: 1px; background: linear-gradient(270deg, rgba(10, 22, 38, 0.42), rgba(10, 22, 38, 0)); }
 .hk_fme.rest { display: none; }
 .hk_fme.r { animation: 2.6s ease-in-out 0s infinite normal none running hk_fmR; }
@@ -1429,8 +1429,11 @@ html:not(.hk_diag_livedec) .hk.hk .ccrab.rtl { left: auto; right: 74px; }
   100% { transform: translate3d(0px, 10px, 0px) scaleX(1.1); opacity: 0.55; }
 }
 @keyframes hk_swFlyR { 
-  45% { opacity: 0; }
-  100% { transform: translate3d(132%, 26px, 0px) rotate(17deg); opacity: 0; }
+  0% { transform: translate3d(var(--flyx,0px),var(--flyy,0px),0) rotate(var(--flyr,0deg)) scale(1); opacity: 1; }
+  8% { transform: translate3d(calc(var(--flyx,0px) + 6%),var(--flyy,0px),0) rotate(calc(var(--flyr,0deg) + 2deg)) scale(1.03); opacity: 1; }
+  30% { opacity: 1; }
+  78% { opacity: 0; }
+  100% { transform: translate3d(calc(var(--flyx,0px) + 150%),calc(var(--flyy,0px) + 58px),0) rotate(calc(var(--flyr,0deg) + 24deg)) scale(.84); opacity: 0; }
 }
 @keyframes hk_fmR { 
   0%, 34% { opacity: 0.3; transform: translate3d(0px, 0px, 0px); }
