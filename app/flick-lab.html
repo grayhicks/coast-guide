@@ -54,7 +54,10 @@
   .say{ color:var(--quiet); font-size:13.5px; margin:0 0 14px; text-align:center; max-width:340px; }
 
   /* the A/B switch. Two big taps, never a slider - he is deciding, not tuning. */
-  .ab{ display:flex; gap:8px; width:100%; max-width:340px; margin:0 0 4px; }
+  /* ⚠ IT WRAPS. Question 4 has four arms and four 52px buttons do not fit across a 320px phone;
+     they go two-up rather than shrinking to a size a thumb misses. */
+  .ab{ display:flex; flex-wrap:wrap; gap:8px; width:100%; max-width:340px; margin:0 0 4px; }
+  .ab button{ flex:1 1 calc(50% - 4px); }
   .ab button{
     flex:1 1 0; min-height:52px; border-radius:13px; cursor:pointer; font-family:inherit;
     font-size:14px; font-weight:800; line-height:1.15;
@@ -92,6 +95,11 @@
     max-height:calc(100% + 24px); overflow:hidden; border-radius:19px;
     opacity:.42; transform:translate3d(0,12px,0) scale(.951);
     transform-origin:50% 0; pointer-events:none; }
+  /* the wash is the C arm of question 1: a verdict painted ON the card instead of the card
+     disappearing. It rides the wrapper, never inside .card, so nothing about the card changes. */
+  .wash{ position:absolute; inset:0; border-radius:19px; pointer-events:none; opacity:0; z-index:2; }
+  .wash.keep{ background:linear-gradient(270deg,rgba(216,180,94,.55),rgba(216,180,94,.06) 70%); }
+  .wash.pass{ background:linear-gradient(90deg,rgba(120,164,200,.55),rgba(120,164,200,.06) 70%); }
   .card{
     height:100%; border-radius:19px; padding:16px 15px; overflow:hidden;
     background:linear-gradient(170deg,#2b1f49,#1d1633 62%,#191228);
@@ -125,7 +133,16 @@
   .act.took{ animation:took .15s linear both; }
 
   .hint{ color:var(--quiet); font-size:12.5px; margin:14px 0 0; text-align:center; }
-  .nav{ display:flex; gap:8px; margin:20px 0 0; flex-wrap:wrap; justify-content:center; }
+  /* ⛔ THE NAV MOVED TO THE TOP AND IT IS NOT A STYLE CHOICE. At the bottom of a 900px page it
+     was under the fold on a phone, so Gray reported he "can't see the others" — three of the four
+     questions were effectively unreachable. A way to move between pages that you have to scroll to
+     find is not a way to move between pages.
+     ⚠ AND THE LINKS ARE QUERY-ONLY. They were "flick-lab.html?d=x", which resolves against a
+     filename that exists on the site and nowhere else, so every one of them 404d when the page was
+     opened from any other address. "?d=x" is correct at every path. */
+  .nav{ display:flex; gap:6px; margin:0 0 14px; flex-wrap:wrap; justify-content:center;
+    width:100%; max-width:340px; }
+  .nav a{ flex:1 1 auto; text-align:center; }
   .nav a{ color:#9FB0C0; font:700 12px/1 system-ui,sans-serif; text-decoration:none;
     padding:9px 12px; border-radius:10px; border:1px solid rgba(160,186,205,.24); }
   .nav a[aria-current]{ color:var(--gold); border-color:rgba(198,160,74,.5); }
@@ -171,8 +188,52 @@
   .fly.l{ animation:flyL .42s cubic-bezier(.17,.72,.31,1) both; }
   .fly.r.b{ animation:flyRb .26s cubic-bezier(.17,.72,.31,1) both; }
   .fly.l.b{ animation:flyLb .26s cubic-bezier(.17,.72,.31,1) both; }
+  /* C — it goes AWAY from you rather than sideways: no turn, no sideways exit, it shrinks back
+     into the deck. A different idea of what throwing a card away means. */
+  @keyframes flyAway{
+    0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    18%{ transform:translate3d(calc(var(--fx,0px) * .5),calc(var(--fy,0px) - 10px),0) rotate(calc(var(--fr,0deg) * .4)) scale(1.02); opacity:1; }
+    to{ transform:translate3d(0,-26px,0) rotate(0deg) scale(.58); opacity:0; } }
+  .fly.r.c, .fly.l.c{ animation:flyAway .34s cubic-bezier(.4,0,.6,1) both; }
+
+  /* ⭐ QUESTION 4 — FOUR PERSONALITIES FOR ONE GESTURE. All transform and opacity; the 3D ones
+     use a perspective, which is still a compositor transform and still costs no repaint. */
+  /* B — the page turn. It hinges on the edge the thumb pushed, so the origin flips with the
+     direction: a card thrown right turns on its RIGHT edge, the way a page does. */
+  @keyframes trickPeelR{
+    0%{ transform:perspective(1100px) translate3d(var(--fx,0px),var(--fy,0px),0) rotateY(0deg); opacity:1; }
+    to{ transform:perspective(1100px) translate3d(calc(var(--fx,0px) + 18%),var(--fy,0px),0) rotateY(-96deg); opacity:0; } }
+  @keyframes trickPeelL{
+    0%{ transform:perspective(1100px) translate3d(var(--fx,0px),var(--fy,0px),0) rotateY(0deg); opacity:1; }
+    to{ transform:perspective(1100px) translate3d(calc(var(--fx,0px) - 18%),var(--fy,0px),0) rotateY(96deg); opacity:0; } }
+  .fly.r.peel{ transform-origin:100% 50%; animation:trickPeelR .40s cubic-bezier(.32,.72,.28,1) both; }
+  .fly.l.peel{ transform-origin:0% 50%;   animation:trickPeelL .40s cubic-bezier(.32,.72,.28,1) both; }
+
+  /* C — filed. It goes to the button that answered, so the verdict has a destination. */
+  @keyframes trickFileR{
+    0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    to{ transform:translate3d(38%,58%,0) rotate(14deg) scale(.16); opacity:0; } }
+  @keyframes trickFileL{
+    0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    to{ transform:translate3d(-38%,58%,0) rotate(-14deg) scale(.16); opacity:0; } }
+  .fly.r.file{ animation:trickFileR .42s cubic-bezier(.5,0,.6,1) both; }
+  .fly.l.file{ animation:trickFileL .42s cubic-bezier(.5,0,.6,1) both; }
+
+  /* D — dealt back onto the pile. It never leaves the screen, it goes UNDER. */
+  @keyframes trickDeal{
+    0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    34%{ transform:translate3d(calc(var(--fx,0px) * .35),-14px,0) rotate(calc(var(--fr,0deg) * .3)) scale(1.02); opacity:1; }
+    to{ transform:translate3d(0,26px,0) rotate(0deg) scale(.93); opacity:0; } }
+  .fly.r.deal, .fly.l.deal{ z-index:0; animation:trickDeal .38s cubic-bezier(.36,.05,.28,1) both; }
   .arr{ animation:arrive .52s cubic-bezier(.16,.78,.28,1) both; }
   .arr.b{ animation:arriveB .22s cubic-bezier(.16,.84,.30,1) both; }
+  /* B for the arrival is a RISE, not a slide: it grows up out of the deck it was already in. */
+  @keyframes arriveRise{
+    from{ transform:translate3d(0,22px,0) scale(.936); opacity:.42; }
+    to{ transform:translate3d(0,0,0) scale(1); opacity:1; } }
+  .arr.rise{ animation:arriveRise .22s cubic-bezier(.16,.84,.30,1) both; transform-origin:50% 0; }
+  /* C is no entrance at all. The card is simply the card. */
+  .arr.none{ animation:none; }
   .cont{ animation:settle .24s cubic-bezier(.16,.84,.30,1) both; transform-origin:50% 0; }
 
   @media (prefers-reduced-motion:reduce){
@@ -186,11 +247,14 @@
 
 <h1 id="h">…</h1>
 <p class="say" id="say">…</p>
+<nav class="nav">
+  <a href="?d=fade">1 · while you decide</a>
+  <a href="?d=arrive">2 · the next card</a>
+  <a href="?d=throw">3 · how it leaves</a>
+  <a href="?d=trick">4 · the tricks</a>
+</nav>
 
-<div class="ab">
-  <button type="button" id="bA" class="on">A<small id="lA">now</small></button>
-  <button type="button" id="bB">B<small id="lB">proposed</small></button>
-</div>
+<div class="ab" id="ab"></div>
 <p class="what" id="what">…</p>
 <div class="meter" id="meter"><span>how solid the card is</span><span class="bar"><i id="barf"></i></span><b id="pct">100%</b></div>
 
@@ -201,13 +265,9 @@
   <button type="button" class="act keep" id="aKeep"><span>Keep &#9734; &#8594;</span><small>swipe right</small></button>
 </div>
 
-<p class="hint">Drag the card sideways with your thumb, or tap a button. Switch between A and B and do it again.</p>
+<p class="hint">Drag the card sideways with your thumb, or tap a button. Switch options above and do it again.</p>
 
-<nav class="nav">
-  <a href="flick-lab.html?d=fade">1 · the dimming</a>
-  <a href="flick-lab.html?d=arrive">2 · the next card</a>
-  <a href="flick-lab.html?d=throw">3 · the throw</a>
-</nav>
+
 
 <script>
 (function(){
@@ -229,30 +289,56 @@
       b:"Two hours down a spring-fed river. Bring your own boat or rent at the landing." }
   ];
 
+  /* ⛔ THREE DIRECTIONS, NOT THREE SPEEDS. GRAY: "make them drastically different so I can
+     choose which directions I want". The first cut offered one motion at two durations, which is a
+     tuning question and not a design one — he could not tell them apart and was right not to care.
+     Each arm below is a different IDEA of what the moment is. A is always the app as it ships. */
+  /* ⛔ EACH ARM IS A DIFFERENT IDEA OF WHAT THE MOMENT IS, NOT THE SAME IDEA AT A DIFFERENT
+     SPEED. GRAY: "make them drastically different so I can choose which directions I want."
+     A is always the app exactly as it ships — it is never exaggerated, because he would then be
+     choosing against a strawman of his own app. */
   var D = {
     fade: {
-      h:"How much does the card dim while you decide?",
-      say:"Push the card sideways slowly and watch how fast it fades out from under your thumb.",
-      lA:"fades fast", lB:"stays solid",
-      /* A is what ships today: 34% of the ink is spent by the commit distance, which is 55px.
-         B moves that term to 8% and leaves the rest on the far term, so the card only really goes
-         once it is actually leaving. */
-      whatA:"<b>A</b> is what your app does now. The card is <b>40% see-through after 55px</b> — about a thumb twitch — while you are still reading it to decide.",
-      whatB:"<b>B</b> holds the card at <b>full strength</b> the entire time you are deciding. It only starts fading once it is genuinely on its way off the screen."
+      h:"What does the card do while you decide?",
+      say:"Push it sideways slowly and hold it there. Watch what happens to the card itself.",
+      arms:[
+        {k:"A", label:"fades out", what:"<b>A</b> \u2014 what your app does now. The card <b>fades toward gone</b> as you pull: 40% see-through after 55px, about a thumb twitch, while you are still reading it."},
+        {k:"B", label:"stays solid", what:"<b>B</b> \u2014 the card <b>does not change at all</b> while you decide. Fully solid, fully readable, and it only fades once it is genuinely on its way off."},
+        {k:"C", label:"colours up", what:"<b>C</b> \u2014 the card <b>washes with colour</b> instead of fading. Gold toward Keep, cool blue toward Not for me. It stays readable and the colour tells you which way you are going."}
+      ]
     },
     arrive: {
-      h:"How fast does the next card come in?",
-      say:"Tap a button instead of swiping. That is the slow path. Then try swiping — that one is already fast.",
-      lA:"474ms", lB:"220ms",
-      whatA:"<b>A</b> is what your app does now: tapping a button takes <b>474ms</b> to bring the next card in, and it arrives slightly tilted.",
-      whatB:"<b>B</b> snaps it in in <b>220ms</b>, straight and square, which is the speed your swipe already gives you."
+      h:"How does the next card show up?",
+      say:"Tap a button rather than swiping, so you see the arrival on its own. Then try each one.",
+      arms:[
+        {k:"A", label:"flies in", what:"<b>A</b> \u2014 what your app does now. The next card <b>flies in from off the right edge</b>, tilted, taking 474ms to settle."},
+        {k:"B", label:"rises up", what:"<b>B</b> \u2014 it <b>grows up out of the deck</b> where it was already sitting. No travel across the screen, 220ms, because it was never anywhere else."},
+        {k:"C", label:"just there", what:"<b>C</b> \u2014 <b>no entrance at all.</b> The moment you answer, the next card is simply the card. Nothing moves and nothing to wait for."}
+      ]
     },
     throw: {
-      h:"How long does the card take to fly off?",
-      say:"Throw the card hard and watch it go.",
-      lA:"420ms", lB:"260ms",
-      whatA:"<b>A</b> is what your app does now. The card is invisible for the <b>last 92ms</b> of the flight — it is still animating after you can no longer see it.",
-      whatB:"<b>B</b> keeps the ink all the way to the edge and is gone in <b>260ms</b>, a third quicker. Nothing you can see is removed, it just stops waiting around."
+      h:"How does the card leave?",
+      say:"Throw it hard and watch where it goes.",
+      arms:[
+        {k:"A", label:"arcs away", what:"<b>A</b> \u2014 what your app does now. It <b>arcs off the corner</b>, turning 24 degrees and sinking as it goes, over 420ms."},
+        {k:"B", label:"flies flat", what:"<b>B</b> \u2014 it <b>launches flat and straight</b> off the side, no turn and no drop, gone in 260ms. Like sliding a card off a table."},
+        {k:"C", label:"drops back", what:"<b>C</b> \u2014 it <b>falls away from you</b>, shrinking back rather than flying off the side. Like it is being put back on the pile."}
+      ]
+    },
+    /* ⭐ QUESTION 4 IS HIS OWN ASK: "Make a 4th for different card animations swipe if you can
+       maybe different tricks or something." So this one is not a value at all — it is four whole
+       personalities for the same gesture, and the answer is which one the app should have.
+       ⚠ EVERY ONE IS TRANSFORM AND OPACITY, INCLUDING THE 3D. rotateY with a perspective is still
+       a compositor transform; it is not a filter and it does not repaint. */
+    trick: {
+      h:"Pick how the flick should feel",
+      say:"Four completely different tricks for the same swipe. Throw a few cards on each one.",
+      arms:[
+        {k:"A", label:"the deck", what:"<b>A</b> \u2014 what your app does now. The card <b>arcs off the corner</b> like a card thrown off the top of a deck."},
+        {k:"B", label:"page turn", what:"<b>B</b> \u2014 the card <b>hinges on the edge you pushed</b> and turns away like a page, showing its thickness as it goes. The most physical of the four."},
+        {k:"C", label:"filed away", what:"<b>C</b> \u2014 the card <b>shrinks and flies to the button you chose</b>, bottom right for Keep and bottom left for Not for me, so you can see where it went."},
+        {k:"D", label:"dealt back", what:"<b>D</b> \u2014 the card <b>drops back into the pile</b> underneath and the next one comes forward. Calm, and it never leaves the screen."}
+      ]
     }
   };
 
@@ -261,22 +347,39 @@
   var cfg = D[q], arm = "A", i = 0;
 
   var $ = function(id){ return document.getElementById(id); };
-  var stage = $("stage"), bA = $("bA"), bB = $("bB"), whatEl = $("what");
+  var stage = $("stage"), abEl = $("ab"), whatEl = $("what");
   var meter = $("meter"), barf = $("barf"), pct = $("pct");
   if (q === "fade") meter.classList.add("on");
   $("h").textContent = cfg.h;
   $("say").textContent = cfg.say;
-  $("lA").textContent = cfg.lA;
-  $("lB").textContent = cfg.lB;
+  /* the buttons are built from the question's own arm list, so adding a fifth idea to any page is
+     a line of data and never a line of markup. */
+  var btns = {};
+  cfg.arms.forEach(function(a){
+    var b = document.createElement("button");
+    b.type = "button";
+    b.innerHTML = a.k + "<small>" + a.label + "</small>";
+    b.onclick = function(){ setArm(a.k); };
+    abEl.appendChild(b);
+    btns[a.k] = b;
+  });
   var links = document.querySelectorAll(".nav a");
   for (var n = 0; n < links.length; n++) {
-    if (links[n].getAttribute("href") === "flick-lab.html?d=" + q) links[n].setAttribute("aria-current", "page");
+    if (links[n].getAttribute("href") === "?d=" + q) links[n].setAttribute("aria-current", "page");
   }
 
-  function paintWhat(){ whatEl.innerHTML = arm === "A" ? cfg.whatA : cfg.whatB; }
-  function setArm(a){ arm = a; bA.classList.toggle("on", a === "A"); bB.classList.toggle("on", a === "B"); paintWhat(); }
-  bA.onclick = function(){ setArm("A"); };
-  bB.onclick = function(){ setArm("B"); };
+  function armOf(k){
+    for (var n = 0; n < cfg.arms.length; n++) if (cfg.arms[n].k === k) return cfg.arms[n];
+    return cfg.arms[0];
+  }
+  function paintWhat(){ whatEl.innerHTML = armOf(arm).what; }
+  function setArm(a){
+    arm = a;
+    cfg.arms.forEach(function(x){ btns[x.k].classList.toggle("on", x.k === a); });
+    paintWhat();
+    /* the stage is rebuilt so the new idea is on the card in FRONT, not one card away. */
+    build(null);
+  }
 
   function cardHTML(d){
     return '<div class="card">'
@@ -288,7 +391,7 @@
       + '<div class="foot">Tap for the full plan</div></div>';
   }
 
-  var top, under, drag = null;
+  var top, under, washK, washP, drag = null;
 
   /* the stage is rebuilt whole on every advance: one card in front, one behind, nothing else. */
   function build(useCont){
@@ -300,8 +403,12 @@
 
     top = document.createElement("div");
     top.className = "cardw top";
-    top.innerHTML = cardHTML(DECKS[i % DECKS.length]);
+    /* the two washes are the C arm of question 1: a verdict painted ON the card rather than the
+       card disappearing. They ride the wrapper, never inside .card, so the card is untouched. */
+    top.innerHTML = '<span class="wash keep"></span><span class="wash pass"></span>' + cardHTML(DECKS[i % DECKS.length]);
     stage.appendChild(top);
+    washK = top.querySelector(".wash.keep");
+    washP = top.querySelector(".wash.pass");
 
     if (useCont) {
       /* the hand-off: the card behind keeps the pose the thumb brought it to and finishes the last
@@ -311,8 +418,10 @@
       top.style.setProperty("--ao", "1");
       top.classList.add("cont");
     } else if (useCont === false) {
-      top.classList.add("arr");
-      if (arm === "B" && q === "arrive") top.classList.add("b");
+      /* the three arrivals are three different ideas, not one at three speeds. */
+      if (q === "arrive" && arm === "B") top.classList.add("arr", "rise");
+      else if (q === "arrive" && arm === "C") top.classList.add("arr", "none");
+      else top.classList.add("arr");
     }
     wire();
   }
@@ -327,14 +436,21 @@
     top.style.transform = "translate3d(" + dx.toFixed(1) + "px," + (dy * 0.22).toFixed(1) + "px,0) rotate(" + (r * 9).toFixed(2) + "deg)";
     var m = Math.min(1, Math.abs(dx) / (w * THROW));
     var far = Math.min(1, Math.abs(dx) / (w * 0.8));
-    /* THE ONE NUMBER QUESTION 1 IS ABOUT. .34 is what ships; .08 is the proposal. */
-    /* ⭐ THE ONE NUMBER QUESTION 1 IS ABOUT, AND B GOES THE WHOLE WAY NOW. .34 is what ships.
-       B was .08 and Gray could not feel it against A — "make it a little more drastic the
-       difference". At 0 the deciding phase costs no ink at all, and the card only ever fades on
-       the far term, which is the one that means "this is leaving". */
-    var mTerm = (q === "fade" && arm === "B") ? 0 : 0.34;
+    /* ⛔ QUESTION 1'S THREE DIRECTIONS, AND THEY ARE THREE IDEAS RATHER THAN THREE NUMBERS.
+         A — the app as it ships: the card fades toward gone as you pull. .34 by the commit
+             distance, which is 40% of the ink spent after 55px.
+         B — it does not change at all while you decide, and only fades once it is leaving.
+         C — it never fades; a colour washes over it saying which way you are going.
+       GRAY: "make them drastically different so I can choose which directions I want." An earlier
+       cut offered .34 against .08, which is a tuning question. He could not tell them apart and
+       was right not to try. */
+    var mTerm = (q === "fade" && arm !== "A") ? 0 : 0.34;
     var op = 1 - mTerm * m - 0.30 * far;
     top.style.opacity = op.toFixed(3);
+    if (q === "fade" && arm === "C") {
+      washK.style.opacity = (dx > 0 ? m : 0).toFixed(3);
+      washP.style.opacity = (dx < 0 ? m : 0).toFixed(3);
+    } else if (washK) { washK.style.opacity = "0"; washP.style.opacity = "0"; }
     if (q === "fade") {
       pct.textContent = Math.round(op * 100) + "%";
       barf.style.transform = "scaleX(" + op.toFixed(3) + ")";
@@ -345,12 +461,13 @@
     lit($("aKeep"), dx > 0, m); lit($("aPass"), dx < 0, m);
   }
 
+  function clearWash(){ if (washK) { washK.style.opacity = "0"; washP.style.opacity = "0"; } }
   function resetMeter(){
     if (q !== "fade") return;
     pct.textContent = "100%"; barf.style.transform = "scaleX(1)";
   }
   function settleBack(){
-    resetMeter();
+    resetMeter(); clearWash();
     top.style.transition = "transform .30s cubic-bezier(.22,1.05,.36,1), opacity .30s ease";
     top.style.transform = ""; top.style.opacity = "";
     under.style.transition = "opacity .3s ease, transform .3s cubic-bezier(.22,1.05,.36,1)";
@@ -375,7 +492,9 @@
     gone.style.setProperty("--fy", (fy || 0).toFixed(1) + "px");
     gone.style.setProperty("--fr", (fr || 0).toFixed(2) + "deg");
     gone.className = "cardw top fly " + (dir > 0 ? "r" : "l")
-      + ((q === "throw" && arm === "B") ? " b" : "");
+      + ((q === "throw" && arm === "B") ? " b" : "")
+      + ((q === "throw" && arm === "C") ? " c" : "")
+      + (q === "trick" ? ({ A:"", B:" peel", C:" file", D:" deal" }[arm] || "") : "");
     receipt(dir);
     resetMeter();
     i = (i + 1) % DECKS.length;
@@ -441,7 +560,6 @@
   $("aPass").onclick = function(){ if (!drag) commit(-1, 0, 0, 0); };
 
   setArm("A");
-  build(null);
 })();
 </script>
 </body>

@@ -3,7 +3,7 @@
    plus a version.txt probe it deliberately never caches (see the note in the fetch handler).
    Nothing here reports anything anywhere, which is a product guarantee, not an implementation
    detail — gate_pwa.js asserts it against this file. */
-const CACHE = "gca-895457c003f77d83";
+const CACHE = "gca-ab975846b4cbc624";
 
 /* ⚠ 08/20 — THE APP IS ONE 4.5MB DOCUMENT AND THIS USED TO DOWNLOAD IT TWICE. The precache list
    was ["./", "./index.html", "./app.webmanifest"] fed to cache.addAll(). The first two are the
@@ -101,6 +101,21 @@ self.addEventListener("fetch", e => {
      pointing at a word in an English sentence. That is CLAUDE.md §0 law 1, and it was earned again
      right here: the first draft quoted the two method names in backticks. */
   if (/\/version\.txt$/.test(url.pathname)) return;
+  /* ⛔⛔ THE DECISION PAGES UNDER app/ ARE NOT THE APP AND THIS WORKER MUST NOT TOUCH THEM.
+     flick-lab.html is a scratch A/B page that lives beside the app so it stays out of the site's
+     page census. Left to the handler below it broke two ways at once, and both look like the page
+     being broken rather than the worker doing its job:
+     1 - THE GENERIC BRANCH MATCHES WITH ignoreSearch:true, so the three links -- ?d=fade,
+         ?d=arrive, ?d=throw -- are ONE cache entry. Open any of them and the other two serve
+         whichever was opened first. Three different questions, one answer.
+     2 - AND A TAP FROM A CHAT APP IS A NAVIGATION, so the branch below answers it, and on a slow
+         connection its 2500ms leash resolves with the cached app shell. The reader taps a link
+         about card motion and gets the app, which is exactly what was reported.
+     Straight to the network, same as the version probe above, and for the same reason.
+     ⚠ A REGEX, NOT A STRING TEST, because gate_pwa refuses root-absolute path literals in this
+     worker -- see the note above. And NO BACKTICKS in this comment: it lives inside the worker's
+     own template literal, which is CLAUDE.md law 1 one layer down. */
+  if (/flick-lab\.html$/.test(url.pathname)) return;
   if (e.request.mode === "navigate") {
     e.respondWith(new Promise(resolve => {
       let settled = false;
