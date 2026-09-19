@@ -64,15 +64,33 @@
   .ab button small{ font-size:10.5px; font-weight:700; letter-spacing:.04em; opacity:.62; text-transform:uppercase; }
   .ab button.on{ color:#12200F; background:#D8B45E; border-color:#F0DCA4; }
   .ab button.on small{ opacity:.66; }
-  .what{ color:var(--quiet); font-size:12.5px; margin:9px 0 12px; text-align:center; min-height:34px;
+  .what{ color:var(--quiet); font-size:12.5px; margin:9px 0 10px; text-align:center; min-height:34px;
     max-width:340px; }
+  /* ⭐ A LIVE READOUT, ON THE FADE PAGE ONLY. Speed you can feel; ink you mostly cannot, because
+     the thing fading is under your own thumb. The number turns a feeling into something he can
+     watch, which is the whole reason this page exists. It reads 100% at rest and never moves on
+     the other two questions, so it is hidden there rather than sitting at a constant. */
+  .meter{ display:none; width:100%; max-width:340px; margin:0 0 12px; padding:9px 12px;
+    border-radius:11px; background:rgba(255,255,255,.04); border:1px solid rgba(160,186,205,.2);
+    font:700 12.5px/1.2 system-ui,sans-serif; color:var(--quiet);
+    align-items:center; justify-content:space-between; gap:10px; }
+  .meter.on{ display:flex; }
+  .meter b{ font:800 17px/1 system-ui,sans-serif; color:var(--gold); font-variant-numeric:tabular-nums; }
+  .bar{ flex:1 1 auto; height:6px; border-radius:3px; background:rgba(159,176,192,.22); overflow:hidden; }
+  .bar i{ display:block; height:100%; width:100%; background:var(--gold); transform-origin:left center; }
   .what b{ color:var(--gold); font-weight:800; }
 
   /* the stage. Fixed height so the card leaving cannot shift the page under his thumb. */
   .stage{ position:relative; width:100%; max-width:340px; height:390px; margin:0 0 12px; }
   .cardw{ position:absolute; inset:0; touch-action:pan-y; }
   .cardw.top{ z-index:3; }
-  .cardw.under{ z-index:1; opacity:.42; transform:translate3d(0,12px,0) scale(.951);
+  /* ⚠ THE CARD BEHIND IS INSET, EXACTLY AS .hk_sw_next IS IN THE APP: 11px each side and 22px
+     down. The first cut had both cards at inset:0, and once the front card fades - which is the
+     whole subject of question 1 - the two printed straight through each other and read as one
+     muddled card rather than as a deck. The offset is what turns bleed-through into depth. */
+  .cardw.under{ z-index:1; left:11px; right:11px; top:22px; bottom:auto; height:100%;
+    max-height:calc(100% + 24px); overflow:hidden; border-radius:19px;
+    opacity:.42; transform:translate3d(0,12px,0) scale(.951);
     transform-origin:50% 0; pointer-events:none; }
   .card{
     height:100%; border-radius:19px; padding:16px 15px; overflow:hidden;
@@ -140,10 +158,10 @@
     30%{ opacity:1; }
     62%{ transform:translate3d(14px,3px,0) scale(.962) rotate(.55deg); opacity:1; }
     to{ transform:translate3d(0,0,0) scale(1) rotate(0deg); opacity:1; } }
+  /* B is the swipe path's own speed, straight and square. No tilt, because a tap applies none. */
   @keyframes arriveB{
-    from{ transform:translate3d(44%,10px,0) scale(.94) rotate(0deg); opacity:0; }
-    30%{ opacity:1; }
-    70%{ transform:translate3d(10px,2px,0) scale(.972) rotate(0deg); opacity:1; }
+    from{ transform:translate3d(30%,6px,0) scale(.952) rotate(0deg); opacity:0; }
+    22%{ opacity:1; }
     to{ transform:translate3d(0,0,0) scale(1) rotate(0deg); opacity:1; } }
   @keyframes settle{
     from{ transform:translate3d(0,var(--ay,22px),0) scale(var(--as,.936)); opacity:var(--ao,1); }
@@ -151,10 +169,10 @@
 
   .fly.r{ animation:flyR .42s cubic-bezier(.17,.72,.31,1) both; }
   .fly.l{ animation:flyL .42s cubic-bezier(.17,.72,.31,1) both; }
-  .fly.r.b{ animation:flyRb .34s cubic-bezier(.17,.72,.31,1) both; }
-  .fly.l.b{ animation:flyLb .34s cubic-bezier(.17,.72,.31,1) both; }
+  .fly.r.b{ animation:flyRb .26s cubic-bezier(.17,.72,.31,1) both; }
+  .fly.l.b{ animation:flyLb .26s cubic-bezier(.17,.72,.31,1) both; }
   .arr{ animation:arrive .52s cubic-bezier(.16,.78,.28,1) both; }
-  .arr.b{ animation:arriveB .30s cubic-bezier(.16,.78,.28,1) both; }
+  .arr.b{ animation:arriveB .22s cubic-bezier(.16,.84,.30,1) both; }
   .cont{ animation:settle .24s cubic-bezier(.16,.84,.30,1) both; transform-origin:50% 0; }
 
   @media (prefers-reduced-motion:reduce){
@@ -174,6 +192,7 @@
   <button type="button" id="bB">B<small id="lB">proposed</small></button>
 </div>
 <p class="what" id="what">…</p>
+<div class="meter" id="meter"><span>how solid the card is</span><span class="bar"><i id="barf"></i></span><b id="pct">100%</b></div>
 
 <div class="stage" id="stage"></div>
 
@@ -219,21 +238,21 @@
          B moves that term to 8% and leaves the rest on the far term, so the card only really goes
          once it is actually leaving. */
       whatA:"<b>A</b> is what your app does now. The card is <b>40% see-through after 55px</b> — about a thumb twitch — while you are still reading it to decide.",
-      whatB:"<b>B</b> keeps the card solid while you are deciding and only fades it once it is genuinely on its way out."
+      whatB:"<b>B</b> holds the card at <b>full strength</b> the entire time you are deciding. It only starts fading once it is genuinely on its way off the screen."
     },
     arrive: {
       h:"How fast does the next card come in?",
       say:"Tap a button instead of swiping. That is the slow path. Then try swiping — that one is already fast.",
-      lA:"slow in", lB:"matches the swipe",
+      lA:"474ms", lB:"220ms",
       whatA:"<b>A</b> is what your app does now: tapping a button takes <b>474ms</b> to bring the next card in, and it arrives slightly tilted.",
-      whatB:"<b>B</b> brings it in in <b>300ms</b>, straight, so tapping and swiping feel like the same app."
+      whatB:"<b>B</b> snaps it in in <b>220ms</b>, straight and square, which is the speed your swipe already gives you."
     },
     throw: {
       h:"How long does the card take to fly off?",
       say:"Throw the card hard and watch it go.",
-      lA:"420ms", lB:"340ms",
+      lA:"420ms", lB:"260ms",
       whatA:"<b>A</b> is what your app does now. The card is invisible for the <b>last 92ms</b> of the flight — it is still animating after you can no longer see it.",
-      whatB:"<b>B</b> keeps the ink all the way to the edge and finishes 80ms sooner. Nothing you can see is removed."
+      whatB:"<b>B</b> keeps the ink all the way to the edge and is gone in <b>260ms</b>, a third quicker. Nothing you can see is removed, it just stops waiting around."
     }
   };
 
@@ -243,6 +262,8 @@
 
   var $ = function(id){ return document.getElementById(id); };
   var stage = $("stage"), bA = $("bA"), bB = $("bB"), whatEl = $("what");
+  var meter = $("meter"), barf = $("barf"), pct = $("pct");
+  if (q === "fade") meter.classList.add("on");
   $("h").textContent = cfg.h;
   $("say").textContent = cfg.say;
   $("lA").textContent = cfg.lA;
@@ -307,15 +328,29 @@
     var m = Math.min(1, Math.abs(dx) / (w * THROW));
     var far = Math.min(1, Math.abs(dx) / (w * 0.8));
     /* THE ONE NUMBER QUESTION 1 IS ABOUT. .34 is what ships; .08 is the proposal. */
-    var mTerm = (q === "fade" && arm === "B") ? 0.08 : 0.34;
-    top.style.opacity = (1 - mTerm * m - 0.30 * far).toFixed(3);
+    /* ⭐ THE ONE NUMBER QUESTION 1 IS ABOUT, AND B GOES THE WHOLE WAY NOW. .34 is what ships.
+       B was .08 and Gray could not feel it against A — "make it a little more drastic the
+       difference". At 0 the deciding phase costs no ink at all, and the card only ever fades on
+       the far term, which is the one that means "this is leaving". */
+    var mTerm = (q === "fade" && arm === "B") ? 0 : 0.34;
+    var op = 1 - mTerm * m - 0.30 * far;
+    top.style.opacity = op.toFixed(3);
+    if (q === "fade") {
+      pct.textContent = Math.round(op * 100) + "%";
+      barf.style.transform = "scaleX(" + op.toFixed(3) + ")";
+    }
     under.style.transition = "none";
     under.style.opacity = (0.42 + 0.58 * m).toFixed(3);
     under.style.transform = "translate3d(0," + (12 - 12 * m).toFixed(1) + "px,0) scale(" + (0.951 + 0.049 * m).toFixed(4) + ")";
     lit($("aKeep"), dx > 0, m); lit($("aPass"), dx < 0, m);
   }
 
+  function resetMeter(){
+    if (q !== "fade") return;
+    pct.textContent = "100%"; barf.style.transform = "scaleX(1)";
+  }
   function settleBack(){
+    resetMeter();
     top.style.transition = "transform .30s cubic-bezier(.22,1.05,.36,1), opacity .30s ease";
     top.style.transform = ""; top.style.opacity = "";
     under.style.transition = "opacity .3s ease, transform .3s cubic-bezier(.22,1.05,.36,1)";
@@ -342,6 +377,7 @@
     gone.className = "cardw top fly " + (dir > 0 ? "r" : "l")
       + ((q === "throw" && arm === "B") ? " b" : "");
     receipt(dir);
+    resetMeter();
     i = (i + 1) % DECKS.length;
 
     /* a dragged commit hands the arrival the pose the thumb left; a TAP has none to inherit, which
