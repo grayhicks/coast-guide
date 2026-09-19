@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Pick one — the card flick</title>
+<!--
+  docs/flick-lab.html — 09/19. Served at /app/flick-lab.html. THREE DECISIONS GRAY HAS TO MAKE WITH HIS THUMB, NOT WITH HIS EYES.
+
+  GRAY: "I guess I have no idea what any of this means so I need pics and to actually view the
+  motion live I guess maybe 3 links or something."
+
+  A findings table cannot answer "does this feel right". This is one page, three links into it
+  (?d=fade / ?d=arrive / ?d=throw), each one live and swipeable on a real phone with an A/B switch.
+  He swipes A, swipes B, and picks.
+
+  ⛔ IT IS NOT THE APP AND IT MUST NEVER PRETEND TO BE. No real card data, no real deck, nothing
+     that could be mistaken for the product. It carries the card's LOOK closely enough that the
+     motion reads the same, and nothing else.
+  ⛔ THE VALUES ARE THE APP'S OWN, COPIED EXACTLY. If one of these drifts from FONT_CSS the page
+     starts lying to him, which is worse than not existing. Every number below is annotated with
+     the rule it came from.
+  ⛔⛔ IT LIVES IN docs/, AND THREE PLACES WERE TRIED BEFORE THIS ONE. The third mistake broke the
+     whole deploy, which is the one that matters:
+     1 · publish/ — generated, and build_site PRUNES anything it did not write. Gone next build.
+     2 · web/lab/ — its web/ loop is `if (isDirectory()) continue`, so a subfolder is copied
+         nowhere at all. It built green, published 2063 files, and the page did not exist.
+     3 · web/ top level — it published, and then gate_site AUDITED IT AS A PAGE OF THE GUIDE:
+         no meta description, no canonical, no skip link, no main landmark, no Open Graph title,
+         and the sitemap went 1270 entries against 1271 indexable pages. The gate failed, the job
+         exited 1, and "Deploy to coast-guide" never ran — so a scratch page took the whole site's
+         deploy down with it, on a day the beach flag rides the same job.
+     ⭐ docs/ IS THE ANSWER BECAUSE IT IS NOT THE SITE. build_site copies docs/* to publish/app/*,
+     and gate_site's page census excludes app/ by construction — it counts "site pages (app/
+     excluded)". A decision aid is not a page of the guide and must never be audited as one.
+     ⚠ build_pwa.js does not prune docs/, so this survives an app rebuild.
+  ⚠ noindex, because this is a decision aid and not a page of the site.
+-->
+<style>
+  :root{
+    --ink:#E7E3D8; --quiet:#9FB0C0; --gold:#E3C471; --ground:#10202E;
+    --card:#241a3d; --rim:rgba(198,160,74,.58);
+  }
+  *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html,body{ margin:0; height:100%; }
+  body{
+    background:linear-gradient(180deg,#10202E,#0C1826 55%,#0A141F);
+    color:var(--ink); font:400 15px/1.45 'Nunito',system-ui,-apple-system,sans-serif;
+    padding:16px 16px 28px; display:flex; flex-direction:column; align-items:center;
+    overscroll-behavior-y:contain;
+  }
+  h1{ font:800 19px/1.25 system-ui,sans-serif; margin:2px 0 4px; text-align:center; }
+  .say{ color:var(--quiet); font-size:13.5px; margin:0 0 14px; text-align:center; max-width:340px; }
+
+  /* the A/B switch. Two big taps, never a slider - he is deciding, not tuning. */
+  .ab{ display:flex; gap:8px; width:100%; max-width:340px; margin:0 0 4px; }
+  .ab button{
+    flex:1 1 0; min-height:52px; border-radius:13px; cursor:pointer; font-family:inherit;
+    font-size:14px; font-weight:800; line-height:1.15;
+    color:#E7D9AE; background:rgba(198,160,74,.10); border:1px solid rgba(198,160,74,.36);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px;
+  }
+  .ab button small{ font-size:10.5px; font-weight:700; letter-spacing:.04em; opacity:.62; text-transform:uppercase; }
+  .ab button.on{ color:#12200F; background:#D8B45E; border-color:#F0DCA4; }
+  .ab button.on small{ opacity:.66; }
+  .what{ color:var(--quiet); font-size:12.5px; margin:9px 0 12px; text-align:center; min-height:34px;
+    max-width:340px; }
+  .what b{ color:var(--gold); font-weight:800; }
+
+  /* the stage. Fixed height so the card leaving cannot shift the page under his thumb. */
+  .stage{ position:relative; width:100%; max-width:340px; height:390px; margin:0 0 12px; }
+  .cardw{ position:absolute; inset:0; touch-action:pan-y; }
+  .cardw.top{ z-index:3; }
+  .cardw.under{ z-index:1; opacity:.42; transform:translate3d(0,12px,0) scale(.951);
+    transform-origin:50% 0; pointer-events:none; }
+  .card{
+    height:100%; border-radius:19px; padding:16px 15px; overflow:hidden;
+    background:linear-gradient(170deg,#2b1f49,#1d1633 62%,#191228);
+    border:1px solid var(--rim);
+    box-shadow:inset 0 1px 0 rgba(255,236,189,.16), 0 10px 26px rgba(0,0,0,.34);
+    display:flex; flex-direction:column;
+  }
+  .kick{ font:800 10.5px/1 system-ui,sans-serif; letter-spacing:.11em; text-transform:uppercase;
+    color:var(--gold); opacity:.9; margin:0 0 9px; }
+  .ttl{ font:700 25px/1.16 'Fraunces',Georgia,serif; color:#F3E9D2; margin:0 0 10px; }
+  .ven{ font:800 11.5px/1.3 system-ui,sans-serif; letter-spacing:.06em; text-transform:uppercase;
+    color:#C9B9E0; margin:0 0 12px; }
+  .pr{ font:700 27px/1 'Fraunces',Georgia,serif; color:var(--gold); margin:0 0 12px; }
+  .bl{ font-size:13.5px; line-height:1.45; color:#CFC6E2; margin:0; }
+  .foot{ margin-top:auto; padding-top:12px; border-top:1px solid rgba(160,186,205,.16);
+    font:700 12px/1 system-ui,sans-serif; color:#9d8fc0; }
+
+  /* the two answers, exactly the app's own shape */
+  .acts{ display:flex; gap:10px; width:100%; max-width:340px; }
+  .act{ flex:1 1 0; min-height:48px; border-radius:13px; cursor:pointer; font-family:inherit;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1px;
+    font:700 12px/1.15 system-ui,sans-serif;
+    background:rgba(255,255,255,.045); border:1px solid rgba(160,186,205,.26); color:#8FA5B8;
+    transition:background .26s ease, border-color .26s ease, color .26s ease; }
+  .act small{ font-size:9.5px; font-weight:700; letter-spacing:.7px; opacity:.62; }
+  .act.pass.lit{ color:#EDE8DC; background:rgba(22,38,52,.94); border-color:rgba(160,186,205,.72); }
+  .act.keep.lit{ color:#12200F; background:#D8B45E; border-color:#F0DCA4; }
+  @keyframes took{ 0%{ transform:scale(1); animation-timing-function:cubic-bezier(.4,0,.9,.55); }
+    34%{ transform:scale(1.06); animation-timing-function:cubic-bezier(.16,.84,.30,1); }
+    to{ transform:scale(1); } }
+  .act.took{ animation:took .15s linear both; }
+
+  .hint{ color:var(--quiet); font-size:12.5px; margin:14px 0 0; text-align:center; }
+  .nav{ display:flex; gap:8px; margin:20px 0 0; flex-wrap:wrap; justify-content:center; }
+  .nav a{ color:#9FB0C0; font:700 12px/1 system-ui,sans-serif; text-decoration:none;
+    padding:9px 12px; border-radius:10px; border:1px solid rgba(160,186,205,.24); }
+  .nav a[aria-current]{ color:var(--gold); border-color:rgba(198,160,74,.5); }
+
+  /* ⛔ THE THROW, THE ARRIVAL AND THE SETTLE ARE THE APP'S OWN KEYFRAMES, COPIED EXACTLY. */
+  @keyframes flyR{
+    0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    8%{ transform:translate3d(calc(var(--fx,0px) + 6%),var(--fy,0px),0) rotate(calc(var(--fr,0deg) + 2deg)) scale(1.03); opacity:1; }
+    30%{ opacity:1; } 78%{ opacity:0; }
+    to{ transform:translate3d(calc(var(--fx,0px) + 150%),calc(var(--fy,0px) + 58px),0) rotate(calc(var(--fr,0deg) + 24deg)) scale(.84); opacity:0; } }
+  @keyframes flyL{
+    0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    8%{ transform:translate3d(calc(var(--fx,0px) - 6%),var(--fy,0px),0) rotate(calc(var(--fr,0deg) - 2deg)) scale(1.03); opacity:1; }
+    30%{ opacity:1; } 78%{ opacity:0; }
+    to{ transform:translate3d(calc(var(--fx,0px) - 150%),calc(var(--fy,0px) + 58px),0) rotate(calc(var(--fr,0deg) - 24deg)) scale(.84); opacity:0; } }
+  /* the B arm of the throw: the ink lasts the whole flight, so nothing animates unseen */
+  @keyframes flyRb{
+    0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    8%{ transform:translate3d(calc(var(--fx,0px) + 6%),var(--fy,0px),0) rotate(calc(var(--fr,0deg) + 2deg)) scale(1.03); opacity:1; }
+    38%{ opacity:1; }
+    to{ transform:translate3d(calc(var(--fx,0px) + 150%),calc(var(--fy,0px) + 58px),0) rotate(calc(var(--fr,0deg) + 24deg)) scale(.84); opacity:0; } }
+  @keyframes flyLb{
+    0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    8%{ transform:translate3d(calc(var(--fx,0px) - 6%),var(--fy,0px),0) rotate(calc(var(--fr,0deg) - 2deg)) scale(1.03); opacity:1; }
+    38%{ opacity:1; }
+    to{ transform:translate3d(calc(var(--fx,0px) - 150%),calc(var(--fy,0px) + 58px),0) rotate(calc(var(--fr,0deg) - 24deg)) scale(.84); opacity:0; } }
+
+  @keyframes arrive{
+    from{ transform:translate3d(44%,10px,0) scale(.94) rotate(2.4deg); opacity:0; }
+    30%{ opacity:1; }
+    62%{ transform:translate3d(14px,3px,0) scale(.962) rotate(.55deg); opacity:1; }
+    to{ transform:translate3d(0,0,0) scale(1) rotate(0deg); opacity:1; } }
+  @keyframes arriveB{
+    from{ transform:translate3d(44%,10px,0) scale(.94) rotate(0deg); opacity:0; }
+    30%{ opacity:1; }
+    70%{ transform:translate3d(10px,2px,0) scale(.972) rotate(0deg); opacity:1; }
+    to{ transform:translate3d(0,0,0) scale(1) rotate(0deg); opacity:1; } }
+  @keyframes settle{
+    from{ transform:translate3d(0,var(--ay,22px),0) scale(var(--as,.936)); opacity:var(--ao,1); }
+    to{ transform:translate3d(0,0,0) scale(1); opacity:1; } }
+
+  .fly.r{ animation:flyR .42s cubic-bezier(.17,.72,.31,1) both; }
+  .fly.l{ animation:flyL .42s cubic-bezier(.17,.72,.31,1) both; }
+  .fly.r.b{ animation:flyRb .34s cubic-bezier(.17,.72,.31,1) both; }
+  .fly.l.b{ animation:flyLb .34s cubic-bezier(.17,.72,.31,1) both; }
+  .arr{ animation:arrive .52s cubic-bezier(.16,.78,.28,1) both; }
+  .arr.b{ animation:arriveB .30s cubic-bezier(.16,.78,.28,1) both; }
+  .cont{ animation:settle .24s cubic-bezier(.16,.84,.30,1) both; transform-origin:50% 0; }
+
+  @media (prefers-reduced-motion:reduce){
+    .fly.r,.fly.l,.fly.r.b,.fly.l.b{ animation:none; opacity:0; }
+    .arr,.arr.b,.cont{ animation:none; }
+    .act.took{ animation:none; }
+  }
+</style>
+</head>
+<body>
+
+<h1 id="h">…</h1>
+<p class="say" id="say">…</p>
+
+<div class="ab">
+  <button type="button" id="bA" class="on">A<small id="lA">now</small></button>
+  <button type="button" id="bB">B<small id="lB">proposed</small></button>
+</div>
+<p class="what" id="what">…</p>
+
+<div class="stage" id="stage"></div>
+
+<div class="acts">
+  <button type="button" class="act pass" id="aPass"><span>&#8592; Not for me</span><small>swipe left</small></button>
+  <button type="button" class="act keep" id="aKeep"><span>Keep &#9734; &#8594;</span><small>swipe right</small></button>
+</div>
+
+<p class="hint">Drag the card sideways with your thumb, or tap a button. Switch between A and B and do it again.</p>
+
+<nav class="nav">
+  <a href="flick-lab.html?d=fade">1 · the dimming</a>
+  <a href="flick-lab.html?d=arrive">2 · the next card</a>
+  <a href="flick-lab.html?d=throw">3 · the throw</a>
+</nav>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ⛔ THE THREE COMMIT NUMBERS ARE THE APP'S OWN AND ARE NOT ON THE TABLE HERE.
+     SWIPE_THROW .16, SWIPE_FLING .30, SWIPE_SLOP 6. He only just started trusting this gesture and
+     a demo that commits at a different distance would teach him the wrong thing about the app. */
+  var THROW = 0.16, FLING = 0.30, SLOP = 6;
+
+  var DECKS = [
+    { k:"MUSIC · TONIGHT", t:"Black Jacket Symphony", v:"Saenger Theatre, Mobile", p:"$ TBA",
+      b:"They play one album front to back, then the hits. Doors at 6:30." },
+    { k:"FESTIVAL · SATURDAY", t:"Harvest Moon Festival", v:"Alabama Gulf Coast Zoo", p:"$15",
+      b:"After hours at the zoo with a hay maze, s'mores and a glow party." },
+    { k:"MILITARY · SATURDAY", t:"Light of the Moon Climb", v:"Pensacola Lighthouse", p:"$ TBA",
+      b:"The sunset and moonrise climb, on the first properly cool evening of the year." },
+    { k:"OUTDOORS · SUNDAY", t:"Blackwater Paddle", v:"Blackwater River State Park", p:"Free",
+      b:"Two hours down a spring-fed river. Bring your own boat or rent at the landing." }
+  ];
+
+  var D = {
+    fade: {
+      h:"How much does the card dim while you decide?",
+      say:"Push the card sideways slowly and watch how fast it fades out from under your thumb.",
+      lA:"fades fast", lB:"stays solid",
+      /* A is what ships today: 34% of the ink is spent by the commit distance, which is 55px.
+         B moves that term to 8% and leaves the rest on the far term, so the card only really goes
+         once it is actually leaving. */
+      whatA:"<b>A</b> is what your app does now. The card is <b>40% see-through after 55px</b> — about a thumb twitch — while you are still reading it to decide.",
+      whatB:"<b>B</b> keeps the card solid while you are deciding and only fades it once it is genuinely on its way out."
+    },
+    arrive: {
+      h:"How fast does the next card come in?",
+      say:"Tap a button instead of swiping. That is the slow path. Then try swiping — that one is already fast.",
+      lA:"slow in", lB:"matches the swipe",
+      whatA:"<b>A</b> is what your app does now: tapping a button takes <b>474ms</b> to bring the next card in, and it arrives slightly tilted.",
+      whatB:"<b>B</b> brings it in in <b>300ms</b>, straight, so tapping and swiping feel like the same app."
+    },
+    throw: {
+      h:"How long does the card take to fly off?",
+      say:"Throw the card hard and watch it go.",
+      lA:"420ms", lB:"340ms",
+      whatA:"<b>A</b> is what your app does now. The card is invisible for the <b>last 92ms</b> of the flight — it is still animating after you can no longer see it.",
+      whatB:"<b>B</b> keeps the ink all the way to the edge and finishes 80ms sooner. Nothing you can see is removed."
+    }
+  };
+
+  var q = (location.search.match(/[?&]d=([a-z]+)/) || [])[1];
+  if (!D[q]) q = "fade";
+  var cfg = D[q], arm = "A", i = 0;
+
+  var $ = function(id){ return document.getElementById(id); };
+  var stage = $("stage"), bA = $("bA"), bB = $("bB"), whatEl = $("what");
+  $("h").textContent = cfg.h;
+  $("say").textContent = cfg.say;
+  $("lA").textContent = cfg.lA;
+  $("lB").textContent = cfg.lB;
+  var links = document.querySelectorAll(".nav a");
+  for (var n = 0; n < links.length; n++) {
+    if (links[n].getAttribute("href") === "flick-lab.html?d=" + q) links[n].setAttribute("aria-current", "page");
+  }
+
+  function paintWhat(){ whatEl.innerHTML = arm === "A" ? cfg.whatA : cfg.whatB; }
+  function setArm(a){ arm = a; bA.classList.toggle("on", a === "A"); bB.classList.toggle("on", a === "B"); paintWhat(); }
+  bA.onclick = function(){ setArm("A"); };
+  bB.onclick = function(){ setArm("B"); };
+
+  function cardHTML(d){
+    return '<div class="card">'
+      + '<div class="kick">' + d.k + '</div>'
+      + '<h2 class="ttl">' + d.t + '</h2>'
+      + '<div class="ven">' + d.v + '</div>'
+      + '<div class="pr">' + d.p + '</div>'
+      + '<p class="bl">' + d.b + '</p>'
+      + '<div class="foot">Tap for the full plan</div></div>';
+  }
+
+  var top, under, drag = null;
+
+  /* the stage is rebuilt whole on every advance: one card in front, one behind, nothing else. */
+  function build(useCont){
+    stage.innerHTML = "";
+    under = document.createElement("div");
+    under.className = "cardw under";
+    under.innerHTML = cardHTML(DECKS[(i + 1) % DECKS.length]);
+    stage.appendChild(under);
+
+    top = document.createElement("div");
+    top.className = "cardw top";
+    top.innerHTML = cardHTML(DECKS[i % DECKS.length]);
+    stage.appendChild(top);
+
+    if (useCont) {
+      /* the hand-off: the card behind keeps the pose the thumb brought it to and finishes the last
+         22px. This is what shipped today and it is the SAME on both arms of all three questions. */
+      top.style.setProperty("--ay", "22px");
+      top.style.setProperty("--as", ".936");
+      top.style.setProperty("--ao", "1");
+      top.classList.add("cont");
+    } else if (useCont === false) {
+      top.classList.add("arr");
+      if (arm === "B" && q === "arrive") top.classList.add("b");
+    }
+    wire();
+  }
+
+  function lit(el, on, m){
+    el.classList.toggle("lit", on && m > 0.12);
+  }
+
+  function paint(dx, dy){
+    var w = top.offsetWidth || 320;
+    var r = Math.max(-1, Math.min(1, dx / (w * 0.62)));
+    top.style.transform = "translate3d(" + dx.toFixed(1) + "px," + (dy * 0.22).toFixed(1) + "px,0) rotate(" + (r * 9).toFixed(2) + "deg)";
+    var m = Math.min(1, Math.abs(dx) / (w * THROW));
+    var far = Math.min(1, Math.abs(dx) / (w * 0.8));
+    /* THE ONE NUMBER QUESTION 1 IS ABOUT. .34 is what ships; .08 is the proposal. */
+    var mTerm = (q === "fade" && arm === "B") ? 0.08 : 0.34;
+    top.style.opacity = (1 - mTerm * m - 0.30 * far).toFixed(3);
+    under.style.transition = "none";
+    under.style.opacity = (0.42 + 0.58 * m).toFixed(3);
+    under.style.transform = "translate3d(0," + (12 - 12 * m).toFixed(1) + "px,0) scale(" + (0.951 + 0.049 * m).toFixed(4) + ")";
+    lit($("aKeep"), dx > 0, m); lit($("aPass"), dx < 0, m);
+  }
+
+  function settleBack(){
+    top.style.transition = "transform .30s cubic-bezier(.22,1.05,.36,1), opacity .30s ease";
+    top.style.transform = ""; top.style.opacity = "";
+    under.style.transition = "opacity .3s ease, transform .3s cubic-bezier(.22,1.05,.36,1)";
+    under.style.opacity = ""; under.style.transform = "";
+    $("aKeep").classList.remove("lit"); $("aPass").classList.remove("lit");
+  }
+
+  function receipt(dir){
+    var b = dir > 0 ? $("aKeep") : $("aPass");
+    b.classList.add("took");
+    var a = b.getAnimations ? b.getAnimations().filter(function(x){ return x.animationName === "took"; })[0] : null;
+    if (a) { a.cancel(); a.play(); }
+    try { if (navigator.vibrate) navigator.vibrate(12); } catch (e) {}
+  }
+
+  function commit(dir, fx, fy, fr){
+    var gone = top;
+    gone.classList.remove("cont", "arr", "b");
+    gone.style.transition = "";
+    gone.style.transform = ""; gone.style.opacity = "";
+    gone.style.setProperty("--fx", (fx || 0).toFixed(1) + "px");
+    gone.style.setProperty("--fy", (fy || 0).toFixed(1) + "px");
+    gone.style.setProperty("--fr", (fr || 0).toFixed(2) + "deg");
+    gone.className = "cardw top fly " + (dir > 0 ? "r" : "l")
+      + ((q === "throw" && arm === "B") ? " b" : "");
+    receipt(dir);
+    i = (i + 1) % DECKS.length;
+
+    /* a dragged commit hands the arrival the pose the thumb left; a TAP has none to inherit, which
+       is exactly the difference question 2 is about. */
+    var dragged = typeof fx === "number" && Math.abs(fx) > 0;
+    var keep = gone;
+    var oldStage = stage.innerHTML;
+    build(dragged ? true : false);
+    stage.insertBefore(keep, stage.firstChild);
+    keep.style.zIndex = "4";
+    setTimeout(function(){ if (keep.parentNode) keep.parentNode.removeChild(keep); }, 520);
+  }
+
+  function wire(){
+    top.onpointerdown = function(e){
+      if (e.isPrimary === false) return;
+      drag = { x0:e.clientX, y0:e.clientY, t0:e.timeStamp || Date.now(),
+        w: top.offsetWidth || 320, on:false, dx:0, dy:0, pid:e.pointerId, tr:[] };
+      top.style.transition = "none";
+      top.classList.remove("arr", "cont", "b");
+    };
+    top.onpointermove = function(e){
+      if (!drag) return;
+      var dx = e.clientX - drag.x0, dy = e.clientY - drag.y0;
+      if (!drag.axis) {
+        if (Math.abs(dx) < 4 && Math.abs(dy) < 4) return;
+        drag.axis = Math.abs(dx) > Math.abs(dy) ? "x" : "y";
+        if (drag.axis === "y") { drag = null; return; }
+      }
+      if (!drag.on) {
+        if (Math.abs(dx) < SLOP) { drag.dx = dx; drag.dy = dy; paint(dx, dy); return; }
+        drag.on = true;
+        try { top.setPointerCapture(drag.pid); } catch (x) {}
+      }
+      drag.tr.push([e.timeStamp || Date.now(), dx]);
+      if (drag.tr.length > 9) drag.tr.shift();
+      drag.dx = dx; drag.dy = dy;
+      paint(dx, dy);
+    };
+    function end(e){
+      var d = drag; drag = null;
+      if (!d) return;
+      try { top.releasePointerCapture(d.pid); } catch (x) {}
+      if (!d.on) { if (d.axis === "x" && top.style.transform) settleBack(); return; }
+      var tr = d.tr, endp = tr[tr.length - 1], ref = null;
+      for (var k = tr.length - 1; k >= 0; k--) { ref = tr[k]; if (endp[0] - tr[k][0] >= 60) break; }
+      var run = endp && ref ? endp[1] - ref[1] : 0, span = endp && ref ? endp[0] - ref[0] : 0;
+      var recent = span > 0 && run * d.dx > 0 ? Math.abs(run / span) : 0;
+      var whole = Math.abs(d.dx) / Math.max(1, (e.timeStamp || Date.now()) - d.t0);
+      var flung = Math.max(recent, whole) > FLING;
+      if (Math.abs(d.dx) > d.w * THROW || flung) {
+        var r = Math.max(-1, Math.min(1, d.dx / ((d.w || 320) * 0.62)));
+        commit(d.dx > 0 ? 1 : -1, d.dx, d.dy * 0.22, r * 9);
+      } else settleBack();
+    }
+    top.onpointerup = end;
+    top.onpointercancel = end;
+  }
+
+  $("aKeep").onclick = function(){ if (!drag) commit(1, 0, 0, 0); };
+  $("aPass").onclick = function(){ if (!drag) commit(-1, 0, 0, 0); };
+
+  setArm("A");
+  build(null);
+})();
+</script>
+</body>
+</html>

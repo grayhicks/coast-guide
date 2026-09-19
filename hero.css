@@ -349,7 +349,7 @@ html.gca_cold .bswash { opacity: 0; }
 .card .pin:not(.on), .card .cardshare:not(.on), .card .cardweb:not(.on), .card .cardcopyact:not(.on), .card .carddoneact:not(.on), .card .cardphoneact:not(.on), .card .cardrateact:not(.on), .card .cardcal.inrail, .card .hpill { background: none transparent !important; box-shadow: none !important; }
 .card.t-town .carddoneact:not(.on), .card.t-coastal .carddoneact:not(.on), .card.t-movie .carddoneact:not(.on), .card.t-art .carddoneact:not(.on), .card.t-comedy .carddoneact:not(.on), .card.t-lab .carddoneact:not(.on), .card.hk_sc .carddoneact:not(.on) { border-color: rgba(140, 102, 28, 0.62); }
 .pin.on { background: linear-gradient(150deg, rgb(246, 182, 78), rgb(232, 137, 58)); color: rgb(255, 255, 255); border-color: rgb(217, 129, 47); animation: 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) 0s 1 normal none running hk_pinpop; }
-.hk_wrd.on { border-color: var(--hk-cat,#E3C471); background: rgba(227, 196, 113, 0.16); }
+.hk_wrd.on { border-color: var(--hk-cat,#E3C471); background: rgba(221, 175, 97, 0.16); }
 .hk_wrd.on .hk_wrn { color: var(--hk-cat,#E3C471); }
 .hk_wrd.on .hk_wrl { opacity: 1; font-weight: 700; }
 .hk_wrd.on .hk_wrb { opacity: 1; }
@@ -539,6 +539,12 @@ html:not(.hk_diag_livedec) .emrl .em_heron, html:not(.hk_diag_livedec) .emrl .em
 .htown .hshim.s1 { bottom: 165px; }
 .htown .hshim.s2 { bottom: 169px; }
 .hk_sw_fly.r { animation: 0.42s cubic-bezier(0.17, 0.72, 0.31, 1) 0s 1 normal both running hk_swFlyR; }
+.hk_sw_glint .gl1 { animation-delay: 0ms; }
+.hk_sw_glint .gl2 { animation-delay: 36ms; }
+.hk_sw_glint .gl3 { animation-delay: 52ms; }
+.hk_sw_glint .gl4 { animation-delay: 78ms; }
+.hk_sw_glint .gl5 { animation-delay: 94ms; }
+.hk_sw_glint .gl6 { animation-delay: 110ms; }
 .hk_swbtn.on { color: rgb(18, 32, 15); background: rgb(216, 180, 94); border-color: rgb(240, 220, 164); }
 .hk_swbtn.on b { opacity: 0.66; border-left-color: rgba(18, 32, 15, 0.3); }
 .hk_day .hk_swbtn.on { color: rgb(46, 36, 19); background: rgb(227, 196, 113); border-color: rgb(150, 113, 38); }
@@ -616,7 +622,7 @@ html:not(.hk_diag_livedec) .emrl .em_heron, html:not(.hk_diag_livedec) .emrl .em
 .support-page.dawn .xp_step.on { background: linear-gradient(rgb(231, 192, 103), rgb(210, 163, 63)); color: rgb(46, 36, 19); border-color: rgb(180, 144, 58); }
 .support-page.tabbed .xp_tab.on { background: linear-gradient(rgb(231, 192, 103), rgb(210, 163, 63)); border-color: rgb(180, 144, 58); color: rgb(46, 36, 19); box-shadow: rgba(255, 247, 224, 0.5) 0px 1px 0px inset, rgba(120, 92, 30, 0.7) 0px 4px 12px -6px; }
 .hk_info.dawn .hk_pzflag.on { color: rgb(46, 36, 19); background: linear-gradient(rgb(231, 192, 103), rgb(210, 163, 63)); border-color: rgb(180, 144, 58); }
-.hk_tab.on { color: rgb(227, 196, 113); }
+.hk_tab.on { color: var(--gca-c-accent); }
 .hk_tab.on .tc { color: rgb(255, 246, 228); }
 .dock .hk_tab:hover:not(.on), .dock .hk_segb:hover:not(.on) { color: rgb(195, 210, 216); }
 .dock .hk_tab.on::before, .dock .hk_segb.on::before { opacity: 1; transform: translateX(-50%) scaleX(1); }
@@ -736,14 +742,14 @@ html:not(.hk_diag_livedec) .emrl .em_heron, html:not(.hk_diag_livedec) .emrl .em
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .glass-drift .card > .inner::before { animation: auto ease 0s 1 normal none running none !important; }}
 .hk_day .hero { border-bottom: 2px solid rgb(138, 106, 34); }
 .hk_day .fpanel .fchips button.on, .hk_day .fpanel .fsub button.on { background: linear-gradient(rgb(243, 215, 127), rgb(207, 164, 58)); color: rgb(45, 33, 6); border-color: rgb(255, 240, 179) rgb(138, 106, 34) rgb(138, 106, 34); box-shadow: rgba(160, 120, 30, 0.28) 0px 4px 12px, rgba(255, 255, 255, 0.55) 0px 1px 0px inset; }
-.hk_day .fbtn:hover:not(.on) { color: rgb(31, 44, 58); }
-.hk_day .fbtn.on { color: rgb(46, 36, 19); border-bottom-color: rgb(138, 90, 12); }
+.hk_day .fbtn:hover:not(.on) { color: var(--gca-c-ink-strong); }
+.hk_day .fbtn.on { color: var(--gca-c-ink-strong); border-bottom-color: var(--gca-c-accent); }
 .hk_day .wguests.on { background: linear-gradient(rgb(191, 227, 236), rgb(147, 198, 214)); border-color: rgb(46, 111, 140); color: rgb(13, 42, 52); }
 .hk_day .wmil.on { background: linear-gradient(rgb(243, 215, 127), rgb(207, 164, 58)); border-color: rgb(138, 106, 34); color: rgb(45, 33, 6); }
 .hk_day .dock .hk_tab:hover:not(.on), .hk_day .dock .hk_segb:hover:not(.on) { color: rgb(31, 44, 58); }
 .hk_day .hk_segb.on { background: transparent; color: rgb(31, 44, 58); }
-.hk_day .hk_tab.on { background: transparent; color: rgb(138, 90, 12); }
-.hk_day .hk_tab.on .tc, .hk_day .dock .hk_tab.on .tc { color: rgb(14, 36, 54); }
+.hk_day .hk_tab.on { background: transparent; color: var(--gca-c-accent); }
+.hk_day .hk_tab.on .tc, .hk_day .dock .hk_tab.on .tc { color: var(--gca-c-ink-strong); }
 .dock .hk_segb.on, .dock .hk_tab.on { background: radial-gradient(62% 62%, rgba(227, 196, 113, 0.24), rgba(227, 196, 113, 0.1) 42%, rgba(227, 196, 113, 0) 78%); }
 .hk.hk_gr_dark .dock .hk_segb.on, .hk.hk_gr_dark .dock .hk_tab.on { background: radial-gradient(62% 62%, rgba(227, 196, 113, 0.28), rgba(227, 196, 113, 0.12) 42%, rgba(227, 196, 113, 0) 78%); }
 .hk.hk_day .dock .hk_segb.on, .hk.hk_day .dock .hk_tab.on { background: radial-gradient(62% 62%, rgba(138, 90, 12, 0.17), rgba(138, 90, 12, 0.07) 42%, rgba(138, 90, 12, 0) 78%); }
@@ -751,12 +757,12 @@ html:not(.hk_diag_livedec) .emrl .em_heron, html:not(.hk_diag_livedec) .emrl .em
 .hk_day .hk_segb.on .hk_tmark { color: rgb(31, 44, 58); }
 .hk_day .hk_tmark .mm_hand, .hk_day .hk_mmark .mm_hand { stroke-width: 2.5; }
 .hk_day .hk_segb.on .hk_tabday { color: rgb(31, 44, 58); }
-.hk_day .fbtn:hover:not(.on) { color: rgb(31, 44, 58); }
+.hk_day .fbtn:hover:not(.on) { color: var(--gca-c-ink-strong); }
 .hk_day .fbtn.on { background: transparent; color: rgb(14, 36, 54); border-bottom-color: rgb(138, 90, 12); }
-.hk_day .sbox.on, .hk_day .sbox:focus-within { background: transparent; color: rgb(14, 36, 54); border-bottom-color: rgb(138, 90, 12); }
-.hk_day .hk_savedpill:hover:not(.on) { color: rgb(31, 44, 58); }
-.hk_day .hk_savedpill.on { background: transparent; border-bottom-color: rgb(138, 90, 12); color: rgb(14, 36, 54); }
-.hk_day .hk_savedpill.on .hkc_n { background: rgba(138, 90, 12, 0.16); color: rgb(14, 36, 54); }
+.hk_day .sbox.on, .hk_day .sbox:focus-within { background: transparent; color: var(--gca-c-ink-strong); border-bottom-color: var(--gca-c-accent); }
+.hk_day .hk_savedpill:hover:not(.on) { color: var(--gca-c-ink-strong); }
+.hk_day .hk_savedpill.on { background: transparent; border-bottom-color: var(--gca-c-accent); color: var(--gca-c-ink-strong); }
+.hk_day .hk_savedpill.on .hkc_n { background: rgba(138, 90, 12, 0.16); color: var(--gca-c-ink-strong); }
 .hk_day .hk_promoted .adlbl.open { opacity: 0.7; }
 .hk_day .skitz .adlbl { color: rgb(68, 86, 106); background: rgba(255, 246, 228, 0.92); box-shadow: rgba(138, 90, 12, 0.4) 0px 0px 0px 1px inset; }
 .hk_day .t-midnight .ray { background: linear-gradient(rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0) 78%); }
@@ -783,7 +789,7 @@ html:not(.hk_diag_livedec) .hk_day .t-rom .rdec .rmote { box-shadow: rgba(131, 9
 .hk.pal-setup-chrome .hk_tab.on .tc, .hk.pal-setup-all .hk_tab.on .tc, .hk.pal-setup-chrome .hk_segb.on .hk_tabday, .hk.pal-setup-all .hk_segb.on .hk_tabday, .hk.pal-setup-chrome .hk_segb.on .hk_tmark, .hk.pal-setup-all .hk_segb.on .hk_tmark { color: rgb(255, 244, 210); }
 .hk.pal-setup-chrome .hk_savedpill.on, .hk.pal-setup-all .hk_savedpill.on { color: rgb(255, 241, 197); border-bottom-color: rgb(243, 215, 127); }
 .hk.hk .fbar .hk_savedpill:not(.on), .hk.hk .fbar .freset { border-bottom-color: rgba(169, 189, 203, 0.62); }
-.hk.hk_day .fbar .hk_savedpill:not(.on), .hk.hk_day .fbar .freset { border-bottom-color: rgba(68, 86, 106, 0.7); }
+.hk.hk_day .fbar .hk_savedpill:not(.on), .hk.hk_day .fbar .freset { border-bottom-color: var(--gca-c-quiet); }
 .hk.pal-setup-chrome .fbar .hk_savedpill:not(.on), .hk.pal-setup-chrome .fbar .freset, .hk.pal-setup-all .fbar .hk_savedpill:not(.on), .hk.pal-setup-all .fbar .freset { border-bottom-color: rgba(184, 202, 200, 0.62); }
 .hk_gr_dark .support-page.dawn .xp_gift.on { background: linear-gradient(168deg, rgb(42, 46, 56), rgb(32, 36, 44)); border-color: rgba(227, 196, 113, 0.5); }
 .hk_gr_dark .support-page.dawn .xp_supportstage .xps_dock .xp_gift.on { background: linear-gradient(168deg, rgb(46, 50, 61), rgb(34, 38, 47)); border-color: rgba(227, 196, 113, 0.55); }
@@ -796,7 +802,7 @@ html:not(.hk_diag_livedec) .hk_day .t-rom .rdec .rmote { box-shadow: rgba(131, 9
 .hk_info.dawn .hk_setopts .hk_setopt:not(.on), .hk_info.dawn .hk_setpvcell .hk_setopt:not(.on) { color: var(--ip-ink, #6B5628); }
 .hk.hk.hk_day .dock .hk_tab:hover:not(.on), .hk.hk.hk_day .dock .hk_segb:hover:not(.on) { color: rgb(255, 246, 228); }
 .hk.hk.hk_day .dock .hk_segb.on { color: rgb(255, 246, 228); }
-.hk.hk.hk_day .dock .hk_tab.on { color: rgb(227, 196, 113); }
+.hk.hk.hk_day .dock .hk_tab.on { color: var(--gca-c-accent); }
 .hk.hk.hk_day .dock .hk_segb.on, .hk.hk.hk_day .dock .hk_tab.on { background: radial-gradient(62% 62%, rgba(227, 196, 113, 0.24), rgba(227, 196, 113, 0.1) 42%, rgba(227, 196, 113, 0) 78%); }
 .hk.hk.hk_day .dock .hk_segb.on .hk_tmark, .hk.hk.hk_day .dock .hk_segb.on .hk_tabday { color: rgb(255, 246, 228); }
 .hk.hk.hk_day .dock .hk_mmark, .hk.hk.hk_day .dock .hk_menumark { --mm1: #F09D52; --mm2: #2FA8A0; --mm3: #F2D89B; --mm4: #E8748C; }
@@ -807,14 +813,14 @@ html:not(.hk_diag_livedec) .hk_day .t-rom .rdec .rmote { box-shadow: rgba(131, 9
 .hk.hk.hk_day .dock .hk_tab.on .tc { color: rgb(93, 63, 6); }
 .hk.hk:not(.hk_day) .dock .hk_tab:hover:not(.on), .hk.hk:not(.hk_day) .dock .hk_segb:hover:not(.on) { color: rgb(255, 246, 228); }
 .hk.hk:not(.hk_day) .dock .hk_segb.on { color: rgb(255, 246, 228); }
-.hk.hk:not(.hk_day) .dock .hk_tab.on { color: rgb(227, 196, 113); }
+.hk.hk:not(.hk_day) .dock .hk_tab.on { color: var(--gca-c-accent); }
 .hk.hk:not(.hk_day) .dock .hk_segb.on .hk_tmark, .hk.hk:not(.hk_day) .dock .hk_segb.on .hk_tabday { color: rgb(255, 246, 228); }
 .hk.hk:not(.hk_day) .dock .hk_tab.on .tc { color: rgb(227, 196, 113); }
-.hk.hk:not(.hk_day) .fbtn:not(.on) { color: rgb(174, 188, 196); }
-.hk.hk.hk_day .fbtn:hover:not(.on) { color: rgb(44, 58, 66); }
-.hk.hk.hk_day .dock .hk_tab:not(.on), .hk.hk.hk_day .dock .hk_segb:not(.on) { color: rgb(85, 103, 112); }
+.hk.hk:not(.hk_day) .fbtn:not(.on) { color: var(--gca-c-ink); }
+.hk.hk.hk_day .fbtn:hover:not(.on) { color: var(--gca-c-ink-strong); }
+.hk.hk.hk_day .dock .hk_tab:not(.on), .hk.hk.hk_day .dock .hk_segb:not(.on) { color: var(--gca-c-ink); }
 .hk.hk.hk_day .dock .hk_segb:not(.on) .hk_tmark, .hk.hk.hk_day .dock .hk_segb:not(.on) .hk_tabday { color: rgb(85, 103, 112); }
-.hk.hk.hk_day .dock .hk_tab:not(.on) .tc { color: rgb(85, 103, 112); }
+.hk.hk.hk_day .dock .hk_tab:not(.on) .tc { color: var(--gca-c-ink); }
 html.hk_diag_nohero .hero, html.hk_diag_nohero .hero::before, html.hk_diag_nohero .hero::after, html.hk_diag_nohero .hero *, html.hk_diag_nohero .hero ::before, html.hk_diag_nohero .hero ::after, html.hk_diag_nohero .dnmwrap, html.hk_diag_nohero .dnmwrap::before, html.hk_diag_nohero .dnmwrap::after, html.hk_diag_nohero .dnmwrap *, html.hk_diag_nohero .dnmwrap ::before, html.hk_diag_nohero .dnmwrap ::after { animation: auto ease 0s 1 normal none running none !important; transition: none !important; }
 html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx_card, html.hk_diag_nofilt .dnx_card *, html.hk_diag_nofilt .hk_supportfloat, html.hk_diag_nofilt .hk_supportfloat *, html.hk_diag_nofilt .hero, html.hk_diag_nofilt .hero *, html.hk_diag_nofilt .dnmwrap, html.hk_diag_nofilt .dnmwrap *, html.hk_diag_nofilt .skitz, html.hk_diag_nofilt .skitz *, html.hk_diag_nofilt .hk_promoted, html.hk_diag_nofilt .hk_promoted * { filter: none !important; mix-blend-mode: normal !important; backdrop-filter: none !important; }
 :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .card .pin:not(.on):where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .card .cardshare:not(.on):where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .card .cardweb:not(.on):where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .card .cardcopyact:not(.on):where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .card .carddoneact:not(.on):where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .card .cardphoneact:not(.on):where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .card .cardcal.inrail:where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .card .hpill:where(:not(.promo-card, .promo-card *)) { background: none transparent !important; box-shadow: none !important; }
