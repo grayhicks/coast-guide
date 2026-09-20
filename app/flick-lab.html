@@ -97,6 +97,21 @@
     transform-origin:50% 0; pointer-events:none; }
   /* the wash is the C arm of question 1: a verdict painted ON the card instead of the card
      disappearing. It rides the wrapper, never inside .card, so nothing about the card changes. */
+  /* ⭐⭐ THE CARD BACK. GRAY: "I think the turned over one literally should preview turned over."
+     He is right and it is the whole point of that option — a card that turns over has to have been
+     FACE DOWN, or the turn reveals something you were already reading. The back carries the house
+     lattice and the gold rim and no words at all, because a back with words on it is a front. */
+  .cardback{ position:absolute; inset:0; border-radius:19px; overflow:hidden;
+    background:
+      repeating-linear-gradient(45deg,rgba(198,160,74,.13) 0 2px,transparent 2px 11px),
+      repeating-linear-gradient(-45deg,rgba(198,160,74,.13) 0 2px,transparent 2px 11px),
+      linear-gradient(170deg,#241a3d,#191228 70%,#150f22);
+    border:1px solid var(--rim);
+    box-shadow:inset 0 1px 0 rgba(255,236,189,.14), 0 10px 26px rgba(0,0,0,.34);
+    display:flex; align-items:center; justify-content:center; }
+  .cardback::after{ content:""; width:74px; height:74px; border-radius:50%;
+    border:1.6px solid rgba(227,196,113,.5);
+    box-shadow:inset 0 0 0 7px rgba(227,196,113,.09), 0 0 0 9px rgba(227,196,113,.13); }
   .wash{ position:absolute; inset:0; border-radius:19px; pointer-events:none; opacity:0; z-index:2; }
   .wash.keep{ background:linear-gradient(270deg,rgba(216,180,94,.55),rgba(216,180,94,.06) 70%); }
   .wash.pass{ background:linear-gradient(90deg,rgba(120,164,200,.55),rgba(120,164,200,.06) 70%); }
@@ -225,6 +240,242 @@
     34%{ transform:translate3d(calc(var(--fx,0px) * .35),-14px,0) rotate(calc(var(--fr,0deg) * .3)) scale(1.02); opacity:1; }
     to{ transform:translate3d(0,26px,0) rotate(0deg) scale(.93); opacity:0; } }
   .fly.r.deal, .fly.l.deal{ z-index:0; animation:trickDeal .38s cubic-bezier(.36,.05,.28,1) both; }
+
+  /* ⭐⭐ GRAY'S OWN IDEA: "quickly spinning in a circle like someone was throwing a card but
+     vertically not horizontally." A thrown playing card spins in its own flat plane; he wants that
+     energy turned on its side, so the card goes END OVER END as it leaves. That is rotateX, around
+     a horizontal axis, and it needs a perspective or it reads as the card squashing rather than
+     turning. Two and a half turns is what reads as a flick rather than a flip. */
+  @keyframes trickTumbleR{
+    0%{ transform:perspective(1200px) translate3d(var(--fx,0px),var(--fy,0px),0) rotateX(0deg) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    12%{ transform:perspective(1200px) translate3d(calc(var(--fx,0px) + 8%),calc(var(--fy,0px) - 18px),0) rotateX(120deg) rotate(calc(var(--fr,0deg) + 3deg)) scale(1.02); opacity:1; }
+    to{ transform:perspective(1200px) translate3d(calc(var(--fx,0px) + 132%),calc(var(--fy,0px) + 36px),0) rotateX(900deg) rotate(calc(var(--fr,0deg) + 10deg)) scale(.82); opacity:0; } }
+  @keyframes trickTumbleL{
+    0%{ transform:perspective(1200px) translate3d(var(--fx,0px),var(--fy,0px),0) rotateX(0deg) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    12%{ transform:perspective(1200px) translate3d(calc(var(--fx,0px) - 8%),calc(var(--fy,0px) - 18px),0) rotateX(120deg) rotate(calc(var(--fr,0deg) - 3deg)) scale(1.02); opacity:1; }
+    to{ transform:perspective(1200px) translate3d(calc(var(--fx,0px) - 132%),calc(var(--fy,0px) + 36px),0) rotateX(900deg) rotate(calc(var(--fr,0deg) - 10deg)) scale(.82); opacity:0; } }
+  .fly.r.tumble{ animation:trickTumbleR .52s cubic-bezier(.22,.62,.3,1) both; }
+  .fly.l.tumble{ animation:trickTumbleL .52s cubic-bezier(.22,.62,.3,1) both; }
+
+  /* the flat version of the same throw, for the comparison: it spins in its own plane the way a
+     card actually does when you skim one across a room. */
+  /* ⭐ SLOWED ON HIS NOTE: "I think c would be my fav if it wasn't so fast." It was 2.1 turns in
+     500ms, which is a blur rather than a spin. Two clean turns over 720ms, and the curve eased so
+     the turn is readable at the start rather than all happening in the first third. */
+  @keyframes trickSpinR{
+    0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    to{ transform:translate3d(calc(var(--fx,0px) + 138%),calc(var(--fy,0px) + 30px),0) rotate(calc(var(--fr,0deg) + 720deg)) scale(.76); opacity:0; } }
+  @keyframes trickSpinL{
+    0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    to{ transform:translate3d(calc(var(--fx,0px) - 138%),calc(var(--fy,0px) + 30px),0) rotate(calc(var(--fr,0deg) - 720deg)) scale(.76); opacity:0; } }
+  .fly.r.spin{ animation:trickSpinR .72s cubic-bezier(.26,.5,.32,1) both; }
+  .fly.l.spin{ animation:trickSpinL .72s cubic-bezier(.26,.5,.32,1) both; }
+
+  /* and one that leaves upward rather than sideways, like letting go of a paper plane. */
+  @keyframes trickSailR{
+    0%{ transform:perspective(1000px) translate3d(var(--fx,0px),var(--fy,0px),0) rotateX(0deg) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    to{ transform:perspective(1000px) translate3d(calc(var(--fx,0px) + 46%),-150%,0) rotateX(-58deg) rotate(calc(var(--fr,0deg) + 16deg)) scale(.7); opacity:0; } }
+  @keyframes trickSailL{
+    0%{ transform:perspective(1000px) translate3d(var(--fx,0px),var(--fy,0px),0) rotateX(0deg) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    to{ transform:perspective(1000px) translate3d(calc(var(--fx,0px) - 46%),-150%,0) rotateX(-58deg) rotate(calc(var(--fr,0deg) - 16deg)) scale(.7); opacity:0; } }
+  .fly.r.sail{ animation:trickSailR .50s cubic-bezier(.3,.5,.3,1) both; }
+  .fly.l.sail{ animation:trickSailL .50s cubic-bezier(.3,.5,.3,1) both; }
+
+  /* ⭐⭐⭐ GRAY'S OWN COMBINATION, AND IT IS THE DEFAULT: "what would be cool is if there was a
+     sails down into a field away as the default." Two of the ideas he liked, joined rather than
+     competing for the same slot — the card TIPS AND SAILS as if caught by air, and the sail carries
+     it DOWN into the button that answered, where it files away to nothing.
+     ⚠ THE ORDER IS THE WHOLE THING. It sails first and files second: the tip and the lift happen
+     in the first third while it is still big enough to read as a card, and only then does it run
+     down to the corner and shrink. Reversed, it is a card that shrinks and then flutters, which
+     reads as a bug. The 34% stop is where the sail hands over to the file. */
+  @keyframes sailFileR{
+    0%{ transform:perspective(1100px) translate3d(var(--fx,0px),var(--fy,0px),0) rotateX(0deg) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    34%{ transform:perspective(1100px) translate3d(calc(var(--fx,0px) + 16%),calc(var(--fy,0px) - 30px),0) rotateX(26deg) rotate(calc(var(--fr,0deg) + 7deg)) scale(.97); opacity:1; }
+    to{ transform:perspective(1100px) translate3d(40%,62%,0) rotateX(52deg) rotate(calc(var(--fr,0deg) + 18deg)) scale(.14); opacity:0; } }
+  @keyframes sailFileL{
+    0%{ transform:perspective(1100px) translate3d(var(--fx,0px),var(--fy,0px),0) rotateX(0deg) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    34%{ transform:perspective(1100px) translate3d(calc(var(--fx,0px) - 16%),calc(var(--fy,0px) - 30px),0) rotateX(26deg) rotate(calc(var(--fr,0deg) - 7deg)) scale(.97); opacity:1; }
+    to{ transform:perspective(1100px) translate3d(-40%,62%,0) rotateX(52deg) rotate(calc(var(--fr,0deg) - 18deg)) scale(.14); opacity:0; } }
+  .fly.r.sailfile{ animation:sailFileR .56s cubic-bezier(.32,.24,.3,1) both; }
+  .fly.l.sailfile{ animation:sailFileL .56s cubic-bezier(.32,.24,.3,1) both; }
+
+  /* ⭐⭐⭐ GRAY'S SECOND LIST, 09/19 — ELEVEN MORE WAYS FOR A CARD TO GO, and the useful thing
+     about it is that he was not describing animations, he was describing EVENTS: a sparkle, a
+     blink, a bite, a shot, a flush, a blast-off, a hand coming down. An event has a cause, and a
+     card that leaves because something HAPPENED to it reads completely differently from one that
+     merely travels. That is the whole reason this list is worth building.
+     ⛔ AND ALL BUT THREE OF THEM ARE FREE. Every one below is transform and opacity only — no
+     new layer, no paint, nothing for §0 law 61 to find. Only the sparkle, the lightning and the
+     rocket's trail want light, and those are quarantined on their own page where the cost of each
+     level is measured and printed rather than assumed.
+     ⛔ THE ONE HE ASKED FOR THAT IS NOT HERE is the 007 blood shot. He ruled it out himself when
+     it was put to him: every other idea on the list works in an app holding three children's
+     events without a second thought, and that one is the only one a parent could screenshot and
+     read wrong. It is recorded here so nobody proposes it again as a fresh idea. */
+
+  /* H · SPARKLE AND GONE — the card pops as if caught by a light and is simply not there. The
+     pop is the whole effect: without the 6% overshoot this is a fade, and a fade is not an event. */
+  @keyframes trickPopR{
+    0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    26%{ transform:translate3d(calc(var(--fx,0px) + 3%),calc(var(--fy,0px) - 6px),0) rotate(calc(var(--fr,0deg) + 2deg)) scale(1.06); opacity:1; }
+    to{ transform:translate3d(calc(var(--fx,0px) + 6%),calc(var(--fy,0px) - 10px),0) rotate(calc(var(--fr,0deg) + 3deg)) scale(.80); opacity:0; } }
+  @keyframes trickPopL{
+    0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    26%{ transform:translate3d(calc(var(--fx,0px) - 3%),calc(var(--fy,0px) - 6px),0) rotate(calc(var(--fr,0deg) - 2deg)) scale(1.06); opacity:1; }
+    to{ transform:translate3d(calc(var(--fx,0px) - 6%),calc(var(--fy,0px) - 10px),0) rotate(calc(var(--fr,0deg) - 3deg)) scale(.80); opacity:0; } }
+  .fly.r.pop{ animation:trickPopR .26s cubic-bezier(.3,.9,.4,1) both; }
+  .fly.l.pop{ animation:trickPopL .26s cubic-bezier(.3,.9,.4,1) both; }
+
+  /* I · TELEPORT — the old cathode-ray switch-off: the picture collapses to a vertical bar, then
+     the bar collapses to a point. ⚠ THE ORDER MATTERS AND IT IS COUNTER-INTUITIVE. X first, then
+     Y. Done the other way round it reads as a window blind, not a teleport. */
+  @keyframes trickBeam{
+    0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1,1); opacity:1;
+        animation-timing-function:cubic-bezier(.7,0,.85,.3); }
+    48%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(0deg) scale(.012,1.05); opacity:1;
+        animation-timing-function:cubic-bezier(.5,0,.75,.4); }
+    to{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(0deg) scale(.012,.004); opacity:0; } }
+  .fly.r.beam, .fly.l.beam{ animation:trickBeam .36s linear both; }
+
+  /* J · BLINK — an eye shutting on it. Y only, from the middle, and a touch WIDER as it closes
+     because an eyelid squeezes what is under it. This is the cheapest idea on the list and one of
+     the best: 240ms and the card was never there. */
+  @keyframes trickBlink{
+    0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1,1); opacity:1; }
+    to{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(0deg) scale(1.05,.004); opacity:0; } }
+  .fly.r.blink, .fly.l.blink{ animation:trickBlink .24s cubic-bezier(.62,0,.36,1) both; }
+
+  /* K · LIGHTNING — struck. Three hard jerks on no curve at all (steps, not easing, because
+     lightning does not accelerate) and then it is gone. The jerks are tiny on purpose: 6px reads
+     as a strike, 20px reads as a cartoon. */
+  @keyframes trickBoltR{
+    0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    16%{ transform:translate3d(calc(var(--fx,0px) + 7px),calc(var(--fy,0px) - 4px),0) rotate(calc(var(--fr,0deg) - 1.4deg)) scale(1.02); opacity:1; }
+    32%{ transform:translate3d(calc(var(--fx,0px) - 6px),calc(var(--fy,0px) + 3px),0) rotate(calc(var(--fr,0deg) + 1.2deg)) scale(.99); opacity:1; }
+    48%{ transform:translate3d(calc(var(--fx,0px) + 4px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1.03); opacity:1; }
+    to{ transform:translate3d(var(--fx,0px),calc(var(--fy,0px) + 10px),0) rotate(var(--fr,0deg)) scale(.90); opacity:0; } }
+  .fly.r.bolt, .fly.l.bolt{ animation:trickBoltR .30s steps(1,end) both; }
+
+  /* L · SHARK BITE — taken in two, and this is the only idea on the list that needs the card
+     drawn TWICE. Each half is a full copy of the card under a STATIC clip-path, and only the
+     transform animates: the clip is rasterised once and never re-cut, so a bite costs one extra
+     card-sized layer for 460ms and nothing after. ⚠ A clip-path that ANIMATES is the expensive
+     kind and is not what this is — do not "improve" it into one.
+     The bite line is a wedge rather than a straight cut because a straight cut reads as a card
+     torn in half by hand, and he said shark. */
+  .bitehalf{ position:absolute; inset:0; }
+  .bitehalf.up{ clip-path:polygon(0 0,100% 0,100% 34%,64% 46%,88% 58%,46% 60%,0 49%); }
+  .bitehalf.dn{ clip-path:polygon(0 49%,46% 60%,88% 58%,64% 46%,100% 34%,100% 100%,0 100%); }
+  @keyframes biteUpR{
+    0%{ transform:translate3d(0,0,0) rotate(0deg); opacity:1; }
+    14%{ transform:translate3d(6px,-3px,0) rotate(-1.5deg); opacity:1; }
+    to{ transform:translate3d(96%,-46%,0) rotate(28deg); opacity:0; } }
+  @keyframes biteDnR{
+    0%{ transform:translate3d(0,0,0) rotate(0deg); opacity:1; }
+    14%{ transform:translate3d(-5px,4px,0) rotate(1.2deg); opacity:1; }
+    to{ transform:translate3d(58%,72%,0) rotate(-19deg); opacity:0; } }
+  /* ⛔ THE CHILD COMBINATOR IS LOad-BEARING HERE AND THE FIRST CUT USED A DESCENDANT. Each
+     half is a COPY of .card, so a rule hiding ".fly.bite .card" hid the original AND both copies
+     inside it — the photograph came back as an empty gold slab with no halves in it at all. Only
+     the card's own top-level face is hidden; the ones inside the halves are the whole point. */
+  .fly.bite > .card, .fly.bite > .cardback, .fly.bite > .wash{ opacity:0; }
+  .fly.bite .bitehalf.up{ animation:biteUpR .46s cubic-bezier(.3,.42,.28,1) both; }
+  .fly.bite .bitehalf.dn{ animation:biteDnR .46s cubic-bezier(.3,.42,.28,1) both; }
+  .fly.l.bite .bitehalf.up{ animation-name:biteUpR; transform:scaleX(-1); }
+  @keyframes trickHold{ from{ opacity:1; } to{ opacity:1; } }
+  .fly.r.bite, .fly.l.bite{ animation:trickHold .46s linear both; }
+
+  /* M · THE SHOT — up, over, and down into the button that answered. The apex is the idea: a
+     shot that does not rise above the card it left has not been shot, it has been slid. */
+  @keyframes trickShotR{
+    0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1); opacity:1;
+        animation-timing-function:cubic-bezier(.2,.62,.44,1); }
+    46%{ transform:translate3d(calc(var(--fx,0px) + 26%),-118%,0) rotate(calc(var(--fr,0deg) + 14deg)) scale(.66); opacity:1;
+        animation-timing-function:cubic-bezier(.56,.06,.72,.9); }
+    to{ transform:translate3d(40%,62%,0) rotate(calc(var(--fr,0deg) + 26deg)) scale(.12); opacity:0; } }
+  @keyframes trickShotL{
+    0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1); opacity:1;
+        animation-timing-function:cubic-bezier(.2,.62,.44,1); }
+    46%{ transform:translate3d(calc(var(--fx,0px) - 26%),-118%,0) rotate(calc(var(--fr,0deg) - 14deg)) scale(.66); opacity:1;
+        animation-timing-function:cubic-bezier(.56,.06,.72,.9); }
+    to{ transform:translate3d(-40%,62%,0) rotate(calc(var(--fr,0deg) - 26deg)) scale(.12); opacity:0; } }
+  .fly.r.shot{ animation:trickShotR .62s linear both; }
+  .fly.l.shot{ animation:trickShotL .62s linear both; }
+
+  /* N · THE SPIRAL — a thrown football, turning on its own long axis as it goes. rotateY, not
+     rotate: a card spinning flat is the skim on page 2 and this is deliberately the other one. */
+  @keyframes trickSpiralR{
+    0%{ transform:perspective(1400px) translate3d(var(--fx,0px),var(--fy,0px),0) rotateY(0deg) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    to{ transform:perspective(1400px) translate3d(calc(var(--fx,0px) + 146%),-38%,0) rotateY(1080deg) rotate(calc(var(--fr,0deg) + 8deg)) scale(.58); opacity:0; } }
+  @keyframes trickSpiralL{
+    0%{ transform:perspective(1400px) translate3d(var(--fx,0px),var(--fy,0px),0) rotateY(0deg) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    to{ transform:perspective(1400px) translate3d(calc(var(--fx,0px) - 146%),-38%,0) rotateY(-1080deg) rotate(calc(var(--fr,0deg) - 8deg)) scale(.58); opacity:0; } }
+  .fly.r.spiral{ animation:trickSpiralR .58s cubic-bezier(.22,.56,.3,1) both; }
+  .fly.l.spiral{ animation:trickSpiralL .58s cubic-bezier(.22,.56,.3,1) both; }
+
+  /* O · THE WHIRLPOOL — down the drain. ⚠ A SPIN PLUS A SHRINK IS NOT A WHIRLPOOL, it is a
+     card disappearing while spinning; what makes a drain is that the card ORBITS a point while
+     the orbit tightens. That needs the path traced by hand, so the four stops below walk it round
+     a circle whose radius falls away as the rotation accelerates. */
+  @keyframes trickDrain{
+    0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    25%{ transform:translate3d(26%,14%,0) rotate(96deg) scale(.80); opacity:1; }
+    50%{ transform:translate3d(2%,30%,0) rotate(228deg) scale(.56); opacity:1; }
+    72%{ transform:translate3d(-14%,20%,0) rotate(392deg) scale(.32); opacity:.9; }
+    88%{ transform:translate3d(-4%,10%,0) rotate(560deg) scale(.14); opacity:.6; }
+    to{ transform:translate3d(0,6%,0) rotate(760deg) scale(.02); opacity:0; } }
+  .fly.r.drain, .fly.l.drain{ animation:trickDrain .68s cubic-bezier(.34,.02,.5,1) both; }
+
+  /* P · BLAST-OFF — straight up and gone, and the CROUCH is what sells it. A rocket that does
+     not dip before it launches reads as a card being lifted; 14px down over the first 90ms and
+     the same motion reads as thrust. */
+  @keyframes trickBlast{
+    0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1); opacity:1;
+        animation-timing-function:cubic-bezier(.4,0,.7,.5); }
+    18%{ transform:translate3d(var(--fx,0px),calc(var(--fy,0px) + 15px),0) rotate(calc(var(--fr,0deg) * .5)) scale(.985,.975); opacity:1;
+        animation-timing-function:cubic-bezier(.5,0,.62,1); }
+    to{ transform:translate3d(calc(var(--fx,0px) * .4),-205%,0) rotate(-3deg) scale(.52); opacity:0; } }
+  .fly.r.blast, .fly.l.blast{ animation:trickBlast .54s linear both; }
+
+  /* Q · CRUSHED — a hand comes down on it. transform-origin at the BOTTOM so it flattens onto
+     the deck rather than closing in on its own middle, which is the blink. The X bulge is the
+     tell: nothing is crushed without squeezing out sideways. */
+  @keyframes trickCrush{
+    0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1,1); opacity:1;
+        animation-timing-function:cubic-bezier(.3,0,.9,.4); }
+    /* ⚠ THE EASING OUT OF THE ANTICIPATION WAS cubic-bezier(.85,0,.9,1), WHICH IS 0.08 OF THE
+       WAY THROUGH AT 40% OF ITS OWN SEGMENT. The filmstrip showed a card sitting perfectly still
+       for 150ms and then vanishing — not a crush, a pause followed by a disappearance. An
+       anticipation that holds longer than the eye's patience is not anticipation, it is a stall. */
+    16%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(calc(var(--fr,0deg) * .6)) scale(.995,1.03); opacity:1;
+        animation-timing-function:cubic-bezier(.52,0,.62,1); }
+    58%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(0deg) scale(1.10,.07); opacity:1; }
+    to{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(0deg) scale(1.15,.02); opacity:0; } }
+  .fly.r.crush, .fly.l.crush{ animation:trickCrush .42s linear both; transform-origin:50% 100%; }
+
+  /* R · THE PUNT — the shot's louder cousin: flatter, faster, end over end, and it never comes
+     back down. Where the shot lands in the button, this one clears the screen. */
+  @keyframes trickPuntR{
+    0%{ transform:perspective(1300px) translate3d(var(--fx,0px),var(--fy,0px),0) rotateX(0deg) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    24%{ transform:perspective(1300px) translate3d(calc(var(--fx,0px) + 24%),-86%,0) rotateX(210deg) rotate(calc(var(--fr,0deg) + 5deg)) scale(.84); opacity:1; }
+    to{ transform:perspective(1300px) translate3d(calc(var(--fx,0px) + 104%),-230%,0) rotateX(760deg) rotate(calc(var(--fr,0deg) + 12deg)) scale(.46); opacity:0; } }
+  @keyframes trickPuntL{
+    0%{ transform:perspective(1300px) translate3d(var(--fx,0px),var(--fy,0px),0) rotateX(0deg) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    24%{ transform:perspective(1300px) translate3d(calc(var(--fx,0px) - 24%),-86%,0) rotateX(210deg) rotate(calc(var(--fr,0deg) - 5deg)) scale(.84); opacity:1; }
+    to{ transform:perspective(1300px) translate3d(calc(var(--fx,0px) - 104%),-230%,0) rotateX(760deg) rotate(calc(var(--fr,0deg) - 12deg)) scale(.46); opacity:0; } }
+  .fly.r.punt{ animation:trickPuntR .60s cubic-bezier(.16,.66,.36,1) both; }
+  .fly.l.punt{ animation:trickPuntL .60s cubic-bezier(.16,.66,.36,1) both; }
+
+  /* ⛔ THE LIGHT CAME OUT ON 09/19. GRAY: "I didn't like 5 at all." Three levels were built,
+     measured and photographed — none, one bloom (+0.39 MP, +15%), twelve sparks (+0.53 MP, +20%)
+     — and he wanted none of them. The glow, the sparks and their keyframes are DELETED rather
+     than parked, because a dead option in a chooser is a thing every future reader has to rule
+     out again. ⭐ THE MEASUREMENT SURVIVES IN THE JOB FILE and it is the part worth keeping: a
+     layer is sized by its own BOX and not by the transform applied to it, so a light grown with a
+     transform costs half what the same reach costs grown with width. That is true of anything,
+     not just this. The sparkle exit (H) stays — it never needed light, only the 6% overshoot. */
+
   .arr{ animation:arrive .52s cubic-bezier(.16,.78,.28,1) both; }
   .arr.b{ animation:arriveB .22s cubic-bezier(.16,.84,.30,1) both; }
   /* B for the arrival is a RISE, not a slide: it grows up out of the deck it was already in. */
@@ -234,6 +485,99 @@
   .arr.rise{ animation:arriveRise .22s cubic-bezier(.16,.84,.30,1) both; transform-origin:50% 0; }
   /* C is no entrance at all. The card is simply the card. */
   .arr.none{ animation:none; }
+
+  /* ⭐ THREE OF PAGE 4'S ELEVEN RUN BACKWARDS AND STAY LEGIBLE DOING IT — the ones whose shape
+     has a direction. ⚠ MOST DO NOT, and the reason is worth keeping: a bite reversed is two
+     halves flying together, which reads as a repair; lightning reversed is a card arriving with
+     a twitch, which reads as a fault. An exit is not automatically an entrance. */
+  @keyframes arriveBeam{
+    0%{ transform:scale(.012,.004); opacity:1; animation-timing-function:cubic-bezier(.3,.6,.3,1); }
+    44%{ transform:scale(.012,1.05); opacity:1; animation-timing-function:cubic-bezier(.2,.8,.3,1); }
+    to{ transform:scale(1,1); opacity:1; } }
+  .arr.beamin{ animation:arriveBeam .36s linear both; }
+  @keyframes arriveUnfold{
+    0%{ transform:scale(1.15,.02); opacity:1; }
+    62%{ transform:scale(.975,1.045); opacity:1; }
+    82%{ transform:scale(1.012,.99); opacity:1; }
+    to{ transform:scale(1,1); opacity:1; } }
+  .arr.unfold{ animation:arriveUnfold .42s cubic-bezier(.24,.78,.32,1) both; transform-origin:50% 100%; }
+  @keyframes arriveDrainIn{
+    0%{ transform:translate3d(0,6%,0) rotate(760deg) scale(.02); opacity:0; }
+    16%{ transform:translate3d(-4%,10%,0) rotate(560deg) scale(.14); opacity:.7; }
+    32%{ transform:translate3d(-14%,20%,0) rotate(392deg) scale(.32); opacity:1; }
+    54%{ transform:translate3d(2%,30%,0) rotate(228deg) scale(.56); opacity:1; }
+    78%{ transform:translate3d(26%,14%,0) rotate(96deg) scale(.80); opacity:1; }
+    to{ transform:translate3d(0,0,0) rotate(0deg) scale(1); opacity:1; } }
+  .arr.drainin{ animation:arriveDrainIn .56s cubic-bezier(.3,.1,.32,1) both; }
+  /* ⚠ THE BACK IS SWAPPED FOR THE FACE AT THE EDGE-ON MOMENT. rotateY passes through 90deg, where
+     the card has no width on screen, so a hard cut there is invisible and costs nothing. steps(1)
+     rather than a fade, because a cross-fade at that instant reads as a ghost. */
+  /* ⛔⛔ THE FIRST CUT TIMED THE SWAP BY A CLOCK AND THE CLOCK WAS WRONG. It cut the back for
+     the face at 50% of the duration, on the assumption that the card is edge-on halfway through.
+     It is not: arriveFlip is eased cubic-bezier(.22,.7,.28,1), so rotateY has already fallen
+     past 90deg inside the first 3% — which is why the filmstrip showed a flat back, a flat back,
+     and then a flat face, with no turn between them. A timed cut cannot follow an eased rotation.
+     ⭐ SO THE CARD IS GENUINELY TWO-SIDED NOW and nothing is timed at all: the wrapper holds the
+     two faces in 3D, the back is mounted a half-turn behind the front, and the browser hides
+     whichever one is facing away. The reveal lands exactly at edge-on because it IS edge-on —
+     the same reason a real card works. */
+  /* ⛔⛔ AND backface-visibility IS NOT THE ANSWER HERE, WHICH COST A FILMSTRIP TO LEARN. The
+     second cut mounted the back a half-turn behind the face and let the browser hide whichever
+     side faced away — the way a real card works. The photograph came back with the card's own
+     text MIRRORED and the lattice showing through it at the same time: preserve-3d is forced back
+     to flat on a wrapper the drag writes an opacity onto, and a flattened wrapper has no back for
+     backface-visibility to hide. ⭐ SO THE SWAP IS A HARD CUT AGAIN, but pinned to 42% — the
+     percentage the keyframes above put edge-on at — instead of to a guessed halfway. A cut at
+     zero screen width is invisible, which is the only thing this ever needed to be. */
+  @keyframes backGo{ 0%,41.99%{ opacity:1; } 42%,100%{ opacity:0; } }
+  @keyframes faceCome{ 0%,41.99%{ opacity:0; } 42%,100%{ opacity:1; } }
+  .arr.flip .cardback{ animation:backGo .50s linear both; z-index:4; }
+  .arr.flip .card{ animation:faceCome .50s linear both; }
+  /* and while it waits its turn, the next card sits face DOWN. */
+  .cardw.under.faced .card{ visibility:hidden; }
+  .cardw.under.faced .cardback{ opacity:1; }
+  .cardw:not(.faced) .cardback{ display:none; }
+  /* ⛔ AND THE CARD IN YOUR HAND IS NEVER FACE DOWN. The back is an absolutely positioned layer
+     and the face is in flow, so the back paints OVER it wherever both exist — which turned the
+     card under the thumb into a blank lattice on the one page where a back exists at all. The top
+     card owns a back only while it is mid-turn; before that it is the card you are reading. */
+  .cardw.top:not(.arr) .cardback{ display:none; }
+
+  /* ⭐ THREE MORE ARRIVALS. GRAY: "I like them all I do think that we need more options for three
+     though." The exits had six and the arrivals had three, so the question with the most obvious
+     answer had the fewest ways to answer it. All transform and opacity, 3D included. */
+  /* D — it turns face up, the way you turn a card over to see what it is. This is the only
+     arrival that carries an idea rather than a direction, and it is why it is worth having: the
+     card is DEALT face down and revealed, rather than delivered. */
+  /* ⭐ THE TURN IS KEYFRAMED SO EDGE-ON HAPPENS AT A PERCENTAGE I CHOSE, NOT ONE AN EASING CURVE
+     CHOSE FOR ME. 90deg lands at 42% by construction, and the two halves carry their own curves:
+     it accelerates into the turn and eases out of it, which is how a thumb actually flips a card.
+     Everything the swap needs is therefore a fixed number, and the swap below uses it. */
+  @keyframes arriveFlip{
+    0%{ transform:perspective(1200px) rotateY(180deg) scale(.955);
+        animation-timing-function:cubic-bezier(.40,0,.75,.45); }
+    42%{ transform:perspective(1200px) rotateY(90deg) scale(.976);
+        animation-timing-function:cubic-bezier(.22,.72,.28,1); }
+    to{ transform:perspective(1200px) rotateY(0deg) scale(1); } }
+  /* ⚠ .50s rather than the other arrivals' .44s: a half turn is nearly twice the journey of the
+     old 96deg, and at .44s the face arrived before the eye had read that it was ever a back. */
+  .arr.flip{ animation:arriveFlip .50s linear both; transform-origin:50% 50%; }
+
+  /* E — dealt down from the top of the deck, with a short overshoot so it lands rather than
+     stops. The overshoot is the whole character; without it this is just a slide. */
+  @keyframes arriveDeal{
+    from{ transform:translate3d(0,-64%,0) rotate(-4deg) scale(.93); opacity:0; }
+    26%{ opacity:1; }
+    68%{ transform:translate3d(0,9px,0) rotate(.8deg) scale(1.008); opacity:1; }
+    to{ transform:translate3d(0,0,0) rotate(0deg) scale(1); opacity:1; } }
+  .arr.deal{ animation:arriveDeal .40s cubic-bezier(.24,.8,.32,1) both; }
+
+  /* F — pushed toward you from behind the glass. No travel across the screen at all, only depth. */
+  @keyframes arriveZoom{
+    from{ transform:scale(.64); opacity:0; }
+    34%{ opacity:1; }
+    to{ transform:scale(1); opacity:1; } }
+  .arr.zoom{ animation:arriveZoom .30s cubic-bezier(.16,.84,.30,1) both; }
   .cont{ animation:settle .24s cubic-bezier(.16,.84,.30,1) both; transform-origin:50% 0; }
 
   @media (prefers-reduced-motion:reduce){
@@ -248,10 +592,10 @@
 <h1 id="h">…</h1>
 <p class="say" id="say">…</p>
 <nav class="nav">
-  <a href="?d=fade">1 · while you decide</a>
-  <a href="?d=arrive">2 · the next card</a>
-  <a href="?d=throw">3 · how it leaves</a>
-  <a href="?d=trick">4 · the tricks</a>
+  <a href="?d=decide">1 · while you decide</a>
+  <a href="?d=leave">2 · how it leaves</a>
+  <a href="?d=next">3 · the next card</a>
+  <a href="?d=all">all three</a>
 </nav>
 
 <div class="ab" id="ab"></div>
@@ -297,59 +641,95 @@
      SPEED. GRAY: "make them drastically different so I can choose which directions I want."
      A is always the app exactly as it ships — it is never exaggerated, because he would then be
      choosing against a strawman of his own app. */
+  /* ⭐⭐⭐ THREE CATEGORIES, AND GRAY IS THE ONE WHO SAW IT. 09/19: "I don't think you can have
+     all of those at once like sail up or whatever and file away... Or place it in 1-3 categories
+     or something." He is right, and the old pages 3 and 4 were the same question asked twice —
+     "how does it leave" and "the tricks" are ONE list, and only one of them can be true at a time.
+     What is genuinely independent is three things, and this is now the shape of the job:
+       1 DECIDE · what the card does under your thumb, before you have committed
+       2 LEAVE  · how it goes, and there can only ever be one of these
+       3 NEXT   · how the one behind takes over
+     A fourth page puts one of each together, because a flick is all three at once and none of them
+     can be judged alone. */
   var D = {
-    fade: {
-      h:"What does the card do while you decide?",
-      say:"Push it sideways slowly and hold it there. Watch what happens to the card itself.",
+    decide: {
+      h:"1 \u00b7 What the card does while you decide",
+      say:"Push it sideways slowly and hold it. Watch the card itself.",
+      def:"C",
       arms:[
-        {k:"A", label:"fades out", what:"<b>A</b> \u2014 what your app does now. The card <b>fades toward gone</b> as you pull: 40% see-through after 55px, about a thumb twitch, while you are still reading it."},
-        {k:"B", label:"stays solid", what:"<b>B</b> \u2014 the card <b>does not change at all</b> while you decide. Fully solid, fully readable, and it only fades once it is genuinely on its way off."},
-        {k:"C", label:"colours up", what:"<b>C</b> \u2014 the card <b>washes with colour</b> instead of fading. Gold toward Keep, cool blue toward Not for me. It stays readable and the colour tells you which way you are going."}
+        {k:"A", label:"fades out", what:"<b>A</b> \u2014 what your app does now. The card <b>fades toward gone</b> as you pull, 40% see-through after about a thumb twitch, while you are still reading it."},
+        {k:"B", label:"stays solid", what:"<b>B</b> \u2014 it <b>does not change at all</b> while you decide, and only fades once it is genuinely on its way off."},
+        {k:"C", label:"colours up", what:"\u2b50 <b>C \u2014 your pick, and the default.</b> The card <b>washes with colour</b> instead of fading: gold toward Keep, cool blue toward Not for me, fully readable the whole time."}
       ]
     },
-    arrive: {
-      h:"How does the next card show up?",
-      say:"Tap a button rather than swiping, so you see the arrival on its own. Then try each one.",
+    leave: {
+      h:"2 \u00b7 How the card leaves",
+      say:"Eighteen of them, and only one can be true at a time. Throw a few on each.",
+      def:"G",
       arms:[
-        {k:"A", label:"flies in", what:"<b>A</b> \u2014 what your app does now. The next card <b>flies in from off the right edge</b>, tilted, taking 474ms to settle."},
-        {k:"B", label:"rises up", what:"<b>B</b> \u2014 it <b>grows up out of the deck</b> where it was already sitting. No travel across the screen, 220ms, because it was never anywhere else."},
-        {k:"C", label:"just there", what:"<b>C</b> \u2014 <b>no entrance at all.</b> The moment you answer, the next card is simply the card. Nothing moves and nothing to wait for."}
+        {k:"G", label:"sails down, files away", what:"\u2b50 <b>G \u2014 your idea, and the default.</b> The card <b>tips and sails</b> as if it caught air, and the sail carries it <b>down into the button you chose</b>, where it files away to nothing. Sails first, files second."},
+        {k:"A", label:"arcs away", what:"<b>A</b> \u2014 what your app does now. It <b>arcs off the corner</b>, turning and sinking as it goes."},
+        {k:"B", label:"spins flat", what:"<b>B</b> \u2014 <b>slowed on your note.</b> It spins in its own plane like a card skimmed across a room, two turns over 720ms."},
+        {k:"C", label:"sails up", what:"<b>C</b> \u2014 it <b>lifts and sails off the top</b> rather than the side, tipping away like letting go of a paper plane."},
+        {k:"D", label:"filed away", what:"<b>D</b> \u2014 the card <b>shrinks and flies to the button you chose</b>, with no sail before it."},
+        {k:"E", label:"tumbles", what:"<b>E</b> \u2014 the end-over-end spin, vertical rather than flat."},
+        {k:"F", label:"page turn", what:"<b>F</b> \u2014 the card <b>hinges on the edge you pushed</b> and turns away like a page."},
+        {k:"H", label:"sparkle, gone", what:"<b>H</b> \u2014 the card <b>pops as if caught by a light</b> and is simply not there. 260ms. The 6% overshoot is the whole effect: without it this is a fade, and a fade is not an event."},
+        {k:"I", label:"teleport", what:"<b>I</b> \u2014 the old <b>cathode-ray switch-off</b>. It collapses to a vertical bar, then the bar collapses to a point. X first, then Y \u2014 the other way round it reads as a window blind."},
+        {k:"J", label:"blink", what:"<b>J</b> \u2014 <b>an eye shuts on it.</b> The cheapest idea on your list and one of the best: 240ms, and it goes a touch <i>wider</i> as it closes, because an eyelid squeezes what is under it."},
+        {k:"K", label:"lightning", what:"<b>K</b> \u2014 <b>struck.</b> Three hard jerks on no curve at all, because lightning does not accelerate, and then gone. The jerks are 6px: any bigger and it is a cartoon."},
+        {k:"L", label:"shark bite", what:"<b>L</b> \u2014 <b>taken in two</b>, along a ragged wedge rather than a straight cut, because a straight cut is a card torn by hand and you said shark. The only one here that needs the card drawn twice."},
+        {k:"M", label:"the shot", what:"<b>M</b> \u2014 <b>up, over, and down into the button you chose.</b> The apex is the idea: a shot that never rises above the card it left has been slid, not shot."},
+        {k:"N", label:"the spiral", what:"<b>N</b> \u2014 a <b>thrown football</b>, turning on its own long axis as it goes. Deliberately not the flat skim on page 2 \u2014 this one turns the other way."},
+        {k:"O", label:"whirlpool", what:"\u2b50 <b>O \u2014 down the drain.</b> A spin plus a shrink is not a whirlpool; what makes a drain is that the card <b>orbits a point while the orbit tightens</b>, so the path is walked round by hand."},
+        {k:"P", label:"blast-off", what:"<b>P</b> \u2014 <b>straight up and gone.</b> The crouch sells it: 15px <i>down</i> over the first 90ms, and the same motion stops reading as a lift and starts reading as thrust."},
+        {k:"Q", label:"crushed", what:"<b>Q</b> \u2014 <b>a hand comes down on it.</b> It flattens onto the deck rather than closing on its own middle, and it bulges sideways, because nothing is crushed without squeezing out."},
+        {k:"R", label:"the punt", what:"<b>R</b> \u2014 the shot's louder cousin: <b>flatter, faster, end over end, and it never comes back down.</b> Where the shot lands in the button, this one clears the screen."}
       ]
     },
-    throw: {
-      h:"How does the card leave?",
-      say:"Throw it hard and watch where it goes.",
+    next: {
+      h:"3 \u00b7 How the next card takes over",
+      say:"Swipe or tap, either way. Watch only the card that takes its place.",
+      def:"F",
       arms:[
-        {k:"A", label:"arcs away", what:"<b>A</b> \u2014 what your app does now. It <b>arcs off the corner</b>, turning 24 degrees and sinking as it goes, over 420ms."},
-        {k:"B", label:"flies flat", what:"<b>B</b> \u2014 it <b>launches flat and straight</b> off the side, no turn and no drop, gone in 260ms. Like sliding a card off a table."},
-        {k:"C", label:"drops back", what:"<b>C</b> \u2014 it <b>falls away from you</b>, shrinking back rather than flying off the side. Like it is being put back on the pile."}
+        {k:"A", label:"flies in", what:"<b>A</b> \u2014 what your app does now. It <b>flies in from off the right edge</b>, tilted, taking 474ms."},
+        {k:"B", label:"rises up", what:"<b>B</b> \u2014 it <b>grows up out of the deck</b> where it was already sitting. No travel across the screen, 220ms."},
+        {k:"C", label:"just there", what:"<b>C</b> \u2014 <b>no entrance at all.</b> The moment you answer, the next card is simply the card."},
+        {k:"D", label:"turns over", what:"<b>D</b> \u2014 it <b>turns face up</b>, the way you turn a card over to see what it is. The only one that says the card was dealt face down and is being revealed, rather than delivered."},
+        {k:"E", label:"dealt down", what:"<b>E</b> \u2014 it <b>comes down off the top of the deck</b> and lands with a short bounce, the way a dealt card settles."},
+        {k:"F", label:"pushed forward", what:"\u2b50 <b>F \u2014 your pick, and the default.</b> It <b>comes toward you from behind the glass</b>. No travel across the screen at all, only depth."},
+        /* ⭐ GRAY: "Can probably use some as entrance though too." Three of the eleven run
+           backwards and stay legible doing it — the ones whose shape has a direction. A bite
+           reversed is two halves flying together, which reads as a repair rather than a card. */
+        {k:"G", label:"teleports in", what:"<b>G</b> \u2014 the switch-off run backwards: <b>a point becomes a bar, the bar becomes the card.</b> Pairs with the teleport exit on page 4."},
+        {k:"H", label:"unfolds", what:"<b>H</b> \u2014 it <b>springs up off the deck from flat</b>, the way a crushed thing comes back. The reverse of the crush, and it lands with a little overshoot."},
+        {k:"I", label:"spirals in", what:"<b>I</b> \u2014 it <b>comes back up out of the drain</b>, unwinding from a point as it grows. The reverse of the whirlpool, and the longest of the nine at 560ms."}
       ]
-    },
-    /* ⭐ QUESTION 4 IS HIS OWN ASK: "Make a 4th for different card animations swipe if you can
-       maybe different tricks or something." So this one is not a value at all — it is four whole
-       personalities for the same gesture, and the answer is which one the app should have.
-       ⚠ EVERY ONE IS TRANSFORM AND OPACITY, INCLUDING THE 3D. rotateY with a perspective is still
-       a compositor transform; it is not a filter and it does not repaint. */
-    trick: {
-      h:"Pick how the flick should feel",
-      say:"Four completely different tricks for the same swipe. Throw a few cards on each one.",
+    }
+    ,
+    /* ⭐⭐ THE WHOLE THING, WHICH IS THE SECOND HALF OF WHAT HE ASKED FOR: "I'd like to see the
+       2nd one for default and all of it together so two things." The three settled answers running
+       as ONE flick, because none of them can be judged alone — a wash that reads well beside a
+       fast exit can read as clutter beside a slow one. No switch here on purpose: there is nothing
+       to compare, only a thing to feel. */
+    all: {
+      h:"All three defaults, together",
+      say:"This is the flick as it would ship. Colour wash while you decide, sails down into filed away, and the next card pushed forward.",
+      def:"X",
       arms:[
-        {k:"A", label:"the deck", what:"<b>A</b> \u2014 what your app does now. The card <b>arcs off the corner</b> like a card thrown off the top of a deck."},
-        {k:"B", label:"page turn", what:"<b>B</b> \u2014 the card <b>hinges on the edge you pushed</b> and turns away like a page, showing its thickness as it goes. The most physical of the four."},
-        {k:"C", label:"filed away", what:"<b>C</b> \u2014 the card <b>shrinks and flies to the button you chose</b>, bottom right for Keep and bottom left for Not for me, so you can see where it went."},
-        {k:"D", label:"dealt back", what:"<b>D</b> \u2014 the card <b>drops back into the pile</b> underneath and the next one comes forward. Calm, and it never leaves the screen."}
+        {k:"X", label:"the default", what:"<b>Colour wash</b> while you decide \u00b7 <b>sails down, files away</b> on the throw \u00b7 <b>pushed forward</b> for the next card. Throw a few and tell me what is wrong with it."}
       ]
     }
   };
 
   var q = (location.search.match(/[?&]d=([a-z]+)/) || [])[1];
-  if (!D[q]) q = "fade";
+  if (!D[q]) q = "decide";
   var cfg = D[q], arm = "A", i = 0;
 
   var $ = function(id){ return document.getElementById(id); };
   var stage = $("stage"), abEl = $("ab"), whatEl = $("what");
   var meter = $("meter"), barf = $("barf"), pct = $("pct");
-  if (q === "fade") meter.classList.add("on");
+  if (q === "decide") meter.classList.add("on");
   $("h").textContent = cfg.h;
   $("say").textContent = cfg.say;
   /* the buttons are built from the question's own arm list, so adding a fifth idea to any page is
@@ -391,6 +771,14 @@
       + '<div class="foot">Tap for the full plan</div></div>';
   }
 
+  /* ⭐ ONE MAP, NOT TWO. GRAY, 09/19: "all of 4 was awesome add them into 3 somewhere wherever
+     they fit." They fit in question 2, and they always did — page 4 was a holding pen for ideas
+     that had not been judged yet, and once they were judged it was a second list of the same
+     thing. Eighteen exits, one of which is the default; that is the whole question. */
+  var LEAVE_FX = { G:" sailfile", A:"", B:" spin", C:" sail", D:" file", E:" tumble", F:" peel",
+                   H:" pop", I:" beam", J:" blink", K:" bolt", L:" bite", M:" shot",
+                   N:" spiral", O:" drain", P:" blast", Q:" crush", R:" punt" };
+
   var top, under, washK, washP, drag = null;
 
   /* the stage is rebuilt whole on every advance: one card in front, one behind, nothing else. */
@@ -398,31 +786,47 @@
     stage.innerHTML = "";
     under = document.createElement("div");
     under.className = "cardw under";
-    under.innerHTML = cardHTML(DECKS[(i + 1) % DECKS.length]);
+    /* ⛔ FACE DOWN ONLY WHERE SOMETHING TURNS IT OVER. Everywhere else the reader is meant to see
+       what is coming, which is the whole reason the card behind rises with the thumb at all. */
+    under.innerHTML = '<span class="cardback"></span>' + cardHTML(DECKS[(i + 1) % DECKS.length]);
+    if (q === "next" && arm === "D") under.classList.add("faced");
     stage.appendChild(under);
 
     top = document.createElement("div");
     top.className = "cardw top";
     /* the two washes are the C arm of question 1: a verdict painted ON the card rather than the
        card disappearing. They ride the wrapper, never inside .card, so the card is untouched. */
-    top.innerHTML = '<span class="wash keep"></span><span class="wash pass"></span>' + cardHTML(DECKS[i % DECKS.length]);
+    top.innerHTML = '<span class="wash keep"></span><span class="wash pass"></span>'
+      + '<span class="cardback"></span>' + cardHTML(DECKS[i % DECKS.length]);
+    if (q === "next" && arm === "D") top.classList.add("faced");
     stage.appendChild(top);
     washK = top.querySelector(".wash.keep");
     washP = top.querySelector(".wash.pass");
 
-    if (useCont) {
-      /* the hand-off: the card behind keeps the pose the thumb brought it to and finishes the last
-         22px. This is what shipped today and it is the SAME on both arms of all three questions. */
-      top.style.setProperty("--ay", "22px");
-      top.style.setProperty("--as", ".936");
-      top.style.setProperty("--ao", "1");
-      top.classList.add("cont");
-    } else if (useCont === false) {
-      /* the three arrivals are three different ideas, not one at three speeds. */
-      if (q === "arrive" && arm === "B") top.classList.add("arr", "rise");
-      else if (q === "arrive" && arm === "C") top.classList.add("arr", "none");
-      else top.classList.add("arr");
+    /* ⛔⛔ QUESTION 2 OWNS THE ARRIVAL ON BOTH PATHS, AND THE FIRST CUT DID NOT. Everywhere else a
+       DRAGGED commit hands the next card the pose the thumb left it in, so it settles rather than
+       arriving — which meant the three arrival ideas only ever played when he TAPPED a button.
+       GRAY: "The next card is the same on all options for the next card." He was swiping. He was
+       right, and the page was lying to him: all three arms genuinely were the same motion.
+       On question 2 the arm decides, drag or tap. */
+    if (useCont !== null) {
+      /* ⭐ EVERY PAGE THAT IS NOT ASKING ABOUT THE ARRIVAL USES THE SETTLED ANSWER, which is F,
+         pushed forward. The first cut left questions 1 and 2 on the old hand-off settle, so the
+         exit he was judging on page 2 was followed by a motion that will not ship — and a sail
+         reads completely differently depending on what walks in behind it. */
+      var how = (q === "next")
+        ? ({ A:"", B:"rise", C:"none", D:"flip", E:"deal", F:"zoom",
+             G:"beamin", H:"unfold", I:"drainin" }[arm] || "")
+        : "zoom";
+      top.classList.add("arr");
+      if (how) top.classList.add(how);
     }
+    /* ⚠ THE HAND-OFF SETTLE (.cont, --ay/--as/--ao) IS DELIBERATELY UNREACHABLE HERE NOW.
+       It is the correct motion under arrival A, "flies in", because a dragged card has already
+       been raised by the thumb and must not jump back off-screen to fly in again — that is the
+       fault the 09/19 lap fixed in the app. Under F, "pushed forward", there is no off-screen to
+       jump back to, so the arrival owns both paths and the settle has nothing to do. It stays
+       written in the app, and it comes back the moment A is the chosen arrival. */
     wire();
   }
 
@@ -444,14 +848,22 @@
        GRAY: "make them drastically different so I can choose which directions I want." An earlier
        cut offered .34 against .08, which is a tuning question. He could not tell them apart and
        was right not to try. */
-    var mTerm = (q === "fade" && arm !== "A") ? 0 : 0.34;
+    /* ⛔⛔ A PAGE USES THE SETTLED DEFAULTS FOR EVERY PART IT IS NOT ASKING ABOUT, and the first
+       cut did not — it left the OLD fade running on questions 2 and 3, which is what produced
+       Gray's note: "the cards become transparent when swiping and you can see the card behind it."
+       He is right, and on the turn-over arrival it is fatal: if you can already read the next card
+       through the one on top, turning it over reveals nothing. DECIDE is settled as the colour
+       wash, so nothing fades anywhere except on the page still asking about fading. */
+    var fades = (q === "decide" && arm === "A");
+    var mTerm = fades ? 0.34 : 0;
     var op = 1 - mTerm * m - 0.30 * far;
     top.style.opacity = op.toFixed(3);
-    if (q === "fade" && arm === "C") {
+    /* the wash is on everywhere the fade is not, because it IS the settled default. */
+    if (washK && !fades && !(q === "decide" && arm === "B")) {
       washK.style.opacity = (dx > 0 ? m : 0).toFixed(3);
       washP.style.opacity = (dx < 0 ? m : 0).toFixed(3);
     } else if (washK) { washK.style.opacity = "0"; washP.style.opacity = "0"; }
-    if (q === "fade") {
+    if (q === "decide") {
       pct.textContent = Math.round(op * 100) + "%";
       barf.style.transform = "scaleX(" + op.toFixed(3) + ")";
     }
@@ -463,7 +875,7 @@
 
   function clearWash(){ if (washK) { washK.style.opacity = "0"; washP.style.opacity = "0"; } }
   function resetMeter(){
-    if (q !== "fade") return;
+    if (q !== "decide") return;
     pct.textContent = "100%"; barf.style.transform = "scaleX(1)";
   }
   function settleBack(){
@@ -491,10 +903,28 @@
     gone.style.setProperty("--fx", (fx || 0).toFixed(1) + "px");
     gone.style.setProperty("--fy", (fy || 0).toFixed(1) + "px");
     gone.style.setProperty("--fr", (fr || 0).toFixed(2) + "deg");
+    /* ⛔⛔ THE THREE ARMS THAT NEED EXTRA ELEMENTS BUILD THEM HERE, ON THE CARD THAT IS
+       LEAVING, AND NOWHERE ELSE. That placement is the whole cost story: a bite's second copy and
+       a spark's twelve dots exist for the 460ms the card is in flight and are swept with it, so
+       the resting deck is byte-for-byte the deck every other arm has. Built into the LIVE card
+       instead, they would sit on screen forever for the sake of a motion that plays once.
+       ⚠ AND THE BITE'S CLIP IS STATIC. Each half is a full copy of the card under a clip-path
+       that never changes; only the transform animates, so the clip is rasterised once. A clip-path
+       that ANIMATES is the expensive kind — do not "improve" this into one. */
+    var fxName = (q === "leave" ? LEAVE_FX[arm] : "") || "";
+    if (fxName === " bite") {
+      var face = gone.querySelector(".card");
+      if (face) {
+        var inner = face.outerHTML;
+        gone.insertAdjacentHTML("beforeend",
+          '<span class="bitehalf up">' + inner + '</span><span class="bitehalf dn">' + inner + '</span>');
+      }
+    }
     gone.className = "cardw top fly " + (dir > 0 ? "r" : "l")
-      + ((q === "throw" && arm === "B") ? " b" : "")
-      + ((q === "throw" && arm === "C") ? " c" : "")
-      + (q === "trick" ? ({ A:"", B:" peel", C:" file", D:" deal" }[arm] || "") : "");
+      /* ⭐ same law as the arrival above: the page asking about the exit lets its arm decide, and
+         every other page uses the settled answer, G — sails down, then files away. A colour wash
+         judged against the old corner-arc is a wash judged against a motion that will not ship. */
+      + (q === "leave" ? (LEAVE_FX[arm] || "") : " sailfile");
     receipt(dir);
     resetMeter();
     i = (i + 1) % DECKS.length;
@@ -507,7 +937,9 @@
     build(dragged ? true : false);
     stage.insertBefore(keep, stage.firstChild);
     keep.style.zIndex = "4";
-    setTimeout(function(){ if (keep.parentNode) keep.parentNode.removeChild(keep); }, 520);
+    /* ⚠ THE SWEEP HAS TO OUTLAST THE LONGEST EXIT ON THE PAGE. The flat spin runs 720ms now, so
+       a 520ms sweep snatched the card out of the air two thirds of the way through its own turn. */
+    setTimeout(function(){ if (keep.parentNode) keep.parentNode.removeChild(keep); }, 820);
   }
 
   function wire(){
@@ -559,7 +991,7 @@
   $("aKeep").onclick = function(){ if (!drag) commit(1, 0, 0, 0); };
   $("aPass").onclick = function(){ if (!drag) commit(-1, 0, 0, 0); };
 
-  setArm("A");
+  setArm(cfg.def || "A");
 })();
 </script>
 </body>
