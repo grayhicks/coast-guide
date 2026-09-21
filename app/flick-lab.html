@@ -227,10 +227,10 @@
   /* C — filed. It goes to the button that answered, so the verdict has a destination. */
   @keyframes trickFileR{
     0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1); opacity:1; }
-    to{ transform:translate3d(38%,58%,0) rotate(14deg) scale(.16); opacity:0; } }
+    to{ transform:translate3d(29%,-62%,0) rotate(14deg) scale(.16); opacity:0; } }
   @keyframes trickFileL{
     0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1); opacity:1; }
-    to{ transform:translate3d(-38%,58%,0) rotate(-14deg) scale(.16); opacity:0; } }
+    to{ transform:translate3d(-29%,-62%,0) rotate(-14deg) scale(.16); opacity:0; } }
   .fly.r.file{ animation:trickFileR .42s cubic-bezier(.5,0,.6,1) both; }
   .fly.l.file{ animation:trickFileL .42s cubic-bezier(.5,0,.6,1) both; }
 
@@ -292,13 +292,35 @@
   @keyframes sailFileR{
     0%{ transform:perspective(1100px) translate3d(var(--fx,0px),var(--fy,0px),0) rotateX(0deg) rotate(var(--fr,0deg)) scale(1); opacity:1; }
     34%{ transform:perspective(1100px) translate3d(calc(var(--fx,0px) + 16%),calc(var(--fy,0px) - 30px),0) rotateX(26deg) rotate(calc(var(--fr,0deg) + 7deg)) scale(.97); opacity:1; }
-    to{ transform:perspective(1100px) translate3d(40%,62%,0) rotateX(52deg) rotate(calc(var(--fr,0deg) + 18deg)) scale(.14); opacity:0; } }
+    to{ transform:perspective(1100px) translate3d(29%,-62%,0) rotateX(52deg) rotate(calc(var(--fr,0deg) + 18deg)) scale(.14); opacity:0; } }
   @keyframes sailFileL{
     0%{ transform:perspective(1100px) translate3d(var(--fx,0px),var(--fy,0px),0) rotateX(0deg) rotate(var(--fr,0deg)) scale(1); opacity:1; }
     34%{ transform:perspective(1100px) translate3d(calc(var(--fx,0px) - 16%),calc(var(--fy,0px) - 30px),0) rotateX(26deg) rotate(calc(var(--fr,0deg) - 7deg)) scale(.97); opacity:1; }
-    to{ transform:perspective(1100px) translate3d(-40%,62%,0) rotateX(52deg) rotate(calc(var(--fr,0deg) - 18deg)) scale(.14); opacity:0; } }
+    to{ transform:perspective(1100px) translate3d(-29%,-62%,0) rotateX(52deg) rotate(calc(var(--fr,0deg) - 18deg)) scale(.14); opacity:0; } }
   .fly.r.sailfile{ animation:sailFileR .56s cubic-bezier(.32,.24,.3,1) both; }
   .fly.l.sailfile{ animation:sailFileL .56s cubic-bezier(.32,.24,.3,1) both; }
+  /* ⭐ 09/20 — THE TWO DOWNWARD ARMS, WHICH IS WHAT HE ASKED FOR ON 09/19 AND DID NOT GET.
+     Mirrors of the two above: -150% becomes +150%, rotateX -58deg becomes +58deg, and the file
+     arm's 34% stop DIPS thirty pixels instead of rising thirty. Same durations, same curves, same
+     destination for the file — the approach differs, not where the card lands. */
+  @keyframes trickSailDnR{
+    0%{ transform:perspective(1000px) translate3d(var(--fx,0px),var(--fy,0px),0) rotateX(0deg) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    to{ transform:perspective(1000px) translate3d(calc(var(--fx,0px) + 46%),150%,0) rotateX(58deg) rotate(calc(var(--fr,0deg) + 16deg)) scale(.7); opacity:0; } }
+  @keyframes trickSailDnL{
+    0%{ transform:perspective(1000px) translate3d(var(--fx,0px),var(--fy,0px),0) rotateX(0deg) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    to{ transform:perspective(1000px) translate3d(calc(var(--fx,0px) - 46%),150%,0) rotateX(58deg) rotate(calc(var(--fr,0deg) - 16deg)) scale(.7); opacity:0; } }
+  .fly.r.saildn{ animation:trickSailDnR .50s cubic-bezier(.3,.5,.3,1) both; }
+  .fly.l.saildn{ animation:trickSailDnL .50s cubic-bezier(.3,.5,.3,1) both; }
+  @keyframes sailDnFileR{
+    0%{ transform:perspective(1100px) translate3d(var(--fx,0px),var(--fy,0px),0) rotateX(0deg) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    34%{ transform:perspective(1100px) translate3d(calc(var(--fx,0px) + 16%),calc(var(--fy,0px) + 30px),0) rotateX(-26deg) rotate(calc(var(--fr,0deg) + 7deg)) scale(.97); opacity:1; }
+    to{ transform:perspective(1100px) translate3d(29%,-62%,0) rotateX(52deg) rotate(calc(var(--fr,0deg) + 18deg)) scale(.14); opacity:0; } }
+  @keyframes sailDnFileL{
+    0%{ transform:perspective(1100px) translate3d(var(--fx,0px),var(--fy,0px),0) rotateX(0deg) rotate(var(--fr,0deg)) scale(1); opacity:1; }
+    34%{ transform:perspective(1100px) translate3d(calc(var(--fx,0px) - 16%),calc(var(--fy,0px) + 30px),0) rotateX(-26deg) rotate(calc(var(--fr,0deg) - 7deg)) scale(.97); opacity:1; }
+    to{ transform:perspective(1100px) translate3d(-29%,-62%,0) rotateX(52deg) rotate(calc(var(--fr,0deg) - 18deg)) scale(.14); opacity:0; } }
+  .fly.r.saildnfile{ animation:sailDnFileR .56s cubic-bezier(.32,.24,.3,1) both; }
+  .fly.l.saildnfile{ animation:sailDnFileL .56s cubic-bezier(.32,.24,.3,1) both; }
 
   /* ⭐⭐⭐ GRAY'S SECOND LIST, 09/19 — ELEVEN MORE WAYS FOR A CARD TO GO, and the useful thing
      about it is that he was not describing animations, he was describing EVENTS: a sparkle, a
@@ -391,15 +413,15 @@
   @keyframes trickShotR{
     0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1); opacity:1;
         animation-timing-function:cubic-bezier(.2,.62,.44,1); }
-    46%{ transform:translate3d(calc(var(--fx,0px) + 26%),-118%,0) rotate(calc(var(--fr,0deg) + 14deg)) scale(.66); opacity:1;
+    46%{ transform:translate3d(calc(var(--fx,0px) + 26%),-150%,0) rotate(calc(var(--fr,0deg) + 14deg)) scale(.66); opacity:1;
         animation-timing-function:cubic-bezier(.56,.06,.72,.9); }
-    to{ transform:translate3d(40%,62%,0) rotate(calc(var(--fr,0deg) + 26deg)) scale(.12); opacity:0; } }
+    to{ transform:translate3d(29%,-62%,0) rotate(calc(var(--fr,0deg) + 26deg)) scale(.12); opacity:0; } }
   @keyframes trickShotL{
     0%{ transform:translate3d(var(--fx,0px),var(--fy,0px),0) rotate(var(--fr,0deg)) scale(1); opacity:1;
         animation-timing-function:cubic-bezier(.2,.62,.44,1); }
-    46%{ transform:translate3d(calc(var(--fx,0px) - 26%),-118%,0) rotate(calc(var(--fr,0deg) - 14deg)) scale(.66); opacity:1;
+    46%{ transform:translate3d(calc(var(--fx,0px) - 26%),-150%,0) rotate(calc(var(--fr,0deg) - 14deg)) scale(.66); opacity:1;
         animation-timing-function:cubic-bezier(.56,.06,.72,.9); }
-    to{ transform:translate3d(-40%,62%,0) rotate(calc(var(--fr,0deg) - 26deg)) scale(.12); opacity:0; } }
+    to{ transform:translate3d(-29%,-62%,0) rotate(calc(var(--fr,0deg) - 26deg)) scale(.12); opacity:0; } }
   .fly.r.shot{ animation:trickShotR .62s linear both; }
   .fly.l.shot{ animation:trickShotL .62s linear both; }
 
@@ -602,12 +624,17 @@
 <p class="what" id="what">…</p>
 <div class="meter" id="meter"><span>how solid the card is</span><span class="bar"><i id="barf"></i></span><b id="pct">100%</b></div>
 
-<div class="stage" id="stage"></div>
-
+<!-- ⭐ 09/20 — THE ANSWER ROW SITS ABOVE THE CARD, BECAUSE THE APP PUTS IT THERE. Gray moved
+     it on 09/19 ("if the not for us and keep are above the cards now the default should be sail up
+     not sail down") and the app followed; this page did not, so every file arm here threw the card
+     at a row on the other side of the screen from the app's. Measured before the move: app
+     ±28.6%,-62.2% · lab ±29.1%,+52.2%. -->
 <div class="acts">
   <button type="button" class="act pass" id="aPass"><span>&#8592; Not for me</span><small>swipe left</small></button>
   <button type="button" class="act keep" id="aKeep"><span>Keep &#9734; &#8594;</span><small>swipe right</small></button>
 </div>
+
+<div class="stage" id="stage"></div>
 
 <p class="hint">Drag the card sideways with your thumb, or tap a button. Switch options above and do it again.</p>
 
@@ -664,13 +691,15 @@
     },
     leave: {
       h:"2 \u00b7 How the card leaves",
-      say:"Eighteen of them, and only one can be true at a time. Throw a few on each.",
+      say:"Twenty of them, and only one can be true at a time. Throw a few on each.",
       def:"G",
       arms:[
-        {k:"G", label:"sails down, files away", what:"\u2b50 <b>G \u2014 your idea, and the default.</b> The card <b>tips and sails</b> as if it caught air, and the sail carries it <b>down into the button you chose</b>, where it files away to nothing. Sails first, files second."},
+        {k:"C", label:"sails up", what:"<b>C</b> \u2014 it <b>lifts and sails off the top</b> rather than the side, tipping away like letting go of a paper plane."},
+        {k:"G", label:"sails up, files away", what:"\u2b50 <b>G \u2014 the default.</b> The card <b>tips and lifts</b> as if it caught air, and then the sail carries it <b>down into the button you chose</b>, where it files away to nothing. Sails first, files second. \u26a0 This was labelled \"sails down\" until 09/20; its 34% stop rises thirty pixels, so it has always sailed UP. S and T below are the downward pair you actually asked for."},
+        {k:"S", label:"sails down", what:"<b>S</b> \u2014 <b>new 09/20.</b> The mirror of C: it tips the other way and <b>sails off the bottom</b> instead of the top."},
+        {k:"T", label:"sails down, files away", what:"<b>T</b> \u2014 <b>new 09/20, and this is the one you described.</b> The card <b>dips and sails downward</b> first, then the sail carries it into the button you chose and it files away to nothing."},
         {k:"A", label:"arcs away", what:"<b>A</b> \u2014 what your app does now. It <b>arcs off the corner</b>, turning and sinking as it goes."},
         {k:"B", label:"spins flat", what:"<b>B</b> \u2014 <b>slowed on your note.</b> It spins in its own plane like a card skimmed across a room, two turns over 720ms."},
-        {k:"C", label:"sails up", what:"<b>C</b> \u2014 it <b>lifts and sails off the top</b> rather than the side, tipping away like letting go of a paper plane."},
         {k:"D", label:"filed away", what:"<b>D</b> \u2014 the card <b>shrinks and flies to the button you chose</b>, with no sail before it."},
         {k:"E", label:"tumbles", what:"<b>E</b> \u2014 the end-over-end spin, vertical rather than flat."},
         {k:"F", label:"page turn", what:"<b>F</b> \u2014 the card <b>hinges on the edge you pushed</b> and turns away like a page."},
@@ -774,8 +803,9 @@
   /* ⭐ ONE MAP, NOT TWO. GRAY, 09/19: "all of 4 was awesome add them into 3 somewhere wherever
      they fit." They fit in question 2, and they always did — page 4 was a holding pen for ideas
      that had not been judged yet, and once they were judged it was a second list of the same
-     thing. Eighteen exits, one of which is the default; that is the whole question. */
-  var LEAVE_FX = { G:" sailfile", A:"", B:" spin", C:" sail", D:" file", E:" tumble", F:" peel",
+     thing. Twenty exits, one of which is the default; that is the whole question. (18 until 09/20, when the two downward sail arms landed.) */
+  var LEAVE_FX = { G:" sailfile", S:" saildn", T:" saildnfile",
+                   A:"", B:" spin", C:" sail", D:" file", E:" tumble", F:" peel",
                    H:" pop", I:" beam", J:" blink", K:" bolt", L:" bite", M:" shot",
                    N:" spiral", O:" drain", P:" blast", Q:" crush", R:" punt" };
 
