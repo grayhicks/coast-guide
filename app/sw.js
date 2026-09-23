@@ -3,7 +3,7 @@
    plus a version.txt probe it deliberately never caches (see the note in the fetch handler).
    Nothing here reports anything anywhere, which is a product guarantee, not an implementation
    detail — gate_pwa.js asserts it against this file. */
-const CACHE = "gca-a0cca09cd3188532";
+const CACHE = "gca-ca7a86d6c1699eef";
 
 /* ⚠ 08/20 — THE APP IS ONE 4.5MB DOCUMENT AND THIS USED TO DOWNLOAD IT TWICE. The precache list
    was ["./", "./index.html", "./app.webmanifest"] fed to cache.addAll(). The first two are the
@@ -24,7 +24,7 @@ self.addEventListener("install", e => {
       if (!res || !res.ok) throw new Error("precache: index.html " + (res && res.status));
       /* put() twice off ONE response — clone before the body is consumed by the first put */
       return c.put("./index.html", res.clone()).then(() => c.put("./", res));
-    }).then(() => c.add("./app.webmanifest"))
+    }).then(() => c.add("./app-ca7a86d6c1699eef.js")).then(() => c.add("./app.webmanifest"))
   ).then(() => self.skipWaiting()));
 });
 
@@ -73,8 +73,13 @@ self.addEventListener("message", e => {
     if (!res || !res.ok) return null;
     const copy = res.clone();
     /* both keys off ONE response, same reason as install: the installed icon opens "./" and an
-       in-app reload asks for "./index.html" */
-    return caches.open(CACHE).then(c => c.put("./index.html", copy.clone()).then(() => c.put("./", copy)));
+       in-app reload asks for "./index.html". GCA-999: and the code file that document names, so
+       the reload it is about to trigger finds the pair in the cache. */
+    return res.clone().text().then(t => {
+      const m = /app-[0-9a-f]{16}\.js/.exec(t);
+      return caches.open(CACHE).then(c => c.put("./index.html", copy.clone()).then(() => c.put("./", copy))
+        .then(() => m ? c.add("./" + m[0]).catch(() => {}) : null)).then(() => true);
+    });
   }).then(ok => {
     if (ok === null) return;
     return self.clients.matchAll().then(cs => cs.forEach(c => c.postMessage({ gca: "fresh" })));
@@ -116,6 +121,8 @@ self.addEventListener("fetch", e => {
      worker -- see the note above. And NO BACKTICKS in this comment: it lives inside the worker's
      own template literal, which is CLAUDE.md law 1 one layer down. */
   if (/flick-lab\.html$/.test(url.pathname)) return;
+  /* GCA-999: the one-file download (app/offline.html) is a download, not the app. Never cached here. */
+  if (/offline\.html$/.test(url.pathname)) return;
   if (e.request.mode === "navigate") {
     e.respondWith(new Promise(resolve => {
       let settled = false;
