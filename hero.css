@@ -741,9 +741,6 @@ html:not(.hk_diag_livedec) .emrl .em_heron, html:not(.hk_diag_livedec) .emrl .em
 .gul_peck .gul_tor { animation: gul_pkb var(--gulpk,19s) cubic-bezier(.3,.05,.35,1) infinite var(--gulo,0s); }
 .gul_peck .gul_hd { animation: gul_pkh var(--gulpk,19s) cubic-bezier(.3,.05,.35,1) infinite var(--gulo,0s); }
 .gul_peck .gul_tl { animation: gul_pkt var(--gulpk,19s) cubic-bezier(.3,.05,.35,1) infinite var(--gulo,0s); }
-.gul_run { display: block; animation: gul_run var(--gulrd,1.5s) linear 1 forwards; }
-.gul_bob { display: block; transform-origin: 50% 96%; animation: gul_bob var(--gulbb,.32s) linear infinite; }
-.gul_lean { display: block; transform: rotate(calc(var(--guld,1) * -7deg)); }
 .gul_bob .gul_leg { animation: gul_step var(--gulbb,.32s) linear infinite; }
 .gul_bob .gul_legB { animation-delay: calc(var(--gulbb,.32s) * -.5); }
 .hgulw { position: absolute; z-index: 1; pointer-events: none; }
@@ -751,7 +748,6 @@ html:not(.hk_diag_livedec) .emrl .em_heron, html:not(.hk_diag_livedec) .emrl .em
 .hgulx { display: block; will-change: transform; }
 .ph-golden .hgulw { filter: sepia(0.24) saturate(1.12) brightness(1.02); }
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .gul_idle, html:not(.hk_mo) .gul_peck, html:not(.hk_mo) .gul_tor, html:not(.hk_mo) .gul_hd, html:not(.hk_mo) .gul_tl, html:not(.hk_mo) .gul_run, html:not(.hk_mo) .gul_bob, html:not(.hk_mo) .gul_leg, html:not(.hk_mo) .skn_gpath, html:not(.hk_mo) .skn_gbob, html:not(.hk_mo) .hgulw, html:not(.hk_mo) .hgulp { animation: auto ease 0s 1 normal none running none !important; }}
-@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .gul_lean { transform: none !important; }}
 .tgw.rtl .tgtin { animation-name: hk_tgnomR; }
 .dcw.rtl { animation-name: hk_dcruiseR; }
 .pelw.rtl { left: auto; right: -84px; animation-name: hk_pelpassR; }
@@ -1779,19 +1775,6 @@ html:not(.hk_diag_livedec) .hk.hk .ccrab.rtl { left: auto; right: 74px; }
   80.6% { transform: translate(var(--gtx),var(--gty)) rotate(-2.5deg) translate(calc(-1 * var(--gtx)),calc(-1 * var(--gty))); }
   81.8% { transform: translate(var(--gtx),var(--gty)) rotate(0deg) translate(calc(-1 * var(--gtx)),calc(-1 * var(--gty))); }
   83%, 100% { transform: translate(var(--gtx),var(--gty)) rotate(0deg) translate(calc(-1 * var(--gtx)),calc(-1 * var(--gty))); }
-}
-@keyframes gul_run { 
-  0% { transform: translateX(0px); }
-  100% { transform: translateX(var(--gulrx,40px)); }
-}
-@keyframes gul_bob { 
-  0% { transform: translateY(.6px) rotate(calc(var(--guld,1) * .5deg)); }
-  14% { transform: translateY(-1.5px) rotate(calc(var(--guld,1) * -.7deg)); }
-  32% { transform: translateY(-.2px) rotate(calc(var(--guld,1) * -.2deg)); }
-  50% { transform: translateY(.8px) rotate(calc(var(--guld,1) * .4deg)); }
-  64% { transform: translateY(-1.1px) rotate(calc(var(--guld,1) * -.55deg)); }
-  84% { transform: translateY(-.1px) rotate(calc(var(--guld,1) * -.15deg)); }
-  100% { transform: translateY(.6px) rotate(calc(var(--guld,1) * .5deg)); }
 }
 @keyframes gul_step { 
   0% { transform: translate(var(--hx),var(--hy)) rotate(26deg) translate(calc(-1 * var(--hx)),calc(-1 * var(--hy))); animation-timing-function: linear; }
