@@ -317,7 +317,6 @@ html.gca_cold .bswash { opacity: 0; }
 .hero-datebtn .hk_mmark { --mm4: var(--flagink,#FFF9EC); }
 .hero-datebtn .hk_mmark .mm_water { display: none; }
 .hero-datebtn .hk_mmark .mm_c4.mm_solid { fill: var(--mm4); fill-opacity: 0.9; }
-.hk_mmark .mm_fill4 { fill: var(--mm4); stroke: none; }
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hero-datebtn { transition: none; }}
 .hero { --sss-dw: 92px; }
 .hk_sss_row { position: relative; top: -3px; height: 25px; display: flex; align-items: center; justify-content: center; --sss-g: clamp(3px, calc((100vw - 320px) / 10 + 3px), 6px); --sss-s: clamp(20px, calc((100vw - 215px - 4 * var(--sss-g)) / 5), 30px); gap: var(--sss-g); left: calc((86.5px - var(--sss-dw)) / 2); pointer-events: auto; }
@@ -706,35 +705,13 @@ html:not(.hk_diag_livedec) .emrl .em_heron, html:not(.hk_diag_livedec) .emrl .em
 .dnx_res.recommended { background: rgba(120, 53, 15, 0.34); color: rgb(253, 230, 138); border-color: rgba(217, 119, 6, 0.5); }
 .dnx_tag.sun { color: rgb(248, 196, 107); border-color: rgba(244, 169, 59, 0.4); }
 .dnx_bt.route { background: rgba(232, 199, 123, 0.1); color: rgb(244, 228, 168); border: 1px solid rgb(201, 164, 78); box-shadow: rgba(255, 241, 184, 0.12) 0px 1px 0px inset; }
-.mitem .hk_mmark { width: 19px; height: 19px; display: block; }
-.hk_mmark .mm_key { stroke-width: 1.9; }
-.hk_mmark { --mm1: #F09D52; --mm2: #2FA8A0; --mm3: #F2D89B; --mm4: #E8748C; }
-.hk_mmark .mm_c3.mm_solid { fill: var(--mm3); fill-opacity: 0.2; }
-.hk_mmark .mm_c3 { stroke: var(--mm3); }
-.hk_mmark .mm_c1 { stroke: var(--mm1); }
-.hk_mmark .mm_c2 { stroke: var(--mm2); }
-.hk_mmark .mm_c4 { stroke: var(--mm4); }
-.hk_mmark .mm_c1.mm_solid { fill: var(--mm1); fill-opacity: 0.22; }
-.hk_mmark .mm_c2.mm_solid { fill: var(--mm2); fill-opacity: 0.24; }
-.hk_mmark .mm_c4.mm_solid { fill: var(--mm4); fill-opacity: 0.22; }
-.hk_mmark .mm_hole { fill: none; }
-.hk_mmark .mm_water { stroke: var(--mm2); stroke-width: 2; opacity: 1; }
-.hk_infoic .hk_mmark, .xp_paper .hk_mmark, .hk_infobody .hk_mmark, .hk_day .moremenu .hk_mmark { --mm1: #7E420C; --mm2: #14625B; --mm3: #5F4A2C; --mm4: #992743; }
-.hk_menumark .mm_key { stroke-width: 2.5; }
-.hk_menumark { --mm2: #3CBDB4; --mm4: #F28CA0; }
-.hk_segb.on .hk_mmark { --mm2: #3CBDB4; --mm4: #F28CA0; }
-.hk_segb.on .hk_tmark .mm_solid { fill: currentcolor; fill-opacity: 0.26; }
 .morewrap.ph-day .morebtn, .morewrap.ph-dawn .morebtn, .morewrap.ph-golden .morebtn { color: rgb(255, 253, 248); border-color: rgba(255, 253, 248, 0.58); background: linear-gradient(rgba(10, 34, 48, 0.4), rgba(6, 22, 32, 0.54)); box-shadow: rgba(255, 255, 255, 0.22) 0px 1px 0px inset, rgba(0, 0, 0, 0.34) 0px 6px 18px, rgba(0, 0, 0, 0.5) 0px 1px 2px; }
 .morewrap.ph-day .morebtn { border-color: rgba(255, 253, 248, 0.66); background: linear-gradient(rgba(8, 30, 44, 0.5), rgba(5, 20, 30, 0.62)); }
 .morewrap.ph-day .morebtn:hover, .morewrap.ph-dawn .morebtn:hover, .morewrap.ph-golden .morebtn:hover { color: rgb(255, 255, 255); border-color: rgb(255, 253, 248); box-shadow: rgba(255, 255, 255, 0.3) 0px 1px 0px inset, rgba(0, 0, 0, 0.4) 0px 8px 22px, rgba(255, 253, 248, 0.75) 0px 0px 16px -6px; }
-.hk_infoic .hk_mmark { width: 46px; height: 46px; margin: 0px auto; stroke-width: 1.25; }
 .hk_tgarrow.r { right: 5px; transform: rotate(45deg); }
 .hk_promoted .adlbl { display: block; margin: 0px 0px 8px; font: 800 11px / 1 Nunito, system-ui, sans-serif; letter-spacing: 1.1px; text-transform: uppercase; color: var(--csoft); opacity: 0.85; }
 .hk_promoted .adlbl.open { font-weight: 700; letter-spacing: 0.9px; opacity: 0.55; }
 .hk_promocard .adlbl { display: block; margin: 0px 0px 5px; font: 800 11px / 1 Nunito, system-ui, sans-serif; letter-spacing: 1.1px; text-transform: uppercase; color: var(--csoft); opacity: 0.85; }
-.hk_seg .hk_segb:not(.on) .hk_tmark, .hk_seg .hk_segb:not(.on) .hk_mmark, .hk_seg .hk_segb:not(.on) .si { opacity: 0.78; transition: opacity 0.18s; }
-.t360w.mir { transform: scaleX(-1); }
-.dph360w.mir { transform: scaleX(-1); }
 .gul360w { position: relative; pointer-events: none; }
 .gul360w.mir { transform: scaleX(-1); }
 .gul360w > svg.gul360 { width: 100%; height: 100%; display: block; overflow: visible; }
@@ -781,8 +758,6 @@ html:not(.hk_diag_livedec) .emrl .em_heron, html:not(.hk_diag_livedec) .emrl .em
 .apt.swim .apt_flipper.rear { transform-origin: 8% 16%; }
 .apt.swim .apt_flipper.rear.far { animation: apt_sea_rudder_far calc(4.2s * var(--gca-calm)) ease-in-out infinite var(--apto,0s); }
 .apt.swim .apt_flipper.rear.near { animation: apt_sea_rudder_near calc(4.2s * var(--gca-calm)) ease-in-out infinite var(--apto,0s); }
-.apt_body .t360w.mir ~ .hkfx-head { left: auto; right: -8%; }
-.apt_body .t360w.mir ~ .aptfx_vein { left: auto; right: 7%; }
 .skn_bub.b1 { left: 168px; bottom: 32px; animation: skn_bub1 var(--skd,28s) linear infinite var(--sko,0s); }
 .skn_bub.b2 { left: 176px; bottom: 28px; width: 3px; height: 3px; animation: skn_bub2 var(--skd,28s) linear infinite var(--sko,0s); }
 .skn_bub.b3 { left: 162px; bottom: 26px; width: 5px; height: 5px; animation: skn_bub3 var(--skd,28s) linear infinite var(--sko,0s); }
@@ -841,7 +816,6 @@ html:not(.hk_diag_livedec) .emrl .em_heron, html:not(.hk_diag_livedec) .emrl .em
 .xps_shorebird.b2 { --flap: .61s; }
 .xp_supportstage.cheering .xps_crab .crb_pup, .xp_supportstage.verified .xps_crab .crb_pup { transform-box: fill-box; transform-origin: center center; animation: xps_crabglee calc(1.24s * var(--gca-calm)) cubic-bezier(.3,0,.25,1) infinite; }
 .xp_supportstage .dph_gaze, .xp_supportstage .crb_pup, .xp_supportstage .pel_fly_eye { transform-box: fill-box; transform-origin: 50% 50%; transition: transform 0.3s cubic-bezier(0.22, 0.8, 0.3, 1); }
-.xp_supportstage.gazing .t360w.mir .hke_gaze { transform: translate(calc(var(--gx) * -.5px),calc(var(--gy) * .38px)); }
 .xp_supportstage.gazing .crb_pup { transform: translate(calc(var(--gx) * .55px),calc(var(--gy) * .4px)); }
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .xp_supportstage.gazing .hke_gaze, html:not(.hk_mo) .xp_supportstage.gazing .dph_gaze, html:not(.hk_mo) .xp_supportstage.gazing .crb_pup, html:not(.hk_mo) .xp_supportstage.gazing .pel_fly_eye, html:not(.hk_mo) .xp_supportstage.gazing .osp_yaw { transform: none; }}
 .promo_bulb.b1 { animation-delay: -1.3s; }
@@ -856,8 +830,6 @@ html:not(.hk_diag_livedec) .emrl .em_heron, html:not(.hk_diag_livedec) .emrl .em
 .hk.glass-drift .card:not(.promo-card) > .inner::before { content: ""; position: absolute; z-index: -1; pointer-events: none; top: 0px; bottom: 0px; left: 0px; width: 220%; background-image: linear-gradient(100deg, rgba(255, 192, 110, 0.1) 6%, rgba(255, 150, 170, 0.09) 26%, rgba(150, 210, 255, 0.1) 48%, rgba(255, 214, 140, 0.08) 70%, rgba(255, 166, 150, 0.09) 88%); animation: hk_glassdrift calc(150s * var(--gca-calm)) ease-in-out infinite alternate; }
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .glass-drift .card > .inner::before { animation: auto ease 0s 1 normal none running none !important; }}
 .hk_day .hero { border-bottom: 2px solid rgb(138, 106, 34); }
-.hk_day .dock .hk_mmark, .hk_day .dock .hk_menumark { --mm1: #7E420C; --mm2: #14625B; --mm3: #5F4A2C; --mm4: #992743; }
-.hk_day .hk_tmark .mm_hand, .hk_day .hk_mmark .mm_hand { stroke-width: 2.5; }
 .hk_day .hk_promoted .adlbl.open { opacity: 0.7; }
 .hk_day .skitz .adlbl { color: rgb(68, 86, 106); background: rgba(255, 246, 228, 0.92); box-shadow: rgba(138, 90, 12, 0.4) 0px 0px 0px 1px inset; }
 .hk_day .t-midnight .ray { background: linear-gradient(rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0) 78%); }
@@ -876,7 +848,6 @@ html:not(.hk_diag_livedec) .hk_day .t-rom .rdec .rmote { box-shadow: rgba(131, 9
 .hk_day .t-rom .rmote { background: rgb(131, 99, 15); box-shadow: rgba(131, 99, 15, 0.35) 0px 0px 7px 1px; }
 .hk_day .t-artNight .agal.nite .aribbon.rb1 { stroke: rgb(168, 58, 90); opacity: 0.42; }
 .hk_day .t-townNight .htown.nite .hferry .flt.r { fill: rgb(176, 74, 66); color: rgb(176, 74, 66); box-shadow: none; filter: drop-shadow(rgba(176, 74, 66, 0.4) 0px 0px 2px); }
-.hk.hk.hk_day .dock .hk_mmark, .hk.hk.hk_day .dock .hk_menumark { --mm1: #F09D52; --mm2: #2FA8A0; --mm3: #F2D89B; --mm4: #E8748C; }
 html.hk_diag_nohero .hero, html.hk_diag_nohero .hero::before, html.hk_diag_nohero .hero::after, html.hk_diag_nohero .hero *, html.hk_diag_nohero .hero ::before, html.hk_diag_nohero .hero ::after, html.hk_diag_nohero .dnmwrap, html.hk_diag_nohero .dnmwrap::before, html.hk_diag_nohero .dnmwrap::after, html.hk_diag_nohero .dnmwrap *, html.hk_diag_nohero .dnmwrap ::before, html.hk_diag_nohero .dnmwrap ::after { animation: auto ease 0s 1 normal none running none !important; transition: none !important; }
 html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx_card, html.hk_diag_nofilt .dnx_card *, html.hk_diag_nofilt .hk_supportfloat, html.hk_diag_nofilt .hk_supportfloat *, html.hk_diag_nofilt .hero, html.hk_diag_nofilt .hero *, html.hk_diag_nofilt .dnmwrap, html.hk_diag_nofilt .dnmwrap *, html.hk_diag_nofilt .skitz, html.hk_diag_nofilt .skitz *, html.hk_diag_nofilt .hk_promoted, html.hk_diag_nofilt .hk_promoted * { filter: none !important; mix-blend-mode: normal !important; backdrop-filter: none !important; }
 :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .rays:where(:not(.promo-card, .promo-card *)) { border-radius: 14px; }
@@ -1008,8 +979,8 @@ html:not(.hk_diag_livedec) .hk.hk .ccrab.rtl { left: auto; right: 74px; }
 .hk.hk_day .dnx .dnx_res.recommended { background: rgba(247, 231, 224, 0.34); color: rgb(79, 1, 47); border-color: rgba(215, 117, 0, 0.75); }
 .hk.hk_day .dnx .dnx_tag.sun { color: rgb(94, 10, 58); border-color: rgba(201, 128, 0, 0.6); }
 .hk.hk_day .dnx .dnx_bt.route { background: rgba(212, 179, 104, 0.16); color: rgb(70, 22, 46); border: 1px solid rgb(177, 141, 52); box-shadow: rgba(172, 159, 104, 0.043) 0px 1px 0px inset; }
-.hk.hk_day .dnx .xp_paper .hk_mmark { --mm1: #F3E5DB; --mm2: #DBECE9; --mm3: #EDE7DE; --mm4: #992743; }
 .hk.hk_day .dnx .hk_supportfloat.dnpill .hsf_label b { color: rgb(37, 20, 41); text-shadow: rgba(71, 46, 68, 0.224) 0px 1px 2px; }
+.hk .hero-datebtn.hk_datecal .hk_datecalic { flex: 0 0 auto; transform: translateY(-1.2px); }
 @keyframes hk_gl { 
   0%, 100% { opacity: 0; transform: scaleX(0.25); }
   33%, 67% { opacity: var(--glo,.6); transform: scaleX(1); }
