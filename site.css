@@ -762,6 +762,8 @@ section.pad + section.pad{border-top:1px solid var(--line-soft)}
 
 .card-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s-4);margin-top:var(--s-5);align-items:stretch}
 
+@media(max-width:699px){.card-grid>article.card{content-visibility:auto;contain-intrinsic-size:auto 380px}}
+
 @media(min-width:700px){
   
   
