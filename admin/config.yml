@@ -177,3 +177,46 @@ collections:
       - { name: wear, label: "What to wear", widget: string, required: false }
       - { name: cost2, label: "Cost for two ($)", widget: number, value_type: float, required: false }
       - { name: tags, label: Tags, widget: list, required: false }
+
+  # T15, 10/01 — the moderation queue. A submission that arrives by email (the app's and the site's
+  # "Send us an event" open the sender's own mail app) is typed in here as pending. A second person
+  # sets it to approved, and `node claude/harness/import_events.js --queue --apply` turns every
+  # approved one into a card through the same checks a scanned card passes. Rejected ones stay here
+  # with their reason, so nobody asks twice.
+  - name: submissions
+    label: Submissions (moderation queue)
+    label_singular: Submission
+    folder: content/submissions
+    format: json
+    extension: json
+    create: true
+    delete: true
+    identifier_field: title
+    summary: "{{status}} · {{date}} · {{title}}"
+    sortable_fields: [status, date, title]
+    fields:
+      - { name: status, label: "Status", widget: select, options: [pending, approved, rejected], default: pending }
+      - { name: reason, label: "Why rejected (if it was)", widget: string, required: false }
+      - { name: title, label: "Event name", widget: string }
+      - { name: date, label: "Date (YYYY-MM-DD)", widget: string, pattern: ['^\d{4}-\d{2}-\d{2}$', "Use YYYY-MM-DD"] }
+      - { name: time, label: "Start time (6:30 PM)", widget: string, required: false }
+      - { name: venue, label: "Venue", widget: string }
+      - { name: address, label: "Street address with town and ZIP", widget: string }
+      - { name: inout, label: "Indoor or outdoor", widget: select, options: [Indoor, Outdoor] }
+      - { name: price, label: "Price: free, TBA, or the adult price as a number", widget: string }
+      - { name: kid_price, label: "Child price (number, optional)", widget: string, required: false }
+      - { name: audience, label: "Only for", widget: select, options: ["", adults, kids], required: false }
+      - { name: price_note, label: "Where the price came from", widget: string, required: false }
+      - { name: military_note, label: "Military price, or 'No military rate'", widget: string }
+      - { name: book_label, label: "Booking link name", widget: string, required: false }
+      - { name: book_url, label: "Booking link", widget: string, required: false }
+      - { name: source_label, label: "Source name", widget: string }
+      - { name: source_url, label: "Source link (the organiser's own page)", widget: string }
+      - { name: verified_on, label: "Day the source was read (YYYY-MM-DD)", widget: string }
+      - { name: blurb, label: "Two to five sentences about it", widget: text }
+      - { name: steps, label: "Three to six steps", widget: list }
+      - { name: tags, label: "Two or more tags (Family, Free, Outdoor...)", widget: list }
+      - { name: cat, label: "Category", widget: select, options: [event, music, art, movie, stem, nature, beach, town, iconic, coastal] }
+      - { name: icon, label: "One emoji", widget: string }
+      - { name: badge, label: "Short label, 18 characters or fewer", widget: string }
+      - { name: night, label: "Evening event", widget: boolean, required: false }
