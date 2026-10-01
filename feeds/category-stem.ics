@@ -1,0 +1,1274 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Coastal Eventures//Events feed//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Coastal Eventures: STEM and learning
+X-WR-TIMEZONE:America/Chicago
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:ev_iphone_and_ipad_0903-2026-10-01@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261001T101500
+DTEND;TZID=America/Chicago:20261001T111500
+SUMMARY:iPhone & iPad
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Thursdays · 10:15 AM to 11:15 AM\n\nThis class at the Nicevill
+ e Senior Center walks members through iPhone and iPad navigation\, ways to
+  optimize the device and its online safety features. It runs Thursday mid 
+ morning and repeats on multiple Thursdays through the September calendar.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-iphone-
+ and-ipad-0903.html
+URL:https://coastaleventures.com/events/ev-iphone-and-ipad-0903.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_chess_club_for_everyone_at_semmes_0910-2026-10-01@coastaleventures.c
+ om
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261001T150000
+DTEND;TZID=America/Chicago:20261001T170000
+SUMMARY:Chess Club for Everyone at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Thursdays · 3:00 PM to 5:00 PM\n\nSemmes Regional Library host
+ s a chess club open to beginners and experienced players alike\, with the 
+ official listing describing it as designed for ages 6 and up. Sessions run
+  weekly on Thursdays\, so a new player can drop in without waiting for a f
+ resh start date.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/
+ events/ev-chess-club-for-everyone-at-semmes-0910.html
+URL:https://coastaleventures.com/events/ev-chess-club-for-everyone-at-semme
+ s-0910.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_psc_darkside_planetarium-2026-10-02@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261002T180000
+DTEND;TZID=America/Chicago:20261002T190000
+SUMMARY:Pink Floyd's Dark Side of the Moon Planetarium Show
+LOCATION:Pensacola State College Planetarium\, Bldg. 21\, 1000 College Blvd
+ .\, Pensacola\, FL 32504
+DESCRIPTION:Fri 10/2 · 6:00 PM-7:00 PM\n\nPSC's planetarium builds a one-h
+ our dome show around Pink Floyd's Dark Side of the Moon\, pairing the albu
+ m with a projected light show under the dome. It is a different register f
+ rom the college's kid-focused astronomy shows\, closer to a concert film t
+ han a science program.\n\nPrice: $ TBA\n\nDetails: https://coastaleventure
+ s.com/events/ev-psc-darkside-planetarium.html
+URL:https://coastaleventures.com/events/ev-psc-darkside-planetarium.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_discover_science_saturday_1003-2026-10-03@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261003T100000
+DTEND;TZID=America/Chicago:20261003T130000
+SUMMARY:Discover Science Saturday
+LOCATION:Emerald Coast Science Center\, 31 SW Memorial Parkway\, Fort Walto
+ n Beach\, FL 32548
+DESCRIPTION:Saturday 10/3 · 10:00 AM to 1:00 PM\n\nThe Emerald Coast Scien
+ ce Center runs a themed activity morning on the first Saturday of every mo
+ nth\, included in regular admission. Space is first come\, first served\, 
+ so registering online ahead of time only helps the center plan materials r
+ ather than holding a spot. Regular general admission applies on top of wha
+ tever the month's theme is.\n\nPrice: from $13\n\nDetails: https://coastal
+ eventures.com/events/ev-discover-science-saturday-1003.html
+URL:https://coastaleventures.com/events/ev-discover-science-saturday-1003.h
+ tml
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_ecsc_maker_days_1005-2026-10-05@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261005T090000
+DTEND;TZID=America/Chicago:20261005T100000
+SUMMARY:Maker Days at Emerald Coast Science Center
+LOCATION:Emerald Coast Science Center\, 31 SW Memorial Parkway\, Fort Walto
+ n Beach\, FL 32548
+DESCRIPTION:Monday 10/5 · 9:00 AM\n\nA hands-on maker program at the scien
+ ce center. The center's own page notes spaces are limited and asks familie
+ s to reserve a spot by emailing website@ecscience.org before the day.\n\nP
+ rice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-ecsc-maker-
+ days-1005.html
+URL:https://coastaleventures.com/events/ev-ecsc-maker-days-1005.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_maker_days_1006-2026-10-06@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261006T090000
+DTEND;TZID=America/Chicago:20261006T120000
+SUMMARY:Maker Days
+LOCATION:Emerald Coast Science Center\, 31 Memorial Pkwy SW\, Fort Walton B
+ each\, FL 32548
+DESCRIPTION:Tuesday 10/6 · 9:00 AM to 12:00 PM\n\nMaker Days is a hands-on
+  STEAM drop-off workshop at the Emerald Coast Science Center\, held the fi
+ rst Monday and Tuesday of every month. October's lesson\, Blueprints of th
+ e Wild\, covers animal engineering and biomimicry. It costs $35 for member
+ s and $40 for nonmembers\, with $10 off each additional sibling\, and a sp
+ ot isn't confirmed until you pay.\n\nPrice: from $40\n\nDetails: https://c
+ oastaleventures.com/events/ev-maker-days-1006.html
+URL:https://coastaleventures.com/events/ev-maker-days-1006.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_pathways_middle_school_workshop_1006-2026-10-06@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261006T090000
+DTEND;TZID=America/Chicago:20261006T120000
+SUMMARY:Pathways: Middle School Workshop
+LOCATION:Emerald Coast Science Center\, 31 SW Memorial Parkway\, Fort Walto
+ n Beach\, FL 32548
+DESCRIPTION:Tuesday 10/6 · 9:00 AM to 12:00 PM\n\nThis drop-off STEM works
+ hop at the Emerald Coast Science Center is for students ages 11 to 14\, he
+ ld the first Tuesday of every month. Spaces are limited\, and registration
+  goes through an email to the center rather than an online form. It runs t
+ he same morning as the center's separate Maker Days session.\n\nPrice: fro
+ m $35\n\nDetails: https://coastaleventures.com/events/ev-pathways-middle-s
+ chool-workshop-1006.html
+URL:https://coastaleventures.com/events/ev-pathways-middle-school-workshop-
+ 1006.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_lego_fun_tuesday_at_semmes_0908-2026-10-06@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261006T160000
+DTEND;TZID=America/Chicago:20261006T170000
+SUMMARY:LEGO Fun Tuesday at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Tuesdays · 4:00 PM to 5:00 PM\n\nSemmes Regional Library runs 
+ a LEGO building challenge meant to encourage imagination alongside buildin
+ g skill\, with the official description listing the program for ages 6 thr
+ ough 18. Mobile Public Libraries lists sessions on September 8 and Septemb
+ er 22\, and nothing on the calendar says it runs every week.\n\nPrice: $ T
+ BA\n\nDetails: https://coastaleventures.com/events/ev-lego-fun-tuesday-at-
+ semmes-0908.html
+URL:https://coastaleventures.com/events/ev-lego-fun-tuesday-at-semmes-0908.
+ html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_makerspace_studio_fall_2026_0923-2026-10-07@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261007T173000
+DTEND;TZID=America/Chicago:20261007T193000
+SUMMARY:Makerspace Studio Fall 2026
+LOCATION:Downtown Pensacola\, Museum of Commerce\, 201 E Zaragoza St\, Pens
+ acola\, FL 32502
+DESCRIPTION:Wednesdays · 5:30 PM to 7:30 PM\n\nThis hands on course at the
+  Museum of Commerce in downtown Pensacola covers 3D printers\, laser engra
+ vers\, CNC mills\, sewing\, electronics\, and other fabrication tools. No 
+ prior experience is required\, and it meets Wednesday evenings from 5:30 P
+ M to 7:30 PM\, September 23 through October 28. Tuition runs $215 per pers
+ on.\n\nPrice: from $215\n\nDetails: https://coastaleventures.com/events/ev
+ -makerspace-studio-fall-2026-0923.html
+URL:https://coastaleventures.com/events/ev-makerspace-studio-fall-2026-0923
+ .html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_draconids_1008-2026-10-08@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261010
+SUMMARY:Draconid Meteor Shower: the one that happens at bedtime
+LOCATION:Your own yard\, or Big Lagoon State Park for a darker sky\, 12301 
+ Gulf Beach Hwy\, Pensacola\, FL 32507
+DESCRIPTION:Thu 10/08/2026 · from dark\, best in the first hours\n\nNearly
+  every meteor shower asks you to be awake at three in the morning. The Dra
+ conids do not: the radiant is highest as the sky goes dark\, so the best h
+ our is the one right after dinner. The moon is a four percent crescent tha
+ t does not rise until quarter to five\, which means the sky is as black as
+  it gets all month.\n\nPrice: Free\n\nDetails: https://coastaleventures.co
+ m/events/ev-draconids-1008.html
+URL:https://coastaleventures.com/events/ev-draconids-1008.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_iphone_and_ipad_0903-2026-10-08@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261008T101500
+DTEND;TZID=America/Chicago:20261008T111500
+SUMMARY:iPhone & iPad
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Thursdays · 10:15 AM to 11:15 AM\n\nThis class at the Nicevill
+ e Senior Center walks members through iPhone and iPad navigation\, ways to
+  optimize the device and its online safety features. It runs Thursday mid 
+ morning and repeats on multiple Thursdays through the September calendar.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-iphone-
+ and-ipad-0903.html
+URL:https://coastaleventures.com/events/ev-iphone-and-ipad-0903.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mini_makers_and_experimenters_lab_1008-2026-10-08@coastaleventures.c
+ om
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261008T103000
+DTEND;TZID=America/Chicago:20261008T113000
+SUMMARY:Mini Makers and Experimenters Lab
+LOCATION:Emerald Coast Science Center\, 31 SW Memorial Parkway\, Fort Walto
+ n Beach\, FL 32548
+DESCRIPTION:Thursday 10/8 · 10:30 AM to 11:30 AM\n\nThis preschool activit
+ y hour at the Emerald Coast Science Center is built for ages 3 to 5\, thou
+ gh the whole family is welcome to join in. Each session is a different han
+ ds-on activity\, included in general admission\, and reservations are requ
+ ired since the room has limited spots. It is a shorter\, gentler session t
+ han the center's regular Maker Days for older kids.\n\nPrice: from $13\n\n
+ Details: https://coastaleventures.com/events/ev-mini-makers-and-experiment
+ ers-lab-1008.html
+URL:https://coastaleventures.com/events/ev-mini-makers-and-experimenters-la
+ b-1008.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_ai_and_emerging_tech_roundtable_workshop_1008-2026-10-08@coastaleven
+ tures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261008T120000
+DTEND;TZID=America/Chicago:20261008T130000
+SUMMARY:AI & Emerging Tech Roundtable/Workshop
+LOCATION:Navarre Chamber Information Center\, Ira Mae Hewatt Bruce Conferen
+ ce Room\, 1804 Prado St\, Navarre\, FL 32566
+DESCRIPTION:Thursday 10/8 · 12:00 PM to 1:00 PM\n\nThe Navarre Chamber's I
+ ra Mae Hewatt Bruce Conference Room hosts this AI and emerging tech roundt
+ able on the second Thursday of the month. It runs from noon to 1 PM. Admis
+ sion is free\, open to businesses\, nonprofits\, solopreneurs and communit
+ y leaders. It repeats monthly\, including October's session.\n\nPrice: Fre
+ e\n\nDetails: https://coastaleventures.com/events/ev-ai-and-emerging-tech-
+ roundtable-workshop-1008.html
+URL:https://coastaleventures.com/events/ev-ai-and-emerging-tech-roundtable-
+ workshop-1008.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_chess_club_for_everyone_at_semmes_0910-2026-10-08@coastaleventures.c
+ om
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261008T150000
+DTEND;TZID=America/Chicago:20261008T170000
+SUMMARY:Chess Club for Everyone at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Thursdays · 3:00 PM to 5:00 PM\n\nSemmes Regional Library host
+ s a chess club open to beginners and experienced players alike\, with the 
+ official listing describing it as designed for ages 6 and up. Sessions run
+  weekly on Thursdays\, so a new player can drop in without waiting for a f
+ resh start date.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/
+ events/ev-chess-club-for-everyone-at-semmes-0910.html
+URL:https://coastaleventures.com/events/ev-chess-club-for-everyone-at-semme
+ s-0910.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_ship_to_shore_nautilus-2026-10-09@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261009T100000
+DTEND;TZID=America/Chicago:20261009T110000
+SUMMARY:Ship to Shore Chat with E/V Nautilus
+LOCATION:Alabama Aquarium at Dauphin Island Sea Lab\, Dauphin Island\, AL
+DESCRIPTION:Friday 10/9 · 10:00 AM to 11:00 AM\n\nThe Alabama Aquarium at 
+ Dauphin Island Sea Lab hosts a live ship-to-shore chat with the crew of th
+ e E/V Nautilus for one hour on a Friday morning. It's included with regula
+ r Aquarium admission.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures
+ .com/events/ev-ship-to-shore-nautilus.html
+URL:https://coastaleventures.com/events/ev-ship-to-shore-nautilus.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_ecsc_gems_workshop_1010-2026-10-10@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261010T103000
+DTEND;TZID=America/Chicago:20261010T113000
+SUMMARY:Girls Empowered with Math and Science Workshop
+LOCATION:Emerald Coast Science Center\, 31 SW Memorial Parkway\, Fort Walto
+ n Beach\, FL 32548
+DESCRIPTION:Saturday 10/10 · 10:30 AM\n\nThe science center's GEMS series 
+ is a STEM workshop program for girls\, held on-site. The center's own page
+  does not describe the specific curriculum for this date.\n\nPrice: $ TBA\
+ n\nDetails: https://coastaleventures.com/events/ev-ecsc-gems-workshop-1010
+ .html
+URL:https://coastaleventures.com/events/ev-ecsc-gems-workshop-1010.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_girls_empowered_with_math_and_science_1010-2026-10-10@coastaleventur
+ es.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261010T103000
+DTEND;TZID=America/Chicago:20261010T120000
+SUMMARY:Girls Empowered with Math and Science Workshops
+LOCATION:Fort Walton Beach Library\, 185 Miracle Strip Parkway SE\, Fort Wa
+ lton Beach\, FL 32548
+DESCRIPTION:Saturday 10/10 · 10:30 AM to 12:00 PM\n\nThe Emerald Coast Sci
+ ence Center runs this GEM workshop for girls ages 8 to 15 at the Fort Walt
+ on Beach Library on the second Saturday of every month. Registration is by
+  phone through the library rather than online.\n\nPrice: $ TBA\n\nDetails:
+  https://coastaleventures.com/events/ev-girls-empowered-with-math-and-scie
+ nce-1010.html
+URL:https://coastaleventures.com/events/ev-girls-empowered-with-math-and-sc
+ ience-1010.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_naturenauts_academy_bellingrath_numbers_harv_1013-2026-10-13@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261013T100000
+DTEND;TZID=America/Chicago:20261013T113000
+SUMMARY:NatureNauts Academy: Bellingrath Numbers Harvest
+LOCATION:Bellingrath Gardens & Home\, 12401 Bellingrath Gardens Road\, Theo
+ dore\, AL 36582
+DESCRIPTION:Tuesday 10/13 · 10:00 AM to 11:30 AM\n\nThis NatureNauts Acade
+ my session turns Bellingrath Gardens' fall harvest into a hands-on math wo
+ rkshop for K-8 students. An adult chaperone is required for each child\, a
+ nd the Gardens ask that participants register at least a week ahead. Membe
+ r chaperones attend free\, member students pay $5.50\, and nonmembers pay 
+ regular Gardens admission.\n\nPrice: from $5.50\n\nDetails: https://coasta
+ leventures.com/events/ev-naturenauts-academy-bellingrath-numbers-harv-1013
+ .html
+URL:https://coastaleventures.com/events/ev-naturenauts-academy-bellingrath-
+ numbers-harv-1013.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_lego_fun_tuesday_at_semmes_0908-2026-10-13@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261013T160000
+DTEND;TZID=America/Chicago:20261013T170000
+SUMMARY:LEGO Fun Tuesday at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Tuesdays · 4:00 PM to 5:00 PM\n\nSemmes Regional Library runs 
+ a LEGO building challenge meant to encourage imagination alongside buildin
+ g skill\, with the official description listing the program for ages 6 thr
+ ough 18. Mobile Public Libraries lists sessions on September 8 and Septemb
+ er 22\, and nothing on the calendar says it runs every week.\n\nPrice: $ T
+ BA\n\nDetails: https://coastaleventures.com/events/ev-lego-fun-tuesday-at-
+ semmes-0908.html
+URL:https://coastaleventures.com/events/ev-lego-fun-tuesday-at-semmes-0908.
+ html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_makerspace_studio_fall_2026_0923-2026-10-14@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261014T173000
+DTEND;TZID=America/Chicago:20261014T193000
+SUMMARY:Makerspace Studio Fall 2026
+LOCATION:Downtown Pensacola\, Museum of Commerce\, 201 E Zaragoza St\, Pens
+ acola\, FL 32502
+DESCRIPTION:Wednesdays · 5:30 PM to 7:30 PM\n\nThis hands on course at the
+  Museum of Commerce in downtown Pensacola covers 3D printers\, laser engra
+ vers\, CNC mills\, sewing\, electronics\, and other fabrication tools. No 
+ prior experience is required\, and it meets Wednesday evenings from 5:30 P
+ M to 7:30 PM\, September 23 through October 28. Tuition runs $215 per pers
+ on.\n\nPrice: from $215\n\nDetails: https://coastaleventures.com/events/ev
+ -makerspace-studio-fall-2026-0923.html
+URL:https://coastaleventures.com/events/ev-makerspace-studio-fall-2026-0923
+ .html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_planetarium_night_steam_wars_1015-2026-10-15@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:Planetarium Night: STEAM Wars
+LOCATION:Emerald Coast Science Center\, 31 Memorial Pkwy SW\, Fort Walton B
+ each\, FL 32548
+DESCRIPTION:Thursday 10/15 · 6:00 PM and 7:00 PM shows\n\nThe Emerald Coas
+ t Science Center runs its Planetarium Night with the STEAM Wars program on
+  Thursday\, with two separate showtimes back to back. Nonmember admission 
+ is $12 per person\, members get in free\, and children 2 and under are fre
+ e at the door. Pick whichever showtime fits your evening\, since both run 
+ the same program.\n\nPrice: from $12\n\nDetails: https://coastaleventures.
+ com/events/ev-planetarium-night-steam-wars-1015.html
+URL:https://coastaleventures.com/events/ev-planetarium-night-steam-wars-101
+ 5.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_iphone_and_ipad_0903-2026-10-15@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261015T101500
+DTEND;TZID=America/Chicago:20261015T111500
+SUMMARY:iPhone & iPad
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Thursdays · 10:15 AM to 11:15 AM\n\nThis class at the Nicevill
+ e Senior Center walks members through iPhone and iPad navigation\, ways to
+  optimize the device and its online safety features. It runs Thursday mid 
+ morning and repeats on multiple Thursdays through the September calendar.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-iphone-
+ and-ipad-0903.html
+URL:https://coastaleventures.com/events/ev-iphone-and-ipad-0903.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_breezemakers_1015-2026-10-15@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261015T150000
+DTEND;TZID=America/Chicago:20261015T170000
+SUMMARY:Breeze Makers
+LOCATION:Gulf Breeze Library\, 1060 Shoreline Drive\, Gulf Breeze\, FL 3256
+ 1
+DESCRIPTION:Thursday 10/15 · 3 PM to 5 PM\n\nGulf Breeze Library opens its
+  makerspace for Breeze Makers\, a free drop-in session for crafts\, hobby 
+ projects and hands-on creating. Bring a project of your own or use the lib
+ rary's tools and materials. Kids 10 and under need an adult with them\, an
+ d there's no sign-up required.\n\nPrice: Free\n\nDetails: https://coastale
+ ventures.com/events/ev-breezemakers-1015.html
+URL:https://coastaleventures.com/events/ev-breezemakers-1015.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_chess_club_for_everyone_at_semmes_0910-2026-10-15@coastaleventures.c
+ om
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261015T150000
+DTEND;TZID=America/Chicago:20261015T170000
+SUMMARY:Chess Club for Everyone at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Thursdays · 3:00 PM to 5:00 PM\n\nSemmes Regional Library host
+ s a chess club open to beginners and experienced players alike\, with the 
+ official listing describing it as designed for ages 6 and up. Sessions run
+  weekly on Thursdays\, so a new player can drop in without waiting for a f
+ resh start date.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/
+ events/ev-chess-club-for-everyone-at-semmes-0910.html
+URL:https://coastaleventures.com/events/ev-chess-club-for-everyone-at-semme
+ s-0910.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_navarre_steamaker_1015-2026-10-15@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261015T160000
+DTEND;TZID=America/Chicago:20261015T170000
+SUMMARY:STEAMaker (Navarre)
+LOCATION:Navarre Library\, 8484 James M. Harvell Road\, Navarre\, FL 32566
+DESCRIPTION:Thursday 10/15 · 4:00 PM to 5:00 PM\n\nSTEAMaker is a one hour
+  after school science and building session at the Navarre Library\, run on
+  a recurring schedule this fall.\n\nPrice: $ TBA\n\nDetails: https://coast
+ aleventures.com/events/ev-navarre-steamaker-1015.html
+URL:https://coastaleventures.com/events/ev-navarre-steamaker-1015.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_laser_etching_custom_keychain_fob_at_the_sea_1017-2026-10-17@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261017T090000
+DTEND;TZID=America/Chicago:20261017T130000
+SUMMARY:Laser Etching: Custom Keychain FOB at the SEA Makerspace
+LOCATION:Downtown Pensacola\, Museum of Commerce\, 201 E Zaragoza St\, Pens
+ acola\, FL 32502
+DESCRIPTION:Saturday 10/17 · 9:00 AM to 1:00 PM\n\nThis hands on workshop 
+ at the Museum of Commerce in downtown Pensacola teaches you to prepare art
+ work\, operate a laser cutter\, and make a wooden keychain fob. Finishing 
+ it also qualifies you to use the SEA Makerspace laser on your own afterwar
+ d. It runs Saturday morning from 9 AM to 1 PM\, and tuition is $65 per per
+ son.\n\nPrice: from $65\n\nDetails: https://coastaleventures.com/events/ev
+ -laser-etching-custom-keychain-fob-at-the-sea-1017.html
+URL:https://coastaleventures.com/events/ev-laser-etching-custom-keychain-fo
+ b-at-the-sea-1017.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_curiositylab_frankenstein_mess-2026-10-17@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261017T130000
+DTEND;TZID=America/Chicago:20261017T160000
+SUMMARY:Curiosity Lab: Frankenstein
+LOCATION:Pensacola MESS Hall\, 116 N Tarragona St\, Pensacola\, FL 32502
+DESCRIPTION:Saturday 10/17 · 1:00 PM to 4:00 PM\n\nOctober's Curiosity Lab
+  goes spooky: kids build their own monster mechanisms using string finger\
+ , jumping jack\, and automata mechanics. It suits ages 7 and up and is inc
+ luded with general admission. The rest of the museum\, including mess kits
+ \, is open for exploration 10 AM to 5 PM the same Saturday.\n\nPrice: from
+  $15\n\nDetails: https://coastaleventures.com/events/ev-curiositylab-frank
+ enstein-mess.html
+URL:https://coastaleventures.com/events/ev-curiositylab-frankenstein-mess.h
+ tml
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_lego_fun_tuesday_at_semmes_0908-2026-10-20@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261020T160000
+DTEND;TZID=America/Chicago:20261020T170000
+SUMMARY:LEGO Fun Tuesday at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Tuesdays · 4:00 PM to 5:00 PM\n\nSemmes Regional Library runs 
+ a LEGO building challenge meant to encourage imagination alongside buildin
+ g skill\, with the official description listing the program for ages 6 thr
+ ough 18. Mobile Public Libraries lists sessions on September 8 and Septemb
+ er 22\, and nothing on the calendar says it runs every week.\n\nPrice: $ T
+ BA\n\nDetails: https://coastaleventures.com/events/ev-lego-fun-tuesday-at-
+ semmes-0908.html
+URL:https://coastaleventures.com/events/ev-lego-fun-tuesday-at-semmes-0908.
+ html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_makerspace_studio_fall_2026_0923-2026-10-21@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261021T173000
+DTEND;TZID=America/Chicago:20261021T193000
+SUMMARY:Makerspace Studio Fall 2026
+LOCATION:Downtown Pensacola\, Museum of Commerce\, 201 E Zaragoza St\, Pens
+ acola\, FL 32502
+DESCRIPTION:Wednesdays · 5:30 PM to 7:30 PM\n\nThis hands on course at the
+  Museum of Commerce in downtown Pensacola covers 3D printers\, laser engra
+ vers\, CNC mills\, sewing\, electronics\, and other fabrication tools. No 
+ prior experience is required\, and it meets Wednesday evenings from 5:30 P
+ M to 7:30 PM\, September 23 through October 28. Tuition runs $215 per pers
+ on.\n\nPrice: from $215\n\nDetails: https://coastaleventures.com/events/ev
+ -makerspace-studio-fall-2026-0923.html
+URL:https://coastaleventures.com/events/ev-makerspace-studio-fall-2026-0923
+ .html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_orionids_1022-2026-10-22@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261022T031500
+DTEND;TZID=America/Chicago:20261022T041500
+SUMMARY:Orionid Meteor Shower: Halley's Comet dust
+LOCATION:Your own yard\, or Big Lagoon State Park for a darker sky\, 12301 
+ Gulf Beach Hwy\, Pensacola\, FL 32507
+DESCRIPTION:Thu 10/22/2026 · from 3:15 AM\, once the moon is down\n\nThese
+  are crumbs off Halley's Comet hitting the air at forty-one miles a second
+ . The catch this year is a fat gibbous moon that washes the sky out until 
+ it sets at quarter past three\, which leaves about two and a half hours of
+  real darkness before dawn on the 22nd.\n\nPrice: Free\n\nDetails: https:/
+ /coastaleventures.com/events/ev-orionids-1022.html
+URL:https://coastaleventures.com/events/ev-orionids-1022.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_iphone_and_ipad_0903-2026-10-22@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261022T101500
+DTEND;TZID=America/Chicago:20261022T111500
+SUMMARY:iPhone & iPad
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Thursdays · 10:15 AM to 11:15 AM\n\nThis class at the Nicevill
+ e Senior Center walks members through iPhone and iPad navigation\, ways to
+  optimize the device and its online safety features. It runs Thursday mid 
+ morning and repeats on multiple Thursdays through the September calendar.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-iphone-
+ and-ipad-0903.html
+URL:https://coastaleventures.com/events/ev-iphone-and-ipad-0903.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gulf_breeze_tween_teen_tech_time_1022-2026-10-22@coastaleventures.co
+ m
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261022T140000
+DTEND;TZID=America/Chicago:20261022T160000
+SUMMARY:Tween/Teen Tech-Time (Gulf Breeze)
+LOCATION:Gulf Breeze Library\, 1060 Shoreline Drive\, Gulf Breeze\, FL 3256
+ 1
+DESCRIPTION:Thursday 10/22 · 2:00 PM to 4:00 PM\n\nTween/Teen Tech-Time op
+ ens the Gulf Breeze Library's technology space to older kids for two hours
+  after school. It suits a kid who is happy to show up and see what is out.
+ \n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-gulf-b
+ reeze-tween-teen-tech-time-1022.html
+URL:https://coastaleventures.com/events/ev-gulf-breeze-tween-teen-tech-time
+ -1022.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_chess_club_for_everyone_at_semmes_0910-2026-10-22@coastaleventures.c
+ om
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261022T150000
+DTEND;TZID=America/Chicago:20261022T170000
+SUMMARY:Chess Club for Everyone at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Thursdays · 3:00 PM to 5:00 PM\n\nSemmes Regional Library host
+ s a chess club open to beginners and experienced players alike\, with the 
+ official listing describing it as designed for ages 6 and up. Sessions run
+  weekly on Thursdays\, so a new player can drop in without waiting for a f
+ resh start date.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/
+ events/ev-chess-club-for-everyone-at-semmes-0910.html
+URL:https://coastaleventures.com/events/ev-chess-club-for-everyone-at-semme
+ s-0910.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_planetarium_special_feature_spooky_secrets_o_1022-2026-10-22@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261022T180000
+DTEND;TZID=America/Chicago:20261022T190000
+SUMMARY:Planetarium Special Feature: Spooky Secrets of the Stars
+LOCATION:Emerald Coast Science Center\, 31 Memorial Pkwy SW\, Fort Walton B
+ each\, FL 32548
+DESCRIPTION:Thursday 10/22 · 6:00 PM\n\nThe Emerald Coast Science Center's
+  planetarium turns Halloween themed for Spooky Secrets of the Stars\, mixi
+ ng eerie space facts with mythological monsters and a tour of the solar sy
+ stem. The show is recommended for ages 5 and up and runs at 6 PM on Thursd
+ ay. Nonmember admission is $12\, and Science Center members pay $10.\n\nPr
+ ice: from $12\n\nDetails: https://coastaleventures.com/events/ev-planetari
+ um-special-feature-spooky-secrets-o-1022.html
+URL:https://coastaleventures.com/events/ev-planetarium-special-feature-spoo
+ ky-secrets-o-1022.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_usa_archaeology_museum_creepy_crawly_1024-2026-10-24@coastaleventure
+ s.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261024T100000
+DTEND;TZID=America/Chicago:20261024T150000
+SUMMARY:Creepy Crawly Halloween at the Museum
+LOCATION:University of South Alabama Archaeology Museum\, 6050 USA Dr. S.\,
+  Mobile\, AL 36688
+DESCRIPTION:Saturday 10/24 · 10:00 AM to 3:00 PM\n\nA free family Hallowee
+ n day at the university's archaeology museum includes a midday Creepy Craw
+ ly Show and Tell led by USA Biology\, plus pumpkin painting\, a trick-or-t
+ reat trail\, crafts and face painting. The museum is part of the Universit
+ y of South Alabama campus.\n\nPrice: Free\n\nDetails: https://coastalevent
+ ures.com/events/ev-usa-archaeology-museum-creepy-crawly-1024.html
+URL:https://coastaleventures.com/events/ev-usa-archaeology-museum-creepy-cr
+ awly-1024.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_lego_fun_tuesday_at_semmes_0908-2026-10-27@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261027T160000
+DTEND;TZID=America/Chicago:20261027T170000
+SUMMARY:LEGO Fun Tuesday at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Tuesdays · 4:00 PM to 5:00 PM\n\nSemmes Regional Library runs 
+ a LEGO building challenge meant to encourage imagination alongside buildin
+ g skill\, with the official description listing the program for ages 6 thr
+ ough 18. Mobile Public Libraries lists sessions on September 8 and Septemb
+ er 22\, and nothing on the calendar says it runs every week.\n\nPrice: $ T
+ BA\n\nDetails: https://coastaleventures.com/events/ev-lego-fun-tuesday-at-
+ semmes-0908.html
+URL:https://coastaleventures.com/events/ev-lego-fun-tuesday-at-semmes-0908.
+ html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_makerspace_studio_fall_2026_0923-2026-10-28@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261028T173000
+DTEND;TZID=America/Chicago:20261028T193000
+SUMMARY:Makerspace Studio Fall 2026
+LOCATION:Downtown Pensacola\, Museum of Commerce\, 201 E Zaragoza St\, Pens
+ acola\, FL 32502
+DESCRIPTION:Wednesdays · 5:30 PM to 7:30 PM\n\nThis hands on course at the
+  Museum of Commerce in downtown Pensacola covers 3D printers\, laser engra
+ vers\, CNC mills\, sewing\, electronics\, and other fabrication tools. No 
+ prior experience is required\, and it meets Wednesday evenings from 5:30 P
+ M to 7:30 PM\, September 23 through October 28. Tuition runs $215 per pers
+ on.\n\nPrice: from $215\n\nDetails: https://coastaleventures.com/events/ev
+ -makerspace-studio-fall-2026-0923.html
+URL:https://coastaleventures.com/events/ev-makerspace-studio-fall-2026-0923
+ .html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_iphone_and_ipad_0903-2026-10-29@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261029T101500
+DTEND;TZID=America/Chicago:20261029T111500
+SUMMARY:iPhone & iPad
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Thursdays · 10:15 AM to 11:15 AM\n\nThis class at the Nicevill
+ e Senior Center walks members through iPhone and iPad navigation\, ways to
+  optimize the device and its online safety features. It runs Thursday mid 
+ morning and repeats on multiple Thursdays through the September calendar.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-iphone-
+ and-ipad-0903.html
+URL:https://coastaleventures.com/events/ev-iphone-and-ipad-0903.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_chess_club_for_everyone_at_semmes_0910-2026-10-29@coastaleventures.c
+ om
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261029T150000
+DTEND;TZID=America/Chicago:20261029T170000
+SUMMARY:Chess Club for Everyone at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Thursdays · 3:00 PM to 5:00 PM\n\nSemmes Regional Library host
+ s a chess club open to beginners and experienced players alike\, with the 
+ official listing describing it as designed for ages 6 and up. Sessions run
+  weekly on Thursdays\, so a new player can drop in without waiting for a f
+ resh start date.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/
+ events/ev-chess-club-for-everyone-at-semmes-0910.html
+URL:https://coastaleventures.com/events/ev-chess-club-for-everyone-at-semme
+ s-0910.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_destin_cooking_lab_1102-2026-11-02@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261102T180000
+DTEND;TZID=America/Chicago:20261102T193000
+SUMMARY:After-Hours Cooking Lab for Middle Schoolers
+LOCATION:Destin Community Center\, 101 Stahlman Avenue\, Destin\, FL 32541
+DESCRIPTION:Mondays 11/2\, 11/9\, 11/16 and 11/30 · 6:00 PM to 7:30 PM\n\n
+ The Destin Community Center runs an evening cooking class for middle schoo
+ lers ages 10 to 14\, where the group cooks basic meals\, eats together and
+  socializes. Supplies are provided\, and the center asks cooks to wear clo
+ sed-toe shoes and tie long hair back. The fee covers the full series of Mo
+ nday sessions.\n\nPrice: from $40\n\nDetails: https://coastaleventures.com
+ /events/ev-destin-cooking-lab-1102.html
+URL:https://coastaleventures.com/events/ev-destin-cooking-lab-1102.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_saenger_ai_da_1102-2026-11-02@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261102T190000
+DTEND;TZID=America/Chicago:20261102T200000
+SUMMARY:Synthetic Creativity: Ai-Da Unveiled
+LOCATION:Saenger Theatre\, Pensacola\, 118 S Palafox Pl\, Pensacola\, FL 32
+ 502
+DESCRIPTION:Monday 11/2 · 7:00 PM\n\nAi-Da\, an ultra-realistic humanoid r
+ obot artist\, creates artwork live on the Saenger stage\, followed by a pa
+ nel discussion with experts in artificial intelligence. Pensacola State Co
+ llege presents the evening as part of the 2026 Foo Foo Festival. The festi
+ val week also includes a free reception and a family robotics event at the
+  Pensacola MESS Hall.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures
+ .com/events/ev-saenger-ai-da-1102.html
+URL:https://coastaleventures.com/events/ev-saenger-ai-da-1102.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_lego_fun_tuesday_at_semmes_0908-2026-11-03@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261103T160000
+DTEND;TZID=America/Chicago:20261103T170000
+SUMMARY:LEGO Fun Tuesday at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Tuesdays · 4:00 PM to 5:00 PM\n\nSemmes Regional Library runs 
+ a LEGO building challenge meant to encourage imagination alongside buildin
+ g skill\, with the official description listing the program for ages 6 thr
+ ough 18. Mobile Public Libraries lists sessions on September 8 and Septemb
+ er 22\, and nothing on the calendar says it runs every week.\n\nPrice: $ T
+ BA\n\nDetails: https://coastaleventures.com/events/ev-lego-fun-tuesday-at-
+ semmes-0908.html
+URL:https://coastaleventures.com/events/ev-lego-fun-tuesday-at-semmes-0908.
+ html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_iphone_and_ipad_0903-2026-11-05@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261105T101500
+DTEND;TZID=America/Chicago:20261105T111500
+SUMMARY:iPhone & iPad
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Thursdays · 10:15 AM to 11:15 AM\n\nThis class at the Nicevill
+ e Senior Center walks members through iPhone and iPad navigation\, ways to
+  optimize the device and its online safety features. It runs Thursday mid 
+ morning and repeats on multiple Thursdays through the September calendar.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-iphone-
+ and-ipad-0903.html
+URL:https://coastaleventures.com/events/ev-iphone-and-ipad-0903.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_chess_club_for_everyone_at_semmes_0910-2026-11-05@coastaleventures.c
+ om
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261105T150000
+DTEND;TZID=America/Chicago:20261105T170000
+SUMMARY:Chess Club for Everyone at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Thursdays · 3:00 PM to 5:00 PM\n\nSemmes Regional Library host
+ s a chess club open to beginners and experienced players alike\, with the 
+ official listing describing it as designed for ages 6 and up. Sessions run
+  weekly on Thursdays\, so a new player can drop in without waiting for a f
+ resh start date.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/
+ events/ev-chess-club-for-everyone-at-semmes-0910.html
+URL:https://coastaleventures.com/events/ev-chess-club-for-everyone-at-semme
+ s-0910.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_lego_fun_tuesday_at_semmes_0908-2026-11-10@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261110T160000
+DTEND;TZID=America/Chicago:20261110T170000
+SUMMARY:LEGO Fun Tuesday at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Tuesdays · 4:00 PM to 5:00 PM\n\nSemmes Regional Library runs 
+ a LEGO building challenge meant to encourage imagination alongside buildin
+ g skill\, with the official description listing the program for ages 6 thr
+ ough 18. Mobile Public Libraries lists sessions on September 8 and Septemb
+ er 22\, and nothing on the calendar says it runs every week.\n\nPrice: $ T
+ BA\n\nDetails: https://coastaleventures.com/events/ev-lego-fun-tuesday-at-
+ semmes-0908.html
+URL:https://coastaleventures.com/events/ev-lego-fun-tuesday-at-semmes-0908.
+ html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_iphone_and_ipad_0903-2026-11-12@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261112T101500
+DTEND;TZID=America/Chicago:20261112T111500
+SUMMARY:iPhone & iPad
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Thursdays · 10:15 AM to 11:15 AM\n\nThis class at the Nicevill
+ e Senior Center walks members through iPhone and iPad navigation\, ways to
+  optimize the device and its online safety features. It runs Thursday mid 
+ morning and repeats on multiple Thursdays through the September calendar.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-iphone-
+ and-ipad-0903.html
+URL:https://coastaleventures.com/events/ev-iphone-and-ipad-0903.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_chess_club_for_everyone_at_semmes_0910-2026-11-12@coastaleventures.c
+ om
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261112T150000
+DTEND;TZID=America/Chicago:20261112T170000
+SUMMARY:Chess Club for Everyone at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Thursdays · 3:00 PM to 5:00 PM\n\nSemmes Regional Library host
+ s a chess club open to beginners and experienced players alike\, with the 
+ official listing describing it as designed for ages 6 and up. Sessions run
+  weekly on Thursdays\, so a new player can drop in without waiting for a f
+ resh start date.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/
+ events/ev-chess-club-for-everyone-at-semmes-0910.html
+URL:https://coastaleventures.com/events/ev-chess-club-for-everyone-at-semme
+ s-0910.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_lego_fun_tuesday_at_semmes_0908-2026-11-17@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261117T160000
+DTEND;TZID=America/Chicago:20261117T170000
+SUMMARY:LEGO Fun Tuesday at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Tuesdays · 4:00 PM to 5:00 PM\n\nSemmes Regional Library runs 
+ a LEGO building challenge meant to encourage imagination alongside buildin
+ g skill\, with the official description listing the program for ages 6 thr
+ ough 18. Mobile Public Libraries lists sessions on September 8 and Septemb
+ er 22\, and nothing on the calendar says it runs every week.\n\nPrice: $ T
+ BA\n\nDetails: https://coastaleventures.com/events/ev-lego-fun-tuesday-at-
+ semmes-0908.html
+URL:https://coastaleventures.com/events/ev-lego-fun-tuesday-at-semmes-0908.
+ html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_iphone_and_ipad_0903-2026-11-19@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261119T101500
+DTEND;TZID=America/Chicago:20261119T111500
+SUMMARY:iPhone & iPad
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Thursdays · 10:15 AM to 11:15 AM\n\nThis class at the Nicevill
+ e Senior Center walks members through iPhone and iPad navigation\, ways to
+  optimize the device and its online safety features. It runs Thursday mid 
+ morning and repeats on multiple Thursdays through the September calendar.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-iphone-
+ and-ipad-0903.html
+URL:https://coastaleventures.com/events/ev-iphone-and-ipad-0903.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_chess_club_for_everyone_at_semmes_0910-2026-11-19@coastaleventures.c
+ om
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261119T150000
+DTEND;TZID=America/Chicago:20261119T170000
+SUMMARY:Chess Club for Everyone at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Thursdays · 3:00 PM to 5:00 PM\n\nSemmes Regional Library host
+ s a chess club open to beginners and experienced players alike\, with the 
+ official listing describing it as designed for ages 6 and up. Sessions run
+  weekly on Thursdays\, so a new player can drop in without waiting for a f
+ resh start date.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/
+ events/ev-chess-club-for-everyone-at-semmes-0910.html
+URL:https://coastaleventures.com/events/ev-chess-club-for-everyone-at-semme
+ s-0910.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_lego_fun_tuesday_at_semmes_0908-2026-11-24@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261124T160000
+DTEND;TZID=America/Chicago:20261124T170000
+SUMMARY:LEGO Fun Tuesday at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Tuesdays · 4:00 PM to 5:00 PM\n\nSemmes Regional Library runs 
+ a LEGO building challenge meant to encourage imagination alongside buildin
+ g skill\, with the official description listing the program for ages 6 thr
+ ough 18. Mobile Public Libraries lists sessions on September 8 and Septemb
+ er 22\, and nothing on the calendar says it runs every week.\n\nPrice: $ T
+ BA\n\nDetails: https://coastaleventures.com/events/ev-lego-fun-tuesday-at-
+ semmes-0908.html
+URL:https://coastaleventures.com/events/ev-lego-fun-tuesday-at-semmes-0908.
+ html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_iphone_and_ipad_0903-2026-11-26@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261126T101500
+DTEND;TZID=America/Chicago:20261126T111500
+SUMMARY:iPhone & iPad
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Thursdays · 10:15 AM to 11:15 AM\n\nThis class at the Nicevill
+ e Senior Center walks members through iPhone and iPad navigation\, ways to
+  optimize the device and its online safety features. It runs Thursday mid 
+ morning and repeats on multiple Thursdays through the September calendar.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-iphone-
+ and-ipad-0903.html
+URL:https://coastaleventures.com/events/ev-iphone-and-ipad-0903.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_chess_club_for_everyone_at_semmes_0910-2026-11-26@coastaleventures.c
+ om
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261126T150000
+DTEND;TZID=America/Chicago:20261126T170000
+SUMMARY:Chess Club for Everyone at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Thursdays · 3:00 PM to 5:00 PM\n\nSemmes Regional Library host
+ s a chess club open to beginners and experienced players alike\, with the 
+ official listing describing it as designed for ages 6 and up. Sessions run
+  weekly on Thursdays\, so a new player can drop in without waiting for a f
+ resh start date.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/
+ events/ev-chess-club-for-everyone-at-semmes-0910.html
+URL:https://coastaleventures.com/events/ev-chess-club-for-everyone-at-semme
+ s-0910.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_lego_fun_tuesday_at_semmes_0908-2026-12-01@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261201T160000
+DTEND;TZID=America/Chicago:20261201T170000
+SUMMARY:LEGO Fun Tuesday at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Tuesdays · 4:00 PM to 5:00 PM\n\nSemmes Regional Library runs 
+ a LEGO building challenge meant to encourage imagination alongside buildin
+ g skill\, with the official description listing the program for ages 6 thr
+ ough 18. Mobile Public Libraries lists sessions on September 8 and Septemb
+ er 22\, and nothing on the calendar says it runs every week.\n\nPrice: $ T
+ BA\n\nDetails: https://coastaleventures.com/events/ev-lego-fun-tuesday-at-
+ semmes-0908.html
+URL:https://coastaleventures.com/events/ev-lego-fun-tuesday-at-semmes-0908.
+ html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_iphone_and_ipad_0903-2026-12-03@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261203T101500
+DTEND;TZID=America/Chicago:20261203T111500
+SUMMARY:iPhone & iPad
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Thursdays · 10:15 AM to 11:15 AM\n\nThis class at the Nicevill
+ e Senior Center walks members through iPhone and iPad navigation\, ways to
+  optimize the device and its online safety features. It runs Thursday mid 
+ morning and repeats on multiple Thursdays through the September calendar.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-iphone-
+ and-ipad-0903.html
+URL:https://coastaleventures.com/events/ev-iphone-and-ipad-0903.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_chess_club_for_everyone_at_semmes_0910-2026-12-03@coastaleventures.c
+ om
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261203T150000
+DTEND;TZID=America/Chicago:20261203T170000
+SUMMARY:Chess Club for Everyone at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Thursdays · 3:00 PM to 5:00 PM\n\nSemmes Regional Library host
+ s a chess club open to beginners and experienced players alike\, with the 
+ official listing describing it as designed for ages 6 and up. Sessions run
+  weekly on Thursdays\, so a new player can drop in without waiting for a f
+ resh start date.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/
+ events/ev-chess-club-for-everyone-at-semmes-0910.html
+URL:https://coastaleventures.com/events/ev-chess-club-for-everyone-at-semme
+ s-0910.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_lego_fun_tuesday_at_semmes_0908-2026-12-08@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261208T160000
+DTEND;TZID=America/Chicago:20261208T170000
+SUMMARY:LEGO Fun Tuesday at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Tuesdays · 4:00 PM to 5:00 PM\n\nSemmes Regional Library runs 
+ a LEGO building challenge meant to encourage imagination alongside buildin
+ g skill\, with the official description listing the program for ages 6 thr
+ ough 18. Mobile Public Libraries lists sessions on September 8 and Septemb
+ er 22\, and nothing on the calendar says it runs every week.\n\nPrice: $ T
+ BA\n\nDetails: https://coastaleventures.com/events/ev-lego-fun-tuesday-at-
+ semmes-0908.html
+URL:https://coastaleventures.com/events/ev-lego-fun-tuesday-at-semmes-0908.
+ html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_iphone_and_ipad_0903-2026-12-10@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261210T101500
+DTEND;TZID=America/Chicago:20261210T111500
+SUMMARY:iPhone & iPad
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Thursdays · 10:15 AM to 11:15 AM\n\nThis class at the Nicevill
+ e Senior Center walks members through iPhone and iPad navigation\, ways to
+  optimize the device and its online safety features. It runs Thursday mid 
+ morning and repeats on multiple Thursdays through the September calendar.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-iphone-
+ and-ipad-0903.html
+URL:https://coastaleventures.com/events/ev-iphone-and-ipad-0903.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_chess_club_for_everyone_at_semmes_0910-2026-12-10@coastaleventures.c
+ om
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261210T150000
+DTEND;TZID=America/Chicago:20261210T170000
+SUMMARY:Chess Club for Everyone at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Thursdays · 3:00 PM to 5:00 PM\n\nSemmes Regional Library host
+ s a chess club open to beginners and experienced players alike\, with the 
+ official listing describing it as designed for ages 6 and up. Sessions run
+  weekly on Thursdays\, so a new player can drop in without waiting for a f
+ resh start date.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/
+ events/ev-chess-club-for-everyone-at-semmes-0910.html
+URL:https://coastaleventures.com/events/ev-chess-club-for-everyone-at-semme
+ s-0910.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_lego_fun_tuesday_at_semmes_0908-2026-12-15@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261215T160000
+DTEND;TZID=America/Chicago:20261215T170000
+SUMMARY:LEGO Fun Tuesday at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Tuesdays · 4:00 PM to 5:00 PM\n\nSemmes Regional Library runs 
+ a LEGO building challenge meant to encourage imagination alongside buildin
+ g skill\, with the official description listing the program for ages 6 thr
+ ough 18. Mobile Public Libraries lists sessions on September 8 and Septemb
+ er 22\, and nothing on the calendar says it runs every week.\n\nPrice: $ T
+ BA\n\nDetails: https://coastaleventures.com/events/ev-lego-fun-tuesday-at-
+ semmes-0908.html
+URL:https://coastaleventures.com/events/ev-lego-fun-tuesday-at-semmes-0908.
+ html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_iphone_and_ipad_0903-2026-12-17@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261217T101500
+DTEND;TZID=America/Chicago:20261217T111500
+SUMMARY:iPhone & iPad
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Thursdays · 10:15 AM to 11:15 AM\n\nThis class at the Nicevill
+ e Senior Center walks members through iPhone and iPad navigation\, ways to
+  optimize the device and its online safety features. It runs Thursday mid 
+ morning and repeats on multiple Thursdays through the September calendar.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-iphone-
+ and-ipad-0903.html
+URL:https://coastaleventures.com/events/ev-iphone-and-ipad-0903.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_chess_club_for_everyone_at_semmes_0910-2026-12-17@coastaleventures.c
+ om
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261217T150000
+DTEND;TZID=America/Chicago:20261217T170000
+SUMMARY:Chess Club for Everyone at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Thursdays · 3:00 PM to 5:00 PM\n\nSemmes Regional Library host
+ s a chess club open to beginners and experienced players alike\, with the 
+ official listing describing it as designed for ages 6 and up. Sessions run
+  weekly on Thursdays\, so a new player can drop in without waiting for a f
+ resh start date.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/
+ events/ev-chess-club-for-everyone-at-semmes-0910.html
+URL:https://coastaleventures.com/events/ev-chess-club-for-everyone-at-semme
+ s-0910.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_lego_fun_tuesday_at_semmes_0908-2026-12-22@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261222T160000
+DTEND;TZID=America/Chicago:20261222T170000
+SUMMARY:LEGO Fun Tuesday at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Tuesdays · 4:00 PM to 5:00 PM\n\nSemmes Regional Library runs 
+ a LEGO building challenge meant to encourage imagination alongside buildin
+ g skill\, with the official description listing the program for ages 6 thr
+ ough 18. Mobile Public Libraries lists sessions on September 8 and Septemb
+ er 22\, and nothing on the calendar says it runs every week.\n\nPrice: $ T
+ BA\n\nDetails: https://coastaleventures.com/events/ev-lego-fun-tuesday-at-
+ semmes-0908.html
+URL:https://coastaleventures.com/events/ev-lego-fun-tuesday-at-semmes-0908.
+ html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_iphone_and_ipad_0903-2026-12-24@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261224T101500
+DTEND;TZID=America/Chicago:20261224T111500
+SUMMARY:iPhone & iPad
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Thursdays · 10:15 AM to 11:15 AM\n\nThis class at the Nicevill
+ e Senior Center walks members through iPhone and iPad navigation\, ways to
+  optimize the device and its online safety features. It runs Thursday mid 
+ morning and repeats on multiple Thursdays through the September calendar.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-iphone-
+ and-ipad-0903.html
+URL:https://coastaleventures.com/events/ev-iphone-and-ipad-0903.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_chess_club_for_everyone_at_semmes_0910-2026-12-24@coastaleventures.c
+ om
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261224T150000
+DTEND;TZID=America/Chicago:20261224T170000
+SUMMARY:Chess Club for Everyone at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Thursdays · 3:00 PM to 5:00 PM\n\nSemmes Regional Library host
+ s a chess club open to beginners and experienced players alike\, with the 
+ official listing describing it as designed for ages 6 and up. Sessions run
+  weekly on Thursdays\, so a new player can drop in without waiting for a f
+ resh start date.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/
+ events/ev-chess-club-for-everyone-at-semmes-0910.html
+URL:https://coastaleventures.com/events/ev-chess-club-for-everyone-at-semme
+ s-0910.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_lego_fun_tuesday_at_semmes_0908-2026-12-29@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261229T160000
+DTEND;TZID=America/Chicago:20261229T170000
+SUMMARY:LEGO Fun Tuesday at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Tuesdays · 4:00 PM to 5:00 PM\n\nSemmes Regional Library runs 
+ a LEGO building challenge meant to encourage imagination alongside buildin
+ g skill\, with the official description listing the program for ages 6 thr
+ ough 18. Mobile Public Libraries lists sessions on September 8 and Septemb
+ er 22\, and nothing on the calendar says it runs every week.\n\nPrice: $ T
+ BA\n\nDetails: https://coastaleventures.com/events/ev-lego-fun-tuesday-at-
+ semmes-0908.html
+URL:https://coastaleventures.com/events/ev-lego-fun-tuesday-at-semmes-0908.
+ html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

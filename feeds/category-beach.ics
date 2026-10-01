@@ -1,0 +1,298 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Coastal Eventures//Events feed//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Coastal Eventures: Beach
+X-WR-TIMEZONE:America/Chicago
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:ev_destin_rodeo_weighins-2026-10-01@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261001T100000
+DTEND;TZID=America/Chicago:20261001T190000
+SUMMARY:Destin Fishing Rodeo: Daily Public Weigh-Ins
+LOCATION:Docks behind AJ's Seafood & Oyster Bar\, 116 Harbor Blvd\, Destin\
+ , FL 32541
+DESCRIPTION:Daily\, Oct 1 – Oct 31 · 10:00 AM-7:00 PM\n\nAnglers competi
+ ng in the month-long Destin Fishing Rodeo bring their catches to the scale
+  on the harbor docks behind AJ's Seafood & Oyster Bar every day in October
+ . The public is welcome to watch for free from 10 AM to 7 PM\, and the cro
+ wd tends to grow with the size of the fish coming off the boats.\n\nPrice:
+  Free\n\nDetails: https://coastaleventures.com/events/ev-destin-rodeo-weig
+ hins.html
+URL:https://coastaleventures.com/events/ev-destin-rodeo-weighins.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_oceanhour-2026-10-03@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261003
+DTEND;VALUE=DATE:20261004
+SUMMARY:Ocean Hour Beach Cleanup
+LOCATION:Rotating\, Pensacola Beach / area waterfronts\, Pensacola Beach\, 
+ FL 32561
+DESCRIPTION:Saturdays · start time and site posted each week\n\nGive an ho
+ ur and leave the beach better. Buckets\, grabbers\, and gloves are provide
+ d. It is a service morning that fits the family's values and is kid-friend
+ ly.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/events/ev-ocea
+ nhour.html
+URL:https://coastaleventures.com/events/ev-oceanhour.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_sritri-2026-10-03@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261003T070000
+DTEND;TZID=America/Chicago:20261003T080000
+SUMMARY:Santa Rosa Island Triathlon: SOLD OUT (waitlist)
+LOCATION:Casino Beach Pavilion\, 20 Casino Beach Blvd\, Pensacola Beach\, F
+ L 32561
+DESCRIPTION:Sat 10/03/2026 · 7:00 AM · Casino Beach\n\nIndividual sprint 
+ entries are sold out (final tier hit $130). The waitlist is open\, and rel
+ ay slots showed 'no waitlist for relays' at $215-240. Watching the swim st
+ art is free and a great spectacle morning.\n\nPrice: from $215\n\nDetails:
+  https://coastaleventures.com/events/ev-sritri.html
+URL:https://coastaleventures.com/events/ev-sritri.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_ferry-2026-10-03@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261003T090000
+DTEND;TZID=America/Chicago:20261003T180000
+SUMMARY:Pensacola Bay Ferry to Fort Pickens
+LOCATION:Downtown ferry landing → Fort Pickens → Pensacola Beach\, 700 
+ S Barracks St\, Pensacola\, FL 32502
+DESCRIPTION:Sat + Sun · runs 9 AM-6 PM\n\nBoat + fort + beach without the 
+ car: ranger narration across the bay\, tunnels and batteries at Fort Picke
+ ns for engineering-minded kids\, then the beach stop. Strollers roll aboar
+ d.\n\nPrice: from $20\n\nDetails: https://coastaleventures.com/events/ev-f
+ erry.html
+URL:https://coastaleventures.com/events/ev-ferry.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_navarre_fishing_rodeo_1003-2026-10-03@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261003T140000
+DTEND;TZID=America/Chicago:20261003T170000
+SUMMARY:Navarre Fishing Rodeo
+LOCATION:Juana's Pagodas & Sailors' Grill weigh-in and awards site\, 1451 N
+ avarre Beach Causeway\, Navarre\, FL 32566
+DESCRIPTION:Saturday 10/3 · 2:00 PM to 5:00 PM\n\nAnglers spread out acros
+ s the shore\, boats\, kayaks and the pier for the two day Navarre Fishing 
+ Rodeo\, with a published Junior Division that keeps the weekend open to yo
+ unger competitors. Weigh ins run Saturday\, and Sunday adds a second round
+  of weigh ins along with the awards presentation.\n\nPrice: $ TBA\n\nDetai
+ ls: https://coastaleventures.com/events/ev-navarre-fishing-rodeo-1003.html
+URL:https://coastaleventures.com/events/ev-navarre-fishing-rodeo-1003.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_ferry-2026-10-04@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261004T090000
+DTEND;TZID=America/Chicago:20261004T180000
+SUMMARY:Pensacola Bay Ferry to Fort Pickens
+LOCATION:Downtown ferry landing → Fort Pickens → Pensacola Beach\, 700 
+ S Barracks St\, Pensacola\, FL 32502
+DESCRIPTION:Sat + Sun · runs 9 AM-6 PM\n\nBoat + fort + beach without the 
+ car: ranger narration across the bay\, tunnels and batteries at Fort Picke
+ ns for engineering-minded kids\, then the beach stop. Strollers roll aboar
+ d.\n\nPrice: from $20\n\nDetails: https://coastaleventures.com/events/ev-f
+ erry.html
+URL:https://coastaleventures.com/events/ev-ferry.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_oceanhour-2026-10-10@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261011
+SUMMARY:Ocean Hour Beach Cleanup
+LOCATION:Rotating\, Pensacola Beach / area waterfronts\, Pensacola Beach\, 
+ FL 32561
+DESCRIPTION:Saturdays · start time and site posted each week\n\nGive an ho
+ ur and leave the beach better. Buckets\, grabbers\, and gloves are provide
+ d. It is a service morning that fits the family's values and is kid-friend
+ ly.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/events/ev-ocea
+ nhour.html
+URL:https://coastaleventures.com/events/ev-oceanhour.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_navarre_runforthereef-2026-10-10@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261010T060000
+DTEND;TZID=America/Chicago:20261010T070000
+SUMMARY:18th Annual Run for the Reef: 10K / 5K / Kids Fun Run
+LOCATION:Navarre Beach Marine Park / Windjammers on the Pier area\, Gulf Bl
+ vd\, Navarre Beach\, FL 32566 (exact start-line street number not publishe
+ d)
+DESCRIPTION:Saturday 10/10 · Race-day registration 6:00-7:00 AM · 10K/5K 
+ start 7:30 AM · Kids Fun Run about 9:00 AM\n\nThe Navarre Beach Marine Sa
+ nctuary's 18th annual reef-benefit race offers a 10K\, a 5K and a one-mile
+  kids Fun Run starting from the Marine Park/Windjammers pier area\, with e
+ ntry fees that climb in three tiers as race day approaches. The kids run\,
+  capped at age 12\, is a flat $20 including a T-shirt. Food\, refreshments
+  and an awards ceremony follow at Windjammers.\n\nPrice: from $20\n\nDetai
+ ls: https://coastaleventures.com/events/ev-navarre-runforthereef.html
+URL:https://coastaleventures.com/events/ev-navarre-runforthereef.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_18th_annual_run_for_the_reef_1010-2026-10-10@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261010T073000
+DTEND;TZID=America/Chicago:20261010T083000
+SUMMARY:Run for the Reef\, 18th year
+LOCATION:Windjammers on the Pier\, 8579 Gulf Blvd\, Navarre\, FL 32566
+DESCRIPTION:Saturday 10/10 · 7:30 AM\n\nA 10K\, a 5K run and walk\, and a 
+ one mile fun run for ages twelve and under\, all starting from the pier at
+  Navarre Beach. The 5K and 10K run out and back along Gulf Blvd. The fun r
+ un goes off on the Sea Turtle Center nature trail once the 5K has cleared.
+  The money pays for the Navarre Beach Marine Sanctuary's snorkelling and d
+ iving reefs\, so the race funds the reef it's named after. An after-race p
+ arty follows with food and refreshments.\n\nPrice: $ TBA\n\nDetails: https
+ ://coastaleventures.com/events/ev-18th-annual-run-for-the-reef-1010.html
+URL:https://coastaleventures.com/events/ev-18th-annual-run-for-the-reef-101
+ 0.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_ferry-2026-10-10@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261010T090000
+DTEND;TZID=America/Chicago:20261010T180000
+SUMMARY:Pensacola Bay Ferry to Fort Pickens
+LOCATION:Downtown ferry landing → Fort Pickens → Pensacola Beach\, 700 
+ S Barracks St\, Pensacola\, FL 32502
+DESCRIPTION:Sat + Sun · runs 9 AM-6 PM\n\nBoat + fort + beach without the 
+ car: ranger narration across the bay\, tunnels and batteries at Fort Picke
+ ns for engineering-minded kids\, then the beach stop. Strollers roll aboar
+ d.\n\nPrice: from $20\n\nDetails: https://coastaleventures.com/events/ev-f
+ erry.html
+URL:https://coastaleventures.com/events/ev-ferry.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_navarre_charity_chili_cookoff_1011-2026-10-11@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261011
+DTEND;VALUE=DATE:20261012
+SUMMARY:Charity Chili Cookoff and Volleyball Tourney on Navarre Beach
+LOCATION:Juana's Pagodas & Sailors' Grill\, 1451 Navarre Beach Causeway\, N
+ avarre\, FL 32566
+DESCRIPTION:Sunday 10/11 · tastings 2:00 PM to 4:00 PM\, music 3:00 PM to 
+ 7:00 PM\n\nCaring and Sharing of South Santa Rosa County holds its 33rd an
+ nual chili and salsa cookoff with a beach volleyball tournament at Juana's
+  Pagodas. Tastings run 2:00 PM to 4:00 PM for a $20 donation at the door\,
+  Goodbye August plays from 3:00 PM to 7:00 PM\, and winners and raffle pri
+ zes are announced at 4:00 PM. The money buys holiday food for families in 
+ South Santa Rosa County.\n\nPrice: from $20\n\nDetails: https://coastaleve
+ ntures.com/events/ev-navarre-charity-chili-cookoff-1011.html
+URL:https://coastaleventures.com/events/ev-navarre-charity-chili-cookoff-10
+ 11.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_ferry-2026-10-11@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261011T090000
+DTEND;TZID=America/Chicago:20261011T180000
+SUMMARY:Pensacola Bay Ferry to Fort Pickens
+LOCATION:Downtown ferry landing → Fort Pickens → Pensacola Beach\, 700 
+ S Barracks St\, Pensacola\, FL 32502
+DESCRIPTION:Sat + Sun · runs 9 AM-6 PM\n\nBoat + fort + beach without the 
+ car: ranger narration across the bay\, tunnels and batteries at Fort Picke
+ ns for engineering-minded kids\, then the beach stop. Strollers roll aboar
+ d.\n\nPrice: from $20\n\nDetails: https://coastaleventures.com/events/ev-f
+ erry.html
+URL:https://coastaleventures.com/events/ev-ferry.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_beach_o_ween_2026_1016-2026-10-16@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+SUMMARY:Beach-O-Ween 2026
+LOCATION:Pensacola Beach Boardwalk\, 400 Quietwater Beach Road\, Pensacola 
+ Beach\, FL 32561
+DESCRIPTION:Friday 10/16\n\nBeach-O-Ween takes over the Pensacola Beach Boa
+ rdwalk with a bounce house\, a costume contest\, games\, face painting\, h
+ otdogs and candy\, and Visit Pensacola says every game and activity is fre
+ e. Pets are asked to stay home for this one\, aside from service animals. 
+ The Halloween event runs October 16.\n\nPrice: Free\n\nDetails: https://co
+ astaleventures.com/events/ev-beach-o-ween-2026-1016.html
+URL:https://coastaleventures.com/events/ev-beach-o-ween-2026-1016.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_pink_pirates_of_navarre_5k-2026-10-17@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261017T070000
+DTEND;TZID=America/Chicago:20261017T103000
+SUMMARY:Pink Pirates of Navarre: 12th Annual Breast Cancer Awareness 5K
+LOCATION:Navarre Beach Marine Park\, Navarre Beach\, FL
+DESCRIPTION:Saturday 10/17 · 7:00 AM to 10:30 AM\n\nThe 12th annual Pink P
+ irates of Navarre 5K starts at Navarre Beach Marine Park on a Saturday mor
+ ning\, raising money for breast cancer awareness. Registration price and p
+ rocess aren't posted\, so check before signing up.\n\nPrice: $ TBA\n\nDeta
+ ils: https://coastaleventures.com/events/ev-pink-pirates-of-navarre-5k.htm
+ l
+URL:https://coastaleventures.com/events/ev-pink-pirates-of-navarre-5k.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_wickedwinerun_1121-2026-11-21@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261121T083000
+DTEND;TZID=America/Chicago:20261121T093000
+SUMMARY:SKECHERS Wicked Wine Run: Milton
+LOCATION:Adventures Unlimited\, 8974 Tomahawk Landing Rd\, Milton\, FL 3257
+ 0
+DESCRIPTION:Sat 11/21/2026 · gates 8:30 AM · 5K at 10:30 · 1K tasting wa
+ lk at 12:30\n\nThis 1K tasting walk with four wine stations\, a 5K run\, o
+ r both\, runs through the Blackwater river property\, then a party with a 
+ DJ\, food trucks\, and games until 2:30. It is a race where the walk is th
+ e point and nobody is timing you.\n\nPrice: $20 per vehicle\n\nDetails: ht
+ tps://coastaleventures.com/events/ev-wickedwinerun-1121.html
+URL:https://coastaleventures.com/events/ev-wickedwinerun-1121.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

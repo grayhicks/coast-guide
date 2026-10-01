@@ -1,0 +1,2748 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Coastal Eventures//Events feed//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Coastal Eventures: Arts and culture
+X-WR-TIMEZONE:America/Chicago
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:ev_jazz_art_writers_south_festival_youth_exhibi_0915-2026-10-01@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261102
+SUMMARY:Jazz Art Writers South Festival Youth Exhibit
+LOCATION:West Regional Library\, 5555 Grelot Road\, Mobile\, AL 36609
+DESCRIPTION:Tuesday 9/15\n\nWest Regional Library hosts this youth exhibiti
+ on tied to the Jazz Art Writers South Festival\, a partnership between Mob
+ ile Arts Council and Amp Up Arts. More than 50 paintings by artists ages 8
+  to 18 line the space\, each interpreting jazz through color and line. No 
+ viewing hours are published for Tuesday\, September 15\, so call the libra
+ ry to confirm.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/ev
+ ents/ev-jazz-art-writers-south-festival-youth-exhibi-0915.html
+URL:https://coastaleventures.com/events/ev-jazz-art-writers-south-festival-
+ youth-exhibi-0915.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_pensacola_state_wanda_sullivan_bloem-2026-10-01@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261212
+SUMMARY:Wanda Sullivan: Bloem Exhibition
+LOCATION:Anna Lamar Switzer Center for Visual Arts\, 1000 College Blvd.\, B
+ ldg. 15\, Pensacola\, FL 32504
+DESCRIPTION:Now through December 11\n\nA gallery exhibition by artist Wanda
+  Sullivan runs at Pensacola State College's visual arts center through mid
+ -December. The center's own site does not publish an admission price.\n\nP
+ rice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-pensacola-s
+ tate-wanda-sullivan-bloem.html
+URL:https://coastaleventures.com/events/ev-pensacola-state-wanda-sullivan-b
+ loem.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_quayside_summers_end_2026-2026-10-01@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261001T110000
+DTEND;TZID=America/Chicago:20261001T170000
+SUMMARY:Summer's End at Quayside Art Gallery
+LOCATION:Quayside Art Gallery\, 17 E Zaragoza St\, Pensacola\, FL 32502
+DESCRIPTION:Daily through 10/5 · 11:00 AM to 5:00 PM\n\nQuayside Art Galle
+ ry in downtown Pensacola is showing Summer's End\, an exhibition about the
+  turn from late summer into autumn\, through October 5. Four artists fill 
+ the show with changing landscapes\, vacation memories and the amber light 
+ of late summer evenings. The gallery is a locally owned artist co-op with 
+ three floors of work by more than 50 local artists\, and it opens every da
+ y from 11 AM to 5 PM.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures
+ .com/events/ev-quayside-summers-end-2026.html
+URL:https://coastaleventures.com/events/ev-quayside-summers-end-2026.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mini_makers_fall_2026_term_1_0827-2026-10-01@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261001T140000
+DTEND;TZID=America/Chicago:20261001T150000
+SUMMARY:Mini Makers: Fall 2026 Term 1
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Thursdays · 2:00 PM to 3:00 PM\n\nMini Makers is an eight week
+  art program for ages 4 to 6 at the Pensacola Museum of Art. It uses varie
+ d\, sensory materials and tactile activities. Instructor Marce Wagner\, kn
+ own as Ms. Messy\, leads Thursday classes from 2:00 PM to 3:00 PM. Term 1 
+ runs August 27 through October 15 and costs $96 for museum members or $110
+  for non-members. Term 2 follows October 22 through December 17. The term 
+ ends with an artwork showcase for family.\n\nPrice: from $110\n\nDetails: 
+ https://coastaleventures.com/events/ev-mini-makers-fall-2026-term-1-0827.h
+ tml
+URL:https://coastaleventures.com/events/ev-mini-makers-fall-2026-term-1-082
+ 7.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mobile_museum_make_take_art-2026-10-01@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261001T150000
+DTEND;TZID=America/Chicago:20261001T163000
+SUMMARY:Make & Take Art: weekly drop-in art sessions
+LOCATION:Mobile Museum of Art\, 4850 Museum Drive\, Mobile\, AL 36608
+DESCRIPTION:Thursdays 8/27 through 10/15 (except Sept 8) · 3:00 PM to 4:30
+  PM\n\nThe museum runs a free Thursday afternoon art session most weeks\, 
+ working through materials and techniques borrowed from artists on view. Pr
+ ojects range from geometric shape painting to a Basquiat-inspired dinosaur
+  build. The printed schedule also lists a session for September 8\, but th
+ at date falls on a Tuesday\, not a Thursday\, so check with the museum fir
+ st.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/events/ev-mobi
+ le-museum-make-take-art.html
+URL:https://coastaleventures.com/events/ev-mobile-museum-make-take-art.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_after_school_art_fall_2026_0827-2026-10-01@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261001T153000
+DTEND;TZID=America/Chicago:20261001T170000
+SUMMARY:After School Art: Fall 2026
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Thursdays · 3:30 PM to 5:00 PM\n\nAfter School Art is a 16 wee
+ k studio program for grades 2 through 6 at the Pensacola Museum of Art. In
+ structor Marce Wagner\, known as Ms. Messy\, covers drawing\, painting and
+  other 2D and 3D media. Classes meet every Thursday from August 27 through
+  December 17\, with no class during Thanksgiving week. The semester costs 
+ $252 for museum members and $280 for non-members\, and ends with an artwor
+ k showcase for families. Scholarships are available\, though the applicati
+ on deadline for this session has passed.\n\nPrice: from $280\n\nDetails: h
+ ttps://coastaleventures.com/events/ev-after-school-art-fall-2026-0827.html
+URL:https://coastaleventures.com/events/ev-after-school-art-fall-2026-0827.
+ html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_navarre_labartory_1001-2026-10-01@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261001T160000
+DTEND;TZID=America/Chicago:20261001T173000
+SUMMARY:labARTory (Navarre)
+LOCATION:Navarre Library\, 8484 James M. Harvell Road\, Navarre\, FL 32566
+DESCRIPTION:Thursday 10/1 · 4:00 PM to 5:30 PM\n\nlabARTory is a ninety mi
+ nute art session for kids at the Navarre Library. The county calendar publ
+ ishes only the time block below and no supply list or age range.\n\nPrice:
+  $ TBA\n\nDetails: https://coastaleventures.com/events/ev-navarre-labartor
+ y-1001.html
+URL:https://coastaleventures.com/events/ev-navarre-labartory-1001.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_crafty_adults_crafting_with_poe_1001-2026-10-01@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261001T173000
+DTEND;TZID=America/Chicago:20261001T183000
+SUMMARY:Crafty Adults: Crafting with Poe
+LOCATION:Orange Beach Public Library\, 26267 Canal Rd\, Orange Beach\, AL 3
+ 6561
+DESCRIPTION:Thursday 10/1 · 5:30 PM to 6:30 PM\n\nThe library's Crafty Adu
+ lts program spends an evening with Edgar Allan Poe on Thursday\, October 1
+ \, from 5:30 PM to 6:30 PM. Participants use embossing foil to create a ra
+ ven or another bird inspired by Poe\, while Poe themed tea and a reading o
+ r listening component round out the hour.\n\nPrice: $ TBA\n\nDetails: http
+ s://coastaleventures.com/events/ev-crafty-adults-crafting-with-poe-1001.ht
+ ml
+URL:https://coastaleventures.com/events/ev-crafty-adults-crafting-with-poe-
+ 1001.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_jewelry_making_class_beginning_beading_with__1001-2026-10-01@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261001T180000
+DTEND;TZID=America/Chicago:20261001T193000
+SUMMARY:Jewelry Making Class: Beginning Beading with Christine
+LOCATION:Bellingrath Gardens & Home: Magnolia Room\, 12401 Bellingrath Gard
+ ens Road\, Theodore\, AL 36582
+DESCRIPTION:Thursday 10/1 · 6:00 PM to 7:30 PM\n\nThis beginner jewelry cl
+ ass in Bellingrath Gardens' Magnolia Room covers bead stringing techniques
+  and tools\, with materials provided so participants leave with a finished
+  bracelet and keychain. The class was originally scheduled for August 5 an
+ d has been rescheduled to October 1 from 6:00 to 7:30 PM. Members pay $30 
+ and nonmembers pay $35.\n\nPrice: from $30\n\nDetails: https://coastaleven
+ tures.com/events/ev-jewelry-making-class-beginning-beading-with-1001.html
+URL:https://coastaleventures.com/events/ev-jewelry-making-class-beginning-b
+ eading-with-1001.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_comedy_on_the_boulevard_oct_1_showcase_1001-2026-10-01@coastaleventu
+ res.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261001T190000
+DTEND;TZID=America/Chicago:20261001T200000
+SUMMARY:Comedy on the Boulevard: Oct. 1 Showcase
+LOCATION:Emerald Coast Theatre Company\, 560 Grand Blvd\, Suite 200\, Miram
+ ar Beach\, FL 32550
+DESCRIPTION:Thursday 10/1 · 7:00 PM\n\nEmerald Coast Theatre Company hosts
+  a one night stand up comedy showcase on Thursday\, October 1\, with the s
+ how starting at 7 PM. It runs as a single evening event rather than a seri
+ es\, so this is the one date to catch it.\n\nPrice: $ TBA\n\nDetails: http
+ s://coastaleventures.com/events/ev-comedy-on-the-boulevard-oct-1-showcase-
+ 1001.html
+URL:https://coastaleventures.com/events/ev-comedy-on-the-boulevard-oct-1-sh
+ owcase-1001.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_navarre_craft_and_chat_1002-2026-10-02@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261002T100000
+DTEND;TZID=America/Chicago:20261002T120000
+SUMMARY:Craft and Chat (Navarre)
+LOCATION:Navarre Library\, 8484 James M. Harvell Road\, Navarre\, FL 32566
+DESCRIPTION:Friday 10/2 · 10:00 AM to 12:00 PM\n\nCraft and Chat is a two 
+ hour open crafting session at the Navarre Library\, held on a recurring sc
+ hedule through the fall.\n\nPrice: $ TBA\n\nDetails: https://coastaleventu
+ res.com/events/ev-navarre-craft-and-chat-1002.html
+URL:https://coastaleventures.com/events/ev-navarre-craft-and-chat-1002.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_botanical_gardens_sketch_club-2026-10-02@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261002T140000
+DTEND;TZID=America/Chicago:20261002T160000
+SUMMARY:Sketch Club in the Gardens
+LOCATION:Mobile Botanical Gardens\, 5151 Museum Drive\, Mobile\, AL 36608
+DESCRIPTION:Fridays 8/28 through 10/16 · 2:00 PM to 4:00 PM (space permitt
+ ing)\n\nBotanical arts instructor Derek Norman leads a casual Friday sketc
+ h session in the Larkins Classroom or the Magnolia Hill Studio. Garden mem
+ bers get in free\, everyone else pays the standard Mobile Botanical Garden
+ s admission\, and the garden's own site is not internally consistent about
+  what the military and veteran rate actually is.\n\nPrice: from $6\n\nDeta
+ ils: https://coastaleventures.com/events/ev-botanical-gardens-sketch-club.
+ html
+URL:https://coastaleventures.com/events/ev-botanical-gardens-sketch-club.ht
+ ml
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-10-02@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261002T153000
+DTEND;TZID=America/Chicago:20261002T163000
+SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
+LOCATION:Fairhope Public Library\, MakerSpace\, 501 Fairhope Avenue\, Fairh
+ ope\, AL 36532
+DESCRIPTION:Fridays · 3:30 PM to 4:30 PM\n\nFairhope Public Library's Make
+ rSpace hosts a weekly art class for ages 7 to 12\, led by an Eastern Shore
+  Art Center artist\, Friday from 3:30 PM to 4:30 PM. Each week sends kids 
+ home with a different project. Registration opens by month.\n\nPrice: $ TB
+ A\n\nDetails: https://coastaleventures.com/events/ev-art-classes-with-east
+ ern-shore-art-center-fa-0904.html
+URL:https://coastaleventures.com/events/ev-art-classes-with-eastern-shore-a
+ rt-center-fa-0904.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_jo_taylor_first_friday_author_signing_1002-2026-10-02@coastaleventur
+ es.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261002T173000
+DTEND;TZID=America/Chicago:20261002T193000
+SUMMARY:Jo Taylor: First Friday Author Signing
+LOCATION:Page & Palette\, 32 South Section Street\, Fairhope\, AL 36532
+DESCRIPTION:Friday 10/2 · 5:30 PM to 7:30 PM\n\nPage & Palette hosts local
+  author Jo Taylor on First Friday\, Friday from 5:30 PM to 7:30 PM\, for a
+  signing of Mimi and Maurice. The historical novel is drawn from surviving
+  correspondence between its real-life subjects.\n\nPrice: $ TBA\n\nDetails
+ : https://coastaleventures.com/events/ev-jo-taylor-first-friday-author-sig
+ ning-1002.html
+URL:https://coastaleventures.com/events/ev-jo-taylor-first-friday-author-si
+ gning-1002.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_foley_library_fiesta_1002-2026-10-02@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261002T173000
+DTEND;TZID=America/Chicago:20261002T190000
+SUMMARY:Library Fiesta at Foley Community Library
+LOCATION:Foley Community Library\, Canopy Hall\, 230 E. Orange Ave.\, Foley
+ \, AL 36535
+DESCRIPTION:Friday 10/2 · 5:30 PM to 7:00 PM\n\nThe Foley Community Librar
+ y holds its second annual Library Fiesta for Hispanic Heritage Month\, a f
+ ree evening for all ages. Mitotiani Folkloric Dance Group and Danza de los
+  Viejitos perform\, and La Casita serves free food. Little ones get crafts
+ \, and there are games in the courtyard.\n\nPrice: Free\n\nDetails: https:
+ //coastaleventures.com/events/ev-foley-library-fiesta-1002.html
+URL:https://coastaleventures.com/events/ev-foley-library-fiesta-1002.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_destin_riverofcolors_1002-2026-10-02@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261002T173000
+DTEND;TZID=America/Chicago:20261002T193000
+SUMMARY:River of Colors: Family Painting Class (Glow in the Dark)
+LOCATION:Destin Community Center\, 101 Stahlman Ave.\, Destin\, FL 32541
+DESCRIPTION:Friday 10/2 · 5:30 PM to 7:30 PM\n\nCreative Canvas Company ru
+ ns this glow-in-the-dark family painting class at the Destin Community Cen
+ ter\, and no prior painting experience is needed. The City's own listing p
+ rices it at $30 for Destin residents and $40 for non-residents\, covering 
+ canvas\, paint and instruction for two hours.\n\nPrice: from $30\n\nDetail
+ s: https://coastaleventures.com/events/ev-destin-riverofcolors-1002.html
+URL:https://coastaleventures.com/events/ev-destin-riverofcolors-1002.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_coastalmakers_fractal_date_night_1002-2026-10-02@coastaleventures.co
+ m
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261002T180000
+DTEND;TZID=America/Chicago:20261002T200000
+SUMMARY:Fractal Burning Date Night at Coastal Makers
+LOCATION:Coastal Makers\, 63 North Florida Street\, Mobile\, AL 36607
+DESCRIPTION:Friday 10/2 · 6:00 PM to 8:00 PM\n\nCouples burn Lichtenberg f
+ ractal patterns into wood together in this two-hour class at Coastal Maker
+ s\, priced per couple rather than per person. It is a hands-on craft date 
+ away from a restaurant table.\n\nPrice: from $62.50\n\nDetails: https://co
+ astaleventures.com/events/ev-coastalmakers-fractal-date-night-1002.html
+URL:https://coastaleventures.com/events/ev-coastalmakers-fractal-date-night
+ -1002.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_alice_in_wonderland_uwf_theatre_1002-2026-10-02@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261002T193000
+DTEND;TZID=America/Chicago:20261002T220000
+SUMMARY:Alice in Wonderland: UWF Theatre
+LOCATION:Building 82\, Center for Fine and Performing Arts\, Mainstage Thea
+ tre\, UWF\, Campus Drive\, Pensacola\, FL 32514
+DESCRIPTION:Friday 10/2 · 7:30 PM to 10:00 PM\n\nUWF Theatre stages Alice 
+ in Wonderland on the Mainstage in Building 82's Center for Fine and Perfor
+ ming Arts\, open to the general public. The university's own calendar list
+ s a price range of free up to $22\; no single admission figure is publishe
+ d for this date. The run adds several more performances: October 3 at 7:30
+  PM\, October 4 at 2:30 PM\, and October 9 at 7:30 PM. October 10 brings a
+  10 AM show\, and the run closes with a matinee on October 11 at 2:30 PM. 
+ Opening night is October 2 at 7:30 PM.\n\nPrice: $ TBA\n\nDetails: https:/
+ /coastaleventures.com/events/ev-alice-in-wonderland-uwf-theatre-1002.html
+URL:https://coastaleventures.com/events/ev-alice-in-wonderland-uwf-theatre-
+ 1002.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_wheel_throwing_fall_ceramics_workshop_0912-2026-10-03@coastaleventur
+ es.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261003T123000
+DTEND;TZID=America/Chicago:20261003T153000
+SUMMARY:Wheel Throwing: Fall Ceramics Workshop
+LOCATION:UWF Pensacola Campus\, Building 82\, 11000 University Pkwy\, Pensa
+ cola\, FL 32514
+DESCRIPTION:Saturdays · 12:30 PM to 3:30 PM\n\nThis six week adult ceramic
+ s course at UWF meets Saturday afternoons from 12:30 PM to 3:30 PM\, cover
+ ing wheel throwing\, centering\, forms\, firing\, and glazing. It is built
+  for beginners and for anyone who wants a refresher\, running through Octo
+ ber 17. Tuition runs $275 per person.\n\nPrice: from $275\n\nDetails: http
+ s://coastaleventures.com/events/ev-wheel-throwing-fall-ceramics-workshop-0
+ 912.html
+URL:https://coastaleventures.com/events/ev-wheel-throwing-fall-ceramics-wor
+ kshop-0912.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_k_a_shows_author_signing_1003-2026-10-03@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261003T130000
+DTEND;TZID=America/Chicago:20261003T150000
+SUMMARY:K.A. Shows: Author Signing
+LOCATION:Page & Palette\, 32 South Section Street\, Fairhope\, AL 36532
+DESCRIPTION:Saturday 10/3 · 1:00 PM to 3:00 PM\n\nPage & Palette hosts Fai
+ rhope author Kathryn Shows\, writing as K.A. Shows\, for a signing of Stum
+ ped: A Real Book\, Property of Walter Stypes\, Saturday from 1 PM to 3 PM.
+  The novel tells a small-town Alabama story.\n\nPrice: $ TBA\n\nDetails: h
+ ttps://coastaleventures.com/events/ev-k-a-shows-author-signing-1003.html
+URL:https://coastaleventures.com/events/ev-k-a-shows-author-signing-1003.ht
+ ml
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_childrens_theater_dragons_love_tacos-2026-10-03@coastalevent
+ ures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261003T170000
+DTEND;TZID=America/Chicago:20261003T180000
+SUMMARY:Dragons Love Tacos: Fall Children's Theater at Seaside
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 3245
+ 9
+DESCRIPTION:Saturdays through 10/17 · 5:00 PM to 6:00 PM\n\nEmerald Coast 
+ Theatre Company performs Dragons Love Tacos at the Seaside Amphitheater on
+  Saturday afternoons this fall. Seven performers tell the story of a boy a
+ nd his dog learning the dos and don'ts of feeding dragons. The show is com
+ plimentary\, paid for by the arts and entertainment fee the Merchants of S
+ easide collect.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/ev
+ ents/ev-seaside-childrens-theater-dragons-love-tacos.html
+URL:https://coastaleventures.com/events/ev-seaside-childrens-theater-dragon
+ s-love-tacos.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_valparaiso_indios_amigos_exhibit_1005-2026-10-05@coastaleventures.co
+ m
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261005T090000
+DTEND;TZID=America/Chicago:20261005T170000
+SUMMARY:Indios Amigos: Traveling Exhibit at the Valparaiso Library
+LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
+DESCRIPTION:Mon 10/5 to Fri 10/9 · 9:00 AM to 5:00 PM\n\nThe Valparaiso Li
+ brary hosts Indios Amigos\, a traveling exhibit made by the Florida Public
+  Archaeology Network and the UWF Archaeology Institute\, for Hispanic Heri
+ tage Month. The library says this is the only Okaloosa County stop for the
+  exhibit\, and it is open 9 AM to 5 PM through Friday\, October 9. The lis
+ ting is for families and everyone.\n\nPrice: $ TBA\n\nDetails: https://coa
+ staleventures.com/events/ev-valparaiso-indios-amigos-exhibit-1005.html
+URL:https://coastaleventures.com/events/ev-valparaiso-indios-amigos-exhibit
+ -1005.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_next_generation_homeschool_art_tuesday_am_ag_0825-2026-10-06@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261006T100000
+DTEND;TZID=America/Chicago:20261006T120000
+SUMMARY:Next Generation Homeschool Art: Ages 7-9\, Tuesday Mornings
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Tuesdays · 10:00 AM to 12:00 PM\n\nNext Generation Homeschool 
+ Art is a visual arts course for ages 7 to 9 that follows National Visual A
+ rts Standards. Group A meets Tuesday mornings from 10:00 AM to 12:00 PM at
+  the Pensacola Museum of Art\, taught by Marce Wagner\, known as Ms. Messy
+ . Term 1 runs August 25 through October 13 and costs $160 for museum membe
+ rs or $180 for non-members. Three other weekday groups are available for d
+ ifferent ages and schedules.\n\nPrice: from $180\n\nDetails: https://coast
+ aleventures.com/events/ev-next-generation-homeschool-art-tuesday-am-ag-082
+ 5.html
+URL:https://coastaleventures.com/events/ev-next-generation-homeschool-art-t
+ uesday-am-ag-0825.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_acrylic_and_watercolor_painting_0909-2026-10-07@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261007T130000
+DTEND;TZID=America/Chicago:20261007T150000
+SUMMARY:Acrylic & Watercolor Painting
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Wednesdays · 1:00 PM to 3:00 PM\n\nThis acrylic and watercolor
+  painting session at the Niceville Senior Center is led by Kathleen LoGalb
+ o\, whom the city describes as a self-taught art enthusiast who keeps lear
+ ning from others. It meets Wednesday afternoon and repeats on the Septembe
+ r calendar\, though the event page does not say how often it comes round.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-acrylic
+ -and-watercolor-painting-0909.html
+URL:https://coastaleventures.com/events/ev-acrylic-and-watercolor-painting-
+ 0909.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_crafternoons_at_west_0902-2026-10-07@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261007T150000
+DTEND;TZID=America/Chicago:20261007T170000
+SUMMARY:Crafternoons at West
+LOCATION:West Regional Library\, 5555 Grelot Road\, Mobile\, AL 36609
+DESCRIPTION:Wednesdays · 3:00 PM to 5:00 PM\n\nAdults bring their own craf
+ t project to work on together at West Regional Library's Crafternoons\, an
+  informal two-hour afternoon session. Additional sessions are held the fol
+ lowing two Wednesdays\, September 9 and September 16.\n\nPrice: $ TBA\n\nD
+ etails: https://coastaleventures.com/events/ev-crafternoons-at-west-0902.h
+ tml
+URL:https://coastaleventures.com/events/ev-crafternoons-at-west-0902.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mini_makers_fall_2026_term_1_0827-2026-10-08@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261008T140000
+DTEND;TZID=America/Chicago:20261008T150000
+SUMMARY:Mini Makers: Fall 2026 Term 1
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Thursdays · 2:00 PM to 3:00 PM\n\nMini Makers is an eight week
+  art program for ages 4 to 6 at the Pensacola Museum of Art. It uses varie
+ d\, sensory materials and tactile activities. Instructor Marce Wagner\, kn
+ own as Ms. Messy\, leads Thursday classes from 2:00 PM to 3:00 PM. Term 1 
+ runs August 27 through October 15 and costs $96 for museum members or $110
+  for non-members. Term 2 follows October 22 through December 17. The term 
+ ends with an artwork showcase for family.\n\nPrice: from $110\n\nDetails: 
+ https://coastaleventures.com/events/ev-mini-makers-fall-2026-term-1-0827.h
+ tml
+URL:https://coastaleventures.com/events/ev-mini-makers-fall-2026-term-1-082
+ 7.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_after_school_art_fall_2026_0827-2026-10-08@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261008T153000
+DTEND;TZID=America/Chicago:20261008T170000
+SUMMARY:After School Art: Fall 2026
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Thursdays · 3:30 PM to 5:00 PM\n\nAfter School Art is a 16 wee
+ k studio program for grades 2 through 6 at the Pensacola Museum of Art. In
+ structor Marce Wagner\, known as Ms. Messy\, covers drawing\, painting and
+  other 2D and 3D media. Classes meet every Thursday from August 27 through
+  December 17\, with no class during Thanksgiving week. The semester costs 
+ $252 for museum members and $280 for non-members\, and ends with an artwor
+ k showcase for families. Scholarships are available\, though the applicati
+ on deadline for this session has passed.\n\nPrice: from $280\n\nDetails: h
+ ttps://coastaleventures.com/events/ev-after-school-art-fall-2026-0827.html
+URL:https://coastaleventures.com/events/ev-after-school-art-fall-2026-0827.
+ html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_young_artist_in_aprons_paint_club_0910-2026-10-08@coastaleventures.c
+ om
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261008T160000
+DTEND;TZID=America/Chicago:20261008T170000
+SUMMARY:Young Artist in Aprons Paint Club
+LOCATION:Grand Bay Library\, 10329 Freeland Ave
+DESCRIPTION:Thursdays · 4:00 PM to 5:00 PM\n\nGrand Bay Library hands out 
+ pre-drawn canvases and paint for a children's painting club\, run for ages
+  6 through 11. Mobile Public Libraries lists several Thursday sessions\, i
+ ncluding August 27 and September 10\, and nothing says how often it comes 
+ round.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-
+ young-artist-in-aprons-paint-club-0910.html
+URL:https://coastaleventures.com/events/ev-young-artist-in-aprons-paint-clu
+ b-0910.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_advanced_watercolor_0910-2026-10-08@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261008T180000
+DTEND;TZID=America/Chicago:20261008T190000
+SUMMARY:Advanced Watercolor
+LOCATION:Monte L. Moorer/Spring Hill Branch Library\, 4 S McGregor Ave\, Mo
+ bile\, AL
+DESCRIPTION:Thursdays · 6:00 PM to 7:00 PM\n\nThe Spring Hill branch of Mo
+ bile Public Libraries hosts an evening watercolor session aimed at painter
+ s who are already working at an advanced level\, not a beginner class. Mob
+ ile Public Libraries lists several dated sessions\, and nothing published 
+ says how often they run.\n\nPrice: $ TBA\n\nDetails: https://coastaleventu
+ res.com/events/ev-advanced-watercolor-0910.html
+URL:https://coastaleventures.com/events/ev-advanced-watercolor-0910.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_lars_anderson_author_event_1008-2026-10-08@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261008T180000
+DTEND;TZID=America/Chicago:20261008T200000
+SUMMARY:Lars Anderson: Author Event
+LOCATION:Page & Palette\, 32 South Section Street\, Fairhope\, AL 36532
+DESCRIPTION:Thursday 10/8 · 6:00 PM to 8:00 PM\n\nPage & Palette hosts spo
+ rtswriter Lars Anderson\, Thursday from 6 PM to 8 PM\, for a discussion an
+ d signing of his new biography of Tom Brady.\n\nPrice: $ TBA\n\nDetails: h
+ ttps://coastaleventures.com/events/ev-lars-anderson-author-event-1008.html
+URL:https://coastaleventures.com/events/ev-lars-anderson-author-event-1008.
+ html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_20th_annual_pumpkin_patch_1009-2026-10-09@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261011
+SUMMARY:20th Annual Pumpkin Patch
+LOCATION:First City Art Center\, 1060 N. Guillemard St.\, Pensacola\, FL 32
+ 501
+DESCRIPTION:Friday 10/9\n\nFirst City Art Center's 20th Annual Pumpkin Patc
+ h opens with a Friday Preview Party on October 9\, ahead of a Saturday pum
+ pkin sale. The center's own page had not yet posted the current 2026 sale 
+ details at last check.\n\nPrice: $ TBA\n\nDetails: https://coastaleventure
+ s.com/events/ev-20th-annual-pumpkin-patch-1009.html
+URL:https://coastaleventures.com/events/ev-20th-annual-pumpkin-patch-1009.h
+ tml
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_botanical_gardens_sketch_club-2026-10-09@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261009T140000
+DTEND;TZID=America/Chicago:20261009T160000
+SUMMARY:Sketch Club in the Gardens
+LOCATION:Mobile Botanical Gardens\, 5151 Museum Drive\, Mobile\, AL 36608
+DESCRIPTION:Fridays 8/28 through 10/16 · 2:00 PM to 4:00 PM (space permitt
+ ing)\n\nBotanical arts instructor Derek Norman leads a casual Friday sketc
+ h session in the Larkins Classroom or the Magnolia Hill Studio. Garden mem
+ bers get in free\, everyone else pays the standard Mobile Botanical Garden
+ s admission\, and the garden's own site is not internally consistent about
+  what the military and veteran rate actually is.\n\nPrice: from $6\n\nDeta
+ ils: https://coastaleventures.com/events/ev-botanical-gardens-sketch-club.
+ html
+URL:https://coastaleventures.com/events/ev-botanical-gardens-sketch-club.ht
+ ml
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-10-09@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261009T153000
+DTEND;TZID=America/Chicago:20261009T163000
+SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
+LOCATION:Fairhope Public Library\, MakerSpace\, 501 Fairhope Avenue\, Fairh
+ ope\, AL 36532
+DESCRIPTION:Fridays · 3:30 PM to 4:30 PM\n\nFairhope Public Library's Make
+ rSpace hosts a weekly art class for ages 7 to 12\, led by an Eastern Shore
+  Art Center artist\, Friday from 3:30 PM to 4:30 PM. Each week sends kids 
+ home with a different project. Registration opens by month.\n\nPrice: $ TB
+ A\n\nDetails: https://coastaleventures.com/events/ev-art-classes-with-east
+ ern-shore-art-center-fa-0904.html
+URL:https://coastaleventures.com/events/ev-art-classes-with-eastern-shore-a
+ rt-center-fa-0904.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_wheel_throwing_fall_ceramics_workshop_0912-2026-10-10@coastaleventur
+ es.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261010T123000
+DTEND;TZID=America/Chicago:20261010T153000
+SUMMARY:Wheel Throwing: Fall Ceramics Workshop
+LOCATION:UWF Pensacola Campus\, Building 82\, 11000 University Pkwy\, Pensa
+ cola\, FL 32514
+DESCRIPTION:Saturdays · 12:30 PM to 3:30 PM\n\nThis six week adult ceramic
+ s course at UWF meets Saturday afternoons from 12:30 PM to 3:30 PM\, cover
+ ing wheel throwing\, centering\, forms\, firing\, and glazing. It is built
+  for beginners and for anyone who wants a refresher\, running through Octo
+ ber 17. Tuition runs $275 per person.\n\nPrice: from $275\n\nDetails: http
+ s://coastaleventures.com/events/ev-wheel-throwing-fall-ceramics-workshop-0
+ 912.html
+URL:https://coastaleventures.com/events/ev-wheel-throwing-fall-ceramics-wor
+ kshop-0912.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_childrens_theater_dragons_love_tacos-2026-10-10@coastalevent
+ ures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261010T170000
+DTEND;TZID=America/Chicago:20261010T180000
+SUMMARY:Dragons Love Tacos: Fall Children's Theater at Seaside
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 3245
+ 9
+DESCRIPTION:Saturdays through 10/17 · 5:00 PM to 6:00 PM\n\nEmerald Coast 
+ Theatre Company performs Dragons Love Tacos at the Seaside Amphitheater on
+  Saturday afternoons this fall. Seven performers tell the story of a boy a
+ nd his dog learning the dos and don'ts of feeding dragons. The show is com
+ plimentary\, paid for by the arts and entertainment fee the Merchants of S
+ easide collect.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/ev
+ ents/ev-seaside-childrens-theater-dragons-love-tacos.html
+URL:https://coastaleventures.com/events/ev-seaside-childrens-theater-dragon
+ s-love-tacos.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_coastalmakers_witch_planter_1011-2026-10-11@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261011T140000
+DTEND;TZID=America/Chicago:20261011T170000
+SUMMARY:Wickedly Creative Witch Planter Workshop
+LOCATION:Coastal Makers\, 63 North Florida Street\, Mobile\, AL 36607
+DESCRIPTION:Sunday 10/11 · 2:00 PM to 5:00 PM\n\nA Halloween-themed painte
+ d planter class at Coastal Makers\, where each guest builds a witch-styled
+  planter to take home over three hours. Materials and instruction are incl
+ uded in the price.\n\nPrice: from $55\n\nDetails: https://coastaleventures
+ .com/events/ev-coastalmakers-witch-planter-1011.html
+URL:https://coastaleventures.com/events/ev-coastalmakers-witch-planter-1011
+ .html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_next_generation_homeschool_art_tuesday_am_ag_0825-2026-10-13@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261013T100000
+DTEND;TZID=America/Chicago:20261013T120000
+SUMMARY:Next Generation Homeschool Art: Ages 7-9\, Tuesday Mornings
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Tuesdays · 10:00 AM to 12:00 PM\n\nNext Generation Homeschool 
+ Art is a visual arts course for ages 7 to 9 that follows National Visual A
+ rts Standards. Group A meets Tuesday mornings from 10:00 AM to 12:00 PM at
+  the Pensacola Museum of Art\, taught by Marce Wagner\, known as Ms. Messy
+ . Term 1 runs August 25 through October 13 and costs $160 for museum membe
+ rs or $180 for non-members. Three other weekday groups are available for d
+ ifferent ages and schedules.\n\nPrice: from $180\n\nDetails: https://coast
+ aleventures.com/events/ev-next-generation-homeschool-art-tuesday-am-ag-082
+ 5.html
+URL:https://coastaleventures.com/events/ev-next-generation-homeschool-art-t
+ uesday-am-ag-0825.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_acrylic_and_watercolor_painting_0909-2026-10-14@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261014T130000
+DTEND;TZID=America/Chicago:20261014T150000
+SUMMARY:Acrylic & Watercolor Painting
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Wednesdays · 1:00 PM to 3:00 PM\n\nThis acrylic and watercolor
+  painting session at the Niceville Senior Center is led by Kathleen LoGalb
+ o\, whom the city describes as a self-taught art enthusiast who keeps lear
+ ning from others. It meets Wednesday afternoon and repeats on the Septembe
+ r calendar\, though the event page does not say how often it comes round.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-acrylic
+ -and-watercolor-painting-0909.html
+URL:https://coastaleventures.com/events/ev-acrylic-and-watercolor-painting-
+ 0909.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_crafternoons_at_west_0902-2026-10-14@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261014T150000
+DTEND;TZID=America/Chicago:20261014T170000
+SUMMARY:Crafternoons at West
+LOCATION:West Regional Library\, 5555 Grelot Road\, Mobile\, AL 36609
+DESCRIPTION:Wednesdays · 3:00 PM to 5:00 PM\n\nAdults bring their own craf
+ t project to work on together at West Regional Library's Crafternoons\, an
+  informal two-hour afternoon session. Additional sessions are held the fol
+ lowing two Wednesdays\, September 9 and September 16.\n\nPrice: $ TBA\n\nD
+ etails: https://coastaleventures.com/events/ev-crafternoons-at-west-0902.h
+ tml
+URL:https://coastaleventures.com/events/ev-crafternoons-at-west-0902.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_matt_kessler_author_event_1014-2026-10-14@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261014T180000
+DTEND;TZID=America/Chicago:20261014T200000
+SUMMARY:Matt Kessler: Author Event
+LOCATION:Page & Palette\, 32 South Section Street\, Fairhope\, AL 36532
+DESCRIPTION:Wednesday 10/14 · 6:00 PM to 8:00 PM\n\nPage & Palette hosts M
+ att Kessler\, Wednesday from 6 PM to 8 PM\, for a discussion of The Wiregr
+ ass: A Tale of Murder and Retribution in the Deep South. Local journalist 
+ Cori Yonge joins the conversation.\n\nPrice: $ TBA\n\nDetails: https://coa
+ staleventures.com/events/ev-matt-kessler-author-event-1014.html
+URL:https://coastaleventures.com/events/ev-matt-kessler-author-event-1014.h
+ tml
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_ectc_39steps-2026-10-15@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261026
+SUMMARY:The 39 Steps: Hitchcock Farce (ECTC)
+LOCATION:Emerald Coast Theatre Company\, 560 Grand Blvd Suite 200\, Miramar
+  Beach\, FL 32550
+DESCRIPTION:Oct 15-25 · Thu-Sat 7 PM · Sun 2 PM · Wed 1 PM · Thu 10/22 
+ also 1 PM\n\nFour actors play 150 roles in a full-tilt Hitchcock spoof tha
+ t is clean\, fast\, and laugh-out-loud. It is the safe-bet theatre date of
+  the fall.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events
+ /ev-ectc-39steps.html
+URL:https://coastaleventures.com/events/ev-ectc-39steps.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mini_makers_fall_2026_term_1_0827-2026-10-15@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261015T140000
+DTEND;TZID=America/Chicago:20261015T150000
+SUMMARY:Mini Makers: Fall 2026 Term 1
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Thursdays · 2:00 PM to 3:00 PM\n\nMini Makers is an eight week
+  art program for ages 4 to 6 at the Pensacola Museum of Art. It uses varie
+ d\, sensory materials and tactile activities. Instructor Marce Wagner\, kn
+ own as Ms. Messy\, leads Thursday classes from 2:00 PM to 3:00 PM. Term 1 
+ runs August 27 through October 15 and costs $96 for museum members or $110
+  for non-members. Term 2 follows October 22 through December 17. The term 
+ ends with an artwork showcase for family.\n\nPrice: from $110\n\nDetails: 
+ https://coastaleventures.com/events/ev-mini-makers-fall-2026-term-1-0827.h
+ tml
+URL:https://coastaleventures.com/events/ev-mini-makers-fall-2026-term-1-082
+ 7.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_after_school_art_fall_2026_0827-2026-10-15@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261015T153000
+DTEND;TZID=America/Chicago:20261015T170000
+SUMMARY:After School Art: Fall 2026
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Thursdays · 3:30 PM to 5:00 PM\n\nAfter School Art is a 16 wee
+ k studio program for grades 2 through 6 at the Pensacola Museum of Art. In
+ structor Marce Wagner\, known as Ms. Messy\, covers drawing\, painting and
+  other 2D and 3D media. Classes meet every Thursday from August 27 through
+  December 17\, with no class during Thanksgiving week. The semester costs 
+ $252 for museum members and $280 for non-members\, and ends with an artwor
+ k showcase for families. Scholarships are available\, though the applicati
+ on deadline for this session has passed.\n\nPrice: from $280\n\nDetails: h
+ ttps://coastaleventures.com/events/ev-after-school-art-fall-2026-0827.html
+URL:https://coastaleventures.com/events/ev-after-school-art-fall-2026-0827.
+ html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mary_esther_lib_lovecrafts_1015-2026-10-15@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261015T160000
+DTEND;TZID=America/Chicago:20261015T173000
+SUMMARY:LoveCrafts Adult Craft Night at Mary Esther Library
+LOCATION:Mary Esther Library\, 100 W. Hollywood Blvd\, Mary Esther\, FL 325
+ 69
+DESCRIPTION:Thursday 10/15 · 4:00 PM to 5:30 PM\n\nMary Esther Library hos
+ ts a monthly crafting night for adults\, with all supplies provided so att
+ endees just bring themselves. The library caps it as 18 and over\, and sea
+ ts are limited since registration is required. It is a low-key way to make
+  something and meet other grown-ups in town without your kids in tow.\n\nP
+ rice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-mary-esther
+ -lib-lovecrafts-1015.html
+URL:https://coastaleventures.com/events/ev-mary-esther-lib-lovecrafts-1015.
+ html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_blithespirit-2026-10-16@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261102
+SUMMARY:Blithe Spirit: Theatre 98
+LOCATION:Theatre 98\, Fairhope\, 350 Morphy Ave\, Fairhope\, AL 36532
+DESCRIPTION:Weekends 10/16-11/1/2026 · eves + matinees\n\nNoël Coward's c
+ lassic ghost-comedy plays at Fairhope's intimate community playhouse\, a w
+ itty\, dressed-up date in Fairhope.\n\nPrice: $ TBA\n\nDetails: https://co
+ astaleventures.com/events/ev-blithespirit.html
+URL:https://coastaleventures.com/events/ev-blithespirit.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_navarre_craft_and_chat_1016-2026-10-16@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261016T100000
+DTEND;TZID=America/Chicago:20261016T120000
+SUMMARY:Craft and Chat (Navarre)
+LOCATION:Navarre Library\, 8484 James M. Harvell Road\, Navarre\, FL 32566
+DESCRIPTION:Friday 10/16 · 10:00 AM to 12:00 PM\n\nCraft and Chat is a two
+  hour open crafting session at the Navarre Library\, held on a recurring s
+ chedule through the fall.\n\nPrice: $ TBA\n\nDetails: https://coastalevent
+ ures.com/events/ev-navarre-craft-and-chat-1016.html
+URL:https://coastaleventures.com/events/ev-navarre-craft-and-chat-1016.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_botanical_gardens_sketch_club-2026-10-16@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261016T140000
+DTEND;TZID=America/Chicago:20261016T160000
+SUMMARY:Sketch Club in the Gardens
+LOCATION:Mobile Botanical Gardens\, 5151 Museum Drive\, Mobile\, AL 36608
+DESCRIPTION:Fridays 8/28 through 10/16 · 2:00 PM to 4:00 PM (space permitt
+ ing)\n\nBotanical arts instructor Derek Norman leads a casual Friday sketc
+ h session in the Larkins Classroom or the Magnolia Hill Studio. Garden mem
+ bers get in free\, everyone else pays the standard Mobile Botanical Garden
+ s admission\, and the garden's own site is not internally consistent about
+  what the military and veteran rate actually is.\n\nPrice: from $6\n\nDeta
+ ils: https://coastaleventures.com/events/ev-botanical-gardens-sketch-club.
+ html
+URL:https://coastaleventures.com/events/ev-botanical-gardens-sketch-club.ht
+ ml
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-10-16@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261016T153000
+DTEND;TZID=America/Chicago:20261016T163000
+SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
+LOCATION:Fairhope Public Library\, MakerSpace\, 501 Fairhope Avenue\, Fairh
+ ope\, AL 36532
+DESCRIPTION:Fridays · 3:30 PM to 4:30 PM\n\nFairhope Public Library's Make
+ rSpace hosts a weekly art class for ages 7 to 12\, led by an Eastern Shore
+  Art Center artist\, Friday from 3:30 PM to 4:30 PM. Each week sends kids 
+ home with a different project. Registration opens by month.\n\nPrice: $ TB
+ A\n\nDetails: https://coastaleventures.com/events/ev-art-classes-with-east
+ ern-shore-art-center-fa-0904.html
+URL:https://coastaleventures.com/events/ev-art-classes-with-eastern-shore-a
+ rt-center-fa-0904.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gallery_ghoul-2026-10-16@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261016T170000
+DTEND;TZID=America/Chicago:20261016T210000
+SUMMARY:Gallery Night: Ghoul-ery Night (Halloween theme)
+LOCATION:Palafox St\, Downtown Pensacola\, S Palafox St\, Pensacola\, FL 32
+ 502
+DESCRIPTION:Fri 10/16/2026 · 5-9 PM\n\nOctober's Gallery Night goes Hallow
+ een\, with costumes on closed-off Palafox\, art\, and street food. It is f
+ amily-fine in the early hours\, though the mild spooky theme is a parent's
+  call for the crew.\n\nPrice: Free\n\nDetails: https://coastaleventures.co
+ m/events/ev-gallery-ghoul.html
+URL:https://coastaleventures.com/events/ev-gallery-ghoul.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_daphne_jubilee_festival_arts_1017-2026-10-17@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261019
+SUMMARY:38th Annual Jubilee Festival of Arts
+LOCATION:W.O. Lott Park\, 2000 Main Street\, Daphne\, AL 36526
+DESCRIPTION:Saturday 10/17 · 10:00 AM to 5:00 PM · Sunday 10/18 · 10:00 
+ AM to 4:00 PM\n\nOlde Towne Daphne fills with more than one hundred local 
+ and regional artists showing handmade jewelry\, paintings\, pottery\, scul
+ pture\, wood and mixed media work along the Eastern Shore of Mobile Bay. T
+ he festival also runs a kids art park and a food court alongside the marke
+ t vendors.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/events/
+ ev-daphne-jubilee-festival-arts-1017.html
+URL:https://coastaleventures.com/events/ev-daphne-jubilee-festival-arts-101
+ 7.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_rockpainting_royalmelvin_1017-2026-10-17@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261017T090000
+DTEND;TZID=America/Chicago:20261017T110000
+SUMMARY:Back to School "Rock Painting Party"
+LOCATION:Capt. Royal Melvin Heritage Park (Harbor Front)\, 206 Harbor Boule
+ vard\, Destin\, FL 32541
+DESCRIPTION:Saturday 10/17 · 9-11 AM\n\nAn outdoor rock-painting session a
+ t the harbor-front park comes with snacks. Rocks\, paint and brushes are s
+ upplied\, or bring your own rocks to paint. Pre-registration is required s
+ ince space is limited.\n\nPrice: from $3\n\nDetails: https://coastaleventu
+ res.com/events/ev-rockpainting-royalmelvin-1017.html
+URL:https://coastaleventures.com/events/ev-rockpainting-royalmelvin-1017.ht
+ ml
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_saturday_morning_art_class_mixed_media_ages__0919-2026-10-17@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261017T093000
+DTEND;TZID=America/Chicago:20261017T120000
+SUMMARY:Saturday Morning Art Class: Mixed Media Ages 6+
+LOCATION:First City Art Center\, 1060 N. Guillemard St.\, Pensacola\, FL 32
+ 501
+DESCRIPTION:Sep 19 and Oct 17 · 9:30 AM to 12:00 PM\n\nFirst City Art Cent
+ er runs a Saturday morning mixed media art class open to anyone age 6 and 
+ up\, from 9:30 AM to noon. A single class costs $35\, or $32.20 for FCAC m
+ embers. The class repeats October 17 for anyone who misses this date.\n\nP
+ rice: from $35\n\nDetails: https://coastaleventures.com/events/ev-saturday
+ -morning-art-class-mixed-media-ages-0919.html
+URL:https://coastaleventures.com/events/ev-saturday-morning-art-class-mixed
+ -media-ages-0919.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_wheel_throwing_fall_ceramics_workshop_0912-2026-10-17@coastaleventur
+ es.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261017T123000
+DTEND;TZID=America/Chicago:20261017T153000
+SUMMARY:Wheel Throwing: Fall Ceramics Workshop
+LOCATION:UWF Pensacola Campus\, Building 82\, 11000 University Pkwy\, Pensa
+ cola\, FL 32514
+DESCRIPTION:Saturdays · 12:30 PM to 3:30 PM\n\nThis six week adult ceramic
+ s course at UWF meets Saturday afternoons from 12:30 PM to 3:30 PM\, cover
+ ing wheel throwing\, centering\, forms\, firing\, and glazing. It is built
+  for beginners and for anyone who wants a refresher\, running through Octo
+ ber 17. Tuition runs $275 per person.\n\nPrice: from $275\n\nDetails: http
+ s://coastaleventures.com/events/ev-wheel-throwing-fall-ceramics-workshop-0
+ 912.html
+URL:https://coastaleventures.com/events/ev-wheel-throwing-fall-ceramics-wor
+ kshop-0912.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_wayne_miller_author_signing_1017-2026-10-17@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261017T130000
+DTEND;TZID=America/Chicago:20261017T150000
+SUMMARY:Wayne Miller: Author Signing
+LOCATION:Page & Palette\, 32 South Section Street\, Fairhope\, AL 36532
+DESCRIPTION:Saturday 10/17 · 1:00 PM to 3:00 PM\n\nPage & Palette hosts Wa
+ yne Miller for a children's signing\, Saturday from 1 PM to 3 PM\, for his
+  locally set pirate adventure about kids playing around Fairhope's beaches
+  and parks.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/event
+ s/ev-wayne-miller-author-signing-1017.html
+URL:https://coastaleventures.com/events/ev-wayne-miller-author-signing-1017
+ .html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_childrens_theater_dragons_love_tacos-2026-10-17@coastalevent
+ ures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261017T170000
+DTEND;TZID=America/Chicago:20261017T180000
+SUMMARY:Dragons Love Tacos: Fall Children's Theater at Seaside
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 3245
+ 9
+DESCRIPTION:Saturdays through 10/17 · 5:00 PM to 6:00 PM\n\nEmerald Coast 
+ Theatre Company performs Dragons Love Tacos at the Seaside Amphitheater on
+  Saturday afternoons this fall. Seven performers tell the story of a boy a
+ nd his dog learning the dos and don'ts of feeding dragons. The show is com
+ plimentary\, paid for by the arts and entertainment fee the Merchants of S
+ easide collect.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/ev
+ ents/ev-seaside-childrens-theater-dragons-love-tacos.html
+URL:https://coastaleventures.com/events/ev-seaside-childrens-theater-dragon
+ s-love-tacos.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mkac_clifford_musical-2026-10-19@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20261020
+SUMMARY:Clifford the Big Red Dog: The Musical
+LOCATION:Mattie Kelly Arts Center\, 100 College Blvd East\, Niceville\, FL 
+ 32578
+DESCRIPTION:Monday 10/19 · 9:45 AM-10:30 AM (second show 11:30 AM-12:30 PM
+ )\n\nA touring musical adaptation of Clifford the Big Red Dog brings Cliff
+ ord and Emily Elizabeth to the Mattie Kelly Arts Center stage with a story
+  built around friendship\, imagination and unconditional love. Two perform
+ ances run back to back on a weekday morning\, timed for school groups and 
+ preschool-age audiences.\n\nPrice: from $12\n\nDetails: https://coastaleve
+ ntures.com/events/ev-mkac-clifford-musical.html
+URL:https://coastaleventures.com/events/ev-mkac-clifford-musical.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_coastalmakers_stained_glass_1019-2026-10-19@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20261020
+SUMMARY:Stained Glass Snake Plant Workshop
+LOCATION:Coastal Makers\, 63 North Florida Street\, Mobile\, AL 36607
+DESCRIPTION:Monday 10/19 · 9:30 AM to 12:30 PM or 6:00 PM to 9:00 PM\n\nCo
+ astal Makers runs this stained-glass snake plant class twice on the same d
+ ay\, a morning session and an evening session\, so guests can pick whichev
+ er fits their schedule. Its own calendar does not list a price.\n\nPrice: 
+ $ TBA\n\nDetails: https://coastaleventures.com/events/ev-coastalmakers-sta
+ ined-glass-1019.html
+URL:https://coastaleventures.com/events/ev-coastalmakers-stained-glass-1019
+ .html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_next_generation_homeschool_art_tuesday_am_ag_0825-2026-10-20@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261020T100000
+DTEND;TZID=America/Chicago:20261020T120000
+SUMMARY:Next Generation Homeschool Art: Ages 7-9\, Tuesday Mornings
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Tuesdays · 10:00 AM to 12:00 PM\n\nNext Generation Homeschool 
+ Art is a visual arts course for ages 7 to 9 that follows National Visual A
+ rts Standards. Group A meets Tuesday mornings from 10:00 AM to 12:00 PM at
+  the Pensacola Museum of Art\, taught by Marce Wagner\, known as Ms. Messy
+ . Term 1 runs August 25 through October 13 and costs $160 for museum membe
+ rs or $180 for non-members. Three other weekday groups are available for d
+ ifferent ages and schedules.\n\nPrice: from $180\n\nDetails: https://coast
+ aleventures.com/events/ev-next-generation-homeschool-art-tuesday-am-ag-082
+ 5.html
+URL:https://coastaleventures.com/events/ev-next-generation-homeschool-art-t
+ uesday-am-ag-0825.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_ariel_lawhon_the_pirate_queen_1020-2026-10-20@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261020T180000
+DTEND;TZID=America/Chicago:20261020T200000
+SUMMARY:Ariel Lawhon: The Pirate Queen
+LOCATION:Page & Palette\, 32 South Section Street\, Fairhope\, AL 36532
+DESCRIPTION:Tuesday 10/20 · 6:00 PM to 8:00 PM\n\nPage & Palette hosts his
+ torical fiction author Ariel Lawhon\, Tuesday from 6 PM to 8 PM\, for a ta
+ lk and signing centered on The Pirate Queen\, her novel about Irish chieft
+ ain Grace O'Malley. Buying the book is the ticket\, and the first 100 tick
+ et holders are seated in The Book Cellar.\n\nPrice: $ TBA\n\nDetails: http
+ s://coastaleventures.com/events/ev-ariel-lawhon-the-pirate-queen-1020.html
+URL:https://coastaleventures.com/events/ev-ariel-lawhon-the-pirate-queen-10
+ 20.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_acrylic_and_watercolor_painting_0909-2026-10-21@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261021T130000
+DTEND;TZID=America/Chicago:20261021T150000
+SUMMARY:Acrylic & Watercolor Painting
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Wednesdays · 1:00 PM to 3:00 PM\n\nThis acrylic and watercolor
+  painting session at the Niceville Senior Center is led by Kathleen LoGalb
+ o\, whom the city describes as a self-taught art enthusiast who keeps lear
+ ning from others. It meets Wednesday afternoon and repeats on the Septembe
+ r calendar\, though the event page does not say how often it comes round.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-acrylic
+ -and-watercolor-painting-0909.html
+URL:https://coastaleventures.com/events/ev-acrylic-and-watercolor-painting-
+ 0909.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_crafternoons_at_west_0902-2026-10-21@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261021T150000
+DTEND;TZID=America/Chicago:20261021T170000
+SUMMARY:Crafternoons at West
+LOCATION:West Regional Library\, 5555 Grelot Road\, Mobile\, AL 36609
+DESCRIPTION:Wednesdays · 3:00 PM to 5:00 PM\n\nAdults bring their own craf
+ t project to work on together at West Regional Library's Crafternoons\, an
+  informal two-hour afternoon session. Additional sessions are held the fol
+ lowing two Wednesdays\, September 9 and September 16.\n\nPrice: $ TBA\n\nD
+ etails: https://coastaleventures.com/events/ev-crafternoons-at-west-0902.h
+ tml
+URL:https://coastaleventures.com/events/ev-crafternoons-at-west-0902.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_jeanie_thompson_and_larry_mitchell_author_ev_1021-2026-10-21@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261021T180000
+DTEND;TZID=America/Chicago:20261021T200000
+SUMMARY:Jeanie Thompson & Larry Mitchell: Author Event and Music
+LOCATION:Page & Palette\, 32 South Section Street\, Fairhope\, AL 36532
+DESCRIPTION:Wednesday 10/21 · 6:00 PM to 8:00 PM\n\nPage & Palette hosts a
+  poetry discussion with Jeanie Thompson about The Myth of Water\, paired w
+ ith live music from Larry Mitchell\, Wednesday from 6 PM to 8 PM.\n\nPrice
+ : $ TBA\n\nDetails: https://coastaleventures.com/events/ev-jeanie-thompson
+ -and-larry-mitchell-author-ev-1021.html
+URL:https://coastaleventures.com/events/ev-jeanie-thompson-and-larry-mitche
+ ll-author-ev-1021.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_after_school_art_fall_2026_0827-2026-10-22@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261022T153000
+DTEND;TZID=America/Chicago:20261022T170000
+SUMMARY:After School Art: Fall 2026
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Thursdays · 3:30 PM to 5:00 PM\n\nAfter School Art is a 16 wee
+ k studio program for grades 2 through 6 at the Pensacola Museum of Art. In
+ structor Marce Wagner\, known as Ms. Messy\, covers drawing\, painting and
+  other 2D and 3D media. Classes meet every Thursday from August 27 through
+  December 17\, with no class during Thanksgiving week. The semester costs 
+ $252 for museum members and $280 for non-members\, and ends with an artwor
+ k showcase for families. Scholarships are available\, though the applicati
+ on deadline for this session has passed.\n\nPrice: from $280\n\nDetails: h
+ ttps://coastaleventures.com/events/ev-after-school-art-fall-2026-0827.html
+URL:https://coastaleventures.com/events/ev-after-school-art-fall-2026-0827.
+ html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_young_artist_in_aprons_paint_club_0910-2026-10-22@coastaleventures.c
+ om
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261022T160000
+DTEND;TZID=America/Chicago:20261022T170000
+SUMMARY:Young Artist in Aprons Paint Club
+LOCATION:Grand Bay Library\, 10329 Freeland Ave
+DESCRIPTION:Thursdays · 4:00 PM to 5:00 PM\n\nGrand Bay Library hands out 
+ pre-drawn canvases and paint for a children's painting club\, run for ages
+  6 through 11. Mobile Public Libraries lists several Thursday sessions\, i
+ ncluding August 27 and September 10\, and nothing says how often it comes 
+ round.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-
+ young-artist-in-aprons-paint-club-0910.html
+URL:https://coastaleventures.com/events/ev-young-artist-in-aprons-paint-clu
+ b-0910.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_arts_afire_fall_festival_1022-2026-10-22@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261022T170000
+DTEND;TZID=America/Chicago:20261022T190000
+SUMMARY:Arts Afire Fall Festival
+LOCATION:Coastal Arts Center of Orange Beach\, 26389 Canal Rd\, Orange Beac
+ h\, AL 36561
+DESCRIPTION:Thursday 10/22 · 5:00 PM to 7:00 PM\n\nThe Coastal Arts Center
+  of Orange Beach hosts its Arts Afire Fall Festival on Thursday\, October 
+ 22\, from 5 to 7 PM. Current local coverage describes free admission and l
+ ive arts demonstrations throughout the evening. The festival returns every
+  year as part of the center's fall lineup.\n\nPrice: Free\n\nDetails: http
+ s://coastaleventures.com/events/ev-arts-afire-fall-festival-1022.html
+URL:https://coastaleventures.com/events/ev-arts-afire-fall-festival-1022.ht
+ ml
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_advanced_watercolor_0910-2026-10-22@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261022T180000
+DTEND;TZID=America/Chicago:20261022T190000
+SUMMARY:Advanced Watercolor
+LOCATION:Monte L. Moorer/Spring Hill Branch Library\, 4 S McGregor Ave\, Mo
+ bile\, AL
+DESCRIPTION:Thursdays · 6:00 PM to 7:00 PM\n\nThe Spring Hill branch of Mo
+ bile Public Libraries hosts an evening watercolor session aimed at painter
+ s who are already working at an advanced level\, not a beginner class. Mob
+ ile Public Libraries lists several dated sessions\, and nothing published 
+ says how often they run.\n\nPrice: $ TBA\n\nDetails: https://coastaleventu
+ res.com/events/ev-advanced-watercolor-0910.html
+URL:https://coastaleventures.com/events/ev-advanced-watercolor-0910.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mobile_opera_romeo_juliet_1023-2026-10-23@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261026
+SUMMARY:Mobile Opera: Romeo et Juliette
+LOCATION:The Temple Downtown\, 351 St Francis Street\, Mobile\, AL 36602
+DESCRIPTION:Friday 10/23 · 7:30 PM and Sunday 10/25 · 2:30 PM\n\nMobile O
+ pera stages Gounod's Romeo et Juliette in French with English supertitles\
+ , with a Friday evening show and a Sunday matinee. Mobile County's listing
+  does not publish a ticket price.\n\nPrice: $ TBA\n\nDetails: https://coas
+ taleventures.com/events/ev-mobile-opera-romeo-juliet-1023.html
+URL:https://coastaleventures.com/events/ev-mobile-opera-romeo-juliet-1023.h
+ tml
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_murder_rocky_seville-2026-10-23@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261025
+SUMMARY:Rocky Homicide Murder Mystery Dinner Theatre
+LOCATION:Heritage Hall at Seville Quarter\, 130 E Government St\, Pensacola
+ \, FL 32502
+DESCRIPTION:Fri 10/23 & Sat 10/24/2026 · Doors 6:00 PM · Show 7:00 PM · 
+ also 10/29-10/30\n\nThis boxing-gym whodunit downtown is the longest run o
+ f the series\, four nights across two weekends. It includes dinner\, a cas
+ t working the room\, and clues between courses.\n\nPrice: from $69\n\nDeta
+ ils: https://coastaleventures.com/events/ev-murder-rocky-seville.html
+URL:https://coastaleventures.com/events/ev-murder-rocky-seville.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-10-23@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261023T153000
+DTEND;TZID=America/Chicago:20261023T163000
+SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
+LOCATION:Fairhope Public Library\, MakerSpace\, 501 Fairhope Avenue\, Fairh
+ ope\, AL 36532
+DESCRIPTION:Fridays · 3:30 PM to 4:30 PM\n\nFairhope Public Library's Make
+ rSpace hosts a weekly art class for ages 7 to 12\, led by an Eastern Shore
+  Art Center artist\, Friday from 3:30 PM to 4:30 PM. Each week sends kids 
+ home with a different project. Registration opens by month.\n\nPrice: $ TB
+ A\n\nDetails: https://coastaleventures.com/events/ev-art-classes-with-east
+ ern-shore-art-center-fa-0904.html
+URL:https://coastaleventures.com/events/ev-art-classes-with-eastern-shore-a
+ rt-center-fa-0904.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_meredith_willson_s_the_music_man_1023-2026-10-23@coastaleventures.co
+ m
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261023T190000
+DTEND;TZID=America/Chicago:20261023T210000
+SUMMARY:Meredith Willson's The Music Man
+LOCATION:Mattie Kelly Arts Center\, 100 College Blvd E\, Niceville\, FL 325
+ 78
+DESCRIPTION:Friday 10/23 · 7:00 PM to 9:00 PM\n\nMeredith Willson's The Mu
+ sic Man takes the stage at Mattie Kelly Arts Center on Friday\, October 23
+ \, from 7 PM to 9 PM. The family friendly musical runs $59 per person\, wi
+ th a listed total of $236 priced for a party of five that rescales to your
+  own group. It is an evening out at the theater for the whole family.\n\nP
+ rice: from $59\n\nDetails: https://coastaleventures.com/events/ev-meredith
+ -willson-s-the-music-man-1023.html
+URL:https://coastaleventures.com/events/ev-meredith-willson-s-the-music-man
+ -1023.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mattie_kelly_arts_foundation_31st_annual_fes_1024-2026-10-24@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261026
+SUMMARY:Mattie Kelly Arts Foundation 31st Annual Festival of the Arts
+LOCATION:Mattie Kelly Dugas Pavilion Green\, 4323 Commons Dr W\, Destin\, F
+ L 32541
+DESCRIPTION:Saturday 10/24\n\nThe Mattie Kelly Arts Foundation's 31st Annua
+ l Festival of the Arts is free to attend\, including parking\, on Saturday
+ \, October 24. The exact venue was not confirmed\, so check the foundation
+ 's own page before heading out. The festival returns every year\, now in i
+ ts 31st edition.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/e
+ vents/ev-mattie-kelly-arts-foundation-31st-annual-fes-1024.html
+URL:https://coastaleventures.com/events/ev-mattie-kelly-arts-foundation-31s
+ t-annual-fes-1024.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_foley_umc_arts_crafts_show_1024-2026-10-24@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261024T090000
+DTEND;TZID=America/Chicago:20261024T140000
+SUMMARY:Arts and Crafts Show at Foley United Methodist Church
+LOCATION:Foley United Methodist Church\, 915 N. Pine St.\, Foley\, AL 36535
+DESCRIPTION:Saturday 10/24 · 9:00 AM to 2:00 PM\n\nA community craft vendo
+ r market ahead of the holiday season sets up at Foley United Methodist Chu
+ rch. The chamber's calendar listing does not name a vendor entry or shoppe
+ r admission price.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.co
+ m/events/ev-foley-umc-arts-crafts-show-1024.html
+URL:https://coastaleventures.com/events/ev-foley-umc-arts-crafts-show-1024.
+ html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_dracula_mobile_ballet-2026-10-24@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261024T193000
+DTEND;TZID=America/Chicago:20261024T203000
+SUMMARY:Dracula: Mobile Ballet
+LOCATION:Saenger Theatre\, Mobile\, AL
+DESCRIPTION:Saturday 10/24 · 7:30 PM\n\nMobile Ballet brings its productio
+ n of Dracula to the Saenger Theatre for one Saturday night performance. Si
+ ngle tickets run $25 to $69 by section\, and children\, students\, guests 
+ 65 and over\, and military pay $3 less in every section.\n\nPrice: from $2
+ 2\n\nDetails: https://coastaleventures.com/events/ev-dracula-mobile-ballet
+ .html
+URL:https://coastaleventures.com/events/ev-dracula-mobile-ballet.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_coastalmakers_fractal_drinkware_1026-2026-10-26@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261026T180000
+DTEND;TZID=America/Chicago:20261026T200000
+SUMMARY:Fractal-Burned Drinkware Workshop at Coastal Makers
+LOCATION:Coastal Makers\, 63 North Florida Street\, Mobile\, AL 36607
+DESCRIPTION:Monday 10/26 · 6:00 PM to 8:00 PM\n\nA two-hour class at Coast
+ al Makers where guests burn a Lichtenberg fractal pattern into their own d
+ rinkware to take home\, priced per person. Materials\, instruction and the
+  heated tool are included in the price.\n\nPrice: from $50\n\nDetails: htt
+ ps://coastaleventures.com/events/ev-coastalmakers-fractal-drinkware-1026.h
+ tml
+URL:https://coastaleventures.com/events/ev-coastalmakers-fractal-drinkware-
+ 1026.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_saenger_waitress_1026-2026-10-26@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261026T193000
+DTEND;TZID=America/Chicago:20261026T203000
+SUMMARY:Waitress at the Pensacola Saenger
+LOCATION:Pensacola Saenger Theatre\, 118 South Palafox Place\, Pensacola\, 
+ FL 32502
+DESCRIPTION:Monday 10/26 and Tuesday 10/27 · 7:30 PM\n\nThe touring musica
+ l Waitress plays the Pensacola Saenger for two nights. The show follows Je
+ nna\, a waitress and pie maker in a small-town diner. Tickets are sold thr
+ ough the Saenger's Ticketmaster links.\n\nPrice: $ TBA\n\nDetails: https:/
+ /coastaleventures.com/events/ev-saenger-waitress-1026.html
+URL:https://coastaleventures.com/events/ev-saenger-waitress-1026.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_next_generation_homeschool_art_tuesday_am_ag_0825-2026-10-27@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261027T100000
+DTEND;TZID=America/Chicago:20261027T120000
+SUMMARY:Next Generation Homeschool Art: Ages 7-9\, Tuesday Mornings
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Tuesdays · 10:00 AM to 12:00 PM\n\nNext Generation Homeschool 
+ Art is a visual arts course for ages 7 to 9 that follows National Visual A
+ rts Standards. Group A meets Tuesday mornings from 10:00 AM to 12:00 PM at
+  the Pensacola Museum of Art\, taught by Marce Wagner\, known as Ms. Messy
+ . Term 1 runs August 25 through October 13 and costs $160 for museum membe
+ rs or $180 for non-members. Three other weekday groups are available for d
+ ifferent ages and schedules.\n\nPrice: from $180\n\nDetails: https://coast
+ aleventures.com/events/ev-next-generation-homeschool-art-tuesday-am-ag-082
+ 5.html
+URL:https://coastaleventures.com/events/ev-next-generation-homeschool-art-t
+ uesday-am-ag-0825.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_acrylic_and_watercolor_painting_0909-2026-10-28@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261028T130000
+DTEND;TZID=America/Chicago:20261028T150000
+SUMMARY:Acrylic & Watercolor Painting
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Wednesdays · 1:00 PM to 3:00 PM\n\nThis acrylic and watercolor
+  painting session at the Niceville Senior Center is led by Kathleen LoGalb
+ o\, whom the city describes as a self-taught art enthusiast who keeps lear
+ ning from others. It meets Wednesday afternoon and repeats on the Septembe
+ r calendar\, though the event page does not say how often it comes round.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-acrylic
+ -and-watercolor-painting-0909.html
+URL:https://coastaleventures.com/events/ev-acrylic-and-watercolor-painting-
+ 0909.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_crafternoons_at_west_0902-2026-10-28@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261028T150000
+DTEND;TZID=America/Chicago:20261028T170000
+SUMMARY:Crafternoons at West
+LOCATION:West Regional Library\, 5555 Grelot Road\, Mobile\, AL 36609
+DESCRIPTION:Wednesdays · 3:00 PM to 5:00 PM\n\nAdults bring their own craf
+ t project to work on together at West Regional Library's Crafternoons\, an
+  informal two-hour afternoon session. Additional sessions are held the fol
+ lowing two Wednesdays\, September 9 and September 16.\n\nPrice: $ TBA\n\nD
+ etails: https://coastaleventures.com/events/ev-crafternoons-at-west-0902.h
+ tml
+URL:https://coastaleventures.com/events/ev-crafternoons-at-west-0902.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_foo_foo_festival_2026-2026-10-29@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261110
+SUMMARY:Foo Foo Festival
+LOCATION:Downtown Pensacola\, Downtown Pensacola\, FL
+DESCRIPTION:Thu 10/29 to Mon 11/9\n\nFoo Foo Festival runs across downtown 
+ Pensacola from October 29 through November 9\, one of the destination's ow
+ n signature annual events. Visit Pensacola's page for it doesn't spell out
+  a program\, since it covers many venues under one banner.\n\nPrice: $ TBA
+ \n\nDetails: https://coastaleventures.com/events/ev-foo-foo-festival-2026.
+ html
+URL:https://coastaleventures.com/events/ev-foo-foo-festival-2026.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_after_school_art_fall_2026_0827-2026-10-29@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261029T153000
+DTEND;TZID=America/Chicago:20261029T170000
+SUMMARY:After School Art: Fall 2026
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Thursdays · 3:30 PM to 5:00 PM\n\nAfter School Art is a 16 wee
+ k studio program for grades 2 through 6 at the Pensacola Museum of Art. In
+ structor Marce Wagner\, known as Ms. Messy\, covers drawing\, painting and
+  other 2D and 3D media. Classes meet every Thursday from August 27 through
+  December 17\, with no class during Thanksgiving week. The semester costs 
+ $252 for museum members and $280 for non-members\, and ends with an artwor
+ k showcase for families. Scholarships are available\, though the applicati
+ on deadline for this session has passed.\n\nPrice: from $280\n\nDetails: h
+ ttps://coastaleventures.com/events/ev-after-school-art-fall-2026-0827.html
+URL:https://coastaleventures.com/events/ev-after-school-art-fall-2026-0827.
+ html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-10-30@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261030T153000
+DTEND;TZID=America/Chicago:20261030T163000
+SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
+LOCATION:Fairhope Public Library\, MakerSpace\, 501 Fairhope Avenue\, Fairh
+ ope\, AL 36532
+DESCRIPTION:Fridays · 3:30 PM to 4:30 PM\n\nFairhope Public Library's Make
+ rSpace hosts a weekly art class for ages 7 to 12\, led by an Eastern Shore
+  Art Center artist\, Friday from 3:30 PM to 4:30 PM. Each week sends kids 
+ home with a different project. Registration opens by month.\n\nPrice: $ TB
+ A\n\nDetails: https://coastaleventures.com/events/ev-art-classes-with-east
+ ern-shore-art-center-fa-0904.html
+URL:https://coastaleventures.com/events/ev-art-classes-with-eastern-shore-a
+ rt-center-fa-0904.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_rockyhorror_plt-2026-10-30@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261030T193000
+DTEND;TZID=America/Chicago:20261030T203000
+SUMMARY:Richard O'Brien's The Rocky Horror Show
+LOCATION:Pensacola Little Theatre\, 400 S Jefferson St\, Pensacola\, FL 325
+ 02
+DESCRIPTION:Opens Friday 10/30 at 7:30 PM · runs through 11/8\n\nPensacola
+  Little Theatre's Mainstage opens the cult musical The Rocky Horror Show o
+ n Halloween weekend\, directed by Justin Gaylard\, and runs through Novemb
+ er 8. The campy sci-fi horror spoof carries adult content and innuendo thr
+ oughout.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/e
+ v-rockyhorror-plt.html
+URL:https://coastaleventures.com/events/ev-rockyhorror-plt.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_ballet_carnival_animals_1101-2026-11-01@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261104
+SUMMARY:Carnival of the Animals: Ballet Pensacola (Foo Foo Fest)
+LOCATION:The Clark Family Cultural Center\, 400 S Jefferson St\, Pensacola\
+ , FL 32502
+DESCRIPTION:Sun 11/1\, Mon 11/2\, Tue 11/3 · see showtimes\n\nCarnival of 
+ the Animals is an original family ballet set to Saint-Saens's score\, danc
+ ed by Ballet Pensacola's Student Company and Youth Ensemble. Animal puppet
+ s and projections tell the story of a child's dream\, and the show ends wi
+ th an interactive Parade of Animals with friends of the Humane Society. It
+  is part of the Foo Foo Festival and is made for audiences of every age.\n
+ \nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-ballet-c
+ arnival-animals-1101.html
+URL:https://coastaleventures.com/events/ev-ballet-carnival-animals-1101.htm
+ l
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_jazz_art_writers_south_festival_youth_exhibi_0801-2026-11-01@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261216
+SUMMARY:Jazz Art Writers South Festival Youth Exhibit 2026
+LOCATION:Monte L. Moorer/Spring Hill Branch Library\, 4 S McGregor Ave\, Mo
+ bile\, AL 36608
+DESCRIPTION:Sunday 11/1\n\nMore than fifty paintings by artists ages 8 to 1
+ 8 who attend local public schools interpret jazz music at the Monte L. Moo
+ rer/Spring Hill Branch Library. The JAWS Festival put the exhibit together
+  with the Mobile Arts Council and the Amp Up Arts Program\, and it hangs a
+ ll day from November 1 through December 15\, so there is no single event w
+ indow to catch.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/e
+ vents/ev-jazz-art-writers-south-festival-youth-exhibi-0801.html
+URL:https://coastaleventures.com/events/ev-jazz-art-writers-south-festival-
+ youth-exhibi-0801.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_next_generation_homeschool_art_tuesday_am_ag_0825-2026-11-03@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261103T100000
+DTEND;TZID=America/Chicago:20261103T120000
+SUMMARY:Next Generation Homeschool Art: Ages 7-9\, Tuesday Mornings
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Tuesdays · 10:00 AM to 12:00 PM\n\nNext Generation Homeschool 
+ Art is a visual arts course for ages 7 to 9 that follows National Visual A
+ rts Standards. Group A meets Tuesday mornings from 10:00 AM to 12:00 PM at
+  the Pensacola Museum of Art\, taught by Marce Wagner\, known as Ms. Messy
+ . Term 1 runs August 25 through October 13 and costs $160 for museum membe
+ rs or $180 for non-members. Three other weekday groups are available for d
+ ifferent ages and schedules.\n\nPrice: from $180\n\nDetails: https://coast
+ aleventures.com/events/ev-next-generation-homeschool-art-tuesday-am-ag-082
+ 5.html
+URL:https://coastaleventures.com/events/ev-next-generation-homeschool-art-t
+ uesday-am-ag-0825.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_acrylic_and_watercolor_painting_0909-2026-11-04@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261104T130000
+DTEND;TZID=America/Chicago:20261104T150000
+SUMMARY:Acrylic & Watercolor Painting
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Wednesdays · 1:00 PM to 3:00 PM\n\nThis acrylic and watercolor
+  painting session at the Niceville Senior Center is led by Kathleen LoGalb
+ o\, whom the city describes as a self-taught art enthusiast who keeps lear
+ ning from others. It meets Wednesday afternoon and repeats on the Septembe
+ r calendar\, though the event page does not say how often it comes round.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-acrylic
+ -and-watercolor-painting-0909.html
+URL:https://coastaleventures.com/events/ev-acrylic-and-watercolor-painting-
+ 0909.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_crafternoons_at_west_0902-2026-11-04@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261104T150000
+DTEND;TZID=America/Chicago:20261104T170000
+SUMMARY:Crafternoons at West
+LOCATION:West Regional Library\, 5555 Grelot Road\, Mobile\, AL 36609
+DESCRIPTION:Wednesdays · 3:00 PM to 5:00 PM\n\nAdults bring their own craf
+ t project to work on together at West Regional Library's Crafternoons\, an
+  informal two-hour afternoon session. Additional sessions are held the fol
+ lowing two Wednesdays\, September 9 and September 16.\n\nPrice: $ TBA\n\nD
+ etails: https://coastaleventures.com/events/ev-crafternoons-at-west-0902.h
+ tml
+URL:https://coastaleventures.com/events/ev-crafternoons-at-west-0902.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_saenger_rock_runway_1104-2026-11-04@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261104T190000
+DTEND;TZID=America/Chicago:20261104T200000
+SUMMARY:Pensacola Opera: Rock the Runway\, Living Art
+LOCATION:Saenger Theatre\, Pensacola\, 118 S Palafox Pl\, Pensacola\, FL 32
+ 502
+DESCRIPTION:Wednesday 11/4 · 7:00 PM\n\nPensacola Opera turns the Saenger 
+ into a fashion theatre stage\, with large projections\, opera singers\, ba
+ llet dancers and runway models bringing famous operatic scenes to life. It
+  is the first week of the Foo Foo Festival. The performance is a good pick
+  for a couple who want opera without the length of a full production.\n\nP
+ rice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-saenger-roc
+ k-runway-1104.html
+URL:https://coastaleventures.com/events/ev-saenger-rock-runway-1104.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_after_school_art_fall_2026_0827-2026-11-05@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261105T153000
+DTEND;TZID=America/Chicago:20261105T170000
+SUMMARY:After School Art: Fall 2026
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Thursdays · 3:30 PM to 5:00 PM\n\nAfter School Art is a 16 wee
+ k studio program for grades 2 through 6 at the Pensacola Museum of Art. In
+ structor Marce Wagner\, known as Ms. Messy\, covers drawing\, painting and
+  other 2D and 3D media. Classes meet every Thursday from August 27 through
+  December 17\, with no class during Thanksgiving week. The semester costs 
+ $252 for museum members and $280 for non-members\, and ends with an artwor
+ k showcase for families. Scholarships are available\, though the applicati
+ on deadline for this session has passed.\n\nPrice: from $280\n\nDetails: h
+ ttps://coastaleventures.com/events/ev-after-school-art-fall-2026-0827.html
+URL:https://coastaleventures.com/events/ev-after-school-art-fall-2026-0827.
+ html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_young_artist_in_aprons_paint_club_0910-2026-11-05@coastaleventures.c
+ om
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261105T160000
+DTEND;TZID=America/Chicago:20261105T170000
+SUMMARY:Young Artist in Aprons Paint Club
+LOCATION:Grand Bay Library\, 10329 Freeland Ave
+DESCRIPTION:Thursdays · 4:00 PM to 5:00 PM\n\nGrand Bay Library hands out 
+ pre-drawn canvases and paint for a children's painting club\, run for ages
+  6 through 11. Mobile Public Libraries lists several Thursday sessions\, i
+ ncluding August 27 and September 10\, and nothing says how often it comes 
+ round.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-
+ young-artist-in-aprons-paint-club-0910.html
+URL:https://coastaleventures.com/events/ev-young-artist-in-aprons-paint-clu
+ b-0910.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_advanced_watercolor_0910-2026-11-05@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261105T180000
+DTEND;TZID=America/Chicago:20261105T190000
+SUMMARY:Advanced Watercolor
+LOCATION:Monte L. Moorer/Spring Hill Branch Library\, 4 S McGregor Ave\, Mo
+ bile\, AL
+DESCRIPTION:Thursdays · 6:00 PM to 7:00 PM\n\nThe Spring Hill branch of Mo
+ bile Public Libraries hosts an evening watercolor session aimed at painter
+ s who are already working at an advanced level\, not a beginner class. Mob
+ ile Public Libraries lists several dated sessions\, and nothing published 
+ says how often they run.\n\nPrice: $ TBA\n\nDetails: https://coastaleventu
+ res.com/events/ev-advanced-watercolor-0910.html
+URL:https://coastaleventures.com/events/ev-advanced-watercolor-0910.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_great_gulfcoast_arts_festival_1106-2026-11-06@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261109
+SUMMARY:Great Gulfcoast Arts Festival
+LOCATION:Seville Square\, 311 E Government St\, Pensacola\, FL 32502
+DESCRIPTION:Fri 11/6 to Sun 11/8 · 9 AM to 5 PM Fri and Sat\, 9 AM to 4 PM
+  Sun\n\nThe Great Gulfcoast Arts Festival fills Seville Square with more t
+ han 200 juried painters\, potters\, sculptors\, jewellers and other artist
+ s over three days. Live music plays from the main stage\, heritage artists
+  demonstrate traditional crafts\, and the Children's Arts Festival has fre
+ e hands-on projects. Admission is free. Pets are not allowed\, and downtow
+ n parking is tight\, so plan to walk in from a distance.\n\nPrice: Free\n\
+ nDetails: https://coastaleventures.com/events/ev-great-gulfcoast-arts-fest
+ ival-1106.html
+URL:https://coastaleventures.com/events/ev-great-gulfcoast-arts-festival-11
+ 06.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-11-06@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261106T153000
+DTEND;TZID=America/Chicago:20261106T163000
+SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
+LOCATION:Fairhope Public Library\, MakerSpace\, 501 Fairhope Avenue\, Fairh
+ ope\, AL 36532
+DESCRIPTION:Fridays · 3:30 PM to 4:30 PM\n\nFairhope Public Library's Make
+ rSpace hosts a weekly art class for ages 7 to 12\, led by an Eastern Shore
+  Art Center artist\, Friday from 3:30 PM to 4:30 PM. Each week sends kids 
+ home with a different project. Registration opens by month.\n\nPrice: $ TB
+ A\n\nDetails: https://coastaleventures.com/events/ev-art-classes-with-east
+ ern-shore-art-center-fa-0904.html
+URL:https://coastaleventures.com/events/ev-art-classes-with-eastern-shore-a
+ rt-center-fa-0904.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_next_generation_homeschool_art_tuesday_am_ag_0825-2026-11-10@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261110T100000
+DTEND;TZID=America/Chicago:20261110T120000
+SUMMARY:Next Generation Homeschool Art: Ages 7-9\, Tuesday Mornings
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Tuesdays · 10:00 AM to 12:00 PM\n\nNext Generation Homeschool 
+ Art is a visual arts course for ages 7 to 9 that follows National Visual A
+ rts Standards. Group A meets Tuesday mornings from 10:00 AM to 12:00 PM at
+  the Pensacola Museum of Art\, taught by Marce Wagner\, known as Ms. Messy
+ . Term 1 runs August 25 through October 13 and costs $160 for museum membe
+ rs or $180 for non-members. Three other weekday groups are available for d
+ ifferent ages and schedules.\n\nPrice: from $180\n\nDetails: https://coast
+ aleventures.com/events/ev-next-generation-homeschool-art-tuesday-am-ag-082
+ 5.html
+URL:https://coastaleventures.com/events/ev-next-generation-homeschool-art-t
+ uesday-am-ag-0825.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_acrylic_and_watercolor_painting_0909-2026-11-11@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261111T130000
+DTEND;TZID=America/Chicago:20261111T150000
+SUMMARY:Acrylic & Watercolor Painting
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Wednesdays · 1:00 PM to 3:00 PM\n\nThis acrylic and watercolor
+  painting session at the Niceville Senior Center is led by Kathleen LoGalb
+ o\, whom the city describes as a self-taught art enthusiast who keeps lear
+ ning from others. It meets Wednesday afternoon and repeats on the Septembe
+ r calendar\, though the event page does not say how often it comes round.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-acrylic
+ -and-watercolor-painting-0909.html
+URL:https://coastaleventures.com/events/ev-acrylic-and-watercolor-painting-
+ 0909.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_crafternoons_at_west_0902-2026-11-11@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261111T150000
+DTEND;TZID=America/Chicago:20261111T170000
+SUMMARY:Crafternoons at West
+LOCATION:West Regional Library\, 5555 Grelot Road\, Mobile\, AL 36609
+DESCRIPTION:Wednesdays · 3:00 PM to 5:00 PM\n\nAdults bring their own craf
+ t project to work on together at West Regional Library's Crafternoons\, an
+  informal two-hour afternoon session. Additional sessions are held the fol
+ lowing two Wednesdays\, September 9 and September 16.\n\nPrice: $ TBA\n\nD
+ etails: https://coastaleventures.com/events/ev-crafternoons-at-west-0902.h
+ tml
+URL:https://coastaleventures.com/events/ev-crafternoons-at-west-0902.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_noisesoff_cct-2026-11-12@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261123
+SUMMARY:Noises Off!: Chickasaw Civic Theatre
+LOCATION:Chickasaw Civic Theatre\, 801 Iroquois St\, Chickasaw\, AL 36611
+DESCRIPTION:Nov 12-22\, 2026 · eves + matinees\n\nMichael Frayn's door-sla
+ mming backstage farce\, one of the funniest plays ever written\, plays at 
+ Chickasaw's community playhouse.\n\nPrice: $ TBA\n\nDetails: https://coast
+ aleventures.com/events/ev-noisesoff-cct.html
+URL:https://coastaleventures.com/events/ev-noisesoff-cct.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_after_school_art_fall_2026_0827-2026-11-12@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261112T153000
+DTEND;TZID=America/Chicago:20261112T170000
+SUMMARY:After School Art: Fall 2026
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Thursdays · 3:30 PM to 5:00 PM\n\nAfter School Art is a 16 wee
+ k studio program for grades 2 through 6 at the Pensacola Museum of Art. In
+ structor Marce Wagner\, known as Ms. Messy\, covers drawing\, painting and
+  other 2D and 3D media. Classes meet every Thursday from August 27 through
+  December 17\, with no class during Thanksgiving week. The semester costs 
+ $252 for museum members and $280 for non-members\, and ends with an artwor
+ k showcase for families. Scholarships are available\, though the applicati
+ on deadline for this session has passed.\n\nPrice: from $280\n\nDetails: h
+ ttps://coastaleventures.com/events/ev-after-school-art-fall-2026-0827.html
+URL:https://coastaleventures.com/events/ev-after-school-art-fall-2026-0827.
+ html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-11-13@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261113T153000
+DTEND;TZID=America/Chicago:20261113T163000
+SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
+LOCATION:Fairhope Public Library\, MakerSpace\, 501 Fairhope Avenue\, Fairh
+ ope\, AL 36532
+DESCRIPTION:Fridays · 3:30 PM to 4:30 PM\n\nFairhope Public Library's Make
+ rSpace hosts a weekly art class for ages 7 to 12\, led by an Eastern Shore
+  Art Center artist\, Friday from 3:30 PM to 4:30 PM. Each week sends kids 
+ home with a different project. Registration opens by month.\n\nPrice: $ TB
+ A\n\nDetails: https://coastaleventures.com/events/ev-art-classes-with-east
+ ern-shore-art-center-fa-0904.html
+URL:https://coastaleventures.com/events/ev-art-classes-with-eastern-shore-a
+ rt-center-fa-0904.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_next_generation_homeschool_art_tuesday_am_ag_0825-2026-11-17@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261117T100000
+DTEND;TZID=America/Chicago:20261117T120000
+SUMMARY:Next Generation Homeschool Art: Ages 7-9\, Tuesday Mornings
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Tuesdays · 10:00 AM to 12:00 PM\n\nNext Generation Homeschool 
+ Art is a visual arts course for ages 7 to 9 that follows National Visual A
+ rts Standards. Group A meets Tuesday mornings from 10:00 AM to 12:00 PM at
+  the Pensacola Museum of Art\, taught by Marce Wagner\, known as Ms. Messy
+ . Term 1 runs August 25 through October 13 and costs $160 for museum membe
+ rs or $180 for non-members. Three other weekday groups are available for d
+ ifferent ages and schedules.\n\nPrice: from $180\n\nDetails: https://coast
+ aleventures.com/events/ev-next-generation-homeschool-art-tuesday-am-ag-082
+ 5.html
+URL:https://coastaleventures.com/events/ev-next-generation-homeschool-art-t
+ uesday-am-ag-0825.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_acrylic_and_watercolor_painting_0909-2026-11-18@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261118T130000
+DTEND;TZID=America/Chicago:20261118T150000
+SUMMARY:Acrylic & Watercolor Painting
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Wednesdays · 1:00 PM to 3:00 PM\n\nThis acrylic and watercolor
+  painting session at the Niceville Senior Center is led by Kathleen LoGalb
+ o\, whom the city describes as a self-taught art enthusiast who keeps lear
+ ning from others. It meets Wednesday afternoon and repeats on the Septembe
+ r calendar\, though the event page does not say how often it comes round.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-acrylic
+ -and-watercolor-painting-0909.html
+URL:https://coastaleventures.com/events/ev-acrylic-and-watercolor-painting-
+ 0909.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_crafternoons_at_west_0902-2026-11-18@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261118T150000
+DTEND;TZID=America/Chicago:20261118T170000
+SUMMARY:Crafternoons at West
+LOCATION:West Regional Library\, 5555 Grelot Road\, Mobile\, AL 36609
+DESCRIPTION:Wednesdays · 3:00 PM to 5:00 PM\n\nAdults bring their own craf
+ t project to work on together at West Regional Library's Crafternoons\, an
+  informal two-hour afternoon session. Additional sessions are held the fol
+ lowing two Wednesdays\, September 9 and September 16.\n\nPrice: $ TBA\n\nD
+ etails: https://coastaleventures.com/events/ev-crafternoons-at-west-0902.h
+ tml
+URL:https://coastaleventures.com/events/ev-crafternoons-at-west-0902.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_after_school_art_fall_2026_0827-2026-11-19@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261119T153000
+DTEND;TZID=America/Chicago:20261119T170000
+SUMMARY:After School Art: Fall 2026
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Thursdays · 3:30 PM to 5:00 PM\n\nAfter School Art is a 16 wee
+ k studio program for grades 2 through 6 at the Pensacola Museum of Art. In
+ structor Marce Wagner\, known as Ms. Messy\, covers drawing\, painting and
+  other 2D and 3D media. Classes meet every Thursday from August 27 through
+  December 17\, with no class during Thanksgiving week. The semester costs 
+ $252 for museum members and $280 for non-members\, and ends with an artwor
+ k showcase for families. Scholarships are available\, though the applicati
+ on deadline for this session has passed.\n\nPrice: from $280\n\nDetails: h
+ ttps://coastaleventures.com/events/ev-after-school-art-fall-2026-0827.html
+URL:https://coastaleventures.com/events/ev-after-school-art-fall-2026-0827.
+ html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_young_artist_in_aprons_paint_club_0910-2026-11-19@coastaleventures.c
+ om
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261119T160000
+DTEND;TZID=America/Chicago:20261119T170000
+SUMMARY:Young Artist in Aprons Paint Club
+LOCATION:Grand Bay Library\, 10329 Freeland Ave
+DESCRIPTION:Thursdays · 4:00 PM to 5:00 PM\n\nGrand Bay Library hands out 
+ pre-drawn canvases and paint for a children's painting club\, run for ages
+  6 through 11. Mobile Public Libraries lists several Thursday sessions\, i
+ ncluding August 27 and September 10\, and nothing says how often it comes 
+ round.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-
+ young-artist-in-aprons-paint-club-0910.html
+URL:https://coastaleventures.com/events/ev-young-artist-in-aprons-paint-clu
+ b-0910.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_advanced_watercolor_0910-2026-11-19@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261119T180000
+DTEND;TZID=America/Chicago:20261119T190000
+SUMMARY:Advanced Watercolor
+LOCATION:Monte L. Moorer/Spring Hill Branch Library\, 4 S McGregor Ave\, Mo
+ bile\, AL
+DESCRIPTION:Thursdays · 6:00 PM to 7:00 PM\n\nThe Spring Hill branch of Mo
+ bile Public Libraries hosts an evening watercolor session aimed at painter
+ s who are already working at an advanced level\, not a beginner class. Mob
+ ile Public Libraries lists several dated sessions\, and nothing published 
+ says how often they run.\n\nPrice: $ TBA\n\nDetails: https://coastaleventu
+ res.com/events/ev-advanced-watercolor-0910.html
+URL:https://coastaleventures.com/events/ev-advanced-watercolor-0910.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-11-20@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261120T153000
+DTEND;TZID=America/Chicago:20261120T163000
+SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
+LOCATION:Fairhope Public Library\, MakerSpace\, 501 Fairhope Avenue\, Fairh
+ ope\, AL 36532
+DESCRIPTION:Fridays · 3:30 PM to 4:30 PM\n\nFairhope Public Library's Make
+ rSpace hosts a weekly art class for ages 7 to 12\, led by an Eastern Shore
+  Art Center artist\, Friday from 3:30 PM to 4:30 PM. Each week sends kids 
+ home with a different project. Registration opens by month.\n\nPrice: $ TB
+ A\n\nDetails: https://coastaleventures.com/events/ev-art-classes-with-east
+ ern-shore-art-center-fa-0904.html
+URL:https://coastaleventures.com/events/ev-art-classes-with-eastern-shore-a
+ rt-center-fa-0904.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gallery_livingart-2026-11-20@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261120T170000
+DTEND;TZID=America/Chicago:20261120T210000
+SUMMARY:Gallery Night: Festival of Living Art
+LOCATION:Palafox St\, Downtown\, S Palafox St\, Pensacola\, FL 32502
+DESCRIPTION:Fri 11/20/2026 · 5-9 PM\n\nNovember's Gallery Night turns the 
+ street into living pictures\, with costumed tableaux holding still down cl
+ osed-off Palafox and the usual art\, music\, and street food around them. 
+ It is easy to explain to a child and hard to look away from.\n\nPrice: Fre
+ e\n\nDetails: https://coastaleventures.com/events/ev-gallery-livingart.htm
+ l
+URL:https://coastaleventures.com/events/ev-gallery-livingart.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_murder_pirates_seville-2026-11-21@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:Pirates Murder Mystery Dinner Theatre
+LOCATION:Heritage Hall at Seville Quarter\, 130 E Government St\, Pensacola
+ \, FL 32502
+DESCRIPTION:Sat 11/21/2026 · Doors 6:00 PM · Show 7:00 PM\n\nThis pirate-
+ crew whodunit downtown includes dinner\, a cast working the tables\, and a
+  mystery that unfolds between courses. It is very Pensacola\, and a good o
+ ne to dress for.\n\nPrice: from $69\n\nDetails: https://coastaleventures.c
+ om/events/ev-murder-pirates-seville.html
+URL:https://coastaleventures.com/events/ev-murder-pirates-seville.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_acrylic_and_watercolor_painting_0909-2026-11-25@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261125T130000
+DTEND;TZID=America/Chicago:20261125T150000
+SUMMARY:Acrylic & Watercolor Painting
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Wednesdays · 1:00 PM to 3:00 PM\n\nThis acrylic and watercolor
+  painting session at the Niceville Senior Center is led by Kathleen LoGalb
+ o\, whom the city describes as a self-taught art enthusiast who keeps lear
+ ning from others. It meets Wednesday afternoon and repeats on the Septembe
+ r calendar\, though the event page does not say how often it comes round.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-acrylic
+ -and-watercolor-painting-0909.html
+URL:https://coastaleventures.com/events/ev-acrylic-and-watercolor-painting-
+ 0909.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-11-27@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261127T153000
+DTEND;TZID=America/Chicago:20261127T163000
+SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
+LOCATION:Fairhope Public Library\, MakerSpace\, 501 Fairhope Avenue\, Fairh
+ ope\, AL 36532
+DESCRIPTION:Fridays · 3:30 PM to 4:30 PM\n\nFairhope Public Library's Make
+ rSpace hosts a weekly art class for ages 7 to 12\, led by an Eastern Shore
+  Art Center artist\, Friday from 3:30 PM to 4:30 PM. Each week sends kids 
+ home with a different project. Registration opens by month.\n\nPrice: $ TB
+ A\n\nDetails: https://coastaleventures.com/events/ev-art-classes-with-east
+ ern-shore-art-center-fa-0904.html
+URL:https://coastaleventures.com/events/ev-art-classes-with-eastern-shore-a
+ rt-center-fa-0904.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_christmascarol-2026-11-30@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261130T193000
+DTEND;TZID=America/Chicago:20261130T203000
+SUMMARY:Charles Dickens' A Christmas Carol
+LOCATION:Saenger Theatre\, 118 S Palafox Pl\, Pensacola\, FL 32502
+DESCRIPTION:Mon 11/30/2026 · 7:30 PM\n\nThis touring stage production of t
+ he Christmas classic is a wholesome holiday night older kids can follow.\n
+ \nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-christma
+ scarol.html
+URL:https://coastaleventures.com/events/ev-christmascarol.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_next_generation_homeschool_art_tuesday_am_ag_0825-2026-12-01@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261201T100000
+DTEND;TZID=America/Chicago:20261201T120000
+SUMMARY:Next Generation Homeschool Art: Ages 7-9\, Tuesday Mornings
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Tuesdays · 10:00 AM to 12:00 PM\n\nNext Generation Homeschool 
+ Art is a visual arts course for ages 7 to 9 that follows National Visual A
+ rts Standards. Group A meets Tuesday mornings from 10:00 AM to 12:00 PM at
+  the Pensacola Museum of Art\, taught by Marce Wagner\, known as Ms. Messy
+ . Term 1 runs August 25 through October 13 and costs $160 for museum membe
+ rs or $180 for non-members. Three other weekday groups are available for d
+ ifferent ages and schedules.\n\nPrice: from $180\n\nDetails: https://coast
+ aleventures.com/events/ev-next-generation-homeschool-art-tuesday-am-ag-082
+ 5.html
+URL:https://coastaleventures.com/events/ev-next-generation-homeschool-art-t
+ uesday-am-ag-0825.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_acrylic_and_watercolor_painting_0909-2026-12-02@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261202T130000
+DTEND;TZID=America/Chicago:20261202T150000
+SUMMARY:Acrylic & Watercolor Painting
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Wednesdays · 1:00 PM to 3:00 PM\n\nThis acrylic and watercolor
+  painting session at the Niceville Senior Center is led by Kathleen LoGalb
+ o\, whom the city describes as a self-taught art enthusiast who keeps lear
+ ning from others. It meets Wednesday afternoon and repeats on the Septembe
+ r calendar\, though the event page does not say how often it comes round.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-acrylic
+ -and-watercolor-painting-0909.html
+URL:https://coastaleventures.com/events/ev-acrylic-and-watercolor-painting-
+ 0909.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_crafternoons_at_west_0902-2026-12-02@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261202T150000
+DTEND;TZID=America/Chicago:20261202T170000
+SUMMARY:Crafternoons at West
+LOCATION:West Regional Library\, 5555 Grelot Road\, Mobile\, AL 36609
+DESCRIPTION:Wednesdays · 3:00 PM to 5:00 PM\n\nAdults bring their own craf
+ t project to work on together at West Regional Library's Crafternoons\, an
+  informal two-hour afternoon session. Additional sessions are held the fol
+ lowing two Wednesdays\, September 9 and September 16.\n\nPrice: $ TBA\n\nD
+ etails: https://coastaleventures.com/events/ev-crafternoons-at-west-0902.h
+ tml
+URL:https://coastaleventures.com/events/ev-crafternoons-at-west-0902.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_ectc_million_dollar_quartet_christmas_1203-2026-12-03@coastaleventur
+ es.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261204
+SUMMARY:Million Dollar Quartet Christmas at Emerald Coast Theatre Company
+LOCATION:Emerald Coast Theatre Company\, 560 Grand Boulevard\, Miramar Beac
+ h\, FL 32550
+DESCRIPTION:Runs 12/3 to 12/20 · Thursday to Saturday 7:00 PM\, Sunday 2:0
+ 0 PM\n\nEmerald Coast Theatre Company closes its season's holiday slot wit
+ h Million Dollar Quartet Christmas\, a stage show built around a rock and 
+ roll Christmas jam. It runs from December 3 to December 20 on the theatre'
+ s regular schedule with extra performances on weekends and holidays. Ticke
+ t prices are not published on the theatre's page.\n\nPrice: $ TBA\n\nDetai
+ ls: https://coastaleventures.com/events/ev-ectc-million-dollar-quartet-chr
+ istmas-1203.html
+URL:https://coastaleventures.com/events/ev-ectc-million-dollar-quartet-chri
+ stmas-1203.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_after_school_art_fall_2026_0827-2026-12-03@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261203T153000
+DTEND;TZID=America/Chicago:20261203T170000
+SUMMARY:After School Art: Fall 2026
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Thursdays · 3:30 PM to 5:00 PM\n\nAfter School Art is a 16 wee
+ k studio program for grades 2 through 6 at the Pensacola Museum of Art. In
+ structor Marce Wagner\, known as Ms. Messy\, covers drawing\, painting and
+  other 2D and 3D media. Classes meet every Thursday from August 27 through
+  December 17\, with no class during Thanksgiving week. The semester costs 
+ $252 for museum members and $280 for non-members\, and ends with an artwor
+ k showcase for families. Scholarships are available\, though the applicati
+ on deadline for this session has passed.\n\nPrice: from $280\n\nDetails: h
+ ttps://coastaleventures.com/events/ev-after-school-art-fall-2026-0827.html
+URL:https://coastaleventures.com/events/ev-after-school-art-fall-2026-0827.
+ html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_advanced_watercolor_0910-2026-12-03@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261203T180000
+DTEND;TZID=America/Chicago:20261203T190000
+SUMMARY:Advanced Watercolor
+LOCATION:Monte L. Moorer/Spring Hill Branch Library\, 4 S McGregor Ave\, Mo
+ bile\, AL
+DESCRIPTION:Thursdays · 6:00 PM to 7:00 PM\n\nThe Spring Hill branch of Mo
+ bile Public Libraries hosts an evening watercolor session aimed at painter
+ s who are already working at an advanced level\, not a beginner class. Mob
+ ile Public Libraries lists several dated sessions\, and nothing published 
+ says how often they run.\n\nPrice: $ TBA\n\nDetails: https://coastaleventu
+ res.com/events/ev-advanced-watercolor-0910.html
+URL:https://coastaleventures.com/events/ev-advanced-watercolor-0910.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-12-04@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261204T153000
+DTEND;TZID=America/Chicago:20261204T163000
+SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
+LOCATION:Fairhope Public Library\, MakerSpace\, 501 Fairhope Avenue\, Fairh
+ ope\, AL 36532
+DESCRIPTION:Fridays · 3:30 PM to 4:30 PM\n\nFairhope Public Library's Make
+ rSpace hosts a weekly art class for ages 7 to 12\, led by an Eastern Shore
+  Art Center artist\, Friday from 3:30 PM to 4:30 PM. Each week sends kids 
+ home with a different project. Registration opens by month.\n\nPrice: $ TB
+ A\n\nDetails: https://coastaleventures.com/events/ev-art-classes-with-east
+ ern-shore-art-center-fa-0904.html
+URL:https://coastaleventures.com/events/ev-art-classes-with-eastern-shore-a
+ rt-center-fa-0904.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_next_generation_homeschool_art_tuesday_am_ag_0825-2026-12-08@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261208T100000
+DTEND;TZID=America/Chicago:20261208T120000
+SUMMARY:Next Generation Homeschool Art: Ages 7-9\, Tuesday Mornings
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Tuesdays · 10:00 AM to 12:00 PM\n\nNext Generation Homeschool 
+ Art is a visual arts course for ages 7 to 9 that follows National Visual A
+ rts Standards. Group A meets Tuesday mornings from 10:00 AM to 12:00 PM at
+  the Pensacola Museum of Art\, taught by Marce Wagner\, known as Ms. Messy
+ . Term 1 runs August 25 through October 13 and costs $160 for museum membe
+ rs or $180 for non-members. Three other weekday groups are available for d
+ ifferent ages and schedules.\n\nPrice: from $180\n\nDetails: https://coast
+ aleventures.com/events/ev-next-generation-homeschool-art-tuesday-am-ag-082
+ 5.html
+URL:https://coastaleventures.com/events/ev-next-generation-homeschool-art-t
+ uesday-am-ag-0825.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_acrylic_and_watercolor_painting_0909-2026-12-09@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261209T130000
+DTEND;TZID=America/Chicago:20261209T150000
+SUMMARY:Acrylic & Watercolor Painting
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Wednesdays · 1:00 PM to 3:00 PM\n\nThis acrylic and watercolor
+  painting session at the Niceville Senior Center is led by Kathleen LoGalb
+ o\, whom the city describes as a self-taught art enthusiast who keeps lear
+ ning from others. It meets Wednesday afternoon and repeats on the Septembe
+ r calendar\, though the event page does not say how often it comes round.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-acrylic
+ -and-watercolor-painting-0909.html
+URL:https://coastaleventures.com/events/ev-acrylic-and-watercolor-painting-
+ 0909.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_crafternoons_at_west_0902-2026-12-09@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261209T150000
+DTEND;TZID=America/Chicago:20261209T170000
+SUMMARY:Crafternoons at West
+LOCATION:West Regional Library\, 5555 Grelot Road\, Mobile\, AL 36609
+DESCRIPTION:Wednesdays · 3:00 PM to 5:00 PM\n\nAdults bring their own craf
+ t project to work on together at West Regional Library's Crafternoons\, an
+  informal two-hour afternoon session. Additional sessions are held the fol
+ lowing two Wednesdays\, September 9 and September 16.\n\nPrice: $ TBA\n\nD
+ etails: https://coastaleventures.com/events/ev-crafternoons-at-west-0902.h
+ tml
+URL:https://coastaleventures.com/events/ev-crafternoons-at-west-0902.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_after_school_art_fall_2026_0827-2026-12-10@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261210T153000
+DTEND;TZID=America/Chicago:20261210T170000
+SUMMARY:After School Art: Fall 2026
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Thursdays · 3:30 PM to 5:00 PM\n\nAfter School Art is a 16 wee
+ k studio program for grades 2 through 6 at the Pensacola Museum of Art. In
+ structor Marce Wagner\, known as Ms. Messy\, covers drawing\, painting and
+  other 2D and 3D media. Classes meet every Thursday from August 27 through
+  December 17\, with no class during Thanksgiving week. The semester costs 
+ $252 for museum members and $280 for non-members\, and ends with an artwor
+ k showcase for families. Scholarships are available\, though the applicati
+ on deadline for this session has passed.\n\nPrice: from $280\n\nDetails: h
+ ttps://coastaleventures.com/events/ev-after-school-art-fall-2026-0827.html
+URL:https://coastaleventures.com/events/ev-after-school-art-fall-2026-0827.
+ html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_plt_ebenezers_trailer_park_christmas_1211-2026-12-11@coastaleventure
+ s.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261211
+DTEND;VALUE=DATE:20261221
+SUMMARY:Ebenezer's Trailer Park Christmas Speck-Tac-Yule-R!
+LOCATION:Pensacola Little Theatre\, Studio 400\, 400 S Jefferson St\, Pensa
+ cola\, FL 32502
+DESCRIPTION:Fri 12/11 to Sun 12/20 · Fri and Sat 7:30 PM\, Sun 2:30 PM\n\n
+ This original musical comedy by a local playwright set Christmas in Fern F
+ orest Trailer Park\, Florida. Act I spoofs A Christmas Carol with Marley r
+ ecast as Harley\, and Act II is a Trailer Park Got Talent fundraiser to sa
+ ve the park. The show has original music and runs in the theatre's Studio 
+ 400 space over two weekends.\n\nPrice: $ TBA\n\nDetails: https://coastalev
+ entures.com/events/ev-plt-ebenezers-trailer-park-christmas-1211.html
+URL:https://coastaleventures.com/events/ev-plt-ebenezers-trailer-park-chris
+ tmas-1211.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-12-11@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261211T153000
+DTEND;TZID=America/Chicago:20261211T163000
+SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
+LOCATION:Fairhope Public Library\, MakerSpace\, 501 Fairhope Avenue\, Fairh
+ ope\, AL 36532
+DESCRIPTION:Fridays · 3:30 PM to 4:30 PM\n\nFairhope Public Library's Make
+ rSpace hosts a weekly art class for ages 7 to 12\, led by an Eastern Shore
+  Art Center artist\, Friday from 3:30 PM to 4:30 PM. Each week sends kids 
+ home with a different project. Registration opens by month.\n\nPrice: $ TB
+ A\n\nDetails: https://coastaleventures.com/events/ev-art-classes-with-east
+ ern-shore-art-center-fa-0904.html
+URL:https://coastaleventures.com/events/ev-art-classes-with-eastern-shore-a
+ rt-center-fa-0904.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_murder_hoho_seville-2026-12-13@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261213T100000
+DTEND;TZID=America/Chicago:20261213T110000
+SUMMARY:Ho Ho Homicide Murder Mystery Holiday BRUNCH
+LOCATION:Heritage Hall at Seville Quarter\, 130 E Government St\, Pensacola
+ \, FL 32502
+DESCRIPTION:Sun 12/13/2026 · 10:00 AM brunch\n\nThe one daytime show in th
+ e run serves a holiday whodunit over brunch instead of dinner\, so it is o
+ ver well before bedtime. It uses the same room and the same cast-in-the-ro
+ om format.\n\nPrice: from $69\n\nDetails: https://coastaleventures.com/eve
+ nts/ev-murder-hoho-seville.html
+URL:https://coastaleventures.com/events/ev-murder-hoho-seville.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_next_generation_homeschool_art_tuesday_am_ag_0825-2026-12-15@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261215T100000
+DTEND;TZID=America/Chicago:20261215T120000
+SUMMARY:Next Generation Homeschool Art: Ages 7-9\, Tuesday Mornings
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Tuesdays · 10:00 AM to 12:00 PM\n\nNext Generation Homeschool 
+ Art is a visual arts course for ages 7 to 9 that follows National Visual A
+ rts Standards. Group A meets Tuesday mornings from 10:00 AM to 12:00 PM at
+  the Pensacola Museum of Art\, taught by Marce Wagner\, known as Ms. Messy
+ . Term 1 runs August 25 through October 13 and costs $160 for museum membe
+ rs or $180 for non-members. Three other weekday groups are available for d
+ ifferent ages and schedules.\n\nPrice: from $180\n\nDetails: https://coast
+ aleventures.com/events/ev-next-generation-homeschool-art-tuesday-am-ag-082
+ 5.html
+URL:https://coastaleventures.com/events/ev-next-generation-homeschool-art-t
+ uesday-am-ag-0825.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_acrylic_and_watercolor_painting_0909-2026-12-16@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261216T130000
+DTEND;TZID=America/Chicago:20261216T150000
+SUMMARY:Acrylic & Watercolor Painting
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Wednesdays · 1:00 PM to 3:00 PM\n\nThis acrylic and watercolor
+  painting session at the Niceville Senior Center is led by Kathleen LoGalb
+ o\, whom the city describes as a self-taught art enthusiast who keeps lear
+ ning from others. It meets Wednesday afternoon and repeats on the Septembe
+ r calendar\, though the event page does not say how often it comes round.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-acrylic
+ -and-watercolor-painting-0909.html
+URL:https://coastaleventures.com/events/ev-acrylic-and-watercolor-painting-
+ 0909.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_crafternoons_at_west_0902-2026-12-16@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261216T150000
+DTEND;TZID=America/Chicago:20261216T170000
+SUMMARY:Crafternoons at West
+LOCATION:West Regional Library\, 5555 Grelot Road\, Mobile\, AL 36609
+DESCRIPTION:Wednesdays · 3:00 PM to 5:00 PM\n\nAdults bring their own craf
+ t project to work on together at West Regional Library's Crafternoons\, an
+  informal two-hour afternoon session. Additional sessions are held the fol
+ lowing two Wednesdays\, September 9 and September 16.\n\nPrice: $ TBA\n\nD
+ etails: https://coastaleventures.com/events/ev-crafternoons-at-west-0902.h
+ tml
+URL:https://coastaleventures.com/events/ev-crafternoons-at-west-0902.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_after_school_art_fall_2026_0827-2026-12-17@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261217T153000
+DTEND;TZID=America/Chicago:20261217T170000
+SUMMARY:After School Art: Fall 2026
+LOCATION:Pensacola Museum of Art: Classroom\, 407 S Jefferson St.\, Pensaco
+ la\, FL 32502
+DESCRIPTION:Thursdays · 3:30 PM to 5:00 PM\n\nAfter School Art is a 16 wee
+ k studio program for grades 2 through 6 at the Pensacola Museum of Art. In
+ structor Marce Wagner\, known as Ms. Messy\, covers drawing\, painting and
+  other 2D and 3D media. Classes meet every Thursday from August 27 through
+  December 17\, with no class during Thanksgiving week. The semester costs 
+ $252 for museum members and $280 for non-members\, and ends with an artwor
+ k showcase for families. Scholarships are available\, though the applicati
+ on deadline for this session has passed.\n\nPrice: from $280\n\nDetails: h
+ ttps://coastaleventures.com/events/ev-after-school-art-fall-2026-0827.html
+URL:https://coastaleventures.com/events/ev-after-school-art-fall-2026-0827.
+ html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_advanced_watercolor_0910-2026-12-17@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261217T180000
+DTEND;TZID=America/Chicago:20261217T190000
+SUMMARY:Advanced Watercolor
+LOCATION:Monte L. Moorer/Spring Hill Branch Library\, 4 S McGregor Ave\, Mo
+ bile\, AL
+DESCRIPTION:Thursdays · 6:00 PM to 7:00 PM\n\nThe Spring Hill branch of Mo
+ bile Public Libraries hosts an evening watercolor session aimed at painter
+ s who are already working at an advanced level\, not a beginner class. Mob
+ ile Public Libraries lists several dated sessions\, and nothing published 
+ says how often they run.\n\nPrice: $ TBA\n\nDetails: https://coastaleventu
+ res.com/events/ev-advanced-watercolor-0910.html
+URL:https://coastaleventures.com/events/ev-advanced-watercolor-0910.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_ballet_pensacola_nutcracker_1218-2026-12-18@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261218
+DTEND;VALUE=DATE:20261219
+SUMMARY:The Nutcracker: Ballet Pensacola
+LOCATION:Saenger Theatre\, Pensacola\, 118 S Palafox Pl\, Pensacola\, FL 32
+ 502
+DESCRIPTION:Friday 12/18 to Sunday 12/20 · times to be announced\n\nBallet
+  Pensacola stages The Nutcracker at the Saenger Theatre over the weekend b
+ efore Christmas as part of its 48th season. The performances page lists th
+ e run as December 18 to 20 and marks tickets as available soon. Performanc
+ e times and prices are not published yet\, so check the page before you pl
+ an the evening.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/e
+ vents/ev-ballet-pensacola-nutcracker-1218.html
+URL:https://coastaleventures.com/events/ev-ballet-pensacola-nutcracker-1218
+ .html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-12-18@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261218T153000
+DTEND;TZID=America/Chicago:20261218T163000
+SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
+LOCATION:Fairhope Public Library\, MakerSpace\, 501 Fairhope Avenue\, Fairh
+ ope\, AL 36532
+DESCRIPTION:Fridays · 3:30 PM to 4:30 PM\n\nFairhope Public Library's Make
+ rSpace hosts a weekly art class for ages 7 to 12\, led by an Eastern Shore
+  Art Center artist\, Friday from 3:30 PM to 4:30 PM. Each week sends kids 
+ home with a different project. Registration opens by month.\n\nPrice: $ TB
+ A\n\nDetails: https://coastaleventures.com/events/ev-art-classes-with-east
+ ern-shore-art-center-fa-0904.html
+URL:https://coastaleventures.com/events/ev-art-classes-with-eastern-shore-a
+ rt-center-fa-0904.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gallery_holidays-2026-12-18@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261218T170000
+DTEND;TZID=America/Chicago:20261218T210000
+SUMMARY:Gallery Night's Home for the Holidays
+LOCATION:Palafox St\, Downtown\, S Palafox St\, Pensacola\, FL 32502
+DESCRIPTION:Fri 12/18/2026 · 5-9 PM\n\nThe December Gallery Night is the l
+ ast of the year. Palafox is closed off and dressed for Christmas\, with th
+ e galleries open late\, carols in the street\, and food vendors down the b
+ lock. It is the cheapest big holiday evening in the radius.\n\nPrice: Free
+ \n\nDetails: https://coastaleventures.com/events/ev-gallery-holidays.html
+URL:https://coastaleventures.com/events/ev-gallery-holidays.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mobile_ballet_nutcracker_1219-2026-12-19@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261219
+DTEND;VALUE=DATE:20261221
+SUMMARY:The Nutcracker: Mobile Ballet
+LOCATION:Saenger Theatre\, 6 S Joachim St\, Mobile\, AL 36602
+DESCRIPTION:Saturday 12/19 · 2 PM and 7 PM · Sunday 12/20 · 2 PM\n\nMobi
+ le Ballet stages its annual Nutcracker at the Saenger Theatre with guest a
+ rtists\, the company and its students. The story follows Clara and the Nut
+ cracker Prince through a dream\, and the show suits families and audiences
+  new to ballet. Three performances run over one weekend\, and individual t
+ ickets go on sale October 15.\n\nPrice: from $25\n\nDetails: https://coast
+ aleventures.com/events/ev-mobile-ballet-nutcracker-1219.html
+URL:https://coastaleventures.com/events/ev-mobile-ballet-nutcracker-1219.ht
+ ml
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_acrylic_and_watercolor_painting_0909-2026-12-23@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261223T130000
+DTEND;TZID=America/Chicago:20261223T150000
+SUMMARY:Acrylic & Watercolor Painting
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Wednesdays · 1:00 PM to 3:00 PM\n\nThis acrylic and watercolor
+  painting session at the Niceville Senior Center is led by Kathleen LoGalb
+ o\, whom the city describes as a self-taught art enthusiast who keeps lear
+ ning from others. It meets Wednesday afternoon and repeats on the Septembe
+ r calendar\, though the event page does not say how often it comes round.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-acrylic
+ -and-watercolor-painting-0909.html
+URL:https://coastaleventures.com/events/ev-acrylic-and-watercolor-painting-
+ 0909.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_crafternoons_at_west_0902-2026-12-23@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261223T150000
+DTEND;TZID=America/Chicago:20261223T170000
+SUMMARY:Crafternoons at West
+LOCATION:West Regional Library\, 5555 Grelot Road\, Mobile\, AL 36609
+DESCRIPTION:Wednesdays · 3:00 PM to 5:00 PM\n\nAdults bring their own craf
+ t project to work on together at West Regional Library's Crafternoons\, an
+  informal two-hour afternoon session. Additional sessions are held the fol
+ lowing two Wednesdays\, September 9 and September 16.\n\nPrice: $ TBA\n\nD
+ etails: https://coastaleventures.com/events/ev-crafternoons-at-west-0902.h
+ tml
+URL:https://coastaleventures.com/events/ev-crafternoons-at-west-0902.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-12-25@coastal
+ eventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261225T153000
+DTEND;TZID=America/Chicago:20261225T163000
+SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
+LOCATION:Fairhope Public Library\, MakerSpace\, 501 Fairhope Avenue\, Fairh
+ ope\, AL 36532
+DESCRIPTION:Fridays · 3:30 PM to 4:30 PM\n\nFairhope Public Library's Make
+ rSpace hosts a weekly art class for ages 7 to 12\, led by an Eastern Shore
+  Art Center artist\, Friday from 3:30 PM to 4:30 PM. Each week sends kids 
+ home with a different project. Registration opens by month.\n\nPrice: $ TB
+ A\n\nDetails: https://coastaleventures.com/events/ev-art-classes-with-east
+ ern-shore-art-center-fa-0904.html
+URL:https://coastaleventures.com/events/ev-art-classes-with-eastern-shore-a
+ rt-center-fa-0904.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_acrylic_and_watercolor_painting_0909-2026-12-30@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261230T130000
+DTEND;TZID=America/Chicago:20261230T150000
+SUMMARY:Acrylic & Watercolor Painting
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 3257
+ 8
+DESCRIPTION:Wednesdays · 1:00 PM to 3:00 PM\n\nThis acrylic and watercolor
+  painting session at the Niceville Senior Center is led by Kathleen LoGalb
+ o\, whom the city describes as a self-taught art enthusiast who keeps lear
+ ning from others. It meets Wednesday afternoon and repeats on the Septembe
+ r calendar\, though the event page does not say how often it comes round.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-acrylic
+ -and-watercolor-painting-0909.html
+URL:https://coastaleventures.com/events/ev-acrylic-and-watercolor-painting-
+ 0909.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_crafternoons_at_west_0902-2026-12-30@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261230T150000
+DTEND;TZID=America/Chicago:20261230T170000
+SUMMARY:Crafternoons at West
+LOCATION:West Regional Library\, 5555 Grelot Road\, Mobile\, AL 36609
+DESCRIPTION:Wednesdays · 3:00 PM to 5:00 PM\n\nAdults bring their own craf
+ t project to work on together at West Regional Library's Crafternoons\, an
+  informal two-hour afternoon session. Additional sessions are held the fol
+ lowing two Wednesdays\, September 9 and September 16.\n\nPrice: $ TBA\n\nD
+ etails: https://coastaleventures.com/events/ev-crafternoons-at-west-0902.h
+ tml
+URL:https://coastaleventures.com/events/ev-crafternoons-at-west-0902.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_snoopy_cct-2027-01-14@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20270114
+DTEND;VALUE=DATE:20270125
+SUMMARY:Snoopy!!! The Musical: Chickasaw Civic Theatre
+LOCATION:Chickasaw Civic Theatre\, 801 Iroquois St\, Chickasaw\, AL 36611
+DESCRIPTION:Jan 14-24\, 2027 · Thu-Sat 7:30 / Sun 2:30\n\nThe Peanuts gang
+  takes the stage in a wholesome\, all-ages show\, an easy family outing on
+  the Mobile side.\n\nPrice: from $15\n\nDetails: https://coastaleventures.
+ com/events/ev-snoopy-cct.html
+URL:https://coastaleventures.com/events/ev-snoopy-cct.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_murder_mardigras_seville-2027-01-23@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20270123
+DTEND;VALUE=DATE:20270124
+SUMMARY:Mardi Gras Murder Mystery Dinner Theatre
+LOCATION:Heritage Hall at Seville Quarter\, 130 E Government St\, Pensacola
+ \, FL 32502
+DESCRIPTION:Sat 01/23/2027 · Doors 6:00 PM · Show 7:00 PM\n\nThis carniva
+ l-season whodunit downtown times itself to the run-up to Mardi Gras. Dinne
+ r\, masks\, and a cast work the room between courses.\n\nPrice: from $69\n
+ \nDetails: https://coastaleventures.com/events/ev-murder-mardigras-seville
+ .html
+URL:https://coastaleventures.com/events/ev-murder-mardigras-seville.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

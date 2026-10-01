@@ -1,0 +1,46 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Coastal Eventures//Events feed//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Coastal Eventures: Coastal icons
+X-WR-TIMEZONE:America/Chicago
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:ev_october_living_history_drill_1024-2026-10-24@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261024T080000
+DTEND;TZID=America/Chicago:20261024T150000
+SUMMARY:October Living History Drill
+LOCATION:USS ALABAMA Battleship Memorial Park\, 2703 Battleship Parkway\, M
+ obile\, AL 36602
+DESCRIPTION:Saturday 10/24 · 8:00 AM to 3:00 PM\n\nWorld War II reenactors
+  aboard the USS Alabama and the USS Drum bring wartime shipboard life to t
+ his living history drill at Battleship Memorial Park. They demonstrate dai
+ ly routines\, share crew stories\, and run activities throughout the day\,
+  from 8 AM to 3 PM.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.c
+ om/events/ev-october-living-history-drill-1024.html
+URL:https://coastaleventures.com/events/ev-october-living-history-drill-102
+ 4.html
+CATEGORIES:Coastal icons
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

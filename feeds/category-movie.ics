@@ -1,0 +1,534 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Coastal Eventures//Events feed//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Coastal Eventures: Movies
+X-WR-TIMEZONE:America/Chicago
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:ev_valparaiso_library_anime_club-2026-10-01@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261001T150000
+DTEND;TZID=America/Chicago:20261001T160000
+SUMMARY:Anime Club at the Valparaiso Library
+LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
+DESCRIPTION:Thursdays · 3:00 PM to 4:00 PM\, through 12/17\n\nThe Valparai
+ so Library's Anime Club meets every Thursday afternoon for middle and high
+  school students\, ages 11 to 17. The club watches anime rated from G to P
+ G-13 and TV-14\, and manga is on hand to read during meetings.\n\nPrice: $
+  TBA\n\nDetails: https://coastaleventures.com/events/ev-valparaiso-library
+ -anime-club.html
+URL:https://coastaleventures.com/events/ev-valparaiso-library-anime-club.ht
+ ml
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_toulminville_goosebumps_movie_1001-2026-10-01@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261001T151500
+DTEND;TZID=America/Chicago:20261001T164500
+SUMMARY:Great Movie Adventure: Goosebumps
+LOCATION:Virginia Dillard Smith/Toulminville Branch Library\, 601 Stanton R
+ oad\, Mobile\, AL 36617
+DESCRIPTION:Thursday 10/1 · 3:15 PM to 4:45 PM\n\nThe Toulminville Branch 
+ Library screens Goosebumps (2015)\, rated PG and 1 hour 43 minutes long\, 
+ with snacks for ages 6 to 11. Registration is recommended. Children come w
+ ith an adult\, and adults without children will not be admitted.\n\nPrice:
+  $ TBA\n\nDetails: https://coastaleventures.com/events/ev-toulminville-goo
+ sebumps-movie-1001.html
+URL:https://coastaleventures.com/events/ev-toulminville-goosebumps-movie-10
+ 01.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_central_square_cinema_air_bud_1002-2026-10-02@coastaleventur
+ es.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261002T190000
+DTEND;TZID=America/Chicago:20261002T203000
+SUMMARY:Central Square Cinema at Seaside: Air Bud
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 3245
+ 9
+DESCRIPTION:Friday 10/2 · 7:00 PM to 8:30 PM\n\nSeaside shows Air Bud on t
+ he lawn of the Seaside Amphitheater for a family movie under the stars. Br
+ ing blankets and chairs\; the film starts at 7 PM\, weather permitting. Se
+ aside lists more Central Square Cinema nights on October 9\, 16\, 23 and 3
+ 1.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-seas
+ ide-central-square-cinema-air-bud-1002.html
+URL:https://coastaleventures.com/events/ev-seaside-central-square-cinema-ai
+ r-bud-1002.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_fear_fest_1003-2026-10-03@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261003T170000
+DTEND;TZID=America/Chicago:20261003T210000
+SUMMARY:Fear Fest
+LOCATION:Exploreum Science Center\, 65 Government St\, Mobile\, AL 36602
+DESCRIPTION:Saturday 10/3 · 5:00 PM to 9:00 PM\n\nFear Fest takes over the
+  Exploreum Science Center on Saturday\, October 3\, from 5 PM to 9 PM\, wi
+ th a screening of Snakes on a Plane. Nonmembers pay $15 and members pay $1
+ 2. The event repeats on additional October dates as one ongoing series.\n\
+ nPrice: from $15\n\nDetails: https://coastaleventures.com/events/ev-fear-f
+ est-1003.html
+URL:https://coastaleventures.com/events/ev-fear-fest-1003.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_ben_may_documentaries_anthropologist_1006-2026-10-06@coastaleventure
+ s.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261006T140000
+DTEND;TZID=America/Chicago:20261006T160000
+SUMMARY:Documentaries with an Anthropologist: The Pentagon Papers
+LOCATION:Ben May Main Library\, Bernheim Hall\, 701 Government Street\, Mob
+ ile\, AL 36602
+DESCRIPTION:Tuesday 10/6 · 2:00 PM to 4:00 PM\n\nThe Ben May Main Library'
+ s monthly Documentaries with an Anthropologist screens The Most Dangerous 
+ Man in America: Daniel Ellsberg and the Pentagon Papers (2009) in Bernheim
+  Hall. The film runs 1 hour 31 minutes. The program is listed for adults.\
+ n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-ben-may
+ -documentaries-anthropologist-1006.html
+URL:https://coastaleventures.com/events/ev-ben-may-documentaries-anthropolo
+ gist-1006.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_valparaiso_library_anime_club-2026-10-08@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261008T150000
+DTEND;TZID=America/Chicago:20261008T160000
+SUMMARY:Anime Club at the Valparaiso Library
+LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
+DESCRIPTION:Thursdays · 3:00 PM to 4:00 PM\, through 12/17\n\nThe Valparai
+ so Library's Anime Club meets every Thursday afternoon for middle and high
+  school students\, ages 11 to 17. The club watches anime rated from G to P
+ G-13 and TV-14\, and manga is on hand to read during meetings.\n\nPrice: $
+  TBA\n\nDetails: https://coastaleventures.com/events/ev-valparaiso-library
+ -anime-club.html
+URL:https://coastaleventures.com/events/ev-valparaiso-library-anime-club.ht
+ ml
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_theaterthu_1008-2026-10-08@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261008T150000
+DTEND;TZID=America/Chicago:20261008T160000
+SUMMARY:Theater Thursday
+LOCATION:Gulf Breeze Library\, 1060 Shoreline Drive\, Gulf Breeze\, FL 3256
+ 1
+DESCRIPTION:Thursday 10/8 · 3 PM\n\nGulf Breeze Library's Theater Thursday
+  is a free popcorn-and-a-movie afternoon held the second Thursday of each 
+ month. October's showing is Monster House\, rated PG. Refreshments come fr
+ om the Friends of the Gulf Breeze Library\, and there's no charge to atten
+ d.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/events/ev-theat
+ erthu-1008.html
+URL:https://coastaleventures.com/events/ev-theaterthu-1008.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mobile_animation_film_festival_2026-2026-10-10@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261010T130000
+DTEND;TZID=America/Chicago:20261010T153000
+SUMMARY:Mobile Animation Film Festival 2026
+LOCATION:Crescent Theater\, 208 Dauphin St\, Mobile\, AL
+DESCRIPTION:Saturday 10/10 · 1:00 PM to 3:30 PM\n\nThe Crescent Theater sc
+ reens the Mobile Animation Film Festival for two and a half hours on a Sat
+ urday afternoon\, free to attend. Some programming may include adult conte
+ nt\, though no specific age cutoff is posted.\n\nPrice: Free\n\nDetails: h
+ ttps://coastaleventures.com/events/ev-mobile-animation-film-festival-2026.
+ html
+URL:https://coastaleventures.com/events/ev-mobile-animation-film-festival-2
+ 026.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_fear_fest_1010-2026-10-10@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261010T170000
+DTEND;TZID=America/Chicago:20261010T210000
+SUMMARY:Fear Fest
+LOCATION:Exploreum Science Center\, 65 Government St.\, Mobile\, AL 36602
+DESCRIPTION:Saturday 10/10 · 5:00 PM to 9:00 PM\n\nThe Exploreum Science C
+ enter pairs its immersive Fear exhibit with a 6:30 PM screening of Final D
+ estination for one October evening. The film is rated R\, and the museum r
+ ecommends the event for guests 17 and older\, requiring anyone younger to 
+ be accompanied by a parent or legal guardian. Admission runs $15 for non-m
+ embers and $12 for Exploreum members.\n\nPrice: from $15\n\nDetails: https
+ ://coastaleventures.com/events/ev-fear-fest-1010.html
+URL:https://coastaleventures.com/events/ev-fear-fest-1010.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_rodeo_kidsmovie_1012-2026-10-12@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:Kids Fall Movie Festival
+LOCATION:AJ's Seafood & Oyster Bar\, 116 Harbor Blvd\, Destin\, FL 32541
+DESCRIPTION:Monday 10/12 (Columbus Day\, school out)\n\nAJ's shows a free m
+ ovie on its JumboTron for kids out of school on Columbus Day. Hot dogs\, p
+ opcorn and snow cones keep them fed while they watch.\n\nPrice: Free\n\nDe
+ tails: https://coastaleventures.com/events/ev-rodeo-kidsmovie-1012.html
+URL:https://coastaleventures.com/events/ev-rodeo-kidsmovie-1012.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_valparaiso_library_monsters_inc_1012-2026-10-12@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261012T153000
+DTEND;TZID=America/Chicago:20261012T170000
+SUMMARY:All Ages Movie at the Valparaiso Library: Monsters\, Inc.
+LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
+DESCRIPTION:Monday 10/12 · 3:30 PM to 5:00 PM\n\nThe Valparaiso Library sh
+ ows Monsters\, Inc.\, rated G\, for a Monday afternoon family movie. The l
+ ibrary says snacks and drinks will be provided. The showing is listed for 
+ families and everyone.\n\nPrice: $ TBA\n\nDetails: https://coastaleventure
+ s.com/events/ev-valparaiso-library-monsters-inc-1012.html
+URL:https://coastaleventures.com/events/ev-valparaiso-library-monsters-inc-
+ 1012.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_niceville_library_hoppers_1015-2026-10-15@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:Family Movie at the Niceville Library: Hoppers
+LOCATION:Niceville Public Library\, 206 N Partin Dr\, Niceville\, FL 32578
+DESCRIPTION:Thursday 10/15 · 4:15 PM (room opens 4:00 PM)\n\nThe Niceville
+  Public Library shows Hoppers\, rated PG and 1 hour 40 minutes long\, on t
+ he big screen in its children's program room. The film follows an animal-l
+ oving college student who moves her mind into a robotic beaver to save a f
+ orest glade from a highway plan. The library says refreshments will be ser
+ ved.\n\nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-ni
+ ceville-library-hoppers-1015.html
+URL:https://coastaleventures.com/events/ev-niceville-library-hoppers-1015.h
+ tml
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_valparaiso_library_anime_club-2026-10-15@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261015T150000
+DTEND;TZID=America/Chicago:20261015T160000
+SUMMARY:Anime Club at the Valparaiso Library
+LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
+DESCRIPTION:Thursdays · 3:00 PM to 4:00 PM\, through 12/17\n\nThe Valparai
+ so Library's Anime Club meets every Thursday afternoon for middle and high
+  school students\, ages 11 to 17. The club watches anime rated from G to P
+ G-13 and TV-14\, and manga is on hand to read during meetings.\n\nPrice: $
+  TBA\n\nDetails: https://coastaleventures.com/events/ev-valparaiso-library
+ -anime-club.html
+URL:https://coastaleventures.com/events/ev-valparaiso-library-anime-club.ht
+ ml
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_navarre_throwback_movie_tuesdays_1020-2026-10-20@coastaleventures.co
+ m
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261020T160000
+DTEND;TZID=America/Chicago:20261020T173000
+SUMMARY:Throwback Movie Tuesday: 20 Years of Stories
+LOCATION:Navarre Library\, 8484 James M. Harvell Road\, Navarre\, FL 32566
+DESCRIPTION:Tuesday 10/20 · 4:00 PM to 5:30 PM\n\nThrowback Movie Tuesday 
+ is a one time screening at the Navarre Library\, part of the library syste
+ m's twentieth anniversary programming this month.\n\nPrice: $ TBA\n\nDetai
+ ls: https://coastaleventures.com/events/ev-navarre-throwback-movie-tuesday
+ s-1020.html
+URL:https://coastaleventures.com/events/ev-navarre-throwback-movie-tuesdays
+ -1020.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_valparaiso_library_anime_club-2026-10-22@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261022T150000
+DTEND;TZID=America/Chicago:20261022T160000
+SUMMARY:Anime Club at the Valparaiso Library
+LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
+DESCRIPTION:Thursdays · 3:00 PM to 4:00 PM\, through 12/17\n\nThe Valparai
+ so Library's Anime Club meets every Thursday afternoon for middle and high
+  school students\, ages 11 to 17. The club watches anime rated from G to P
+ G-13 and TV-14\, and manga is on hand to read during meetings.\n\nPrice: $
+  TBA\n\nDetails: https://coastaleventures.com/events/ev-valparaiso-library
+ -anime-club.html
+URL:https://coastaleventures.com/events/ev-valparaiso-library-anime-club.ht
+ ml
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_cinemas_sand_toystory5_1023-2026-10-23@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:Cinemas in the Sand: “Toy Story 5”
+LOCATION:Gulfside Pavilion\, Casino Beach\, 20 Casino Beach Blvd\, Pensacol
+ a Beach\, FL 32561
+DESCRIPTION:Fri 10/23/2026 · dusk\n\nToy Story 5 plays free on a giant out
+ door screen at the Gulfside Pavilion stage\, right on the sand at Casino B
+ each. The Santa Rosa Island Authority starts the movie at sunset\, weather
+  permitting. It suits families with younger kids who already know Woody an
+ d Buzz. Bring your own chairs or a blanket since there is no seating.\n\nP
+ rice: Free\n\nDetails: https://coastaleventures.com/events/ev-cinemas-sand
+ -toystory5-1023.html
+URL:https://coastaleventures.com/events/ev-cinemas-sand-toystory5-1023.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_fear_fest_exploreum_2026_series_1003-2026-10-24@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261024T170000
+DTEND;TZID=America/Chicago:20261024T210000
+SUMMARY:Fear Fest
+LOCATION:Exploreum Science Center\, 65 Government St.\, Mobile\, AL 36602
+DESCRIPTION:Saturday 10/24 · 5:00 PM to 9:00 PM\n\nFear Fest closes its Oc
+ tober run at the Exploreum Science Center on Saturday\, October 24\, with 
+ a 6:30 PM screening of Poltergeist. Doors are open from 5 PM to 9 PM and t
+ he immersive Fear exhibit is open alongside it. The film is rated R\, the 
+ museum recommends the evening for guests 17 and older\, and anyone younger
+  should come with a parent or legal guardian.\n\nPrice: from $15\n\nDetail
+ s: https://coastaleventures.com/events/ev-fear-fest-exploreum-2026-series-
+ 1003.html
+URL:https://coastaleventures.com/events/ev-fear-fest-exploreum-2026-series-
+ 1003.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_valparaiso_library_anime_club-2026-10-29@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261029T150000
+DTEND;TZID=America/Chicago:20261029T160000
+SUMMARY:Anime Club at the Valparaiso Library
+LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
+DESCRIPTION:Thursdays · 3:00 PM to 4:00 PM\, through 12/17\n\nThe Valparai
+ so Library's Anime Club meets every Thursday afternoon for middle and high
+  school students\, ages 11 to 17. The club watches anime rated from G to P
+ G-13 and TV-14\, and manga is on hand to read during meetings.\n\nPrice: $
+  TBA\n\nDetails: https://coastaleventures.com/events/ev-valparaiso-library
+ -anime-club.html
+URL:https://coastaleventures.com/events/ev-valparaiso-library-anime-club.ht
+ ml
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_crescent_nosferatu_live_score_1030-2026-10-30@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:Nosferatu with a Live Improvised Score
+LOCATION:Crescent Theater\, 208 Dauphin St\, Mobile\, AL
+DESCRIPTION:Friday 10/30 · 8:00 PM (doors 7:00 PM)\n\nThe Crescent Theater
+  in downtown Mobile screens the silent horror classic Nosferatu while Mike
+  Dillon\, Chris "Baby" Spies\, Brian Haas and James Singleton improvise a 
+ score live. The theater lists the show as all ages. Doors open at 7:00 PM 
+ ahead of the 8:00 PM start.\n\nPrice: from $39.01\n\nDetails: https://coas
+ taleventures.com/events/ev-crescent-nosferatu-live-score-1030.html
+URL:https://coastaleventures.com/events/ev-crescent-nosferatu-live-score-10
+ 30.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_harborwalk_movieslawn_1030-2026-10-30@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261030T170000
+DTEND;TZID=America/Chicago:20261030T200000
+SUMMARY:Movies On The Lawn: Fall Edition
+LOCATION:HarborWalk Village\, 10 Harbor Blvd\, Destin\, FL 32541
+DESCRIPTION:Friday 10/30 · 5-8 PM\n\nAn outdoor family movie night on the 
+ HarborWalk lawn\, part of the village's fall lineup. The venue's own calen
+ dar lists only the date and time so far\, with no film title posted yet.\n
+ \nPrice: $ TBA\n\nDetails: https://coastaleventures.com/events/ev-harborwa
+ lk-movieslawn-1030.html
+URL:https://coastaleventures.com/events/ev-harborwalk-movieslawn-1030.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_fallintofun_miltonlibrary_1031-2026-10-31@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261031T100000
+DTEND;TZID=America/Chicago:20261031T120000
+SUMMARY:Fall Into Fun at Milton Library
+LOCATION:Milton Library\, 5541 Alabama Street\, Milton\, FL 32570
+DESCRIPTION:Saturday 10/31 · 10 AM to 12 PM\n\nKids can wear their costume
+ s to the library for fall activities and a free screening of It's the Grea
+ t Pumpkin\, Charlie Brown\, rated G. Every branch across Santa Rosa County
+  runs its own version at the same time\, and staff can point you to the ac
+ tivity stations at the Milton branch. It wraps up by noon\, well before tr
+ ick-or-treating starts.\n\nPrice: Free\n\nDetails: https://coastaleventure
+ s.com/events/ev-fallintofun-miltonlibrary-1031.html
+URL:https://coastaleventures.com/events/ev-fallintofun-miltonlibrary-1031.h
+ tml
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_valparaiso_library_anime_club-2026-11-05@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261105T150000
+DTEND;TZID=America/Chicago:20261105T160000
+SUMMARY:Anime Club at the Valparaiso Library
+LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
+DESCRIPTION:Thursdays · 3:00 PM to 4:00 PM\, through 12/17\n\nThe Valparai
+ so Library's Anime Club meets every Thursday afternoon for middle and high
+  school students\, ages 11 to 17. The club watches anime rated from G to P
+ G-13 and TV-14\, and manga is on hand to read during meetings.\n\nPrice: $
+  TBA\n\nDetails: https://coastaleventures.com/events/ev-valparaiso-library
+ -anime-club.html
+URL:https://coastaleventures.com/events/ev-valparaiso-library-anime-club.ht
+ ml
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_valparaiso_library_anime_club-2026-11-12@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261112T150000
+DTEND;TZID=America/Chicago:20261112T160000
+SUMMARY:Anime Club at the Valparaiso Library
+LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
+DESCRIPTION:Thursdays · 3:00 PM to 4:00 PM\, through 12/17\n\nThe Valparai
+ so Library's Anime Club meets every Thursday afternoon for middle and high
+  school students\, ages 11 to 17. The club watches anime rated from G to P
+ G-13 and TV-14\, and manga is on hand to read during meetings.\n\nPrice: $
+  TBA\n\nDetails: https://coastaleventures.com/events/ev-valparaiso-library
+ -anime-club.html
+URL:https://coastaleventures.com/events/ev-valparaiso-library-anime-club.ht
+ ml
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_valparaiso_library_anime_club-2026-11-19@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261119T150000
+DTEND;TZID=America/Chicago:20261119T160000
+SUMMARY:Anime Club at the Valparaiso Library
+LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
+DESCRIPTION:Thursdays · 3:00 PM to 4:00 PM\, through 12/17\n\nThe Valparai
+ so Library's Anime Club meets every Thursday afternoon for middle and high
+  school students\, ages 11 to 17. The club watches anime rated from G to P
+ G-13 and TV-14\, and manga is on hand to read during meetings.\n\nPrice: $
+  TBA\n\nDetails: https://coastaleventures.com/events/ev-valparaiso-library
+ -anime-club.html
+URL:https://coastaleventures.com/events/ev-valparaiso-library-anime-club.ht
+ ml
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_valparaiso_library_anime_club-2026-11-26@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261126T150000
+DTEND;TZID=America/Chicago:20261126T160000
+SUMMARY:Anime Club at the Valparaiso Library
+LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
+DESCRIPTION:Thursdays · 3:00 PM to 4:00 PM\, through 12/17\n\nThe Valparai
+ so Library's Anime Club meets every Thursday afternoon for middle and high
+  school students\, ages 11 to 17. The club watches anime rated from G to P
+ G-13 and TV-14\, and manga is on hand to read during meetings.\n\nPrice: $
+  TBA\n\nDetails: https://coastaleventures.com/events/ev-valparaiso-library
+ -anime-club.html
+URL:https://coastaleventures.com/events/ev-valparaiso-library-anime-club.ht
+ ml
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_valparaiso_library_anime_club-2026-12-03@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261203T150000
+DTEND;TZID=America/Chicago:20261203T160000
+SUMMARY:Anime Club at the Valparaiso Library
+LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
+DESCRIPTION:Thursdays · 3:00 PM to 4:00 PM\, through 12/17\n\nThe Valparai
+ so Library's Anime Club meets every Thursday afternoon for middle and high
+  school students\, ages 11 to 17. The club watches anime rated from G to P
+ G-13 and TV-14\, and manga is on hand to read during meetings.\n\nPrice: $
+  TBA\n\nDetails: https://coastaleventures.com/events/ev-valparaiso-library
+ -anime-club.html
+URL:https://coastaleventures.com/events/ev-valparaiso-library-anime-club.ht
+ ml
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_valparaiso_library_anime_club-2026-12-10@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261210T150000
+DTEND;TZID=America/Chicago:20261210T160000
+SUMMARY:Anime Club at the Valparaiso Library
+LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
+DESCRIPTION:Thursdays · 3:00 PM to 4:00 PM\, through 12/17\n\nThe Valparai
+ so Library's Anime Club meets every Thursday afternoon for middle and high
+  school students\, ages 11 to 17. The club watches anime rated from G to P
+ G-13 and TV-14\, and manga is on hand to read during meetings.\n\nPrice: $
+  TBA\n\nDetails: https://coastaleventures.com/events/ev-valparaiso-library
+ -anime-club.html
+URL:https://coastaleventures.com/events/ev-valparaiso-library-anime-club.ht
+ ml
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_valparaiso_library_anime_club-2026-12-17@coastaleventures.com
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261217T150000
+DTEND;TZID=America/Chicago:20261217T160000
+SUMMARY:Anime Club at the Valparaiso Library
+LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
+DESCRIPTION:Thursdays · 3:00 PM to 4:00 PM\, through 12/17\n\nThe Valparai
+ so Library's Anime Club meets every Thursday afternoon for middle and high
+  school students\, ages 11 to 17. The club watches anime rated from G to P
+ G-13 and TV-14\, and manga is on hand to read during meetings.\n\nPrice: $
+  TBA\n\nDetails: https://coastaleventures.com/events/ev-valparaiso-library
+ -anime-club.html
+URL:https://coastaleventures.com/events/ev-valparaiso-library-anime-club.ht
+ ml
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
