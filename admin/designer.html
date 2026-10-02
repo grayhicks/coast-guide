@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Card Designer</title>
+<!-- 10/02, R-372. Gray: "a canva style thing... where the card editor and card is on screen. Then, I can use the
+     keyboard direction keys and mouse to place it where i need it to go exactly, and move it higher or lower exactly,
+     and save it. Recolor the font, change the fonts, make smaller or larger, things like that".
+     The live app sits in the phone frame (same site, so this page can reach inside it). Pick a part of any card, move
+     it with the arrow keys or the mouse, change its size, font, weight and colour, then Save. Save writes
+     content/card_style.json in the repository with the same GitHub key the card editor uses; Publish asks the daily
+     update to run now. card_design.js turns the file into the CSS, here and in the real build. -->
+<style>
+:root{ --bg:#14171c; --panel:#1d222b; --line:#2e3542; --ink:#eef1f4; --mute:#9aa4b2; --go:#138567; --red:#FF3B30; --accent:#4FB3E8; }
+*{ box-sizing:border-box; }
+body{ margin:0; background:var(--bg); color:var(--ink); font:15px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+header{ display:flex; gap:12px; align-items:center; padding:10px 16px; border-bottom:1px solid var(--line); flex-wrap:wrap; }
+header h1{ font-size:17px; margin:0 12px 0 0; }
+header .sp{ flex:1; }
+button, select, input{ font:inherit; color:var(--ink); background:#262c37; border:1px solid var(--line); border-radius:8px; padding:6px 10px; }
+button{ cursor:pointer; }
+button.go{ background:var(--go); border-color:var(--go); font-weight:700; }
+button.on{ background:var(--accent); border-color:var(--accent); color:#071018; font-weight:700; }
+main{ display:flex; gap:18px; padding:16px; align-items:flex-start; flex-wrap:wrap; }
+.phone{ position:sticky; top:12px; width:406px; flex:0 0 auto; border:8px solid #000; border-radius:28px; overflow:hidden; background:#000; box-shadow:0 10px 40px rgba(0,0,0,.5); }
+.phone iframe{ display:block; width:390px; height:820px; border:0; background:#fff; }
+.panel{ flex:1 1 360px; max-width:520px; background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:14px 16px; }
+.panel h2{ font-size:15px; margin:0 0 8px; color:var(--mute); text-transform:uppercase; letter-spacing:.6px; }
+.row{ display:flex; gap:10px; align-items:center; margin:8px 0; flex-wrap:wrap; }
+.row label{ min-width:92px; color:var(--mute); }
+.big{ font-size:18px; font-weight:800; }
+.mute{ color:var(--mute); }
+.pad{ display:grid; grid-template-columns:repeat(3,44px); gap:4px; }
+.pad button{ padding:6px 0; }
+.list{ margin:8px 0 0; padding:0; list-style:none; max-height:180px; overflow:auto; border-top:1px solid var(--line); }
+.list li{ padding:6px 0; border-bottom:1px solid var(--line); display:flex; gap:8px; justify-content:space-between; }
+.status{ min-height:22px; color:var(--mute); }
+.status.err{ color:#ff8a80; }
+.status.ok{ color:#7fe0b4; }
+.hint{ font-size:13px; color:var(--mute); }
+kbd{ background:#262c37; border:1px solid var(--line); border-radius:4px; padding:0 5px; font-size:12px; }
+</style>
+<script src="card_design.js"></script>
+</head>
+<body>
+<header>
+  <h1>Card Designer</h1>
+  <button id="pick" class="on" title="P">Pick a part</button>
+  <select id="look" title="Which look the phone shows"><option value="day">Day look</option><option value="night">Night look</option><option value="dark">Dark look</option></select>
+  <span class="sp"></span>
+  <input id="token" type="password" placeholder="GitHub key (same as the card editor)" size="30">
+  <button id="load">Load saved</button>
+  <button id="save" class="go">Save</button>
+  <button id="publish">Save and publish now</button>
+</header>
+<main>
+  <div class="phone"><iframe id="app" src="../app/" title="The app"></iframe></div>
+  <section class="panel">
+    <h2>Selected</h2>
+    <div class="big" id="partName">Nothing yet. Click a word on a card.</div>
+    <div class="mute" id="partWhere"></div>
+    <div id="gapRead" style="margin-top:6px;font-weight:700;color:#FF8AC0"></div>
+    <div class="row"><label>Change it on</label>
+      <select id="scope"><option value="all">Every card</option><option value="kind">Cards like this one</option><option value="card">Only this card</option></select>
+      <select id="lookScope"><option value="all">Every look</option><option value="day">Day look only</option><option value="night">Night and Dark only</option></select>
+    </div>
+    <div class="row"><label>Move</label>
+      <div class="pad"><span></span><button data-n="0,-1">&#8593;</button><span></span><button data-n="-1,0">&#8592;</button><button data-n="0,0" title="Back to where it was">&#8226;</button><button data-n="1,0">&#8594;</button><span></span><button data-n="0,1">&#8595;</button><span></span></div>
+      <span class="mute" id="moveRead">0, 0 px</span>
+    </div>
+    <div class="row"><label>Size</label><button data-s="-0.5">Smaller</button><input id="size" type="number" step="0.5" min="6" max="60" style="width:80px"><button data-s="0.5">Larger</button><span class="mute">px</span></div>
+    <div class="row"><label>Font</label><select id="font"></select></div>
+    <div class="row"><label>Weight</label><select id="weight"><option value="">Card's own</option><option value="400">Regular</option><option value="600">Semibold</option><option value="700">Bold</option><option value="800">Extra bold</option><option value="900">Black</option></select></div>
+    <div class="row"><label>Colour</label><input id="color" type="color" value="#1d2a33"><button id="colorOff">Card's own colour</button></div>
+    <div class="row"><label>Edge</label><select id="outline"><option value="">Card's own</option><option value="dark">Dark outline</option><option value="none">No outline or shadow</option></select></div>
+    <div class="row"><button id="resetPart">Reset this part</button><button id="undo">Undo</button></div>
+    <p class="hint">Arrow keys move the picked part 1 px, <kbd>Shift</kbd> + arrow moves 10 px. Drag it with the mouse too. Turn off <b>Pick a part</b> (or press <kbd>P</kbd>) to scroll and tap the app normally.</p>
+    <div class="status" id="status"></div>
+    <h2 style="margin-top:14px">Changes (<span id="count">0</span>)</h2>
+    <ul class="list" id="list"></ul>
+  </section>
+</main>
+<script>
+(function () {
+  "use strict";
+  var CD = window.CardDesign;
+  var REPO = "grayhicks/gca-widget", PATH = "content/card_style.json", WORKFLOW = "beach-flag-daily.yml";
+  var $ = function (id) { return document.getElementById(id); };
+  var doc = { version: 1, rules: [] }, sha = null, history = [], sel = null, picking = true, drag = null;
+  try { $("token").value = localStorage.getItem("hk_designer_token") || ""; } catch (e) {}
+  CD.FONTS.forEach(function (f, i) { var o = document.createElement("option"); o.value = i ? f : ""; o.textContent = f; $("font").appendChild(o); });
+  var say = function (t, cls) { $("status").textContent = t; $("status").className = "status" + (cls ? " " + cls : ""); };
+  var frame = function () { try { return $("app").contentDocument; } catch (e) { return null; } };
+
+  /* the rule this selection edits: same part, same scope and value, same look */
+  function key() {
+    if (!sel) return null;
+    var scope = $("scope").value, value = scope === "kind" ? sel.kind : scope === "card" ? sel.card : "";
+    return { part: sel.part, scope: scope, value: value, look: $("lookScope").value };
+  }
+  function findRule(k) { for (var i = 0; i < doc.rules.length; i++) { var r = doc.rules[i]; if (r.part === k.part && r.scope === k.scope && (r.value || "") === (k.value || "") && r.look === k.look) return r; } return null; }
+  function edit(fn) {
+    var k = key(); if (!k) { say("Click a word on a card first.", "err"); return; }
+    history.push(JSON.stringify(doc.rules));
+    var r = findRule(k); if (!r) { r = { part: k.part, scope: k.scope, value: k.value, look: k.look, set: {} }; doc.rules.push(r); }
+    fn(r.set); paint(); fill();
+  }
+  /* ⭐ THE SPACING GUIDES, CANVA-STYLE. Gray: "it should be like canva where it tells you the distance from the letters
+     above and below, not just a bubble or imaginery point, but actually the visual pxs ... away above and beside".
+     So every distance is taken from INK, not boxes: a run of text is measured with the canvas's own glyph metrics
+     (actualBoundingBoxAscent/Descent from the baseline), so "12 px" means 12 px between the letters you see. Icons,
+     pictures and buttons are measured by their drawn box. Lines go to the nearest thing above, below, left and right
+     inside the same card; with nothing there, to the card's edge. Numbers are CSS px, the size the app is laid out in. */
+  var meas = document.createElement("canvas").getContext("2d");
+  function ownText(el) { var t = ""; for (var n = el.firstChild; n; n = n.nextSibling) if (n.nodeType === 3) t += n.nodeValue; return t.trim(); }
+  function inkRects(el) {
+    var d = el.ownerDocument, out = [], w = d.createTreeWalker(el, 4), n;
+    while ((n = w.nextNode())) {
+      if (!n.nodeValue.trim()) continue;
+      var par = n.parentElement, cs = d.defaultView.getComputedStyle(par);
+      if (cs.visibility === "hidden" || cs.display === "none") continue;
+      meas.font = cs.fontStyle + " " + cs.fontWeight + " " + cs.fontSize + " " + cs.fontFamily;
+      var m = meas.measureText(n.nodeValue.trim());
+      var fa = m.fontBoundingBoxAscent || parseFloat(cs.fontSize) * .8, ia = m.actualBoundingBoxAscent, id = m.actualBoundingBoxDescent;
+      var r = d.createRange(); r.selectNodeContents(n);
+      Array.prototype.forEach.call(r.getClientRects(), function (b) {
+        if (b.width < 1) return;
+        var base = b.top + fa;   /* the inline box's top is the font's ascent above the baseline */
+        out.push({ l: b.left, r: b.right, t: base - ia, b: base + id });
+      });
+    }
+    if (!out.length) { var bb = el.getBoundingClientRect(); if (bb.width && bb.height) out.push({ l: bb.left, r: bb.right, t: bb.top, b: bb.bottom }); }
+    return out;
+  }
+  var union = function (rs) { return rs.reduce(function (a, b) { return { l: Math.min(a.l, b.l), r: Math.max(a.r, b.r), t: Math.min(a.t, b.t), b: Math.max(a.b, b.b) }; }); };
+  function guides() {
+    var d = frame(); if (!d || !d.body) return;
+    var g = d.getElementById("hk_guides");
+    if (!g) { g = d.createElement("div"); g.id = "hk_guides"; g.style.cssText = "position:fixed;inset:0;pointer-events:none;z-index:2147483647"; d.body.appendChild(g); }
+    g.innerHTML = "";
+    if (!sel || !sel.el || !sel.el.isConnected) return;
+    var card = sel.el.closest(".card"); if (!card) return;
+    var me = union(inkRects(sel.el));
+    /* neighbours: leaf things in the same card that draw letters or a mark, outside the picked part */
+    var cand = [];
+    Array.prototype.forEach.call(card.querySelectorAll("*"), function (el) {
+      if (el === sel.el || sel.el.contains(el) || el.contains(sel.el)) return;
+      var isMark = /^(svg|img|button)$/i.test(el.tagName) || el.classList.contains("icoW");
+      if (!isMark && !ownText(el)) return;
+      if (isMark && el.closest("svg") && el.tagName.toLowerCase() !== "svg") return;
+      var cs = d.defaultView.getComputedStyle(el); if (cs.visibility === "hidden" || cs.display === "none" || +cs.opacity === 0) return;
+      var rs = isMark ? [el.getBoundingClientRect()].map(function (b) { return { l: b.left, r: b.right, t: b.top, b: b.bottom }; }) : inkRects(el);
+      rs.forEach(function (b) { if (b.r - b.l > 0.5 && b.b - b.t > 0.5) cand.push(b); });
+    });
+    var cb = card.getBoundingClientRect(), edge = { l: cb.left, r: cb.right, t: cb.top, b: cb.bottom };
+    var hov = function (a) { return a.r > me.l + 1 && a.l < me.r - 1; }, vov = function (a) { return a.b > me.t + 1 && a.t < me.b - 1; };
+    var best = { up: null, down: null, left: null, right: null };
+    cand.forEach(function (a) {
+      if (hov(a) && a.b <= me.t + .5 && (!best.up || a.b > best.up.b)) best.up = a;
+      if (hov(a) && a.t >= me.b - .5 && (!best.down || a.t < best.down.t)) best.down = a;
+      if (vov(a) && a.r <= me.l + .5 && (!best.left || a.r > best.left.r)) best.left = a;
+      if (vov(a) && a.l >= me.r - .5 && (!best.right || a.l < best.right.l)) best.right = a;
+    });
+    var line = function (x1, y1, x2, y2, txt, toEdge) {
+      var col = toEdge ? "#4FB3E8" : "#FF2D87", L = d.createElement("div"), v = x1 === x2;
+      L.style.cssText = "position:absolute;background:" + col + ";left:" + Math.min(x1, x2) + "px;top:" + Math.min(y1, y2) + "px;" + (v ? "width:1px;height:" + Math.abs(y2 - y1) + "px" : "height:1px;width:" + Math.abs(x2 - x1) + "px");
+      g.appendChild(L);
+      var T = d.createElement("div");
+      T.textContent = txt;
+      T.style.cssText = "position:absolute;font:700 11px/16px system-ui,sans-serif;color:#fff;background:" + col + ";border-radius:8px;padding:0 6px;white-space:nowrap;transform:translate(-50%,-50%);left:" + Math.max(44, (x1 + x2) / 2 + (v ? 18 : 0)) + "px;top:" + ((y1 + y2) / 2 - (v ? 0 : 10)) + "px";
+      g.appendChild(T);
+    };
+    var px = function (n) { return (Math.round(n * 10) / 10) + " px"; };
+    var box = d.createElement("div");
+    box.style.cssText = "position:absolute;border:1px solid #FF2D87;left:" + me.l + "px;top:" + me.t + "px;width:" + (me.r - me.l) + "px;height:" + (me.b - me.t) + "px";
+    g.appendChild(box);
+    var cx = (me.l + me.r) / 2, cy = (me.t + me.b) / 2;
+    if (best.up) line(cx, best.up.b, cx, me.t, px(me.t - best.up.b)); else line(cx, edge.t, cx, me.t, px(me.t - edge.t) + " to edge", true);
+    if (best.down) line(cx, me.b, cx, best.down.t, px(best.down.t - me.b)); else line(cx, me.b, cx, edge.b, px(edge.b - me.b) + " to edge", true);
+    if (best.left) line(best.left.r, cy, me.l, cy, px(me.l - best.left.r)); else line(edge.l, cy, me.l, cy, px(me.l - edge.l) + " to edge", true);
+    if (best.right) line(me.r, cy, best.right.l, cy, px(best.right.l - me.r)); else line(me.r, cy, edge.r, cy, px(edge.r - me.r) + " to edge", true);
+    $("gapRead").textContent = "Above " + (best.up ? px(me.t - best.up.b) : "edge " + px(me.t - edge.t)) + " · below " + (best.down ? px(best.down.t - me.b) : "edge " + px(edge.b - me.b)) + " · left " + (best.left ? px(me.l - best.left.r) : "edge " + px(me.l - edge.l)) + " · right " + (best.right ? px(best.right.l - me.r) : "edge " + px(edge.r - me.r));
+  }
+  function paint() {
+    var d = frame(); if (!d || !d.body) return;
+    var baked = d.getElementById("hk_design"); if (baked) baked.media = "not all";
+    var st = d.getElementById("hk_design_preview");
+    if (!st) { st = d.createElement("style"); st.id = "hk_design_preview"; d.body.appendChild(st); }
+    st.textContent = CD.designCss(doc) + "\n[data-hk-pick]{outline:2px dashed #FF3B30 !important;outline-offset:2px !important;}" + (picking ? "\n.card *{cursor:crosshair !important;}" : "");
+    guides();
+    $("count").textContent = doc.rules.length;
+    var ul = $("list"); ul.innerHTML = "";
+    doc.rules.forEach(function (r, i) {
+      var p = CD.partById(r.part), li = document.createElement("li");
+      var where = r.scope === "all" ? "every card" : r.scope === "kind" ? "cards like " + r.value : "card " + r.value;
+      var bits = []; var s = r.set;
+      if (s.dx || s.dy) bits.push("moved " + (s.dx || 0) + ", " + (s.dy || 0));
+      if (s.size) bits.push(s.size + " px"); if (s.font) bits.push(s.font); if (s.weight) bits.push("weight " + s.weight); if (s.color) bits.push(s.color); if (s.outline) bits.push(s.outline + " edge");
+      li.innerHTML = "<span></span><button>Remove</button>";
+      li.firstChild.textContent = (p ? p.label : r.part) + " on " + where + (r.look !== "all" ? " (" + r.look + ")" : "") + ": " + (bits.join(", ") || "no change");
+      li.lastChild.onclick = function () { history.push(JSON.stringify(doc.rules)); doc.rules.splice(i, 1); paint(); fill(); };
+      ul.appendChild(li);
+    });
+  }
+  /* the panel shows the selected rule's values */
+  function fill() {
+    var r = sel && findRule(key()), s = (r && r.set) || {};
+    $("moveRead").textContent = (s.dx || 0) + ", " + (s.dy || 0) + " px";
+    var el = sel && sel.el; var cs = el ? el.ownerDocument.defaultView.getComputedStyle(el) : null;
+    $("size").value = s.size || (cs ? parseFloat(cs.fontSize) : "");
+    $("font").value = s.font || ""; $("weight").value = s.weight || ""; $("outline").value = s.outline || "";
+    if (s.color) $("color").value = s.color;
+  }
+  function pickAt(t) {
+    var d = frame(); if (!d) return;
+    var card = t.closest && t.closest(".card"); if (!card) return false;
+    var best = null;
+    CD.PARTS.forEach(function (p) { var el = t.closest(p.sel); if (el && card.contains(el) && (!best || best.el.contains(el))) best = { p: p, el: el }; });
+    if (!best) return true;
+    var old = d.querySelector("[data-hk-pick]"); if (old) old.removeAttribute("data-hk-pick");
+    best.el.setAttribute("data-hk-pick", "1");
+    var kind = (card.getAttribute("data-bub") || "").replace(/\d+$/, "");
+    var cardId = (card.getAttribute("data-card-id") || "").replace(/_\d{4}-\d{2}-\d{2}$/, "");
+    sel = { part: best.p.id, el: best.el, kind: kind, card: cardId };
+    $("partName").textContent = best.p.label;
+    $("partWhere").textContent = "on " + (cardId || "a card") + (kind ? " (a " + kind + " card)" : "");
+    fill(); paint(); return true;
+  }
+  function hook() {
+    var d = frame(); if (!d) return;
+    d.addEventListener("click", function (e) { if (!picking) return; if (pickAt(e.target)) { e.preventDefault(); e.stopPropagation(); } }, true);
+    d.addEventListener("pointerdown", function (e) {
+      if (!picking) return;
+      /* while picking, a press on a card never starts the app's swipe */
+      if (!sel || !(e.target === sel.el || sel.el.contains(e.target))) { if (e.target.closest && e.target.closest(".card")) e.stopPropagation(); return; }
+      var r = findRule(key()); var s0 = (r && r.set) || {};
+      drag = { x: e.clientX, y: e.clientY, dx: s0.dx || 0, dy: s0.dy || 0, started: false };
+      e.preventDefault(); e.stopPropagation();
+    }, true);
+    d.addEventListener("pointermove", function (e) {
+      if (!drag) return;
+      var mx = Math.round(e.clientX - drag.x), my = Math.round(e.clientY - drag.y);
+      if (!drag.started) { if (Math.abs(mx) + Math.abs(my) < 3) return; drag.started = true; history.push(JSON.stringify(doc.rules)); }
+      var k = key(), r = findRule(k); if (!r) { r = { part: k.part, scope: k.scope, value: k.value, look: k.look, set: {} }; doc.rules.push(r); }
+      r.set.dx = drag.dx + mx; r.set.dy = drag.dy + my; paint(); fill(); e.preventDefault();
+    }, true);
+    d.addEventListener("pointerup", function () { drag = null; }, true);
+    d.addEventListener("keydown", onKey, true);
+    d.addEventListener("scroll", function () { guides(); }, true);
+    paint();
+  }
+  function onKey(e) {
+    var tag = (e.target && e.target.tagName) || "";
+    if (/INPUT|SELECT|TEXTAREA/.test(tag)) return;
+    if (e.key === "p" || e.key === "P") { togglePick(); e.preventDefault(); return; }
+    var m = { ArrowUp: [0, -1], ArrowDown: [0, 1], ArrowLeft: [-1, 0], ArrowRight: [1, 0] }[e.key];
+    if (!m || !sel) return;
+    var n = e.shiftKey ? 10 : 1; e.preventDefault();
+    edit(function (s) { s.dx = (s.dx || 0) + m[0] * n; s.dy = (s.dy || 0) + m[1] * n; });
+  }
+  function togglePick() { picking = !picking; $("pick").className = picking ? "on" : ""; $("pick").textContent = picking ? "Pick a part" : "Using the app"; paint(); }
+  document.addEventListener("keydown", onKey, true);
+  $("app").addEventListener("load", hook);
+  $("pick").onclick = togglePick;
+  $("look").onchange = function () { try { $("app").contentWindow.localStorage.setItem("hk_theme_v1", this.value); } catch (e) {} sel = null; $("app").contentWindow.location.reload(); };
+  Array.prototype.forEach.call(document.querySelectorAll("[data-n]"), function (b) {
+    b.onclick = function () { var v = b.getAttribute("data-n").split(",").map(Number); edit(function (s) { if (!v[0] && !v[1]) { s.dx = 0; s.dy = 0; } else { s.dx = (s.dx || 0) + v[0]; s.dy = (s.dy || 0) + v[1]; } }); };
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-s]"), function (b) {
+    b.onclick = function () { var step = Number(b.getAttribute("data-s")); edit(function (s) { s.size = Math.max(6, (Number(s.size) || Number($("size").value) || 14) + step); }); };
+  });
+  $("size").onchange = function () { var v = Number(this.value); edit(function (s) { s.size = v > 0 ? v : undefined; }); };
+  $("font").onchange = function () { var v = this.value; edit(function (s) { s.font = v || undefined; }); };
+  $("weight").onchange = function () { var v = this.value; edit(function (s) { s.weight = v ? Number(v) : undefined; }); };
+  $("color").oninput = function () { var v = this.value; edit(function (s) { s.color = v; }); };
+  $("colorOff").onclick = function () { edit(function (s) { delete s.color; }); };
+  $("outline").onchange = function () { var v = this.value; edit(function (s) { s.outline = v || undefined; }); };
+  $("scope").onchange = $("lookScope").onchange = function () { fill(); };
+  $("resetPart").onclick = function () { var k = key(); if (!k) return; history.push(JSON.stringify(doc.rules)); doc.rules = doc.rules.filter(function (r) { return r !== findRule(k); }); paint(); fill(); };
+  $("undo").onclick = function () { if (!history.length) return; doc.rules = JSON.parse(history.pop()); paint(); fill(); };
+
+  /* GitHub: read and write content/card_style.json, and start the daily update */
+  function tok() { var t = $("token").value.trim(); try { localStorage.setItem("hk_designer_token", t); } catch (e) {} return t; }
+  function gh(method, url, body) {
+    var t = tok(); if (!t) return Promise.reject(new Error("Paste your GitHub key in the box at the top first."));
+    return fetch("https://api.github.com" + url, { method: method, headers: { Authorization: "Bearer " + t, Accept: "application/vnd.github+json" }, body: body ? JSON.stringify(body) : undefined })
+      .then(function (r) { if (!r.ok && r.status !== 204) return r.text().then(function (x) { throw new Error("GitHub said " + r.status + ": " + x.slice(0, 160)); }); return r.status === 204 ? {} : r.json(); });
+  }
+  var b64 = function (s) { return btoa(unescape(encodeURIComponent(s))); };
+  var unb64 = function (s) { return decodeURIComponent(escape(atob(s.replace(/\n/g, "")))); };
+  function load() {
+    say("Loading the saved design...");
+    return gh("GET", "/repos/" + REPO + "/contents/" + PATH + "?ref=main").then(function (j) {
+      sha = j.sha; doc = JSON.parse(unb64(j.content)); if (!doc.rules) doc.rules = []; history = []; paint(); fill();
+      say("Loaded " + doc.rules.length + " saved change(s).", "ok");
+    }).catch(function (e) { say(e.message, "err"); });
+  }
+  function save() {
+    say("Saving...");
+    var body = JSON.stringify({ version: 1, rules: doc.rules }, null, 2) + "\n";
+    var go = function () { return gh("PUT", "/repos/" + REPO + "/contents/" + PATH, { message: "Card designer: " + doc.rules.length + " change(s)", content: b64(body), sha: sha || undefined, branch: "main" }); };
+    var first = sha ? Promise.resolve() : gh("GET", "/repos/" + REPO + "/contents/" + PATH + "?ref=main").then(function (j) { sha = j.sha; }).catch(function () {});
+    return first.then(go).then(function (j) { sha = j.content && j.content.sha; say("Saved. It goes live with the next update (every hour, 10 AM to 8 PM), or press Save and publish now.", "ok"); return true; })
+      .catch(function (e) { say(e.message, "err"); return false; });
+  }
+  $("load").onclick = load;
+  $("save").onclick = save;
+  $("publish").onclick = function () {
+    save().then(function (ok) { if (!ok) return; return gh("POST", "/repos/" + REPO + "/actions/workflows/" + WORKFLOW + "/dispatches", { ref: "main" }).then(function () { say("Saved and publishing. The app shows it in about 8 minutes.", "ok"); }); })
+      .catch(function (e) { say(e.message, "err"); });
+  };
+  if ($("token").value) load();
+})();
+</script>
+</body>
+</html>
