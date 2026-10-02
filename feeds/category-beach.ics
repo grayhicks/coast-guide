@@ -61,23 +61,6 @@ CATEGORIES:Beach
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_sritri-2026-10-03@coastaleventures.com
-DTSTAMP:20261002T000000Z
-DTSTART;TZID=America/Chicago:20261003T070000
-DTEND;TZID=America/Chicago:20261003T080000
-SUMMARY:Santa Rosa Island Triathlon: SOLD OUT (waitlist)
-LOCATION:Casino Beach Pavilion\, 20 Casino Beach Blvd\, Pensacola Beach\, F
- L 32561
-DESCRIPTION:Sat 10/03/2026 · 7:00 AM · Casino Beach\n\nIndividual sprint 
- entries are sold out (final tier hit $130). The waitlist is open\, and rel
- ay slots showed 'no waitlist for relays' at $215-240. Watching the swim st
- art is free and a great spectacle morning.\n\nPrice: from $215\n\nDetails:
-  https://coastaleventures.com/events/ev-sritri.html
-URL:https://coastaleventures.com/events/ev-sritri.html
-CATEGORIES:Beach
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_ferry-2026-10-03@coastaleventures.com
 DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261003T090000
@@ -165,6 +148,23 @@ DESCRIPTION:Saturday 10/10 · Race-day registration 6:00-7:00 AM · 10K/5K
   and an awards ceremony follow at Windjammers.\n\nPrice: from $20\n\nDetai
  ls: https://coastaleventures.com/events/ev-navarre-runforthereef.html
 URL:https://coastaleventures.com/events/ev-navarre-runforthereef.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_sritri-2026-10-10@coastaleventures.com
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Chicago:20261010T070000
+DTEND;TZID=America/Chicago:20261010T080000
+SUMMARY:Santa Rosa Island Triathlon: SOLD OUT (waitlist)
+LOCATION:Casino Beach Pavilion\, 20 Casino Beach Blvd\, Pensacola Beach\, F
+ L 32561
+DESCRIPTION:Sat 10/10/2026 · 7:00 AM · Casino Beach\n\nIndividual sprint 
+ entries are sold out (final tier hit $130). The waitlist is open\, and rel
+ ay slots showed 'no waitlist for relays' at $215-240. Watching the swim st
+ art is free and a great spectacle morning.\n\nPrice: from $215\n\nDetails:
+  https://coastaleventures.com/events/ev-sritri.html
+URL:https://coastaleventures.com/events/ev-sritri.html
 CATEGORIES:Beach
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -282,17 +282,17 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_wickedwinerun_1121-2026-11-21@coastaleventures.com
 DTSTAMP:20261002T000000Z
-DTSTART;TZID=America/Chicago:20261121T083000
-DTEND;TZID=America/Chicago:20261121T093000
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
 SUMMARY:SKECHERS Wicked Wine Run: Milton
 LOCATION:Adventures Unlimited\, 8974 Tomahawk Landing Rd\, Milton\, FL 3257
  0
-DESCRIPTION:Sat 11/21/2026 · gates 8:30 AM · 5K at 10:30 · 1K tasting wa
- lk at 12:30\n\nThis 1K tasting walk with four wine stations\, a 5K run\, o
- r both\, runs through the Blackwater river property\, then a party with a 
- DJ\, food trucks\, and games until 2:30. It is a race where the walk is th
- e point and nobody is timing you.\n\nPrice: $20 per vehicle\n\nDetails: ht
- tps://coastaleventures.com/events/ev-wickedwinerun-1121.html
+DESCRIPTION:Sat 11/21/2026 · gates 8:30 AM · 5K at 10:30 AM · 1K tasting
+  walk at 12:30 PM\n\nThis 1K tasting walk with four wine stations\, a 5K r
+ un\, or both\, runs through the Blackwater river property\, then a party w
+ ith a DJ\, food trucks\, and games until 2:30. It is a race where the walk
+  is the point and nobody is timing you.\n\nPrice: $20 per vehicle\n\nDetai
+ ls: https://coastaleventures.com/events/ev-wickedwinerun-1121.html
 URL:https://coastaleventures.com/events/ev-wickedwinerun-1121.html
 CATEGORIES:Beach
 TRANSP:TRANSPARENT
