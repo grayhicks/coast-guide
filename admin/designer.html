@@ -217,16 +217,20 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     return { in: sel.in, path: sel.path, scope: sc, value: sc === "kind" ? sel.kind : sc === "card" ? sel.card : "", look: lookScope };
   }
   function findRule(k) { for (var i = 0; i < doc.rules.length; i++) { var r = doc.rules[i]; if (r.path === k.path && r.in === k.in && (r.scope || "all") === k.scope && (r.value || "") === (k.value || "") && r.look === k.look) return r; } return null; }
+  /* 10/02, his phone: "I pressed up on the pad and nothing happened at all". The rule had been made by the 3:59
+     build, before mv existed, so it kept moving by translate, which does nothing to a plain word. Any rule without
+     mv gets it the first time it is touched. */
+  function moveKind() { var pos = sel && sel.el ? sel.el.ownerDocument.defaultView.getComputedStyle(sel.el).position : "static"; return /absolute|fixed|sticky/.test(pos) ? "tr" : "rel"; }
   function newRule(k) {
-    var pos = sel && sel.el ? sel.el.ownerDocument.defaultView.getComputedStyle(sel.el).position : "static";
-    var r = { in: k.in, path: k.path, name: sel && sel.name, scope: k.scope, value: k.value, look: k.look, set: { mv: /absolute|fixed|sticky/.test(pos) ? "tr" : "rel" } };
+    var r = { in: k.in, path: k.path, name: sel && sel.name, scope: k.scope, value: k.value, look: k.look, set: { mv: moveKind() } };
     doc.rules.push(r); return r;
   }
+  function ruleFor(k) { var r = findRule(k) || newRule(k); if (!r.set) r.set = {}; if (r.set.mv === undefined) r.set.mv = moveKind(); return r; }
   function edit(fn) {
     var k = key(); if (!k) { say("Tap a word in the app first.", "err"); return; }
     hist.push(JSON.stringify(doc.rules));
-    var r = findRule(k) || newRule(k);
-    fn(r.set); paint(); fill();
+    var r = ruleFor(k);
+    fn(r.set); flashGuides(); paint(); fill();
   }
 
   /* ---- spacing guides, measured from the letters (canvas glyph metrics), labels kept on screen ---- */
@@ -246,11 +250,16 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     return out;
   }
   var union = function (rs) { return rs.reduce(function (a, b) { return { l: Math.min(a.l, b.l), r: Math.max(a.r, b.r), t: Math.min(a.t, b.t), b: Math.max(a.b, b.b) }; }); };
+  /* 10/02, his phone: "the distances are straight up in the way". The lines show while he drags or nudges and fade
+     1.6 s later, like Canva's; the four numbers stay in the panel line at all times. */
+  var guideUntil = 0, guideT = 0;
+  function flashGuides() { guideUntil = Date.now() + 1600; clearTimeout(guideT); guideT = setTimeout(guides, 1650); }
   function guides() {
     var d = frame(), w = fw(); if (!d || !d.body) return;
     var g = d.getElementById("hk_guides");
     if (!g) { g = d.createElement("div"); g.id = "hk_guides"; g.style.cssText = "position:fixed;inset:0;pointer-events:none;z-index:2147483647"; d.body.appendChild(g); }
     g.innerHTML = ""; $("gapRead").textContent = "";
+    g.style.display = (drag && drag.on) || Date.now() < guideUntil ? "" : "none";
     if (!sel || !sel.el || !sel.el.isConnected) return;
     var box = sel.el.closest(".card") || d.body, me = union(inkRects(sel.el)), cand = [];
     Array.prototype.forEach.call(box.querySelectorAll("*"), function (el) {
@@ -276,8 +285,8 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
       L.style.cssText = "position:absolute;background:" + col + ";left:" + Math.min(x1, x2) + "px;top:" + Math.min(y1, y2) + "px;" + (v ? "width:1px;height:" + Math.abs(y2 - y1) : "height:1px;width:" + Math.abs(x2 - x1)) + "px";
       g.appendChild(L);
       var T = d.createElement("div"); T.textContent = txt;
-      var lx = v ? x1 + 6 : (x1 + x2) / 2 - 22, ly = v ? (y1 + y2) / 2 - 8 : y1 - 18;
-      T.style.cssText = "position:absolute;font:800 11px/16px system-ui,sans-serif;color:#fff;background:" + col + ";border-radius:8px;padding:0 6px;white-space:nowrap;left:" + clamp(lx, 2, W - 70) + "px;top:" + clamp(ly, 2, H - 18) + "px";
+      var lx = v ? x1 + 4 : (x1 + x2) / 2 - 16, ly = v ? (y1 + y2) / 2 - 6 : y1 - 15;
+      T.style.cssText = "position:absolute;font:700 9.5px/13px system-ui,sans-serif;color:#fff;background:" + col + ";opacity:.9;border-radius:6px;padding:0 4px;white-space:nowrap;left:" + clamp(lx, 2, W - 56) + "px;top:" + clamp(ly, 2, H - 15) + "px";
       g.appendChild(T);
     };
     var px = function (n) { return (Math.round(n * 10) / 10) + " px"; };
@@ -344,6 +353,7 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
   /* ---- the app in the frame: tap to pick, drag to move, keys to nudge ---- */
   function hook() {
     var d = frame(); if (!d) return;
+    var tries = 0, upd = setInterval(function () { var b = d.querySelector('[data-testid="update-load"]'); if (b) { clearInterval(upd); say("Loading the newest app…"); fw().location.reload(); } else if (++tries > 40) clearInterval(upd); }, 250);
     /* 10/02: a tap picks on pointerup, not click. iPhone Safari sends no click to plain text, so on his phone the tap
        picked nothing and the arrows had nothing to move. click is still swallowed so the app does not act on it. */
     var tap = null;
@@ -361,7 +371,7 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
       if (!drag) return;
       var mx = Math.round(e.clientX - drag.x), my = Math.round(e.clientY - drag.y);
       if (!drag.on) { if (Math.abs(mx) + Math.abs(my) < 3) return; drag.on = true; hist.push(JSON.stringify(doc.rules)); }
-      var k = key(), r = findRule(k) || newRule(k);
+      var k = key(), r = ruleFor(k); guideUntil = Date.now() + 1600;
       r.set.dx = drag.dx + mx; r.set.dy = drag.dy + my; paint(); fill(); e.preventDefault(); e.stopPropagation();
     }, true);
     var end = function (e) { if (drag && drag.on && e) { e.preventDefault(); e.stopPropagation(); } drag = null; };
