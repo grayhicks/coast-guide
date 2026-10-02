@@ -25,46 +25,9 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_valparaiso_library_anime_club-2026-10-01@coastaleventures.com
-DTSTAMP:20261001T000000Z
-DTSTART;TZID=America/Chicago:20261001T150000
-DTEND;TZID=America/Chicago:20261001T160000
-SUMMARY:Anime Club at the Valparaiso Library
-LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
-DESCRIPTION:Thursdays · 3:00 PM to 4:00 PM\, through 12/17\n\nThe Valparai
- so Library's Anime Club meets every Thursday afternoon for middle and high
-  school students\, ages 11 to 17. The club watches anime rated from G to P
- G-13 and TV-14\, and manga is on hand to read during meetings.\n\nPrice: N
- o published price\n\nDetails: https://coastaleventures.com/events/ev-valpa
- raiso-library-anime-club.html
-URL:https://coastaleventures.com/events/ev-valparaiso-library-anime-club.ht
- ml
-CATEGORIES:Movies
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_toulminville_goosebumps_movie_1001-2026-10-01@coastaleventures.com
-DTSTAMP:20261001T000000Z
-DTSTART;TZID=America/Chicago:20261001T151500
-DTEND;TZID=America/Chicago:20261001T164500
-SUMMARY:Great Movie Adventure: Goosebumps
-LOCATION:Virginia Dillard Smith/Toulminville Branch Library\, 601 Stanton R
- oad\, Mobile\, AL 36617
-DESCRIPTION:Thursday 10/1 · 3:15 PM to 4:45 PM\n\nThe Toulminville Branch 
- Library screens Goosebumps (2015)\, rated PG and 1 hour 43 minutes long\, 
- with snacks for ages 6 to 11. Registration is recommended. Children come w
- ith an adult\, and adults without children will not be admitted.\n\nPrice:
-  No published price\n\nDetails: https://coastaleventures.com/events/ev-tou
- lminville-goosebumps-movie-1001.html
-URL:https://coastaleventures.com/events/ev-toulminville-goosebumps-movie-10
- 01.html
-CATEGORIES:Movies
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_seaside_central_square_cinema_air_bud_1002-2026-10-02@coastaleventur
  es.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261002T190000
 DTEND;TZID=America/Chicago:20261002T203000
 SUMMARY:Central Square Cinema at Seaside: Air Bud
@@ -83,7 +46,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_fear_fest_1003-2026-10-03@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261003T170000
 DTEND;TZID=America/Chicago:20261003T210000
 SUMMARY:Fear Fest
@@ -101,7 +64,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_ben_may_documentaries_anthropologist_1006-2026-10-06@coastaleventure
  s.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261006T140000
 DTEND;TZID=America/Chicago:20261006T160000
 SUMMARY:Documentaries with an Anthropologist: The Pentagon Papers
@@ -120,7 +83,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-10-08@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261008T150000
 DTEND;TZID=America/Chicago:20261008T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -138,7 +101,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_theaterthu_1008-2026-10-08@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261008T150000
 DTEND;TZID=America/Chicago:20261008T160000
 SUMMARY:Theater Thursday
@@ -156,7 +119,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_mobile_animation_film_festival_2026-2026-10-10@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261010T130000
 DTEND;TZID=America/Chicago:20261010T153000
 SUMMARY:Mobile Animation Film Festival 2026
@@ -174,7 +137,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_fear_fest_1010-2026-10-10@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261010T170000
 DTEND;TZID=America/Chicago:20261010T210000
 SUMMARY:Fear Fest
@@ -192,7 +155,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_rodeo_kidsmovie_1012-2026-10-12@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
 SUMMARY:Kids Fall Movie Festival
@@ -207,7 +170,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_monsters_inc_1012-2026-10-12@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261012T153000
 DTEND;TZID=America/Chicago:20261012T170000
 SUMMARY:All Ages Movie at the Valparaiso Library: Monsters\, Inc.
@@ -224,7 +187,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_niceville_library_hoppers_1015-2026-10-15@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Family Movie at the Niceville Library: Hoppers
@@ -243,7 +206,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-10-15@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261015T150000
 DTEND;TZID=America/Chicago:20261015T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -262,7 +225,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_navarre_throwback_movie_tuesdays_1020-2026-10-20@coastaleventures.co
  m
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261020T160000
 DTEND;TZID=America/Chicago:20261020T173000
 SUMMARY:Throwback Movie Tuesday: 20 Years of Stories
@@ -279,7 +242,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-10-22@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261022T150000
 DTEND;TZID=America/Chicago:20261022T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -297,7 +260,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_cinemas_sand_toystory5_1023-2026-10-23@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;VALUE=DATE:20261023
 DTEND;VALUE=DATE:20261024
 SUMMARY:Cinemas in the Sand: “Toy Story 5”
@@ -316,7 +279,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_fear_fest_exploreum_2026_series_1003-2026-10-24@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261024T170000
 DTEND;TZID=America/Chicago:20261024T210000
 SUMMARY:Fear Fest
@@ -336,7 +299,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-10-29@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261029T150000
 DTEND;TZID=America/Chicago:20261029T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -354,7 +317,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_crescent_nosferatu_live_score_1030-2026-10-30@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
 SUMMARY:Nosferatu with a Live Improvised Score
@@ -372,7 +335,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_harborwalk_movieslawn_1030-2026-10-30@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261030T170000
 DTEND;TZID=America/Chicago:20261030T200000
 SUMMARY:Movies On The Lawn: Fall Edition
@@ -388,7 +351,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_fallintofun_miltonlibrary_1031-2026-10-31@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261031T100000
 DTEND;TZID=America/Chicago:20261031T120000
 SUMMARY:Fall Into Fun at Milton Library
@@ -407,7 +370,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-05@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261105T150000
 DTEND;TZID=America/Chicago:20261105T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -425,7 +388,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-12@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261112T150000
 DTEND;TZID=America/Chicago:20261112T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -443,7 +406,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-19@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261119T150000
 DTEND;TZID=America/Chicago:20261119T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -461,7 +424,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-26@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261126T150000
 DTEND;TZID=America/Chicago:20261126T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -479,7 +442,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-03@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261203T150000
 DTEND;TZID=America/Chicago:20261203T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -497,7 +460,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-10@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261210T150000
 DTEND;TZID=America/Chicago:20261210T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -515,7 +478,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-17@coastaleventures.com
-DTSTAMP:20261001T000000Z
+DTSTAMP:20261002T000000Z
 DTSTART;TZID=America/Chicago:20261217T150000
 DTEND;TZID=America/Chicago:20261217T160000
 SUMMARY:Anime Club at the Valparaiso Library
