@@ -87,7 +87,10 @@
   function decls(s) {
     var out = [];
     var dx = Number(s.dx) || 0, dy = Number(s.dy) || 0;
-    if (dx || dy) out.push("translate:" + dx + "px " + dy + "px");
+    /* 10/02, Gray: "I pressed up keys... on the phone it doesn't move". translate does nothing on a plain inline word, so
+       anything not already lifted out of the flow moves by relative offset, which works on every box and still leaves
+       the space around it untouched. mv is decided once, when the rule is made, from how the element sat then. */
+    if (dx || dy) { if (s.mv === "rel") { out.push("position:relative"); out.push("left:" + dx + "px"); out.push("top:" + dy + "px"); } else out.push("translate:" + dx + "px " + dy + "px"); }
     if (Number(s.size) > 0) out.push("font-size:" + Number(s.size) + "px");
     if (s.font && fontOk(s.font)) out.push("font-family:'" + s.font + "',Nunito,sans-serif");
     if (Number(s.weight) > 0) out.push("font-weight:" + Number(s.weight));

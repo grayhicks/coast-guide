@@ -52,6 +52,16 @@ main{ display:flex; gap:16px; padding:12px; align-items:flex-start; }
 .status.err{ color:#ff8a80; } .status.ok{ color:#7fe0b4; }
 kbd{ background:#252b36; border:1px solid var(--line); border-radius:4px; padding:0 5px; font-size:12px; }
 #signin{ display:none; }
+/* 10/02, Gray: "no one should ever be able to see this page but me ever". Locked until his key is checked against
+   GitHub: nothing of the app or the editor is drawn or even loaded before that. */
+#toast{ position:fixed; left:50%; bottom:78px; transform:translateX(-50%); max-width:calc(100vw - 32px); background:#252b36; color:#fff; border:1px solid var(--line); border-radius:12px; padding:10px 14px; font-size:15px; font-weight:700; z-index:50; opacity:0; pointer-events:none; transition:opacity .2s; }
+#toast.on{ opacity:1; } #toast.err{ background:#7a1f1f; } #toast.ok{ background:#0f5c45; }
+#lock{ display:none; }
+body.locked header, body.locked main, body.locked .dock{ display:none !important; }
+body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-content:center; padding:24px 16px; }
+#lock .box{ max-width:420px; width:100%; }
+#lock input{ width:100%; font-size:17px; padding:12px; margin:10px 0; }
+#lock button{ width:100%; font-size:17px; padding:12px; }
 /* PHONE: the app on top, the editor underneath, and the most-used buttons in a bar along the bottom */
 .dock{ display:none; }
 @media (max-width:820px){
@@ -67,7 +77,14 @@ kbd{ background:#252b36; border:1px solid var(--line); border-radius:4px; paddin
 </style>
 <script src="card_design.js"></script>
 </head>
-<body>
+<body class="locked">
+<div id="lock"><div class="box">
+  <h2>Card Designer is locked</h2>
+  <div class="mute">Paste your GitHub key. It is checked with GitHub, then remembered on this device only.</div>
+  <input id="lockKey" type="password" autocomplete="off" placeholder="Your GitHub key">
+  <button id="lockGo" class="go">Unlock</button>
+  <div class="status" id="lockSay"></div>
+</div></div>
 <header>
   <h1>Card Designer</h1>
   <button id="pick" class="on" title="P">Pick</button>
@@ -78,7 +95,7 @@ kbd{ background:#252b36; border:1px solid var(--line); border-radius:4px; paddin
   <button id="publish">Save + publish</button>
 </header>
 <main>
-  <div class="phone"><iframe id="app" src="../app/" title="The app"></iframe></div>
+  <div class="phone"><iframe id="app" data-src="../app/" title="The app"></iframe></div>
   <section class="panel">
     <div class="box" id="signin">
       <h2>One time on this device, to save</h2>
@@ -133,6 +150,7 @@ kbd{ background:#252b36; border:1px solid var(--line); border-radius:4px; paddin
     </div>
   </section>
 </main>
+<div id="toast"></div>
 <div class="dock"><button data-d="pick">Pick</button><button data-s="-0.5">A&#8722;</button><button data-s="0.5">A+</button><button data-n="0,-1">&#8593;</button><button data-n="0,1">&#8595;</button><button data-n="-1,0">&#8592;</button><button data-n="1,0">&#8594;</button><button data-d="outer">Bigger</button><button data-d="undo">Undo</button><button data-d="save" class="go">Save</button></div>
 <script>
 (function () {
@@ -141,7 +159,12 @@ kbd{ background:#252b36; border:1px solid var(--line); border-radius:4px; paddin
   var REPO = "grayhicks/gca-widget", PATH = "content/card_style.json", WORKFLOW = "beach-flag-daily.yml";
   var doc = { version: 1, rules: [] }, sha = null, hist = [], sel = null, trail = [], picking = true, focusOn = false, drag = null;
   var scope = "all", lookScope = "all";
-  var say = function (t, c) { $("status").textContent = t; $("status").className = "status" + (c ? " " + c : ""); };
+  var toastT = 0;
+  var say = function (t, c) {
+    $("status").textContent = t; $("status").className = "status" + (c ? " " + c : "");
+    var T = $("toast"); T.textContent = t; T.className = "on" + (c ? " " + c : ""); clearTimeout(toastT);
+    if (!/…$/.test(t)) toastT = setTimeout(function () { T.className = ""; }, 3500);
+  };
   var frame = function () { try { return $("app").contentDocument; } catch (e) { return null; } };
   var fw = function () { try { return $("app").contentWindow; } catch (e) { return null; } };
   var gfont = function (d, fam) {
@@ -192,10 +215,15 @@ kbd{ background:#252b36; border:1px solid var(--line); border-radius:4px; paddin
     return { in: sel.in, path: sel.path, scope: sc, value: sc === "kind" ? sel.kind : sc === "card" ? sel.card : "", look: lookScope };
   }
   function findRule(k) { for (var i = 0; i < doc.rules.length; i++) { var r = doc.rules[i]; if (r.path === k.path && r.in === k.in && (r.scope || "all") === k.scope && (r.value || "") === (k.value || "") && r.look === k.look) return r; } return null; }
+  function newRule(k) {
+    var pos = sel && sel.el ? sel.el.ownerDocument.defaultView.getComputedStyle(sel.el).position : "static";
+    var r = { in: k.in, path: k.path, name: sel && sel.name, scope: k.scope, value: k.value, look: k.look, set: { mv: /absolute|fixed|sticky/.test(pos) ? "tr" : "rel" } };
+    doc.rules.push(r); return r;
+  }
   function edit(fn) {
     var k = key(); if (!k) { say("Tap a word in the app first.", "err"); return; }
     hist.push(JSON.stringify(doc.rules));
-    var r = findRule(k); if (!r) { r = { in: k.in, path: k.path, name: sel.name, scope: k.scope, value: k.value, look: k.look, set: {} }; doc.rules.push(r); }
+    var r = findRule(k) || newRule(k);
     fn(r.set); paint(); fill();
   }
 
@@ -314,9 +342,13 @@ kbd{ background:#252b36; border:1px solid var(--line); border-radius:4px; paddin
   /* ---- the app in the frame: tap to pick, drag to move, keys to nudge ---- */
   function hook() {
     var d = frame(); if (!d) return;
-    d.addEventListener("click", function (e) { if (!picking) return; e.preventDefault(); e.stopPropagation(); trail = []; select(e.target); }, true);
+    /* 10/02: a tap picks on pointerup, not click. iPhone Safari sends no click to plain text, so on his phone the tap
+       picked nothing and the arrows had nothing to move. click is still swallowed so the app does not act on it. */
+    var tap = null;
+    d.addEventListener("click", function (e) { if (!picking) return; e.preventDefault(); e.stopPropagation(); }, true);
     d.addEventListener("pointerdown", function (e) {
       if (!picking) return;
+      tap = { x: e.clientX, y: e.clientY, t: e.target };
       if (!sel || !(e.target === sel.el || sel.el.contains(e.target))) { if (e.target.closest && e.target.closest(".card")) e.stopPropagation(); return; }
       var r = findRule(key()), s0 = (r && r.set) || {};
       drag = { x: e.clientX, y: e.clientY, dx: s0.dx || 0, dy: s0.dy || 0, on: false };
@@ -326,11 +358,15 @@ kbd{ background:#252b36; border:1px solid var(--line); border-radius:4px; paddin
       if (!drag) return;
       var mx = Math.round(e.clientX - drag.x), my = Math.round(e.clientY - drag.y);
       if (!drag.on) { if (Math.abs(mx) + Math.abs(my) < 3) return; drag.on = true; hist.push(JSON.stringify(doc.rules)); }
-      var k = key(), r = findRule(k); if (!r) { r = { in: k.in, path: k.path, scope: k.scope, value: k.value, look: k.look, set: {} }; doc.rules.push(r); }
+      var k = key(), r = findRule(k) || newRule(k);
       r.set.dx = drag.dx + mx; r.set.dy = drag.dy + my; paint(); fill(); e.preventDefault(); e.stopPropagation();
     }, true);
     var end = function (e) { if (drag && drag.on && e) { e.preventDefault(); e.stopPropagation(); } drag = null; };
-    d.addEventListener("pointerup", end, true); d.addEventListener("pointercancel", end, true);
+    d.addEventListener("pointerup", function (e) {
+      var moved = drag && drag.on, t = tap; tap = null; end(e);
+      if (picking && t && !moved && Math.abs(e.clientX - t.x) + Math.abs(e.clientY - t.y) < 10) { trail = []; select(t.t); e.preventDefault(); }
+    }, true);
+    d.addEventListener("pointercancel", function (e) { tap = null; end(e); }, true);
     d.addEventListener("keydown", onKey, true);
     d.addEventListener("scroll", function () { guides(); }, true);
     paint();
@@ -405,7 +441,7 @@ kbd{ background:#252b36; border:1px solid var(--line); border-radius:4px; paddin
   function gh(method, url, body) {
     var t = tok(); if (!t) { askKey = true; showSignin(); return Promise.reject(new Error("To save from this device, paste your GitHub key once in the box above.")); }
     return fetch("https://api.github.com" + url, { method: method, headers: { Authorization: "Bearer " + t, Accept: "application/vnd.github+json" }, body: body ? JSON.stringify(body) : undefined })
-      .then(function (r) { if (r.status === 401) { try { localStorage.removeItem("hk_designer_token"); } catch (e) {} askKey = true; showSignin(); throw new Error("GitHub did not accept that key. Paste it again."); } if (!r.ok && r.status !== 204) return r.text().then(function (x) { throw new Error("GitHub said " + r.status + ": " + x.slice(0, 140)); }); return r.status === 204 ? {} : r.json(); });
+      .then(function (r) { if (r.status === 401) { try { localStorage.removeItem("hk_designer_token"); } catch (e) {} document.body.className = "locked"; lockSay("Your key stopped working. Paste the new one.", "err"); throw new Error("GitHub did not accept that key. Paste it again."); } if (!r.ok && r.status !== 204) return r.text().then(function (x) { throw new Error("GitHub said " + r.status + ": " + x.slice(0, 140)); }); return r.status === 204 ? {} : r.json(); });
   }
   /* 10/02, Gray: "I'm not at work anymore so I don't have that key". Every change is kept on this device as he makes
      it, so a device with no key loses nothing: it saves the moment a key is there (here or in the card editor). */
@@ -434,9 +470,24 @@ kbd{ background:#252b36; border:1px solid var(--line); border-radius:4px; paddin
   }
   $("save").onclick = save;
   $("publish").onclick = function () { save().then(function (ok) { if (!ok) return; return gh("POST", "/repos/" + REPO + "/actions/workflows/" + WORKFLOW + "/dispatches", { ref: "main" }).then(function () { say("Saved and publishing. The app shows it in about 8 minutes.", "ok"); }); }).catch(function (e) { say(e.message, "err"); }); };
+  /* the lock: the key must be one GitHub says can write to this repo; only then is the app loaded into the frame */
+  function check(t) {
+    return fetch("https://api.github.com/repos/" + REPO, { headers: { Authorization: "Bearer " + t, Accept: "application/vnd.github+json" } })
+      .then(function (r) { return r.ok ? r.json() : null; }).then(function (j) { return !!(j && j.permissions && j.permissions.push); }).catch(function () { return null; });
+  }
+  function unlock() { document.body.className = ""; var f = $("app"); if (!f.getAttribute("src")) f.setAttribute("src", f.getAttribute("data-src")); load(); }
+  var lockSay = function (t, c) { $("lockSay").textContent = t; $("lockSay").className = "status" + (c ? " " + c : ""); };
+  $("lockGo").onclick = function () {
+    var t = $("lockKey").value.trim(); if (!t) return; lockSay("Checking with GitHub…");
+    check(t).then(function (ok) {
+      if (ok) { try { localStorage.setItem("hk_designer_token", t); } catch (e) {} $("lockKey").value = ""; unlock(); }
+      else lockSay(ok === null ? "Could not reach GitHub. Check the connection and try again." : "That key can't change the app. Check it and paste it again.", "err");
+    });
+  };
+  $("lockKey").onkeydown = function (e) { if (e.key === "Enter") $("lockGo").click(); };
   showSignin();
-  if (tok()) load();
-  else { var dr0 = readDraft(); if (dr0) { base = dr0.base; doc.rules = dr0.rules; } setTimeout(function () { paint(); fill(); say(dr0 ? "Your changes on this device are back. They stay here until you save." : "Edit away. Changes stay on this device until you save.", "ok"); }, 600); }
+  var t0 = tok();
+  if (t0) { lockSay("Checking your key…"); check(t0).then(function (ok) { if (ok) unlock(); else { try { localStorage.removeItem("hk_designer_token"); } catch (e) {} lockSay(ok === null ? "Could not reach GitHub. Paste your key to try again." : "Your saved key no longer works. Paste the new one.", "err"); } }); }
 })();
 </script>
 </body>
