@@ -81,9 +81,9 @@ kbd{ background:#252b36; border:1px solid var(--line); border-radius:4px; paddin
   <div class="phone"><iframe id="app" src="../app/" title="The app"></iframe></div>
   <section class="panel">
     <div class="box" id="signin">
-      <h2>Sign in once on this device</h2>
+      <h2>One time on this device, to save</h2>
       <div class="row"><input id="token" type="password" placeholder="Paste your GitHub key" style="flex:1;min-width:200px"><button id="tokenGo" class="go">Sign in</button></div>
-      <div class="mute">The same key as the card editor. It stays on this device only.</div>
+      <div class="mute">Only asked when you save and this device has no key yet. Signed in to the card editor here? Then it is never asked.</div>
     </div>
     <div class="box">
       <h2>Picked</h2>
@@ -264,7 +264,10 @@ kbd{ background:#252b36; border:1px solid var(--line); border-radius:4px; paddin
   /* ---- paint the preview and the panel ---- */
   function paint() {
     var d = frame(); if (!d || !d.body) return;
-    var baked = d.getElementById("hk_design"); if (baked) baked.media = "not all";
+    /* the published design is swapped for the working copy only once that copy came from GitHub; a copy made on a
+       device with no key sits ON TOP of what is published, so nothing already saved drops out of the preview */
+    var baked = d.getElementById("hk_design"); if (baked) baked.media = base === "github" ? "not all" : "all";
+    keepDraft();
     doc.rules.forEach(function (r) { if (r.set && r.set.font) gfont(d, r.set.font); });
     var st = d.getElementById("hk_design_preview");
     if (!st) { st = d.createElement("style"); st.id = "hk_design_preview"; d.body.appendChild(st); }
@@ -391,29 +394,49 @@ kbd{ background:#252b36; border:1px solid var(--line); border-radius:4px; paddin
   $("look").onchange = function () { try { fw().localStorage.setItem("hk_theme_v1", this.value); } catch (e) {} sel = null; fw().location.reload(); };
 
   /* ---- GitHub: sign in once, load, save, publish ---- */
-  var tok = function () { try { return localStorage.getItem("hk_designer_token") || ""; } catch (e) { return ""; } };
-  function showSignin() { $("signin").style.display = tok() ? "none" : "block"; }
+  /* 10/02, Gray: "it's asking me to sign in on this device but I've already signed in... I need that taken away now".
+     The box never shows on its own any more. The key is borrowed from the card editor (admin/, same site) when he has
+     signed in there on this device, and asked for only when he presses Save with no key anywhere on the device. */
+  var cmsTok = function () { var ks = ["sveltia-cms.user", "decap-cms-user", "netlify-cms-user"]; for (var i = 0; i < ks.length; i++) { try { var u = JSON.parse(localStorage.getItem(ks[i]) || "null"); if (u && u.token) return u.token; } catch (e) {} } return ""; };
+  var tok = function () { var t = ""; try { t = localStorage.getItem("hk_designer_token") || ""; } catch (e) {} return t || cmsTok(); };
+  var askKey = false;
+  function showSignin() { $("signin").style.display = askKey && !tok() ? "block" : "none"; }
   $("tokenGo").onclick = function () { var t = $("token").value.trim(); if (!t) return; try { localStorage.setItem("hk_designer_token", t); } catch (e) {} showSignin(); load(); };
   function gh(method, url, body) {
-    var t = tok(); if (!t) { showSignin(); return Promise.reject(new Error("Sign in first: paste your GitHub key in the box above.")); }
+    var t = tok(); if (!t) { askKey = true; showSignin(); return Promise.reject(new Error("To save from this device, paste your GitHub key once in the box above.")); }
     return fetch("https://api.github.com" + url, { method: method, headers: { Authorization: "Bearer " + t, Accept: "application/vnd.github+json" }, body: body ? JSON.stringify(body) : undefined })
-      .then(function (r) { if (r.status === 401) { try { localStorage.removeItem("hk_designer_token"); } catch (e) {} showSignin(); throw new Error("GitHub did not accept that key. Paste it again."); } if (!r.ok && r.status !== 204) return r.text().then(function (x) { throw new Error("GitHub said " + r.status + ": " + x.slice(0, 140)); }); return r.status === 204 ? {} : r.json(); });
+      .then(function (r) { if (r.status === 401) { try { localStorage.removeItem("hk_designer_token"); } catch (e) {} askKey = true; showSignin(); throw new Error("GitHub did not accept that key. Paste it again."); } if (!r.ok && r.status !== 204) return r.text().then(function (x) { throw new Error("GitHub said " + r.status + ": " + x.slice(0, 140)); }); return r.status === 204 ? {} : r.json(); });
   }
+  /* 10/02, Gray: "I'm not at work anymore so I don't have that key". Every change is kept on this device as he makes
+     it, so a device with no key loses nothing: it saves the moment a key is there (here or in the card editor). */
+  var base = "none", DRAFT = "hk_designer_draft";
+  var rid = function (r) { return JSON.stringify([r.path, r.in, r.scope, r.value, r.look, r.sel, r.root, r.part]); };
+  function keepDraft() { try { if (doc.rules.length || localStorage.getItem(DRAFT)) localStorage.setItem(DRAFT, JSON.stringify({ base: base, rules: doc.rules })); } catch (e) {} }
+  function readDraft() { try { var d = JSON.parse(localStorage.getItem(DRAFT) || "null"); return d && d.rules && d.rules.length ? d : null; } catch (e) { return null; } }
   var b64 = function (s) { return btoa(unescape(encodeURIComponent(s))); }, unb64 = function (s) { return decodeURIComponent(escape(atob(s.replace(/\n/g, "")))); };
   function load() {
-    return gh("GET", "/repos/" + REPO + "/contents/" + PATH + "?ref=main").then(function (j) { sha = j.sha; doc = JSON.parse(unb64(j.content)); if (!doc.rules) doc.rules = []; hist = []; paint(); fill(); say("Loaded " + doc.rules.length + " saved change(s).", "ok"); }).catch(function (e) { say(e.message, "err"); });
+    var dr = readDraft();
+    return gh("GET", "/repos/" + REPO + "/contents/" + PATH + "?ref=main").then(function (j) {
+      sha = j.sha; doc = JSON.parse(unb64(j.content)); if (!doc.rules) doc.rules = []; hist = [];
+      if (dr && dr.base === "github") doc.rules = dr.rules;
+      else if (dr) dr.rules.forEach(function (r) { var k = rid(r), hit = -1; doc.rules.forEach(function (o, i) { if (rid(o) === k) hit = i; }); if (hit > -1) doc.rules[hit] = r; else doc.rules.push(r); });
+      base = "github"; paint(); fill();
+      say(dr ? "Your unsaved changes from this device are back. Press Save to keep them." : "Loaded " + doc.rules.length + " saved change(s).", "ok");
+    }).catch(function (e) { say(e.message, "err"); });
   }
   function save() {
     say("Saving…");
     var body = JSON.stringify({ version: 1, rules: doc.rules }, null, 2) + "\n";
     var first = sha ? Promise.resolve() : gh("GET", "/repos/" + REPO + "/contents/" + PATH + "?ref=main").then(function (j) { sha = j.sha; }).catch(function () {});
     return first.then(function () { return gh("PUT", "/repos/" + REPO + "/contents/" + PATH, { message: "Card designer: " + doc.rules.length + " change(s)", content: b64(body), sha: sha || undefined, branch: "main" }); })
-      .then(function (j) { sha = j.content && j.content.sha; say("Saved. It reaches the app at the next hourly update, or press Save + publish.", "ok"); return true; })
+      .then(function (j) { sha = j.content && j.content.sha; base = "github"; try { localStorage.removeItem(DRAFT); } catch (e) {} say("Saved. It reaches the app at the next hourly update, or press Save + publish.", "ok"); return true; })
       .catch(function (e) { say(e.message, "err"); return false; });
   }
   $("save").onclick = save;
   $("publish").onclick = function () { save().then(function (ok) { if (!ok) return; return gh("POST", "/repos/" + REPO + "/actions/workflows/" + WORKFLOW + "/dispatches", { ref: "main" }).then(function () { say("Saved and publishing. The app shows it in about 8 minutes.", "ok"); }); }).catch(function (e) { say(e.message, "err"); }); };
-  showSignin(); if (tok()) load();
+  showSignin();
+  if (tok()) load();
+  else { var dr0 = readDraft(); if (dr0) { base = dr0.base; doc.rules = dr0.rules; } setTimeout(function () { paint(); fill(); say(dr0 ? "Your changes on this device are back. They stay here until you save." : "Edit away. Changes stay on this device until you save.", "ok"); }, 600); }
 })();
 </script>
 </body>
