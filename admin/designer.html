@@ -151,7 +151,7 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
   </section>
 </main>
 <div id="toast"></div>
-<div class="dock"><button data-d="pick">Pick</button><button data-s="-0.5">A&#8722;</button><button data-s="0.5">A+</button><button data-n="0,-1">&#8593;</button><button data-n="0,1">&#8595;</button><button data-n="-1,0">&#8592;</button><button data-n="1,0">&#8594;</button><button data-d="outer">Bigger</button><button data-d="undo">Undo</button><button data-d="save" class="go">Save</button></div>
+<div class="dock"><button data-d="pick" class="on">Pick</button><button data-s="-0.5">A&#8722;</button><button data-s="0.5">A+</button><button data-n="0,-1">&#8593;</button><button data-n="0,1">&#8595;</button><button data-n="-1,0">&#8592;</button><button data-n="1,0">&#8594;</button><button data-d="outer">Bigger</button><button data-d="undo">Undo</button><button data-d="save" class="go">Save</button></div>
 <script>
 (function () {
   "use strict";
@@ -201,7 +201,9 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     var where = card ? "card" : hk ? "app" : "page";
     var path = pathFor(el, card || hk || d.body);
     sel = { el: el, in: where, path: path, name: describe(el), kind: card ? (card.getAttribute("data-bub") || "").replace(/\d+$/, "") : "", card: card ? (card.getAttribute("data-card-id") || "").replace(/_\d{4}-\d{2}-\d{2}$/, "") : "" };
-    $("partName").textContent = describe(el);
+    var part = null; CD.PARTS.forEach(function (pp) { if (!part) { try { if (el.matches(pp.sel)) part = pp.label; } catch (e) {} } });
+    var lvl = trail.length ? " (" + trail.length + " level" + (trail.length > 1 ? "s" : "") + " out)" : "";
+    $("partName").textContent = (part ? part + ": " : el.tagName.toLowerCase() === "svg" ? "" : trail.length ? "Area: " : "") + describe(el) + lvl;
     $("partWhere").textContent = card ? "On " + (sel.card || "a card") + (sel.kind ? ", a " + sel.kind + " card" : "") : "In the app (outside the cards)";
     $("scopeSeg").style.display = card ? "" : "none";
     var n = 0; try { n = (card ? d.querySelectorAll(".card " + path) : d.querySelectorAll(path)).length; } catch (e) {}
@@ -345,9 +347,10 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     /* 10/02: a tap picks on pointerup, not click. iPhone Safari sends no click to plain text, so on his phone the tap
        picked nothing and the arrows had nothing to move. click is still swallowed so the app does not act on it. */
     var tap = null;
-    d.addEventListener("click", function (e) { if (!picking) return; e.preventDefault(); e.stopPropagation(); }, true);
+    var popup = function (t) { return t && t.closest && t.closest('[role="dialog"][aria-modal="true"]'); };
+    d.addEventListener("click", function (e) { if (!picking || popup(e.target)) return; e.preventDefault(); e.stopPropagation(); }, true);
     d.addEventListener("pointerdown", function (e) {
-      if (!picking) return;
+      if (!picking || popup(e.target)) { tap = null; return; }
       tap = { x: e.clientX, y: e.clientY, t: e.target };
       if (!sel || !(e.target === sel.el || sel.el.contains(e.target))) { if (e.target.closest && e.target.closest(".card")) e.stopPropagation(); return; }
       var r = findRule(key()), s0 = (r && r.set) || {};
@@ -381,12 +384,17 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     var n = e.shiftKey ? 10 : 1; e.preventDefault();
     edit(function (s) { s.dx = (s.dx || 0) + m[0] * n; s.dy = (s.dy || 0) + m[1] * n; });
   }
-  function togglePick() { picking = !picking; $("pick").className = picking ? "on" : ""; $("pick").textContent = picking ? "Pick" : "Using app"; paint(); }
-  function undo() { if (!hist.length) return; doc.rules = JSON.parse(hist.pop()); paint(); fill(); }
-  function outer() { if (!sel) return; var p = sel.el.parentElement; if (!p || p === frame().body) return; trail.push(sel.el); select(p); }
-  function inner() { if (!trail.length) return; select(trail.pop()); }
+  function togglePick() {
+    picking = !picking; $("pick").className = picking ? "on" : ""; $("pick").textContent = picking ? "Pick" : "Using app";
+    var dp = document.querySelector('.dock [data-d="pick"]'); dp.textContent = picking ? "Pick" : "Using app"; dp.classList.toggle("on", picking);
+    say(picking ? "Tap any word to pick it." : "Using the app: tap tabs and buttons as normal. Tap Pick to edit again.", "ok"); paint();
+  }
+  function undo() { if (!hist.length) { say("Nothing to undo.", "err"); return; } doc.rules = JSON.parse(hist.pop()); paint(); fill(); say("Undone.", "ok"); }
+  function outer() { if (!sel) { say("Tap a word in the app first.", "err"); return; } var p = sel.el.parentElement; if (!p || p === frame().body || p.classList.contains("hk")) { say("That is already the biggest area.", "err"); return; } trail.push(sel.el); select(p); }
+  function inner() { if (!trail.length) { say("That is already the smallest piece. Tap a word to pick it.", "err"); return; } var el = trail.pop(); select(el); }
   document.addEventListener("keydown", onKey, true);
   $("app").addEventListener("load", hook);
+  window.HK_DESIGNER = { state: function () { return { picked: sel && { in: sel.in, path: sel.path }, rules: JSON.parse(JSON.stringify(doc.rules)) }; } };
 
   /* ---- the panel ---- */
   CD.SWATCHES.forEach(function (c) {
@@ -424,7 +432,7 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
   $("italic").onclick = function () { edit(function (s) { s.italic = s.italic === true ? undefined : true; }); };
   $("hide").onclick = function () { edit(function (s) { s.hide = s.hide === true ? undefined : true; }); };
   $("outer").onclick = outer; $("inner").onclick = inner; $("undo").onclick = undo;
-  $("resetPart").onclick = function () { var k = key(); if (!k) return; var r = findRule(k); if (!r) return; hist.push(JSON.stringify(doc.rules)); doc.rules.splice(doc.rules.indexOf(r), 1); paint(); fill(); };
+  $("resetPart").onclick = function () { var k = key(); if (!k) { say("Tap a word in the app first.", "err"); return; } var r = findRule(k); if (!r) { say("Nothing changed on this one yet.", "err"); return; } hist.push(JSON.stringify(doc.rules)); doc.rules.splice(doc.rules.indexOf(r), 1); paint(); fill(); };
   $("pick").onclick = togglePick;
   $("focus").onclick = function () { focusOn = !focusOn; this.className = focusOn ? "on" : ""; focusCard(); paint(); };
   $("look").onchange = function () { try { fw().localStorage.setItem("hk_theme_v1", this.value); } catch (e) {} sel = null; fw().location.reload(); };
