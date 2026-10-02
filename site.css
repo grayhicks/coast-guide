@@ -2466,6 +2466,9 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
 .bf-facts li,.bf-days li{display:flex;gap:12px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:var(--r-field)}
 .bf-facts li span{flex:0 0 9.5em;font-weight:700;color:var(--ink-2)}
 .bf-day{flex:0 0 6.5em;font-weight:700}
+
+.bf-facts.bf-stack li{flex-direction:column;align-items:flex-start;gap:2px}
+.bf-facts.bf-stack li span{flex:none}
 .bf-alert{padding:8px 12px;border-left:3px solid #B83434;background:rgba(184,52,52,.10);border-radius:4px}
 .bf-go{display:flex;flex-wrap:wrap;gap:10px;margin:var(--s-4) 0}
 .bf-h3{margin:var(--s-5) 0 var(--s-2)}

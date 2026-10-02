@@ -7,7 +7,7 @@
     "from": "2026-10-01",
     "to": "2027-01-29"
   },
-  "count": 2179,
+  "count": 2224,
   "note": "Event details are compiled from the venue or organizer pages named in each record's sources. Check the venue before you travel. Weather data elsewhere on the site is Open-Meteo, CC BY 4.0.",
   "events": [
     {
@@ -195,6 +195,36 @@
         }
       ],
       "checkedOn": "2026-09-26"
+    },
+    {
+      "id": "ev_uwf_make_it_last_1001-2026-10-01",
+      "title": "Make It Last: Gallery Exhibition at UWF",
+      "date": "2026-10-01",
+      "endDate": "2026-11-20",
+      "startTime": null,
+      "endTime": null,
+      "when": "Weekdays through 11/20 · 10:00 AM to 4:00 PM · opening reception Thursday 10/8 · 5:00 PM to 7:00 PM",
+      "venue": "UWF Center for Fine and Performing Arts, Building 82, The Art Gallery",
+      "address": "11000 University Parkway, Pensacola, FL 32514",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "Make It Last is an exhibition in The Art Gallery at the UWF Center for Fine and Performing Arts, curated by a UWF graduate. Six artists share the space, which includes a conversation pit in the gallery alcove and a poetry wall that visitors fill with their own work. Admission is free, and the opening reception on October 8 runs from 5:00 PM to 7:00 PM.",
+      "url": "https://coastaleventures.com/events/ev-uwf-make-it-last-1001.html",
+      "sources": [
+        {
+          "note": "events.uwf.edu: Make It Last, free, weekdays 10 AM to 4 PM from October 1 to November 20 at the Center for Fine and Performing Arts, Building 82, with an opening reception October 8 from 5 to 7 PM",
+          "url": "https://events.uwf.edu/event/make-it-last"
+        },
+        {
+          "note": "events.uwf.edu: opening reception for Make It Last, October 8, 5 to 7 PM, free",
+          "url": "https://events.uwf.edu/event/opening-reception-for-make-it-last"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_nwfl_fair_0929-2026-10-01",
@@ -2091,6 +2121,32 @@
       "checkedOn": "2026-09-16"
     },
     {
+      "id": "ev_srcfa_lawnmower_racing_1003-2026-10-02",
+      "title": "Bahia Grass Invitational Lawnmower Racing and Fish Fry",
+      "date": "2026-10-02",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "when": "Saturday 10/3 · 9:00 AM to 5:00 PM · heats 9 AM to 11 AM and 2 PM until dark",
+      "venue": "Santa Rosa County Fairgrounds",
+      "address": "8700 Randy Brown Rd, Milton, FL 32583",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "The Santa Rosa County Fair Association hosts its first lawnmower racing day at the county fairgrounds in Milton, with souped up mowers running under Nasgrass rules. Heats run from 9:00 AM to 11:00 AM and again from 2:00 PM until dark, with fried fish dinners for sale between races. Proceeds go to the Milton Rotary Club, Santa Rosa Kids House and the Fair Association, and the Santa Rosa County Extension Service adds lawn care and water quality tips.",
+      "url": "https://coastaleventures.com/events/ev-srcfa-lawnmower-racing-1003.html",
+      "sources": [
+        {
+          "note": "getrelaxing.com Santa Rosa County tourism page: first Bahia Grass Invitational Lawnmower Racing and Fat Boy Fish Fry Contest, Saturday October 3, 9 AM to 5 PM, heats 9 to 11 AM and again from 2 PM until dark, hosted by the Santa Rosa County Fair Association",
+          "url": "https://www.getrelaxing.com/event/bahia-grass-invitational-lawnmower-racing-fat-boy-fish-fry-contest/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
       "id": "ev_ballet_frank-2026-10-02",
       "title": "Ballet Pensacola: Frankenstein",
       "date": "2026-10-02",
@@ -2245,6 +2301,36 @@
         }
       ],
       "checkedOn": "2026-09-11"
+    },
+    {
+      "id": "ev_hp_tormented_trolley_1003-2026-10-02",
+      "title": "Tormented Trolley Tours",
+      "date": "2026-10-02",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "when": "Saturday 10/3 · 6:30 PM, 7:30 PM and 8:30 PM",
+      "venue": "Historic Pensacola Village",
+      "address": "330 South Jefferson Street, Pensacola, FL 32502",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $15"
+      },
+      "summary": "Historic Pensacola kicks off its haunted season with trolley tours that tell the ghost stories of North Hill after dark. Tours run at 6:30 PM, 7:30 PM and 8:30 PM, and children 3 and older are welcome. Each session is limited to 28 people, and guests stay on the trolley for the whole tour.",
+      "url": "https://coastaleventures.com/events/ev-hp-tormented-trolley-1003.html",
+      "sources": [
+        {
+          "note": "historicpensacola.org Haunted History Happenings page: Tormented Trolley Tours on October 2 and 3 at 6:30, 7:30 and 8:30 p.m., $25 adults and $15 children 3-14, exploring the haunted history of North Hill",
+          "url": "https://historicpensacola.org/plan-your-visit/haunted-history-happenings/"
+        },
+        {
+          "note": "historicpensacola.org calendar of events: trolley tours limited to 28 people each session, trolleys not accessible, tours do not exit the trolley",
+          "url": "https://historicpensacola.org/plan-your-visit/calendar-of-events/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "nl_sandshaker_live-2026-10-02",
@@ -2561,6 +2647,32 @@
         }
       ],
       "checkedOn": "2026-09-26"
+    },
+    {
+      "id": "ev_navarre_sea_turtle_extravaganza_1003-2026-10-02",
+      "title": "Sea Turtle Extravaganza at the Navarre Beach Sea Turtle Center",
+      "date": "2026-10-02",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "when": "Saturday 10/3 · 10:00 AM to 2:00 PM",
+      "venue": "Navarre Beach Sea Turtle Conservation Center",
+      "address": "8740 Gulf Blvd, Navarre Beach, FL 32566",
+      "category": "nature",
+      "categoryLabel": "Nature and outdoors",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "The Navarre Beach Sea Turtle Conservation Center holds a Saturday morning event with crafts, face painting, photo opportunities and educational activities. Ambassador animals come with the National Park Service, Audubon Florida and the Emerald Coast Science Center.",
+      "url": "https://coastaleventures.com/events/ev-navarre-sea-turtle-extravaganza-1003.html",
+      "sources": [
+        {
+          "note": "getrelaxing.com Santa Rosa County tourism page: Sea Turtle Extravaganza, Saturday October 3, 10 AM to 2 PM at 8740 Gulf Blvd., Navarre Beach, with crafts, face painting, photo opportunities, educational activities and ambassador animals",
+          "url": "https://www.getrelaxing.com/event/sea-turtle-extravaganza-3/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_table_tennis_open_play_0902-2026-10-02",
@@ -3229,6 +3341,36 @@
         }
       ],
       "checkedOn": "2026-08-24"
+    },
+    {
+      "id": "ev_usa_football_ulm_1003-2026-10-02",
+      "title": "South Alabama Football vs ULM: Homecoming",
+      "date": "2026-10-02",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "when": "Saturday 10/3 · 6:00 PM",
+      "venue": "Hancock Whitney Stadium",
+      "address": "500 Stadium Drive, Mobile, AL 36688",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "South Alabama hosts ULM at Hancock Whitney Stadium on Homecoming and Family Weekend, a Sun Belt Conference game. Kickoff is at 6:00 PM.",
+      "url": "https://coastaleventures.com/events/ev-usa-football-ulm-1003.html",
+      "sources": [
+        {
+          "note": "usajaguars.com football schedule: ULM on Saturday 10/3 at Hancock Whitney Stadium, Homecoming and Family Weekend, Sun Belt Conference game",
+          "url": "https://usajaguars.com/sports/football/schedule"
+        },
+        {
+          "note": "usajaguars.com parking page: Hancock Whitney Stadium, 500 Stadium Drive, Mobile, AL 36688",
+          "url": "https://usajaguars.com/sports/2023/3/22/parking.aspx"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_jeri_with_raul_sanchez_book_cellar_music_1002-2026-10-02",
@@ -8047,6 +8189,32 @@
       "checkedOn": "2026-08-08"
     },
     {
+      "id": "ev_uwf_runge_strings_1006-2026-10-06",
+      "title": "UWF Runge Strings in Concert",
+      "date": "2026-10-06",
+      "endDate": null,
+      "startTime": "19:30",
+      "endTime": null,
+      "when": "Tuesday 10/6 · 7:30 PM",
+      "venue": "Rolfs Music Hall, UWF Center for Fine and Performing Arts, Building 82",
+      "address": "11000 University Parkway, Pensacola, FL 32514",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "The UWF Dr. Grier Williams School of Music presents the Runge Strings in concert in Rolfs Music Hall on the UWF Pensacola campus. Admission is free.",
+      "url": "https://coastaleventures.com/events/ev-uwf-runge-strings-1006.html",
+      "sources": [
+        {
+          "note": "events.uwf.edu: Runge Strings in concert Tuesday October 6 at 7:30 PM in Rolfs Music Hall, free",
+          "url": "https://events.uwf.edu/event/runge-strings-2026-10-06"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
       "id": "ev_seville_karaoke-2026-10-06",
       "title": "Karaoke at Lili Marlene's: Every Night",
       "date": "2026-10-06",
@@ -8965,6 +9133,32 @@
         }
       ],
       "checkedOn": "2026-08-22"
+    },
+    {
+      "id": "ev_uwf_chamber_music_old_christ_1007-2026-10-07",
+      "title": "UWF Chamber Music Concert at Old Christ Church",
+      "date": "2026-10-07",
+      "endDate": null,
+      "startTime": "12:00",
+      "endTime": "13:30",
+      "when": "Wednesday 10/7 · 12:00 PM to 1:30 PM",
+      "venue": "Old Christ Church",
+      "address": "405 South Adams Street, Pensacola, FL 32502",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "The UWF Chamber Music Concert Series opens its 21st season at Old Christ Church in downtown Pensacola. Members of the UWF Chamber Music Class perform pieces written for piano, strings, flute, clarinet, harpsichord, cello and castanet. The program includes arias, vocal duets and musical theater favorites with music by Bach, Purcell, Handel, Mozart, Chopin, Lalo, Ravel and Schubert. Admission is free and the concert runs at lunchtime.",
+      "url": "https://coastaleventures.com/events/ev-uwf-chamber-music-old-christ-1007.html",
+      "sources": [
+        {
+          "note": "events.uwf.edu: Chamber Music Concert at Old Christ Church, October 7, noon to 1:30 PM, free, 21st season opener",
+          "url": "https://events.uwf.edu/event/chamber-music-concert"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_acrylic_and_watercolor_painting_0909-2026-10-07",
@@ -10883,6 +11077,32 @@
       "checkedOn": "2026-08-22"
     },
     {
+      "id": "ev_uwf_singers_1008-2026-10-08",
+      "title": "UWF Singers Concert with Two Troy University Choirs",
+      "date": "2026-10-08",
+      "endDate": null,
+      "startTime": "19:30",
+      "endTime": null,
+      "when": "Thursday 10/8 · 7:30 PM",
+      "venue": "Rolfs Music Hall, UWF Center for Fine and Performing Arts, Building 82",
+      "address": "11000 University Parkway, Pensacola, FL 32514",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "The UWF Singers perform in Rolfs Music Hall at the Center for Fine and Performing Arts. The concert includes two choirs from Troy University alongside the UWF Concert Choir. Admission is free.",
+      "url": "https://coastaleventures.com/events/ev-uwf-singers-1008.html",
+      "sources": [
+        {
+          "note": "events.uwf.edu: UWF Singers concert Thursday October 8 at 7:30 PM in Rolfs Music Hall with two choirs from Troy University, free",
+          "url": "https://events.uwf.edu/event/uwf-singers-concert"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
       "id": "nl_seville_collegenight-2026-10-08",
       "title": "College Night: Seville Quarter (18+)",
       "date": "2026-10-08",
@@ -11093,6 +11313,32 @@
         }
       ],
       "checkedOn": "2026-09-26"
+    },
+    {
+      "id": "ev_hp_haunted_walking_1009-2026-10-09",
+      "title": "Haunted History Walking Tours",
+      "date": "2026-10-09",
+      "endDate": "2026-10-24",
+      "startTime": null,
+      "endTime": null,
+      "when": "Fri 10/9, Sat 10/10, Fri 10/23 and Sat 10/24 · 6:30 PM, 7:30 PM and 8:30 PM",
+      "venue": "Historic Pensacola Village",
+      "address": "330 South Jefferson Street, Pensacola, FL 32502",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $15"
+      },
+      "summary": "Historic Pensacola runs two after-dark walking tours on four nights in October. The Haunted Village tour visits the Dorr House, Old Christ Church and the Lear/Rocheblave House, and Macabre Museum Mysteries goes through the Arbona Building and the Museum of History. Children 3 and older are welcome.",
+      "url": "https://coastaleventures.com/events/ev-hp-haunted-walking-1009.html",
+      "sources": [
+        {
+          "note": "historicpensacola.org Haunted History Happenings page: haunted history walking tours October 9, 10, 23 and 24 at 6:30, 7:30 and 8:30 p.m., $20 adults and $15 children 3-14, two routes",
+          "url": "https://historicpensacola.org/plan-your-visit/haunted-history-happenings/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "nl_fubar_nights-2026-10-09",
@@ -12095,6 +12341,36 @@
       "checkedOn": "2026-09-26"
     },
     {
+      "id": "ev_hadji_haunted_house_1009-2026-10-09",
+      "title": "Hadji Haunted House",
+      "date": "2026-10-09",
+      "endDate": "2026-10-31",
+      "startTime": "19:00",
+      "endTime": "22:30",
+      "when": "Fri and Sat 10/9 to 10/31 · 7:00 PM to 10:30 PM",
+      "venue": "Hadji Shrine Temple",
+      "address": "800 W 9 Mile Road, Pensacola, FL 32534",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $25"
+      },
+      "summary": "The Hadji Shriners fill their temple on West 9 Mile Road with more than 40 haunted rooms each Friday and Saturday night in October. A 3D funhouse is open from 6:00 PM for guests who want something gentler, and one afternoon on October 25 is set aside as a kid friendly haunted house. Tickets are $25 and general admission doors open at 7:00 PM.",
+      "url": "https://coastaleventures.com/events/ev-hadji-haunted-house-1009.html",
+      "sources": [
+        {
+          "note": "hadjishriners.org event page: Hadji Haunted House October 9 to 31, 2026, price $25, 800 W 9 Mile Road, Pensacola FL 32534, phone 850-476-9384",
+          "url": "https://www.hadjishriners.org/event/hadji-haunted-house/"
+        },
+        {
+          "note": "hadjihauntedhouse.com: over 40 rooms of terror on October 9, 10, 16, 17, 23, 24, 30 and 31, with a kid friendly 3D funhouse and one kid friendly haunted house night on 10/25",
+          "url": "https://hadjihauntedhouse.com/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
       "id": "ev_tbs_pensacola_pokemon_league-2026-10-09",
       "title": "Pokémon League at TBS Comics Pensacola",
       "date": "2026-10-09",
@@ -12123,6 +12399,32 @@
         }
       ],
       "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "ev_owa_private_eyes_1009-2026-10-09",
+      "title": "Private Eyes: A Hall and Oates Tribute at OWA Theater",
+      "date": "2026-10-09",
+      "endDate": null,
+      "startTime": "19:30",
+      "endTime": null,
+      "when": "Friday 10/9 · 7:30 PM",
+      "venue": "OWA Theater",
+      "address": "205-A N. OWA Blvd, Foley, AL 36535",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Private Eyes, a Los Angeles tribute band formed in 2018, plays the songs of Daryl Hall and John Oates at the OWA Theater in Foley. OWA describes a six to seven piece band with vocal harmonies and a saxophone.",
+      "url": "https://coastaleventures.com/events/ev-owa-private-eyes-1009.html",
+      "sources": [
+        {
+          "note": "owa visit page: Private Eyes Hall and Oates tribute at OWA Theater on October 9 at 7:30 PM, tickets through OvationTix",
+          "url": "https://visitowa.com/private-eyes-the-premier-hall-oates-tribute/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_seville_karaoke-2026-10-09",
@@ -12425,6 +12727,36 @@
         }
       ],
       "checkedOn": null
+    },
+    {
+      "id": "ev_holland_pilates_pumpkins_1010-2026-10-10",
+      "title": "Pilates and Pumpkins at Holland Farms",
+      "date": "2026-10-10",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "when": "Saturday 10/10 · 6:00 AM to 8:00 AM · pilates 6 AM to 7 AM · pumpkin painting 7 AM to 8 AM",
+      "venue": "Holland Farms",
+      "address": "2055 Homer Holland Rd, Milton, FL 32570",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $5"
+      },
+      "summary": "Holland Farms starts a Saturday with an hour of pilates at 6:00 AM followed by an hour of pumpkin painting at 7:00 AM. The class costs $20, and the pumpkin painting add-on is $5 and includes one pumpkin. Bring a yoga mat, grip socks, water and a towel.",
+      "url": "https://coastaleventures.com/events/ev-holland-pilates-pumpkins-1010.html",
+      "sources": [
+        {
+          "note": "hollandfarms.ticketspice.com: Pilates and Pumpkins, October 10, 6 to 8 AM, pilates class $20, pumpkin painting add-on $5, all sales final",
+          "url": "https://hollandfarms.ticketspice.com/pilates-pumpkins"
+        },
+        {
+          "note": "getrelaxing.com Santa Rosa County tourism page: Pilates and Pumpkins at Holland Farms, 2055 Homer Holland Rd., Milton, October 10",
+          "url": "https://www.getrelaxing.com/event/pilates-pumpkins/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_repticon_fort_walton_beach_october_2026_1010-2026-10-10",
@@ -14193,6 +14525,32 @@
       "checkedOn": "2026-08-22"
     },
     {
+      "id": "ev_uwf_symphonic_band_gulf_breeze_1011-2026-10-11",
+      "title": "UWF Symphonic Band Concert in Gulf Breeze",
+      "date": "2026-10-11",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "when": "Sunday 10/11 · 2:00 PM",
+      "venue": "Gulf Breeze United Methodist Church",
+      "address": "75 Fairpoint Drive, Gulf Breeze, FL 32561",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "The UWF Symphonic Band plays an afternoon concert at Gulf Breeze United Methodist Church. The band is made up of students from every major on campus and performs both traditional and contemporary wind band music. Admission is free.",
+      "url": "https://coastaleventures.com/events/ev-uwf-symphonic-band-gulf-breeze-1011.html",
+      "sources": [
+        {
+          "note": "events.uwf.edu: Symphonic Band Concert Sunday October 11 at 2 PM at Gulf Breeze United Methodist Church, 75 Fairpoint Drive, free",
+          "url": "https://events.uwf.edu/event/symphonic-band-concert"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
       "id": "ev_coastalmakers_witch_planter_1011-2026-10-11",
       "title": "Wickedly Creative Witch Planter Workshop",
       "date": "2026-10-11",
@@ -15185,6 +15543,32 @@
         }
       ],
       "checkedOn": "2026-08-08"
+    },
+    {
+      "id": "ev_uwf_artist_series_flute_1012-2026-10-12",
+      "title": "Music Hall Artist Series: Cheryl Star, Flute",
+      "date": "2026-10-12",
+      "endDate": null,
+      "startTime": "19:30",
+      "endTime": null,
+      "when": "Monday 10/12 · 7:30 PM",
+      "venue": "Rolfs Music Hall, UWF Center for Fine and Performing Arts, Building 82",
+      "address": "11000 University Parkway, Pensacola, FL 32514",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "The UWF Dr. Grier Williams School of Music presents flutist Cheryl Star in the Music Hall Artist Series. The recital is in Rolfs Music Hall on the UWF Pensacola campus. Tickets are sold through the UWF ticket office.",
+      "url": "https://coastaleventures.com/events/ev-uwf-artist-series-flute-1012.html",
+      "sources": [
+        {
+          "note": "events.uwf.edu: Music Hall Artist Series with flutist Cheryl Star, Monday October 12 at 7:30 PM in Rolfs Music Hall, ticket link for pricing",
+          "url": "https://events.uwf.edu/event/music-hall-artist-series-cheryl-star-flute"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_seville_barbingo-2026-10-12",
@@ -18961,6 +19345,32 @@
       "checkedOn": "2026-08-24"
     },
     {
+      "id": "ev_uwf_inauguration_street_party_1015-2026-10-15",
+      "title": "UWF Community Street Party at Museum Plaza",
+      "date": "2026-10-15",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": "19:00",
+      "when": "Thursday 10/15 · 5:00 PM to 7:00 PM",
+      "venue": "Museum Plaza, UWF Historic Trust",
+      "address": "300 South Tarragona Street, Pensacola, FL 32502",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "UWF kicks off its presidential inauguration celebration with a festival-style street party at the Historic Trust Museum Plaza in downtown Pensacola. Expect food trucks, carnival-style games and a live DJ. It is open to the public.",
+      "url": "https://coastaleventures.com/events/ev-uwf-inauguration-street-party-1015.html",
+      "sources": [
+        {
+          "note": "events.uwf.edu: Presidential Inauguration Celebration Community Street Party, Thursday October 15, 5 to 7 PM at the UWF Historic Trust Museum Plaza, 300 South Tarragona Street, with food trucks, carnival-style games and a live DJ",
+          "url": "https://events.uwf.edu/event/presidential-inauguration-celebration-community-street-party"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
       "id": "ev_fundamentals_of_wine_fall_2026_0910-2026-10-15",
       "title": "Fundamentals of Wine Fall 2026",
       "date": "2026-10-15",
@@ -20315,6 +20725,32 @@
       "checkedOn": "2026-09-26"
     },
     {
+      "id": "ev_owa_jt_carole_king_tribute_1016-2026-10-16",
+      "title": "James Taylor and Carole King Tribute at OWA Theater",
+      "date": "2026-10-16",
+      "endDate": null,
+      "startTime": "19:30",
+      "endTime": null,
+      "when": "Friday 10/16 · 7:30 PM",
+      "venue": "OWA Theater",
+      "address": "205-A N. OWA Blvd, Foley, AL 36535",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "A live tribute to James Taylor and Carole King plays the OWA Theater in Foley, with classics such as You've Got a Friend, Fire and Rain and I Feel the Earth Move. OWA says the music suits audiences of all ages.",
+      "url": "https://coastaleventures.com/events/ev-owa-jt-carole-king-tribute-1016.html",
+      "sources": [
+        {
+          "note": "owa visit page: James Taylor and Carole King Tribute at OWA Theater, Friday October 16 at 7:30 PM, tickets through OvationTix",
+          "url": "https://visitowa.com/james-taylor-carole-king-tribute/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
       "id": "ev_karaokelegion_1016-2026-10-16",
       "title": "Karaoke Night at American Legion Post 378",
       "date": "2026-10-16",
@@ -20563,36 +20999,6 @@
         }
       ],
       "checkedOn": "2026-08-24"
-    },
-    {
-      "id": "ev_pensacola_ice_flyers_2026_27_home_season_ope_1017-2026-10-17",
-      "title": "Pensacola Ice Flyers: 2026-27 Home Season Opening Date",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Saturday 10/17 · time not published",
-      "venue": "Pensacola Bay Center",
-      "address": "201 E. Gregory St., Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The Pensacola Bay Center opens the Ice Flyers' 2026-27 home season on October 17, with home games running through April 2, 2027. Fans of all ages are welcome, and the Bay Center's current listing does not publish a puck drop time for opening night.",
-      "url": "https://coastaleventures.com/events/ev-pensacola-ice-flyers-2026-27-home-season-ope-1017.html",
-      "sources": [
-        {
-          "note": "pensacolabaycenter.com: the organizer's own page, read for the admission and current schedule",
-          "url": "https://www.pensacolabaycenter.com/events"
-        },
-        {
-          "note": "pensacolabaycenter.com: the current schedule",
-          "url": "https://www.pensacolabaycenter.com/"
-        }
-      ],
-      "checkedOn": "2026-09-26"
     },
     {
       "id": "ev_navarre_pinkpirates5k_1017-2026-10-17",
@@ -21705,6 +22111,40 @@
       "checkedOn": "2026-08-08"
     },
     {
+      "id": "ev_pensacola_ice_flyers_2026_27_home_season_ope_1017-2026-10-17",
+      "title": "Pensacola Ice Flyers: 2026-27 Home Season Opening Date",
+      "date": "2026-10-17",
+      "endDate": null,
+      "startTime": "19:05",
+      "endTime": null,
+      "when": "Saturday 10/17 · 7:05 PM",
+      "venue": "Pensacola Bay Center",
+      "address": "201 E. Gregory St., Pensacola, FL 32502",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "The Pensacola Bay Center opens the Ice Flyers' 2026-27 home season on October 17, with home games running through April 2, 2027. Opening Night is against the Macon Mayhem, with the puck dropping at 7:05 PM. Fans of all ages are welcome.",
+      "url": "https://coastaleventures.com/events/ev-pensacola-ice-flyers-2026-27-home-season-ope-1017.html",
+      "sources": [
+        {
+          "note": "pensacolabaycenter.com: the organizer's own page, read for the admission and current schedule",
+          "url": "https://www.pensacolabaycenter.com/events"
+        },
+        {
+          "note": "pensacolabaycenter.com: the current schedule",
+          "url": "https://www.pensacolabaycenter.com/"
+        },
+        {
+          "note": "iceflyers.com theme nights, read 10/02/2026: \"Saturday, October 17 at 7:05 PM, Opening Night versus Macon Mayhem\"",
+          "url": "https://iceflyers.com/theme-nights/"
+        }
+      ],
+      "checkedOn": "2026-09-26"
+    },
+    {
       "id": "ev_destin_wizardofoz_1017-2026-10-17",
       "title": "Film in Concert: The Wizard of Oz",
       "date": "2026-10-17",
@@ -21917,6 +22357,36 @@
       "checkedOn": "2026-08-08"
     },
     {
+      "id": "ev_uwf_womens_soccer_queens_1018-2026-10-18",
+      "title": "UWF Women's Soccer vs Queens: Senior Day",
+      "date": "2026-10-18",
+      "endDate": null,
+      "startTime": "12:00",
+      "endTime": null,
+      "when": "Sunday 10/18 · 12:00 PM",
+      "venue": "UWF Soccer Complex",
+      "address": "11000 University Parkway, Pensacola, FL 32514",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $3"
+      },
+      "summary": "UWF women's soccer hosts Queens University of Charlotte at the UWF Soccer Complex on Senior Day. General admission is $5, with a $3 rate for seniors, military and visiting students. UWF students, faculty and staff and children under 6 get in free.",
+      "url": "https://coastaleventures.com/events/ev-uwf-womens-soccer-queens-1018.html",
+      "sources": [
+        {
+          "note": "goargos.com women's soccer schedule: Queens University of Charlotte on Sunday 10/18 · 12:00 PM at UWF Soccer Complex, Senior Day",
+          "url": "https://goargos.com/sports/womens-soccer/schedule"
+        },
+        {
+          "note": "goargos.com admission page: $5 general admission, $3 seniors, military and visiting students, free for UWF students, faculty, staff, children under 6 and youth in team uniform, game day cash only",
+          "url": "https://goargos.com/sports/2014/12/9/GEN_1209141045.aspx?id=87"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
       "id": "ev_brunch_and_rally_0823-2026-10-18",
       "title": "Brunch & Rally",
       "date": "2026-10-18",
@@ -21941,6 +22411,36 @@
         }
       ],
       "checkedOn": "2026-08-22"
+    },
+    {
+      "id": "ev_uwf_volleyball_lipscomb_1018-2026-10-18",
+      "title": "UWF Women's Volleyball vs Lipscomb: Volley Back to the 70s",
+      "date": "2026-10-18",
+      "endDate": null,
+      "startTime": "13:00",
+      "endTime": null,
+      "when": "Sunday 10/18 · 1:00 PM",
+      "venue": "UWF Field House, Building 54",
+      "address": "11000 University Parkway, Pensacola, FL 32514",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $3"
+      },
+      "summary": "UWF women's volleyball hosts Lipscomb at the UWF Field House for Volley Back to the 70s. General admission is $5, with a $3 rate for seniors, military and visiting students. UWF students, faculty and staff and children under 6 get in free.",
+      "url": "https://coastaleventures.com/events/ev-uwf-volleyball-lipscomb-1018.html",
+      "sources": [
+        {
+          "note": "goargos.com women's volleyball schedule: Lipscomb on Sunday 10/18 · 1:00 PM at UWF Field House, Building 54, Volley Back to the 70s",
+          "url": "https://goargos.com/sports/womens-volleyball/schedule"
+        },
+        {
+          "note": "goargos.com admission page: $5 general admission, $3 seniors, military and visiting students, free for UWF students, faculty, staff, children under 6 and youth in team uniform, game day cash only",
+          "url": "https://goargos.com/sports/2014/12/9/GEN_1209141045.aspx?id=87"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_perfectplain_poursencores-2026-10-18",
@@ -21971,6 +22471,32 @@
         }
       ],
       "checkedOn": "2026-08-24"
+    },
+    {
+      "id": "ev_uwf_kamerman_piano_1018-2026-10-18",
+      "title": "Kamerman Piano Series: Zehao Bai",
+      "date": "2026-10-18",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "when": "Sunday 10/18 · 3:00 PM",
+      "venue": "Rolfs Music Hall, UWF Center for Fine and Performing Arts, Building 82",
+      "address": "11000 University Parkway, Pensacola, FL 32514",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Pianist Zehao Bai plays the Kamerman Piano Series at Rolfs Music Hall on the UWF campus. He is a soloist, collaborator and educator who performed and taught in the United States, Europe and Asia in 2025.",
+      "url": "https://coastaleventures.com/events/ev-uwf-kamerman-piano-1018.html",
+      "sources": [
+        {
+          "note": "events.uwf.edu: Kamerman Piano Series presents Zehao Bai, Sunday October 18 at 3 PM, Building 82, ticket link for pricing",
+          "url": "https://events.uwf.edu/event/kamerman-piano-series-presents-zehao-bai"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_daphne_sunday_sunset_concert_1018-2026-10-18",
@@ -22647,6 +23173,32 @@
       "checkedOn": "2026-09-16"
     },
     {
+      "id": "ev_owa_devon_gilfillian_1019-2026-10-19",
+      "title": "Devon Gilfillian: Time Will Tell Tour at OWA Theater",
+      "date": "2026-10-19",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "when": "Monday 10/19 · 7:00 PM",
+      "venue": "OWA Theater",
+      "address": "205-A N. OWA Blvd, Foley, AL 36535",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Nashville soul and blues singer Devon Gilfillian brings the Time Will Tell Tour to the OWA Theater in Foley, with Jon Muq opening. OWA's page encourages guests to arrive early for drinks and concessions.",
+      "url": "https://coastaleventures.com/events/ev-owa-devon-gilfillian-1019.html",
+      "sources": [
+        {
+          "note": "owa visit page: Devon Gilfillian Time Will Tell Tour at OWA Theater on October 19 at 7:00 PM with Jon Muq opening, tickets through OvationTix",
+          "url": "https://visitowa.com/devon-gilfillian-time-will-tell-tour/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
       "id": "ev_seville_mondayblues-2026-10-19",
       "title": "Monday Night Blues: Lili Marlene's",
       "date": "2026-10-19",
@@ -22723,6 +23275,32 @@
         }
       ],
       "checkedOn": "2026-08-08"
+    },
+    {
+      "id": "ev_sonic_live_concert_1020-2026-10-20",
+      "title": "Sonic Live in Concert at the Saenger Theatre",
+      "date": "2026-10-20",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "when": "Tuesday 10/20 · 7:30 PM (doors 6:30 PM)",
+      "venue": "Saenger Theatre, Mobile",
+      "address": "6 South Joachim St., Mobile, AL 36602",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "A live ensemble with a rock band, electronics and vocalists performs music from the Sonic the Hedgehog games alongside iconic moments from the games, as part of a 35th anniversary celebration. The show is at the Saenger Theatre in downtown Mobile.",
+      "url": "https://coastaleventures.com/events/ev-sonic-live-concert-1020.html",
+      "sources": [
+        {
+          "note": "regionsarena.com event page: Sonic Live in Concert, October 20, 2026, 7:30 PM, doors 6:30 PM, Saenger Theatre, 6 South Joachim St., Mobile, with a live ensemble in a 35th anniversary celebration",
+          "url": "https://www.regionsarena.com/events/detail/sonic-live-in-concert"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_teen_dungeons_and_dragons_at_moorer_0905-2026-10-20",
@@ -24429,6 +25007,32 @@
       "checkedOn": "2026-08-22"
     },
     {
+      "id": "ev_hp_table_talks_creek_war_1021-2026-10-21",
+      "title": "Table Talks at the Trust: The Creek War of 1813 and 1814",
+      "date": "2026-10-21",
+      "endDate": null,
+      "startTime": "12:00",
+      "endTime": "13:00",
+      "when": "Wednesday 10/21 · 12:00 PM to 1:00 PM",
+      "venue": "Voices of Pensacola Multicultural Center",
+      "address": "117 E. Government Street, Pensacola, FL 32502",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "Historic Pensacola's monthly lunch and learn series meets on the third Wednesday of the month at the Voices of Pensacola Multicultural Center. The October 21 talk covers the Creek War of 1813 and 1814 and is given by the UWF Historic Trust's living history coordinator. The program is free, and guests bring their own lunch.",
+      "url": "https://coastaleventures.com/events/ev-hp-table-talks-creek-war-1021.html",
+      "sources": [
+        {
+          "note": "historicpensacola.org calendar of events: Table Talks at the Trust, third Wednesday of each month, 12 to 1 PM at the Voices of Pensacola Multicultural Center, 117 E. Government Street, free, October 21 topic the Creek War of 1813 and 1814",
+          "url": "https://historicpensacola.org/plan-your-visit/calendar-of-events/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
       "id": "ev_acrylic_and_watercolor_painting_0909-2026-10-21",
       "title": "Acrylic & Watercolor Painting",
       "date": "2026-10-21",
@@ -26013,6 +26617,36 @@
       "checkedOn": "2026-09-26"
     },
     {
+      "id": "ev_fair_lip_sync_battle_1022-2026-10-22",
+      "title": "Cat Country 98.7 BIG Lip Sync Battle at the Pensacola Interstate Fair",
+      "date": "2026-10-22",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "when": "Thursday 10/22 · 7:00 PM",
+      "venue": "Pensacola Interstate Fairgrounds, Pepsi Open-Air Stage",
+      "address": "6655 W. Mobile Hwy, Pensacola, FL 32526",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "priced",
+        "label": "from $3.87"
+      },
+      "summary": "The Cat Country 98.7 BIG Lip Sync Battle opens the entertainment lineup on the Pepsi Open-Air Stage on the fair's first night. The show is included with fair admission. Seating is first come, first served, so arrive when the gates open.",
+      "url": "https://coastaleventures.com/events/ev-fair-lip-sync-battle-1022.html",
+      "sources": [
+        {
+          "note": "pensacolafair.com entertainment lineup: Cat Country 98.7 BIG Lip Sync Battle on Thursday 10/22 at 7:00 PM on the Pepsi Open-Air Stage, all shows free with admission to the fair",
+          "url": "https://pensacolafair.com/entertainment-lineup/"
+        },
+        {
+          "note": "pensacolafair.com home page: Super Saver advance tickets, adult $8.28 and child $3.87, fair October 22 to November 1",
+          "url": "https://pensacolafair.com/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
       "id": "nl_seville_collegenight-2026-10-22",
       "title": "College Night: Seville Quarter (18+)",
       "date": "2026-10-22",
@@ -26885,6 +27519,36 @@
       "checkedOn": "2026-09-29"
     },
     {
+      "id": "ev_fair_band_perry_1023-2026-10-23",
+      "title": "The Band Perry at the Pensacola Interstate Fair",
+      "date": "2026-10-23",
+      "endDate": null,
+      "startTime": "19:30",
+      "endTime": null,
+      "when": "Friday 10/23 · 7:30 PM",
+      "venue": "Pensacola Interstate Fairgrounds, Pepsi Open-Air Stage",
+      "address": "6655 W. Mobile Hwy, Pensacola, FL 32526",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "priced",
+        "label": "from $3.87"
+      },
+      "summary": "The Band Perry plays the Pepsi Open-Air Stage at the Pensacola Interstate Fair on opening weekend. The concert costs nothing beyond fair admission. Seating is first come, first served, so anyone who wants a close spot should arrive when the gates open.",
+      "url": "https://coastaleventures.com/events/ev-fair-band-perry-1023.html",
+      "sources": [
+        {
+          "note": "pensacolafair.com entertainment lineup: The Band Perry on Friday 10/23 at 7:30 PM on the Pepsi Open-Air Stage, all shows free with admission to the fair",
+          "url": "https://pensacolafair.com/entertainment-lineup/"
+        },
+        {
+          "note": "pensacolafair.com home page: Super Saver advance tickets, adult $8.28 and child $3.87, fair October 22 to November 1",
+          "url": "https://pensacolafair.com/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
       "id": "ev_seville_karaoke-2026-10-23",
       "title": "Karaoke at Lili Marlene's: Every Night",
       "date": "2026-10-23",
@@ -26999,6 +27663,36 @@
         }
       ],
       "checkedOn": "2026-09-06"
+    },
+    {
+      "id": "ev_next_stop_comedy_prost_1024-2026-10-24",
+      "title": "Next Stop Comedy at The Prost Office Brewery",
+      "date": "2026-10-24",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "when": "Saturday 10/24 · 7:30 PM seating · show 8:00 PM",
+      "venue": "The Prost Office Brewery",
+      "address": "6821 Caroline St, Milton, FL 32570",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $27"
+      },
+      "summary": "Next Stop Comedy brings a touring stand up lineup to The Prost Office Brewery in downtown Milton. Dan Bakst headlines, and the company brings a new lineup to every show. Seating opens at 7:30 PM and the show starts at 8:00 PM.",
+      "url": "https://coastaleventures.com/events/ev-next-stop-comedy-prost-1024.html",
+      "sources": [
+        {
+          "note": "nextstopcomedy.com event page: The Prost Office Brewery, Saturday October 24, 2026, seating 7:30 PM, show 8:00 PM, general admission $27 with fees included, Milton FL",
+          "url": "https://www.nextstopcomedy.com/events/the-prost-office-brewery-2026-10-24"
+        },
+        {
+          "note": "prostofficebrewery.com home page: 6821 Caroline St Milton, FL, phone 850-904-2838",
+          "url": "https://www.prostofficebrewery.com/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_rednotchili_vinyl-2026-10-24",
@@ -27807,6 +28501,40 @@
       "checkedOn": "2026-09-24"
     },
     {
+      "id": "ev_act4_monster_bash_vine_1024-2026-10-24",
+      "title": "Murder at the Monster Bash Dinner Theater at The Vine",
+      "date": "2026-10-24",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "when": "Saturday 10/24 · 6:00 PM",
+      "venue": "The Vine Wine Bar, Bistro and Shoppe",
+      "address": "8211 Navarre Parkway, Navarre, FL 32566",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $52"
+      },
+      "summary": "Act4Mystery performs a three course dinner theater comedy called Murder at the Monster Bash at The Vine Wine Bar in Navarre. A costume party thrown to raise money for the Gulfarium's wildlife rescue turns up something buried under the restaurant, and the coffin in the corner turns out to be more than decoration. Diners choose an entree, and the ticket price includes tax and tip.",
+      "url": "https://coastaleventures.com/events/ev-act4-monster-bash-vine-1024.html",
+      "sources": [
+        {
+          "note": "getrelaxing.com Santa Rosa County tourism page: Murder at the Monster Bash by Act4Mystery at The Vine Wine Bar, 8211 Navarre Pkwy, Saturday October 24 at 6 PM, $52 includes dinner, show, tax and tip",
+          "url": "https://www.getrelaxing.com/event/murder-at-the-monster-bash/"
+        },
+        {
+          "note": "act4mystery.com reservations page: non-refundable $5 per person deposit credited back on the final bill, VIP packages available, phone 850-862-2885",
+          "url": "https://www.act4mystery.com/Reservations_Act4Mystery.html"
+        },
+        {
+          "note": "thevinewinebarnavarre.com contact page: 8211 Navarre Parkway, Navarre, Florida 32566",
+          "url": "https://www.thevinewinebarnavarre.com/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
       "id": "ev_brandonstyles_variety-2026-10-24",
       "title": "The Brandon Styles Variety Show",
       "date": "2026-10-24",
@@ -27833,6 +28561,70 @@
       "checkedOn": "2026-08-08"
     },
     {
+      "id": "ev_uwf_mens_soccer_jacksonville_1024-2026-10-24",
+      "title": "UWF Men's Soccer vs Jacksonville",
+      "date": "2026-10-24",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "when": "Saturday 10/24 · 7:00 PM",
+      "venue": "UWF Soccer Complex",
+      "address": "11000 University Parkway, Pensacola, FL 32514",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $3"
+      },
+      "summary": "UWF men's soccer hosts Jacksonville on a Saturday night at the UWF Soccer Complex. General admission is $5, with a $3 rate for seniors, military and visiting students. UWF students, faculty and staff and children under 6 get in free.",
+      "url": "https://coastaleventures.com/events/ev-uwf-mens-soccer-jacksonville-1024.html",
+      "sources": [
+        {
+          "note": "goargos.com men's soccer schedule: Jacksonville on Saturday 10/24 · 7:00 PM at UWF Soccer Complex, Saturday night match",
+          "url": "https://goargos.com/sports/mens-soccer/schedule"
+        },
+        {
+          "note": "goargos.com admission page: $5 general admission, $3 seniors, military and visiting students, free for UWF students, faculty, staff, children under 6 and youth in team uniform, game day cash only",
+          "url": "https://goargos.com/sports/2014/12/9/GEN_1209141045.aspx?id=87"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "id": "ev_ice_flyers_small_dog_1024-2026-10-24",
+      "title": "Ice Flyers Small Dog Race Night vs Huntsville",
+      "date": "2026-10-24",
+      "endDate": null,
+      "startTime": "19:05",
+      "endTime": null,
+      "when": "Saturday 10/24 · 7:05 PM",
+      "venue": "Pensacola Bay Center",
+      "address": "201 E Gregory St, Pensacola, FL 32502",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "The Pensacola Ice Flyers host the Huntsville Havoc on Small Dog Race Night at the Pensacola Bay Center. Owners can register a small dog for the race on the team's site. Puck drop is at 7:05 PM.",
+      "url": "https://coastaleventures.com/events/ev-ice-flyers-small-dog-1024.html",
+      "sources": [
+        {
+          "note": "iceflyers.com 2026-27 theme nights: Small Dog Race Night Saturday 10/24 at 7:05 PM against the Huntsville Havoc",
+          "url": "https://iceflyers.com/theme-nights/"
+        },
+        {
+          "note": "iceflyers.com single game tickets: Ticketmaster or the Bay Center box office, no ticket for children 2 and under, children 3 to 12 get 25 percent off at the box office",
+          "url": "https://iceflyers.com/tickets/single-game-tickets/"
+        },
+        {
+          "note": "iceflyers.com military tickets: $2 off at the box office for active, retired and veteran service members and their entire party",
+          "url": "https://iceflyers.com/military-tickets/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
       "id": "ev_dracula_mobile_ballet-2026-10-24",
       "title": "Dracula: Mobile Ballet",
       "date": "2026-10-24",
@@ -27857,6 +28649,36 @@
         }
       ],
       "checkedOn": "2026-09-26"
+    },
+    {
+      "id": "ev_fair_hunter_hayes_1024-2026-10-24",
+      "title": "Hunter Hayes at the Pensacola Interstate Fair",
+      "date": "2026-10-24",
+      "endDate": null,
+      "startTime": "19:30",
+      "endTime": null,
+      "when": "Saturday 10/24 · 7:30 PM",
+      "venue": "Pensacola Interstate Fairgrounds, Pepsi Open-Air Stage",
+      "address": "6655 W. Mobile Hwy, Pensacola, FL 32526",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "priced",
+        "label": "from $3.87"
+      },
+      "summary": "Hunter Hayes headlines the Pepsi Open-Air Stage on the fair's first Saturday night. The show is included with fair admission. There are no reserved seats, so the front rows go to whoever arrives first.",
+      "url": "https://coastaleventures.com/events/ev-fair-hunter-hayes-1024.html",
+      "sources": [
+        {
+          "note": "pensacolafair.com entertainment lineup: Hunter Hayes on Saturday 10/24 at 7:30 PM on the Pepsi Open-Air Stage, all shows free with admission to the fair",
+          "url": "https://pensacolafair.com/entertainment-lineup/"
+        },
+        {
+          "note": "pensacolafair.com home page: Super Saver advance tickets, adult $8.28 and child $3.87, fair October 22 to November 1",
+          "url": "https://pensacolafair.com/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_seville_karaoke-2026-10-24",
@@ -28073,6 +28895,36 @@
         }
       ],
       "checkedOn": "2026-09-16"
+    },
+    {
+      "id": "ev_fair_temptations_revue_1025-2026-10-25",
+      "title": "Glenn Leonard's Temptations Revue at the Pensacola Interstate Fair",
+      "date": "2026-10-25",
+      "endDate": null,
+      "startTime": "19:30",
+      "endTime": null,
+      "when": "Sunday 10/25 · 7:30 PM",
+      "venue": "Pensacola Interstate Fairgrounds, Pepsi Open-Air Stage",
+      "address": "6655 W. Mobile Hwy, Pensacola, FL 32526",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "priced",
+        "label": "from $3.87"
+      },
+      "summary": "Glenn Leonard's Temptations Revue plays the Pepsi Open-Air Stage on the fair's first Sunday night. The show is included with fair admission. Seating is first come, first served, with no reserved seats.",
+      "url": "https://coastaleventures.com/events/ev-fair-temptations-revue-1025.html",
+      "sources": [
+        {
+          "note": "pensacolafair.com entertainment lineup: Glenn Leonard's Temptations Revue on Sunday 10/25 at 7:30 PM on the Pepsi Open-Air Stage, all shows free with admission to the fair",
+          "url": "https://pensacolafair.com/entertainment-lineup/"
+        },
+        {
+          "note": "pensacolafair.com home page: Super Saver advance tickets, adult $8.28 and child $3.87, fair October 22 to November 1",
+          "url": "https://pensacolafair.com/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_seville_karaoke-2026-10-25",
@@ -28691,6 +29543,36 @@
         }
       ],
       "checkedOn": "2026-08-08"
+    },
+    {
+      "id": "ev_fair_john_foster_1026-2026-10-26",
+      "title": "John Foster at the Pensacola Interstate Fair",
+      "date": "2026-10-26",
+      "endDate": null,
+      "startTime": "19:30",
+      "endTime": null,
+      "when": "Monday 10/26 · 7:30 PM",
+      "venue": "Pensacola Interstate Fairgrounds, Pepsi Open-Air Stage",
+      "address": "6655 W. Mobile Hwy, Pensacola, FL 32526",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "priced",
+        "label": "from $3.87"
+      },
+      "summary": "John Foster plays the Pepsi Open-Air Stage on a Monday night at the Pensacola Interstate Fair. The show is included with fair admission. There are no reserved seats, so plan to arrive early for a spot.",
+      "url": "https://coastaleventures.com/events/ev-fair-john-foster-1026.html",
+      "sources": [
+        {
+          "note": "pensacolafair.com entertainment lineup: John Foster on Monday 10/26 at 7:30 PM on the Pepsi Open-Air Stage, all shows free with admission to the fair",
+          "url": "https://pensacolafair.com/entertainment-lineup/"
+        },
+        {
+          "note": "pensacolafair.com home page: Super Saver advance tickets, adult $8.28 and child $3.87, fair October 22 to November 1",
+          "url": "https://pensacolafair.com/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_saenger_waitress_1026-2026-10-26",
@@ -29679,6 +30561,36 @@
       "checkedOn": "2026-08-08"
     },
     {
+      "id": "ev_fair_monsters_of_rock_1027-2026-10-27",
+      "title": "White Tie Rock Ensemble: Monsters of Rock at the Pensacola Interstate Fair",
+      "date": "2026-10-27",
+      "endDate": null,
+      "startTime": "19:30",
+      "endTime": null,
+      "when": "Tuesday 10/27 · 7:30 PM",
+      "venue": "Pensacola Interstate Fairgrounds, Pepsi Open-Air Stage",
+      "address": "6655 W. Mobile Hwy, Pensacola, FL 32526",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "priced",
+        "label": "from $3.87"
+      },
+      "summary": "The White Tie Rock Ensemble presents Monsters of Rock on the Pepsi Open-Air Stage on a Tuesday night at the fair. The show is included with fair admission. Seating is first come, first served with no reserved seats.",
+      "url": "https://coastaleventures.com/events/ev-fair-monsters-of-rock-1027.html",
+      "sources": [
+        {
+          "note": "pensacolafair.com entertainment lineup: White Tie Rock Ensemble: Monsters of Rock on Tuesday 10/27 at 7:30 PM on the Pepsi Open-Air Stage, all shows free with admission to the fair",
+          "url": "https://pensacolafair.com/entertainment-lineup/"
+        },
+        {
+          "note": "pensacolafair.com home page: Super Saver advance tickets, adult $8.28 and child $3.87, fair October 22 to November 1",
+          "url": "https://pensacolafair.com/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
       "id": "ev_seville_karaoke-2026-10-27",
       "title": "Karaoke at Lili Marlene's: Every Night",
       "date": "2026-10-27",
@@ -29703,6 +30615,32 @@
         }
       ],
       "checkedOn": "2026-08-08"
+    },
+    {
+      "id": "ev_hp_monsters_ball_1028-2026-10-28",
+      "title": "Murder at the Monster's Ball: Dinner Mystery",
+      "date": "2026-10-28",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "when": "Wednesday 10/28 · doors 5:30 PM · show 6:00 PM",
+      "venue": "Historic Pensacola Village, Barkley House",
+      "address": "410 South Florida Blanca Street, Pensacola, FL 32502",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $65"
+      },
+      "summary": "Historic Pensacola turns the Barkley House into a monster party where a famous monster hunter crashes the guest list and the diners have to find the killer. ICMT Murder Mystery Theatre performs the show, and the ticket covers a themed dinner, beer and wine. Guests are invited to dress as a classic monster for a costume contest. The evening supports the UWF Historic Trust and is for guests 21 and older.",
+      "url": "https://coastaleventures.com/events/ev-hp-monsters-ball-1028.html",
+      "sources": [
+        {
+          "note": "historicpensacola.org Haunted History Happenings page: Murder at the Monster's Ball murder mystery dinner on October 28 at 5:30 p.m. at the Barkley House, 410 South Florida Blanca Street, $65 adult 21+ and $60 member, with ICMT Murder Mystery Theatre",
+          "url": "https://historicpensacola.org/plan-your-visit/haunted-history-happenings/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_shape_and_sculpt_fitness_class_0826-2026-10-28",
@@ -30701,6 +31639,32 @@
       "checkedOn": "2026-09-17"
     },
     {
+      "id": "ev_uwf_halloween_hike_1028-2026-10-28",
+      "title": "Halloween Night Hike at the Edward Ball Nature Trail",
+      "date": "2026-10-28",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": "22:00",
+      "when": "Wednesday 10/28 · 7:00 PM to 10:00 PM",
+      "venue": "Edward Ball Nature Trail, behind Crosby Hall, UWF",
+      "address": "11000 University Parkway, Pensacola, FL 32514",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $2"
+      },
+      "summary": "UWF Outdoor Adventures turns the half mile Edward Ball Nature Trail into a haunted night walk, lit by glow sticks, with staff in costume lurking along the path. Walkers get glow sticks and candy, and a costume contest runs from 7:00 PM to 7:15 PM with prize buckets for the top three. Community members are welcome at $10 per group of up to 5 people, and the last entry is at 9:40 PM.",
+      "url": "https://coastaleventures.com/events/ev-uwf-halloween-hike-1028.html",
+      "sources": [
+        {
+          "note": "events.uwf.edu: Halloween Hike, Wednesday October 28, 7 to 10 PM, Edward Ball Nature Trail behind Crosby Hall, Building 10, glow sticks and candy, costume contest 7:00 to 7:15 PM, community members $10 per group of up to 5",
+          "url": "https://events.uwf.edu/event/halloween-hike-event"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
       "id": "nl_seville_nochetropical-2026-10-28",
       "title": "Noche Tropical: Latin night (18+)",
       "date": "2026-10-28",
@@ -30777,6 +31741,66 @@
         }
       ],
       "checkedOn": "2026-08-08"
+    },
+    {
+      "id": "ev_fair_lauren_alaina_1028-2026-10-28",
+      "title": "Lauren Alaina at the Pensacola Interstate Fair",
+      "date": "2026-10-28",
+      "endDate": null,
+      "startTime": "20:30",
+      "endTime": null,
+      "when": "Wednesday 10/28 · 8:30 PM",
+      "venue": "Pensacola Interstate Fairgrounds, Pepsi Open-Air Stage",
+      "address": "6655 W. Mobile Hwy, Pensacola, FL 32526",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "priced",
+        "label": "from $3.87"
+      },
+      "summary": "Lauren Alaina takes the Pepsi Open-Air Stage on a Wednesday night, with a later start of 8:30 PM than the rest of the fair's lineup. The concert is included with fair admission. There is no reserved seating, so arrive when the gates open for a good spot.",
+      "url": "https://coastaleventures.com/events/ev-fair-lauren-alaina-1028.html",
+      "sources": [
+        {
+          "note": "pensacolafair.com entertainment lineup: Lauren Alaina on Wednesday 10/28 at 8:30 PM on the Pepsi Open-Air Stage, all shows free with admission to the fair",
+          "url": "https://pensacolafair.com/entertainment-lineup/"
+        },
+        {
+          "note": "pensacolafair.com home page: Super Saver advance tickets, adult $8.28 and child $3.87, fair October 22 to November 1",
+          "url": "https://pensacolafair.com/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "id": "ev_fair_bee_gees_now_1029-2026-10-29",
+      "title": "Bee Gees Now at the Pensacola Interstate Fair",
+      "date": "2026-10-29",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "when": "Thursday 10/29 · 3:30 PM and 7:00 PM",
+      "venue": "Pensacola Interstate Fairgrounds, Pepsi Open-Air Stage",
+      "address": "6655 W. Mobile Hwy, Pensacola, FL 32526",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "priced",
+        "label": "from $3.87"
+      },
+      "summary": "Bee Gees Now plays the Pepsi Open-Air Stage twice on the fair's second Thursday, at 3:30 PM and again at 7:00 PM. Both shows are included with fair admission. Seating is first come, first served.",
+      "url": "https://coastaleventures.com/events/ev-fair-bee-gees-now-1029.html",
+      "sources": [
+        {
+          "note": "pensacolafair.com entertainment lineup: Bee Gees Now on Thursday 10/29 at 3:30 PM on the Pepsi Open-Air Stage, all shows free with admission to the fair",
+          "url": "https://pensacolafair.com/entertainment-lineup/"
+        },
+        {
+          "note": "pensacolafair.com home page: Super Saver advance tickets, adult $8.28 and child $3.87, fair October 22 to November 1",
+          "url": "https://pensacolafair.com/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_foo_foo_festival_2026-2026-10-29",
@@ -31839,44 +32863,6 @@
       "checkedOn": "2026-09-29"
     },
     {
-      "id": "ev_pensacola_ice_flyers_5_night_1030-2026-10-30",
-      "title": "Ice Flyers $5 Night",
-      "date": "2026-10-30",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Friday 10/30",
-      "venue": "Pensacola Bay Center",
-      "address": "201 E Gregory St, Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $5"
-      },
-      "summary": "Five dollars gets a seat at the Bay Center for an Ice Flyers home game against the Huntsville Havoc, on the first of two $5 Nights on the season's theme night calendar. The five dollar price covers select seating rather than the whole bowl, so it is a block of cheap seats and not the house. Kia Autosport of Pensacola presents it. The other $5 Night is not until April.",
-      "url": "https://coastaleventures.com/events/ev-pensacola-ice-flyers-5-night-1030.html",
-      "sources": [
-        {
-          "note": "iceflyers.com: the admission and current schedule",
-          "url": "https://iceflyers.com/up-next-ice-flyers-prep-for-first-road-game-and-5-night/"
-        },
-        {
-          "note": "oursportscentral.com: the current schedule",
-          "url": "https://www.oursportscentral.com/services/releases/ice-flyers-announce-2026-27-theme-night-schedule/n-6396857"
-        },
-        {
-          "note": "iceflyers.com: the current schedule",
-          "url": "https://iceflyers.com/full-schedule/"
-        },
-        {
-          "note": "iceflyers.com: the organizer's own page for this event",
-          "url": "https://iceflyers.com/"
-        }
-      ],
-      "checkedOn": null
-    },
-    {
       "id": "ev_crescent_nosferatu_live_score_1030-2026-10-30",
       "title": "Nosferatu with a Live Improvised Score",
       "date": "2026-10-30",
@@ -32555,6 +33541,48 @@
       "checkedOn": "2026-09-29"
     },
     {
+      "id": "ev_pensacola_ice_flyers_5_night_1030-2026-10-30",
+      "title": "Ice Flyers $5 Night",
+      "date": "2026-10-30",
+      "endDate": null,
+      "startTime": "19:05",
+      "endTime": null,
+      "when": "Friday 10/30 · 7:05 PM",
+      "venue": "Pensacola Bay Center",
+      "address": "201 E Gregory St, Pensacola, FL 32502",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $5"
+      },
+      "summary": "Five dollars gets a seat at the Bay Center for an Ice Flyers home game against the Macon Mayhem, on the first of two $5 Nights on the season's theme night calendar. The five dollar price covers select seating rather than the whole bowl, so it is a block of cheap seats and not the house. Kia Autosport of Pensacola presents it. The other $5 Night is not until April.",
+      "url": "https://coastaleventures.com/events/ev-pensacola-ice-flyers-5-night-1030.html",
+      "sources": [
+        {
+          "note": "iceflyers.com: the admission and current schedule",
+          "url": "https://iceflyers.com/up-next-ice-flyers-prep-for-first-road-game-and-5-night/"
+        },
+        {
+          "note": "oursportscentral.com: the current schedule",
+          "url": "https://www.oursportscentral.com/services/releases/ice-flyers-announce-2026-27-theme-night-schedule/n-6396857"
+        },
+        {
+          "note": "iceflyers.com: the current schedule",
+          "url": "https://iceflyers.com/full-schedule/"
+        },
+        {
+          "note": "iceflyers.com: the organizer's own page for this event",
+          "url": "https://iceflyers.com/"
+        },
+        {
+          "note": "iceflyers.com theme nights, read 10/02/2026: \"Friday, October 30 at 7:05 PM, $5 Night versus Macon Mayhem\"",
+          "url": "https://iceflyers.com/theme-nights/"
+        }
+      ],
+      "checkedOn": null
+    },
+    {
       "id": "ev_karaokelegion_1030-2026-10-30",
       "title": "Karaoke Night at American Legion Post 378",
       "date": "2026-10-30",
@@ -32579,6 +33607,36 @@
         }
       ],
       "checkedOn": "2026-09-16"
+    },
+    {
+      "id": "ev_fair_locash_1030-2026-10-30",
+      "title": "LOCASH at the Pensacola Interstate Fair",
+      "date": "2026-10-30",
+      "endDate": null,
+      "startTime": "19:30",
+      "endTime": null,
+      "when": "Friday 10/30 · 7:30 PM",
+      "venue": "Pensacola Interstate Fairgrounds, Pepsi Open-Air Stage",
+      "address": "6655 W. Mobile Hwy, Pensacola, FL 32526",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "priced",
+        "label": "from $3.87"
+      },
+      "summary": "The Friday night headliner on the fair's Pepsi Open-Air Stage plays the day before Halloween. The show is included with fair admission. Seating is first come, first served.",
+      "url": "https://coastaleventures.com/events/ev-fair-locash-1030.html",
+      "sources": [
+        {
+          "note": "pensacolafair.com entertainment lineup: LOCASH on Friday 10/30 at 7:30 PM on the Pepsi Open-Air Stage, all shows free with admission to the fair",
+          "url": "https://pensacolafair.com/entertainment-lineup/"
+        },
+        {
+          "note": "pensacolafair.com home page: Super Saver advance tickets, adult $8.28 and child $3.87, fair October 22 to November 1",
+          "url": "https://pensacolafair.com/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_rockyhorror_plt-2026-10-30",
@@ -32821,6 +33879,62 @@
         }
       ],
       "checkedOn": "2026-09-16"
+    },
+    {
+      "id": "ev_usa_football_la_tech_1031-2026-10-31",
+      "title": "South Alabama Football vs Louisiana Tech: Military Appreciation",
+      "date": "2026-10-31",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "when": "Saturday 10/31 · kickoff time to be announced",
+      "venue": "Hancock Whitney Stadium",
+      "address": "500 Stadium Drive, Mobile, AL 36688",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "South Alabama hosts Louisiana Tech at Hancock Whitney Stadium on Halloween for Military Appreciation, Honor Band and USA Day. It is a Sun Belt Conference game and the kickoff time has not been announced.",
+      "url": "https://coastaleventures.com/events/ev-usa-football-la-tech-1031.html",
+      "sources": [
+        {
+          "note": "usajaguars.com football schedule: Louisiana Tech on Saturday 10/31 at Hancock Whitney Stadium, Military Appreciation, Honor Band and USA Day, Sun Belt Conference game",
+          "url": "https://usajaguars.com/sports/football/schedule"
+        },
+        {
+          "note": "usajaguars.com parking page: Hancock Whitney Stadium, 500 Stadium Drive, Mobile, AL 36688",
+          "url": "https://usajaguars.com/sports/2023/3/22/parking.aspx"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "id": "ev_hp_victorian_seance_1031-2026-10-31",
+      "title": "Talking to the Dead: The Victorian Seance",
+      "date": "2026-10-31",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "when": "Saturday 10/31 · 6:30 PM, 7:30 PM and 8:30 PM",
+      "venue": "Historic Pensacola Village, Barkley House",
+      "address": "410 South Florida Blanca Street, Pensacola, FL 32502",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $35"
+      },
+      "summary": "Historic Pensacola's living history staff stage a Victorian seance in the Barkley House, with the origins of All Hallow's Eve and the rise of spiritualism explained along the way. The group shows the stage tricks that were common in a seance of that era. Each session is limited to 8 people, and it is the sixth year of the program.",
+      "url": "https://coastaleventures.com/events/ev-hp-victorian-seance-1031.html",
+      "sources": [
+        {
+          "note": "historicpensacola.org Haunted History Happenings page: Talking to the Dead, the Victorian Seance at the Barkley House, October 31 at 6:30, 7:30 and 8:30 p.m., $35 adults only, October 30 sold out",
+          "url": "https://historicpensacola.org/plan-your-visit/haunted-history-happenings/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_teen_dungeons_and_dragons_at_moorer_0905-2026-10-31",
@@ -33397,6 +34511,32 @@
       "checkedOn": "2026-09-16"
     },
     {
+      "id": "ev_exploreum_fear_fest_conjuring_1031-2026-10-31",
+      "title": "Fear Fest: The Conjuring at the Exploreum",
+      "date": "2026-10-31",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": "21:00",
+      "when": "Saturday 10/31 · 5:00 PM to 9:00 PM · film at 6:30 PM",
+      "venue": "Exploreum Science Center",
+      "address": "65 Government St., Mobile, AL 36602",
+      "category": "stem",
+      "categoryLabel": "STEM and learning",
+      "price": {
+        "kind": "priced",
+        "label": "from $12"
+      },
+      "summary": "The Exploreum's Fear Fest ends on Halloween night with The Conjuring on the PCI Digital Dome Theater screen at 6:30 PM. A ticket also covers the Fear exhibit, which explains the science behind phobias and fear responses, plus themed button making in the Atrium. The Exploreum rates the featured films R and recommends the night for guests 17 and older.",
+      "url": "https://coastaleventures.com/events/ev-exploreum-fear-fest-conjuring-1031.html",
+      "sources": [
+        {
+          "note": "exploreum.com Fear Fest page: October 31, doors 5 PM, The Conjuring at 6:30 PM in the PCI Digital Dome Theater, $15 non-members and $12 members, R-rated films recommended for guests 17 and older",
+          "url": "https://www.exploreum.com/event/fear-fest-4/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
       "id": "ev_navarre_presbyterian_trunk_or_treat_1031-2026-10-31",
       "title": "Trunk or Treat at Navarre Presbyterian Church",
       "date": "2026-10-31",
@@ -33421,6 +34561,62 @@
         }
       ],
       "checkedOn": "2026-09-24"
+    },
+    {
+      "id": "ev_uwf_mens_soccer_spring_hill_1031-2026-10-31",
+      "title": "UWF Men's Soccer vs Spring Hill: Senior Day and Socctober",
+      "date": "2026-10-31",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "when": "Saturday 10/31 · 5:00 PM",
+      "venue": "UWF Soccer Complex",
+      "address": "11000 University Parkway, Pensacola, FL 32514",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $3"
+      },
+      "summary": "UWF men's soccer hosts Spring Hill on Halloween afternoon for Senior Day and Socctober. General admission is $5, with a $3 rate for seniors, military and visiting students. UWF students, faculty and staff and children under 6 get in free.",
+      "url": "https://coastaleventures.com/events/ev-uwf-mens-soccer-spring-hill-1031.html",
+      "sources": [
+        {
+          "note": "goargos.com men's soccer schedule: Spring Hill on Saturday 10/31 · 5:00 PM at UWF Soccer Complex, Senior Day and Socctober",
+          "url": "https://goargos.com/sports/mens-soccer/schedule"
+        },
+        {
+          "note": "goargos.com admission page: $5 general admission, $3 seniors, military and visiting students, free for UWF students, faculty, staff, children under 6 and youth in team uniform, game day cash only",
+          "url": "https://goargos.com/sports/2014/12/9/GEN_1209141045.aspx?id=87"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "id": "ev_baytowne_trick_or_treat_street_1031-2026-10-31",
+      "title": "Trick or Treat Street at Baytowne Wharf",
+      "date": "2026-10-31",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": "20:00",
+      "when": "Saturday 10/31 · 6:00 PM to 8:00 PM",
+      "venue": "The Village of Baytowne Wharf",
+      "address": "9300 Baytowne Wharf Blvd, Miramar Beach, FL 32550",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Kids trick or treat through the streets of the Village of Baytowne Wharf and collect candy from the merchants. Steve Hall plays on the main stage, and the night ends with a Halloween fireworks display at 8:00 PM.",
+      "url": "https://coastaleventures.com/events/ev-baytowne-trick-or-treat-street-1031.html",
+      "sources": [
+        {
+          "note": "sandestin.com event page: Trick or Treat Street, Saturday October 31, 6 to 8 p.m. at the Village of Baytowne Wharf, trick or treat through the Village streets, fireworks at 8 p.m.",
+          "url": "https://www.sandestin.com/things-to-do/events/trick-or-treat-street-2"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_festivaloffearsmaryesther_1031-2026-10-31",
@@ -33455,6 +34651,36 @@
         }
       ],
       "checkedOn": "2026-09-16"
+    },
+    {
+      "id": "ev_solaris_halloween_cruise_1031-2026-10-31",
+      "title": "Halloween Dinner Cruise on the SOLARIS",
+      "date": "2026-10-31",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": "22:00",
+      "when": "Saturday 10/31 · 7:00 PM to 10:00 PM",
+      "venue": "SOLARIS Yacht, Baytowne Marina",
+      "address": "8330 Mike Hayes Dr, Miramar Beach, FL 32550",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $25"
+      },
+      "summary": "SunQuest Cruises runs its Solaris yacht out of Baytowne Marina on Halloween night with a three-course dinner, live music, a costume contest and fireworks. The costume contest prize is a future dinner cruise for four. Seats sell out, so book ahead.",
+      "url": "https://coastaleventures.com/events/ev-solaris-halloween-cruise-1031.html",
+      "sources": [
+        {
+          "note": "sunquestcruises.com Halloween Dinner Cruise page: Saturday October 31, 7 to 10 p.m., check-in 6:15 p.m., adults $93.50, children 3-10 $48, infants 0-2 $25, three-course dinner, costume contest",
+          "url": "https://sunquestcruises.com/halloween-destin-dinner-cruise/"
+        },
+        {
+          "note": "sandestin.com event page: Halloween Dinner Cruise aboard SOLARIS from Baytowne Marina, reservations at sunquestcruises.com or 850-650-2519",
+          "url": "https://www.sandestin.com/things-to-do/events/halloween-dinner-cruise"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_saosin-2026-10-31",
@@ -33507,6 +34733,36 @@
         }
       ],
       "checkedOn": "2026-08-08"
+    },
+    {
+      "id": "ev_fair_the_lacs_1031-2026-10-31",
+      "title": "The Lacs at the Pensacola Interstate Fair",
+      "date": "2026-10-31",
+      "endDate": null,
+      "startTime": "19:30",
+      "endTime": null,
+      "when": "Saturday 10/31 · 7:30 PM",
+      "venue": "Pensacola Interstate Fairgrounds, Pepsi Open-Air Stage",
+      "address": "6655 W. Mobile Hwy, Pensacola, FL 32526",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "priced",
+        "label": "from $3.87"
+      },
+      "summary": "The Lacs close out the fair's entertainment lineup on Halloween night at the Pepsi Open-Air Stage. The show is included with fair admission. There are no reserved seats, so plan to claim a spot early.",
+      "url": "https://coastaleventures.com/events/ev-fair-the-lacs-1031.html",
+      "sources": [
+        {
+          "note": "pensacolafair.com entertainment lineup: The Lacs on Saturday 10/31 at 7:30 PM on the Pepsi Open-Air Stage, all shows free with admission to the fair",
+          "url": "https://pensacolafair.com/entertainment-lineup/"
+        },
+        {
+          "note": "pensacolafair.com home page: Super Saver advance tickets, adult $8.28 and child $3.87, fair October 22 to November 1",
+          "url": "https://pensacolafair.com/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_seville_karaoke-2026-10-31",
@@ -33611,6 +34867,40 @@
         }
       ],
       "checkedOn": "2026-08-22"
+    },
+    {
+      "id": "ev_ice_flyers_day_of_dead_1101-2026-11-01",
+      "title": "Ice Flyers Day of the Dead Night vs Birmingham",
+      "date": "2026-11-01",
+      "endDate": null,
+      "startTime": "16:05",
+      "endTime": null,
+      "when": "Sunday 11/1 · 4:05 PM",
+      "venue": "Pensacola Bay Center",
+      "address": "201 E Gregory St, Pensacola, FL 32502",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "The Pensacola Ice Flyers host the Birmingham Bulls on Day of the Dead Night, an afternoon game at the Pensacola Bay Center. Puck drop is at 4:05 PM. It is the first home game of November.",
+      "url": "https://coastaleventures.com/events/ev-ice-flyers-day-of-dead-1101.html",
+      "sources": [
+        {
+          "note": "iceflyers.com 2026-27 theme nights: Day of the Dead Night Sunday 11/1 at 4:05 PM against the Birmingham Bulls",
+          "url": "https://iceflyers.com/theme-nights/"
+        },
+        {
+          "note": "iceflyers.com single game tickets: Ticketmaster or the Bay Center box office, no ticket for children 2 and under, children 3 to 12 get 25 percent off at the box office",
+          "url": "https://iceflyers.com/tickets/single-game-tickets/"
+        },
+        {
+          "note": "iceflyers.com military tickets: $2 off at the box office for active, retired and veteran service members and their entire party",
+          "url": "https://iceflyers.com/military-tickets/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_cornhole_open_play_0901-2026-11-02",
