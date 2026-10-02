@@ -1249,6 +1249,8 @@ html[data-theme="light"] .jn{background:rgba(138,95,16,.1)}
 .group{margin-top:var(--s-7);scroll-margin-top:84px}
 .group:first-of-type{margin-top:var(--s-6)}
 .group-h{display:flex;align-items:baseline;gap:16px}
+
+.group-more{margin:var(--s-4) 0 0;display:flex;justify-content:center}
 .group-h::after{content:"";flex:1 1 40px;height:1px;align-self:center;
   background:linear-gradient(90deg,var(--line),transparent)}
 
@@ -2072,6 +2074,8 @@ html[data-theme="light"] .card[data-cat]{ --cat-ink:color-mix(in srgb, var(--cat
 .crest-key li[data-seal="night"]    {--cat:var(--cat-place);  --catw:var(--catw-place)}
 .crest-key li[data-seal="listing"]  {--cat:var(--cat-place);  --catw:var(--catw-place)}
 .crest-key li[data-seal="play"]     {--cat:var(--cat-opening);--catw:var(--catw-opening)}
+
+.crest-key li[data-seal="adventure"]{--cat:var(--cat-nature); --catw:var(--catw-nature)}
 .crest-key li[data-seal="retail"]   {--cat:var(--cat-art);    --catw:var(--catw-art)}
 
 .card[data-cat]{background:linear-gradient(180deg, var(--catw), transparent 88px),
