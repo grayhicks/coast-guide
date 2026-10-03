@@ -65,6 +65,10 @@
   var fontOk = function (f) { return FONTS.indexOf(f) > -1 || CUSTOM.indexOf(f) > -1; };
   /* a tapped-element selector is only ever classes, tags, attributes and combinators: never braces or tags */
   var selOk = function (s) { return typeof s === "string" && s.length < 400 && /^[a-zA-Z0-9_\-\.\s>\[\]="'^:()#,]+$/.test(s) && !/[{}<]/.test(s); };
+  /* 10/03, J13: every rule starts "html:not(#hk_d) body", and the :not(#id) counts as an id, so a designer rule outranks
+     any of the app's own class-only rules, however many classes they stack (a sticker-lettering rule with eleven
+     classes beat the ten-class prefix and a pasted colour did not show on place names). */
+  var ROOT = "html:not(#hk_d) body";
   function target(r) {
     var look = r.look === "day" ? ".hk_day" : r.look === "night" ? ":not(.hk_day)" : "";
     /* r.path: exactly the element he tapped, as a class path inside a card (in: "card") or inside the app (in: "app") */
@@ -74,19 +78,19 @@
         var c = ".card.card:not(.hk_sc)";
         if (r.scope === "kind" && r.value) c += '[data-bub^="' + esc(r.value) + '"]';
         if (r.scope === "card" && r.value) c += '[data-card-id^="' + esc(r.value) + '"]';
-        return "html body .hk.hk.hk.hk" + look + " " + c + " " + r.path;
+        return ROOT + " .hk.hk.hk.hk" + look + " " + c + " " + r.path;
       }
-      return r.in === "page" ? "html body " + r.path : "html body .hk.hk.hk.hk" + look + " " + r.path;
+      return r.in === "page" ? ROOT + " " + r.path : ROOT + " .hk.hk.hk.hk" + look + " " + r.path;
     }
     if (r.sel) {
       if (!selOk(r.sel)) return "";
-      return r.root === "page" ? "html body " + r.sel : "html body .hk.hk.hk.hk" + look + " " + r.sel;
+      return r.root === "page" ? ROOT + " " + r.sel : ROOT + " .hk.hk.hk.hk" + look + " " + r.sel;
     }
     var p = partById(r.part); if (!p) return "";
     var card = ".card.card:not(.hk_sc)";
     if (r.scope === "kind" && r.value) card += '[data-bub^="' + esc(r.value) + '"]';
     if (r.scope === "card" && r.value) card += '[data-card-id^="' + esc(r.value) + '"]';
-    return "html body .hk.hk.hk.hk" + look + " " + card + " " + p.sel;
+    return ROOT + " .hk.hk.hk.hk" + look + " " + card + " " + p.sel;
   }
   function decls(s) {
     var out = [];

@@ -69,6 +69,7 @@ main{ display:flex; gap:16px; padding:12px; align-items:flex-start; }
 .readout input{ font:inherit; width:4ch; field-sizing:content; min-width:2ch; padding:0; border:0; background:transparent; color:var(--ink); }
 .readout span{ font-size:16px; color:var(--mute); margin-left:4px; }
 .sizebtns button{ flex:1 1 0; font-weight:800; }
+.lineup button{ flex:1 1 auto; font-size:13px; }
 .sw{ display:grid; grid-template-columns:repeat(auto-fill,minmax(30px,1fr)); gap:6px; width:100%; }
 .sw button{ min-height:30px; height:30px; padding:0; border-radius:8px; border:2px solid rgba(255,255,255,.18); }
 .sw button.sel{ outline:3px solid var(--mint); outline-offset:1px; }
@@ -105,6 +106,12 @@ kbd{ background:var(--chip); border:1px solid var(--line); border-radius:4px; pa
 #toast{ position:fixed; left:50%; bottom:24px; transform:translateX(-50%); max-width:calc(100vw - 32px); background:var(--key); color:#fff; border:1px solid var(--line); border-radius:12px; padding:10px 14px; font-size:15px; font-weight:700; z-index:50; opacity:0; pointer-events:none; transition:opacity .2s; }
 #toast.on{ opacity:1; } #toast.err{ background:#7a1f1f; } #toast.ok{ background:#0f5c45; }
 #lock{ display:none; }
+#keys{ background:var(--panel); color:var(--ink); border:1px solid var(--line); border-radius:16px; padding:16px 18px; max-width:440px; }
+#keys::backdrop{ background:rgba(0,0,0,.55); }
+#keys h2{ font-size:14px; margin:0 0 10px; color:var(--mute); text-transform:uppercase; letter-spacing:.8px; }
+#keys td{ padding:5px 10px 5px 0; font-size:14px; vertical-align:top; } #keys td:first-child{ white-space:nowrap; }
+#keys button{ margin-top:12px; width:100%; }
+.list li button.show{ flex:none; }
 body.locked header, body.locked main{ display:none !important; }
 body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-content:center; padding:24px 16px; }
 #lock .box{ max-width:420px; width:100%; }
@@ -204,6 +211,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     <select id="width" class="onlywide" title="How wide a phone the app shows (every change should hold at 320, 390 and 430)" aria-label="Phone width"><option value="320">Small phone (320)</option><option value="360">360</option><option value="390" selected>iPhone (390)</option><option value="430">Big phone (430)</option></select>
     <select id="look" title="Which look the app shows"><option value="day">Day look</option><option value="night">Night look</option><option value="dark">Dark look</option></select>
     <button id="publish" data-i="publish"><span>Save + publish</span></button>
+    <button id="keysBtn" class="onlywide" title="Keyboard shortcuts (?)">Keys</button>
   </div>
 </header>
 <main>
@@ -259,12 +267,14 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
         <div class="mvside"><div class="seg" id="stepSeg"><button data-v="1" class="sel">1 px</button><button data-v="5">5 px</button><button data-v="10">10 px</button></div>
           <div class="cap">Moved</div><div class="readout" id="moveRead">0, 0 px</div></div></div>
       <div class="gap" id="gapRead"></div>
+      <div class="row lineup"><button id="evenV" title="Same space above as below">&#8597; Even above and below</button><button id="evenH" title="Same space left as right">&#8596; Even left and right</button><button id="centreX" title="Centre it across the card">Centre on the card</button></div>
       <div class="row"><button id="snap" class="on" data-i="snap"><span>Snap on</span></button><span class="mute onlywide">Hold <kbd>Alt</kbd> while dragging to place it freely.</span></div>
       <div class="mute onlywide">Drag it in the app, or use the arrow keys (<kbd>Shift</kbd> moves 10 px). <kbd>P</kbd> switches between picking and using the app.</div>
       <div class="mute onlyphone">Drag it in the app with your finger. On the other tabs your finger scrolls the app instead.</div>
     </div>
     <div class="box" data-tab="colour">
       <h2>Colour</h2>
+      <div class="row" id="recentRow" style="display:none"><label>Recent</label><div class="sw" id="recent" style="flex:1"></div></div>
       <div class="sw" id="sw"></div>
       <div class="contrast" id="contrast"></div>
       <div class="row"><label>Any colour</label><input id="color" type="color" value="#1d2a33" style="width:64px;height:38px;padding:2px"><input id="hex" type="text" maxlength="7" placeholder="#1C6BB5" aria-label="Colour code" autocomplete="off" spellcheck="false" style="width:104px"><button id="colorOff">Its own colour</button></div>
@@ -319,6 +329,20 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   </section>
 </main>
 <div id="toast"></div>
+<dialog id="keys" aria-label="Keyboard shortcuts">
+  <h2>Keys on a computer</h2>
+  <table>
+    <tr><td><kbd>P</kbd></td><td>Pick, or use the app</td></tr>
+    <tr><td><kbd>&#8592;</kbd> <kbd>&#8593;</kbd> <kbd>&#8594;</kbd> <kbd>&#8595;</kbd></td><td>Move 1 px (<kbd>Shift</kbd> moves 10)</td></tr>
+    <tr><td><kbd>Shift</kbd> + click</td><td>Pick more pieces to change together</td></tr>
+    <tr><td><kbd>Alt</kbd> while dragging</td><td>Place it freely, no snapping</td></tr>
+    <tr><td>Hold <kbd>\</kbd></td><td>See the app without your changes</td></tr>
+    <tr><td><kbd>Ctrl</kbd> <kbd>Z</kbd></td><td>Undo (<kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>Z</kbd> redo)</td></tr>
+    <tr><td><kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>C</kbd> / <kbd>V</kbd></td><td>Copy a look, paste it</td></tr>
+    <tr><td><kbd>?</kbd></td><td>This list</td></tr>
+  </table>
+  <button id="keysOff" class="go">Close</button>
+</dialog>
 <script>
 (function () {
   "use strict";
@@ -543,8 +567,17 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   function edit(fn) {
     var k = key(); if (!k) { say("Tap a word in the app first.", "err"); return; }
     snap();
+    var c0 = (findRule(k) || { set: {} }).set.color;
     group().forEach(function (g) { withSel(g, function () { fn(ruleFor(key()).set); }); });
+    var c1 = ruleFor(k).set.color; if (c1 && c1 !== c0) remember(c1);
     flashGuides(); paint(); fill();
+  }
+  /* the last ten colours he used, newest first, kept on this device (10/03, J13) */
+  var recent = []; try { recent = JSON.parse(localStorage.getItem("hk_designer_recent") || "[]").filter(function (c) { return /^#[0-9A-Fa-f]{6}$/.test(c); }); } catch (e) {}
+  function remember(c) { c = String(c).toUpperCase(); recent = [c].concat(recent.filter(function (x) { return x.toUpperCase() !== c; })).slice(0, 10); try { localStorage.setItem("hk_designer_recent", JSON.stringify(recent)); } catch (e) {} recentRow(); }
+  function recentRow() {
+    var box = $("recent"); if (!box) return; box.innerHTML = ""; $("recentRow").style.display = recent.length ? "" : "none";
+    recent.forEach(function (c) { var b = document.createElement("button"); b.style.background = c; b.title = c; b.setAttribute("data-c", c); b.setAttribute("aria-label", "Recent colour " + c); b.onclick = function () { edit(function (s) { s.color = c; }); }; box.appendChild(b); });
   }
 
   /* ---- spacing guides, measured from the letters (canvas glyph metrics), labels kept on screen ---- */
@@ -667,8 +700,11 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   }
 
   /* ---- paint the preview and the panel ---- */
+  /* a rule left with nothing in it (a reset colour, a move back to 0, 0) is dropped, so Your changes lists only real changes */
+  var live = function (st) { return Object.keys(st || {}).some(function (k) { var v = st[k]; if (/^(mv|m0|textSize)$/.test(k) || v === undefined || v === "") return false; if (k === "dx" || k === "dy") return Number(v) !== 0; return true; }); };
+  function prune() { if (drag && drag.on) return; doc.rules = doc.rules.filter(function (r) { return r.sel || r.part || live(r.set); }); }
   function paint() {
-    var d = frame(); if (!d || !d.body) return;
+    var d = frame(); if (!d || !d.body) return; prune();
     /* the published design is swapped for the working copy only once that copy came from GitHub; a copy made on a
        device with no key sits ON TOP of what is published, so nothing already saved drops out of the preview */
     var baked = d.getElementById("hk_design"); if (baked) baked.media = base === "github" || comparing ? "not all" : "all";
@@ -704,9 +740,18 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       ["size", "font", "weight", "color", "bg", "edge", "tcase"].forEach(function (k) { if (s[k] !== undefined && s[k] !== "") bits.push(k === "size" ? s[k] + " px" : s[k]); });
       if (s.hide) bits.push("hidden");
       if (s.text) bits.push("words: " + s.text);
-      li.innerHTML = "<span></span><button>Remove</button>";
+      li.innerHTML = "<span></span><button class=\"show\">Show</button><button>Remove</button>";
+      /* Show finds that piece in the app, scrolls to it and picks it, with Where set the way the change was made */
+      li.children[1].onclick = function () {
+        var d = frame(), el = null; try { el = r.in === "card" ? d.querySelector('.card' + (r.scope === "card" && r.value ? '[data-card-id^="' + String(r.value).replace(/"/g, "") + '"]' : r.scope === "kind" && r.value ? '[data-bub^="' + String(r.value).replace(/"/g, "") + '"]' : "") + " " + r.path) : d.querySelector(".hk " + r.path); } catch (e) {}
+        if (!el) { say("That piece is not on this page of the app. Open the tab it lives on, then tap Show again.", "err"); return; }
+        el.scrollIntoView({ block: "center" }); scope = r.scope || "all"; lookScope = r.look || "all";
+        Array.prototype.forEach.call($("scopeSeg").children, function (x) { x.classList.toggle("sel", x.getAttribute("data-v") === scope); }); Array.prototype.forEach.call($("lookSeg").children, function (x) { x.classList.toggle("sel", x.getAttribute("data-v") === lookScope); });
+        trail = []; levelBase = null; setTimeout(function () { select(el); say("Picked. This is the change: " + li.firstChild.textContent.slice(0, 60), "ok"); }, 120);
+      };
       li.firstChild.textContent = (r.name || r.path || r.part || r.sel) + " → " + where + (r.look !== "all" ? " (" + r.look + ")" : "") + ": " + (bits.join(", ") || "no change");
       li.lastChild.onclick = function () { snap(); doc.rules.splice(i, 1); paint(); fill(); };
+      li.firstChild.style.flex = "1"; li.firstChild.style.minWidth = "0";
       ul.appendChild(li);
     });
   }
@@ -844,6 +889,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     var tag = (e.target && e.target.tagName) || "";
     if (/INPUT|SELECT|TEXTAREA/.test(tag)) return;
     if (e.key === "p" || e.key === "P") { togglePick(); e.preventDefault(); return; }
+    if (e.key === "?") { showKeys(); e.preventDefault(); return; }
     if ((e.ctrlKey || e.metaKey) && ((e.shiftKey && (e.key === "z" || e.key === "Z")) || e.key === "y" || e.key === "Y")) { redo(); e.preventDefault(); return; }
     if ((e.ctrlKey || e.metaKey) && (e.key === "z" || e.key === "Z")) { undo(); e.preventDefault(); return; }
     if ((e.ctrlKey || e.metaKey) && e.altKey && (e.code === "KeyC" || e.code === "KeyV")) { if (e.code === "KeyC") copyLook(); else pasteLook(); e.preventDefault(); return; }
@@ -874,6 +920,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   var moreOpen = function (on) { $("more").classList.toggle("open", on); $("moreBtn").setAttribute("aria-expanded", on ? "true" : "false"); };
   $("moreBtn").onclick = function (e) { e.stopPropagation(); moreOpen(!$("more").classList.contains("open")); };
   document.addEventListener("click", function (e) { if (!e.target.closest("#more") || e.target.closest("button")) moreOpen(false); });
+  recentRow();
   CD.SWATCHES.forEach(function (c) {
     var b = document.createElement("button"); b.style.background = c; b.title = c; b.setAttribute("data-c", c);
     b.onclick = function () { edit(function (s) { s.color = c; }); }; $("sw").appendChild(b);
@@ -929,6 +976,25 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       group().forEach(function (g) { withSel(g, function () { var r = ruleFor(key()); if (v === plain) delete r.set[q[1]]; else r.set[q[1]] = v; }); }); paint(); flashGuides(); });
     el.addEventListener("change", function () { slid = false; fill(); });
   });
+  /* ---- line it up in one tap (10/03, J13), Gray's spacing law: "symmetrical spacing everywhere always. above and
+     below whenever possible". Even above/below puts the piece where the space to the words above equals the space
+     to the words below (the card's edge when there is nothing); the same left and right; Centre puts its middle on
+     the card's middle. Every piece in a group lines up on its own. ---- */
+  function lineUp(kind) {
+    if (!sel) { say("Tap a word in the app first.", "err"); return; }
+    var d = frame(), g0 = d.getElementById("hk_guides") || d.createElement("i"), moves = [];
+    group().forEach(function (g) { withSel(g, function () {
+      var A = around(g0), me = A.me, eb = A.eb, dl = 0;
+      if (kind === "v") { var top = A.up ? A.up.b : eb.top, bot = A.dn ? A.dn.t : eb.bottom; dl = (top + bot) / 2 - (me.t + me.b) / 2; }
+      else if (kind === "h") { var lf = A.lf ? A.lf.r : eb.left, rt = A.rt ? A.rt.l : eb.right; dl = (lf + rt) / 2 - (me.l + me.r) / 2; }
+      else dl = (eb.left + eb.right) / 2 - (me.l + me.r) / 2;
+      moves.push({ g: g, d: Math.round(dl * 2) / 2 });
+    }); });
+    if (moves.every(function (m) { return Math.abs(m.d) < 0.5; })) { say("Already even.", "ok"); return; }
+    snap(); moves.forEach(function (m) { withSel(m.g, function () { var s = ruleFor(key()).set; if (kind === "v") s.dy = Math.round(((s.dy || 0) + m.d) * 2) / 2; else s.dx = Math.round(((s.dx || 0) + m.d) * 2) / 2; }); });
+    flashGuides(); paint(); fill(); say(kind === "v" ? "Same space above and below." : kind === "h" ? "Same space left and right." : "Centred on the card.", "ok");
+  }
+  $("evenV").onclick = function () { lineUp("v"); }; $("evenH").onclick = function () { lineUp("h"); }; $("centreX").onclick = function () { lineUp("c"); };
   /* the slider previews as it slides and keeps one undo step for the whole slide */
   var sliding = false;
   $("sizeRange").addEventListener("input", function () { var v = Number(this.value); if (!sliding) { sliding = true; snap(); } var k = key(); if (!k) return; var r = ruleFor(k); r.set.size = v; $("size").value = v; paint(); flashGuides(); });
@@ -942,6 +1008,8 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   $("outer").onclick = outer; $("inner").onclick = inner; $("undo").onclick = undo;
   $("resetPart").onclick = function () { var k = key(); if (!k) { say("Tap a word in the app first.", "err"); return; } var rs = group().map(function (g) { return withSel(g, function () { return findRule(key()); }); }).filter(Boolean); if (!rs.length) { say("Nothing changed on this one yet.", "err"); return; } snap(); rs.forEach(function (r) { var i = doc.rules.indexOf(r); if (i > -1) doc.rules.splice(i, 1); }); paint(); fill(); };
   $("pick").onclick = togglePick;
+  function showKeys() { var k = $("keys"); if (k.open) k.close(); else if (k.showModal) k.showModal(); }
+  $("keysBtn").onclick = showKeys; $("keysOff").onclick = function () { $("keys").close(); };
   /* ---- Copy look / Paste look (10/03, J13): "make this look like that". Copy reads what the piece looks like now (its
      size, font, weight, colour, caps, spacing, plus any fill or edge set here) and Paste puts that look on whatever is
      picked next, with the Where settings as usual. Its place and its words are never copied. ---- */
