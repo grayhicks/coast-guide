@@ -200,7 +200,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   .more.open{ display:flex; }
   .more button, .more select{ justify-content:flex-start; min-height:44px; }
   main{ flex:1 1 auto; min-height:0; display:flex; flex-direction:column; gap:0; padding:0; }
-  .phone{ position:relative; top:0; flex:0 0 auto; height:clamp(150px, min(44dvh, calc(100dvh - 356px)), 480px); width:100%; border-width:0 0 1px; border-radius:0 0 16px 16px; box-shadow:none; }
+  .phone{ position:relative; top:0; flex:0 0 auto; height:clamp(150px, min(50dvh, calc(100dvh - 356px)), 520px); width:100%; border-width:0 0 1px; border-radius:0 0 16px 16px; box-shadow:none; }
   .phone iframe{ width:100%; height:100%; max-height:none; }
   html, body{ overflow-x:hidden; }
   .panel{ flex:1 1 auto; min-height:0; max-width:none; min-width:0; width:100%; padding:0 8px calc(var(--tabh) + env(safe-area-inset-bottom)); display:flex; flex-direction:column; }
@@ -238,6 +238,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   .tabs.more-l:not(.more-r){ -webkit-mask-image:linear-gradient(90deg,transparent,#000 14%); mask-image:linear-gradient(90deg,transparent,#000 14%); }
   .tabs button{ flex:0 0 auto; min-width:60px; min-height:56px; border-radius:12px; font-size:11px; }
   .tabs svg.i{ width:22px; height:22px; }
+  .sw{ grid-template-columns:repeat(auto-fill,minmax(40px,1fr)); gap:6px; } .sw button{ min-height:40px; height:40px; }
   .pad{ grid-template-columns:repeat(3,52px); gap:6px; }
   .pad button{ min-height:48px; font-size:20px; }
   /* on a phone the update's progress floats just under the bar, over the top of the app */
@@ -819,7 +820,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     if (!st) { st = d.createElement("style"); st.id = "hk_design_preview"; d.body.appendChild(st); }
     st.media = comparing ? "not all" : "all";
     st.textContent = CD.designCss(doc) +
-      "\n[data-hk-pick]{" + (!narrow() || document.body.getAttribute("data-tab") === "move" ? "touch-action:none !important;" : "") + "}" +
+      "\n[data-hk-pick]{touch-action:none !important;}" +
       /* the app's floating buttons (Show support, back to top) step aside while he picks, so they never sit on a card he is editing */
       (picking && hideFloats ? "\n.hk_supportfloat, .hk_totop, [aria-label=\"Back to top\"]{visibility:hidden !important;}" : "") +
       (picking ? "\n.hk *{cursor:crosshair !important;}\n[data-hk-add]{pointer-events:auto !important;}" : "") +
@@ -963,8 +964,8 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     var tries = 0, upd = setInterval(function () { var b = d.querySelector('[data-testid="update-load"]'); if (b) { clearInterval(upd); say("Loading the newest app…"); fw().location.reload(); } else if (++tries > 40) clearInterval(upd); }, 250);
     /* 10/02: a tap picks on pointerup, not click. iPhone Safari sends no click to plain text, so on his phone the tap
        picked nothing and the arrows had nothing to move. click is still swallowed so the app does not act on it. */
-    var tap = null;
-    var popup = function (t) { return t && t.closest && t.closest('[role="dialog"][aria-modal="true"]'); };
+    var tap = null, lastTap = null;
+    var popup = function (t) { return t && t.closest && (t.id === "hk_inline" || t.closest('[role="dialog"][aria-modal="true"]')); };
     d.addEventListener("click", function (e) { if (!picking || popup(e.target)) return; e.preventDefault(); e.stopPropagation(); }, true);
     d.addEventListener("pointerdown", function (e) {
       if (e.target && e.target.id === "hk_handle" && sel) {
@@ -984,7 +985,6 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       if (dropping) { e.stopPropagation(); return; }
       var inGroup = group().some(function (g) { return e.target === g.el || g.el.contains(e.target); });
       if (!sel || !inGroup || e.shiftKey || adding) { if (e.target.closest && e.target.closest(".card")) e.stopPropagation(); return; }
-      if (e.pointerType === "touch" && narrow() && document.body.getAttribute("data-tab") !== "move") return;
       drag = { x: e.clientX, y: e.clientY, on: false, starts: group().map(function (g) { return withSel(g, function () { var r = findRule(key()), s0 = (r && r.set) || {}; return { g: g, dx: s0.dx || 0, dy: s0.dy || 0 }; }); }) };
       e.stopPropagation();
     }, true);
@@ -997,18 +997,23 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
         paint(); fill(); e.preventDefault(); e.stopPropagation(); return; }
       if (!drag) return;
       var mx = Math.round(e.clientX - drag.x), my = Math.round(e.clientY - drag.y);
-      if (!drag.on) { if (Math.abs(mx) + Math.abs(my) < 3) return; drag.on = true; snap(); drag.ar = around(d.getElementById("hk_guides") || d.createElement("i")); }
+      if (!drag.on) { if (Math.abs(mx) + Math.abs(my) < 3) return; drag.on = true; snap(); drag.ar = around(d.getElementById("hk_guides") || d.createElement("i")); lift(true); }
       var sp = snapTo(drag.ar, mx, my, !snapOn || e.altKey || e.ctrlKey || e.metaKey); mx = sp.x; my = sp.y;
       if (JSON.stringify(sp.at) !== JSON.stringify(drag.snapped || null)) { if (sp.at && navigator.vibrate) { try { navigator.vibrate(8); } catch (x) {} } drag.snapped = sp.at; }
       guideUntil = Date.now() + 1600;
       drag.starts.forEach(function (st) { withSel(st.g, function () { var r = ruleFor(key()); r.set.dx = st.dx + mx; r.set.dy = st.dy + my; }); });
       paint(); fill(); e.preventDefault(); e.stopPropagation();
     }, true);
-    var end = function (e) { var was = drag && drag.on; if (was && e) { e.preventDefault(); e.stopPropagation(); } drag = null; if (was) flashGuides(); };
+    /* while it is dragged the piece rides on top of its neighbours (a pill or a date never hides it), like Canva and Figma */
+    var lift = function (on) { (drag && drag.starts || []).forEach(function (st) { var el = st.g.el; if (on) { st.z = [el.style.zIndex, el.style.position]; el.style.zIndex = "2147483000"; if (el.ownerDocument.defaultView.getComputedStyle(el).position === "static") el.style.position = "relative"; } else if (st.z) { el.style.zIndex = st.z[0]; el.style.position = st.z[1]; } }); };
+    var end = function (e) { var was = drag && drag.on; if (was && e) { e.preventDefault(); e.stopPropagation(); } if (was) lift(false); drag = null; if (was) flashGuides(); };
     d.addEventListener("pointerup", function (e) {
       if (turn) { var tw = turn.on; turn = null; e.preventDefault(); e.stopPropagation(); ring(); if (tw) { fill(); say("Turned. Undo takes it back.", "ok"); } return; }
       if (resize) { var was = resize.on; resize = null; ring(); e.preventDefault(); e.stopPropagation(); if (was) { fill(); say("Resized. Undo takes it back.", "ok"); } return; }
       var moved = drag && drag.on, t = tap; tap = null; end(e);
+      if (picking && t && !moved && Math.abs(e.clientX - t.x) + Math.abs(e.clientY - t.y) < 10 && !dropping && !adding && !e.shiftKey && sel && (t.t === sel.el || sel.el.contains(t.t))) {
+        var now = Date.now(); if (lastTap && now - lastTap.at < 400 && lastTap.el === sel.el) { lastTap = null; e.preventDefault(); typeHere(); return; } lastTap = { at: now, el: sel.el };
+      } else if (t && !moved) lastTap = null;
       if (picking && t && !moved && Math.abs(e.clientX - t.x) + Math.abs(e.clientY - t.y) < 10) { e.preventDefault(); if (dropping) { takeColour(t.t); return; } if ((e.shiftKey || adding) && sel) { toggleGroup(sceneryAt(t.t, t.x, t.y) || t.t); return; } trail = []; levelBase = null; select(sceneryAt(t.t, t.x, t.y) || t.t); }
     }, true);
     d.addEventListener("pointercancel", function (e) { tap = null; resize = null; turn = null; end(e); }, true);
@@ -1334,6 +1339,29 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   var tabFade = function () { var t = $("tabs"); t.classList.toggle("more-r", t.scrollLeft + t.clientWidth < t.scrollWidth - 4); t.classList.toggle("more-l", t.scrollLeft > 4); };
   $("tabs").addEventListener("scroll", tabFade, { passive: true }); window.addEventListener("resize", tabFade); setTimeout(tabFade, 0);
   try { var t0tab = localStorage.getItem("hk_designer_tab"); if (t0tab && document.querySelector('#tabs [data-t="' + t0tab + '"]')) showTab(t0tab); } catch (e) {}
+  /* double-tap the picked words to type right on the card (Canva's way); Enter or a tap away keeps them, Esc cancels.
+     It saves through the same Use these words step, so Undo and the one-card rule work the same. */
+  function typeHere() {
+    var d = frame(); if (!sel || !d) return;
+    if (!wordsOk()) { say("This piece has no words of its own. Tap the words themselves.", "err"); return; }
+    var old = d.getElementById("hk_inline"); if (old) old.remove();
+    fill(); var el = sel.el, cs = el.ownerDocument.defaultView.getComputedStyle(el), b = boxOf(el), r = el.getBoundingClientRect();
+    var L = Math.min(b.l, r.left), T = Math.min(b.t, r.top), W = Math.max(b.r, r.right) - L, H = Math.max(b.b, r.bottom) - T;
+    var fs = parseFloat(cs.fontSize) || 16; if (!fs) { var a = d.defaultView.getComputedStyle(el, "::after"); fs = parseFloat(a.fontSize) || 16; }
+    var ta = d.createElement("textarea"); ta.id = "hk_inline"; ta.value = $("words").value; ta.setAttribute("aria-label", "Type the new words");
+    ta.style.cssText = "position:fixed;z-index:2147483647;left:" + (L - 4) + "px;top:" + (T - 4) + "px;width:" + Math.max(W + 8, 120) + "px;min-height:" + (H + 8) + "px;margin:0;padding:3px;box-sizing:border-box;resize:none;overflow:hidden;" +
+      "font-family:" + cs.fontFamily + ";font-size:" + fs + "px;font-weight:" + cs.fontWeight + ";line-height:" + cs.lineHeight + ";letter-spacing:" + cs.letterSpacing + ";text-transform:" + cs.textTransform + ";font-style:" + cs.fontStyle + ";" +
+      "color:" + cs.color + ";background:rgba(255,255,255,.94);border:2px solid #FF2D87;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,.3);outline:none";
+    var grow = function () { ta.style.height = "auto"; ta.style.height = (ta.scrollHeight + 2) + "px"; };
+    var vis = el.style.visibility; el.style.visibility = "hidden"; d.body.appendChild(ta); grow();
+    var done = false, finish = function (keep) { if (done) return; done = true; el.style.visibility = vis; var v = ta.value.replace(/\s+/g, " ").trim(); ta.remove();
+      if (keep && v && v !== $("words").value.replace(/\s+/g, " ").trim()) { $("words").value = v; $("wordsGo").onclick(); } else fill(); };
+    ta.addEventListener("input", grow);
+    ta.addEventListener("keydown", function (e) { e.stopPropagation(); if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); finish(true); } else if (e.key === "Escape") { e.preventDefault(); finish(false); } }, true);
+    ta.addEventListener("blur", function () { finish(true); });
+    ["pointerdown", "pointerup", "click"].forEach(function (k) { ta.addEventListener(k, function (e) { e.stopPropagation(); }, true); });
+    ta.focus(); ta.select(); say("Type the new words, then Enter. Esc keeps the old ones.", "ok");
+  }
   $("wordsGo").onclick = function () {
     if (!wordsOk()) { say("Tap the words themselves first.", "err"); return; }
     var t = $("words").value.trim(); if (!t) { say("Type the new words first.", "err"); return; }
