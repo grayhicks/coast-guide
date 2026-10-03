@@ -153,6 +153,9 @@
       var px = Number(s.size) > 0 ? Number(s.size) : Number(s.textSize) > 0 ? Number(s.textSize) : 16;
       out = out.filter(function (d) { return d.indexOf("font-size:") !== 0; });
       out.push("font-size:0");
+      /* a plain inline word box at 0 px has no height of its own, so the new words drawn by ::after spill out of it and the
+         picked box shrank to a thin strip (10/03 grade); as an inline-block it holds them */
+      if (s.ib === true) out.push("display:inline-block");
       extra = "\n" + sel.split(",").map(function (x) { return x + "::after"; }).join(",") + "{content:\"" + cssText(s.text) + "\" !important;font-size:" + px + "px !important}" +
         /* 10/03, J13: a title's last word sits in its own little box (so it never wraps away from its ticket mark); new
            words replace the whole title, so the boxes inside step aside too */

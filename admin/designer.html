@@ -49,7 +49,9 @@ header button, header select{ white-space:nowrap; }
   header h1{ display:none; }
   #focus, #floatsBtn{ width:40px; min-width:40px; padding:0; }
   #focus span, #floatsBtn span{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
-  #keysBtn{ width:40px; padding:0; }
+  #keysBtn{ width:auto; padding:0 8px; }
+  /* the words on Before and Save + publish now made the row 28 px too wide at 1100 (10/03): the menus give the room */
+  #width{ max-width:128px; } #lists, #look{ max-width:112px; } #publish{ padding:0 10px; } #publish span{ font-size:13px; }
 } #pubLine{ order:9; }
 .publine{ display:none; font-size:12px; font-weight:800; color:var(--mint); white-space:nowrap; max-width:46vw; overflow:hidden; text-overflow:ellipsis; }
 .publine.on{ display:block; } .publine.err, .publine.err a{ color:#ff8a80; } .publine.ok::before{ content:"\2713  "; }
@@ -105,7 +107,9 @@ main{ display:flex; gap:16px; padding:12px; align-items:flex-start; }
 .cap.cap0{ margin-top:0; }
 .readout{ font-size:30px; font-weight:800; line-height:1.1; font-variant-numeric:tabular-nums; }
 .sizehead{ display:flex; align-items:flex-end; justify-content:space-between; gap:12px; }
-.readout input{ font:inherit; width:4ch; field-sizing:content; min-width:2ch; padding:0; border:0; background:transparent; color:var(--ink); }
+/* the browser's little up/down arrows ate the number ("29.£"); the size buttons beside it do that job */
+#size, #tSize{ -moz-appearance:textfield; appearance:textfield; } #size::-webkit-inner-spin-button, #size::-webkit-outer-spin-button, #tSize::-webkit-inner-spin-button, #tSize::-webkit-outer-spin-button{ -webkit-appearance:none; margin:0; }
+.readout input{ font:inherit; width:5ch; field-sizing:content; min-width:2ch; padding:0; border:0; background:transparent; color:var(--ink); }
 .readout span{ font-size:16px; color:var(--mute); margin-left:4px; }
 .sizebtns button{ flex:1 1 0; font-weight:800; }
 .lineup button{ flex:1 1 auto; font-size:13px; }
@@ -192,7 +196,7 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
 /* a drawing or picture has no words: its word tools step out of the tab row */
 body[data-kind="mark"] #tabs [data-t="font"], body[data-kind="mark"] #tabs [data-t="words"], body[data-kind="mark"] #tabs [data-t="text"]{ display:none; }
 #tWords{ width:100%; font-size:16px; padding:9px 12px; margin:0 0 8px; }
-#textBox h2{ display:none; }
+#textBox h2{ display:none; } .twrow{ display:flex; gap:6px; align-items:center; margin:0 0 8px; } .twrow #tWords{ margin:0; flex:1 1 auto; min-width:0; }
 .trow{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:0 0 8px; }
 .tsize{ display:flex; align-items:center; gap:4px; } .tsize input{ width:64px; text-align:center; font-size:17px; font-weight:800; padding:8px 4px; }
 .tsize button, .tstyle button{ min-height:42px; min-width:44px; padding:0 10px; display:inline-flex; align-items:center; gap:4px; }
@@ -297,7 +301,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   .pad button{ min-height:48px; font-size:20px; }
   /* on a phone the update's progress floats just under the bar, over the top of the app */
   .publine{ position:fixed; top:56px; left:50%; transform:translateX(-50%); z-index:15; max-width:90vw; padding:4px 12px; border-radius:999px; background:rgba(14,22,33,.94); border:1px solid var(--line); box-shadow:0 4px 14px rgba(0,0,0,.4); }
-  #toast{ top:58px; bottom:auto; font-size:13px; line-height:1.3; font-weight:700; padding:7px 14px; border-radius:16px; max-width:calc(100vw - 32px); text-align:center; box-shadow:0 6px 18px rgba(0,0,0,.35); }
+  #toast{ width:max-content; font-size:13px; line-height:1.3; font-weight:700; padding:7px 14px; border-radius:16px; max-width:calc(100vw - 32px); text-align:center; box-shadow:0 6px 18px rgba(0,0,0,.35); }
   #signin{ margin-top:8px; }
 }
 /* Hide tools: the app takes the whole screen above the tab bar until a tab is tapped again */
@@ -354,14 +358,14 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   <button id="compare" class="ib" title="Hold to see the app without your changes (or hold the \ key)" aria-label="Hold to see it before your changes" data-i="compare"><span>Before</span></button>
   <span class="sp"></span>
   <span class="publine" id="pubLine" role="status"></span>
-  <button id="save" class="go">Save</button>
+  <button id="save" class="go" title="Save your changes. The app shows them at its next hourly update; Save + publish (in More) shows them in about 10 minutes.">Save</button>
   <button id="moreBtn" class="ib onlyphone" aria-label="More" aria-expanded="false" data-i="more"><span>More</span></button>
   <div class="more" id="more">
     <button id="focus" title="Zoom into the picked card" data-i="focus"><span>Focus card</span></button>
     <select id="width" class="onlywide" title="How wide a phone the app shows (every change should hold at 320, 390 and 430)" aria-label="Phone width"><option value="320">Small phone (320)</option><option value="360">360</option><option value="390" selected>iPhone (390)</option><option value="430">Big phone (430)</option></select>
     <select id="lists" title="How the app's lists show while you edit" aria-label="How the lists show"><option value="full">Full cards</option><option value="poster">Poster tiles</option></select>
     <select id="look" title="Which look the app shows"><option value="day">Day look</option><option value="night">Night look</option><option value="dark">Dark look</option></select>
-    <button id="publish" data-i="publish"><span>Save + publish</span></button>
+    <button id="publish" data-i="publish" title="Save, then update the app now (about 10 minutes)"><span>Save + publish now</span></button>
     <button id="floatsBtn" title="Show or hide the app's floating buttons (Show support, back to top) while picking" data-i="floats"><span>Floating buttons: hidden</span></button>
     <button id="keysBtn" class="onlywide" title="Keyboard shortcuts (?)" aria-label="Keyboard shortcuts">? Keys</button>
   </div>
@@ -389,7 +393,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     <div class="tools" id="tools">
     <div class="box empty" id="emptyHint">
       <h2>Start here</h2>
-      <p>Tap any word, mark or picture in the app to pick it. It gets a pink dashed ring, and the tools here change it.</p>
+      <p>Tap any word, mark or picture in the app to pick it. It gets a pink box, and the tools here change it.</p>
       <p class="mute">Hold the half-filled square at the top to see the app without your changes. Nothing reaches the app until you press Save.</p>
     </div>
     <div class="box" data-tab="where">
@@ -406,7 +410,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
          to another thing". Words, size, bold, italic, capitals, colour and font together; the full tabs stay for more -->
     <div class="box" id="textBox" data-tab="text">
       <h2>Text</h2>
-      <input id="tWords" type="text" placeholder="Type new words" aria-label="The words" autocomplete="off" enterkeyhint="done">
+      <div class="twrow"><input id="tWords" type="text" placeholder="Type new words" aria-label="The words" autocomplete="off" enterkeyhint="done"><button id="tOwn" class="tmore" title="Put back the words the app had" style="display:none">Its own words</button></div>
       <div class="trow">
         <div class="tsize"><button id="tSmaller" class="tcap" title="Smaller text (Ctrl+Shift+&lt;)" aria-label="Smaller text"><span class="tg"><span class="aa sm">A</span><span class="ar">&#9660;</span></span><small>Smaller</small></button><label class="tszl"><input id="tSize" type="number" step="0.5" min="5" max="80" aria-label="Text size"><small>Size</small></label><button id="tBigger" class="tcap" title="Bigger text (Ctrl+Shift+&gt;)" aria-label="Bigger text"><span class="tg"><span class="aa">A</span><span class="ar">&#9650;</span></span><small>Bigger</small></button></div>
         <div class="tstyle"><button id="tBold" class="tcap" title="Bold (Ctrl+B)" aria-label="Bold"><b>B</b><small>Bold</small></button><button id="tItalic" class="tcap" title="Italic (Ctrl+I)" aria-label="Italic"><i>I</i><small>Italic</small></button><button id="tCaps" class="tcap" title="Capitals (Ctrl+Shift+K)" aria-label="Capitals">AA<small>Capitals</small></button></div>
@@ -566,7 +570,8 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     $("status").textContent = t; $("status").className = "status" + (c ? " " + c : "");
     var T = $("toast"); T.textContent = t; T.className = "on" + (c ? " " + c : ""); clearTimeout(toastT);
     /* on a phone the note sits over the bottom of the app, never over the tool he is using */
-    if (narrow()) { var ph = document.querySelector(".phone"); if (ph) T.style.bottom = Math.max(8, window.innerHeight - ph.getBoundingClientRect().bottom + 10) + "px"; } else T.style.bottom = "";
+    /* a small bar at the foot of the app, never a slab over the card (10/03 grade: it grew 407 px tall) */
+    if (narrow()) { var ph = document.querySelector(".phone"); if (ph) T.style.bottom = Math.max(8, window.innerHeight - ph.getBoundingClientRect().bottom + 44) + "px"; } else T.style.bottom = "";
     if (!/…$/.test(t)) toastT = setTimeout(function () { T.className = ""; }, narrow() ? 2600 : 3500);
   };
   var frame = function () { try { return $("app").contentDocument; } catch (e) { return null; } };
@@ -709,8 +714,10 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     var box = $("levels"); box.innerHTML = ""; if (!levelBase) return;
     var chain = [], n = levelBase, stop = levelBase.closest(".card");
     while (n && chain.length < 6 && n.tagName && n.tagName.toLowerCase() !== "body" && !(n.classList && n.classList.contains("hk"))) { chain.unshift(n); if (n === stop) break; n = n.parentElement; }
+    /* two levels with one name ("Date pill › Date pill") read as a stutter: the inner one is called by its own words */
+    var names = chain.map(levelName); names = names.map(function (nm, i) { if (!i || nm !== names[i - 1]) return nm; var t = ownText(chain[i]); return t ? "\u201c" + (t.length > 16 ? t.slice(0, 14) + "\u2026" : t) + "\u201d" : nm + " inside"; });
     chain.forEach(function (node, i) {
-      var b = document.createElement("button"); b.textContent = levelName(node); if (node === sel.el) b.className = "sel";
+      var b = document.createElement("button"); b.textContent = names[i]; if (node === sel.el) b.className = "sel";
       b.title = "Pick this level";
       b.onclick = function () { trail = chain.slice(i + 1).reverse(); select(node); };
       box.appendChild(b);
@@ -781,11 +788,13 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     if (r.set.ib === undefined && sel && sel.el && sel.el.ownerDocument.defaultView.getComputedStyle(sel.el).display === "inline") r.set.ib = true;
     if (r.set.mv === "mg" && !r.set.m0 && sel && sel.el) { var cs = sel.el.ownerDocument.defaultView.getComputedStyle(sel.el); r.set.m0 = [parseFloat(cs.marginLeft) || 0, parseFloat(cs.marginTop) || 0]; }
     return r; }
+  function syncText(r) { if (!sel || sel.in !== "card" || !(Number(r.set.size) > 0)) return; var tk = findRule(Object.assign(key(), { scope: "card", value: sel.card })); if (tk && tk !== r && tk.set && tk.set.text) tk.set.textSize = Number(r.set.size); }
   function edit(fn) {
     var k = key(); if (!k) { say("Tap a word in the app first.", "err"); return; }
     snap();
     var c0 = (findRule(k) || { set: {} }).set.color, g0 = (function (st) { st = st || {}; return JSON.stringify([st.dx, st.dy, st.size, st.scale, st.rot, st.spacing, st.lh, st.font, st.weight, st.text, st.hide, st.tcase]); })((findRule(k) || {}).set);
-    group().forEach(function (g) { withSel(g, function () { fn(ruleFor(key()).set); }); });
+    /* a card whose words were replaced draws them at the words rule's own size, so a size change carries over to it */
+    group().forEach(function (g) { withSel(g, function () { var r = ruleFor(key()); fn(r.set); syncText(r); }); });
     var c1 = ruleFor(k).set.color; if (c1 && c1 !== c0) remember(c1);
     /* the distance lines show again only when the piece moved or changed size, not after a colour (10/03 grade) */
     var geo = function (st) { st = st || {}; return JSON.stringify([st.dx, st.dy, st.size, st.scale, st.rot, st.spacing, st.lh, st.font, st.weight, st.text, st.hide, st.tcase]); };
@@ -964,6 +973,9 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
      letters themselves (not the line boxes), drawn above the app so a colour shift never tints it, with a round handle
      at the bottom right corner: drag it out to make the piece bigger, in to make it smaller. ---- */
   var hideFloats = true; try { hideFloats = localStorage.getItem("hk_designer_floats") !== "show"; } catch (e) {}
+  /* 10/03 grade: after new words the element is 0 px (its ::after draws the words), so Size read 0 and one tap of
+     Bigger set every card's title to 15 px. The size he sees is the ::after's when the element's own is 0 */
+  function fsOf(el) { if (!el) return 0; var w = el.ownerDocument.defaultView, f = parseFloat(w.getComputedStyle(el).fontSize) || 0; if (!f) f = parseFloat(w.getComputedStyle(el, "::after").fontSize) || 0; return f; }
   function boxOf(el) { var tc = el.ownerDocument.defaultView.getComputedStyle(el), af = el.ownerDocument.defaultView.getComputedStyle(el, "::after").content;
     if ((tc.rotate && tc.rotate !== "none") || tc.transform !== "none" || (parseFloat(tc.fontSize) === 0 && af && af !== "none" && af !== "normal")) { var q = el.getBoundingClientRect(); return { l: q.left, r: q.right, t: q.top, b: q.bottom }; }
     if (ownText(el) && el.tagName.toLowerCase() !== "svg") { var u = union(inkRects(el)); if (u.r > u.l) return u; } var b = el.getBoundingClientRect(); return { l: b.left, r: b.right, t: b.top, b: b.bottom }; }
@@ -1061,7 +1073,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     var dx0 = Number(s.dx) || 0, dy0 = Number(s.dy) || 0;
     $("moveRead").textContent = !dx0 && !dy0 ? "Not moved" : (dx0 ? (dx0 > 0 ? "\u2192 " : "\u2190 ") + Math.abs(dx0) : "") + (dx0 && dy0 ? "   " : "") + (dy0 ? (dy0 > 0 ? "\u2193 " : "\u2191 ") + Math.abs(dy0) : "") + " px";
     var zNow = cs ? (parseInt(cs.zIndex, 10) || 0) : 0; $("zRead").textContent = s.z !== undefined ? "Layer " + s.z : cs ? (zNow > 99 ? "Its own layer" : "Layer " + zNow + " (its own)") : "";
-    $("size").value = s.size || (cs ? Math.round(parseFloat(cs.fontSize) * 2) / 2 : ""); $("sizeRange").value = $("size").value || 14;
+    $("size").value = s.size || (el ? Math.round(fsOf(el) * 2) / 2 : ""); $("sizeRange").value = $("size").value || 14;
     $("sizeWas").textContent = r && r.set && r.set.size ? "Changed (Reset this puts it back)" : "Its own size";
     var mark = function (box, v) { Array.prototype.forEach.call($(box).children, function (b) { b.classList.toggle("sel", (b.getAttribute("data-v") || "") === (v === undefined ? "" : String(v))); }); };
     mark("wSeg", s.weight || ""); mark("caseSeg", s.tcase || ""); mark("edgeSeg", s.edge || "");
@@ -1131,7 +1143,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     var spread = function () { var k = Object.keys(fingers), a = fingers[k[0]], b = fingers[k[1]]; return { d: Math.max(8, Math.hypot(b.x - a.x, b.y - a.y)), a: Math.atan2(b.y - a.y, b.x - a.x) }; };
     var startPinch = function () { var s0 = spread(); if (drag && drag.on) lift(false); drag = null; tap = null;
       pinch = { d0: s0.d, a0: s0.a, on: false, starts: group().map(function (g) { return withSel(g, function () { var cs = g.el.ownerDocument.defaultView.getComputedStyle(g.el), r = findRule(key()), st = (r && r.set) || {}, txt = ownText(g.el) && g.el.tagName.toLowerCase() !== "svg";
-        return { g: g, txt: txt, base: txt ? (Number(st.size) || parseFloat(cs.fontSize)) : (Number(st.scale) || 1), rot: Number(st.rot) || 0 }; }); }) }; };
+        return { g: g, txt: txt, base: txt ? (Number(st.size) || fsOf(g.el)) : (Number(st.scale) || 1), rot: Number(st.rot) || 0 }; }); }) }; };
     var popup = function (t) { return t && t.closest && (t.id === "hk_inline" || t.closest('[role="dialog"][aria-modal="true"]')); };
     d.addEventListener("click", function (e) { if (!picking || popup(e.target)) return; e.preventDefault(); e.stopPropagation(); }, true);
     d.addEventListener("pointerdown", function (e) {
@@ -1141,7 +1153,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
         e.preventDefault(); e.stopPropagation(); tap = null; var b = boxOf(sel.el), cx = (b.l + b.r) / 2, cy = (b.t + b.b) / 2;
         resize = { hid: e.target.id, cx: cx, cy: cy, d0: Math.max(8, Math.hypot(e.clientX - cx, e.clientY - cy)), on: false,
           starts: group().map(function (g) { return withSel(g, function () { var cs = g.el.ownerDocument.defaultView.getComputedStyle(g.el), r = findRule(key()), st = (r && r.set) || {}, txt = ownText(g.el) && g.el.tagName.toLowerCase() !== "svg";
-            return { g: g, txt: txt, base: txt ? (Number(st.size) || parseFloat(cs.fontSize)) : (Number(st.scale) || 1) }; }); }) };
+            return { g: g, txt: txt, base: txt ? (Number(st.size) || fsOf(g.el)) : (Number(st.scale) || 1) }; }); }) };
         return;
       }
       if (e.target && e.target.id === "hk_turn" && sel) {
@@ -1166,14 +1178,14 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       if (fingers[e.pointerId]) fingers[e.pointerId] = { x: e.clientX, y: e.clientY };
       if (pinch) { if (Object.keys(fingers).length < 2) return; var sp = spread(), k = sp.d / pinch.d0, da = ((sp.a - pinch.a0) * 180 / Math.PI + 540) % 360 - 180;
         if (!pinch.on) { if (Math.abs(k - 1) < 0.03 && Math.abs(da) < 4) return; pinch.on = true; snap(); }
-        pinch.starts.forEach(function (st) { withSel(st.g, function () { var r = ruleFor(key()); if (st.txt) r.set.size = Math.max(5, Math.round(st.base * k * 2) / 2); else r.set.scale = Math.max(0.2, Math.min(4, Math.round(st.base * k * 100) / 100));
+        pinch.starts.forEach(function (st) { withSel(st.g, function () { var r = ruleFor(key()); if (st.txt) r.set.size = Math.max(5, Math.round(st.base * k * 2) / 2); else r.set.scale = Math.max(0.2, Math.min(4, Math.round(st.base * k * 100) / 100)); syncText(r);
           var v = st.rot + da, sn = Math.round(v / 15) * 15; v = Math.abs(v - sn) < 5 ? sn : Math.round(v); v = ((v + 540) % 360) - 180; if (!v) delete r.set.rot; else r.set.rot = v; }); });
         paint(); fill(); e.preventDefault(); e.stopPropagation(); return; }
       if (turn) { var a = (Math.atan2(e.clientY - turn.cy, e.clientX - turn.cx) - turn.a0) * 180 / Math.PI; a = ((a + 540) % 360) - 180; if (!turn.on) { if (Math.abs(a) < 2) return; turn.on = true; snap(); }
         turn.starts.forEach(function (st) { withSel(st.g, function () { var v = st.rot + a, sn = Math.round(v / 15) * 15; v = e.altKey ? Math.round(v) : Math.abs(v - sn) < 4 ? sn : Math.round(v); v = ((v + 540) % 360) - 180; var r = ruleFor(key()); if (!v) delete r.set.rot; else r.set.rot = v; }); });
         paint(); fill(); e.preventDefault(); e.stopPropagation(); return; }
       if (resize) { var k = Math.hypot(e.clientX - resize.cx, e.clientY - resize.cy) / resize.d0; if (!resize.on) { if (Math.abs(k - 1) < 0.02) return; resize.on = true; snap(); }
-        resize.starts.forEach(function (st) { withSel(st.g, function () { var r = ruleFor(key()); if (st.txt) r.set.size = Math.max(5, Math.round(st.base * k * 2) / 2); else r.set.scale = Math.max(0.2, Math.min(4, Math.round(st.base * k * 100) / 100)); }); });
+        resize.starts.forEach(function (st) { withSel(st.g, function () { var r = ruleFor(key()); if (st.txt) r.set.size = Math.max(5, Math.round(st.base * k * 2) / 2); else r.set.scale = Math.max(0.2, Math.min(4, Math.round(st.base * k * 100) / 100)); syncText(r); }); });
         paint(); fill(); e.preventDefault(); e.stopPropagation(); return; }
       if (!drag) return;
       var mx = Math.round(e.clientX - drag.x), my = Math.round(e.clientY - drag.y);
@@ -1381,9 +1393,9 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   var TFONTS = ["Baloo 2", "Nunito", "Chewy", "Fredoka", "Pacifico", "Lobster", "Playfair Display", "Bebas Neue", "Cormorant Garamond"].filter(function (f) { return CD.FONTS.indexOf(f) > -1; });
   function textFill() {
     if (!$("textBox") || !SW || !TFONTS) return; var el = sel && sel.el, r = sel && findRule(key()), st = (r && r.set) || {}, cs = el ? el.ownerDocument.defaultView.getComputedStyle(el) : null, wok = wordsOk();
-    if (document.activeElement !== $("tWords")) { var tk = sel && sel.in === "card" ? Object.assign(key(), { scope: "card", value: sel.card }) : null, tr = tk ? findRule(tk) : r; $("tWords").value = wok ? ((tr && tr.set && tr.set.text) || allWords(el).slice(0, 160)) : ""; }
+    if (document.activeElement !== $("tWords")) { var tk = sel && sel.in === "card" ? Object.assign(key(), { scope: "card", value: sel.card }) : null, tr = tk ? findRule(tk) : r; $("tWords").value = wok ? ((tr && tr.set && tr.set.text) || allWords(el).slice(0, 160)) : ""; $("tOwn").style.display = tr && tr.set && tr.set.text ? "" : "none"; }
     $("tWords").placeholder = !sel ? "Tap any words in the app" : wok ? "Type new words" : "Tap here to pick the words inside";
-    if (document.activeElement !== $("tSize")) $("tSize").value = st.size || (cs ? Math.round(parseFloat(cs.fontSize) * 2) / 2 : "");
+    if (document.activeElement !== $("tSize")) $("tSize").value = st.size || (el ? Math.round(fsOf(el) * 2) / 2 : "");
     var fwN = Number(st.weight) || (cs ? Number(cs.fontWeight) : 400); $("tBold").classList.toggle("sel", fwN >= 700); $("tItalic").classList.toggle("sel", st.italic === true || (cs && cs.fontStyle === "italic" && st.italic !== false)); $("tCaps").classList.toggle("sel", (st.tcase || (cs && cs.textTransform)) === "upper" || (cs && cs.textTransform === "uppercase" && !st.tcase));
     var rc = recent.map(function (x) { return x.toUpperCase(); }), notR = function (c) { return rc.indexOf(c.toUpperCase()) < 0; };
     var cols = recent.concat(SW.filter(function (c) { return notR(c) && hsl(c).c >= 0.16 && hsl(c).l <= 0.9; })).concat(SW.filter(function (c) { return notR(c) && (hsl(c).c < 0.16 || hsl(c).l > 0.9); })).slice(0, 16);
@@ -1401,13 +1413,14 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     if (!v || v === now.replace(/\s+/g, " ").trim()) return; $("words").value = v; $("wordsGo").onclick(); };
   $("tWords").addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); tApply(); $("tWords").blur(); } });
   $("tWords").addEventListener("change", tApply);
+  $("tOwn").onclick = function () { $("wordsOff").click(); fill(); };
   $("tSmaller").onclick = function () { var b = document.querySelector('.panel [data-s="-1"]'); if (b) b.click(); };
   $("tBigger").onclick = function () { var b = document.querySelector('.panel [data-s="1"]'); if (b) b.click(); };
   $("tSize").addEventListener("change", function () { var v = Number(this.value); if (!sel || !(v >= 5 && v <= 80)) return; edit(function (s2) { s2.size = Math.round(v * 2) / 2; }); });
   $("tBold").onclick = function () { if (!sel) return; var fwNow = Number(sel.el.ownerDocument.defaultView.getComputedStyle(sel.el).fontWeight) || 400; edit(function (s2) { s2.weight = fwNow >= 700 ? 400 : 800; }); };
   $("tItalic").onclick = function () { if (!sel) return; var it = sel.el.ownerDocument.defaultView.getComputedStyle(sel.el).fontStyle === "italic"; edit(function (s2) { s2.italic = it ? false : true; }); };
   $("tCaps").onclick = function () { if (!sel) return; var up = sel.el.ownerDocument.defaultView.getComputedStyle(sel.el).textTransform === "uppercase"; edit(function (s2) { s2.tcase = up ? "none" : "upper"; }); };
-  Array.prototype.forEach.call(document.querySelectorAll(".tmore"), function (b) { b.onclick = function () { showTab(b.getAttribute("data-go")); }; });
+  Array.prototype.forEach.call(document.querySelectorAll(".tmore[data-go]"), function (b) { b.onclick = function () { showTab(b.getAttribute("data-go")); }; });
   /* the font buttons show themselves: one request for every family, for this page only */
   (function () { var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "https://fonts.googleapis.com/css2?" + CD.FONTS.map(function (f) { return "family=" + f.replace(/ /g, "+"); }).join("&") + "&display=swap"; document.head.appendChild(l);
     /* the Font tab is closed at first, and a closed tab's fonts are never asked for: ask for every one now, so they are drawn by the time he opens it */
@@ -1423,7 +1436,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   Array.prototype.forEach.call($("wSeg").children, function (b) { b.onclick = function () { var v = b.getAttribute("data-v"); edit(function (s) { s.weight = v ? Number(v) : undefined; }); }; });
   Array.prototype.forEach.call($("caseSeg").children, function (b) { b.onclick = function () { var v = b.getAttribute("data-v"); edit(function (s) { s.tcase = v || undefined; }); }; });
   Array.prototype.forEach.call(document.querySelectorAll("[data-n]"), function (b) { b.onclick = function () { var v = b.getAttribute("data-n").split(",").map(function (x) { return Number(x) * step; }); edit(function (s) { if (!v[0] && !v[1]) { s.dx = 0; s.dy = 0; } else { s.dx = (s.dx || 0) + v[0]; s.dy = (s.dy || 0) + v[1]; } }); }; });
-  Array.prototype.forEach.call(document.querySelectorAll("[data-s]"), function (b) { b.onclick = function () { var st = Number(b.getAttribute("data-s")); edit(function (s) { var own = sel && sel.el ? parseFloat(sel.el.ownerDocument.defaultView.getComputedStyle(sel.el).fontSize) : 0; s.size = Math.max(5, Math.round(((Number(s.size) || own || Number($("size").value) || 14) + st) * 10) / 10); }); }; });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-s]"), function (b) { b.onclick = function () { var st = Number(b.getAttribute("data-s")); edit(function (s) { var own = sel && sel.el ? fsOf(sel.el) : 0; s.size = Math.max(5, Math.round(((Number(s.size) || own || Number($("size").value) || 14) + st) * 10) / 10); }); }; });
   Array.prototype.forEach.call(document.querySelectorAll("[data-sp]"), function (b) { b.onclick = function () { var st = Number(b.getAttribute("data-sp")); edit(function (s) { var cs = sel.el.ownerDocument.defaultView.getComputedStyle(sel.el); var cur = s.spacing !== undefined ? Number(s.spacing) : (parseFloat(cs.letterSpacing) || 0); s.spacing = Math.round((cur + st) * 10) / 10; }); }; });
   Array.prototype.forEach.call(document.querySelectorAll("[data-lh]"), function (b) { b.onclick = function () { var st = Number(b.getAttribute("data-lh")); edit(function (s) { var cs = sel.el.ownerDocument.defaultView.getComputedStyle(sel.el); var cur = Number(s.lh) || (parseFloat(cs.lineHeight) / parseFloat(cs.fontSize)) || 1.2; s.lh = Math.round((cur + st) * 100) / 100; }); }; });
   /* every slider: it previews as it slides, keeps one undo step for the whole slide, and its middle value means "its own" */
@@ -1661,7 +1674,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   $("wordsGo").onclick = function () {
     if (!wordsOk()) { say("Tap the words themselves first.", "err"); return; }
     var t = $("words").value.trim(); if (!t) { say("Type the new words first.", "err"); return; }
-    var px = Math.round(parseFloat(sel.el.ownerDocument.defaultView.getComputedStyle(sel.el).fontSize) * 10) / 10;
+    var px = Math.round(fsOf(sel.el) * 10) / 10;
     var was = scope; if (sel.in === "card") scope = "card";
     edit(function (s) { s.text = t; if (!(Number(s.textSize) > 0)) s.textSize = px; });
     scope = was; scopeChip(); say(sel.in === "card" ? "New words on this card." : "New words in place.", "ok");
