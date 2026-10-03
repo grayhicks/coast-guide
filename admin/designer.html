@@ -163,7 +163,12 @@ body.locked header, body.locked main{ display:none !important; }
 body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-content:center; padding:24px 16px; }
 #lock .box{ max-width:420px; width:100%; }
 #lock input{ width:100%; font-size:17px; padding:12px; margin:10px 0; }
-#lock button{ width:100%; font-size:17px; padding:12px; }
+#lock button{ width:100%; font-size:17px; padding:12px; } #lock .keyrow{ flex-wrap:nowrap; gap:8px; } #lock .keyrow button{ flex:1 1 0; }
+.keysteps{ margin-top:18px; padding:14px; border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.03); }
+.keysteps h3{ margin:0 0 10px; font-size:15px; color:var(--mint); }
+.keysteps ol{ margin:0 0 10px; padding-left:22px; } .keysteps li{ margin:0 0 12px; font-size:15px; line-height:1.4; } .keysteps li span{ display:block; color:var(--mute); font-size:14px; margin-top:2px; }
+.keysteps a.keylink{ display:inline-block; font-weight:800; color:#0E1621; background:var(--mint); border-radius:999px; padding:8px 14px; text-decoration:none; }
+.keysteps a{ color:var(--mint); }
 .levels{ display:flex; gap:6px; flex-wrap:wrap; margin:8px 0 2px; align-items:center; }
 .levels button{ min-height:30px; padding:3px 10px; font-size:13px; border-radius:999px; color:var(--mute); }
 .levels button.sel{ background:var(--chipon); border-color:#1F6B57; color:var(--mint); font-weight:800; }
@@ -215,9 +220,9 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   html, body{ overflow-x:hidden; }
   .panel{ flex:1 1 auto; min-height:0; max-width:none; min-width:0; width:100%; padding:0 8px calc(var(--tabh) + env(safe-area-inset-bottom)); display:flex; flex-direction:column; }
   .panel > *, .tools > *, .strip{ min-width:0; max-width:100%; }
-  .readout{ font-size:22px; } .mvside .cap{ margin-top:4px; } .mvside .cap.cap0{ margin-top:0; } .mvside .gap{ margin-top:2px; }
+  .readout{ font-size:20px; white-space:nowrap; } .mvside .cap{ margin-top:4px; } .mvside .cap.cap0{ margin-top:0; } .mvside .gap{ margin-top:8px; }
   .mvside .gd{ grid-template-rows:auto 14px auto; gap:0 6px; } .mvside .gd b{ height:14px; width:30px; } .mvside .gd i{ font-size:12px; line-height:14px; }
-  .mvrow{ gap:12px; } .mvside{ flex:1 1 0; } .mvside .seg{ flex-wrap:nowrap; } .mvside .seg button{ padding:6px 9px; flex:1 1 0; }
+  .mvrow{ gap:12px; } .mvside{ flex:1 1 0; } .mvside .seg{ flex-wrap:nowrap; } .mvside .seg button{ padding:6px 4px; flex:1 1 0; font-size:14px; white-space:nowrap; }
   .box{ border-radius:0; border:0; background:transparent; padding:0; margin:0; }
   .box.picked{ padding:6px 4px 0; }
   .strip .big{ font-size:15px; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; flex:1 1 auto; }
@@ -281,12 +286,23 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
 <script src="card_design.js"></script>
 </head>
 <body class="locked" data-tab="move" data-sel="0">
+<template id="keySteps"><div class="keysteps">
+  <h3>No key on this device? Make one in about two minutes</h3>
+  <ol>
+    <li><a class="keylink" href="https://github.com/settings/personal-access-tokens/new?name=Card+designer&description=Lets+the+card+designer+save+and+publish+changes&target_name=grayhicks&expires_in=366&contents=write&actions=write" target="_blank" rel="noreferrer">Open the key page on GitHub</a><span>Sign in to GitHub if it asks. The name, the one-year expiry and the two permissions it needs are already filled in.</span></li>
+    <li><b>Under Repository access, tap Only select repositories, then choose gca-widget.</b><span>That is the one thing the link cannot fill in for you.</span></li>
+    <li><b>Scroll to the bottom and press Generate token.</b><span>Then press the copy button beside the long code that starts with github_pat_.</span></li>
+    <li><b>Come back to this page and paste the code into the box above.</b><span>It is checked with GitHub as soon as it lands, and this device remembers it for a year.</span></li>
+  </ol>
+  <div class="mute">Lost an old key? It stops working on its own, or you can delete it on <a href="https://github.com/settings/personal-access-tokens" target="_blank" rel="noreferrer">your GitHub keys page</a>.</div>
+</div></template>
 <div id="lock"><div class="box">
   <h2>Card Designer is locked</h2>
   <div class="mute">Paste your GitHub key. It is checked with GitHub, then remembered on this device only.</div>
   <input id="lockKey" type="password" autocomplete="off" placeholder="Your GitHub key">
-  <button id="lockGo" class="go">Unlock</button>
+  <div class="row keyrow"><button id="lockPaste" class="go">Paste my key</button><button id="lockGo">Unlock</button></div>
   <div class="status" id="lockSay"></div>
+  <div class="keyhere"></div>
 </div></div>
 <header>
   <h1>Card Designer</h1>
@@ -301,6 +317,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   <div class="more" id="more">
     <button id="focus" title="Zoom into the picked card" data-i="focus"><span>Focus card</span></button>
     <select id="width" class="onlywide" title="How wide a phone the app shows (every change should hold at 320, 390 and 430)" aria-label="Phone width"><option value="320">Small phone (320)</option><option value="360">360</option><option value="390" selected>iPhone (390)</option><option value="430">Big phone (430)</option></select>
+    <select id="lists" title="How the app's lists show while you edit" aria-label="How the lists show"><option value="full">Full cards</option><option value="poster">Poster tiles</option></select>
     <select id="look" title="Which look the app shows"><option value="day">Day look</option><option value="night">Night look</option><option value="dark">Dark look</option></select>
     <button id="publish" data-i="publish"><span>Save + publish</span></button>
     <button id="floatsBtn" title="Show or hide the app's floating buttons (Show support, back to top) while picking" data-i="floats"><span>Floating buttons: hidden</span></button>
@@ -314,6 +331,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       <h2>One time on this device, to save</h2>
       <div class="row"><input id="token" type="password" placeholder="Paste your GitHub key" style="flex:1;min-width:200px"><button id="tokenGo" class="go">Sign in</button></div>
       <div class="mute">Only asked when you save and this device has no key yet. Signed in to the card editor here? Then it is never asked.</div>
+      <div class="keyhere"></div>
     </div>
     <div class="box picked">
       <h2 class="onlywide">Picked</h2>
@@ -358,8 +376,8 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       <h2>Move</h2>
       <div class="row mvrow">
         <div class="pad"><span></span><button data-n="0,-1" aria-label="Move up" data-i="chup"></button><span></span><button data-n="-1,0" aria-label="Move left" data-i="chleft"></button><button data-n="0,0" title="Back to where it was" aria-label="Back to where it was" data-i="home"></button><button data-n="1,0" aria-label="Move right" data-i="chright"></button><span></span><button data-n="0,1" aria-label="Move down" data-i="chdown"></button><span></span></div>
-        <div class="mvside"><div class="cap cap0">Step</div><div class="seg" id="stepSeg"><button data-v="1" class="sel" title="Each tap moves it 1 pixel">1</button><button data-v="5" title="Each tap moves it 5 pixels">5</button><button data-v="10" title="Each tap moves it 10 pixels">10</button></div>
-          <div class="cap">Moved</div><div class="readout" id="moveRead">0, 0</div><div class="gap" id="gapRead"></div></div></div>
+        <div class="mvside"><div class="seg" id="stepSeg"><button data-v="1" class="sel" title="Each tap moves it 1 pixel">1 px</button><button data-v="5" title="Each tap moves it 5 pixels">5 px</button><button data-v="10" title="Each tap moves it 10 pixels">10 px</button></div>
+          <div class="cap">Moved</div><div class="readout" id="moveRead">Not moved</div><div class="gap" id="gapRead"></div></div></div>
       <div class="row lineup"><button id="evenV" title="Same space above as below">&#8597; Even above and below</button><button id="evenH" title="Same space left as right">&#8596; Even left and right</button><button id="centreX" title="Centre it across the card">Centre on the card</button></div>
       <div class="row"><button id="snap" class="on" data-i="snap"><span>Snap on</span></button><span class="mute onlywide">Hold <kbd>Alt</kbd> while dragging to place it freely.</span></div>
       <div class="mute onlywide">Drag it in the app, or use the arrow keys (<kbd>Shift</kbd> moves 10 px). <kbd>P</kbd> switches between picking and using the app.</div>
@@ -431,6 +449,9 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
 <dialog id="news" aria-label="New in the designer">
   <h2>New in the designer</h2>
   <ul>
+    <li>Tap words that are already picked to type new ones right on the card.</li>
+    <li>On a computer: Enter types, Esc picks the box around it, Tab goes to the next piece, Ctrl+B bolds, Delete hides. The ? button lists them all.</li>
+    <li>More, then Poster tiles, lets you style the new poster view.</li>
     <li>Double-tap the picked words to type right on the card. Enter keeps them.</li>
     <li>On a phone, two fingers on the picked piece make it bigger or smaller and turn it.</li>
     <li>The pink dot above the picked piece turns it. Layers can bring a piece forward or send it back.</li>
@@ -459,6 +480,13 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     <tr><td><kbd>Ctrl</kbd> <kbd>Z</kbd></td><td>Undo (<kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>Z</kbd> redo)</td></tr>
     <tr><td><kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>C</kbd> / <kbd>V</kbd></td><td>Copy a look, paste it</td></tr>
     <tr><td><kbd>Ctrl</kbd> <kbd>]</kbd> / <kbd>[</kbd></td><td>Bring forward, send back</td></tr>
+    <tr><td><kbd>Enter</kbd></td><td>Type new words on the picked piece</td></tr>
+    <tr><td><kbd>Esc</kbd></td><td>Pick the box it sits in</td></tr>
+    <tr><td><kbd>Tab</kbd> / <kbd>Shift</kbd> <kbd>Tab</kbd></td><td>Next piece, previous piece</td></tr>
+    <tr><td><kbd>Delete</kbd></td><td>Hide it (Undo or Layers brings it back)</td></tr>
+    <tr><td><kbd>Ctrl</kbd> <kbd>B</kbd> / <kbd>I</kbd></td><td>Bold, italic</td></tr>
+    <tr><td><kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>K</kbd></td><td>Capitals</td></tr>
+    <tr><td><kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>&gt;</kbd> / <kbd>&lt;</kbd></td><td>Bigger, smaller</td></tr>
     <tr><td>Double-click the words</td><td>Type right on the card</td></tr>
     <tr><td><kbd>?</kbd></td><td>This list</td></tr>
   </table>
@@ -531,6 +559,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   }
   function groupName() { var base = $("partName").getAttribute("data-one") || $("partName").textContent; $("partName").setAttribute("data-one", base); $("partName").textContent = base + (multi.length ? " + " + multi.length + " more" : ""); }
   function select(el, keepGroup) {
+    if (typing) typing(true);
     var d = frame(); if (!d || !el) return;
     if (el.closest("svg") && el.tagName.toLowerCase() !== "svg") el = el.closest("svg");
     if (!keepGroup) clearGroup();
@@ -555,7 +584,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     fill(); paint(); layersList(); if (zoomK > 1) setTimeout(zoomTo, 0);
   }
   /* plain names for the app's own boxes, so the level chips read like places on the card, not code */
-  var LEVEL_NAMES = { cardbtn: "Whole card", top: "Top of card", hbody: "Header", headleft: "Title area", hk_slot: "Title box",
+  var LEVEL_NAMES = { hk_pgrid: "All the tiles", hk_ptile: "Whole tile", hk_ptph: "Tile picture", hk_ptt: "Tile name", hk_ptrib: "Tile date", hk_ptsub: "Tile line", hk_ptrows: "Tile details", hk_ptstamp: "Tile town", hk_ptmore: "Full card link", hk_ptback: "Back to posters", cardbtn: "Whole card", top: "Top of card", hbody: "Header", headleft: "Title area", hk_slot: "Title box",
     eyebrow: "Category line", ebcat: "Category", ebtail: "Category word", ebrow2: "Today line", meta: "Date area", daterail: "Date row",
     dpill: "Date pill", cardcal: "Calendar button", vstamp: "Source stamp", venue: "Place line", venueprimary: "Place name",
     status: "Bar", chip: "Bar word", blurb: "Description", cardfoot: "Card bottom", price: "Price", hourslist: "Times",
@@ -934,21 +963,22 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
      one card, so a new title never lands on every card */
   /* words can change on a piece whose words are its own, or run on through small inline boxes (a title's last word) */
   var allWords = function (el) { return (el.textContent || "").replace(/\s+/g, " ").trim(); };
-  function wordsOk() { if (!(sel && sel.el && sel.el.tagName.toLowerCase() !== "svg" && ownText(sel.el))) return false; return !Array.prototype.some.call(sel.el.querySelectorAll("*"), function (k) { if (k.closest("svg")) return false; var d = k.ownerDocument.defaultView.getComputedStyle(k).display; return /block|flex|grid|table/.test(d) && !/inline/.test(d); }); }
+  function wordsOk() { if (!(sel && sel.el && sel.el.tagName.toLowerCase() !== "svg" && ownText(sel.el)) || sel.el.closest(".hk_ptile")) return false; return !Array.prototype.some.call(sel.el.querySelectorAll("*"), function (k) { if (k.closest("svg")) return false; var d = k.ownerDocument.defaultView.getComputedStyle(k).display; return /block|flex|grid|table/.test(d) && !/inline/.test(d); }); }
   /* the change's reach, always beside its name: Every card / Cards like this / Only this card, plus the look */
   function scopeChip() {
     var c = $("scopeChip"); if (!sel) { c.textContent = ""; return; }
     var d = frame(), n = function (q) { try { return d.querySelectorAll(q).length; } catch (e) { return 0; } };
-    var w = sel.in === "card" ? (scope === "card" ? "Only this card" : scope === "kind" ? "Cards like this (" + (sel.kind || "same kind") + ", " + n('.card[data-bub^="' + String(sel.kind || "").replace(/"/g, "") + '"]') + " on this page)" : "Every card (" + n(".card") + " on this page)") : sel.el.closest(".hero") ? "The hero" : "Everywhere in the app";
+    var w = sel.in === "card" ? (scope === "card" ? "Only this card" : scope === "kind" ? "Cards like this (" + (sel.kind || "same kind") + ", " + n('.card[data-bub^="' + String(sel.kind || "").replace(/"/g, "") + '"]') + " on this page)" : "Every card (" + n(".card") + " on this page)") : sel.el.closest(".hero") ? "The hero" : sel.el.closest(".hk_ptile") ? "Every poster tile (" + n(".hk_ptile") + " on this page)" : "Everywhere in the app";
     c.textContent = "Changes: " + w + (lookScope === "day" ? ", day look only" : lookScope === "night" ? ", night and dark only" : "") + " \u203a";
   }
   function fill() { scopeChip(); samples();
     var r = sel && findRule(key()), s = (r && r.set) || {}, el = sel && sel.el, cs = el ? el.ownerDocument.defaultView.getComputedStyle(el) : null;
-    var wok = wordsOk(); $("words").disabled = $("wordsGo").disabled = !wok;
+    var wok = wordsOk(); $("words").disabled = !sel; $("wordsGo").disabled = !wok;
     var tk = sel && sel.in === "card" ? Object.assign(key(), { scope: "card", value: sel.card }) : null, tr = tk ? findRule(tk) : r;
     $("words").value = (tr && tr.set && tr.set.text) || ""; $("words").placeholder = wok ? allWords(sel.el).slice(0, 80) : "Type new words"; if (wok && !$("words").value) $("words").value = allWords(sel.el).slice(0, 160);
-    $("wordsNote").textContent = !sel ? "Tap a single word or line in the app first." : !wok ? "This piece has no words of its own. Tap the words themselves, or use Smaller." : sel.in === "card" ? "Changes the words on this one card only. Words that update by themselves stop updating." : "Changes these words everywhere they show. Words that update by themselves stop updating.";
-    $("moveRead").textContent = (s.dx || 0) + ", " + (s.dy || 0);
+    $("wordsNote").textContent = !sel ? "Tap a single word or line in the app first." : sel.el.closest(".hk_ptile") ? "A tile's words come from its card, so they are changed on the full card (More, then Full cards)." : !wok ? "This piece has no words of its own. Tap the words themselves, or use Smaller." : sel.in === "card" ? "Changes the words on this one card only. Words that update by themselves stop updating." : "Changes these words everywhere they show. Words that update by themselves stop updating.";
+    var dx0 = Number(s.dx) || 0, dy0 = Number(s.dy) || 0;
+    $("moveRead").textContent = !dx0 && !dy0 ? "Not moved" : (dx0 ? (dx0 > 0 ? "\u2192 " : "\u2190 ") + Math.abs(dx0) : "") + (dx0 && dy0 ? "   " : "") + (dy0 ? (dy0 > 0 ? "\u2193 " : "\u2191 ") + Math.abs(dy0) : "") + " px";
     $("zRead").textContent = s.z !== undefined ? "Layer " + s.z : cs ? "Layer " + (parseInt(cs.zIndex, 10) || 0) + " (its own)" : "";
     $("size").value = s.size || (cs ? Math.round(parseFloat(cs.fontSize) * 2) / 2 : ""); $("sizeRange").value = $("size").value || 14;
     $("sizeWas").textContent = r && r.set && r.set.size ? "Changed (Reset this puts it back)" : "Its own size";
@@ -1002,7 +1032,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     var tries = 0, upd = setInterval(function () { var b = d.querySelector('[data-testid="update-load"]'); if (b) { clearInterval(upd); say("Loading the newest app…"); fw().location.reload(); } else if (++tries > 40) clearInterval(upd); }, 250);
     /* 10/02: a tap picks on pointerup, not click. iPhone Safari sends no click to plain text, so on his phone the tap
        picked nothing and the arrows had nothing to move. click is still swallowed so the app does not act on it. */
-    var tap = null, lastTap = null, fingers = {}, pinch = null;
+    var tap = null, fingers = {}, pinch = null;
     /* two fingers on the picked piece: spread or pinch to make it bigger or smaller, twist to turn it (Canva's phone way).
        The first finger must start on the piece; the turn settles on every 15 degrees. */
     var spread = function () { var k = Object.keys(fingers), a = fingers[k[0]], b = fingers[k[1]]; return { d: Math.max(8, Math.hypot(b.x - a.x, b.y - a.y)), a: Math.atan2(b.y - a.y, b.x - a.x) }; };
@@ -1065,9 +1095,11 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       if (turn) { var tw = turn.on; turn = null; e.preventDefault(); e.stopPropagation(); ring(); if (tw) { fill(); say("Turned. Undo takes it back.", "ok"); } return; }
       if (resize) { var was = resize.on; resize = null; ring(); e.preventDefault(); e.stopPropagation(); if (was) { fill(); say("Resized. Undo takes it back.", "ok"); } return; }
       var moved = drag && drag.on, t = tap; tap = null; end(e);
-      if (picking && t && !moved && Math.abs(e.clientX - t.x) + Math.abs(e.clientY - t.y) < 10 && !dropping && !adding && !e.shiftKey && sel && (t.t === sel.el || sel.el.contains(t.t))) {
-        var now = Date.now(); if (lastTap && now - lastTap.at < 400 && lastTap.el === sel.el) { lastTap = null; e.preventDefault(); typeHere(); return; } lastTap = { at: now, el: sel.el };
-      } else if (t && !moved) lastTap = null;
+      /* 10/03, Gray: "text on the Gulf breeze letters the box and tried to type new words and nothing would let me".
+         Canva's way: a tap on words that are already picked opens typing right there (a double tap does the same) */
+      if (picking && t && !moved && Math.abs(e.clientX - t.x) + Math.abs(e.clientY - t.y) < 10 && !dropping && !adding && !e.shiftKey && sel && sel.el.isConnected) {
+        var tgt = sceneryAt(t.t, t.x, t.y) || t.t; if (tgt === sel.el && group().length === 1 && wordsOk()) { e.preventDefault(); typeHere(); return; }
+      }
       if (picking && t && !moved && Math.abs(e.clientX - t.x) + Math.abs(e.clientY - t.y) < 10) { e.preventDefault(); if (dropping) { takeColour(t.t); return; } if ((e.shiftKey || adding) && sel) { toggleGroup(sceneryAt(t.t, t.x, t.y) || t.t); return; } trail = []; levelBase = null; select(sceneryAt(t.t, t.x, t.y) || t.t); }
     }, true);
     d.addEventListener("pointercancel", function (e) { if (unfinger(e)) return; tap = null; resize = null; turn = null; end(e); }, true);
@@ -1122,10 +1154,33 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     if ((e.ctrlKey || e.metaKey) && ((e.shiftKey && (e.key === "z" || e.key === "Z")) || e.key === "y" || e.key === "Y")) { redo(); e.preventDefault(); return; }
     if ((e.ctrlKey || e.metaKey) && (e.key === "z" || e.key === "Z")) { undo(); e.preventDefault(); return; }
     if ((e.ctrlKey || e.metaKey) && e.altKey && (e.code === "KeyC" || e.code === "KeyV")) { if (e.code === "KeyC") copyLook(); else pasteLook(); e.preventDefault(); return; }
+    /* 10/03, Gray: "canva like... mouse and keyboard functions". Canva's own keys: Enter types, Esc steps out to
+       the box around it, Delete hides, Tab walks to the next piece, Ctrl+B / I bold and italic, Ctrl+Shift+K capitals,
+       Ctrl+Shift+> and < bigger and smaller */
+    var cm = e.ctrlKey || e.metaKey;
+    /* a button, a link or an open dialog keeps Enter, Tab, Esc and Delete for itself (keyboard use of the panel) */
+    if (/^(Enter|Tab|Escape|Delete|Backspace|F2)$/.test(e.key) && (/BUTTON|^A$|SUMMARY/.test(tag) || document.querySelector("dialog[open]"))) return;
+    if (sel && !cm && !e.altKey && (e.key === "Enter" || e.key === "F2")) { typeHere(); e.preventDefault(); return; }
+    if (sel && e.key === "Escape") { outer(); e.preventDefault(); return; }
+    if (sel && !cm && (e.key === "Delete" || e.key === "Backspace")) { edit(function (s) { s.hide = true; }); say("Hidden. Undo brings it back, or find it in Layers.", "ok"); e.preventDefault(); return; }
+    if (sel && e.key === "Tab" && !cm) { nextPiece(e.shiftKey ? -1 : 1); e.preventDefault(); return; }
+    if (sel && cm && !e.shiftKey && (e.key === "b" || e.key === "B")) { var fwNow = Number(sel.el.ownerDocument.defaultView.getComputedStyle(sel.el).fontWeight) || 400; edit(function (s) { s.weight = fwNow >= 700 ? 400 : 800; }); e.preventDefault(); return; }
+    if (sel && cm && !e.shiftKey && (e.key === "i" || e.key === "I")) { edit(function (s) { s.italic = s.italic === true ? undefined : true; }); e.preventDefault(); return; }
+    if (sel && cm && e.shiftKey && (e.code === "KeyK")) { edit(function (s) { s.tcase = s.tcase === "upper" ? undefined : "upper"; }); e.preventDefault(); return; }
+    if (sel && cm && e.shiftKey && (e.code === "Period" || e.code === "Comma")) { var sb = document.querySelector('.panel [data-s="' + (e.code === "Period" ? "1" : "-1") + '"]'); if (sb) sb.click(); e.preventDefault(); return; }
     var m = { ArrowUp: [0, -1], ArrowDown: [0, 1], ArrowLeft: [-1, 0], ArrowRight: [1, 0] }[e.key];
     if (!m || !sel) return;
     var n = e.shiftKey ? 10 : 1; e.preventDefault();
     edit(function (s) { s.dx = (s.dx || 0) + m[0] * n; s.dy = (s.dy || 0) + m[1] * n; });
+  }
+  /* Tab / Shift+Tab: the next or previous piece in the card, in reading order (words, marks and pictures) */
+  function nextPiece(dir) {
+    var root = sel.el.closest(".card") || sel.el.closest("section, header, nav, .hero") || frame().body, d = frame(), all = [];
+    Array.prototype.forEach.call(root.querySelectorAll("*"), function (n) { if (n.closest("#hk_guides, #hk_ring") || (n.closest("svg") && n.tagName.toLowerCase() !== "svg")) return;
+      var tg = n.tagName.toLowerCase(); if (!(tg === "svg" || tg === "img" || ownText(n))) return; var r = n.getBoundingClientRect(); if (r.width < 2 || r.height < 2) return;
+      var cs = d.defaultView.getComputedStyle(n); if (cs.display === "none" || cs.visibility === "hidden" || (cs.clip && cs.clip !== "auto")) return; all.push(n); });
+    if (!all.length) return; var i = all.indexOf(sel.el); if (i < 0) i = all.findIndex(function (n) { return sel.el.contains(n); }); var k = all[(i + dir + all.length) % all.length];
+    trail = []; levelBase = null; select(k); try { k.scrollIntoView({ block: "nearest" }); } catch (x) {}
   }
   function togglePick() {
     picking = !picking; $("pick").className = picking ? "on" : ""; $("pick").lastChild.textContent = picking ? "Pick" : "Using app";
@@ -1136,6 +1191,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   function outer() { if (!sel) { say("Tap a word in the app first.", "err"); return; } var p = sel.el.parentElement; if (!p || p === frame().body || p.classList.contains("hk")) { say("That is already the biggest area.", "err"); return; } trail.push(sel.el); select(p); }
   function inner() { if (!trail.length) { say("That is already the smallest piece. Tap a word to pick it.", "err"); return; } var el = trail.pop(); select(el); }
   document.addEventListener("keydown", onKey, true);
+  document.addEventListener("pointerdown", function () { if (typing) typing(true); }, true);
   $("app").addEventListener("load", hook);
   window.HK_DESIGNER = { state: function () { return { picked: sel && { in: sel.in, path: sel.path }, rules: JSON.parse(JSON.stringify(doc.rules)) }; },
     ink: function () { return sel && sel.el && sel.el.isConnected ? union(inkRects(sel.el)) : null; } };
@@ -1398,6 +1454,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   try { var t0tab = localStorage.getItem("hk_designer_tab"); if (t0tab && document.querySelector('#tabs [data-t="' + t0tab + '"]')) showTab(t0tab); } catch (e) {}
   /* double-tap the picked words to type right on the card (Canva's way); Enter or a tap away keeps them, Esc cancels.
      It saves through the same Use these words step, so Undo and the one-card rule work the same. */
+  var typing = null;
   function typeHere() {
     var d = frame(); if (!sel || !d) return;
     if (!wordsOk()) { say("This piece has no words of its own. Tap the words themselves.", "err"); return; }
@@ -1411,13 +1468,13 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       "color:" + cs.color + ";background:rgba(255,255,255,.94);border:2px solid #FF2D87;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,.3);outline:none";
     var grow = function () { ta.style.height = "auto"; ta.style.height = (ta.scrollHeight + 2) + "px"; };
     var vis = el.style.visibility; el.style.visibility = "hidden"; d.body.appendChild(ta); grow();
-    var done = false, finish = function (keep) { if (done) return; done = true; el.style.visibility = vis; var v = ta.value.replace(/\s+/g, " ").trim(); ta.remove();
+    var done = false, finish = function (keep) { if (done) return; done = true; typing = null; el.style.visibility = vis; var v = ta.value.replace(/\s+/g, " ").trim(); ta.remove();
       if (keep && v && v !== $("words").value.replace(/\s+/g, " ").trim()) { $("words").value = v; $("wordsGo").onclick(); } else fill(); };
     ta.addEventListener("input", grow);
     ta.addEventListener("keydown", function (e) { e.stopPropagation(); if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); finish(true); } else if (e.key === "Escape") { e.preventDefault(); finish(false); } }, true);
     ta.addEventListener("blur", function () { finish(true); });
     ["pointerdown", "pointerup", "click"].forEach(function (k) { ta.addEventListener(k, function (e) { e.stopPropagation(); }, true); });
-    ta.focus(); ta.select(); say("Type the new words, then Enter. Esc keeps the old ones.", "ok");
+    typing = finish; ta.focus(); ta.select(); say("Type the new words, then Enter. Esc keeps the old ones.", "ok");
   }
   /* Bring forward / Send back: one step on the piece's stacking number; back at 0 it returns to how the app had it */
   function zStep(dz) {
@@ -1428,6 +1485,11 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     layersList(); say(dz > 0 ? "Brought forward. It now sits over the pieces beside it." : "Sent back.", "ok");
   }
   $("zUp").onclick = function () { zStep(1); }; $("zDown").onclick = function () { zStep(-1); };
+  /* a box holding words (a place line, a pill) is picked: tapping the Words box moves the pick to the words inside,
+     the longest run of them, so the box is never a dead end */
+  function wordsInside() { if (!sel || !sel.el || wordsOk() || sel.el.closest(".hk_ptile")) return null; var best = null, bl = 0;
+    Array.prototype.forEach.call(sel.el.querySelectorAll("*"), function (k) { if (k.closest("svg")) return; var t = ownText(k).length; if (t > bl) { bl = t; best = k; } }); return best; }
+  $("words").addEventListener("focus", function () { var k = wordsInside(); if (!k) return; select(k); setTimeout(function () { $("words").focus(); $("words").select(); }, 60); say("Picked the words inside: " + describe(k) + ". Type the new ones.", "ok"); });
   $("wordsGo").onclick = function () {
     if (!wordsOk()) { say("Tap the words themselves first.", "err"); return; }
     var t = $("words").value.trim(); if (!t) { say("Type the new words first.", "err"); return; }
@@ -1447,6 +1509,9 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   $("width").onchange = function () { setWidth(Number(this.value)); say("The app is now " + this.value + " px wide.", "ok"); };
   try { var w0 = Number(localStorage.getItem("hk_designer_width")); if ([320, 360, 390, 430].indexOf(w0) > -1 && !narrow()) setWidth(w0); } catch (e) {}
   $("focus").onclick = function () { focusOn = !focusOn; this.className = focusOn ? "on" : ""; focusCard(); paint(); };
+  /* 10/03, Gray: "Can the designer edit those?" (the poster tiles readers now see first, R-378). Inside the designer
+     the app shows full cards; this switch loads it with #poster so the tiles can be picked and styled like anything else */
+  $("lists").onchange = function () { moreOpen(false); zoomK = 1; zoomTo(); sel = null; var v = this.value; try { fw().location.hash = v === "poster" ? "poster" : ""; } catch (e) {} fw().location.reload(); say(v === "poster" ? "Showing the poster tiles. Tap any part of a tile to change it." : "Showing full cards.", "ok"); };
   $("look").onchange = function () { moreOpen(false); zoomK = 1; zoomTo(); try { fw().localStorage.setItem("hk_theme_v1", this.value); } catch (e) {} sel = null; fw().location.reload(); };
 
   /* ---- GitHub: sign in once, load, save, publish ---- */
@@ -1577,8 +1642,8 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       .then(function (r) { return r.ok ? r.json() : null; }).then(function (j) { return !!(j && j.permissions && j.permissions.push); }).catch(function () { return null; });
   }
   /* the first time he opens the designer after the 10/03 night, a short list says what is new; Got it closes it for good */
-  function news() { var seen = ""; try { seen = localStorage.getItem("hk_designer_news") || ""; } catch (e) {} if (seen === "1003b") return; var n = $("news"); if (n.showModal) n.showModal(); }
-  $("newsOff").onclick = function () { $("news").close(); try { localStorage.setItem("hk_designer_news", "1003b"); } catch (e) {} };
+  function news() { var seen = ""; try { seen = localStorage.getItem("hk_designer_news") || ""; } catch (e) {} if (seen === "1003c") return; var n = $("news"); if (n.showModal) n.showModal(); }
+  $("newsOff").onclick = function () { $("news").close(); try { localStorage.setItem("hk_designer_news", "1003c"); } catch (e) {} };
   function unlock() { setTimeout(news, 600); document.body.className = ""; var f = $("app"); if (!f.getAttribute("src")) f.setAttribute("src", f.getAttribute("data-src")); load(); if (document.body.getAttribute("data-tab") === "history") showHistory(); }
   var lockSay = function (t, c) { $("lockSay").textContent = t; $("lockSay").className = "status" + (c ? " " + c : ""); };
   $("lockGo").onclick = function () {
@@ -1589,6 +1654,17 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     });
   };
   $("lockKey").onkeydown = function (e) { if (e.key === "Enter") $("lockGo").click(); };
+  /* 10/03, Gray: "I don't have that token anymore... need it so freaking easy". The steps sit under the box with the
+     GitHub page pre-filled (GitHub reads name, expiry and permissions from the link); a pasted key unlocks by itself */
+  Array.prototype.forEach.call(document.querySelectorAll(".keyhere"), function (h) { h.appendChild($("keySteps").content.cloneNode(true)); });
+  var looksKey = function (t) { return /^(github_pat_|ghp_|gho_)[A-Za-z0-9_]{20,}$/.test(t); };
+  $("lockKey").addEventListener("paste", function () { setTimeout(function () { if (looksKey($("lockKey").value.trim())) $("lockGo").click(); }, 30); });
+  $("token").addEventListener("paste", function () { setTimeout(function () { if (looksKey($("token").value.trim())) $("tokenGo").click(); }, 30); });
+  $("lockPaste").onclick = function () {
+    if (!navigator.clipboard || !navigator.clipboard.readText) { $("lockKey").focus(); lockSay("Long-press the box above and choose Paste.", "err"); return; }
+    navigator.clipboard.readText().then(function (t) { t = (t || "").trim(); if (!t) { lockSay("Nothing is copied yet. Do step 3 first.", "err"); return; } $("lockKey").value = t; $("lockGo").click(); })
+      .catch(function () { $("lockKey").focus(); lockSay("This browser would not share what you copied. Long-press the box above and choose Paste.", "err"); });
+  };
   showSignin();
   var t0 = tok();
   if (t0) { lockSay("Checking your key…"); check(t0).then(function (ok) { if (ok) unlock(); else { try { localStorage.removeItem("hk_designer_token"); } catch (e) {} lockSay(ok === null ? "Could not reach GitHub. Paste your key to try again." : "Your saved key no longer works. Paste the new one.", "err"); } }); }
