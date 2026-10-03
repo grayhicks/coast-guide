@@ -981,6 +981,11 @@ html.hk_calopen .hk :is(.hero, .hk_supportfloat, .tabpanel, .hk_nav) { visibilit
 html.hk_calopen .hk :is(.hero, .tabpanel) { content-visibility: hidden; }
 html.hk_calopen .hk :is(.hero, .hk_supportfloat, .tabpanel, .hk_nav), html.hk_calopen .hk :is(.hero, .hk_supportfloat, .tabpanel, .hk_nav) * { animation-play-state: paused !important; }
 .hk .hero-datebtn.hk_datecal .hk_datecalic { flex: 0 0 auto; transform: translateY(-1.2px); }
+.hero.hk_nhon { background: rgb(127, 195, 227); }
+.hero.hk_nhon > .hk_nh { position: absolute; inset: 0px; z-index: 0; overflow: hidden; pointer-events: none; }
+.hero.hk_nhon > .hk_nh > svg { display: block; width: 100%; height: 100%; }
+.hero.hk_nhon > :is(.sun, .clouds, .hz, .glit, .hk_boat, .hk_sailw, .boat-refl, .supw, .rplfield, .hero-wave, .hero-sand, .hk_swellw, .hero-surf, .beachprops, .crabw, .hgulw, .hero_slot_boatname, .hero_slot_yacht, .hero_slot_parasa) { display: none !important; }
+.hero.hk_nhon :is(.adparasail, [class^="hkn_"], [class*=" hkn_"]) { display: none !important; }
 @keyframes hk_gl { 
   0%, 100% { opacity: 0; transform: scaleX(0.25); }
   33%, 67% { opacity: var(--glo,.6); transform: scaleX(1); }
