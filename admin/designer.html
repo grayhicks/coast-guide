@@ -265,13 +265,21 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     if (focusOn) focusCard();
     fill(); paint();
   }
+  /* plain names for the app's own boxes, so the level chips read like places on the card, not code */
+  var LEVEL_NAMES = { cardbtn: "Whole card", top: "Top of card", hbody: "Header", headleft: "Title area", hk_slot: "Title box",
+    eyebrow: "Category line", ebcat: "Category", ebtail: "Category word", ebrow2: "Today line", meta: "Date area", daterail: "Date row",
+    dpill: "Date pill", cardcal: "Calendar button", vstamp: "Source stamp", venue: "Place line", venueprimary: "Place name",
+    status: "Bar", chip: "Bar word", blurb: "Description", cardfoot: "Card bottom", price: "Price", hourslist: "Times",
+    hero: "Hero", hk_gcapage: "Page", hk_wrap: "App", hk_segb: "Tab bar", si: "Tab", ico: "Icon circle", icoW: "Icon circle", hk_add: "Added piece" };
   function levelName(n) {
     var part = null; CD.PARTS.forEach(function (pp) { if (!part) { try { if (n.matches(pp.sel)) part = pp.label; } catch (e) {} } });
     if (part) return part;
     if (n.classList && n.classList.contains("card")) return "Whole card";
     var t = ownText(n); if (t) return "\u201c" + (t.length > 18 ? t.slice(0, 16) + "\u2026" : t) + "\u201d";
     if (n.tagName.toLowerCase() === "svg") return "Icon";
-    var c = cls(n)[0] || n.tagName.toLowerCase(); return c.replace(/^hk_/, "").replace(/[_-]+/g, " ");
+    var c = cls(n)[0] || n.tagName.toLowerCase();
+    if (LEVEL_NAMES[c]) return LEVEL_NAMES[c];
+    return c.replace(/^hk_/, "").replace(/[_-]+/g, " ").replace(/^\w/, function (x) { return x.toUpperCase(); });
   }
   function levels() {
     var box = $("levels"); box.innerHTML = ""; if (!levelBase) return;
