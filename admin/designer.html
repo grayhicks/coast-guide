@@ -32,7 +32,12 @@ svg.i{ width:20px; height:20px; flex:none; fill:none; stroke:currentColor; strok
 .ib{ padding:0; width:40px; min-width:40px; }
 #compare{ -webkit-touch-callout:none; user-select:none; -webkit-user-select:none; touch-action:none; }
 #compare.held{ background:var(--pink); border-color:var(--pink); color:#fff; }
-.ib span{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+/* 10/03, Gray: "Every single button needs to be intuitive I shouldn't have to guess to know what it does". An icon
+   button carries its word under the icon, like the tab bar */
+.ib{ display:inline-flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; }
+.ib span{ font:700 9.5px/1 system-ui, sans-serif; letter-spacing:.1px; color:var(--mute); white-space:nowrap; }
+.ib.on span, .ib:hover span{ color:inherit; }
+.ib svg.i{ width:18px; height:18px; }
 header{ position:sticky; top:0; z-index:5; display:flex; gap:8px; align-items:center; padding:8px 12px; background:var(--bg); border-bottom:1px solid var(--line); }
 header h1{ font-size:16px; margin:0 6px 0 0; }
 header .sp{ flex:1; }
@@ -69,10 +74,17 @@ main{ display:flex; gap:16px; padding:12px; align-items:flex-start; }
 .strip{ display:flex; align-items:baseline; gap:8px; min-width:0; }
 .strip .ib.sm{ width:34px; min-width:34px; min-height:30px; height:30px; border-radius:999px; flex:none; align-self:center; }
 .strip .ib.sm svg.i{ width:17px; height:17px; }
-.strip #addPick{ margin-left:auto; } #addPick.on{ background:var(--pink); border-color:var(--pink); color:#fff; }
+.piecemenu{ display:flex; flex-wrap:wrap; gap:6px; margin:6px 0 0; }
+.piecemenu .pm{ display:inline-flex; align-items:center; gap:6px; min-height:32px; padding:0 12px; font-size:13px; font-weight:700; border-radius:999px; }
+.piecemenu .pm svg.i{ width:16px; height:16px; } #addPick.on{ background:var(--pink); border-color:var(--pink); color:#fff; }
+.strip #resetPart{ margin-left:auto; } #addPick.on{ background:var(--pink); border-color:var(--pink); color:#fff; }
 .strip #resetPart{ min-height:30px; padding:3px 10px; font-size:13px; border-radius:999px; flex:none; align-self:center; }
 .scopechip{ max-width:calc(100% - 20px); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-height:24px; padding:1px 10px; margin:4px 0 0 16px; font-size:12px; font-weight:700; border-radius:999px; background:transparent; border:1px solid var(--line); color:var(--mute); }
 .scopechip:empty{ display:none; }
+/* on a computer the picked name gets its own full line (it was squeezed into a column and broke "Pensacol / a"),
+   with where it is and the buttons on the line under it */
+@media (min-width:821px){ .strip{ flex-wrap:wrap; row-gap:6px; } .strip .big{ flex:1 1 calc(100% - 20px); min-width:0; font-size:17px; line-height:1.25; }
+  .strip .mute{ flex:1 1 100%; min-width:0; font-size:12px; } .strip #addPick{ margin-left:0; } .scopechip{ margin-left:0; } }
 .strip .dot{ width:8px; height:8px; border-radius:50%; background:var(--pink); flex:none; align-self:center; }
 .big{ font-size:18px; font-weight:800; overflow-wrap:anywhere; min-width:0; }
 .mute{ color:var(--mute); font-size:13px; }
@@ -178,16 +190,32 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
 .tabs button.on{ background:var(--chipon); color:var(--mint); border-color:transparent; }
 .tools [data-tab]{ display:none; }
 /* a drawing or picture has no words: its word tools step out of the tab row */
-body[data-kind="mark"] #tabs [data-t="font"], body[data-kind="mark"] #tabs [data-t="words"]{ display:none; }
+body[data-kind="mark"] #tabs [data-t="font"], body[data-kind="mark"] #tabs [data-t="words"], body[data-kind="mark"] #tabs [data-t="text"]{ display:none; }
+#tWords{ width:100%; font-size:16px; padding:9px 12px; margin:0 0 8px; }
+#textBox h2{ display:none; }
+.trow{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:0 0 8px; }
+.tsize{ display:flex; align-items:center; gap:4px; } .tsize input{ width:64px; text-align:center; font-size:17px; font-weight:800; padding:8px 4px; }
+.tsize button, .tstyle button{ min-height:42px; min-width:44px; padding:0 10px; display:inline-flex; align-items:center; gap:4px; }
+.tsize .aa{ font:800 21px/1 Georgia, serif; } .tsize .aa.sm{ font-size:15px; } .tsize .ar{ font-size:9px; color:var(--mint); margin-left:1px; align-self:flex-start; margin-top:9px; }
+.trow{ flex-wrap:nowrap; }
+.tcap{ flex-direction:column !important; gap:1px !important; min-height:46px !important; } .tcap small{ font:700 9.5px/1 system-ui, sans-serif; color:var(--mute); font-style:normal; letter-spacing:.1px; }
+.tcap.sel small{ color:#d9fff2; } .tg{ display:inline-flex; align-items:flex-start; }
+.tszl{ display:flex; flex-direction:column; align-items:center; gap:1px; } .tszl small{ font:700 9.5px/1 system-ui, sans-serif; color:var(--mute); } .tszl input{ padding:4px 2px; } .tsize button, .tstyle button{ padding:0 8px; } .tsize input{ width:58px; }
+.tstyle{ display:flex; gap:4px; } .tstyle button{ font:800 17px/1 Georgia, serif; } .tstyle button.sel{ background:var(--go); border-color:var(--go); color:#fff; }
+.tline{ display:flex; gap:8px; align-items:center; margin:0 0 8px; min-width:0; }
+.tcols, .tfonts{ display:flex; gap:6px; overflow-x:auto; flex:1 1 auto; min-width:0; scrollbar-width:none; } .tcols::-webkit-scrollbar, .tfonts::-webkit-scrollbar{ display:none; }
+.tcols button{ flex:none; width:36px; height:36px; min-height:36px; padding:0; border-radius:50%; border:2px solid rgba(255,255,255,.2); } .tcols button.sel{ outline:3px solid #fff; outline-offset:2px; }
+.tfonts button{ flex:none; min-height:38px; padding:0 12px; font-size:16px; white-space:nowrap; } .tfonts button.sel{ background:var(--go); border-color:var(--go); color:#fff; }
+.tmore{ flex:none; min-height:36px; padding:0 10px; font-size:12px; font-weight:800; color:var(--mint); background:transparent; border:1px solid var(--line); border-radius:999px; }
 #emptyHint{ display:none; } #emptyHint p{ margin:0 0 8px; font-size:15px; }
-body[data-sel="0"][data-tab="move"] #emptyHint, body[data-sel="0"][data-tab="size"] #emptyHint, body[data-sel="0"][data-tab="colour"] #emptyHint, body[data-sel="0"][data-tab="font"] #emptyHint,
+body[data-sel="0"][data-tab="text"] #emptyHint, body[data-sel="0"][data-tab="move"] #emptyHint, body[data-sel="0"][data-tab="size"] #emptyHint, body[data-sel="0"][data-tab="colour"] #emptyHint, body[data-sel="0"][data-tab="font"] #emptyHint,
 body[data-sel="0"][data-tab="words"] #emptyHint, body[data-sel="0"][data-tab="edge"] #emptyHint, body[data-sel="0"][data-tab="where"] #emptyHint, body[data-sel="0"][data-tab="layers"] #emptyHint{ display:block; }
-body[data-sel="0"] .tools .box[data-tab="move"], body[data-sel="0"] .tools .box[data-tab="size"], body[data-sel="0"] .tools .box[data-tab="colour"], body[data-sel="0"] .tools .box[data-tab="font"],
+body[data-sel="0"] .tools .box[data-tab="text"], body[data-sel="0"] .tools .box[data-tab="move"], body[data-sel="0"] .tools .box[data-tab="size"], body[data-sel="0"] .tools .box[data-tab="colour"], body[data-sel="0"] .tools .box[data-tab="font"],
 body[data-sel="0"] .tools .box[data-tab="words"], body[data-sel="0"] .tools .box[data-tab="edge"], body[data-sel="0"] .tools .box[data-tab="where"], body[data-sel="0"] .tools .box[data-tab="layers"]{ display:none !important; }
 .tabs .badge{ position:absolute; top:4px; right:8px; min-width:17px; height:17px; padding:0 4px; border-radius:999px; background:var(--pink); color:#fff; font:800 11px/17px system-ui; }
 .tabs button{ position:relative; }
 button#save.dirty::after{ content:""; width:8px; height:8px; border-radius:50%; background:#fff; margin-left:2px; }
-body[data-tab="move"] .tools [data-tab="move"], body[data-tab="size"] .tools [data-tab="size"], body[data-tab="colour"] .tools [data-tab="colour"],
+body[data-tab="text"] .tools [data-tab="text"], body[data-tab="move"] .tools [data-tab="move"], body[data-tab="size"] .tools [data-tab="size"], body[data-tab="colour"] .tools [data-tab="colour"],
 body[data-tab="font"] .tools [data-tab="font"], body[data-tab="words"] .tools [data-tab="words"], body[data-tab="edge"] .tools [data-tab="edge"],
 body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tools [data-tab="history"], body[data-tab="layers"] .tools [data-tab="layers"], body[data-tab="add"] .tools [data-tab="add"], body[data-tab="changes"] .tools [data-tab="changes"]{ display:block; }
 .onlyphone{ display:none !important; }
@@ -229,9 +257,16 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   .strip .mute{ flex:none; max-width:40%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:12px; }
   /* the picked strip is one fixed height whatever is picked, so the app above never changes size under his finger:
      the levels and the card's scenery share one row that scrolls sideways */
-  .box.picked{ height:110px; flex:none; }
+  .box.picked{ height:118px; flex:none; }
   .scopechip{ margin:4px 0 0 16px; }
-  .strip{ height:32px; align-items:center; }
+  .strip{ height:40px; align-items:center; }
+  /* on a phone the picked row keeps the name, Options, Reset and Hide, each with its word under the icon; Options opens
+     a short list with Pick more pieces, Copy its look and Paste the look */
+  .strip .ib.sm{ width:48px; min-width:48px; height:40px; min-height:40px; border-radius:12px; padding:0 2px; }
+  .strip #resetPart{ display:inline-flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; width:44px; min-width:44px; height:40px; min-height:40px; padding:0; border-radius:12px; font-size:0; }
+  .strip #resetPart span{ font:700 9.5px/1 system-ui, sans-serif; color:var(--mute); } .strip #resetPart svg.i{ width:18px; height:18px; margin:0; }
+  .piecemenu{ display:none; position:fixed; z-index:25; right:8px; flex-direction:column; align-items:stretch; gap:6px; padding:8px; margin:0; background:var(--panel); border:1px solid var(--line); border-radius:14px; box-shadow:0 10px 30px rgba(0,0,0,.5); }
+  .piecemenu.open{ display:flex; } .piecemenu .pm{ min-height:44px; font-size:15px; justify-content:flex-start; }
   .strip .mute{ display:none; }
   .levelrow{ display:flex; gap:6px; overflow-x:auto; margin:6px 0 0; height:40px; align-items:center; scrollbar-width:none; }
   .levelrow::-webkit-scrollbar{ display:none; }
@@ -276,7 +311,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
 /* the smallest phones (10/03 grade, 320 x 568: the picked name was 38 px wide and 4 of 53 fonts showed): Reset this
    becomes its icon so the name keeps room, and the font list packs three rows where it held two */
 @media (max-width:374px){
-  #resetPart{ width:38px; min-width:38px; padding:0; } #resetPart span{ display:none; } #resetPart svg.i{ width:20px; height:20px; margin:0; }
+  .strip .ib.sm, .strip #resetPart{ width:44px; min-width:44px; } .strip .ib.sm span, .strip #resetPart span{ font-size:9px; }
   .fonts button{ height:40px; min-height:40px; padding:0 8px; } .fonts .fsamp{ font-size:15px; } .fonts small{ font-size:9.5px; }
   .fonts{ grid-template-columns:repeat(auto-fill,minmax(130px,1fr)); }
 }
@@ -292,7 +327,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
 </style>
 <script src="card_design.js"></script>
 </head>
-<body class="locked" data-tab="move" data-sel="0">
+<body class="locked" data-tab="text" data-sel="0">
 <template id="keySteps"><div class="keysteps">
   <h3>No key on this device? Make one in about two minutes</h3>
   <ol>
@@ -316,7 +351,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   <button id="pick" class="on" title="P" data-i="pick"><span>Pick</span></button>
   <button id="undoTop" class="ib" title="Undo (Ctrl+Z)" aria-label="Undo" data-i="undo"><span>Undo</span></button>
   <button id="redo" class="ib" title="Redo (Ctrl+Shift+Z)" aria-label="Redo" data-i="redo"><span>Redo</span></button>
-  <button id="compare" class="ib" title="Hold to see the app without your changes (or hold the \ key)" aria-label="Hold to compare" data-i="compare"><span>Compare</span></button>
+  <button id="compare" class="ib" title="Hold to see the app without your changes (or hold the \ key)" aria-label="Hold to see it before your changes" data-i="compare"><span>Before</span></button>
   <span class="sp"></span>
   <span class="publine" id="pubLine" role="status"></span>
   <button id="save" class="go">Save</button>
@@ -328,7 +363,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     <select id="look" title="Which look the app shows"><option value="day">Day look</option><option value="night">Night look</option><option value="dark">Dark look</option></select>
     <button id="publish" data-i="publish"><span>Save + publish</span></button>
     <button id="floatsBtn" title="Show or hide the app's floating buttons (Show support, back to top) while picking" data-i="floats"><span>Floating buttons: hidden</span></button>
-    <button id="keysBtn" class="onlywide" title="Keyboard shortcuts (?)" aria-label="Keyboard shortcuts">?</button>
+    <button id="keysBtn" class="onlywide" title="Keyboard shortcuts (?)" aria-label="Keyboard shortcuts">? Keys</button>
   </div>
 </header>
 <main>
@@ -342,13 +377,14 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     </div>
     <div class="box picked">
       <h2 class="onlywide">Picked</h2>
-      <div class="strip"><i class="dot"></i><div class="big" id="partName">Tap any word in the app.</div><div class="mute" id="partWhere"></div><button id="addPick" class="ib sm" title="Pick more pieces to change together (or Shift+click)" aria-label="Pick more pieces" data-i="addmore"><span>Pick more</span></button><button id="copyStyle" class="ib sm" title="Copy its look (Ctrl+Alt+C)" aria-label="Copy its look" data-i="copy"><span>Copy look</span></button><button id="pasteStyle" class="ib sm" title="Paste the copied look (Ctrl+Alt+V)" aria-label="Paste the copied look" data-i="paste" disabled><span>Paste look</span></button><button id="resetPart" class="chip" data-i="reset" title="Put the picked piece back the way the app had it" aria-label="Reset this"><span>Reset this</span></button><button id="mini" class="ib sm onlyphone" title="Hide the tools to see more of the app" aria-label="Hide the tools to see more of the app" data-i="chdown"><span>Hide tools</span></button></div>
+      <div class="strip"><i class="dot"></i><div class="big" id="partName">Tap any word in the app.</div><div class="mute" id="partWhere"></div><button id="pieceOpts" class="ib sm onlyphone" aria-label="Options for this piece" aria-expanded="false" data-i="more"><span>Options</span></button><button id="resetPart" class="chip" data-i="reset" title="Put the picked piece back the way the app had it" aria-label="Reset this"><span>Reset</span></button><button id="mini" class="ib sm onlyphone" title="Hide the tools to see more of the app" aria-label="Hide the tools to see more of the app" data-i="chdown"><span>Hide</span></button></div>
+      <div class="piecemenu" id="pieceMenu" role="menu"><button id="addPick" class="pm" title="Pick more pieces to change together (or Shift+click)" aria-label="Pick more pieces" data-i="addmore"><span>Pick more pieces</span></button><button id="copyStyle" class="pm" title="Copy its look (Ctrl+Alt+C)" aria-label="Copy its look" data-i="copy"><span>Copy its look</span></button><button id="pasteStyle" class="pm" title="Paste the copied look (Ctrl+Alt+V)" aria-label="Paste the copied look" data-i="paste" disabled><span>Paste the look</span></button></div>
       <button id="scopeChip" class="scopechip" title="Where the change goes: tap to choose"></button>
       <div class="levelrow"><div class="levels" id="levels"></div><div class="levels" id="scenery"></div></div>
       <div class="row acts"><button id="outer" title="Pick the box this piece sits in">Pick what holds it</button><button id="inner" title="Back to the smaller piece">Back to the piece</button><button id="undo">Undo</button></div>
     </div>
     <nav class="tabs" id="tabs" aria-label="Tools">
-      <button data-t="move" data-i="move" class="on"><span>Move</span></button><button data-t="size" data-i="size"><span>Size</span></button><button data-t="colour" data-i="colour"><span>Colour</span></button><button data-t="font" data-i="font"><span>Font</span></button><button data-t="words" data-i="words"><span>Words</span></button><button data-t="edge" data-i="edge"><span>Edge</span></button><button data-t="layers" data-i="layers"><span>Layers</span></button><button data-t="where" data-i="where"><span>Where</span></button><button data-t="add" data-i="add"><span>Add</span></button><button data-t="changes" data-i="changes"><span>Changes</span></button><button data-t="history" data-i="history"><span>History</span></button>
+      <button data-t="text" data-i="tee" class="on"><span>Text</span></button><button data-t="move" data-i="move"><span>Move</span></button><button data-t="size" data-i="size"><span>Size</span></button><button data-t="colour" data-i="colour"><span>Colour</span></button><button data-t="font" data-i="font"><span>Font</span></button><button data-t="words" data-i="words"><span>Words</span></button><button data-t="edge" data-i="edge"><span>Edge</span></button><button data-t="layers" data-i="layers"><span>Layers</span></button><button data-t="where" data-i="where"><span>Where</span></button><button data-t="add" data-i="add"><span>Add</span></button><button data-t="changes" data-i="changes"><span>Changes</span></button><button data-t="history" data-i="history"><span>History</span></button>
     </nav>
     <div class="tools" id="tools">
     <div class="box empty" id="emptyHint">
@@ -365,6 +401,20 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
         <div class="seg" id="scopeSeg"><button data-v="all" class="sel">Every card</button><button data-v="kind">Cards like this</button><button data-v="card">Only this card</button></div></div>
       <div class="row"><label>Look</label>
         <div class="seg" id="lookSeg"><button data-v="all" class="sel">Every look</button><button data-v="day">Day only</button><button data-v="night">Night + Dark</button></div></div>
+    </div>
+    <!-- 10/03, Gray: "I click on a text I'm able to edit make larger change color font all from one page. Not have to go
+         to another thing". Words, size, bold, italic, capitals, colour and font together; the full tabs stay for more -->
+    <div class="box" id="textBox" data-tab="text">
+      <h2>Text</h2>
+      <input id="tWords" type="text" placeholder="Type new words" aria-label="The words" autocomplete="off" enterkeyhint="done">
+      <div class="trow">
+        <div class="tsize"><button id="tSmaller" class="tcap" title="Smaller text (Ctrl+Shift+&lt;)" aria-label="Smaller text"><span class="tg"><span class="aa sm">A</span><span class="ar">&#9660;</span></span><small>Smaller</small></button><label class="tszl"><input id="tSize" type="number" step="0.5" min="5" max="80" aria-label="Text size"><small>Size</small></label><button id="tBigger" class="tcap" title="Bigger text (Ctrl+Shift+&gt;)" aria-label="Bigger text"><span class="tg"><span class="aa">A</span><span class="ar">&#9650;</span></span><small>Bigger</small></button></div>
+        <div class="tstyle"><button id="tBold" class="tcap" title="Bold (Ctrl+B)" aria-label="Bold"><b>B</b><small>Bold</small></button><button id="tItalic" class="tcap" title="Italic (Ctrl+I)" aria-label="Italic"><i>I</i><small>Italic</small></button><button id="tCaps" class="tcap" title="Capitals (Ctrl+Shift+K)" aria-label="Capitals">AA<small>Capitals</small></button></div>
+      </div>
+      <div class="tline"><div class="tcols" id="tCols"></div><button class="tmore" data-go="colour">More colours</button></div>
+      <div class="tline"><div class="tfonts" id="tFonts"></div><button class="tmore" data-go="font">More fonts</button></div>
+      <div class="mute" id="tNote"></div>
+      <div class="mute hint">Drag the words to move them. The white corners make them bigger or smaller, and the pink dot turns them.</div>
     </div>
     <div class="box" id="wordsBox" data-tab="words">
       <h2>Words</h2>
@@ -573,7 +623,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     var old = d.querySelector("[data-hk-pick]"); if (old) old.removeAttribute("data-hk-pick");
     el.setAttribute("data-hk-pick", "1"); document.body.setAttribute("data-sel", "1");
     document.body.setAttribute("data-kind", ownText(el) && el.tagName.toLowerCase() !== "svg" ? "words" : el.querySelector && el.querySelector("*") && (el.textContent || "").trim() ? "words" : "mark");
-    if (document.body.getAttribute("data-kind") === "mark" && /^(font|words)$/.test(document.body.getAttribute("data-tab") || "")) setTimeout(function () { showTab("size"); }, 0);
+    if (document.body.getAttribute("data-kind") === "mark" && /^(font|words|text)$/.test(document.body.getAttribute("data-tab") || "")) setTimeout(function () { showTab("size"); }, 0);
     var card = el.closest(".card");
     sel = selOf(el);
     var part = null; CD.PARTS.forEach(function (pp) { if (!part) { try { if (el.matches(pp.sel)) part = pp.label; } catch (e) {} } });
@@ -921,7 +971,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     var d = frame(); if (!d || !d.body) return;
     var R = d.getElementById("hk_ring"); if (!R) { R = d.createElement("div"); R.id = "hk_ring"; R.style.cssText = "position:fixed;inset:0;pointer-events:none;z-index:2147483646"; d.body.appendChild(R); }
     /* a handle under a finger is kept, not rebuilt: a touch stops reporting once the element it began on leaves the page */
-    var held = (turn || resize) ? d.getElementById(turn ? "hk_turn" : "hk_handle") : null;
+    var held = (turn || resize) ? d.getElementById(turn ? "hk_turn" : resize.hid || "hk_handle") : null;
     Array.prototype.slice.call(R.children).forEach(function (c) { if (c !== held) R.removeChild(c); }); R.style.visibility = comparing ? "hidden" : "";
     /* 10/03 grade: the turn dot sat on the app's own tabs. Nothing of the box is drawn over the app's top bar */
     var bar = appBar(d); R.style.clipPath = bar ? "inset(" + bar + "px 0 0 0)" : "";
@@ -931,7 +981,15 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       var x = d.createElement("div"); x.className = i ? "hk_ring2" : "hk_ring1";
       x.style.cssText = "position:absolute;left:" + (b.l - P) + "px;top:" + (b.t - P) + "px;width:" + (b.r - b.l + 2 * P) + "px;height:" + (b.b - b.t + 2 * P) + "px;border:" + (i ? (1.5 / zk) + "px dashed rgba(255,45,135,.75)" : (2 / zk) + "px solid #FF2D87") + ";border-radius:" + (4 / zk) + "px;box-shadow:0 0 0 " + (1 / zk) + "px rgba(255,255,255,.55)";
       R.appendChild(x);
-      if (!i) { var h = mk("hk_handle"); h.id = "hk_handle"; h.setAttribute("aria-label", "Drag to make it bigger or smaller");
+      if (!i) {
+        /* 10/03, Gray: "especially the corners and make larger and smaller like a drag style like PowerPoint and canva".
+           A handle on every corner of a piece big enough to hold them; a small piece keeps the one at the bottom right */
+        var big = (b.r - b.l) * zk >= 60 && (b.b - b.t) * zk >= 22, t0 = (narrow() ? 22 : 14) / zk;
+        if (big) [["tl", b.l - P, b.t - P, "nwse"], ["tr", b.r + P, b.t - P, "nesw"], ["bl", b.l - P, b.b + P, "nesw"]].forEach(function (q) {
+          var hc = mk("hk_handle_" + q[0]); hc.id = "hk_handle_" + q[0]; hc.className = "hk_hnd"; hc.setAttribute("aria-label", "Drag to make it bigger or smaller");
+          hc.style.cssText = "position:absolute;left:" + (q[1] - t0 / 2) + "px;top:" + (q[2] - t0 / 2) + "px;width:" + t0 + "px;height:" + t0 + "px;border-radius:50%;background:#fff;border:" + (2 / zk) + "px solid #FF2D87;box-shadow:0 1px 3px rgba(0,0,0,.4);pointer-events:auto;touch-action:none;cursor:" + q[3] + "-resize";
+          R.appendChild(hc); });
+        var h = mk("hk_handle"); h.id = "hk_handle"; h.setAttribute("aria-label", "Drag to make it bigger or smaller");
         /* the same size on screen at any zoom */
         /* it sits just outside the corner, so on a small piece (a 22 px date pill) it never covers the words: a drag on
            the words always moves them (10/03 grade: dragging the middle of the place name grew it instead) */
@@ -994,7 +1052,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     var w = sel.in === "card" ? (scope === "card" ? "Only this card" : scope === "kind" ? "Cards like this (" + (sel.kind || "same kind") + ", " + n('.card[data-bub^="' + String(sel.kind || "").replace(/"/g, "") + '"]') + " on this page)" : "Every card (" + n(".card") + " on this page)") : sel.el.closest(".hero") ? "The hero" : sel.el.closest(".hk_ptile") ? "Every poster tile (" + n(".hk_ptile") + " on this page)" : "Everywhere in the app";
     c.textContent = "Changes: " + w + (lookScope === "day" ? ", day look only" : lookScope === "night" ? ", night and dark only" : "") + " \u203a";
   }
-  function fill() { scopeChip(); samples();
+  function fill() { scopeChip(); samples(); textFill();
     var r = sel && findRule(key()), s = (r && r.set) || {}, el = sel && sel.el, cs = el ? el.ownerDocument.defaultView.getComputedStyle(el) : null;
     var wok = wordsOk(); $("words").disabled = !sel; $("wordsGo").disabled = !wok;
     var tk = sel && sel.in === "card" ? Object.assign(key(), { scope: "card", value: sel.card }) : null, tr = tk ? findRule(tk) : r;
@@ -1055,7 +1113,19 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     var tries = 0, upd = setInterval(function () { var b = d.querySelector('[data-testid="update-load"]'); if (b) { clearInterval(upd); say("Loading the newest app…"); fw().location.reload(); } else if (++tries > 40) clearInterval(upd); }, 250);
     /* 10/02: a tap picks on pointerup, not click. iPhone Safari sends no click to plain text, so on his phone the tap
        picked nothing and the arrows had nothing to move. click is still swallowed so the app does not act on it. */
-    var tap = null, fingers = {}, pinch = null;
+    var tap = null, fingers = {}, pinch = null, marq = null;
+    /* box select (computer, like Figma): a mouse drag that starts off the picked piece draws a box, and every piece of
+       words, mark or picture wholly inside it is picked together, so one change goes on all of them */
+    var marqPick = function (r) {
+      var seen = [], out = [];
+      Array.prototype.forEach.call(d.querySelectorAll(".hk *"), function (n) {
+        if (out.length >= 40 || n.closest("#hk_ring, #hk_guides, #hk_hover, #hk_marq, #hk_inline") || (n.closest("svg") && n.tagName.toLowerCase() !== "svg")) return;
+        var tg = n.tagName.toLowerCase(); if (!(tg === "svg" || tg === "img" || ownText(n))) return;
+        var cs = d.defaultView.getComputedStyle(n); if (cs.visibility === "hidden" || cs.display === "none") return;
+        var b = boxOf(n); if (b.r - b.l < 2 || b.l < r.l || b.r > r.r || b.t < r.t || b.b > r.b) return;
+        var w = tg === "svg" || tg === "img" ? n : wholeRun(n); if (seen.indexOf(w) > -1) return; seen.push(w); out.push(w); });
+      return out.filter(function (n) { return !out.some(function (o) { return o !== n && o.contains(n); }); });
+    };
     /* two fingers on the picked piece: spread or pinch to make it bigger or smaller, twist to turn it (Canva's phone way).
        The first finger must start on the piece; the turn settles on every 15 degrees. */
     var spread = function () { var k = Object.keys(fingers), a = fingers[k[0]], b = fingers[k[1]]; return { d: Math.max(8, Math.hypot(b.x - a.x, b.y - a.y)), a: Math.atan2(b.y - a.y, b.x - a.x) }; };
@@ -1067,9 +1137,9 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     d.addEventListener("pointerdown", function (e) {
       if (e.pointerType === "touch") { fingers[e.pointerId] = { x: e.clientX, y: e.clientY };
         if (Object.keys(fingers).length === 2 && sel && drag) { startPinch(); e.preventDefault(); e.stopPropagation(); return; } }
-      if (e.target && e.target.id === "hk_handle" && sel) {
+      if (e.target && /^hk_handle/.test(e.target.id || "") && sel) {
         e.preventDefault(); e.stopPropagation(); tap = null; var b = boxOf(sel.el), cx = (b.l + b.r) / 2, cy = (b.t + b.b) / 2;
-        resize = { cx: cx, cy: cy, d0: Math.max(8, Math.hypot(e.clientX - cx, e.clientY - cy)), on: false,
+        resize = { hid: e.target.id, cx: cx, cy: cy, d0: Math.max(8, Math.hypot(e.clientX - cx, e.clientY - cy)), on: false,
           starts: group().map(function (g) { return withSel(g, function () { var cs = g.el.ownerDocument.defaultView.getComputedStyle(g.el), r = findRule(key()), st = (r && r.set) || {}, txt = ownText(g.el) && g.el.tagName.toLowerCase() !== "svg";
             return { g: g, txt: txt, base: txt ? (Number(st.size) || parseFloat(cs.fontSize)) : (Number(st.scale) || 1) }; }); }) };
         return;
@@ -1083,11 +1153,16 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       tap = { x: e.clientX, y: e.clientY, t: e.target };
       if (dropping) { e.stopPropagation(); return; }
       var inGroup = group().some(function (g) { return e.target === g.el || g.el.contains(e.target); });
-      if (!sel || !inGroup || e.shiftKey || adding) { if (e.target.closest && e.target.closest(".card")) e.stopPropagation(); return; }
+      if (!sel || !inGroup || e.shiftKey || adding) { if (e.pointerType === "mouse" && !e.shiftKey && !adding && e.button === 0) marq = { x: e.clientX, y: e.clientY, on: false }; if (e.target.closest && e.target.closest(".card")) e.stopPropagation(); return; }
       drag = { x: e.clientX, y: e.clientY, on: false, starts: group().map(function (g) { return withSel(g, function () { var r = findRule(key()), s0 = (r && r.set) || {}; return { g: g, dx: s0.dx || 0, dy: s0.dy || 0 }; }); }) };
       e.stopPropagation();
     }, true);
     d.addEventListener("pointermove", function (e) {
+      if (marq) { if (!marq.on) { if (Math.abs(e.clientX - marq.x) + Math.abs(e.clientY - marq.y) < 8) return; marq.on = true; tap = null; d.body.style.userSelect = "none"; }
+        var M = d.getElementById("hk_marq"); if (!M) { M = d.createElement("div"); M.id = "hk_marq"; d.body.appendChild(M); }
+        var l = Math.min(marq.x, e.clientX), t = Math.min(marq.y, e.clientY), zk = zoomK || 1; marq.r = { l: l, t: t, r: Math.max(marq.x, e.clientX), b: Math.max(marq.y, e.clientY) };
+        M.style.cssText = "position:fixed;z-index:2147483646;pointer-events:none;left:" + l + "px;top:" + t + "px;width:" + (marq.r.r - l) + "px;height:" + (marq.r.b - t) + "px;border:" + (1.5 / zk) + "px dashed #FF2D87;background:rgba(255,45,135,.08);border-radius:" + (3 / zk) + "px";
+        e.preventDefault(); e.stopPropagation(); return; }
       if (fingers[e.pointerId]) fingers[e.pointerId] = { x: e.clientX, y: e.clientY };
       if (pinch) { if (Object.keys(fingers).length < 2) return; var sp = spread(), k = sp.d / pinch.d0, da = ((sp.a - pinch.a0) * 180 / Math.PI + 540) % 360 - 180;
         if (!pinch.on) { if (Math.abs(k - 1) < 0.03 && Math.abs(da) < 4) return; pinch.on = true; snap(); }
@@ -1129,6 +1204,11 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     var unfinger = function (e) { delete fingers[e.pointerId]; if (pinch) { var pw = pinch.on; if (Object.keys(fingers).length === 0) { pinch = null; ring(); if (pw) { fill(); say("Resized and turned with two fingers. Undo takes it back.", "ok"); } } if (e.cancelable) e.preventDefault(); e.stopPropagation(); tap = null; return true; } return false; };
     d.addEventListener("pointerup", function (e) {
       if (unfinger(e)) return;
+      if (marq) { var mo = marq.on, mr = marq.r; marq = null; d.body.style.userSelect = ""; var M = d.getElementById("hk_marq"); if (M) M.remove();
+        if (mo) { e.preventDefault(); e.stopPropagation(); tap = null; var got = mr ? marqPick(mr) : [];
+          if (!got.length) { say("Nothing whole inside that box. Draw it around the pieces.", "err"); return; }
+          trail = []; levelBase = null; select(got[0]); got.slice(1).forEach(function (n) { toggleGroup(n); });
+          say(got.length === 1 ? "Picked 1 piece." : got.length + " pieces picked. Every change now goes on all of them.", "ok"); return; } }
       if (turn) { var tw = turn.on; turn = null; e.preventDefault(); e.stopPropagation(); ring(); if (tw) { fill(); say("Turned. Undo takes it back.", "ok"); } return; }
       if (resize) { var was = resize.on; resize = null; ring(); e.preventDefault(); e.stopPropagation(); if (was) { fill(); say("Resized. Undo takes it back.", "ok"); } return; }
       var moved = drag && drag.on, t = tap; tap = null; end(e);
@@ -1139,7 +1219,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       }
       if (picking && t && !moved && Math.abs(e.clientX - t.x) + Math.abs(e.clientY - t.y) < 10) { e.preventDefault(); if (dropping) { takeColour(t.t); return; } if ((e.shiftKey || adding) && sel) { toggleGroup(sceneryAt(t.t, t.x, t.y) || t.t); return; } trail = []; levelBase = null; select(wholeRun(sceneryAt(t.t, t.x, t.y) || t.t)); }
     }, true);
-    d.addEventListener("pointercancel", function (e) { if (unfinger(e)) return; tap = null; resize = null; turn = null; end(e); }, true);
+    d.addEventListener("pointercancel", function (e) { if (marq) { marq = null; d.body.style.userSelect = ""; var M = d.getElementById("hk_marq"); if (M) M.remove(); } if (unfinger(e)) return; tap = null; resize = null; turn = null; end(e); }, true);
     d.addEventListener("keydown", onKey, true); d.addEventListener("keydown", function (e) { cmpKey(e); }, true); d.addEventListener("keyup", function (e) { cmpKey(e); }, true);
     var gq = 0; d.addEventListener("scroll", function () { if (!gq) gq = fw().requestAnimationFrame(function () { gq = 0; guides(); ring(); }); }, true);
     clearInterval(hook.tick); hook.tick = setInterval(function () { if (sel && !document.hidden) ring(); }, 250);
@@ -1247,7 +1327,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   function cycleZoom() { if (!sel && zoomK === 1) { say("Tap a word in the app first, then zoom in on it.", "err"); return; } zoomK = zoomK === 1 ? 2 : zoomK === 2 ? 3 : 1; zoomTo(); say(zoomK === 1 ? "Back to normal size." : "Zoomed " + zoomK + " times on the picked piece. A drag or nudge now moves it in finer steps.", "ok"); }
   /* ---- the panel ---- */
   /* the marks on the buttons are Tabler outline icons (MIT licence, tabler.io/icons), drawn at 20 px, 22 on the phone's tool tabs */
-  var ICONS = {"floats":"<path d=\"M20 6v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2\" /><path d=\"M20 15h-16\" /><path d=\"M14 8l-2 2l-2 -2\" />","zoomin":"<path d=\"M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0\" /><path d=\"M7 10l6 0\" /><path d=\"M10 7l0 6\" /><path d=\"M21 21l-6 -6\" />","addmore":"<path d=\"M12 5l0 14\" /><path d=\"M5 12l14 0\" />","chup":"<path d=\"M6 15l6 -6l6 6\" />","chdown":"<path d=\"M6 9l6 6l6 -6\" />","chleft":"<path d=\"M15 6l-6 6l6 6\" />","chright":"<path d=\"M9 6l6 6l-6 6\" />","home":"<path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M4 8v-2a2 2 0 0 1 2 -2h2\" /><path d=\"M4 16v2a2 2 0 0 0 2 2h2\" /><path d=\"M16 4h2a2 2 0 0 1 2 2v2\" /><path d=\"M16 20h2a2 2 0 0 0 2 -2v-2\" />","eye":"<path d=\"M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0\" /><path d=\"M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6\" />","eyeoff":"<path d=\"M10.585 10.587a2 2 0 0 0 2.829 2.828\" /><path d=\"M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87\" /><path d=\"M3 3l18 18\" />","pick":"<path d=\"M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5\" /><path d=\"M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5\" /><path d=\"M14 10.5a1.5 1.5 0 0 1 3 0v1.5\" /><path d=\"M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47\" /><path d=\"M5 3l-1 -1\" /><path d=\"M4 7h-1\" /><path d=\"M14 3l1 -1\" /><path d=\"M15 6h1\" />","undo":"<path d=\"M9 14l-4 -4l4 -4\" /><path d=\"M5 10h11a4 4 0 1 1 0 8h-1\" />","redo":"<path d=\"M15 14l4 -4l-4 -4\" /><path d=\"M19 10h-11a4 4 0 1 0 0 8h1\" />","more":"<path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M11 19a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M11 5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" />","move":"<path d=\"M18 9l3 3l-3 3\" /><path d=\"M15 12h6\" /><path d=\"M6 9l-3 3l3 3\" /><path d=\"M3 12h6\" /><path d=\"M9 18l3 3l3 -3\" /><path d=\"M12 15v6\" /><path d=\"M15 6l-3 -3l-3 3\" /><path d=\"M12 3v6\" />","size":"<path d=\"M3 7v-2h13v2\" /><path d=\"M10 5v14\" /><path d=\"M12 19h-4\" /><path d=\"M15 13v-1h6v1\" /><path d=\"M18 12v7\" /><path d=\"M17 19h2\" />","colour":"<path d=\"M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25\" /><path d=\"M7.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M11.5 7.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M15.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" />","font":"<path d=\"M4 20l3 0\" /><path d=\"M14 20l7 0\" /><path d=\"M6.9 15l6.9 0\" /><path d=\"M10.2 6.3l5.8 13.7\" /><path d=\"M5 20l6 -16l2 0l7 16\" />","words":"<path d=\"M12 3a3 3 0 0 0 -3 3v12a3 3 0 0 0 3 3\" /><path d=\"M6 3a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3\" /><path d=\"M13 7h7a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-7\" /><path d=\"M5 7h-1a1 1 0 0 0 -1 1v8a1 1 0 0 0 1 1h1\" /><path d=\"M17 12h.01\" /><path d=\"M13 12h.01\" />","edge":"<path d=\"M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0\" /><path d=\"M13 12h5\" /><path d=\"M13 15h4\" /><path d=\"M13 18h1\" /><path d=\"M13 9h4\" /><path d=\"M13 6h1\" />","where":"<path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M12 7a5 5 0 1 0 5 5\" /><path d=\"M13 3.055a9 9 0 1 0 7.941 7.945\" /><path d=\"M15 6v3h3l3 -3h-3v-3l-3 3\" /><path d=\"M15 9l-3 3\" />","add":"<path d=\"M9 12h6\" /><path d=\"M12 9v6\" /><path d=\"M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14\" />","changes":"<path d=\"M3.5 5.5l1.5 1.5l2.5 -2.5\" /><path d=\"M3.5 11.5l1.5 1.5l2.5 -2.5\" /><path d=\"M3.5 17.5l1.5 1.5l2.5 -2.5\" /><path d=\"M11 6l9 0\" /><path d=\"M11 12l9 0\" /><path d=\"M11 18l9 0\" />","focus":"<path d=\"M11.5 12a.5 .5 0 1 0 1 0a.5 .5 0 1 0 -1 0\" fill=\"currentColor\" /><path d=\"M5 12a7 7 0 1 0 14 0a7 7 0 1 0 -14 0\" /><path d=\"M12 3l0 2\" /><path d=\"M3 12l2 0\" /><path d=\"M12 19l0 2\" /><path d=\"M19 12l2 0\" />","publish":"<path d=\"M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-1\" /><path d=\"M9 15l3 -3l3 3\" /><path d=\"M12 12l0 9\" />","layers":"<path d=\"M12 4l-8 4l8 4l8 -4l-8 -4\" /><path d=\"M4 12l8 4l8 -4\" /><path d=\"M4 16l8 4l8 -4\" />","history":"<path d=\"M12 8l0 4l2 2\" /><path d=\"M3.05 11a9 9 0 1 1 .5 4m-.5 5v-5h5\" />","compare":"<path d=\"M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -14\" /><path d=\"M3 19h2.25c3.728 0 6.75 -3.134 6.75 -7s3.022 -7 6.75 -7h2.25\" />","width":"<path d=\"M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14\" /><path d=\"M11 4h2\" /><path d=\"M12 17v.01\" />","copy":"<path d=\"M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666\" /><path d=\"M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1\" />","paste":"<path d=\"M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2\" /><path d=\"M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2\" />","eyedrop":"<path d=\"M11 7l6 6\" /><path d=\"M4 16l11.7 -11.7a1 1 0 0 1 1.4 0l2.6 2.6a1 1 0 0 1 0 1.4l-11.7 11.7h-4v-4\" />","reset":"<path d=\"M3.06 13a9 9 0 1 0 .49 -4.087\" /><path d=\"M3 4.001v5h5\" /><path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" />","snap":"<path d=\"M4 13v-8a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v8a2 2 0 0 0 6 0v-8a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v8a8 8 0 0 1 -16 0\" /><path d=\"M4 8l5 0\" /><path d=\"M15 8l4 0\" />"};
+  var ICONS = {"floats":"<path d=\"M20 6v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2\" /><path d=\"M20 15h-16\" /><path d=\"M14 8l-2 2l-2 -2\" />","zoomin":"<path d=\"M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0\" /><path d=\"M7 10l6 0\" /><path d=\"M10 7l0 6\" /><path d=\"M21 21l-6 -6\" />","addmore":"<path d=\"M12 5l0 14\" /><path d=\"M5 12l14 0\" />","chup":"<path d=\"M6 15l6 -6l6 6\" />","chdown":"<path d=\"M6 9l6 6l6 -6\" />","chleft":"<path d=\"M15 6l-6 6l6 6\" />","chright":"<path d=\"M9 6l6 6l-6 6\" />","home":"<path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M4 8v-2a2 2 0 0 1 2 -2h2\" /><path d=\"M4 16v2a2 2 0 0 0 2 2h2\" /><path d=\"M16 4h2a2 2 0 0 1 2 2v2\" /><path d=\"M16 20h2a2 2 0 0 0 2 -2v-2\" />","eye":"<path d=\"M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0\" /><path d=\"M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6\" />","eyeoff":"<path d=\"M10.585 10.587a2 2 0 0 0 2.829 2.828\" /><path d=\"M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87\" /><path d=\"M3 3l18 18\" />","pick":"<path d=\"M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5\" /><path d=\"M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5\" /><path d=\"M14 10.5a1.5 1.5 0 0 1 3 0v1.5\" /><path d=\"M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47\" /><path d=\"M5 3l-1 -1\" /><path d=\"M4 7h-1\" /><path d=\"M14 3l1 -1\" /><path d=\"M15 6h1\" />","undo":"<path d=\"M9 14l-4 -4l4 -4\" /><path d=\"M5 10h11a4 4 0 1 1 0 8h-1\" />","redo":"<path d=\"M15 14l4 -4l-4 -4\" /><path d=\"M19 10h-11a4 4 0 1 0 0 8h1\" />","more":"<path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M11 19a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M11 5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" />","move":"<path d=\"M18 9l3 3l-3 3\" /><path d=\"M15 12h6\" /><path d=\"M6 9l-3 3l3 3\" /><path d=\"M3 12h6\" /><path d=\"M9 18l3 3l3 -3\" /><path d=\"M12 15v6\" /><path d=\"M15 6l-3 -3l-3 3\" /><path d=\"M12 3v6\" />","size":"<path d=\"M3 7v-2h13v2\" /><path d=\"M10 5v14\" /><path d=\"M12 19h-4\" /><path d=\"M15 13v-1h6v1\" /><path d=\"M18 12v7\" /><path d=\"M17 19h2\" />","colour":"<path d=\"M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25\" /><path d=\"M7.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M11.5 7.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M15.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" />","font":"<path d=\"M4 20l3 0\" /><path d=\"M14 20l7 0\" /><path d=\"M6.9 15l6.9 0\" /><path d=\"M10.2 6.3l5.8 13.7\" /><path d=\"M5 20l6 -16l2 0l7 16\" />","words":"<path d=\"M12 3a3 3 0 0 0 -3 3v12a3 3 0 0 0 3 3\" /><path d=\"M6 3a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3\" /><path d=\"M13 7h7a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-7\" /><path d=\"M5 7h-1a1 1 0 0 0 -1 1v8a1 1 0 0 0 1 1h1\" /><path d=\"M17 12h.01\" /><path d=\"M13 12h.01\" />","edge":"<path d=\"M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0\" /><path d=\"M13 12h5\" /><path d=\"M13 15h4\" /><path d=\"M13 18h1\" /><path d=\"M13 9h4\" /><path d=\"M13 6h1\" />","where":"<path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M12 7a5 5 0 1 0 5 5\" /><path d=\"M13 3.055a9 9 0 1 0 7.941 7.945\" /><path d=\"M15 6v3h3l3 -3h-3v-3l-3 3\" /><path d=\"M15 9l-3 3\" />","add":"<path d=\"M9 12h6\" /><path d=\"M12 9v6\" /><path d=\"M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14\" />","changes":"<path d=\"M3.5 5.5l1.5 1.5l2.5 -2.5\" /><path d=\"M3.5 11.5l1.5 1.5l2.5 -2.5\" /><path d=\"M3.5 17.5l1.5 1.5l2.5 -2.5\" /><path d=\"M11 6l9 0\" /><path d=\"M11 12l9 0\" /><path d=\"M11 18l9 0\" />","focus":"<path d=\"M11.5 12a.5 .5 0 1 0 1 0a.5 .5 0 1 0 -1 0\" fill=\"currentColor\" /><path d=\"M5 12a7 7 0 1 0 14 0a7 7 0 1 0 -14 0\" /><path d=\"M12 3l0 2\" /><path d=\"M3 12l2 0\" /><path d=\"M12 19l0 2\" /><path d=\"M19 12l2 0\" />","publish":"<path d=\"M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-1\" /><path d=\"M9 15l3 -3l3 3\" /><path d=\"M12 12l0 9\" />","layers":"<path d=\"M12 4l-8 4l8 4l8 -4l-8 -4\" /><path d=\"M4 12l8 4l8 -4\" /><path d=\"M4 16l8 4l8 -4\" />","history":"<path d=\"M12 8l0 4l2 2\" /><path d=\"M3.05 11a9 9 0 1 1 .5 4m-.5 5v-5h5\" />","compare":"<path d=\"M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -14\" /><path d=\"M3 19h2.25c3.728 0 6.75 -3.134 6.75 -7s3.022 -7 6.75 -7h2.25\" />","width":"<path d=\"M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14\" /><path d=\"M11 4h2\" /><path d=\"M12 17v.01\" />","copy":"<path d=\"M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666\" /><path d=\"M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1\" />","paste":"<path d=\"M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2\" /><path d=\"M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2\" />","eyedrop":"<path d=\"M11 7l6 6\" /><path d=\"M4 16l11.7 -11.7a1 1 0 0 1 1.4 0l2.6 2.6a1 1 0 0 1 0 1.4l-11.7 11.7h-4v-4\" />","reset":"<path d=\"M3.06 13a9 9 0 1 0 .49 -4.087\" /><path d=\"M3 4.001v5h5\" /><path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" />","tee":"<path d=\"M6 4l12 0\" /><path d=\"M12 4l0 16\" /><path d=\"M10 20l4 0\" />","snap":"<path d=\"M4 13v-8a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v8a2 2 0 0 0 6 0v-8a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v8a8 8 0 0 1 -16 0\" /><path d=\"M4 8l5 0\" /><path d=\"M15 8l4 0\" />"};
   var icon = function (k) { return ICONS[k] ? '<svg class="i" viewBox="0 0 24 24" aria-hidden="true">' + ICONS[k] + "</svg>" : ""; };
   Array.prototype.forEach.call(document.querySelectorAll("[data-i]"), function (b) { b.insertAdjacentHTML("afterbegin", icon(b.getAttribute("data-i"))); });
   /* the phone keeps the bar short: Focus card, the look and Save + publish sit behind More */
@@ -1296,6 +1376,38 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   $("gfName").addEventListener("keydown", function (e) { if (e.key === "Enter") $("gfGo").click(); });
   fontBtn("", "Its own font");
   CD.FONTS.forEach(function (f) { fontBtn(f); });
+  /* ---- the Text page (10/03): one place for the words, the size, bold / italic / capitals, a colour and a font.
+     Every control here calls the same change the full tab makes, so Undo, groups and Where behave the same ---- */
+  var TFONTS = ["Baloo 2", "Nunito", "Chewy", "Fredoka", "Pacifico", "Lobster", "Playfair Display", "Bebas Neue", "Cormorant Garamond"].filter(function (f) { return CD.FONTS.indexOf(f) > -1; });
+  function textFill() {
+    if (!$("textBox") || !SW || !TFONTS) return; var el = sel && sel.el, r = sel && findRule(key()), st = (r && r.set) || {}, cs = el ? el.ownerDocument.defaultView.getComputedStyle(el) : null, wok = wordsOk();
+    if (document.activeElement !== $("tWords")) { var tk = sel && sel.in === "card" ? Object.assign(key(), { scope: "card", value: sel.card }) : null, tr = tk ? findRule(tk) : r; $("tWords").value = wok ? ((tr && tr.set && tr.set.text) || allWords(el).slice(0, 160)) : ""; }
+    $("tWords").placeholder = !sel ? "Tap any words in the app" : wok ? "Type new words" : "Tap here to pick the words inside";
+    if (document.activeElement !== $("tSize")) $("tSize").value = st.size || (cs ? Math.round(parseFloat(cs.fontSize) * 2) / 2 : "");
+    var fwN = Number(st.weight) || (cs ? Number(cs.fontWeight) : 400); $("tBold").classList.toggle("sel", fwN >= 700); $("tItalic").classList.toggle("sel", st.italic === true || (cs && cs.fontStyle === "italic" && st.italic !== false)); $("tCaps").classList.toggle("sel", (st.tcase || (cs && cs.textTransform)) === "upper" || (cs && cs.textTransform === "uppercase" && !st.tcase));
+    var rc = recent.map(function (x) { return x.toUpperCase(); }), notR = function (c) { return rc.indexOf(c.toUpperCase()) < 0; };
+    var cols = recent.concat(SW.filter(function (c) { return notR(c) && hsl(c).c >= 0.16 && hsl(c).l <= 0.9; })).concat(SW.filter(function (c) { return notR(c) && (hsl(c).c < 0.16 || hsl(c).l > 0.9); })).slice(0, 16);
+    var tc = $("tCols"); if (tc.getAttribute("data-k") !== cols.join()) { tc.innerHTML = ""; tc.setAttribute("data-k", cols.join()); cols.forEach(function (c) { var b = document.createElement("button"); b.style.background = c; b.title = c; b.setAttribute("aria-label", "Colour " + c); b.setAttribute("data-c", c); b.onclick = function () { edit(function (s2) { s2.color = c; }); }; tc.appendChild(b); }); }
+    Array.prototype.forEach.call(tc.children, function (b) { b.classList.toggle("sel", (st.color || "").toUpperCase() === b.getAttribute("data-c").toUpperCase()); });
+    var used = []; doc.rules.forEach(function (x) { if (x.set && x.set.font && used.indexOf(x.set.font) < 0) used.push(x.set.font); });
+    var fl = [""].concat(used).concat(TFONTS.filter(function (f) { return used.indexOf(f) < 0; })).slice(0, 10), tf = $("tFonts");
+    if (tf.getAttribute("data-k") !== fl.join("|")) { tf.innerHTML = ""; tf.setAttribute("data-k", fl.join("|")); fl.forEach(function (f) { var b = document.createElement("button"); b.textContent = f || "Its own"; b.setAttribute("data-f", f); if (f) b.style.fontFamily = "'" + f + "', sans-serif";
+      b.onclick = function () { var real = document.querySelector('#fonts [data-f="' + f + '"]'); if (real) real.click(); else edit(function (s2) { s2.font = f || undefined; }); }; tf.appendChild(b); }); }
+    Array.prototype.forEach.call(tf.children, function (b) { b.classList.toggle("sel", b.getAttribute("data-f") === (st.font || "")); });
+    $("tNote").textContent = !sel ? "" : !wok ? (sel.el.closest(".hk_ptile") ? "A tile's words come from its card." : "This box holds more than words. Tap the words box above to pick the words inside.") : sel.in === "card" ? "New words go on this card only. Size, colour and font follow Where (" + (scope === "card" ? "only this card" : scope === "kind" ? "cards like this" : "every card") + ")." : "";
+  }
+  $("tWords").addEventListener("focus", function () { var k = wordsInside(); if (!k) return; select(k); setTimeout(function () { $("tWords").focus(); $("tWords").select(); }, 60); });
+  var tApply = function () { if (!sel || !wordsOk()) return; var v = $("tWords").value.replace(/\s+/g, " ").trim(), now = (function () { var tk = sel.in === "card" ? Object.assign(key(), { scope: "card", value: sel.card }) : null, tr = tk ? findRule(tk) : findRule(key()); return (tr && tr.set && tr.set.text) || allWords(sel.el); })();
+    if (!v || v === now.replace(/\s+/g, " ").trim()) return; $("words").value = v; $("wordsGo").onclick(); };
+  $("tWords").addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); tApply(); $("tWords").blur(); } });
+  $("tWords").addEventListener("change", tApply);
+  $("tSmaller").onclick = function () { var b = document.querySelector('.panel [data-s="-1"]'); if (b) b.click(); };
+  $("tBigger").onclick = function () { var b = document.querySelector('.panel [data-s="1"]'); if (b) b.click(); };
+  $("tSize").addEventListener("change", function () { var v = Number(this.value); if (!sel || !(v >= 5 && v <= 80)) return; edit(function (s2) { s2.size = Math.round(v * 2) / 2; }); });
+  $("tBold").onclick = function () { if (!sel) return; var fwNow = Number(sel.el.ownerDocument.defaultView.getComputedStyle(sel.el).fontWeight) || 400; edit(function (s2) { s2.weight = fwNow >= 700 ? 400 : 800; }); };
+  $("tItalic").onclick = function () { if (!sel) return; var it = sel.el.ownerDocument.defaultView.getComputedStyle(sel.el).fontStyle === "italic"; edit(function (s2) { s2.italic = it ? false : true; }); };
+  $("tCaps").onclick = function () { if (!sel) return; var up = sel.el.ownerDocument.defaultView.getComputedStyle(sel.el).textTransform === "uppercase"; edit(function (s2) { s2.tcase = up ? "none" : "upper"; }); };
+  Array.prototype.forEach.call(document.querySelectorAll(".tmore"), function (b) { b.onclick = function () { showTab(b.getAttribute("data-go")); }; });
   /* the font buttons show themselves: one request for every family, for this page only */
   (function () { var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "https://fonts.googleapis.com/css2?" + CD.FONTS.map(function (f) { return "family=" + f.replace(/ /g, "+"); }).join("&") + "&display=swap"; document.head.appendChild(l);
     /* the Font tab is closed at first, and a closed tab's fonts are never asked for: ask for every one now, so they are drawn by the time he opens it */
@@ -1478,9 +1590,13 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   $("undoTop").onclick = undo; $("redo").onclick = redo;
   segs("stepSeg", function (v) { step = Number(v) || 1; });
   /* Hide tools (phone): the tool sheet folds away so the app fills the screen; any tab brings it back */
-  function setMini(on) { if (on) document.body.setAttribute("data-mini", "1"); else document.body.removeAttribute("data-mini"); var m = $("mini"); if (m) { m.setAttribute("aria-label", on ? "Show the tools again" : "Hide the tools to see more of the app"); m.title = m.getAttribute("aria-label"); m.setAttribute("aria-pressed", on ? "true" : "false"); } if (sel) setTimeout(ring, 60); }
+  function setMini(on) { if (on) document.body.setAttribute("data-mini", "1"); else document.body.removeAttribute("data-mini"); var m = $("mini"); if (m) { m.setAttribute("aria-label", on ? "Show the tools again" : "Hide the tools to see more of the app"); m.title = m.getAttribute("aria-label"); m.setAttribute("aria-pressed", on ? "true" : "false"); var ms = m.querySelector("span"); if (ms) ms.textContent = on ? "Show" : "Hide"; } if (sel) setTimeout(ring, 60); }
   (function () { var tb = $("tabs"), at = function () { if (tb.scrollLeft + tb.clientWidth >= tb.scrollWidth - 4) tb.setAttribute("data-end", ""); else tb.removeAttribute("data-end"); }; tb.addEventListener("scroll", at, { passive: true }); window.addEventListener("resize", at); setTimeout(at, 300); })();
   document.body.appendChild($("dragHud"));
+  $("pieceOpts").onclick = function (e) { e.stopPropagation(); var m = $("pieceMenu"), on = !m.classList.contains("open"); m.classList.toggle("open", on); this.setAttribute("aria-expanded", on ? "true" : "false");
+    if (on) { var r = this.getBoundingClientRect(); m.style.top = (r.bottom + 6) + "px"; } };
+  Array.prototype.forEach.call(document.querySelectorAll("#pieceMenu .pm"), function (b) { b.addEventListener("click", function () { $("pieceMenu").classList.remove("open"); $("pieceOpts").setAttribute("aria-expanded", "false"); }); });
+  document.addEventListener("click", function (e) { if (!e.target.closest || !e.target.closest("#pieceMenu, #pieceOpts")) { $("pieceMenu").classList.remove("open"); } });
   $("mini").onclick = function () { setMini(document.body.getAttribute("data-mini") !== "1"); };
   var showTab = function (t) { setMini(false); if (document.body.getAttribute("data-tab") !== t) { var tl = document.querySelector(".tools"); if (tl) tl.scrollTop = 0; } document.body.setAttribute("data-tab", t); Array.prototype.forEach.call($("tabs").children, function (b) { b.classList.toggle("on", b.getAttribute("data-t") === t); });
     /* the open tab is always in view on the phone's sideways tab row */
