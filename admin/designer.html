@@ -133,6 +133,11 @@ kbd{ background:var(--chip); border:1px solid var(--line); border-radius:4px; pa
 #toast{ position:fixed; left:50%; bottom:24px; transform:translateX(-50%); max-width:calc(100vw - 32px); background:var(--key); color:#fff; border:1px solid var(--line); border-radius:12px; padding:10px 14px; font-size:15px; font-weight:700; z-index:50; opacity:0; pointer-events:none; transition:opacity .2s; }
 #toast.on{ opacity:1; } #toast.err{ background:#7a1f1f; } #toast.ok{ background:#0f5c45; }
 #lock{ display:none; }
+#news{ background:var(--panel); color:var(--ink); border:1px solid var(--line); border-radius:16px; padding:16px 18px; max-width:min(460px, calc(100vw - 24px)); max-height:calc(100dvh - 40px); }
+#news::backdrop{ background:rgba(0,0,0,.55); }
+#news h2{ font-size:14px; margin:0 0 8px; color:var(--mint); text-transform:uppercase; letter-spacing:.8px; }
+#news ul{ margin:0; padding:0 0 0 18px; } #news li{ margin:0 0 8px; font-size:15px; line-height:1.4; }
+#news button{ margin-top:10px; width:100%; }
 #keys{ background:var(--panel); color:var(--ink); border:1px solid var(--line); border-radius:16px; padding:16px 18px; max-width:440px; }
 #keys::backdrop{ background:rgba(0,0,0,.55); }
 #keys h2{ font-size:14px; margin:0 0 10px; color:var(--mute); text-transform:uppercase; letter-spacing:.8px; }
@@ -390,6 +395,22 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   </section>
 </main>
 <div id="toast"></div>
+<dialog id="news" aria-label="New in the designer">
+  <h2>New in the designer</h2>
+  <ul>
+    <li>Drag the round handle on the picked piece to make it bigger or smaller.</li>
+    <li>Hold the half-filled square at the top to see the app without your changes.</li>
+    <li>The magnifier on the app zooms 2x or 3x on the picked piece for exact placing.</li>
+    <li>In Move, Even above and below lines a piece up in one tap. Dragging snaps to the words around it.</li>
+    <li>The + button picks more pieces, so one change goes on all of them.</li>
+    <li>Copy a look from one piece and paste it on another.</li>
+    <li>Colour has an eyedropper, colour codes, see-through, gradients and a check that it still reads.</li>
+    <li>Tap the hero to change its boat, flag, moon and the rest: size, turn and colour.</li>
+    <li>History keeps every Save, and Bring back loads an older one.</li>
+    <li>After Save + publish, the top of the screen says when your changes are live.</li>
+  </ul>
+  <button id="newsOff" class="go">Got it</button>
+</dialog>
 <dialog id="keys" aria-label="Keyboard shortcuts">
   <h2>Keys on a computer</h2>
   <table>
@@ -1397,7 +1418,10 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     return fetch("https://api.github.com/repos/" + REPO, { headers: { Authorization: "Bearer " + t, Accept: "application/vnd.github+json" } })
       .then(function (r) { return r.ok ? r.json() : null; }).then(function (j) { return !!(j && j.permissions && j.permissions.push); }).catch(function () { return null; });
   }
-  function unlock() { document.body.className = ""; var f = $("app"); if (!f.getAttribute("src")) f.setAttribute("src", f.getAttribute("data-src")); load(); if (document.body.getAttribute("data-tab") === "history") showHistory(); }
+  /* the first time he opens the designer after the 10/03 night, a short list says what is new; Got it closes it for good */
+  function news() { var seen = ""; try { seen = localStorage.getItem("hk_designer_news") || ""; } catch (e) {} if (seen === "1003") return; var n = $("news"); if (n.showModal) n.showModal(); }
+  $("newsOff").onclick = function () { $("news").close(); try { localStorage.setItem("hk_designer_news", "1003"); } catch (e) {} };
+  function unlock() { setTimeout(news, 600); document.body.className = ""; var f = $("app"); if (!f.getAttribute("src")) f.setAttribute("src", f.getAttribute("data-src")); load(); if (document.body.getAttribute("data-tab") === "history") showHistory(); }
   var lockSay = function (t, c) { $("lockSay").textContent = t; $("lockSay").className = "status" + (c ? " " + c : ""); };
   $("lockGo").onclick = function () {
     var t = $("lockKey").value.trim(); if (!t) return; lockSay("Checking with GitHub…");
