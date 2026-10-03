@@ -200,6 +200,6 @@
     api2.set(list); return api2;
   }
   var api = { PARTS: PARTS, STICKERS: STICKERS, placeAdds: placeAdds, FONTS: FONTS, BUILT_IN: BUILT_IN, EXTRA: EXTRA, SWATCHES: SWATCHES, EDGES: EDGES,
-    ruleCss: ruleCss, designCss: designCss, famOk: famOk, partById: partById, fontsToFetch: fontsToFetch, selOk: selOk };
+    ruleCss: ruleCss, designCss: designCss, famOk: famOk, decls: decls, partById: partById, fontsToFetch: fontsToFetch, selOk: selOk };
   if (typeof module === "object" && module.exports) module.exports = api; else root.CardDesign = api;
 })(typeof window !== "undefined" ? window : this);

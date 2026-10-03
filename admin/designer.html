@@ -38,10 +38,20 @@ header h1{ font-size:16px; margin:0 6px 0 0; }
 header .sp{ flex:1; }
 header button, header select{ white-space:nowrap; }
 /* on a computer the extra controls sit before Save, so Save is always the last thing on the bar */
-#save{ order:10; } #moreBtn{ order:11; }
+#save{ order:10; } #moreBtn{ order:11; } #pubLine{ order:9; }
+.publine{ display:none; font-size:12px; font-weight:800; color:var(--mint); white-space:nowrap; max-width:46vw; overflow:hidden; text-overflow:ellipsis; }
+.publine.on{ display:block; } .publine.err, .publine.err a{ color:#ff8a80; } .publine.ok::before{ content:"\2713  "; }
 .more{ display:contents; }
 main{ display:flex; gap:16px; padding:12px; align-items:flex-start; }
 .phone{ position:sticky; top:62px; width:calc(var(--appw, 390px) + 16px); flex:0 0 auto; border:8px solid #000; border-radius:28px; overflow:hidden; background:#000; box-shadow:0 10px 40px rgba(0,0,0,.5); }
+.phone{ position:relative; }
+/* zoom (10/03, J13): the app keeps its phone width and is only drawn bigger, centred on the picked piece, so a
+   finger or mouse moves it in finer steps; the frame does not change size */
+.phone iframe{ transform-origin:0 0; }
+.zoombtn{ position:absolute; right:10px; bottom:10px; z-index:3; width:44px; height:44px; min-height:44px; padding:0; border-radius:50%; background:rgba(14,22,33,.86); border:1.5px solid var(--line); color:#fff; box-shadow:0 4px 14px rgba(0,0,0,.4); }
+.zoombtn.on{ background:var(--pink); border-color:var(--pink); }
+.zoombtn span{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+.zoombtn .zl{ position:absolute; top:-8px; right:-6px; font:800 10px/16px system-ui; background:#fff; color:#0E1621; border-radius:999px; padding:0 4px; position:absolute; width:auto; height:auto; clip:auto; overflow:visible; }
 .phone iframe{ display:block; width:var(--appw, 390px); height:calc(100vh - 110px); max-height:844px; border:0; background:#fff; }
 .panel{ flex:1 1 380px; max-width:680px; }
 .box{ background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:12px 14px; margin:0 0 12px; }
@@ -78,7 +88,12 @@ main{ display:flex; gap:16px; padding:12px; align-items:flex-start; }
 .sw button.now{ outline:2px dashed var(--mint); outline-offset:2px; }
 .fonts{ display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:6px; max-height:260px; overflow:auto; width:100%; padding-right:4px; }
 /* a font button is a fixed 42 px tall, one line: the 52 families arrive one by one and must not shuffle the grid under his finger */
-.fonts button{ justify-content:flex-start; text-align:left; font-size:19px; line-height:1.1; padding:0 10px; height:42px; min-height:42px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; display:block; }
+.fonts button{ display:flex; flex-direction:column; align-items:flex-start; justify-content:center; gap:1px; text-align:left; line-height:1.1; padding:0 10px; height:56px; min-height:56px; overflow:hidden; }
+.fonts .fsamp{ font-size:19px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:100%; }
+.fonts small{ font:600 10.5px/1.2 system-ui, sans-serif; color:var(--mute); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:100%; }
+.fonts button.sel small{ color:#d9fff2; }
+#edgeSeg button{ flex-direction:column; gap:3px; min-height:64px; padding:6px 10px; font-size:12px; }
+#edgeSeg .esamp{ display:block; padding:2px 8px; border-radius:6px; background:#F4EEE2; color:#FF3EA5; font:900 17px/1.2 "Baloo 2", system-ui, sans-serif; white-space:nowrap; max-width:120px; overflow:hidden; }
 .fonts button.sel, .seg button.sel{ background:var(--go); border-color:var(--go); color:#fff; font-weight:800; }
 .seg{ display:flex; gap:6px; flex-wrap:wrap; }
 .seg button{ white-space:nowrap; }
@@ -199,6 +214,8 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   .tabs svg.i{ width:22px; height:22px; }
   .pad{ grid-template-columns:repeat(3,52px); gap:6px; }
   .pad button{ min-height:48px; font-size:20px; }
+  /* on a phone the update's progress floats just under the bar, over the top of the app */
+  .publine{ position:fixed; top:56px; left:50%; transform:translateX(-50%); z-index:15; max-width:90vw; padding:4px 12px; border-radius:999px; background:rgba(14,22,33,.94); border:1px solid var(--line); box-shadow:0 4px 14px rgba(0,0,0,.4); }
   #toast{ font-size:13px; line-height:1.3; font-weight:700; padding:7px 14px; border-radius:16px; max-width:calc(100vw - 32px); text-align:center; box-shadow:0 6px 18px rgba(0,0,0,.35); }
   #signin{ margin-top:8px; }
 }
@@ -229,6 +246,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   <button id="redo" class="ib" title="Redo (Ctrl+Shift+Z)" aria-label="Redo" data-i="redo"><span>Redo</span></button>
   <button id="compare" class="ib" title="Hold to see the app without your changes (or hold the \ key)" aria-label="Hold to compare" data-i="compare"><span>Compare</span></button>
   <span class="sp"></span>
+  <span class="publine" id="pubLine" role="status"></span>
   <button id="save" class="go">Save</button>
   <button id="moreBtn" class="ib onlyphone" aria-label="More" aria-expanded="false" data-i="more"><span>More</span></button>
   <div class="more" id="more">
@@ -241,7 +259,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   </div>
 </header>
 <main>
-  <div class="phone"><iframe id="app" data-src="../app/" title="The app"></iframe></div>
+  <div class="phone"><iframe id="app" data-src="../app/" title="The app"></iframe><button id="zoom" class="zoombtn" aria-label="Zoom in on the picked piece" title="Zoom in on the picked piece (Z)" data-i="zoomin"><span>Zoom</span></button></div>
   <section class="panel">
     <div class="box" id="signin">
       <h2>One time on this device, to save</h2>
@@ -458,7 +476,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     if (!levelBase || !levelBase.isConnected || !(levelBase === el || el.contains(levelBase))) levelBase = el;
     levels();
     if (focusOn) focusCard();
-    fill(); paint(); layersList();
+    fill(); paint(); layersList(); if (zoomK > 1) setTimeout(zoomTo, 0);
   }
   /* plain names for the app's own boxes, so the level chips read like places on the card, not code */
   var LEVEL_NAMES = { cardbtn: "Whole card", top: "Top of card", hbody: "Header", headleft: "Title area", hk_slot: "Title box",
@@ -672,6 +690,8 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     if (!sel || !sel.el || !sel.el.isConnected) return;
     var A = around(g), box = A.box, me = A.me, cand = A.cand, eb = A.eb, up = A.up, dn = A.dn, lf = A.lf, rt = A.rt;
     var W = w.innerWidth, H = w.innerHeight, clamp = function (v, lo, hi) { return Math.max(lo, Math.min(hi, v)); };
+    /* zoomed in, only part of the app shows: numbers are kept inside that part and drawn at their normal size on screen */
+    var zk = zoomK || 1, V = { l: -zoomTx / zk, t: -zoomTy / zk, r: (W - zoomTx) / zk, b: (H - zoomTy) / zk };
     /* the snap lines, mint, right across the card, while a drag is holding to one */
     if (drag && drag.on && drag.snapped) {
       var sn = drag.snapped, SL = function (css) { var z = d.createElement("div"); z.className = "hk_snapline"; z.style.cssText = "position:absolute;background:#4FD6AC;" + css; g.appendChild(z); };
@@ -693,7 +713,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       L.style.cssText = "position:absolute;background:" + col + ";left:" + Math.min(x1, x2) + "px;top:" + Math.min(y1, y2) + "px;" + (v ? "width:1px;height:" + Math.abs(y2 - y1) : "height:1px;width:" + Math.abs(x2 - x1)) + "px";
       g.appendChild(L);
       var T = d.createElement("div"); T.textContent = txt; T.setAttribute("data-gl", side);
-      T.style.cssText = "position:absolute;left:0;top:0;font:700 9.5px/13px system-ui,sans-serif;color:#fff;background:" + col + ";opacity:.92;border-radius:6px;padding:0 4px;white-space:nowrap";
+      T.style.cssText = "position:absolute;left:0;top:0;font:700 " + (9.5 / zk) + "px/" + (13 / zk) + "px system-ui,sans-serif;color:#fff;background:" + col + ";opacity:.92;border-radius:6px;padding:0 4px;white-space:nowrap";
       g.appendChild(T);
       var tw = T.offsetWidth || 40, th = T.offsetHeight || 13, mx = (x1 + x2) / 2, my = (y1 + y2) / 2, far = side === "up" || side === "lf";
       var spots = v ? [[x1 + 4, my - th / 2], [x1 - 4 - tw, my - th / 2], [x1 - tw / 2, far ? Math.min(y1, y2) - th - 2 : Math.max(y1, y2) + 2],
@@ -704,7 +724,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
           [far ? avoid.l - tw - 2 : avoid.r + 2, avoid.t - th - 2], [far ? avoid.l - tw - 2 : avoid.r + 2, avoid.b + 2]];
       var best = null, bs = Infinity;
       spots.forEach(function (s, i) {
-        var x = clamp(s[0], 2, W - tw - 2), y = clamp(s[1], 2, H - th - 2), R = { l: x, r: x + tw, t: y, b: y + th };
+        var x = clamp(s[0], V.l + 2 / zk, V.r - tw - 2 / zk), y = clamp(s[1], V.t + 2 / zk, V.b - th - 2 / zk), R = { l: x, r: x + tw, t: y, b: y + th };
         if (hit(R, avoid) || placed.some(function (p) { return hit(R, p); }) || near.some(function (p) { return hit(R, p); })) return;
         var sc = Math.abs(x - s[0]) + Math.abs(y - s[1]) + i * 4;
         if (sc < bs) { bs = sc; best = R; }
@@ -725,7 +745,8 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
        line still shows it here */
     var hud = d.createElement("div"); hud.id = "hk_hud"; var r1 = function (n) { return Math.round(n * 10) / 10; };
     hud.textContent = "\u2191 " + r1(a) + "   \u2193 " + r1(b) + "   \u2190 " + r1(c) + "   \u2192 " + r1(e);
-    hud.style.cssText = "position:absolute;left:50%;transform:translateX(-50%);font:800 12px/24px system-ui,sans-serif;color:#fff;background:rgba(14,22,33,.92);border:1px solid #FF2D87;border-radius:999px;padding:0 12px;white-space:pre;font-variant-numeric:tabular-nums;" + ((me.t + me.b) / 2 > H / 2 ? "top:8px" : "bottom:8px");
+    var hudTop = (me.t + me.b) / 2 > (V.t + V.b) / 2;
+    hud.style.cssText = "position:absolute;left:" + ((V.l + V.r) / 2) + "px;transform:translateX(-50%);font:800 " + (12 / zk) + "px/" + (24 / zk) + "px system-ui,sans-serif;color:#fff;background:rgba(14,22,33,.92);border:" + (1 / zk) + "px solid #FF2D87;border-radius:999px;padding:0 " + (12 / zk) + "px;white-space:pre;font-variant-numeric:tabular-nums;" + (hudTop ? "top:" + (V.t + 8 / zk) + "px" : "top:" + (V.b - 34 / zk) + "px");
     g.appendChild(hud);
   }
 
@@ -763,12 +784,13 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     var R = d.getElementById("hk_ring"); if (!R) { R = d.createElement("div"); R.id = "hk_ring"; R.style.cssText = "position:fixed;inset:0;pointer-events:none;z-index:2147483646"; d.body.appendChild(R); }
     R.innerHTML = ""; R.style.visibility = comparing ? "hidden" : "";
     group().forEach(function (g, i) {
-      if (!g.el.isConnected) return; var b = boxOf(g.el), P = 3;
+      if (!g.el.isConnected) return; var b = boxOf(g.el), zk = zoomK || 1, P = 3 / zk;
       var x = d.createElement("div"); x.className = i ? "hk_ring2" : "hk_ring1";
-      x.style.cssText = "position:absolute;left:" + (b.l - P) + "px;top:" + (b.t - P) + "px;width:" + (b.r - b.l + 2 * P) + "px;height:" + (b.b - b.t + 2 * P) + "px;border:" + (i ? "1.5px dashed rgba(255,45,135,.75)" : "2px solid #FF2D87") + ";border-radius:4px;box-shadow:0 0 0 1px rgba(255,255,255,.55)";
+      x.style.cssText = "position:absolute;left:" + (b.l - P) + "px;top:" + (b.t - P) + "px;width:" + (b.r - b.l + 2 * P) + "px;height:" + (b.b - b.t + 2 * P) + "px;border:" + (i ? (1.5 / zk) + "px dashed rgba(255,45,135,.75)" : (2 / zk) + "px solid #FF2D87") + ";border-radius:" + (4 / zk) + "px;box-shadow:0 0 0 " + (1 / zk) + "px rgba(255,255,255,.55)";
       R.appendChild(x);
       if (!i) { var h = d.createElement("div"); h.id = "hk_handle"; h.setAttribute("aria-label", "Drag to make it bigger or smaller");
-        var t = narrow() ? 26 : 16; h.style.cssText = "position:absolute;left:" + (b.r + P - t / 2) + "px;top:" + (b.b + P - t / 2) + "px;width:" + t + "px;height:" + t + "px;border-radius:50%;background:#fff;border:2.5px solid #FF2D87;box-shadow:0 1px 4px rgba(0,0,0,.45);pointer-events:auto;touch-action:none;cursor:nwse-resize";
+        /* the same size on screen at any zoom */
+        var t = (narrow() ? 26 : 16) / zk; h.style.cssText = "position:absolute;left:" + (b.r + P - t / 2) + "px;top:" + (b.b + P - t / 2) + "px;width:" + t + "px;height:" + t + "px;border-radius:50%;background:#fff;border:" + (2.5 / zk) + "px solid #FF2D87;box-shadow:0 1px 4px rgba(0,0,0,.45);pointer-events:auto;touch-action:none;cursor:nwse-resize";
         R.appendChild(h); }
     });
   }
@@ -816,7 +838,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     var w = sel.in === "card" ? (scope === "card" ? "Only this card" : scope === "kind" ? "Cards like this (" + (sel.kind || "same kind") + ")" : "Every card") : sel.el.closest(".hero") ? "The hero" : "Everywhere in the app";
     c.textContent = "Changes: " + w + (lookScope === "day" ? ", day look only" : lookScope === "night" ? ", night and dark only" : "") + " \u203a";
   }
-  function fill() { scopeChip();
+  function fill() { scopeChip(); samples();
     var r = sel && findRule(key()), s = (r && r.set) || {}, el = sel && sel.el, cs = el ? el.ownerDocument.defaultView.getComputedStyle(el) : null;
     var wok = wordsOk(); $("words").disabled = $("wordsGo").disabled = !wok;
     var tk = sel && sel.in === "card" ? Object.assign(key(), { scope: "card", value: sel.card }) : null, tr = tk ? findRule(tk) : r;
@@ -961,6 +983,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     if (/INPUT|SELECT|TEXTAREA/.test(tag)) return;
     if (e.key === "p" || e.key === "P") { togglePick(); e.preventDefault(); return; }
     if (e.key === "?") { showKeys(); e.preventDefault(); return; }
+    if ((e.key === "z" || e.key === "Z") && !e.ctrlKey && !e.metaKey) { cycleZoom(); e.preventDefault(); return; }
     if ((e.ctrlKey || e.metaKey) && ((e.shiftKey && (e.key === "z" || e.key === "Z")) || e.key === "y" || e.key === "Y")) { redo(); e.preventDefault(); return; }
     if ((e.ctrlKey || e.metaKey) && (e.key === "z" || e.key === "Z")) { undo(); e.preventDefault(); return; }
     if ((e.ctrlKey || e.metaKey) && e.altKey && (e.code === "KeyC" || e.code === "KeyV")) { if (e.code === "KeyC") copyLook(); else pasteLook(); e.preventDefault(); return; }
@@ -982,9 +1005,21 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   window.HK_DESIGNER = { state: function () { return { picked: sel && { in: sel.in, path: sel.path }, rules: JSON.parse(JSON.stringify(doc.rules)) }; },
     ink: function () { return sel && sel.el && sel.el.isConnected ? union(inkRects(sel.el)) : null; } };
 
+  /* ---- zoom on the picked piece (10/03, J13): 1x, 2x, 3x, then back ---- */
+  var zoomK = 1, zoomTx = 0, zoomTy = 0;
+  function zoomTo() {
+    var f = $("app"), w = fw(); if (!w) return;
+    if (zoomK === 1 || !sel || !sel.el || !sel.el.isConnected) { f.style.transform = ""; zoomK = 1; zoomTx = 0; zoomTy = 0; ring(); $("zoom").classList.remove("on"); $("zoom").setAttribute("aria-label", "Zoom in on the picked piece"); var l0 = $("zoom").querySelector(".zl"); if (l0) l0.remove(); return; }
+    var b = boxOf(sel.el), cx = (b.l + b.r) / 2, cy = (b.t + b.b) / 2, W = f.clientWidth, H = f.clientHeight;
+    var tx = Math.min(0, Math.max(W - W * zoomK, W / 2 - cx * zoomK)), ty = Math.min(0, Math.max(H - H * zoomK, H / 2 - cy * zoomK));
+    zoomTx = tx; zoomTy = ty; f.style.transform = "translate(" + tx + "px," + ty + "px) scale(" + zoomK + ")"; $("zoom").classList.add("on"); ring(); guides();
+    var lab = $("zoom").querySelector(".zl"); if (!lab) { lab = document.createElement("span"); lab.className = "zl"; $("zoom").appendChild(lab); } lab.textContent = zoomK + "x";
+    $("zoom").setAttribute("aria-label", "Zoomed " + zoomK + " times. Tap for more, or back to normal");
+  }
+  function cycleZoom() { if (!sel && zoomK === 1) { say("Tap a word in the app first, then zoom in on it.", "err"); return; } zoomK = zoomK === 1 ? 2 : zoomK === 2 ? 3 : 1; zoomTo(); say(zoomK === 1 ? "Back to normal size." : "Zoomed " + zoomK + " times on the picked piece. A drag or nudge now moves it in finer steps.", "ok"); }
   /* ---- the panel ---- */
   /* the marks on the buttons are Tabler outline icons (MIT licence, tabler.io/icons), drawn at 20 px, 22 on the phone's tool tabs */
-  var ICONS = {"addmore":"<path d=\"M12 5l0 14\" /><path d=\"M5 12l14 0\" />","chup":"<path d=\"M6 15l6 -6l6 6\" />","chdown":"<path d=\"M6 9l6 6l6 -6\" />","chleft":"<path d=\"M15 6l-6 6l6 6\" />","chright":"<path d=\"M9 6l6 6l-6 6\" />","home":"<path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M4 8v-2a2 2 0 0 1 2 -2h2\" /><path d=\"M4 16v2a2 2 0 0 0 2 2h2\" /><path d=\"M16 4h2a2 2 0 0 1 2 2v2\" /><path d=\"M16 20h2a2 2 0 0 0 2 -2v-2\" />","eye":"<path d=\"M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0\" /><path d=\"M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6\" />","eyeoff":"<path d=\"M10.585 10.587a2 2 0 0 0 2.829 2.828\" /><path d=\"M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87\" /><path d=\"M3 3l18 18\" />","pick":"<path d=\"M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5\" /><path d=\"M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5\" /><path d=\"M14 10.5a1.5 1.5 0 0 1 3 0v1.5\" /><path d=\"M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47\" /><path d=\"M5 3l-1 -1\" /><path d=\"M4 7h-1\" /><path d=\"M14 3l1 -1\" /><path d=\"M15 6h1\" />","undo":"<path d=\"M9 14l-4 -4l4 -4\" /><path d=\"M5 10h11a4 4 0 1 1 0 8h-1\" />","redo":"<path d=\"M15 14l4 -4l-4 -4\" /><path d=\"M19 10h-11a4 4 0 1 0 0 8h1\" />","more":"<path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M11 19a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M11 5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" />","move":"<path d=\"M18 9l3 3l-3 3\" /><path d=\"M15 12h6\" /><path d=\"M6 9l-3 3l3 3\" /><path d=\"M3 12h6\" /><path d=\"M9 18l3 3l3 -3\" /><path d=\"M12 15v6\" /><path d=\"M15 6l-3 -3l-3 3\" /><path d=\"M12 3v6\" />","size":"<path d=\"M3 7v-2h13v2\" /><path d=\"M10 5v14\" /><path d=\"M12 19h-4\" /><path d=\"M15 13v-1h6v1\" /><path d=\"M18 12v7\" /><path d=\"M17 19h2\" />","colour":"<path d=\"M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25\" /><path d=\"M7.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M11.5 7.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M15.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" />","font":"<path d=\"M4 20l3 0\" /><path d=\"M14 20l7 0\" /><path d=\"M6.9 15l6.9 0\" /><path d=\"M10.2 6.3l5.8 13.7\" /><path d=\"M5 20l6 -16l2 0l7 16\" />","words":"<path d=\"M12 3a3 3 0 0 0 -3 3v12a3 3 0 0 0 3 3\" /><path d=\"M6 3a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3\" /><path d=\"M13 7h7a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-7\" /><path d=\"M5 7h-1a1 1 0 0 0 -1 1v8a1 1 0 0 0 1 1h1\" /><path d=\"M17 12h.01\" /><path d=\"M13 12h.01\" />","edge":"<path d=\"M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0\" /><path d=\"M13 12h5\" /><path d=\"M13 15h4\" /><path d=\"M13 18h1\" /><path d=\"M13 9h4\" /><path d=\"M13 6h1\" />","where":"<path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M12 7a5 5 0 1 0 5 5\" /><path d=\"M13 3.055a9 9 0 1 0 7.941 7.945\" /><path d=\"M15 6v3h3l3 -3h-3v-3l-3 3\" /><path d=\"M15 9l-3 3\" />","add":"<path d=\"M9 12h6\" /><path d=\"M12 9v6\" /><path d=\"M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14\" />","changes":"<path d=\"M3.5 5.5l1.5 1.5l2.5 -2.5\" /><path d=\"M3.5 11.5l1.5 1.5l2.5 -2.5\" /><path d=\"M3.5 17.5l1.5 1.5l2.5 -2.5\" /><path d=\"M11 6l9 0\" /><path d=\"M11 12l9 0\" /><path d=\"M11 18l9 0\" />","focus":"<path d=\"M11.5 12a.5 .5 0 1 0 1 0a.5 .5 0 1 0 -1 0\" fill=\"currentColor\" /><path d=\"M5 12a7 7 0 1 0 14 0a7 7 0 1 0 -14 0\" /><path d=\"M12 3l0 2\" /><path d=\"M3 12l2 0\" /><path d=\"M12 19l0 2\" /><path d=\"M19 12l2 0\" />","publish":"<path d=\"M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-1\" /><path d=\"M9 15l3 -3l3 3\" /><path d=\"M12 12l0 9\" />","layers":"<path d=\"M12 4l-8 4l8 4l8 -4l-8 -4\" /><path d=\"M4 12l8 4l8 -4\" /><path d=\"M4 16l8 4l8 -4\" />","history":"<path d=\"M12 8l0 4l2 2\" /><path d=\"M3.05 11a9 9 0 1 1 .5 4m-.5 5v-5h5\" />","compare":"<path d=\"M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -14\" /><path d=\"M3 19h2.25c3.728 0 6.75 -3.134 6.75 -7s3.022 -7 6.75 -7h2.25\" />","width":"<path d=\"M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14\" /><path d=\"M11 4h2\" /><path d=\"M12 17v.01\" />","copy":"<path d=\"M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666\" /><path d=\"M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1\" />","paste":"<path d=\"M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2\" /><path d=\"M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2\" />","eyedrop":"<path d=\"M11 7l6 6\" /><path d=\"M4 16l11.7 -11.7a1 1 0 0 1 1.4 0l2.6 2.6a1 1 0 0 1 0 1.4l-11.7 11.7h-4v-4\" />","snap":"<path d=\"M4 13v-8a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v8a2 2 0 0 0 6 0v-8a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v8a8 8 0 0 1 -16 0\" /><path d=\"M4 8l5 0\" /><path d=\"M15 8l4 0\" />"};
+  var ICONS = {"zoomin":"<path d=\"M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0\" /><path d=\"M7 10l6 0\" /><path d=\"M10 7l0 6\" /><path d=\"M21 21l-6 -6\" />","addmore":"<path d=\"M12 5l0 14\" /><path d=\"M5 12l14 0\" />","chup":"<path d=\"M6 15l6 -6l6 6\" />","chdown":"<path d=\"M6 9l6 6l6 -6\" />","chleft":"<path d=\"M15 6l-6 6l6 6\" />","chright":"<path d=\"M9 6l6 6l-6 6\" />","home":"<path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M4 8v-2a2 2 0 0 1 2 -2h2\" /><path d=\"M4 16v2a2 2 0 0 0 2 2h2\" /><path d=\"M16 4h2a2 2 0 0 1 2 2v2\" /><path d=\"M16 20h2a2 2 0 0 0 2 -2v-2\" />","eye":"<path d=\"M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0\" /><path d=\"M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6\" />","eyeoff":"<path d=\"M10.585 10.587a2 2 0 0 0 2.829 2.828\" /><path d=\"M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87\" /><path d=\"M3 3l18 18\" />","pick":"<path d=\"M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5\" /><path d=\"M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5\" /><path d=\"M14 10.5a1.5 1.5 0 0 1 3 0v1.5\" /><path d=\"M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47\" /><path d=\"M5 3l-1 -1\" /><path d=\"M4 7h-1\" /><path d=\"M14 3l1 -1\" /><path d=\"M15 6h1\" />","undo":"<path d=\"M9 14l-4 -4l4 -4\" /><path d=\"M5 10h11a4 4 0 1 1 0 8h-1\" />","redo":"<path d=\"M15 14l4 -4l-4 -4\" /><path d=\"M19 10h-11a4 4 0 1 0 0 8h1\" />","more":"<path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M11 19a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M11 5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" />","move":"<path d=\"M18 9l3 3l-3 3\" /><path d=\"M15 12h6\" /><path d=\"M6 9l-3 3l3 3\" /><path d=\"M3 12h6\" /><path d=\"M9 18l3 3l3 -3\" /><path d=\"M12 15v6\" /><path d=\"M15 6l-3 -3l-3 3\" /><path d=\"M12 3v6\" />","size":"<path d=\"M3 7v-2h13v2\" /><path d=\"M10 5v14\" /><path d=\"M12 19h-4\" /><path d=\"M15 13v-1h6v1\" /><path d=\"M18 12v7\" /><path d=\"M17 19h2\" />","colour":"<path d=\"M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25\" /><path d=\"M7.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M11.5 7.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M15.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" />","font":"<path d=\"M4 20l3 0\" /><path d=\"M14 20l7 0\" /><path d=\"M6.9 15l6.9 0\" /><path d=\"M10.2 6.3l5.8 13.7\" /><path d=\"M5 20l6 -16l2 0l7 16\" />","words":"<path d=\"M12 3a3 3 0 0 0 -3 3v12a3 3 0 0 0 3 3\" /><path d=\"M6 3a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3\" /><path d=\"M13 7h7a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-7\" /><path d=\"M5 7h-1a1 1 0 0 0 -1 1v8a1 1 0 0 0 1 1h1\" /><path d=\"M17 12h.01\" /><path d=\"M13 12h.01\" />","edge":"<path d=\"M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0\" /><path d=\"M13 12h5\" /><path d=\"M13 15h4\" /><path d=\"M13 18h1\" /><path d=\"M13 9h4\" /><path d=\"M13 6h1\" />","where":"<path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M12 7a5 5 0 1 0 5 5\" /><path d=\"M13 3.055a9 9 0 1 0 7.941 7.945\" /><path d=\"M15 6v3h3l3 -3h-3v-3l-3 3\" /><path d=\"M15 9l-3 3\" />","add":"<path d=\"M9 12h6\" /><path d=\"M12 9v6\" /><path d=\"M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14\" />","changes":"<path d=\"M3.5 5.5l1.5 1.5l2.5 -2.5\" /><path d=\"M3.5 11.5l1.5 1.5l2.5 -2.5\" /><path d=\"M3.5 17.5l1.5 1.5l2.5 -2.5\" /><path d=\"M11 6l9 0\" /><path d=\"M11 12l9 0\" /><path d=\"M11 18l9 0\" />","focus":"<path d=\"M11.5 12a.5 .5 0 1 0 1 0a.5 .5 0 1 0 -1 0\" fill=\"currentColor\" /><path d=\"M5 12a7 7 0 1 0 14 0a7 7 0 1 0 -14 0\" /><path d=\"M12 3l0 2\" /><path d=\"M3 12l2 0\" /><path d=\"M12 19l0 2\" /><path d=\"M19 12l2 0\" />","publish":"<path d=\"M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-1\" /><path d=\"M9 15l3 -3l3 3\" /><path d=\"M12 12l0 9\" />","layers":"<path d=\"M12 4l-8 4l8 4l8 -4l-8 -4\" /><path d=\"M4 12l8 4l8 -4\" /><path d=\"M4 16l8 4l8 -4\" />","history":"<path d=\"M12 8l0 4l2 2\" /><path d=\"M3.05 11a9 9 0 1 1 .5 4m-.5 5v-5h5\" />","compare":"<path d=\"M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -14\" /><path d=\"M3 19h2.25c3.728 0 6.75 -3.134 6.75 -7s3.022 -7 6.75 -7h2.25\" />","width":"<path d=\"M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14\" /><path d=\"M11 4h2\" /><path d=\"M12 17v.01\" />","copy":"<path d=\"M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666\" /><path d=\"M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1\" />","paste":"<path d=\"M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2\" /><path d=\"M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2\" />","eyedrop":"<path d=\"M11 7l6 6\" /><path d=\"M4 16l11.7 -11.7a1 1 0 0 1 1.4 0l2.6 2.6a1 1 0 0 1 0 1.4l-11.7 11.7h-4v-4\" />","snap":"<path d=\"M4 13v-8a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v8a2 2 0 0 0 6 0v-8a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v8a8 8 0 0 1 -16 0\" /><path d=\"M4 8l5 0\" /><path d=\"M15 8l4 0\" />"};
   var icon = function (k) { return ICONS[k] ? '<svg class="i" viewBox="0 0 24 24" aria-hidden="true">' + ICONS[k] + "</svg>" : ""; };
   Array.prototype.forEach.call(document.querySelectorAll("[data-i]"), function (b) { b.insertAdjacentHTML("afterbegin", icon(b.getAttribute("data-i"))); });
   /* the phone keeps the bar short: Focus card, the look and Save + publish sit behind More */
@@ -1002,9 +1037,13 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     var f = document.createElement("button"); f.style.background = c; f.title = c; f.setAttribute("data-c", c);
     f.onclick = function () { edit(function (s) { s.bg = c; }); }; $("swBg").appendChild(f);
   });
+  var sample = "Pensacola";
+  function samples() { var t = sel && sel.el && ownText(sel.el) ? ownText(sel.el) : sel && sel.el ? (sel.el.textContent || "").trim() : ""; t = t.replace(/\s+/g, " ").slice(0, 24) || "Pensacola"; if (t === sample) return; sample = t; Array.prototype.forEach.call(document.querySelectorAll("#fonts .fsamp, #edgeSeg .esamp"), function (x) { x.textContent = x.classList.contains("esamp") ? t.slice(0, 10) : t; }); }
   var fontBtn = function (name, label) {
-    var b = document.createElement("button"); b.textContent = label || name; b.setAttribute("data-f", name);
-    if (name) b.style.fontFamily = "'" + name + "', system-ui";
+    /* each font button writes the picked words in that font, with the font's name small underneath (10/03, J13) */
+    var b = document.createElement("button"); b.setAttribute("data-f", name); b.title = label || name;
+    var sm = document.createElement("span"); sm.className = "fsamp"; sm.textContent = sample; var nm = document.createElement("small"); nm.textContent = label || name; b.appendChild(sm); b.appendChild(nm);
+    if (name) sm.style.fontFamily = "'" + name + "', system-ui";
     b.onclick = function () { var d = frame(); if (d && name) gfont(d, name); edit(function (s) { s.font = name || undefined; }); };
     $("fonts").appendChild(b);
   };
@@ -1033,7 +1072,10 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   (function () { var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "https://fonts.googleapis.com/css2?" + CD.FONTS.map(function (f) { return "family=" + f.replace(/ /g, "+"); }).join("&") + "&display=swap"; document.head.appendChild(l);
     /* the Font tab is closed at first, and a closed tab's fonts are never asked for: ask for every one now, so they are drawn by the time he opens it */
     l.onload = function () { CD.FONTS.forEach(function (f) { try { document.fonts.load("19px '" + f + "'"); } catch (e) {} }); }; })();
-  Object.keys(CD.EDGES).forEach(function (k) { var b = document.createElement("button"); b.textContent = CD.EDGES[k]; b.setAttribute("data-v", k); b.onclick = function () { edit(function (s) { s.edge = k || undefined; }); }; $("edgeSeg").appendChild(b); });
+  Object.keys(CD.EDGES).forEach(function (k) { var b = document.createElement("button"); b.setAttribute("data-v", k);
+    /* each edge button shows the edge on the picked words, pink on cream like a card */
+    var es = document.createElement("span"); es.className = "esamp"; es.textContent = sample.slice(0, 10); (CD.decls({ edge: k }) || []).forEach(function (dcl) { var i = dcl.indexOf(":"); es.style.setProperty(dcl.slice(0, i), dcl.slice(i + 1)); });
+    var el2 = document.createElement("span"); el2.textContent = CD.EDGES[k]; b.appendChild(es); b.appendChild(el2); b.onclick = function () { edit(function (s) { s.edge = k || undefined; }); }; $("edgeSeg").appendChild(b); });
   var segs = function (id, fn) { Array.prototype.forEach.call($(id).children, function (b) { b.onclick = function () { Array.prototype.forEach.call($(id).children, function (x) { x.classList.toggle("sel", x === b); }); fn(b.getAttribute("data-v")); }; }); };
   segs("scopeSeg", function (v) { scope = v; fill(); });
   segs("matchSeg", function (v) { exact = v === "exact"; if (sel) { var el = sel.el; select(el); } });
@@ -1083,6 +1125,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   $("outer").onclick = outer; $("inner").onclick = inner; $("undo").onclick = undo;
   $("resetPart").onclick = function () { var k = key(); if (!k) { say("Tap a word in the app first.", "err"); return; } var rs = group().map(function (g) { return withSel(g, function () { return findRule(key()); }); }).filter(Boolean); if (!rs.length) { say("Nothing changed on this one yet.", "err"); return; } snap(); rs.forEach(function (r) { var i = doc.rules.indexOf(r); if (i > -1) doc.rules.splice(i, 1); }); paint(); fill(); };
   $("pick").onclick = togglePick;
+  $("zoom").onclick = cycleZoom;
   $("scopeChip").onclick = function () { showTab("where"); };
   function showKeys() { var k = $("keys"); if (k.open) k.close(); else if (k.showModal) k.showModal(); }
   $("keysBtn").onclick = showKeys;
@@ -1232,7 +1275,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   $("width").onchange = function () { setWidth(Number(this.value)); say("The app is now " + this.value + " px wide.", "ok"); };
   try { var w0 = Number(localStorage.getItem("hk_designer_width")); if ([320, 360, 390, 430].indexOf(w0) > -1 && !narrow()) setWidth(w0); } catch (e) {}
   $("focus").onclick = function () { focusOn = !focusOn; this.className = focusOn ? "on" : ""; focusCard(); paint(); };
-  $("look").onchange = function () { moreOpen(false); try { fw().localStorage.setItem("hk_theme_v1", this.value); } catch (e) {} sel = null; fw().location.reload(); };
+  $("look").onchange = function () { moreOpen(false); zoomK = 1; zoomTo(); try { fw().localStorage.setItem("hk_theme_v1", this.value); } catch (e) {} sel = null; fw().location.reload(); };
 
   /* ---- GitHub: sign in once, load, save, publish ---- */
   /* 10/02, Gray: "it's asking me to sign in on this device but I've already signed in... I need that taken away now".
@@ -1311,7 +1354,28 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       loadImgs(ref); paint(); fill(); say("This is " + label + ". Save to keep it, or Undo to go back.", "ok");
     }).catch(function (e) { say(e.message, "err"); });
   }
-  $("publish").onclick = function () { save().then(function (ok) { if (!ok) return; return gh("POST", "/repos/" + REPO + "/actions/workflows/" + WORKFLOW + "/dispatches", { ref: "main" }).then(function () { say("Saved and publishing. The app shows it in about 8 minutes.", "ok"); }); }).catch(function (e) { say(e.message, "err"); }); };
+  /* 10/03, J13: after Save + publish the bar shows the update going out and says when it is live, so he never has to
+     guess or go and look at GitHub. It asks GitHub every 20 s for the run it started, for up to 20 minutes. */
+  var pubT = 0;
+  function watchPublish(since) {
+    clearTimeout(pubT); var tries = 0, line = $("pubLine"); line.className = "publine on"; line.textContent = "Publishing\u2026";
+    var ask = function () {
+      tries++;
+      gh("GET", "/repos/" + REPO + "/actions/workflows/" + WORKFLOW + "/runs?event=workflow_dispatch&per_page=3").then(function (j) {
+        var run = ((j && j.workflow_runs) || []).filter(function (r) { return Date.parse(r.created_at) >= since - 60000; })[0];
+        var mins = Math.max(1, Math.round((Date.now() - since) / 60000));
+        if (run && run.status === "completed") {
+          if (run.conclusion === "success") { line.className = "publine on ok"; line.textContent = "Live in the app now"; say("Your changes are live in the app. Close and reopen it to see them.", "ok"); setTimeout(function () { line.className = "publine"; }, 60000); }
+          else { line.className = "publine on err"; line.innerHTML = ""; var a = document.createElement("a"); a.href = run.html_url; a.target = "_blank"; a.rel = "noopener"; a.textContent = "The update stopped. Tap to see why"; line.appendChild(a); }
+          return;
+        }
+        line.textContent = (run ? "Publishing, " : "Starting the update, ") + mins + " min";
+        if (tries < 60) pubT = setTimeout(ask, 20000); else { line.textContent = "Still publishing. It will show in the app when it finishes."; }
+      }).catch(function () { if (tries < 60) pubT = setTimeout(ask, 20000); });
+    };
+    pubT = setTimeout(ask, 8000);
+  }
+  $("publish").onclick = function () { var t0 = Date.now(); save().then(function (ok) { if (!ok) return; return gh("POST", "/repos/" + REPO + "/actions/workflows/" + WORKFLOW + "/dispatches", { ref: "main" }).then(function () { say("Saved and publishing. The app shows it in about 8 minutes.", "ok"); watchPublish(t0); }); }).catch(function (e) { say(e.message, "err"); }); };
   /* the lock: the key must be one GitHub says can write to this repo; only then is the app loaded into the frame */
   function check(t) {
     return fetch("https://api.github.com/repos/" + REPO, { headers: { Authorization: "Bearer " + t, Accept: "application/vnd.github+json" } })
