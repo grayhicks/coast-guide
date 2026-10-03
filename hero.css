@@ -854,6 +854,7 @@ html.hk_calopen .hk :is(.hero, .hk_supportfloat, .tabpanel, .hk_nav) { visibilit
 html.hk_calopen .hk :is(.hero, .tabpanel) { content-visibility: hidden; }
 html.hk_calopen .hk :is(.hero, .hk_supportfloat, .tabpanel, .hk_nav), html.hk_calopen .hk :is(.hero, .hk_supportfloat, .tabpanel, .hk_nav) * { animation-play-state: paused !important; }
 .hk .hero-datebtn.hk_datecal .hk_datecalic { flex: 0 0 auto; transform: translateY(-1.2px); }
+html body .hk.hk.hk.hk .hk_wrap .hk_gcapage .hero { position: relative !important; left: -1px !important; top: 0px !important; }
 @keyframes hk_gl { 
   0%, 100% { opacity: 0; transform: scaleX(0.25); }
   33%, 67% { opacity: var(--glo,.6); transform: scaleX(1); }
