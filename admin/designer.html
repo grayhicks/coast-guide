@@ -54,8 +54,8 @@ main{ display:flex; gap:16px; padding:12px; align-items:flex-start; }
 /* zoom (10/03, J13): the app keeps its phone width and is only drawn bigger, centred on the picked piece, so a
    finger or mouse moves it in finer steps; the frame does not change size */
 .phone iframe{ transform-origin:0 0; }
-.zoombtn{ position:absolute; right:10px; bottom:10px; z-index:3; width:44px; height:44px; min-height:44px; padding:0; border-radius:50%; background:rgba(14,22,33,.86); border:1.5px solid var(--line); color:#fff; box-shadow:0 4px 14px rgba(0,0,0,.4); }
-.zoombtn.on{ background:var(--pink); border-color:var(--pink); }
+.zoombtn{ position:absolute; right:8px; bottom:8px; z-index:3; width:38px; height:38px; min-height:38px; opacity:.82; padding:0; border-radius:50%; background:rgba(14,22,33,.86); border:1.5px solid var(--line); color:#fff; box-shadow:0 4px 14px rgba(0,0,0,.4); }
+.zoombtn.on{ background:var(--pink); border-color:var(--pink); opacity:1; }
 .zoombtn span{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
 .zoombtn .zl{ position:absolute; top:-8px; right:-6px; font:800 10px/16px system-ui; background:#fff; color:#0E1621; border-radius:999px; padding:0 4px; position:absolute; width:auto; height:auto; clip:auto; overflow:visible; }
 .phone iframe{ display:block; width:var(--appw, 390px); height:calc(100vh - 110px); max-height:844px; border:0; background:#fff; }
@@ -74,7 +74,12 @@ main{ display:flex; gap:16px; padding:12px; align-items:flex-start; }
 .strip .dot{ width:8px; height:8px; border-radius:50%; background:var(--pink); flex:none; align-self:center; }
 .big{ font-size:18px; font-weight:800; overflow-wrap:anywhere; min-width:0; }
 .mute{ color:var(--mute); font-size:13px; }
-.gap{ font-weight:700; color:#FF8AC0; font-size:13px; margin-top:6px; }
+.gap{ font-weight:700; color:#FF8AC0; font-size:13px; margin-top:6px; display:flex; align-items:center; gap:10px; min-height:0; }
+.sr{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+.gd{ display:grid; grid-template-columns:auto 34px auto; grid-template-rows:auto 18px auto; align-items:center; justify-items:center; gap:2px 6px; font-style:normal; }
+.gd i{ font-style:normal; font-variant-numeric:tabular-nums; font-size:12.5px; color:#FF8AC0; }
+.gd .gt{ grid-column:2; grid-row:1; } .gd .gl{ grid-column:1; grid-row:2; justify-self:end; } .gd b{ grid-column:2; grid-row:2; width:34px; height:18px; border:2px solid #FF2D87; border-radius:4px; } .gd .gr{ grid-column:3; grid-row:2; justify-self:start; } .gd .gb{ grid-column:2; grid-row:3; }
+.gu{ color:var(--mute); font-size:12px; } .geq{ color:var(--mint); font-size:12.5px; }
 .mvrow{ align-items:flex-start; gap:16px; flex-wrap:nowrap; }
 .pad{ display:grid; grid-template-columns:repeat(3,46px); gap:4px; padding:6px; background:var(--chip); border-radius:14px; }
 .pad button{ background:var(--key); border-color:transparent; }
@@ -240,6 +245,14 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   #toast{ font-size:13px; line-height:1.3; font-weight:700; padding:7px 14px; border-radius:16px; max-width:calc(100vw - 32px); text-align:center; box-shadow:0 6px 18px rgba(0,0,0,.35); }
   #signin{ margin-top:8px; }
 }
+/* Hide tools: the app takes the whole screen above the tab bar until a tab is tapped again */
+@media (max-width:820px){
+  body[data-mini="1"] .tools, body[data-mini="1"] .levelrow, body[data-mini="1"] .scopechip{ display:none !important; }
+  body[data-mini="1"] .phone{ flex:1 1 auto; height:auto; min-height:0; }
+  body[data-mini="1"] .panel{ flex:none; }
+  body[data-mini="1"] .box.picked{ height:44px; }
+  body[data-mini="1"] #mini svg{ transform:rotate(180deg); }
+}
 /* the smallest phones (320 to 374 wide): the top bar keeps every button by dropping the word on Pick and tightening */
 @media (max-width:374px){
   header{ gap:4px; padding:6px; }
@@ -289,10 +302,10 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     </div>
     <div class="box picked">
       <h2 class="onlywide">Picked</h2>
-      <div class="strip"><i class="dot"></i><div class="big" id="partName">Tap any word in the app.</div><div class="mute" id="partWhere"></div><button id="addPick" class="ib sm" title="Pick more pieces to change together (or Shift+click)" aria-label="Pick more pieces" data-i="addmore"><span>Pick more</span></button><button id="copyStyle" class="ib sm" title="Copy its look (Ctrl+Alt+C)" aria-label="Copy its look" data-i="copy"><span>Copy look</span></button><button id="pasteStyle" class="ib sm" title="Paste the copied look (Ctrl+Alt+V)" aria-label="Paste the copied look" data-i="paste" disabled><span>Paste look</span></button><button id="resetPart" class="chip">Reset this</button></div>
+      <div class="strip"><i class="dot"></i><div class="big" id="partName">Tap any word in the app.</div><div class="mute" id="partWhere"></div><button id="addPick" class="ib sm" title="Pick more pieces to change together (or Shift+click)" aria-label="Pick more pieces" data-i="addmore"><span>Pick more</span></button><button id="copyStyle" class="ib sm" title="Copy its look (Ctrl+Alt+C)" aria-label="Copy its look" data-i="copy"><span>Copy look</span></button><button id="pasteStyle" class="ib sm" title="Paste the copied look (Ctrl+Alt+V)" aria-label="Paste the copied look" data-i="paste" disabled><span>Paste look</span></button><button id="resetPart" class="chip">Reset this</button><button id="mini" class="ib sm onlyphone" title="Hide the tools to see more of the app" aria-label="Hide the tools to see more of the app" data-i="chdown"><span>Hide tools</span></button></div>
       <button id="scopeChip" class="scopechip" title="Where the change goes: tap to choose"></button>
       <div class="levelrow"><div class="levels" id="levels"></div><div class="levels" id="scenery"></div></div>
-      <div class="row acts"><button id="outer">Bigger area</button><button id="inner">Smaller</button><button id="undo">Undo</button></div>
+      <div class="row acts"><button id="outer" title="Pick the box this piece sits in">Pick what holds it</button><button id="inner" title="Back to the smaller piece">Back to the piece</button><button id="undo">Undo</button></div>
     </div>
     <nav class="tabs" id="tabs" aria-label="Tools">
       <button data-t="move" data-i="move" class="on"><span>Move</span></button><button data-t="size" data-i="size"><span>Size</span></button><button data-t="colour" data-i="colour"><span>Colour</span></button><button data-t="font" data-i="font"><span>Font</span></button><button data-t="words" data-i="words"><span>Words</span></button><button data-t="edge" data-i="edge"><span>Edge</span></button><button data-t="layers" data-i="layers"><span>Layers</span></button><button data-t="where" data-i="where"><span>Where</span></button><button data-t="add" data-i="add"><span>Add</span></button><button data-t="changes" data-i="changes"><span>Changes</span></button><button data-t="history" data-i="history"><span>History</span></button>
@@ -389,6 +402,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     <div class="box" data-tab="changes">
       <div class="status" id="status"></div>
       <h2>Your changes (<span id="count">0</span>)</h2>
+      <div class="mute" id="noChanges">No changes yet. Pick a word in the app and change it; each change shows here with Show and Remove.</div>
       <ul class="list" id="list"></ul>
     </div>
     </div>
@@ -431,7 +445,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   var CD = window.CardDesign, $ = function (id) { return document.getElementById(id); };
   var REPO = "grayhicks/gca-widget", PATH = "content/card_style.json", WORKFLOW = "beach-flag-daily.yml";
   var doc = { version: 1, rules: [], adds: [] }, sha = null, hist = [], sel = null, trail = [], picking = true, focusOn = false, drag = null;
-  var addsCtl = null, imgData = {}, pendingImg = {}, resize = null;
+  var addsCtl = null, imgData = {}, pendingImg = {}, resize = null, turn = null;
   var scope = "all", lookScope = "all", redoSt = [], levelBase = null, step = 1;
   var state = function () { return JSON.stringify({ r: doc.rules, a: doc.adds || [], f: doc.fonts || [] }); };
   var restore = function (str) { var v = JSON.parse(str); if (Array.isArray(v)) doc.rules = v; else { doc.rules = v.r; doc.adds = v.a; doc.fonts = v.f || []; } fontList(); };
@@ -776,7 +790,10 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     line(cx, me.b, cx, dn ? dn.t : Math.min(eb.bottom, H), px(b) + (dn ? "" : " edge"), !dn, "dn");
     line(lf ? lf.r : Math.max(eb.left, 0), cy, me.l, cy, px(c) + (lf ? "" : " edge"), !lf, "lf");
     line(me.r, cy, rt ? rt.l : Math.min(eb.right, W), cy, px(e) + (rt ? "" : " edge"), !rt, "rt");
-    $("gapRead").textContent = "Above " + px(a) + " · below " + px(b) + " · left " + px(c) + " · right " + px(e);
+    /* the four gaps as a little picture: the piece in the middle, each number on its own side (the sentence is kept for
+       screen readers and the checks) */
+    var r1d = function (n) { return String(Math.round(n * 10) / 10); };
+    $("gapRead").innerHTML = '<span class="sr">Above ' + px(a) + " · below " + px(b) + " · left " + px(c) + " · right " + px(e) + '</span><span class="gd" aria-hidden="true"><i class="gt">' + r1d(a) + '</i><i class="gl">' + r1d(c) + '</i><b></b><i class="gr">' + r1d(e) + '</i><i class="gb">' + r1d(b) + '</i></span><span class="gu" aria-hidden="true">px</span>' + (Math.abs(a - b) <= 0.5 ? '<span class="geq" aria-hidden="true">= even above and below</span>' : "");
     /* all four in one pill at the top or the bottom of the app, whichever is farther from the piece, like Canva's
        read-out while dragging: always on screen, never on the piece, so a crowded spot that keeps a number off its
        line still shows it here */
@@ -819,20 +836,29 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   function ring() {
     var d = frame(); if (!d || !d.body) return;
     var R = d.getElementById("hk_ring"); if (!R) { R = d.createElement("div"); R.id = "hk_ring"; R.style.cssText = "position:fixed;inset:0;pointer-events:none;z-index:2147483646"; d.body.appendChild(R); }
-    R.innerHTML = ""; R.style.visibility = comparing ? "hidden" : "";
+    /* a handle under a finger is kept, not rebuilt: a touch stops reporting once the element it began on leaves the page */
+    var held = (turn || resize) ? d.getElementById(turn ? "hk_turn" : "hk_handle") : null;
+    Array.prototype.slice.call(R.children).forEach(function (c) { if (c !== held) R.removeChild(c); }); R.style.visibility = comparing ? "hidden" : "";
+    var mk = function (id) { return held && held.id === id ? held : d.createElement("div"); };
     group().forEach(function (g, i) {
       if (!g.el.isConnected) return; var b = boxOf(g.el), zk = zoomK || 1, P = 3 / zk;
       var x = d.createElement("div"); x.className = i ? "hk_ring2" : "hk_ring1";
       x.style.cssText = "position:absolute;left:" + (b.l - P) + "px;top:" + (b.t - P) + "px;width:" + (b.r - b.l + 2 * P) + "px;height:" + (b.b - b.t + 2 * P) + "px;border:" + (i ? (1.5 / zk) + "px dashed rgba(255,45,135,.75)" : (2 / zk) + "px solid #FF2D87") + ";border-radius:" + (4 / zk) + "px;box-shadow:0 0 0 " + (1 / zk) + "px rgba(255,255,255,.55)";
       R.appendChild(x);
-      if (!i) { var h = d.createElement("div"); h.id = "hk_handle"; h.setAttribute("aria-label", "Drag to make it bigger or smaller");
+      if (!i) { var h = mk("hk_handle"); h.id = "hk_handle"; h.setAttribute("aria-label", "Drag to make it bigger or smaller");
         /* the same size on screen at any zoom */
         var t = (narrow() ? 26 : 16) / zk; h.style.cssText = "position:absolute;left:" + (b.r + P - t / 2) + "px;top:" + (b.b + P - t / 2) + "px;width:" + t + "px;height:" + t + "px;border-radius:50%;background:#fff;border:" + (2.5 / zk) + "px solid #FF2D87;box-shadow:0 1px 4px rgba(0,0,0,.45);pointer-events:auto;touch-action:none;cursor:nwse-resize";
-        R.appendChild(h); }
+        R.appendChild(h);
+        /* the turn handle: a dot on a short stalk above the middle; drag it round to turn the piece, it settles on every 15 degrees */
+        var tt = (narrow() ? 24 : 14) / zk, cx = (b.l + b.r) / 2, st = (narrow() ? 22 : 16) / zk, top = b.t - P;
+        if (top - st - tt > 2) { var k = d.createElement("div"); k.style.cssText = "position:absolute;left:" + (cx - 0.75 / zk) + "px;top:" + (top - st) + "px;width:" + (1.5 / zk) + "px;height:" + st + "px;background:#FF2D87";
+          var o = mk("hk_turn"); o.id = "hk_turn"; o.setAttribute("aria-label", "Drag round to turn it");
+          o.style.cssText = "position:absolute;left:" + (cx - tt / 2) + "px;top:" + (top - st - tt) + "px;width:" + tt + "px;height:" + tt + "px;border-radius:50%;background:#FF2D87;border:" + (2.5 / zk) + "px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.45);pointer-events:auto;touch-action:none;cursor:grab";
+          R.appendChild(k); R.appendChild(o); } }
     });
   }
   function list() {
-    var nAll = doc.rules.length + (doc.adds || []).length; $("count").textContent = nAll;
+    var nAll = doc.rules.length + (doc.adds || []).length; $("count").textContent = nAll; $("noChanges").style.display = nAll ? "none" : "";
     /* the Changes tab carries the count, and Save shows a dot while something is not saved yet */
     var ct = document.querySelector('#tabs [data-t="changes"]'), bd = ct.querySelector(".badge"); if (!bd) { bd = document.createElement("i"); bd.className = "badge"; ct.appendChild(bd); }
     bd.textContent = nAll; bd.style.display = nAll ? "" : "none";
@@ -868,18 +894,21 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   }
   /* words can be changed on a piece that holds only text (not a box of other pieces), and on a card only for that
      one card, so a new title never lands on every card */
-  function wordsOk() { return !!(sel && sel.el && sel.el.tagName.toLowerCase() !== "svg" && ownText(sel.el)); }
+  /* words can change on a piece whose words are its own, or run on through small inline boxes (a title's last word) */
+  var allWords = function (el) { return (el.textContent || "").replace(/\s+/g, " ").trim(); };
+  function wordsOk() { if (!(sel && sel.el && sel.el.tagName.toLowerCase() !== "svg" && ownText(sel.el))) return false; return !Array.prototype.some.call(sel.el.querySelectorAll("*"), function (k) { if (k.closest("svg")) return false; var d = k.ownerDocument.defaultView.getComputedStyle(k).display; return /block|flex|grid|table/.test(d) && !/inline/.test(d); }); }
   /* the change's reach, always beside its name: Every card / Cards like this / Only this card, plus the look */
   function scopeChip() {
     var c = $("scopeChip"); if (!sel) { c.textContent = ""; return; }
-    var w = sel.in === "card" ? (scope === "card" ? "Only this card" : scope === "kind" ? "Cards like this (" + (sel.kind || "same kind") + ")" : "Every card") : sel.el.closest(".hero") ? "The hero" : "Everywhere in the app";
+    var d = frame(), n = function (q) { try { return d.querySelectorAll(q).length; } catch (e) { return 0; } };
+    var w = sel.in === "card" ? (scope === "card" ? "Only this card" : scope === "kind" ? "Cards like this (" + (sel.kind || "same kind") + ", " + n('.card[data-bub^="' + String(sel.kind || "").replace(/"/g, "") + '"]') + " on this page)" : "Every card (" + n(".card") + " on this page)") : sel.el.closest(".hero") ? "The hero" : "Everywhere in the app";
     c.textContent = "Changes: " + w + (lookScope === "day" ? ", day look only" : lookScope === "night" ? ", night and dark only" : "") + " \u203a";
   }
   function fill() { scopeChip(); samples();
     var r = sel && findRule(key()), s = (r && r.set) || {}, el = sel && sel.el, cs = el ? el.ownerDocument.defaultView.getComputedStyle(el) : null;
     var wok = wordsOk(); $("words").disabled = $("wordsGo").disabled = !wok;
     var tk = sel && sel.in === "card" ? Object.assign(key(), { scope: "card", value: sel.card }) : null, tr = tk ? findRule(tk) : r;
-    $("words").value = (tr && tr.set && tr.set.text) || ""; $("words").placeholder = wok ? ownText(sel.el).slice(0, 60) : "Type new words";
+    $("words").value = (tr && tr.set && tr.set.text) || ""; $("words").placeholder = wok ? allWords(sel.el).slice(0, 80) : "Type new words"; if (wok && !$("words").value) $("words").value = allWords(sel.el).slice(0, 160);
     $("wordsNote").textContent = !sel ? "Tap a single word or line in the app first." : !wok ? "This piece has no words of its own. Tap the words themselves, or use Smaller." : sel.in === "card" ? "Changes the words on this one card only. Words that update by themselves stop updating." : "Changes these words everywhere they show. Words that update by themselves stop updating.";
     $("moveRead").textContent = (s.dx || 0) + ", " + (s.dy || 0) + " px";
     $("size").value = s.size || (cs ? Math.round(parseFloat(cs.fontSize) * 10) / 10 : ""); $("sizeRange").value = $("size").value || 14;
@@ -945,6 +974,11 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
             return { g: g, txt: txt, base: txt ? (Number(st.size) || parseFloat(cs.fontSize)) : (Number(st.scale) || 1) }; }); }) };
         return;
       }
+      if (e.target && e.target.id === "hk_turn" && sel) {
+        e.preventDefault(); e.stopPropagation(); tap = null; var b2 = boxOf(sel.el), r0 = findRule(key());
+        turn = { cx: (b2.l + b2.r) / 2, cy: (b2.t + b2.b) / 2, a0: 0, on: false, base: Number(r0 && r0.set && r0.set.rot) || 0, starts: group().map(function (g) { return withSel(g, function () { var r = findRule(key()); return { g: g, rot: Number(r && r.set && r.set.rot) || 0 }; }); }) };
+        turn.a0 = Math.atan2(e.clientY - turn.cy, e.clientX - turn.cx); return;
+      }
       if (!picking || popup(e.target)) { tap = null; return; }
       tap = { x: e.clientX, y: e.clientY, t: e.target };
       if (dropping) { e.stopPropagation(); return; }
@@ -955,6 +989,9 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       e.stopPropagation();
     }, true);
     d.addEventListener("pointermove", function (e) {
+      if (turn) { var a = (Math.atan2(e.clientY - turn.cy, e.clientX - turn.cx) - turn.a0) * 180 / Math.PI; a = ((a + 540) % 360) - 180; if (!turn.on) { if (Math.abs(a) < 2) return; turn.on = true; snap(); }
+        turn.starts.forEach(function (st) { withSel(st.g, function () { var v = st.rot + a, sn = Math.round(v / 15) * 15; v = e.altKey ? Math.round(v) : Math.abs(v - sn) < 4 ? sn : Math.round(v); v = ((v + 540) % 360) - 180; var r = ruleFor(key()); if (!v) delete r.set.rot; else r.set.rot = v; }); });
+        paint(); fill(); e.preventDefault(); e.stopPropagation(); return; }
       if (resize) { var k = Math.hypot(e.clientX - resize.cx, e.clientY - resize.cy) / resize.d0; if (!resize.on) { if (Math.abs(k - 1) < 0.02) return; resize.on = true; snap(); }
         resize.starts.forEach(function (st) { withSel(st.g, function () { var r = ruleFor(key()); if (st.txt) r.set.size = Math.max(5, Math.round(st.base * k * 2) / 2); else r.set.scale = Math.max(0.2, Math.min(4, Math.round(st.base * k * 100) / 100)); }); });
         paint(); fill(); e.preventDefault(); e.stopPropagation(); return; }
@@ -969,11 +1006,12 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     }, true);
     var end = function (e) { var was = drag && drag.on; if (was && e) { e.preventDefault(); e.stopPropagation(); } drag = null; if (was) flashGuides(); };
     d.addEventListener("pointerup", function (e) {
-      if (resize) { var was = resize.on; resize = null; e.preventDefault(); e.stopPropagation(); if (was) { fill(); say("Resized. Undo takes it back.", "ok"); } return; }
+      if (turn) { var tw = turn.on; turn = null; e.preventDefault(); e.stopPropagation(); ring(); if (tw) { fill(); say("Turned. Undo takes it back.", "ok"); } return; }
+      if (resize) { var was = resize.on; resize = null; ring(); e.preventDefault(); e.stopPropagation(); if (was) { fill(); say("Resized. Undo takes it back.", "ok"); } return; }
       var moved = drag && drag.on, t = tap; tap = null; end(e);
       if (picking && t && !moved && Math.abs(e.clientX - t.x) + Math.abs(e.clientY - t.y) < 10) { e.preventDefault(); if (dropping) { takeColour(t.t); return; } if ((e.shiftKey || adding) && sel) { toggleGroup(sceneryAt(t.t, t.x, t.y) || t.t); return; } trail = []; levelBase = null; select(sceneryAt(t.t, t.x, t.y) || t.t); }
     }, true);
-    d.addEventListener("pointercancel", function (e) { tap = null; resize = null; end(e); }, true);
+    d.addEventListener("pointercancel", function (e) { tap = null; resize = null; turn = null; end(e); }, true);
     d.addEventListener("keydown", onKey, true); d.addEventListener("keydown", function (e) { cmpKey(e); }, true); d.addEventListener("keyup", function (e) { cmpKey(e); }, true);
     var gq = 0; d.addEventListener("scroll", function () { if (!gq) gq = fw().requestAnimationFrame(function () { gq = 0; guides(); ring(); }); }, true);
     clearInterval(hook.tick); hook.tick = setInterval(function () { if (sel && !document.hidden) ring(); }, 250);
@@ -1286,7 +1324,10 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   };
   $("undoTop").onclick = undo; $("redo").onclick = redo;
   segs("stepSeg", function (v) { step = Number(v) || 1; });
-  var showTab = function (t) { document.body.setAttribute("data-tab", t); Array.prototype.forEach.call($("tabs").children, function (b) { b.classList.toggle("on", b.getAttribute("data-t") === t); });
+  /* Hide tools (phone): the tool sheet folds away so the app fills the screen; any tab brings it back */
+  function setMini(on) { if (on) document.body.setAttribute("data-mini", "1"); else document.body.removeAttribute("data-mini"); var m = $("mini"); if (m) { m.setAttribute("aria-label", on ? "Show the tools again" : "Hide the tools to see more of the app"); m.title = m.getAttribute("aria-label"); m.setAttribute("aria-pressed", on ? "true" : "false"); } if (sel) setTimeout(ring, 60); }
+  $("mini").onclick = function () { setMini(document.body.getAttribute("data-mini") !== "1"); };
+  var showTab = function (t) { setMini(false); if (document.body.getAttribute("data-tab") !== t) { var tl = document.querySelector(".tools"); if (tl) tl.scrollTop = 0; } document.body.setAttribute("data-tab", t); Array.prototype.forEach.call($("tabs").children, function (b) { b.classList.toggle("on", b.getAttribute("data-t") === t); });
     /* the open tab is always in view on the phone's sideways tab row */
     var tb = $("tabs"), on = tb.querySelector(".on"); if (on && tb.scrollWidth > tb.clientWidth) { var a = on.getBoundingClientRect(), z = tb.getBoundingClientRect(); if (a.left < z.left || a.right > z.right) tb.scrollLeft += a.left - z.left - (z.width - a.width) / 2; } try { localStorage.setItem("hk_designer_tab", t); } catch (e) {} paint(); layersList(); if (t === "history" && document.body.className !== "locked") showHistory(); };
   Array.prototype.forEach.call($("tabs").children, function (b) { b.onclick = function () { showTab(b.getAttribute("data-t")); }; });
@@ -1347,7 +1388,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       if (dr && dr.base === "github") doc.rules = dr.rules;
       else if (dr) dr.rules.forEach(function (r) { var k = rid(r), hit = -1; doc.rules.forEach(function (o, i) { if (rid(o) === k) hit = i; }); if (hit > -1) doc.rules[hit] = r; else doc.rules.push(r); });
       base = "github"; savedAs = JSON.stringify({ r: JSON.parse(unb64(j.content)).rules || [], a: JSON.parse(unb64(j.content)).adds || [], f: JSON.parse(unb64(j.content)).fonts || [] }); fontList(); paint(); fill();
-      say(dr ? "Your unsaved changes from this device are back. Press Save to keep them." : "Loaded " + doc.rules.length + " saved change(s).", "ok");
+      say(dr ? "Your unsaved changes from this device are back. Press Save to keep them." : (doc.rules.length ? doc.rules.length + (doc.rules.length === 1 ? " saved change is" : " saved changes are") + " in place." : "Ready. Tap any word in the app to start."), "ok");
     }).catch(function (e) { say(e.message, "err"); });
   }
   /* the save's own name in History: what was changed, in his words, not just a count */
@@ -1372,7 +1413,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   function showHistory() {
     var ul = $("hist"); ul.innerHTML = ""; $("histNote").textContent = "Loading your saves\u2026";
     gh("GET", "/repos/" + REPO + "/commits?path=" + encodeURIComponent(PATH) + "&sha=main&per_page=30").then(function (list) {
-      if (!list || !list.length) { $("histNote").textContent = "Nothing saved yet."; return; }
+      if (!list || !list.length) { $("histNote").textContent = "Nothing saved yet. Each time you press Save it is kept here, so you can always go back."; return; }
       $("histNote").textContent = list.length + " saves, newest first. Tap Bring back, look it over in the app, then Save to keep it (Undo takes it back).";
       list.forEach(function (c, i) {
         var li = document.createElement("li"); if (!i) li.className = "now";

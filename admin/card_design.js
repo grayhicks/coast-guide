@@ -149,7 +149,10 @@
       var px = Number(s.size) > 0 ? Number(s.size) : Number(s.textSize) > 0 ? Number(s.textSize) : 16;
       out = out.filter(function (d) { return d.indexOf("font-size:") !== 0; });
       out.push("font-size:0");
-      extra = "\n" + sel.split(",").map(function (x) { return x + "::after"; }).join(",") + "{content:\"" + cssText(s.text) + "\" !important;font-size:" + px + "px !important}";
+      extra = "\n" + sel.split(",").map(function (x) { return x + "::after"; }).join(",") + "{content:\"" + cssText(s.text) + "\" !important;font-size:" + px + "px !important}" +
+        /* 10/03, J13: a title's last word sits in its own little box (so it never wraps away from its ticket mark); new
+           words replace the whole title, so the boxes inside step aside too */
+        "\n" + sel.split(",").map(function (x) { return x + " > *"; }).join(",") + "{display:none !important}";
     }
     if (!out.length) return "";
     return sel + "{" + out.map(function (d) { return d + " !important"; }).join(";") + "}" + extra;
