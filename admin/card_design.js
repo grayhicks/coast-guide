@@ -100,6 +100,12 @@
        the space around it untouched. mv is decided once, when the rule is made, from how the element sat then. */
     /* "mg" (10/03, J13): a hero piece that already slides by translate in its own animation is moved by its margins
        instead (its own margins m0 plus the offset), so the move never stops the animation */
+    /* 10/03, Gray: "I should be able to lock the position and it never move and it be like that on all cards". A locked
+       piece is pinned at the same spot inside its box on every card (absolute, from the box's left or right edge), so the
+       words around it no longer push it about. Its dx/dy are folded into the lock when it is set. */
+    if (s.lock && isFinite(Number(s.lock.t))) { out.push("position:absolute"); out.push("top:" + Math.round(Number(s.lock.t)) + "px"); out.push("margin:0");
+      if (s.lock.side === "r") { out.push("right:" + Math.round(Number(s.lock.x)) + "px"); out.push("left:auto"); } else out.push("left:" + Math.round(Number(s.lock.x)) + "px");
+      dx = 0; dy = 0; }
     if (dx || dy) { if (s.mv === "rel") { out.push("position:relative"); out.push("left:" + dx + "px"); out.push("top:" + dy + "px"); }
       else if (s.mv === "mg") { var m0 = Array.isArray(s.m0) ? s.m0 : [0, 0]; out.push("margin-left:" + ((Number(m0[0]) || 0) + dx) + "px"); out.push("margin-top:" + ((Number(m0[1]) || 0) + dy) + "px"); }
       else out.push("translate:" + dx + "px " + dy + "px"); }

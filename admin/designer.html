@@ -62,6 +62,14 @@ main{ display:flex; gap:16px; padding:12px; align-items:flex-start; }
    finger or mouse moves it in finer steps; the frame does not change size */
 .phone iframe{ transform-origin:0 0; }
 .zoombtn{ position:absolute; right:8px; bottom:8px; z-index:3; width:38px; height:38px; min-height:38px; opacity:.82; padding:0; border-radius:50%; background:rgba(14,22,33,.86); border:1.5px solid var(--line); color:#fff; box-shadow:0 4px 14px rgba(0,0,0,.4); }
+/* the grab bar between the app and the tools (phone): drag it up for more tools, down for more app, like Canva's sheet */
+.grab{ width:100%; flex:none; height:22px; align-items:center; justify-content:center; touch-action:none; cursor:ns-resize; margin:-11px 0 -11px; position:relative; z-index:6; }
+.grab i{ width:44px; height:5px; border-radius:999px; background:var(--mute); opacity:.8; } .grab.on i{ background:var(--pink); opacity:1; }
+.checkbox{ margin:10px 0; padding:10px; border:1px solid var(--line); border-radius:12px; }
+.checks{ margin:8px 0; } .checks li{ display:flex; align-items:center; gap:6px; padding:6px 0; border-top:1px solid var(--line); }
+.checks li > div{ flex:1 1 auto; min-width:0; } .checks li b{ display:block; font-size:14px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.checks li small{ color:var(--mute); } .checks li.bad small{ color:#ffb4a8; } .checks li.flag{ background:rgba(255,45,135,.12); border-radius:8px; }
+.checks li button{ flex:none; min-height:36px; padding:0 10px; font-size:13px; } .checks .ok::before{ content:"\2713  "; color:var(--mint); }
 .draghud{ position:fixed; z-index:30; transform:translateX(-50%); display:none; pointer-events:none; font:800 12px/24px system-ui,sans-serif; color:#fff; background:#0E1621; border:1.5px solid #FF2D87; border-radius:999px; padding:0 12px; white-space:pre; font-variant-numeric:tabular-nums; box-shadow:0 3px 10px rgba(0,0,0,.45); }
 .draghud.on{ display:block; } .draghud.eq{ color:#0E1621; background:#4FD6AC; border-color:#fff; }
 .zoombtn.on{ background:var(--pink); border-color:var(--pink); opacity:1; }
@@ -247,7 +255,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   .more.open{ display:flex; }
   .more button, .more select{ justify-content:flex-start; min-height:44px; }
   main{ flex:1 1 auto; min-height:0; display:flex; flex-direction:column; gap:0; padding:0; }
-  .phone{ position:relative; top:0; flex:0 0 auto; height:clamp(150px, min(50dvh, calc(100dvh - 356px)), 520px); width:100%; border-width:0 0 1px; border-radius:0 0 16px 16px; box-shadow:none; }
+  .phone{ position:relative; top:0; flex:0 0 auto; height:var(--phoneh, clamp(150px, min(50dvh, calc(100dvh - 356px)), 520px)); width:100%; border-width:0 0 1px; border-radius:0 0 16px 16px; box-shadow:none; }
   .phone iframe{ width:100%; height:100%; max-height:none; }
   html, body{ overflow-x:hidden; }
   .panel{ flex:1 1 auto; min-height:0; max-width:none; min-width:0; width:100%; padding:0 8px calc(var(--tabh) + env(safe-area-inset-bottom)); display:flex; flex-direction:column; }
@@ -372,6 +380,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
 </header>
 <main>
   <div class="phone"><iframe id="app" data-src="../app/" title="The app"></iframe><div id="dragHud" class="draghud" aria-live="off"></div><button id="zoom" class="zoombtn" aria-label="Zoom in on the picked piece" title="Zoom in on the picked piece (Z)" data-i="zoomin"><span>Zoom</span></button></div>
+  <div id="grab" class="grab onlyphone" role="separator" aria-orientation="horizontal" aria-label="Drag up for more tools, down for more of the app" title="Drag up for more tools, down for more of the app"><i></i></div>
   <section class="panel">
     <div class="box" id="signin">
       <h2>One time on this device, to save</h2>
@@ -402,7 +411,15 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
         <div class="seg" id="matchSeg"><button data-v="like" class="sel">Everything like it</button><button data-v="exact">Only this exact kind</button></div></div>
       <div class="mute" id="matchRead"></div>
       <div class="row"><label>Change it on</label>
-        <div class="seg" id="scopeSeg"><button data-v="all" class="sel">Every card</button><button data-v="kind">Cards like this</button><button data-v="card">Only this card</button></div></div>
+        <div class="seg" id="scopeSeg"><button data-v="card" class="sel">Only this card</button><button data-v="kind">Cards like this</button><button data-v="all">Every card</button></div></div>
+      <!-- 10/03, Gray: "I can edit one calendar pill and 7 others are good then find another then 3 are good... I don't want
+           to hand go through everyone... flag the ones that need to be different". After a change on every card the
+           designer looks at every card itself and lists the ones where the piece now sits on other words or off the card -->
+      <div class="checkbox" id="checkBox">
+        <div class="row"><button id="checkGo" class="go">Check every card</button><span class="mute" id="checkSum"></span></div>
+        <ul class="list checks" id="checkList"></ul>
+        <div class="row"><button id="claudeGo" title="Writes what you changed and the cards you flagged as a request Claude can apply">Send to Claude</button><span class="mute" id="claudeSay"></span></div>
+      </div>
       <div class="row"><label>Look</label>
         <div class="seg" id="lookSeg"><button data-v="all" class="sel">Every look</button><button data-v="day">Day only</button><button data-v="night">Night + Dark</button></div></div>
     </div>
@@ -439,6 +456,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
         <div class="pad"><span></span><button data-n="0,-1" aria-label="Move up" data-i="chup"></button><span></span><button data-n="-1,0" aria-label="Move left" data-i="chleft"></button><button data-n="0,0" title="Back to where it was" aria-label="Back to where it was" data-i="home"></button><button data-n="1,0" aria-label="Move right" data-i="chright"></button><span></span><button data-n="0,1" aria-label="Move down" data-i="chdown"></button><span></span></div>
         <div class="mvside"><div class="seg" id="stepSeg"><button data-v="1" class="sel" title="Each tap moves it 1 pixel">1 px</button><button data-v="5" title="Each tap moves it 5 pixels">5 px</button><button data-v="10" title="Each tap moves it 10 pixels">10 px</button></div>
           <div class="cap">Moved</div><div class="readout" id="moveRead">Not moved</div><div class="gap" id="gapRead"></div></div></div>
+      <div class="row"><button id="lockGo2" title="Pin it at this spot inside its box, so the words around it never push it about">Lock in place</button><span class="mute" id="lockRead"></span></div>
       <div class="row lineup"><button id="evenV" title="Same space above as below">&#8597; Even above and below</button><button id="evenH" title="Same space left as right">&#8596; Even left and right</button><button id="centreX" title="Centre it across the card">Centre on the card</button></div>
       <div class="row"><button id="snap" class="on" data-i="snap"><span>Snap on</span></button><span class="mute onlywide">Hold <kbd>Alt</kbd> while dragging to place it freely.</span></div>
       <div class="mute onlywide">Drag it in the app, or use the arrow keys (<kbd>Shift</kbd> moves 10 px). <kbd>P</kbd> switches between picking and using the app.</div>
@@ -560,7 +578,9 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   var REPO = "grayhicks/gca-widget", PATH = "content/card_style.json", WORKFLOW = "beach-flag-daily.yml";
   var doc = { version: 1, rules: [], adds: [] }, sha = null, hist = [], sel = null, trail = [], picking = true, focusOn = false, drag = null;
   var addsCtl = null, imgData = {}, pendingImg = {}, resize = null, turn = null;
-  var scope = "all", lookScope = "all", redoSt = [], levelBase = null, step = 1;
+  /* 10/03, Gray: "it should be one card unless I see it's on every card I select the every card". Each new pick starts
+     on Only this card; Every card and Cards like this are a choice he makes */
+  var scope = "card", holdScope = false, lookScope = "all", redoSt = [], levelBase = null, step = 1;
   var state = function () { return JSON.stringify({ r: doc.rules, a: doc.adds || [], f: doc.fonts || [] }); };
   var restore = function (str) { var v = JSON.parse(str); if (Array.isArray(v)) doc.rules = v; else { doc.rules = v.r; doc.adds = v.a; doc.fonts = v.f || []; } fontList(); };
   function snap() { hist.push(state()); redoSt = []; }
@@ -622,11 +642,18 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   function groupName() { var base = $("partName").getAttribute("data-one") || $("partName").textContent; $("partName").setAttribute("data-one", base); $("partName").textContent = base + (multi.length ? " + " + multi.length + " more" : ""); }
   function select(el, keepGroup) {
     if (typing) typing(true);
+    if (!keepGroup && !holdScope && scope !== "card") { scope = "card"; Array.prototype.forEach.call($("scopeSeg").children, function (x) { x.classList.toggle("sel", x.getAttribute("data-v") === "card"); }); }
+    holdScope = false;
     var d = frame(); if (!d || !el) return;
     if (el.closest("svg") && el.tagName.toLowerCase() !== "svg") el = el.closest("svg");
     if (!keepGroup) clearGroup();
     var old = d.querySelector("[data-hk-pick]"); if (old) old.removeAttribute("data-hk-pick");
     el.setAttribute("data-hk-pick", "1"); document.body.setAttribute("data-sel", "1");
+    /* 10/03, Gray: "sometimes I wanted to just move the screen around when editing and it moved the whole hero or app or
+       card". A piece taller than 40% of the app or wider and taller than most of it is "big": a finger on it scrolls, and
+       it moves only with the arrows (or a mouse drag on a computer) */
+    (function () { var w = el.ownerDocument.defaultView, r = el.getBoundingClientRect(), big = r.height > w.innerHeight * 0.4 || (r.width * r.height > w.innerWidth * w.innerHeight * 0.3) || el.matches(".card, .hero, .hk, main, section");
+      Array.prototype.forEach.call(el.ownerDocument.querySelectorAll("[data-hk-big]"), function (x) { x.removeAttribute("data-hk-big"); }); if (big) el.setAttribute("data-hk-big", "1"); })();
     document.body.setAttribute("data-kind", ownText(el) && el.tagName.toLowerCase() !== "svg" ? "words" : el.querySelector && el.querySelector("*") && (el.textContent || "").trim() ? "words" : "mark");
     if (document.body.getAttribute("data-kind") === "mark" && /^(font|words|text)$/.test(document.body.getAttribute("data-tab") || "")) setTimeout(function () { showTab("size"); }, 0);
     var card = el.closest(".card");
@@ -727,6 +754,69 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     var row = box.parentElement, on = box.querySelector(".sel");
     if (on && row && row.scrollWidth > row.clientWidth) { var rr = row.getBoundingClientRect(), br = on.getBoundingClientRect(); if (br.right > rr.right - 8 || br.left < rr.left) row.scrollLeft += br.right - rr.right + Math.min(rr.width / 3, 120); }
   }
+  /* ---- Check every card / Send to Claude (10/03) ---- */
+  var flagged = {}, autoT = 0, toCheck = 0;
+  function autoCheck() { if (!sel || sel.in !== "card") { toCheck = 0; return; } var r = findRule(key()); if (!r || r.scope === "card") { toCheck = 0; scopeChip(); return; }
+    toCheck = cardsFor(Object.assign({}, r, { scope: r.scope })).filter(function (x) { return problemOf(x.card, x.el); }).length; scopeChip();
+    if (toCheck) say(toCheck + (toCheck === 1 ? " card needs" : " cards need") + " a look. Tap the Changes line, then Check every card.", "err"); }
+  function cardsFor(r) { var d = frame(); if (!d || !r || r.in !== "card") return [];
+    var list = Array.prototype.slice.call(d.querySelectorAll(".card:not(.hk_sc)" + (r.scope === "kind" && r.value ? '[data-bub^="' + String(r.value).replace(/"/g, "") + '"]' : r.scope === "card" && r.value ? '[data-card-id^="' + String(r.value).replace(/"/g, "") + '"]' : "")));
+    return list.map(function (c) { var el = null; try { el = c.querySelector(r.path); } catch (e) {} return el ? { card: c, el: el } : null; }).filter(Boolean); }
+  function problemOf(card, el) {
+    var d = el.ownerDocument, b = boxOf(el), cr = (card.querySelector(".cardbtn") || card).getBoundingClientRect();
+    if (b.r - b.l < 1) return null;
+    if (b.l < cr.left - 2 || b.r > cr.right + 2 || b.t < cr.top - 2 || b.b > cr.bottom + 2) return "runs off the card";
+    var hit = null;
+    Array.prototype.forEach.call(card.querySelectorAll("*"), function (n) { if (hit || n === el || el.contains(n) || n.contains(el) || n.closest(".tdec, .sig, .spdec, #hk_ring, #hk_guides")) return;
+      var tg = n.tagName.toLowerCase(), mark = tg === "svg" || tg === "img" || tg === "button"; if (!mark && !ownText(n)) return; if (n.closest("svg") && tg !== "svg") return;
+      var cs = d.defaultView.getComputedStyle(n); if (cs.visibility === "hidden" || cs.display === "none" || +cs.opacity === 0) return;
+      (mark ? [(function (q) { return { l: q.left, r: q.right, t: q.top, b: q.bottom }; })(n.getBoundingClientRect())] : inkRects(n)).forEach(function (q) {
+        var w = Math.min(q.r, b.r) - Math.max(q.l, b.l), h = Math.min(q.b, b.b) - Math.max(q.t, b.t); if (!hit && w > 2 && h > 2) hit = n; }); });
+    return hit ? "sits on " + (ownText(hit) ? "\u201c" + ownText(hit).slice(0, 18) + "\u201d" : levelName(hit).toLowerCase()) : null; }
+  function cardName(c) { var t = c.querySelector(".hk_h3"); return t ? allWords(t).slice(0, 40) : (c.getAttribute("data-card-id") || "a card"); }
+  function checkCards() {
+    var ul = $("checkList"); ul.innerHTML = ""; if (!sel || sel.in !== "card") { $("checkSum").textContent = "Pick a piece on a card first."; return; }
+    var r = findRule(key()) || { in: "card", path: sel.path, scope: scope, value: scope === "kind" ? sel.kind : scope === "card" ? sel.card : "" };
+    var all = cardsFor(Object.assign({}, r, { scope: "all" })), bad = 0;
+    all.forEach(function (x) { var id = (x.card.getAttribute("data-card-id") || "") + "|" + sel.path, why = problemOf(x.card, x.el); if (why) bad++;
+      var li = document.createElement("li"); li.className = (why ? "bad" : "") + (flagged[id] ? " flag" : "");
+      var t = document.createElement("div"); t.innerHTML = "<b></b><small></small>"; t.firstChild.textContent = cardName(x.card); t.lastChild.textContent = why ? "Needs a look: it " + why : "Looks right"; if (!why) t.lastChild.className = "ok"; li.appendChild(t);
+      var sh = document.createElement("button"); sh.textContent = "Show"; sh.onclick = function () { x.el.scrollIntoView({ block: "center" }); holdScope = true; trail = []; levelBase = null; setTimeout(function () { select(x.el); }, 120); }; li.appendChild(sh);
+      var fl = document.createElement("button"); fl.textContent = flagged[id] ? "Flagged" : "Flag"; fl.onclick = function () { if (flagged[id]) delete flagged[id]; else flagged[id] = { card: x.card.getAttribute("data-card-id"), title: cardName(x.card), piece: sel.name || sel.path, path: sel.path, why: why || "Gray flagged it" }; checkCards(); }; li.appendChild(fl);
+      ul.appendChild(li); });
+    $("checkSum").textContent = all.length ? (all.length - bad) + " of " + all.length + " cards look right" + (bad ? ", " + bad + " need a look" : "") + "." : "This piece is not on the other cards.";
+  }
+  $("checkGo").onclick = checkCards;
+  /* Lock in place: read where the piece sits now inside its positioned box, and pin it there (left or right edge,
+     whichever it is nearer); Unlock puts it back in the flow */
+  $("lockGo2").onclick = function () {
+    if (!sel) { say("Tap a piece in the app first.", "err"); return; }
+    var r0 = findRule(key()), locked = r0 && r0.set && r0.set.lock;
+    if (locked) { edit(function (s2) { delete s2.lock; }); say("Unlocked. It sits in the flow again.", "ok"); return; }
+    var el = sel.el, op = el.offsetParent; if (!op) { say("This piece can't be pinned.", "err"); return; }
+    var a = el.getBoundingClientRect(), b = op.getBoundingClientRect(), cs = el.ownerDocument.defaultView.getComputedStyle(op);
+    var x = a.left - b.left - (parseFloat(cs.borderLeftWidth) || 0), t = a.top - b.top - (parseFloat(cs.borderTopWidth) || 0), rx = b.right - a.right - (parseFloat(cs.borderRightWidth) || 0);
+    var right = (a.left + a.right) / 2 > (b.left + b.right) / 2;
+    edit(function (s2) { s2.lock = { side: right ? "r" : "l", x: Math.round(right ? rx : x), t: Math.round(t) }; delete s2.dx; delete s2.dy; });
+    say("Locked in place" + (scope === "card" ? " on this card." : " on " + (scope === "kind" ? "cards like this." : "every card.")) + " Tap again to unlock.", "ok");
+  };
+  /* the request for Claude: every change in plain words with its exact values, then the flagged cards; copied, and kept in
+     content/design/requests/ so the next Claude session finds it */
+  function claudeText() {
+    var stamp = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" }), lines = ["# Card designer request, " + stamp + " CT", "", "Gray made these changes in the card designer" + (savedAs != null && state() === savedAs ? " (saved)" : " (not saved yet)") + ":", ""];
+    doc.rules.forEach(function (r) { var where = r.in === "card" ? (r.scope === "kind" ? "cards like " + r.value : r.scope === "card" ? "only card " + r.value : "every card") : "the app"; lines.push("- " + String(r.name || r.path).replace(/[\u201c\u201d]/g, "\"") + " on " + where + ": " + JSON.stringify(r.set) + " (piece `" + r.path + "`)"); });
+    var fl = Object.keys(flagged).map(function (k) { return flagged[k]; });
+    if (fl.length) { lines.push("", "Cards he flagged as needing their own value:", ""); fl.forEach(function (f) { lines.push("- " + f.title + " (" + f.card + "), " + f.piece + ": " + f.why); }); }
+    lines.push("", "Please apply each change to every card where it fits, give the flagged cards their own value so nothing sits on other words or runs off the card, keep the spacing even above and below, and send a before and after picture.");
+    return lines.join("\n"); }
+  $("claudeGo").onclick = function () {
+    var t = claudeText(), path = "content/design/requests/" + new Date().toISOString().slice(0, 16).replace(/[:T]/g, "-") + ".md";
+    try { navigator.clipboard.writeText(t); } catch (e) {}
+    $("claudeSay").textContent = "Copied. Saving it for Claude\u2026";
+    gh("PUT", "/repos/" + REPO + "/contents/" + path, { message: "Card designer: request for Claude", content: b64(t), branch: "main" })
+      .then(function () { $("claudeSay").textContent = "Saved for Claude and copied. Paste it into a Claude chat, or say \u201cdo the designer request\u201d."; say("Request saved for Claude.", "ok"); })
+      .catch(function (e) { $("claudeSay").textContent = "Copied, but not saved: " + e.message; });
+  };
   /* ---- Layers (10/03, J13): every piece of the picked card (or of the area outside the cards), in reading order ---- */
   function layersList() {
     var ul = $("layers"); if (!ul || (document.body.getAttribute("data-tab") !== "layers" && !window.matchMedia("(min-width:1280px)").matches)) return; ul.innerHTML = "";
@@ -799,6 +889,8 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     /* the distance lines show again only when the piece moved or changed size, not after a colour (10/03 grade) */
     var geo = function (st) { st = st || {}; return JSON.stringify([st.dx, st.dy, st.size, st.scale, st.rot, st.spacing, st.lh, st.font, st.weight, st.text, st.hide, st.tcase]); };
     var g1 = geo(ruleFor(k).set); if (g1 !== g0) flashGuides(); paint(); fill();
+    /* a change on many cards is checked on all of them a moment later; the line under the picked name says how many need a look */
+    if (scope !== "card" && sel && sel.in === "card") { clearTimeout(autoT); autoT = setTimeout(autoCheck, 450); }
   }
   /* the last ten colours he used, newest first, kept on this device (10/03, J13) */
   var recent = []; try { recent = JSON.parse(localStorage.getItem("hk_designer_recent") || "[]").filter(function (c) { return /^#[0-9A-Fa-f]{6}$/.test(c); }); } catch (e) {}
@@ -960,7 +1052,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     if (!st) { st = d.createElement("style"); st.id = "hk_design_preview"; d.body.appendChild(st); }
     st.media = comparing ? "not all" : "all";
     st.textContent = CD.designCss(doc) +
-      "\n[data-hk-pick]{touch-action:none !important;}" +
+      "\n[data-hk-pick]:not([data-hk-big]){touch-action:none !important;}" +
       /* the app's floating buttons (Show support, back to top) step aside while he picks, so they never sit on a card he is editing */
       (picking && hideFloats ? "\n.hk_supportfloat, .hk_totop, [aria-label=\"Back to top\"]{visibility:hidden !important;}" : "") +
       (picking ? "\n.hk *{cursor:crosshair !important;}\n.hk [data-hk-pick], .hk [data-hk-pick] *{cursor:move !important;}\n[data-hk-add]{pointer-events:auto !important;}" : "") +
@@ -1042,7 +1134,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       li.children[1].onclick = function () {
         var d = frame(), el = null; try { el = r.in === "card" ? d.querySelector('.card' + (r.scope === "card" && r.value ? '[data-card-id^="' + String(r.value).replace(/"/g, "") + '"]' : r.scope === "kind" && r.value ? '[data-bub^="' + String(r.value).replace(/"/g, "") + '"]' : "") + " " + r.path) : d.querySelector(".hk " + r.path); } catch (e) {}
         if (!el) { say("That piece is not on this page of the app. Open the tab it lives on, then tap Show again.", "err"); return; }
-        el.scrollIntoView({ block: "center" }); scope = r.scope || "all"; lookScope = r.look || "all";
+        el.scrollIntoView({ block: "center" }); scope = r.scope || "all"; holdScope = true; lookScope = r.look || "all";
         Array.prototype.forEach.call($("scopeSeg").children, function (x) { x.classList.toggle("sel", x.getAttribute("data-v") === scope); }); Array.prototype.forEach.call($("lookSeg").children, function (x) { x.classList.toggle("sel", x.getAttribute("data-v") === lookScope); });
         trail = []; levelBase = null; setTimeout(function () { select(el); say("Picked. This is the change: " + li.firstChild.textContent.slice(0, 60), "ok"); }, 120);
       };
@@ -1061,8 +1153,8 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   function scopeChip() {
     var c = $("scopeChip"); if (!sel) { c.textContent = ""; return; }
     var d = frame(), n = function (q) { try { return d.querySelectorAll(q).length; } catch (e) { return 0; } };
-    var w = sel.in === "card" ? (scope === "card" ? "Only this card" : scope === "kind" ? "Cards like this (" + (sel.kind || "same kind") + ", " + n('.card[data-bub^="' + String(sel.kind || "").replace(/"/g, "") + '"]') + " on this page)" : "Every card (" + n(".card") + " on this page)") : sel.el.closest(".hero") ? "The hero" : sel.el.closest(".hk_ptile") ? "Every poster tile (" + n(".hk_ptile") + " on this page)" : "Everywhere in the app";
-    c.textContent = "Changes: " + w + (lookScope === "day" ? ", day look only" : lookScope === "night" ? ", night and dark only" : "") + " \u203a";
+    var w = sel.in === "card" ? (scope === "card" ? "Only this card \u00b7 tap for every card" : scope === "kind" ? "Cards like this (" + (sel.kind || "same kind") + ", " + n('.card[data-bub^="' + String(sel.kind || "").replace(/"/g, "") + '"]') + " on this page)" : "Every card (" + n(".card") + " on this page)") : sel.el.closest(".hero") ? "The hero" : sel.el.closest(".hk_ptile") ? "Every poster tile (" + n(".hk_ptile") + " on this page)" : "Everywhere in the app";
+    c.textContent = "Changes: " + w + (lookScope === "day" ? ", day look only" : lookScope === "night" ? ", night and dark only" : "") + (scope !== "card" && toCheck ? " \u00b7 " + toCheck + " to check" : "") + " \u203a";
   }
   function fill() { scopeChip(); samples(); textFill();
     var r = sel && findRule(key()), s = (r && r.set) || {}, el = sel && sel.el, cs = el ? el.ownerDocument.defaultView.getComputedStyle(el) : null;
@@ -1071,6 +1163,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     $("words").value = (tr && tr.set && tr.set.text) || ""; $("words").placeholder = wok ? allWords(sel.el).slice(0, 80) : "Type new words"; if (wok && !$("words").value) $("words").value = allWords(sel.el).slice(0, 160);
     $("wordsNote").textContent = !sel ? "Tap a single word or line in the app first." : sel.el.closest(".hk_ptile") ? "A tile's words come from its card, so they are changed on the full card (More, then Full cards)." : !wok ? "This piece has no words of its own. Tap the words themselves, or use Smaller." : sel.in === "card" ? "Changes the words on this one card only. Words that update by themselves stop updating." : "Changes these words everywhere they show. Words that update by themselves stop updating.";
     var dx0 = Number(s.dx) || 0, dy0 = Number(s.dy) || 0;
+    $("lockGo2").textContent = s.lock ? "Unlock" : "Lock in place"; $("lockRead").textContent = s.lock ? "Pinned " + s.lock.t + " px from the top, " + s.lock.x + " px from the " + (s.lock.side === "r" ? "right" : "left") : "";
     $("moveRead").textContent = !dx0 && !dy0 ? "Not moved" : (dx0 ? (dx0 > 0 ? "\u2192 " : "\u2190 ") + Math.abs(dx0) : "") + (dx0 && dy0 ? "   " : "") + (dy0 ? (dy0 > 0 ? "\u2193 " : "\u2191 ") + Math.abs(dy0) : "") + " px";
     var zNow = cs ? (parseInt(cs.zIndex, 10) || 0) : 0; $("zRead").textContent = s.z !== undefined ? "Layer " + s.z : cs ? (zNow > 99 ? "Its own layer" : "Layer " + zNow + " (its own)") : "";
     $("size").value = s.size || (el ? Math.round(fsOf(el) * 2) / 2 : ""); $("sizeRange").value = $("size").value || 14;
@@ -1165,6 +1258,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       tap = { x: e.clientX, y: e.clientY, t: e.target };
       if (dropping) { e.stopPropagation(); return; }
       var inGroup = group().some(function (g) { return e.target === g.el || g.el.contains(e.target); });
+      if (inGroup && e.pointerType === "touch" && sel && sel.el.hasAttribute("data-hk-big")) { inGroup = false; if (!e.shiftKey && !adding) { tap = { x: e.clientX, y: e.clientY, t: e.target }; return; } }
       if (!sel || !inGroup || e.shiftKey || adding) { if (e.pointerType === "mouse" && !e.shiftKey && !adding && e.button === 0) marq = { x: e.clientX, y: e.clientY, on: false }; if (e.target.closest && e.target.closest(".card")) e.stopPropagation(); return; }
       drag = { x: e.clientX, y: e.clientY, on: false, starts: group().map(function (g) { return withSel(g, function () { var r = findRule(key()), s0 = (r && r.set) || {}; return { g: g, dx: s0.dx || 0, dy: s0.dy || 0 }; }); }) };
       e.stopPropagation();
@@ -1393,7 +1487,9 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   var TFONTS = ["Baloo 2", "Nunito", "Chewy", "Fredoka", "Pacifico", "Lobster", "Playfair Display", "Bebas Neue", "Cormorant Garamond"].filter(function (f) { return CD.FONTS.indexOf(f) > -1; });
   function textFill() {
     if (!$("textBox") || !SW || !TFONTS) return; var el = sel && sel.el, r = sel && findRule(key()), st = (r && r.set) || {}, cs = el ? el.ownerDocument.defaultView.getComputedStyle(el) : null, wok = wordsOk();
-    if (document.activeElement !== $("tWords")) { var tk = sel && sel.in === "card" ? Object.assign(key(), { scope: "card", value: sel.card }) : null, tr = tk ? findRule(tk) : r; $("tWords").value = wok ? ((tr && tr.set && tr.set.text) || allWords(el).slice(0, 160)) : ""; $("tOwn").style.display = tr && tr.set && tr.set.text ? "" : "none"; }
+    if (document.activeElement !== $("tWords")) { var tk = sel && sel.in === "card" ? Object.assign(key(), { scope: "card", value: sel.card }) : null, tr = tk ? findRule(tk) : r; $("tWords").value = wok ? ((tr && tr.set && tr.set.text) || allWords(el).slice(0, 160)) : ""; $("tOwn").style.display = tr && tr.set && tr.set.text ? "" : "none";
+      /* the picked name shows the words on screen, not the ones the new words replaced */
+      if (tr && tr.set && tr.set.text && group().length === 1) $("partName").textContent = "\u201c" + (tr.set.text.length > 40 ? tr.set.text.slice(0, 38) + "\u2026" : tr.set.text) + "\u201d"; }
     $("tWords").placeholder = !sel ? "Tap any words in the app" : wok ? "Type new words" : "Tap here to pick the words inside";
     if (document.activeElement !== $("tSize")) $("tSize").value = st.size || (el ? Math.round(fsOf(el) * 2) / 2 : "");
     var fwN = Number(st.weight) || (cs ? Number(cs.fontWeight) : 400); $("tBold").classList.toggle("sel", fwN >= 700); $("tItalic").classList.toggle("sel", st.italic === true || (cs && cs.fontStyle === "italic" && st.italic !== false)); $("tCaps").classList.toggle("sel", (st.tcase || (cs && cs.textTransform)) === "upper" || (cs && cs.textTransform === "uppercase" && !st.tcase));
@@ -1606,6 +1702,14 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   function setMini(on) { if (on) document.body.setAttribute("data-mini", "1"); else document.body.removeAttribute("data-mini"); var m = $("mini"); if (m) { m.setAttribute("aria-label", on ? "Show the tools again" : "Hide the tools to see more of the app"); m.title = m.getAttribute("aria-label"); m.setAttribute("aria-pressed", on ? "true" : "false"); var ms = m.querySelector("span"); if (ms) ms.textContent = on ? "Show" : "Hide"; } if (sel) setTimeout(ring, 60); }
   (function () { var tb = $("tabs"), at = function () { if (tb.scrollLeft + tb.clientWidth >= tb.scrollWidth - 4) tb.setAttribute("data-end", ""); else tb.removeAttribute("data-end"); }; tb.addEventListener("scroll", at, { passive: true }); window.addEventListener("resize", at); setTimeout(at, 300); })();
   document.body.appendChild($("dragHud"));
+  (function () { var g = $("grab"), ph = document.querySelector(".phone"), st = null;
+    var set = function (h) { var lo = 150, hi = Math.max(lo, window.innerHeight - 56 - 118 - 66 - 90); h = Math.max(lo, Math.min(hi, h)); document.documentElement.style.setProperty("--phoneh", Math.round(h) + "px"); return h; };
+    try { var sv = Number(localStorage.getItem("hk_designer_phoneh")); if (sv > 0) set(sv); } catch (e) {}
+    g.addEventListener("pointerdown", function (e) { e.preventDefault(); try { g.setPointerCapture(e.pointerId); } catch (x) {} st = { y: e.clientY, h: ph.getBoundingClientRect().height }; g.classList.add("on"); });
+    g.addEventListener("pointermove", function (e) { if (!st) return; set(st.h + e.clientY - st.y); });
+    var done = function () { if (!st) return; st = null; g.classList.remove("on"); try { localStorage.setItem("hk_designer_phoneh", parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--phoneh")) || ""); } catch (e) {} if (sel) setTimeout(ring, 60); };
+    g.addEventListener("pointerup", done); g.addEventListener("pointercancel", done);
+    g.addEventListener("dblclick", function () { document.documentElement.style.removeProperty("--phoneh"); try { localStorage.removeItem("hk_designer_phoneh"); } catch (e) {} }); })();
   $("pieceOpts").onclick = function (e) { e.stopPropagation(); var m = $("pieceMenu"), on = !m.classList.contains("open"); m.classList.toggle("open", on); this.setAttribute("aria-expanded", on ? "true" : "false");
     if (on) { var r = this.getBoundingClientRect(); m.style.top = (r.bottom + 6) + "px"; } };
   Array.prototype.forEach.call(document.querySelectorAll("#pieceMenu .pm"), function (b) { b.addEventListener("click", function () { $("pieceMenu").classList.remove("open"); $("pieceOpts").setAttribute("aria-expanded", "false"); }); });
@@ -1713,7 +1817,14 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
      it, so a device with no key loses nothing: it saves the moment a key is there (here or in the card editor). */
   var base = "none", DRAFT = "hk_designer_draft", savedAs = null;
   var rid = function (r) { return JSON.stringify([r.path, r.in, r.scope, r.value, r.look, r.sel, r.root, r.part]); };
-  function keepDraft() { try { if (doc.rules.length || (doc.adds && doc.adds.length) || localStorage.getItem(DRAFT)) localStorage.setItem(DRAFT, JSON.stringify({ base: base, rules: doc.rules, adds: doc.adds || [], fonts: doc.fonts || [], imgs: pendingImg })); } catch (e) {} }
+  /* 10/03, Gray: "I backed out of the app when I did it came back and pressed undo and there was nothing to undo". The
+     undo and redo steps are kept on this device (the last 40), and come back when the designer opens on the same state */
+  var UNDO = "hk_designer_undo", undoT = 0, undoReady = false;
+  /* nothing is written until load() has read the kept steps back, or the empty list of a fresh page overwrote them */
+  function keepUndo(now) { if (!undoReady) return; clearTimeout(undoT); var run = function () { try { localStorage.setItem(UNDO, JSON.stringify({ now: state(), h: hist.slice(-40), r: redoSt.slice(-20) })); } catch (e) {} }; if (now) run(); else undoT = setTimeout(run, 500); }
+  window.addEventListener("pagehide", function () { keepUndo(true); });
+  document.addEventListener("visibilitychange", function () { if (document.hidden) keepUndo(true); });
+  function keepDraft() { keepUndo(); try { if (doc.rules.length || (doc.adds && doc.adds.length) || localStorage.getItem(DRAFT)) localStorage.setItem(DRAFT, JSON.stringify({ base: base, rules: doc.rules, adds: doc.adds || [], fonts: doc.fonts || [], imgs: pendingImg })); } catch (e) {} }
   function readDraft() { try { var d = JSON.parse(localStorage.getItem(DRAFT) || "null"); return d && ((d.rules && d.rules.length) || (d.adds && d.adds.length)) ? d : null; } catch (e) { return null; } }
   var b64 = function (s) { return btoa(unescape(encodeURIComponent(s))); }, unb64 = function (s) { return decodeURIComponent(escape(atob(s.replace(/\n/g, "")))); };
   function loadImgs(ref) { (doc.adds || []).forEach(function (a) { if (a.kind === "img" && a.src && !imgData[a.id]) gh("GET", "/repos/" + REPO + "/contents/" + a.src + "?ref=" + encodeURIComponent(ref)).then(function (f) { imgData[a.id] = "data:image/" + a.src.split(".").pop().replace("jpg", "jpeg") + ";base64," + String(f.content || "").replace(/\n/g, ""); paint(); }).catch(function () {}); }); }
@@ -1727,6 +1838,8 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       if (dr && dr.fonts) dr.fonts.forEach(function (f) { if (!doc.fonts) doc.fonts = []; if (doc.fonts.indexOf(f) < 0) doc.fonts.push(f); });
       if (dr && dr.base === "github") doc.rules = dr.rules;
       else if (dr) dr.rules.forEach(function (r) { var k = rid(r), hit = -1; doc.rules.forEach(function (o, i) { if (rid(o) === k) hit = i; }); if (hit > -1) doc.rules[hit] = r; else doc.rules.push(r); });
+      try { var uu = JSON.parse(localStorage.getItem(UNDO) || "null"); if (uu && uu.now === state() && Array.isArray(uu.h)) { hist = uu.h; redoSt = uu.r || []; } } catch (e) {}
+      undoReady = true;
       base = "github"; savedAs = JSON.stringify({ r: JSON.parse(unb64(j.content)).rules || [], a: JSON.parse(unb64(j.content)).adds || [], f: JSON.parse(unb64(j.content)).fonts || [] }); fontList(); paint(); fill();
       say(dr ? "Your unsaved changes from this device are back. Press Save to keep them." : (doc.rules.length ? doc.rules.length + (doc.rules.length === 1 ? " saved change is" : " saved changes are") + " in place." : "Ready. Tap any word in the app to start."), "ok");
     }).catch(function (e) { say(e.message, "err"); });
@@ -1752,7 +1865,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   var when = function (iso) { try { return new Date(iso).toLocaleString("en-US", { timeZone: "America/Chicago", weekday: "short", month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" }); } catch (e) { return iso; } };
   /* ---- This session (10/03 grade: History showed only Saves): every Undo step, named by what it changed; a tap goes
      back to just after that change, and what was after it moves onto Redo ---- */
-  var WORD = { dx: "moved", dy: "moved", size: "size", scale: "size", rot: "turned", color: "colour", bg: "background", grad: "gradient", opacity: "see-through", font: "font", weight: "weight", text: "words", hide: "hidden", z: "layer", edge: "edge", spacing: "letter gap", lh: "line gap", tcase: "capitals", italic: "italic", hue: "colour shift", bright: "brightness", sat: "strength" };
+  var WORD = { lock: "locked in place", dx: "moved", dy: "moved", size: "size", scale: "size", rot: "turned", color: "colour", bg: "background", grad: "gradient", opacity: "see-through", font: "font", weight: "weight", text: "words", hide: "hidden", z: "layer", edge: "edge", spacing: "letter gap", lh: "line gap", tcase: "capitals", italic: "italic", hue: "colour shift", bright: "brightness", sat: "strength" };
   function stepLabel(a, b) {
     var A = JSON.parse(a), B = JSON.parse(b), ra = Array.isArray(A) ? A : A.r, rb = Array.isArray(B) ? B : B.r, k = function (r) { return [r.in, r.path, r.scope, r.value, r.look].join("|"); }, before = {}, out = [];
     ra.forEach(function (r) { before[k(r)] = r; });
