@@ -116,6 +116,11 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
       <div class="row"><label>Look</label>
         <div class="seg" id="lookSeg"><button data-v="all" class="sel">Every look</button><button data-v="day">Day only</button><button data-v="night">Night + Dark</button></div></div>
     </div>
+    <div class="box" id="wordsBox">
+      <h2>Words</h2>
+      <div class="row"><input id="words" type="text" maxlength="160" placeholder="Type new words" style="flex:1;min-width:180px"><button id="wordsGo" class="go">Use these words</button><button id="wordsOff">Its own words</button></div>
+      <div class="mute" id="wordsNote">Tap a single word or line in the app first.</div>
+    </div>
     <div class="box">
       <h2>Size and place</h2>
       <div class="row"><label>Text size</label><button data-s="-1">A&#8722;&#8722;</button><button data-s="-0.5">A&#8722;</button><input id="size" type="number" step="0.5" min="5" max="80" style="width:78px"><button data-s="0.5">A+</button><button data-s="1">A++</button></div>
@@ -246,10 +251,10 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
       var rg = d.createRange(); rg.selectNodeContents(n);
       Array.prototype.forEach.call(rg.getClientRects(), function (b) { if (b.width >= 1) out.push({ l: b.left, r: b.right, t: b.top + fa - m.actualBoundingBoxAscent, b: b.top + fa + m.actualBoundingBoxDescent }); });
     }
-    if (!out.length) { var bb = el.getBoundingClientRect(); if (bb.width && bb.height) out.push({ l: bb.left, r: bb.right, t: bb.top, b: bb.bottom }); }
+    if (!out.length) { var bb = el.getBoundingClientRect(); if (bb.width || bb.height) out.push({ l: bb.left, r: bb.right, t: bb.top, b: bb.bottom }); }
     return out;
   }
-  var union = function (rs) { return rs.reduce(function (a, b) { return { l: Math.min(a.l, b.l), r: Math.max(a.r, b.r), t: Math.min(a.t, b.t), b: Math.max(a.b, b.b) }; }); };
+  var union = function (rs) { if (!rs.length) return { l: 0, r: 0, t: 0, b: 0 }; return rs.reduce(function (a, b) { return { l: Math.min(a.l, b.l), r: Math.max(a.r, b.r), t: Math.min(a.t, b.t), b: Math.max(a.b, b.b) }; }); };
   /* 10/02, his phone: "the distances are straight up in the way". The lines show while he drags or nudges and fade
      1.6 s later, like Canva's; the four numbers stay in the panel line at all times. */
   var guideUntil = 0, guideT = 0;
@@ -325,14 +330,22 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
       if (s.dx || s.dy) bits.push("moved " + (s.dx || 0) + "," + (s.dy || 0));
       ["size", "font", "weight", "color", "bg", "edge", "tcase"].forEach(function (k) { if (s[k] !== undefined && s[k] !== "") bits.push(k === "size" ? s[k] + " px" : s[k]); });
       if (s.hide) bits.push("hidden");
+      if (s.text) bits.push("words: " + s.text);
       li.innerHTML = "<span></span><button>Remove</button>";
       li.firstChild.textContent = (r.name || r.path || r.part || r.sel) + " → " + where + (r.look !== "all" ? " (" + r.look + ")" : "") + ": " + (bits.join(", ") || "no change");
       li.lastChild.onclick = function () { hist.push(JSON.stringify(doc.rules)); doc.rules.splice(i, 1); paint(); fill(); };
       ul.appendChild(li);
     });
   }
+  /* words can be changed on a piece that holds only text (not a box of other pieces), and on a card only for that
+     one card, so a new title never lands on every card */
+  function wordsOk() { return !!(sel && sel.el && sel.el.tagName.toLowerCase() !== "svg" && ownText(sel.el)); }
   function fill() {
     var r = sel && findRule(key()), s = (r && r.set) || {}, el = sel && sel.el, cs = el ? el.ownerDocument.defaultView.getComputedStyle(el) : null;
+    var wok = wordsOk(); $("words").disabled = $("wordsGo").disabled = !wok;
+    var tk = sel && sel.in === "card" ? Object.assign(key(), { scope: "card", value: sel.card }) : null, tr = tk ? findRule(tk) : r;
+    $("words").value = (tr && tr.set && tr.set.text) || ""; $("words").placeholder = wok ? ownText(sel.el).slice(0, 60) : "Type new words";
+    $("wordsNote").textContent = !sel ? "Tap a single word or line in the app first." : !wok ? "This piece has no words of its own. Tap the words themselves, or use Smaller." : sel.in === "card" ? "Changes the words on this one card only. Words that update by themselves stop updating." : "Changes these words everywhere they show. Words that update by themselves stop updating.";
     $("moveRead").textContent = (s.dx || 0) + ", " + (s.dy || 0) + " px";
     $("size").value = s.size || (cs ? Math.round(parseFloat(cs.fontSize) * 10) / 10 : "");
     var mark = function (box, v) { Array.prototype.forEach.call($(box).children, function (b) { b.classList.toggle("sel", (b.getAttribute("data-v") || "") === (v === undefined ? "" : String(v))); }); };
@@ -444,6 +457,20 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
   $("outer").onclick = outer; $("inner").onclick = inner; $("undo").onclick = undo;
   $("resetPart").onclick = function () { var k = key(); if (!k) { say("Tap a word in the app first.", "err"); return; } var r = findRule(k); if (!r) { say("Nothing changed on this one yet.", "err"); return; } hist.push(JSON.stringify(doc.rules)); doc.rules.splice(doc.rules.indexOf(r), 1); paint(); fill(); };
   $("pick").onclick = togglePick;
+  $("wordsGo").onclick = function () {
+    if (!wordsOk()) { say("Tap the words themselves first.", "err"); return; }
+    var t = $("words").value.trim(); if (!t) { say("Type the new words first.", "err"); return; }
+    var px = Math.round(parseFloat(sel.el.ownerDocument.defaultView.getComputedStyle(sel.el).fontSize) * 10) / 10;
+    var was = scope; if (sel.in === "card") scope = "card";
+    edit(function (s) { s.text = t; if (!(Number(s.textSize) > 0)) s.textSize = px; });
+    scope = was; say(sel.in === "card" ? "New words on this card." : "New words in place.", "ok");
+  };
+  $("words").onkeydown = function (e) { if (e.key === "Enter") $("wordsGo").click(); };
+  $("wordsOff").onclick = function () {
+    if (!sel) { say("Tap a word in the app first.", "err"); return; }
+    var was = scope; if (sel.in === "card") scope = "card";
+    edit(function (s) { delete s.text; delete s.textSize; }); scope = was;
+  };
   $("focus").onclick = function () { focusOn = !focusOn; this.className = focusOn ? "on" : ""; focusCard(); paint(); };
   $("look").onchange = function () { try { fw().localStorage.setItem("hk_theme_v1", this.value); } catch (e) {} sel = null; fw().location.reload(); };
 

@@ -111,11 +111,23 @@
     if (e === "drop") { out.push("-webkit-text-stroke:0"); out.push("text-shadow:1.5px 2px 0 rgba(16,22,28,.55)"); }
     return out;
   }
+  /* 10/02, Gray: "it says GB in the top of the app... I need to be able to edit that. I need to be able to edit
+     everything". New words for one element: its own words drop to size 0 and the new ones are drawn in its ::after
+     at the size it was, so colour, font, weight, caps and spacing all still apply. Plain text only: quotes,
+     backslashes and anything that could close the style tag are cut, and it is capped at 160 characters. */
+  var cssText = function (t) { return String(t).replace(/[\\"<>{}]/g, "").replace(/[\r\n]+/g, " ").slice(0, 160); };
   function ruleCss(r) {
     if (!r || !r.set) return "";
     var sel = target(r); if (!sel) return "";
-    var out = decls(r.set); if (!out.length) return "";
-    return sel + "{" + out.map(function (d) { return d + " !important"; }).join(";") + "}";
+    var out = decls(r.set), s = r.set, extra = "";
+    if (typeof s.text === "string" && s.text.trim()) {
+      var px = Number(s.size) > 0 ? Number(s.size) : Number(s.textSize) > 0 ? Number(s.textSize) : 16;
+      out = out.filter(function (d) { return d.indexOf("font-size:") !== 0; });
+      out.push("font-size:0");
+      extra = "\n" + sel.split(",").map(function (x) { return x + "::after"; }).join(",") + "{content:\"" + cssText(s.text) + "\" !important;font-size:" + px + "px !important}";
+    }
+    if (!out.length) return "";
+    return sel + "{" + out.map(function (d) { return d + " !important"; }).join(";") + "}" + extra;
   }
   function designCss(doc) { return ((doc && doc.rules) || []).map(ruleCss).filter(Boolean).join("\n"); }
   /* fonts a saved design uses that the app does not already carry: the build fetches these */
