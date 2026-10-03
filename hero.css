@@ -972,7 +972,14 @@ html.hk_calopen .hk :is(.hero, .hk_supportfloat, .tabpanel, .hk_nav), html.hk_ca
 .hero.hk_nhon > .hk_nh { position: absolute; inset: 0px; z-index: 0; overflow: hidden; pointer-events: none; }
 .hero.hk_nhon > .hk_nh > svg { display: block; width: 100%; height: 100%; }
 .hero.hk_nhon > :is(.sun, .clouds, .hz, .glit, .hk_boat, .hk_sailw, .boat-refl, .supw, .rplfield, .hero-wave, .hero-sand, .hk_swellw, .hero-surf, .beachprops, .crabw, .hgulw, .hero_slot_boatname, .hero_slot_yacht, .hero_slot_parasa) { display: none !important; }
-.hero.hk_nhon :is(.adparasail, [class^="hkn_"], [class*=" hkn_"]) { display: none !important; }
+.hero.hk_nhon :is(.adparasail, .npw, [class^="hkn_"], [class*=" hkn_"]) { display: none !important; }
+.hero[data-sea] .hk_nh [id$="move-waves"] { transition: opacity 0.6s; }
+.hero[data-sea="calm"] .hk_nh [id$="move-waves"] { opacity: 0.18; }
+.hero[data-sea="light"] .hk_nh [id$="move-waves"] { opacity: 0.5; }
+.hero[data-sea="breezy"] .hk_nh [id$="move-waves"] { opacity: 0.72; }
+.hero[data-sea="rough"] .hk_nh [id$="move-waves"] { opacity: 1; }
+.hero[data-sea="calm"] .hk_nh [id$="whitecaps"], .hero[data-sea="light"] .hk_nh [id$="whitecaps"] { display: none; }
+.hero[data-sea="breezy"] .hk_nh [id$="whitecaps"] { opacity: 0.55; }
 @keyframes hk_gl { 
   0%, 100% { opacity: 0; transform: scaleX(0.25); }
   33%, 67% { opacity: var(--glo,.6); transform: scaleX(1); }
