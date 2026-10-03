@@ -208,7 +208,7 @@
     var colOk = function (c) { return /^(#[0-9a-fA-F]{3,8}|rgba?\([0-9.,\s%]+\))$/.test(String(c || "")); };
     if (!o.paths.every(function (q) { return q && typeof q.d === "string" && q.d.length < 9000 && /^[MLZ0-9.\s-]+$/.test(q.d); })) return null;
     if (typeof o.vb !== "string" || !/^-?[0-9.]+ -?[0-9.]+ [0-9.]+ [0-9.]+$/.test(o.vb)) return null;
-    if (!Array.isArray(o.pad) || o.pad.length !== 4 || !o.pad.every(function (v) { return isFinite(Number(v)) && Number(v) >= 0 && Number(v) < 400; })) return null;
+    if (!Array.isArray(o.pad) || o.pad.length !== 4 || !o.pad.every(function (v) { return isFinite(Number(v)) && Number(v) >= 0 && Number(v) < 1500; })) return null;
     return { vb: o.vb, pad: o.pad.map(function (v) { return Math.round(Number(v) * 10) / 10; }), paths: o.paths.map(function (q) { return { d: q.d, fill: colOk(q.fill) ? q.fill : "#FFFDF8" }; }) };
   }
   function designCss(doc) { CUSTOM = customOf(doc); return ((doc && doc.rules) || []).map(ruleCss).filter(Boolean).join("\n"); }

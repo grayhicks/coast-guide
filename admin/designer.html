@@ -513,9 +513,11 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
         <div class="seg" id="bcSeg"><button data-v="#FFFFFF">White</button><button data-v="#F4EEE2">Cream</button><button data-v="#14202B">Navy</button><button data-v="#FF2D87">Pink</button></div>
       </div>
       <div id="lineShape">
-        <div class="mute" id="shapeNote">Drag a pink dot to bend that part of the line. Tap a dot to give that part its own thickness.</div>
+        <div class="mute" id="shapeNote">Drag a pink dot to bend that part of the line. Touch the line anywhere to add a dot there. Tap a dot to give that part its own thickness.</div>
         <div class="seg" id="layerSeg"></div>
-        <div class="row"><label>Dots</label><button id="dotLess" title="Fewer dots: a smoother, simpler bend">Fewer</button><b id="dotN">5</b><button id="dotMore" title="More dots: bend smaller parts of the line">More</button></div>
+        <div class="row"><label>Dots</label><button id="dotLess" title="Fewer dots: a smoother, simpler bend">Fewer</button><b id="dotN">5</b><button id="dotMore" title="More dots: bend smaller parts of the line">More</button><button id="dotDel" title="Take the tapped dot away">Remove this dot</button></div>
+        <div class="row"><label for="stretchR" title="Pull the whole line wider or narrower">Wide</label><input id="stretchR" type="range" min="20" max="600" step="5" value="100" style="flex:1;min-width:120px;padding:0"><span class="mute" id="stretchRead">100%</span></div>
+        <div class="row"><label for="heightR">Height</label><input id="heightR" type="range" min="0" max="600" step="5" value="100" style="flex:1;min-width:120px;padding:0"><span class="mute" id="heightRead">100%</span></div>
         <div class="row"><label for="thickR">Whole line</label><input id="thickR" type="range" min="20" max="300" step="5" value="100" style="flex:1;min-width:120px;padding:0"><span class="mute" id="thickRead">100%</span></div>
         <div class="row"><label for="dotW" id="dotWLab">Tap a dot</label><input id="dotW" type="range" min="0" max="300" step="5" value="100" disabled style="flex:1;min-width:120px;padding:0"><span class="mute" id="dotWRead"></span></div>
         <div class="seg" id="lineCol"><button data-v="">Drawing's own</button><button data-v="#FFFDF8">Cream</button><button data-v="#E8C078">Gold</button><button data-v="#FF2D87">Pink</button><button data-v="#2EC4B6">Teal</button><button data-v="#14202B">Navy</button></div>
@@ -678,27 +680,35 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     if (shapeBase && shapeBase.path === tg.path && shapeBase.d === tg.path.getAttribute("d")) return shapeBase;
     var p = tg.path, L = p.getTotalLength(), n = 220, pts = [];
     for (var i = 0; i < n; i++) { var q = p.getPointAtLength(L * i / n); pts.push([q.x, q.y]); }
-    var mids = [], gap = Math.round(n / 8);
+    var mids = [], pair = [], gap = Math.round(n / 8);
     for (i = 0; i < n; i++) {
       /* the point straight across the line: the nearest one that is not its own neighbour along the outline */
       var best = Infinity, bj = i; for (var j = 0; j < n; j++) { var dd = Math.abs(((j - i + n + n / 2) % n) - n / 2); if (dd < gap) continue; var e = Math.hypot(pts[j][0] - pts[i][0], pts[j][1] - pts[i][1]); if (e < best) { best = e; bj = j; } }
-      mids.push([(pts[i][0] + pts[bj][0]) / 2, (pts[i][1] + pts[bj][1]) / 2]); }
+      mids.push([(pts[i][0] + pts[bj][0]) / 2, (pts[i][1] + pts[bj][1]) / 2]); pair.push(bj); }
     var xs = pts.map(function (q) { return q[0]; }), vb = tg.svg.viewBox.baseVal;
-    shapeBase = { path: p, d: p.getAttribute("d"), pts: pts, mids: mids, x0: Math.min.apply(null, xs), x1: Math.max.apply(null, xs), vb: { x: vb.x, y: vb.y, w: vb.width, h: vb.height } };
+    var ys0 = mids.map(function (m) { return m[1]; });
+    shapeBase = { path: p, d: p.getAttribute("d"), pts: pts, mids: mids, pair: pair, cy: ys0.reduce(function (a2, v) { return a2 + v; }, 0) / ys0.length, x0: Math.min.apply(null, xs), x1: Math.max.apply(null, xs), vb: { x: vb.x, y: vb.y, w: vb.width, h: vb.height } };
     return shapeBase;
   }
   function dotXs(B, n) { var o = []; for (var k = 0; k < n; k++) o.push(B.x0 + (B.x1 - B.x0) * (0.1 + 0.8 * k / (n - 1))); return o; }
   function midY(B, X) { var near = B.mids.filter(function (m) { return Math.abs(m[0] - X) < (B.x1 - B.x0) / 12; }); return near.length ? near.reduce(function (s0, m) { return s0 + m[1]; }, 0) / near.length : (B.vb.y + B.vb.h / 2); }
   /* a value at any point along the line, smoothly between the dots (a Catmull-Rom curve through them) */
-  function along(B, vals, x) {
-    var n = vals.length; if (n === 1) return vals[0]; var xs = dotXs(B, n), u = Math.max(0, Math.min(n - 1, (x - xs[0]) / ((xs[n - 1] - xs[0]) / (n - 1)))), i = Math.min(n - 2, Math.floor(u)), f = u - i;
+  /* where each dot sits along the line: evenly spaced, or wherever he tapped one in (Ly.x) */
+  function xsOf(B, Ly) { return Array.isArray(Ly.x) && Ly.x.length === Ly.h.length ? Ly.x : dotXs(B, Ly.h.length); }
+  function along(B, vals, x, xs) {
+    var n = vals.length; if (n === 1) return vals[0]; xs = xs || dotXs(B, n);
+    var i = 0; while (i < n - 2 && x > xs[i + 1]) i++; var f = Math.max(0, Math.min(1, (x - xs[i]) / ((xs[i + 1] - xs[i]) || 1)));
+    if (x < xs[0]) f = 0; if (x > xs[n - 1]) f = 1;
     var P = function (k) { return vals[Math.max(0, Math.min(n - 1, k))]; }, cr = function (p0, p1, p2, p3) { return 0.5 * (2 * p1 + (-p0 + p2) * f + (2 * p0 - 5 * p1 + 4 * p2 - p3) * f * f + (-p0 + 3 * p1 - 3 * p2 + p3) * f * f * f); };
     if (Array.isArray(vals[0])) return [0, 1].map(function (c) { return cr(P(i - 1)[c], P(i)[c], P(i + 1)[c], P(i + 2)[c]); });
     return cr(P(i - 1), P(i), P(i + 1), P(i + 2));
   }
   function newLayer(n) { var h = [], w = []; for (var k = 0; k < n; k++) { h.push([0, 0]); w.push(1); } return { h: h, w: w, k: 1, c: "", o: [0, 0] }; }
-  function layerPts(B, Ly) { return B.pts.map(function (q, i) { var m = B.mids[i], kk = Math.max(0, (Number(Ly.k) || 1) * along(B, Ly.w, m[0])), o = along(B, Ly.h, m[0]);
-    return [m[0] + (q[0] - m[0]) * kk + o[0] + Ly.o[0], m[1] + (q[1] - m[1]) * kk + o[1] + Ly.o[1]]; }); }
+  /* Stretch (Ly.s) pulls the whole line longer or shorter about its own middle, after the bend */
+  function layerPts(B, Ly) { var xs = xsOf(B, Ly), st = Number(Ly.s) || 1, tt = Ly.t === undefined ? 1 : Number(Ly.t), cx = (B.x0 + B.x1) / 2, cy = B.cy;
+    /* Height (Ly.t) pulls the bends taller or flatter about the line's own level; the line's thickness is kept */
+    return B.pts.map(function (q, i) { var m = B.mids[i], kk = Math.max(0, (Number(Ly.k) || 1) * along(B, Ly.w, m[0], xs)), o = along(B, Ly.h, m[0], xs), x = m[0] + (q[0] - m[0]) * kk + o[0] + Ly.o[0], my = cy + (m[1] + o[1] + Ly.o[1] - cy) * tt;
+      return [cx + (x - cx) * st, my + (q[1] - m[1]) * kk]; }); }
   /* the drawing's own colour as painted now (the squiggle's is cream, #FFFDF8, on every scene) */
   function fillOf(tg) { var f = tg.svg.ownerDocument.defaultView.getComputedStyle(tg.path).fill; return /^rgba?\(/.test(f) ? f : "#FFFDF8"; }
   function shapeOut(tg, sh) {
@@ -717,7 +727,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   function setShape(mut) {
     if (!sel) return; var tg = shapeTarget(sel.el); if (!tg) return; var r = ruleFor(key()), sh = r.set.shape && r.set.shape.L ? JSON.parse(JSON.stringify(r.set.shape)) : { L: [newLayer(5)] };
     mut(sh); if (shapeUi.layer >= sh.L.length) shapeUi.layer = sh.L.length - 1;
-    var L0 = sh.L[0], plain = sh.L.length === 1 && L0.k === 1 && !L0.c && !L0.o[0] && !L0.o[1] && L0.h.every(function (q) { return !q[0] && !q[1]; }) && L0.w.every(function (v) { return v === 1; });
+    var L0 = sh.L[0], plain = sh.L.length === 1 && L0.k === 1 && !L0.c && !L0.o[0] && !L0.o[1] && L0.h.every(function (q) { return !q[0] && !q[1]; }) && L0.w.every(function (v) { return v === 1; }) && !L0.s && !L0.x && L0.t === undefined;
     if (plain) delete r.set.shape; else { sh.out = shapeOut(tg, sh); r.set.shape = sh; }
     paint(); bendDots();
   }
@@ -727,7 +737,9 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     if (sh.L.length < 6) { var a = document.createElement("button"); a.className = "add"; a.textContent = "+ Add a line"; a.title = "Lay another copy of this line behind it, with its own dots, thickness and colour";
       a.onclick = function () { snap(); setShape(function (s2) { var c = JSON.parse(JSON.stringify(s2.L[0])); c.o = [0, 2.5]; c.c = "#E8C078"; c.k = (Number(c.k) || 1) * 0.8; s2.L.push(c); shapeUi = { layer: s2.L.length - 1, dot: -1 }; }); fill(); say("A second line sits behind the first. Drag its dots, or shift it with the arrows.", "ok"); };
       seg.appendChild(a); }
-    $("dotN").textContent = Ly.h.length; $("thickR").value = Math.round((Number(Ly.k) || 1) * 100); $("thickRead").textContent = $("thickR").value + "%";
+    $("dotN").textContent = Ly.h.length; $("stretchR").value = Math.round((Number(Ly.s) || 1) * 100); $("stretchRead").textContent = $("stretchR").value + "%";
+    $("heightR").value = Math.round((Ly.t === undefined ? 1 : Number(Ly.t)) * 100); $("heightRead").textContent = $("heightR").value + "%";
+    $("dotDel").style.display = shapeUi.dot > -1 && Ly.h.length > 3 ? "" : "none"; $("thickR").value = Math.round((Number(Ly.k) || 1) * 100); $("thickRead").textContent = $("thickR").value + "%";
     var dw = shapeUi.dot > -1 && shapeUi.dot < Ly.w.length; $("dotW").disabled = !dw; $("dotWLab").textContent = dw ? "Dot " + (shapeUi.dot + 1) + " thickness" : "Tap a dot";
     $("dotW").value = dw ? Math.round(Ly.w[shapeUi.dot] * 100) : 100; $("dotWRead").textContent = dw ? $("dotW").value + "%" : "";
     Array.prototype.forEach.call($("lineCol").children, function (b) { b.classList.toggle("sel", b.getAttribute("data-v") === (Ly.c || "")); });
@@ -743,11 +755,14 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     /* a line this small is zoomed in on when the Shape tab opens, so the dots sit apart and the bend can be seen */
     if (!bend && zoomK === 1 && !shapeUi.zoomed && tg.svg.getBoundingClientRect().width < 160) { shapeUi.zoomed = true; zoomK = 3; zoomTo(); return; }
     var B = baseOf(tg), sh = curShape(), Ly = sh.L[shapeUi.layer] || sh.L[0], M = tg.path.getScreenCTM(); if (!M) return; shapeFill(sh);
-    var zk = zoomK || 1, n = Ly.h.length, S = (n > 8 ? 18 : 24) / zk; if (old.length !== n) { old.forEach(function (x) { x.remove(); }); old = []; }
+    var zk = zoomK || 1, n = Ly.h.length, S = (n > 16 ? 14 : n > 8 ? 18 : 24) / zk; if (old.length !== n) { old.forEach(function (x) { x.remove(); }); old = []; }
     /* each dot sits on the line as it is drawn now: the middle of the outline points across from each other near it */
-    var np = layerPts(B, Ly), span = (B.x1 - B.x0) / 20;
-    dotXs(B, n).forEach(function (x, i) { var near = []; B.mids.forEach(function (m, j) { if (Math.abs(m[0] - x) < span) near.push(np[j]); });
-      var o = Ly.h[i], X = near.length ? near.reduce(function (s0, q) { return s0 + q[0]; }, 0) / near.length : x + o[0] + Ly.o[0], Y = near.length ? near.reduce(function (s0, q) { return s0 + q[1]; }, 0) / near.length : midY(B, x) + o[1] + Ly.o[1], cx = M.a * X + M.c * Y + M.e, cy = M.b * X + M.d * Y + M.f, on = i === shapeUi.dot;
+    var np = layerPts(B, Ly), span = (B.x1 - B.x0) / Math.max(20, n * 3);
+    var st0 = Number(Ly.s) || 1, tt0 = Ly.t === undefined ? 1 : Number(Ly.t), cx0 = (B.x0 + B.x1) / 2;
+    xsOf(B, Ly).forEach(function (x, i) { var o = Ly.h[i], ex = cx0 + (x + o[0] + Ly.o[0] - cx0) * st0, ey = B.cy + (midY(B, x) + o[1] + Ly.o[1] - B.cy) * tt0, bj = 0, bd = Infinity;
+      /* snapped onto the line as drawn: the outline point nearest the dot's own place, and the one across from it */
+      np.forEach(function (q, j) { var dd = Math.hypot(q[0] - ex, q[1] - ey); if (dd < bd) { bd = dd; bj = j; } });
+      var qa = np[bj], qb = np[B.pair[bj]] || qa, X = (qa[0] + qb[0]) / 2, Y = (qa[1] + qb[1]) / 2, cx = M.a * X + M.c * Y + M.e, cy = M.b * X + M.d * Y + M.f, on = i === shapeUi.dot;
       var b = old[i] || d.createElement("div"); b.className = "hk_bend"; b.setAttribute("data-i", i); b.setAttribute("aria-label", "Bend point " + (i + 1));
       b.style.cssText = "position:fixed;z-index:2147483647;left:" + (cx - S / 2) + "px;top:" + (cy - S / 2) + "px;width:" + S + "px;height:" + S + "px;border-radius:50%;background:" + (on ? "#fff" : "#FF2D87") + ";border:" + (3 / zk) + "px solid " + (on ? "#FF2D87" : "#fff") + ";box-shadow:0 1px 6px rgba(0,0,0,.45);touch-action:none;cursor:grab;pointer-events:auto;box-sizing:border-box";
       if (!b.parentNode) d.body.appendChild(b); });
@@ -1268,6 +1283,9 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       "\n[data-hk-pick]:not([data-hk-big]){touch-action:none !important;}" +
       /* on the Shape tab the corner handles and the turn dot step aside, so only the bend dots sit on the line */
       "\nhtml.hk_shaping [id^=\"hk_handle\"], html.hk_shaping #hk_turn{display:none !important;}" +
+      /* and a finger that lands next to the line never scrolls the page mid-drag (the browser cancels the touch when it
+         starts a scroll, so a new dot went dead after a few steps, 10/03) */
+      "\nhtml.hk_shaping .hero:has([data-hk-pick]), html.hk_shaping .hero:has([data-hk-pick]) *, html.hk_shaping .card:has([data-hk-pick]), html.hk_shaping .card:has([data-hk-pick]) *{touch-action:none !important;}" +
       /* the app's floating buttons (Show support, back to top) step aside while he picks, so they never sit on a card he is editing */
       (picking && hideFloats ? "\n.hk_supportfloat, .hk_totop, [aria-label=\"Back to top\"]{visibility:hidden !important;}" : "") +
       (picking ? "\n.hk *{cursor:crosshair !important;}\n.hk [data-hk-pick], .hk [data-hk-pick] *{cursor:move !important;}\n[data-hk-add]{pointer-events:auto !important;}" : "") +
@@ -1463,6 +1481,21 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
         bend = { i: Number(e.target.getAttribute("data-i")), x: e.clientX, y: e.clientY, on: false, h0: JSON.parse(JSON.stringify(L0.h)), ia: 1 / (Math.hypot(M0.a, M0.b) || 1) };
         return;
       }
+      /* 10/03, Gray: "Can I add more dots to be able to change the shapes a lot more and stretch it out". On the Shape
+         tab a finger on the line itself (not on a dot) puts a new dot there and picks it up, so one touch adds and drags */
+      if (sel && document.body.getAttribute("data-tab") === "shape" && shapeTarget(sel.el) && !(e.target.classList && e.target.classList.contains("hk_bend"))) {
+        var tgA = shapeTarget(sel.el), MA = tgA.path.getScreenCTM(), BA = baseOf(tgA), shA = curShape(), LyA = shA.L[shapeUi.layer] || shA.L[0], npA = layerPts(BA, LyA), bj = -1, bd = Infinity;
+        if (MA && LyA.h.length < 40) npA.forEach(function (q, j) { var X = MA.a * q[0] + MA.c * q[1] + MA.e, Y = MA.b * q[0] + MA.d * q[1] + MA.f, dd = Math.hypot(X - e.clientX, Y - e.clientY); if (dd < bd) { bd = dd; bj = j; } });
+        if (bj > -1 && bd < 18 / (zoomK || 1)) {
+          e.preventDefault(); e.stopPropagation(); tap = null; snap(); var nx = BA.mids[bj][0], ni = 0;
+          setShape(function (sh) { var Ly = sh.L[shapeUi.layer] || sh.L[0], xs = xsOf(BA, Ly).slice(); ni = 0; while (ni < xs.length && xs[ni] < nx) ni++;
+            var hv = along(BA, Ly.h, nx, xs).map(function (v) { return Math.round(v * 100) / 100; }), wv = Math.round(along(BA, Ly.w, nx, xs) * 100) / 100;
+            xs.splice(ni, 0, Math.round(nx * 100) / 100); Ly.h.splice(ni, 0, hv); Ly.w.splice(ni, 0, wv); Ly.x = xs; });
+          shapeUi.dot = ni; bendDots(); var shN = curShape(), LyN = shN.L[shapeUi.layer] || shN.L[0];
+          bend = { i: ni, x: e.clientX, y: e.clientY, on: true, added: true, h0: JSON.parse(JSON.stringify(LyN.h)), ia: 1 / (Math.hypot(MA.a, MA.b) || 1) };
+          say("Dot added. Drag it to shape the line.", "ok"); return;
+        }
+      }
       if (e.target && /^hk_handle/.test(e.target.id || "") && sel) {
         e.preventDefault(); e.stopPropagation(); tap = null; var b = boxOf(sel.el), cx = (b.l + b.r) / 2, cy = (b.t + b.b) / 2;
         resize = { hid: e.target.id, cx: cx, cy: cy, d0: Math.max(8, Math.hypot(e.clientX - cx, e.clientY - cy)), on: false,
@@ -1496,8 +1529,8 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
         pinch.starts.forEach(function (st) { withSel(st.g, function () { var r = ruleFor(key()); if (st.txt) r.set.size = Math.max(5, Math.round(st.base * k * 2) / 2); else r.set.scale = Math.max(0.2, Math.min(4, Math.round(st.base * k * 100) / 100)); syncText(r);
           var v = st.rot + da, sn = Math.round(v / 15) * 15; v = Math.abs(v - sn) < 5 ? sn : Math.round(v); v = ((v + 540) % 360) - 180; if (!v) delete r.set.rot; else r.set.rot = v; }); });
         paint(); fill(); e.preventDefault(); e.stopPropagation(); return; }
-      if (bend) { var bx = e.clientX - bend.x, by = e.clientY - bend.y; if (!bend.on) { if (Math.abs(bx) + Math.abs(by) < 3) return; bend.on = true; snap(); }
-        setShape(function (sh) { var Ly = sh.L[shapeUi.layer] || sh.L[0]; Ly.h = JSON.parse(JSON.stringify(bend.h0)); Ly.h[bend.i] = [Math.round((bend.h0[bend.i][0] + bx * bend.ia) * 100) / 100, Math.round((bend.h0[bend.i][1] + by * bend.ia) * 100) / 100]; });
+      if (bend) { var bx = e.clientX - bend.x, by = e.clientY - bend.y; if (Math.abs(bx) + Math.abs(by) >= 3) bend.mv = true; if (!bend.on) { if (Math.abs(bx) + Math.abs(by) < 3) return; bend.on = true; snap(); }
+        setShape(function (sh) { var Ly = sh.L[shapeUi.layer] || sh.L[0]; Ly.h = JSON.parse(JSON.stringify(bend.h0)); Ly.h[bend.i] = [Math.round((bend.h0[bend.i][0] + bx * bend.ia / (Number(Ly.s) || 1)) * 100) / 100, Math.round((bend.h0[bend.i][1] + by * bend.ia / ((Ly.t === undefined ? 1 : Number(Ly.t)) || 1)) * 100) / 100]; });
         e.preventDefault(); e.stopPropagation(); return; }
       if (turn) { var a = (Math.atan2(e.clientY - turn.cy, e.clientX - turn.cx) - turn.a0) * 180 / Math.PI; a = ((a + 540) % 360) - 180; if (!turn.on) { if (Math.abs(a) < 2) return; turn.on = true; snap(); }
         turn.starts.forEach(function (st) { withSel(st.g, function () { var v = st.rot + a, sn = Math.round(v / 15) * 15; v = e.altKey ? Math.round(v) : Math.abs(v - sn) < 4 ? sn : Math.round(v); v = ((v + 540) % 360) - 180; var r = ruleFor(key()); if (!v) delete r.set.rot; else r.set.rot = v; }); });
@@ -1539,6 +1572,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
           if (!got.length) { say("Nothing whole inside that box. Draw it around the pieces.", "err"); return; }
           trail = []; levelBase = null; select(got[0]); got.slice(1).forEach(function (n) { toggleGroup(n); });
           say(got.length === 1 ? "Picked 1 piece." : got.length + " pieces picked. Every change now goes on all of them.", "ok"); return; } }
+      if (bend && bend.added && !bend.mv) { bend = null; e.preventDefault(); e.stopPropagation(); fill(); bendDots(); return; }
       if (bend) { var bw = bend.on, bi = bend.i; bend = null; e.preventDefault(); e.stopPropagation();
         if (bw) { fill(); bendDots(); say("Bent. Undo takes it back.", "ok"); } else { shapeUi.dot = shapeUi.dot === bi ? -1 : bi; bendDots(); } return; }
       if (turn) { var tw = turn.on; turn = null; e.preventDefault(); e.stopPropagation(); ring(); if (tw) { fill(); say("Turned. Undo takes it back.", "ok"); } return; }
@@ -1787,13 +1821,25 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     $("dotW").addEventListener("input", function () { var v = Number(this.value) / 100; $("dotWRead").textContent = this.value + "%"; if (!ok() || shapeUi.dot < 0) return; if (!slidW) { slidW = true; snap(); } setShape(function (sh) { var Ly = cur(sh); if (shapeUi.dot < Ly.w.length) Ly.w[shapeUi.dot] = v; }); });
     $("dotW").addEventListener("change", function () { slidW = false; fill(); });
     /* more or fewer dots keeps the bend he already made: the new dots are read off the curve through the old ones */
-    var reDot = function (dn) { if (!ok()) return; var B = baseOf(shapeTarget(sel.el)); snap(); setShape(function (sh) { var Ly = cur(sh), n = Math.max(3, Math.min(12, Ly.h.length + dn)); if (n === Ly.h.length) return;
-      var xs = dotXs(B, n); Ly.h = xs.map(function (x) { return along(B, Ly.h, x).map(function (v) { return Math.round(v * 100) / 100; }); }); Ly.w = xs.map(function (x) { return Math.round(along(B, Ly.w, x) * 100) / 100; }); shapeUi.dot = -1; }); fill(); };
+    /* more or fewer dots keeps the bend he already made: More puts a dot in the middle of the widest gap (on the curve
+       as it is), Fewer takes away the dot the curve misses least */
+    var reDot = function (dn) { if (!ok()) return; var B = baseOf(shapeTarget(sel.el)); snap(); setShape(function (sh) { var Ly = cur(sh), xs = xsOf(B, Ly).slice(), n = Ly.h.length;
+      if (dn > 0 && n < 40) { var gi = 0; for (var i = 1; i < n - 1; i++) if (xs[i + 1] - xs[i] > xs[gi + 1] - xs[gi]) gi = i; var nx = (xs[gi] + xs[gi + 1]) / 2;
+        var hv = along(B, Ly.h, nx, xs).map(function (v) { return Math.round(v * 100) / 100; }), wv = Math.round(along(B, Ly.w, nx, xs) * 100) / 100;
+        xs.splice(gi + 1, 0, Math.round(nx * 100) / 100); Ly.h.splice(gi + 1, 0, hv); Ly.w.splice(gi + 1, 0, wv); Ly.x = xs; }
+      if (dn < 0 && n > 3) { var bj = 1, be = Infinity; for (var j = 1; j < n - 1; j++) { var t = (xs[j] - xs[j - 1]) / ((xs[j + 1] - xs[j - 1]) || 1), ex = Ly.h[j - 1][0] + (Ly.h[j + 1][0] - Ly.h[j - 1][0]) * t, ey = Ly.h[j - 1][1] + (Ly.h[j + 1][1] - Ly.h[j - 1][1]) * t, ew = Ly.w[j - 1] + (Ly.w[j + 1] - Ly.w[j - 1]) * t, er = Math.hypot(Ly.h[j][0] - ex, Ly.h[j][1] - ey) + Math.abs(Ly.w[j] - ew) * 4; if (er < be) { be = er; bj = j; } }
+        xs.splice(bj, 1); Ly.h.splice(bj, 1); Ly.w.splice(bj, 1); Ly.x = xs; }
+      shapeUi.dot = -1; }); fill(); };
+    $("dotDel").onclick = function () { if (!ok() || shapeUi.dot < 0) return; var B = baseOf(shapeTarget(sel.el)); snap(); setShape(function (sh) { var Ly = cur(sh); if (Ly.h.length <= 3) return; var xs = xsOf(B, Ly).slice(); xs.splice(shapeUi.dot, 1); Ly.h.splice(shapeUi.dot, 1); Ly.w.splice(shapeUi.dot, 1); Ly.x = xs; }); shapeUi.dot = -1; bendDots(); fill(); say("Dot removed. Undo brings it back.", "ok"); };
+    (function () { var slidS = false; $("stretchR").addEventListener("input", function () { var v = Number(this.value) / 100; $("stretchRead").textContent = this.value + "%"; if (!ok()) return; if (!slidS) { slidS = true; snap(); } setShape(function (sh) { var Ly = cur(sh); if (v === 1) delete Ly.s; else Ly.s = v; }); });
+      $("stretchR").addEventListener("change", function () { slidS = false; fill(); });
+      var slidT = false; $("heightR").addEventListener("input", function () { var v = Number(this.value) / 100; $("heightRead").textContent = this.value + "%"; if (!ok()) return; if (!slidT) { slidT = true; snap(); } setShape(function (sh) { var Ly = cur(sh); if (v === 1) delete Ly.t; else Ly.t = v; }); });
+      $("heightR").addEventListener("change", function () { slidT = false; fill(); }); })();
     $("dotMore").onclick = function () { reDot(1); }; $("dotLess").onclick = function () { reDot(-1); };
     Array.prototype.forEach.call($("lineCol").children, function (b) { b.onclick = function () { if (!ok()) return; snap(); var v = b.getAttribute("data-v"); setShape(function (sh) { cur(sh).c = v; }); fill(); }; });
     Array.prototype.forEach.call($("lineNudge").querySelectorAll("button"), function (b) { b.onclick = function () { if (!ok()) return; snap(); var n = b.getAttribute("data-n").split(",").map(Number); setShape(function (sh) { var Ly = cur(sh); Ly.o = [Math.round((Ly.o[0] + n[0] * 0.5) * 100) / 100, Math.round((Ly.o[1] + n[1] * 0.5) * 100) / 100]; }); fill(); }; });
     $("lineDel").onclick = function () { if (!ok() || shapeUi.layer < 1) return; snap(); var i = shapeUi.layer; setShape(function (sh) { sh.L.splice(i, 1); }); shapeUi = { layer: 0, dot: -1 }; bendDots(); fill(); say("Line removed. Undo brings it back.", "ok"); };
-    $("shapeFlat").onclick = function () { if (!ok()) return; snap(); var B = baseOf(shapeTarget(sel.el)); setShape(function (sh) { var Ly = cur(sh), xs = dotXs(B, Ly.h.length), ys = xs.map(function (x) { return midY(B, x); }), ym = ys.reduce(function (s0, v) { return s0 + v; }, 0) / ys.length; Ly.h = ys.map(function (y) { return [0, Math.round((ym - y) * 100) / 100]; }); }); fill(); say("Straightened. Undo takes it back.", "ok"); };
+    $("shapeFlat").onclick = function () { if (!ok()) return; snap(); var B = baseOf(shapeTarget(sel.el)); setShape(function (sh) { var Ly = cur(sh), xs = xsOf(B, Ly), ys = xs.map(function (x) { return midY(B, x); }), ym = ys.reduce(function (s0, v) { return s0 + v; }, 0) / ys.length; Ly.h = ys.map(function (y) { return [0, Math.round((ym - y) * 100) / 100]; }); }); fill(); say("Straightened. Undo takes it back.", "ok"); };
     $("shapeReset").onclick = function () { if (!ok()) return; snap(); setShape(function (sh) { sh.L = [newLayer(5)]; }); shapeUi = { layer: 0, dot: -1 }; bendDots(); fill(); say("Back as drawn.", "ok"); };
   })();
   /* ---- line it up in one tap (10/03, J13), Gray's spacing law: "symmetrical spacing everywhere always. above and
