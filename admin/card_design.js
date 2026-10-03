@@ -136,7 +136,44 @@
     ((doc && doc.rules) || []).forEach(function (r) { var f = r.set && r.set.font; if (f && EXTRA.indexOf(f) > -1) seen[f] = 1; });
     return Object.keys(seen);
   }
-  var api = { PARTS: PARTS, FONTS: FONTS, BUILT_IN: BUILT_IN, EXTRA: EXTRA, SWATCHES: SWATCHES, EDGES: EDGES,
+  /* 10/02, Gray: "I should literally be able to correct everything and I port new stuff into the hero". An ADD is a
+     new piece he places: words, a sticker or a picture, dropped into whatever he had picked (the hero, a card, any
+     area). It is a real element appended into that host, absolutely placed, so the app around it never moves and
+     it never takes a tap from the app (pointer-events:none). React may redraw the host and drop it, so a watcher
+     puts it back. Styling an add is an ordinary rule on its own class, hk_add_<id>, so every tool works on it.
+     Same function here (preview) and in the build (inlined), so what he placed is what ships. */
+  var STICKERS = ["\u2B50", "\uD83C\uDF0A", "\u2600\uFE0F", "\uD83D\uDC2C", "\uD83D\uDC22", "\uD83C\uDF89", "\uD83D\uDD25", "\u2764\uFE0F", "\uD83C\uDFB5", "\uD83C\uDFD6\uFE0F", "\uD83C\uDF34", "\uD83E\uDD80"];
+  function placeAdds(d, list, srcOf) {
+    var adds = [], queued = false;
+    var idOk = function (v) { return /^[a-z0-9]{4,16}$/.test(String(v || "")); };
+    var host = function (a) {
+      var pth = String(a.path || ""); if (!/^[a-zA-Z0-9_\-\.\s>\[\]="'^:()#,]+$/.test(pth) || /[{}<]/.test(pth)) return null;
+      var base = a.in === "card" ? '.card[data-card-id^="' + String(a.card || "").replace(/[^a-zA-Z0-9_\-]/g, "") + '"] ' : a.in === "page" ? "" : ".hk ";
+      try { return d.querySelector(base + pth); } catch (e) { return null; }
+    };
+    function run() {
+      queued = false;
+      var keep = {}; adds.forEach(function (a) { keep[a.id] = 1; });
+      Array.prototype.forEach.call(d.querySelectorAll("[data-hk-add]"), function (n) { if (!keep[n.getAttribute("data-hk-add")]) n.remove(); });
+      adds.forEach(function (a) {
+        if (!idOk(a.id)) return;
+        var h = host(a); if (!h || h.querySelector('[data-hk-add="' + a.id + '"]')) return;
+        if (d.defaultView.getComputedStyle(h).position === "static") h.style.position = "relative";
+        var el;
+        if (a.kind === "img") { var src = srcOf ? srcOf(a) : ""; if (!/^data:image\/(png|jpeg|webp|gif);base64,/.test(src || "")) return; el = d.createElement("img"); el.src = src; el.alt = ""; el.draggable = false; }
+        else { el = d.createElement("span"); el.textContent = String(a.text || "").slice(0, 80); }
+        el.className = "hk_add_" + a.id + " hk_add"; el.setAttribute("data-hk-add", a.id);
+        el.style.cssText = "position:absolute;left:" + (Number(a.x) || 0) + "px;top:" + (Number(a.y) || 0) + "px;z-index:6;pointer-events:none;margin:0;white-space:nowrap;line-height:1.1;font-size:" + (a.kind === "sticker" ? 40 : a.kind === "img" ? 16 : 20) + "px;" +
+          (a.kind === "img" ? "width:6em;height:auto;" : a.kind === "text" ? "font-weight:800;color:#FFFFFF;text-shadow:0 1px 3px rgba(0,0,0,.55);" : "");
+        h.appendChild(el);
+      });
+    }
+    var queue = function () { if (!queued) { queued = true; (d.defaultView.requestAnimationFrame || setTimeout)(run); } };
+    try { new d.defaultView.MutationObserver(queue).observe(d.body, { childList: true, subtree: true }); } catch (e) {}
+    var api2 = { set: function (l) { adds = (l || []).slice(0, 40); run(); } };
+    api2.set(list); return api2;
+  }
+  var api = { PARTS: PARTS, STICKERS: STICKERS, placeAdds: placeAdds, FONTS: FONTS, BUILT_IN: BUILT_IN, EXTRA: EXTRA, SWATCHES: SWATCHES, EDGES: EDGES,
     ruleCss: ruleCss, designCss: designCss, partById: partById, fontsToFetch: fontsToFetch, selOk: selOk };
   if (typeof module === "object" && module.exports) module.exports = api; else root.CardDesign = api;
 })(typeof window !== "undefined" ? window : this);

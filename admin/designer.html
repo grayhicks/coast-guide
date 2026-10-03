@@ -62,7 +62,13 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
 #lock .box{ max-width:420px; width:100%; }
 #lock input{ width:100%; font-size:17px; padding:12px; margin:10px 0; }
 #lock button{ width:100%; font-size:17px; padding:12px; }
-/* PHONE: the app on top, the editor underneath, and the most-used buttons in a bar along the bottom */
+.levels{ display:flex; gap:6px; flex-wrap:wrap; margin:8px 0 2px; }
+.levels button{ min-height:30px; padding:3px 10px; font-size:13px; border-radius:999px; }
+.levels button.sel{ background:var(--pink); border-color:var(--pink); color:#fff; font-weight:800; }
+.tabs{ display:none; }
+.onlyphone{ display:none; }
+/* PHONE (10/02, "It seems extremely finicky"): one row of controls up top, the app, what is picked with its levels,
+   then tool tabs, and ONE tool showing at a time instead of a long page of everything */
 .dock{ display:none; }
 @media (max-width:820px){
   header{ position:static; }
@@ -72,12 +78,26 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
   .panel{ max-width:none; padding-bottom:84px; }
   header h1{ font-size:15px; }
   .dock{ display:flex; position:fixed; left:0; right:0; bottom:0; z-index:9; gap:6px; padding:8px 8px calc(8px + env(safe-area-inset-bottom)); background:rgba(18,21,26,.96); border-top:1px solid var(--line); overflow-x:auto; }
-  .dock button{ flex:0 0 auto; min-width:46px; font-weight:800; }
+  .dock button{ flex:1 1 0; min-width:0; padding:0 2px; font-weight:800; }
+  header{ flex-wrap:nowrap; overflow-x:auto; padding:6px 8px; gap:6px; }
+  header h1{ display:none; }
+  header button, header select{ flex:0 0 auto; min-height:36px; padding:5px 10px; }
+  .phone iframe{ height:46vh; }
+  .tabs{ display:flex; gap:6px; overflow-x:auto; padding:2px 0 10px; position:sticky; top:calc(46vh + 6px); z-index:3; background:var(--bg); }
+  .tabs button{ flex:0 0 auto; min-height:36px; border-radius:999px; padding:5px 14px; font-weight:700; }
+  .panel [data-tab]{ display:none; }
+  body[data-tab="move"] .panel [data-tab="move"], body[data-tab="size"] .panel [data-tab="size"], body[data-tab="colour"] .panel [data-tab="colour"],
+  body[data-tab="font"] .panel [data-tab="font"], body[data-tab="words"] .panel [data-tab="words"], body[data-tab="edge"] .panel [data-tab="edge"],
+  body[data-tab="where"] .panel [data-tab="where"], body[data-tab="add"] .panel [data-tab="add"], body[data-tab="changes"] .panel [data-tab="changes"]{ display:block; }
+  .pad{ grid-template-columns:repeat(3,58px); gap:6px; }
+  .pad button{ min-height:50px; font-size:20px; }
+  .onlywide{ display:none; } .onlyphone{ display:block; }
+  #outer, #inner{ display:none; }
 }
 </style>
 <script src="card_design.js"></script>
 </head>
-<body class="locked">
+<body class="locked" data-tab="move">
 <div id="lock"><div class="box">
   <h2>Card Designer is locked</h2>
   <div class="mute">Paste your GitHub key. It is checked with GitHub, then remembered on this device only.</div>
@@ -88,6 +108,8 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
 <header>
   <h1>Card Designer</h1>
   <button id="pick" class="on" title="P">Pick</button>
+  <button id="undoTop" title="Undo (Ctrl+Z)">&#8630; Undo</button>
+  <button id="redo" title="Redo (Ctrl+Shift+Z)">&#8631; Redo</button>
   <button id="focus" title="Zoom into the picked card">Focus card</button>
   <select id="look" title="Which look the app shows"><option value="day">Day look</option><option value="night">Night look</option><option value="dark">Dark look</option></select>
   <span class="sp"></span>
@@ -106,8 +128,15 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
       <h2>Picked</h2>
       <div class="big" id="partName">Tap any word in the app.</div>
       <div class="mute" id="partWhere"></div>
+      <div class="levels" id="levels"></div>
       <div class="gap" id="gapRead"></div>
       <div class="row"><button id="outer">Bigger area</button><button id="inner">Smaller</button><button id="resetPart">Reset this</button><button id="undo">Undo</button></div>
+    </div>
+    <nav class="tabs" id="tabs">
+      <button data-t="move" class="on">Move</button><button data-t="size">Size</button><button data-t="colour">Colour</button><button data-t="font">Font</button><button data-t="words">Words</button><button data-t="edge">Edge</button><button data-t="where">Where</button><button data-t="add">Add</button><button data-t="changes">Changes</button>
+    </nav>
+    <div class="box" data-tab="where">
+      <h2>Where the change goes</h2>
       <div class="row"><label>Match</label>
         <div class="seg" id="matchSeg"><button data-v="like" class="sel">Everything like it</button><button data-v="exact">Only this exact kind</button></div></div>
       <div class="mute" id="matchRead"></div>
@@ -116,39 +145,52 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
       <div class="row"><label>Look</label>
         <div class="seg" id="lookSeg"><button data-v="all" class="sel">Every look</button><button data-v="day">Day only</button><button data-v="night">Night + Dark</button></div></div>
     </div>
-    <div class="box" id="wordsBox">
+    <div class="box" id="wordsBox" data-tab="words">
       <h2>Words</h2>
       <div class="row"><input id="words" type="text" maxlength="160" placeholder="Type new words" style="flex:1;min-width:180px"><button id="wordsGo" class="go">Use these words</button><button id="wordsOff">Its own words</button></div>
       <div class="mute" id="wordsNote">Tap a single word or line in the app first.</div>
     </div>
-    <div class="box">
-      <h2>Size and place</h2>
+    <div class="box" data-tab="size">
+      <h2>Size</h2>
       <div class="row"><label>Text size</label><button data-s="-1">A&#8722;&#8722;</button><button data-s="-0.5">A&#8722;</button><input id="size" type="number" step="0.5" min="5" max="80" style="width:78px"><button data-s="0.5">A+</button><button data-s="1">A++</button></div>
-      <div class="row"><label>Move</label>
+    </div>
+    <div class="box" data-tab="move">
+      <h2>Move</h2>
+      <div class="row"><label>Nudge</label>
         <div class="pad"><span></span><button data-n="0,-1">&#8593;</button><span></span><button data-n="-1,0">&#8592;</button><button data-n="0,0" title="Back to where it was">&#8226;</button><button data-n="1,0">&#8594;</button><span></span><button data-n="0,1">&#8595;</button><span></span></div>
         <span class="mute" id="moveRead">0, 0 px</span></div>
-      <div class="mute">Drag it in the app, or use the arrow keys (<kbd>Shift</kbd> = 10 px). <kbd>P</kbd> switches between picking and using the app.</div>
+      <div class="row"><label>Step</label><div class="seg" id="stepSeg"><button data-v="1" class="sel">1 px</button><button data-v="5">5 px</button><button data-v="10">10 px</button></div></div>
+      <div class="mute onlywide">Drag it in the app, or use the arrow keys (<kbd>Shift</kbd> = 10 px). <kbd>P</kbd> switches between picking and using the app.</div>
+      <div class="mute onlyphone">While Move is open you can drag the picked piece with your finger. On the other tabs your finger scrolls the app, so nothing moves by accident.</div>
     </div>
-    <div class="box">
+    <div class="box" data-tab="colour">
       <h2>Colour</h2>
       <div class="sw" id="sw"></div>
       <div class="row"><label>Any colour</label><input id="color" type="color" value="#1d2a33" style="width:64px;height:38px;padding:2px"><button id="colorOff">Its own colour</button></div>
       <div class="row"><label>Fill behind</label><div class="sw" id="swBg" style="grid-template-columns:repeat(auto-fill,minmax(26px,1fr))"></div></div>
       <div class="row"><button id="bgOff">No fill change</button></div>
     </div>
-    <div class="box">
+    <div class="box" data-tab="font">
       <h2>Font</h2>
       <div class="fonts" id="fonts"></div>
       <div class="row"><label>Weight</label><div class="seg" id="wSeg"><button data-v="">Its own</button><button data-v="400">Regular</button><button data-v="600">Semi</button><button data-v="700">Bold</button><button data-v="800">Extra</button><button data-v="900">Black</button></div></div>
       <div class="row"><label>Style</label><div class="seg" id="caseSeg"><button data-v="">Its own</button><button data-v="none">As typed</button><button data-v="upper">ALL CAPS</button><button data-v="capitalize">Title Case</button><button data-v="lower">lower</button></div><button id="italic">Italic</button></div>
       <div class="row"><label>Letter gap</label><button data-sp="-0.2">Tighter</button><button data-sp="0.2">Wider</button><label style="min-width:0">Line gap</label><button data-lh="-0.05">Tighter</button><button data-lh="0.05">Looser</button></div>
     </div>
-    <div class="box">
+    <div class="box" data-tab="edge">
       <h2>Edge</h2>
       <div class="seg" id="edgeSeg"></div>
       <div class="row"><button id="hide">Hide it</button></div>
     </div>
-    <div class="box">
+    <div class="box" data-tab="add" id="addBox">
+      <h2>Add something new</h2>
+      <div class="mute" id="addNote">Pick where it goes first: tap the hero, a card or any area, then add.</div>
+      <div class="row"><input id="addText" type="text" maxlength="80" placeholder="New words to add" style="flex:1;min-width:160px"><button id="addTextGo" class="go">Add words</button></div>
+      <div class="row"><input id="addFile" type="file" accept="image/png,image/jpeg,image/webp,image/gif,image/svg+xml" style="flex:1;min-width:160px"><button id="addImgGo" class="go">Add picture</button></div>
+      <div class="row"><label>Sticker</label><div class="seg" id="stickers"></div></div>
+      <div class="mute">An added piece is picked as soon as it lands: drag it, nudge it, size it and colour it like anything else.</div>
+    </div>
+    <div class="box" data-tab="changes">
       <div class="status" id="status"></div>
       <h2>Your changes (<span id="count">0</span>)</h2>
       <ul class="list" id="list"></ul>
@@ -156,14 +198,19 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
   </section>
 </main>
 <div id="toast"></div>
-<div class="dock"><button data-d="pick" class="on">Pick</button><button data-s="-0.5">A&#8722;</button><button data-s="0.5">A+</button><button data-n="0,-1">&#8593;</button><button data-n="0,1">&#8595;</button><button data-n="-1,0">&#8592;</button><button data-n="1,0">&#8594;</button><button data-d="outer">Bigger</button><button data-d="undo">Undo</button><button data-d="save" class="go">Save</button></div>
+<div class="dock"><button data-d="pick" class="on">Pick</button><button data-n="0,-1">&#8593;</button><button data-n="0,1">&#8595;</button><button data-n="-1,0">&#8592;</button><button data-n="1,0">&#8594;</button><button data-s="-0.5">A&#8722;</button><button data-s="0.5">A+</button><button data-d="undo">&#8630;</button><button data-d="save" class="go">Save</button></div>
 <script>
 (function () {
   "use strict";
   var CD = window.CardDesign, $ = function (id) { return document.getElementById(id); };
   var REPO = "grayhicks/gca-widget", PATH = "content/card_style.json", WORKFLOW = "beach-flag-daily.yml";
-  var doc = { version: 1, rules: [] }, sha = null, hist = [], sel = null, trail = [], picking = true, focusOn = false, drag = null;
-  var scope = "all", lookScope = "all";
+  var doc = { version: 1, rules: [], adds: [] }, sha = null, hist = [], sel = null, trail = [], picking = true, focusOn = false, drag = null;
+  var addsCtl = null, imgData = {}, pendingImg = {};
+  var scope = "all", lookScope = "all", redoSt = [], levelBase = null, step = 1;
+  var state = function () { return JSON.stringify({ r: doc.rules, a: doc.adds || [] }); };
+  var restore = function (str) { var v = JSON.parse(str); if (Array.isArray(v)) doc.rules = v; else { doc.rules = v.r; doc.adds = v.a; } };
+  function snap() { hist.push(state()); redoSt = []; }
+  var narrow = function () { return window.matchMedia("(max-width:820px)").matches; };
   var toastT = 0;
   var say = function (t, c) {
     $("status").textContent = t; $("status").className = "status" + (c ? " " + c : "");
@@ -213,8 +260,30 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     $("scopeSeg").style.display = card ? "" : "none";
     var n = 0; try { n = (card ? d.querySelectorAll(".card " + path) : d.querySelectorAll(path)).length; } catch (e) {}
     $("matchRead").textContent = n > 1 ? "Changes " + n + " things on screen like it" : "Changes just this one on screen";
+    if (!levelBase || !levelBase.isConnected || !(levelBase === el || el.contains(levelBase))) levelBase = el;
+    levels();
     if (focusOn) focusCard();
     fill(); paint();
+  }
+  function levelName(n) {
+    var part = null; CD.PARTS.forEach(function (pp) { if (!part) { try { if (n.matches(pp.sel)) part = pp.label; } catch (e) {} } });
+    if (part) return part;
+    if (n.classList && n.classList.contains("card")) return "Whole card";
+    var t = ownText(n); if (t) return "\u201c" + (t.length > 18 ? t.slice(0, 16) + "\u2026" : t) + "\u201d";
+    if (n.tagName.toLowerCase() === "svg") return "Icon";
+    var c = cls(n)[0] || n.tagName.toLowerCase(); return c.replace(/^hk_/, "").replace(/[_-]+/g, " ");
+  }
+  function levels() {
+    var box = $("levels"); box.innerHTML = ""; if (!levelBase) return;
+    var chain = [], n = levelBase, stop = levelBase.closest(".card");
+    while (n && chain.length < 6 && n.tagName && n.tagName.toLowerCase() !== "body" && !(n.classList && n.classList.contains("hk"))) { chain.unshift(n); if (n === stop) break; n = n.parentElement; }
+    chain.forEach(function (node, i) {
+      var b = document.createElement("button"); b.textContent = levelName(node); if (node === sel.el) b.className = "sel";
+      b.title = "Pick this level";
+      b.onclick = function () { trail = chain.slice(i + 1).reverse(); select(node); };
+      box.appendChild(b);
+      if (i < chain.length - 1) { var sp = document.createElement("span"); sp.className = "mute"; sp.textContent = "\u203a"; box.appendChild(sp); }
+    });
   }
   function key() {
     if (!sel) return null;
@@ -233,7 +302,7 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
   function ruleFor(k) { var r = findRule(k) || newRule(k); if (!r.set) r.set = {}; if (r.set.mv === undefined) r.set.mv = moveKind(); return r; }
   function edit(fn) {
     var k = key(); if (!k) { say("Tap a word in the app first.", "err"); return; }
-    hist.push(JSON.stringify(doc.rules));
+    snap();
     var r = ruleFor(k);
     fn(r.set); flashGuides(); paint(); fill();
   }
@@ -316,14 +385,21 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     var st = d.getElementById("hk_design_preview");
     if (!st) { st = d.createElement("style"); st.id = "hk_design_preview"; d.body.appendChild(st); }
     st.textContent = CD.designCss(doc) +
-      "\n[data-hk-pick]{outline:2px dashed #FF2D87 !important;outline-offset:2px !important;touch-action:none !important;}" +
-      (picking ? "\n.hk *{cursor:crosshair !important;}" : "") +
+      "\n[data-hk-pick]{outline:2px dashed #FF2D87 !important;outline-offset:2px !important;" + (!narrow() || document.body.getAttribute("data-tab") === "move" ? "touch-action:none !important;" : "") + "}" +
+      (picking ? "\n.hk *{cursor:crosshair !important;}\n[data-hk-add]{pointer-events:auto !important;}" : "") +
       (focusOn ? "\n.card:not([data-hk-focus]){opacity:.12 !important;filter:grayscale(1) !important;}\n.card[data-hk-focus]{box-shadow:0 0 0 3px #FF2D87, 0 20px 60px rgba(0,0,0,.45) !important;}" : "");
+    if (addsCtl && addsCtl.doc === d) addsCtl.set(doc.adds || []); else { addsCtl = CD.placeAdds(d, doc.adds || [], function (a) { return imgData[a.id] || ""; }); addsCtl.doc = d; }
     guides(); list();
   }
   function list() {
-    $("count").textContent = doc.rules.length;
+    $("count").textContent = doc.rules.length + (doc.adds || []).length;
     var ul = $("list"); ul.innerHTML = "";
+    (doc.adds || []).forEach(function (a, i) {
+      var li = document.createElement("li"); li.innerHTML = "<span></span><button>Remove</button>";
+      li.firstChild.textContent = "Added " + (a.kind === "img" ? "picture" : a.kind === "sticker" ? "sticker " + a.text : "words \u201c" + a.text + "\u201d") + (a.in === "card" ? " on card " + a.card : " in the app");
+      li.lastChild.onclick = function () { snap(); doc.adds.splice(i, 1); doc.rules = doc.rules.filter(function (r) { return String(r.path || "").indexOf("hk_add_" + a.id) < 0; }); delete pendingImg[a.id]; paint(); fill(); };
+      ul.appendChild(li);
+    });
     doc.rules.forEach(function (r, i) {
       var li = document.createElement("li"), s = r.set || {}, bits = [];
       var where = r.in === "card" ? (r.scope === "kind" ? "cards like " + r.value : r.scope === "card" ? "card " + r.value : "every card") : "the app";
@@ -333,7 +409,7 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
       if (s.text) bits.push("words: " + s.text);
       li.innerHTML = "<span></span><button>Remove</button>";
       li.firstChild.textContent = (r.name || r.path || r.part || r.sel) + " → " + where + (r.look !== "all" ? " (" + r.look + ")" : "") + ": " + (bits.join(", ") || "no change");
-      li.lastChild.onclick = function () { hist.push(JSON.stringify(doc.rules)); doc.rules.splice(i, 1); paint(); fill(); };
+      li.lastChild.onclick = function () { snap(); doc.rules.splice(i, 1); paint(); fill(); };
       ul.appendChild(li);
     });
   }
@@ -376,6 +452,7 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
       if (!picking || popup(e.target)) { tap = null; return; }
       tap = { x: e.clientX, y: e.clientY, t: e.target };
       if (!sel || !(e.target === sel.el || sel.el.contains(e.target))) { if (e.target.closest && e.target.closest(".card")) e.stopPropagation(); return; }
+      if (e.pointerType === "touch" && narrow() && document.body.getAttribute("data-tab") !== "move") return;
       var r = findRule(key()), s0 = (r && r.set) || {};
       drag = { x: e.clientX, y: e.clientY, dx: s0.dx || 0, dy: s0.dy || 0, on: false };
       e.stopPropagation();
@@ -383,14 +460,14 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     d.addEventListener("pointermove", function (e) {
       if (!drag) return;
       var mx = Math.round(e.clientX - drag.x), my = Math.round(e.clientY - drag.y);
-      if (!drag.on) { if (Math.abs(mx) + Math.abs(my) < 3) return; drag.on = true; hist.push(JSON.stringify(doc.rules)); }
+      if (!drag.on) { if (Math.abs(mx) + Math.abs(my) < 3) return; drag.on = true; snap(); }
       var k = key(), r = ruleFor(k); guideUntil = Date.now() + 1600;
       r.set.dx = drag.dx + mx; r.set.dy = drag.dy + my; paint(); fill(); e.preventDefault(); e.stopPropagation();
     }, true);
     var end = function (e) { if (drag && drag.on && e) { e.preventDefault(); e.stopPropagation(); } drag = null; };
     d.addEventListener("pointerup", function (e) {
       var moved = drag && drag.on, t = tap; tap = null; end(e);
-      if (picking && t && !moved && Math.abs(e.clientX - t.x) + Math.abs(e.clientY - t.y) < 10) { trail = []; select(t.t); e.preventDefault(); }
+      if (picking && t && !moved && Math.abs(e.clientX - t.x) + Math.abs(e.clientY - t.y) < 10) { trail = []; levelBase = null; select(t.t); e.preventDefault(); }
     }, true);
     d.addEventListener("pointercancel", function (e) { tap = null; end(e); }, true);
     d.addEventListener("keydown", onKey, true);
@@ -401,6 +478,7 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     var tag = (e.target && e.target.tagName) || "";
     if (/INPUT|SELECT|TEXTAREA/.test(tag)) return;
     if (e.key === "p" || e.key === "P") { togglePick(); e.preventDefault(); return; }
+    if ((e.ctrlKey || e.metaKey) && ((e.shiftKey && (e.key === "z" || e.key === "Z")) || e.key === "y" || e.key === "Y")) { redo(); e.preventDefault(); return; }
     if ((e.ctrlKey || e.metaKey) && (e.key === "z" || e.key === "Z")) { undo(); e.preventDefault(); return; }
     var m = { ArrowUp: [0, -1], ArrowDown: [0, 1], ArrowLeft: [-1, 0], ArrowRight: [1, 0] }[e.key];
     if (!m || !sel) return;
@@ -412,7 +490,8 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     var dp = document.querySelector('.dock [data-d="pick"]'); dp.textContent = picking ? "Pick" : "Using app"; dp.classList.toggle("on", picking);
     say(picking ? "Tap any word to pick it." : "Using the app: tap tabs and buttons as normal. Tap Pick to edit again.", "ok"); paint();
   }
-  function undo() { if (!hist.length) { say("Nothing to undo.", "err"); return; } doc.rules = JSON.parse(hist.pop()); paint(); fill(); say("Undone.", "ok"); }
+  function undo() { if (!hist.length) { say("Nothing to undo.", "err"); return; } redoSt.push(state()); restore(hist.pop()); paint(); fill(); say("Undone.", "ok"); }
+  function redo() { if (!redoSt.length) { say("Nothing to redo.", "err"); return; } hist.push(state()); restore(redoSt.pop()); paint(); fill(); say("Redone.", "ok"); }
   function outer() { if (!sel) { say("Tap a word in the app first.", "err"); return; } var p = sel.el.parentElement; if (!p || p === frame().body || p.classList.contains("hk")) { say("That is already the biggest area.", "err"); return; } trail.push(sel.el); select(p); }
   function inner() { if (!trail.length) { say("That is already the smallest piece. Tap a word to pick it.", "err"); return; } var el = trail.pop(); select(el); }
   document.addEventListener("keydown", onKey, true);
@@ -443,7 +522,7 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
   segs("lookSeg", function (v) { lookScope = v; fill(); });
   Array.prototype.forEach.call($("wSeg").children, function (b) { b.onclick = function () { var v = b.getAttribute("data-v"); edit(function (s) { s.weight = v ? Number(v) : undefined; }); }; });
   Array.prototype.forEach.call($("caseSeg").children, function (b) { b.onclick = function () { var v = b.getAttribute("data-v"); edit(function (s) { s.tcase = v || undefined; }); }; });
-  Array.prototype.forEach.call(document.querySelectorAll("[data-n]"), function (b) { b.onclick = function () { var v = b.getAttribute("data-n").split(",").map(Number); edit(function (s) { if (!v[0] && !v[1]) { s.dx = 0; s.dy = 0; } else { s.dx = (s.dx || 0) + v[0]; s.dy = (s.dy || 0) + v[1]; } }); }; });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-n]"), function (b) { b.onclick = function () { var v = b.getAttribute("data-n").split(",").map(function (x) { return Number(x) * step; }); edit(function (s) { if (!v[0] && !v[1]) { s.dx = 0; s.dy = 0; } else { s.dx = (s.dx || 0) + v[0]; s.dy = (s.dy || 0) + v[1]; } }); }; });
   Array.prototype.forEach.call(document.querySelectorAll("[data-s]"), function (b) { b.onclick = function () { var st = Number(b.getAttribute("data-s")); edit(function (s) { s.size = Math.max(5, Math.round(((Number(s.size) || Number($("size").value) || 14) + st) * 10) / 10); }); }; });
   Array.prototype.forEach.call(document.querySelectorAll("[data-sp]"), function (b) { b.onclick = function () { var st = Number(b.getAttribute("data-sp")); edit(function (s) { var cs = sel.el.ownerDocument.defaultView.getComputedStyle(sel.el); var cur = s.spacing !== undefined ? Number(s.spacing) : (parseFloat(cs.letterSpacing) || 0); s.spacing = Math.round((cur + st) * 10) / 10; }); }; });
   Array.prototype.forEach.call(document.querySelectorAll("[data-lh]"), function (b) { b.onclick = function () { var st = Number(b.getAttribute("data-lh")); edit(function (s) { var cs = sel.el.ownerDocument.defaultView.getComputedStyle(sel.el); var cur = Number(s.lh) || (parseFloat(cs.lineHeight) / parseFloat(cs.fontSize)) || 1.2; s.lh = Math.round((cur + st) * 100) / 100; }); }; });
@@ -455,8 +534,52 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
   $("italic").onclick = function () { edit(function (s) { s.italic = s.italic === true ? undefined : true; }); };
   $("hide").onclick = function () { edit(function (s) { s.hide = s.hide === true ? undefined : true; }); };
   $("outer").onclick = outer; $("inner").onclick = inner; $("undo").onclick = undo;
-  $("resetPart").onclick = function () { var k = key(); if (!k) { say("Tap a word in the app first.", "err"); return; } var r = findRule(k); if (!r) { say("Nothing changed on this one yet.", "err"); return; } hist.push(JSON.stringify(doc.rules)); doc.rules.splice(doc.rules.indexOf(r), 1); paint(); fill(); };
+  $("resetPart").onclick = function () { var k = key(); if (!k) { say("Tap a word in the app first.", "err"); return; } var r = findRule(k); if (!r) { say("Nothing changed on this one yet.", "err"); return; } snap(); doc.rules.splice(doc.rules.indexOf(r), 1); paint(); fill(); };
   $("pick").onclick = togglePick;
+  var newId = function () { return Math.random().toString(36).slice(2, 10).replace(/[^a-z0-9]/g, "x"); };
+  function addPiece(a) {
+    if (!sel || !sel.el) { say("Tap where it goes first: the hero, a card or any area.", "err"); return null; }
+    var h = sel.el; if (h.closest("[data-hk-add]")) h = h.closest("[data-hk-add]").parentElement;
+    if (/^(img|svg|input|br|hr)$/i.test(h.tagName)) h = h.parentElement;
+    var card = h.closest(".card"), hk = h.closest(".hk"), d = frame();
+    a.id = newId(); a.in = card ? "card" : hk ? "app" : "page"; a.card = card ? (card.getAttribute("data-card-id") || "").replace(/_\d{4}-\d{2}-\d{2}$/, "") : "";
+    a.path = pathFor(h, card || hk || d.body); a.x = 12; a.y = 12;
+    var r = h.getBoundingClientRect(); if (r.height > 60) { a.x = Math.round(Math.max(8, r.width / 2 - 40)); a.y = Math.round(Math.max(8, Math.min(r.height, fw().innerHeight - Math.max(r.top, 0)) / 2 - 20)); }
+    snap(); if (!doc.adds) doc.adds = []; doc.adds.push(a); paint(); fill();
+    var el = d.querySelector('[data-hk-add="' + a.id + '"]');
+    if (el) { trail = []; levelBase = null; select(el); say("Added. Drag it or nudge it into place.", "ok"); document.querySelector('#tabs [data-t="move"]') && narrow() && document.querySelector('#tabs [data-t="move"]').click(); }
+    else say("Could not place it there. Pick a bigger area and try again.", "err");
+    return a;
+  }
+  $("addTextGo").onclick = function () { var t = $("addText").value.trim(); if (!t) { say("Type the words first.", "err"); return; } if (addPiece({ kind: "text", text: t.slice(0, 80) })) $("addText").value = ""; };
+  $("addText").onkeydown = function (e) { if (e.key === "Enter") $("addTextGo").click(); };
+  CD.STICKERS.forEach(function (st) { var b = document.createElement("button"); b.textContent = st; b.style.fontSize = "22px"; b.onclick = function () { addPiece({ kind: "sticker", text: st }); }; $("stickers").appendChild(b); });
+  /* a picture is shrunk on this device to at most 640 px wide and stored as WebP, then uploaded with the next Save */
+  $("addImgGo").onclick = function () {
+    var f = $("addFile").files && $("addFile").files[0]; if (!f) { say("Choose a picture first.", "err"); return; }
+    if (!/^image\/(png|jpeg|webp|gif)$/.test(f.type)) { say("Use a PNG, JPG, WebP or GIF picture.", "err"); return; }
+    var img = new Image(), url = URL.createObjectURL(f);
+    img.onload = function () {
+      var k = Math.min(1, 640 / Math.max(img.width, img.height)), c = document.createElement("canvas");
+      c.width = Math.max(1, Math.round(img.width * k)); c.height = Math.max(1, Math.round(img.height * k));
+      c.getContext("2d").drawImage(img, 0, 0, c.width, c.height); URL.revokeObjectURL(url);
+      var data = c.toDataURL("image/webp", 0.85), ext = "webp";
+      if (data.indexOf("data:image/webp") !== 0) { data = c.toDataURL("image/png"); ext = "png"; }
+      if (data.length > 900000) { say("That picture is too big even after shrinking. Try a smaller one.", "err"); return; }
+      var a = { kind: "img" }; a.src = "";
+      var placed = addPiece(a); if (!placed) return;
+      placed.src = "content/design/" + placed.id + "." + ext; imgData[placed.id] = data; pendingImg[placed.id] = { path: placed.src, b64: data.split(",")[1] };
+      paint(); var el = frame().querySelector('[data-hk-add="' + placed.id + '"]'); if (el) select(el);
+      $("addFile").value = "";
+    };
+    img.onerror = function () { say("That file would not open as a picture.", "err"); };
+    img.src = url;
+  };
+  $("undoTop").onclick = undo; $("redo").onclick = redo;
+  segs("stepSeg", function (v) { step = Number(v) || 1; });
+  var showTab = function (t) { document.body.setAttribute("data-tab", t); Array.prototype.forEach.call($("tabs").children, function (b) { b.classList.toggle("on", b.getAttribute("data-t") === t); }); try { localStorage.setItem("hk_designer_tab", t); } catch (e) {} paint(); };
+  Array.prototype.forEach.call($("tabs").children, function (b) { b.onclick = function () { showTab(b.getAttribute("data-t")); }; });
+  try { var t0tab = localStorage.getItem("hk_designer_tab"); if (t0tab && document.querySelector('#tabs [data-t="' + t0tab + '"]')) showTab(t0tab); } catch (e) {}
   $("wordsGo").onclick = function () {
     if (!wordsOk()) { say("Tap the words themselves first.", "err"); return; }
     var t = $("words").value.trim(); if (!t) { say("Type the new words first.", "err"); return; }
@@ -492,13 +615,16 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
      it, so a device with no key loses nothing: it saves the moment a key is there (here or in the card editor). */
   var base = "none", DRAFT = "hk_designer_draft";
   var rid = function (r) { return JSON.stringify([r.path, r.in, r.scope, r.value, r.look, r.sel, r.root, r.part]); };
-  function keepDraft() { try { if (doc.rules.length || localStorage.getItem(DRAFT)) localStorage.setItem(DRAFT, JSON.stringify({ base: base, rules: doc.rules })); } catch (e) {} }
-  function readDraft() { try { var d = JSON.parse(localStorage.getItem(DRAFT) || "null"); return d && d.rules && d.rules.length ? d : null; } catch (e) { return null; } }
+  function keepDraft() { try { if (doc.rules.length || (doc.adds && doc.adds.length) || localStorage.getItem(DRAFT)) localStorage.setItem(DRAFT, JSON.stringify({ base: base, rules: doc.rules, adds: doc.adds || [], imgs: pendingImg })); } catch (e) {} }
+  function readDraft() { try { var d = JSON.parse(localStorage.getItem(DRAFT) || "null"); return d && ((d.rules && d.rules.length) || (d.adds && d.adds.length)) ? d : null; } catch (e) { return null; } }
   var b64 = function (s) { return btoa(unescape(encodeURIComponent(s))); }, unb64 = function (s) { return decodeURIComponent(escape(atob(s.replace(/\n/g, "")))); };
   function load() {
     var dr = readDraft();
     return gh("GET", "/repos/" + REPO + "/contents/" + PATH + "?ref=main").then(function (j) {
-      sha = j.sha; doc = JSON.parse(unb64(j.content)); if (!doc.rules) doc.rules = []; hist = [];
+      sha = j.sha; doc = JSON.parse(unb64(j.content)); if (!doc.rules) doc.rules = []; if (!doc.adds) doc.adds = []; hist = [];
+      doc.adds.forEach(function (a) { if (a.kind === "img" && a.src && !imgData[a.id]) gh("GET", "/repos/" + REPO + "/contents/" + a.src + "?ref=main").then(function (f) { imgData[a.id] = "data:image/" + a.src.split(".").pop().replace("jpg", "jpeg") + ";base64," + String(f.content || "").replace(/\n/g, ""); paint(); }).catch(function () {}); });
+      if (dr && dr.adds && dr.adds.length) { var have = {}; doc.adds.forEach(function (a) { have[a.id] = 1; }); dr.adds.forEach(function (a) { if (!have[a.id]) doc.adds.push(a); }); }
+      if (dr && dr.imgs) Object.keys(dr.imgs).forEach(function (id) { pendingImg[id] = dr.imgs[id]; imgData[id] = "data:image/" + dr.imgs[id].path.split(".").pop() + ";base64," + dr.imgs[id].b64; });
       if (dr && dr.base === "github") doc.rules = dr.rules;
       else if (dr) dr.rules.forEach(function (r) { var k = rid(r), hit = -1; doc.rules.forEach(function (o, i) { if (rid(o) === k) hit = i; }); if (hit > -1) doc.rules[hit] = r; else doc.rules.push(r); });
       base = "github"; paint(); fill();
@@ -507,9 +633,11 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
   }
   function save() {
     say("Saving…");
-    var body = JSON.stringify({ version: 1, rules: doc.rules }, null, 2) + "\n";
+    var body = JSON.stringify({ version: 1, rules: doc.rules, adds: (doc.adds || []).map(function (a) { return { id: a.id, kind: a.kind, in: a.in, card: a.card, path: a.path, x: a.x, y: a.y, text: a.text, src: a.src }; }) }, null, 2) + "\n";
+    var ups = Object.keys(pendingImg).filter(function (id) { return (doc.adds || []).some(function (a) { return a.id === id; }); });
+    var upload = ups.reduce(function (pr, id) { return pr.then(function () { return gh("PUT", "/repos/" + REPO + "/contents/" + pendingImg[id].path, { message: "Card designer: picture " + id, content: pendingImg[id].b64, branch: "main" }).then(function () { delete pendingImg[id]; }); }); }, Promise.resolve());
     var first = sha ? Promise.resolve() : gh("GET", "/repos/" + REPO + "/contents/" + PATH + "?ref=main").then(function (j) { sha = j.sha; }).catch(function () {});
-    return first.then(function () { return gh("PUT", "/repos/" + REPO + "/contents/" + PATH, { message: "Card designer: " + doc.rules.length + " change(s)", content: b64(body), sha: sha || undefined, branch: "main" }); })
+    return upload.then(function () { return first; }).then(function () { return gh("PUT", "/repos/" + REPO + "/contents/" + PATH, { message: "Card designer: " + doc.rules.length + " change(s)", content: b64(body), sha: sha || undefined, branch: "main" }); })
       .then(function (j) { sha = j.content && j.content.sha; base = "github"; try { localStorage.removeItem(DRAFT); } catch (e) {} say("Saved. It reaches the app at the next hourly update, or press Save + publish.", "ok"); return true; })
       .catch(function (e) { say(e.message, "err"); return false; });
   }
