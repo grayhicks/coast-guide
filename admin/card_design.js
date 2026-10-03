@@ -64,7 +64,9 @@
   var customOf = function (doc) { return ((doc && doc.fonts) || []).filter(famOk).slice(0, 12); };
   var fontOk = function (f) { return FONTS.indexOf(f) > -1 || CUSTOM.indexOf(f) > -1; };
   /* a tapped-element selector is only ever classes, tags, attributes and combinators: never braces or tags */
-  var selOk = function (s) { return typeof s === "string" && s.length < 400 && /^[a-zA-Z0-9_\-\.\s>\[\]="'^:()#,]+$/.test(s) && !/[{}<]/.test(s); };
+  var selOk = function (s) { return typeof s === "string" && s.length < 400 && /^[a-zA-Z0-9_\-\.\s>\[\]="'^$:()#,]+$/.test(s) && !/[{}<]/.test(s); };
+  /* 10/03, J13: "$" is allowed so a new-hero piece can be named by the end of its id ([id$="move-sloop"]); the
+     day and night copies of the hero carry different front letters on the same piece */
   /* 10/03, J13: every rule starts "html:not(#hk_d) body", and the :not(#id) counts as an id, so a designer rule outranks
      any of the app's own class-only rules, however many classes they stack (a sticker-lettering rule with eleven
      classes beat the ten-class prefix and a pasted colour did not show on place names). */
@@ -106,14 +108,25 @@
     if (s.lock && isFinite(Number(s.lock.t))) { out.push("position:absolute"); out.push("top:" + Math.round(Number(s.lock.t)) + "px"); out.push("margin:0");
       if (s.lock.side === "r") { out.push("right:" + Math.round(Number(s.lock.x)) + "px"); out.push("left:auto"); } else out.push("left:" + Math.round(Number(s.lock.x)) + "px");
       dx = 0; dy = 0; }
+    var sc = Number(s.scale) > 0 && Number(s.scale) !== 1 ? Math.max(0.2, Math.min(4, Number(s.scale))) : 0, ro = Number(s.rot) ? Math.max(-180, Math.min(180, Number(s.rot))) : 0;
+    /* "tf" (10/03, J13): a drawn hero piece is an SVG group, and scale or rotate on one turns it about the corner of the
+       whole drawing, so the boat flew off the water. Its move, turn and size go into one transform: the move, then where
+       it was drawn (t0), then the turn and size about its own middle (c0) */
+    if (s.mv === "tf") {
+      var t0 = typeof s.t0 === "string" && /^[a-z0-9().,\s-]*$/i.test(s.t0) ? s.t0 : "", c0 = Array.isArray(s.c0) ? s.c0.map(function (v) { return Number(v) || 0; }) : [0, 0];
+      var tf = []; if (dx || dy) tf.push("translate(" + dx + "px," + dy + "px)"); if (t0 && (dx || dy || sc || ro)) tf.push(t0);
+      if (sc || ro) { tf.push("translate(" + c0[0] + "px," + c0[1] + "px)"); if (ro) tf.push("rotate(" + ro + "deg)"); if (sc) tf.push("scale(" + sc + ")"); tf.push("translate(" + -c0[0] + "px," + -c0[1] + "px)"); }
+      if (tf.length) out.push("transform:" + tf.join(" "));
+      dx = dy = sc = ro = 0;
+    }
     if (dx || dy) { if (s.mv === "rel") { out.push("position:relative"); out.push("left:" + dx + "px"); out.push("top:" + dy + "px"); }
       else if (s.mv === "mg") { var m0 = Array.isArray(s.m0) ? s.m0 : [0, 0]; out.push("margin-left:" + ((Number(m0[0]) || 0) + dx) + "px"); out.push("margin-top:" + ((Number(m0[1]) || 0) + dy) + "px"); }
       else out.push("translate:" + dx + "px " + dy + "px"); }
     /* 10/03, J13: bigger or smaller and turned, for drawings and pictures as much as words (scale and rotate stack on
        top of any animation the piece already has), and a colour shift for drawings (hue and brightness) */
-    if (s.ib === true && ((Number(s.scale) > 0 && Number(s.scale) !== 1) || Number(s.rot))) out.push("display:inline-block");
-    if (Number(s.scale) > 0 && Number(s.scale) !== 1) out.push("scale:" + Math.max(0.2, Math.min(4, Number(s.scale))));
-    if (Number(s.rot)) out.push("rotate:" + Math.max(-180, Math.min(180, Number(s.rot))) + "deg");
+    if (s.ib === true && (sc || ro)) out.push("display:inline-block");
+    if (sc) out.push("scale:" + sc);
+    if (ro) out.push("rotate:" + ro + "deg");
     var fx = []; if (Number(s.hue)) fx.push("hue-rotate(" + Math.round(Number(s.hue)) + "deg)"); if (Number(s.bright) > 0 && Number(s.bright) !== 1) fx.push("brightness(" + Math.max(0.3, Math.min(2, Number(s.bright))) + ")"); if (Number(s.sat) >= 0 && s.sat !== undefined && Number(s.sat) !== 1) fx.push("saturate(" + Math.max(0, Math.min(3, Number(s.sat))) + ")");
     if (fx.length) out.push("filter:" + fx.join(" "));
     if (Number(s.size) > 0) out.push("font-size:" + Number(s.size) + "px");
@@ -167,8 +180,36 @@
            words replace the whole title, so the boxes inside step aside too */
         "\n" + sel.split(",").map(function (x) { return x + " > *"; }).join(",") + "{display:none !important}";
     }
+    /* 10/03, Gray: "How can I change the shape of the swiggle" and "multiple layers ... different layers of thickness".
+       A drawn line he reshaped in the Shape tab is painted as a picture of its new outlines (one per line he made), each
+       in its own colour, and the drawing's own path steps aside. A picture, not the CSS "d" property, because iPhones do
+       not support "d" (caniuse, 10/03), and not a mask, which would cut off the drawing's shadow. Padding gives the bent
+       shape room past the drawing's own box. */
+    /* 10/03, Gray: "import things and overlay them and edit... their position and shape and thickness". A picture's
+       cut-out shape and the thickness of a border round it */
+    var CUTS = { square: "0", rounded: "18%", round: "50%", pill: "999px", arch: "50% 50% 0 0 / 35% 35% 0 0" };
+    if (Object.prototype.hasOwnProperty.call(CUTS, s.cut)) { out.push("border-radius:" + CUTS[s.cut]); out.push("overflow:hidden"); }
+    if (Number(s.bw) > 0) { out.push("border:" + Math.min(24, Math.round(Number(s.bw))) + "px solid " + (hex(s.bc) || "#FFFFFF")); out.push("box-sizing:border-box"); }
+    var sh = shapeOk(s.shape);
+    if (sh) {
+      var svgs = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="' + sh.vb + '" preserveAspectRatio="none">' + sh.paths.map(function (q, i) {
+        return '<path fill="' + (i === sh.paths.length - 1 && hex(s.color) ? s.color : q.fill) + '" d="' + q.d + '"/>'; }).join("") + '</svg>';
+      var u = 'url("data:image/svg+xml,' + encodeURIComponent(svgs).replace(/'/g, "%27").replace(/\(/g, "%28").replace(/\)/g, "%29") + '")';
+      out.push("box-sizing:content-box"); out.push("padding:" + sh.pad.map(function (v) { return v + "px"; }).join(" "));
+      out.push("margin:" + sh.pad.map(function (v) { return (v ? -v : 0) + "px"; }).join(" "));
+      out.push("background:" + u + " 0 0/100% 100% no-repeat border-box");
+      extra += "\n" + sel.split(",").map(function (x) { return x + " path"; }).join(",") + "{visibility:hidden !important}";
+    }
     if (!out.length) return "";
     return sel + "{" + out.map(function (d) { return d + " !important"; }).join(";") + "}" + extra;
+  }
+  function shapeOk(sh) {
+    var o = sh && sh.out; if (!o || !Array.isArray(o.paths) || !o.paths.length || o.paths.length > 6) return null;
+    var colOk = function (c) { return /^(#[0-9a-fA-F]{3,8}|rgba?\([0-9.,\s%]+\))$/.test(String(c || "")); };
+    if (!o.paths.every(function (q) { return q && typeof q.d === "string" && q.d.length < 9000 && /^[MLZ0-9.\s-]+$/.test(q.d); })) return null;
+    if (typeof o.vb !== "string" || !/^-?[0-9.]+ -?[0-9.]+ [0-9.]+ [0-9.]+$/.test(o.vb)) return null;
+    if (!Array.isArray(o.pad) || o.pad.length !== 4 || !o.pad.every(function (v) { return isFinite(Number(v)) && Number(v) >= 0 && Number(v) < 400; })) return null;
+    return { vb: o.vb, pad: o.pad.map(function (v) { return Math.round(Number(v) * 10) / 10; }), paths: o.paths.map(function (q) { return { d: q.d, fill: colOk(q.fill) ? q.fill : "#FFFDF8" }; }) };
   }
   function designCss(doc) { CUSTOM = customOf(doc); return ((doc && doc.rules) || []).map(ruleCss).filter(Boolean).join("\n"); }
   /* fonts a saved design uses that the app does not already carry: the build fetches these */

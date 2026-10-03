@@ -47,11 +47,11 @@ header button, header select{ white-space:nowrap; }
 /* a computer narrower than 1360: the bar keeps one row by showing marks instead of words on the quieter buttons */
 @media (min-width:821px) and (max-width:1359px){
   header h1{ display:none; }
-  #focus, #floatsBtn{ width:40px; min-width:40px; padding:0; }
-  #focus span, #floatsBtn span{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+  #focus, #floatsBtn, #signsBtn{ width:40px; min-width:40px; padding:0; }
+  #focus span, #floatsBtn span, #signsBtn span{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
   #keysBtn{ width:auto; padding:0 8px; }
   /* the words on Before and Save + publish now made the row 28 px too wide at 1100 (10/03): the menus give the room */
-  #width{ max-width:128px; } #lists, #look{ max-width:112px; } #publish{ padding:0 10px; } #publish span{ font-size:13px; }
+  #width{ max-width:118px; } #lists, #look{ max-width:106px; } #publish{ padding:0 10px; } #publish span{ font-size:13px; }
 } #pubLine{ order:9; }
 .publine{ display:none; font-size:12px; font-weight:800; color:var(--mint); white-space:nowrap; max-width:46vw; overflow:hidden; text-overflow:ellipsis; }
 .publine.on{ display:block; } .publine.err, .publine.err a{ color:#ff8a80; } .publine.ok::before{ content:"\2713  "; }
@@ -65,6 +65,9 @@ main{ display:flex; gap:16px; padding:12px; align-items:flex-start; }
 /* the grab bar between the app and the tools (phone): drag it up for more tools, down for more app, like Canva's sheet */
 .grab{ width:100%; flex:none; height:22px; align-items:center; justify-content:center; touch-action:none; cursor:ns-resize; margin:-11px 0 -11px; position:relative; z-index:6; }
 .grab i{ width:44px; height:5px; border-radius:999px; background:var(--mute); opacity:.8; } .grab.on i{ background:var(--pink); opacity:1; }
+.herosigns{ display:none; margin:0 0 12px; padding:10px; border:1px solid var(--line); border-radius:12px; } body[data-hero="1"] .herosigns, body.signs .herosigns{ display:block; }
+body.signs[data-sel="0"] .tools .box#textBox{ display:block !important; } body.signs[data-sel="0"] #textBox > :not(#heroSigns){ display:none !important; } body.signs #emptyHint{ display:none !important; }
+.hsl{ display:flex; flex-direction:column; gap:3px; margin:0 0 8px; font-size:13px; font-weight:700; color:var(--mute); } .hsl input{ font-size:16px; padding:8px 10px; text-transform:uppercase; } .hsl small{ font-weight:600; } .hsl small.long{ color:#ffb4a8; }
 .checkbox{ margin:10px 0; padding:10px; border:1px solid var(--line); border-radius:12px; }
 .checks{ margin:8px 0; } .checks li{ display:flex; align-items:center; gap:6px; padding:6px 0; border-top:1px solid var(--line); }
 .checks li > div{ flex:1 1 auto; min-width:0; } .checks li b{ display:block; font-size:14px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
@@ -202,7 +205,7 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
 .tabs button.on{ background:var(--chipon); color:var(--mint); border-color:transparent; }
 .tools [data-tab]{ display:none; }
 /* a drawing or picture has no words: its word tools step out of the tab row */
-body[data-kind="mark"] #tabs [data-t="font"], body[data-kind="mark"] #tabs [data-t="words"], body[data-kind="mark"] #tabs [data-t="text"]{ display:none; }
+body[data-kind="mark"] #tabs [data-t="font"], body[data-kind="mark"] #tabs [data-t="words"], body[data-kind="mark"]:not([data-hero="1"]) #tabs [data-t="text"]{ display:none; }
 #tWords{ width:100%; font-size:16px; padding:9px 12px; margin:0 0 8px; }
 #textBox h2{ display:none; } .twrow{ display:flex; gap:6px; align-items:center; margin:0 0 8px; } .twrow #tWords{ margin:0; flex:1 1 auto; min-width:0; }
 .trow{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:0 0 8px; }
@@ -224,11 +227,14 @@ body[data-sel="0"][data-tab="text"] #emptyHint, body[data-sel="0"][data-tab="mov
 body[data-sel="0"][data-tab="words"] #emptyHint, body[data-sel="0"][data-tab="edge"] #emptyHint, body[data-sel="0"][data-tab="where"] #emptyHint, body[data-sel="0"][data-tab="layers"] #emptyHint{ display:block; }
 body[data-sel="0"] .tools .box[data-tab="text"], body[data-sel="0"] .tools .box[data-tab="move"], body[data-sel="0"] .tools .box[data-tab="size"], body[data-sel="0"] .tools .box[data-tab="colour"], body[data-sel="0"] .tools .box[data-tab="font"],
 body[data-sel="0"] .tools .box[data-tab="words"], body[data-sel="0"] .tools .box[data-tab="edge"], body[data-sel="0"] .tools .box[data-tab="where"], body[data-sel="0"] .tools .box[data-tab="layers"]{ display:none !important; }
+body:not([data-shape="1"]):not([data-shape="pic"]) #tabs [data-t="shape"]{ display:none !important; }
+body:not([data-shape="pic"]) #picShape, body:not([data-shape="1"]) #lineShape{ display:none; }
+#dotN{ min-width:28px; text-align:center; font-size:16px; } #lineNudge button{ min-width:44px; } #layerSeg button.add{ border-style:dashed; }
 .tabs .badge{ position:absolute; top:4px; right:8px; min-width:17px; height:17px; padding:0 4px; border-radius:999px; background:var(--pink); color:#fff; font:800 11px/17px system-ui; }
 .tabs button{ position:relative; }
 button#save.dirty::after{ content:""; width:8px; height:8px; border-radius:50%; background:#fff; margin-left:2px; }
 body[data-tab="text"] .tools [data-tab="text"], body[data-tab="move"] .tools [data-tab="move"], body[data-tab="size"] .tools [data-tab="size"], body[data-tab="colour"] .tools [data-tab="colour"],
-body[data-tab="font"] .tools [data-tab="font"], body[data-tab="words"] .tools [data-tab="words"], body[data-tab="edge"] .tools [data-tab="edge"],
+body[data-tab="font"] .tools [data-tab="font"], body[data-tab="words"] .tools [data-tab="words"], body[data-tab="edge"] .tools [data-tab="edge"], body[data-tab="shape"] .tools [data-tab="shape"],
 body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tools [data-tab="history"], body[data-tab="layers"] .tools [data-tab="layers"], body[data-tab="add"] .tools [data-tab="add"], body[data-tab="changes"] .tools [data-tab="changes"]{ display:block; }
 .onlyphone{ display:none !important; }
 /* A WIDE COMPUTER SCREEN (10/03, J13): Layers stays open in its own column beside the tools, like Figma's left panel */
@@ -374,12 +380,13 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     <select id="lists" title="How the app's lists show while you edit" aria-label="How the lists show"><option value="full">Full cards</option><option value="poster">Poster tiles</option></select>
     <select id="look" title="Which look the app shows"><option value="day">Day look</option><option value="night">Night look</option><option value="dark">Dark look</option></select>
     <button id="publish" data-i="publish" title="Save, then update the app now (about 10 minutes)"><span>Save + publish now</span></button>
+    <button id="signsBtn" title="Change the words on the hero's banner plane, parasail and pier sign" data-i="words"><span>Hero signs</span></button>
     <button id="floatsBtn" title="Show or hide the app's floating buttons (Show support, back to top) while picking" data-i="floats"><span>Floating buttons: hidden</span></button>
     <button id="keysBtn" class="onlywide" title="Keyboard shortcuts (?)" aria-label="Keyboard shortcuts">? Keys</button>
   </div>
 </header>
 <main>
-  <div class="phone"><iframe id="app" data-src="../app/" title="The app"></iframe><div id="dragHud" class="draghud" aria-live="off"></div><button id="zoom" class="zoombtn" aria-label="Zoom in on the picked piece" title="Zoom in on the picked piece (Z)" data-i="zoomin"><span>Zoom</span></button></div>
+  <div class="phone"><iframe id="app" data-src="../app/#newhero" title="The app"></iframe><div id="dragHud" class="draghud" aria-live="off"></div><button id="zoom" class="zoombtn" aria-label="Zoom in on the picked piece" title="Zoom in on the picked piece (Z)" data-i="zoomin"><span>Zoom</span></button></div>
   <div id="grab" class="grab onlyphone" role="separator" aria-orientation="horizontal" aria-label="Drag up for more tools, down for more of the app" title="Drag up for more tools, down for more of the app"><i></i></div>
   <section class="panel">
     <div class="box" id="signin">
@@ -397,7 +404,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       <div class="row acts"><button id="outer" title="Pick the box this piece sits in">Pick what holds it</button><button id="inner" title="Back to the smaller piece">Back to the piece</button><button id="undo">Undo</button></div>
     </div>
     <nav class="tabs" id="tabs" aria-label="Tools">
-      <button data-t="text" data-i="tee" class="on"><span>Text</span></button><button data-t="move" data-i="move"><span>Move</span></button><button data-t="size" data-i="size"><span>Size</span></button><button data-t="colour" data-i="colour"><span>Colour</span></button><button data-t="font" data-i="font"><span>Font</span></button><button data-t="words" data-i="words"><span>Words</span></button><button data-t="edge" data-i="edge"><span>Edge</span></button><button data-t="layers" data-i="layers"><span>Layers</span></button><button data-t="where" data-i="where"><span>Where</span></button><button data-t="add" data-i="add"><span>Add</span></button><button data-t="changes" data-i="changes"><span>Changes</span></button><button data-t="history" data-i="history"><span>History</span></button>
+      <button data-t="text" data-i="tee" class="on"><span>Text</span></button><button data-t="move" data-i="move"><span>Move</span></button><button data-t="size" data-i="size"><span>Size</span></button><button data-t="colour" data-i="colour"><span>Colour</span></button><button data-t="font" data-i="font"><span>Font</span></button><button data-t="words" data-i="words"><span>Words</span></button><button data-t="edge" data-i="edge"><span>Edge</span></button><button data-t="shape" data-i="shape"><span>Shape</span></button><button data-t="layers" data-i="layers"><span>Layers</span></button><button data-t="where" data-i="where"><span>Where</span></button><button data-t="add" data-i="add"><span>Add</span></button><button data-t="changes" data-i="changes"><span>Changes</span></button><button data-t="history" data-i="history"><span>History</span></button>
     </nav>
     <div class="tools" id="tools">
     <div class="box empty" id="emptyHint">
@@ -427,6 +434,16 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
          to another thing". Words, size, bold, italic, capitals, colour and font together; the full tabs stay for more -->
     <div class="box" id="textBox" data-tab="text">
       <h2>Text</h2>
+      <!-- 10/03, Gray (through J12): the words on the hero's banner plane, parasail and pier sign "need to stay that way even
+           when I'm editing it". They live in content/hero_ads.json; the app fits any length into its space -->
+      <div class="herosigns" id="heroSigns">
+        <h3 class="sub">The hero's signs</h3>
+        <label class="hsl">Banner plane<input id="hsPlane" maxlength="40" autocomplete="off"><small id="hsPlaneN"></small></label>
+        <label class="hsl">Parasail<input id="hsPara" maxlength="50" autocomplete="off"><small id="hsParaN"></small></label>
+        <label class="hsl">Pier sign<input id="hsSign" maxlength="50" autocomplete="off"><small id="hsSignN"></small></label>
+        <div class="row"><button id="hsSave" class="go">Save the signs</button><button id="hsPub">Save and publish now</button></div>
+        <div class="mute" id="hsSay">The hero shows them as you type. Short reads best on a phone.</div>
+      </div>
       <div class="twrow"><input id="tWords" type="text" placeholder="Type new words" aria-label="The words" autocomplete="off" enterkeyhint="done"><button id="tOwn" class="tmore" title="Put back the words the app had" style="display:none">Its own words</button></div>
       <div class="trow">
         <div class="tsize"><button id="tSmaller" class="tcap" title="Smaller text (Ctrl+Shift+&lt;)" aria-label="Smaller text"><span class="tg"><span class="aa sm">A</span><span class="ar">&#9660;</span></span><small>Smaller</small></button><label class="tszl"><input id="tSize" type="number" step="0.5" min="5" max="80" aria-label="Text size"><small>Size</small></label><button id="tBigger" class="tcap" title="Bigger text (Ctrl+Shift+&gt;)" aria-label="Bigger text"><span class="tg"><span class="aa">A</span><span class="ar">&#9650;</span></span><small>Bigger</small></button></div>
@@ -486,6 +503,25 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       <div class="row"><label>Weight</label><div class="seg" id="wSeg"><button data-v="">Its own</button><button data-v="400">Regular</button><button data-v="600">Semi</button><button data-v="700">Bold</button><button data-v="800">Extra</button><button data-v="900">Black</button></div></div>
       <div class="row"><label>Style</label><div class="seg" id="caseSeg"><button data-v="">Its own</button><button data-v="none">As typed</button><button data-v="upper">ALL CAPS</button><button data-v="capitalize">Title Case</button><button data-v="lower">lower</button></div><button id="italic">Italic</button></div>
       <div class="row"><label>Letter gap</label><button data-sp="-0.2">Tighter</button><button data-sp="0.2">Wider</button><label style="min-width:0">Line gap</label><button data-lh="-0.05">Tighter</button><button data-lh="0.05">Looser</button></div>
+    </div>
+    <div class="box" data-tab="shape">
+      <h2>Shape</h2>
+      <div id="picShape">
+        <div class="mute">The picture's outline, and a border round it.</div>
+        <div class="seg" id="cutSeg"><button data-v="">As it is</button><button data-v="rounded">Rounded</button><button data-v="round">Round</button><button data-v="pill">Pill</button><button data-v="arch">Arch</button><button data-v="square">Square</button></div>
+        <div class="row"><label for="bwR">Border</label><input id="bwR" type="range" min="0" max="16" step="1" value="0" style="flex:1;min-width:120px;padding:0"><span class="mute" id="bwRead">None</span></div>
+        <div class="seg" id="bcSeg"><button data-v="#FFFFFF">White</button><button data-v="#F4EEE2">Cream</button><button data-v="#14202B">Navy</button><button data-v="#FF2D87">Pink</button></div>
+      </div>
+      <div id="lineShape">
+        <div class="mute" id="shapeNote">Drag a pink dot to bend that part of the line. Tap a dot to give that part its own thickness.</div>
+        <div class="seg" id="layerSeg"></div>
+        <div class="row"><label>Dots</label><button id="dotLess" title="Fewer dots: a smoother, simpler bend">Fewer</button><b id="dotN">5</b><button id="dotMore" title="More dots: bend smaller parts of the line">More</button></div>
+        <div class="row"><label for="thickR">Whole line</label><input id="thickR" type="range" min="20" max="300" step="5" value="100" style="flex:1;min-width:120px;padding:0"><span class="mute" id="thickRead">100%</span></div>
+        <div class="row"><label for="dotW" id="dotWLab">Tap a dot</label><input id="dotW" type="range" min="0" max="300" step="5" value="100" disabled style="flex:1;min-width:120px;padding:0"><span class="mute" id="dotWRead"></span></div>
+        <div class="seg" id="lineCol"><button data-v="">Drawing's own</button><button data-v="#FFFDF8">Cream</button><button data-v="#E8C078">Gold</button><button data-v="#FF2D87">Pink</button><button data-v="#2EC4B6">Teal</button><button data-v="#14202B">Navy</button></div>
+        <div class="row" id="lineNudge"><label>Shift this line</label><button data-n="-1,0" aria-label="Left">&larr;</button><button data-n="0,-1" aria-label="Up">&uarr;</button><button data-n="0,1" aria-label="Down">&darr;</button><button data-n="1,0" aria-label="Right">&rarr;</button></div>
+        <div class="row"><button id="lineDel" title="Take this extra line away">Remove this line</button><button id="shapeFlat" title="Bring every dot of this line back into a straight line through the middle">Straighten</button><button id="shapeReset" title="Put the whole shape back as it was drawn">As drawn</button></div>
+      </div>
     </div>
     <div class="box" data-tab="edge">
       <h2>Edge</h2>
@@ -607,7 +643,134 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   var STATE = /^(on|sel|open|active|is-|fk_|zzz|hk_vis|hk_lt_|hk_tf_|hk_ts_|hk_ct|hk_day|hk_gr_|hk_still|hk_sitecards|hk_wide|epoxy|acc-|t-)/;
   var cls = function (el) { return Array.prototype.filter.call(el.classList || [], function (c) { return !STATE.test(c) && /^[a-zA-Z_][\w-]*$/.test(c); }); };
   var exact = false;
-  function stepOf(el) { var c = cls(el); if (!c.length) return null; return "." + (exact ? c.join(".") : c[0]); }
+  function stepOf(el) { var c = cls(el); if (!c.length) { var m = (el.id || "").match(/((?:move|ad)-[a-z0-9-]+)$/); return m ? '[id$="' + m[1] + '"]' : null; } return "." + (exact ? c.join(".") : c[0]); }
+  /* 10/03: the new hero's drawings are named groups (move-sloop, ad-parasail...), one per sky; plain names for each */
+  var NH_NAMES = { "move-bird": "Bird", "move-sloop": "Sailboat", "move-paddler": "Paddleboarder", "move-kids": "Kids", "move-ball": "Beach ball", "move-dog": "Dog", "move-oats": "Sea oats", "ad-banner-plane": "Banner plane", "ad-parasail": "Parasail", "ad-pier-sign": "Pier sign",
+    "move-bird2": "Second bird", "move-wings": "Bird's wings", "move-wings2": "Second bird's wings", "move-doghead": "Dog's head",
+    "move-waves": "Waves", "move-glitter": "Sun glitter", "move-glints": "Moon glints", "move-reflections": "Light on the water",
+    "move-anglers": "Pier fishermen", "move-lamps": "Pier lamps", "move-footprints": "Footprints", "move-people": "People on the beach",
+    "move-beam": "Light beam", "move-crab": "Crab", "move-hatchlings": "Turtle hatchlings", bswash: "Squiggle under Event" };
+  /* 10/03, Gray: "How do I edit the animals if I don't see them?" Picking a hero piece holds it still at the moment in
+     its own animation where most of it is on screen, so a bird that has flown off or a crab that has ducked away can
+     still be picked and moved. Only the picture in the designer is held; nothing is saved by it, and picking anything
+     else lets it go again. */
+  /* ---- Shape (10/03, Gray: "How can I change the shape of the swiggle", then "fill in those dots however I want
+     maybe have multiple layers ... different layers of thickness"). A drawing made of one filled outline (the squiggle
+     under Event) gets pink dots along it, as many as he wants (3 to 12). Dragging a dot bends that part; the parts
+     between follow a smooth curve. Tapping a dot gives that part its own thickness, and the thickness between dots
+     blends. "Add a line" lays another copy of the line behind the first, with its own dots, thickness, colour and
+     place, up to five extra lines. Thickness always grows or thins around the line's own middle, so a thin tail stays
+     thin. What is saved is the new outlines; the app paints them in their colours (card_design.js). ---- */
+  var bend = null, shapeBase = null, shapeUi = { layer: 0, dot: -1 };
+  function picTarget(el) { if (!el || !el.tagName) return false; if (el.tagName.toLowerCase() === "img") return true; return !!(el.hasAttribute && el.hasAttribute("data-hk-add") && el.querySelector("img")); }
+  function picFill() { var r = sel && findRule(key()), s = (r && r.set) || {};
+    Array.prototype.forEach.call($("cutSeg").children, function (b) { b.classList.toggle("sel", b.getAttribute("data-v") === (s.cut || "")); });
+    Array.prototype.forEach.call($("bcSeg").children, function (b) { b.classList.toggle("sel", b.getAttribute("data-v") === (s.bc || "#FFFFFF")); });
+    $("bwR").value = Number(s.bw) || 0; $("bwRead").textContent = Number(s.bw) ? s.bw + " px" : "None"; }
+  function shapeTarget(el) {
+    if (!el || !el.tagName) return null; var t = el.tagName.toLowerCase(), svg = t === "svg" ? el : t === "path" ? el.ownerSVGElement : null;
+    if (!svg || !svg.viewBox || !svg.viewBox.baseVal || !svg.viewBox.baseVal.width) return null;
+    var ps = svg.querySelectorAll("path"); if (ps.length !== 1) return null; var d = ps[0].getAttribute("d") || "";
+    if ((d.match(/[Mm]/g) || []).length !== 1 || d.length < 20) return null;
+    return { svg: svg, path: ps[0] };
+  }
+  function baseOf(tg) {
+    if (shapeBase && shapeBase.path === tg.path && shapeBase.d === tg.path.getAttribute("d")) return shapeBase;
+    var p = tg.path, L = p.getTotalLength(), n = 220, pts = [];
+    for (var i = 0; i < n; i++) { var q = p.getPointAtLength(L * i / n); pts.push([q.x, q.y]); }
+    var mids = [], gap = Math.round(n / 8);
+    for (i = 0; i < n; i++) {
+      /* the point straight across the line: the nearest one that is not its own neighbour along the outline */
+      var best = Infinity, bj = i; for (var j = 0; j < n; j++) { var dd = Math.abs(((j - i + n + n / 2) % n) - n / 2); if (dd < gap) continue; var e = Math.hypot(pts[j][0] - pts[i][0], pts[j][1] - pts[i][1]); if (e < best) { best = e; bj = j; } }
+      mids.push([(pts[i][0] + pts[bj][0]) / 2, (pts[i][1] + pts[bj][1]) / 2]); }
+    var xs = pts.map(function (q) { return q[0]; }), vb = tg.svg.viewBox.baseVal;
+    shapeBase = { path: p, d: p.getAttribute("d"), pts: pts, mids: mids, x0: Math.min.apply(null, xs), x1: Math.max.apply(null, xs), vb: { x: vb.x, y: vb.y, w: vb.width, h: vb.height } };
+    return shapeBase;
+  }
+  function dotXs(B, n) { var o = []; for (var k = 0; k < n; k++) o.push(B.x0 + (B.x1 - B.x0) * (0.1 + 0.8 * k / (n - 1))); return o; }
+  function midY(B, X) { var near = B.mids.filter(function (m) { return Math.abs(m[0] - X) < (B.x1 - B.x0) / 12; }); return near.length ? near.reduce(function (s0, m) { return s0 + m[1]; }, 0) / near.length : (B.vb.y + B.vb.h / 2); }
+  /* a value at any point along the line, smoothly between the dots (a Catmull-Rom curve through them) */
+  function along(B, vals, x) {
+    var n = vals.length; if (n === 1) return vals[0]; var xs = dotXs(B, n), u = Math.max(0, Math.min(n - 1, (x - xs[0]) / ((xs[n - 1] - xs[0]) / (n - 1)))), i = Math.min(n - 2, Math.floor(u)), f = u - i;
+    var P = function (k) { return vals[Math.max(0, Math.min(n - 1, k))]; }, cr = function (p0, p1, p2, p3) { return 0.5 * (2 * p1 + (-p0 + p2) * f + (2 * p0 - 5 * p1 + 4 * p2 - p3) * f * f + (-p0 + 3 * p1 - 3 * p2 + p3) * f * f * f); };
+    if (Array.isArray(vals[0])) return [0, 1].map(function (c) { return cr(P(i - 1)[c], P(i)[c], P(i + 1)[c], P(i + 2)[c]); });
+    return cr(P(i - 1), P(i), P(i + 1), P(i + 2));
+  }
+  function newLayer(n) { var h = [], w = []; for (var k = 0; k < n; k++) { h.push([0, 0]); w.push(1); } return { h: h, w: w, k: 1, c: "", o: [0, 0] }; }
+  function layerPts(B, Ly) { return B.pts.map(function (q, i) { var m = B.mids[i], kk = Math.max(0, (Number(Ly.k) || 1) * along(B, Ly.w, m[0])), o = along(B, Ly.h, m[0]);
+    return [m[0] + (q[0] - m[0]) * kk + o[0] + Ly.o[0], m[1] + (q[1] - m[1]) * kk + o[1] + Ly.o[1]]; }); }
+  /* the drawing's own colour as painted now (the squiggle's is cream, #FFFDF8, on every scene) */
+  function fillOf(tg) { var f = tg.svg.ownerDocument.defaultView.getComputedStyle(tg.path).fill; return /^rgba?\(/.test(f) ? f : "#FFFDF8"; }
+  function shapeOut(tg, sh) {
+    var B = baseOf(tg), cs = tg.svg.ownerDocument.defaultView.getComputedStyle(tg.svg), own = (sh.out && sh.out.own) || fillOf(tg), all = [];
+    /* the extra lines lie behind the first, in the order he added them */
+    var order = sh.L.slice(1).concat([sh.L[0]]), paths = order.map(function (Ly) { var np = layerPts(B, Ly); all = all.concat(np);
+      return { d: "M" + np.map(function (q) { return q[0].toFixed(2) + " " + q[1].toFixed(2); }).join(" L") + " Z", fill: Ly.c || own }; });
+    var sx = (parseFloat(cs.width) || B.vb.w) / B.vb.w, sy = (parseFloat(cs.height) || B.vb.h) / B.vb.h;
+    var xs = all.map(function (q) { return q[0]; }), ys = all.map(function (q) { return q[1]; });
+    var pl = Math.max(0, B.vb.x - Math.min.apply(null, xs)) * sx + 4, pr = Math.max(0, Math.max.apply(null, xs) - B.vb.x - B.vb.w) * sx + 4,
+        pt = Math.max(0, B.vb.y - Math.min.apply(null, ys)) * sy + 4, pb = Math.max(0, Math.max.apply(null, ys) - B.vb.y - B.vb.h) * sy + 4;
+    var vb = [B.vb.x - pl / sx, B.vb.y - pt / sy, B.vb.w + (pl + pr) / sx, B.vb.h + (pt + pb) / sy].map(function (v) { return Math.round(v * 100) / 100; }).join(" ");
+    return { paths: paths, vb: vb, pad: [pt, pr, pb, pl].map(function (v) { return Math.round(v * 10) / 10; }), own: own };
+  }
+  function curShape() { var r = sel && findRule(key()), sh = r && r.set && r.set.shape; return sh && sh.L ? JSON.parse(JSON.stringify(sh)) : { L: [newLayer(5)] }; }
+  function setShape(mut) {
+    if (!sel) return; var tg = shapeTarget(sel.el); if (!tg) return; var r = ruleFor(key()), sh = r.set.shape && r.set.shape.L ? JSON.parse(JSON.stringify(r.set.shape)) : { L: [newLayer(5)] };
+    mut(sh); if (shapeUi.layer >= sh.L.length) shapeUi.layer = sh.L.length - 1;
+    var L0 = sh.L[0], plain = sh.L.length === 1 && L0.k === 1 && !L0.c && !L0.o[0] && !L0.o[1] && L0.h.every(function (q) { return !q[0] && !q[1]; }) && L0.w.every(function (v) { return v === 1; });
+    if (plain) delete r.set.shape; else { sh.out = shapeOut(tg, sh); r.set.shape = sh; }
+    paint(); bendDots();
+  }
+  function shapeFill(sh) {
+    var Ly = sh.L[shapeUi.layer] || sh.L[0], seg = $("layerSeg"); seg.innerHTML = "";
+    sh.L.forEach(function (x, i) { var b = document.createElement("button"); b.textContent = "Line " + (i + 1); if (i === shapeUi.layer) b.className = "sel"; b.onclick = function () { shapeUi = { layer: i, dot: -1 }; bendDots(); }; seg.appendChild(b); });
+    if (sh.L.length < 6) { var a = document.createElement("button"); a.className = "add"; a.textContent = "+ Add a line"; a.title = "Lay another copy of this line behind it, with its own dots, thickness and colour";
+      a.onclick = function () { snap(); setShape(function (s2) { var c = JSON.parse(JSON.stringify(s2.L[0])); c.o = [0, 2.5]; c.c = "#E8C078"; c.k = (Number(c.k) || 1) * 0.8; s2.L.push(c); shapeUi = { layer: s2.L.length - 1, dot: -1 }; }); fill(); say("A second line sits behind the first. Drag its dots, or shift it with the arrows.", "ok"); };
+      seg.appendChild(a); }
+    $("dotN").textContent = Ly.h.length; $("thickR").value = Math.round((Number(Ly.k) || 1) * 100); $("thickRead").textContent = $("thickR").value + "%";
+    var dw = shapeUi.dot > -1 && shapeUi.dot < Ly.w.length; $("dotW").disabled = !dw; $("dotWLab").textContent = dw ? "Dot " + (shapeUi.dot + 1) + " thickness" : "Tap a dot";
+    $("dotW").value = dw ? Math.round(Ly.w[shapeUi.dot] * 100) : 100; $("dotWRead").textContent = dw ? $("dotW").value + "%" : "";
+    Array.prototype.forEach.call($("lineCol").children, function (b) { b.classList.toggle("sel", b.getAttribute("data-v") === (Ly.c || "")); });
+    $("lineDel").style.display = shapeUi.layer > 0 ? "" : "none"; $("lineNudge").style.display = shapeUi.layer > 0 ? "" : "none";
+  }
+  function bendDots() {
+    /* the dots are moved, never rebuilt, while one is held: a finger's touch stops reporting the moment the dot it
+       landed on leaves the page (10/03, the drag went dead after one step) */
+    var d = frame(); if (!d) return; var old = Array.prototype.slice.call(d.querySelectorAll(".hk_bend")), tg = sel && document.body.getAttribute("data-tab") === "shape" ? shapeTarget(sel.el) : null;
+    if (sel && picTarget(sel.el) && document.body.getAttribute("data-tab") === "shape") picFill();
+    d.documentElement.classList.toggle("hk_shaping", !!tg);
+    if (!tg) { old.forEach(function (n) { n.remove(); }); return; }
+    /* a line this small is zoomed in on when the Shape tab opens, so the dots sit apart and the bend can be seen */
+    if (!bend && zoomK === 1 && !shapeUi.zoomed && tg.svg.getBoundingClientRect().width < 160) { shapeUi.zoomed = true; zoomK = 3; zoomTo(); return; }
+    var B = baseOf(tg), sh = curShape(), Ly = sh.L[shapeUi.layer] || sh.L[0], M = tg.path.getScreenCTM(); if (!M) return; shapeFill(sh);
+    var zk = zoomK || 1, n = Ly.h.length, S = (n > 8 ? 18 : 24) / zk; if (old.length !== n) { old.forEach(function (x) { x.remove(); }); old = []; }
+    /* each dot sits on the line as it is drawn now: the middle of the outline points across from each other near it */
+    var np = layerPts(B, Ly), span = (B.x1 - B.x0) / 20;
+    dotXs(B, n).forEach(function (x, i) { var near = []; B.mids.forEach(function (m, j) { if (Math.abs(m[0] - x) < span) near.push(np[j]); });
+      var o = Ly.h[i], X = near.length ? near.reduce(function (s0, q) { return s0 + q[0]; }, 0) / near.length : x + o[0] + Ly.o[0], Y = near.length ? near.reduce(function (s0, q) { return s0 + q[1]; }, 0) / near.length : midY(B, x) + o[1] + Ly.o[1], cx = M.a * X + M.c * Y + M.e, cy = M.b * X + M.d * Y + M.f, on = i === shapeUi.dot;
+      var b = old[i] || d.createElement("div"); b.className = "hk_bend"; b.setAttribute("data-i", i); b.setAttribute("aria-label", "Bend point " + (i + 1));
+      b.style.cssText = "position:fixed;z-index:2147483647;left:" + (cx - S / 2) + "px;top:" + (cy - S / 2) + "px;width:" + S + "px;height:" + S + "px;border-radius:50%;background:" + (on ? "#fff" : "#FF2D87") + ";border:" + (3 / zk) + "px solid " + (on ? "#FF2D87" : "#fff") + ";box-shadow:0 1px 6px rgba(0,0,0,.45);touch-action:none;cursor:grab;pointer-events:auto;box-sizing:border-box";
+      if (!b.parentNode) d.body.appendChild(b); });
+  }
+  var posed = null;
+  function letGo() { if (!posed) return; posed.forEach(function (a) { try { a.play(); } catch (e) {} }); posed = null; }
+  function poseShown(el) {
+    letGo(); if (!el || !nhName(el)) return;
+    var anims = []; try { anims = el.getAnimations({ subtree: true }).concat(el.getAnimations()); } catch (e) { return; }
+    var own = anims.filter(function (a, i) { return anims.indexOf(a) === i && a.effect && a.effect.getComputedTiming; });
+    if (!own.length) return;
+    var hero = el.closest(".hero"), H = hero.getBoundingClientRect(), dur = 0, win = el.ownerDocument.defaultView;
+    own.forEach(function (a) { var d = Number(a.effect.getComputedTiming().duration) || 0; var it = a.effect.getComputedTiming().iterations; dur = Math.max(dur, d * (isFinite(it) && it > 1 ? Math.min(it, 2) : it === Infinity ? 2 : 1)); });
+    if (!dur) return;
+    var best = -1, bt = 0;
+    own.forEach(function (a) { try { a.pause(); } catch (e) {} });
+    for (var k = 0; k < 24; k++) { var t = dur * k / 24; own.forEach(function (a) { a.currentTime = t; });
+      var r = el.getBoundingClientRect(), w = Math.max(0, Math.min(r.right, H.right) - Math.max(r.left, H.left)), h = Math.max(0, Math.min(r.bottom, H.bottom) - Math.max(r.top, H.top));
+      var op = 1; for (var n = el; n && n !== hero; n = n.parentElement || n.parentNode) { if (!n.nodeType || n.nodeType !== 1) break; op *= Number(win.getComputedStyle(n).opacity); }
+      var sc = w * h * op; if (sc > best + 0.5) { best = sc; bt = t; } }
+    own.forEach(function (a) { a.currentTime = bt; }); posed = own;
+  }
+  var nhName = function (el) { if (el && el.classList && el.classList.contains("bswash")) return NH_NAMES.bswash; var m = el && (el.id || "").match(/((?:move|ad)-[a-z0-9-]+)$/); return m ? (NH_NAMES[m[1]] || m[1].replace(/^(move|ad)-/, "").replace(/-/g, " ")) : ""; };
   function pathFor(el, stop) {
     var steps = [], n = el, own = stepOf(el);
     if (!own) { var p = el.parentElement, pc = p && stepOf(p); own = (pc ? pc + " > " : "") + el.tagName.toLowerCase(); n = p; }
@@ -616,6 +779,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     return steps.join(" ");
   }
   function describe(el) {
+    if (nhName(el)) return nhName(el);
     var t = (el.innerText || el.textContent || "").trim().replace(/\s+/g, " ");
     var c = cls(el)[0] || "";
     if (el.tagName.toLowerCase() === "svg") return LEVEL_NAMES[c] || (el.closest(".hero") ? "Hero drawing" : "Icon");
@@ -633,7 +797,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   function withSel(s, f) { var keep = sel; sel = s; try { return f(); } finally { sel = keep; } }
   function clearGroup() { multi.forEach(function (m) { m.el.removeAttribute("data-hk-pick2"); }); multi = []; }
   function toggleGroup(el) {
-    if (el.closest("svg") && el.tagName.toLowerCase() !== "svg") el = el.closest("svg");
+    if (el.closest("svg") && el.tagName.toLowerCase() !== "svg" && !nhName(el)) el = el.closest("svg");
     if (!sel) { select(el); return; } if (el === sel.el) return;
     var i = -1; multi.forEach(function (m, k) { if (m.el === el) i = k; });
     if (i > -1) { el.removeAttribute("data-hk-pick2"); multi.splice(i, 1); } else { multi.push(selOf(el)); el.setAttribute("data-hk-pick2", "1"); }
@@ -643,11 +807,13 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   function select(el, keepGroup) {
     if (typing) typing(true);
     if (!keepGroup && !holdScope && scope !== "card") { scope = "card"; Array.prototype.forEach.call($("scopeSeg").children, function (x) { x.classList.toggle("sel", x.getAttribute("data-v") === "card"); }); }
-    holdScope = false;
+    holdScope = false; if (!(el.closest && el.closest(".hero"))) document.body.classList.remove("signs"); document.body.setAttribute("data-hero", el.closest && el.closest(".hero") ? "1" : "0"); if (el.closest && el.closest(".hero")) setTimeout(hsLoad, 0);
     var d = frame(); if (!d || !el) return;
-    if (el.closest("svg") && el.tagName.toLowerCase() !== "svg") el = el.closest("svg");
+    if (el.closest("svg") && el.tagName.toLowerCase() !== "svg" && !nhName(el)) el = el.closest("svg");
     if (!keepGroup) clearGroup();
     var old = d.querySelector("[data-hk-pick]"); if (old) old.removeAttribute("data-hk-pick");
+    poseShown(el); shapeUi = { layer: 0, dot: -1 };
+    document.body.setAttribute("data-shape", shapeTarget(el) ? "1" : picTarget(el) ? "pic" : "0"); if (!shapeTarget(el) && !picTarget(el) && document.body.getAttribute("data-tab") === "shape") setTimeout(function () { showTab("move"); }, 0);
     el.setAttribute("data-hk-pick", "1"); document.body.setAttribute("data-sel", "1");
     /* 10/03, Gray: "sometimes I wanted to just move the screen around when editing and it moved the whole hero or app or
        card". A piece taller than 40% of the app or wider and taller than most of it is "big": a finger on it scrolls, and
@@ -655,7 +821,8 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     (function () { var w = el.ownerDocument.defaultView, r = el.getBoundingClientRect(), big = r.height > w.innerHeight * 0.4 || (r.width * r.height > w.innerWidth * w.innerHeight * 0.3) || el.matches(".card, .hero, .hk, main, section");
       Array.prototype.forEach.call(el.ownerDocument.querySelectorAll("[data-hk-big]"), function (x) { x.removeAttribute("data-hk-big"); }); if (big) el.setAttribute("data-hk-big", "1"); })();
     document.body.setAttribute("data-kind", ownText(el) && el.tagName.toLowerCase() !== "svg" ? "words" : el.querySelector && el.querySelector("*") && (el.textContent || "").trim() ? "words" : "mark");
-    if (document.body.getAttribute("data-kind") === "mark" && /^(font|words|text)$/.test(document.body.getAttribute("data-tab") || "")) setTimeout(function () { showTab("size"); }, 0);
+    if (/move-/.test(el.id || "") && el.closest(".hk_nh") && document.body.getAttribute("data-tab") === "text") setTimeout(function () { showTab("move"); }, 0);
+    else if (document.body.getAttribute("data-kind") === "mark" && (/^(font|words)$/.test(document.body.getAttribute("data-tab") || "") || (document.body.getAttribute("data-tab") === "text" && document.body.getAttribute("data-hero") !== "1"))) setTimeout(function () { showTab("size"); }, 0);
     var card = el.closest(".card");
     sel = selOf(el);
     var part = null; CD.PARTS.forEach(function (pp) { if (!part) { try { if (el.matches(pp.sel)) part = pp.label; } catch (e) {} } });
@@ -692,6 +859,9 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     "hero-titlelink": "Coastal Eventures", hk_datecal: "Date",
     rm_bulb: "Light bulb", rm_bg: "String of lights", rm_swag: "Light string", rheart: "Heart", rvig: "Glow edge", svg: "Drawing" };
   function levelName(n) {
+    if (nhName(n)) return nhName(n);
+    /* 10/03: above a named hero piece the chips read "Whole scene" and "Group", never "Drawing" and "Box" */
+    if (n.closest && n.closest(".hk_nh")) return n.classList.contains("hk_nh") ? "Whole scene" : n.tagName.toLowerCase() === "svg" ? "Scene drawing" : "Group";
     var part = null; CD.PARTS.forEach(function (pp) { if (!part) { try { if (n.matches(pp.sel)) part = pp.label; } catch (e) {} } });
     if (part) return part;
     if (n.classList && n.classList.contains("card")) return "Whole card";
@@ -711,9 +881,14 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     /* in the hero, its pieces are offered as buttons, one per named piece, so a finger never has to hit a thin mast */
     var hero = sel && sel.el && sel.el.closest(".hero");
     if (hero) {
+      /* 10/03: the hero has a day, a sunset and a night scene, each with its own pieces (the crab and the turtle
+         hatchlings come out at night); this switch shows the one he wants to edit */
+      var now = heroScene(), lab1 = document.createElement("span"); lab1.className = "mute"; lab1.textContent = "Scene:"; box.appendChild(lab1);
+      [["day", "Day"], ["golden", "Sunset"], ["night", "Night"]].forEach(function (q) { var b = document.createElement("button"); b.textContent = q[1]; b.className = "scene" + (now === q[0] ? " sel" : ""); b.title = "Show the hero's " + q[1].toLowerCase() + " scene";
+        b.onclick = function () { if (heroScene() === q[0]) return; setScene(q[0]); }; box.appendChild(b); });
       var lab0 = document.createElement("span"); lab0.className = "mute"; lab0.textContent = "Hero:"; box.appendChild(lab0); var seen = {};
-      heroPieces(hero).forEach(function (p) { var nm = LEVEL_NAMES[p.c]; if (!nm || seen[nm]) return; seen[nm] = 1;
-        var b = document.createElement("button"); b.textContent = nm; if (sel.el === p.el) b.className = "sel"; b.onclick = function () { trail = []; levelBase = null; select(p.el); }; box.appendChild(b); });
+      heroPieces(hero).forEach(function (p) { var nm = NH_NAMES[p.c] || LEVEL_NAMES[p.c]; if (!nm || seen[nm]) return; seen[nm] = 1;
+        var b = document.createElement("button"); b.textContent = nm; if (sel.el === p.el) b.className = "sel"; else if (p.r.width < 2 || p.r.height < 2) b.title = nm + " is away right now; tap to bring it into view"; b.onclick = function () { trail = []; levelBase = null; select(p.el); }; box.appendChild(b); });
       return;
     }
     var card = sel && sel.el && sel.el.closest(".card"); if (!card) return;
@@ -754,6 +929,23 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     var row = box.parentElement, on = box.querySelector(".sel");
     if (on && row && row.scrollWidth > row.clientWidth) { var rr = row.getBoundingClientRect(), br = on.getBoundingClientRect(); if (br.right > rr.right - 8 || br.left < rr.left) row.scrollLeft += br.right - rr.right + Math.min(rr.width / 3, 120); }
   }
+  /* ---- the hero's signs (10/03) ---- */
+  var HS = { plane: ["hsPlane", 18], parasail: ["hsPara", 30], sign: ["hsSign", 28] }, hsSha = null, hsDoc = null, HSPATH = "content/hero_ads.json";
+  function hsVals() { var v = {}; Object.keys(HS).forEach(function (k) { v[k] = $(HS[k][0]).value.replace(/\s+/g, " ").trim().toUpperCase(); }); return v; }
+  function hsCount() { Object.keys(HS).forEach(function (k) { var n = $(HS[k][0]).value.trim().length, m = HS[k][1], c = $(HS[k][0] + "N"); c.textContent = n + " letters" + (n > m ? ", longer than the " + m + " that read best, so it squeezes" : " (about " + m + " read best)"); c.className = n > m ? "long" : ""; }); }
+  function hsLoad() { if (hsDoc) return Promise.resolve();
+    var fromHero = function () { var d = frame(); Object.keys(HS).forEach(function (k) { var id = { plane: "ad-banner-plane", parasail: "ad-parasail", sign: "ad-pier-sign" }[k], e = d && d.querySelector('.hero [id$="' + id + '"] text'); if (e && !$(HS[k][0]).value) $(HS[k][0]).value = Array.prototype.map.call(e.querySelectorAll("tspan"), function (t) { return t.textContent.trim(); }).join(" ").trim() || e.textContent.trim(); }); hsCount(); };
+    return gh("GET", "/repos/" + REPO + "/contents/" + HSPATH + "?ref=main").then(function (j) { var o = JSON.parse(unb64(j.content)); if (!o || typeof o.plane !== "string") throw new Error("not the signs file"); hsSha = j.sha; hsDoc = o; Object.keys(HS).forEach(function (k) { $(HS[k][0]).value = hsDoc[k] || ""; }); hsCount(); })
+      .catch(fromHero).then(function () { if (!$("hsPlane").value) fromHero(); }); }
+  Object.keys(HS).forEach(function (k) { $(HS[k][0]).addEventListener("input", function () { hsCount(); try { var f = fw(); if (f && f.__hkHeroAds) f.__hkHeroAds(hsVals()); } catch (e) {} }); });
+  function hsSave() { var v = hsVals(); if (!v.plane || !v.parasail || !v.sign) { $("hsSay").textContent = "Each sign needs some words."; return Promise.resolve(false); }
+    var out = Object.assign({}, hsDoc || {}, v); $("hsSay").textContent = "Saving the signs\u2026";
+    return gh("PUT", "/repos/" + REPO + "/contents/" + HSPATH, { message: "Card designer: hero signs", content: b64(JSON.stringify(out, null, 1) + "\n"), sha: hsSha || undefined, branch: "main" })
+      .then(function (j) { hsSha = j && j.content && j.content.sha; hsDoc = out; $("hsSay").textContent = "Saved. The hero shows them after the next update, or tap Save and publish now."; say("Hero signs saved.", "ok"); return true; })
+      .catch(function (e) { $("hsSay").textContent = "Not saved: " + e.message; return false; }); }
+  $("hsSave").onclick = hsSave;
+  $("hsPub").onclick = function () { hsSave().then(function (ok) { if (!ok) return; return gh("POST", "/repos/" + REPO + "/actions/workflows/" + WORKFLOW + "/dispatches", { ref: "main" }).then(function () { $("hsSay").textContent = "Saved and publishing. The hero changes in about 10 minutes."; watchPublish(Date.now()); }); }).catch(function (e) { $("hsSay").textContent = e.message; }); };
+  $("signsBtn").onclick = function () { moreOpen(false); document.body.classList.add("signs"); showTab("text"); hsLoad(); var d = frame(), e = d && d.querySelector('.hero [id$="ad-banner-plane"]'); if (e) e.scrollIntoView({ block: "center" }); setTimeout(function () { $("hsPlane").focus(); }, 200); };
   /* ---- Check every card / Send to Claude (10/03) ---- */
   var flagged = {}, autoT = 0, toCheck = 0;
   function autoCheck() { if (!sel || sel.in !== "card") { toCheck = 0; return; } var r = findRule(key()); if (!r || r.scope === "card") { toCheck = 0; scopeChip(); return; }
@@ -863,10 +1055,29 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
      mv gets it the first time it is touched. */
   function moveKind() {
     var el = sel && sel.el, pos = el ? el.ownerDocument.defaultView.getComputedStyle(el).position : "static";
+    /* a drawn hero piece (an SVG group) moves by its own transform, so its drift animation, which runs on translate,
+       keeps going; "tf" carries the group's drawn transform in t0 so the move adds to where it was drawn */
+    if (el && el.ownerSVGElement) return "tf";
     if (!/absolute|fixed|sticky/.test(pos)) return "rel";
     /* a piece already sliding by translate in its own animation (hero pieces) moves by its margins instead */
     var slides = false; try { slides = el.getAnimations().some(function (a) { return a.effect && a.effect.getKeyframes && a.effect.getKeyframes().some(function (k) { return "translate" in k || ("transform" in k && false); }); }); } catch (e) {}
     return slides && pos === "absolute" ? "mg" : "tr";
+  }
+  /* an SVG transform attribute in CSS words: translate(-5 -14) becomes translate(-5px,-14px); anything it cannot read
+     safely becomes "" and the piece moves from where it sits now */
+  function svgTf(t) {
+    t = String(t || "").trim(); if (!t) return "";
+    var out = [], ok = true, num = /^-?[0-9.]+(e-?[0-9]+)?$/;
+    t.replace(/([a-z]+)\(([^)]*)\)/gi, function (m, f, a) {
+      var n = a.trim().split(/[\s,]+/); if (!n.every(function (v) { return num.test(v); })) { ok = false; return m; }
+      if (f === "translate") out.push("translate(" + n[0] + "px," + (n[1] || 0) + "px)");
+      else if (f === "matrix" && n.length === 6) out.push("matrix(" + n.join(",") + ")");
+      else if (f === "scale") out.push("scale(" + n[0] + "," + (n[1] || n[0]) + ")");
+      else if (f === "rotate" && n.length === 1) out.push("rotate(" + n[0] + "deg)");
+      else ok = false;
+      return m;
+    });
+    return ok ? out.join(" ") : "";
   }
   function newRule(k) {
     var r = { in: k.in, path: k.path, name: sel && sel.name, scope: k.scope, value: k.value, look: k.look, set: { mv: moveKind() } };
@@ -875,7 +1086,9 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   /* ib (10/03): a plain inline word (a title's link) cannot turn or scale, so a rule made on one records it once, like mv,
      and the turn or scale then makes the piece an inline-block */
   function ruleFor(k) { var r = findRule(k) || newRule(k); if (!r.set) r.set = {}; if (r.set.mv === undefined) r.set.mv = moveKind();
-    if (r.set.ib === undefined && sel && sel.el && sel.el.ownerDocument.defaultView.getComputedStyle(sel.el).display === "inline") r.set.ib = true;
+    if (r.set.mv === "tf" && r.set.t0 === undefined && sel && sel.el) { r.set.t0 = svgTf(sel.el.getAttribute("transform"));
+      try { var bb = sel.el.getBBox(); r.set.c0 = [Math.round(bb.x + bb.width / 2), Math.round(bb.y + bb.height / 2)]; } catch (e) { r.set.c0 = [0, 0]; } }
+    if (r.set.ib === undefined && sel && sel.el && !sel.el.ownerSVGElement && sel.el.ownerDocument.defaultView.getComputedStyle(sel.el).display === "inline") r.set.ib = true;
     if (r.set.mv === "mg" && !r.set.m0 && sel && sel.el) { var cs = sel.el.ownerDocument.defaultView.getComputedStyle(sel.el); r.set.m0 = [parseFloat(cs.marginLeft) || 0, parseFloat(cs.marginTop) || 0]; }
     return r; }
   function syncText(r) { if (!sel || sel.in !== "card" || !(Number(r.set.size) > 0)) return; var tk = findRule(Object.assign(key(), { scope: "card", value: sel.card })); if (tk && tk !== r && tk.set && tk.set.text) tk.set.textSize = Number(r.set.size); }
@@ -1039,7 +1252,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
 
   /* ---- paint the preview and the panel ---- */
   /* a rule left with nothing in it (a reset colour, a move back to 0, 0) is dropped, so Your changes lists only real changes */
-  var live = function (st) { return Object.keys(st || {}).some(function (k) { var v = st[k]; if (/^(mv|m0|textSize|zr|ib)$/.test(k) || v === undefined || v === "") return false; if (k === "dx" || k === "dy") return Number(v) !== 0; return true; }); };
+  var live = function (st) { return Object.keys(st || {}).some(function (k) { var v = st[k]; if (/^(mv|m0|t0|c0|textSize|zr|ib)$/.test(k) || v === undefined || v === "") return false; if (k === "dx" || k === "dy") return Number(v) !== 0; return true; }); };
   function prune() { if (drag && drag.on) return; doc.rules = doc.rules.filter(function (r) { return r.sel || r.part || live(r.set); }); }
   function paint() {
     var d = frame(); if (!d || !d.body) return; prune();
@@ -1053,6 +1266,8 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     st.media = comparing ? "not all" : "all";
     st.textContent = CD.designCss(doc) +
       "\n[data-hk-pick]:not([data-hk-big]){touch-action:none !important;}" +
+      /* on the Shape tab the corner handles and the turn dot step aside, so only the bend dots sit on the line */
+      "\nhtml.hk_shaping [id^=\"hk_handle\"], html.hk_shaping #hk_turn{display:none !important;}" +
       /* the app's floating buttons (Show support, back to top) step aside while he picks, so they never sit on a card he is editing */
       (picking && hideFloats ? "\n.hk_supportfloat, .hk_totop, [aria-label=\"Back to top\"]{visibility:hidden !important;}" : "") +
       (picking ? "\n.hk *{cursor:crosshair !important;}\n.hk [data-hk-pick], .hk [data-hk-pick] *{cursor:move !important;}\n[data-hk-add]{pointer-events:auto !important;}" : "") +
@@ -1071,7 +1286,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   function boxOf(el) { var tc = el.ownerDocument.defaultView.getComputedStyle(el), af = el.ownerDocument.defaultView.getComputedStyle(el, "::after").content;
     if ((tc.rotate && tc.rotate !== "none") || tc.transform !== "none" || (parseFloat(tc.fontSize) === 0 && af && af !== "none" && af !== "normal")) { var q = el.getBoundingClientRect(); return { l: q.left, r: q.right, t: q.top, b: q.bottom }; }
     if (ownText(el) && el.tagName.toLowerCase() !== "svg") { var u = union(inkRects(el)); if (u.r > u.l) return u; } var b = el.getBoundingClientRect(); return { l: b.left, r: b.right, t: b.top, b: b.bottom }; }
-  function ring() {
+  function ring() { bendDots();
     var d = frame(); if (!d || !d.body) return;
     var R = d.getElementById("hk_ring"); if (!R) { R = d.createElement("div"); R.id = "hk_ring"; R.style.cssText = "position:fixed;inset:0;pointer-events:none;z-index:2147483646"; d.body.appendChild(R); }
     /* a handle under a finger is kept, not rebuilt: a touch stops reporting once the element it began on leaves the page */
@@ -1242,6 +1457,12 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     d.addEventListener("pointerdown", function (e) {
       if (e.pointerType === "touch") { fingers[e.pointerId] = { x: e.clientX, y: e.clientY };
         if (Object.keys(fingers).length === 2 && sel && drag) { startPinch(); e.preventDefault(); e.stopPropagation(); return; } }
+      if (e.target && e.target.classList && e.target.classList.contains("hk_bend") && sel) {
+        e.preventDefault(); e.stopPropagation(); tap = null; var tg0 = shapeTarget(sel.el), M0 = tg0 && tg0.path.getScreenCTM(); if (!M0) return;
+        var sh0 = curShape(), L0 = sh0.L[shapeUi.layer] || sh0.L[0];
+        bend = { i: Number(e.target.getAttribute("data-i")), x: e.clientX, y: e.clientY, on: false, h0: JSON.parse(JSON.stringify(L0.h)), ia: 1 / (Math.hypot(M0.a, M0.b) || 1) };
+        return;
+      }
       if (e.target && /^hk_handle/.test(e.target.id || "") && sel) {
         e.preventDefault(); e.stopPropagation(); tap = null; var b = boxOf(sel.el), cx = (b.l + b.r) / 2, cy = (b.t + b.b) / 2;
         resize = { hid: e.target.id, cx: cx, cy: cy, d0: Math.max(8, Math.hypot(e.clientX - cx, e.clientY - cy)), on: false,
@@ -1275,6 +1496,9 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
         pinch.starts.forEach(function (st) { withSel(st.g, function () { var r = ruleFor(key()); if (st.txt) r.set.size = Math.max(5, Math.round(st.base * k * 2) / 2); else r.set.scale = Math.max(0.2, Math.min(4, Math.round(st.base * k * 100) / 100)); syncText(r);
           var v = st.rot + da, sn = Math.round(v / 15) * 15; v = Math.abs(v - sn) < 5 ? sn : Math.round(v); v = ((v + 540) % 360) - 180; if (!v) delete r.set.rot; else r.set.rot = v; }); });
         paint(); fill(); e.preventDefault(); e.stopPropagation(); return; }
+      if (bend) { var bx = e.clientX - bend.x, by = e.clientY - bend.y; if (!bend.on) { if (Math.abs(bx) + Math.abs(by) < 3) return; bend.on = true; snap(); }
+        setShape(function (sh) { var Ly = sh.L[shapeUi.layer] || sh.L[0]; Ly.h = JSON.parse(JSON.stringify(bend.h0)); Ly.h[bend.i] = [Math.round((bend.h0[bend.i][0] + bx * bend.ia) * 100) / 100, Math.round((bend.h0[bend.i][1] + by * bend.ia) * 100) / 100]; });
+        e.preventDefault(); e.stopPropagation(); return; }
       if (turn) { var a = (Math.atan2(e.clientY - turn.cy, e.clientX - turn.cx) - turn.a0) * 180 / Math.PI; a = ((a + 540) % 360) - 180; if (!turn.on) { if (Math.abs(a) < 2) return; turn.on = true; snap(); }
         turn.starts.forEach(function (st) { withSel(st.g, function () { var v = st.rot + a, sn = Math.round(v / 15) * 15; v = e.altKey ? Math.round(v) : Math.abs(v - sn) < 4 ? sn : Math.round(v); v = ((v + 540) % 360) - 180; var r = ruleFor(key()); if (!v) delete r.set.rot; else r.set.rot = v; }); });
         paint(); fill(); e.preventDefault(); e.stopPropagation(); return; }
@@ -1315,6 +1539,8 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
           if (!got.length) { say("Nothing whole inside that box. Draw it around the pieces.", "err"); return; }
           trail = []; levelBase = null; select(got[0]); got.slice(1).forEach(function (n) { toggleGroup(n); });
           say(got.length === 1 ? "Picked 1 piece." : got.length + " pieces picked. Every change now goes on all of them.", "ok"); return; } }
+      if (bend) { var bw = bend.on, bi = bend.i; bend = null; e.preventDefault(); e.stopPropagation();
+        if (bw) { fill(); bendDots(); say("Bent. Undo takes it back.", "ok"); } else { shapeUi.dot = shapeUi.dot === bi ? -1 : bi; bendDots(); } return; }
       if (turn) { var tw = turn.on; turn = null; e.preventDefault(); e.stopPropagation(); ring(); if (tw) { fill(); say("Turned. Undo takes it back.", "ok"); } return; }
       if (resize) { var was = resize.on; resize = null; ring(); e.preventDefault(); e.stopPropagation(); if (was) { fill(); say("Resized. Undo takes it back.", "ok"); } return; }
       var moved = drag && drag.on, t = tap; tap = null; end(e);
@@ -1325,7 +1551,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       }
       if (picking && t && !moved && Math.abs(e.clientX - t.x) + Math.abs(e.clientY - t.y) < 10) { e.preventDefault(); if (dropping) { takeColour(t.t); return; } if ((e.shiftKey || adding) && sel) { toggleGroup(sceneryAt(t.t, t.x, t.y) || t.t); return; } trail = []; levelBase = null; select(wholeRun(sceneryAt(t.t, t.x, t.y) || t.t)); }
     }, true);
-    d.addEventListener("pointercancel", function (e) { if (marq) { marq = null; d.body.style.userSelect = ""; var M = d.getElementById("hk_marq"); if (M) M.remove(); } if (unfinger(e)) return; tap = null; resize = null; turn = null; end(e); }, true);
+    d.addEventListener("pointercancel", function (e) { if (marq) { marq = null; d.body.style.userSelect = ""; var M = d.getElementById("hk_marq"); if (M) M.remove(); } if (unfinger(e)) return; tap = null; resize = null; turn = null; bend = null; end(e); }, true);
     d.addEventListener("keydown", onKey, true); d.addEventListener("keydown", function (e) { cmpKey(e); }, true); d.addEventListener("keyup", function (e) { cmpKey(e); }, true);
     var gq = 0; d.addEventListener("scroll", function () { if (!gq) gq = fw().requestAnimationFrame(function () { gq = 0; guides(); ring(); }); }, true);
     clearInterval(hook.tick); hook.tick = setInterval(function () { if (sel && !document.hidden) ring(); }, 250);
@@ -1340,8 +1566,14 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
      stays usable), so a tap on the hero lands on the hero itself. Then the smallest hero piece under the finger is
      picked: the sailboat, the flag, the sun and moon, a cloud, the surf. Huge washes (the grain, the scrim) are skipped. */
   var HERO_SKIP = /^(grain|hero-scrim|boat-refl|hero_slot|hkn_tl|hk_rigsrc)$/;
+  function heroScene() { try { var m = (fw().location.hash || "").match(/ph-(day|golden|night)/); return m ? m[1] : (frame().querySelector(".hk_nh svg [id^='nhn_']") ? "night" : frame().querySelector(".hk_nh svg [id^='nhk_'], .hk_nh svg [id^='nhs_']") ? "golden" : "day"); } catch (e) { return "day"; } }
+  function frameHash(poster, ph) { return "newhero" + (poster ? "&poster" : "") + (ph && ph !== "auto" ? "&ph-" + ph : ""); }
+  function setScene(ph) { letGo(); sel = null; zoomK = 1; zoomTo(); try { fw().location.hash = frameHash($("lists").value === "poster", ph); } catch (e) {} fw().location.reload();
+    say(ph === "night" ? "Showing the night scene: the crab, the turtle hatchlings, the pier lamps." : ph === "golden" ? "Showing the sunset scene." : "Showing the day scene.", "ok"); }
   function heroPieces(hero) {
     var out = [], H = hero.getBoundingClientRect(), big = H.width * H.height * 0.6;
+    Array.prototype.forEach.call(hero.querySelectorAll('.hk_nh [id*="move-"], .hk_nh [id*="ad-"]'), function (n) { if (!/((?:move|ad)-[a-z0-9-]+)$/.test(n.id)) return; var r = n.getBoundingClientRect(); out.push({ el: n, r: r, c: n.id.replace(/^.*?((?:move|ad)-)/, "$1") }); });
+    var sq = hero.querySelector(".bswash"); if (sq) out.push({ el: sq, r: sq.getBoundingClientRect(), c: "bswash" });
     Array.prototype.forEach.call(hero.querySelectorAll(":scope > *, :scope > * > *"), function (n) {
       var c = cls(n)[0] || ""; if (!c || HERO_SKIP.test(c) || n.closest(".stars .hkn_sheet") || /^(defs)$/i.test(n.tagName)) return;
       var r = n.getBoundingClientRect(); if (r.width < 6 || r.height < 6 || r.width * r.height > big) return;
@@ -1351,7 +1583,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   }
   function heroAt(hit, x, y) {
     var hero = hit && hit.closest && hit.closest(".hero"); if (!hero || (hit !== hero && ownText(hit))) return null;
-    if (hit !== hero && !/^(hero|hero-in|clouds|hk_swellw|hero-surf|hkn_sea)$/.test(cls(hit)[0] || "")) return null;
+    if (hit !== hero && !hit.closest(".hk_nh") && !/^(hero|hero-in|clouds|hk_swellw|hero-surf|hkn_sea)$/.test(cls(hit)[0] || "")) return null;
     var best = null, area = Infinity;
     heroPieces(hero).forEach(function (p) { var r = p.r; if (x < r.left || x > r.right || y < r.top || y > r.bottom) return; var a = r.width * r.height; if (a < area) { area = a; best = p.el; } });
     return best;
@@ -1433,7 +1665,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   function cycleZoom() { if (!sel && zoomK === 1) { say("Tap a word in the app first, then zoom in on it.", "err"); return; } zoomK = zoomK === 1 ? 2 : zoomK === 2 ? 3 : 1; zoomTo(); say(zoomK === 1 ? "Back to normal size." : "Zoomed " + zoomK + " times on the picked piece. A drag or nudge now moves it in finer steps.", "ok"); }
   /* ---- the panel ---- */
   /* the marks on the buttons are Tabler outline icons (MIT licence, tabler.io/icons), drawn at 20 px, 22 on the phone's tool tabs */
-  var ICONS = {"floats":"<path d=\"M20 6v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2\" /><path d=\"M20 15h-16\" /><path d=\"M14 8l-2 2l-2 -2\" />","zoomin":"<path d=\"M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0\" /><path d=\"M7 10l6 0\" /><path d=\"M10 7l0 6\" /><path d=\"M21 21l-6 -6\" />","addmore":"<path d=\"M12 5l0 14\" /><path d=\"M5 12l14 0\" />","chup":"<path d=\"M6 15l6 -6l6 6\" />","chdown":"<path d=\"M6 9l6 6l6 -6\" />","chleft":"<path d=\"M15 6l-6 6l6 6\" />","chright":"<path d=\"M9 6l6 6l-6 6\" />","home":"<path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M4 8v-2a2 2 0 0 1 2 -2h2\" /><path d=\"M4 16v2a2 2 0 0 0 2 2h2\" /><path d=\"M16 4h2a2 2 0 0 1 2 2v2\" /><path d=\"M16 20h2a2 2 0 0 0 2 -2v-2\" />","eye":"<path d=\"M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0\" /><path d=\"M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6\" />","eyeoff":"<path d=\"M10.585 10.587a2 2 0 0 0 2.829 2.828\" /><path d=\"M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87\" /><path d=\"M3 3l18 18\" />","pick":"<path d=\"M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5\" /><path d=\"M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5\" /><path d=\"M14 10.5a1.5 1.5 0 0 1 3 0v1.5\" /><path d=\"M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47\" /><path d=\"M5 3l-1 -1\" /><path d=\"M4 7h-1\" /><path d=\"M14 3l1 -1\" /><path d=\"M15 6h1\" />","undo":"<path d=\"M9 14l-4 -4l4 -4\" /><path d=\"M5 10h11a4 4 0 1 1 0 8h-1\" />","redo":"<path d=\"M15 14l4 -4l-4 -4\" /><path d=\"M19 10h-11a4 4 0 1 0 0 8h1\" />","more":"<path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M11 19a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M11 5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" />","move":"<path d=\"M18 9l3 3l-3 3\" /><path d=\"M15 12h6\" /><path d=\"M6 9l-3 3l3 3\" /><path d=\"M3 12h6\" /><path d=\"M9 18l3 3l3 -3\" /><path d=\"M12 15v6\" /><path d=\"M15 6l-3 -3l-3 3\" /><path d=\"M12 3v6\" />","size":"<path d=\"M3 7v-2h13v2\" /><path d=\"M10 5v14\" /><path d=\"M12 19h-4\" /><path d=\"M15 13v-1h6v1\" /><path d=\"M18 12v7\" /><path d=\"M17 19h2\" />","colour":"<path d=\"M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25\" /><path d=\"M7.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M11.5 7.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M15.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" />","font":"<path d=\"M4 20l3 0\" /><path d=\"M14 20l7 0\" /><path d=\"M6.9 15l6.9 0\" /><path d=\"M10.2 6.3l5.8 13.7\" /><path d=\"M5 20l6 -16l2 0l7 16\" />","words":"<path d=\"M12 3a3 3 0 0 0 -3 3v12a3 3 0 0 0 3 3\" /><path d=\"M6 3a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3\" /><path d=\"M13 7h7a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-7\" /><path d=\"M5 7h-1a1 1 0 0 0 -1 1v8a1 1 0 0 0 1 1h1\" /><path d=\"M17 12h.01\" /><path d=\"M13 12h.01\" />","edge":"<path d=\"M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0\" /><path d=\"M13 12h5\" /><path d=\"M13 15h4\" /><path d=\"M13 18h1\" /><path d=\"M13 9h4\" /><path d=\"M13 6h1\" />","where":"<path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M12 7a5 5 0 1 0 5 5\" /><path d=\"M13 3.055a9 9 0 1 0 7.941 7.945\" /><path d=\"M15 6v3h3l3 -3h-3v-3l-3 3\" /><path d=\"M15 9l-3 3\" />","add":"<path d=\"M9 12h6\" /><path d=\"M12 9v6\" /><path d=\"M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14\" />","changes":"<path d=\"M3.5 5.5l1.5 1.5l2.5 -2.5\" /><path d=\"M3.5 11.5l1.5 1.5l2.5 -2.5\" /><path d=\"M3.5 17.5l1.5 1.5l2.5 -2.5\" /><path d=\"M11 6l9 0\" /><path d=\"M11 12l9 0\" /><path d=\"M11 18l9 0\" />","focus":"<path d=\"M11.5 12a.5 .5 0 1 0 1 0a.5 .5 0 1 0 -1 0\" fill=\"currentColor\" /><path d=\"M5 12a7 7 0 1 0 14 0a7 7 0 1 0 -14 0\" /><path d=\"M12 3l0 2\" /><path d=\"M3 12l2 0\" /><path d=\"M12 19l0 2\" /><path d=\"M19 12l2 0\" />","publish":"<path d=\"M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-1\" /><path d=\"M9 15l3 -3l3 3\" /><path d=\"M12 12l0 9\" />","layers":"<path d=\"M12 4l-8 4l8 4l8 -4l-8 -4\" /><path d=\"M4 12l8 4l8 -4\" /><path d=\"M4 16l8 4l8 -4\" />","history":"<path d=\"M12 8l0 4l2 2\" /><path d=\"M3.05 11a9 9 0 1 1 .5 4m-.5 5v-5h5\" />","compare":"<path d=\"M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -14\" /><path d=\"M3 19h2.25c3.728 0 6.75 -3.134 6.75 -7s3.022 -7 6.75 -7h2.25\" />","width":"<path d=\"M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14\" /><path d=\"M11 4h2\" /><path d=\"M12 17v.01\" />","copy":"<path d=\"M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666\" /><path d=\"M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1\" />","paste":"<path d=\"M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2\" /><path d=\"M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2\" />","eyedrop":"<path d=\"M11 7l6 6\" /><path d=\"M4 16l11.7 -11.7a1 1 0 0 1 1.4 0l2.6 2.6a1 1 0 0 1 0 1.4l-11.7 11.7h-4v-4\" />","reset":"<path d=\"M3.06 13a9 9 0 1 0 .49 -4.087\" /><path d=\"M3 4.001v5h5\" /><path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" />","tee":"<path d=\"M6 4l12 0\" /><path d=\"M12 4l0 16\" /><path d=\"M10 20l4 0\" />","snap":"<path d=\"M4 13v-8a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v8a2 2 0 0 0 6 0v-8a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v8a8 8 0 0 1 -16 0\" /><path d=\"M4 8l5 0\" /><path d=\"M15 8l4 0\" />"};
+  var ICONS = {"floats":"<path d=\"M20 6v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2\" /><path d=\"M20 15h-16\" /><path d=\"M14 8l-2 2l-2 -2\" />","zoomin":"<path d=\"M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0\" /><path d=\"M7 10l6 0\" /><path d=\"M10 7l0 6\" /><path d=\"M21 21l-6 -6\" />","addmore":"<path d=\"M12 5l0 14\" /><path d=\"M5 12l14 0\" />","chup":"<path d=\"M6 15l6 -6l6 6\" />","chdown":"<path d=\"M6 9l6 6l6 -6\" />","chleft":"<path d=\"M15 6l-6 6l6 6\" />","chright":"<path d=\"M9 6l6 6l-6 6\" />","home":"<path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M4 8v-2a2 2 0 0 1 2 -2h2\" /><path d=\"M4 16v2a2 2 0 0 0 2 2h2\" /><path d=\"M16 4h2a2 2 0 0 1 2 2v2\" /><path d=\"M16 20h2a2 2 0 0 0 2 -2v-2\" />","eye":"<path d=\"M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0\" /><path d=\"M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6\" />","eyeoff":"<path d=\"M10.585 10.587a2 2 0 0 0 2.829 2.828\" /><path d=\"M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87\" /><path d=\"M3 3l18 18\" />","pick":"<path d=\"M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5\" /><path d=\"M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5\" /><path d=\"M14 10.5a1.5 1.5 0 0 1 3 0v1.5\" /><path d=\"M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47\" /><path d=\"M5 3l-1 -1\" /><path d=\"M4 7h-1\" /><path d=\"M14 3l1 -1\" /><path d=\"M15 6h1\" />","undo":"<path d=\"M9 14l-4 -4l4 -4\" /><path d=\"M5 10h11a4 4 0 1 1 0 8h-1\" />","redo":"<path d=\"M15 14l4 -4l-4 -4\" /><path d=\"M19 10h-11a4 4 0 1 0 0 8h1\" />","more":"<path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M11 19a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M11 5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" />","move":"<path d=\"M18 9l3 3l-3 3\" /><path d=\"M15 12h6\" /><path d=\"M6 9l-3 3l3 3\" /><path d=\"M3 12h6\" /><path d=\"M9 18l3 3l3 -3\" /><path d=\"M12 15v6\" /><path d=\"M15 6l-3 -3l-3 3\" /><path d=\"M12 3v6\" />","size":"<path d=\"M3 7v-2h13v2\" /><path d=\"M10 5v14\" /><path d=\"M12 19h-4\" /><path d=\"M15 13v-1h6v1\" /><path d=\"M18 12v7\" /><path d=\"M17 19h2\" />","colour":"<path d=\"M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25\" /><path d=\"M7.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M11.5 7.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M15.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" />","font":"<path d=\"M4 20l3 0\" /><path d=\"M14 20l7 0\" /><path d=\"M6.9 15l6.9 0\" /><path d=\"M10.2 6.3l5.8 13.7\" /><path d=\"M5 20l6 -16l2 0l7 16\" />","words":"<path d=\"M12 3a3 3 0 0 0 -3 3v12a3 3 0 0 0 3 3\" /><path d=\"M6 3a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3\" /><path d=\"M13 7h7a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-7\" /><path d=\"M5 7h-1a1 1 0 0 0 -1 1v8a1 1 0 0 0 1 1h1\" /><path d=\"M17 12h.01\" /><path d=\"M13 12h.01\" />","edge":"<path d=\"M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0\" /><path d=\"M13 12h5\" /><path d=\"M13 15h4\" /><path d=\"M13 18h1\" /><path d=\"M13 9h4\" /><path d=\"M13 6h1\" />","where":"<path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M12 7a5 5 0 1 0 5 5\" /><path d=\"M13 3.055a9 9 0 1 0 7.941 7.945\" /><path d=\"M15 6v3h3l3 -3h-3v-3l-3 3\" /><path d=\"M15 9l-3 3\" />","add":"<path d=\"M9 12h6\" /><path d=\"M12 9v6\" /><path d=\"M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14\" />","changes":"<path d=\"M3.5 5.5l1.5 1.5l2.5 -2.5\" /><path d=\"M3.5 11.5l1.5 1.5l2.5 -2.5\" /><path d=\"M3.5 17.5l1.5 1.5l2.5 -2.5\" /><path d=\"M11 6l9 0\" /><path d=\"M11 12l9 0\" /><path d=\"M11 18l9 0\" />","focus":"<path d=\"M11.5 12a.5 .5 0 1 0 1 0a.5 .5 0 1 0 -1 0\" fill=\"currentColor\" /><path d=\"M5 12a7 7 0 1 0 14 0a7 7 0 1 0 -14 0\" /><path d=\"M12 3l0 2\" /><path d=\"M3 12l2 0\" /><path d=\"M12 19l0 2\" /><path d=\"M19 12l2 0\" />","publish":"<path d=\"M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-1\" /><path d=\"M9 15l3 -3l3 3\" /><path d=\"M12 12l0 9\" />","layers":"<path d=\"M12 4l-8 4l8 4l8 -4l-8 -4\" /><path d=\"M4 12l8 4l8 -4\" /><path d=\"M4 16l8 4l8 -4\" />","history":"<path d=\"M12 8l0 4l2 2\" /><path d=\"M3.05 11a9 9 0 1 1 .5 4m-.5 5v-5h5\" />","compare":"<path d=\"M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -14\" /><path d=\"M3 19h2.25c3.728 0 6.75 -3.134 6.75 -7s3.022 -7 6.75 -7h2.25\" />","width":"<path d=\"M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14\" /><path d=\"M11 4h2\" /><path d=\"M12 17v.01\" />","copy":"<path d=\"M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666\" /><path d=\"M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1\" />","paste":"<path d=\"M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2\" /><path d=\"M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2\" />","eyedrop":"<path d=\"M11 7l6 6\" /><path d=\"M4 16l11.7 -11.7a1 1 0 0 1 1.4 0l2.6 2.6a1 1 0 0 1 0 1.4l-11.7 11.7h-4v-4\" />","reset":"<path d=\"M3.06 13a9 9 0 1 0 .49 -4.087\" /><path d=\"M3 4.001v5h5\" /><path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" />","shape":"<path d=\"M17 4a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z\" /><path d=\"M3 18a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z\" /><path d=\"M17 5c-6.627 0 -12 5.373 -12 12\" />","tee":"<path d=\"M6 4l12 0\" /><path d=\"M12 4l0 16\" /><path d=\"M10 20l4 0\" />","snap":"<path d=\"M4 13v-8a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v8a2 2 0 0 0 6 0v-8a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v8a8 8 0 0 1 -16 0\" /><path d=\"M4 8l5 0\" /><path d=\"M15 8l4 0\" />"};
   var icon = function (k) { return ICONS[k] ? '<svg class="i" viewBox="0 0 24 24" aria-hidden="true">' + ICONS[k] + "</svg>" : ""; };
   Array.prototype.forEach.call(document.querySelectorAll("[data-i]"), function (b) { b.insertAdjacentHTML("afterbegin", icon(b.getAttribute("data-i"))); });
   /* the phone keeps the bar short: Focus card, the look and Save + publish sit behind More */
@@ -1542,6 +1774,28 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       group().forEach(function (g) { withSel(g, function () { var r = ruleFor(key()); if (v === plain) delete r.set[q[1]]; else r.set[q[1]] = v; }); }); paint(); flashGuides(); });
     el.addEventListener("change", function () { slid = false; fill(); });
   });
+  (function () { var slidB = false;
+    var setAll = function (f) { group().forEach(function (g) { withSel(g, function () { var r = ruleFor(key()); f(r.set); }); }); paint(); picFill(); };
+    Array.prototype.forEach.call($("cutSeg").children, function (b) { b.onclick = function () { if (!sel) return; snap(); var v = b.getAttribute("data-v"); setAll(function (st) { if (v) st.cut = v; else delete st.cut; }); fill(); }; });
+    Array.prototype.forEach.call($("bcSeg").children, function (b) { b.onclick = function () { if (!sel) return; snap(); var v = b.getAttribute("data-v"); setAll(function (st) { st.bc = v; if (!Number(st.bw)) st.bw = 4; }); fill(); }; });
+    $("bwR").addEventListener("input", function () { if (!sel) return; if (!slidB) { slidB = true; snap(); } var v = Number(this.value); setAll(function (st) { if (v) st.bw = v; else { delete st.bw; delete st.bc; } }); });
+    $("bwR").addEventListener("change", function () { slidB = false; fill(); });
+  })();
+  (function () { var slid = false, slidW = false, ok = function () { return sel && shapeTarget(sel.el); }, cur = function (sh) { return sh.L[shapeUi.layer] || sh.L[0]; };
+    $("thickR").addEventListener("input", function () { var v = Number(this.value) / 100; $("thickRead").textContent = this.value + "%"; if (!ok()) return; if (!slid) { slid = true; snap(); } setShape(function (sh) { cur(sh).k = v; }); });
+    $("thickR").addEventListener("change", function () { slid = false; fill(); });
+    $("dotW").addEventListener("input", function () { var v = Number(this.value) / 100; $("dotWRead").textContent = this.value + "%"; if (!ok() || shapeUi.dot < 0) return; if (!slidW) { slidW = true; snap(); } setShape(function (sh) { var Ly = cur(sh); if (shapeUi.dot < Ly.w.length) Ly.w[shapeUi.dot] = v; }); });
+    $("dotW").addEventListener("change", function () { slidW = false; fill(); });
+    /* more or fewer dots keeps the bend he already made: the new dots are read off the curve through the old ones */
+    var reDot = function (dn) { if (!ok()) return; var B = baseOf(shapeTarget(sel.el)); snap(); setShape(function (sh) { var Ly = cur(sh), n = Math.max(3, Math.min(12, Ly.h.length + dn)); if (n === Ly.h.length) return;
+      var xs = dotXs(B, n); Ly.h = xs.map(function (x) { return along(B, Ly.h, x).map(function (v) { return Math.round(v * 100) / 100; }); }); Ly.w = xs.map(function (x) { return Math.round(along(B, Ly.w, x) * 100) / 100; }); shapeUi.dot = -1; }); fill(); };
+    $("dotMore").onclick = function () { reDot(1); }; $("dotLess").onclick = function () { reDot(-1); };
+    Array.prototype.forEach.call($("lineCol").children, function (b) { b.onclick = function () { if (!ok()) return; snap(); var v = b.getAttribute("data-v"); setShape(function (sh) { cur(sh).c = v; }); fill(); }; });
+    Array.prototype.forEach.call($("lineNudge").querySelectorAll("button"), function (b) { b.onclick = function () { if (!ok()) return; snap(); var n = b.getAttribute("data-n").split(",").map(Number); setShape(function (sh) { var Ly = cur(sh); Ly.o = [Math.round((Ly.o[0] + n[0] * 0.5) * 100) / 100, Math.round((Ly.o[1] + n[1] * 0.5) * 100) / 100]; }); fill(); }; });
+    $("lineDel").onclick = function () { if (!ok() || shapeUi.layer < 1) return; snap(); var i = shapeUi.layer; setShape(function (sh) { sh.L.splice(i, 1); }); shapeUi = { layer: 0, dot: -1 }; bendDots(); fill(); say("Line removed. Undo brings it back.", "ok"); };
+    $("shapeFlat").onclick = function () { if (!ok()) return; snap(); var B = baseOf(shapeTarget(sel.el)); setShape(function (sh) { var Ly = cur(sh), xs = dotXs(B, Ly.h.length), ys = xs.map(function (x) { return midY(B, x); }), ym = ys.reduce(function (s0, v) { return s0 + v; }, 0) / ys.length; Ly.h = ys.map(function (y) { return [0, Math.round((ym - y) * 100) / 100]; }); }); fill(); say("Straightened. Undo takes it back.", "ok"); };
+    $("shapeReset").onclick = function () { if (!ok()) return; snap(); setShape(function (sh) { sh.L = [newLayer(5)]; }); shapeUi = { layer: 0, dot: -1 }; bendDots(); fill(); say("Back as drawn.", "ok"); };
+  })();
   /* ---- line it up in one tap (10/03, J13), Gray's spacing law: "symmetrical spacing everywhere always. above and
      below whenever possible". Even above/below puts the piece where the space to the words above equals the space
      to the words below (the card's edge when there is nothing); the same left and right; Centre puts its middle on
@@ -1678,11 +1932,13 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   $("addFile").addEventListener("change", function () { $("fileName").textContent = this.files && this.files[0] ? this.files[0].name : "Choose a picture"; });
   $("addImgGo").onclick = function () {
     var f = $("addFile").files && $("addFile").files[0]; if (!f) { say("Choose a picture first.", "err"); return; }
-    if (!/^image\/(png|jpeg|webp|gif)$/.test(f.type)) { say("Use a PNG, JPG, WebP or GIF picture.", "err"); return; }
+    if (!/^image\/(png|jpeg|webp|gif|svg\+xml)$/.test(f.type)) { say("Use a PNG, JPG, WebP, GIF or SVG picture.", "err"); return; }
+    /* 10/03: an SVG (a drawing) is turned into a picture 640 px across, so it stays sharp and ships like any picture */
+    var vec = f.type === "image/svg+xml";
     var img = new Image(), url = URL.createObjectURL(f);
     img.onload = function () {
-      var k = Math.min(1, 640 / Math.max(img.width, img.height)), c = document.createElement("canvas");
-      c.width = Math.max(1, Math.round(img.width * k)); c.height = Math.max(1, Math.round(img.height * k));
+      var iw = img.width || 640, ih = img.height || 640, k = vec ? 640 / Math.max(iw, ih) : Math.min(1, 640 / Math.max(iw, ih)), c = document.createElement("canvas");
+      c.width = Math.max(1, Math.round(iw * k)); c.height = Math.max(1, Math.round(ih * k));
       c.getContext("2d").drawImage(img, 0, 0, c.width, c.height); URL.revokeObjectURL(url);
       var data = c.toDataURL("image/webp", 0.85), ext = "webp";
       if (data.indexOf("data:image/webp") !== 0) { data = c.toDataURL("image/png"); ext = "png"; }
@@ -1715,7 +1971,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   Array.prototype.forEach.call(document.querySelectorAll("#pieceMenu .pm"), function (b) { b.addEventListener("click", function () { $("pieceMenu").classList.remove("open"); $("pieceOpts").setAttribute("aria-expanded", "false"); }); });
   document.addEventListener("click", function (e) { if (!e.target.closest || !e.target.closest("#pieceMenu, #pieceOpts")) { $("pieceMenu").classList.remove("open"); } });
   $("mini").onclick = function () { setMini(document.body.getAttribute("data-mini") !== "1"); };
-  var showTab = function (t) { setMini(false); if (document.body.getAttribute("data-tab") !== t) { var tl = document.querySelector(".tools"); if (tl) tl.scrollTop = 0; } document.body.setAttribute("data-tab", t); Array.prototype.forEach.call($("tabs").children, function (b) { b.classList.toggle("on", b.getAttribute("data-t") === t); });
+  var showTab = function (t) { setTimeout(bendDots, 0); setMini(false); if (document.body.getAttribute("data-tab") !== t) { var tl = document.querySelector(".tools"); if (tl) tl.scrollTop = 0; } document.body.setAttribute("data-tab", t); Array.prototype.forEach.call($("tabs").children, function (b) { b.classList.toggle("on", b.getAttribute("data-t") === t); });
     /* the open tab is always in view on the phone's sideways tab row */
     var tb = $("tabs"), on = tb.querySelector(".on"); if (on && tb.scrollWidth > tb.clientWidth) { var a = on.getBoundingClientRect(), z = tb.getBoundingClientRect(); if (a.left < z.left || a.right > z.right) tb.scrollLeft += a.left - z.left - (z.width - a.width) / 2; } try { localStorage.setItem("hk_designer_tab", t); } catch (e) {} paint(); layersList(); if (t === "history" && document.body.className !== "locked") showHistory(); };
   Array.prototype.forEach.call($("tabs").children, function (b) { b.onclick = function () { showTab(b.getAttribute("data-t")); }; });
@@ -1796,7 +2052,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   $("focus").onclick = function () { focusOn = !focusOn; this.className = focusOn ? "on" : ""; focusCard(); paint(); };
   /* 10/03, Gray: "Can the designer edit those?" (the poster tiles readers now see first, R-378). Inside the designer
      the app shows full cards; this switch loads it with #poster so the tiles can be picked and styled like anything else */
-  $("lists").onchange = function () { moreOpen(false); zoomK = 1; zoomTo(); sel = null; var v = this.value; try { fw().location.hash = v === "poster" ? "poster" : ""; } catch (e) {} fw().location.reload(); say(v === "poster" ? "Showing the poster tiles. Tap any part of a tile to change it." : "Showing full cards.", "ok"); };
+  $("lists").onchange = function () { moreOpen(false); zoomK = 1; zoomTo(); sel = null; var v = this.value; try { fw().location.hash = frameHash(v === "poster", heroScene()); } catch (e) {} fw().location.reload(); say(v === "poster" ? "Showing the poster tiles. Tap any part of a tile to change it." : "Showing full cards.", "ok"); };
   $("look").onchange = function () { moreOpen(false); zoomK = 1; zoomTo(); try { fw().localStorage.setItem("hk_theme_v1", this.value); } catch (e) {} sel = null; fw().location.reload(); };
 
   /* ---- GitHub: sign in once, load, save, publish ---- */
