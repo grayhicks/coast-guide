@@ -105,6 +105,7 @@
       else out.push("translate:" + dx + "px " + dy + "px"); }
     /* 10/03, J13: bigger or smaller and turned, for drawings and pictures as much as words (scale and rotate stack on
        top of any animation the piece already has), and a colour shift for drawings (hue and brightness) */
+    if (s.ib === true && ((Number(s.scale) > 0 && Number(s.scale) !== 1) || Number(s.rot))) out.push("display:inline-block");
     if (Number(s.scale) > 0 && Number(s.scale) !== 1) out.push("scale:" + Math.max(0.2, Math.min(4, Number(s.scale))));
     if (Number(s.rot)) out.push("rotate:" + Math.max(-180, Math.min(180, Number(s.rot))) + "deg");
     var fx = []; if (Number(s.hue)) fx.push("hue-rotate(" + Math.round(Number(s.hue)) + "deg)"); if (Number(s.bright) > 0 && Number(s.bright) !== 1) fx.push("brightness(" + Math.max(0.3, Math.min(2, Number(s.bright))) + ")"); if (Number(s.sat) >= 0 && s.sat !== undefined && Number(s.sat) !== 1) fx.push("saturate(" + Math.max(0, Math.min(3, Number(s.sat))) + ")");
