@@ -25,10 +25,10 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_jazz_art_writers_south_festival_youth_exhibi_0915-2026-10-02@coastal
+UID:ev_jazz_art_writers_south_festival_youth_exhibi_0915-2026-10-03@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
-DTSTART;VALUE=DATE:20261002
+DTSTAMP:20261003T000000Z
+DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261102
 SUMMARY:Jazz Art Writers South Festival Youth Exhibit
 LOCATION:West Regional Library\, 5555 Grelot Road\, Mobile\, AL 36609
@@ -46,9 +46,9 @@ CATEGORIES:Arts and culture
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_uwf_make_it_last_1001-2026-10-02@coastaleventures.com
-DTSTAMP:20261002T000000Z
-DTSTART;VALUE=DATE:20261002
+UID:ev_uwf_make_it_last_1001-2026-10-03@coastaleventures.com
+DTSTAMP:20261003T000000Z
+DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261121
 SUMMARY:Make It Last: Gallery Exhibition at UWF
 LOCATION:UWF Center for Fine and Performing Arts\, Building 82\, The Art Ga
@@ -66,9 +66,9 @@ CATEGORIES:Arts and culture
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_pensacola_state_wanda_sullivan_bloem-2026-10-02@coastaleventures.com
-DTSTAMP:20261002T000000Z
-DTSTART;VALUE=DATE:20261002
+UID:ev_pensacola_state_wanda_sullivan_bloem-2026-10-03@coastaleventures.com
+DTSTAMP:20261003T000000Z
+DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261212
 SUMMARY:Wanda Sullivan: Bloem Exhibition
 LOCATION:Anna Lamar Switzer Center for Visual Arts\, 1000 College Blvd. Bld
@@ -84,25 +84,10 @@ CATEGORIES:Arts and culture
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_navarre_craft_and_chat_1002-2026-10-02@coastaleventures.com
-DTSTAMP:20261002T000000Z
-DTSTART;TZID=America/Chicago:20261002T100000
-DTEND;TZID=America/Chicago:20261002T120000
-SUMMARY:Craft and Chat (Navarre)
-LOCATION:Navarre Library\, 8484 James M. Harvell Road\, Navarre\, FL 32566
-DESCRIPTION:Friday 10/2 · 10:00 AM to 12:00 PM\n\nCraft and Chat is a two 
- hour open crafting session at the Navarre Library\, held on a recurring sc
- hedule through the fall.\n\nPrice: No published price\n\nDetails: https://
- coastaleventures.com/events/ev-navarre-craft-and-chat-1002.html
-URL:https://coastaleventures.com/events/ev-navarre-craft-and-chat-1002.html
-CATEGORIES:Arts and culture
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_quayside_summers_end_2026-2026-10-02@coastaleventures.com
-DTSTAMP:20261002T000000Z
-DTSTART;TZID=America/Chicago:20261002T110000
-DTEND;TZID=America/Chicago:20261002T170000
+UID:ev_quayside_summers_end_2026-2026-10-03@coastaleventures.com
+DTSTAMP:20261003T000000Z
+DTSTART;TZID=America/Chicago:20261003T110000
+DTEND;TZID=America/Chicago:20261003T170000
 SUMMARY:Summer's End at Quayside Art Gallery
 LOCATION:Quayside Art Gallery\, 17 E Zaragoza St\, Pensacola\, FL 32502
 DESCRIPTION:Daily through 10/5 · 11:00 AM to 5:00 PM\n\nQuayside Art Galle
@@ -118,163 +103,9 @@ CATEGORIES:Arts and culture
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_botanical_gardens_sketch_club-2026-10-02@coastaleventures.com
-DTSTAMP:20261002T000000Z
-DTSTART;TZID=America/Chicago:20261002T140000
-DTEND;TZID=America/Chicago:20261002T160000
-SUMMARY:Sketch Club in the Gardens
-LOCATION:Mobile Botanical Gardens\, 5151 Museum Drive\, Mobile\, AL 36608
-DESCRIPTION:Fridays 8/28 through 10/16 · 2:00 PM to 4:00 PM (space permitt
- ing)\n\nBotanical arts instructor Derek Norman leads a casual Friday sketc
- h session in the Larkins Classroom or the Magnolia Hill Studio. Garden mem
- bers get in free\, everyone else pays the standard Mobile Botanical Garden
- s admission\, and the garden's own site is not internally consistent about
-  what the military and veteran rate actually is.\n\nPrice: from $6\n\nDeta
- ils: https://coastaleventures.com/events/ev-botanical-gardens-sketch-club.
- html
-URL:https://coastaleventures.com/events/ev-botanical-gardens-sketch-club.ht
- ml
-CATEGORIES:Arts and culture
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_mobile_museum_make_take_art-2026-10-02@coastaleventures.com
-DTSTAMP:20261002T000000Z
-DTSTART;TZID=America/Chicago:20261002T150000
-DTEND;TZID=America/Chicago:20261002T163000
-SUMMARY:Make & Take Art: weekly drop-in art sessions
-LOCATION:Mobile Museum of Art\, 4850 Museum Drive\, Mobile\, AL 36608
-DESCRIPTION:Thursdays 8/27 through 10/15 (except Sept 8) · 3:00 PM to 4:30
-  PM\n\nThe museum runs a free Thursday afternoon art session most weeks\, 
- working through materials and techniques borrowed from artists on view. Pr
- ojects range from geometric shape painting to a Basquiat-inspired dinosaur
-  build. The printed schedule also lists a session for September 8\, but th
- at date falls on a Tuesday\, not a Thursday\, so check with the museum fir
- st.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/events/ev-mobi
- le-museum-make-take-art.html
-URL:https://coastaleventures.com/events/ev-mobile-museum-make-take-art.html
-CATEGORIES:Arts and culture
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-10-02@coastal
- eventures.com
-DTSTAMP:20261002T000000Z
-DTSTART;TZID=America/Chicago:20261002T153000
-DTEND;TZID=America/Chicago:20261002T163000
-SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
-LOCATION:Fairhope Public Library\, MakerSpace\, 501 Fairhope Avenue\, Fairh
- ope\, AL 36532
-DESCRIPTION:Fridays · 3:30 PM to 4:30 PM\n\nFairhope Public Library's Make
- rSpace hosts a weekly art class for ages 7 to 12\, led by an Eastern Shore
-  Art Center artist\, Friday from 3:30 PM to 4:30 PM. Each week sends kids 
- home with a different project. Registration opens by month.\n\nPrice: No p
- ublished price\n\nDetails: https://coastaleventures.com/events/ev-art-clas
- ses-with-eastern-shore-art-center-fa-0904.html
-URL:https://coastaleventures.com/events/ev-art-classes-with-eastern-shore-a
- rt-center-fa-0904.html
-CATEGORIES:Arts and culture
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_jo_taylor_first_friday_author_signing_1002-2026-10-02@coastaleventur
- es.com
-DTSTAMP:20261002T000000Z
-DTSTART;TZID=America/Chicago:20261002T173000
-DTEND;TZID=America/Chicago:20261002T193000
-SUMMARY:Jo Taylor: First Friday Author Signing
-LOCATION:Page & Palette\, 32 South Section Street\, Fairhope\, AL 36532
-DESCRIPTION:Friday 10/2 · 5:30 PM to 7:30 PM\n\nPage & Palette hosts local
-  author Jo Taylor on First Friday\, Friday from 5:30 PM to 7:30 PM\, for a
-  signing of Mimi and Maurice. The historical novel is drawn from surviving
-  correspondence between its real-life subjects.\n\nPrice: No published pri
- ce\n\nDetails: https://coastaleventures.com/events/ev-jo-taylor-first-frid
- ay-author-signing-1002.html
-URL:https://coastaleventures.com/events/ev-jo-taylor-first-friday-author-si
- gning-1002.html
-CATEGORIES:Arts and culture
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_foley_library_fiesta_1002-2026-10-02@coastaleventures.com
-DTSTAMP:20261002T000000Z
-DTSTART;TZID=America/Chicago:20261002T173000
-DTEND;TZID=America/Chicago:20261002T190000
-SUMMARY:Library Fiesta at Foley Community Library
-LOCATION:Foley Community Library\, Canopy Hall\, 230 E. Orange Ave.\, Foley
- \, AL 36535
-DESCRIPTION:Friday 10/2 · 5:30 PM to 7:00 PM\n\nThe Foley Community Librar
- y holds its second annual Library Fiesta for Hispanic Heritage Month\, a f
- ree evening for all ages. Mitotiani Folkloric Dance Group and Danza de los
-  Viejitos perform\, and La Casita serves free food. Little ones get crafts
- \, and there are games in the courtyard.\n\nPrice: Free\n\nDetails: https:
- //coastaleventures.com/events/ev-foley-library-fiesta-1002.html
-URL:https://coastaleventures.com/events/ev-foley-library-fiesta-1002.html
-CATEGORIES:Arts and culture
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_destin_riverofcolors_1002-2026-10-02@coastaleventures.com
-DTSTAMP:20261002T000000Z
-DTSTART;TZID=America/Chicago:20261002T173000
-DTEND;TZID=America/Chicago:20261002T193000
-SUMMARY:River of Colors: Family Painting Class (Glow in the Dark)
-LOCATION:Destin Community Center\, 101 Stahlman Ave.\, Destin\, FL 32541
-DESCRIPTION:Friday 10/2 · 5:30 PM to 7:30 PM\n\nCreative Canvas Company ru
- ns this glow-in-the-dark family painting class at the Destin Community Cen
- ter\, and no prior painting experience is needed. The City's own listing p
- rices it at $30 for Destin residents and $40 for non-residents\, covering 
- canvas\, paint and instruction for two hours.\n\nPrice: from $30\n\nDetail
- s: https://coastaleventures.com/events/ev-destin-riverofcolors-1002.html
-URL:https://coastaleventures.com/events/ev-destin-riverofcolors-1002.html
-CATEGORIES:Arts and culture
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_coastalmakers_fractal_date_night_1002-2026-10-02@coastaleventures.co
- m
-DTSTAMP:20261002T000000Z
-DTSTART;TZID=America/Chicago:20261002T180000
-DTEND;TZID=America/Chicago:20261002T200000
-SUMMARY:Fractal Burning Date Night at Coastal Makers
-LOCATION:Coastal Makers\, 63 North Florida Street\, Mobile\, AL 36607
-DESCRIPTION:Friday 10/2 · 6:00 PM to 8:00 PM\n\nCouples burn Lichtenberg f
- ractal patterns into wood together in this two-hour class at Coastal Maker
- s\, priced per couple rather than per person. It is a hands-on craft date 
- away from a restaurant table.\n\nPrice: from $62.50\n\nDetails: https://co
- astaleventures.com/events/ev-coastalmakers-fractal-date-night-1002.html
-URL:https://coastaleventures.com/events/ev-coastalmakers-fractal-date-night
- -1002.html
-CATEGORIES:Arts and culture
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_alice_in_wonderland_uwf_theatre_1002-2026-10-02@coastaleventures.com
-DTSTAMP:20261002T000000Z
-DTSTART;TZID=America/Chicago:20261002T193000
-DTEND;TZID=America/Chicago:20261002T220000
-SUMMARY:Alice in Wonderland: UWF Theatre
-LOCATION:Building 82\, Center for Fine and Performing Arts\, Mainstage Thea
- tre\, UWF\, Campus Drive\, Pensacola\, FL 32514
-DESCRIPTION:Friday 10/2 · 7:30 PM to 10:00 PM\n\nUWF Theatre stages Alice 
- in Wonderland on the Mainstage in Building 82's Center for Fine and Perfor
- ming Arts\, open to the general public. The university's own calendar list
- s a price range of free up to $22\; no single admission figure is publishe
- d for this date. The run adds several more performances: October 3 at 7:30
-  PM\, October 4 at 2:30 PM\, and October 9 at 7:30 PM. October 10 brings a
-  10 AM show\, and the run closes with a matinee on October 11 at 2:30 PM. 
- Opening night is October 2 at 7:30 PM.\n\nPrice: No published price\n\nDet
- ails: https://coastaleventures.com/events/ev-alice-in-wonderland-uwf-theat
- re-1002.html
-URL:https://coastaleventures.com/events/ev-alice-in-wonderland-uwf-theatre-
- 1002.html
-CATEGORIES:Arts and culture
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_wheel_throwing_fall_ceramics_workshop_0912-2026-10-03@coastaleventur
  es.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261003T123000
 DTEND;TZID=America/Chicago:20261003T153000
 SUMMARY:Wheel Throwing: Fall Ceramics Workshop
@@ -294,7 +125,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_k_a_shows_author_signing_1003-2026-10-03@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261003T130000
 DTEND;TZID=America/Chicago:20261003T150000
 SUMMARY:K.A. Shows: Author Signing
@@ -311,9 +142,28 @@ CATEGORIES:Arts and culture
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_mobile_museum_make_take_art-2026-10-03@coastaleventures.com
+DTSTAMP:20261003T000000Z
+DTSTART;TZID=America/Chicago:20261003T150000
+DTEND;TZID=America/Chicago:20261003T163000
+SUMMARY:Make & Take Art: weekly drop-in art sessions
+LOCATION:Mobile Museum of Art\, 4850 Museum Drive\, Mobile\, AL 36608
+DESCRIPTION:Thursdays 8/27 through 10/15 (except Sept 8) · 3:00 PM to 4:30
+  PM\n\nThe museum runs a free Thursday afternoon art session most weeks\, 
+ working through materials and techniques borrowed from artists on view. Pr
+ ojects range from geometric shape painting to a Basquiat-inspired dinosaur
+  build. The printed schedule also lists a session for September 8\, but th
+ at date falls on a Tuesday\, not a Thursday\, so check with the museum fir
+ st.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/events/ev-mobi
+ le-museum-make-take-art.html
+URL:https://coastaleventures.com/events/ev-mobile-museum-make-take-art.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_seaside_childrens_theater_dragons_love_tacos-2026-10-03@coastalevent
  ures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261003T170000
 DTEND;TZID=America/Chicago:20261003T180000
 SUMMARY:Dragons Love Tacos: Fall Children's Theater at Seaside
@@ -332,9 +182,32 @@ CATEGORIES:Arts and culture
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_alice_in_wonderland_uwf_theatre_1002-2026-10-03@coastaleventures.com
+DTSTAMP:20261003T000000Z
+DTSTART;TZID=America/Chicago:20261003T193000
+DTEND;TZID=America/Chicago:20261003T220000
+SUMMARY:Alice in Wonderland: UWF Theatre
+LOCATION:Building 82\, Center for Fine and Performing Arts\, Mainstage Thea
+ tre\, UWF\, Campus Drive\, Pensacola\, FL 32514
+DESCRIPTION:Friday 10/2 · 7:30 PM to 10:00 PM\n\nUWF Theatre stages Alice 
+ in Wonderland on the Mainstage in Building 82's Center for Fine and Perfor
+ ming Arts\, open to the general public. The university's own calendar list
+ s a price range of free up to $22\; no single admission figure is publishe
+ d for this date. The run adds several more performances: October 3 at 7:30
+  PM\, October 4 at 2:30 PM\, and October 9 at 7:30 PM. October 10 brings a
+  10 AM show\, and the run closes with a matinee on October 11 at 2:30 PM. 
+ Opening night is October 2 at 7:30 PM.\n\nPrice: No published price\n\nDet
+ ails: https://coastaleventures.com/events/ev-alice-in-wonderland-uwf-theat
+ re-1002.html
+URL:https://coastaleventures.com/events/ev-alice-in-wonderland-uwf-theatre-
+ 1002.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_valparaiso_indios_amigos_exhibit_1005-2026-10-05@coastaleventures.co
  m
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261005T090000
 DTEND;TZID=America/Chicago:20261005T170000
 SUMMARY:Indios Amigos: Traveling Exhibit at the Valparaiso Library
@@ -355,7 +228,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_next_generation_homeschool_art_tuesday_am_ag_0825-2026-10-06@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261006T100000
 DTEND;TZID=America/Chicago:20261006T120000
 SUMMARY:Next Generation Homeschool Art: Ages 7-9\, Tuesday Mornings
@@ -377,7 +250,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_acrylic_and_watercolor_painting_0909-2026-10-07@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261007T130000
 DTEND;TZID=America/Chicago:20261007T150000
 SUMMARY:Acrylic & Watercolor Painting
@@ -396,7 +269,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_crafternoons_at_west_0902-2026-10-07@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261007T150000
 DTEND;TZID=America/Chicago:20261007T170000
 SUMMARY:Crafternoons at West
@@ -413,7 +286,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_mini_makers_fall_2026_term_1_0827-2026-10-08@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261008T140000
 DTEND;TZID=America/Chicago:20261008T150000
 SUMMARY:Mini Makers: Fall 2026 Term 1
@@ -435,7 +308,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_after_school_art_fall_2026_0827-2026-10-08@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261008T153000
 DTEND;TZID=America/Chicago:20261008T170000
 SUMMARY:After School Art: Fall 2026
@@ -458,7 +331,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_young_artist_in_aprons_paint_club_0910-2026-10-08@coastaleventures.c
  om
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261008T160000
 DTEND;TZID=America/Chicago:20261008T170000
 SUMMARY:Young Artist in Aprons Paint Club
@@ -475,7 +348,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_advanced_watercolor_0910-2026-10-08@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261008T180000
 DTEND;TZID=America/Chicago:20261008T190000
 SUMMARY:Advanced Watercolor
@@ -493,7 +366,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_lars_anderson_author_event_1008-2026-10-08@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261008T180000
 DTEND;TZID=America/Chicago:20261008T200000
 SUMMARY:Lars Anderson: Author Event
@@ -510,7 +383,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_20th_annual_pumpkin_patch_1009-2026-10-09@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261011
 SUMMARY:20th Annual Pumpkin Patch
@@ -528,7 +401,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_botanical_gardens_sketch_club-2026-10-09@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261009T140000
 DTEND;TZID=America/Chicago:20261009T160000
 SUMMARY:Sketch Club in the Gardens
@@ -548,7 +421,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_fwb_library_haunted_paintings_1009-2026-10-09@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261009T150000
 DTEND;TZID=America/Chicago:20261009T163000
 SUMMARY:Haunted Paintings at the Fort Walton Beach Library
@@ -569,7 +442,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-10-09@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261009T153000
 DTEND;TZID=America/Chicago:20261009T163000
 SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
@@ -589,7 +462,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_wheel_throwing_fall_ceramics_workshop_0912-2026-10-10@coastaleventur
  es.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261010T123000
 DTEND;TZID=America/Chicago:20261010T153000
 SUMMARY:Wheel Throwing: Fall Ceramics Workshop
@@ -610,7 +483,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_childrens_theater_dragons_love_tacos-2026-10-10@coastalevent
  ures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261010T170000
 DTEND;TZID=America/Chicago:20261010T180000
 SUMMARY:Dragons Love Tacos: Fall Children's Theater at Seaside
@@ -630,7 +503,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_coastalmakers_witch_planter_1011-2026-10-11@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261011T140000
 DTEND;TZID=America/Chicago:20261011T170000
 SUMMARY:Wickedly Creative Witch Planter Workshop
@@ -648,7 +521,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_next_generation_homeschool_art_tuesday_am_ag_0825-2026-10-13@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261013T100000
 DTEND;TZID=America/Chicago:20261013T120000
 SUMMARY:Next Generation Homeschool Art: Ages 7-9\, Tuesday Mornings
@@ -670,7 +543,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_acrylic_and_watercolor_painting_0909-2026-10-14@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261014T130000
 DTEND;TZID=America/Chicago:20261014T150000
 SUMMARY:Acrylic & Watercolor Painting
@@ -689,7 +562,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_crafternoons_at_west_0902-2026-10-14@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261014T150000
 DTEND;TZID=America/Chicago:20261014T170000
 SUMMARY:Crafternoons at West
@@ -706,7 +579,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_fwb_library_ghost_squeegee_art_1014-2026-10-14@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261014T153000
 DTEND;TZID=America/Chicago:20261014T163000
 SUMMARY:Ghost Squeegee Art at the Fort Walton Beach Library
@@ -725,7 +598,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_matt_kessler_author_event_1014-2026-10-14@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261014T180000
 DTEND;TZID=America/Chicago:20261014T200000
 SUMMARY:Matt Kessler: Author Event
@@ -743,7 +616,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_ectc_39steps-2026-10-15@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261026
 SUMMARY:The 39 Steps: Hitchcock Farce (ECTC)
@@ -760,7 +633,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_mini_makers_fall_2026_term_1_0827-2026-10-15@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261015T140000
 DTEND;TZID=America/Chicago:20261015T150000
 SUMMARY:Mini Makers: Fall 2026 Term 1
@@ -782,7 +655,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_after_school_art_fall_2026_0827-2026-10-15@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261015T153000
 DTEND;TZID=America/Chicago:20261015T170000
 SUMMARY:After School Art: Fall 2026
@@ -804,7 +677,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_mary_esther_lib_lovecrafts_1015-2026-10-15@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261015T160000
 DTEND;TZID=America/Chicago:20261015T173000
 SUMMARY:LoveCrafts Adult Craft Night at Mary Esther Library
@@ -824,7 +697,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blithespirit-2026-10-16@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261102
 SUMMARY:Blithe Spirit: Theatre 98
@@ -839,7 +712,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_navarre_craft_and_chat_1016-2026-10-16@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261016T100000
 DTEND;TZID=America/Chicago:20261016T120000
 SUMMARY:Craft and Chat (Navarre)
@@ -854,7 +727,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_botanical_gardens_sketch_club-2026-10-16@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261016T140000
 DTEND;TZID=America/Chicago:20261016T160000
 SUMMARY:Sketch Club in the Gardens
@@ -875,7 +748,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-10-16@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261016T153000
 DTEND;TZID=America/Chicago:20261016T163000
 SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
@@ -894,7 +767,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_gallery_ghoul-2026-10-16@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261016T170000
 DTEND;TZID=America/Chicago:20261016T210000
 SUMMARY:Gallery Night: Ghoul-ery Night (Halloween theme)
@@ -911,7 +784,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_daphne_jubilee_festival_arts_1017-2026-10-17@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261017
 DTEND;VALUE=DATE:20261019
 SUMMARY:38th Annual Jubilee Festival of Arts
@@ -930,7 +803,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_rockpainting_royalmelvin_1017-2026-10-17@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261017T090000
 DTEND;TZID=America/Chicago:20261017T110000
 SUMMARY:Back to School "Rock Painting Party"
@@ -949,7 +822,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_saturday_morning_art_class_mixed_media_ages__0919-2026-10-17@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261017T093000
 DTEND;TZID=America/Chicago:20261017T120000
 SUMMARY:Saturday Morning Art Class: Mixed Media Ages 6+
@@ -969,7 +842,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_wheel_throwing_fall_ceramics_workshop_0912-2026-10-17@coastaleventur
  es.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261017T123000
 DTEND;TZID=America/Chicago:20261017T153000
 SUMMARY:Wheel Throwing: Fall Ceramics Workshop
@@ -989,7 +862,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_wayne_miller_author_signing_1017-2026-10-17@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261017T130000
 DTEND;TZID=America/Chicago:20261017T150000
 SUMMARY:Wayne Miller: Author Signing
@@ -1007,7 +880,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_childrens_theater_dragons_love_tacos-2026-10-17@coastalevent
  ures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261017T170000
 DTEND;TZID=America/Chicago:20261017T180000
 SUMMARY:Dragons Love Tacos: Fall Children's Theater at Seaside
@@ -1027,7 +900,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_mkac_clifford_musical-2026-10-19@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261019
 DTEND;VALUE=DATE:20261020
 SUMMARY:Clifford the Big Red Dog: The Musical
@@ -1046,7 +919,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_coastalmakers_stained_glass_1019-2026-10-19@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261019
 DTEND;VALUE=DATE:20261020
 SUMMARY:Stained Glass Snake Plant Workshop
@@ -1065,7 +938,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_next_generation_homeschool_art_tuesday_am_ag_0825-2026-10-20@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261020T100000
 DTEND;TZID=America/Chicago:20261020T120000
 SUMMARY:Next Generation Homeschool Art: Ages 7-9\, Tuesday Mornings
@@ -1087,7 +960,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_ariel_lawhon_the_pirate_queen_1020-2026-10-20@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261020T180000
 DTEND;TZID=America/Chicago:20261020T200000
 SUMMARY:Ariel Lawhon: The Pirate Queen
@@ -1106,7 +979,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_acrylic_and_watercolor_painting_0909-2026-10-21@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261021T130000
 DTEND;TZID=America/Chicago:20261021T150000
 SUMMARY:Acrylic & Watercolor Painting
@@ -1125,7 +998,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_crafternoons_at_west_0902-2026-10-21@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261021T150000
 DTEND;TZID=America/Chicago:20261021T170000
 SUMMARY:Crafternoons at West
@@ -1143,7 +1016,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_jeanie_thompson_and_larry_mitchell_author_ev_1021-2026-10-21@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261021T180000
 DTEND;TZID=America/Chicago:20261021T200000
 SUMMARY:Jeanie Thompson & Larry Mitchell: Author Event and Music
@@ -1160,7 +1033,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_after_school_art_fall_2026_0827-2026-10-22@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261022T153000
 DTEND;TZID=America/Chicago:20261022T170000
 SUMMARY:After School Art: Fall 2026
@@ -1183,7 +1056,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_young_artist_in_aprons_paint_club_0910-2026-10-22@coastaleventures.c
  om
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261022T160000
 DTEND;TZID=America/Chicago:20261022T170000
 SUMMARY:Young Artist in Aprons Paint Club
@@ -1200,7 +1073,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_arts_afire_fall_festival_1022-2026-10-22@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261022T170000
 DTEND;TZID=America/Chicago:20261022T190000
 SUMMARY:Arts Afire Fall Festival
@@ -1219,7 +1092,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_advanced_watercolor_0910-2026-10-22@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261022T180000
 DTEND;TZID=America/Chicago:20261022T190000
 SUMMARY:Advanced Watercolor
@@ -1237,7 +1110,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_mobile_opera_romeo_juliet_1023-2026-10-23@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261023
 DTEND;VALUE=DATE:20261026
 SUMMARY:Mobile Opera: Romeo et Juliette
@@ -1255,7 +1128,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_murder_rocky_seville-2026-10-23@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261023
 DTEND;VALUE=DATE:20261025
 SUMMARY:Rocky Homicide Murder Mystery Dinner Theatre
@@ -1273,7 +1146,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-10-23@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261023T153000
 DTEND;TZID=America/Chicago:20261023T163000
 SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
@@ -1293,7 +1166,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_meredith_willson_s_the_music_man_1023-2026-10-23@coastaleventures.co
  m
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261023T190000
 DTEND;TZID=America/Chicago:20261023T210000
 SUMMARY:Meredith Willson's The Music Man
@@ -1314,7 +1187,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_mattie_kelly_arts_foundation_31st_annual_fes_1024-2026-10-24@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261024
 DTEND;VALUE=DATE:20261026
 SUMMARY:Mattie Kelly Arts Foundation 31st Annual Festival of the Arts
@@ -1333,7 +1206,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_foley_umc_arts_crafts_show_1024-2026-10-24@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261024T090000
 DTEND;TZID=America/Chicago:20261024T140000
 SUMMARY:Arts and Crafts Show at Foley United Methodist Church
@@ -1350,7 +1223,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_dracula_mobile_ballet-2026-10-24@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261024T193000
 DTEND;TZID=America/Chicago:20261024T203000
 SUMMARY:Dracula: Mobile Ballet
@@ -1367,7 +1240,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_coastalmakers_fractal_drinkware_1026-2026-10-26@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261026T180000
 DTEND;TZID=America/Chicago:20261026T200000
 SUMMARY:Fractal-Burned Drinkware Workshop at Coastal Makers
@@ -1385,7 +1258,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_saenger_waitress_1026-2026-10-26@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261026T193000
 DTEND;TZID=America/Chicago:20261026T203000
 SUMMARY:Waitress at the Pensacola Saenger
@@ -1403,7 +1276,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_next_generation_homeschool_art_tuesday_am_ag_0825-2026-10-27@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261027T100000
 DTEND;TZID=America/Chicago:20261027T120000
 SUMMARY:Next Generation Homeschool Art: Ages 7-9\, Tuesday Mornings
@@ -1425,7 +1298,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_acrylic_and_watercolor_painting_0909-2026-10-28@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261028T130000
 DTEND;TZID=America/Chicago:20261028T150000
 SUMMARY:Acrylic & Watercolor Painting
@@ -1444,7 +1317,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_crafternoons_at_west_0902-2026-10-28@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261028T150000
 DTEND;TZID=America/Chicago:20261028T170000
 SUMMARY:Crafternoons at West
@@ -1461,7 +1334,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_foo_foo_festival_2026-2026-10-29@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261110
 SUMMARY:Foo Foo Festival
@@ -1478,7 +1351,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_after_school_art_fall_2026_0827-2026-10-29@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261029T153000
 DTEND;TZID=America/Chicago:20261029T170000
 SUMMARY:After School Art: Fall 2026
@@ -1501,7 +1374,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-10-30@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261030T153000
 DTEND;TZID=America/Chicago:20261030T163000
 SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
@@ -1520,7 +1393,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_rockyhorror_plt-2026-10-30@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261030T193000
 DTEND;TZID=America/Chicago:20261030T203000
 SUMMARY:Richard O'Brien's The Rocky Horror Show
@@ -1538,7 +1411,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_ballet_carnival_animals_1101-2026-11-01@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261104
 SUMMARY:Carnival of the Animals: Ballet Pensacola (Foo Foo Fest)
@@ -1560,7 +1433,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_jazz_art_writers_south_festival_youth_exhibi_0801-2026-11-01@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261216
 SUMMARY:Jazz Art Writers South Festival Youth Exhibit 2026
@@ -1582,7 +1455,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_next_generation_homeschool_art_tuesday_am_ag_0825-2026-11-03@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261103T100000
 DTEND;TZID=America/Chicago:20261103T120000
 SUMMARY:Next Generation Homeschool Art: Ages 7-9\, Tuesday Mornings
@@ -1604,7 +1477,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_acrylic_and_watercolor_painting_0909-2026-11-04@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261104T130000
 DTEND;TZID=America/Chicago:20261104T150000
 SUMMARY:Acrylic & Watercolor Painting
@@ -1623,7 +1496,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_crafternoons_at_west_0902-2026-11-04@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261104T150000
 DTEND;TZID=America/Chicago:20261104T170000
 SUMMARY:Crafternoons at West
@@ -1640,7 +1513,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_saenger_rock_runway_1104-2026-11-04@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261104T190000
 DTEND;TZID=America/Chicago:20261104T200000
 SUMMARY:Pensacola Opera: Rock the Runway\, Living Art
@@ -1659,7 +1532,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_after_school_art_fall_2026_0827-2026-11-05@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261105T153000
 DTEND;TZID=America/Chicago:20261105T170000
 SUMMARY:After School Art: Fall 2026
@@ -1682,7 +1555,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_young_artist_in_aprons_paint_club_0910-2026-11-05@coastaleventures.c
  om
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261105T160000
 DTEND;TZID=America/Chicago:20261105T170000
 SUMMARY:Young Artist in Aprons Paint Club
@@ -1699,7 +1572,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_advanced_watercolor_0910-2026-11-05@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261105T180000
 DTEND;TZID=America/Chicago:20261105T190000
 SUMMARY:Advanced Watercolor
@@ -1717,7 +1590,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_great_gulfcoast_arts_festival_1106-2026-11-06@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261109
 SUMMARY:Great Gulfcoast Arts Festival
@@ -1739,7 +1612,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-11-06@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261106T153000
 DTEND;TZID=America/Chicago:20261106T163000
 SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
@@ -1759,7 +1632,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_next_generation_homeschool_art_tuesday_am_ag_0825-2026-11-10@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261110T100000
 DTEND;TZID=America/Chicago:20261110T120000
 SUMMARY:Next Generation Homeschool Art: Ages 7-9\, Tuesday Mornings
@@ -1781,7 +1654,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_acrylic_and_watercolor_painting_0909-2026-11-11@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261111T130000
 DTEND;TZID=America/Chicago:20261111T150000
 SUMMARY:Acrylic & Watercolor Painting
@@ -1800,7 +1673,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_crafternoons_at_west_0902-2026-11-11@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261111T150000
 DTEND;TZID=America/Chicago:20261111T170000
 SUMMARY:Crafternoons at West
@@ -1817,7 +1690,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_noisesoff_cct-2026-11-12@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261123
 SUMMARY:Noises Off!: Chickasaw Civic Theatre
@@ -1832,7 +1705,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_after_school_art_fall_2026_0827-2026-11-12@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261112T153000
 DTEND;TZID=America/Chicago:20261112T170000
 SUMMARY:After School Art: Fall 2026
@@ -1854,7 +1727,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_foley_art_center_trim_a_tree_1113-2026-11-13@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261224
 SUMMARY:Trim-a-Tree at the Foley Art Center
@@ -1874,7 +1747,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-11-13@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261113T153000
 DTEND;TZID=America/Chicago:20261113T163000
 SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
@@ -1893,7 +1766,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_mobile_arti_gras_1114-2026-11-14@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261114T110000
 DTEND;TZID=America/Chicago:20261114T160000
 SUMMARY:Arti Gras Mobile
@@ -1912,7 +1785,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_next_generation_homeschool_art_tuesday_am_ag_0825-2026-11-17@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261117T100000
 DTEND;TZID=America/Chicago:20261117T120000
 SUMMARY:Next Generation Homeschool Art: Ages 7-9\, Tuesday Mornings
@@ -1934,7 +1807,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_acrylic_and_watercolor_painting_0909-2026-11-18@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261118T130000
 DTEND;TZID=America/Chicago:20261118T150000
 SUMMARY:Acrylic & Watercolor Painting
@@ -1953,7 +1826,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_crafternoons_at_west_0902-2026-11-18@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261118T150000
 DTEND;TZID=America/Chicago:20261118T170000
 SUMMARY:Crafternoons at West
@@ -1970,7 +1843,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_after_school_art_fall_2026_0827-2026-11-19@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261119T153000
 DTEND;TZID=America/Chicago:20261119T170000
 SUMMARY:After School Art: Fall 2026
@@ -1993,7 +1866,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_young_artist_in_aprons_paint_club_0910-2026-11-19@coastaleventures.c
  om
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261119T160000
 DTEND;TZID=America/Chicago:20261119T170000
 SUMMARY:Young Artist in Aprons Paint Club
@@ -2010,7 +1883,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_advanced_watercolor_0910-2026-11-19@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261119T180000
 DTEND;TZID=America/Chicago:20261119T190000
 SUMMARY:Advanced Watercolor
@@ -2029,7 +1902,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-11-20@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261120T153000
 DTEND;TZID=America/Chicago:20261120T163000
 SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
@@ -2048,7 +1921,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_gallery_livingart-2026-11-20@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261120T170000
 DTEND;TZID=America/Chicago:20261120T210000
 SUMMARY:Gallery Night: Festival of Living Art
@@ -2065,7 +1938,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_murder_pirates_seville-2026-11-21@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:Pirates Murder Mystery Dinner Theatre
@@ -2082,7 +1955,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_acrylic_and_watercolor_painting_0909-2026-11-25@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261125T130000
 DTEND;TZID=America/Chicago:20261125T150000
 SUMMARY:Acrylic & Watercolor Painting
@@ -2102,7 +1975,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-11-27@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261127T153000
 DTEND;TZID=America/Chicago:20261127T163000
 SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
@@ -2121,7 +1994,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_christmascarol-2026-11-30@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261130T193000
 DTEND;TZID=America/Chicago:20261130T203000
 SUMMARY:Charles Dickens' A Christmas Carol
@@ -2137,7 +2010,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_next_generation_homeschool_art_tuesday_am_ag_0825-2026-12-01@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261201T100000
 DTEND;TZID=America/Chicago:20261201T120000
 SUMMARY:Next Generation Homeschool Art: Ages 7-9\, Tuesday Mornings
@@ -2159,7 +2032,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_acrylic_and_watercolor_painting_0909-2026-12-02@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261202T130000
 DTEND;TZID=America/Chicago:20261202T150000
 SUMMARY:Acrylic & Watercolor Painting
@@ -2178,7 +2051,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_crafternoons_at_west_0902-2026-12-02@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261202T150000
 DTEND;TZID=America/Chicago:20261202T170000
 SUMMARY:Crafternoons at West
@@ -2196,7 +2069,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_ectc_million_dollar_quartet_christmas_1203-2026-12-03@coastaleventur
  es.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:Million Dollar Quartet Christmas at Emerald Coast Theatre Company
@@ -2217,7 +2090,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_after_school_art_fall_2026_0827-2026-12-03@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261203T153000
 DTEND;TZID=America/Chicago:20261203T170000
 SUMMARY:After School Art: Fall 2026
@@ -2239,7 +2112,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_advanced_watercolor_0910-2026-12-03@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261203T180000
 DTEND;TZID=America/Chicago:20261203T190000
 SUMMARY:Advanced Watercolor
@@ -2258,7 +2131,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-12-04@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261204T153000
 DTEND;TZID=America/Chicago:20261204T163000
 SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
@@ -2278,7 +2151,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_next_generation_homeschool_art_tuesday_am_ag_0825-2026-12-08@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261208T100000
 DTEND;TZID=America/Chicago:20261208T120000
 SUMMARY:Next Generation Homeschool Art: Ages 7-9\, Tuesday Mornings
@@ -2300,7 +2173,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_acrylic_and_watercolor_painting_0909-2026-12-09@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261209T130000
 DTEND;TZID=America/Chicago:20261209T150000
 SUMMARY:Acrylic & Watercolor Painting
@@ -2319,7 +2192,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_crafternoons_at_west_0902-2026-12-09@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261209T150000
 DTEND;TZID=America/Chicago:20261209T170000
 SUMMARY:Crafternoons at West
@@ -2336,7 +2209,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_after_school_art_fall_2026_0827-2026-12-10@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261210T153000
 DTEND;TZID=America/Chicago:20261210T170000
 SUMMARY:After School Art: Fall 2026
@@ -2359,7 +2232,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_plt_ebenezers_trailer_park_christmas_1211-2026-12-11@coastaleventure
  s.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20261221
 SUMMARY:Ebenezer's Trailer Park Christmas Speck-Tac-Yule-R!
@@ -2381,7 +2254,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-12-11@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261211T153000
 DTEND;TZID=America/Chicago:20261211T163000
 SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
@@ -2400,7 +2273,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_murder_hoho_seville-2026-12-13@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261213T100000
 DTEND;TZID=America/Chicago:20261213T110000
 SUMMARY:Ho Ho Homicide Murder Mystery Holiday BRUNCH
@@ -2418,7 +2291,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_next_generation_homeschool_art_tuesday_am_ag_0825-2026-12-15@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261215T100000
 DTEND;TZID=America/Chicago:20261215T120000
 SUMMARY:Next Generation Homeschool Art: Ages 7-9\, Tuesday Mornings
@@ -2440,7 +2313,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_acrylic_and_watercolor_painting_0909-2026-12-16@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261216T130000
 DTEND;TZID=America/Chicago:20261216T150000
 SUMMARY:Acrylic & Watercolor Painting
@@ -2459,7 +2332,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_crafternoons_at_west_0902-2026-12-16@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261216T150000
 DTEND;TZID=America/Chicago:20261216T170000
 SUMMARY:Crafternoons at West
@@ -2476,7 +2349,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_after_school_art_fall_2026_0827-2026-12-17@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261217T153000
 DTEND;TZID=America/Chicago:20261217T170000
 SUMMARY:After School Art: Fall 2026
@@ -2498,7 +2371,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_advanced_watercolor_0910-2026-12-17@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261217T180000
 DTEND;TZID=America/Chicago:20261217T190000
 SUMMARY:Advanced Watercolor
@@ -2516,7 +2389,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_ballet_pensacola_nutcracker_1218-2026-12-18@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261218
 DTEND;VALUE=DATE:20261219
 SUMMARY:The Nutcracker: Ballet Pensacola
@@ -2537,7 +2410,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-12-18@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261218T153000
 DTEND;TZID=America/Chicago:20261218T163000
 SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
@@ -2556,7 +2429,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_gallery_holidays-2026-12-18@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261218T170000
 DTEND;TZID=America/Chicago:20261218T210000
 SUMMARY:Gallery Night's Home for the Holidays
@@ -2572,7 +2445,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_mobile_ballet_nutcracker_1219-2026-12-19@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261221
 SUMMARY:The Nutcracker: Mobile Ballet
@@ -2591,7 +2464,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_acrylic_and_watercolor_painting_0909-2026-12-23@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261223T130000
 DTEND;TZID=America/Chicago:20261223T150000
 SUMMARY:Acrylic & Watercolor Painting
@@ -2610,7 +2483,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_crafternoons_at_west_0902-2026-12-23@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261223T150000
 DTEND;TZID=America/Chicago:20261223T170000
 SUMMARY:Crafternoons at West
@@ -2628,7 +2501,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-12-25@coastal
  eventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261225T153000
 DTEND;TZID=America/Chicago:20261225T163000
 SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
@@ -2647,7 +2520,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_acrylic_and_watercolor_painting_0909-2026-12-30@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261230T130000
 DTEND;TZID=America/Chicago:20261230T150000
 SUMMARY:Acrylic & Watercolor Painting
@@ -2666,7 +2539,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_crafternoons_at_west_0902-2026-12-30@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261230T150000
 DTEND;TZID=America/Chicago:20261230T170000
 SUMMARY:Crafternoons at West
@@ -2683,7 +2556,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_advanced_watercolor_0910-2026-12-31@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261231T180000
 DTEND;TZID=America/Chicago:20261231T190000
 SUMMARY:Advanced Watercolor
@@ -2700,8 +2573,28 @@ CATEGORIES:Arts and culture
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2027-01-01@coastal
+ eventures.com
+DTSTAMP:20261003T000000Z
+DTSTART;TZID=America/Chicago:20270101T153000
+DTEND;TZID=America/Chicago:20270101T163000
+SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
+LOCATION:Fairhope Public Library\, MakerSpace\, 501 Fairhope Avenue\, Fairh
+ ope\, AL 36532
+DESCRIPTION:Fridays · 3:30 PM to 4:30 PM\n\nFairhope Public Library's Make
+ rSpace hosts a weekly art class for ages 7 to 12\, led by an Eastern Shore
+  Art Center artist\, Friday from 3:30 PM to 4:30 PM. Each week sends kids 
+ home with a different project. Registration opens by month.\n\nPrice: No p
+ ublished price\n\nDetails: https://coastaleventures.com/events/ev-art-clas
+ ses-with-eastern-shore-art-center-fa-0904.html
+URL:https://coastaleventures.com/events/ev-art-classes-with-eastern-shore-a
+ rt-center-fa-0904.html
+CATEGORIES:Arts and culture
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_snoopy_cct-2027-01-14@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20270114
 DTEND;VALUE=DATE:20270125
 SUMMARY:Snoopy!!! The Musical: Chickasaw Civic Theatre
@@ -2716,7 +2609,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_murder_mardigras_seville-2027-01-23@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20270123
 DTEND;VALUE=DATE:20270124
 SUMMARY:Mardi Gras Murder Mystery Dinner Theatre

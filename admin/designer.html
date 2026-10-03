@@ -129,6 +129,7 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
       <div class="big" id="partName">Tap any word in the app.</div>
       <div class="mute" id="partWhere"></div>
       <div class="levels" id="levels"></div>
+      <div class="levels" id="scenery"></div>
       <div class="gap" id="gapRead"></div>
       <div class="row"><button id="outer">Bigger area</button><button id="inner">Smaller</button><button id="resetPart">Reset this</button><button id="undo">Undo</button></div>
     </div>
@@ -270,7 +271,8 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     eyebrow: "Category line", ebcat: "Category", ebtail: "Category word", ebrow2: "Today line", meta: "Date area", daterail: "Date row",
     dpill: "Date pill", cardcal: "Calendar button", vstamp: "Source stamp", venue: "Place line", venueprimary: "Place name",
     status: "Bar", chip: "Bar word", blurb: "Description", cardfoot: "Card bottom", price: "Price", hourslist: "Times",
-    hero: "Hero", hk_gcapage: "Page", hk_wrap: "App", hk_segb: "Tab bar", si: "Tab", ico: "Icon circle", icoW: "Icon circle", hk_add: "Added piece" };
+    hero: "Hero", hk_gcapage: "Page", hk_wrap: "App", hk_segb: "Tab bar", si: "Tab", ico: "Icon circle", icoW: "Icon circle", hk_add: "Added piece", tdec: "Scenery", sig: "Card mark", spdec: "Scenery",
+    rm_bulb: "Light bulb", rm_bg: "String of lights", rm_swag: "Light string", rheart: "Heart", rvig: "Glow edge", svg: "Drawing" };
   function levelName(n) {
     var part = null; CD.PARTS.forEach(function (pp) { if (!part) { try { if (n.matches(pp.sel)) part = pp.label; } catch (e) {} } });
     if (part) return part;
@@ -281,7 +283,29 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     if (LEVEL_NAMES[c]) return LEVEL_NAMES[c];
     return c.replace(/^hk_/, "").replace(/[_-]+/g, " ").replace(/^\w/, function (x) { return x.toUpperCase(); });
   }
+  /* phones nudge a tap onto the nearest words (touch adjustment), so a tiny light is hard to hit with a finger: the
+     card's scenery pieces are offered as buttons instead, one per kind, and a button picks that kind */
+  function sceneryChips() {
+    var box = $("scenery"); box.innerHTML = ""; var card = sel && sel.el && sel.el.closest(".card"); if (!card) return;
+    var kinds = {}, order = [];
+    Array.prototype.forEach.call(card.querySelectorAll(":scope > .tdec *, :scope > .sig *, :scope > .spdec *"), function (n) {
+      if (n.closest("svg") && n.tagName.toLowerCase() !== "svg") return;
+      var r = n.getBoundingClientRect(); if (r.width < 2 || r.height < 2) return;
+      var c = cls(n)[0] || (n.tagName.toLowerCase() === "svg" ? "svg" : ""); if (!c) return;
+      if (!kinds[c]) { kinds[c] = { el: n, n: 0 }; order.push(c); } kinds[c].n++;
+    });
+    if (!order.length) return;
+    var lab = document.createElement("span"); lab.className = "mute"; lab.textContent = "Scenery:"; box.appendChild(lab);
+    order.slice(0, 10).forEach(function (c) {
+      var b = document.createElement("button"); var k = kinds[c];
+      b.textContent = (LEVEL_NAMES[c] || c.replace(/^hk_/, "").replace(/[_-]+/g, " ")) + (k.n > 1 ? " \u00d7" + k.n : "");
+      if (sel.el === k.el || (sel.el.classList && sel.el.classList.contains(c))) b.className = "sel";
+      b.onclick = function () { trail = []; levelBase = null; select(k.el); };
+      box.appendChild(b);
+    });
+  }
   function levels() {
+    sceneryChips();
     var box = $("levels"); box.innerHTML = ""; if (!levelBase) return;
     var chain = [], n = levelBase, stop = levelBase.closest(".card");
     while (n && chain.length < 6 && n.tagName && n.tagName.toLowerCase() !== "body" && !(n.classList && n.classList.contains("hk"))) { chain.unshift(n); if (n === stop) break; n = n.parentElement; }
@@ -475,12 +499,27 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     var end = function (e) { if (drag && drag.on && e) { e.preventDefault(); e.stopPropagation(); } drag = null; };
     d.addEventListener("pointerup", function (e) {
       var moved = drag && drag.on, t = tap; tap = null; end(e);
-      if (picking && t && !moved && Math.abs(e.clientX - t.x) + Math.abs(e.clientY - t.y) < 10) { trail = []; levelBase = null; select(t.t); e.preventDefault(); }
+      if (picking && t && !moved && Math.abs(e.clientX - t.x) + Math.abs(e.clientY - t.y) < 10) { trail = []; levelBase = null; select(sceneryAt(t.t, t.x, t.y) || t.t); e.preventDefault(); }
     }, true);
     d.addEventListener("pointercancel", function (e) { tap = null; end(e); }, true);
     d.addEventListener("keydown", onKey, true);
     d.addEventListener("scroll", function () { guides(); }, true);
     paint();
+  }
+  /* 10/02 night, Gray: "the drawings on certain types of cards like the one you just showed with lights. Can I select
+     the lights and set it up and it effects only those type of cards". Card scenery never takes a tap (it is
+     pointer-events:none so the card stays usable), so a tap on a light lands on the card's own box. When the tap
+     hit a box with no words of its own, the smallest scenery piece under the finger is picked instead. Its path
+     names that scenery (".tdec .rm_bg .rm_bulb"), so "Every card" only ever reaches cards that have those lights. */
+  function sceneryAt(hit, x, y) {
+    var card = hit && hit.closest && hit.closest(".card"); if (!card || ownText(hit)) return null;
+    var best = null, area = Infinity;
+    Array.prototype.forEach.call(card.querySelectorAll(":scope > .tdec *, :scope > .sig *, :scope > .spdec *"), function (n) {
+      var r = n.getBoundingClientRect(); if (r.width < 2 || r.height < 2 || x < r.left || x > r.right || y < r.top || y > r.bottom) return;
+      var cs = n.ownerDocument.defaultView.getComputedStyle(n); if (cs.visibility === "hidden" || cs.display === "none" || +cs.opacity === 0) return;
+      var a = r.width * r.height; if (a < area && a < card.getBoundingClientRect().width * 120) { area = a; best = n; }
+    });
+    return best;
   }
   function onKey(e) {
     var tag = (e.target && e.target.tagName) || "";

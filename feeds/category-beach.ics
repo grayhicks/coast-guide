@@ -25,27 +25,8 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_destin_rodeo_weighins-2026-10-02@coastaleventures.com
-DTSTAMP:20261002T000000Z
-DTSTART;TZID=America/Chicago:20261002T100000
-DTEND;TZID=America/Chicago:20261002T190000
-SUMMARY:Destin Fishing Rodeo: Daily Public Weigh-Ins
-LOCATION:Docks behind AJ's Seafood & Oyster Bar\, 116 Harbor Blvd\, Destin\
- , FL 32541
-DESCRIPTION:Daily\, Oct 1 – Oct 31 · 10:00 AM-7:00 PM\n\nAnglers competi
- ng in the month-long Destin Fishing Rodeo bring their catches to the scale
-  on the harbor docks behind AJ's Seafood & Oyster Bar every day in October
- . The public is welcome to watch for free from 10 AM to 7 PM\, and the cro
- wd tends to grow with the size of the fish coming off the boats.\n\nPrice:
-  Free\n\nDetails: https://coastaleventures.com/events/ev-destin-rodeo-weig
- hins.html
-URL:https://coastaleventures.com/events/ev-destin-rodeo-weighins.html
-CATEGORIES:Beach
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_oceanhour-2026-10-03@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:Ocean Hour Beach Cleanup
@@ -62,7 +43,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_ferry-2026-10-03@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261003T090000
 DTEND;TZID=America/Chicago:20261003T180000
 SUMMARY:Pensacola Bay Ferry to Fort Pickens
@@ -78,8 +59,27 @@ CATEGORIES:Beach
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_destin_rodeo_weighins-2026-10-03@coastaleventures.com
+DTSTAMP:20261003T000000Z
+DTSTART;TZID=America/Chicago:20261003T100000
+DTEND;TZID=America/Chicago:20261003T190000
+SUMMARY:Destin Fishing Rodeo: Daily Public Weigh-Ins
+LOCATION:Docks behind AJ's Seafood & Oyster Bar\, 116 Harbor Blvd\, Destin\
+ , FL 32541
+DESCRIPTION:Daily\, Oct 1 – Oct 31 · 10:00 AM-7:00 PM\n\nAnglers competi
+ ng in the month-long Destin Fishing Rodeo bring their catches to the scale
+  on the harbor docks behind AJ's Seafood & Oyster Bar every day in October
+ . The public is welcome to watch for free from 10 AM to 7 PM\, and the cro
+ wd tends to grow with the size of the fish coming off the boats.\n\nPrice:
+  Free\n\nDetails: https://coastaleventures.com/events/ev-destin-rodeo-weig
+ hins.html
+URL:https://coastaleventures.com/events/ev-destin-rodeo-weighins.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_navarre_fishing_rodeo_1003-2026-10-03@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261003T140000
 DTEND;TZID=America/Chicago:20261003T170000
 SUMMARY:Navarre Fishing Rodeo
@@ -98,7 +98,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_ferry-2026-10-04@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261004T090000
 DTEND;TZID=America/Chicago:20261004T180000
 SUMMARY:Pensacola Bay Ferry to Fort Pickens
@@ -115,7 +115,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_oceanhour-2026-10-10@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261010
 DTEND;VALUE=DATE:20261011
 SUMMARY:Ocean Hour Beach Cleanup
@@ -132,7 +132,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_navarre_runforthereef-2026-10-10@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261010T060000
 DTEND;TZID=America/Chicago:20261010T070000
 SUMMARY:18th Annual Run for the Reef: 10K / 5K / Kids Fun Run
@@ -153,7 +153,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_sritri-2026-10-10@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261010T070000
 DTEND;TZID=America/Chicago:20261010T080000
 SUMMARY:Santa Rosa Island Triathlon: SOLD OUT (waitlist)
@@ -170,7 +170,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_18th_annual_run_for_the_reef_1010-2026-10-10@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261010T073000
 DTEND;TZID=America/Chicago:20261010T083000
 SUMMARY:Run for the Reef\, 18th year
@@ -191,7 +191,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_ferry-2026-10-10@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261010T090000
 DTEND;TZID=America/Chicago:20261010T180000
 SUMMARY:Pensacola Bay Ferry to Fort Pickens
@@ -208,7 +208,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_navarre_charity_chili_cookoff_1011-2026-10-11@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261011
 DTEND;VALUE=DATE:20261012
 SUMMARY:Charity Chili Cookoff and Volleyball Tourney on Navarre Beach
@@ -229,7 +229,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_ferry-2026-10-11@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261011T090000
 DTEND;TZID=America/Chicago:20261011T180000
 SUMMARY:Pensacola Bay Ferry to Fort Pickens
@@ -246,7 +246,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_beach_o_ween_2026_1016-2026-10-16@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261017
 SUMMARY:Beach-O-Ween 2026
@@ -264,7 +264,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_pink_pirates_of_navarre_5k-2026-10-17@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;TZID=America/Chicago:20261017T070000
 DTEND;TZID=America/Chicago:20261017T103000
 SUMMARY:Pink Pirates of Navarre: 12th Annual Breast Cancer Awareness 5K
@@ -281,7 +281,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_wickedwinerun_1121-2026-11-21@coastaleventures.com
-DTSTAMP:20261002T000000Z
+DTSTAMP:20261003T000000Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:SKECHERS Wicked Wine Run: Milton
