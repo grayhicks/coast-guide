@@ -15,89 +15,174 @@
      version grabbed the nearest named part: "i tried to select TBA and it selected the whole bar"), with Bigger area /
      Smaller to step out and back in. card_design.js turns the saved rules into CSS, here and in the real build. -->
 <style>
-:root{ --bg:#12151a; --panel:#1b2029; --line:#2d3441; --ink:#eef1f4; --mute:#9aa4b2; --go:#138567; --pink:#FF2D87; --accent:#4FB3E8; }
+/* 10/03, J13 (GCA-1072): "Night harbour", Fable's treatment A. Teal is the one primary (Save, the step picked, the
+   tab open); hot pink belongs to the app only, the dashed ring round what he picked, so the two never mean the same thing. */
+:root{ --bg:#0E1621; --panel:#15202C; --chip:#1F2D3C; --chipon:#16483D; --line:#263546; --key:#28394A; --ink:#EDF2F7; --mute:#8696A8; --go:#138567; --mint:#4FD6AC; --pink:#FF2D87; --tabh:66px; }
 *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
 html,body{ margin:0; background:var(--bg); color:var(--ink); font:15px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
-button, select, input{ font:inherit; color:var(--ink); background:#252b36; border:1px solid var(--line); border-radius:10px; padding:7px 11px; }
-button{ cursor:pointer; min-height:38px; }
-button:active{ transform:translateY(1px); }
-button.go{ background:var(--go); border-color:var(--go); font-weight:800; }
-button.on{ background:var(--accent); border-color:var(--accent); color:#071018; font-weight:800; }
-button.chip{ padding:6px 10px; }
-header{ position:sticky; top:0; z-index:5; display:flex; gap:8px; align-items:center; padding:8px 12px; background:var(--bg); border-bottom:1px solid var(--line); flex-wrap:wrap; }
+button, select, input{ font:inherit; color:var(--ink); background:var(--chip); border:1px solid var(--line); border-radius:10px; padding:7px 11px; }
+button{ cursor:pointer; min-height:38px; display:inline-flex; align-items:center; justify-content:center; gap:6px; }
+button:active{ transform:scale(.97); }
+button:focus-visible, select:focus-visible, input:focus-visible{ outline:2px solid var(--mint); outline-offset:2px; }
+button.go{ background:var(--go); border-color:var(--go); color:#fff; font-weight:800; }
+button.on{ background:var(--chipon); border-color:#1F6B57; color:var(--mint); font-weight:800; }
+button:disabled{ opacity:.45; cursor:default; }
+input[type=range]{ accent-color:var(--mint); }
+svg.i{ width:20px; height:20px; flex:none; fill:none; stroke:currentColor; stroke-width:1.75; stroke-linecap:round; stroke-linejoin:round; }
+.ib{ padding:0; width:40px; min-width:40px; }
+#compare{ -webkit-touch-callout:none; user-select:none; -webkit-user-select:none; touch-action:none; }
+#compare.held{ background:var(--pink); border-color:var(--pink); color:#fff; }
+.ib span{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+header{ position:sticky; top:0; z-index:5; display:flex; gap:8px; align-items:center; padding:8px 12px; background:var(--bg); border-bottom:1px solid var(--line); }
 header h1{ font-size:16px; margin:0 6px 0 0; }
 header .sp{ flex:1; }
+header button, header select{ white-space:nowrap; }
+/* on a computer the extra controls sit before Save, so Save is always the last thing on the bar */
+#save{ order:10; } #moreBtn{ order:11; }
+.more{ display:contents; }
 main{ display:flex; gap:16px; padding:12px; align-items:flex-start; }
-.phone{ position:sticky; top:62px; width:406px; flex:0 0 auto; border:8px solid #000; border-radius:28px; overflow:hidden; background:#000; box-shadow:0 10px 40px rgba(0,0,0,.5); }
-.phone iframe{ display:block; width:390px; height:calc(100vh - 110px); max-height:844px; border:0; background:#fff; }
+.phone{ position:sticky; top:62px; width:calc(var(--appw, 390px) + 16px); flex:0 0 auto; border:8px solid #000; border-radius:28px; overflow:hidden; background:#000; box-shadow:0 10px 40px rgba(0,0,0,.5); }
+.phone iframe{ display:block; width:var(--appw, 390px); height:calc(100vh - 110px); max-height:844px; border:0; background:#fff; }
 .panel{ flex:1 1 380px; max-width:560px; }
 .box{ background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:12px 14px; margin:0 0 12px; }
 .box h2{ font-size:12px; margin:0 0 8px; color:var(--mute); text-transform:uppercase; letter-spacing:.8px; }
 .row{ display:flex; gap:8px; align-items:center; margin:7px 0; flex-wrap:wrap; }
 .row > label{ min-width:84px; color:var(--mute); font-size:13px; }
-.big{ font-size:18px; font-weight:800; overflow-wrap:anywhere; }
+.strip{ display:flex; align-items:baseline; gap:8px; min-width:0; }
+.strip .ib.sm{ width:34px; min-width:34px; min-height:30px; height:30px; border-radius:999px; flex:none; align-self:center; }
+.strip .ib.sm svg.i{ width:17px; height:17px; }
+.strip #addPick{ margin-left:auto; } #addPick.on{ background:var(--pink); border-color:var(--pink); color:#fff; }
+.strip #resetPart{ min-height:30px; padding:3px 10px; font-size:13px; border-radius:999px; flex:none; align-self:center; }
+.strip .dot{ width:8px; height:8px; border-radius:50%; background:var(--pink); flex:none; align-self:center; }
+.big{ font-size:18px; font-weight:800; overflow-wrap:anywhere; min-width:0; }
 .mute{ color:var(--mute); font-size:13px; }
-.gap{ font-weight:800; color:#FF8AC0; font-size:14px; }
-.pad{ display:grid; grid-template-columns:repeat(3,46px); gap:4px; }
+.gap{ font-weight:700; color:#FF8AC0; font-size:13px; margin-top:6px; }
+.mvrow{ align-items:flex-start; gap:16px; flex-wrap:nowrap; }
+.pad{ display:grid; grid-template-columns:repeat(3,46px); gap:4px; padding:6px; background:var(--chip); border-radius:14px; }
+.pad button{ background:var(--key); border-color:transparent; }
+.pad svg.i{ width:24px; height:24px; stroke-width:2.2; }
+.pad span{ display:block; }
+.mvside{ display:flex; flex-direction:column; gap:4px; min-width:0; }
+.cap{ margin-top:10px; color:var(--mute); font-size:11px; font-weight:800; letter-spacing:1px; text-transform:uppercase; }
+.readout{ font-size:30px; font-weight:800; line-height:1.1; font-variant-numeric:tabular-nums; }
+.sizehead{ display:flex; align-items:flex-end; justify-content:space-between; gap:12px; }
+.readout input{ font:inherit; width:4ch; field-sizing:content; min-width:2ch; padding:0; border:0; background:transparent; color:var(--ink); }
+.readout span{ font-size:16px; color:var(--mute); margin-left:4px; }
+.sizebtns button{ flex:1 1 0; font-weight:800; }
 .sw{ display:grid; grid-template-columns:repeat(auto-fill,minmax(30px,1fr)); gap:6px; width:100%; }
 .sw button{ min-height:30px; height:30px; padding:0; border-radius:8px; border:2px solid rgba(255,255,255,.18); }
-.sw button.sel{ outline:3px solid var(--pink); outline-offset:1px; }
+.sw button.sel{ outline:3px solid var(--mint); outline-offset:1px; }
 .fonts{ display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:6px; max-height:260px; overflow:auto; width:100%; padding-right:4px; }
-.fonts button{ text-align:left; font-size:19px; line-height:1.1; padding:8px 10px; }
-.fonts button.sel, .seg button.sel{ background:var(--pink); border-color:var(--pink); color:#fff; }
+/* a font button is a fixed 42 px tall, one line: the 52 families arrive one by one and must not shuffle the grid under his finger */
+.fonts button{ justify-content:flex-start; text-align:left; font-size:19px; line-height:1.1; padding:0 10px; height:42px; min-height:42px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; display:block; }
+.fonts button.sel, .seg button.sel{ background:var(--go); border-color:var(--go); color:#fff; font-weight:800; }
 .seg{ display:flex; gap:6px; flex-wrap:wrap; }
+.seg button{ white-space:nowrap; }
 .list{ margin:6px 0 0; padding:0; list-style:none; max-height:220px; overflow:auto; }
+.layers li{ padding:0; gap:4px; }
+.layers li > button.pickrow{ flex:1 1 auto; min-width:0; justify-content:flex-start; background:transparent; border-color:transparent; padding:6px 8px; font-size:14px; text-align:left; }
+.layers li > button.pickrow span{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.layers li > button.pickrow small{ color:var(--mute); font-size:11px; flex:none; }
+.layers li.on > button.pickrow{ background:var(--chipon); color:var(--mint); font-weight:800; }
+.layers li.off > button.pickrow span{ text-decoration:line-through; opacity:.6; }
+.layers li i.chg{ width:7px; height:7px; border-radius:50%; background:var(--pink); flex:none; }
+.layers li > button.eye{ width:38px; min-width:38px; min-height:34px; padding:0; flex:none; }
+.layers li > button.pickrow{ min-height:36px; }
+.hist li > div{ min-width:0; } .hist li b{ display:block; font-size:14px; } .hist li small{ color:var(--mute); }
+.hist li.now b::after{ content:" · live now"; color:var(--mint); font-weight:700; }
+.hist li.shown{ background:var(--chipon); border-radius:10px; padding-left:8px; } .hist li.shown b::after{ content:" · showing"; color:var(--mint); font-weight:700; }
 .list li{ padding:6px 0; border-top:1px solid var(--line); display:flex; gap:8px; justify-content:space-between; align-items:center; font-size:13px; }
+.contrast{ font-size:13px; font-weight:700; margin:8px 0 2px; display:flex; align-items:center; gap:8px; }
+.contrast i{ width:22px; height:22px; border-radius:6px; flex:none; border:1px solid rgba(255,255,255,.25); display:grid; place-items:center; font:900 12px/1 system-ui; font-style:normal; }
+.contrast.good{ color:#7fe0b4; } .contrast.low{ color:#ffb27a; } .contrast.bad{ color:#ff8a80; }
+#eyedrop.on{ background:var(--pink); border-color:var(--pink); color:#fff; }
 .status{ min-height:20px; color:var(--mute); font-size:13px; }
 .status.err{ color:#ff8a80; } .status.ok{ color:#7fe0b4; }
-kbd{ background:#252b36; border:1px solid var(--line); border-radius:4px; padding:0 5px; font-size:12px; }
+kbd{ background:var(--chip); border:1px solid var(--line); border-radius:4px; padding:0 5px; font-size:12px; }
 #signin{ display:none; }
 /* 10/02, Gray: "no one should ever be able to see this page but me ever". Locked until his key is checked against
    GitHub: nothing of the app or the editor is drawn or even loaded before that. */
-#toast{ position:fixed; left:50%; bottom:78px; transform:translateX(-50%); max-width:calc(100vw - 32px); background:#252b36; color:#fff; border:1px solid var(--line); border-radius:12px; padding:10px 14px; font-size:15px; font-weight:700; z-index:50; opacity:0; pointer-events:none; transition:opacity .2s; }
+#toast{ position:fixed; left:50%; bottom:24px; transform:translateX(-50%); max-width:calc(100vw - 32px); background:var(--key); color:#fff; border:1px solid var(--line); border-radius:12px; padding:10px 14px; font-size:15px; font-weight:700; z-index:50; opacity:0; pointer-events:none; transition:opacity .2s; }
 #toast.on{ opacity:1; } #toast.err{ background:#7a1f1f; } #toast.ok{ background:#0f5c45; }
 #lock{ display:none; }
-body.locked header, body.locked main, body.locked .dock{ display:none !important; }
+body.locked header, body.locked main{ display:none !important; }
 body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-content:center; padding:24px 16px; }
 #lock .box{ max-width:420px; width:100%; }
 #lock input{ width:100%; font-size:17px; padding:12px; margin:10px 0; }
 #lock button{ width:100%; font-size:17px; padding:12px; }
-.levels{ display:flex; gap:6px; flex-wrap:wrap; margin:8px 0 2px; }
-.levels button{ min-height:30px; padding:3px 10px; font-size:13px; border-radius:999px; }
-.levels button.sel{ background:var(--pink); border-color:var(--pink); color:#fff; font-weight:800; }
-.tabs{ display:none; }
-.onlyphone{ display:none; }
-/* PHONE (10/02, "It seems extremely finicky"): one row of controls up top, the app, what is picked with its levels,
-   then tool tabs, and ONE tool showing at a time instead of a long page of everything */
-.dock{ display:none; }
+.levels{ display:flex; gap:6px; flex-wrap:wrap; margin:8px 0 2px; align-items:center; }
+.levels button{ min-height:30px; padding:3px 10px; font-size:13px; border-radius:999px; color:var(--mute); }
+.levels button.sel{ background:var(--chipon); border-color:#1F6B57; color:var(--mint); font-weight:800; }
+.levels:empty{ display:none; }
+.tabs{ display:flex; gap:6px; flex-wrap:wrap; margin:0 0 12px; }
+.tabs button{ flex-direction:column; gap:2px; min-width:58px; min-height:54px; padding:6px 8px; font-size:12px; font-weight:700; color:var(--mute); background:transparent; border-color:transparent; }
+.tabs button.on{ background:var(--chipon); color:var(--mint); border-color:transparent; }
+.tools [data-tab]{ display:none; }
+#emptyHint{ display:none; } #emptyHint p{ margin:0 0 8px; font-size:15px; }
+body[data-sel="0"][data-tab="move"] #emptyHint, body[data-sel="0"][data-tab="size"] #emptyHint, body[data-sel="0"][data-tab="colour"] #emptyHint, body[data-sel="0"][data-tab="font"] #emptyHint,
+body[data-sel="0"][data-tab="words"] #emptyHint, body[data-sel="0"][data-tab="edge"] #emptyHint, body[data-sel="0"][data-tab="where"] #emptyHint, body[data-sel="0"][data-tab="layers"] #emptyHint{ display:block; }
+body[data-sel="0"] .tools .box[data-tab="move"], body[data-sel="0"] .tools .box[data-tab="size"], body[data-sel="0"] .tools .box[data-tab="colour"], body[data-sel="0"] .tools .box[data-tab="font"],
+body[data-sel="0"] .tools .box[data-tab="words"], body[data-sel="0"] .tools .box[data-tab="edge"], body[data-sel="0"] .tools .box[data-tab="where"], body[data-sel="0"] .tools .box[data-tab="layers"]{ display:none !important; }
+.tabs .badge{ position:absolute; top:4px; right:8px; min-width:17px; height:17px; padding:0 4px; border-radius:999px; background:var(--pink); color:#fff; font:800 11px/17px system-ui; }
+.tabs button{ position:relative; }
+button#save.dirty::after{ content:""; width:8px; height:8px; border-radius:50%; background:#fff; margin-left:2px; }
+body[data-tab="move"] .tools [data-tab="move"], body[data-tab="size"] .tools [data-tab="size"], body[data-tab="colour"] .tools [data-tab="colour"],
+body[data-tab="font"] .tools [data-tab="font"], body[data-tab="words"] .tools [data-tab="words"], body[data-tab="edge"] .tools [data-tab="edge"],
+body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tools [data-tab="history"], body[data-tab="layers"] .tools [data-tab="layers"], body[data-tab="add"] .tools [data-tab="add"], body[data-tab="changes"] .tools [data-tab="changes"]{ display:block; }
+.onlyphone{ display:none !important; }
+/* PHONE (10/03, J13, GCA-1072): a fixed screen like Canva's, nothing scrolls the page. The bar on top, the live app,
+   what is picked and its levels on one line each, the open tool in a sheet that scrolls inside itself, and the tool
+   tabs along the bottom under his thumb. Gray: "edit everything much quicker and cleaner and easily like canva". */
 @media (max-width:820px){
-  header{ position:static; }
-  main{ display:block; padding:0 8px 8px; }
-  .phone{ position:sticky; top:0; z-index:4; width:100%; border-width:3px; border-radius:0 0 16px 16px; }
-  .phone iframe{ width:100%; height:50vh; }
-  .panel{ max-width:none; padding-bottom:84px; }
-  header h1{ font-size:15px; }
-  .dock{ display:flex; position:fixed; left:0; right:0; bottom:0; z-index:9; gap:6px; padding:8px 8px calc(8px + env(safe-area-inset-bottom)); background:rgba(18,21,26,.96); border-top:1px solid var(--line); overflow-x:auto; }
-  .dock button{ flex:1 1 0; min-width:0; padding:0 2px; font-weight:800; }
-  header{ flex-wrap:nowrap; overflow-x:auto; padding:6px 8px; gap:6px; }
+  body:not(.locked){ height:100vh; height:100dvh; overflow:hidden; display:flex; flex-direction:column; }
+  header{ position:static; flex:none; padding:6px 8px; gap:6px; }
   header h1{ display:none; }
-  header button, header select{ flex:0 0 auto; min-height:36px; padding:5px 10px; }
-  .phone iframe{ height:46vh; }
-  .tabs{ display:flex; gap:6px; overflow-x:auto; padding:2px 0 10px; position:sticky; top:calc(46vh + 6px); z-index:3; background:var(--bg); }
-  .tabs button{ flex:0 0 auto; min-height:36px; border-radius:999px; padding:5px 14px; font-weight:700; }
-  .panel [data-tab]{ display:none; }
-  body[data-tab="move"] .panel [data-tab="move"], body[data-tab="size"] .panel [data-tab="size"], body[data-tab="colour"] .panel [data-tab="colour"],
-  body[data-tab="font"] .panel [data-tab="font"], body[data-tab="words"] .panel [data-tab="words"], body[data-tab="edge"] .panel [data-tab="edge"],
-  body[data-tab="where"] .panel [data-tab="where"], body[data-tab="add"] .panel [data-tab="add"], body[data-tab="changes"] .panel [data-tab="changes"]{ display:block; }
-  .pad{ grid-template-columns:repeat(3,58px); gap:6px; }
-  .pad button{ min-height:50px; font-size:20px; }
-  .onlywide{ display:none; } .onlyphone{ display:block; }
-  #outer, #inner{ display:none; }
+  header button, header select{ flex:0 0 auto; min-height:40px; }
+  #pick{ padding:0 12px; border-radius:999px; }
+  .onlyphone{ display:inline-flex !important; } .onlywide{ display:none !important; }
+  .more{ display:none; position:fixed; top:54px; right:8px; z-index:20; flex-direction:column; align-items:stretch; gap:6px; padding:8px; background:var(--panel); border:1px solid var(--line); border-radius:14px; box-shadow:0 12px 32px rgba(0,0,0,.5); min-width:200px; }
+  .more.open{ display:flex; }
+  .more button, .more select{ justify-content:flex-start; min-height:44px; }
+  main{ flex:1 1 auto; min-height:0; display:flex; flex-direction:column; gap:0; padding:0; }
+  .phone{ position:relative; top:0; flex:1 1 auto; min-height:180px; width:100%; border-width:0 0 1px; border-radius:0 0 16px 16px; box-shadow:none; }
+  .phone iframe{ width:100%; height:100%; max-height:none; }
+  html, body{ overflow-x:hidden; }
+  .panel{ flex:none; max-width:none; min-width:0; width:100%; padding:0 8px calc(var(--tabh) + env(safe-area-inset-bottom)); display:flex; flex-direction:column; }
+  .panel > *, .tools > *, .strip{ min-width:0; max-width:100%; }
+  .mvrow{ gap:12px; } .mvside{ flex:1 1 0; } .mvside .seg{ flex-wrap:nowrap; } .mvside .seg button{ padding:6px 9px; flex:1 1 0; }
+  .box{ border-radius:0; border:0; background:transparent; padding:0; margin:0; }
+  .box.picked{ padding:6px 4px 0; }
+  .strip .big{ font-size:15px; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; flex:1 1 auto; }
+  .strip .mute{ flex:none; max-width:40%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:12px; }
+  /* the picked strip is one fixed height whatever is picked, so the app above never changes size under his finger:
+     the levels and the card's scenery share one row that scrolls sideways */
+  .box.picked{ height:84px; flex:none; }
+  .strip{ height:32px; align-items:center; }
+  .strip .mute{ display:none; }
+  .levelrow{ display:flex; gap:6px; overflow-x:auto; margin:6px 0 0; height:40px; align-items:center; scrollbar-width:none; }
+  .levelrow::-webkit-scrollbar{ display:none; }
+  .levels{ flex-wrap:nowrap; margin:0; flex:none; width:max-content; }
+  #scenery:not(:empty){ padding-left:8px; border-left:1px solid var(--line); }
+  .levels > *{ flex:none; }
+  .levels button{ min-height:32px; }
+  .acts{ display:none; }
+  .tools{ height:clamp(170px, 31dvh, 290px); overflow-y:auto; overscroll-behavior:contain; margin-top:8px; padding:10px 6px 8px; background:var(--panel); border-radius:16px; border:1px solid var(--line); }
+  .tools .box h2{ display:none; }
+  .fonts{ max-height:none; overflow:visible; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); }
+  .list{ max-height:none; }
+  .tabs{ position:fixed; left:0; right:0; bottom:0; z-index:9; margin:0; flex-wrap:nowrap; overflow-x:auto; gap:2px; padding:4px 6px calc(4px + env(safe-area-inset-bottom)); background:var(--bg); border-top:1px solid var(--line); scrollbar-width:none; }
+  .tabs::-webkit-scrollbar{ display:none; }
+  .tabs button{ flex:0 0 auto; min-width:60px; min-height:56px; border-radius:12px; font-size:11px; }
+  .tabs svg.i{ width:22px; height:22px; }
+  .pad{ grid-template-columns:repeat(3,52px); gap:6px; }
+  .pad button{ min-height:48px; font-size:20px; }
+  #toast{ font-size:13px; line-height:1.3; font-weight:700; padding:7px 14px; border-radius:16px; max-width:calc(100vw - 32px); text-align:center; box-shadow:0 6px 18px rgba(0,0,0,.35); }
+  #signin{ margin-top:8px; }
 }
 </style>
 <script src="card_design.js"></script>
 </head>
-<body class="locked" data-tab="move">
+<body class="locked" data-tab="move" data-sel="0">
 <div id="lock"><div class="box">
   <h2>Card Designer is locked</h2>
   <div class="mute">Paste your GitHub key. It is checked with GitHub, then remembered on this device only.</div>
@@ -107,14 +192,19 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
 </div></div>
 <header>
   <h1>Card Designer</h1>
-  <button id="pick" class="on" title="P">Pick</button>
-  <button id="undoTop" title="Undo (Ctrl+Z)">&#8630; Undo</button>
-  <button id="redo" title="Redo (Ctrl+Shift+Z)">&#8631; Redo</button>
-  <button id="focus" title="Zoom into the picked card">Focus card</button>
-  <select id="look" title="Which look the app shows"><option value="day">Day look</option><option value="night">Night look</option><option value="dark">Dark look</option></select>
+  <button id="pick" class="on" title="P" data-i="pick"><span>Pick</span></button>
+  <button id="undoTop" class="ib" title="Undo (Ctrl+Z)" aria-label="Undo" data-i="undo"><span>Undo</span></button>
+  <button id="redo" class="ib" title="Redo (Ctrl+Shift+Z)" aria-label="Redo" data-i="redo"><span>Redo</span></button>
+  <button id="compare" class="ib" title="Hold to see the app without your changes (or hold the \ key)" aria-label="Hold to compare" data-i="compare"><span>Compare</span></button>
   <span class="sp"></span>
   <button id="save" class="go">Save</button>
-  <button id="publish">Save + publish</button>
+  <button id="moreBtn" class="ib onlyphone" aria-label="More" aria-expanded="false" data-i="more"><span>More</span></button>
+  <div class="more" id="more">
+    <button id="focus" title="Zoom into the picked card" data-i="focus"><span>Focus card</span></button>
+    <select id="width" class="onlywide" title="How wide a phone the app shows (every change should hold at 320, 390 and 430)" aria-label="Phone width"><option value="320">Small phone (320)</option><option value="360">360</option><option value="390" selected>iPhone (390)</option><option value="430">Big phone (430)</option></select>
+    <select id="look" title="Which look the app shows"><option value="day">Day look</option><option value="night">Night look</option><option value="dark">Dark look</option></select>
+    <button id="publish" data-i="publish"><span>Save + publish</span></button>
+  </div>
 </header>
 <main>
   <div class="phone"><iframe id="app" data-src="../app/" title="The app"></iframe></div>
@@ -124,18 +214,21 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
       <div class="row"><input id="token" type="password" placeholder="Paste your GitHub key" style="flex:1;min-width:200px"><button id="tokenGo" class="go">Sign in</button></div>
       <div class="mute">Only asked when you save and this device has no key yet. Signed in to the card editor here? Then it is never asked.</div>
     </div>
-    <div class="box">
-      <h2>Picked</h2>
-      <div class="big" id="partName">Tap any word in the app.</div>
-      <div class="mute" id="partWhere"></div>
-      <div class="levels" id="levels"></div>
-      <div class="levels" id="scenery"></div>
-      <div class="gap" id="gapRead"></div>
-      <div class="row"><button id="outer">Bigger area</button><button id="inner">Smaller</button><button id="resetPart">Reset this</button><button id="undo">Undo</button></div>
+    <div class="box picked">
+      <h2 class="onlywide">Picked</h2>
+      <div class="strip"><i class="dot"></i><div class="big" id="partName">Tap any word in the app.</div><div class="mute" id="partWhere"></div><button id="addPick" class="ib sm" title="Pick more pieces to change together (or Shift+click)" aria-label="Pick more pieces" data-i="addmore"><span>Pick more</span></button><button id="copyStyle" class="ib sm" title="Copy its look (Ctrl+Alt+C)" aria-label="Copy its look" data-i="copy"><span>Copy look</span></button><button id="pasteStyle" class="ib sm" title="Paste the copied look (Ctrl+Alt+V)" aria-label="Paste the copied look" data-i="paste" disabled><span>Paste look</span></button><button id="resetPart" class="chip">Reset this</button></div>
+      <div class="levelrow"><div class="levels" id="levels"></div><div class="levels" id="scenery"></div></div>
+      <div class="row acts"><button id="outer">Bigger area</button><button id="inner">Smaller</button><button id="undo">Undo</button></div>
     </div>
-    <nav class="tabs" id="tabs">
-      <button data-t="move" class="on">Move</button><button data-t="size">Size</button><button data-t="colour">Colour</button><button data-t="font">Font</button><button data-t="words">Words</button><button data-t="edge">Edge</button><button data-t="where">Where</button><button data-t="add">Add</button><button data-t="changes">Changes</button>
+    <nav class="tabs" id="tabs" aria-label="Tools">
+      <button data-t="move" data-i="move" class="on"><span>Move</span></button><button data-t="size" data-i="size"><span>Size</span></button><button data-t="colour" data-i="colour"><span>Colour</span></button><button data-t="font" data-i="font"><span>Font</span></button><button data-t="words" data-i="words"><span>Words</span></button><button data-t="edge" data-i="edge"><span>Edge</span></button><button data-t="layers" data-i="layers"><span>Layers</span></button><button data-t="where" data-i="where"><span>Where</span></button><button data-t="add" data-i="add"><span>Add</span></button><button data-t="changes" data-i="changes"><span>Changes</span></button><button data-t="history" data-i="history"><span>History</span></button>
     </nav>
+    <div class="tools" id="tools">
+    <div class="box empty" id="emptyHint">
+      <h2>Start here</h2>
+      <p>Tap any word, mark or picture in the app to pick it. It gets a pink dashed ring, and the tools here change it.</p>
+      <p class="mute">Hold the half-filled square at the top to see the app without your changes. Nothing reaches the app until you press Save.</p>
+    </div>
     <div class="box" data-tab="where">
       <h2>Where the change goes</h2>
       <div class="row"><label>Match</label>
@@ -153,27 +246,43 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     </div>
     <div class="box" data-tab="size">
       <h2>Size</h2>
-      <div class="row"><label>Text size</label><button data-s="-1">A&#8722;&#8722;</button><button data-s="-0.5">A&#8722;</button><input id="size" type="number" step="0.5" min="5" max="80" style="width:78px"><button data-s="0.5">A+</button><button data-s="1">A++</button></div>
+      <div class="sizehead"><div><div class="cap">Text size</div><div class="readout"><input id="size" type="number" step="0.5" min="5" max="80" aria-label="Text size in px"><span>px</span></div></div><div class="mute" id="sizeWas"></div></div>
+      <input id="sizeRange" type="range" min="6" max="60" step="0.5" aria-label="Text size" style="width:100%;padding:0;margin:10px 0 4px">
+      <div class="row"><label>Bigger / smaller</label><input id="scaleR" type="range" min="20" max="300" step="5" value="100" style="flex:1;min-width:120px;padding:0"><span class="mute" id="scaleRead">100%</span></div>
+      <div class="row"><label>Turn</label><input id="rotR" type="range" min="-45" max="45" step="1" value="0" style="flex:1;min-width:120px;padding:0"><span class="mute" id="rotRead">0°</span></div>
+      <div class="row sizebtns"><button data-s="-1">A&#8722;&#8722;</button><button data-s="-0.5">A&#8722;</button><button data-s="0.5">A+</button><button data-s="1">A++</button></div>
     </div>
     <div class="box" data-tab="move">
       <h2>Move</h2>
-      <div class="row"><label>Nudge</label>
-        <div class="pad"><span></span><button data-n="0,-1">&#8593;</button><span></span><button data-n="-1,0">&#8592;</button><button data-n="0,0" title="Back to where it was">&#8226;</button><button data-n="1,0">&#8594;</button><span></span><button data-n="0,1">&#8595;</button><span></span></div>
-        <span class="mute" id="moveRead">0, 0 px</span></div>
-      <div class="row"><label>Step</label><div class="seg" id="stepSeg"><button data-v="1" class="sel">1 px</button><button data-v="5">5 px</button><button data-v="10">10 px</button></div></div>
-      <div class="mute onlywide">Drag it in the app, or use the arrow keys (<kbd>Shift</kbd> = 10 px). <kbd>P</kbd> switches between picking and using the app.</div>
-      <div class="mute onlyphone">While Move is open you can drag the picked piece with your finger. On the other tabs your finger scrolls the app, so nothing moves by accident.</div>
+      <div class="row mvrow">
+        <div class="pad"><span></span><button data-n="0,-1" aria-label="Move up" data-i="chup"></button><span></span><button data-n="-1,0" aria-label="Move left" data-i="chleft"></button><button data-n="0,0" title="Back to where it was" aria-label="Back to where it was" data-i="home"></button><button data-n="1,0" aria-label="Move right" data-i="chright"></button><span></span><button data-n="0,1" aria-label="Move down" data-i="chdown"></button><span></span></div>
+        <div class="mvside"><div class="seg" id="stepSeg"><button data-v="1" class="sel">1 px</button><button data-v="5">5 px</button><button data-v="10">10 px</button></div>
+          <div class="cap">Moved</div><div class="readout" id="moveRead">0, 0 px</div></div></div>
+      <div class="gap" id="gapRead"></div>
+      <div class="row"><button id="snap" class="on" data-i="snap"><span>Snap on</span></button><span class="mute onlywide">Hold <kbd>Alt</kbd> while dragging to place it freely.</span></div>
+      <div class="mute onlywide">Drag it in the app, or use the arrow keys (<kbd>Shift</kbd> moves 10 px). <kbd>P</kbd> switches between picking and using the app.</div>
+      <div class="mute onlyphone">Drag it in the app with your finger. On the other tabs your finger scrolls the app instead.</div>
     </div>
     <div class="box" data-tab="colour">
       <h2>Colour</h2>
       <div class="sw" id="sw"></div>
-      <div class="row"><label>Any colour</label><input id="color" type="color" value="#1d2a33" style="width:64px;height:38px;padding:2px"><button id="colorOff">Its own colour</button></div>
+      <div class="contrast" id="contrast"></div>
+      <div class="row"><label>Any colour</label><input id="color" type="color" value="#1d2a33" style="width:64px;height:38px;padding:2px"><input id="hex" type="text" maxlength="7" placeholder="#1C6BB5" aria-label="Colour code" autocomplete="off" spellcheck="false" style="width:104px"><button id="colorOff">Its own colour</button></div>
+      <div class="row"><button id="eyedrop" data-i="eyedrop"><span>Take a colour from the app</span></button></div>
+      <div class="row"><label>Shift colour</label><input id="hueR" type="range" min="-180" max="180" step="5" value="0" style="flex:1;min-width:120px;padding:0"><span class="mute" id="hueRead">0°</span></div>
+      <div class="row"><label>Brightness</label><input id="briR" type="range" min="30" max="200" step="5" value="100" style="flex:1;min-width:120px;padding:0"><span class="mute" id="briRead">100%</span></div>
+      <div class="row"><label>Colour strength</label><input id="satR" type="range" min="0" max="300" step="10" value="100" style="flex:1;min-width:120px;padding:0"><span class="mute" id="satRead">100%</span></div>
+      <div class="mute">Shift colour, brightness and strength work on drawings and pictures too (the hero's boat, the flag), keeping their shading.</div>
+      <div class="row"><label>See-through</label><input id="opacity" type="range" min="10" max="100" step="5" value="100" style="flex:1;min-width:120px;padding:0"><span class="mute" id="opRead">100%</span></div>
+      <div class="row"><label>Gradient</label><input id="grad2" type="color" value="#1EBEE6" aria-label="Gradient end colour" style="width:52px;height:38px;padding:2px"><select id="gradDir" aria-label="Gradient direction"><option value="90">Left to right</option><option value="180">Top to bottom</option><option value="135">Corner to corner</option></select><button id="gradGo">Use gradient</button><button id="gradOff">No gradient</button></div>
       <div class="row"><label>Fill behind</label><div class="sw" id="swBg" style="grid-template-columns:repeat(auto-fill,minmax(26px,1fr))"></div></div>
       <div class="row"><button id="bgOff">No fill change</button></div>
     </div>
     <div class="box" data-tab="font">
       <h2>Font</h2>
       <div class="fonts" id="fonts"></div>
+      <div class="row"><input id="gfName" type="text" maxlength="40" placeholder="Any Google font, like Lobster Two" aria-label="Google font name" autocomplete="off" spellcheck="false" style="flex:1;min-width:170px"><button id="gfGo" class="go">Add font</button></div>
+      <div class="mute">Every font at <a href="https://fonts.google.com/" target="_blank" rel="noopener" style="color:var(--mint)">fonts.google.com</a> works: type its name exactly as it shows there.</div>
       <div class="row"><label>Weight</label><div class="seg" id="wSeg"><button data-v="">Its own</button><button data-v="400">Regular</button><button data-v="600">Semi</button><button data-v="700">Bold</button><button data-v="800">Extra</button><button data-v="900">Black</button></div></div>
       <div class="row"><label>Style</label><div class="seg" id="caseSeg"><button data-v="">Its own</button><button data-v="none">As typed</button><button data-v="upper">ALL CAPS</button><button data-v="capitalize">Title Case</button><button data-v="lower">lower</button></div><button id="italic">Italic</button></div>
       <div class="row"><label>Letter gap</label><button data-sp="-0.2">Tighter</button><button data-sp="0.2">Wider</button><label style="min-width:0">Line gap</label><button data-lh="-0.05">Tighter</button><button data-lh="0.05">Looser</button></div>
@@ -183,6 +292,11 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
       <div class="seg" id="edgeSeg"></div>
       <div class="row"><button id="hide">Hide it</button></div>
     </div>
+    <div class="box" data-tab="layers">
+      <h2>Layers</h2>
+      <div class="mute" id="layersNote">Every piece of the card you picked, top to bottom. Tap one to pick it; the eye hides or shows it.</div>
+      <ul class="list layers" id="layers"></ul>
+    </div>
     <div class="box" data-tab="add" id="addBox">
       <h2>Add something new</h2>
       <div class="mute" id="addNote">Pick where it goes first: tap the hero, a card or any area, then add.</div>
@@ -191,15 +305,20 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
       <div class="row"><label>Sticker</label><div class="seg" id="stickers"></div></div>
       <div class="mute">An added piece is picked as soon as it lands: drag it, nudge it, size it and colour it like anything else.</div>
     </div>
+    <div class="box" data-tab="history">
+      <h2>History</h2>
+      <div class="mute" id="histNote">Every Save is kept. Tap one to bring it back, look it over, then Save to keep it.</div>
+      <ul class="list hist" id="hist"></ul>
+    </div>
     <div class="box" data-tab="changes">
       <div class="status" id="status"></div>
       <h2>Your changes (<span id="count">0</span>)</h2>
       <ul class="list" id="list"></ul>
     </div>
+    </div>
   </section>
 </main>
 <div id="toast"></div>
-<div class="dock"><button data-d="pick" class="on">Pick</button><button data-n="0,-1">&#8593;</button><button data-n="0,1">&#8595;</button><button data-n="-1,0">&#8592;</button><button data-n="1,0">&#8594;</button><button data-s="-0.5">A&#8722;</button><button data-s="0.5">A+</button><button data-d="undo">&#8630;</button><button data-d="save" class="go">Save</button></div>
 <script>
 (function () {
   "use strict";
@@ -208,15 +327,17 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
   var doc = { version: 1, rules: [], adds: [] }, sha = null, hist = [], sel = null, trail = [], picking = true, focusOn = false, drag = null;
   var addsCtl = null, imgData = {}, pendingImg = {};
   var scope = "all", lookScope = "all", redoSt = [], levelBase = null, step = 1;
-  var state = function () { return JSON.stringify({ r: doc.rules, a: doc.adds || [] }); };
-  var restore = function (str) { var v = JSON.parse(str); if (Array.isArray(v)) doc.rules = v; else { doc.rules = v.r; doc.adds = v.a; } };
+  var state = function () { return JSON.stringify({ r: doc.rules, a: doc.adds || [], f: doc.fonts || [] }); };
+  var restore = function (str) { var v = JSON.parse(str); if (Array.isArray(v)) doc.rules = v; else { doc.rules = v.r; doc.adds = v.a; doc.fonts = v.f || []; } fontList(); };
   function snap() { hist.push(state()); redoSt = []; }
   var narrow = function () { return window.matchMedia("(max-width:820px)").matches; };
   var toastT = 0;
   var say = function (t, c) {
     $("status").textContent = t; $("status").className = "status" + (c ? " " + c : "");
     var T = $("toast"); T.textContent = t; T.className = "on" + (c ? " " + c : ""); clearTimeout(toastT);
-    if (!/…$/.test(t)) toastT = setTimeout(function () { T.className = ""; }, 3500);
+    /* on a phone the note sits over the bottom of the app, never over the tool he is using */
+    if (narrow()) { var ph = document.querySelector(".phone"); if (ph) T.style.bottom = Math.max(8, window.innerHeight - ph.getBoundingClientRect().bottom + 10) + "px"; } else T.style.bottom = "";
+    if (!/…$/.test(t)) toastT = setTimeout(function () { T.className = ""; }, narrow() ? 2600 : 3500);
   };
   var frame = function () { try { return $("app").contentDocument; } catch (e) { return null; } };
   var fw = function () { try { return $("app").contentWindow; } catch (e) { return null; } };
@@ -241,22 +362,41 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
   }
   function describe(el) {
     var t = (el.innerText || el.textContent || "").trim().replace(/\s+/g, " ");
-    if (el.tagName.toLowerCase() === "svg") return "Icon";
-    if (t) return "“" + (t.length > 42 ? t.slice(0, 40) + "…" : t) + "”";
-    return (cls(el)[0] || el.tagName.toLowerCase());
+    var c = cls(el)[0] || "";
+    if (el.tagName.toLowerCase() === "svg") return LEVEL_NAMES[c] || (el.closest(".hero") ? "Hero drawing" : "Icon");
+    if (t && !(LEVEL_NAMES[c] && el.closest(".hero") && el.children.length)) return "“" + (t.length > 42 ? t.slice(0, 40) + "…" : t) + "”";
+    return LEVEL_NAMES[c] || (el.closest(".tdec, .sig, .spdec") ? "Scenery piece" : el.closest(".hero") ? "Hero piece" : el.tagName.toLowerCase() === "img" ? "Picture" : "Box");
   }
-  function select(el) {
+  function selOf(el) {
+    var d = el.ownerDocument, card = el.closest(".card"), hk = el.closest(".hk");
+    return { el: el, in: card ? "card" : hk ? "app" : "page", path: pathFor(el, card || hk || d.body), name: describe(el), kind: card ? (card.getAttribute("data-bub") || "").replace(/\d+$/, "") : "", card: card ? (card.getAttribute("data-card-id") || "").replace(/_\d{4}-\d{2}-\d{2}$/, "") : "" };
+  }
+  /* ---- a group (10/03, J13): Shift+click on a computer, or "Add more" on a phone, picks more pieces; every tool and
+     every move then works on all of them at once, each with its own Where settings. A plain tap starts over. ---- */
+  var multi = [], adding = false;
+  function group() { return sel ? [sel].concat(multi.filter(function (m) { return m.el.isConnected; })) : []; }
+  function withSel(s, f) { var keep = sel; sel = s; try { return f(); } finally { sel = keep; } }
+  function clearGroup() { multi.forEach(function (m) { m.el.removeAttribute("data-hk-pick2"); }); multi = []; }
+  function toggleGroup(el) {
+    if (el.closest("svg") && el.tagName.toLowerCase() !== "svg") el = el.closest("svg");
+    if (!sel) { select(el); return; } if (el === sel.el) return;
+    var i = -1; multi.forEach(function (m, k) { if (m.el === el) i = k; });
+    if (i > -1) { el.removeAttribute("data-hk-pick2"); multi.splice(i, 1); } else { multi.push(selOf(el)); el.setAttribute("data-hk-pick2", "1"); }
+    groupName(); paint(); fill(); say(multi.length ? (multi.length + 1) + " pieces picked. Every change now goes on all of them." : "Back to one piece.", "ok");
+  }
+  function groupName() { var base = $("partName").getAttribute("data-one") || $("partName").textContent; $("partName").setAttribute("data-one", base); $("partName").textContent = base + (multi.length ? " + " + multi.length + " more" : ""); }
+  function select(el, keepGroup) {
     var d = frame(); if (!d || !el) return;
     if (el.closest("svg") && el.tagName.toLowerCase() !== "svg") el = el.closest("svg");
+    if (!keepGroup) clearGroup();
     var old = d.querySelector("[data-hk-pick]"); if (old) old.removeAttribute("data-hk-pick");
-    el.setAttribute("data-hk-pick", "1");
-    var card = el.closest(".card"), hk = el.closest(".hk");
-    var where = card ? "card" : hk ? "app" : "page";
-    var path = pathFor(el, card || hk || d.body);
-    sel = { el: el, in: where, path: path, name: describe(el), kind: card ? (card.getAttribute("data-bub") || "").replace(/\d+$/, "") : "", card: card ? (card.getAttribute("data-card-id") || "").replace(/_\d{4}-\d{2}-\d{2}$/, "") : "" };
+    el.setAttribute("data-hk-pick", "1"); document.body.setAttribute("data-sel", "1");
+    var card = el.closest(".card");
+    sel = selOf(el);
     var part = null; CD.PARTS.forEach(function (pp) { if (!part) { try { if (el.matches(pp.sel)) part = pp.label; } catch (e) {} } });
     var lvl = trail.length ? " (" + trail.length + " level" + (trail.length > 1 ? "s" : "") + " out)" : "";
     $("partName").textContent = (part ? part + ": " : el.tagName.toLowerCase() === "svg" ? "" : trail.length ? "Area: " : "") + describe(el) + lvl;
+    $("partName").removeAttribute("data-one"); groupName();
     $("partWhere").textContent = card ? "On " + (sel.card || "a card") + (sel.kind ? ", a " + sel.kind + " card" : "") : "In the app (outside the cards)";
     $("scopeSeg").style.display = card ? "" : "none";
     var n = 0; try { n = (card ? d.querySelectorAll(".card " + path) : d.querySelectorAll(path)).length; } catch (e) {}
@@ -264,7 +404,7 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     if (!levelBase || !levelBase.isConnected || !(levelBase === el || el.contains(levelBase))) levelBase = el;
     levels();
     if (focusOn) focusCard();
-    fill(); paint();
+    fill(); paint(); layersList();
   }
   /* plain names for the app's own boxes, so the level chips read like places on the card, not code */
   var LEVEL_NAMES = { cardbtn: "Whole card", top: "Top of card", hbody: "Header", headleft: "Title area", hk_slot: "Title box",
@@ -272,21 +412,41 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     dpill: "Date pill", cardcal: "Calendar button", vstamp: "Source stamp", venue: "Place line", venueprimary: "Place name",
     status: "Bar", chip: "Bar word", blurb: "Description", cardfoot: "Card bottom", price: "Price", hourslist: "Times",
     hero: "Hero", hk_gcapage: "Page", hk_wrap: "App", hk_segb: "Tab bar", si: "Tab", ico: "Icon circle", icoW: "Icon circle", hk_add: "Added piece", tdec: "Scenery", sig: "Card mark", spdec: "Scenery",
+    vloc: "Place and drive", venuetown: "Town", venuesecondary: "Town line", prow: "Price row", titlelink: "Title words", titlelast: "Last word", hk_mmark: "Tab mark", lantag: "Tag", opkind: "Kind of place",
+    hsun: "Sun", hmoon: "Moon", hboat: "Boat", hbridge: "Bridge", hpel: "Pelican", hsky: "Sky", hbay: "Bay", hcar: "Car", hferry: "Ferry",
+    snote: "Music note", dnote: "Music note", dnotes: "Music notes", rhearts: "Hearts", rcandle: "Candle", racc_candle: "Candle", spball: "Ball",
+    spgoal: "Goal", mkgoal: "Goal", bub: "Bubble", em_heron: "Heron", em_bfly: "Butterfly", fern: "Fern", ldna: "DNA", latom: "Atom",
+    lflask: "Flask", lscope: "Microscope", aeasel: "Easel", abrush: "Brush", apal: "Paint palette", adrip: "Paint drip", aribbon: "Ribbon",
+    hk_boat: "Sailboat", hk_sailw: "Sails", hfp: "Beach flag", hfp_svg: "Beach flag", sunb: "Sun and moon", moon: "Moon", clouds: "Clouds", cl: "Cloud",
+    hkn_sea: "Sea", "hero-surf": "Surf", "hero-wave": "Wave line", "hero-sand": "Sand", hk_swellw: "Swell lines", glit: "Water sparkle", crabw: "Crab",
+    beachprops: "Beach things", "hero-in": "Hero words", hk_sss_row: "Icon row", "hero-date": "Date", stars: "Stars", hz: "Horizon", npw: "Beach piece",
+    "hero-titlelink": "Coastal Eventures", hk_datecal: "Date",
     rm_bulb: "Light bulb", rm_bg: "String of lights", rm_swag: "Light string", rheart: "Heart", rvig: "Glow edge", svg: "Drawing" };
   function levelName(n) {
     var part = null; CD.PARTS.forEach(function (pp) { if (!part) { try { if (n.matches(pp.sel)) part = pp.label; } catch (e) {} } });
     if (part) return part;
     if (n.classList && n.classList.contains("card")) return "Whole card";
+    var c = cls(n)[0] || n.tagName.toLowerCase();
+    /* a box with a plain name is called by it even when it holds a few loose words ("Place line", not "· 20 mins") */
+    if (LEVEL_NAMES[c] && n.children.length) return LEVEL_NAMES[c];
     var t = ownText(n); if (t) return "\u201c" + (t.length > 18 ? t.slice(0, 16) + "\u2026" : t) + "\u201d";
     if (n.tagName.toLowerCase() === "svg") return "Icon";
-    var c = cls(n)[0] || n.tagName.toLowerCase();
     if (LEVEL_NAMES[c]) return LEVEL_NAMES[c];
-    return c.replace(/^hk_/, "").replace(/[_-]+/g, " ").replace(/^\w/, function (x) { return x.toUpperCase(); });
+    return n.closest(".tdec, .sig, .spdec") ? "Scenery piece" : n.tagName.toLowerCase() === "img" ? "Picture" : "Box";
   }
   /* phones nudge a tap onto the nearest words (touch adjustment), so a tiny light is hard to hit with a finger: the
      card's scenery pieces are offered as buttons instead, one per kind, and a button picks that kind */
   function sceneryChips() {
-    var box = $("scenery"); box.innerHTML = ""; var card = sel && sel.el && sel.el.closest(".card"); if (!card) return;
+    var box = $("scenery"); box.innerHTML = "";
+    /* in the hero, its pieces are offered as buttons, one per named piece, so a finger never has to hit a thin mast */
+    var hero = sel && sel.el && sel.el.closest(".hero");
+    if (hero) {
+      var lab0 = document.createElement("span"); lab0.className = "mute"; lab0.textContent = "Hero:"; box.appendChild(lab0); var seen = {};
+      heroPieces(hero).forEach(function (p) { var nm = LEVEL_NAMES[p.c]; if (!nm || seen[nm]) return; seen[nm] = 1;
+        var b = document.createElement("button"); b.textContent = nm; if (sel.el === p.el) b.className = "sel"; b.onclick = function () { trail = []; levelBase = null; select(p.el); }; box.appendChild(b); });
+      return;
+    }
+    var card = sel && sel.el && sel.el.closest(".card"); if (!card) return;
     var kinds = {}, order = [];
     Array.prototype.forEach.call(card.querySelectorAll(":scope > .tdec *, :scope > .sig *, :scope > .spdec *"), function (n) {
       if (n.closest("svg") && n.tagName.toLowerCase() !== "svg") return;
@@ -296,9 +456,11 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     });
     if (!order.length) return;
     var lab = document.createElement("span"); lab.className = "mute"; lab.textContent = "Scenery:"; box.appendChild(lab);
+    /* a piece with no plain name is numbered rather than called by its code name; picking it rings it in the app */
+    var un = 0;
     order.slice(0, 10).forEach(function (c) {
       var b = document.createElement("button"); var k = kinds[c];
-      b.textContent = (LEVEL_NAMES[c] || c.replace(/^hk_/, "").replace(/[_-]+/g, " ")) + (k.n > 1 ? " \u00d7" + k.n : "");
+      b.textContent = (LEVEL_NAMES[c] || "Piece " + (++un)) + (k.n > 1 ? " \u00d7" + k.n : "");
       if (sel.el === k.el || (sel.el.classList && sel.el.classList.contains(c))) b.className = "sel";
       b.onclick = function () { trail = []; levelBase = null; select(k.el); };
       box.appendChild(b);
@@ -316,6 +478,44 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
       box.appendChild(b);
       if (i < chain.length - 1) { var sp = document.createElement("span"); sp.className = "mute"; sp.textContent = "\u203a"; box.appendChild(sp); }
     });
+    /* on a phone the row scrolls sideways: bring the picked level into view, so what is picked is always named on screen */
+    var row = box.parentElement, on = box.querySelector(".sel");
+    if (on && row && row.scrollWidth > row.clientWidth) { var rr = row.getBoundingClientRect(), br = on.getBoundingClientRect(); if (br.right > rr.right - 8 || br.left < rr.left) row.scrollLeft += br.right - rr.right + Math.min(rr.width / 3, 120); }
+  }
+  /* ---- Layers (10/03, J13): every piece of the picked card (or of the area outside the cards), in reading order ---- */
+  function layersList() {
+    var ul = $("layers"); if (!ul || document.body.getAttribute("data-tab") !== "layers") return; ul.innerHTML = "";
+    if (!sel || !sel.el || !sel.el.isConnected) { $("layersNote").textContent = "Tap a card or anything in the app first."; return; }
+    var root = sel.el.closest(".card") || sel.el.closest("section, header, nav, .hero") || sel.el.parentElement, rows = [], d = frame();
+    Array.prototype.forEach.call(root.querySelectorAll("*"), function (n) {
+      if (rows.length >= 80 || n.closest("#hk_guides")) return;
+      var tag = n.tagName.toLowerCase(), mark = tag === "svg" || tag === "img", add = n.hasAttribute("data-hk-add");
+      if (n.closest("svg") && tag !== "svg") return;
+      if (!add && !mark && !ownText(n)) return;
+      /* words kept for screen readers only (1 px, clipped) are not something he can see, so they are not listed */
+      var r = n.getBoundingClientRect(); if (r.width < 2 || r.height < 2) return;
+      var cs = d.defaultView.getComputedStyle(n); if (cs.display === "none" || (cs.clip && cs.clip !== "auto") || /inset\(50%/.test(cs.clipPath)) return;
+      var dec = !!n.closest(".tdec, .sig, .spdec");
+      rows.push({ n: n, kind: add ? "Added" : dec ? "Scenery" : mark ? (tag === "img" ? "Picture" : "Mark") : "Words", off: cs.visibility === "hidden" });
+    });
+    var changed = []; doc.rules.forEach(function (r) { if (!r.path) return; try { Array.prototype.push.apply(changed, Array.prototype.slice.call(root.querySelectorAll(r.path))); } catch (e) {} });
+    $("layersNote").textContent = rows.length + " pieces in " + (sel.el.closest(".card") ? "this card" : "this area") + ", top to bottom. Tap one to pick it; the eye hides or shows it.";
+    rows.forEach(function (row) {
+      var li = document.createElement("li"); if (row.n === sel.el) li.className = "on"; if (row.off) li.className += " off";
+      var b = document.createElement("button"); b.className = "pickrow";
+      /* a mark is called what the app calls it for screen readers ("Share", "Keep"), else its plain name, else what it is */
+      var lab = row.n.getAttribute("aria-label") || (row.n.closest("[aria-label]") && row.n.closest("[aria-label]").closest(".card, .hk") !== row.n.closest("[aria-label]") ? row.n.closest("[aria-label]").getAttribute("aria-label") : "") || row.n.getAttribute("title") || row.n.getAttribute("alt") || "";
+      var c0 = cls(row.n)[0] || "";
+      var nm = document.createElement("span"); nm.textContent = row.kind === "Words" || row.kind === "Added" ? describe(row.n) : (lab ? lab.slice(0, 40) : LEVEL_NAMES[c0] && c0 !== "svg" ? LEVEL_NAMES[c0] : row.kind === "Scenery" ? "Scenery piece" : row.kind === "Picture" ? "Picture" : "Icon"); b.appendChild(nm);
+      var k = document.createElement("small"); k.textContent = row.kind; b.appendChild(k);
+      b.onclick = function () { trail = []; levelBase = null; select(row.n); };
+      li.appendChild(b);
+      if (changed.indexOf(row.n) > -1) { var c = document.createElement("i"); c.className = "chg"; c.title = "Changed"; li.insertBefore(c, b); }
+      var e = document.createElement("button"); e.className = "eye"; e.setAttribute("aria-label", row.off ? "Show it" : "Hide it"); e.innerHTML = icon(row.off ? "eyeoff" : "eye");
+      e.onclick = function () { trail = []; levelBase = null; select(row.n); edit(function (s) { s.hide = s.hide === true ? undefined : true; }); layersList(); };
+      li.appendChild(e); ul.appendChild(li);
+    });
+    var on = ul.querySelector("li.on"); if (on && on.scrollIntoView) { var lr = ul.closest(".tools") || ul; var a = on.getBoundingClientRect(), z = lr.getBoundingClientRect(); if (a.top < z.top || a.bottom > z.bottom) lr.scrollTop += a.top - z.top - z.height / 3; }
   }
   function key() {
     if (!sel) return null;
@@ -326,33 +526,44 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
   /* 10/02, his phone: "I pressed up on the pad and nothing happened at all". The rule had been made by the 3:59
      build, before mv existed, so it kept moving by translate, which does nothing to a plain word. Any rule without
      mv gets it the first time it is touched. */
-  function moveKind() { var pos = sel && sel.el ? sel.el.ownerDocument.defaultView.getComputedStyle(sel.el).position : "static"; return /absolute|fixed|sticky/.test(pos) ? "tr" : "rel"; }
+  function moveKind() {
+    var el = sel && sel.el, pos = el ? el.ownerDocument.defaultView.getComputedStyle(el).position : "static";
+    if (!/absolute|fixed|sticky/.test(pos)) return "rel";
+    /* a piece already sliding by translate in its own animation (hero pieces) moves by its margins instead */
+    var slides = false; try { slides = el.getAnimations().some(function (a) { return a.effect && a.effect.getKeyframes && a.effect.getKeyframes().some(function (k) { return "translate" in k || ("transform" in k && false); }); }); } catch (e) {}
+    return slides && pos === "absolute" ? "mg" : "tr";
+  }
   function newRule(k) {
     var r = { in: k.in, path: k.path, name: sel && sel.name, scope: k.scope, value: k.value, look: k.look, set: { mv: moveKind() } };
     doc.rules.push(r); return r;
   }
-  function ruleFor(k) { var r = findRule(k) || newRule(k); if (!r.set) r.set = {}; if (r.set.mv === undefined) r.set.mv = moveKind(); return r; }
+  function ruleFor(k) { var r = findRule(k) || newRule(k); if (!r.set) r.set = {}; if (r.set.mv === undefined) r.set.mv = moveKind();
+    if (r.set.mv === "mg" && !r.set.m0 && sel && sel.el) { var cs = sel.el.ownerDocument.defaultView.getComputedStyle(sel.el); r.set.m0 = [parseFloat(cs.marginLeft) || 0, parseFloat(cs.marginTop) || 0]; }
+    return r; }
   function edit(fn) {
     var k = key(); if (!k) { say("Tap a word in the app first.", "err"); return; }
     snap();
-    var r = ruleFor(k);
-    fn(r.set); flashGuides(); paint(); fill();
+    group().forEach(function (g) { withSel(g, function () { fn(ruleFor(key()).set); }); });
+    flashGuides(); paint(); fill();
   }
 
   /* ---- spacing guides, measured from the letters (canvas glyph metrics), labels kept on screen ---- */
   var meas = document.createElement("canvas").getContext("2d");
   var ownText = function (el) { var t = ""; for (var n = el.firstChild; n; n = n.nextSibling) if (n.nodeType === 3) t += n.nodeValue; return t.trim(); };
-  function inkRects(el) {
-    var d = el.ownerDocument, out = [], w = d.createTreeWalker(el, 4), n;
-    while ((n = w.nextNode())) {
+  function inkRects(el, own) {
+    var d = el.ownerDocument, out = [], w = d.createTreeWalker(el, 4), n, kids = own ? Array.prototype.filter.call(el.childNodes, function (k) { return k.nodeType === 3; }) : null;
+    while ((n = kids ? kids.shift() : w.nextNode())) {
       if (!n.nodeValue.trim()) continue;
       var cs = d.defaultView.getComputedStyle(n.parentElement); if (cs.visibility === "hidden" || cs.display === "none") continue;
-      meas.font = cs.fontStyle + " " + cs.fontWeight + " " + cs.fontSize + " " + cs.fontFamily;
-      var m = meas.measureText(n.nodeValue.trim()), fa = m.fontBoundingBoxAscent || parseFloat(cs.fontSize) * .8;
+      /* measured on a canvas inside the app's own page, so the app's web fonts are the ones measured, and in the case the
+         reader sees (CAPS words have no descenders; measuring them as typed put the ink box lower than the letters) */
+      var mc = d.__hkMeas || (d.__hkMeas = d.createElement("canvas").getContext("2d")) || meas, tt = cs.textTransform, raw = n.nodeValue.trim();
+      mc.font = cs.fontStyle + " " + cs.fontWeight + " " + cs.fontSize + " " + cs.fontFamily;
+      var m = mc.measureText(tt === "uppercase" ? raw.toUpperCase() : tt === "lowercase" ? raw.toLowerCase() : raw), fa = m.fontBoundingBoxAscent || parseFloat(cs.fontSize) * .8;
       var rg = d.createRange(); rg.selectNodeContents(n);
       Array.prototype.forEach.call(rg.getClientRects(), function (b) { if (b.width >= 1) out.push({ l: b.left, r: b.right, t: b.top + fa - m.actualBoundingBoxAscent, b: b.top + fa + m.actualBoundingBoxDescent }); });
     }
-    if (!out.length) { var bb = el.getBoundingClientRect(); if (bb.width || bb.height) out.push({ l: bb.left, r: bb.right, t: bb.top, b: bb.bottom }); }
+    if (!out.length && !own) { var bb = el.getBoundingClientRect(); if (bb.width || bb.height) out.push({ l: bb.left, r: bb.right, t: bb.top, b: bb.bottom }); }
     return out;
   }
   var union = function (rs) { if (!rs.length) return { l: 0, r: 0, t: 0, b: 0 }; return rs.reduce(function (a, b) { return { l: Math.min(a.l, b.l), r: Math.max(a.r, b.r), t: Math.min(a.t, b.t), b: Math.max(a.b, b.b) }; }); };
@@ -360,21 +571,23 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
      1.6 s later, like Canva's; the four numbers stay in the panel line at all times. */
   var guideUntil = 0, guideT = 0;
   function flashGuides() { guideUntil = Date.now() + 1600; clearTimeout(guideT); guideT = setTimeout(guides, 1650); }
-  function guides() {
-    var d = frame(), w = fw(); if (!d || !d.body) return;
-    var g = d.getElementById("hk_guides");
-    if (!g) { g = d.createElement("div"); g.id = "hk_guides"; g.style.cssText = "position:fixed;inset:0;pointer-events:none;z-index:2147483647"; d.body.appendChild(g); }
-    g.innerHTML = ""; $("gapRead").textContent = "";
-    g.style.display = (drag && drag.on) || Date.now() < guideUntil ? "" : "none";
-    if (!sel || !sel.el || !sel.el.isConnected) return;
+  /* what sits around the picked piece: its letters' box, every other word and mark near it, the nearest one on each
+     side and the card's edges. The spacing lines and the snapping both read it. */
+  function around(g) {
+    var d = frame(), w = fw();
     var box = sel.el.closest(".card") || d.body, me = union(inkRects(sel.el)), cand = [];
     Array.prototype.forEach.call(box.querySelectorAll("*"), function (el) {
-      if (el === sel.el || sel.el.contains(el) || el.contains(sel.el) || el.id === "hk_guides" || g.contains(el)) return;
+      if (el === sel.el || sel.el.contains(el) || el.id === "hk_guides" || g.contains(el)) return;
+      /* a box holding the piece is not a neighbour, but its own loose words are ("Pensacola" sits in the place line beside "· 20 mins") */
+      if (el.contains(sel.el)) { if (ownText(el)) inkRects(el, true).forEach(function (b) { if (b.r - b.l > .5) cand.push(b); }); return; }
       var mark = /^(svg|img|button)$/i.test(el.tagName);
       if (!mark && !ownText(el)) return;
       if (el.closest("svg") && el.tagName.toLowerCase() !== "svg") return;
+      /* only what is on screen is measured, so a pick outside the cards (the whole app is its box) stays quick */
+      var bb = el.getBoundingClientRect(); if (bb.bottom < -200 || bb.top > w.innerHeight + 200 || (!bb.width && !bb.height)) return;
       var cs = d.defaultView.getComputedStyle(el); if (cs.visibility === "hidden" || cs.display === "none" || +cs.opacity === 0) return;
-      (mark ? [el.getBoundingClientRect()].map(function (b) { return { l: b.left, r: b.right, t: b.top, b: b.bottom }; }) : inkRects(el)).forEach(function (b) { if (b.r - b.l > .5 && b.b - b.t > .5) cand.push(b); });
+      var dec = !!el.closest(".tdec, .sig, .spdec");
+      (mark ? [{ l: bb.left, r: bb.right, t: bb.top, b: bb.bottom }] : inkRects(el)).forEach(function (b) { if (b.r - b.l > .5 && b.b - b.t > .5) { b.dec = dec; cand.push(b); } });
     });
     var eb = box === d.body ? { left: 0, right: w.innerWidth, top: 0, bottom: w.innerHeight } : box.getBoundingClientRect();
     var hov = function (a) { return a.r > me.l + 1 && a.l < me.r - 1; }, vov = function (a) { return a.b > me.t + 1 && a.t < me.b - 1; };
@@ -385,25 +598,72 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
       if (vov(a) && a.r <= me.l + .5 && (!lf || a.r > lf.r)) lf = a;
       if (vov(a) && a.l >= me.r - .5 && (!rt || a.l < rt.l)) rt = a;
     });
+    return { box: box, me: me, cand: cand, eb: eb, up: up, dn: dn, lf: lf, rt: rt };
+  }
+  function guides() {
+    var d = frame(), w = fw(); if (!d || !d.body) return;
+    var g = d.getElementById("hk_guides");
+    if (!g) { g = d.createElement("div"); g.id = "hk_guides"; g.style.cssText = "position:fixed;inset:0;pointer-events:none;z-index:2147483647"; d.body.appendChild(g); }
+    g.innerHTML = ""; $("gapRead").textContent = "";
+    g.style.display = (drag && drag.on) || Date.now() < guideUntil ? "" : "none";
+    if (!sel || !sel.el || !sel.el.isConnected) return;
+    var A = around(g), box = A.box, me = A.me, cand = A.cand, eb = A.eb, up = A.up, dn = A.dn, lf = A.lf, rt = A.rt;
     var W = w.innerWidth, H = w.innerHeight, clamp = function (v, lo, hi) { return Math.max(lo, Math.min(hi, v)); };
-    var line = function (x1, y1, x2, y2, txt, edge) {
+    /* the snap lines, mint, right across the card, while a drag is holding to one */
+    if (drag && drag.on && drag.snapped) {
+      var sn = drag.snapped, SL = function (css) { var z = d.createElement("div"); z.className = "hk_snapline"; z.style.cssText = "position:absolute;background:#4FD6AC;" + css; g.appendChild(z); };
+      if (sn.x !== undefined) SL("left:" + sn.x + "px;top:" + Math.max(eb.top, 0) + "px;width:1px;height:" + (Math.min(eb.bottom, H) - Math.max(eb.top, 0)) + "px");
+      if (sn.y !== undefined) SL("top:" + sn.y + "px;left:" + Math.max(eb.left, 0) + "px;height:1px;width:" + (Math.min(eb.right, W) - Math.max(eb.left, 0)) + "px");
+      if (sn.sym) { var eq = d.createElement("div"); eq.className = "hk_snapline"; eq.textContent = sn.sym === "y" ? "= same space above and below" : "= same space left and right"; eq.style.cssText = "position:absolute;left:50%;transform:translateX(-50%);" + ((me.t + me.b) / 2 > H / 2 ? "top:42px" : "bottom:42px") + ";font:800 11px/20px system-ui,sans-serif;color:#0E1621;background:#4FD6AC;border-radius:999px;padding:0 10px;white-space:nowrap"; g.appendChild(eq); }
+    }
+    /* 10/03, J13, Gray: "the distances from the lines above and below... should not be overlapping the thing I am
+       moving.... it shouldn't block it, the text i mean. It shouldn't run off screen". Each number is measured at its
+       real width and tried in several spots: in the gap beside its line, past the far end of the line, then outside
+       the piece on that side. The spot that covers the piece (padded 3 px) is never taken while any other exists, then
+       the one that covers another number. A spot that would cover any other words or mark on the card is never taken:
+       where every spot would, that number is left off the app (the line still shows) and read in the panel instead,
+       which always carries all four. Every spot is kept on screen. */
+    var avoid = { l: me.l - 3, r: me.r + 3, t: me.t - 3, b: me.b + 3 }, placed = [], near = cand.filter(function (c) { return !c.dec; }).map(function (c) { return { l: c.l - 2, r: c.r + 2, t: c.t - 2, b: c.b + 2 }; });
+    var hit = function (a, b) { return a.l < b.r && a.r > b.l && a.t < b.b && a.b > b.t; };
+    var line = function (x1, y1, x2, y2, txt, edge, side) {
       var col = edge ? "#2E9BD6" : "#FF2D87", v = x1 === x2, L = d.createElement("div");
       L.style.cssText = "position:absolute;background:" + col + ";left:" + Math.min(x1, x2) + "px;top:" + Math.min(y1, y2) + "px;" + (v ? "width:1px;height:" + Math.abs(y2 - y1) : "height:1px;width:" + Math.abs(x2 - x1)) + "px";
       g.appendChild(L);
-      var T = d.createElement("div"); T.textContent = txt;
-      var lx = v ? x1 + 4 : (x1 + x2) / 2 - 16, ly = v ? (y1 + y2) / 2 - 6 : y1 - 15;
-      T.style.cssText = "position:absolute;font:700 9.5px/13px system-ui,sans-serif;color:#fff;background:" + col + ";opacity:.9;border-radius:6px;padding:0 4px;white-space:nowrap;left:" + clamp(lx, 2, W - 56) + "px;top:" + clamp(ly, 2, H - 15) + "px";
+      var T = d.createElement("div"); T.textContent = txt; T.setAttribute("data-gl", side);
+      T.style.cssText = "position:absolute;left:0;top:0;font:700 9.5px/13px system-ui,sans-serif;color:#fff;background:" + col + ";opacity:.92;border-radius:6px;padding:0 4px;white-space:nowrap";
       g.appendChild(T);
+      var tw = T.offsetWidth || 40, th = T.offsetHeight || 13, mx = (x1 + x2) / 2, my = (y1 + y2) / 2, far = side === "up" || side === "lf";
+      var spots = v ? [[x1 + 4, my - th / 2], [x1 - 4 - tw, my - th / 2], [x1 - tw / 2, far ? Math.min(y1, y2) - th - 2 : Math.max(y1, y2) + 2],
+          [x1 + 4, far ? Math.min(y1, y2) - th - 2 : Math.max(y1, y2) + 2], [x1 - 4 - tw, far ? Math.min(y1, y2) - th - 2 : Math.max(y1, y2) + 2],
+          [far ? avoid.l - tw - 2 : avoid.r + 2, far ? avoid.t - th - 2 : avoid.b + 2], [far ? avoid.r + 2 : avoid.l - tw - 2, far ? avoid.t - th - 2 : avoid.b + 2]]
+        : [[mx - tw / 2, y1 - th - 2], [mx - tw / 2, y1 + 3], [far ? Math.min(x1, x2) - tw - 3 : Math.max(x1, x2) + 3, y1 - th / 2],
+          [far ? Math.min(x1, x2) - tw - 3 : Math.max(x1, x2) + 3, y1 - th - 2], [far ? Math.min(x1, x2) - tw - 3 : Math.max(x1, x2) + 3, y1 + 3],
+          [far ? avoid.l - tw - 2 : avoid.r + 2, avoid.t - th - 2], [far ? avoid.l - tw - 2 : avoid.r + 2, avoid.b + 2]];
+      var best = null, bs = Infinity;
+      spots.forEach(function (s, i) {
+        var x = clamp(s[0], 2, W - tw - 2), y = clamp(s[1], 2, H - th - 2), R = { l: x, r: x + tw, t: y, b: y + th };
+        if (hit(R, avoid) || placed.some(function (p) { return hit(R, p); }) || near.some(function (p) { return hit(R, p); })) return;
+        var sc = Math.abs(x - s[0]) + Math.abs(y - s[1]) + i * 4;
+        if (sc < bs) { bs = sc; best = R; }
+      });
+      if (!best) { T.remove(); return; }
+      placed.push(best); T.style.left = best.l + "px"; T.style.top = best.t + "px";
     };
     var px = function (n) { return (Math.round(n * 10) / 10) + " px"; };
-    var B = d.createElement("div"); B.style.cssText = "position:absolute;border:1px solid #FF2D87;left:" + me.l + "px;top:" + me.t + "px;width:" + (me.r - me.l) + "px;height:" + (me.b - me.t) + "px"; g.appendChild(B);
     var cx = clamp((me.l + me.r) / 2, 4, W - 4), cy = clamp((me.t + me.b) / 2, 4, H - 4);
     var a = up ? me.t - up.b : me.t - eb.top, b = dn ? dn.t - me.b : eb.bottom - me.b, c = lf ? me.l - lf.r : me.l - eb.left, e = rt ? rt.l - me.r : eb.right - me.r;
-    line(cx, up ? up.b : Math.max(eb.top, 0), cx, me.t, px(a) + (up ? "" : " edge"), !up);
-    line(cx, me.b, cx, dn ? dn.t : Math.min(eb.bottom, H), px(b) + (dn ? "" : " edge"), !dn);
-    line(lf ? lf.r : Math.max(eb.left, 0), cy, me.l, cy, px(c) + (lf ? "" : " edge"), !lf);
-    line(me.r, cy, rt ? rt.l : Math.min(eb.right, W), cy, px(e) + (rt ? "" : " edge"), !rt);
+    line(cx, up ? up.b : Math.max(eb.top, 0), cx, me.t, px(a) + (up ? "" : " edge"), !up, "up");
+    line(cx, me.b, cx, dn ? dn.t : Math.min(eb.bottom, H), px(b) + (dn ? "" : " edge"), !dn, "dn");
+    line(lf ? lf.r : Math.max(eb.left, 0), cy, me.l, cy, px(c) + (lf ? "" : " edge"), !lf, "lf");
+    line(me.r, cy, rt ? rt.l : Math.min(eb.right, W), cy, px(e) + (rt ? "" : " edge"), !rt, "rt");
     $("gapRead").textContent = "Above " + px(a) + " · below " + px(b) + " · left " + px(c) + " · right " + px(e);
+    /* all four in one pill at the top or the bottom of the app, whichever is farther from the piece, like Canva's
+       read-out while dragging: always on screen, never on the piece, so a crowded spot that keeps a number off its
+       line still shows it here */
+    var hud = d.createElement("div"); hud.id = "hk_hud"; var r1 = function (n) { return Math.round(n * 10) / 10; };
+    hud.textContent = "\u2191 " + r1(a) + "   \u2193 " + r1(b) + "   \u2190 " + r1(c) + "   \u2192 " + r1(e);
+    hud.style.cssText = "position:absolute;left:50%;transform:translateX(-50%);font:800 12px/24px system-ui,sans-serif;color:#fff;background:rgba(14,22,33,.92);border:1px solid #FF2D87;border-radius:999px;padding:0 12px;white-space:pre;font-variant-numeric:tabular-nums;" + ((me.t + me.b) / 2 > H / 2 ? "top:8px" : "bottom:8px");
+    g.appendChild(hud);
   }
 
   /* ---- paint the preview and the panel ---- */
@@ -411,20 +671,25 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     var d = frame(); if (!d || !d.body) return;
     /* the published design is swapped for the working copy only once that copy came from GitHub; a copy made on a
        device with no key sits ON TOP of what is published, so nothing already saved drops out of the preview */
-    var baked = d.getElementById("hk_design"); if (baked) baked.media = base === "github" ? "not all" : "all";
+    var baked = d.getElementById("hk_design"); if (baked) baked.media = base === "github" || comparing ? "not all" : "all";
     keepDraft();
     doc.rules.forEach(function (r) { if (r.set && r.set.font) gfont(d, r.set.font); });
     var st = d.getElementById("hk_design_preview");
     if (!st) { st = d.createElement("style"); st.id = "hk_design_preview"; d.body.appendChild(st); }
+    st.media = comparing ? "not all" : "all";
     st.textContent = CD.designCss(doc) +
-      "\n[data-hk-pick]{outline:2px dashed #FF2D87 !important;outline-offset:2px !important;" + (!narrow() || document.body.getAttribute("data-tab") === "move" ? "touch-action:none !important;" : "") + "}" +
+      "\n[data-hk-pick2]{outline:2px dashed rgba(255,45,135,.7) !important;outline-offset:2px !important;}" + "\n[data-hk-pick]{outline:2px dashed #FF2D87 !important;outline-offset:2px !important;" + (!narrow() || document.body.getAttribute("data-tab") === "move" ? "touch-action:none !important;" : "") + "}" +
       (picking ? "\n.hk *{cursor:crosshair !important;}\n[data-hk-add]{pointer-events:auto !important;}" : "") +
       (focusOn ? "\n.card:not([data-hk-focus]){opacity:.12 !important;filter:grayscale(1) !important;}\n.card[data-hk-focus]{box-shadow:0 0 0 3px #FF2D87, 0 20px 60px rgba(0,0,0,.45) !important;}" : "");
     if (addsCtl && addsCtl.doc === d) addsCtl.set(doc.adds || []); else { addsCtl = CD.placeAdds(d, doc.adds || [], function (a) { return imgData[a.id] || ""; }); addsCtl.doc = d; }
     guides(); list();
   }
   function list() {
-    $("count").textContent = doc.rules.length + (doc.adds || []).length;
+    var nAll = doc.rules.length + (doc.adds || []).length; $("count").textContent = nAll;
+    /* the Changes tab carries the count, and Save shows a dot while something is not saved yet */
+    var ct = document.querySelector('#tabs [data-t="changes"]'), bd = ct.querySelector(".badge"); if (!bd) { bd = document.createElement("i"); bd.className = "badge"; ct.appendChild(bd); }
+    bd.textContent = nAll; bd.style.display = nAll ? "" : "none";
+    $("save").classList.toggle("dirty", savedAs != null && state() !== savedAs);
     var ul = $("list"); ul.innerHTML = "";
     (doc.adds || []).forEach(function (a, i) {
       var li = document.createElement("li"); li.innerHTML = "<span></span><button>Remove</button>";
@@ -455,7 +720,8 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     $("words").value = (tr && tr.set && tr.set.text) || ""; $("words").placeholder = wok ? ownText(sel.el).slice(0, 60) : "Type new words";
     $("wordsNote").textContent = !sel ? "Tap a single word or line in the app first." : !wok ? "This piece has no words of its own. Tap the words themselves, or use Smaller." : sel.in === "card" ? "Changes the words on this one card only. Words that update by themselves stop updating." : "Changes these words everywhere they show. Words that update by themselves stop updating.";
     $("moveRead").textContent = (s.dx || 0) + ", " + (s.dy || 0) + " px";
-    $("size").value = s.size || (cs ? Math.round(parseFloat(cs.fontSize) * 10) / 10 : "");
+    $("size").value = s.size || (cs ? Math.round(parseFloat(cs.fontSize) * 10) / 10 : ""); $("sizeRange").value = $("size").value || 14;
+    $("sizeWas").textContent = r && r.set && r.set.size ? "Changed (Reset this puts it back)" : "Its own size";
     var mark = function (box, v) { Array.prototype.forEach.call($(box).children, function (b) { b.classList.toggle("sel", (b.getAttribute("data-v") || "") === (v === undefined ? "" : String(v))); }); };
     mark("wSeg", s.weight || ""); mark("caseSeg", s.tcase || ""); mark("edgeSeg", s.edge || "");
     Array.prototype.forEach.call($("fonts").children, function (b) { b.classList.toggle("sel", b.getAttribute("data-f") === (s.font || "")); });
@@ -463,12 +729,40 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     Array.prototype.forEach.call($("swBg").children, function (b) { b.classList.toggle("sel", b.getAttribute("data-c") === (s.bg || "")); });
     $("italic").classList.toggle("on", s.italic === true); $("hide").classList.toggle("on", s.hide === true);
     if (s.color) $("color").value = s.color;
+    [["scaleR", "scale", 100, "%", 100], ["rotR", "rot", 0, "°", 1], ["hueR", "hue", 0, "°", 1], ["briR", "bright", 100, "%", 100], ["satR", "sat", 100, "%", 100]].forEach(function (q) { var v = s[q[1]] !== undefined ? Math.round(Number(s[q[1]]) * q[4]) : q[2]; $(q[0]).value = v; $(q[0].replace("R", "Read")).textContent = v + q[3]; });
+    var op = s.opacity !== undefined ? Math.round(Number(s.opacity) * 100) : 100; $("opacity").value = op; $("opRead").textContent = op + "%";
+    if (document.activeElement !== $("hex")) $("hex").value = s.color || (cs ? toHex(cs.color) : "");
+    if (s.grad) { $("grad2").value = s.grad[1]; $("gradDir").value = String(s.grad[2] || 90); }
+    contrastRead();
   }
   function focusCard() {
     var d = frame(); if (!d) return;
     Array.prototype.forEach.call(d.querySelectorAll("[data-hk-focus]"), function (c) { c.removeAttribute("data-hk-focus"); });
     var card = focusOn && sel && sel.el.closest(".card");
     if (card) { card.setAttribute("data-hk-focus", "1"); card.scrollIntoView({ block: "center", behavior: "smooth" }); setTimeout(guides, 450); }
+  }
+
+  /* ---- snapping (10/03, J13): a dragged piece is pulled onto the edges and middles of the words and marks around it,
+     the card's own edges and middle, and, the one Gray's spacing law asks for, the spot with the same space above as
+     below (or left as right). Within 5 px it holds there, a mint line shows what it holds to, and the phone ticks once.
+     Alt, Ctrl or Cmd held, or Snap off in Move, and it moves freely. Arrows never snap: they are for exact steps. ---- */
+  var snapOn = true;
+  try { snapOn = localStorage.getItem("hk_designer_snap") !== "off"; } catch (e) {}
+  function snapTo(ar, mx, my, free) {
+    if (free || !ar) return { x: mx, y: my, at: null };
+    var me = ar.me, T = 5, w = me.r - me.l, h = me.b - me.t, at = {};
+    var xs = [ar.eb.left + 0, ar.eb.right, (ar.eb.left + ar.eb.right) / 2], ys = [(ar.eb.top + ar.eb.bottom) / 2];
+    ar.cand.forEach(function (c) { if (c.dec) return; xs.push(c.l, c.r, (c.l + c.r) / 2); ys.push(c.t, c.b, (c.t + c.b) / 2); });
+    var best = function (edges, targets) { var b = null; edges.forEach(function (e) { targets.forEach(function (t) { var dd = t - e.v; if (Math.abs(dd) <= T && (!b || Math.abs(dd) < Math.abs(b.d))) b = { d: dd, line: t }; }); }); return b; };
+    var L = me.l + mx, Tp = me.t + my;
+    /* same space both sides first: it is the one he asks for by name */
+    var symY = ar.up && ar.dn ? (ar.up.b + ar.dn.t - h) / 2 : null, symX = ar.lf && ar.rt ? (ar.lf.r + ar.rt.l - w) / 2 : null;
+    var nx = mx, ny = my;
+    if (symY !== null && Math.abs(symY - Tp) <= T) { ny = Math.round(my + symY - Tp); at.sym = "y"; at.y = Math.round(symY + h / 2); }
+    else { var by = best([{ v: Tp }, { v: Tp + h / 2 }, { v: Tp + h }], ys); if (by) { ny = Math.round(my + by.d); at.y = by.line; } }
+    if (symX !== null && Math.abs(symX - L) <= T) { nx = Math.round(mx + symX - L); at.sym = at.sym || "x"; at.x = Math.round(symX + w / 2); }
+    else { var bx = best([{ v: L }, { v: L + w / 2 }, { v: L + w }], xs); if (bx) { nx = Math.round(mx + bx.d); at.x = bx.line; } }
+    return { x: nx, y: ny, at: (at.x !== undefined || at.y !== undefined) ? at : null };
   }
 
   /* ---- the app in the frame: tap to pick, drag to move, keys to nudge ---- */
@@ -483,27 +777,31 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     d.addEventListener("pointerdown", function (e) {
       if (!picking || popup(e.target)) { tap = null; return; }
       tap = { x: e.clientX, y: e.clientY, t: e.target };
-      if (!sel || !(e.target === sel.el || sel.el.contains(e.target))) { if (e.target.closest && e.target.closest(".card")) e.stopPropagation(); return; }
+      if (dropping) { e.stopPropagation(); return; }
+      var inGroup = group().some(function (g) { return e.target === g.el || g.el.contains(e.target); });
+      if (!sel || !inGroup || e.shiftKey || adding) { if (e.target.closest && e.target.closest(".card")) e.stopPropagation(); return; }
       if (e.pointerType === "touch" && narrow() && document.body.getAttribute("data-tab") !== "move") return;
-      var r = findRule(key()), s0 = (r && r.set) || {};
-      drag = { x: e.clientX, y: e.clientY, dx: s0.dx || 0, dy: s0.dy || 0, on: false };
+      drag = { x: e.clientX, y: e.clientY, on: false, starts: group().map(function (g) { return withSel(g, function () { var r = findRule(key()), s0 = (r && r.set) || {}; return { g: g, dx: s0.dx || 0, dy: s0.dy || 0 }; }); }) };
       e.stopPropagation();
     }, true);
     d.addEventListener("pointermove", function (e) {
       if (!drag) return;
       var mx = Math.round(e.clientX - drag.x), my = Math.round(e.clientY - drag.y);
-      if (!drag.on) { if (Math.abs(mx) + Math.abs(my) < 3) return; drag.on = true; snap(); }
-      var k = key(), r = ruleFor(k); guideUntil = Date.now() + 1600;
-      r.set.dx = drag.dx + mx; r.set.dy = drag.dy + my; paint(); fill(); e.preventDefault(); e.stopPropagation();
+      if (!drag.on) { if (Math.abs(mx) + Math.abs(my) < 3) return; drag.on = true; snap(); drag.ar = around(d.getElementById("hk_guides") || d.createElement("i")); }
+      var sp = snapTo(drag.ar, mx, my, !snapOn || e.altKey || e.ctrlKey || e.metaKey); mx = sp.x; my = sp.y;
+      if (JSON.stringify(sp.at) !== JSON.stringify(drag.snapped || null)) { if (sp.at && navigator.vibrate) { try { navigator.vibrate(8); } catch (x) {} } drag.snapped = sp.at; }
+      guideUntil = Date.now() + 1600;
+      drag.starts.forEach(function (st) { withSel(st.g, function () { var r = ruleFor(key()); r.set.dx = st.dx + mx; r.set.dy = st.dy + my; }); });
+      paint(); fill(); e.preventDefault(); e.stopPropagation();
     }, true);
-    var end = function (e) { if (drag && drag.on && e) { e.preventDefault(); e.stopPropagation(); } drag = null; };
+    var end = function (e) { var was = drag && drag.on; if (was && e) { e.preventDefault(); e.stopPropagation(); } drag = null; if (was) flashGuides(); };
     d.addEventListener("pointerup", function (e) {
       var moved = drag && drag.on, t = tap; tap = null; end(e);
-      if (picking && t && !moved && Math.abs(e.clientX - t.x) + Math.abs(e.clientY - t.y) < 10) { trail = []; levelBase = null; select(sceneryAt(t.t, t.x, t.y) || t.t); e.preventDefault(); }
+      if (picking && t && !moved && Math.abs(e.clientX - t.x) + Math.abs(e.clientY - t.y) < 10) { e.preventDefault(); if (dropping) { takeColour(t.t); return; } if ((e.shiftKey || adding) && sel) { toggleGroup(sceneryAt(t.t, t.x, t.y) || t.t); return; } trail = []; levelBase = null; select(sceneryAt(t.t, t.x, t.y) || t.t); }
     }, true);
     d.addEventListener("pointercancel", function (e) { tap = null; end(e); }, true);
-    d.addEventListener("keydown", onKey, true);
-    d.addEventListener("scroll", function () { guides(); }, true);
+    d.addEventListener("keydown", onKey, true); d.addEventListener("keydown", function (e) { cmpKey(e); }, true); d.addEventListener("keyup", function (e) { cmpKey(e); }, true);
+    var gq = 0; d.addEventListener("scroll", function () { if (!gq) gq = fw().requestAnimationFrame(function () { gq = 0; guides(); }); }, true);
     paint();
   }
   /* 10/02 night, Gray: "the drawings on certain types of cards like the one you just showed with lights. Can I select
@@ -511,7 +809,28 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
      pointer-events:none so the card stays usable), so a tap on a light lands on the card's own box. When the tap
      hit a box with no words of its own, the smallest scenery piece under the finger is picked instead. Its path
      names that scenery (".tdec .rm_bg .rm_bulb"), so "Every card" only ever reaches cards that have those lights. */
+  /* 10/03, J13, Gray: "I could be able to edit the hero myself almost". The hero's drawings take no taps (so the app
+     stays usable), so a tap on the hero lands on the hero itself. Then the smallest hero piece under the finger is
+     picked: the sailboat, the flag, the sun and moon, a cloud, the surf. Huge washes (the grain, the scrim) are skipped. */
+  var HERO_SKIP = /^(grain|hero-scrim|boat-refl|hero_slot|hkn_tl|hk_rigsrc)$/;
+  function heroPieces(hero) {
+    var out = [], H = hero.getBoundingClientRect(), big = H.width * H.height * 0.6;
+    Array.prototype.forEach.call(hero.querySelectorAll(":scope > *, :scope > * > *"), function (n) {
+      var c = cls(n)[0] || ""; if (!c || HERO_SKIP.test(c) || n.closest(".stars .hkn_sheet") || /^(defs)$/i.test(n.tagName)) return;
+      var r = n.getBoundingClientRect(); if (r.width < 6 || r.height < 6 || r.width * r.height > big) return;
+      out.push({ el: n, r: r, c: c });
+    });
+    return out;
+  }
+  function heroAt(hit, x, y) {
+    var hero = hit && hit.closest && hit.closest(".hero"); if (!hero || (hit !== hero && ownText(hit))) return null;
+    if (hit !== hero && !/^(hero|hero-in|clouds|hk_swellw|hero-surf|hkn_sea)$/.test(cls(hit)[0] || "")) return null;
+    var best = null, area = Infinity;
+    heroPieces(hero).forEach(function (p) { var r = p.r; if (x < r.left || x > r.right || y < r.top || y > r.bottom) return; var a = r.width * r.height; if (a < area) { area = a; best = p.el; } });
+    return best;
+  }
   function sceneryAt(hit, x, y) {
+    var hp = heroAt(hit, x, y); if (hp) return hp;
     var card = hit && hit.closest && hit.closest(".card"); if (!card || ownText(hit)) return null;
     var best = null, area = Infinity;
     Array.prototype.forEach.call(card.querySelectorAll(":scope > .tdec *, :scope > .sig *, :scope > .spdec *"), function (n) {
@@ -527,14 +846,14 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     if (e.key === "p" || e.key === "P") { togglePick(); e.preventDefault(); return; }
     if ((e.ctrlKey || e.metaKey) && ((e.shiftKey && (e.key === "z" || e.key === "Z")) || e.key === "y" || e.key === "Y")) { redo(); e.preventDefault(); return; }
     if ((e.ctrlKey || e.metaKey) && (e.key === "z" || e.key === "Z")) { undo(); e.preventDefault(); return; }
+    if ((e.ctrlKey || e.metaKey) && e.altKey && (e.code === "KeyC" || e.code === "KeyV")) { if (e.code === "KeyC") copyLook(); else pasteLook(); e.preventDefault(); return; }
     var m = { ArrowUp: [0, -1], ArrowDown: [0, 1], ArrowLeft: [-1, 0], ArrowRight: [1, 0] }[e.key];
     if (!m || !sel) return;
     var n = e.shiftKey ? 10 : 1; e.preventDefault();
     edit(function (s) { s.dx = (s.dx || 0) + m[0] * n; s.dy = (s.dy || 0) + m[1] * n; });
   }
   function togglePick() {
-    picking = !picking; $("pick").className = picking ? "on" : ""; $("pick").textContent = picking ? "Pick" : "Using app";
-    var dp = document.querySelector('.dock [data-d="pick"]'); dp.textContent = picking ? "Pick" : "Using app"; dp.classList.toggle("on", picking);
+    picking = !picking; $("pick").className = picking ? "on" : ""; $("pick").lastChild.textContent = picking ? "Pick" : "Using app";
     say(picking ? "Tap any word to pick it." : "Using the app: tap tabs and buttons as normal. Tap Pick to edit again.", "ok"); paint();
   }
   function undo() { if (!hist.length) { say("Nothing to undo.", "err"); return; } redoSt.push(state()); restore(hist.pop()); paint(); fill(); say("Undone.", "ok"); }
@@ -543,9 +862,18 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
   function inner() { if (!trail.length) { say("That is already the smallest piece. Tap a word to pick it.", "err"); return; } var el = trail.pop(); select(el); }
   document.addEventListener("keydown", onKey, true);
   $("app").addEventListener("load", hook);
-  window.HK_DESIGNER = { state: function () { return { picked: sel && { in: sel.in, path: sel.path }, rules: JSON.parse(JSON.stringify(doc.rules)) }; } };
+  window.HK_DESIGNER = { state: function () { return { picked: sel && { in: sel.in, path: sel.path }, rules: JSON.parse(JSON.stringify(doc.rules)) }; },
+    ink: function () { return sel && sel.el && sel.el.isConnected ? union(inkRects(sel.el)) : null; } };
 
   /* ---- the panel ---- */
+  /* the marks on the buttons are Tabler outline icons (MIT licence, tabler.io/icons), drawn at 20 px, 22 on the phone's tool tabs */
+  var ICONS = {"addmore":"<path d=\"M12 5l0 14\" /><path d=\"M5 12l14 0\" />","chup":"<path d=\"M6 15l6 -6l6 6\" />","chdown":"<path d=\"M6 9l6 6l6 -6\" />","chleft":"<path d=\"M15 6l-6 6l6 6\" />","chright":"<path d=\"M9 6l6 6l-6 6\" />","home":"<path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M4 8v-2a2 2 0 0 1 2 -2h2\" /><path d=\"M4 16v2a2 2 0 0 0 2 2h2\" /><path d=\"M16 4h2a2 2 0 0 1 2 2v2\" /><path d=\"M16 20h2a2 2 0 0 0 2 -2v-2\" />","eye":"<path d=\"M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0\" /><path d=\"M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6\" />","eyeoff":"<path d=\"M10.585 10.587a2 2 0 0 0 2.829 2.828\" /><path d=\"M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87\" /><path d=\"M3 3l18 18\" />","pick":"<path d=\"M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5\" /><path d=\"M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5\" /><path d=\"M14 10.5a1.5 1.5 0 0 1 3 0v1.5\" /><path d=\"M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47\" /><path d=\"M5 3l-1 -1\" /><path d=\"M4 7h-1\" /><path d=\"M14 3l1 -1\" /><path d=\"M15 6h1\" />","undo":"<path d=\"M9 14l-4 -4l4 -4\" /><path d=\"M5 10h11a4 4 0 1 1 0 8h-1\" />","redo":"<path d=\"M15 14l4 -4l-4 -4\" /><path d=\"M19 10h-11a4 4 0 1 0 0 8h1\" />","more":"<path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M11 19a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M11 5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" />","move":"<path d=\"M18 9l3 3l-3 3\" /><path d=\"M15 12h6\" /><path d=\"M6 9l-3 3l3 3\" /><path d=\"M3 12h6\" /><path d=\"M9 18l3 3l3 -3\" /><path d=\"M12 15v6\" /><path d=\"M15 6l-3 -3l-3 3\" /><path d=\"M12 3v6\" />","size":"<path d=\"M3 7v-2h13v2\" /><path d=\"M10 5v14\" /><path d=\"M12 19h-4\" /><path d=\"M15 13v-1h6v1\" /><path d=\"M18 12v7\" /><path d=\"M17 19h2\" />","colour":"<path d=\"M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25\" /><path d=\"M7.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M11.5 7.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M15.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" />","font":"<path d=\"M4 20l3 0\" /><path d=\"M14 20l7 0\" /><path d=\"M6.9 15l6.9 0\" /><path d=\"M10.2 6.3l5.8 13.7\" /><path d=\"M5 20l6 -16l2 0l7 16\" />","words":"<path d=\"M12 3a3 3 0 0 0 -3 3v12a3 3 0 0 0 3 3\" /><path d=\"M6 3a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3\" /><path d=\"M13 7h7a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-7\" /><path d=\"M5 7h-1a1 1 0 0 0 -1 1v8a1 1 0 0 0 1 1h1\" /><path d=\"M17 12h.01\" /><path d=\"M13 12h.01\" />","edge":"<path d=\"M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0\" /><path d=\"M13 12h5\" /><path d=\"M13 15h4\" /><path d=\"M13 18h1\" /><path d=\"M13 9h4\" /><path d=\"M13 6h1\" />","where":"<path d=\"M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /><path d=\"M12 7a5 5 0 1 0 5 5\" /><path d=\"M13 3.055a9 9 0 1 0 7.941 7.945\" /><path d=\"M15 6v3h3l3 -3h-3v-3l-3 3\" /><path d=\"M15 9l-3 3\" />","add":"<path d=\"M9 12h6\" /><path d=\"M12 9v6\" /><path d=\"M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14\" />","changes":"<path d=\"M3.5 5.5l1.5 1.5l2.5 -2.5\" /><path d=\"M3.5 11.5l1.5 1.5l2.5 -2.5\" /><path d=\"M3.5 17.5l1.5 1.5l2.5 -2.5\" /><path d=\"M11 6l9 0\" /><path d=\"M11 12l9 0\" /><path d=\"M11 18l9 0\" />","focus":"<path d=\"M11.5 12a.5 .5 0 1 0 1 0a.5 .5 0 1 0 -1 0\" fill=\"currentColor\" /><path d=\"M5 12a7 7 0 1 0 14 0a7 7 0 1 0 -14 0\" /><path d=\"M12 3l0 2\" /><path d=\"M3 12l2 0\" /><path d=\"M12 19l0 2\" /><path d=\"M19 12l2 0\" />","publish":"<path d=\"M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-1\" /><path d=\"M9 15l3 -3l3 3\" /><path d=\"M12 12l0 9\" />","layers":"<path d=\"M12 4l-8 4l8 4l8 -4l-8 -4\" /><path d=\"M4 12l8 4l8 -4\" /><path d=\"M4 16l8 4l8 -4\" />","history":"<path d=\"M12 8l0 4l2 2\" /><path d=\"M3.05 11a9 9 0 1 1 .5 4m-.5 5v-5h5\" />","compare":"<path d=\"M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -14\" /><path d=\"M3 19h2.25c3.728 0 6.75 -3.134 6.75 -7s3.022 -7 6.75 -7h2.25\" />","width":"<path d=\"M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14\" /><path d=\"M11 4h2\" /><path d=\"M12 17v.01\" />","copy":"<path d=\"M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666\" /><path d=\"M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1\" />","paste":"<path d=\"M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2\" /><path d=\"M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2\" />","eyedrop":"<path d=\"M11 7l6 6\" /><path d=\"M4 16l11.7 -11.7a1 1 0 0 1 1.4 0l2.6 2.6a1 1 0 0 1 0 1.4l-11.7 11.7h-4v-4\" />","snap":"<path d=\"M4 13v-8a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v8a2 2 0 0 0 6 0v-8a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v8a8 8 0 0 1 -16 0\" /><path d=\"M4 8l5 0\" /><path d=\"M15 8l4 0\" />"};
+  var icon = function (k) { return ICONS[k] ? '<svg class="i" viewBox="0 0 24 24" aria-hidden="true">' + ICONS[k] + "</svg>" : ""; };
+  Array.prototype.forEach.call(document.querySelectorAll("[data-i]"), function (b) { b.insertAdjacentHTML("afterbegin", icon(b.getAttribute("data-i"))); });
+  /* the phone keeps the bar short: Focus card, the look and Save + publish sit behind More */
+  var moreOpen = function (on) { $("more").classList.toggle("open", on); $("moreBtn").setAttribute("aria-expanded", on ? "true" : "false"); };
+  $("moreBtn").onclick = function (e) { e.stopPropagation(); moreOpen(!$("more").classList.contains("open")); };
+  document.addEventListener("click", function (e) { if (!e.target.closest("#more") || e.target.closest("button")) moreOpen(false); });
   CD.SWATCHES.forEach(function (c) {
     var b = document.createElement("button"); b.style.background = c; b.title = c; b.setAttribute("data-c", c);
     b.onclick = function () { edit(function (s) { s.color = c; }); }; $("sw").appendChild(b);
@@ -558,10 +886,31 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     b.onclick = function () { var d = frame(); if (d && name) gfont(d, name); edit(function (s) { s.font = name || undefined; }); };
     $("fonts").appendChild(b);
   };
+  /* ---- import any Google font by name (10/03, J13). It is checked with Google first, listed in the saved file's
+     "fonts", shown with the others, and the build fetches it like the designer's own extra fonts ---- */
+  function fontList() {
+    Array.prototype.forEach.call(document.querySelectorAll("#fonts [data-imported]"), function (b) { b.remove(); });
+    (doc.fonts || []).forEach(function (f) { if (!CD.famOk(f) || CD.FONTS.indexOf(f) > -1) return; fontBtn(f); var b = $("fonts").lastChild; b.setAttribute("data-imported", "1"); b.title = f + " (imported)"; loadFace(f); var d = frame(); if (d) gfont(d, f); });
+  }
+  var loadFace = function (f) { var id = "gfp_" + f.replace(/\W/g, ""); if (document.getElementById(id)) return; var l = document.createElement("link"); l.id = id; l.rel = "stylesheet"; l.href = "https://fonts.googleapis.com/css2?family=" + f.replace(/ /g, "+") + "&display=swap"; document.head.appendChild(l); };
+  $("gfGo").onclick = function () {
+    var f = $("gfName").value.trim().replace(/\s+/g, " ");
+    if (!CD.famOk(f)) { say("Type the font's name with letters and spaces, like Lobster Two.", "err"); return; }
+    if (CD.FONTS.indexOf(f) > -1 || (doc.fonts || []).indexOf(f) > -1) { var b0 = document.querySelector('#fonts [data-f="' + f + '"]'); if (b0) b0.click(); return; }
+    say("Checking " + f + " with Google\u2026");
+    fetch("https://fonts.googleapis.com/css2?family=" + f.replace(/ /g, "+") + "&display=swap").then(function (r) { if (!r.ok) throw new Error("nf"); return r.text(); }).then(function () {
+      snap(); if (!doc.fonts) doc.fonts = []; doc.fonts.push(f); fontList(); $("gfName").value = "";
+      if (sel) { var d = frame(); if (d) gfont(d, f); var keepHist = hist.length; edit(function (s) { s.font = f; }); hist.length = keepHist; }
+      say(f + " added" + (sel ? " and used." : ". Pick a word and tap it in the list."), "ok"); paint();
+    }).catch(function () { say("Google Fonts has no font called " + f + ". Check the spelling on fonts.google.com.", "err"); });
+  };
+  $("gfName").addEventListener("keydown", function (e) { if (e.key === "Enter") $("gfGo").click(); });
   fontBtn("", "Its own font");
   CD.FONTS.forEach(function (f) { fontBtn(f); });
   /* the font buttons show themselves: one request for every family, for this page only */
-  (function () { var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "https://fonts.googleapis.com/css2?" + CD.FONTS.map(function (f) { return "family=" + f.replace(/ /g, "+"); }).join("&") + "&display=swap"; document.head.appendChild(l); })();
+  (function () { var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "https://fonts.googleapis.com/css2?" + CD.FONTS.map(function (f) { return "family=" + f.replace(/ /g, "+"); }).join("&") + "&display=swap"; document.head.appendChild(l);
+    /* the Font tab is closed at first, and a closed tab's fonts are never asked for: ask for every one now, so they are drawn by the time he opens it */
+    l.onload = function () { CD.FONTS.forEach(function (f) { try { document.fonts.load("19px '" + f + "'"); } catch (e) {} }); }; })();
   Object.keys(CD.EDGES).forEach(function (k) { var b = document.createElement("button"); b.textContent = CD.EDGES[k]; b.setAttribute("data-v", k); b.onclick = function () { edit(function (s) { s.edge = k || undefined; }); }; $("edgeSeg").appendChild(b); });
   var segs = function (id, fn) { Array.prototype.forEach.call($(id).children, function (b) { b.onclick = function () { Array.prototype.forEach.call($(id).children, function (x) { x.classList.toggle("sel", x === b); }); fn(b.getAttribute("data-v")); }; }); };
   segs("scopeSeg", function (v) { scope = v; fill(); });
@@ -570,10 +919,20 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
   Array.prototype.forEach.call($("wSeg").children, function (b) { b.onclick = function () { var v = b.getAttribute("data-v"); edit(function (s) { s.weight = v ? Number(v) : undefined; }); }; });
   Array.prototype.forEach.call($("caseSeg").children, function (b) { b.onclick = function () { var v = b.getAttribute("data-v"); edit(function (s) { s.tcase = v || undefined; }); }; });
   Array.prototype.forEach.call(document.querySelectorAll("[data-n]"), function (b) { b.onclick = function () { var v = b.getAttribute("data-n").split(",").map(function (x) { return Number(x) * step; }); edit(function (s) { if (!v[0] && !v[1]) { s.dx = 0; s.dy = 0; } else { s.dx = (s.dx || 0) + v[0]; s.dy = (s.dy || 0) + v[1]; } }); }; });
-  Array.prototype.forEach.call(document.querySelectorAll("[data-s]"), function (b) { b.onclick = function () { var st = Number(b.getAttribute("data-s")); edit(function (s) { s.size = Math.max(5, Math.round(((Number(s.size) || Number($("size").value) || 14) + st) * 10) / 10); }); }; });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-s]"), function (b) { b.onclick = function () { var st = Number(b.getAttribute("data-s")); edit(function (s) { var own = sel && sel.el ? parseFloat(sel.el.ownerDocument.defaultView.getComputedStyle(sel.el).fontSize) : 0; s.size = Math.max(5, Math.round(((Number(s.size) || own || Number($("size").value) || 14) + st) * 10) / 10); }); }; });
   Array.prototype.forEach.call(document.querySelectorAll("[data-sp]"), function (b) { b.onclick = function () { var st = Number(b.getAttribute("data-sp")); edit(function (s) { var cs = sel.el.ownerDocument.defaultView.getComputedStyle(sel.el); var cur = s.spacing !== undefined ? Number(s.spacing) : (parseFloat(cs.letterSpacing) || 0); s.spacing = Math.round((cur + st) * 10) / 10; }); }; });
   Array.prototype.forEach.call(document.querySelectorAll("[data-lh]"), function (b) { b.onclick = function () { var st = Number(b.getAttribute("data-lh")); edit(function (s) { var cs = sel.el.ownerDocument.defaultView.getComputedStyle(sel.el); var cur = Number(s.lh) || (parseFloat(cs.lineHeight) / parseFloat(cs.fontSize)) || 1.2; s.lh = Math.round((cur + st) * 100) / 100; }); }; });
-  Array.prototype.forEach.call(document.querySelectorAll("[data-d]"), function (b) { b.onclick = function () { var a = b.getAttribute("data-d"); if (a === "pick") togglePick(); if (a === "outer") outer(); if (a === "undo") undo(); if (a === "save") save(); }; });
+  /* every slider: it previews as it slides, keeps one undo step for the whole slide, and its middle value means "its own" */
+  [["scaleR", "scale", 100, "%"], ["rotR", "rot", 1, "°"], ["hueR", "hue", 1, "°"], ["briR", "bright", 100, "%"], ["satR", "sat", 100, "%"]].forEach(function (q) {
+    var el = $(q[0]), slid = false, plain = { scale: 1, rot: 0, hue: 0, bright: 1, sat: 1 }[q[1]];
+    el.addEventListener("input", function () { var v = Number(this.value) / q[2]; $(q[0].replace("R", "Read")).textContent = this.value + q[3]; if (!sel) return; if (!slid) { slid = true; snap(); }
+      group().forEach(function (g) { withSel(g, function () { var r = ruleFor(key()); if (v === plain) delete r.set[q[1]]; else r.set[q[1]] = v; }); }); paint(); flashGuides(); });
+    el.addEventListener("change", function () { slid = false; fill(); });
+  });
+  /* the slider previews as it slides and keeps one undo step for the whole slide */
+  var sliding = false;
+  $("sizeRange").addEventListener("input", function () { var v = Number(this.value); if (!sliding) { sliding = true; snap(); } var k = key(); if (!k) return; var r = ruleFor(k); r.set.size = v; $("size").value = v; paint(); flashGuides(); });
+  $("sizeRange").addEventListener("change", function () { sliding = false; fill(); });
   $("size").onchange = function () { var v = Number(this.value); edit(function (s) { s.size = v > 0 ? v : undefined; }); };
   $("color").oninput = function () { var v = this.value; edit(function (s) { s.color = v; }); };
   $("colorOff").onclick = function () { edit(function (s) { delete s.color; }); };
@@ -581,8 +940,84 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
   $("italic").onclick = function () { edit(function (s) { s.italic = s.italic === true ? undefined : true; }); };
   $("hide").onclick = function () { edit(function (s) { s.hide = s.hide === true ? undefined : true; }); };
   $("outer").onclick = outer; $("inner").onclick = inner; $("undo").onclick = undo;
-  $("resetPart").onclick = function () { var k = key(); if (!k) { say("Tap a word in the app first.", "err"); return; } var r = findRule(k); if (!r) { say("Nothing changed on this one yet.", "err"); return; } snap(); doc.rules.splice(doc.rules.indexOf(r), 1); paint(); fill(); };
+  $("resetPart").onclick = function () { var k = key(); if (!k) { say("Tap a word in the app first.", "err"); return; } var rs = group().map(function (g) { return withSel(g, function () { return findRule(key()); }); }).filter(Boolean); if (!rs.length) { say("Nothing changed on this one yet.", "err"); return; } snap(); rs.forEach(function (r) { var i = doc.rules.indexOf(r); if (i > -1) doc.rules.splice(i, 1); }); paint(); fill(); };
   $("pick").onclick = togglePick;
+  /* ---- Copy look / Paste look (10/03, J13): "make this look like that". Copy reads what the piece looks like now (its
+     size, font, weight, colour, caps, spacing, plus any fill or edge set here) and Paste puts that look on whatever is
+     picked next, with the Where settings as usual. Its place and its words are never copied. ---- */
+  var copied = null; try { copied = JSON.parse(localStorage.getItem("hk_designer_look") || "null"); } catch (e) {}
+  var toHex = function (c) { var m = String(c).match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?/); if (!m || (m[4] !== undefined && Number(m[4]) === 0)) return ""; return "#" + [1, 2, 3].map(function (i) { return ("0" + Number(m[i]).toString(16)).slice(-2); }).join("").toUpperCase(); };
+  function copyLook() {
+    if (!sel || !sel.el) { say("Tap a word in the app first.", "err"); return; }
+    var cs = sel.el.ownerDocument.defaultView.getComputedStyle(sel.el), r = findRule(key()), st = (r && r.set) || {}, fam = (cs.fontFamily.split(",")[0] || "").replace(/["']/g, "").trim();
+    var look = { size: Math.round(parseFloat(cs.fontSize) * 10) / 10, weight: Number(cs.fontWeight) || undefined, color: toHex(cs.color) || undefined, tcase: cs.textTransform === "uppercase" ? "upper" : cs.textTransform === "lowercase" ? "lower" : cs.textTransform === "capitalize" ? "capitalize" : "none", italic: cs.fontStyle === "italic" ? true : undefined };
+    if (CD.FONTS.indexOf(fam) > -1) look.font = fam;
+    var ls = parseFloat(cs.letterSpacing); if (!isNaN(ls)) look.spacing = Math.round(ls * 10) / 10;
+    ["bg", "edge", "lh", "font", "color"].forEach(function (k) { if (st[k] !== undefined) look[k] = st[k]; });
+    copied = look; try { localStorage.setItem("hk_designer_look", JSON.stringify(look)); } catch (e) {}
+    $("pasteStyle").disabled = false; say("Look copied. Pick something else and tap Paste look.", "ok");
+  }
+  function pasteLook() {
+    if (!copied) { say("Copy a look first.", "err"); return; }
+    edit(function (s) { Object.keys(copied).forEach(function (k) { if (copied[k] !== undefined) s[k] = copied[k]; }); }); say("Look pasted.", "ok");
+  }
+  /* ---- colour, the senior half (10/03, J13): a code he can type, a colour taken straight off the app, how see-through,
+     a two-colour gradient on the letters, and a contrast read so a new colour still reads (R-136) ---- */
+  var lum = function (h) { var v = [1, 3, 5].map(function (i) { var c = parseInt(h.substr(i, 2), 16) / 255; return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); }); return 0.2126 * v[0] + 0.7152 * v[1] + 0.0722 * v[2]; };
+  /* the colour behind a piece: the first box under it with a solid fill. A photo or a gradient behind it is not seen
+     here, so the read says "about" and the eye still decides (law 22) */
+  function groundOf(el) { for (var n = el; n && n.nodeType === 1; n = n.parentElement) { var c = n.ownerDocument.defaultView.getComputedStyle(n).backgroundColor, h = toHex(c); if (h && !/,\s*0\.\d+\)$/.test(c)) return h; } return "#FFFFFF"; }
+  function contrastRead() {
+    var box = $("contrast"); if (!sel || !sel.el || !ownText(sel.el)) { box.textContent = ""; box.className = "contrast"; return; }
+    var cs = sel.el.ownerDocument.defaultView.getComputedStyle(sel.el), ink = toHex(cs.webkitTextFillColor && toHex(cs.webkitTextFillColor) ? cs.webkitTextFillColor : cs.color), bg = groundOf(sel.el.parentElement || sel.el);
+    /* gradient letters are read at their weaker end */
+    var gr = findRule(key()), gg = gr && gr.set && gr.set.grad, ratio = function (h) { var x = lum(h), y = lum(bg); return (Math.max(x, y) + .05) / (Math.min(x, y) + .05); };
+    if (gg) ink = ratio(gg[0]) < ratio(gg[1]) ? gg[0] : gg[1];
+    if (!ink) { box.textContent = ""; box.className = "contrast"; return; }
+    var r = ratio(ink), big = parseFloat(cs.fontSize) >= 18.66 || (parseFloat(cs.fontSize) >= 14 && Number(cs.fontWeight) >= 700);
+    var need = big ? 3 : 4.5, cl = r >= need ? "good" : r >= 3 ? "low" : "bad";
+    box.className = "contrast " + cl; box.innerHTML = "";
+    var sw = document.createElement("i"); sw.style.background = bg; sw.style.color = ink; sw.textContent = "A"; box.appendChild(sw);
+    box.appendChild(document.createTextNode((cl === "good" ? "Easy to read" : cl === "low" ? "Hard to read for some people" : "Too faint to read") + (gg ? " (its fainter end)" : "") + ": about " + (Math.round(r * 10) / 10) + " to 1 against the colour behind it" + (cl === "good" ? "" : " (aim for " + need + ")")));
+  }
+  $("hex").addEventListener("change", function () { var v = this.value.trim(); if (v && v[0] !== "#") v = "#" + v; if (!/^#[0-9a-fA-F]{6}$/.test(v)) { say("Use six letters or numbers, like #1C6BB5.", "err"); return; } v = v.toUpperCase(); edit(function (s) { s.color = v; }); });
+  $("hex").addEventListener("keydown", function (e) { if (e.key === "Enter") this.blur(); });
+  $("opacity").oninput = function () { var v = Number(this.value); $("opRead").textContent = v + "%"; };
+  $("opacity").onchange = function () { var v = Number(this.value); edit(function (s) { s.opacity = v >= 100 ? undefined : v / 100; }); };
+  $("gradGo").onclick = function () { if (!sel) { say("Tap a word in the app first.", "err"); return; } var cs = sel.el.ownerDocument.defaultView.getComputedStyle(sel.el), r0 = findRule(key()), a = (r0 && r0.set && r0.set.color) || toHex(cs.color) || "#1C6BB5", b = $("grad2").value.toUpperCase(), dir = Number($("gradDir").value); edit(function (s) { s.grad = [a, b, dir]; }); say("Gradient from its colour to the one you chose.", "ok"); };
+  $("gradDir").onchange = function () { var r0 = sel && findRule(key()); if (r0 && r0.set && r0.set.grad) { var dir = Number(this.value); edit(function (s) { s.grad = [s.grad[0], s.grad[1], dir]; }); } };
+  $("grad2").oninput = function () { var r0 = sel && findRule(key()); if (r0 && r0.set && r0.set.grad) { var v = this.value.toUpperCase(); edit(function (s) { s.grad = [s.grad[0], v, s.grad[2]]; }); } };
+  $("gradOff").onclick = function () { edit(function (s) { delete s.grad; }); };
+  /* the eyedropper: the next tap in the app takes that word's colour (or its fill, when it has no words) instead of picking */
+  var dropping = false;
+  $("eyedrop").onclick = function () { if (!sel) { say("Tap a word in the app first, then take a colour for it.", "err"); return; } dropping = !dropping; this.classList.toggle("on", dropping); say(dropping ? "Tap any word or colour in the app to take it." : "Eyedropper off.", "ok"); };
+  function takeColour(t) {
+    dropping = false; $("eyedrop").classList.remove("on");
+    var cs = t.ownerDocument.defaultView.getComputedStyle(t), c = ownText(t) ? toHex(cs.color) : toHex(cs.backgroundColor) || groundOf(t);
+    if (!c) { say("No solid colour there. Try a word or a plain fill.", "err"); return; }
+    edit(function (s) { s.color = c; }); say("Took " + c + ".", "ok");
+  }
+  $("addPick").onclick = function () { if (!sel) { say("Tap a word in the app first.", "err"); return; } adding = !adding; this.classList.toggle("on", adding); say(adding ? "Tap more pieces to add them; tap one again to drop it. Tap this button when done." : multi.length ? (multi.length + 1) + " pieces picked." : "Back to one piece.", "ok"); };
+  $("copyStyle").onclick = copyLook; $("pasteStyle").onclick = pasteLook; $("pasteStyle").disabled = !copied;
+  /* 10/03, J13: hold Compare (or the \ key) to see the app with none of the designer's changes, let go to see them
+     again, the way a photo editor shows the original. Nothing is changed by it. */
+  var comparing = false;
+  function compare(on) {
+    var d = frame(); if (!d || comparing === on) return; comparing = on; $("compare").classList.toggle("held", on);
+    var st = d.getElementById("hk_design_preview"), bk = d.getElementById("hk_design"), g = d.getElementById("hk_guides");
+    if (st) st.media = on ? "not all" : "all"; if (bk) bk.media = on || base === "github" ? "not all" : "all";
+    Array.prototype.forEach.call(d.querySelectorAll("[data-hk-add]"), function (n) { n.style.visibility = on ? "hidden" : ""; });
+    if (g) g.style.visibility = on ? "hidden" : "";
+    if (on) say("Showing the app without your changes. Let go to see them.", "ok");
+  }
+  $("compare").addEventListener("pointerdown", function (e) { e.preventDefault(); try { this.setPointerCapture(e.pointerId); } catch (x) {} compare(true); });
+  ["pointerup", "pointercancel", "lostpointercapture"].forEach(function (t) { $("compare").addEventListener(t, function () { compare(false); }); });
+  $("compare").addEventListener("contextmenu", function (e) { e.preventDefault(); });
+  var cmpKey = function (e) { if (e.key !== "\\" || /INPUT|SELECT|TEXTAREA/.test((e.target && e.target.tagName) || "")) return; e.preventDefault(); compare(e.type === "keydown"); };
+  document.addEventListener("keydown", cmpKey, true); document.addEventListener("keyup", cmpKey, true);
+  var showSnap = function () { $("snap").className = snapOn ? "on" : ""; $("snap").lastChild.textContent = snapOn ? "Snap on" : "Snap off"; };
+  showSnap();
+  $("snap").onclick = function () { snapOn = !snapOn; try { localStorage.setItem("hk_designer_snap", snapOn ? "on" : "off"); } catch (e) {} showSnap(); say(snapOn ? "Snapping on: a drag holds to the lines around it." : "Snapping off: a drag goes exactly where your finger goes.", "ok"); };
   var newId = function () { return Math.random().toString(36).slice(2, 10).replace(/[^a-z0-9]/g, "x"); };
   function addPiece(a) {
     if (!sel || !sel.el) { say("Tap where it goes first: the hero, a card or any area.", "err"); return null; }
@@ -594,7 +1029,7 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     var r = h.getBoundingClientRect(); if (r.height > 60) { a.x = Math.round(Math.max(8, r.width / 2 - 40)); a.y = Math.round(Math.max(8, Math.min(r.height, fw().innerHeight - Math.max(r.top, 0)) / 2 - 20)); }
     snap(); if (!doc.adds) doc.adds = []; doc.adds.push(a); paint(); fill();
     var el = d.querySelector('[data-hk-add="' + a.id + '"]');
-    if (el) { trail = []; levelBase = null; select(el); say("Added. Drag it or nudge it into place.", "ok"); document.querySelector('#tabs [data-t="move"]') && narrow() && document.querySelector('#tabs [data-t="move"]').click(); }
+    if (el) { trail = []; levelBase = null; select(el); say("Added. Drag it or nudge it into place.", "ok"); showTab("move"); }
     else say("Could not place it there. Pick a bigger area and try again.", "err");
     return a;
   }
@@ -624,7 +1059,9 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
   };
   $("undoTop").onclick = undo; $("redo").onclick = redo;
   segs("stepSeg", function (v) { step = Number(v) || 1; });
-  var showTab = function (t) { document.body.setAttribute("data-tab", t); Array.prototype.forEach.call($("tabs").children, function (b) { b.classList.toggle("on", b.getAttribute("data-t") === t); }); try { localStorage.setItem("hk_designer_tab", t); } catch (e) {} paint(); };
+  var showTab = function (t) { document.body.setAttribute("data-tab", t); Array.prototype.forEach.call($("tabs").children, function (b) { b.classList.toggle("on", b.getAttribute("data-t") === t); });
+    /* the open tab is always in view on the phone's sideways tab row */
+    var tb = $("tabs"), on = tb.querySelector(".on"); if (on && tb.scrollWidth > tb.clientWidth) { var a = on.getBoundingClientRect(), z = tb.getBoundingClientRect(); if (a.left < z.left || a.right > z.right) tb.scrollLeft += a.left - z.left - (z.width - a.width) / 2; } try { localStorage.setItem("hk_designer_tab", t); } catch (e) {} paint(); layersList(); if (t === "history" && document.body.className !== "locked") showHistory(); };
   Array.prototype.forEach.call($("tabs").children, function (b) { b.onclick = function () { showTab(b.getAttribute("data-t")); }; });
   try { var t0tab = localStorage.getItem("hk_designer_tab"); if (t0tab && document.querySelector('#tabs [data-t="' + t0tab + '"]')) showTab(t0tab); } catch (e) {}
   $("wordsGo").onclick = function () {
@@ -641,8 +1078,12 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
     var was = scope; if (sel.in === "card") scope = "card";
     edit(function (s) { delete s.text; delete s.textSize; }); scope = was;
   };
+  /* 10/03, J13: the frame at 320, 360, 390 or 430, the widths every change must hold at (law 12), on a computer */
+  var setWidth = function (v) { document.documentElement.style.setProperty("--appw", v + "px"); $("width").value = String(v); try { localStorage.setItem("hk_designer_width", v); } catch (e) {} setTimeout(guides, 300); };
+  $("width").onchange = function () { setWidth(Number(this.value)); say("The app is now " + this.value + " px wide.", "ok"); };
+  try { var w0 = Number(localStorage.getItem("hk_designer_width")); if ([320, 360, 390, 430].indexOf(w0) > -1 && !narrow()) setWidth(w0); } catch (e) {}
   $("focus").onclick = function () { focusOn = !focusOn; this.className = focusOn ? "on" : ""; focusCard(); paint(); };
-  $("look").onchange = function () { try { fw().localStorage.setItem("hk_theme_v1", this.value); } catch (e) {} sel = null; fw().location.reload(); };
+  $("look").onchange = function () { moreOpen(false); try { fw().localStorage.setItem("hk_theme_v1", this.value); } catch (e) {} sel = null; fw().location.reload(); };
 
   /* ---- GitHub: sign in once, load, save, publish ---- */
   /* 10/02, Gray: "it's asking me to sign in on this device but I've already signed in... I need that taken away now".
@@ -660,42 +1101,74 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
   }
   /* 10/02, Gray: "I'm not at work anymore so I don't have that key". Every change is kept on this device as he makes
      it, so a device with no key loses nothing: it saves the moment a key is there (here or in the card editor). */
-  var base = "none", DRAFT = "hk_designer_draft";
+  var base = "none", DRAFT = "hk_designer_draft", savedAs = null;
   var rid = function (r) { return JSON.stringify([r.path, r.in, r.scope, r.value, r.look, r.sel, r.root, r.part]); };
-  function keepDraft() { try { if (doc.rules.length || (doc.adds && doc.adds.length) || localStorage.getItem(DRAFT)) localStorage.setItem(DRAFT, JSON.stringify({ base: base, rules: doc.rules, adds: doc.adds || [], imgs: pendingImg })); } catch (e) {} }
+  function keepDraft() { try { if (doc.rules.length || (doc.adds && doc.adds.length) || localStorage.getItem(DRAFT)) localStorage.setItem(DRAFT, JSON.stringify({ base: base, rules: doc.rules, adds: doc.adds || [], fonts: doc.fonts || [], imgs: pendingImg })); } catch (e) {} }
   function readDraft() { try { var d = JSON.parse(localStorage.getItem(DRAFT) || "null"); return d && ((d.rules && d.rules.length) || (d.adds && d.adds.length)) ? d : null; } catch (e) { return null; } }
   var b64 = function (s) { return btoa(unescape(encodeURIComponent(s))); }, unb64 = function (s) { return decodeURIComponent(escape(atob(s.replace(/\n/g, "")))); };
+  function loadImgs(ref) { (doc.adds || []).forEach(function (a) { if (a.kind === "img" && a.src && !imgData[a.id]) gh("GET", "/repos/" + REPO + "/contents/" + a.src + "?ref=" + encodeURIComponent(ref)).then(function (f) { imgData[a.id] = "data:image/" + a.src.split(".").pop().replace("jpg", "jpeg") + ";base64," + String(f.content || "").replace(/\n/g, ""); paint(); }).catch(function () {}); }); }
   function load() {
     var dr = readDraft();
     return gh("GET", "/repos/" + REPO + "/contents/" + PATH + "?ref=main").then(function (j) {
       sha = j.sha; doc = JSON.parse(unb64(j.content)); if (!doc.rules) doc.rules = []; if (!doc.adds) doc.adds = []; hist = [];
-      doc.adds.forEach(function (a) { if (a.kind === "img" && a.src && !imgData[a.id]) gh("GET", "/repos/" + REPO + "/contents/" + a.src + "?ref=main").then(function (f) { imgData[a.id] = "data:image/" + a.src.split(".").pop().replace("jpg", "jpeg") + ";base64," + String(f.content || "").replace(/\n/g, ""); paint(); }).catch(function () {}); });
+      loadImgs("main");
       if (dr && dr.adds && dr.adds.length) { var have = {}; doc.adds.forEach(function (a) { have[a.id] = 1; }); dr.adds.forEach(function (a) { if (!have[a.id]) doc.adds.push(a); }); }
       if (dr && dr.imgs) Object.keys(dr.imgs).forEach(function (id) { pendingImg[id] = dr.imgs[id]; imgData[id] = "data:image/" + dr.imgs[id].path.split(".").pop() + ";base64," + dr.imgs[id].b64; });
+      if (dr && dr.fonts) dr.fonts.forEach(function (f) { if (!doc.fonts) doc.fonts = []; if (doc.fonts.indexOf(f) < 0) doc.fonts.push(f); });
       if (dr && dr.base === "github") doc.rules = dr.rules;
       else if (dr) dr.rules.forEach(function (r) { var k = rid(r), hit = -1; doc.rules.forEach(function (o, i) { if (rid(o) === k) hit = i; }); if (hit > -1) doc.rules[hit] = r; else doc.rules.push(r); });
-      base = "github"; paint(); fill();
+      base = "github"; savedAs = JSON.stringify({ r: JSON.parse(unb64(j.content)).rules || [], a: JSON.parse(unb64(j.content)).adds || [], f: JSON.parse(unb64(j.content)).fonts || [] }); fontList(); paint(); fill();
       say(dr ? "Your unsaved changes from this device are back. Press Save to keep them." : "Loaded " + doc.rules.length + " saved change(s).", "ok");
     }).catch(function (e) { say(e.message, "err"); });
   }
+  /* the save's own name in History: what was changed, in his words, not just a count */
+  function saveNote() {
+    var names = []; doc.rules.slice(-3).reverse().forEach(function (r) { var n = String(r.name || "").replace(/[\u201c\u201d"]/g, "").slice(0, 28); if (n && names.indexOf(n) < 0) names.push(n); });
+    var n = doc.rules.length + (doc.adds || []).length;
+    return n + " change" + (n === 1 ? "" : "s") + (names.length ? " (latest: " + names.join(", ") + ")" : "");
+  }
   function save() {
     say("Saving…");
-    var body = JSON.stringify({ version: 1, rules: doc.rules, adds: (doc.adds || []).map(function (a) { return { id: a.id, kind: a.kind, in: a.in, card: a.card, path: a.path, x: a.x, y: a.y, text: a.text, src: a.src }; }) }, null, 2) + "\n";
+    var body = JSON.stringify({ version: 1, fonts: (doc.fonts || []).length ? doc.fonts : undefined, rules: doc.rules, adds: (doc.adds || []).map(function (a) { return { id: a.id, kind: a.kind, in: a.in, card: a.card, path: a.path, x: a.x, y: a.y, text: a.text, src: a.src }; }) }, null, 2) + "\n";
     var ups = Object.keys(pendingImg).filter(function (id) { return (doc.adds || []).some(function (a) { return a.id === id; }); });
     var upload = ups.reduce(function (pr, id) { return pr.then(function () { return gh("PUT", "/repos/" + REPO + "/contents/" + pendingImg[id].path, { message: "Card designer: picture " + id, content: pendingImg[id].b64, branch: "main" }).then(function () { delete pendingImg[id]; }); }); }, Promise.resolve());
     var first = sha ? Promise.resolve() : gh("GET", "/repos/" + REPO + "/contents/" + PATH + "?ref=main").then(function (j) { sha = j.sha; }).catch(function () {});
-    return upload.then(function () { return first; }).then(function () { return gh("PUT", "/repos/" + REPO + "/contents/" + PATH, { message: "Card designer: " + doc.rules.length + " change(s)", content: b64(body), sha: sha || undefined, branch: "main" }); })
-      .then(function (j) { sha = j.content && j.content.sha; base = "github"; try { localStorage.removeItem(DRAFT); } catch (e) {} say("Saved. It reaches the app at the next hourly update, or press Save + publish.", "ok"); return true; })
+    return upload.then(function () { return first; }).then(function () { return gh("PUT", "/repos/" + REPO + "/contents/" + PATH, { message: "Card designer: " + saveNote(), content: b64(body), sha: sha || undefined, branch: "main" }); })
+      .then(function (j) { sha = j.content && j.content.sha; base = "github"; savedAs = state(); list(); try { localStorage.removeItem(DRAFT); } catch (e) {} say("Saved. It reaches the app at the next hourly update, or press Save + publish.", "ok"); return true; })
       .catch(function (e) { say(e.message, "err"); return false; });
   }
   $("save").onclick = save;
+  /* ---- History (10/03, J13): every Save is a commit of content/card_style.json; list them and bring one back ---- */
+  var when = function (iso) { try { return new Date(iso).toLocaleString("en-US", { timeZone: "America/Chicago", weekday: "short", month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" }); } catch (e) { return iso; } };
+  function showHistory() {
+    var ul = $("hist"); ul.innerHTML = ""; $("histNote").textContent = "Loading your saves\u2026";
+    gh("GET", "/repos/" + REPO + "/commits?path=" + encodeURIComponent(PATH) + "&sha=main&per_page=30").then(function (list) {
+      if (!list || !list.length) { $("histNote").textContent = "Nothing saved yet."; return; }
+      $("histNote").textContent = list.length + " saves, newest first. Tap Bring back, look it over in the app, then Save to keep it (Undo takes it back).";
+      list.forEach(function (c, i) {
+        var li = document.createElement("li"); if (!i) li.className = "now";
+        var t = document.createElement("div"), b = document.createElement("b"), sm = document.createElement("small");
+        b.textContent = when(c.commit && c.commit.author && c.commit.author.date); sm.textContent = String((c.commit && c.commit.message) || "").split("\n")[0].replace(/^Card designer: /, "").slice(0, 90);
+        t.appendChild(b); t.appendChild(sm); li.appendChild(t);
+        var go = document.createElement("button"); go.textContent = i ? "Bring back" : "Reload"; go.onclick = function () { Array.prototype.forEach.call(ul.children, function (x) { x.classList.remove("shown"); }); if (i) li.classList.add("shown"); restoreFrom(c.sha, b.textContent); };
+        li.appendChild(go); ul.appendChild(li);
+      });
+    }).catch(function (e) { $("histNote").textContent = e.message; });
+  }
+  function restoreFrom(ref, label) {
+    say("Bringing back " + label + "\u2026");
+    gh("GET", "/repos/" + REPO + "/contents/" + PATH + "?ref=" + encodeURIComponent(ref)).then(function (j) {
+      var v = JSON.parse(unb64(j.content)); snap(); doc.rules = v.rules || []; doc.adds = v.adds || []; doc.fonts = v.fonts || []; fontList(); base = "github";
+      loadImgs(ref); paint(); fill(); say("This is " + label + ". Save to keep it, or Undo to go back.", "ok");
+    }).catch(function (e) { say(e.message, "err"); });
+  }
   $("publish").onclick = function () { save().then(function (ok) { if (!ok) return; return gh("POST", "/repos/" + REPO + "/actions/workflows/" + WORKFLOW + "/dispatches", { ref: "main" }).then(function () { say("Saved and publishing. The app shows it in about 8 minutes.", "ok"); }); }).catch(function (e) { say(e.message, "err"); }); };
   /* the lock: the key must be one GitHub says can write to this repo; only then is the app loaded into the frame */
   function check(t) {
     return fetch("https://api.github.com/repos/" + REPO, { headers: { Authorization: "Bearer " + t, Accept: "application/vnd.github+json" } })
       .then(function (r) { return r.ok ? r.json() : null; }).then(function (j) { return !!(j && j.permissions && j.permissions.push); }).catch(function () { return null; });
   }
-  function unlock() { document.body.className = ""; var f = $("app"); if (!f.getAttribute("src")) f.setAttribute("src", f.getAttribute("data-src")); load(); }
+  function unlock() { document.body.className = ""; var f = $("app"); if (!f.getAttribute("src")) f.setAttribute("src", f.getAttribute("data-src")); load(); if (document.body.getAttribute("data-tab") === "history") showHistory(); }
   var lockSay = function (t, c) { $("lockSay").textContent = t; $("lockSay").className = "status" + (c ? " " + c : ""); };
   $("lockGo").onclick = function () {
     var t = $("lockKey").value.trim(); if (!t) return; lockSay("Checking with GitHub…");

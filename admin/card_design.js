@@ -58,7 +58,11 @@
   var partById = function (id) { for (var i = 0; i < PARTS.length; i++) if (PARTS[i].id === id) return PARTS[i]; return null; };
   var esc = function (v) { return String(v).replace(/[^a-zA-Z0-9_\-]/g, ""); };
   var hex = function (v) { return /^#[0-9a-fA-F]{3,8}$/.test(String(v || "")) ? v : ""; };
-  var fontOk = function (f) { return FONTS.indexOf(f) > -1; };
+  /* 10/03, J13: any Google font he imports by name is listed in the saved file's "fonts" and allowed like the built-in ones */
+  var CUSTOM = [];
+  var famOk = function (f) { return typeof f === "string" && /^[A-Za-z][A-Za-z0-9 ]{1,39}$/.test(f); };
+  var customOf = function (doc) { return ((doc && doc.fonts) || []).filter(famOk).slice(0, 12); };
+  var fontOk = function (f) { return FONTS.indexOf(f) > -1 || CUSTOM.indexOf(f) > -1; };
   /* a tapped-element selector is only ever classes, tags, attributes and combinators: never braces or tags */
   var selOk = function (s) { return typeof s === "string" && s.length < 400 && /^[a-zA-Z0-9_\-\.\s>\[\]="'^:()#,]+$/.test(s) && !/[{}<]/.test(s); };
   function target(r) {
@@ -90,12 +94,29 @@
     /* 10/02, Gray: "I pressed up keys... on the phone it doesn't move". translate does nothing on a plain inline word, so
        anything not already lifted out of the flow moves by relative offset, which works on every box and still leaves
        the space around it untouched. mv is decided once, when the rule is made, from how the element sat then. */
-    if (dx || dy) { if (s.mv === "rel") { out.push("position:relative"); out.push("left:" + dx + "px"); out.push("top:" + dy + "px"); } else out.push("translate:" + dx + "px " + dy + "px"); }
+    /* "mg" (10/03, J13): a hero piece that already slides by translate in its own animation is moved by its margins
+       instead (its own margins m0 plus the offset), so the move never stops the animation */
+    if (dx || dy) { if (s.mv === "rel") { out.push("position:relative"); out.push("left:" + dx + "px"); out.push("top:" + dy + "px"); }
+      else if (s.mv === "mg") { var m0 = Array.isArray(s.m0) ? s.m0 : [0, 0]; out.push("margin-left:" + ((Number(m0[0]) || 0) + dx) + "px"); out.push("margin-top:" + ((Number(m0[1]) || 0) + dy) + "px"); }
+      else out.push("translate:" + dx + "px " + dy + "px"); }
+    /* 10/03, J13: bigger or smaller and turned, for drawings and pictures as much as words (scale and rotate stack on
+       top of any animation the piece already has), and a colour shift for drawings (hue and brightness) */
+    if (Number(s.scale) > 0 && Number(s.scale) !== 1) out.push("scale:" + Math.max(0.2, Math.min(4, Number(s.scale))));
+    if (Number(s.rot)) out.push("rotate:" + Math.max(-180, Math.min(180, Number(s.rot))) + "deg");
+    var fx = []; if (Number(s.hue)) fx.push("hue-rotate(" + Math.round(Number(s.hue)) + "deg)"); if (Number(s.bright) > 0 && Number(s.bright) !== 1) fx.push("brightness(" + Math.max(0.3, Math.min(2, Number(s.bright))) + ")"); if (Number(s.sat) >= 0 && s.sat !== undefined && Number(s.sat) !== 1) fx.push("saturate(" + Math.max(0, Math.min(3, Number(s.sat))) + ")");
+    if (fx.length) out.push("filter:" + fx.join(" "));
     if (Number(s.size) > 0) out.push("font-size:" + Number(s.size) + "px");
     if (s.font && fontOk(s.font)) out.push("font-family:'" + s.font + "',Nunito,sans-serif");
     if (Number(s.weight) > 0) out.push("font-weight:" + Number(s.weight));
     if (hex(s.color)) { out.push("color:" + s.color); out.push("-webkit-text-fill-color:" + s.color); }
-    if (hex(s.bg)) out.push("background:" + s.bg);
+    /* 10/03, J13: a two-colour gradient on the letters (the background is clipped to the text, so it replaces the fill
+       behind), and how see-through the piece is, 10% to 100% */
+    var grad = Array.isArray(s.grad) && hex(s.grad[0]) && hex(s.grad[1]) ? s.grad : null;
+    if (hex(s.bg) && !grad) out.push("background:" + s.bg);
+    if (grad) { var ang = [90, 135, 180].indexOf(Number(s.grad[2])) > -1 ? Number(s.grad[2]) : 90;
+      out.push("background:linear-gradient(" + ang + "deg," + grad[0] + "," + grad[1] + ")"); out.push("-webkit-background-clip:text"); out.push("background-clip:text");
+      out.push("color:transparent"); out.push("-webkit-text-fill-color:transparent"); }
+    if (Number(s.opacity) >= 0.1 && Number(s.opacity) < 1) out.push("opacity:" + Math.round(Number(s.opacity) * 100) / 100);
     if (s.spacing !== undefined && s.spacing !== "" && !isNaN(Number(s.spacing))) out.push("letter-spacing:" + Number(s.spacing) + "px");
     if (Number(s.lh) > 0) out.push("line-height:" + Number(s.lh));
     if (s.tcase === "upper" || s.tcase === "lower" || s.tcase === "none" || s.tcase === "capitalize") out.push("text-transform:" + (s.tcase === "upper" ? "uppercase" : s.tcase === "lower" ? "lowercase" : s.tcase));
@@ -129,11 +150,12 @@
     if (!out.length) return "";
     return sel + "{" + out.map(function (d) { return d + " !important"; }).join(";") + "}" + extra;
   }
-  function designCss(doc) { return ((doc && doc.rules) || []).map(ruleCss).filter(Boolean).join("\n"); }
+  function designCss(doc) { CUSTOM = customOf(doc); return ((doc && doc.rules) || []).map(ruleCss).filter(Boolean).join("\n"); }
   /* fonts a saved design uses that the app does not already carry: the build fetches these */
   function fontsToFetch(doc) {
     var seen = {};
-    ((doc && doc.rules) || []).forEach(function (r) { var f = r.set && r.set.font; if (f && EXTRA.indexOf(f) > -1) seen[f] = 1; });
+    var custom = customOf(doc);
+    ((doc && doc.rules) || []).forEach(function (r) { var f = r.set && r.set.font; if (f && (EXTRA.indexOf(f) > -1 || custom.indexOf(f) > -1)) seen[f] = 1; });
     return Object.keys(seen);
   }
   /* 10/02, Gray: "I should literally be able to correct everything and I port new stuff into the hero". An ADD is a
@@ -174,6 +196,6 @@
     api2.set(list); return api2;
   }
   var api = { PARTS: PARTS, STICKERS: STICKERS, placeAdds: placeAdds, FONTS: FONTS, BUILT_IN: BUILT_IN, EXTRA: EXTRA, SWATCHES: SWATCHES, EDGES: EDGES,
-    ruleCss: ruleCss, designCss: designCss, partById: partById, fontsToFetch: fontsToFetch, selOk: selOk };
+    ruleCss: ruleCss, designCss: designCss, famOk: famOk, partById: partById, fontsToFetch: fontsToFetch, selOk: selOk };
   if (typeof module === "object" && module.exports) module.exports = api; else root.CardDesign = api;
 })(typeof window !== "undefined" ? window : this);
