@@ -116,6 +116,8 @@ main{ display:flex; gap:16px; padding:12px; align-items:flex-start; }
 .layers li.on > button.pickrow{ background:var(--chipon); color:var(--mint); font-weight:800; }
 .layers li.off > button.pickrow span{ text-decoration:line-through; opacity:.6; }
 .layers li i.chg{ width:7px; height:7px; border-radius:50%; background:var(--pink); flex:none; }
+/* Bring forward / Send back stay in sight while the list below scrolls to the picked piece */
+.zrow{ position:sticky; top:-10px; z-index:2; background:var(--panel); padding:6px 0; margin:0; }
 .layers li > button.eye{ width:38px; min-width:38px; min-height:34px; padding:0; flex:none; }
 .layers li > button.pickrow{ min-height:36px; }
 .hist li > div{ min-width:0; } .hist li b{ display:block; font-size:14px; } .hist li small{ color:var(--mute); }
@@ -238,6 +240,8 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   .tabs.more-l:not(.more-r){ -webkit-mask-image:linear-gradient(90deg,transparent,#000 14%); mask-image:linear-gradient(90deg,transparent,#000 14%); }
   .tabs button{ flex:0 0 auto; min-width:60px; min-height:56px; border-radius:12px; font-size:11px; }
   .tabs svg.i{ width:22px; height:22px; }
+  /* more tabs to the right: the bar fades at its right edge until it is scrolled to the end */
+  .tabs:not([data-end]){ -webkit-mask-image:linear-gradient(90deg,#000 82%,rgba(0,0,0,.25)); mask-image:linear-gradient(90deg,#000 82%,rgba(0,0,0,.25)); }
   .sw{ grid-template-columns:repeat(auto-fill,minmax(40px,1fr)); gap:6px; } .sw button{ min-height:40px; height:40px; }
   .pad{ grid-template-columns:repeat(3,52px); gap:6px; }
   .pad button{ min-height:48px; font-size:20px; }
@@ -385,6 +389,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     <div class="box" data-tab="layers">
       <h2>Layers</h2>
       <div class="mute" id="layersNote">Every piece of the card you picked, top to bottom. Tap one to pick it; the eye hides or shows it.</div>
+      <div class="row zrow"><button id="zUp" title="Bring forward (Ctrl+])">Bring forward</button><button id="zDown" title="Send back (Ctrl+[)">Send back</button><span class="mute" id="zRead"></span></div>
       <ul class="list layers" id="layers"></ul>
     </div>
     <div class="box" data-tab="add" id="addBox">
@@ -436,6 +441,8 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     <tr><td>Hold <kbd>\</kbd></td><td>See the app without your changes</td></tr>
     <tr><td><kbd>Ctrl</kbd> <kbd>Z</kbd></td><td>Undo (<kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>Z</kbd> redo)</td></tr>
     <tr><td><kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>C</kbd> / <kbd>V</kbd></td><td>Copy a look, paste it</td></tr>
+    <tr><td><kbd>Ctrl</kbd> <kbd>]</kbd> / <kbd>[</kbd></td><td>Bring forward, send back</td></tr>
+    <tr><td>Double-click the words</td><td>Type right on the card</td></tr>
     <tr><td><kbd>?</kbd></td><td>This list</td></tr>
   </table>
   <button id="keysOff" class="go">Close</button>
@@ -807,7 +814,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
 
   /* ---- paint the preview and the panel ---- */
   /* a rule left with nothing in it (a reset colour, a move back to 0, 0) is dropped, so Your changes lists only real changes */
-  var live = function (st) { return Object.keys(st || {}).some(function (k) { var v = st[k]; if (/^(mv|m0|textSize)$/.test(k) || v === undefined || v === "") return false; if (k === "dx" || k === "dy") return Number(v) !== 0; return true; }); };
+  var live = function (st) { return Object.keys(st || {}).some(function (k) { var v = st[k]; if (/^(mv|m0|textSize|zr)$/.test(k) || v === undefined || v === "") return false; if (k === "dx" || k === "dy") return Number(v) !== 0; return true; }); };
   function prune() { if (drag && drag.on) return; doc.rules = doc.rules.filter(function (r) { return r.sel || r.part || live(r.set); }); }
   function paint() {
     var d = frame(); if (!d || !d.body) return; prune();
@@ -912,6 +919,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     $("words").value = (tr && tr.set && tr.set.text) || ""; $("words").placeholder = wok ? allWords(sel.el).slice(0, 80) : "Type new words"; if (wok && !$("words").value) $("words").value = allWords(sel.el).slice(0, 160);
     $("wordsNote").textContent = !sel ? "Tap a single word or line in the app first." : !wok ? "This piece has no words of its own. Tap the words themselves, or use Smaller." : sel.in === "card" ? "Changes the words on this one card only. Words that update by themselves stop updating." : "Changes these words everywhere they show. Words that update by themselves stop updating.";
     $("moveRead").textContent = (s.dx || 0) + ", " + (s.dy || 0) + " px";
+    $("zRead").textContent = s.z !== undefined ? "Layer " + s.z : cs ? "Layer " + (parseInt(cs.zIndex, 10) || 0) + " (its own)" : "";
     $("size").value = s.size || (cs ? Math.round(parseFloat(cs.fontSize) * 10) / 10 : ""); $("sizeRange").value = $("size").value || 14;
     $("sizeWas").textContent = r && r.set && r.set.size ? "Changed (Reset this puts it back)" : "Its own size";
     var mark = function (box, v) { Array.prototype.forEach.call($(box).children, function (b) { b.classList.toggle("sel", (b.getAttribute("data-v") || "") === (v === undefined ? "" : String(v))); }); };
@@ -1061,6 +1069,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   function onKey(e) {
     var tag = (e.target && e.target.tagName) || "";
     if (/INPUT|SELECT|TEXTAREA/.test(tag)) return;
+    if ((e.ctrlKey || e.metaKey) && (e.key === "]" || e.key === "[")) { zStep(e.key === "]" ? 1 : -1); e.preventDefault(); return; }
     if (e.key === "p" || e.key === "P") { togglePick(); e.preventDefault(); return; }
     if (e.key === "?") { showKeys(); e.preventDefault(); return; }
     if ((e.key === "z" || e.key === "Z") && !e.ctrlKey && !e.metaKey) { cycleZoom(); e.preventDefault(); return; }
@@ -1331,6 +1340,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   segs("stepSeg", function (v) { step = Number(v) || 1; });
   /* Hide tools (phone): the tool sheet folds away so the app fills the screen; any tab brings it back */
   function setMini(on) { if (on) document.body.setAttribute("data-mini", "1"); else document.body.removeAttribute("data-mini"); var m = $("mini"); if (m) { m.setAttribute("aria-label", on ? "Show the tools again" : "Hide the tools to see more of the app"); m.title = m.getAttribute("aria-label"); m.setAttribute("aria-pressed", on ? "true" : "false"); } if (sel) setTimeout(ring, 60); }
+  (function () { var tb = $("tabs"), at = function () { if (tb.scrollLeft + tb.clientWidth >= tb.scrollWidth - 4) tb.setAttribute("data-end", ""); else tb.removeAttribute("data-end"); }; tb.addEventListener("scroll", at, { passive: true }); window.addEventListener("resize", at); setTimeout(at, 300); })();
   $("mini").onclick = function () { setMini(document.body.getAttribute("data-mini") !== "1"); };
   var showTab = function (t) { setMini(false); if (document.body.getAttribute("data-tab") !== t) { var tl = document.querySelector(".tools"); if (tl) tl.scrollTop = 0; } document.body.setAttribute("data-tab", t); Array.prototype.forEach.call($("tabs").children, function (b) { b.classList.toggle("on", b.getAttribute("data-t") === t); });
     /* the open tab is always in view on the phone's sideways tab row */
@@ -1362,6 +1372,15 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     ["pointerdown", "pointerup", "click"].forEach(function (k) { ta.addEventListener(k, function (e) { e.stopPropagation(); }, true); });
     ta.focus(); ta.select(); say("Type the new words, then Enter. Esc keeps the old ones.", "ok");
   }
+  /* Bring forward / Send back: one step on the piece's stacking number; back at 0 it returns to how the app had it */
+  function zStep(dz) {
+    if (!sel) { say("Tap a piece in the app first.", "err"); return; }
+    edit(function (s) { var cs = sel.el.ownerDocument.defaultView.getComputedStyle(sel.el), cur = s.z !== undefined ? Number(s.z) : (parseInt(cs.zIndex, 10) || 0), nz = Math.max(0, Math.min(99, cur + dz));
+      if (s.z === undefined && cs.position === "static") s.zr = true;
+      if (nz === 0 && s.zr) { delete s.z; delete s.zr; } else s.z = nz; });
+    layersList(); say(dz > 0 ? "Brought forward. It now sits over the pieces beside it." : "Sent back.", "ok");
+  }
+  $("zUp").onclick = function () { zStep(1); }; $("zDown").onclick = function () { zStep(-1); };
   $("wordsGo").onclick = function () {
     if (!wordsOk()) { say("Tap the words themselves first.", "err"); return; }
     var t = $("words").value.trim(); if (!t) { say("Type the new words first.", "err"); return; }

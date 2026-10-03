@@ -126,6 +126,9 @@
     if (s.tcase === "upper" || s.tcase === "lower" || s.tcase === "none" || s.tcase === "capitalize") out.push("text-transform:" + (s.tcase === "upper" ? "uppercase" : s.tcase === "lower" ? "lowercase" : s.tcase));
     if (s.italic === true) out.push("font-style:italic"); else if (s.italic === false) out.push("font-style:normal");
     if (s.hide === true) out.push("visibility:hidden");
+    /* 10/03, J13: Bring forward / Send back. z is the piece's stacking number, 0 to 99; zr is set when the piece sat
+       in the plain flow and needed position:relative for the number to count (decided once, like mv) */
+    if (s.z !== undefined && s.z !== "" && isFinite(Number(s.z))) { if (s.zr === true) out.push("position:relative"); out.push("z-index:" + Math.max(0, Math.min(99, Math.round(Number(s.z))))); }
     var e = s.edge;
     if (e === "none") { out.push("-webkit-text-stroke:0"); out.push("text-shadow:none"); }
     if (e === "thin") { out.push("-webkit-text-stroke:1.6px #10161C"); out.push("paint-order:stroke fill"); out.push("text-shadow:none"); }
