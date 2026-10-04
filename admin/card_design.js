@@ -53,7 +53,16 @@
     sticker: "White sticker edge",
     glow: "Glow",
     neon: "Dark halo (like the bar)",
-    drop: "Drop shadow"
+    drop: "Drop shadow",
+    /* 10/04, R-422/R-423: the poster-title letterings he picked from photographs ("A and B are perfect", then "b and d need
+       some shading work ... or black outlining work"). Each keeps the word's own colour family: "deeper" mixes it toward ink. */
+    tA: "A: deeper colour, soft shadow",
+    tB1: "B1: colour, thick black outline",
+    tB2: "B2: deeper colour, black outline",
+    tB3: "B3: black outline, thin drop",
+    tD1: "D1: outline, black shadow down",
+    tD2: "D2: deeper, shadow down-right",
+    tD3: "D3: two-step black shadow"
   };
   var partById = function (id) { for (var i = 0; i < PARTS.length; i++) if (PARTS[i].id === id) return PARTS[i]; return null; };
   var esc = function (v) { return String(v).replace(/[^a-zA-Z0-9_\-]/g, ""); };
@@ -157,6 +166,16 @@
     if (e === "glow") { out.push("-webkit-text-stroke:0"); out.push("text-shadow:0 0 6px currentColor,0 0 12px currentColor"); }
     if (e === "neon") { out.push("-webkit-text-stroke:0"); out.push("text-shadow:0 0 1px #0C0A10,0 0 1px #0C0A10,0 0 2px rgba(12,10,16,.85),0 0 4px rgba(12,10,16,.45)"); }
     if (e === "drop") { out.push("-webkit-text-stroke:0"); out.push("text-shadow:1.5px 2px 0 rgba(16,22,28,.55)"); }
+    /* a colour he picked for the word is the one deepened; otherwise the colour it already has */
+    var deep = function (pct) { var c = "color-mix(in srgb, " + (hex(s.color) || "currentColor") + " " + pct + "%, #1A1208)"; out.push("color:" + c); if (hex(s.color)) out.push("-webkit-text-fill-color:" + c); };
+    var ink = function (w) { out.push("-webkit-text-stroke:" + w + "px #120C06"); out.push("paint-order:stroke fill"); };
+    if (e === "tA") { deep(66); out.push("-webkit-text-stroke:0"); out.push("text-shadow:1px 1.3px 0 color-mix(in srgb, currentColor 30%, #FFF8EC)"); }
+    if (e === "tB1") { ink(1.6); out.push("text-shadow:none"); }
+    if (e === "tB2") { deep(82); ink(1.4); out.push("text-shadow:none"); }
+    if (e === "tB3") { ink(1.3); out.push("text-shadow:0 1.4px 0 #120C06"); }
+    if (e === "tD1") { deep(90); ink(0.9); out.push("text-shadow:0 2px 0 #120C06"); }
+    if (e === "tD2") { deep(80); ink(1); out.push("text-shadow:1.2px 2px 0 #120C06"); }
+    if (e === "tD3") { ink(1); out.push("text-shadow:0 1.2px 0 #120C06, 0 2.4px 0 #120C06"); }
     return out;
   }
   /* 10/02, Gray: "it says GB in the top of the app... I need to be able to edit that. I need to be able to edit
