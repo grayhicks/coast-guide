@@ -899,7 +899,6 @@ html:not(.hk_diag_livedec) .hk.hk .ccrab.rtl { left: auto; right: 74px; }
 html.hk_calopen .hk :is(.hero, .hk_supportfloat, .tabpanel, .hk_nav) { visibility: hidden; }
 .hk :is(.hero, .tabpanel) { contain-intrinsic-size: auto none; }
 html.hk_calopen .hk :is(.hero, .tabpanel) { content-visibility: hidden; }
-html.hk_calopen .hk :is(.hero, .hk_supportfloat, .tabpanel, .hk_nav), html.hk_calopen .hk :is(.hero, .hk_supportfloat, .tabpanel, .hk_nav) * { animation-play-state: paused !important; }
 .hk .hero-datebtn.hk_datecal .hk_datecalic { flex: 0 0 auto; transform: translateY(-1.2px); }
 .hero.hk_nhon { background: rgb(127, 195, 227); }
 .hero.hk_nhon > .hk_nh { position: absolute; inset: 0px; z-index: 0; overflow: hidden; pointer-events: none; }
