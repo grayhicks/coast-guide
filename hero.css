@@ -1119,6 +1119,9 @@ html.hk_calopen .hk :is(.hero, .hk_supportfloat, .tabpanel, .hk_nav), html.hk_ca
 .hero.hk_nhon > .hk_nhfront > svg { display: block; width: 100%; height: 100%; }
 .hero.hk_nhon .adcart { bottom: var(--nh-lane, 18px); }
 .hero.hk_nhon .adcart_art { transform: scale(calc(.62 * var(--nh-k, 1))); transform-origin: 0px 100%; }
+.hero.hk_nhon .hk_nh [id$="ad-banner-plane"] { transform-box: view-box; transform-origin: 388px 100px; }
+@media (max-width: 389px){.hero.hk_nhon .hk_nh [id$="ad-banner-plane"] { transform: translate(calc(-197px + 50vw), -40px) scale(0.9); }}
+@media (max-width: 389px){.hero.hk_nhon .hk_nh [id$="ad-parasail"] { transform: translateX(calc(197px - 50vw)); }}
 .hero.hk_nhon > :is(.sun, .clouds, .hz, .glit, .hk_boat, .hk_sailw, .boat-refl, .supw, .rplfield, .hero-wave, .hero-sand, .hk_swellw, .hero-surf, .beachprops, .crabw, .hgulw, .hero_slot_boatname, .hero_slot_yacht, .hero_slot_plane, .hero_slot_parasa) { display: none !important; }
 .hero.hk_nhon :is(.adparasail, .npw, [class^="hkn_"], [class*=" hkn_"]) { display: none !important; }
 .hero[data-sea] .hk_nh [id$="move-waves"] { transition: opacity 0.6s; }
