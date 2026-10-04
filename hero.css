@@ -1109,6 +1109,7 @@ html.hk_calopen .hk :is(.hero, .hk_supportfloat, .tabpanel, .hk_nav), html.hk_ca
 .hk.hk_day .hk_calsegb.on { background: rgb(28, 107, 181); color: rgb(255, 255, 255); }
 .hk .hk_calc.m.on .hk_calev { background: rgba(11, 26, 38, 0.2); color: rgb(11, 26, 38); }
 .hk.hk_day .hk_calc.m.on .hk_calev { background: rgba(255, 255, 255, 0.22); color: rgb(255, 255, 255); }
+.hk_ptacts :is(.pin, .cardrateact).on { background: var(--hk-bub) !important; color: rgb(255, 250, 240) !important; }
 .hero.hk_nhon { background: rgb(127, 195, 227); }
 .hero.hk_nhon > .hk_nh { position: absolute; inset: 0px; z-index: 0; overflow: hidden; pointer-events: none; }
 .hero.hk_nhon > .hk_nh > svg { display: block; width: 100%; height: 100%; }

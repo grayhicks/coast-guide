@@ -65,6 +65,10 @@ main{ display:flex; gap:16px; padding:12px; align-items:flex-start; }
 /* the grab bar between the app and the tools (phone): drag it up for more tools, down for more app, like Canva's sheet */
 .grab{ width:100%; flex:none; height:22px; align-items:center; justify-content:center; touch-action:none; cursor:ns-resize; margin:-11px 0 -11px; position:relative; z-index:6; }
 .grab i{ width:44px; height:5px; border-radius:999px; background:var(--mute); opacity:.8; } .grab.on i{ background:var(--pink); opacity:1; }
+.photopick{ display:none; margin:0 0 12px; padding:10px; border:1px solid var(--line); border-radius:12px; } body[data-photo="1"] .photopick{ display:block; }
+#ppFind{ width:100%; margin:6px 0; font-size:15px; } .ppgrid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(88px,1fr)); gap:6px; max-height:260px; overflow:auto; }
+.ppgrid button{ padding:0; min-height:0; height:auto; border-radius:10px; overflow:hidden; border:2px solid transparent; background:var(--chip); display:flex; flex-direction:column; }
+.ppgrid button.sel{ border-color:var(--pink); } .ppgrid img{ width:100%; aspect-ratio:4/3; object-fit:cover; display:block; } .ppgrid small{ font-size:10.5px; padding:3px 4px; color:var(--mute); text-align:left; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 .herosigns{ display:none; margin:0 0 12px; padding:10px; border:1px solid var(--line); border-radius:12px; } body[data-hero="1"] .herosigns, body.signs .herosigns{ display:block; }
 body.signs[data-sel="0"] .tools .box#textBox{ display:block !important; } body.signs[data-sel="0"] #textBox > :not(#heroSigns){ display:none !important; } body.signs #emptyHint{ display:none !important; }
 .hsl{ display:flex; flex-direction:column; gap:3px; margin:0 0 8px; font-size:13px; font-weight:700; color:var(--mute); } .hsl input{ font-size:16px; padding:8px 10px; text-transform:uppercase; } .hsl small{ font-weight:600; } .hsl small.long{ color:#ffb4a8; }
@@ -213,6 +217,7 @@ body[data-kind="mark"] #tabs [data-t="font"], body[data-kind="mark"] #tabs [data
 .tsize button, .tstyle button{ min-height:42px; min-width:44px; padding:0 10px; display:inline-flex; align-items:center; gap:4px; }
 .tsize .aa{ font:800 21px/1 Georgia, serif; } .tsize .aa.sm{ font-size:15px; } .tsize .ar{ font-size:9px; color:var(--mint); margin-left:1px; align-self:flex-start; margin-top:9px; }
 .trow{ flex-wrap:nowrap; }
+@media (max-width:380px){ #sw{ grid-template-rows:34px !important; grid-auto-columns:34px !important; } #sw button{ min-height:34px !important; height:34px !important; } .tools .row{ margin-top:6px; margin-bottom:6px; } .trow{ gap:4px; } .tsize input{ width:48px; font-size:15px; padding:8px 2px; } .trow button.tcap{ padding:0 5px; min-width:0; } }
 .tcap{ flex-direction:column !important; gap:1px !important; min-height:46px !important; } .tcap small{ font:700 9.5px/1 system-ui, sans-serif; color:var(--mute); font-style:normal; letter-spacing:.1px; }
 .tcap.sel small{ color:#d9fff2; } .tg{ display:inline-flex; align-items:flex-start; }
 .tszl{ display:flex; flex-direction:column; align-items:center; gap:1px; } .tszl small{ font:700 9.5px/1 system-ui, sans-serif; color:var(--mute); } .tszl input{ padding:4px 2px; } .tsize button, .tstyle button{ padding:0 8px; } .tsize input{ width:58px; }
@@ -230,6 +235,16 @@ body[data-sel="0"] .tools .box[data-tab="words"], body[data-sel="0"] .tools .box
 body:not([data-shape="1"]):not([data-shape="pic"]) #tabs [data-t="shape"]{ display:none !important; }
 body:not([data-shape="pic"]) #picShape, body:not([data-shape="1"]) #lineShape{ display:none; }
 #dotN{ min-width:28px; text-align:center; font-size:16px; } #lineNudge button{ min-width:44px; } #layerSeg button.add{ border-style:dashed; }
+.sizewho{ display:flex; flex-wrap:wrap; align-items:center; gap:6px 10px; margin:4px 0 8px; } .sizewho .seg button{ min-height:36px; } #sizeNote{ font-size:12.5px; } #sizeStd{ display:none; min-height:36px; } body[data-ownsize="1"] #sizeStd{ display:inline-flex; }
+.colmore{ margin:6px 0; } .colmore summary{ cursor:pointer; min-height:40px; display:flex; align-items:center; font-weight:700; color:var(--mute); }
+/* a picture or a drawing has no text size: the Size tab keeps its bigger/smaller and turn */
+body[data-kind="mark"] .box[data-tab="size"] .sizehead, body[data-kind="mark"] #sizeRange, body[data-kind="mark"] .box[data-tab="size"] .sizebtns, body[data-kind="mark"] .box[data-tab="size"] .sizewho{ display:none; }
+.tools .box .row > label:first-child{ flex:0 0 104px; min-width:0; }
+.tools .box .row > input[type=range]{ flex:1 1 auto !important; min-width:0 !important; }
+.tools .box .row > input[type=range] + .mute{ flex:0 0 46px; text-align:right; }
+body[data-sel="0"]:not(.locked) .tabs button:not([data-t="add"]):not([data-t="changes"]):not([data-t="history"]){ opacity:.42; }
+.swlab{ font-size:12.5px; font-weight:800; color:var(--mute); text-transform:uppercase; letter-spacing:.4px; }
+#compare span{ font-size:8.5px !important; letter-spacing:-.1px; }
 .tabs .badge{ position:absolute; top:4px; right:8px; min-width:17px; height:17px; padding:0 4px; border-radius:999px; background:var(--pink); color:#fff; font:800 11px/17px system-ui; }
 .tabs button{ position:relative; }
 button#save.dirty::after{ content:""; width:8px; height:8px; border-radius:50%; background:#fff; margin-left:2px; }
@@ -261,7 +276,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   .more.open{ display:flex; }
   .more button, .more select{ justify-content:flex-start; min-height:44px; }
   main{ flex:1 1 auto; min-height:0; display:flex; flex-direction:column; gap:0; padding:0; }
-  .phone{ position:relative; top:0; flex:0 0 auto; height:var(--phoneh, clamp(150px, min(50dvh, calc(100dvh - 356px)), 520px)); width:100%; border-width:0 0 1px; border-radius:0 0 16px 16px; box-shadow:none; }
+  .phone{ position:relative; top:0; flex:0 0 auto; height:var(--phonefit, var(--phoneh, clamp(150px, min(50dvh, calc(100dvh - 356px)), 520px))); width:100%; border-width:0 0 1px; border-radius:0 0 16px 16px; box-shadow:none; }
   .phone iframe{ width:100%; height:100%; max-height:none; }
   html, body{ overflow-x:hidden; }
   .panel{ flex:1 1 auto; min-height:0; max-width:none; min-width:0; width:100%; padding:0 8px calc(var(--tabh) + env(safe-area-inset-bottom)); display:flex; flex-direction:column; }
@@ -298,6 +313,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     background:linear-gradient(var(--panel) 30%, rgba(21,32,44,0)) center top, linear-gradient(rgba(21,32,44,0), var(--panel) 70%) center bottom, radial-gradient(farthest-side at 50% 0, rgba(0,0,0,.55), transparent) center top, radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,.55), transparent) center bottom, var(--panel);
     background-repeat:no-repeat; background-size:100% 36px, 100% 36px, 100% 12px, 100% 12px; background-attachment:local, local, scroll, scroll; }
   .tools .box h2{ display:none; }
+  .tools{ padding-bottom:14px !important; }
   .fonts{ max-height:none; overflow:visible; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); }
   .list{ max-height:none; }
   .tabs{ position:fixed; left:0; right:0; bottom:0; z-index:9; margin:0; flex-wrap:nowrap; overflow-x:auto; gap:2px; padding:4px 6px calc(4px + env(safe-area-inset-bottom)); background:var(--bg); border-top:1px solid var(--line); scrollbar-width:none; }
@@ -311,7 +327,22 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   /* more tabs to the right: the bar fades at its right edge until it is scrolled to the end */
   .tabs:not([data-end]){ -webkit-mask-image:linear-gradient(90deg,#000 82%,rgba(0,0,0,.25)); mask-image:linear-gradient(90deg,#000 82%,rgba(0,0,0,.25)); }
   .sw{ grid-template-columns:repeat(auto-fill,minmax(40px,1fr)); gap:6px; } .sw button{ min-height:40px; height:40px; }
-  .pad{ grid-template-columns:repeat(3,52px); gap:6px; }
+  .pad{ grid-template-columns:repeat(5,44px); grid-auto-rows:44px; gap:5px; } .pad span{ display:none; }
+  .pad button{ min-height:44px !important; height:44px; }
+  .pad [data-n="-1,0"]{ order:1; } .pad [data-n="0,-1"]{ order:2; } .pad [data-n="0,0"]{ order:3; } .pad [data-n="0,1"]{ order:4; } .pad [data-n="1,0"]{ order:5; }
+  .mvrow{ flex-wrap:wrap; row-gap:8px; } .mvrow .mvside{ flex:1 1 100%; display:grid; grid-template-columns:auto 1fr auto; align-items:center; column-gap:10px; }
+  .mvrow .mvside .cap{ display:none; } .mvrow .mvside .readout{ font-size:16px !important; } .mvrow .mvside .gap{ margin:0 !important; }
+  .lineup{ flex-wrap:nowrap !important; gap:5px !important; } .lineup button{ flex:1 1 0; min-width:0; padding:4px 4px !important; font-size:12px !important; line-height:1.15; white-space:normal; min-height:44px; }
+  .box[data-tab="move"] .mvlock{ display:flex; gap:8px; flex-wrap:nowrap; } .box[data-tab="move"] .mvlock > *{ flex:1 1 0; min-width:0; } .box[data-tab="move"] .mvlock > .mute:empty, .box[data-tab="move"] .mvlock > .onlywide{ display:none; } .box[data-tab="move"] .mvlock button{ min-height:44px; white-space:nowrap; }
+  body[data-sel="1"] .zoombtn{ width:32px; height:32px; min-height:32px; opacity:.6; right:6px; bottom:6px; }
+  /* the 45 colours sit in two rows that swipe sideways, so the colour code, the eyedropper and the sliders are on screen */
+  .colnote{ display:none; }
+  #sw{ grid-auto-flow:column; grid-template-columns:none; grid-template-rows:repeat(2,40px); grid-auto-columns:40px; overflow-x:auto; overscroll-behavior-x:contain; padding-bottom:4px; scrollbar-width:none; } #sw::-webkit-scrollbar{ display:none; }
+  #edgeSeg{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px; } #edgeSeg button{ min-height:52px; padding:4px; font-size:11.5px; } #edgeSeg .esamp{ font-size:14px; max-width:100%; }
+  #scopeSeg, #matchSeg, #lookSeg{ flex-wrap:nowrap; } #scopeSeg button, #matchSeg button, #lookSeg button{ flex:1 1 0; min-width:0; padding:6px 6px; font-size:13px; line-height:1.15; white-space:normal; }
+  .box[data-tab="where"] .row > label{ flex:0 0 auto; min-width:0; font-size:12.5px; }
+  #tabsMore{ display:flex; position:fixed; right:4px; bottom:calc(14px + env(safe-area-inset-bottom)); z-index:10; width:30px; height:44px; min-height:0; padding:0; border-radius:10px; align-items:center; justify-content:center; background:var(--chip); border:1px solid var(--line); }
+  .tabs[data-end] ~ #tabsMore, body.locked #tabsMore{ display:none; }
   .pad button{ min-height:48px; font-size:20px; }
   /* on a phone the update's progress floats just under the bar, over the top of the app */
   .publine{ position:fixed; top:56px; left:50%; transform:translateX(-50%); z-index:15; max-width:90vw; padding:4px 12px; border-radius:999px; background:rgba(14,22,33,.94); border:1px solid var(--line); box-shadow:0 4px 14px rgba(0,0,0,.4); }
@@ -369,7 +400,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   <button id="pick" class="on" title="P" data-i="pick"><span>Pick</span></button>
   <button id="undoTop" class="ib" title="Undo (Ctrl+Z)" aria-label="Undo" data-i="undo"><span>Undo</span></button>
   <button id="redo" class="ib" title="Redo (Ctrl+Shift+Z)" aria-label="Redo" data-i="redo"><span>Redo</span></button>
-  <button id="compare" class="ib" title="Hold to see the app without your changes (or hold the \ key)" aria-label="Hold to see it before your changes" data-i="compare"><span>Before</span></button>
+  <button id="compare" class="ib" title="Hold to see the app without your changes (or hold the \ key)" aria-label="Hold to compare with the app before your changes" data-i="compare"><span>Compare</span></button>
   <span class="sp"></span>
   <span class="publine" id="pubLine" role="status"></span>
   <button id="save" class="go" title="Save your changes. The app shows them at its next hourly update; Save + publish (in More) shows them in about 10 minutes.">Save</button>
@@ -403,8 +434,9 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       <div class="levelrow"><div class="levels" id="levels"></div><div class="levels" id="scenery"></div></div>
       <div class="row acts"><button id="outer" title="Pick the box this piece sits in">Pick what holds it</button><button id="inner" title="Back to the smaller piece">Back to the piece</button><button id="undo">Undo</button></div>
     </div>
+    <button id="tabsMore" class="onlyphone" aria-label="More tools" title="More tools" data-i="chright"></button>
     <nav class="tabs" id="tabs" aria-label="Tools">
-      <button data-t="text" data-i="tee" class="on"><span>Text</span></button><button data-t="move" data-i="move"><span>Move</span></button><button data-t="size" data-i="size"><span>Size</span></button><button data-t="colour" data-i="colour"><span>Colour</span></button><button data-t="font" data-i="font"><span>Font</span></button><button data-t="words" data-i="words"><span>Words</span></button><button data-t="edge" data-i="edge"><span>Edge</span></button><button data-t="shape" data-i="shape"><span>Shape</span></button><button data-t="layers" data-i="layers"><span>Layers</span></button><button data-t="where" data-i="where"><span>Where</span></button><button data-t="add" data-i="add"><span>Add</span></button><button data-t="changes" data-i="changes"><span>Changes</span></button><button data-t="history" data-i="history"><span>History</span></button>
+      <button data-t="text" data-i="tee" class="on"><span>Text</span></button><button data-t="move" data-i="move"><span>Move</span></button><button data-t="size" data-i="size"><span>Size</span></button><button data-t="colour" data-i="colour"><span>Colour</span></button><button data-t="font" data-i="font"><span>Font</span></button><button data-t="words" data-i="words"><span>Words</span></button><button data-t="edge" data-i="edge"><span>Effects</span></button><button data-t="shape" data-i="shape"><span>Shape</span></button><button data-t="layers" data-i="layers"><span>Layers</span></button><button data-t="where" data-i="where"><span>Apply to</span></button><button data-t="add" data-i="add"><span>Add</span></button><button data-t="changes" data-i="changes"><span>Changes</span></button><button data-t="history" data-i="history"><span>History</span></button>
     </nav>
     <div class="tools" id="tools">
     <div class="box empty" id="emptyHint">
@@ -414,21 +446,23 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     </div>
     <div class="box" data-tab="where">
       <h2>Where the change goes</h2>
-      <div class="row"><label>Match</label>
-        <div class="seg" id="matchSeg"><button data-v="like" class="sel">Everything like it</button><button data-v="exact">Only this exact kind</button></div></div>
-      <div class="mute" id="matchRead"></div>
       <div class="row"><label>Change it on</label>
         <div class="seg" id="scopeSeg"><button data-v="card" class="sel">Only this card</button><button data-v="kind">Cards like this</button><button data-v="all">Every card</button></div></div>
+      <div class="row"><label>Look</label>
+        <div class="seg" id="lookSeg"><button data-v="all" class="sel">Every look</button><button data-v="day">Day only</button><button data-v="night">Night + Dark</button></div></div>
       <!-- 10/03, Gray: "I can edit one calendar pill and 7 others are good then find another then 3 are good... I don't want
            to hand go through everyone... flag the ones that need to be different". After a change on every card the
            designer looks at every card itself and lists the ones where the piece now sits on other words or off the card -->
       <div class="checkbox" id="checkBox">
-        <div class="row"><button id="checkGo" class="go">Check every card</button><span class="mute" id="checkSum"></span></div>
+        <div class="row"><button id="checkGo" class="go">Check every card</button><button id="fitAll" title="Make the words a little smaller, only on the cards where they run long or sit on something">Fit the ones that need it</button><span class="mute" id="checkSum"></span></div>
         <ul class="list checks" id="checkList"></ul>
         <div class="row"><button id="claudeGo" title="Writes what you changed and the cards you flagged as a request Claude can apply">Send to Claude</button><span class="mute" id="claudeSay"></span></div>
       </div>
-      <div class="row"><label>Look</label>
-        <div class="seg" id="lookSeg"><button data-v="all" class="sel">Every look</button><button data-v="day">Day only</button><button data-v="night">Night + Dark</button></div></div>
+      <details class="colmore" id="matchMore"><summary>Which pieces count as the same</summary>
+      <div class="row"><label>Match</label>
+        <div class="seg" id="matchSeg"><button data-v="like" class="sel">Everything like it</button><button data-v="exact">Only this exact kind</button></div></div>
+      <div class="mute" id="matchRead"></div>
+      </details>
     </div>
     <!-- 10/03, Gray: "I click on a text I'm able to edit make larger change color font all from one page. Not have to go
          to another thing". Words, size, bold, italic, capitals, colour and font together; the full tabs stay for more -->
@@ -444,11 +478,12 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
         <div class="row"><button id="hsSave" class="go">Save the signs</button><button id="hsPub">Save and publish now</button></div>
         <div class="mute" id="hsSay">The hero shows them as you type. Short reads best on a phone.</div>
       </div>
-      <div class="twrow"><input id="tWords" type="text" placeholder="Type new words" aria-label="The words" autocomplete="off" enterkeyhint="done"><button id="tOwn" class="tmore" title="Put back the words the app had" style="display:none">Its own words</button></div>
+      <div class="twrow"><input id="tWords" type="text" placeholder="Type new words" aria-label="The words" autocomplete="off" enterkeyhint="done"><button id="tOwn" class="tmore" title="Put back the words the app had" style="display:none">Original words</button></div>
       <div class="trow">
         <div class="tsize"><button id="tSmaller" class="tcap" title="Smaller text (Ctrl+Shift+&lt;)" aria-label="Smaller text"><span class="tg"><span class="aa sm">A</span><span class="ar">&#9660;</span></span><small>Smaller</small></button><label class="tszl"><input id="tSize" type="number" step="0.5" min="5" max="80" aria-label="Text size"><small>Size</small></label><button id="tBigger" class="tcap" title="Bigger text (Ctrl+Shift+&gt;)" aria-label="Bigger text"><span class="tg"><span class="aa">A</span><span class="ar">&#9650;</span></span><small>Bigger</small></button></div>
         <div class="tstyle"><button id="tBold" class="tcap" title="Bold (Ctrl+B)" aria-label="Bold"><b>B</b><small>Bold</small></button><button id="tItalic" class="tcap" title="Italic (Ctrl+I)" aria-label="Italic"><i>I</i><small>Italic</small></button><button id="tCaps" class="tcap" title="Capitals (Ctrl+Shift+K)" aria-label="Capitals">AA<small>Capitals</small></button></div>
       </div>
+      <div class="sizewho"><span class="swlab">Size on</span><div class="seg" id="sizeWho"><button data-v="all" class="sel" title="One standard size on every card">Every card</button><button data-v="one" title="Give this card its own size, for a title that needs to be a little smaller">Only this card</button></div><span class="mute" id="sizeNote"></span><button id="sizeStd" title="Take this card's own size away so it follows the standard again">Use the standard</button></div>
       <div class="tline"><div class="tcols" id="tCols"></div><button class="tmore" data-go="colour">More colours</button></div>
       <div class="tline"><div class="tfonts" id="tFonts"></div><button class="tmore" data-go="font">More fonts</button></div>
       <div class="mute" id="tNote"></div>
@@ -456,16 +491,26 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     </div>
     <div class="box" id="wordsBox" data-tab="words">
       <h2>Words</h2>
-      <div class="row"><textarea id="words" maxlength="160" rows="2" placeholder="Type new words" style="flex:1 1 100%;min-width:180px;resize:vertical"></textarea><button id="wordsGo" class="go">Use these words</button><button id="wordsOff">Its own words</button></div>
+      <div class="row"><textarea id="words" maxlength="160" rows="2" placeholder="Type new words" style="flex:1 1 100%;min-width:180px;resize:vertical"></textarea><button id="wordsGo" class="go">Use these words</button><button id="wordsOff">Original words</button></div>
       <div class="mute" id="wordsNote">Tap a single word or line in the app first.</div>
     </div>
     <div class="box" data-tab="size">
+      <!-- 10/03, Gray: "Every single thing should be editable everything". A listing with no photo of its own shows an
+           example photo (claude/data/stock_photos.json, map listing -> kind); tap it and choose another here -->
+      <div class="photopick" id="photoPick">
+        <h3 class="sub">Example photo</h3>
+        <div class="mute" id="ppNote"></div>
+        <input id="ppFind" type="search" placeholder="Find a photo: beach, music, food" aria-label="Find a photo" autocomplete="off">
+        <div class="ppgrid" id="ppGrid"></div>
+        <div class="row"><button id="ppSave" class="go" disabled>Save this photo</button><span class="mute" id="ppSay"></span></div>
+      </div>
       <h2>Size</h2>
       <div class="sizehead"><div><div class="cap">Text size</div><div class="readout"><input id="size" type="number" step="0.5" min="5" max="80" aria-label="Text size in pixels"></div></div><div class="mute" id="sizeWas"></div></div>
       <input id="sizeRange" type="range" min="6" max="60" step="0.5" aria-label="Text size" style="width:100%;padding:0;margin:10px 0 4px">
+      <div class="row sizebtns"><button data-s="-2" title="2 px smaller">A&#8722;&#8722;</button><button data-s="-1" title="1 px smaller">A&#8722;</button><button data-s="1" title="1 px bigger">A+</button><button data-s="2" title="2 px bigger">A++</button></div>
+      <div class="sizewho"><span class="swlab">Size on</span><div class="seg" id="sizeWho2"><button data-v="all" class="sel" title="One standard size on every card">Every card</button><button data-v="one" title="Give this card its own size">Only this card</button></div></div>
       <div class="row"><label>Bigger / smaller</label><input id="scaleR" type="range" min="20" max="300" step="5" value="100" style="flex:1;min-width:120px;padding:0"><span class="mute" id="scaleRead">100%</span></div>
       <div class="row"><label>Turn</label><input id="rotR" type="range" min="-45" max="45" step="1" value="0" style="flex:1;min-width:120px;padding:0"><span class="mute" id="rotRead">0°</span></div>
-      <div class="row sizebtns"><button data-s="-2" title="2 px smaller">A&#8722;&#8722;</button><button data-s="-1" title="1 px smaller">A&#8722;</button><button data-s="1" title="1 px bigger">A+</button><button data-s="2" title="2 px bigger">A++</button></div>
     </div>
     <div class="box" data-tab="move">
       <h2>Move</h2>
@@ -473,9 +518,9 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
         <div class="pad"><span></span><button data-n="0,-1" aria-label="Move up" data-i="chup"></button><span></span><button data-n="-1,0" aria-label="Move left" data-i="chleft"></button><button data-n="0,0" title="Back to where it was" aria-label="Back to where it was" data-i="home"></button><button data-n="1,0" aria-label="Move right" data-i="chright"></button><span></span><button data-n="0,1" aria-label="Move down" data-i="chdown"></button><span></span></div>
         <div class="mvside"><div class="seg" id="stepSeg"><button data-v="1" class="sel" title="Each tap moves it 1 pixel">1 px</button><button data-v="5" title="Each tap moves it 5 pixels">5 px</button><button data-v="10" title="Each tap moves it 10 pixels">10 px</button></div>
           <div class="cap">Moved</div><div class="readout" id="moveRead">Not moved</div><div class="gap" id="gapRead"></div></div></div>
-      <div class="row"><button id="lockGo2" title="Pin it at this spot inside its box, so the words around it never push it about">Lock in place</button><span class="mute" id="lockRead"></span></div>
       <div class="row lineup"><button id="evenV" title="Same space above as below">&#8597; Even above and below</button><button id="evenH" title="Same space left as right">&#8596; Even left and right</button><button id="centreX" title="Centre it across the card">Centre on the card</button></div>
-      <div class="row"><button id="snap" class="on" data-i="snap"><span>Snap on</span></button><span class="mute onlywide">Hold <kbd>Alt</kbd> while dragging to place it freely.</span></div>
+      <div class="row mvlock"><button id="lockGo2" title="Pin it at this spot inside its box, so the words around it never push it about">Lock in place</button><span class="mute" id="lockRead"></span>
+      <button id="snap" class="on" data-i="snap"><span>Snap on</span></button><span class="mute onlywide">Hold <kbd>Alt</kbd> while dragging to place it freely.</span></div>
       <div class="mute onlywide">Drag it in the app, or use the arrow keys (<kbd>Shift</kbd> moves 10 px). <kbd>P</kbd> switches between picking and using the app.</div>
       <div class="mute onlyphone">Drag it in the app with your finger. On the other tabs your finger scrolls the app instead.</div>
     </div>
@@ -484,16 +529,18 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       <div class="row" id="recentRow" style="display:none"><label>Recent</label><div class="sw" id="recent" style="flex:1"></div></div>
       <div class="sw" id="sw"></div>
       <div class="contrast" id="contrast"></div>
-      <div class="row"><label>Any colour</label><input id="color" type="color" value="#1d2a33" style="width:64px;height:38px;padding:2px"><input id="hex" type="text" maxlength="7" placeholder="#1C6BB5" aria-label="Colour code" autocomplete="off" spellcheck="false" style="width:104px"><button id="colorOff">Its own colour</button></div>
+      <div class="row"><label>Any colour</label><input id="color" type="color" value="#1d2a33" style="width:64px;height:38px;padding:2px"><input id="hex" type="text" maxlength="7" placeholder="#1C6BB5" aria-label="Colour code" autocomplete="off" spellcheck="false" style="width:104px"><button id="colorOff">Original colour</button></div>
       <div class="row"><button id="eyedrop" data-i="eyedrop"><span>Take a colour from the app</span></button></div>
       <div class="row"><label>Shift colour</label><input id="hueR" type="range" min="-180" max="180" step="5" value="0" style="flex:1;min-width:120px;padding:0"><span class="mute" id="hueRead">0°</span></div>
       <div class="row"><label>Brightness</label><input id="briR" type="range" min="30" max="200" step="5" value="100" style="flex:1;min-width:120px;padding:0"><span class="mute" id="briRead">100%</span></div>
       <div class="row"><label>Colour strength</label><input id="satR" type="range" min="0" max="300" step="10" value="100" style="flex:1;min-width:120px;padding:0"><span class="mute" id="satRead">100%</span></div>
-      <div class="mute">Shift colour, brightness and strength work on drawings and pictures too (the hero's boat, the flag), keeping their shading.</div>
       <div class="row"><label>See-through</label><input id="opacity" type="range" min="10" max="100" step="5" value="100" style="flex:1;min-width:120px;padding:0"><span class="mute" id="opRead">100%</span></div>
+      <div class="mute colnote">Shift colour, brightness and strength work on drawings and pictures too (the hero's boat, the flag), keeping their shading.</div>
+      <details class="colmore" id="colMore"><summary>Gradient and fill behind</summary>
       <div class="row"><label>Gradient</label><input id="grad2" type="color" value="#1EBEE6" aria-label="Gradient end colour" style="width:52px;height:38px;padding:2px"><select id="gradDir" aria-label="Gradient direction"><option value="90">Left to right</option><option value="180">Top to bottom</option><option value="135">Corner to corner</option></select><button id="gradGo">Use gradient</button><button id="gradOff">No gradient</button></div>
       <div class="row"><label>Fill behind</label><div class="sw" id="swBg" style="grid-template-columns:repeat(auto-fill,minmax(26px,1fr))"></div></div>
       <div class="row"><button id="bgOff">No fill change</button></div>
+      </details>
     </div>
     <div class="box" data-tab="font">
       <h2>Font</h2>
@@ -827,13 +874,15 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     if (el.closest("svg") && el.tagName.toLowerCase() !== "svg" && !nhName(el)) el = el.closest("svg");
     if (!keepGroup) clearGroup();
     var old = d.querySelector("[data-hk-pick]"); if (old) old.removeAttribute("data-hk-pick");
-    poseShown(el); shapeUi = { layer: 0, dot: -1 };
+    poseShown(el); shapeUi = { layer: 0, dot: -1 }; sizeOne = false;
     document.body.setAttribute("data-shape", shapeTarget(el) ? "1" : picTarget(el) ? "pic" : "0"); if (!shapeTarget(el) && !picTarget(el) && document.body.getAttribute("data-tab") === "shape") setTimeout(function () { showTab("move"); }, 0);
-    el.setAttribute("data-hk-pick", "1"); document.body.setAttribute("data-sel", "1");
+    el.setAttribute("data-hk-pick", "1"); document.body.setAttribute("data-sel", "1"); setTimeout(function () { fitSheet(true); }, 0);
     /* 10/03, Gray: "sometimes I wanted to just move the screen around when editing and it moved the whole hero or app or
        card". A piece taller than 40% of the app or wider and taller than most of it is "big": a finger on it scrolls, and
        it moves only with the arrows (or a mouse drag on a computer) */
-    (function () { var w = el.ownerDocument.defaultView, r = el.getBoundingClientRect(), big = r.height > w.innerHeight * 0.4 || (r.width * r.height > w.innerWidth * w.innerHeight * 0.3) || el.matches(".card, .hero, .hk, main, section");
+    /* measured against at least 420 px of app (or half the phone screen): when a tool takes the room on a phone the app can be 168 px tall, and
+       every title then counted as "big" and stopped following the finger (10/03) */
+    (function () { var w = el.ownerDocument.defaultView, H = Math.max(w.innerHeight, 420, window.innerHeight * 0.5), r = el.getBoundingClientRect(), big = r.height > H * 0.4 || (r.width * r.height > w.innerWidth * H * 0.3) || el.matches(".card, .hero, .hk, main, section");
       Array.prototype.forEach.call(el.ownerDocument.querySelectorAll("[data-hk-big]"), function (x) { x.removeAttribute("data-hk-big"); }); if (big) el.setAttribute("data-hk-big", "1"); })();
     document.body.setAttribute("data-kind", ownText(el) && el.tagName.toLowerCase() !== "svg" ? "words" : el.querySelector && el.querySelector("*") && (el.textContent || "").trim() ? "words" : "mark");
     if (/move-/.test(el.id || "") && el.closest(".hk_nh") && document.body.getAttribute("data-tab") === "text") setTimeout(function () { showTab("move"); }, 0);
@@ -944,6 +993,27 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     var row = box.parentElement, on = box.querySelector(".sel");
     if (on && row && row.scrollWidth > row.clientWidth) { var rr = row.getBoundingClientRect(), br = on.getBoundingClientRect(); if (br.right > rr.right - 8 || br.left < rr.left) row.scrollLeft += br.right - rr.right + Math.min(rr.width / 3, 120); }
   }
+  /* ---- the example photo (10/03) ---- */
+  var PPATH = "claude/data/stock_photos.json", ppDoc = null, ppSha = null, ppPick = null, ppFor = null, ppLast = "";
+  function photoOf(el) { if (!el) return null; var img = el.tagName && el.tagName.toLowerCase() === "img" ? el : el.querySelector && el.querySelector("img"); if (!img) return null; var src = img.getAttribute("src") || "", m = src.match(/stock_([a-z0-9_]+?)(_b)?(_m)?\.jpg/); var tile = img.closest(".hk_ptile"); return tile ? { img: img, kind: m ? m[1] : null, id: (tile.getAttribute("data-testid") || "").replace(/^poster-/, "") } : null; }
+  function ppLoad() { if (ppDoc) return Promise.resolve(); return gh("GET", "/repos/" + REPO + "/contents/" + PPATH + "?ref=main").then(function (j) { var o = JSON.parse(unb64(j.content)); if (!o || !o.photos) throw new Error("no photos"); ppDoc = o; ppSha = j.sha; }); }
+  function ppGrid() { var g = $("ppGrid"); g.innerHTML = ""; if (!ppDoc) return; var f = $("ppFind").value.trim().toLowerCase().replace(/\s+/g, "_");
+    Object.keys(ppDoc.photos).filter(function (k) { return !f || k.indexOf(f) > -1; }).slice(0, 120).forEach(function (k) {
+      var b = document.createElement("button"); b.setAttribute("data-k", k); b.title = k.replace(/_/g, " "); b.innerHTML = '<img loading="lazy" alt=""><small></small>'; b.firstChild.src = "../photos/stock_" + k + "_m.jpg"; b.lastChild.textContent = k.replace(/_/g, " ");
+      if (k === (ppPick || (ppFor && ppFor.kind))) b.className = "sel";
+      b.onclick = function () { ppPick = k; Array.prototype.forEach.call(g.children, function (x) { x.classList.toggle("sel", x === b); }); $("ppSave").disabled = false;
+        var d = frame(); if (d && ppFor) Array.prototype.forEach.call(d.querySelectorAll('.hk_ptile[data-testid="poster-' + ppFor.id + '"] img'), function (im) { if (/stock_/.test(im.getAttribute("src") || "")) im.src = "../photos/stock_" + k + "_m.jpg"; });
+        $("ppSay").textContent = "Showing " + k.replace(/_/g, " ") + ". Save to keep it."; };
+      g.appendChild(b); }); }
+  function photoFill() { ppFor = sel ? photoOf(sel.el) : null; document.body.setAttribute("data-photo", ppFor ? "1" : "0"); if (!ppFor) { ppLast = ""; return; } if (ppFor.id + "|" + ppFor.kind === ppLast) return; ppLast = ppFor.id + "|" + ppFor.kind; ppPick = null;
+    $("ppNote").textContent = ppFor.kind ? "This listing shows the " + ppFor.kind.replace(/_/g, " ") + " example photo. Tap another to try it." : "This listing has its own photo. An example photo only shows on listings without one.";
+    $("ppFind").style.display = $("ppGrid").style.display = ppFor.kind ? "" : "none"; $("ppSave").style.display = ppFor.kind ? "" : "none";
+    if (ppFor.kind) ppLoad().then(ppGrid).catch(function () { $("ppNote").textContent = "The photo list could not be read from GitHub just now."; }); }
+  $("ppFind").addEventListener("input", ppGrid);
+  $("ppSave").onclick = function () { if (!ppFor || !ppPick || !ppDoc) return; ppDoc.map = ppDoc.map || {}; ppDoc.map[ppFor.id] = ppPick; $("ppSay").textContent = "Saving\u2026";
+    gh("PUT", "/repos/" + REPO + "/contents/" + PPATH, { message: "Card designer: example photo for " + ppFor.id, content: b64(JSON.stringify(ppDoc, null, 1) + "\n"), sha: ppSha || undefined, branch: "main" })
+      .then(function (j) { ppSha = j && j.content && j.content.sha; ppFor.kind = ppPick; ppPick = null; $("ppSave").disabled = true; $("ppSay").textContent = "Saved. The app shows it after the next update."; say("Example photo saved.", "ok"); })
+      .catch(function (e) { $("ppSay").textContent = "Not saved: " + e.message; }); };
   /* ---- the hero's signs (10/03) ---- */
   var HS = { plane: ["hsPlane", 18], parasail: ["hsPara", 30], sign: ["hsSign", 28] }, hsSha = null, hsDoc = null, HSPATH = "content/hero_ads.json";
   function hsVals() { var v = {}; Object.keys(HS).forEach(function (k) { v[k] = $(HS[k][0]).value.replace(/\s+/g, " ").trim().toUpperCase(); }); return v; }
@@ -973,6 +1043,8 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     var d = el.ownerDocument, b = boxOf(el), cr = (card.querySelector(".cardbtn") || card).getBoundingClientRect();
     if (b.r - b.l < 1) return null;
     if (b.l < cr.left - 2 || b.r > cr.right + 2 || b.t < cr.top - 2 || b.b > cr.bottom + 2) return "runs off the card";
+    /* words that run to four lines or more read as a mistake (10/03, Gray: "starting to look strange") */
+    if (ownText(el) || el.querySelector("a, span")) { var tops = []; Array.prototype.forEach.call(el.getClientRects(), function (q) { if (q.width > 1 && !tops.some(function (t0) { return Math.abs(t0 - q.top) < 3; })) tops.push(q.top); }); if (tops.length >= 4) return "runs to " + tops.length + " lines"; }
     var hit = null;
     Array.prototype.forEach.call(card.querySelectorAll("*"), function (n) { if (hit || n === el || el.contains(n) || n.contains(el) || n.closest(".tdec, .sig, .spdec, #hk_ring, #hk_guides")) return;
       var tg = n.tagName.toLowerCase(), mark = tg === "svg" || tg === "img" || tg === "button"; if (!mark && !ownText(n)) return; if (n.closest("svg") && tg !== "svg") return;
@@ -994,6 +1066,22 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     $("checkSum").textContent = all.length ? (all.length - bad) + " of " + all.length + " cards look right" + (bad ? ", " + bad + " need a look" : "") + "." : "This piece is not on the other cards.";
   }
   $("checkGo").onclick = checkCards;
+  $("sizeStd").onclick = function () { if (!sel || sel.in !== "card") return; var own = findRule({ in: sel.in, path: sel.path, scope: "card", value: sel.card, look: lookScope }); if (!own || !own.set) return; snap(); delete own.set.size; paint(); fill(); say("This card follows the standard size again.", "ok"); };
+  /* Fit: on one card, the title steps down half a pixel at a time until it stops running long or sitting on its
+     neighbours, never below 75% of the standard, and the card keeps that as its own size */
+  function fitOne(x) {
+    var k0 = { in: "card", path: sel.path, scope: "card", value: x.card.getAttribute("data-card-id") || "", look: lookScope }; if (!k0.value) return false;
+    /* tried on the word itself first (a style on that one element), so the whole design is not rebuilt for every try;
+       only the size that fits is written as the card's rule */
+    var start = fsOf(x.el) || 14, lo = Math.ceil(start * 0.75 * 2) / 2, hi = start, set = function (v) { x.el.style.setProperty("font-size", v + "px", "important"); return !problemOf(x.card, x.el); };
+    var fits = set(lo);
+    if (fits) while (hi - lo > 0.5) { var mid = Math.round((lo + hi) / 2 * 2) / 2; if (mid <= lo) break; if (set(mid)) lo = mid; else hi = mid; }
+    x.el.style.removeProperty("font-size"); if (!fits) return false;
+    var r = ruleFor(k0); r.set.size = lo; return true;
+  }
+  $("fitAll").onclick = function () { if (!sel || sel.in !== "card" || !(ownText(sel.el) || allWords(sel.el))) { say("Pick some words on a card first.", "err"); return; } snap();
+    var n = 0, m = 0; cardsFor({ in: "card", path: sel.path, scope: "all", value: "" }).forEach(function (x) { if (!problemOf(x.card, x.el)) return; m++; if (fitOne(x)) n++; }); paint();
+    fill(); checkCards(); say(m ? n + " of " + m + " cards fitted with a slightly smaller size." + (m > n ? " " + (m - n) + " still need a look." : "") : "Every card already fits.", m > n ? "err" : "ok"); };
   /* Lock in place: read where the piece sits now inside its positioned box, and pin it there (left or right edge,
      whichever it is nearer); Unlock puts it back in the flow */
   $("lockGo2").onclick = function () {
@@ -1059,9 +1147,14 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     });
     var on = ul.querySelector("li.on"); if (on && on.scrollIntoView) { var lr = ul.closest(".tools") || ul; var a = on.getBoundingClientRect(), z = lr.getBoundingClientRect(); if (a.top < z.top || a.bottom > z.bottom) lr.scrollTop += a.top - z.top - z.height / 3; }
   }
-  function key() {
+  /* 10/03, Gray: "it needs an automatic size so I'm not choosing different sizes for each card so everything needs to
+     be somewhat standard on every single card but I can change some to make the title slightly smaller". A text size
+     goes on every card by default, even while the rest of the changes stay on one card; "Only this card" (sizeOne)
+     gives one card its own size, and that card keeps it when the standard changes. */
+  var sizeOne = false;
+  function key(forSize) {
     if (!sel) return null;
-    var sc = sel.in === "card" ? scope : "all";
+    var sc = sel.in === "card" ? (forSize && scope === "card" && !sizeOne ? "all" : scope) : "all";
     return { in: sel.in, path: sel.path, scope: sc, value: sc === "kind" ? sel.kind : sc === "card" ? sel.card : "", look: lookScope };
   }
   function findRule(k) { for (var i = 0; i < doc.rules.length; i++) { var r = doc.rules[i]; if (r.path === k.path && r.in === k.in && (r.scope || "all") === k.scope && (r.value || "") === (k.value || "") && r.look === k.look) return r; } return null; }
@@ -1107,12 +1200,12 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     if (r.set.mv === "mg" && !r.set.m0 && sel && sel.el) { var cs = sel.el.ownerDocument.defaultView.getComputedStyle(sel.el); r.set.m0 = [parseFloat(cs.marginLeft) || 0, parseFloat(cs.marginTop) || 0]; }
     return r; }
   function syncText(r) { if (!sel || sel.in !== "card" || !(Number(r.set.size) > 0)) return; var tk = findRule(Object.assign(key(), { scope: "card", value: sel.card })); if (tk && tk !== r && tk.set && tk.set.text) tk.set.textSize = Number(r.set.size); }
-  function edit(fn) {
-    var k = key(); if (!k) { say("Tap a word in the app first.", "err"); return; }
+  function edit(fn, forSize) {
+    var k = key(forSize); if (!k) { say("Tap a word in the app first.", "err"); return; }
     snap();
     var c0 = (findRule(k) || { set: {} }).set.color, g0 = (function (st) { st = st || {}; return JSON.stringify([st.dx, st.dy, st.size, st.scale, st.rot, st.spacing, st.lh, st.font, st.weight, st.text, st.hide, st.tcase]); })((findRule(k) || {}).set);
     /* a card whose words were replaced draws them at the words rule's own size, so a size change carries over to it */
-    group().forEach(function (g) { withSel(g, function () { var r = ruleFor(key()); fn(r.set); syncText(r); }); });
+    group().forEach(function (g) { withSel(g, function () { var r = ruleFor(key(forSize)); fn(r.set); syncText(r); }); });
     var c1 = ruleFor(k).set.color; if (c1 && c1 !== c0) remember(c1);
     /* the distance lines show again only when the piece moved or changed size, not after a colour (10/03 grade) */
     var geo = function (st) { st = st || {}; return JSON.stringify([st.dx, st.dy, st.size, st.scale, st.rot, st.spacing, st.lh, st.font, st.weight, st.text, st.hide, st.tcase]); };
@@ -1283,6 +1376,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       "\n[data-hk-pick]:not([data-hk-big]){touch-action:none !important;}" +
       /* on the Shape tab the corner handles and the turn dot step aside, so only the bend dots sit on the line */
       "\nhtml.hk_shaping [id^=\"hk_handle\"], html.hk_shaping #hk_turn{display:none !important;}" +
+      "\nhtml.hk_tight [data-hk-unstick]{position:relative !important;top:auto !important;}" +
       /* and a finger that lands next to the line never scrolls the page mid-drag (the browser cancels the touch when it
          starts a scroll, so a new dot went dead after a few steps, 10/03) */
       "\nhtml.hk_shaping .hero:has([data-hk-pick]), html.hk_shaping .hero:has([data-hk-pick]) *, html.hk_shaping .card:has([data-hk-pick]), html.hk_shaping .card:has([data-hk-pick]) *{touch-action:none !important;}" +
@@ -1389,7 +1483,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     var w = sel.in === "card" ? (scope === "card" ? "Only this card \u00b7 tap for every card" : scope === "kind" ? "Cards like this (" + (sel.kind || "same kind") + ", " + n('.card[data-bub^="' + String(sel.kind || "").replace(/"/g, "") + '"]') + " on this page)" : "Every card (" + n(".card") + " on this page)") : sel.el.closest(".hero") ? "The hero" : sel.el.closest(".hk_ptile") ? "Every poster tile (" + n(".hk_ptile") + " on this page)" : "Everywhere in the app";
     c.textContent = "Changes: " + w + (lookScope === "day" ? ", day look only" : lookScope === "night" ? ", night and dark only" : "") + (scope !== "card" && toCheck ? " \u00b7 " + toCheck + " to check" : "") + " \u203a";
   }
-  function fill() { scopeChip(); samples(); textFill();
+  function fill() { scopeChip(); samples(); textFill(); photoFill();
     var r = sel && findRule(key()), s = (r && r.set) || {}, el = sel && sel.el, cs = el ? el.ownerDocument.defaultView.getComputedStyle(el) : null;
     var wok = wordsOk(); $("words").disabled = !sel; $("wordsGo").disabled = !wok;
     var tk = sel && sel.in === "card" ? Object.assign(key(), { scope: "card", value: sel.card }) : null, tr = tk ? findRule(tk) : r;
@@ -1398,9 +1492,9 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     var dx0 = Number(s.dx) || 0, dy0 = Number(s.dy) || 0;
     $("lockGo2").textContent = s.lock ? "Unlock" : "Lock in place"; $("lockRead").textContent = s.lock ? "Pinned " + s.lock.t + " px from the top, " + s.lock.x + " px from the " + (s.lock.side === "r" ? "right" : "left") : "";
     $("moveRead").textContent = !dx0 && !dy0 ? "Not moved" : (dx0 ? (dx0 > 0 ? "\u2192 " : "\u2190 ") + Math.abs(dx0) : "") + (dx0 && dy0 ? "   " : "") + (dy0 ? (dy0 > 0 ? "\u2193 " : "\u2191 ") + Math.abs(dy0) : "") + " px";
-    var zNow = cs ? (parseInt(cs.zIndex, 10) || 0) : 0; $("zRead").textContent = s.z !== undefined ? "Layer " + s.z : cs ? (zNow > 99 ? "Its own layer" : "Layer " + zNow + " (its own)") : "";
+    var zNow = cs ? (parseInt(cs.zIndex, 10) || 0) : 0; $("zRead").textContent = s.z !== undefined ? "Layer " + s.z : cs ? (zNow > 99 ? "Original layer" : "Layer " + zNow + " (original)") : "";
     $("size").value = s.size || (el ? Math.round(fsOf(el) * 2) / 2 : ""); $("sizeRange").value = $("size").value || 14;
-    $("sizeWas").textContent = r && r.set && r.set.size ? "Changed (Reset this puts it back)" : "Its own size";
+    $("sizeWas").textContent = r && r.set && r.set.size ? "Changed (Reset this puts it back)" : "Original size";
     var mark = function (box, v) { Array.prototype.forEach.call($(box).children, function (b) { b.classList.toggle("sel", (b.getAttribute("data-v") || "") === (v === undefined ? "" : String(v))); }); };
     mark("wSeg", s.weight || ""); mark("caseSeg", s.tcase || ""); mark("edgeSeg", s.edge || "");
     Array.prototype.forEach.call($("fonts").children, function (b) { b.classList.toggle("sel", b.getAttribute("data-f") === (s.font || "")); });
@@ -1526,7 +1620,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       if (fingers[e.pointerId]) fingers[e.pointerId] = { x: e.clientX, y: e.clientY };
       if (pinch) { if (Object.keys(fingers).length < 2) return; var sp = spread(), k = sp.d / pinch.d0, da = ((sp.a - pinch.a0) * 180 / Math.PI + 540) % 360 - 180;
         if (!pinch.on) { if (Math.abs(k - 1) < 0.03 && Math.abs(da) < 4) return; pinch.on = true; snap(); }
-        pinch.starts.forEach(function (st) { withSel(st.g, function () { var r = ruleFor(key()); if (st.txt) r.set.size = Math.max(5, Math.round(st.base * k * 2) / 2); else r.set.scale = Math.max(0.2, Math.min(4, Math.round(st.base * k * 100) / 100)); syncText(r);
+        pinch.starts.forEach(function (st) { withSel(st.g, function () { var r = ruleFor(key(st.txt)); if (st.txt) r.set.size = Math.max(5, Math.round(st.base * k * 2) / 2); else r.set.scale = Math.max(0.2, Math.min(4, Math.round(st.base * k * 100) / 100)); syncText(r);
           var v = st.rot + da, sn = Math.round(v / 15) * 15; v = Math.abs(v - sn) < 5 ? sn : Math.round(v); v = ((v + 540) % 360) - 180; if (!v) delete r.set.rot; else r.set.rot = v; }); });
         paint(); fill(); e.preventDefault(); e.stopPropagation(); return; }
       if (bend) { var bx = e.clientX - bend.x, by = e.clientY - bend.y; if (Math.abs(bx) + Math.abs(by) >= 3) bend.mv = true; if (!bend.on) { if (Math.abs(bx) + Math.abs(by) < 3) return; bend.on = true; snap(); }
@@ -1536,7 +1630,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
         turn.starts.forEach(function (st) { withSel(st.g, function () { var v = st.rot + a, sn = Math.round(v / 15) * 15; v = e.altKey ? Math.round(v) : Math.abs(v - sn) < 4 ? sn : Math.round(v); v = ((v + 540) % 360) - 180; var r = ruleFor(key()); if (!v) delete r.set.rot; else r.set.rot = v; }); });
         paint(); fill(); e.preventDefault(); e.stopPropagation(); return; }
       if (resize) { var k = Math.hypot(e.clientX - resize.cx, e.clientY - resize.cy) / resize.d0; if (!resize.on) { if (Math.abs(k - 1) < 0.02) return; resize.on = true; snap(); }
-        resize.starts.forEach(function (st) { withSel(st.g, function () { var r = ruleFor(key()); if (st.txt) r.set.size = Math.max(5, Math.round(st.base * k * 2) / 2); else r.set.scale = Math.max(0.2, Math.min(4, Math.round(st.base * k * 100) / 100)); syncText(r); }); });
+        resize.starts.forEach(function (st) { withSel(st.g, function () { var r = ruleFor(key(st.txt)); if (st.txt) r.set.size = Math.max(5, Math.round(st.base * k * 2) / 2); else r.set.scale = Math.max(0.2, Math.min(4, Math.round(st.base * k * 100) / 100)); syncText(r); }); });
         paint(); fill(); e.preventDefault(); e.stopPropagation(); return; }
       if (!drag) return;
       var mx = Math.round(e.clientX - drag.x), my = Math.round(e.clientY - drag.y);
@@ -1718,7 +1812,14 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     f.onclick = function () { edit(function (s) { s.bg = c; }); }; $("swBg").appendChild(f);
   });
   var sample = "Pensacola";
-  function samples() { var t = sel && sel.el && ownText(sel.el) ? ownText(sel.el) : sel && sel.el ? (sel.el.textContent || "").trim() : ""; t = t.replace(/\s+/g, " ").slice(0, 24) || "Pensacola"; if (t === sample) return; sample = t; Array.prototype.forEach.call(document.querySelectorAll("#fonts .fsamp, #edgeSeg .esamp"), function (x) { x.textContent = x.classList.contains("esamp") ? t.slice(0, 10) : t; }); }
+  /* 10/03 cold grade: "the Effects previews show pink Pensacola on cream, not the real dark-brown title". Each preview
+     now wears the picked words' own colour, font and weight on the ground they sit on in the app */
+  function samplesLook() {
+    var el = sel && sel.el; if (!el || !el.ownerDocument) return; var w = el.ownerDocument.defaultView, cs = w.getComputedStyle(el), bg = "";
+    for (var n = el; n && n.nodeType === 1 && !bg; n = n.parentElement) { var b = w.getComputedStyle(n).backgroundColor; if (b && !/rgba\(0, 0, 0, 0\)|transparent/.test(b)) bg = b; }
+    Array.prototype.forEach.call(document.querySelectorAll("#edgeSeg .esamp"), function (x) { x.style.color = cs.color; x.style.fontFamily = cs.fontFamily; x.style.fontWeight = cs.fontWeight; x.style.background = bg || "#F4EEE2"; });
+  }
+  function samples() { samplesLook(); var t = sel && sel.el && ownText(sel.el) ? ownText(sel.el) : sel && sel.el ? (sel.el.textContent || "").trim() : ""; t = t.replace(/\s+/g, " ").slice(0, 24) || "Pensacola"; if (t === sample) return; sample = t; Array.prototype.forEach.call(document.querySelectorAll("#fonts .fsamp, #edgeSeg .esamp"), function (x) { x.textContent = x.classList.contains("esamp") ? t.slice(0, 10) : t; }); }
   var fontBtn = function (name, label) {
     /* each font button writes the picked words in that font, with the font's name small underneath (10/03, J13) */
     var b = document.createElement("button"); b.setAttribute("data-f", name); b.title = label || name;
@@ -1746,11 +1847,20 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     }).catch(function () { say("Google Fonts has no font called " + f + ". Check the spelling on fonts.google.com.", "err"); });
   };
   $("gfName").addEventListener("keydown", function (e) { if (e.key === "Enter") $("gfGo").click(); });
-  fontBtn("", "Its own font");
+  fontBtn("", "Original font");
   CD.FONTS.forEach(function (f) { fontBtn(f); });
   /* ---- the Text page (10/03): one place for the words, the size, bold / italic / capitals, a colour and a font.
      Every control here calls the same change the full tab makes, so Undo, groups and Where behave the same ---- */
   var TFONTS = ["Baloo 2", "Nunito", "Chewy", "Fredoka", "Pacifico", "Lobster", "Playfair Display", "Bebas Neue", "Cormorant Garamond"].filter(function (f) { return CD.FONTS.indexOf(f) > -1; });
+  /* the line under the size buttons: who a size change reaches, and whether this card has a size of its own */
+  function sizeSaid() {
+    if (!$("sizeWho")) return; Array.prototype.forEach.call(document.querySelectorAll("#sizeWho button, #sizeWho2 button"), function (b) { b.classList.toggle("sel", b.getAttribute("data-v") === (sizeOne ? "one" : "all")); });
+    var own = sel && sel.in === "card" ? findRule({ in: sel.in, path: sel.path, scope: "card", value: sel.card, look: lookScope }) : null, has = !!(own && own.set && Number(own.set.size) > 0);
+    var std = sel ? findRule({ in: sel.in, path: sel.path, scope: "all", value: "", look: lookScope }) : null;
+    document.body.setAttribute("data-ownsize", has && !sizeOne ? "1" : "0");
+    $("sizeNote").textContent = !sel || sel.in !== "card" ? "" : sizeOne ? "A size now goes on this card only." : has ? "This card has its own size, " + own.set.size + " px." : (std && Number(std.set.size) > 0 ? "The size is " + std.set.size + " px on every card." : "A size goes on every card.") + (scope === "card" ? " Other changes stay on this card." : "");
+  }
+  Array.prototype.forEach.call(document.querySelectorAll("#sizeWho button, #sizeWho2 button"), function (b) { b.onclick = function () { sizeOne = b.getAttribute("data-v") === "one"; sizeSaid(); }; });
   function textFill() {
     if (!$("textBox") || !SW || !TFONTS) return; var el = sel && sel.el, r = sel && findRule(key()), st = (r && r.set) || {}, cs = el ? el.ownerDocument.defaultView.getComputedStyle(el) : null, wok = wordsOk();
     if (document.activeElement !== $("tWords")) { var tk = sel && sel.in === "card" ? Object.assign(key(), { scope: "card", value: sel.card }) : null, tr = tk ? findRule(tk) : r; $("tWords").value = wok ? ((tr && tr.set && tr.set.text) || allWords(el).slice(0, 160)) : ""; $("tOwn").style.display = tr && tr.set && tr.set.text ? "" : "none";
@@ -1758,6 +1868,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       if (tr && tr.set && tr.set.text && group().length === 1) $("partName").textContent = "\u201c" + (tr.set.text.length > 40 ? tr.set.text.slice(0, 38) + "\u2026" : tr.set.text) + "\u201d"; }
     $("tWords").placeholder = !sel ? "Tap any words in the app" : wok ? "Type new words" : "Tap here to pick the words inside";
     if (document.activeElement !== $("tSize")) $("tSize").value = st.size || (el ? Math.round(fsOf(el) * 2) / 2 : "");
+    sizeSaid();
     var fwN = Number(st.weight) || (cs ? Number(cs.fontWeight) : 400); $("tBold").classList.toggle("sel", fwN >= 700); $("tItalic").classList.toggle("sel", st.italic === true || (cs && cs.fontStyle === "italic" && st.italic !== false)); $("tCaps").classList.toggle("sel", (st.tcase || (cs && cs.textTransform)) === "upper" || (cs && cs.textTransform === "uppercase" && !st.tcase));
     var rc = recent.map(function (x) { return x.toUpperCase(); }), notR = function (c) { return rc.indexOf(c.toUpperCase()) < 0; };
     var cols = recent.concat(SW.filter(function (c) { return notR(c) && hsl(c).c >= 0.16 && hsl(c).l <= 0.9; })).concat(SW.filter(function (c) { return notR(c) && (hsl(c).c < 0.16 || hsl(c).l > 0.9); })).slice(0, 16);
@@ -1778,7 +1889,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   $("tOwn").onclick = function () { $("wordsOff").click(); fill(); };
   $("tSmaller").onclick = function () { var b = document.querySelector('.panel [data-s="-1"]'); if (b) b.click(); };
   $("tBigger").onclick = function () { var b = document.querySelector('.panel [data-s="1"]'); if (b) b.click(); };
-  $("tSize").addEventListener("change", function () { var v = Number(this.value); if (!sel || !(v >= 5 && v <= 80)) return; edit(function (s2) { s2.size = Math.round(v * 2) / 2; }); });
+  $("tSize").addEventListener("change", function () { var v = Number(this.value); if (!sel || !(v >= 5 && v <= 80)) return; edit(function (s2) { s2.size = Math.round(v * 2) / 2; }, true); sizeSaid(); });
   $("tBold").onclick = function () { if (!sel) return; var fwNow = Number(sel.el.ownerDocument.defaultView.getComputedStyle(sel.el).fontWeight) || 400; edit(function (s2) { s2.weight = fwNow >= 700 ? 400 : 800; }); };
   $("tItalic").onclick = function () { if (!sel) return; var it = sel.el.ownerDocument.defaultView.getComputedStyle(sel.el).fontStyle === "italic"; edit(function (s2) { s2.italic = it ? false : true; }); };
   $("tCaps").onclick = function () { if (!sel) return; var up = sel.el.ownerDocument.defaultView.getComputedStyle(sel.el).textTransform === "uppercase"; edit(function (s2) { s2.tcase = up ? "none" : "upper"; }); };
@@ -1798,7 +1909,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   Array.prototype.forEach.call($("wSeg").children, function (b) { b.onclick = function () { var v = b.getAttribute("data-v"); edit(function (s) { s.weight = v ? Number(v) : undefined; }); }; });
   Array.prototype.forEach.call($("caseSeg").children, function (b) { b.onclick = function () { var v = b.getAttribute("data-v"); edit(function (s) { s.tcase = v || undefined; }); }; });
   Array.prototype.forEach.call(document.querySelectorAll("[data-n]"), function (b) { b.onclick = function () { var v = b.getAttribute("data-n").split(",").map(function (x) { return Number(x) * step; }); edit(function (s) { if (!v[0] && !v[1]) { s.dx = 0; s.dy = 0; } else { s.dx = (s.dx || 0) + v[0]; s.dy = (s.dy || 0) + v[1]; } }); }; });
-  Array.prototype.forEach.call(document.querySelectorAll("[data-s]"), function (b) { b.onclick = function () { var st = Number(b.getAttribute("data-s")); edit(function (s) { var own = sel && sel.el ? fsOf(sel.el) : 0; s.size = Math.max(5, Math.round(((Number(s.size) || own || Number($("size").value) || 14) + st) * 10) / 10); }); }; });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-s]"), function (b) { b.onclick = function () { var st = Number(b.getAttribute("data-s")); edit(function (s) { var own = sel && sel.el ? fsOf(sel.el) : 0; s.size = Math.max(5, Math.round(((Number(s.size) || own || Number($("size").value) || 14) + st) * 10) / 10); }, true); sizeSaid(); }; });
   Array.prototype.forEach.call(document.querySelectorAll("[data-sp]"), function (b) { b.onclick = function () { var st = Number(b.getAttribute("data-sp")); edit(function (s) { var cs = sel.el.ownerDocument.defaultView.getComputedStyle(sel.el); var cur = s.spacing !== undefined ? Number(s.spacing) : (parseFloat(cs.letterSpacing) || 0); s.spacing = Math.round((cur + st) * 10) / 10; }); }; });
   Array.prototype.forEach.call(document.querySelectorAll("[data-lh]"), function (b) { b.onclick = function () { var st = Number(b.getAttribute("data-lh")); edit(function (s) { var cs = sel.el.ownerDocument.defaultView.getComputedStyle(sel.el); var cur = Number(s.lh) || (parseFloat(cs.lineHeight) / parseFloat(cs.fontSize)) || 1.2; s.lh = Math.round((cur + st) * 100) / 100; }); }; });
   /* every slider: it previews as it slides, keeps one undo step for the whole slide, and its middle value means "its own" */
@@ -1863,16 +1974,19 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   $("evenV").onclick = function () { lineUp("v"); }; $("evenH").onclick = function () { lineUp("h"); }; $("centreX").onclick = function () { lineUp("c"); };
   /* the slider previews as it slides and keeps one undo step for the whole slide */
   var sliding = false;
-  $("sizeRange").addEventListener("input", function () { var v = Number(this.value); if (!sliding) { sliding = true; snap(); } var k = key(); if (!k) return; var r = ruleFor(k); r.set.size = v; $("size").value = v; paint(); flashGuides(); });
+  $("sizeRange").addEventListener("input", function () { var v = Number(this.value); if (!sliding) { sliding = true; snap(); } var k = key(true); if (!k) return; var r = ruleFor(k); r.set.size = v; $("size").value = v; paint(); flashGuides(); });
   $("sizeRange").addEventListener("change", function () { sliding = false; fill(); });
-  $("size").onchange = function () { var v = Number(this.value); edit(function (s) { s.size = v > 0 ? v : undefined; }); };
+  $("size").onchange = function () { var v = Number(this.value); edit(function (s) { s.size = v > 0 ? v : undefined; }, true); sizeSaid(); };
   $("color").oninput = function () { var v = this.value; edit(function (s) { s.color = v; }); };
   $("colorOff").onclick = function () { edit(function (s) { delete s.color; }); };
   $("bgOff").onclick = function () { edit(function (s) { delete s.bg; }); };
   $("italic").onclick = function () { edit(function (s) { s.italic = s.italic === true ? undefined : true; }); };
   $("hide").onclick = function () { edit(function (s) { s.hide = s.hide === true ? undefined : true; }); };
   $("outer").onclick = outer; $("inner").onclick = inner; $("undo").onclick = undo;
-  $("resetPart").onclick = function () { var k = key(); if (!k) { say("Tap a word in the app first.", "err"); return; } var rs = group().map(function (g) { return withSel(g, function () { return findRule(key()); }); }).filter(Boolean); if (!rs.length) { say("Nothing changed on this one yet.", "err"); return; } snap(); rs.forEach(function (r) { var i = doc.rules.indexOf(r); if (i > -1) doc.rules.splice(i, 1); }); paint(); fill(); };
+  $("resetPart").onclick = function () { var k = key(); if (!k) { say("Tap a word in the app first.", "err"); return; } var rs = group().map(function (g) { return withSel(g, function () { return findRule(key()); }); }).filter(Boolean);
+    /* the standard text size lives on the every-card rule, so Reset this takes that size back too */
+    var ss = group().map(function (g) { return withSel(g, function () { var r2 = findRule(key(true)); return r2 && r2.set && r2.set.size !== undefined && rs.indexOf(r2) < 0 ? r2 : null; }); }).filter(Boolean);
+    if (!rs.length && !ss.length) { say("Nothing changed on this one yet.", "err"); return; } snap(); ss.forEach(function (r2) { delete r2.set.size; }); rs.forEach(function (r) { var i = doc.rules.indexOf(r); if (i > -1) doc.rules.splice(i, 1); }); paint(); fill(); };
   $("pick").onclick = togglePick;
   $("zoom").onclick = cycleZoom;
   $("scopeChip").onclick = function () { showTab("where"); };
@@ -2001,13 +2115,13 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   $("undoTop").onclick = undo; $("redo").onclick = redo;
   segs("stepSeg", function (v) { step = Number(v) || 1; });
   /* Hide tools (phone): the tool sheet folds away so the app fills the screen; any tab brings it back */
-  function setMini(on) { if (on) document.body.setAttribute("data-mini", "1"); else document.body.removeAttribute("data-mini"); var m = $("mini"); if (m) { m.setAttribute("aria-label", on ? "Show the tools again" : "Hide the tools to see more of the app"); m.title = m.getAttribute("aria-label"); m.setAttribute("aria-pressed", on ? "true" : "false"); var ms = m.querySelector("span"); if (ms) ms.textContent = on ? "Show" : "Hide"; } if (sel) setTimeout(ring, 60); }
+  function setMini(on) { var wasMini = document.body.getAttribute("data-mini") === "1"; if (on) document.body.setAttribute("data-mini", "1"); else document.body.removeAttribute("data-mini"); if (wasMini !== !!on && typeof fitSheet === "function") fitSheet(false); var m = $("mini"); if (m) { m.setAttribute("aria-label", on ? "Show the tools again" : "Hide the tools to see more of the app"); m.title = m.getAttribute("aria-label"); m.setAttribute("aria-pressed", on ? "true" : "false"); var ms = m.querySelector("span"); if (ms) ms.textContent = on ? "Show" : "Hide"; } if (sel) setTimeout(ring, 60); }
   (function () { var tb = $("tabs"), at = function () { if (tb.scrollLeft + tb.clientWidth >= tb.scrollWidth - 4) tb.setAttribute("data-end", ""); else tb.removeAttribute("data-end"); }; tb.addEventListener("scroll", at, { passive: true }); window.addEventListener("resize", at); setTimeout(at, 300); })();
   document.body.appendChild($("dragHud"));
   (function () { var g = $("grab"), ph = document.querySelector(".phone"), st = null;
     var set = function (h) { var lo = 150, hi = Math.max(lo, window.innerHeight - 56 - 118 - 66 - 90); h = Math.max(lo, Math.min(hi, h)); document.documentElement.style.setProperty("--phoneh", Math.round(h) + "px"); return h; };
     try { var sv = Number(localStorage.getItem("hk_designer_phoneh")); if (sv > 0) set(sv); } catch (e) {}
-    g.addEventListener("pointerdown", function (e) { e.preventDefault(); try { g.setPointerCapture(e.pointerId); } catch (x) {} st = { y: e.clientY, h: ph.getBoundingClientRect().height }; g.classList.add("on"); });
+    g.addEventListener("pointerdown", function (e) { e.preventDefault(); try { g.setPointerCapture(e.pointerId); } catch (x) {} st = { y: e.clientY, h: ph.getBoundingClientRect().height }; document.documentElement.style.removeProperty("--phonefit"); g.classList.add("on"); });
     g.addEventListener("pointermove", function (e) { if (!st) return; set(st.h + e.clientY - st.y); });
     var done = function () { if (!st) return; st = null; g.classList.remove("on"); try { localStorage.setItem("hk_designer_phoneh", parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--phoneh")) || ""); } catch (e) {} if (sel) setTimeout(ring, 60); };
     g.addEventListener("pointerup", done); g.addEventListener("pointercancel", done);
@@ -2017,7 +2131,39 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
   Array.prototype.forEach.call(document.querySelectorAll("#pieceMenu .pm"), function (b) { b.addEventListener("click", function () { $("pieceMenu").classList.remove("open"); $("pieceOpts").setAttribute("aria-expanded", "false"); }); });
   document.addEventListener("click", function (e) { if (!e.target.closest || !e.target.closest("#pieceMenu, #pieceOpts")) { $("pieceMenu").classList.remove("open"); } });
   $("mini").onclick = function () { setMini(document.body.getAttribute("data-mini") !== "1"); };
-  var showTab = function (t) { setTimeout(bendDots, 0); setMini(false); if (document.body.getAttribute("data-tab") !== t) { var tl = document.querySelector(".tools"); if (tl) tl.scrollTop = 0; } document.body.setAttribute("data-tab", t); Array.prototype.forEach.call($("tabs").children, function (b) { b.classList.toggle("on", b.getAttribute("data-t") === t); });
+  /* 10/03, Gray: "everything is easily seeable on phones ... you don't have to scroll up or something to make edits"
+     (J14 measured 26 of 36 tool views cutting controls off at 360, 390 and 430). On a phone, when a tool opens, the app
+     above gives up the height that tool needs, never below 190 px (a font list just scrolls), and the picked piece is scrolled back into the part
+     of the app that still shows. A long list (fonts, colours, layers) scrolls as before and leaves the app alone. */
+  var fitQ = 0;
+  /* scrollToo: after a fresh pick, bring the piece into view; after a tab change, only when the app's height changed.
+     Hide tools, a computer screen and the sign-in page take the height off again. The height changes at once (a slide
+     left the app half-sized while the piece was scrolled into view, and a quick scroll after it jumped back, 10/03). */
+  var fitWant = false, lastFit = "";
+  function fitSheet(scrollToo) {
+    if (scrollToo) fitWant = true; if (fitQ) return; fitQ = requestAnimationFrame(function () { fitQ = 0; var want = fitWant; fitWant = false;
+      var root = document.documentElement, ph = document.querySelector(".phone"), tl = document.querySelector(".tools"), d = frame();
+      if (!ph || !tl || !window.matchMedia("(max-width:820px)").matches || document.body.classList.contains("locked") || document.body.getAttribute("data-mini") === "1") {
+        root.style.removeProperty("--phonefit"); if (d && d.documentElement) d.documentElement.classList.remove("hk_tight"); lastFit = ""; return; }
+      root.style.removeProperty("--phonefit");
+      var over = tl.scrollHeight - tl.clientHeight, h = ph.getBoundingClientRect().height;
+      /* a long list (fonts) is left to scroll; everything else takes the room it needs, down to 190 px of app (168 on a short phone) */
+      var listy = document.body.getAttribute("data-tab") === "font";
+      var floor = window.innerHeight < 800 ? 168 : 190, tight = over > 2 && !listy && h > floor; if (tight) root.style.setProperty("--phonefit", Math.max(floor, Math.floor(h - over - 6)) + "px");
+      void ph.offsetHeight;
+      /* in a short app the app's own sticky bars (the section tabs, the filter row) would fill it, so while a tool has
+         taken the room they scroll away with the page instead (in the designer's view only; the app is not changed) */
+      if (d && d.documentElement) { if (tight) { var w0 = d.defaultView; Array.prototype.forEach.call(d.querySelectorAll("body *"), function (k) { if (k.hasAttribute("data-hk-unstick")) return; if (k.getBoundingClientRect().top > 260) return; if (w0.getComputedStyle(k).position === "sticky") k.setAttribute("data-hk-unstick", ""); }); }
+        d.documentElement.classList.toggle("hk_tight", !!tight); }
+      var now = root.style.getPropertyValue("--phonefit");
+      if ((want || now !== lastFit) && sel && sel.el && sel.el.isConnected) { var dd = sel.el.ownerDocument, w = dd.defaultView, r = sel.el.getBoundingClientRect(), top = appBar(dd) + 6;
+        if (r.top < top || r.bottom > w.innerHeight) w.scrollBy(0, r.top - Math.max(top, (w.innerHeight - Math.min(r.height, w.innerHeight)) / 2)); }
+      lastFit = now; ring();
+    });
+  }
+  window.addEventListener("resize", function () { fitSheet(false); });
+  $("tabsMore").onclick = function () { var tb = $("tabs"); tb.scrollBy({ left: tb.clientWidth * 0.7, behavior: "smooth" }); };
+  var showTab = function (t) { setTimeout(bendDots, 0); setTimeout(function () { fitSheet(false); }, 0); setMini(false); if (document.body.getAttribute("data-tab") !== t) { var tl = document.querySelector(".tools"); if (tl) tl.scrollTop = 0; } document.body.setAttribute("data-tab", t); Array.prototype.forEach.call($("tabs").children, function (b) { b.classList.toggle("on", b.getAttribute("data-t") === t); });
     /* the open tab is always in view on the phone's sideways tab row */
     var tb = $("tabs"), on = tb.querySelector(".on"); if (on && tb.scrollWidth > tb.clientWidth) { var a = on.getBoundingClientRect(), z = tb.getBoundingClientRect(); if (a.left < z.left || a.right > z.right) tb.scrollLeft += a.left - z.left - (z.width - a.width) / 2; } try { localStorage.setItem("hk_designer_tab", t); } catch (e) {} paint(); layersList(); if (t === "history" && document.body.className !== "locked") showHistory(); };
   Array.prototype.forEach.call($("tabs").children, function (b) { b.onclick = function () { showTab(b.getAttribute("data-t")); }; });
