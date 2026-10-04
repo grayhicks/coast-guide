@@ -45,7 +45,7 @@ header button, header select{ white-space:nowrap; }
 /* on a computer the extra controls sit before Save, so Save is always the last thing on the bar */
 #save{ order:10; } #moreBtn{ order:11; }
 /* a computer narrower than 1360: the bar keeps one row by showing marks instead of words on the quieter buttons */
-@media (min-width:821px) and (max-width:1359px){
+@media (min-width:821px) and (max-width:1679px){
   header h1{ display:none; }
   #focus, #floatsBtn, #signsBtn{ width:40px; min-width:40px; padding:0; }
   #focus span, #floatsBtn span, #signsBtn span{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
@@ -201,10 +201,14 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
 .keysteps a.keylink{ display:inline-block; font-weight:800; color:#0E1621; background:var(--mint); border-radius:999px; padding:8px 14px; text-decoration:none; }
 .keysteps a{ color:var(--mint); }
 .levels{ display:flex; gap:6px; flex-wrap:wrap; margin:8px 0 2px; align-items:center; }
+@media (min-width:821px){ .levelrow{ display:flex; gap:6px; overflow-x:auto; align-items:center; scrollbar-width:thin; padding-bottom:2px; }
+  .levelrow .levels{ flex-wrap:nowrap; flex:none; margin:4px 0; } .levelrow .levels > *{ flex:none; } #scenery:not(:empty){ padding-left:8px; border-left:1px solid var(--line); } }
 .levels button{ min-height:30px; padding:3px 10px; font-size:13px; border-radius:999px; color:var(--mute); }
 .levels button.sel{ background:var(--chipon); border-color:#1F6B57; color:var(--mint); font-weight:800; }
 .levels:empty{ display:none; }
 .tabs{ display:flex; gap:6px; flex-wrap:wrap; margin:0 0 12px; }
+@media (min-width:821px){ .tabs{ flex-wrap:nowrap; gap:2px; } .tabs button{ flex:1 1 0; min-width:0 !important; } .panel, .panel > *, .box.picked, .levelrow{ min-width:0; } }
+@media (min-width:1360px) and (max-width:1679px){ #width{ max-width:160px !important; } #lists, #look{ max-width:140px !important; } }
 .tabs button{ flex-direction:column; gap:2px; min-width:54px; min-height:54px; padding:6px 6px; font-size:12px; font-weight:700; color:var(--mute); background:transparent; border-color:transparent; }
 .tabs button.on{ background:var(--chipon); color:var(--mint); border-color:transparent; }
 .tools [data-tab]{ display:none; }
@@ -245,6 +249,7 @@ body[data-kind="mark"] .box[data-tab="size"] .sizehead, body[data-kind="mark"] #
 body[data-sel="0"]:not(.locked) .tabs button:not([data-t="add"]):not([data-t="changes"]):not([data-t="history"]){ opacity:.42; }
 .swlab{ font-size:12.5px; font-weight:800; color:var(--mute); text-transform:uppercase; letter-spacing:.4px; }
 #compare span{ font-size:8.5px !important; letter-spacing:-.1px; }
+body[data-sel="0"] #pieceOpts, body[data-sel="0"] #resetPart{ display:none !important; }
 .tabs .badge{ position:absolute; top:4px; right:8px; min-width:17px; height:17px; padding:0 4px; border-radius:999px; background:var(--pink); color:#fff; font:800 11px/17px system-ui; }
 .tabs button{ position:relative; }
 button#save.dirty::after{ content:""; width:8px; height:8px; border-radius:50%; background:#fff; margin-left:2px; }
@@ -253,6 +258,7 @@ body[data-tab="font"] .tools [data-tab="font"], body[data-tab="words"] .tools [d
 body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tools [data-tab="history"], body[data-tab="layers"] .tools [data-tab="layers"], body[data-tab="add"] .tools [data-tab="add"], body[data-tab="changes"] .tools [data-tab="changes"]{ display:block; }
 .onlyphone{ display:none !important; }
 /* A WIDE COMPUTER SCREEN (10/03, J13): Layers stays open in its own column beside the tools, like Figma's left panel */
+@media (min-width:1600px){ .panel{ max-width:1340px !important; grid-template-columns:minmax(520px,1fr) 360px !important; } }
 @media (min-width:1280px){
   .panel{ max-width:1020px; display:grid; grid-template-columns:minmax(380px,1fr) 300px; column-gap:16px; align-items:start; }
   .panel > *{ grid-column:1; }
@@ -428,7 +434,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     </div>
     <div class="box picked">
       <h2 class="onlywide">Picked</h2>
-      <div class="strip"><i class="dot"></i><div class="big" id="partName">Tap any word in the app.</div><div class="mute" id="partWhere"></div><button id="pieceOpts" class="ib sm onlyphone" aria-label="Options for this piece" aria-expanded="false" data-i="more"><span>Options</span></button><button id="resetPart" class="chip" data-i="reset" title="Put the picked piece back the way the app had it" aria-label="Reset this"><span>Reset</span></button><button id="mini" class="ib sm onlyphone" title="Hide the tools to see more of the app" aria-label="Hide the tools to see more of the app" data-i="chdown"><span>Hide</span></button></div>
+      <div class="strip"><i class="dot"></i><div class="big" id="partName">Tap anything to change it</div><div class="mute" id="partWhere"></div><button id="pieceOpts" class="ib sm onlyphone" aria-label="Options for this piece" aria-expanded="false" data-i="more"><span>Options</span></button><button id="resetPart" class="chip" data-i="reset" title="Put the picked piece back the way the app had it" aria-label="Reset this"><span>Reset</span></button><button id="mini" class="ib sm onlyphone" title="Hide the tools to see more of the app" aria-label="Hide the tools to see more of the app" data-i="chdown"><span>Hide</span></button></div>
       <div class="piecemenu" id="pieceMenu" role="menu"><button id="addPick" class="pm" title="Pick more pieces to change together (or Shift+click)" aria-label="Pick more pieces" data-i="addmore"><span>Pick more pieces</span></button><button id="copyStyle" class="pm" title="Copy its look (Ctrl+Alt+C)" aria-label="Copy its look" data-i="copy"><span>Copy its look</span></button><button id="pasteStyle" class="pm" title="Paste the copied look (Ctrl+Alt+V)" aria-label="Paste the copied look" data-i="paste" disabled><span>Paste the look</span></button></div>
       <button id="scopeChip" class="scopechip" title="Where the change goes: tap to choose"></button>
       <div class="levelrow"><div class="levels" id="levels"></div><div class="levels" id="scenery"></div></div>
@@ -441,8 +447,8 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     <div class="tools" id="tools">
     <div class="box empty" id="emptyHint">
       <h2>Start here</h2>
-      <p>Tap any word, mark or picture in the app to pick it. It gets a pink box, and the tools here change it.</p>
-      <p class="mute">Hold the half-filled square at the top to see the app without your changes. Nothing reaches the app until you press Save.</p>
+      <p>Tap any words, picture or drawing in the app above. It gets a pink box, and these tools change it.</p>
+      <p class="mute">Hold Compare to see the app without your changes. Nothing reaches the app until you press Save.</p>
     </div>
     <div class="box" data-tab="where">
       <h2>Where the change goes</h2>
@@ -547,8 +553,8 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
       <div class="fonts" id="fonts"></div>
       <div class="row"><input id="gfName" type="text" maxlength="40" placeholder="Any Google font, like Lobster Two" aria-label="Google font name" autocomplete="off" spellcheck="false" style="flex:1;min-width:170px"><button id="gfGo" class="go">Add font</button></div>
       <div class="mute">Every font at <a href="https://fonts.google.com/" target="_blank" rel="noopener" style="color:var(--mint)">fonts.google.com</a> works: type its name exactly as it shows there.</div>
-      <div class="row"><label>Weight</label><div class="seg" id="wSeg"><button data-v="">Its own</button><button data-v="400">Regular</button><button data-v="600">Semi</button><button data-v="700">Bold</button><button data-v="800">Extra</button><button data-v="900">Black</button></div></div>
-      <div class="row"><label>Style</label><div class="seg" id="caseSeg"><button data-v="">Its own</button><button data-v="none">As typed</button><button data-v="upper">ALL CAPS</button><button data-v="capitalize">Title Case</button><button data-v="lower">lower</button></div><button id="italic">Italic</button></div>
+      <div class="row"><label>Weight</label><div class="seg" id="wSeg"><button data-v="">Original</button><button data-v="400">Regular</button><button data-v="600">Semi</button><button data-v="700">Bold</button><button data-v="800">Extra</button><button data-v="900">Black</button></div></div>
+      <div class="row"><label>Style</label><div class="seg" id="caseSeg"><button data-v="">Original</button><button data-v="none">As typed</button><button data-v="upper">ALL CAPS</button><button data-v="capitalize">Title Case</button><button data-v="lower">lower</button></div><button id="italic">Italic</button></div>
       <div class="row"><label>Letter gap</label><button data-sp="-0.2">Tighter</button><button data-sp="0.2">Wider</button><label style="min-width:0">Line gap</label><button data-lh="-0.05">Tighter</button><button data-lh="0.05">Looser</button></div>
     </div>
     <div class="box" data-tab="shape">
@@ -621,7 +627,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     <li>The pink dot above the picked piece turns it. Layers can bring a piece forward or send it back.</li>
     <li>Hide tools (the arrow beside Reset this) gives the app the whole phone screen.</li>
     <li>Drag the round handle on the picked piece to make it bigger or smaller.</li>
-    <li>Hold the half-filled square at the top to see the app without your changes.</li>
+    <li>Hold Compare at the top to see the app without your changes.</li>
     <li>The magnifier on the app zooms 2x or 3x on the picked piece for exact placing.</li>
     <li>In Move, Even above and below lines a piece up in one tap. Dragging snaps to the words around it.</li>
     <li>The + button picks more pieces, so one change goes on all of them.</li>
@@ -1876,10 +1882,10 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     Array.prototype.forEach.call(tc.children, function (b) { b.classList.toggle("sel", (st.color || "").toUpperCase() === b.getAttribute("data-c").toUpperCase()); });
     var used = []; doc.rules.forEach(function (x) { if (x.set && x.set.font && used.indexOf(x.set.font) < 0) used.push(x.set.font); });
     var fl = [""].concat(used).concat(TFONTS.filter(function (f) { return used.indexOf(f) < 0; })).slice(0, 10), tf = $("tFonts");
-    if (tf.getAttribute("data-k") !== fl.join("|")) { tf.innerHTML = ""; tf.setAttribute("data-k", fl.join("|")); fl.forEach(function (f) { var b = document.createElement("button"); b.textContent = f || "Its own"; b.setAttribute("data-f", f); if (f) b.style.fontFamily = "'" + f + "', sans-serif";
+    if (tf.getAttribute("data-k") !== fl.join("|")) { tf.innerHTML = ""; tf.setAttribute("data-k", fl.join("|")); fl.forEach(function (f) { var b = document.createElement("button"); b.textContent = f || "Original"; b.setAttribute("data-f", f); if (f) b.style.fontFamily = "'" + f + "', sans-serif";
       b.onclick = function () { var real = document.querySelector('#fonts [data-f="' + f + '"]'); if (real) real.click(); else edit(function (s2) { s2.font = f || undefined; }); }; tf.appendChild(b); }); }
     Array.prototype.forEach.call(tf.children, function (b) { b.classList.toggle("sel", b.getAttribute("data-f") === (st.font || "")); });
-    $("tNote").textContent = !sel ? "" : !wok ? (sel.el.closest(".hk_ptile") ? "A tile's words come from its card." : "This box holds more than words. Tap the words box above to pick the words inside.") : sel.in === "card" ? "New words go on this card only. Size, colour and font follow Where (" + (scope === "card" ? "only this card" : scope === "kind" ? "cards like this" : "every card") + ")." : "";
+    $("tNote").textContent = !sel ? "" : !wok ? (sel.el.closest(".hk_ptile") ? "A tile's words come from its card." : "This box holds more than words. Tap the words box above to pick the words inside.") : sel.in === "card" ? "New words go on this card only. Size, colour and font follow Apply to (" + (scope === "card" ? "only this card" : scope === "kind" ? "cards like this" : "every card") + ")." : "";
   }
   $("tWords").addEventListener("focus", function () { var k = wordsInside(); if (!k) return; select(k); setTimeout(function () { $("tWords").focus(); $("tWords").select(); }, 60); });
   var tApply = function () { if (!sel || !wordsOk()) return; var v = $("tWords").value.replace(/\s+/g, " ").trim(), now = (function () { var tk = sel.in === "card" ? Object.assign(key(), { scope: "card", value: sel.card }) : null, tr = tk ? findRule(tk) : findRule(key()); return (tr && tr.set && tr.set.text) || allWords(sel.el); })();
@@ -2162,6 +2168,7 @@ body[data-tab="where"] .tools [data-tab="where"], body[data-tab="history"] .tool
     });
   }
   window.addEventListener("resize", function () { fitSheet(false); });
+  (function () { var lr = document.querySelector(".levelrow"); if (lr) lr.addEventListener("wheel", function (e) { if (Math.abs(e.deltaY) > Math.abs(e.deltaX) && lr.scrollWidth > lr.clientWidth) { lr.scrollLeft += e.deltaY; e.preventDefault(); } }, { passive: false }); })();
   $("tabsMore").onclick = function () { var tb = $("tabs"); tb.scrollBy({ left: tb.clientWidth * 0.7, behavior: "smooth" }); };
   var showTab = function (t) { setTimeout(bendDots, 0); setTimeout(function () { fitSheet(false); }, 0); setMini(false); if (document.body.getAttribute("data-tab") !== t) { var tl = document.querySelector(".tools"); if (tl) tl.scrollTop = 0; } document.body.setAttribute("data-tab", t); Array.prototype.forEach.call($("tabs").children, function (b) { b.classList.toggle("on", b.getAttribute("data-t") === t); });
     /* the open tab is always in view on the phone's sideways tab row */
