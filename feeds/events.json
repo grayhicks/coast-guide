@@ -7,7 +7,7 @@
     "from": "2026-10-04",
     "to": "2027-02-01"
   },
-  "count": 3091,
+  "count": 3092,
   "note": "Event details are compiled from the venue or organizer pages named in each record's sources. Check the venue before you travel. Weather data elsewhere on the site is Open-Meteo, CC BY 4.0.",
   "events": [
     {
@@ -21419,6 +21419,36 @@
         }
       ],
       "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_riptide_cardcon_1018-2026-10-18",
+      "title": "Riptide Cardcon",
+      "date": "2026-10-18",
+      "endDate": null,
+      "startTime": "09:00",
+      "endTime": "18:00",
+      "when": "Sunday 10/18 · 9:00 AM to 6:00 PM",
+      "venue": "Destin-Fort Walton Beach Rigdon Center",
+      "address": "1958 Lewis Turner Blvd, Fort Walton Beach, FL 32547",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "Riptide Cardcon bills itself as the Emerald Coast's premier card show, and admission is free. Dealers bring Pokémon and other trading card games, One Piece, sports cards and memorabilia to the Rigdon Center at the Destin-Fort Walton Beach Fairgrounds from 9 AM to 6 PM. JSA is on site to authenticate cards and take submissions, and food trucks stay all day.",
+      "url": "https://coastaleventures.com/events/ev-riptide-cardcon-1018.html",
+      "sources": [
+        {
+          "note": "instagram.com/riptidecardcon: the organiser's own posts (date, 9 AM to 6 PM, Rigdon Center, free admission, JSA on site, food trucks), read 10/04/2026",
+          "url": "https://www.instagram.com/riptidecardcon/"
+        },
+        {
+          "note": "Rigdon Center street address, as on the Destin chamber's event page for the same building",
+          "url": "https://business.destinchamber.com/events/details/america-250-heritage-festival-and-scouting-expo-61138"
+        }
+      ],
+      "checkedOn": "2026-10-04"
     },
     {
       "id": "ev_seville_sundaybrunch-2026-10-18",
