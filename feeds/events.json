@@ -1,20 +1,20 @@
 {
   "name": "Coastal Eventures events",
   "site": "https://coastaleventures.com/",
-  "generated": "2026-10-04",
+  "generated": "2026-10-05",
   "timezone": "America/Chicago",
   "window": {
-    "from": "2026-10-04",
-    "to": "2027-02-01"
+    "from": "2026-10-05",
+    "to": "2027-02-02"
   },
-  "count": 3092,
+  "count": 3073,
   "note": "Event details are compiled from the venue or organizer pages named in each record's sources. Check the venue before you travel. Weather data elsewhere on the site is Open-Meteo, CC BY 4.0.",
   "events": [
     {
-      "id": "ev_usta_october_l4_open_1003-2026-10-04",
+      "id": "ev_usta_october_l4_open_1003-2026-10-05",
       "title": "2026 USTA October Level 4 Open",
-      "date": "2026-10-04",
-      "endDate": "2026-10-05",
+      "date": "2026-10-05",
+      "endDate": null,
       "startTime": null,
       "endTime": null,
       "when": "Sat 10/3 – Mon 10/5 · times not yet published",
@@ -41,35 +41,9 @@
       "checkedOn": "2026-10-02"
     },
     {
-      "id": "ev_ballet_frank-2026-10-04",
-      "title": "Ballet Pensacola: Frankenstein",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Fri 10/2 7 PM · Sat 10/3 1:30 PM and 7 PM · Sun 10/4 1:30 PM",
-      "venue": "Ballet Pensacola, The Center",
-      "address": "400 S Jefferson St, Pensacola, FL 32502",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "A gothic, atmospheric Frankenstein ballet plays one October weekend, October 2-4, a moody, elegant date. Bonus for a young dance fan: a matinee could work too.",
-      "url": "https://coastaleventures.com/events/ev-ballet-frank.html",
-      "sources": [
-        {
-          "note": "Ballet Pensacola: Frankenstein Oct 2-4 @ The Center, 400 S Jefferson St: Fri 7 PM, Sat 1:30 + 7 PM, Sun 1:30 PM",
-          "url": "https://www.balletpensacola.org/performances"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_game_days_at_marina_bar_and_grill_1001-2026-10-04",
+      "id": "ev_game_days_at_marina_bar_and_grill_1001-2026-10-05",
       "title": "Game Days at Marina Bar & Grill",
-      "date": "2026-10-04",
+      "date": "2026-10-05",
       "endDate": "2026-12-31",
       "startTime": null,
       "endTime": null,
@@ -97,9 +71,9 @@
       "checkedOn": "2026-09-26"
     },
     {
-      "id": "ev_jazz_art_writers_south_festival_youth_exhibi_0915-2026-10-04",
+      "id": "ev_jazz_art_writers_south_festival_youth_exhibi_0915-2026-10-05",
       "title": "Jazz Art Writers South Festival Youth Exhibit",
-      "date": "2026-10-04",
+      "date": "2026-10-05",
       "endDate": "2026-11-01",
       "startTime": null,
       "endTime": null,
@@ -123,9 +97,9 @@
       "checkedOn": "2026-09-26"
     },
     {
-      "id": "nl_fubar_nights-2026-10-04",
+      "id": "nl_fubar_nights-2026-10-05",
       "title": "Karaoke & DJ Nights: FUBAR Pizza Bar",
-      "date": "2026-10-04",
+      "date": "2026-10-05",
       "endDate": null,
       "startTime": null,
       "endTime": null,
@@ -149,61 +123,9 @@
       "checkedOn": "2026-09-26"
     },
     {
-      "id": "nl_mancis_live-2026-10-04",
-      "title": "Live Music: Manci's Antique Club",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Thu 6:30 PM · Fri-Sat 7:30 PM · Sun 6:00 PM",
-      "venue": "Manci's Antique Club",
-      "address": "1715 Main St, Daphne, AL 36526",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "This Daphne institution has walls of Jim Beam decanters and live local bands Thursday through Sunday. It is a grown-up night out.",
-      "url": "https://coastaleventures.com/events/nl-mancis-live.html",
-      "sources": [
-        {
-          "note": "Manci's Antique Club: live music Thu–Sun (own site)",
-          "url": "https://www.mancisantiqueclub.com/"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "nl_paradise_live-2026-10-04",
-      "title": "Live Music: Paradise Bar & Grill",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Tue/Fri/Sat 5:30 PM · Sun 2:30 PM",
-      "venue": "Paradise Bar & Grill",
-      "address": "21 Via De Luna Dr, Pensacola Beach, FL 32561",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Beachside live music plays most nights on Pensacola Beach, with rotating local acts starting at 5:30 (Sundays 2:30). Wine Down Wednesday runs $3 house and $6 premium wines all day.",
-      "url": "https://coastaleventures.com/events/nl-paradise-live.html",
-      "sources": [
-        {
-          "note": "Paradise Bar & Grill: live music calendar (own site)",
-          "url": "https://www.paradisebar-grill.com/Music-Calendar"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_uwf_make_it_last_1001-2026-10-04",
+      "id": "ev_uwf_make_it_last_1001-2026-10-05",
       "title": "Make It Last: Gallery Exhibition at UWF",
-      "date": "2026-10-04",
+      "date": "2026-10-05",
       "endDate": "2026-11-20",
       "startTime": null,
       "endTime": null,
@@ -231,9 +153,9 @@
       "checkedOn": "2026-10-02"
     },
     {
-      "id": "ev_monochrome_exhibition_1003-2026-10-04",
+      "id": "ev_monochrome_exhibition_1003-2026-10-05",
       "title": "MONOCHROME exhibition",
-      "date": "2026-10-04",
+      "date": "2026-10-05",
       "endDate": "2026-10-24",
       "startTime": null,
       "endTime": null,
@@ -257,65 +179,9 @@
       "checkedOn": "2026-10-03"
     },
     {
-      "id": "ev_ccb_nuts_and_butts_1002-2026-10-04",
-      "title": "Nuts and Butts Festival",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Friday 10/2 through Sunday 10/4 · all day",
-      "venue": "Coastal County Brewing Company",
-      "address": "3041 E Olive Rd, Pensacola, FL 32514",
-      "category": "town",
-      "categoryLabel": "Town and community",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Coastal County's pork and peanut festival runs three days in the beer garden. It is all day Friday through Sunday on the brewery's own calendar. No admission is published.",
-      "url": "https://coastaleventures.com/events/ev-ccb-nuts-and-butts-1002.html",
-      "sources": [
-        {
-          "note": "coastalcountybrewing.com: the brewery's own events calendar, read 09/11/2026",
-          "url": "https://coastalcountybrewing.com/events"
-        }
-      ],
-      "checkedOn": "2026-09-11"
-    },
-    {
-      "id": "ev_painting_with_a_twist_pensacola_pa_1003-2026-10-04",
-      "title": "Painting with a Twist Pensacola: paint-and-sip, family paint days and date nights (weekly programme)",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Classes most days: family days Saturday 10:30 AM, brunch Sunday 11 AM, evenings Wednesday to Saturday",
-      "venue": "Painting with a Twist Pensacola",
-      "address": "4771 Bayou Blvd Suite C11, Pensacola, FL 32503",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "$35 per family"
-      },
-      "summary": "Painting with a Twist Pensacola is an artist-led paint-and-sip studio at 4771 Bayou Blvd Suite C11 with several classes every week. October has family paint days (ages 6 and up with a parent, no alcohol), adult Paint & Sip and Date Night classes (ages 16 and up on date nights), Halloween-themed canvases and Paint Your Pet. Classes cost $35-$60 depending on the class, and alcohol is sold on site with no BYOB.",
-      "url": "https://coastaleventures.com/events/ev-painting-with-a-twist-pensacola-pa-1003.html",
-      "sources": [
-        {
-          "note": "Studio page: address 4771 Bayou Blvd Suite C11, phone (850) 471-1450, Alcohol for Purchase, No BYOB; Brushes & Brunch Oct 4 $35-45, Treat Yourself Tuesday Oct 6 6 PM",
-          "url": "https://www.paintingwithatwist.com/studio/pensacola"
-        },
-        {
-          "note": "October calendar: class names, times and prices Oct 3-31",
-          "url": "https://www.paintingwithatwist.com/studio/pensacola/calendar/"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_songwriters-2026-10-04",
+      "id": "ev_songwriters-2026-10-05",
       "title": "Pensacola Beach Songwriters Festival (cherry-pick sets)",
-      "date": "2026-10-04",
+      "date": "2026-10-05",
       "endDate": "2026-10-11",
       "startTime": null,
       "endTime": null,
@@ -339,9 +205,9 @@
       "checkedOn": "2026-08-05"
     },
     {
-      "id": "ev_owa_primal_fear_2026-2026-10-04",
+      "id": "ev_owa_primal_fear_2026-2026-10-05",
       "title": "Primal Fear Haunted Attraction at OWA",
-      "date": "2026-10-04",
+      "date": "2026-10-05",
       "endDate": "2026-10-31",
       "startTime": null,
       "endTime": null,
@@ -365,47 +231,9 @@
       "checkedOn": "2026-09-24"
     },
     {
-      "id": "ev_south_alabama_comic_con_1003-2026-10-04",
-      "title": "South Alabama Comic Con",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Saturday 10/3 · 10:00 AM to 6:00 PM · Sunday 10/4 · 11:00 AM to 5:00 PM",
-      "venue": "Mobile Convention Center",
-      "address": "1 S. Water St, Mobile, AL 36602",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $30"
-      },
-      "summary": "South Alabama Comic Con fills the Mobile Convention Center for two days with guests from film, television, anime and comics, plus cosplay, artist and vendor booths, and gaming. The show includes a costume contest, guest Q&As and fan panels. Children ten and under get in free with a paid adult, limited to two children per adult ticket. Autographs and photo ops cost extra, and every bag is searched at the door.",
-      "url": "https://coastaleventures.com/events/ev-south-alabama-comic-con-1003.html",
-      "sources": [
-        {
-          "note": "southalabamacomiccon.com: dates, hours and venue address",
-          "url": "https://www.southalabamacomiccon.com/"
-        },
-        {
-          "note": "southalabamacomiccon.com: tickets page, single day and weekend prices, kids and military policy",
-          "url": "https://www.southalabamacomiccon.com/tickets"
-        },
-        {
-          "note": "southalabamacomiccon.com: FAQ, bag search policy and cosplay contest registration",
-          "url": "https://www.southalabamacomiccon.com/faq"
-        },
-        {
-          "note": "Regions Arena: Mobile Convention Center event listing for October 3-4",
-          "url": "https://www.regionsarena.com/events/detail/south-alabama-comic-con-2"
-        }
-      ],
-      "checkedOn": "2026-09-29"
-    },
-    {
-      "id": "ev_pensacola_state_wanda_sullivan_bloem-2026-10-04",
+      "id": "ev_pensacola_state_wanda_sullivan_bloem-2026-10-05",
       "title": "Wanda Sullivan: Bloem Exhibition",
-      "date": "2026-10-04",
+      "date": "2026-10-05",
       "endDate": "2026-12-11",
       "startTime": null,
       "endTime": null,
@@ -429,65 +257,9 @@
       "checkedOn": "2026-09-24"
     },
     {
-      "id": "nl_sandshaker_live-2026-10-04",
-      "title": "Weekend Live Music: Sandshaker Lounge",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Every weekend · evenings",
-      "venue": "Sandshaker Lounge",
-      "address": "731 Pensacola Beach Blvd, Pensacola Beach, FL 32561",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "The Shaker, birthplace of the Bushwacker, has live music every weekend and never a cover. It is a classic Pensacola Beach dive, about 25 minutes from the bridge.",
-      "url": "https://coastaleventures.com/events/nl-sandshaker-live.html",
-      "sources": [
-        {
-          "note": "Sandshaker Lounge: the bar's own site, read 09/02/2026 for live music every weekend, never a cover, and the 10 AM to 3 AM hours seven days a week",
-          "url": "https://www.sandshaker.com/"
-        }
-      ],
-      "checkedOn": "2026-09-02"
-    },
-    {
-      "id": "ev_takeakidfishing_1004-2026-10-04",
-      "title": "Take a Kid Fishing Day: Okaloosa Island Pier",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": "07:00",
-      "endTime": "16:00",
-      "when": "Sun 10/04/2026 · 7:00 AM-4:00 PM",
-      "venue": "Okaloosa Island Pier",
-      "address": "1030 Miracle Strip Pkwy SE, Fort Walton Beach, FL 32548",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $2"
-      },
-      "summary": "Kids twelve and under fish free for the whole day, the first hundred get a rod to keep, and the pier lends tackle to anyone who needs it. Bait is donated. This is the fourth year running, with vendors, games, and food along the deck.",
-      "url": "https://coastaleventures.com/events/ev-takeakidfishing-1004.html",
-      "sources": [
-        {
-          "note": "The Island Pier, own pricing page: \"Adult Fishing Pass $8.00\", \"Fishing Rod Rental $30.00\", \"Observers/Walking Pass $2.00\"",
-          "url": "https://www.theislandpier.com/pricing.php"
-        },
-        {
-          "note": "Okaloosa County: own pier page naming the leaseholder as the fee authority",
-          "url": "https://myokaloosa.com/Parks/pier"
-        }
-      ],
-      "checkedOn": "2026-08-08"
-    },
-    {
-      "id": "ev_2026_ala_case_fall_conference_1004-2026-10-04",
+      "id": "ev_2026_ala_case_fall_conference_1004-2026-10-05",
       "title": "2026 ALA-CASE Fall Conference",
-      "date": "2026-10-04",
+      "date": "2026-10-05",
       "endDate": "2026-10-07",
       "startTime": "08:00",
       "endTime": "17:00",
@@ -515,39 +287,9 @@
       "checkedOn": "2026-09-26"
     },
     {
-      "id": "ev_destin_5k_rodeo_1004-2026-10-04",
-      "title": "Destin Fishing Rodeo: Rodeo Run 5K",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": "08:00",
-      "endTime": null,
-      "when": "Sunday 10/4 · 8:00 AM (finish/awards time not published)",
-      "venue": "Clement E. Taylor Park",
-      "address": "131 Calhoun Ave, Destin, FL 32541",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $35"
-      },
-      "summary": "The Rodeo Run is a flat 3.1-mile course starting and ending at Clement E. Taylor Park on the Destin Harbor. It has separate runner, walker and open-runner categories. Kids and wheelchair participants are welcome, and the first 200 registrants get a T-shirt. Proceeds support the Miss Destin Scholarship Fund and local charities; awards follow at AJ's Seafood & Oyster Bar.",
-      "url": "https://coastaleventures.com/events/ev-destin-5k-rodeo-1004.html",
-      "sources": [
-        {
-          "note": "Destin Fishing Rodeo: official Rodeo Run registration page, 2026 date, fee and route",
-          "url": "https://destinfishingrodeo.org/register/rodeorun/"
-        },
-        {
-          "note": "City of Destin: Clement E. Taylor Park address",
-          "url": "https://www.cityofdestin.com/718/Clement-E-Taylor-Park"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_great_bellingrath_harvest_0919-2026-10-04",
+      "id": "ev_great_bellingrath_harvest_0919-2026-10-05",
       "title": "The Great Bellingrath Harvest",
-      "date": "2026-10-04",
+      "date": "2026-10-05",
       "endDate": "2026-11-08",
       "startTime": "08:00",
       "endTime": "17:00",
@@ -573,916 +315,6 @@
         }
       ],
       "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_steves_farm_adventure_zone_0929-2026-10-04",
-      "title": "Adventure Zone at Steve's Fishing and Adventure Farm",
-      "date": "2026-10-04",
-      "endDate": "2026-10-31",
-      "startTime": "09:00",
-      "endTime": "18:00",
-      "when": "Mon-Sat through Oct 31 · 9 AM to 6 PM",
-      "venue": "Steve's Fishing and Adventure Farm",
-      "address": "1201 S Highway 99, Walnut Hill, FL 32568",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Steve's Farm has rebranded as Steve's Fishing and Adventure Farm and opened a fall attraction in Walnut Hill with a corn maze, a giant slide, a kids' zipline, a jump pad, hayrides, a wagon train, a sunflower field and a pumpkin patch. It suits a family with small children who want a half day outdoors. The farm's own page does not print admission prices, so check the ticket page before driving out.",
-      "url": "https://coastaleventures.com/events/ev-steves-farm-adventure-zone-0929.html",
-      "sources": [
-        {
-          "note": "stevesfarm.net Adventure Zone page: corn maze, giant slide, kids' zipline, jump pad, hayride, wagon train, sunflower field and pumpkin patch, with single day and season passes",
-          "url": "https://stevesfarm.net/adventure-zone/"
-        },
-        {
-          "note": "stevesfarm.simpletix.com: Adventure Zone listed as an upcoming event starting 9/29/2026 at 1201 South Highway 99, Walnut Hill",
-          "url": "https://stevesfarm.simpletix.com/"
-        }
-      ],
-      "checkedOn": "2026-09-29"
-    },
-    {
-      "id": "ev_ferry-2026-10-04",
-      "title": "Pensacola Bay Ferry to Fort Pickens",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": "09:00",
-      "endTime": "18:00",
-      "when": "Sat + Sun · runs 9 AM-6 PM",
-      "venue": "Downtown ferry landing → Fort Pickens → Pensacola Beach",
-      "address": "700 S Barracks St, Pensacola, FL 32502",
-      "category": "beach",
-      "categoryLabel": "Beach",
-      "price": {
-        "kind": "priced",
-        "label": "from $20"
-      },
-      "summary": "Boat + fort + beach without the car: ranger narration across the bay, tunnels and batteries at Fort Pickens for engineering-minded kids, then the beach stop. Strollers roll aboard.",
-      "url": "https://coastaleventures.com/events/ev-ferry.html",
-      "sources": [
-        {
-          "note": "NPS Gulf Islands, Pensacola Bay City Ferry: 'Ticket prices are listed on www.pensacolabaycityferry.com'",
-          "url": "https://www.nps.gov/guis/planyourvisit/pensacolabaycityferry.htm"
-        },
-        {
-          "note": "Pensacola Bay Cruises: operator site (no fare table published; re-checked 07/27/2026)",
-          "url": "https://www.pensacolabaycityferry.com/"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_free_yoga_in_the_park_at_bayview_p_1004-2026-10-04",
-      "title": "Free Yoga in the Park at Bayview Park",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": "09:30",
-      "endTime": null,
-      "when": "First Sunday of the month · 9:30 AM",
-      "venue": "Bayview Park (dock next to the dog beach, east of Bayview Senior Resource Center)",
-      "address": "2001 E. Lloyd Street, Pensacola, FL 32503",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Free Yoga in the Park is a one-hour outdoor class at Bayview Park in Pensacola, led by Breathe Yoga and Wellness Center with City of Pensacola Parks and Recreation. It meets on the first Sunday of each month at 9:30 AM, next on Oct 4, Nov 1 and Dec 6. All ages and levels are welcome, and it's free.",
-      "url": "https://coastaleventures.com/events/ev-free-yoga-in-the-park-at-bayview-p-1004.html",
-      "sources": [
-        {
-          "note": "First Sunday monthly 9:30 AM, Bayview Park, free, instructor Breathe Yoga and Wellness Center",
-          "url": "https://www.cityofpensacola.com/3409/Yoga-and-Wellness"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_coco_and_crawlers_0917-2026-10-04",
-      "title": "Coco & Crawlers",
-      "date": "2026-10-04",
-      "endDate": "2026-12-17",
-      "startTime": "10:00",
-      "endTime": "11:00",
-      "when": "Thursday 9/17 · 10:00 AM to 11:00 AM",
-      "venue": "Ben May Main Library, Youth Programming Room",
-      "address": "701 Government St, Mobile, AL",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "This caregiver meetup in the Youth Programming Room at Ben May Main Library pairs children's play with a warm drink. It gives caregivers time to connect with each other. It runs Thursday morning from 10 AM to 11 AM, repeating on the third Thursday of the month, with more dates on October 15, November 19 and December 17. Registration is requested but not required.",
-      "url": "https://coastaleventures.com/events/ev-coco-and-crawlers-0917.html",
-      "sources": [
-        {
-          "note": "mobilepubliclibrary.org: the organizer's own page for this event",
-          "url": "https://www.mobilepubliclibrary.org/event/coco-crawlers-16284"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_destin_rodeo_weighins-2026-10-04",
-      "title": "Destin Fishing Rodeo: Daily Public Weigh-Ins",
-      "date": "2026-10-04",
-      "endDate": "2026-10-31",
-      "startTime": "10:00",
-      "endTime": "19:00",
-      "when": "Daily, Oct 1 – Oct 31 · 10:00 AM-7:00 PM",
-      "venue": "Docks behind AJ's Seafood & Oyster Bar",
-      "address": "116 Harbor Blvd, Destin, FL 32541",
-      "category": "beach",
-      "categoryLabel": "Beach",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Anglers competing in the month-long Destin Fishing Rodeo bring their catches to the scale on the harbor docks behind AJ's Seafood & Oyster Bar every day in October. The public is welcome to watch for free from 10 AM to 7 PM, and the crowd tends to grow with the size of the fish coming off the boats.",
-      "url": "https://coastaleventures.com/events/ev-destin-rodeo-weighins.html",
-      "sources": [
-        {
-          "note": "Destin Fishing Rodeo: Rodeo Events page (free public weigh-ins)",
-          "url": "https://destinfishingrodeo.org/rodeo-fun-for-everyone/rodeo-events/"
-        },
-        {
-          "note": "Destin Fishing Rodeo: Contact Us page",
-          "url": "https://destinfishingrodeo.org/destin-fishing-rodeo/contact-us/"
-        },
-        {
-          "note": "Destin Fishing Rodeo: How to Participate page",
-          "url": "https://destinfishingrodeo.org/just-for-anglers/how-to-participate/"
-        },
-        {
-          "note": "Destin Fishing Rodeo: parking map",
-          "url": "https://destinfishingrodeo.org/destin-fishing-rodeo/where-to-park-map/"
-        }
-      ],
-      "checkedOn": "2026-08-24"
-    },
-    {
-      "id": "ev_sunmkt-2026-10-04",
-      "title": "Sunday Market on Palafox",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": "10:00",
-      "endTime": "15:00",
-      "when": "Sundays · ~10 AM-3 PM",
-      "venue": "MLK Jr. Plaza, Downtown Pensacola",
-      "address": "200 N Palafox St, Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "The Sunday sibling of Palafox Market brings crafts, art, and prepared food. Confirm each week's market on their Facebook page before driving.",
-      "url": "https://coastaleventures.com/events/ev-sunmkt.html",
-      "sources": [
-        {
-          "note": "SMOP: active org, vendor apps updated 06/16/2026",
-          "url": "https://www.smopalafox.com/"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_crosspoint_disciplestory-2026-10-04",
-      "title": "DiscipleStory",
-      "date": "2026-10-04",
-      "endDate": "2026-10-18",
-      "startTime": "11:00",
-      "endTime": null,
-      "when": "Sundays 9/13 – 10/18 (of an 8-week class) · 11:00 AM (end time not published)",
-      "venue": "Crosspoint Niceville Campus, Room 912",
-      "address": "214 Partin Dr S, Niceville, FL 32578",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "An eight-week Sunday morning class at Crosspoint's Niceville campus walks participants through identifying their own story, passions, abilities and role in the church's mission. The class starts September 13 at 11 AM; the campus newsletter does not publish an end time.",
-      "url": "https://coastaleventures.com/events/ev-crosspoint-disciplestory.html",
-      "sources": [
-        {
-          "note": "Crosspoint Church: Niceville Campus eLetter",
-          "url": "https://crosspoint.church/news/eletternv/"
-        },
-        {
-          "note": "Crosspoint Church: campus locations",
-          "url": "https://crosspoint.church/locations/"
-        }
-      ],
-      "checkedOn": "2026-08-24"
-    },
-    {
-      "id": "ev_quayside_summers_end_2026-2026-10-04",
-      "title": "Summer's End at Quayside Art Gallery",
-      "date": "2026-10-04",
-      "endDate": "2026-10-05",
-      "startTime": "11:00",
-      "endTime": "17:00",
-      "when": "Daily through 10/5 · 11:00 AM to 5:00 PM",
-      "venue": "Quayside Art Gallery",
-      "address": "17 E Zaragoza St, Pensacola, FL 32502",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Quayside Art Gallery in downtown Pensacola is showing Summer's End, an exhibition about the turn from late summer into autumn, through October 5. Four artists fill the show with changing landscapes, vacation memories and the amber light of late summer evenings. The gallery is a locally owned artist co-op with three floors of work by more than 50 local artists, and it opens every day from 11 AM to 5 PM.",
-      "url": "https://coastaleventures.com/events/ev-quayside-summers-end-2026.html",
-      "sources": [
-        {
-          "note": "Quayside Art Gallery: events page and its Summer's End flyer, read for the run dates, the theme and the four artists",
-          "url": "https://quaysidegallery.com/publicevents/"
-        },
-        {
-          "note": "Quayside Art Gallery: home page, read for the daily hours and the street address",
-          "url": "https://quaysidegallery.com/"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_seville_sundaybrunch-2026-10-04",
-      "title": "Sunday Brunch with John Wheeler: Seville Quarter",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": "11:00",
-      "endTime": "14:00",
-      "when": "Sundays · 11:00 AM-2:00 PM",
-      "venue": "Seville Quarter, Apple Annie's",
-      "address": "130 E Government St, Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Brunch runs in the courtyard room while John Wheeler plays through it. It is a daytime date that ends early enough to still leave a Sunday afterward.",
-      "url": "https://coastaleventures.com/events/ev-seville-sundaybrunch.html",
-      "sources": [
-        {
-          "note": "Seville Quarter: own Sunday Brunch page, performer John Wheeler, \"$20 BOGO champagne bottles, loaded bloody mary's, & BARE drink specials\"",
-          "url": "https://sevillequarter.com/event/sunday-brunch/2026-08-09/"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_aia_alabama_annual_conference_2026_1002-2026-10-04",
-      "title": "AIA Alabama Annual Conference 2026",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": "12:00",
-      "endTime": null,
-      "when": "Friday 10/2 at 12:00 PM · runs through Sunday 10/4",
-      "venue": "Perdido Beach Resort",
-      "address": "27200 Perdido Beach Blvd, Orange Beach, AL 36561",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $35"
-      },
-      "summary": "Perdido Beach Resort hosts the AIA Alabama Annual Conference 2026 starting Friday, October 2. Architecture professionals gather for continuing education, networking, a product show, awards, and social events. Full meeting registration is $495 for AIA members and $695 for non-members, with a $50 rate for young professionals and students. A spouse or guest can attend for $75, and children are $35. The conference returns every year.",
-      "url": "https://coastaleventures.com/events/ev-aia-alabama-annual-conference-2026-1002.html",
-      "sources": [
-        {
-          "note": "aiaalabama.org: the organizer's own page, read for the admission",
-          "url": "https://www.aiaalabama.org/event-details-registration/annual-conference-2026"
-        },
-        {
-          "note": "aiaalabama.org: the admission",
-          "url": "https://www.aiaalabama.org/conference-on-architecture"
-        }
-      ],
-      "checkedOn": "2026-08-28"
-    },
-    {
-      "id": "ev_brunch_and_rally_0823-2026-10-04",
-      "title": "Brunch & Rally",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": "13:00",
-      "endTime": "17:00",
-      "when": "Sundays · 1:00 PM to 5:00 PM",
-      "venue": "Pickleball at OWA",
-      "address": "200-A N. OWA Blvd, Foley, AL 36535",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $10"
-      },
-      "summary": "Pickleball at OWA runs indoor open play every Sunday afternoon, paired with a discount for anyone who shows a same-day receipt from Waffles R Wild. Open play costs $10 for nonmembers, members play free, and a Waffles R Wild receipt brings the nonmember rate down to $7. It repeats weekly, so today's session is one stop on an ongoing schedule.",
-      "url": "https://coastaleventures.com/events/ev-brunch-and-rally-0823.html",
-      "sources": [
-        {
-          "note": "visitowa.com: the organizer's own page, read for the admission and current schedule",
-          "url": "https://visitowa.com/entertainment/pickleball-at-owa/"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_monthly_gym_leader_challenge_pokem_1004-2026-10-04",
-      "title": "Monthly Gym Leader Challenge (Pokémon) at Trinity Games",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": "13:00",
-      "endTime": "16:00",
-      "when": "First Sunday of the month · 1 PM-4 PM",
-      "venue": "Trinity Games",
-      "address": "2400 West Michigan Avenue, Pensacola, FL 32526",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "The Monthly Gym Leader Challenge is a free Pokémon event at Trinity Games in Pensacola on the first Sunday of each month, 1-4 PM. Decks are mono-type, and each player adds one booster pack to the prize pool. Payout is the top 2 for 8 or fewer players, the top 4 for 9 to 16, and the top 8 for 17 or more. Rules are at gymleaderchallenge.com/rules.",
-      "url": "https://coastaleventures.com/events/ev-monthly-gym-leader-challenge-pokem-1004.html",
-      "sources": [
-        {
-          "note": "Trinity Games main calendar (The Shop Calendar widget, shop trinity-games-llc.myshopify.com): 'PokeMon: Monthly Gym Leader Challenge', Oct 04 / Nov 01 / Dec 06, 1:00 PM, 4:00 PM, 2400 West Michigan Avenue, Pensacola; 'First Sunday of every month we will have a FREE Gym Leader Challenge event'",
-          "url": "https://www.trinitygamesllc.com/pages/main-calendar"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_pokemon_league_at_trinity_games_1004-2026-10-04",
-      "title": "Pokémon League at Trinity Games",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": "13:00",
-      "endTime": "16:00",
-      "when": "Sundays · 1 PM-4 PM",
-      "venue": "Trinity Games",
-      "address": "2400 W Michigan Ave Unit 27, Pensacola, FL 32526",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Pokémon League at Trinity Games is a free weekly play session every Sunday from 1-4 PM at the shop in Pensacola. Trinity Games is a Wizards-certified Magic and trading card store with open play tables. The shop also runs other Pokémon events.",
-      "url": "https://coastaleventures.com/events/ev-pokemon-league-at-trinity-games-1004.html",
-      "sources": [
-        {
-          "note": "Weekly Events banner: Sun PokeMon League 1-4 PM FREE",
-          "url": "https://trinitygamesllc.com/pages/events"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_university_of_west_florida_women_s_soccer_vs_1004-2026-10-04",
-      "title": "UWF Women's Soccer vs Jacksonville University",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": "13:00",
-      "endTime": "15:00",
-      "when": "Sunday 10/4 · 1:00 PM to 3:00 PM",
-      "venue": "UWF Soccer Complex",
-      "address": "11000 University Parkway, Pensacola, FL 32514",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $3"
-      },
-      "summary": "University of West Florida women's soccer hosts Jacksonville University at the UWF Soccer Complex, part of the program's debut NCAA Division I season. General admission is five dollars, and seniors, military and visiting students pay three dollars. UWF students, faculty, staff, children under six and youth in uniform get in free. Tickets are cash only at the gate.",
-      "url": "https://coastaleventures.com/events/ev-university-of-west-florida-women-s-soccer-vs-1004.html",
-      "sources": [
-        {
-          "note": "goargos.com: the admission and current schedule",
-          "url": "https://goargos.com/sports/2014/12/9/GEN_1209141045.aspx?id=87"
-        },
-        {
-          "note": "goargos.com: the organizer's own page, read for the current schedule",
-          "url": "https://goargos.com/news/2026/7/28/womens-soccer-womens-soccer-releases-2026-schedule.aspx"
-        },
-        {
-          "note": "events.uwf.edu: the current schedule",
-          "url": "https://events.uwf.edu/soccer_complex"
-        },
-        {
-          "note": "events.uwf.edu: the current schedule",
-          "url": "https://events.uwf.edu/event/university-of-west-florida-womens-soccer-vs-jacksonville-university"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_yu_gi_oh_weekly_casual_play_and_to_1004-2026-10-04",
-      "title": "Yu-Gi-Oh! Weekly Casual Play and Tournament",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": "13:00",
-      "endTime": null,
-      "when": "Sundays · 1 PM",
-      "venue": "GameMasters Guild",
-      "address": "743 Ashley Drive, Crestview, FL 32536",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $5"
-      },
-      "summary": "The Yu-Gi-Oh weekly tournament is an Advanced Constructed Yu-Gi-Oh TCG event at GameMasters Guild in Crestview, every Sunday at 1 PM. Entry is $5 including tax. Every player gets an OTS pack, and top placers get more.",
-      "url": "https://coastaleventures.com/events/ev-yu-gi-oh-weekly-casual-play-and-to-1004.html",
-      "sources": [
-        {
-          "note": "Yu-Gi-Oh weekly Sunday tournament 1 PM $5",
-          "url": "https://gmgcrestview.com/events/"
-        },
-        {
-          "note": "GameMasters Guild's own embedded Google Calendar feed (gmgcrestview@aol.com), read as ICS today: Yu-Gi-Oh weekly Sunday tournament 1 PM $5",
-          "url": "https://calendar.google.com/calendar/ical/gmgcrestview%40aol.com/public/basic.ics"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_navarre_fishing_rodeo_1003-2026-10-04",
-      "title": "Navarre Fishing Rodeo",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": "14:00",
-      "endTime": "17:00",
-      "when": "Saturday 10/3 · 2:00 PM to 5:00 PM",
-      "venue": "Juana's Pagodas & Sailors' Grill weigh-in and awards site",
-      "address": "1451 Navarre Beach Causeway, Navarre, FL 32566",
-      "category": "beach",
-      "categoryLabel": "Beach",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Anglers spread out across the shore, boats, kayaks and the pier for the two day Navarre Fishing Rodeo, with a published Junior Division that keeps the weekend open to younger competitors. Weigh ins run Saturday, and Sunday adds a second round of weigh ins along with the awards presentation.",
-      "url": "https://coastaleventures.com/events/ev-navarre-fishing-rodeo-1003.html",
-      "sources": [
-        {
-          "note": "navarrefishingrodeo.com: the organizer's own page, read for the admission and current schedule",
-          "url": "https://navarrefishingrodeo.com/"
-        },
-        {
-          "note": "juanaspagodas.com: the admission and current schedule",
-          "url": "https://www.juanaspagodas.com/events/navarre-fishing-rodeo"
-        },
-        {
-          "note": "juanaspagodas.com: the current schedule",
-          "url": "https://www.juanaspagodas.com/contact"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_mobile_museum_make_take_art-2026-10-04",
-      "title": "Make & Take Art: weekly drop-in art sessions",
-      "date": "2026-10-04",
-      "endDate": "2026-10-15",
-      "startTime": "15:00",
-      "endTime": "16:30",
-      "when": "Thursdays 8/27 through 10/15 (except Sept 8) · 3:00 PM to 4:30 PM",
-      "venue": "Mobile Museum of Art",
-      "address": "4850 Museum Drive, Mobile, AL 36608",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "The museum runs a free Thursday afternoon art session most weeks, working through materials and techniques borrowed from artists on view. Projects range from geometric shape painting to a Basquiat-inspired dinosaur build. The printed schedule also lists a session for September 8, but that date falls on a Tuesday, not a Thursday, so check with the museum first.",
-      "url": "https://coastaleventures.com/events/ev-mobile-museum-make-take-art.html",
-      "sources": [
-        {
-          "note": "Mobile Museum of Art: official Make & Take Art event page and weekly topic schedule",
-          "url": "https://www.mobilemuseumofart.com/event/make-take-art-7-2/2026-04-02/"
-        }
-      ],
-      "checkedOn": "2026-08-24"
-    },
-    {
-      "id": "ev_painting_with_a_twist_fort_walton_1003-2026-10-04",
-      "title": "Painting with a Twist Fort Walton Beach: paint nights and all-ages sessions (weekly programme)",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": "15:00",
-      "endTime": null,
-      "when": "Classes most weeks: Sunday 3 PM, Monday evenings, Saturday all-ages open studio",
-      "venue": "Painting with a Twist Fort Walton Beach",
-      "address": "255 Miracle Strip Pkwy SE, Suite B-8, Fort Walton Beach, FL 32548",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $27"
-      },
-      "summary": "Painting with a Twist Fort Walton Beach is an artist-led canvas painting studio at 255 Miracle Strip Pkwy SE, Suite B-8, in the Publix shopping center in downtown Fort Walton Beach. October has an all-ages open studio, Halloween sessions, a book-lovers paint night and blacklight painting. Standard canvases cost $37-$39, all-ages sessions $27-$60 and Paint Your Pet $57-$59, and the studio is BYOB-friendly.",
-      "url": "https://coastaleventures.com/events/ev-painting-with-a-twist-fort-walton-1003.html",
-      "sources": [
-        {
-          "note": "Studio page: address, phone (850) 226-7218, BYOB-friendly, Oct 4 Spooky Highland 3 PM $37-39",
-          "url": "https://www.paintingwithatwist.com/studio/fort-walton-beach/"
-        },
-        {
-          "note": "October calendar with ALL AGES sessions and prices",
-          "url": "https://www.paintingwithatwist.com/studio/fort-walton-beach/calendar/"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_trip_down_memory_lane_1004-2026-10-04",
-      "title": "Trip Down Memory Lane",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": "15:00",
-      "endTime": "16:00",
-      "when": "Sunday 10/4 · 3:00 PM to 4:00 PM",
-      "venue": "Brandon Styles Theater",
-      "address": "101-H S. OWA Blvd, Foley, AL 36535",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "priced",
-        "label": "from $25"
-      },
-      "summary": "Tribute performer Brandon Styles channels nearly 40 classic artists from the 1950s through the 1970s at OWA's Brandon Styles Theater. Expect impressions of Frank Sinatra, Tony Bennett, Neil Diamond, and Louis Armstrong. Tickets run $35 for adults and $25 for youth, though the youth age is not published.",
-      "url": "https://coastaleventures.com/events/ev-trip-down-memory-lane-1004.html",
-      "sources": [
-        {
-          "note": "visitowa.com: the organizer's own page, read for the admission and current schedule",
-          "url": "https://visitowa.com/trip-down-memory-lane/"
-        },
-        {
-          "note": "visitowa.com: the current schedule",
-          "url": "https://visitowa.com/events/week/2026-10-04/"
-        },
-        {
-          "note": "visitowa.com: the current schedule",
-          "url": "https://visitowa.com/entertainment/brandon-styles/"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_blessing_of_the_animals_1004-2026-10-04",
-      "title": "Blessing of the Animals",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": "16:00",
-      "endTime": "16:30",
-      "when": "Sunday 10/4 · 4:00 PM to 4:30 PM",
-      "venue": "First Presbyterian Church Fort Walton Beach",
-      "address": "134 Beal Pkwy SW, Fort Walton Beach, FL 32547",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "First Presbyterian Church holds a short outdoor blessing service for pets under the oak trees beside the church, with treats for animals and their people afterward. Leash or carry your pet for everyone's safety, since this draws a crowd of dogs, cats and whatever else the family brings. Parking is in the three lots beside and behind the church.",
-      "url": "https://coastaleventures.com/events/ev-blessing-of-the-animals-1004.html",
-      "sources": [
-        {
-          "note": "fwbchamber.org: the chamber's event listing, read for the schedule and admission",
-          "url": "https://www.fwbchamber.org/events/details/blessing-of-the-animals-25361"
-        },
-        {
-          "note": "firstpresfwb.org: the church's own site, read for the address",
-          "url": "https://firstpresfwb.org/"
-        }
-      ],
-      "checkedOn": "2026-09-16"
-    },
-    {
-      "id": "ev_baldwin_pops_founder_s_day_concert_1004-2026-10-04",
-      "title": "Baldwin Pops Founder's Day Concert",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": "18:00",
-      "endTime": null,
-      "when": "Sunday 10/4 · 6:00 PM",
-      "venue": "Henry George Park on the Bluff",
-      "address": "11 Fairhope Avenue, Fairhope, AL 36532",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "The volunteer Baldwin Pops stage a free Founder's Day concert at Henry George Park on the Bluff, Sunday at 6 PM. Baldwin Pops states its public concerts never require a ticket, so seating is first come, first served on the bluff overlooking Mobile Bay. The concert is an annual Founder's Day tradition in Fairhope.",
-      "url": "https://coastaleventures.com/events/ev-baldwin-pops-founder-s-day-concert-1004.html",
-      "sources": [
-        {
-          "note": "fairhopers.com: the organizer's own page, read for the admission",
-          "url": "https://fairhopers.com/upcoming-events-fairhope-al/"
-        },
-        {
-          "note": "baldwinpops.com: the admission",
-          "url": "https://www.baldwinpops.com/"
-        },
-        {
-          "note": "baldwinpops.com: the admission",
-          "url": "https://www.baldwinpops.com/calendar"
-        }
-      ],
-      "checkedOn": null
-    },
-    {
-      "id": "ev_crosspoint_dating_purpose-2026-10-04",
-      "title": "Dating with a Purpose",
-      "date": "2026-10-04",
-      "endDate": "2026-10-14",
-      "startTime": "18:00",
-      "endTime": null,
-      "when": "Wednesdays, weekly (no published end date) · 6:00 PM (end time not published)",
-      "venue": "Crosspoint Niceville Campus, Room 701",
-      "address": "214 Partin Dr S, Niceville, FL 32578",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "A Wednesday evening discussion group at Crosspoint's Niceville campus focuses on intentional dating, character and evaluating a shared life vision, starting September 9. The campus newsletter does not publish an end date or an end time.",
-      "url": "https://coastaleventures.com/events/ev-crosspoint-dating-purpose.html",
-      "sources": [
-        {
-          "note": "Crosspoint Church: Niceville Campus eLetter",
-          "url": "https://crosspoint.church/news/eletternv/"
-        },
-        {
-          "note": "Crosspoint Church: campus locations",
-          "url": "https://crosspoint.church/locations/"
-        }
-      ],
-      "checkedOn": "2026-08-24"
-    },
-    {
-      "id": "ev_crosspoint_divorcecare-2026-10-04",
-      "title": "DivorceCare Support Group",
-      "date": "2026-10-04",
-      "endDate": "2026-10-13",
-      "startTime": "18:00",
-      "endTime": "19:30",
-      "when": "Tuesdays, weekly (no published end date) · 6:00 PM-7:30 PM",
-      "venue": "Crosspoint Niceville Campus Community Life Center, Room 956",
-      "address": "214 Partin Dr S, Niceville, FL 32578",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Crosspoint's Niceville campus runs a weekly Tuesday evening support program for adults who are separated or divorced, meeting in the Community Life Center starting September 8. The church does not publish an end date. DivorceCare groups can carry an optional paid workbook.",
-      "url": "https://coastaleventures.com/events/ev-crosspoint-divorcecare.html",
-      "sources": [
-        {
-          "note": "Crosspoint Church: Niceville Campus eLetter",
-          "url": "https://crosspoint.church/news/eletternv/"
-        },
-        {
-          "note": "Crosspoint Church: campus locations",
-          "url": "https://crosspoint.church/locations/"
-        }
-      ],
-      "checkedOn": "2026-08-24"
-    },
-    {
-      "id": "ev_crosspoint_elevate_marriage-2026-10-04",
-      "title": "Elevate Marriage Group",
-      "date": "2026-10-04",
-      "endDate": "2026-10-14",
-      "startTime": "18:00",
-      "endTime": "19:00",
-      "when": "Wednesdays 9/9 – 10/14 (of a 9-session group) · 6:00 PM-7:00 PM",
-      "venue": "Crosspoint Niceville Campus Friendship Hall",
-      "address": "214 Partin Dr S, Niceville, FL 32578",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "A nine-session marriage enrichment group meets Wednesday evenings at Crosspoint's Niceville Campus Friendship Hall starting September 9, aimed at building practical relationship skills for couples. The campus newsletter publishes the start date, weekly time and room but not a program fee.",
-      "url": "https://coastaleventures.com/events/ev-crosspoint-elevate-marriage.html",
-      "sources": [
-        {
-          "note": "Crosspoint Church: Niceville Campus eLetter",
-          "url": "https://crosspoint.church/news/eletternv/"
-        },
-        {
-          "note": "Crosspoint Church: campus locations",
-          "url": "https://crosspoint.church/locations/"
-        }
-      ],
-      "checkedOn": "2026-08-24"
-    },
-    {
-      "id": "ev_crosspoint_fpu-2026-10-04",
-      "title": "Financial Peace University",
-      "date": "2026-10-04",
-      "endDate": "2026-10-14",
-      "startTime": "18:00",
-      "endTime": "20:00",
-      "when": "Wednesdays 9/2 – 10/14 (of a 9-week course) · 6:00 PM-8:00 PM",
-      "venue": "Crosspoint Niceville Campus, Room 703",
-      "address": "214 Partin Dr S, Niceville, FL 32578",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Crosspoint's Niceville campus runs Dave Ramsey's nine-week Financial Peace University course on Wednesday evenings starting September 2. The church frames it as managing money by Christian principles and building toward financial freedom. The campus newsletter gives the meeting room, day and time. Financial Peace University is sold nationally with a paid membership or materials kit.",
-      "url": "https://coastaleventures.com/events/ev-crosspoint-fpu.html",
-      "sources": [
-        {
-          "note": "Crosspoint Church: Niceville Campus eLetter",
-          "url": "https://crosspoint.church/news/eletternv/"
-        },
-        {
-          "note": "Crosspoint Church: campus locations",
-          "url": "https://crosspoint.church/locations/"
-        }
-      ],
-      "checkedOn": "2026-08-24"
-    },
-    {
-      "id": "ev_crosspoint_strength-2026-10-04",
-      "title": "From Strength to Strength Discussion Group",
-      "date": "2026-10-04",
-      "endDate": "2026-10-14",
-      "startTime": "18:00",
-      "endTime": "19:00",
-      "when": "Wednesdays 9/9 – 10/14 (of a run through 11/4) · 6:00 PM-7:00 PM",
-      "venue": "Crosspoint Niceville Campus Marler Chapel",
-      "address": "214 Partin Dr S, Niceville, FL 32578",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "A Wednesday evening discussion group at Crosspoint's Niceville campus works through Arthur C. Brooks' From Strength to Strength, on finding purpose and happiness in the second half of life. The full run goes from September 9 through November 4. Participants order the book on their own.",
-      "url": "https://coastaleventures.com/events/ev-crosspoint-strength.html",
-      "sources": [
-        {
-          "note": "Crosspoint Church: Niceville Campus eLetter",
-          "url": "https://crosspoint.church/news/eletternv/"
-        },
-        {
-          "note": "Crosspoint Church: campus locations",
-          "url": "https://crosspoint.church/locations/"
-        }
-      ],
-      "checkedOn": "2026-08-24"
-    },
-    {
-      "id": "ev_lucky_leaves_bingo_night_series_0910-2026-10-04",
-      "title": "Lucky Leaves Bingo Night series",
-      "date": "2026-10-04",
-      "endDate": "2026-10-15",
-      "startTime": "18:00",
-      "endTime": "20:30",
-      "when": "Thursday 9/10 · 6:00 PM to 8:30 PM",
-      "venue": "Bellingrath Gardens & Home, Magnolia Café",
-      "address": "12401 Bellingrath Gardens Road, Theodore, AL 36582",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $20"
-      },
-      "summary": "Bellingrath Gardens & Home hosts its monthly Lucky Leaves Bingo Night at the Magnolia Café on Thursday, October 15, from 6 PM to 8:30 PM, as a Halloween-themed plant bingo with prizes and a costume contest. Complimentary refreshments are included, and beer and wine are available for purchase during play. The series repeats monthly.",
-      "url": "https://coastaleventures.com/events/ev-lucky-leaves-bingo-night-series-0910.html",
-      "sources": [
-        {
-          "note": "bellingrath.org: the organizer's own page, read for the admission",
-          "url": "https://bellingrath.org/event/lucky-leaves-bingo-night-3/"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_alice_in_wonderland_uwf_theatre_1002-2026-10-04",
-      "title": "Alice in Wonderland: UWF Theatre",
-      "date": "2026-10-04",
-      "endDate": "2026-10-11",
-      "startTime": "19:30",
-      "endTime": "22:00",
-      "when": "Friday 10/2 · 7:30 PM to 10:00 PM",
-      "venue": "Building 82, Center for Fine and Performing Arts, Mainstage Theatre, UWF",
-      "address": "Campus Drive, Pensacola, FL 32514",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "UWF Theatre stages Alice in Wonderland on the Mainstage in Building 82's Center for Fine and Performing Arts, open to the general public. The university's own calendar lists a price range of free up to $22; no single admission figure is published for this date. The run adds several more performances: October 3 at 7:30 PM, October 4 at 2:30 PM, and October 9 at 7:30 PM. October 10 brings a 10 AM show, and the run closes with a matinee on October 11 at 2:30 PM. Opening night is October 2 at 7:30 PM.",
-      "url": "https://coastaleventures.com/events/ev-alice-in-wonderland-uwf-theatre-1002.html",
-      "sources": [
-        {
-          "note": "events.uwf.edu: the organizer's own page, read for the admission",
-          "url": "https://events.uwf.edu/department/theatre"
-        },
-        {
-          "note": "events.uwf.edu: the admission",
-          "url": "https://events.uwf.edu/event/alice-in-wonderland-2026-10-04"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_romanstreet-2026-10-04",
-      "title": "Roman Street",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": "19:30",
-      "endTime": null,
-      "when": "Sun 10/04/2026 · 7:30 PM",
-      "venue": "Saenger Theatre",
-      "address": "118 S Palafox Pl, Pensacola, FL 32502",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "priced",
-        "label": "$73 for two"
-      },
-      "summary": "This local instrumental duo plays Latin and smooth-jazz guitar, easy and romantic. It is a relaxed, all-ages-clean date.",
-      "url": "https://coastaleventures.com/events/ev-romanstreet.html",
-      "sources": [
-        {
-          "note": "Ticketmaster: “Roman Street tickets Sun, Oct 04, 2026 Pensacola Saenger Theatre 7:30 PM”",
-          "url": "https://www.ticketmaster.com/roman-street-pensacola-10-04-2026/event/1B006383EB1C6FDA"
-        }
-      ],
-      "checkedOn": null
-    },
-    {
-      "id": "ev_seville_karaoke-2026-10-04",
-      "title": "Lili Marlene's Karaoke",
-      "date": "2026-10-04",
-      "endDate": null,
-      "startTime": "20:00",
-      "endTime": "23:00",
-      "when": "Sunday and Tuesday to Saturday · 8:00-11:00 PM",
-      "venue": "Seville Quarter, Lili Marlene's",
-      "address": "130 E Government St, Pensacola, FL 32502",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Karaoke runs every night but Monday in the aviators' room, not just on the weekend. It has a supportive room, a real sound system, and no sign-up fee posted.",
-      "url": "https://coastaleventures.com/events/ev-seville-karaoke.html",
-      "sources": [
-        {
-          "note": "Seville Quarter, own week calendar 08/09–08/15/2026 lists Karaoke 8:00–11:00 PM at Lili Marlene's on every night of the week",
-          "url": "https://sevillequarter.com/events/week/2026-08-09/"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "nl_fubar_nights-2026-10-05",
-      "title": "Karaoke & DJ Nights: FUBAR Pizza Bar",
-      "date": "2026-10-05",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Nightly · 9 PM-1 AM",
-      "venue": "FUBAR Pizza Bar",
-      "address": "114 Amberjack Dr, Fort Walton Beach, FL 32548",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Late-night karaoke runs five nights a week (Sun, Tue, Wed, Fri, Sat) plus a DJ on Monday and Thursday, 9 PM to 1 AM every night, with pizza till close. It is in Fort Walton Beach.",
-      "url": "https://coastaleventures.com/events/nl-fubar-nights.html",
-      "sources": [
-        {
-          "note": "FUBAR Pizza Bar: Karaoke & DJ nightly 9 PM–1 AM (own events page)",
-          "url": "https://fubarfwb.com/events-specials/"
-        }
-      ],
-      "checkedOn": "2026-09-26"
     },
     {
       "id": "ev_billiards_0901-2026-10-05",
@@ -1723,6 +555,36 @@
       "checkedOn": "2026-09-26"
     },
     {
+      "id": "ev_steves_farm_adventure_zone_0929-2026-10-05",
+      "title": "Adventure Zone at Steve's Fishing and Adventure Farm",
+      "date": "2026-10-05",
+      "endDate": "2026-10-31",
+      "startTime": "09:00",
+      "endTime": "18:00",
+      "when": "Mon-Sat through Oct 31 · 9 AM to 6 PM",
+      "venue": "Steve's Fishing and Adventure Farm",
+      "address": "1201 S Highway 99, Walnut Hill, FL 32568",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Steve's Farm has rebranded as Steve's Fishing and Adventure Farm and opened a fall attraction in Walnut Hill with a corn maze, a giant slide, a kids' zipline, a jump pad, hayrides, a wagon train, a sunflower field and a pumpkin patch. It suits a family with small children who want a half day outdoors. The farm's own page does not print admission prices, so check the ticket page before driving out.",
+      "url": "https://coastaleventures.com/events/ev-steves-farm-adventure-zone-0929.html",
+      "sources": [
+        {
+          "note": "stevesfarm.net Adventure Zone page: corn maze, giant slide, kids' zipline, jump pad, hayride, wagon train, sunflower field and pumpkin patch, with single day and season passes",
+          "url": "https://stevesfarm.net/adventure-zone/"
+        },
+        {
+          "note": "stevesfarm.simpletix.com: Adventure Zone listed as an upcoming event starting 9/29/2026 at 1201 South Highway 99, Walnut Hill",
+          "url": "https://stevesfarm.simpletix.com/"
+        }
+      ],
+      "checkedOn": "2026-09-29"
+    },
+    {
       "id": "ev_valparaiso_indios_amigos_exhibit_1005-2026-10-05",
       "title": "Indios Amigos: Traveling Exhibit at the Valparaiso Library",
       "date": "2026-10-05",
@@ -1809,6 +671,70 @@
       "checkedOn": "2026-09-26"
     },
     {
+      "id": "ev_coco_and_crawlers_0917-2026-10-05",
+      "title": "Coco & Crawlers",
+      "date": "2026-10-05",
+      "endDate": "2026-12-17",
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "when": "Thursday 9/17 · 10:00 AM to 11:00 AM",
+      "venue": "Ben May Main Library, Youth Programming Room",
+      "address": "701 Government St, Mobile, AL",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "This caregiver meetup in the Youth Programming Room at Ben May Main Library pairs children's play with a warm drink. It gives caregivers time to connect with each other. It runs Thursday morning from 10 AM to 11 AM, repeating on the third Thursday of the month, with more dates on October 15, November 19 and December 17. Registration is requested but not required.",
+      "url": "https://coastaleventures.com/events/ev-coco-and-crawlers-0917.html",
+      "sources": [
+        {
+          "note": "mobilepubliclibrary.org: the organizer's own page for this event",
+          "url": "https://www.mobilepubliclibrary.org/event/coco-crawlers-16284"
+        }
+      ],
+      "checkedOn": "2026-09-26"
+    },
+    {
+      "id": "ev_destin_rodeo_weighins-2026-10-05",
+      "title": "Destin Fishing Rodeo: Daily Public Weigh-Ins",
+      "date": "2026-10-05",
+      "endDate": "2026-10-31",
+      "startTime": "10:00",
+      "endTime": "19:00",
+      "when": "Daily, Oct 1 – Oct 31 · 10:00 AM-7:00 PM",
+      "venue": "Docks behind AJ's Seafood & Oyster Bar",
+      "address": "116 Harbor Blvd, Destin, FL 32541",
+      "category": "beach",
+      "categoryLabel": "Beach",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "Anglers competing in the month-long Destin Fishing Rodeo bring their catches to the scale on the harbor docks behind AJ's Seafood & Oyster Bar every day in October. The public is welcome to watch for free from 10 AM to 7 PM, and the crowd tends to grow with the size of the fish coming off the boats.",
+      "url": "https://coastaleventures.com/events/ev-destin-rodeo-weighins.html",
+      "sources": [
+        {
+          "note": "Destin Fishing Rodeo: Rodeo Events page (free public weigh-ins)",
+          "url": "https://destinfishingrodeo.org/rodeo-fun-for-everyone/rodeo-events/"
+        },
+        {
+          "note": "Destin Fishing Rodeo: Contact Us page",
+          "url": "https://destinfishingrodeo.org/destin-fishing-rodeo/contact-us/"
+        },
+        {
+          "note": "Destin Fishing Rodeo: How to Participate page",
+          "url": "https://destinfishingrodeo.org/just-for-anglers/how-to-participate/"
+        },
+        {
+          "note": "Destin Fishing Rodeo: parking map",
+          "url": "https://destinfishingrodeo.org/destin-fishing-rodeo/where-to-park-map/"
+        }
+      ],
+      "checkedOn": "2026-08-24"
+    },
+    {
       "id": "ev_messy_monday_0907-2026-10-05",
       "title": "Messy Monday",
       "date": "2026-10-05",
@@ -1864,6 +790,66 @@
         {
           "note": "nicevillefl.gov: the current schedule",
           "url": "https://www.nicevillefl.gov/calendar.aspx?CID=0&month=9&view=month&year=2026"
+        }
+      ],
+      "checkedOn": "2026-09-26"
+    },
+    {
+      "id": "ev_crosspoint_disciplestory-2026-10-05",
+      "title": "DiscipleStory",
+      "date": "2026-10-05",
+      "endDate": "2026-10-18",
+      "startTime": "11:00",
+      "endTime": null,
+      "when": "Sundays 9/13 – 10/18 (of an 8-week class) · 11:00 AM (end time not published)",
+      "venue": "Crosspoint Niceville Campus, Room 912",
+      "address": "214 Partin Dr S, Niceville, FL 32578",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "An eight-week Sunday morning class at Crosspoint's Niceville campus walks participants through identifying their own story, passions, abilities and role in the church's mission. The class starts September 13 at 11 AM; the campus newsletter does not publish an end time.",
+      "url": "https://coastaleventures.com/events/ev-crosspoint-disciplestory.html",
+      "sources": [
+        {
+          "note": "Crosspoint Church: Niceville Campus eLetter",
+          "url": "https://crosspoint.church/news/eletternv/"
+        },
+        {
+          "note": "Crosspoint Church: campus locations",
+          "url": "https://crosspoint.church/locations/"
+        }
+      ],
+      "checkedOn": "2026-08-24"
+    },
+    {
+      "id": "ev_quayside_summers_end_2026-2026-10-05",
+      "title": "Summer's End at Quayside Art Gallery",
+      "date": "2026-10-05",
+      "endDate": null,
+      "startTime": "11:00",
+      "endTime": "17:00",
+      "when": "Daily through 10/5 · 11:00 AM to 5:00 PM",
+      "venue": "Quayside Art Gallery",
+      "address": "17 E Zaragoza St, Pensacola, FL 32502",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Quayside Art Gallery in downtown Pensacola is showing Summer's End, an exhibition about the turn from late summer into autumn, through October 5. Four artists fill the show with changing landscapes, vacation memories and the amber light of late summer evenings. The gallery is a locally owned artist co-op with three floors of work by more than 50 local artists, and it opens every day from 11 AM to 5 PM.",
+      "url": "https://coastaleventures.com/events/ev-quayside-summers-end-2026.html",
+      "sources": [
+        {
+          "note": "Quayside Art Gallery: events page and its Summer's End flyer, read for the run dates, the theme and the four artists",
+          "url": "https://quaysidegallery.com/publicevents/"
+        },
+        {
+          "note": "Quayside Art Gallery: home page, read for the daily hours and the street address",
+          "url": "https://quaysidegallery.com/"
         }
       ],
       "checkedOn": "2026-09-26"
@@ -1927,6 +913,32 @@
         }
       ],
       "checkedOn": "2026-09-26"
+    },
+    {
+      "id": "ev_mobile_museum_make_take_art-2026-10-05",
+      "title": "Make & Take Art: weekly drop-in art sessions",
+      "date": "2026-10-05",
+      "endDate": "2026-10-15",
+      "startTime": "15:00",
+      "endTime": "16:30",
+      "when": "Thursdays 8/27 through 10/15 (except Sept 8) · 3:00 PM to 4:30 PM",
+      "venue": "Mobile Museum of Art",
+      "address": "4850 Museum Drive, Mobile, AL 36608",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "The museum runs a free Thursday afternoon art session most weeks, working through materials and techniques borrowed from artists on view. Projects range from geometric shape painting to a Basquiat-inspired dinosaur build. The printed schedule also lists a session for September 8, but that date falls on a Tuesday, not a Thursday, so check with the museum first.",
+      "url": "https://coastaleventures.com/events/ev-mobile-museum-make-take-art.html",
+      "sources": [
+        {
+          "note": "Mobile Museum of Art: official Make & Take Art event page and weekly topic schedule",
+          "url": "https://www.mobilemuseumofart.com/event/make-take-art-7-2/2026-04-02/"
+        }
+      ],
+      "checkedOn": "2026-08-24"
     },
     {
       "id": "ev_painting_with_a_twist_fort_walton_1003-2026-10-05",
@@ -2157,6 +1169,126 @@
       "checkedOn": "2026-09-26"
     },
     {
+      "id": "ev_crosspoint_dating_purpose-2026-10-05",
+      "title": "Dating with a Purpose",
+      "date": "2026-10-05",
+      "endDate": "2026-10-14",
+      "startTime": "18:00",
+      "endTime": null,
+      "when": "Wednesdays, weekly (no published end date) · 6:00 PM (end time not published)",
+      "venue": "Crosspoint Niceville Campus, Room 701",
+      "address": "214 Partin Dr S, Niceville, FL 32578",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "A Wednesday evening discussion group at Crosspoint's Niceville campus focuses on intentional dating, character and evaluating a shared life vision, starting September 9. The campus newsletter does not publish an end date or an end time.",
+      "url": "https://coastaleventures.com/events/ev-crosspoint-dating-purpose.html",
+      "sources": [
+        {
+          "note": "Crosspoint Church: Niceville Campus eLetter",
+          "url": "https://crosspoint.church/news/eletternv/"
+        },
+        {
+          "note": "Crosspoint Church: campus locations",
+          "url": "https://crosspoint.church/locations/"
+        }
+      ],
+      "checkedOn": "2026-08-24"
+    },
+    {
+      "id": "ev_crosspoint_divorcecare-2026-10-05",
+      "title": "DivorceCare Support Group",
+      "date": "2026-10-05",
+      "endDate": "2026-10-13",
+      "startTime": "18:00",
+      "endTime": "19:30",
+      "when": "Tuesdays, weekly (no published end date) · 6:00 PM-7:30 PM",
+      "venue": "Crosspoint Niceville Campus Community Life Center, Room 956",
+      "address": "214 Partin Dr S, Niceville, FL 32578",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Crosspoint's Niceville campus runs a weekly Tuesday evening support program for adults who are separated or divorced, meeting in the Community Life Center starting September 8. The church does not publish an end date. DivorceCare groups can carry an optional paid workbook.",
+      "url": "https://coastaleventures.com/events/ev-crosspoint-divorcecare.html",
+      "sources": [
+        {
+          "note": "Crosspoint Church: Niceville Campus eLetter",
+          "url": "https://crosspoint.church/news/eletternv/"
+        },
+        {
+          "note": "Crosspoint Church: campus locations",
+          "url": "https://crosspoint.church/locations/"
+        }
+      ],
+      "checkedOn": "2026-08-24"
+    },
+    {
+      "id": "ev_crosspoint_elevate_marriage-2026-10-05",
+      "title": "Elevate Marriage Group",
+      "date": "2026-10-05",
+      "endDate": "2026-10-14",
+      "startTime": "18:00",
+      "endTime": "19:00",
+      "when": "Wednesdays 9/9 – 10/14 (of a 9-session group) · 6:00 PM-7:00 PM",
+      "venue": "Crosspoint Niceville Campus Friendship Hall",
+      "address": "214 Partin Dr S, Niceville, FL 32578",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "A nine-session marriage enrichment group meets Wednesday evenings at Crosspoint's Niceville Campus Friendship Hall starting September 9, aimed at building practical relationship skills for couples. The campus newsletter publishes the start date, weekly time and room but not a program fee.",
+      "url": "https://coastaleventures.com/events/ev-crosspoint-elevate-marriage.html",
+      "sources": [
+        {
+          "note": "Crosspoint Church: Niceville Campus eLetter",
+          "url": "https://crosspoint.church/news/eletternv/"
+        },
+        {
+          "note": "Crosspoint Church: campus locations",
+          "url": "https://crosspoint.church/locations/"
+        }
+      ],
+      "checkedOn": "2026-08-24"
+    },
+    {
+      "id": "ev_crosspoint_fpu-2026-10-05",
+      "title": "Financial Peace University",
+      "date": "2026-10-05",
+      "endDate": "2026-10-14",
+      "startTime": "18:00",
+      "endTime": "20:00",
+      "when": "Wednesdays 9/2 – 10/14 (of a 9-week course) · 6:00 PM-8:00 PM",
+      "venue": "Crosspoint Niceville Campus, Room 703",
+      "address": "214 Partin Dr S, Niceville, FL 32578",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Crosspoint's Niceville campus runs Dave Ramsey's nine-week Financial Peace University course on Wednesday evenings starting September 2. The church frames it as managing money by Christian principles and building toward financial freedom. The campus newsletter gives the meeting room, day and time. Financial Peace University is sold nationally with a paid membership or materials kit.",
+      "url": "https://coastaleventures.com/events/ev-crosspoint-fpu.html",
+      "sources": [
+        {
+          "note": "Crosspoint Church: Niceville Campus eLetter",
+          "url": "https://crosspoint.church/news/eletternv/"
+        },
+        {
+          "note": "Crosspoint Church: campus locations",
+          "url": "https://crosspoint.church/locations/"
+        }
+      ],
+      "checkedOn": "2026-08-24"
+    },
+    {
       "id": "ev_fort_walton_beach_library_friends_meeting_1005-2026-10-05",
       "title": "Fort Walton Beach Library Friends Meeting",
       "date": "2026-10-05",
@@ -2207,6 +1339,36 @@
         }
       ],
       "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_crosspoint_strength-2026-10-05",
+      "title": "From Strength to Strength Discussion Group",
+      "date": "2026-10-05",
+      "endDate": "2026-10-14",
+      "startTime": "18:00",
+      "endTime": "19:00",
+      "when": "Wednesdays 9/9 – 10/14 (of a run through 11/4) · 6:00 PM-7:00 PM",
+      "venue": "Crosspoint Niceville Campus Marler Chapel",
+      "address": "214 Partin Dr S, Niceville, FL 32578",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "A Wednesday evening discussion group at Crosspoint's Niceville campus works through Arthur C. Brooks' From Strength to Strength, on finding purpose and happiness in the second half of life. The full run goes from September 9 through November 4. Participants order the book on their own.",
+      "url": "https://coastaleventures.com/events/ev-crosspoint-strength.html",
+      "sources": [
+        {
+          "note": "Crosspoint Church: Niceville Campus eLetter",
+          "url": "https://crosspoint.church/news/eletternv/"
+        },
+        {
+          "note": "Crosspoint Church: campus locations",
+          "url": "https://crosspoint.church/locations/"
+        }
+      ],
+      "checkedOn": "2026-08-24"
     },
     {
       "id": "ev_gulf_shores_fire_rescue_basic_life_support_c_1005-2026-10-05",
@@ -2267,6 +1429,32 @@
         }
       ],
       "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_lucky_leaves_bingo_night_series_0910-2026-10-05",
+      "title": "Lucky Leaves Bingo Night series",
+      "date": "2026-10-05",
+      "endDate": "2026-10-15",
+      "startTime": "18:00",
+      "endTime": "20:30",
+      "when": "Thursday 9/10 · 6:00 PM to 8:30 PM",
+      "venue": "Bellingrath Gardens & Home, Magnolia Café",
+      "address": "12401 Bellingrath Gardens Road, Theodore, AL 36582",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $20"
+      },
+      "summary": "Bellingrath Gardens & Home hosts its monthly Lucky Leaves Bingo Night at the Magnolia Café on Thursday, October 15, from 6 PM to 8:30 PM, as a Halloween-themed plant bingo with prizes and a costume contest. Complimentary refreshments are included, and beer and wine are available for purchase during play. The series repeats monthly.",
+      "url": "https://coastaleventures.com/events/ev-lucky-leaves-bingo-night-series-0910.html",
+      "sources": [
+        {
+          "note": "bellingrath.org: the organizer's own page, read for the admission",
+          "url": "https://bellingrath.org/event/lucky-leaves-bingo-night-3/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_name_that_tune_0831-2026-10-05",
@@ -2483,6 +1671,36 @@
         }
       ],
       "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "ev_alice_in_wonderland_uwf_theatre_1002-2026-10-05",
+      "title": "Alice in Wonderland: UWF Theatre",
+      "date": "2026-10-05",
+      "endDate": "2026-10-11",
+      "startTime": "19:30",
+      "endTime": "22:00",
+      "when": "Friday 10/2 · 7:30 PM to 10:00 PM",
+      "venue": "Building 82, Center for Fine and Performing Arts, Mainstage Theatre, UWF",
+      "address": "Campus Drive, Pensacola, FL 32514",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "UWF Theatre stages Alice in Wonderland on the Mainstage in Building 82's Center for Fine and Performing Arts, open to the general public. The university's own calendar lists a price range of free up to $22; no single admission figure is published for this date. The run adds several more performances: October 3 at 7:30 PM, October 4 at 2:30 PM, and October 9 at 7:30 PM. October 10 brings a 10 AM show, and the run closes with a matinee on October 11 at 2:30 PM. Opening night is October 2 at 7:30 PM.",
+      "url": "https://coastaleventures.com/events/ev-alice-in-wonderland-uwf-theatre-1002.html",
+      "sources": [
+        {
+          "note": "events.uwf.edu: the organizer's own page, read for the admission",
+          "url": "https://events.uwf.edu/department/theatre"
+        },
+        {
+          "note": "events.uwf.edu: the admission",
+          "url": "https://events.uwf.edu/event/alice-in-wonderland-2026-10-04"
+        }
+      ],
+      "checkedOn": "2026-09-26"
     },
     {
       "id": "ev_seville_barbingo-2026-10-05",
@@ -84115,6 +83333,32 @@
       "checkedOn": "2026-10-03"
     },
     {
+      "id": "ev_brunch_and_rally_0823-2027-01-03",
+      "title": "Brunch & Rally",
+      "date": "2027-01-03",
+      "endDate": null,
+      "startTime": "13:00",
+      "endTime": "17:00",
+      "when": "Sundays · 1:00 PM to 5:00 PM",
+      "venue": "Pickleball at OWA",
+      "address": "200-A N. OWA Blvd, Foley, AL 36535",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $10"
+      },
+      "summary": "Pickleball at OWA runs indoor open play every Sunday afternoon, paired with a discount for anyone who shows a same-day receipt from Waffles R Wild. Open play costs $10 for nonmembers, members play free, and a Waffles R Wild receipt brings the nonmember rate down to $7. It repeats weekly, so today's session is one stop on an ongoing schedule.",
+      "url": "https://coastaleventures.com/events/ev-brunch-and-rally-0823.html",
+      "sources": [
+        {
+          "note": "visitowa.com: the organizer's own page, read for the admission and current schedule",
+          "url": "https://visitowa.com/entertainment/pickleball-at-owa/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
       "id": "ev_pokemon_league_at_trinity_games_1004-2027-01-03",
       "title": "Pokémon League at Trinity Games",
       "date": "2027-01-03",
@@ -90630,6 +89874,196 @@
         {
           "note": "Weekly Events banner image with day, game, time, entry",
           "url": "https://trinitygamesllc.com/pages/events"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_board_game_night_1006-2027-02-02",
+      "title": "Board Game Night",
+      "date": "2027-02-02",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": "21:00",
+      "when": "Tuesdays · 3 PM-9 PM",
+      "venue": "GameMasters Guild",
+      "address": "743 Ashley Drive, Crestview, FL 32536",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Board Game Night at GameMasters Guild in Crestview runs every Tuesday from 3 to 9 PM. Bring your own game or pick one from the shop's game library. All ages are welcome, and children under 13 must be accompanied by an adult.",
+      "url": "https://coastaleventures.com/events/ev-board-game-night-1006.html",
+      "sources": [
+        {
+          "note": "Board Game Night every Tuesday 3-9 PM, all ages",
+          "url": "https://gmgcrestview.com/events/"
+        },
+        {
+          "note": "GameMasters Guild's own embedded Google Calendar feed (gmgcrestview@aol.com), read as ICS today: Board Game Night every Tuesday 3-9 PM, all ages",
+          "url": "https://calendar.google.com/calendar/ical/gmgcrestview%40aol.com/public/basic.ics"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_nwftc_tuesday_group_run_at_run_wit_1006-2027-02-02",
+      "title": "NWFTC Tuesday group run at Run With It",
+      "date": "2027-02-02",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": "18:00",
+      "when": "Tuesdays · 5 PM-6 PM",
+      "venue": "Run With It",
+      "address": "21 Racetrack Road NE, Fort Walton Beach, FL 32547",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "The NWFTC Tuesday group run is a weekly training run from Run With It with the Northwest Florida Track Club. Runs go every Tuesday at 5-6 PM, and various paces and distances are available.",
+      "url": "https://coastaleventures.com/events/ev-nwftc-tuesday-group-run-at-run-wit-1006.html",
+      "sources": [
+        {
+          "note": "Tuesday 5-6 PM at Run With It, 21 Racetrack Road NE, Fort Walton Beach, FL 32547",
+          "url": "https://www.nwftc.com/training-runs"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_tbs_comics_fort_walton_beach_weekl_1005-2027-02-02",
+      "title": "TBS Comics Fort Walton Beach weekly game nights (Yu-Gi-Oh, D&D, Magic, Lorcana, One Piece and more)",
+      "date": "2027-02-02",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "when": "Game nights Monday, Tuesday, Wednesday and Friday · from 5 PM",
+      "venue": "TBS Comics Fort Walton Beach",
+      "address": "550 Mary Esther Blvd, Fort Walton Beach, FL 32548",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "TBS Comics Fort Walton Beach hosts weekly game nights at its shop on Mary Esther Blvd. Monday is Yu-Gi-Oh at 6 PM, and Tuesday is D&D Adventurers League at 5 PM. Wednesday has casual Magic all day and Digimon at 6 PM, and Friday has Magic Commander at 6 PM and Yu-Gi-Oh at 7 PM.",
+      "url": "https://coastaleventures.com/events/ev-tbs-comics-fort-walton-beach-weekl-1005.html",
+      "sources": [
+        {
+          "note": "TBS gaming page weekly schedule for Fort Walton Beach",
+          "url": "https://www.tbscomics.com/gaming/"
+        },
+        {
+          "note": "Store locations: 550 Mary Esther Blvd, FWB 32548",
+          "url": "https://www.tbscomics.com/store-locations/"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_tempo_tuesday_with_the_west_florid_1006-2027-02-02",
+      "title": "Tempo Tuesday with the West Florida Wheelmen",
+      "date": "2027-02-02",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "when": "Tuesdays · 6 PM",
+      "venue": "Ride MORE Bicycles",
+      "address": "59 E Gregory St., Pensacola, FL",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Tempo Tuesday is a weekly group road ride that departs from Ride MORE Bicycles, 59 E Gregory St. in downtown Pensacola, and is led with the West Florida Wheelmen. It covers about 33 miles at an average of 17-20 mph. The ride runs 6-7:30 PM every Tuesday.",
+      "url": "https://coastaleventures.com/events/ev-tempo-tuesday-with-the-west-florid-1006.html",
+      "sources": [
+        {
+          "note": "Events page: Every Tuesday Tempo Tuesday with the West Florida Wheelmen, 6-7:30 PM, about 33 miles, 17-20 mph",
+          "url": "https://ridemorebicycles.com/events/"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_fleet_feet_pensacola_free_run_club_1006-2027-02-02",
+      "title": "Fleet Feet Pensacola Free Run Clubs",
+      "date": "2027-02-02",
+      "endDate": null,
+      "startTime": "18:15",
+      "endTime": null,
+      "when": "Tuesdays and Thursdays · 6:15 PM",
+      "venue": "Fleet Feet Pensacola",
+      "address": "236 West Garden Street, Unit 1, Pensacola, FL 32502",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "The Fleet Feet Pensacola Free Run Clubs meet Tuesday and Thursday at 6:15 PM at the shop on West Garden Street. Tuesday offers a social club, a 1-mile walk, a 1.8-mile run or walk, or a 5K. Thursday offers a 1-mile walk, a 1.8-mile run or walk, a 5K or a 10K. Both are free.",
+      "url": "https://coastaleventures.com/events/ev-fleet-feet-pensacola-free-run-club-1006.html",
+      "sources": [
+        {
+          "note": "RunSignup page: Tue and Thu 6:15 PM, 236 West Garden St Unit 1, price $0",
+          "url": "https://runsignup.com/Race/FL/Pensacola/FLEETFEETPENSACOLATUESDAYANDTHURSDAYFREERUNCLUBS"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_trinity_games_weekly_game_nights_m_1005-2027-02-02",
+      "title": "Trinity Games weekly game nights (Magic, Gundam, One Piece, Flesh and Blood, Riftbound and more)",
+      "date": "2027-02-02",
+      "endDate": null,
+      "startTime": "18:30",
+      "endTime": null,
+      "when": "Game nights Monday to Thursday · 6:30 PM",
+      "venue": "Trinity Games",
+      "address": "2400 W Michigan Ave Unit 27, Pensacola, FL 32526",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $5"
+      },
+      "summary": "Trinity Games runs weekly game nights at its Pensacola shop for Magic, Gundam, One Piece, Flesh and Blood, Riftbound and more. Monday has Gundam Locals at 6:30 PM and Flesh and Blood at 7 PM. Tuesday has Digimon Locals and MTG Pauper at 6:30 PM, and Wednesday has One Piece Locals and CyberPunk Locals at 6:30 PM. Thursday has Magic Commander Day all day, Riftbound Competitive at 6:30 PM and HoloLive Locals at 7 PM, and Friday has MTG Modern at 7 PM.",
+      "url": "https://coastaleventures.com/events/ev-trinity-games-weekly-game-nights-m-1005.html",
+      "sources": [
+        {
+          "note": "Weekly Events banner image with day, game, time, entry",
+          "url": "https://trinitygamesllc.com/pages/events"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_weekly_trivia_tuesdays_perfect_pla_1006-2027-02-02",
+      "title": "Weekly Trivia Tuesdays (Perfect Plain)",
+      "date": "2027-02-02",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": "21:00",
+      "when": "Tuesdays · 7 PM-9 PM",
+      "venue": "Perfect Plain Brewing Co.",
+      "address": "50 E. Garden Street, Pensacola, FL 32502",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "Weekly Trivia Tuesdays is a brewery trivia night at Perfect Plain Brewing Co., 50 E. Garden Street, with adoptable dogs as honorary co-hosts. It is free and runs 7-9 PM every Tuesday.",
+      "url": "https://coastaleventures.com/events/ev-weekly-trivia-tuesdays-perfect-pla-1006.html",
+      "sources": [
+        {
+          "note": "Perfect Plain upcoming events: Trivia Tuesdays 7-9 PM, free, at Perfect Plain Brewing Co.",
+          "url": "https://www.perfectplain.com/upcoming-events"
         }
       ],
       "checkedOn": "2026-10-03"

@@ -25,27 +25,10 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_ferry-2026-10-04@coastaleventures.com
-DTSTAMP:20261004T000000Z
-DTSTART;TZID=America/Chicago:20261004T090000
-DTEND;TZID=America/Chicago:20261004T180000
-SUMMARY:Pensacola Bay Ferry to Fort Pickens
-LOCATION:Downtown ferry landing → Fort Pickens → Pensacola Beach\, 700 
- S Barracks St\, Pensacola\, FL 32502
-DESCRIPTION:Sat + Sun · runs 9 AM-6 PM\n\nBoat + fort + beach without the 
- car: ranger narration across the bay\, tunnels and batteries at Fort Picke
- ns for engineering-minded kids\, then the beach stop. Strollers roll aboar
- d.\n\nPrice: from $20\n\nDetails: https://coastaleventures.com/events/ev-f
- erry.html
-URL:https://coastaleventures.com/events/ev-ferry.html
-CATEGORIES:Beach
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_destin_rodeo_weighins-2026-10-04@coastaleventures.com
-DTSTAMP:20261004T000000Z
-DTSTART;TZID=America/Chicago:20261004T100000
-DTEND;TZID=America/Chicago:20261004T190000
+UID:ev_destin_rodeo_weighins-2026-10-05@coastaleventures.com
+DTSTAMP:20261005T000000Z
+DTSTART;TZID=America/Chicago:20261005T100000
+DTEND;TZID=America/Chicago:20261005T190000
 SUMMARY:Destin Fishing Rodeo: Daily Public Weigh-Ins
 LOCATION:Docks behind AJ's Seafood & Oyster Bar\, 116 Harbor Blvd\, Destin\
  , FL 32541
@@ -61,27 +44,8 @@ CATEGORIES:Beach
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_navarre_fishing_rodeo_1003-2026-10-04@coastaleventures.com
-DTSTAMP:20261004T000000Z
-DTSTART;TZID=America/Chicago:20261004T140000
-DTEND;TZID=America/Chicago:20261004T170000
-SUMMARY:Navarre Fishing Rodeo
-LOCATION:Juana's Pagodas & Sailors' Grill weigh-in and awards site\, 1451 N
- avarre Beach Causeway\, Navarre\, FL 32566
-DESCRIPTION:Saturday 10/3 · 2:00 PM to 5:00 PM\n\nAnglers spread out acros
- s the shore\, boats\, kayaks and the pier for the two day Navarre Fishing 
- Rodeo\, with a published Junior Division that keeps the weekend open to yo
- unger competitors. Weigh ins run Saturday\, and Sunday adds a second round
-  of weigh ins along with the awards presentation.\n\nPrice: No published p
- rice\n\nDetails: https://coastaleventures.com/events/ev-navarre-fishing-ro
- deo-1003.html
-URL:https://coastaleventures.com/events/ev-navarre-fishing-rodeo-1003.html
-CATEGORIES:Beach
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_oceanhour-2026-10-10@coastaleventures.com
-DTSTAMP:20261004T000000Z
+DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261010
 DTEND;VALUE=DATE:20261011
 SUMMARY:Ocean Hour Beach Cleanup
@@ -98,7 +62,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_sritri-2026-10-10@coastaleventures.com
-DTSTAMP:20261004T000000Z
+DTSTAMP:20261005T000000Z
 DTSTART;TZID=America/Chicago:20261010T070000
 DTEND;TZID=America/Chicago:20261010T080000
 SUMMARY:Santa Rosa Island Triathlon: SOLD OUT (waitlist)
@@ -115,7 +79,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_18th_annual_run_for_the_reef_1010-2026-10-10@coastaleventures.com
-DTSTAMP:20261004T000000Z
+DTSTAMP:20261005T000000Z
 DTSTART;TZID=America/Chicago:20261010T073000
 DTEND;TZID=America/Chicago:20261010T083000
 SUMMARY:Run for the Reef\, 18th year
@@ -136,7 +100,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_ferry-2026-10-10@coastaleventures.com
-DTSTAMP:20261004T000000Z
+DTSTAMP:20261005T000000Z
 DTSTART;TZID=America/Chicago:20261010T090000
 DTEND;TZID=America/Chicago:20261010T180000
 SUMMARY:Pensacola Bay Ferry to Fort Pickens
@@ -153,7 +117,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_navarre_charity_chili_cookoff_1011-2026-10-11@coastaleventures.com
-DTSTAMP:20261004T000000Z
+DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261011
 DTEND;VALUE=DATE:20261012
 SUMMARY:Charity Chili Cookoff and Volleyball Tourney on Navarre Beach
@@ -174,7 +138,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_ferry-2026-10-11@coastaleventures.com
-DTSTAMP:20261004T000000Z
+DTSTAMP:20261005T000000Z
 DTSTART;TZID=America/Chicago:20261011T090000
 DTEND;TZID=America/Chicago:20261011T180000
 SUMMARY:Pensacola Bay Ferry to Fort Pickens
@@ -191,7 +155,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_beach_o_ween_2026_1016-2026-10-16@coastaleventures.com
-DTSTAMP:20261004T000000Z
+DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261017
 SUMMARY:Beach-O-Ween 2026
@@ -209,7 +173,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_wickedwinerun_1121-2026-11-21@coastaleventures.com
-DTSTAMP:20261004T000000Z
+DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:SKECHERS Wicked Wine Run: Milton

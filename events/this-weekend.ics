@@ -5,56 +5,108 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Gulf Coast: this weekend
 BEGIN:VEVENT
-UID:ev_ferry-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T090000
-DTEND:20261004T110000
-SUMMARY:Pensacola Bay Ferry to Fort Pickens
-DESCRIPTION:Boat + fort + beach without the car: ranger narration across t
- he bay\, tunnels and batteries at Fort Pickens for engineering-minded kid
- s\, then the beach stop. Strollers roll aboard.\nPrice: from $20\nArea: P
- ensacola Beach & Perdido\nTimes: Sat + Sun · runs 9 AM-6 PM\nChecked aga
- inst the venue's own page on 2026-09-26\nhttps://coastaleventures.com/eve
- nts/ev-ferry.html
-LOCATION:Downtown ferry landing → Fort Pickens → Pensacola Beach\, 700
-  S Barracks St\, Pensacola\, FL 32502
-URL:https://coastaleventures.com/events/ev-ferry.html
+UID:ev_splash_spooktober_milton-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261010
+SUMMARY:Spooktober at Splash: four Halloween weekends
+DESCRIPTION:Four weekends of trick-or-treating\, hayrides\, live music\, s
+ ite decorating and costume contests\, thirty minutes up the road in Milto
+ n. The catch is the gate: Splash is a resort and everything inside it is 
+ for people with a reservation\, so this is a weekend away rather than an 
+ afternoon out.\nPrice: not published by the venue\, so confirm before you
+  go\nArea: Milton & Pace\nTimes: Oct 9-12 · 16-18 · 23-25 · 30-31\nChe
+ cked against the venue's own page on 2026-10-02\nhttps://coastaleventures
+ .com/events/ev-splash-spooktober-milton.html
+LOCATION:Splash RV Resort\, 8500 Welcome Church Road\, Milton\, FL 32583
+URL:https://coastaleventures.com/events/ev-splash-spooktober-milton.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_sunmkt-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T100000
-DTEND:20261004T120000
-SUMMARY:Sunday Market on Palafox
-DESCRIPTION:The Sunday sibling of Palafox Market brings crafts\, art\, and
-  prepared food. Confirm each week's market on their Facebook page before 
- driving.\nPrice: Free\nArea: Pensacola\nTimes: Sundays · ~10 AM-3 PM\nCh
- ecked against the venue's own page on 2026-09-26\nhttps://coastaleventure
- s.com/events/ev-sunmkt.html
-LOCATION:MLK Jr. Plaza\, Downtown Pensacola\, 200 N Palafox St\, Pensacola
- \, FL 32502
-URL:https://coastaleventures.com/events/ev-sunmkt.html
+UID:ev_draconids_1008-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261010
+SUMMARY:Draconid Meteor Shower: the one that happens at bedtime
+DESCRIPTION:Nearly every meteor shower asks you to be awake at three in th
+ e morning. The Draconids do not: the radiant is highest as the sky goes d
+ ark\, so the best hour is the one right after dinner. The moon is a four 
+ percent crescent that does not rise until quarter to five\, which means t
+ he sky is as black as it gets all month.\nPrice: Free\nArea: Pensacola Be
+ ach & Perdido\nTimes: Thu 10/08/2026 · from dark\, best in the first hou
+ rs\nChecked against the venue's own page on 2026-10-02\nhttps://coastalev
+ entures.com/events/ev-draconids-1008.html
+LOCATION:Your own yard\, or Big Lagoon State Park for a darker sky\, 12301
+  Gulf Beach Hwy\, Pensacola\, FL 32507
+URL:https://coastaleventures.com/events/ev-draconids-1008.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_ballet_frank-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T190000
-DTEND:20261004T210000
-SUMMARY:Ballet Pensacola: Frankenstein
-DESCRIPTION:A gothic\, atmospheric Frankenstein ballet plays one October w
- eekend\, October 2-4\, a moody\, elegant date. Bonus for a young dance fa
- n: a matinee could work too.\nPrice: not published by the venue\, so conf
- irm before you go\nArea: Pensacola\nTimes: Fri 10/2 7 PM · Sat 10/3 1:30
-  PM and 7 PM · Sun 10/4 1:30 PM\nChecked against the venue's own page on
-  2026-09-26\nhttps://coastaleventures.com/events/ev-ballet-frank.html
-LOCATION:Ballet Pensacola\, The Center\, 400 S Jefferson St\, Pensacola\, 
- FL 32502
-URL:https://coastaleventures.com/events/ev-ballet-frank.html
+UID:ev_ship_to_shore_nautilus-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T100000
+DTEND:20261009T120000
+SUMMARY:Ship to Shore Chat with E/V Nautilus
+DESCRIPTION:The Alabama Aquarium at Dauphin Island Sea Lab hosts a live sh
+ ip-to-shore chat with the crew of the E/V Nautilus for one hour on a Frid
+ ay morning. It's included with regular Aquarium admission.\nPrice: not pu
+ blished by the venue\, so confirm before you go\nTimes: Friday 10/9 · 10
+ :00 AM to 11:00 AM\nChecked against the venue's own page on 2026-09-26\nh
+ ttps://coastaleventures.com/events/ev-ship-to-shore-nautilus.html
+LOCATION:Alabama Aquarium at Dauphin Island Sea Lab\, Dauphin Island\, AL
+URL:https://coastaleventures.com/events/ev-ship-to-shore-nautilus.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_songwriters-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
+UID:ev_uwf_iacuc_semiannual_meeting-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T130000
+DTEND:20261009T150000
+SUMMARY:Institutional Animal Care and Use Committee Semi-Annual Meeting
+DESCRIPTION:UWF's Institutional Animal Care and Use Committee holds its se
+ mi-annual public meeting in Building 10\, Room 131\, Friday from 1 to 3 P
+ M. The meeting is open to the public with no admission charge.\nPrice: no
+ t published by the venue\, so confirm before you go\nArea: Pensacola\nTim
+ es: Friday 10/9 · 1:00 PM to 3:00 PM\nhttps://coastaleventures.com/event
+ s/ev-uwf-iacuc-semiannual-meeting.html
+LOCATION:UWF Building 10\, Room 131\, 11000 University Parkway\, Pensacola
+ \, FL 32514
+URL:https://coastaleventures.com/events/ev-uwf-iacuc-semiannual-meeting.ht
+ ml
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_proof_youth_group_gbpc-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T183000
+DTEND:20261009T203000
+SUMMARY:Proof Youth Group
+DESCRIPTION:Gulf Breeze Presbyterian Church runs its Proof Youth Group on 
+ Fridays from 6:30 to 9:05 PM\, at the church on Andrew Jackson Trail. The
+  group is open to the public and meets every week.\nPrice: not published 
+ by the venue\, so confirm before you go\nArea: Gulf Breeze & Navarre\nTim
+ es: Fridays · 6:30 PM to 9:05 PM\nhttps://coastaleventures.com/events/ev
+ -proof-youth-group-gbpc.html
+LOCATION:Gulf Breeze Presbyterian Church\, 100 Andrew Jackson Trail\, Gulf
+  Breeze\, FL
+URL:https://coastaleventures.com/events/ev-proof-youth-group-gbpc.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_shrimpfest-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261012
+SUMMARY:53rd National Shrimp Festival: Gulf Shores
+DESCRIPTION:The Gulf Coast's giant beach festival brings a Children's Acti
+ vity Village\, a sand-sculpture contest\, three music stages\, and more t
+ han 250 vendors. Entry is free\, right on the sand.\nPrice: Free\nArea: O
+ range Beach & Gulf Shores\nTimes: Thu-Sat 10 AM-10 PM · Sun 10 AM-5 PM\n
+ Checked against the venue's own page on 2026-10-02\nhttps://coastaleventu
+ res.com/events/ev-shrimpfest.html
+LOCATION:Gulf Shores Public Beach\, 101 Gulf Shores Pkwy\, Gulf Shores\, A
+ L 36542
+URL:https://coastaleventures.com/events/ev-shrimpfest.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_songwriters-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261012
 SUMMARY:Pensacola Beach Songwriters Festival (cherry-pick sets)
 DESCRIPTION:Ten days of acoustic storyteller rounds run\, mostly free\, a 
@@ -69,10 +121,27 @@ LOCATION:22+ venues\, Pensacola Beach + downtown\, Via de Luna Dr\, Pensac
 URL:https://coastaleventures.com/events/ev-songwriters.html
 END:VEVENT
 BEGIN:VEVENT
-UID:nl_mancis_live-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T183000
-DTEND:20261004T203000
+UID:ev_tosh_saenger-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T190000
+DTEND:20261009T210000
+SUMMARY:Daniel Tosh: My First Farewell Tour
+DESCRIPTION:Tosh's "My First Farewell Tour" plays the Saenger downtown. Hi
+ s material runs shock-oriented and explicit\, edgier than most adult come
+ dy. Know the act before you book. This is strictly a leave-the-kids\, adu
+ lts-only night.\nPrice: not published by the venue\, so confirm before yo
+ u go\nArea: Pensacola\nTimes: Fri 10/09/2026 · 7:00 PM\nChecked against 
+ the venue's own page on 2026-09-26\nhttps://coastaleventures.com/events/e
+ v-tosh-saenger.html
+LOCATION:Saenger Theatre\, Pensacola\, 118 S Palafox Pl\, Pensacola\, FL 3
+ 2502
+URL:https://coastaleventures.com/events/ev-tosh-saenger.html
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_mancis_live-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T183000
+DTEND:20261009T203000
 SUMMARY:Live Music: Manci's Antique Club
 DESCRIPTION:This Daphne institution has walls of Jim Beam decanters and li
  ve local bands Thursday through Sunday. It is a grown-up night out.\nPric
@@ -83,10 +152,10 @@ LOCATION:Manci's Antique Club\, 1715 Main St\, Daphne\, AL 36526
 URL:https://coastaleventures.com/events/nl-mancis-live.html
 END:VEVENT
 BEGIN:VEVENT
-UID:nl_fubar_nights-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T210000
-DTEND:20261004T230000
+UID:nl_fubar_nights-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T210000
+DTEND:20261009T230000
 SUMMARY:Karaoke & DJ Nights: FUBAR Pizza Bar
 DESCRIPTION:Late-night karaoke runs five nights a week (Sun\, Tue\, Wed\, 
  Fri\, Sat) plus a DJ on Monday and Thursday\, 9 PM to 1 AM every night\, 
@@ -98,10 +167,24 @@ LOCATION:FUBAR Pizza Bar\, 114 Amberjack Dr\, Fort Walton Beach\, FL 32548
 URL:https://coastaleventures.com/events/nl-fubar-nights.html
 END:VEVENT
 BEGIN:VEVENT
-UID:nl_sandshaker_live-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
-DTEND;VALUE=DATE:20261005
+UID:nl_theblock_karaoke-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T180000
+DTEND:20261009T200000
+SUMMARY:Karaoke Block: The Block
+DESCRIPTION:The Sports & Karaoke room at The Block runs Wednesday through 
+ Saturday\, opening at 6 (8 on Thursday) and going late. It is downtown Fo
+ rt Walton Beach.\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Wed-Sat
+  · from 6 PM (Thu 8 PM)\nChecked against the venue's own page on 2026-09
+ -26\nhttps://coastaleventures.com/events/nl-theblock-karaoke.html
+LOCATION:The Block\, 113 Eglin Pkwy SE\, Fort Walton Beach\, FL 32548
+URL:https://coastaleventures.com/events/nl-theblock-karaoke.html
+END:VEVENT
+BEGIN:VEVENT
+UID:nl_sandshaker_live-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261010
 SUMMARY:Weekend Live Music: Sandshaker Lounge
 DESCRIPTION:The Shaker\, birthplace of the Bushwacker\, has live music eve
  ry weekend and never a cover. It is a classic Pensacola Beach dive\, abou
@@ -114,10 +197,10 @@ LOCATION:Sandshaker Lounge\, 731 Pensacola Beach Blvd\, Pensacola Beach\,
 URL:https://coastaleventures.com/events/nl-sandshaker-live.html
 END:VEVENT
 BEGIN:VEVENT
-UID:nl_paradise_live-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T173000
-DTEND:20261004T193000
+UID:nl_paradise_live-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T173000
+DTEND:20261009T193000
 SUMMARY:Live Music: Paradise Bar & Grill
 DESCRIPTION:Beachside live music plays most nights on Pensacola Beach\, wi
  th rotating local acts starting at 5:30 (Sundays 2:30). Wine Down Wednesd
@@ -130,23 +213,42 @@ LOCATION:Paradise Bar & Grill\, 21 Via De Luna Dr\, Pensacola Beach\, FL 3
 URL:https://coastaleventures.com/events/nl-paradise-live.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_romanstreet-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T193000
-DTEND:20261004T213000
-SUMMARY:Roman Street
-DESCRIPTION:This local instrumental duo plays Latin and smooth-jazz guitar
- \, easy and romantic. It is a relaxed\, all-ages-clean date.\nPrice: $73 
- for two\nArea: Pensacola\nTimes: Sun 10/04/2026 · 7:30 PM\nhttps://coast
- aleventures.com/events/ev-romanstreet.html
-LOCATION:Saenger Theatre\, 118 S Palafox Pl\, Pensacola\, FL 32502
-URL:https://coastaleventures.com/events/ev-romanstreet.html
+UID:ev_seville_flipquarter-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T180000
+DTEND:20261009T200000
+SUMMARY:Flip My Quarter: Friday happy hour
+DESCRIPTION:Call the coin flip and the drink is free\; miss it and you pay
+ . It is two hours of the week's first exhale\, in the courtyard room\, be
+ fore the complex turns into a Friday night.\nPrice: not published by the 
+ venue\, so confirm before you go\nArea: Pensacola\nTimes: Fridays · 6:00
+ -8:00 PM\nChecked against the venue's own page on 2026-10-02\nhttps://coa
+ staleventures.com/events/ev-seville-flipquarter.html
+LOCATION:Seville Quarter\, Apple Annie's\, 130 E Government St\, Pensacola
+ \, FL 32502
+URL:https://coastaleventures.com/events/ev-seville-flipquarter.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_seville_karaoke-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T200000
-DTEND:20261004T230000
+UID:ev_seville_dueling-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T200000
+DTEND:20261009T230000
+SUMMARY:Rosie O'Grady's Dueling Piano Show
+DESCRIPTION:Two pianos take requests shouted from the floor\, and the room
+  sings back. It is loud\, and the show carries the night for three hours.
+ \nPrice: not published by the venue\, so confirm before you go\nArea: Pen
+ sacola\nTimes: Fridays · 8:00-11:00 PM\nChecked against the venue's own 
+ page on 2026-08-08\nhttps://coastaleventures.com/events/ev-seville-duelin
+ g.html
+LOCATION:Seville Quarter\, Rosie O'Grady's\, 130 E Government St\, Pensaco
+ la\, FL 32502
+URL:https://coastaleventures.com/events/ev-seville-dueling.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seville_karaoke-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T200000
+DTEND:20261009T230000
 SUMMARY:Lili Marlene's Karaoke
 DESCRIPTION:Karaoke runs every night but Monday in the aviators' room\, no
  t just on the weekend. It has a supportive room\, a real sound system\, a
@@ -159,115 +261,207 @@ LOCATION:Seville Quarter\, Lili Marlene's\, 130 E Government St\, Pensacol
 URL:https://coastaleventures.com/events/ev-seville-karaoke.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_seville_sundaybrunch-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T110000
-DTEND:20261004T130000
-SUMMARY:Sunday Brunch with John Wheeler: Seville Quarter
-DESCRIPTION:Brunch runs in the courtyard room while John Wheeler plays thr
- ough it. It is a daytime date that ends early enough to still leave a Sun
- day afterward.\nPrice: not published by the venue\, so confirm before you
-  go\nArea: Pensacola\nTimes: Sundays · 11:00 AM-2:00 PM\nChecked against
-  the venue's own page on 2026-10-02\nhttps://coastaleventures.com/events/
- ev-seville-sundaybrunch.html
-LOCATION:Seville Quarter\, Apple Annie's\, 130 E Government St\, Pensacola
- \, FL 32502
-URL:https://coastaleventures.com/events/ev-seville-sundaybrunch.html
+UID:ev_bigchill_djdan-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T180000
+DTEND:20261009T213000
+SUMMARY:Friday Dance Party with DJ Dan: The Big Chill
+DESCRIPTION:The venue bills it as a family dance party\, not a club night\
+ , with kids on the floor\, parents around the edge\, and it is done by 9:
+ 30. It is three and a half hours of somebody else providing the entertain
+ ment.\nPrice: not published by the venue\, so confirm before you go\nArea
+ : 30A & South Walton\nTimes: Fridays · 6:00-9:30 PM\nChecked against the
+  venue's own page on 2026-10-02\nhttps://coastaleventures.com/events/ev-b
+ igchill-djdan.html
+LOCATION:The Big Chill\, 20 Hub Lane\, Watersound Beach\, FL 32461
+URL:https://coastaleventures.com/events/ev-bigchill-djdan.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_takeakidfishing_1004-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T070000
-DTEND:20261004T090000
-SUMMARY:Take a Kid Fishing Day: Okaloosa Island Pier
-DESCRIPTION:Kids twelve and under fish free for the whole day\, the first 
- hundred get a rod to keep\, and the pier lends tackle to anyone who needs
-  it. Bait is donated. This is the fourth year running\, with vendors\, ga
- mes\, and food along the deck.\nPrice: from $2\nArea: Destin & Fort Walto
- n\nTimes: Sun 10/04/2026 · 7:00 AM-4:00 PM\nChecked against the venue's 
- own page on 2026-08-08\nhttps://coastaleventures.com/events/ev-takeakidfi
- shing-1004.html
-LOCATION:Okaloosa Island Pier\, 1030 Miracle Strip Pkwy SE\, Fort Walton B
- each\, FL 32548
-URL:https://coastaleventures.com/events/ev-takeakidfishing-1004.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_university_of_west_florida_women_s_soccer_vs_1004-2026-10-04@coast-
+UID:ev_university_of_west_florida_women_s_volleybal_1009-2026-10-09@coast-
  guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T130000
-DTEND:20261004T150000
-SUMMARY:UWF Women's Soccer vs Jacksonville University
-DESCRIPTION:University of West Florida women's soccer hosts Jacksonville U
- niversity at the UWF Soccer Complex\, part of the program's debut NCAA Di
- vision I season. General admission is five dollars\, and seniors\, milita
- ry and visiting students pay three dollars. UWF students\, faculty\, staf
- f\, children under six and youth in uniform get in free. Tickets are cash
-  only at the gate.\nPrice: from $3\nArea: Pensacola\nTimes: Sunday 10/4 
- · 1:00 PM to 3:00 PM\nChecked against the venue's own page on 2026-10-02
- \nhttps://coastaleventures.com/events/ev-university-of-west-florida-women
- -s-soccer-vs-1004.html
-LOCATION:UWF Soccer Complex\, 11000 University Parkway\, Pensacola\, FL 32
- 514
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T180000
+DTEND:20261009T200000
+SUMMARY:UWF Women's Volleyball vs Jacksonville: Argo Aloha
+DESCRIPTION:UWF women's volleyball hosts Jacksonville for Argo Aloha at th
+ e Field House. General admission is $5\, with a $3 rate for seniors\, mil
+ itary and visiting students\, and free entry for UWF students\, staff and
+  children under 6. Tickets are sold at the gate on game day only and cash
+  is the only accepted payment.\nPrice: from $3\nArea: Pensacola\nTimes: F
+ riday 10/9 · 6:00 PM to 8:00 PM\nChecked against the venue's own page on
+  2026-10-02\nhttps://coastaleventures.com/events/ev-university-of-west-fl
+ orida-women-s-volleybal-1009.html
+LOCATION:UWF Field House\, Building 54\, 11000 University Parkway\, Pensac
+ ola\, FL 32514
 URL:https://coastaleventures.com/events/ev-university-of-west-florida-wome
- n-s-soccer-vs-1004.html
+ n-s-volleybal-1009.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_brunch_and_rally_0823-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T130000
-DTEND:20261004T150000
-SUMMARY:Brunch & Rally
-DESCRIPTION:Pickleball at OWA runs indoor open play every Sunday afternoon
- \, paired with a discount for anyone who shows a same-day receipt from Wa
- ffles R Wild. Open play costs $10 for nonmembers\, members play free\, an
- d a Waffles R Wild receipt brings the nonmember rate down to $7. It repea
- ts weekly\, so today's session is one stop on an ongoing schedule.\nPrice
- : from $10\nArea: Orange Beach & Gulf Shores\nTimes: Sundays · 1:00 PM t
- o 5:00 PM\nChecked against the venue's own page on 2026-10-02\nhttps://co
- astaleventures.com/events/ev-brunch-and-rally-0823.html
-LOCATION:Pickleball at OWA\, 200-A N. OWA Blvd\, Foley\, AL 36535
-URL:https://coastaleventures.com/events/ev-brunch-and-rally-0823.html
+UID:ev_table_tennis_open_play_0901-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T083000
+DTEND:20261009T103000
+SUMMARY:Table Tennis Open Play
+DESCRIPTION:Niceville Senior Center's table tennis room is open for casual
+ \, drop-in play with no experience required. The city describes it as an 
+ active\, social way to spend the morning rather than a competitive league
+ . It shares the Tuesday 8:30 AM to 4:30 PM window with several other open
+ -play programs at the center\, and members age 55 and up are the intended
+  audience.\nPrice: not published by the venue\, so confirm before you go\
+ nArea: Destin & Fort Walton\nTimes: 8:30 AM to 4:30 PM\nChecked against t
+ he venue's own page on 2026-09-26\nhttps://coastaleventures.com/events/ev
+ -table-tennis-open-play-0901.html
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 325
+ 78
+URL:https://coastaleventures.com/events/ev-table-tennis-open-play-0901.htm
+ l
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_navarre_fishing_rodeo_1003-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T140000
-DTEND:20261004T160000
-SUMMARY:Navarre Fishing Rodeo
-DESCRIPTION:Anglers spread out across the shore\, boats\, kayaks and the p
- ier for the two day Navarre Fishing Rodeo\, with a published Junior Divis
- ion that keeps the weekend open to younger competitors. Weigh ins run Sat
- urday\, and Sunday adds a second round of weigh ins along with the awards
-  presentation.\nPrice: not published by the venue\, so confirm before you
-  go\nArea: Gulf Breeze & Navarre\nTimes: Saturday 10/3 · 2:00 PM to 5:00
-  PM\nChecked against the venue's own page on 2026-09-26\nhttps://coastale
- ventures.com/events/ev-navarre-fishing-rodeo-1003.html
-LOCATION:Juana's Pagodas & Sailors' Grill weigh-in and awards site\, 1451 
- Navarre Beach Causeway\, Navarre\, FL 32566
-URL:https://coastaleventures.com/events/ev-navarre-fishing-rodeo-1003.html
+UID:ev_ping_pong_meet_up_0902-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T093000
+DTEND:20261009T113000
+SUMMARY:Ping Pong Meet-Up
+DESCRIPTION:This ping pong meetup at the Niceville Senior Center is open t
+ o beginners and experienced players alike\, and the city says no experien
+ ce is required to join in. It runs Wednesday mid morning and repeats on m
+ ultiple weekdays.\nPrice: not published by the venue\, so confirm before 
+ you go\nArea: Destin & Fort Walton\nTimes: 9:30 AM to 11:00 AM\nChecked a
+ gainst the venue's own page on 2026-09-26\nhttps://coastaleventures.com/e
+ vents/ev-ping-pong-meet-up-0902.html
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 325
+ 78
+URL:https://coastaleventures.com/events/ev-ping-pong-meet-up-0902.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_trip_down_memory_lane_1004-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T150000
-DTEND:20261004T170000
-SUMMARY:Trip Down Memory Lane
-DESCRIPTION:Tribute performer Brandon Styles channels nearly 40 classic ar
- tists from the 1950s through the 1970s at OWA's Brandon Styles Theater. E
- xpect impressions of Frank Sinatra\, Tony Bennett\, Neil Diamond\, and Lo
- uis Armstrong. Tickets run $35 for adults and $25 for youth\, though the 
- youth age is not published.\nPrice: from $25\nArea: Orange Beach & Gulf S
- hores\nTimes: Sunday 10/4 · 3:00 PM to 4:00 PM\nChecked against the venu
- e's own page on 2026-10-02\nhttps://coastaleventures.com/events/ev-trip-d
- own-memory-lane-1004.html
-LOCATION:Brandon Styles Theater\, 101-H S. OWA Blvd\, Foley\, AL 36535
-URL:https://coastaleventures.com/events/ev-trip-down-memory-lane-1004.html
+UID:ev_mexican_train_dominoes_0902-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T100000
+DTEND:20261009T120000
+SUMMARY:Mexican Train Dominoes
+DESCRIPTION:Mexican Train Dominoes at the Niceville Senior Center is pitch
+ ed as easy to learn\, welcoming first-time players alongside the regulars
+ . It runs Wednesday late morning into early afternoon and repeats on mult
+ iple weekdays.\nPrice: not published by the venue\, so confirm before you
+  go\nArea: Destin & Fort Walton\nTimes: 10:00 AM to 1:00 PM\nChecked agai
+ nst the venue's own page on 2026-09-26\nhttps://coastaleventures.com/even
+ ts/ev-mexican-train-dominoes-0902.html
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 325
+ 78
+URL:https://coastaleventures.com/events/ev-mexican-train-dominoes-0902.htm
+ l
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_mobile_museum_make_take_art-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
+UID:ev_hearts_card_game_0909-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T130000
+DTEND:20261009T150000
+SUMMARY:Hearts Card Game
+DESCRIPTION:The Niceville Senior Center opens its doors on Wednesday after
+ noons for a drop in game of Hearts\, welcoming beginners and experienced 
+ players alike. No reservation is needed\, so you can just show up and fin
+ d a table. The center is open to members age 55 and up\, and City of Nice
+ ville residents get free membership. Non-resident membership pricing isn'
+ t published\, so call ahead.\nPrice: not published by the venue\, so conf
+ irm before you go\nArea: Destin & Fort Walton\nTimes: 1:00 PM to 4:30 PM\
+ nChecked against the venue's own page on 2026-09-26\nhttps://coastalevent
+ ures.com/events/ev-hearts-card-game-0909.html
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 325
+ 78
+URL:https://coastaleventures.com/events/ev-hearts-card-game-0909.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_concerts_at_the_landing_cat_rhodes_and_the_t_1009-2026-10-09@coast-
+ guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T180000
+DTEND:20261009T200000
+SUMMARY:Concerts at The Landing: Cat Rhodes & The Truth
+DESCRIPTION:Fort Walton Beach Landing hosts Cat Rhodes & The Truth for a f
+ ree evening of live music\, one date in the city's Fall 2026 waterfront c
+ oncert series that runs every Friday from September 4 through October 23.
+  The band plays blues\, funk and neo soul. Bring a lawn chair or a quilt\
+ , since the show sits on the open lawn along the water.\nPrice: Free\nAre
+ a: Destin & Fort Walton\nTimes: Friday 10/9 · 6:00 PM to 8:00 PM\nChecke
+ d against the venue's own page on 2026-10-02\nhttps://coastaleventures.co
+ m/events/ev-concerts-at-the-landing-cat-rhodes-and-the-t-1009.html
+LOCATION:Fort Walton Beach Landing\, 131 Brooks Street SE\, Fort Walton Be
+ ach\, FL 32548
+URL:https://coastaleventures.com/events/ev-concerts-at-the-landing-cat-rho
+ des-and-the-t-1009.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_friday_night_karaoke_0904-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T180000
+DTEND:20261009T200000
+SUMMARY:Friday Night Karaoke
+DESCRIPTION:Cozumel Bar & Grill runs karaoke every Friday night at OWA\, l
+ etting guests sing between orders of food and drinks. Karaoke runs from 6
+ :00 PM to 10:00 PM\, including October 9.\nPrice: not published by the ve
+ nue\, so confirm before you go\nArea: Orange Beach & Gulf Shores\nTimes: 
+ Fridays · 6:00 PM to 10:00 PM\nChecked against the venue's own page on 2
+ 026-10-02\nhttps://coastaleventures.com/events/ev-friday-night-karaoke-09
+ 04.html
+LOCATION:Cozumel Bar & Grill\, 104 S OWA Blvd Ste A\, Foley\, AL 36535
+URL:https://coastaleventures.com/events/ev-friday-night-karaoke-0904.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_cornhole_open_play_0901-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T083000
+DTEND:20261009T103000
+SUMMARY:Cornhole Open Play
+DESCRIPTION:Members toss bags at the boards during open-play cornhole at t
+ he Niceville Senior Center. It runs casually throughout the center's regu
+ lar weekday hours. City of Niceville residents play free\, and everyone e
+ lse pays a $5 day rate.\nPrice: from $5\nArea: Destin & Fort Walton\nTime
+ s: 8:30 AM to 4:30 PM\nChecked against the venue's own page on 2026-10-02
+ \nhttps://coastaleventures.com/events/ev-cornhole-open-play-0901.html
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 325
+ 78
+URL:https://coastaleventures.com/events/ev-cornhole-open-play-0901.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_exercise_room_0901-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T083000
+DTEND:20261009T103000
+SUMMARY:Exercise Room
+DESCRIPTION:The Niceville Senior Center's exercise room stays open for mem
+ bers to work through strength\, cardio\, and flexibility routines on thei
+ r own schedule. Equipment includes two recumbent bikes\, a treadmill\, fr
+ ee weights\, a stability ball\, mats\, and stretch bands. City of Nicevil
+ le residents get free access\, and everyone else pays a $5 day rate.\nPri
+ ce: from $5\nArea: Destin & Fort Walton\nTimes: 8:30 AM to 4:30 PM\nCheck
+ ed against the venue's own page on 2026-10-02\nhttps://coastaleventures.c
+ om/events/ev-exercise-room-0901.html
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 325
+ 78
+URL:https://coastaleventures.com/events/ev-exercise-room-0901.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_putting_green_open_play_0901-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T083000
+DTEND:20261009T103000
+SUMMARY:Putting Green Open Play
+DESCRIPTION:Members check out putters and balls at the front desk to pract
+ ice on the Niceville Senior Center's putting green. It is casual\, and yo
+ u can work on your short game alone or play a round with friends. City of
+  Niceville residents get free access\, and everyone else pays a $5 day ra
+ te.\nPrice: from $5\nArea: Destin & Fort Walton\nTimes: 8:30 AM to 4:30 P
+ M\nChecked against the venue's own page on 2026-10-02\nhttps://coastaleve
+ ntures.com/events/ev-putting-green-open-play-0901.html
+LOCATION:Niceville Senior Center\, 201 Campbell Drive\, Niceville\, FL 325
+ 78
+URL:https://coastaleventures.com/events/ev-putting-green-open-play-0901.ht
+ ml
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mobile_museum_make_take_art-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261016
 SUMMARY:Make & Take Art: weekly drop-in art sessions
 DESCRIPTION:The museum runs a free Thursday afternoon art session most wee
@@ -284,45 +478,45 @@ URL:https://coastaleventures.com/events/ev-mobile-museum-make-take-art.htm
  l
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_usta_october_l4_open_1003-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
-DTEND;VALUE=DATE:20261006
-SUMMARY:2026 USTA October Level 4 Open
-DESCRIPTION:A USTA Level 4 open draws roughly 200 players from around the 
- country to the Mobile Tennis Center over three days. Match times and any 
- spectator admission are not published on the host page\, and the host's o
- wn address for the venue misspells the street name that USTA's own venue 
- contact page corrects to Gaillard Drive.\nPrice: not published by the ven
- ue\, so confirm before you go\nArea: Mobile & Baldwin County\nTimes: Sat 
- 10/3 – Mon 10/5 · times not yet published\nChecked against the venue's
-  own page on 2026-10-02\nhttps://coastaleventures.com/events/ev-usta-octo
- ber-l4-open-1003.html
-LOCATION:Mobile Tennis Center\, 851 Gaillard Drive\, Mobile\, AL 36608
-URL:https://coastaleventures.com/events/ev-usta-october-l4-open-1003.html
+UID:ev_botanical_gardens_sketch_club-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261017
+SUMMARY:Sketch Club in the Gardens
+DESCRIPTION:Botanical arts instructor Derek Norman leads a casual Friday s
+ ketch session in the Larkins Classroom or the Magnolia Hill Studio. Garde
+ n members get in free\, everyone else pays the standard Mobile Botanical 
+ Gardens admission\, and the garden's own site is not internally consisten
+ t about what the military and veteran rate actually is.\nPrice: from $6\n
+ Area: Mobile & Baldwin County\nTimes: Fridays 8/28 through 10/16 · 2:00 
+ PM to 4:00 PM (space permitting)\nChecked against the venue's own page on
+  2026-10-02\nhttps://coastaleventures.com/events/ev-botanical-gardens-ske
+ tch-club.html
+LOCATION:Mobile Botanical Gardens\, 5151 Museum Drive\, Mobile\, AL 36608
+URL:https://coastaleventures.com/events/ev-botanical-gardens-sketch-club.h
+ tml
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_destin_5k_rodeo_1004-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T080000
-DTEND:20261004T100000
-SUMMARY:Destin Fishing Rodeo: Rodeo Run 5K
-DESCRIPTION:The Rodeo Run is a flat 3.1-mile course starting and ending at
-  Clement E. Taylor Park on the Destin Harbor. It has separate runner\, wa
- lker and open-runner categories. Kids and wheelchair participants are wel
- come\, and the first 200 registrants get a T-shirt. Proceeds support the 
- Miss Destin Scholarship Fund and local charities\; awards follow at AJ's 
- Seafood & Oyster Bar.\nPrice: from $35\nArea: Destin & Fort Walton\nTimes
- : Sunday 10/4 · 8:00 AM (finish/awards time not published)\nChecked agai
- nst the venue's own page on 2026-10-02\nhttps://coastaleventures.com/even
- ts/ev-destin-5k-rodeo-1004.html
-LOCATION:Clement E. Taylor Park\, 131 Calhoun Ave\, Destin\, FL 32541
-URL:https://coastaleventures.com/events/ev-destin-5k-rodeo-1004.html
+UID:ev_umobile_vb_1009-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T180000
+DTEND:20261009T200000
+SUMMARY:University of Mobile Volleyball vs Wesleyan College
+DESCRIPTION:The Rams open a new home weekend against Wesleyan College at P
+ harr Gymnasium. The October events calendar and volleyball schedule both 
+ list the Friday evening start time without a published gate price.\nPrice
+ : not published by the venue\, so confirm before you go\nArea: Mobile & B
+ aldwin County\nTimes: Friday 10/9 · 6:00 PM\nChecked against the venue's
+  own page on 2026-10-02\nhttps://coastaleventures.com/events/ev-umobile-v
+ b-1009.html
+LOCATION:H. Austill Pharr Gymnasium\, University of Mobile\, 5735 College 
+ Parkway\, Mobile\, AL 36613
+URL:https://coastaleventures.com/events/ev-umobile-vb-1009.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_destin_rodeo_weighins-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
+UID:ev_destin_rodeo_weighins-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261101
 SUMMARY:Destin Fishing Rodeo: Daily Public Weigh-Ins
 DESCRIPTION:Anglers competing in the month-long Destin Fishing Rodeo bring
@@ -338,9 +532,9 @@ LOCATION:Docks behind AJ's Seafood & Oyster Bar\, 116 Harbor Blvd\, Destin
 URL:https://coastaleventures.com/events/ev-destin-rodeo-weighins.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_crosspoint_fpu-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
+UID:ev_crosspoint_fpu-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261015
 SUMMARY:Financial Peace University
 DESCRIPTION:Crosspoint's Niceville campus runs Dave Ramsey's nine-week Fin
@@ -358,9 +552,9 @@ LOCATION:Crosspoint Niceville Campus\, Room 703\, 214 Partin Dr S\, Nicevi
 URL:https://coastaleventures.com/events/ev-crosspoint-fpu.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_crosspoint_elevate_marriage-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
+UID:ev_crosspoint_elevate_marriage-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261015
 SUMMARY:Elevate Marriage Group
 DESCRIPTION:A nine-session marriage enrichment group meets Wednesday eveni
@@ -378,9 +572,9 @@ URL:https://coastaleventures.com/events/ev-crosspoint-elevate-marriage.htm
  l
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_crosspoint_disciplestory-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
+UID:ev_crosspoint_disciplestory-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261019
 SUMMARY:DiscipleStory
 DESCRIPTION:An eight-week Sunday morning class at Crosspoint's Niceville c
@@ -396,9 +590,9 @@ LOCATION:Crosspoint Niceville Campus\, Room 912\, 214 Partin Dr S\, Nicevi
 URL:https://coastaleventures.com/events/ev-crosspoint-disciplestory.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_crosspoint_divorcecare-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
+UID:ev_crosspoint_divorcecare-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261014
 SUMMARY:DivorceCare Support Group
 DESCRIPTION:Crosspoint's Niceville campus runs a weekly Tuesday evening su
@@ -414,9 +608,9 @@ LOCATION:Crosspoint Niceville Campus Community Life Center\, Room 956\, 21
 URL:https://coastaleventures.com/events/ev-crosspoint-divorcecare.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_crosspoint_strength-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
+UID:ev_crosspoint_strength-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261015
 SUMMARY:From Strength to Strength Discussion Group
 DESCRIPTION:A Wednesday evening discussion group at Crosspoint's Niceville
@@ -432,9 +626,9 @@ LOCATION:Crosspoint Niceville Campus Marler Chapel\, 214 Partin Dr S\, Nic
 URL:https://coastaleventures.com/events/ev-crosspoint-strength.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_crosspoint_dating_purpose-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
+UID:ev_crosspoint_dating_purpose-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261015
 SUMMARY:Dating with a Purpose
 DESCRIPTION:A Wednesday evening discussion group at Crosspoint's Niceville
@@ -450,9 +644,98 @@ LOCATION:Crosspoint Niceville Campus\, Room 701\, 214 Partin Dr S\, Nicevi
 URL:https://coastaleventures.com/events/ev-crosspoint-dating-purpose.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_alice_in_wonderland_uwf_theatre_1002-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
+UID:ev_milton_hs_homecoming_parade-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T103000
+DTEND:20261009T123000
+SUMMARY:Milton High School Homecoming Parade
+DESCRIPTION:Milton High School's homecoming parade runs for an hour on a F
+ riday morning in October\, per the City of Milton's public calendar. The 
+ City does not publish the exact route for spectators\, and the school has
+  not posted its own page for the 2026 parade.\nPrice: not published by th
+ e venue\, so confirm before you go\nArea: Milton & Pace\nTimes: Friday 10
+ /9 · 10:30 AM to 11:30 AM\nChecked against the venue's own page on 2026-
+ 09-26\nhttps://coastaleventures.com/events/ev-milton-hs-homecoming-parade
+ .html
+LOCATION:Milton community parade route\, Milton\, FL 32572 (exact parade r
+ oute not published)
+URL:https://coastaleventures.com/events/ev-milton-hs-homecoming-parade.htm
+ l
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_vinyl_blackflag-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T200000
+DTEND:20261009T220000
+SUMMARY:Black Flag
+DESCRIPTION:The pioneering hardcore punk band Black Flag plays Vinyl Music
+  Hall's main room\, with doors at 7 PM ahead of an 8 PM start. The show i
+ s all ages\, one of the rarer punk bills where a teenager with a ride doe
+ s not need a workaround. Expect a loud\, physical room built for standing
+ \, not seated.\nPrice: from $35\nArea: Pensacola\nTimes: Fri 10/9 · 8:00
+  PM (doors 7:00 PM)\nChecked against the venue's own page on 2026-10-02\n
+ https://coastaleventures.com/events/ev-vinyl-blackflag.html
+LOCATION:Vinyl Music Hall\, 2 South Palafox\, Pensacola\, FL 32502
+URL:https://coastaleventures.com/events/ev-vinyl-blackflag.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_rockin_in_paradise_with_styx_and_friends_1008-2026-10-09@coast-guid
+ e
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261011
+SUMMARY:Rockin' in Paradise with Styx & Friends
+DESCRIPTION:Rockin' In Paradise With Styx & Friends comes to Seascape Reso
+ rt on Thursday\, October 8. No start time or address is posted yet. The r
+ esort's own event page is where those land first.\nPrice: not published b
+ y the venue\, so confirm before you go\nArea: Destin & Fort Walton\nTimes
+ : Thursday 10/8 · 3:00 PM to 10:00 PM\nChecked against the venue's own p
+ age on 2026-09-26\nhttps://coastaleventures.com/events/ev-rockin-in-parad
+ ise-with-styx-and-friends-1008.html
+LOCATION:Seascape Resort\, 100 Seascape Dr\, Miramar Beach\, FL 32550
+URL:https://coastaleventures.com/events/ev-rockin-in-paradise-with-styx-an
+ d-friends-1008.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_costa_pensacola_beach_fl_1009-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T200000
+DTEND:20261009T220000
+SUMMARY:Costa: Pensacola Beach\, FL
+DESCRIPTION:Costa takes over Laguna's Beach Bar + Grill on Pensacola Beach
+  for a night that runs from 8 PM to 12:30 AM. No cover charge is posted f
+ or the night. Laguna's sits right on Pensacola Beach Boulevard\, so the n
+ ight carries an ocean view.\nPrice: not published by the venue\, so confi
+ rm before you go\nArea: Pensacola Beach & Perdido\nTimes: Friday 10/9 · 
+ 8:00 PM to 12:30 AM\nChecked against the venue's own page on 2026-09-26\n
+ https://coastaleventures.com/events/ev-costa-pensacola-beach-fl-1009.html
+LOCATION:Laguna's Beach Bar + Grill\, 460 Pensacola Beach Blvd\, Pensacola
+  Beach\, FL 32561
+URL:https://coastaleventures.com/events/ev-costa-pensacola-beach-fl-1009.h
+ tml
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_20th_annual_pumpkin_patch_1009-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261011
+SUMMARY:20th Annual Pumpkin Patch
+DESCRIPTION:First City Art Center's 20th Annual Pumpkin Patch opens with a
+  Friday Preview Party on October 9\, ahead of a Saturday pumpkin sale. Th
+ e center's own page had not yet posted the current 2026 sale details at l
+ ast check.\nPrice: not published by the venue\, so confirm before you go\
+ nArea: Pensacola\nTimes: Friday 10/9\nChecked against the venue's own pag
+ e on 2026-09-26\nhttps://coastaleventures.com/events/ev-20th-annual-pumpk
+ in-patch-1009.html
+LOCATION:First City Art Center\, 1060 N. Guillemard St.\, Pensacola\, FL 3
+ 2501
+URL:https://coastaleventures.com/events/ev-20th-annual-pumpkin-patch-1009.
+ html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_alice_in_wonderland_uwf_theatre_1002-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261012
 SUMMARY:Alice in Wonderland: UWF Theatre
 DESCRIPTION:UWF Theatre stages Alice in Wonderland on the Mainstage in Bui
@@ -472,28 +755,30 @@ URL:https://coastaleventures.com/events/ev-alice-in-wonderland-uwf-theatre
  -1002.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_baldwin_pops_founder_s_day_concert_1004-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T180000
-DTEND:20261004T200000
-SUMMARY:Baldwin Pops Founder's Day Concert
-DESCRIPTION:The volunteer Baldwin Pops stage a free Founder's Day concert 
- at Henry George Park on the Bluff\, Sunday at 6 PM. Baldwin Pops states i
- ts public concerts never require a ticket\, so seating is first come\, fi
- rst served on the bluff overlooking Mobile Bay. The concert is an annual 
- Founder's Day tradition in Fairhope.\nPrice: Free\nArea: Mobile & Baldwin
-  County\nTimes: Sunday 10/4 · 6:00 PM\nhttps://coastaleventures.com/even
- ts/ev-baldwin-pops-founder-s-day-concert-1004.html
-LOCATION:Henry George Park on the Bluff\, 11 Fairhope Avenue\, Fairhope\, 
- AL 36532
-URL:https://coastaleventures.com/events/ev-baldwin-pops-founder-s-day-conc
- ert-1004.html
+UID:ev_art_classes_with_eastern_shore_art_center_fa_0904-2026-10-09@coast-
+ guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T153000
+DTEND:20261009T173000
+SUMMARY:Art Classes with Eastern Shore Art Center: Fairhope Public Library
+DESCRIPTION:Fairhope Public Library's MakerSpace hosts a weekly art class 
+ for ages 7 to 12\, led by an Eastern Shore Art Center artist\, Friday fro
+ m 3:30 PM to 4:30 PM. Each week sends kids home with a different project.
+  Registration opens by month.\nPrice: not published by the venue\, so con
+ firm before you go\nArea: Mobile & Baldwin County\nTimes: Fridays · 3:30
+  PM to 4:30 PM\nChecked against the venue's own page on 2026-09-26\nhttps
+ ://coastaleventures.com/events/ev-art-classes-with-eastern-shore-art-cent
+ er-fa-0904.html
+LOCATION:Fairhope Public Library\, MakerSpace\, 501 Fairhope Avenue\, Fair
+ hope\, AL 36532
+URL:https://coastaleventures.com/events/ev-art-classes-with-eastern-shore-
+ art-center-fa-0904.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_jazz_art_writers_south_festival_youth_exhibi_0915-2026-10-04@coast-
+UID:ev_jazz_art_writers_south_festival_youth_exhibi_0915-2026-10-09@coast-
  guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261102
 SUMMARY:Jazz Art Writers South Festival Youth Exhibit
 DESCRIPTION:West Regional Library hosts this youth exhibition tied to the 
@@ -510,9 +795,26 @@ URL:https://coastaleventures.com/events/ev-jazz-art-writers-south-festival
  -youth-exhibi-0915.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_game_days_at_marina_bar_and_grill_1001-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
+UID:ev_our_lady_peace_30th_anniversary_tour_1009-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T200000
+DTEND:20261009T220000
+SUMMARY:Our Lady Peace: 30th Anniversary Tour
+DESCRIPTION:Our Lady Peace plays Club LA on Friday\, October 9\, as part o
+ f the band's 30th Anniversary Tour\, with the show starting at 8 PM. Tick
+ ets are sold through Ticketmaster. This is a touring stop for the band's 
+ own catalog rather than a tribute act.\nPrice: not published by the venue
+ \, so confirm before you go\nArea: Destin & Fort Walton\nTimes: Friday 10
+ /9 · 8:00 PM\nhttps://coastaleventures.com/events/ev-our-lady-peace-30th
+ -anniversary-tour-1009.html
+LOCATION:Club LA\, 34876 Emerald Coast Pkwy\, Destin\, FL 32541
+URL:https://coastaleventures.com/events/ev-our-lady-peace-30th-anniversary
+ -tour-1009.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_game_days_at_marina_bar_and_grill_1001-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20270101
 SUMMARY:Game Days at Marina Bar & Grill
 DESCRIPTION:Marina Bar & Grill at Baytowne Marina runs its own Game Days p
@@ -528,49 +830,9 @@ URL:https://coastaleventures.com/events/ev-game-days-at-marina-bar-and-gri
  ll-1001.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_aia_alabama_annual_conference_2026_1002-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T120000
-DTEND:20261004T140000
-SUMMARY:AIA Alabama Annual Conference 2026
-DESCRIPTION:Perdido Beach Resort hosts the AIA Alabama Annual Conference 2
- 026 starting Friday\, October 2. Architecture professionals gather for co
- ntinuing education\, networking\, a product show\, awards\, and social ev
- ents. Full meeting registration is $495 for AIA members and $695 for non-
- members\, with a $50 rate for young professionals and students. A spouse 
- or guest can attend for $75\, and children are $35. The conference return
- s every year.\nPrice: from $35\nArea: Orange Beach & Gulf Shores\nTimes: 
- Friday 10/2 at 12:00 PM · runs through Sunday 10/4\nChecked against the 
- venue's own page on 2026-08-28\nhttps://coastaleventures.com/events/ev-ai
- a-alabama-annual-conference-2026-1002.html
-LOCATION:Perdido Beach Resort\, 27200 Perdido Beach Blvd\, Orange Beach\, 
- AL 36561
-URL:https://coastaleventures.com/events/ev-aia-alabama-annual-conference-2
- 026-1002.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_2026_ala_case_fall_conference_1004-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
-DTEND;VALUE=DATE:20261008
-SUMMARY:2026 ALA-CASE Fall Conference
-DESCRIPTION:Perdido Beach Resort hosts the 2026 ALA-CASE Fall Conference o
- n Sunday\, October 4\, from 8 AM to 5 PM. Alabama special education admin
- istrators and education leaders gather for professional learning across t
- he day. The conference returns every year.\nPrice: not published by the v
- enue\, so confirm before you go\nArea: Orange Beach & Gulf Shores\nTimes:
-  Sunday 10/4 · 8:00 AM to 5:00 PM\nChecked against the venue's own page 
- on 2026-09-26\nhttps://coastaleventures.com/events/ev-2026-ala-case-fall-
- conference-1004.html
-LOCATION:Perdido Beach Resort\, 27200 Perdido Beach Blvd\, Orange Beach\, 
- AL 36561
-URL:https://coastaleventures.com/events/ev-2026-ala-case-fall-conference-1
- 004.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_coco_and_crawlers_0917-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
+UID:ev_coco_and_crawlers_0917-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261218
 SUMMARY:Coco & Crawlers
 DESCRIPTION:This caregiver meetup in the Youth Programming Room at Ben May
@@ -587,9 +849,28 @@ LOCATION:Ben May Main Library\, Youth Programming Room\, 701 Government St
 URL:https://coastaleventures.com/events/ev-coco-and-crawlers-0917.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_lucky_leaves_bingo_night_series_0910-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
+UID:ev_bands_on_the_blackwater_fall_2026_0904-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T190000
+DTEND:20261009T210000
+SUMMARY:Bands on the Blackwater Fall 2026
+DESCRIPTION:This free outdoor concert series runs Friday nights along the 
+ Blackwater River in downtown Milton\, from 7 PM to 9 PM. Local and region
+ al acts fill out the lineup each week\, straight through October 30. The 
+ city posts weather announcements on its Bands on the Blackwater channel i
+ f a Friday needs to change.\nPrice: Free\nArea: Milton & Pace\nTimes: Fri
+ days · 7:00 PM to 9:00 PM\nChecked against the venue's own page on 2026-
+ 10-02\nhttps://coastaleventures.com/events/ev-bands-on-the-blackwater-fal
+ l-2026-0904.html
+LOCATION:downtown Milton / Blackwater River event area\, 5158 South Willin
+ g Street\, Milton\, FL
+URL:https://coastaleventures.com/events/ev-bands-on-the-blackwater-fall-20
+ 26-0904.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_lucky_leaves_bingo_night_series_0910-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261016
 SUMMARY:Lucky Leaves Bingo Night series
 DESCRIPTION:Bellingrath Gardens & Home hosts its monthly Lucky Leaves Bing
@@ -606,44 +887,137 @@ URL:https://coastaleventures.com/events/ev-lucky-leaves-bingo-night-series
  -0910.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_ccb_nuts_and_butts_1002-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
-DTEND;VALUE=DATE:20261005
-SUMMARY:Nuts and Butts Festival
-DESCRIPTION:Coastal County's pork and peanut festival runs three days in t
- he beer garden. It is all day Friday through Sunday on the brewery's own 
- calendar. No admission is published.\nPrice: not published by the venue\,
-  so confirm before you go\nArea: Pensacola\nTimes: Friday 10/2 through Su
- nday 10/4 · all day\nChecked against the venue's own page on 2026-09-11\
- nhttps://coastaleventures.com/events/ev-ccb-nuts-and-butts-1002.html
-LOCATION:Coastal County Brewing Company\, 3041 E Olive Rd\, Pensacola\, FL
-  32514
-URL:https://coastaleventures.com/events/ev-ccb-nuts-and-butts-1002.html
+UID:ev_table_tennis_open_play_0902-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T100000
+DTEND:20261009T120000
+SUMMARY:Table Tennis Open Play
+DESCRIPTION:Destin Community Center opens its tables for open table tennis
+  play three days a week\, Monday\, Wednesday and Friday from 10 AM to 1 P
+ M. Paddles and balls are provided\, so nobody needs to bring their own eq
+ uipment. Active Destin seniors play free\, and non-residents pay $2.\nPri
+ ce: from $2\nArea: Destin & Fort Walton\nTimes: 10:00 AM to 1:00 PM\nChec
+ ked against the venue's own page on 2026-10-02\nhttps://coastaleventures.
+ com/events/ev-table-tennis-open-play-0902.html
+LOCATION:Destin Community Center\, 101 Stahlman Ave\, Destin\, FL 32541
+URL:https://coastaleventures.com/events/ev-table-tennis-open-play-0902.htm
+ l
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_blessing_of_the_animals_1004-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T160000
-DTEND:20261004T180000
-SUMMARY:Blessing of the Animals
-DESCRIPTION:First Presbyterian Church holds a short outdoor blessing servi
- ce for pets under the oak trees beside the church\, with treats for anima
- ls and their people afterward. Leash or carry your pet for everyone's saf
- ety\, since this draws a crowd of dogs\, cats and whatever else the famil
- y brings. Parking is in the three lots beside and behind the church.\nPri
- ce: Free\nArea: Destin & Fort Walton\nTimes: Sunday 10/4 · 4:00 PM to 4:
- 30 PM\nChecked against the venue's own page on 2026-09-16\nhttps://coasta
- leventures.com/events/ev-blessing-of-the-animals-1004.html
-LOCATION:First Presbyterian Church Fort Walton Beach\, 134 Beal Pkwy SW\, 
- Fort Walton Beach\, FL 32547
-URL:https://coastaleventures.com/events/ev-blessing-of-the-animals-1004.ht
- ml
+UID:ev_crestview_nightofworship_1009-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T183000
+DTEND:20261009T203000
+SUMMARY:Night of Worship
+DESCRIPTION:Emerald Coast Zoo hosts a family-friendly evening of worship i
+ n the field west of the zoo\, with guest speakers\, food trucks and comme
+ morative shirts. The zoo's own event page states there is no admission fe
+ e\, and the Destin-Fort Walton Beach tourism site independently lists the
+  same date.\nPrice: Free\nTimes: Friday 10/9 · 6:30 PM\nChecked against 
+ the venue's own page on 2026-10-02\nhttps://coastaleventures.com/events/e
+ v-crestview-nightofworship-1009.html
+LOCATION:Emerald Coast Zoo\, 5262 Deer Springs Dr.\, Crestview\, FL 32539
+URL:https://coastaleventures.com/events/ev-crestview-nightofworship-1009.h
+ tml
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_owa_primal_fear_2026-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
+UID:ev_argos_aim_high_clay_shoot_1009-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T073000
+DTEND:20261009T093000
+SUMMARY:Argos Aim High Clay Shoot Fundraiser
+DESCRIPTION:The University of West Florida Athletics program and its Alumn
+ i Association run the Argos Aim High clay shoot fundraiser. It's held at 
+ the Santa Rosa Shooting Center in Pace. Teams of four enter for $750\, wi
+ th breakfast at check-in\, plus lunch and awards after. Registration and 
+ breakfast start at 7:30 AM\, a mandatory safety briefing follows at 8:30 
+ AM\, and the tournament starts at 9:00 AM. Shooters bring their own shotg
+ un\, ammunition\, and eye and ear protection\; shells are limited to No. 
+ 7.5\, 8 or 9 shot. A rain date of December 4\, 2026 covers an October was
+ hout.\nPrice: from $750\nArea: Milton & Pace\nTimes: Friday 10/9 · Regis
+ tration and breakfast 7:30 AM · Safety briefing 8:30 AM · Tournament 9:
+ 00 AM\nChecked against the venue's own page on 2026-10-02\nhttps://coasta
+ leventures.com/events/ev-argos-aim-high-clay-shoot-1009.html
+LOCATION:Santa Rosa Shooting Center\, 6950 Quintette Rd\, Pace\, FL 32571
+URL:https://coastaleventures.com/events/ev-argos-aim-high-clay-shoot-1009.
+ html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_lifelinescreening_milton_1009-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T090000
+DTEND:20261009T110000
+SUMMARY:Lifeline Health Screenings at the Milton Event Center
+DESCRIPTION:Life Line Screening brings a day of preventive health checks t
+ o the Garden Center at the Milton Event Center. The screenings look for r
+ isk factors tied to stroke\, cardiovascular disease\, osteoporosis\, and 
+ other chronic conditions.\nPrice: not published by the venue\, so confirm
+  before you go\nArea: Milton & Pace\nTimes: Friday 10/9 · 9 AM to 5 PM\n
+ Checked against the venue's own page on 2026-09-16\nhttps://coastaleventu
+ res.com/events/ev-lifelinescreening-milton-1009.html
+LOCATION:Milton Event Center\, Garden Center\, 5256 Alabama Street\, Milto
+ n\, FL 32572
+URL:https://coastaleventures.com/events/ev-lifelinescreening-milton-1009.h
+ tml
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_wentz_festival_of_fears_me_1009-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T190000
+DTEND:20261009T210000
+SUMMARY:Cryptid Hollow Haunted Trail at Oak Tree Nature Park
+DESCRIPTION:Wentz Brothers' Festival of Fears turns Oak Tree Nature Park's
+  trail into Cryptid Hollow\, a three-quarter-mile walk through cryptid-th
+ emed scares\, running Friday and Saturday nights through the end of Octob
+ er. The operator recommends it for ages 13 and up\, with younger kids all
+ owed only with a paying adult\, and it runs rain or shine with a cap of e
+ ight people per group. Parking is at the old Regal Santa Rosa theater lot
+  next door\, and part of each weekend's ticket sales goes to a different 
+ local community organization.\nPrice: from $20\nTimes: Fridays and Saturd
+ ays 10/9 through 10/31 · Opens 7:00 PM\nChecked against the venue's own 
+ page on 2026-09-16\nhttps://coastaleventures.com/events/ev-wentz-festival
+ -of-fears-me-1009.html
+LOCATION:Wentz Brothers' Festival of Fears\, Oak Tree Nature Park\, 200 Ho
+ llywood Blvd West\, Mary Esther\, FL 32569
+URL:https://coastaleventures.com/events/ev-wentz-festival-of-fears-me-1009
+ .html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_navarre_cover_to_cover_book_club_1009-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T103000
+DTEND:20261009T123000
+SUMMARY:Cover to Cover Book Club (Navarre)
+DESCRIPTION:Cover to Cover Book Club meets at the Navarre Library on the r
+ ecurring date below.\nPrice: not published by the venue\, so confirm befo
+ re you go\nArea: Gulf Breeze & Navarre\nTimes: Friday 10/9 · 10:30 AM to
+  11:30 AM\nChecked against the venue's own page on 2026-09-16\nhttps://co
+ astaleventures.com/events/ev-navarre-cover-to-cover-book-club-1009.html
+LOCATION:Navarre Library\, 8484 James M. Harvell Road\, Navarre\, FL 32566
+URL:https://coastaleventures.com/events/ev-navarre-cover-to-cover-book-clu
+ b-1009.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gulf_breeze_preschool_storytime_1009-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T110000
+DTEND:20261009T130000
+SUMMARY:Preschool Storytime (Gulf Breeze)
+DESCRIPTION:The Gulf Breeze Library runs Preschool Storytime most weeks th
+ is fall\, back to back with its other children's programs.\nPrice: not pu
+ blished by the venue\, so confirm before you go\nArea: Gulf Breeze & Nava
+ rre\nTimes: Friday 10/9 · 11:00 AM to 11:30 AM\nChecked against the venu
+ e's own page on 2026-09-16\nhttps://coastaleventures.com/events/ev-gulf-b
+ reeze-preschool-storytime-1009.html
+LOCATION:Gulf Breeze Library\, 1060 Shoreline Drive\, Gulf Breeze\, FL 325
+ 61
+URL:https://coastaleventures.com/events/ev-gulf-breeze-preschool-storytime
+ -1009.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_owa_primal_fear_2026-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261101
 SUMMARY:Primal Fear Haunted Attraction at OWA
 DESCRIPTION:OWA's immersive haunted attraction runs on select nights throu
@@ -658,9 +1032,9 @@ LOCATION:OWA Parks & Resort\, 1501 S. OWA Blvd\, Foley\, AL 36535
 URL:https://coastaleventures.com/events/ev-owa-primal-fear-2026.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_pensacola_state_wanda_sullivan_bloem-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
+UID:ev_pensacola_state_wanda_sullivan_bloem-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261212
 SUMMARY:Wanda Sullivan: Bloem Exhibition
 DESCRIPTION:A gallery exhibition by artist Wanda Sullivan runs at Pensacol
@@ -675,28 +1049,28 @@ URL:https://coastaleventures.com/events/ev-pensacola-state-wanda-sullivan-
  bloem.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_quayside_summers_end_2026-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
-DTEND;VALUE=DATE:20261006
-SUMMARY:Summer's End at Quayside Art Gallery
-DESCRIPTION:Quayside Art Gallery in downtown Pensacola is showing Summer's
-  End\, an exhibition about the turn from late summer into autumn\, throug
- h October 5. Four artists fill the show with changing landscapes\, vacati
- on memories and the amber light of late summer evenings. The gallery is a
-  locally owned artist co-op with three floors of work by more than 50 loc
- al artists\, and it opens every day from 11 AM to 5 PM.\nPrice: not publi
- shed by the venue\, so confirm before you go\nArea: Pensacola\nTimes: Dai
- ly through 10/5 · 11:00 AM to 5:00 PM\nChecked against the venue's own p
- age on 2026-09-26\nhttps://coastaleventures.com/events/ev-quayside-summer
- s-end-2026.html
-LOCATION:Quayside Art Gallery\, 17 E Zaragoza St\, Pensacola\, FL 32502
-URL:https://coastaleventures.com/events/ev-quayside-summers-end-2026.html
+UID:ev_valparaiso_indios_amigos_exhibit_1005-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T090000
+DTEND:20261009T110000
+SUMMARY:Indios Amigos: Traveling Exhibit at the Valparaiso Library
+DESCRIPTION:The Valparaiso Library hosts Indios Amigos\, a traveling exhib
+ it made by the Florida Public Archaeology Network and the UWF Archaeology
+  Institute\, for Hispanic Heritage Month. The library says this is the on
+ ly Okaloosa County stop for the exhibit\, and it is open 9 AM to 5 PM thr
+ ough Friday\, October 9. The listing is for families and everyone.\nPrice
+ : not published by the venue\, so confirm before you go\nTimes: Mon 10/5 
+ to Fri 10/9 · 9:00 AM to 5:00 PM\nChecked against the venue's own page o
+ n 2026-09-26\nhttps://coastaleventures.com/events/ev-valparaiso-indios-am
+ igos-exhibit-1005.html
+LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
+URL:https://coastaleventures.com/events/ev-valparaiso-indios-amigos-exhibi
+ t-1005.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_steves_farm_adventure_zone_0929-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
+UID:ev_steves_farm_adventure_zone_0929-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261101
 SUMMARY:Adventure Zone at Steve's Fishing and Adventure Farm
 DESCRIPTION:Steve's Farm has rebranded as Steve's Fishing and Adventure Fa
@@ -714,29 +1088,27 @@ URL:https://coastaleventures.com/events/ev-steves-farm-adventure-zone-0929
  .html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_south_alabama_comic_con_1003-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T100000
-DTEND:20261004T120000
-SUMMARY:South Alabama Comic Con
-DESCRIPTION:South Alabama Comic Con fills the Mobile Convention Center for
-  two days with guests from film\, television\, anime and comics\, plus co
- splay\, artist and vendor booths\, and gaming. The show includes a costum
- e contest\, guest Q&As and fan panels. Children ten and under get in free
-  with a paid adult\, limited to two children per adult ticket. Autographs
-  and photo ops cost extra\, and every bag is searched at the door.\nPrice
- : from $30\nArea: Mobile & Baldwin County\nTimes: Saturday 10/3 · 10:00 
- AM to 6:00 PM · Sunday 10/4 · 11:00 AM to 5:00 PM\nChecked against the 
- venue's own page on 2026-09-29\nhttps://coastaleventures.com/events/ev-so
- uth-alabama-comic-con-1003.html
-LOCATION:Mobile Convention Center\, 1 S. Water St\, Mobile\, AL 36602
-URL:https://coastaleventures.com/events/ev-south-alabama-comic-con-1003.ht
- ml
+UID:ev_festa_italiana_1009-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261011
+SUMMARY:Festa Italiana
+DESCRIPTION:The Buona Fortuna Lodge turns Seville Square into an Italian s
+ treet fair with shrimp scampi\, spaghetti and meatballs\, lasagna\, sausa
+ ge and pepper sandwiches and tiramisu. There is Italian music\, a silent 
+ auction\, a cash prize drawing and a Kids Corner with face painting and b
+ alloons. Proceeds go to the lodge's charitable donations and scholarships
+  in the Pensacola area. Confirm the dates and hours with the lodge before
+  you go.\nPrice: Free\nArea: Pensacola\nTimes: Fri 10/9 and Sat 10/10 · 
+ 11 AM to 6 PM\nhttps://coastaleventures.com/events/ev-festa-italiana-1009
+ .html
+LOCATION:Seville Square\, 311 E Government St\, Pensacola\, FL 32502
+URL:https://coastaleventures.com/events/ev-festa-italiana-1009.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_great_bellingrath_harvest_0919-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
+UID:ev_great_bellingrath_harvest_0919-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261109
 SUMMARY:The Great Bellingrath Harvest
 DESCRIPTION:Bellingrath Gardens and Home runs a fall festival from Septemb
@@ -753,9 +1125,80 @@ URL:https://coastaleventures.com/events/ev-great-bellingrath-harvest-0919.
  html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_uwf_make_it_last_1001-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
+UID:ev_foley_midday_melodies_1007-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261029
+SUMMARY:Midday Melodies: Downtown Foley
+DESCRIPTION:Foley Main Street schedules a lunchtime concert at Heritage Pa
+ rk on Wednesdays in October\, starting October 7 at 11:00 AM. The 2026 li
+ neup is the Wiley Pete Duo on October 7\, Dan Lee on October 14\, This Si
+ de of 49 on October 21\, and Tennessee Tim and Doug Drake on October 28. 
+ The 2025 series invited guests to bring a picnic blanket or lawn chair an
+ d pick up lunch from a nearby downtown restaurant.\nPrice: not published 
+ by the venue\, so confirm before you go\nArea: Orange Beach & Gulf Shores
+ \nTimes: Wednesday 10/7 · 11:00 AM\nChecked against the venue's own page
+  on 2026-09-29\nhttps://coastaleventures.com/events/ev-foley-midday-melod
+ ies-1007.html
+LOCATION:Heritage Park\, 104 N. McKenzie St\, Foley\, AL 36535
+URL:https://coastaleventures.com/events/ev-foley-midday-melodies-1007.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_tbs_pensacola_pokemon_league-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T190000
+DTEND:20261009T210000
+SUMMARY:Pokémon League at TBS Comics Pensacola
+DESCRIPTION:TBS Comics Pensacola lists a weekly Pokémon session on its ga
+ ming schedule\, and the shop's league post welcomes beginners and veteran
+ s alike. The gaming page does not print an entry fee\, so ask when you ca
+ ll.\nPrice: not published by the venue\, so confirm before you go\nArea: 
+ Pensacola\nTimes: Fridays · 7:00 PM\nChecked against the venue's own pag
+ e on 2026-09-29\nhttps://coastaleventures.com/events/ev-tbs-pensacola-pok
+ emon-league.html
+LOCATION:TBS Comics Pensacola\, 6873 North 9th Ave\, Pensacola\, FL 32504
+URL:https://coastaleventures.com/events/ev-tbs-pensacola-pokemon-league.ht
+ ml
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_hp_haunted_walking_1009-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261025
+SUMMARY:Haunted History Walking Tours
+DESCRIPTION:Historic Pensacola runs two after-dark walking tours on four n
+ ights in October. The Haunted Village tour visits the Dorr House\, Old Ch
+ rist Church and the Lear/Rocheblave House\, and Macabre Museum Mysteries 
+ goes through the Arbona Building and the Museum of History. Children 3 an
+ d older are welcome.\nPrice: from $15\nArea: Pensacola\nTimes: Fri 10/9\,
+  Sat 10/10\, Fri 10/23 and Sat 10/24 · 6:30 PM\, 7:30 PM and 8:30 PM\nCh
+ ecked against the venue's own page on 2026-10-02\nhttps://coastaleventure
+ s.com/events/ev-hp-haunted-walking-1009.html
+LOCATION:Historic Pensacola Village\, 330 South Jefferson Street\, Pensaco
+ la\, FL 32502
+URL:https://coastaleventures.com/events/ev-hp-haunted-walking-1009.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_hadji_haunted_house_1009-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261101
+SUMMARY:Hadji Haunted House
+DESCRIPTION:The Hadji Shriners fill their temple on West 9 Mile Road with 
+ more than 40 haunted rooms each Friday and Saturday night in October. A 3
+ D funhouse is open from 6:00 PM for guests who want something gentler\, a
+ nd one afternoon on October 25 is set aside as a kid friendly haunted hou
+ se. Tickets are $25 and general admission doors open at 7:00 PM.\nPrice: 
+ from $25\nArea: Pensacola\nTimes: Fri and Sat 10/9 to 10/31 · 7:00 PM to
+  10:30 PM\nChecked against the venue's own page on 2026-10-02\nhttps://co
+ astaleventures.com/events/ev-hadji-haunted-house-1009.html
+LOCATION:Hadji Shrine Temple\, 800 W 9 Mile Road\, Pensacola\, FL 32534
+URL:https://coastaleventures.com/events/ev-hadji-haunted-house-1009.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_uwf_make_it_last_1001-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261121
 SUMMARY:Make It Last: Gallery Exhibition at UWF
 DESCRIPTION:Make It Last is an exhibition in The Art Gallery at the UWF Ce
@@ -772,25 +1215,154 @@ LOCATION:UWF Center for Fine and Performing Arts\, Building 82\, The Art G
 URL:https://coastaleventures.com/events/ev-uwf-make-it-last-1001.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_yu_gi_oh_weekly_casual_play_and_to_1004-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T130000
-DTEND:20261004T150000
-SUMMARY:Yu-Gi-Oh! Weekly Casual Play and Tournament
-DESCRIPTION:The Yu-Gi-Oh weekly tournament is an Advanced Constructed Yu-G
- i-Oh TCG event at GameMasters Guild in Crestview\, every Sunday at 1 PM. 
- Entry is $5 including tax. Every player gets an OTS pack\, and top placer
- s get more.\nPrice: from $5\nTimes: Sundays · 1 PM\nChecked against the 
- venue's own page on 2026-10-03\nhttps://coastaleventures.com/events/ev-yu
- -gi-oh-weekly-casual-play-and-to-1004.html
-LOCATION:GameMasters Guild\, 743 Ashley Drive\, Crestview\, FL 32536
-URL:https://coastaleventures.com/events/ev-yu-gi-oh-weekly-casual-play-and
- -to-1004.html
+UID:ev_owa_private_eyes_1009-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T193000
+DTEND:20261009T213000
+SUMMARY:Private Eyes: A Hall and Oates Tribute at OWA Theater
+DESCRIPTION:Private Eyes\, a Los Angeles tribute band formed in 2018\, pla
+ ys the songs of Daryl Hall and John Oates at the OWA Theater in Foley. OW
+ A describes a six to seven piece band with vocal harmonies and a saxophon
+ e.\nPrice: not published by the venue\, so confirm before you go\nArea: O
+ range Beach & Gulf Shores\nTimes: Friday 10/9 · 7:30 PM\nChecked against
+  the venue's own page on 2026-10-02\nhttps://coastaleventures.com/events/
+ ev-owa-private-eyes-1009.html
+LOCATION:OWA Theater\, 205-A N. OWA Blvd\, Foley\, AL 36535
+URL:https://coastaleventures.com/events/ev-owa-private-eyes-1009.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_monochrome_exhibition_1003-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
+UID:ev_fwb_library_haunted_paintings_1009-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T150000
+DTEND:20261009T170000
+SUMMARY:Haunted Paintings at the Fort Walton Beach Library
+DESCRIPTION:Tweens and teens ages 10 to 18 add spooky elements to old pain
+ tings at this drop-in craft in the Fort Walton Beach Library's children's
+  story room. Supplies and snacks are provided\, and no registration is ne
+ eded. It is a low-pressure way to start the Halloween season on a Friday 
+ afternoon.\nPrice: not published by the venue\, so confirm before you go\
+ nArea: Destin & Fort Walton\nTimes: Friday 10/9 · 3:00 PM to 4:30 PM\nCh
+ ecked against the venue's own page on 2026-10-02\nhttps://coastaleventure
+ s.com/events/ev-fwb-library-haunted-paintings-1009.html
+LOCATION:Fort Walton Beach Library\, 185 Miracle Strip Parkway SE\, Fort W
+ alton Beach\, FL 32548
+URL:https://coastaleventures.com/events/ev-fwb-library-haunted-paintings-1
+ 009.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mobile_loda_artwalk_halloween_1009-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T180000
+DTEND:20261009T200000
+SUMMARY:LODA ArtWalk Celebrates Halloween
+DESCRIPTION:Downtown Mobile's monthly LODA ArtWalk goes Halloween for one 
+ evening\, with costumes encouraged\, live performances\, local artists an
+ d makers along Dauphin Street\, and food trucks. A Kids' Zone has hands-o
+ n crafts and face painting\, and DJ JWalk and Once Upon a Time Friends pe
+ rform in Cathedral Square. It is a family-friendly Friday evening downtow
+ n for anyone willing to make the drive from Pensacola.\nPrice: not publis
+ hed by the venue\, so confirm before you go\nArea: Mobile & Baldwin Count
+ y\nTimes: Friday 10/9 · 6:00 PM to 9:00 PM\nChecked against the venue's 
+ own page on 2026-10-02\nhttps://coastaleventures.com/events/ev-mobile-lod
+ a-artwalk-halloween-1009.html
+LOCATION:Downtown Mobile\, Dauphin Street\, Dauphin Street\, Mobile\, AL 3
+ 6602
+URL:https://coastaleventures.com/events/ev-mobile-loda-artwalk-halloween-1
+ 009.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_decades_by_request_gulf_club_1002-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T200000
+DTEND:20261009T220000
+SUMMARY:The Decades by Request
+DESCRIPTION:DJ Matt mixes 80s\, 90s and 2000s hits with guests’ own requ
+ ests at The Gulf Club in Destin\, and dressing up is encouraged. It runs 
+ every Friday night through November 27 and is free to attend.\nPrice: Fre
+ e\nArea: Destin & Fort Walton\nTimes: Fridays · 8:00 PM to 11:00 PM\nChe
+ cked against the venue's own page on 2026-10-02\nhttps://coastaleventures
+ .com/events/ev-decades-by-request-gulf-club-1002.html
+LOCATION:The Gulf Club Restaurant and Sports Pub\, 960 US-98 Suite 112\, D
+ estin\, FL 32541
+URL:https://coastaleventures.com/events/ev-decades-by-request-gulf-club-10
+ 02.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_friday_night_magic_modern_1009-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T180000
+DTEND:20261009T200000
+SUMMARY:Friday Night Magic (Modern)
+DESCRIPTION:Friday Night Magic is a weekly Magic: The Gathering tournament
+  at GameMasters Guild in Crestview\, played in the Modern format over fou
+ r Swiss rounds. It starts at 6 PM every Friday through December 18 and co
+ sts $12 per person including tax. Prizes are play booster packs and promo
+  packs. Free Commander Nights casual play runs 3-9 PM on the same Fridays
+ .\nPrice: from $12\nTimes: Fridays · 6 PM\, through 12/18\nChecked again
+ st the venue's own page on 2026-10-03\nhttps://coastaleventures.com/event
+ s/ev-friday-night-magic-modern-1009.html
+LOCATION:GameMasters Guild\, 743 Ashley Drive\, Crestview\, FL 32536
+URL:https://coastaleventures.com/events/ev-friday-night-magic-modern-1009.
+ html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_magic_commander_nights_and_command_1009-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T150000
+DTEND:20261009T170000
+SUMMARY:Magic Commander Nights and Commander Parties
+DESCRIPTION:Magic Commander Nights are free casual Magic: The Gathering Co
+ mmander play on Fridays from 3 to 9 PM at GameMasters Guild in Crestview.
+  Three Commander Parties are also free drop-in: Reality Fracture on Octob
+ er 9 and October 23\, and Star Trek on November 20. Players use the Wizar
+ ds Companion app\, and there are random promo drawings at the end of the 
+ night.\nPrice: Free\nTimes: Fridays · 3 PM-9 PM\nChecked against the ven
+ ue's own page on 2026-10-03\nhttps://coastaleventures.com/events/ev-magic
+ -commander-nights-and-command-1009.html
+LOCATION:GameMasters Guild\, 743 Ashley Drive\, Crestview\, FL 32536
+URL:https://coastaleventures.com/events/ev-magic-commander-nights-and-comm
+ and-1009.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_riftbound_nexus_nights_and_radianc_1009-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T183000
+DTEND:20261009T203000
+SUMMARY:Riftbound Nexus Nights and Radiance Pre-Rift
+DESCRIPTION:Riftbound Nexus Nights are weekly Riftbound TCG tournaments at
+  GameMasters Guild in Crestview\, every Friday at 6:30 PM. Each is three 
+ rounds for $10\, with a Nexus Night pack plus a pack for every round you 
+ win. Radiance Pre-Rift events on October 16 and October 17 cost $35 inclu
+ ding tax\, with a 24-player cap and a deck built from provided packs over
+  three rounds.\nPrice: from $10\nTimes: Fridays · 6:30 PM\nChecked again
+ st the venue's own page on 2026-10-03\nhttps://coastaleventures.com/event
+ s/ev-riftbound-nexus-nights-and-radianc-1009.html
+LOCATION:GameMasters Guild\, 743 Ashley Drive\, Crestview\, FL 32536
+URL:https://coastaleventures.com/events/ev-riftbound-nexus-nights-and-radi
+ anc-1009.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_pensacola_beach_yoga_friday_and_we_1007-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T090000
+DTEND:20261009T110000
+SUMMARY:Pensacola Beach Yoga: Friday and Wednesday beach classes
+DESCRIPTION:Pensacola Beach Yoga runs drop-in yoga on the sand beside the 
+ Gulf Pier at 41 Fort Pickens Road in Pensacola Beach. Classes are Fridays
+  at 9 AM and Wednesdays at 6 PM\, and they cost $10 with no registration.
+  Bring a mat or towel.\nPrice: from $10\nArea: Pensacola Beach & Perdido\
+ nTimes: Fridays 9 AM and Wednesdays 6 PM\nChecked against the venue's own
+  page on 2026-10-03\nhttps://coastaleventures.com/events/ev-pensacola-bea
+ ch-yoga-friday-and-we-1007.html
+LOCATION:Pensacola Beach Yoga\, beside the Gulf Pier\, 41 Fort Pickens Roa
+ d\, Pensacola Beach\, FL
+URL:https://coastaleventures.com/events/ev-pensacola-beach-yoga-friday-and
+ -we-1007.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_monochrome_exhibition_1003-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261025
 SUMMARY:MONOCHROME exhibition
 DESCRIPTION:Monochrome is a group show by three artists at Blue Morning Ga
@@ -806,9 +1378,9 @@ LOCATION:Blue Morning Gallery\, 21 S. Palafox Place\, Pensacola\, FL 32502
 URL:https://coastaleventures.com/events/ev-monochrome-exhibition-1003.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_painting_with_a_twist_pensacola_pa_1003-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
+UID:ev_painting_with_a_twist_pensacola_pa_1003-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261101
 SUMMARY:Painting with a Twist Pensacola: paint-and-sip\, family paint days
   and date nights (weekly programme)
@@ -828,9 +1400,1293 @@ URL:https://coastaleventures.com/events/ev-painting-with-a-twist-pensacola
  -pa-1003.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_painting_with_a_twist_fort_walton_1003-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART;VALUE=DATE:20261004
+UID:ev_tbs_comics_fort_walton_beach_weekl_1005-2026-10-09@coast-guide
+DTSTAMP:20261009T000000Z
+DTSTART:20261009T170000
+DTEND:20261009T190000
+SUMMARY:TBS Comics Fort Walton Beach weekly game nights (Yu-Gi-Oh\, D&D\, 
+ Magic\, Lorcana\, One Piece and more)
+DESCRIPTION:TBS Comics Fort Walton Beach hosts weekly game nights at its s
+ hop on Mary Esther Blvd. Monday is Yu-Gi-Oh at 6 PM\, and Tuesday is D&D 
+ Adventurers League at 5 PM. Wednesday has casual Magic all day and Digimo
+ n at 6 PM\, and Friday has Magic Commander at 6 PM and Yu-Gi-Oh at 7 PM.\
+ nPrice: not published by the venue\, so confirm before you go\nArea: Dest
+ in & Fort Walton\nTimes: Game nights Monday\, Tuesday\, Wednesday and Fri
+ day · from 5 PM\nChecked against the venue's own page on 2026-10-03\nhtt
+ ps://coastaleventures.com/events/ev-tbs-comics-fort-walton-beach-weekl-10
+ 05.html
+LOCATION:TBS Comics Fort Walton Beach\, 550 Mary Esther Blvd\, Fort Walton
+  Beach\, FL 32548
+URL:https://coastaleventures.com/events/ev-tbs-comics-fort-walton-beach-we
+ ekl-1005.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_race_for_grace_crestview_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T080000
+DTEND:20261010T100000
+SUMMARY:Race for Grace 5K and Harvest Festival
+DESCRIPTION:A 5K that raises money for a recovery program\, and a harvest 
+ festival waiting at the finish with a petting zoo\, pumpkin carving\, fac
+ e painting and inflatables. The run is a walk if you want it to be. Entry
+  goes up after September 30\, so the cheap week is this one.\nPrice: from
+  $35\nTimes: Sat 10/10/2026 · 5K at 8 AM\nChecked against the venue's ow
+ n page on 2026-09-11\nhttps://coastaleventures.com/events/ev-race-for-gra
+ ce-crestview-1010.html
+LOCATION:Twin Hills Park\, 100 Hathaway Street\, Crestview\, FL 32539
+URL:https://coastaleventures.com/events/ev-race-for-grace-crestview-1010.h
+ tml
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mobile_animation_film_festival_2026-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T130000
+DTEND:20261010T150000
+SUMMARY:Mobile Animation Film Festival 2026
+DESCRIPTION:The Crescent Theater screens the Mobile Animation Film Festiva
+ l for two and a half hours on a Saturday afternoon\, free to attend. Some
+  programming may include adult content\, though no specific age cutoff is
+  posted.\nPrice: Free\nArea: Mobile & Baldwin County\nTimes: Saturday 10/
+ 10 · 1:00 PM to 3:30 PM\nhttps://coastaleventures.com/events/ev-mobile-a
+ nimation-film-festival-2026.html
+LOCATION:Crescent Theater\, 208 Dauphin St\, Mobile\, AL
+URL:https://coastaleventures.com/events/ev-mobile-animation-film-festival-
+ 2026.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_palafox-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T090000
+DTEND:20261010T110000
+SUMMARY:Palafox Market
+DESCRIPTION:A big Saturday market fills downtown with produce\, local make
+ rs\, art\, and food. A free trolley runs between plazas. It is stroller-f
+ riendly.\nPrice: Free\nArea: Pensacola\nTimes: Saturdays · 9 AM-2 PM\nCh
+ ecked against the venue's own page on 2026-09-02\nhttps://coastaleventure
+ s.com/events/ev-palafox.html
+LOCATION:MLK Jr. Plaza + Plaza Ferdinand\, Downtown Pensacola\, 200 N Pala
+ fox St\, Pensacola\, FL 32502
+URL:https://coastaleventures.com/events/ev-palafox.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grandblvd_mkt-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T090000
+DTEND:20261010T110000
+SUMMARY:Grand Boulevard Farmers' Market
+DESCRIPTION:A Saturday farmers and makers market fills the Sandestin green
+ \, with local honey\, produce\, and kettle corn. Pair it with a Destin/Ba
+ ytowne day.\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Saturdays ·
+  9 AM-1 PM\nChecked against the venue's own page on 2026-09-02\nhttps://c
+ oastaleventures.com/events/ev-grandblvd-mkt.html
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Blvd\, Mira
+ mar Beach\, FL 32550
+URL:https://coastaleventures.com/events/ev-grandblvd-mkt.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_foley_mkt-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T090000
+DTEND:20261010T110000
+SUMMARY:Coastal Alabama Farmers & Fishermens Market
+DESCRIPTION:The county's largest market sells fresh Gulf seafood straight 
+ from the boats plus produce and makers. It is five minutes from OWA\, so 
+ it stacks with a Tropic Falls day.\nPrice: Free\nArea: Orange Beach & Gul
+ f Shores\nTimes: Saturdays · 9 AM-2 PM\nChecked against the venue's own 
+ page on 2026-09-02\nhttps://coastaleventures.com/events/ev-foley-mkt.html
+LOCATION:Coastal Alabama Market\, 781 Farmers Market Ln\, Foley\, AL 36535
+URL:https://coastaleventures.com/events/ev-foley-mkt.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_parkrun-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T073000
+DTEND:20261010T093000
+SUMMARY:Parkrun: Free Timed 5K (Rec Plex North)
+DESCRIPTION:A free\, timed\, all-comers 5K runs every Saturday. Walk\, run
+ \, or push the jogging stroller. The kids can earn official times too\, w
+ ith one-time free barcode registration.\nPrice: Free\nArea: Pensacola\nTi
+ mes: Saturdays · 7:30 AM\nChecked against the venue's own page on 2026-0
+ 9-02\nhttps://coastaleventures.com/events/ev-parkrun.html
+LOCATION:UWF Rec Plex North Field\, 11000 University Pkwy\, Pensacola\, FL
+  32514
+URL:https://coastaleventures.com/events/ev-parkrun.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_oceanhour-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261011
+SUMMARY:Ocean Hour Beach Cleanup
+DESCRIPTION:Give an hour and leave the beach better. Buckets\, grabbers\, 
+ and gloves are provided. It is a service morning that fits the family's v
+ alues and is kid-friendly.\nPrice: Free\nArea: Pensacola Beach & Perdido\
+ nTimes: Saturdays · start time and site posted each week\nhttps://coasta
+ leventures.com/events/ev-oceanhour.html
+LOCATION:Rotating\, Pensacola Beach / area waterfronts\, Pensacola Beach\,
+  FL 32561
+URL:https://coastaleventures.com/events/ev-oceanhour.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_ferry-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T090000
+DTEND:20261010T110000
+SUMMARY:Pensacola Bay Ferry to Fort Pickens
+DESCRIPTION:Boat + fort + beach without the car: ranger narration across t
+ he bay\, tunnels and batteries at Fort Pickens for engineering-minded kid
+ s\, then the beach stop. Strollers roll aboard.\nPrice: from $20\nArea: P
+ ensacola Beach & Perdido\nTimes: Sat + Sun · runs 9 AM-6 PM\nChecked aga
+ inst the venue's own page on 2026-09-26\nhttps://coastaleventures.com/eve
+ nts/ev-ferry.html
+LOCATION:Downtown ferry landing → Fort Pickens → Pensacola Beach\, 700
+  S Barracks St\, Pensacola\, FL 32502
+URL:https://coastaleventures.com/events/ev-ferry.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_sritri-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T070000
+DTEND:20261010T090000
+SUMMARY:Santa Rosa Island Triathlon: SOLD OUT (waitlist)
+DESCRIPTION:Individual sprint entries are sold out (final tier hit $130). 
+ The waitlist is open\, and relay slots showed 'no waitlist for relays' at
+  $215-240. Watching the swim start is free and a great spectacle morning.
+ \nPrice: from $215\nArea: Pensacola Beach & Perdido\nTimes: Sat 10/10/202
+ 6 · 7:00 AM · Casino Beach\nChecked against the venue's own page on 202
+ 6-10-02\nhttps://coastaleventures.com/events/ev-sritri.html
+LOCATION:Casino Beach Pavilion\, 20 Casino Beach Blvd\, Pensacola Beach\, 
+ FL 32561
+URL:https://coastaleventures.com/events/ev-sritri.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mso_spectacular-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261012
+SUMMARY:Mobile Symphony: Spectacular! (Pictures at an Exhibition)
+DESCRIPTION:The Mobile Symphony season opener features Mussorgsky's Pictur
+ es at an Exhibition. It is an elegant\, clean date in Mobile.\nPrice: not
+  published by the venue\, so confirm before you go\nArea: Mobile & Baldwi
+ n County\nTimes: Oct 10 (7:30 PM) + Oct 11 (2:30 PM)\, 2026\nChecked agai
+ nst the venue's own page on 2026-09-29\nhttps://coastaleventures.com/even
+ ts/ev-mso-spectacular.html
+LOCATION:Mobile Saenger Theatre\, 6 S Joachim St\, Mobile\, AL 36602
+URL:https://coastaleventures.com/events/ev-mso-spectacular.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_brandonstyles_variety-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T190000
+DTEND:20261010T210000
+SUMMARY:The Brandon Styles Variety Show
+DESCRIPTION:Celebrity impressions\, comedy\, and magic play a purpose-buil
+ t theatre at OWA\, twice a week. It is marketed all-ages and it means it\
+ , a rare thing that a nine-year-old and two adults can all sit through ha
+ ppily.\nPrice: from $35\nArea: Orange Beach & Gulf Shores\nTimes: Tuesday
+ s and Saturdays · 7:00 PM\nChecked against the venue's own page on 2026-
+ 10-02\nhttps://coastaleventures.com/events/ev-brandonstyles-variety.html
+LOCATION:Brandon Styles Theater at OWA\, 1501 S OWA Blvd\, Foley\, AL 3653
+ 5
+URL:https://coastaleventures.com/events/ev-brandonstyles-variety.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_university_of_west_florida_football_vs_north_1010-2026-10-10@coast-
+ guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T160000
+DTEND:20261010T180000
+SUMMARY:UWF Football vs Northeastern State: CANCER AWARENESS
+DESCRIPTION:University of West Florida football hosts Northeastern State a
+ t PenAir Field for a Cancer Awareness game in its inaugural NCAA Division
+  I season. Tickets are on sale. UWF students get in free with registratio
+ n on Argo Pulse and a Student Nautilus Card.\nPrice: not published by the
+  venue\, so confirm before you go\nArea: Pensacola\nTimes: Saturday 10/10
+  · 4:00 PM to 7:00 PM\nChecked against the venue's own page on 2026-09-2
+ 6\nhttps://coastaleventures.com/events/ev-university-of-west-florida-foot
+ ball-vs-north-1010.html
+LOCATION:PenAir Field\, 11000 University Parkway\, Pensacola\, FL 32514
+URL:https://coastaleventures.com/events/ev-university-of-west-florida-foot
+ ball-vs-north-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_comedy_rodney_carrington_live_2026_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T190000
+DTEND:20261010T210000
+SUMMARY:Comedy Rodney Carrington Live 2026
+DESCRIPTION:Comedian\, actor\, singer and writer Rodney Carrington perform
+ s live at the Pensacola Saenger Theatre. The venue bills the show for mat
+ ure audiences only\, so this one is for the grown-ups. All seats are rese
+ rved and tickets are available through the venue.\nPrice: not published b
+ y the venue\, so confirm before you go\nArea: Pensacola\nTimes: Saturday 
+ 10/10 · 7:00 PM\nChecked against the venue's own page on 2026-09-26\nhtt
+ ps://coastaleventures.com/events/ev-comedy-rodney-carrington-live-2026-10
+ 10.html
+LOCATION:Pensacola Saenger Theatre\, 118 South Palafox Place\, Pensacola\,
+  FL 32502
+URL:https://coastaleventures.com/events/ev-comedy-rodney-carrington-live-2
+ 026-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_qigong_for_beginners_0912-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T103000
+DTEND:20261010T123000
+SUMMARY:Qigong for Beginners
+DESCRIPTION:An adults-only beginner Qigong class at the Moorer/Spring Hill
+  Branch Library combines gentle repetitive movement\, breathing and focus
+ ed meditation. It meets every other Saturday morning\, and registration i
+ s required through the branch.\nPrice: not published by the venue\, so co
+ nfirm before you go\nArea: Mobile & Baldwin County\nTimes: Saturdays · 1
+ 0:30 AM to 11:30 AM\nChecked against the venue's own page on 2026-09-26\n
+ https://coastaleventures.com/events/ev-qigong-for-beginners-0912.html
+LOCATION:Monte L. Moorer/Spring Hill Branch Library\, 4 S McGregor Ave\, M
+ obile\, AL 36608
+URL:https://coastaleventures.com/events/ev-qigong-for-beginners-0912.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_fear_fest_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T170000
+DTEND:20261010T190000
+SUMMARY:Fear Fest
+DESCRIPTION:The Exploreum Science Center pairs its immersive Fear exhibit 
+ with a 6:30 PM screening of Final Destination for one October evening. Th
+ e film is rated R\, and the museum recommends the event for guests 17 and
+  older\, requiring anyone younger to be accompanied by a parent or legal 
+ guardian. Admission runs $15 for non-members and $12 for Exploreum member
+ s.\nPrice: from $15\nArea: Mobile & Baldwin County\nTimes: Saturday 10/10
+  · 5:00 PM to 9:00 PM\nChecked against the venue's own page on 2026-09-2
+ 6\nhttps://coastaleventures.com/events/ev-fear-fest-1010.html
+LOCATION:Exploreum Science Center\, 65 Government St.\, Mobile\, AL 36602
+URL:https://coastaleventures.com/events/ev-fear-fest-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_chess_club_for_everyone_at_moorer_0905-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T140000
+DTEND:20261010T160000
+SUMMARY:Chess Club for Everyone at Moorer
+DESCRIPTION:The Monte L. Moorer/Spring Hill Branch Library runs a chess cl
+ ub open to beginners and experienced players alike. The library says the 
+ program suits ages 6 and up\, including teens\, and it emphasizes concent
+ ration and problem solving over competition. Saturday sessions at 2 PM re
+ peat weekly through October\, including October 3 and October 10\, so a m
+ issed week is not a missed chance.\nPrice: not published by the venue\, s
+ o confirm before you go\nArea: Mobile & Baldwin County\nTimes: Saturdays 
+ · 2:00 PM to 4:00 PM\nChecked against the venue's own page on 2026-10-02
+ \nhttps://coastaleventures.com/events/ev-chess-club-for-everyone-at-moore
+ r-0905.html
+LOCATION:Monte L. Moorer/Spring Hill Branch Library\, 4 S McGregor Ave\, M
+ obile\, AL 36608
+URL:https://coastaleventures.com/events/ev-chess-club-for-everyone-at-moor
+ er-0905.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_house_party_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T213000
+DTEND:20261010T233000
+SUMMARY:House Party
+DESCRIPTION:Vinyl Music Hall calls this dance party a love letter to the 2
+ 010s rager\, open to guests 18 and older. Doors open at 9:00 PM ahead of 
+ the 9:30 PM start. Tickets run $15 to $30.\nPrice: from $15\nArea: Pensac
+ ola\nTimes: Saturday 10/10 · 9:30 PM\nChecked against the venue's own pa
+ ge on 2026-10-02\nhttps://coastaleventures.com/events/ev-house-party-1010
+ .html
+LOCATION:Vinyl Music Hall\, 2 South Palafox\, Pensacola\, FL 32502
+URL:https://coastaleventures.com/events/ev-house-party-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_garnier_beach_garden_club_0912-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T103000
+DTEND:20261010T123000
+SUMMARY:Garnier Beach Garden Club
+DESCRIPTION:Local gardeners with the Garnier Beach Garden Club give in-dep
+ th talks and demonstrations on plants and gardening at Fort Walton Beach 
+ Library\, for an adult audience. A second session is scheduled for Octobe
+ r 10\, so this is a recurring club meeting rather than a one time talk.\n
+ Price: not published by the venue\, so confirm before you go\nArea: Desti
+ n & Fort Walton\nTimes: 10:30 AM to 1:00 PM\nChecked against the venue's 
+ own page on 2026-09-26\nhttps://coastaleventures.com/events/ev-garnier-be
+ ach-garden-club-0912.html
+LOCATION:Fort Walton Beach Library\, 185 Miracle Strip Parkway SE\, Fort W
+ alton Beach\, FL 32548
+URL:https://coastaleventures.com/events/ev-garnier-beach-garden-club-0912.
+ html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_18th_annual_run_for_the_reef_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T073000
+DTEND:20261010T093000
+SUMMARY:Run for the Reef\, 18th year
+DESCRIPTION:A 10K\, a 5K run and walk\, and a one mile fun run for ages tw
+ elve and under\, all starting from the pier at Navarre Beach. The 5K and 
+ 10K run out and back along Gulf Blvd. The fun run goes off on the Sea Tur
+ tle Center nature trail once the 5K has cleared. The money pays for the N
+ avarre Beach Marine Sanctuary's snorkelling and diving reefs\, so the rac
+ e funds the reef it's named after. An after-race party follows with food 
+ and refreshments.\nPrice: not published by the venue\, so confirm before 
+ you go\nArea: Gulf Breeze & Navarre\nTimes: Saturday 10/10 · 7:30 AM\nCh
+ ecked against the venue's own page on 2026-09-26\nhttps://coastaleventure
+ s.com/events/ev-18th-annual-run-for-the-reef-1010.html
+LOCATION:Windjammers on the Pier\, 8579 Gulf Blvd\, Navarre\, FL 32566
+URL:https://coastaleventures.com/events/ev-18th-annual-run-for-the-reef-10
+ 10.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_dauphinbeerfest-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T180000
+DTEND:20261010T210000
+SUMMARY:28th Annual Dauphin Street Beer Festival
+DESCRIPTION:This 21-plus downtown beer tasting includes a commemorative mu
+ g\, a temporary membership card and a wristband with each ticket. Designa
+ ted-driver wristbands are available at the City of Mobile Events tent in 
+ Cathedral Square\, and holders receive no alcoholic drinks. Sources disag
+ ree on the number of venues and beers\, so both figures are kept.\nPrice:
+  from $35\nArea: Mobile & Baldwin County\nTimes: Sat 10/10 · 6-9 PM\nChe
+ cked against the venue's own page on 2026-10-02\nhttps://coastaleventures
+ .com/events/ev-dauphinbeerfest.html
+LOCATION:Participating downtown Mobile taverns and restaurants\, Downtown 
+ Mobile\, Mobile\, AL 36602 (no single event street address published)
+URL:https://coastaleventures.com/events/ev-dauphinbeerfest.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_umobile_vb_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T130000
+DTEND:20261010T150000
+SUMMARY:University of Mobile Volleyball vs Brewton-Parker Christian Univer
+ sity
+DESCRIPTION:Brewton-Parker Christian University visits the next day for an
+  early-afternoon match\, the second half of this October home weekend.\nP
+ rice: not published by the venue\, so confirm before you go\nArea: Mobile
+  & Baldwin County\nTimes: Saturday 10/10 · 1:00 PM\nChecked against the 
+ venue's own page on 2026-10-02\nhttps://coastaleventures.com/events/ev-um
+ obile-vb-1010.html
+LOCATION:H. Austill Pharr Gymnasium\, University of Mobile\, 5735 College 
+ Parkway\, Mobile\, AL 36613
+URL:https://coastaleventures.com/events/ev-umobile-vb-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_marketshops_bloodymary-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T110000
+DTEND:20261010T130000
+SUMMARY:The Market Shops 11th Annual Bloody Mary Festival
+DESCRIPTION:Restaurants across the Emerald Coast pour unlimited Bloody Mar
+ y samples at this fundraiser for Habitat for Humanity Walton County. Expe
+ ct local food\, craft beer\, champagne\, shopping\, and live music. The o
+ rganizer's page calls it 21 and older\, but the ticketing page separately
+  says kids 14 and under get in free. Confirm the minor-admission policy b
+ efore bringing children.\nPrice: from $70.31\nArea: Destin & Fort Walton\
+ nTimes: Saturday 10/10 · 11:00 AM to 2:00 PM\nChecked against the venue'
+ s own page on 2026-10-02\nhttps://coastaleventures.com/events/ev-marketsh
+ ops-bloodymary.html
+LOCATION:The Market Shops\, 9375 Emerald Coast Pkwy W\, Miramar Beach\, FL
+  32550
+URL:https://coastaleventures.com/events/ev-marketshops-bloodymary.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mkac_dogsbandsbeer-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T130000
+DTEND:20261010T150000
+SUMMARY:Dogs\, Bands and Beer Day Fest
+DESCRIPTION:The Mattie Kelly Arts Center Amphitheater hosts an outdoor mus
+ ic festival built around live bands\, gourmet food trucks\, and a selecti
+ on of craft beer and wine. The venue markets it as an afternoon-into-nigh
+ t event but has not published exact start or end times. Reserved seating 
+ tickets start at $55\, and the venue does not publish a general-admission
+  price.\nPrice: from $55\nArea: Destin & Fort Walton\nTimes: Saturday 10/
+ 10 · 1:00 PM to 9:00 PM\nChecked against the venue's own page on 2026-10
+ -02\nhttps://coastaleventures.com/events/ev-mkac-dogsbandsbeer.html
+LOCATION:Mattie Kelly Arts Center Amphitheater\, 100 College Boulevard\, N
+ iceville\, FL 32578
+URL:https://coastaleventures.com/events/ev-mkac-dogsbandsbeer.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_boo_at_the_zoo_2026_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T100000
+DTEND:20261010T120000
+SUMMARY:Boo at the Zoo 2026
+DESCRIPTION:Gulf Breeze Zoo turns its grounds into a Halloween trick-or-tr
+ eat trail for the day\, with candy\, toys\, bounce houses\, face painting
+  and the zoo's animal ambassadors out to meet visitors. The zoo opens at 
+ 10 AM for the event and does not admit guests earlier\, and a Boo at the 
+ Zoo ticket includes regular zoo admission.\nPrice: not published by the v
+ enue\, so confirm before you go\nArea: Gulf Breeze & Navarre\nTimes: Sat 
+ 10/10 10 AM-5 PM · Sun 10/11 10 AM-3 PM\nChecked against the venue's own
+  page on 2026-10-02\nhttps://coastaleventures.com/events/ev-boo-at-the-zo
+ o-2026-1010.html
+LOCATION:Gulf Breeze Zoo\, 5701 Gulf Breeze Parkway\, Gulf Breeze\, FL 325
+ 63
+URL:https://coastaleventures.com/events/ev-boo-at-the-zoo-2026-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_27th_annual_emerald_coast_home_and_boat_show_1010-2026-10-10@coast-
+ guide
+DTSTAMP:20261010T000000Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261012
+SUMMARY:27th Annual Emerald Coast Home & Boat Show
+DESCRIPTION:The 27th Annual Emerald Coast Home & Boat Show fills the Desti
+ n-Fort Walton Beach Convention Center with more than 100 vendors selling 
+ home goods to boats. A lot of boats are parked outside for browsing too. 
+ Retail\, health and pet-rescue booths line the aisles alongside giveaways
+ \, and admission is free for every age. The show returns every year.\nPri
+ ce: Free\nArea: Destin & Fort Walton\nTimes: Saturday 10/10 · 10:00 AM\n
+ Checked against the venue's own page on 2026-10-02\nhttps://coastaleventu
+ res.com/events/ev-27th-annual-emerald-coast-home-and-boat-show-1010.html
+LOCATION:Destin-Fort Walton Beach Convention Center\, 1250 Miracle Strip P
+ kwy SE\, Fort Walton Beach\, FL 32548
+URL:https://coastaleventures.com/events/ev-27th-annual-emerald-coast-home-
+ and-boat-show-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_10th_annual_bras_across_the_causeway_5k_and__1010-2026-10-10@coast-
+ guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T081500
+DTEND:20261010T101500
+SUMMARY:10th Annual Bras Across the CAUSEway 5K & Fun Run
+DESCRIPTION:The 10th annual Bras Across the CAUSEway runs at USS Alabama B
+ attleship Memorial Park on Saturday\, October 10\, with the 5K at 8:15 AM
+  and the fun run at 8:30 AM. It offers a timed 5K and a family-friendly 1
+ -mile fun run\, with a virtual option too. It raises money for local brea
+ st-cancer patients. Registration is $40 for ages 13 and up and $35 for 12
+  and under from September 27 through October 9\, and parking runs $5 per 
+ vehicle or $30 per RV.\nPrice: from $30\nArea: Mobile & Baldwin County\nT
+ imes: Saturday 10/10 · 5K 8:15 AM · 1-mile fun run 8:30 AM\nChecked aga
+ inst the venue's own page on 2026-10-02\nhttps://coastaleventures.com/eve
+ nts/ev-10th-annual-bras-across-the-causeway-5k-and-1010.html
+LOCATION:USS ALABAMA Battleship Memorial Park\, 2703 Battleship Parkway\, 
+ Mobile\, AL 36602
+URL:https://coastaleventures.com/events/ev-10th-annual-bras-across-the-cau
+ seway-5k-and-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mobile_latin_fest_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T140000
+DTEND:20261010T160000
+SUMMARY:Mobile Latin Fest
+DESCRIPTION:Mardi Gras Park hosts Mobile Latin Fest on Saturday from 2 PM 
+ to 9 PM\, a family-friendly celebration of Latin American and Caribbean c
+ ulture. The Hispanic American Business Association organizes the festival
+ \, which brings together music\, dance\, food and art for the day. Admiss
+ ion is free.\nPrice: Free\nArea: Mobile & Baldwin County\nTimes: Saturday
+  10/10 · 2:00 PM to 9:00 PM\nhttps://coastaleventures.com/events/ev-mobi
+ le-latin-fest-1010.html
+LOCATION:Mardi Gras Park\, 104 S Royal Street\, Mobile\, AL 36602
+URL:https://coastaleventures.com/events/ev-mobile-latin-fest-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_2nd_destin_high_school_harbor_boil_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T120000
+DTEND:20261010T140000
+SUMMARY:2nd Destin High School Harbor Boil
+DESCRIPTION:Destin High School's second annual Harbor Boil runs at AJ's Se
+ afood & Oyster Bar from noon to 4 PM on Saturday\, October 10. It has a L
+ owcountry boil\, football on the screens\, a silent auction\, and family 
+ activities. General admission runs $25 a person\, and a party of five com
+ es to $100 total\, scaling to your group. Cheerleaders\, the band\, and t
+ he dance team appear through the afternoon\, doubling as an early look at
+  the school's fall programs.\nPrice: from $25\nArea: Destin & Fort Walton
+ \nTimes: Saturday 10/10 · 12:00 PM to 4:00 PM\nChecked against the venue
+ 's own page on 2026-10-02\nhttps://coastaleventures.com/events/ev-2nd-des
+ tin-high-school-harbor-boil-1010.html
+LOCATION:AJ’s Seafood & Oyster Bar\, 116 Harbor Blvd\, Destin\, FL 32541
+URL:https://coastaleventures.com/events/ev-2nd-destin-high-school-harbor-b
+ oil-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_shrimp_festival_5k_10k_run_and_walk_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T073000
+DTEND:20261010T093000
+SUMMARY:Shrimp Festival 5K / 10K Run & Walk
+DESCRIPTION:The Shrimp Festival 5K and 10K start on the Backcountry Trail 
+ behind the Orange Beach Sportsplex at 7:30 AM on Saturday\, October 10. R
+ egistration proceeds benefit the Orange Beach and Gulf Shores high school
+  cross-country and track teams. The race repeats every year alongside Nat
+ ional Shrimp Festival weekend.\nPrice: not published by the venue\, so co
+ nfirm before you go\nArea: Orange Beach & Gulf Shores\nTimes: Saturday 10
+ /10 · 7:30 AM\nChecked against the venue's own page on 2026-09-26\nhttps
+ ://coastaleventures.com/events/ev-shrimp-festival-5k-10k-run-and-walk-101
+ 0.html
+LOCATION:Orange Beach Sportsplex / Hugh S. Branyon Backcountry Trail\, 438
+ 5 William Silvers Pkwy\, Orange Beach\, AL 36561
+URL:https://coastaleventures.com/events/ev-shrimp-festival-5k-10k-run-and-
+ walk-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_wheel_throwing_fall_ceramics_workshop_0912-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T123000
+DTEND:20261010T143000
+SUMMARY:Wheel Throwing: Fall Ceramics Workshop
+DESCRIPTION:This six week adult ceramics course at UWF meets Saturday afte
+ rnoons from 12:30 PM to 3:30 PM\, covering wheel throwing\, centering\, f
+ orms\, firing\, and glazing. It is built for beginners and for anyone who
+  wants a refresher\, running through October 17. Tuition runs $275 per pe
+ rson.\nPrice: from $275\nArea: Pensacola\nTimes: Saturdays · 12:30 PM to
+  3:30 PM\nChecked against the venue's own page on 2026-10-02\nhttps://coa
+ staleventures.com/events/ev-wheel-throwing-fall-ceramics-workshop-0912.ht
+ ml
+LOCATION:UWF Pensacola Campus\, Building 82\, 11000 University Pkwy\, Pens
+ acola\, FL 32514
+URL:https://coastaleventures.com/events/ev-wheel-throwing-fall-ceramics-wo
+ rkshop-0912.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_anchor_up_card_show_vfw706_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T090000
+DTEND:20261010T110000
+SUMMARY:Anchor Up Monthly Card Show
+DESCRIPTION:The Anchor Up Monthly Card Show is a sports card and trading c
+ ard show at Emerald Fortress in Pensacola\, on the second Saturday of the
+  month. Expect Pokémon\, One Piece TCG\, sports cards\, slabs and single
+ s\, sealed wax and packs\, supplies and memorabilia\, with live raffles. 
+ Admission and parking are free.\nPrice: Free\nArea: Pensacola\nTimes: Sat
+ urday 10/10 · 9:00 AM-4:00 PM\nChecked against the venue's own page on 2
+ 026-10-04\nhttps://coastaleventures.com/events/ev-anchor-up-card-show-vfw
+ 706-1010.html
+LOCATION:Emerald Fortress\, 319 E Nine Mile Rd\, Pensacola\, FL 32514
+URL:https://coastaleventures.com/events/ev-anchor-up-card-show-vfw706-1010
+ .html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_repticon_fort_walton_beach_october_2026_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261012
+SUMMARY:Repticon Fort Walton Beach: October 2026
+DESCRIPTION:Repticon comes to the Destin Fort Walton Beach Fairgrounds and
+  Events Center Saturday\, October 10\, 9 AM to 4 PM\, and Sunday\, Octobe
+ r 11\, 10 AM to 4 PM. Admission is $15 for adults\, $6 for ages 5 to 12\,
+  and free for ages 4 and under.\nPrice: from $6\nArea: Destin & Fort Walt
+ on\nTimes: Sat 10/10 · 9:00 AM to 4:00 PM and Sun 10/11 · 10:00 AM to 4
+ :00 PM\nhttps://coastaleventures.com/events/ev-repticon-fort-walton-beach
+ -october-2026-1010.html
+LOCATION:Destin Fort Walton Beach Fairgrounds and Events Center\, 1958 Lew
+ is Turner Blvd\, Fort Walton Beach\, FL 32547
+URL:https://coastaleventures.com/events/ev-repticon-fort-walton-beach-octo
+ ber-2026-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_sweet_season_scout_day_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T090000
+DTEND:20261010T110000
+SUMMARY:Scout Day at the Farm
+DESCRIPTION:Scouts get a free patch with paid admission while supplies las
+ t\, and the corn maze is a real orienteering problem rather than a walk. 
+ Group rates exist for parties of twenty or more. Saturday hours are 9:00 
+ AM to 5:00 PM.\nPrice: from $18.50\nArea: Milton & Pace\nTimes: Saturday 
+ 10/10 · 9:00 AM to 5:00 PM\nChecked against the venue's own page on 2026
+ -10-02\nhttps://coastaleventures.com/events/ev-sweet-season-scout-day-101
+ 0.html
+LOCATION:Sweet Season Farms\, 2260 Horn Road\, Milton\, FL 32570
+URL:https://coastaleventures.com/events/ev-sweet-season-scout-day-1010.htm
+ l
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_sea_no_limits_maritime_park_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T080000
+DTEND:20261010T100000
+SUMMARY:Sea No Limits fishing clinic
+DESCRIPTION:A free fishing clinic at Maritime Park for children and adults
+  with intellectual and developmental disabilities\, and their families. I
+ t runs 8:00 AM to noon on the downtown waterfront. Gear and instruction a
+ re the point of the morning.\nPrice: Free\nArea: Pensacola\nTimes: Saturd
+ ay 10/10 · 8:00 AM to 12:00 PM\nChecked against the venue's own page on 
+ 2026-10-02\nhttps://coastaleventures.com/events/ev-sea-no-limits-maritime
+ -park-1010.html
+LOCATION:Vince J. Whibbs Sr. Community Maritime Park\, 301 W Main St\, Pen
+ sacola\, FL 32501
+URL:https://coastaleventures.com/events/ev-sea-no-limits-maritime-park-101
+ 0.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_melody_community_fiesta_seville_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T140000
+DTEND:20261010T160000
+SUMMARY:The Melody Community Fiesta
+DESCRIPTION:Eight hours of community fiesta in the Seville Quarter courtya
+ rd\, free and open to the public. It starts at 2:00 PM and runs to 10:00 
+ PM\, so it works as an afternoon with the kids or a night out. Food and d
+ rink are on you.\nPrice: Free\nArea: Pensacola\nTimes: Saturday 10/10 · 
+ 2:00 PM to 10:00 PM\nChecked against the venue's own page on 2026-10-02\n
+ https://coastaleventures.com/events/ev-melody-community-fiesta-seville-10
+ 10.html
+LOCATION:Seville Quarter Courtyard\, 130 E Government St\, Pensacola\, FL 
+ 32502
+URL:https://coastaleventures.com/events/ev-melody-community-fiesta-seville
+ -1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_50_shades_of_pink_luncheon_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T100000
+DTEND:20261010T120000
+SUMMARY:50 Shades of Pink fashion show
+DESCRIPTION:A fashion show and luncheon built around breast cancer awarene
+ ss\, honoring women who are survivors. Tickets are sold through the organ
+ izer.\nPrice: not published by the venue\, so confirm before you go\nArea
+ : Pensacola\nTimes: Saturday 10/10 · 10:00 AM to 2:00 PM\nChecked agains
+ t the venue's own page on 2026-10-02\nhttps://coastaleventures.com/events
+ /ev-50-shades-of-pink-luncheon-1010.html
+LOCATION:Freewill Ministries Destiny Center\, 836 W Michigan Ave\, Pensaco
+ la\, FL 32505
+URL:https://coastaleventures.com/events/ev-50-shades-of-pink-luncheon-1010
+ .html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_girls_empowered_with_math_and_science_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T103000
+DTEND:20261010T123000
+SUMMARY:Girls Empowered with Math and Science Workshops
+DESCRIPTION:The Emerald Coast Science Center runs this GEM workshop for gi
+ rls ages 8 to 15 at the Fort Walton Beach Library on the second Saturday 
+ of every month. Registration is by phone through the library rather than 
+ online.\nPrice: not published by the venue\, so confirm before you go\nAr
+ ea: Destin & Fort Walton\nTimes: Saturday 10/10 · 10:30 AM to 12:00 PM\n
+ Checked against the venue's own page on 2026-09-16\nhttps://coastaleventu
+ res.com/events/ev-girls-empowered-with-math-and-science-1010.html
+LOCATION:Fort Walton Beach Library\, 185 Miracle Strip Parkway SE\, Fort W
+ alton Beach\, FL 32548
+URL:https://coastaleventures.com/events/ev-girls-empowered-with-math-and-s
+ cience-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_navarre_hnsapancakes_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T073000
+DTEND:20261010T093000
+SUMMARY:Monthly Pancake Breakfast at Holley-Navarre Senior Association
+DESCRIPTION:The senior center's second-Saturday all-you-can-eat pancake br
+ eakfast is open to the whole community\, not just members\, with proceeds
+  supporting the center. Neither the Chamber's listing nor the center's si
+ te publishes a set price\; the center asks guests to bring cash since it 
+ does not yet take cards.\nPrice: not published by the venue\, so confirm 
+ before you go\nArea: Gulf Breeze & Navarre\nTimes: Saturday 10/10 · 7:30
+  AM to 10:30 AM\nChecked against the venue's own page on 2026-09-16\nhttp
+ s://coastaleventures.com/events/ev-navarre-hnsapancakes-1010.html
+LOCATION:Holley-Navarre Senior Association\, 8476 Gordon Goodin Ln\, Navar
+ re\, FL 32566
+URL:https://coastaleventures.com/events/ev-navarre-hnsapancakes-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_southerntipoff_baycenter-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T160000
+DTEND:20261010T180000
+SUMMARY:Southern Tip-Off: FSU vs Mississippi State
+DESCRIPTION:Florida State and Mississippi State open the college basketbal
+ l season at the Bay Center in the inaugural Southern Tip-Off. Doors open 
+ an hour before the 5 PM tip. Tickets start at $10\, published on the venu
+ e's own event page.\nPrice: from $10\nArea: Pensacola\nTimes: Saturday 10
+ /10 · Doors 4:00 PM · Tip-off 5:00 PM\nChecked against the venue's own 
+ page on 2026-09-16\nhttps://coastaleventures.com/events/ev-southerntipoff
+ -baycenter.html
+LOCATION:Pensacola Bay Center\, 201 E Gregory St\, Pensacola\, FL 32502
+URL:https://coastaleventures.com/events/ev-southerntipoff-baycenter.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_improvablecause_plt_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T203000
+DTEND:20261010T223000
+SUMMARY:Improvable Cause
+DESCRIPTION:Pensacola's own professional improv troupe\, Improvable Cause\
+ , performs unscripted comedy built entirely from audience suggestions. It
+  runs the first Saturday of most months at Pensacola Little Theatre\, and
+  this October date lands the second Saturday instead.\nPrice: not publish
+ ed by the venue\, so confirm before you go\nArea: Pensacola\nTimes: Satur
+ day 10/10 · 8:30 PM\nChecked against the venue's own page on 2026-09-16\
+ nhttps://coastaleventures.com/events/ev-improvablecause-plt-1010.html
+LOCATION:Pensacola Little Theatre\, 400 S Jefferson St\, Pensacola\, FL 32
+ 502
+URL:https://coastaleventures.com/events/ev-improvablecause-plt-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_fwbsatmarket_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T080000
+DTEND:20261010T100000
+SUMMARY:Downtown FWB Saturday Market
+DESCRIPTION:Local vendors set up along the waterfront at Fort Walton Beach
+  Landing Park for a Saturday morning market of handmade goods\, produce\,
+  and food. The Downtown FWB group runs it rain or shine on the second and
+  fourth Saturday of every month\, so this window covers both October 10 a
+ nd October 24. Admission is free and the market sits right on the water\,
+  so it makes an easy stop before or after a walk at the park. The vendor 
+ lineup changes week to week\, and organizers post updates on their Facebo
+ ok page.\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Saturday 10/10 
+ · 8 AM to 1 PM\, also runs 10/24\nChecked against the venue's own page o
+ n 2026-09-16\nhttps://coastaleventures.com/events/ev-fwbsatmarket-1010.ht
+ ml
+LOCATION:Fort Walton Beach Landing Park\, 139 Brooks St SE\, Fort Walton B
+ each\, FL 32547
+URL:https://coastaleventures.com/events/ev-fwbsatmarket-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_fwbzombiewalk_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T160000
+DTEND:20261010T180000
+SUMMARY:Downtown Fort Walton Beach Zombie Walk
+DESCRIPTION:Downtown Fort Walton Beach turns into a costume parade for one
+  Saturday evening\, run by the Downtown board with Sharing and Caring. Tr
+ ick-or-treaters start at The Landing with a canned food donation\, then c
+ ollect candy from businesses around downtown before the whole group walks
+  together behind the library at 6:30 PM. The night ends with a Thriller d
+ ance back at The Landing at 7 PM. There is no ticket\, but organizers ask
+  each costumed kid to bring at least two canned or nonperishable food ite
+ ms.\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Saturday 10/10 · 4 
+ PM to 8 PM\nChecked against the venue's own page on 2026-09-16\nhttps://c
+ oastaleventures.com/events/ev-fwbzombiewalk-1010.html
+LOCATION:Fort Walton Beach Landing (Downtown FWB)\, 139 Brooks St SE\, For
+ t Walton Beach\, FL 32547
+URL:https://coastaleventures.com/events/ev-fwbzombiewalk-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_florabama_tailgateinthetent_0919-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T110000
+DTEND:20261010T130000
+SUMMARY:Tailgate in the Tent: Flora-Bama
+DESCRIPTION:Flora-Bama turns its Tent Stage into a game-day sports bar eve
+ ry Saturday through the fall\, with a big screen on SEC matchups\, live m
+ usic on two other stages\, and a fresh-oyster walk-up bar. It runs 11 AM 
+ to 6 PM\, so the early part of the day is a family beach-bar visit before
+  it turns into an adult crowd by kickoff of the late games.\nPrice: not p
+ ublished by the venue\, so confirm before you go\nArea: Pensacola Beach &
+  Perdido\nTimes: Saturdays · 11:00 AM to 6:00 PM\nChecked against the ve
+ nue's own page on 2026-09-16\nhttps://coastaleventures.com/events/ev-flor
+ abama-tailgateinthetent-0919.html
+LOCATION:Flora-Bama: Tent Stage\, 17401 Perdido Key Dr\, Perdido Key\, FL 
+ 32507
+URL:https://coastaleventures.com/events/ev-florabama-tailgateinthetent-091
+ 9.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_navarre_krewe_coronation_ball_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T180000
+DTEND:20261010T200000
+SUMMARY:Navarre Krewe of Jesters Coronation Ball
+DESCRIPTION:The Navarre Krewe of Jesters installs its new King and Queen a
+ t this masquerade ball\, formal attire\, at St. Sylvester Catholic Church
+ . A live band plays\, Aloha Grill caters\, and the night is BYOB with fix
+ ings and a bartender provided. The chamber's listing notes only that last
+  year sold out\, so get tickets ahead of the date.\nPrice: not published 
+ by the venue\, so confirm before you go\nArea: Gulf Breeze & Navarre\nTim
+ es: Saturday 10/10 · 6:00 PM to 10:00 PM\nChecked against the venue's ow
+ n page on 2026-09-16\nhttps://coastaleventures.com/events/ev-navarre-krew
+ e-coronation-ball-1010.html
+LOCATION:St. Sylvester Catholic Church\, 6464 Gulf Breeze Pkwy\, Gulf Bree
+ ze\, FL 32563
+URL:https://coastaleventures.com/events/ev-navarre-krewe-coronation-ball-1
+ 010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_srsc_ministry_village_clay_shoot_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T080000
+DTEND:20261010T100000
+SUMMARY:Ministry Village Clay Shoot
+DESCRIPTION:Santa Rosa Shooting Center sets aside the day for Ministry Vil
+ lage Clay Shoot. Call the range closer to the date to register.\nPrice: n
+ ot published by the venue\, so confirm before you go\nArea: Milton & Pace
+ \nTimes: Saturday 10/10 · 8:00 AM to 8:00 PM\nChecked against the venue'
+ s own page on 2026-09-16\nhttps://coastaleventures.com/events/ev-srsc-min
+ istry-village-clay-shoot-1010.html
+LOCATION:Santa Rosa Shooting Center\, 6950 Quintette Rd\, Pace\, FL 32571
+URL:https://coastaleventures.com/events/ev-srsc-ministry-village-clay-shoo
+ t-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_harborwalk_sipshop_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T170000
+DTEND:20261010T200000
+SUMMARY:Harbor Sip & Shop: Fall Edition
+DESCRIPTION:A fall shopping evening along the HarborWalk boardwalk\, with 
+ drinks in hand at participating shops. The venue's own calendar lists onl
+ y the date and time so far\, with no vendor list or price posted yet.\nPr
+ ice: not published by the venue\, so confirm before you go\nArea: Destin 
+ & Fort Walton\nTimes: Saturday 10/10 · 5-8 PM\nChecked against the venue
+ 's own page on 2026-09-16\nhttps://coastaleventures.com/events/ev-harborw
+ alk-sipshop-1010.html
+LOCATION:HarborWalk Village\, 10 Harbor Blvd\, Destin\, FL 32541
+URL:https://coastaleventures.com/events/ev-harborwalk-sipshop-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_america250_scoutingexpo_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T090000
+DTEND:20261010T110000
+SUMMARY:America 250 Heritage Festival and Scouting Expo
+DESCRIPTION:Scouting America's Gulf Coast Council hosts a free day of hist
+ orical reenactments\, a flag retirement ceremony\, museum displays\, food
+  trucks\, and live entertainment at the Rigdon Center. Scouts camp on the
+  grounds the whole weekend.\nPrice: Free\nArea: Destin & Fort Walton\nTim
+ es: Saturday 10/10 · 9 AM-5 PM\nChecked against the venue's own page on 
+ 2026-09-16\nhttps://coastaleventures.com/events/ev-america250-scoutingexp
+ o-1010.html
+LOCATION:Destin-Fort Walton Beach Rigdon Center\, 1958 Lewis Turner Blvd\,
+  Fort Walton Beach\, FL 32547
+URL:https://coastaleventures.com/events/ev-america250-scoutingexpo-1010.ht
+ ml
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_niceville_national_night_out_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T160000
+DTEND:20261010T180000
+SUMMARY:National Night Out with Niceville Police
+DESCRIPTION:The Niceville Police Department hosts National Night Out 2026\
+ , a chance to meet local officers and firefighters and connect with neigh
+ bors. The city's listing promises activities and games\, giveaways\, food
+  trucks and booths from community groups and local resources. The departm
+ ent invites families to bring friends and neighbors along for the evening
+ .\nPrice: not published by the venue\, so confirm before you go\nArea: De
+ stin & Fort Walton\nTimes: Saturday 10/10 · 4:00 PM to 7:00 PM\nChecked 
+ against the venue's own page on 2026-09-24\nhttps://coastaleventures.com/
+ events/ev-niceville-national-night-out-1010.html
+LOCATION:Niceville Police Department\, 212 Partin Drive North\, Niceville\
+ , FL 32578
+URL:https://coastaleventures.com/events/ev-niceville-national-night-out-10
+ 10.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_ecsc_gems_workshop_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T103000
+DTEND:20261010T123000
+SUMMARY:Girls Empowered with Math and Science Workshop
+DESCRIPTION:The science center's GEMS series is a STEM workshop program fo
+ r girls\, held on-site. The center's own page does not describe the speci
+ fic curriculum for this date.\nPrice: not published by the venue\, so con
+ firm before you go\nArea: Destin & Fort Walton\nTimes: Saturday 10/10 · 
+ 10:30 AM\nChecked against the venue's own page on 2026-09-24\nhttps://coa
+ staleventures.com/events/ev-ecsc-gems-workshop-1010.html
+LOCATION:Emerald Coast Science Center\, 31 SW Memorial Parkway\, Fort Walt
+ on Beach\, FL 32548
+URL:https://coastaleventures.com/events/ev-ecsc-gems-workshop-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_farmers_market-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T090000
+DTEND:20261010T110000
+SUMMARY:Seaside Farmers Market
+DESCRIPTION:The Seaside Farmers Market fills the amphitheater in Seaside's
+  Central Square every Saturday morning with local farmers\, growers and a
+ rtisans. Stalls sell fresh produce\, baked goods and specialty foods\, an
+ d live music plays while you browse. The market runs rain or shine unless
+  the weather turns unsafe.\nPrice: not published by the venue\, so confir
+ m before you go\nArea: 30A & South Walton\nTimes: Saturdays · 9:00 AM to
+  1:00 PM\nChecked against the venue's own page on 2026-09-26\nhttps://coa
+ staleventures.com/events/ev-seaside-farmers-market.html
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 324
+ 59
+URL:https://coastaleventures.com/events/ev-seaside-farmers-market.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_childrens_theater_dragons_love_tacos-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T170000
+DTEND:20261010T190000
+SUMMARY:Dragons Love Tacos: Fall Children's Theater at Seaside
+DESCRIPTION:Emerald Coast Theatre Company performs Dragons Love Tacos at t
+ he Seaside Amphitheater on Saturday afternoons this fall. Seven performer
+ s tell the story of a boy and his dog learning the dos and don'ts of feed
+ ing dragons. The show is complimentary\, paid for by the arts and enterta
+ inment fee the Merchants of Seaside collect.\nPrice: Free\nArea: 30A & So
+ uth Walton\nTimes: Saturdays through 10/17 · 5:00 PM to 6:00 PM\nChecked
+  against the venue's own page on 2026-09-26\nhttps://coastaleventures.com
+ /events/ev-seaside-childrens-theater-dragons-love-tacos.html
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 324
+ 59
+URL:https://coastaleventures.com/events/ev-seaside-childrens-theater-drago
+ ns-love-tacos.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_munson_heritage_festival_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261012
+SUMMARY:Munson Heritage Festival
+DESCRIPTION:The Munson Heritage Festival is a nonprofit weekend at Krul Re
+ creation Area that shows how northern Santa Rosa and Okaloosa counties li
+ ved\, with demonstrations of wood carving\, basket weaving and Civil War 
+ reenactment. It suits families who like to watch old crafts done by hand\
+ , and children can stand close enough to see how it works. Krul Recreatio
+ n Area is a forested state park with unreliable cell service\, so plan th
+ e route before leaving Milton.\nPrice: not published by the venue\, so co
+ nfirm before you go\nArea: Milton & Pace\nTimes: Saturday 10/10 and Sunda
+ y 10/11 · 9:00 AM to 4:00 PM\nChecked against the venue's own page on 20
+ 26-09-29\nhttps://coastaleventures.com/events/ev-munson-heritage-festival
+ -1010.html
+LOCATION:Krul Recreation Area\, 11007 Krul Lake Rd\, Milton\, FL 32570
+URL:https://coastaleventures.com/events/ev-munson-heritage-festival-1010.h
+ tml
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_animal_services_fall_fest_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T110000
+DTEND:20261010T130000
+SUMMARY:Fall Fest Adoption Event at Santa Rosa County Animal Services
+DESCRIPTION:Santa Rosa County Animal Services holds a Fall Fest at its Mil
+ ton shelter with adoptable dogs and cats\, food vendors\, local crafts an
+ d information on volunteering. Every adoption is $10 for the day. The fir
+ st 50 visitors get a free coffee from the Travelin' Tom's truck\, and it 
+ is an easy outing for children who like animals.\nPrice: Free\nArea: Milt
+ on & Pace\nTimes: Saturday 10/10 · 11:00 AM to 3:00 PM\nChecked against 
+ the venue's own page on 2026-09-29\nhttps://coastaleventures.com/events/e
+ v-animal-services-fall-fest-1010.html
+LOCATION:Santa Rosa County Animal Services\, 4451 Pine Forest Rd\, Milton\
+ , FL 32583
+URL:https://coastaleventures.com/events/ev-animal-services-fall-fest-1010.
+ html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_navarre_beach_autorama_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T080000
+DTEND:20261010T100000
+SUMMARY:26th Annual Navarre Beach Car\, Truck and Bike Show
+DESCRIPTION:The Navarre Beach Car\, Truck and Bike Show fills the Navarre 
+ High School parking lot with more than 150 classic and custom vehicles\, 
+ judged across several classes. The Blue Levee Band plays live\, and food 
+ and vendors line the lot. The price for spectators is not published yet.\
+ nPrice: not published by the venue\, so confirm before you go\nArea: Gulf
+  Breeze & Navarre\nTimes: Saturday 10/10 · 8:00 AM to 4:00 PM\nChecked a
+ gainst the venue's own page on 2026-09-29\nhttps://coastaleventures.com/e
+ vents/ev-navarre-beach-autorama-1010.html
+LOCATION:Navarre High School\, 8600 High School Blvd\, Navarre\, FL 32566
+URL:https://coastaleventures.com/events/ev-navarre-beach-autorama-1010.htm
+ l
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_tbs_fwb_pokemon_saturday-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T110000
+DTEND:20261010T130000
+SUMMARY:Pokémon at TBS Comics Fort Walton Beach
+DESCRIPTION:TBS Comics in Fort Walton Beach lists a Saturday morning Poké
+ mon session on its gaming schedule. The page prints no entry fee and no d
+ escription\, so call the shop for the format.\nPrice: not published by th
+ e venue\, so confirm before you go\nArea: Destin & Fort Walton\nTimes: Sa
+ turdays · 11:00 AM\nChecked against the venue's own page on 2026-09-29\n
+ https://coastaleventures.com/events/ev-tbs-fwb-pokemon-saturday.html
+LOCATION:TBS Comics Fort Walton Beach\, 550 Mary Esther Blvd Unit 5\, Fort
+  Walton Beach\, FL 32548
+URL:https://coastaleventures.com/events/ev-tbs-fwb-pokemon-saturday.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_holland_pilates_pumpkins_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T060000
+DTEND:20261010T080000
+SUMMARY:Pilates and Pumpkins at Holland Farms
+DESCRIPTION:Holland Farms starts a Saturday with an hour of pilates at 6:0
+ 0 AM followed by an hour of pumpkin painting at 7:00 AM. The class costs 
+ $20\, and the pumpkin painting add-on is $5 and includes one pumpkin. Bri
+ ng a yoga mat\, grip socks\, water and a towel.\nPrice: from $20\nArea: M
+ ilton & Pace\nTimes: Saturday 10/10 · 6:00 AM to 8:00 AM · pilates 6 AM
+  to 7 AM · pumpkin painting 7 AM to 8 AM\nChecked against the venue's ow
+ n page on 2026-10-02\nhttps://coastaleventures.com/events/ev-holland-pila
+ tes-pumpkins-1010.html
+LOCATION:Holland Farms\, 2055 Homer Holland Rd\, Milton\, FL 32570
+URL:https://coastaleventures.com/events/ev-holland-pilates-pumpkins-1010.h
+ tml
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_snake_yoga_at_emerald_coast_zoo_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T103000
+DTEND:20261010T123000
+SUMMARY:Snake Yoga at Emerald Coast Zoo
+DESCRIPTION:Snake Yoga is a yoga session with snakes at Emerald Coast Zoo 
+ in Crestview\, held Saturday\, October 10 and Saturday\, October 17 at 10
+ :30 AM. The price is $40 per person\, and zoo admission is included.\nPri
+ ce: from $40\nTimes: Saturdays 10/10 and 10/17 · 10:30 AM\nChecked again
+ st the venue's own page on 2026-10-03\nhttps://coastaleventures.com/event
+ s/ev-snake-yoga-at-emerald-coast-zoo-1010.html
+LOCATION:Emerald Coast Zoo\, 5262 Deer Springs Dr\, Crestview\, FL 32539
+URL:https://coastaleventures.com/events/ev-snake-yoga-at-emerald-coast-zoo
+ -1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gentle_yoga_adults_destin_communit_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T100000
+DTEND:20261010T120000
+SUMMARY:Gentle Yoga (Adults)\, Destin Community Center
+DESCRIPTION:Gentle Yoga is a weekly adult class run by City of Destin Park
+ s & Recreation at Destin Community Center. It meets Saturdays from 10 to 
+ 11 AM\, and each class costs $5. Posted dates are October 3\, 10\, 17\, 2
+ 4 and 31.\nPrice: from $5\nArea: Destin & Fort Walton\nTimes: Saturdays t
+ hrough 10/31 · 10 AM-11 AM\nChecked against the venue's own page on 2026
+ -10-03\nhttps://coastaleventures.com/events/ev-gentle-yoga-adults-destin-
+ communit-1010.html
+LOCATION:Destin Community Center\, 101 Stahlman Ave\, Destin\, FL 32541
+URL:https://coastaleventures.com/events/ev-gentle-yoga-adults-destin-commu
+ nit-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_pokemon_league_at_gamemasters_guil_1008-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T150000
+DTEND:20261010T170000
+SUMMARY:Pokémon League at GameMasters Guild
+DESCRIPTION:Pokémon League at GameMasters Guild is free casual play for t
+ he Pokémon TCG\, the Pokémon Champions video game and Pokémon GO. It r
+ uns Thursdays from 3 to 8 PM and Saturdays from 12 to 2 PM in Crestview. 
+ All ages are welcome\, and the shop calls it a family-friendly space. Pla
+ yers get promo cards or special items while supplies last\, and a free Po
+ kémon account is needed to qualify (children under 13 register under a p
+ arent's account).\nPrice: Free\nTimes: Thursdays 3 PM-8 PM and Saturdays 
+ 12 PM-2 PM\nChecked against the venue's own page on 2026-10-03\nhttps://c
+ oastaleventures.com/events/ev-pokemon-league-at-gamemasters-guil-1008.htm
+ l
+LOCATION:GameMasters Guild\, 743 Ashley Drive\, Crestview\, FL 32536
+URL:https://coastaleventures.com/events/ev-pokemon-league-at-gamemasters-g
+ uil-1008.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_magic_reality_fracture_store_champ_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T170000
+DTEND:20261010T190000
+SUMMARY:Magic Reality Fracture Store Championship
+DESCRIPTION:The Magic Reality Fracture Store Championship is a Standard Ma
+ gic: The Gathering tournament at GameMasters Guild in Crestview on Saturd
+ ay\, October 10 at 5 PM. Entry is $12. The prize pool has two play booste
+ rs per player\, and all participants and the Top 8 get promos.\nPrice: fr
+ om $12\nTimes: Saturday 10/10 · 5:00 PM\nChecked against the venue's own
+  page on 2026-10-03\nhttps://coastaleventures.com/events/ev-magic-reality
+ -fracture-store-champ-1010.html
+LOCATION:GameMasters Guild\, 743 Ashley Drive\, Crestview\, FL 32536
+URL:https://coastaleventures.com/events/ev-magic-reality-fracture-store-ch
+ amp-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_disney_lorcana_league_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T120000
+DTEND:20261010T140000
+SUMMARY:Disney Lorcana League
+DESCRIPTION:Disney Lorcana League is casual league play at GameMasters Gui
+ ld in Crestview. Players earn league points toward monthly prizes and a p
+ romo card the first time they play each month\, and you can borrow a deck
+  or buy one. The shop describes it as great for families. Casual play is 
+ free\, tournaments vary in price\, and a free Carde.io account is needed 
+ to earn promos.\nPrice: Free\nTimes: Weekly · Saturdays 12 PM-3 PM (conf
+ irm the day)\nChecked against the venue's own page on 2026-10-03\nhttps:/
+ /coastaleventures.com/events/ev-disney-lorcana-league-1010.html
+LOCATION:GameMasters Guild\, 743 Ashley Drive\, Crestview\, FL 32536
+URL:https://coastaleventures.com/events/ev-disney-lorcana-league-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_crestview_r_e_a_d_reading_to_a_the_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261011
+SUMMARY:Crestview R.E.A.D. (reading to a therapy dog)
+DESCRIPTION:Crestview R.E.A.D. is a reading program at Crestview Library w
+ here children read one-on-one for 20 minutes with a trained therapy dog n
+ amed Hattie. It is recommended for ages 4 to 12 who can read or are learn
+ ing to. A parent must stay with their child.\nPrice: not published by the
+  venue\, so confirm before you go\nTimes: Second Saturday of the month: 1
+ 0/10\, 11/14\, 12/12\nChecked against the venue's own page on 2026-10-03\
+ nhttps://coastaleventures.com/events/ev-crestview-r-e-a-d-reading-to-a-th
+ e-1010.html
+LOCATION:Crestview Library\, 1445 Commerce Dr\, Crestview\, FL 32539
+URL:https://coastaleventures.com/events/ev-crestview-r-e-a-d-reading-to-a-
+ the-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_yoga_with_dolphins_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T073000
+DTEND:20261010T093000
+SUMMARY:Yoga with Dolphins
+DESCRIPTION:Yoga with Dolphins is a guided all-levels yoga class at Dolphi
+ n Oasis\, Gulfarium Marine Adventure Park in Fort Walton Beach\, with the
+  park's bottlenose dolphins swimming nearby. An instructor from Prana Yog
+ a teaches it on Saturdays from 7:30-8:30 AM\, and general admission is no
+ t required. It costs $40 per person.\nPrice: from $40\nArea: Destin & For
+ t Walton\nTimes: Saturdays 10/10\, 10/24\, 11/7\, 11/21\, 12/12\, 12/26 
+ · 7:30 AM-8:30 AM\nChecked against the venue's own page on 2026-10-03\nh
+ ttps://coastaleventures.com/events/ev-yoga-with-dolphins-1010.html
+LOCATION:Gulfarium Marine Adventure Park\, Dolphin Oasis\, 1010 Miracle St
+ rip Parkway SE\, Fort Walton Beach\, FL 32548
+URL:https://coastaleventures.com/events/ev-yoga-with-dolphins-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_fall_ball_at_blue_wahoos_stadium_f_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T130000
+DTEND:20261010T150000
+SUMMARY:Fall Ball at Blue Wahoos Stadium: Florida State vs. Auburn (fall b
+ aseball exhibition)
+DESCRIPTION:Fall Ball: Florida State vs. Auburn is a college baseball scri
+ mmage at the Blue Wahoos' downtown ballpark on Saturday\, October 10 at 1
+  PM. It's one of three fall exhibitions in what the club calls its larges
+ t-ever fall schedule. Tickets are sold through bluewahoos.com\, and the t
+ ailgate begins at 10 AM.\nPrice: not published by the venue\, so confirm 
+ before you go\nArea: Pensacola\nTimes: Saturday 10/10 · 1:00 PM\nChecked
+  against the venue's own page on 2026-10-03\nhttps://coastaleventures.com
+ /events/ev-fall-ball-at-blue-wahoos-stadium-f-1010.html
+LOCATION:Blue Wahoos Stadium\, 351 W Cedar St\, Pensacola\, FL 32502
+URL:https://coastaleventures.com/events/ev-fall-ball-at-blue-wahoos-stadiu
+ m-f-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_make_your_own_glass_hot_glass_by_a_1007-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T170000
+DTEND:20261010T190000
+SUMMARY:Make Your Own Glass (hot glass\, by appointment)
+DESCRIPTION:Make Your Own Glass is a hands-on hot glass session at First C
+ ity Art Center in Pensacola\, where each participant makes a piece with a
+  glassblower. It's for ages 8 and up including adults\, by appointment on
+  Wednesdays from 5-9 PM and Saturdays from 8-11 AM. The finished piece co
+ ols in an annealing oven and is picked up the following week. Standard pi
+ eces cost $85\, and premium pieces such as a pumpkin\, ornament\, cup or 
+ bowl cost $110-$140.\nPrice: from $85\nArea: Pensacola\nTimes: By appoint
+ ment: Wednesdays 5 PM-9 PM\, Saturdays 8 AM-11 AM\nChecked against the ve
+ nue's own page on 2026-10-03\nhttps://coastaleventures.com/events/ev-make
+ -your-own-glass-hot-glass-by-a-1007.html
+LOCATION:First City Art Center\, 1060 N Guillemard St\, Pensacola\, FL 325
+ 01
+URL:https://coastaleventures.com/events/ev-make-your-own-glass-hot-glass-b
+ y-a-1007.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_artel_jam_session_1007-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T160000
+DTEND:20261010T180000
+SUMMARY:Artel Jam Session
+DESCRIPTION:Artel Jam Session is an open musical gathering at Artel Galler
+ y\, 223 Palafox Pl in downtown Pensacola. It meets every Wednesday and Sa
+ turday from 4-7 PM and welcomes participants from the community.\nPrice: 
+ not published by the venue\, so confirm before you go\nArea: Pensacola\nT
+ imes: Wednesdays and Saturdays · 4 PM-7 PM\nChecked against the venue's 
+ own page on 2026-10-03\nhttps://coastaleventures.com/events/ev-artel-jam-
+ session-1007.html
+LOCATION:Artel Gallery\, 223 Palafox Pl\, Pensacola\, FL 32502
+URL:https://coastaleventures.com/events/ev-artel-jam-session-1007.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_winnie_the_pooh_100th_anniversary_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T130000
+DTEND:20261010T150000
+SUMMARY:Winnie the Pooh 100th Anniversary Tea Party (Tryon Library)
+DESCRIPTION:The Winnie the Pooh 100th Anniversary Tea Party at Tryon Libra
+ ry celebrates the 100th anniversary of Winnie the Pooh with activities\, 
+ snacks and games. It starts at 1 PM on Saturday\, October 10.\nPrice: not
+  published by the venue\, so confirm before you go\nArea: Pensacola\nTime
+ s: Saturday 10/10 · 1:00 PM\nChecked against the venue's own page on 202
+ 6-10-03\nhttps://coastaleventures.com/events/ev-winnie-the-pooh-100th-ann
+ iversary-1010.html
+LOCATION:Tryon Library\, 1200 Langley Ave.\, Pensacola\, FL 32504
+URL:https://coastaleventures.com/events/ev-winnie-the-pooh-100th-anniversa
+ ry-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_video_game_day_century_library_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261011
+SUMMARY:Video Game Day (Century Library)
+DESCRIPTION:Video Game Day at Century Library is a chance to play video ga
+ mes on the library's big screen. The first one is Saturday\, October 10\,
+  listed as all day\, and a second Video Game Day is on October 24.\nPrice
+ : not published by the venue\, so confirm before you go\nTimes: Saturdays
+  10/10 and 10/24 · all day\nChecked against the venue's own page on 2026
+ -10-03\nhttps://coastaleventures.com/events/ev-video-game-day-century-lib
+ rary-1010.html
+LOCATION:Century Library\, 7991 N. Century Blvd.\, Century\, FL 32535
+URL:https://coastaleventures.com/events/ev-video-game-day-century-library-
+ 1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_steam_midnight_kitty_painting_pens_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261101
+SUMMARY:STEAM: Midnight Kitty Painting (Pensacola Library)
+DESCRIPTION:STEAM: Midnight Kitty Painting is a step-by-step painting clas
+ s at Pensacola Library\, 239 N. Spring St.\, where you paint a little sha
+ dow kitty watching the moon. It is recommended for ages 10 and up. A them
+ ed painting class is held almost every Saturday through Oct 31 at 11 AM.\
+ nPrice: not published by the venue\, so confirm before you go\nArea: Pens
+ acola\nTimes: Saturday 10/10 to Saturday 10/31 · 11:00 AM\nChecked again
+ st the venue's own page on 2026-10-03\nhttps://coastaleventures.com/event
+ s/ev-steam-midnight-kitty-painting-pens-1010.html
+LOCATION:Pensacola Library\, 239 N. Spring St.\, Pensacola\, FL 32502
+URL:https://coastaleventures.com/events/ev-steam-midnight-kitty-painting-p
+ ens-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_ride_more_bicycles_saturday_shop_r_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T073000
+DTEND:20261010T093000
+SUMMARY:Ride MORE Bicycles Saturday Shop Ride
+DESCRIPTION:The Ride MORE Bicycles Saturday Shop Ride is a weekly road gro
+ up ride that leaves the shop at 59 E Gregory St. in Pensacola. It covers 
+ about 30 miles at a 17-19 mph average\, with sprints and regrouping spots
+ . The ride runs 7:30-9:30 AM every Saturday and road bikes are required.\
+ nPrice: not published by the venue\, so confirm before you go\nArea: Pens
+ acola\nTimes: Saturdays · 7:30 AM\nChecked against the venue's own page 
+ on 2026-10-03\nhttps://coastaleventures.com/events/ev-ride-more-bicycles-
+ saturday-shop-r-1010.html
+LOCATION:Ride MORE Bicycles\, 59 E Gregory St.\, Pensacola\, FL
+URL:https://coastaleventures.com/events/ev-ride-more-bicycles-saturday-sho
+ p-r-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_century_lions_club_cross_country_5_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T080000
+DTEND:20261010T100000
+SUMMARY:Century Lions Club Cross Country 5K
+DESCRIPTION:The Century Lions Club Cross Country 5K is a community race at
+  Anthony Pleasant Park\, 100 SR-4 in Century\, organized by the Century L
+ ions Club. It has a runner division and a walker division. Medals and rib
+ bons go to the top three in each of 32 age groups\, with overall awards f
+ or the first male and first female and separate awards for the top three 
+ men and women walkers.\nPrice: from $10\nTimes: Saturday 10/10 · 8:00 AM
+ \nChecked against the venue's own page on 2026-10-03\nhttps://coastaleven
+ tures.com/events/ev-century-lions-club-cross-country-5-1010.html
+LOCATION:Anthony Pleasant Park\, 100 SR-4\, Century\, FL 32535
+URL:https://coastaleventures.com/events/ev-century-lions-club-cross-countr
+ y-5-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_painting_with_a_twist_fort_walton_1003-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART;VALUE=DATE:20261010
 DTEND;VALUE=DATE:20261101
 SUMMARY:Painting with a Twist Fort Walton Beach: paint nights and all-ages
   sessions (weekly programme)
@@ -850,29 +2706,451 @@ URL:https://coastaleventures.com/events/ev-painting-with-a-twist-fort-walt
  on-1003.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_free_yoga_in_the_park_at_bayview_p_1004-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T093000
-DTEND:20261004T113000
-SUMMARY:Free Yoga in the Park at Bayview Park
-DESCRIPTION:Free Yoga in the Park is a one-hour outdoor class at Bayview P
- ark in Pensacola\, led by Breathe Yoga and Wellness Center with City of P
- ensacola Parks and Recreation. It meets on the first Sunday of each month
-  at 9:30 AM\, next on Oct 4\, Nov 1 and Dec 6. All ages and levels are we
- lcome\, and it's free.\nPrice: Free\nArea: Pensacola\nTimes: First Sunday
-  of the month · 9:30 AM\nChecked against the venue's own page on 2026-10
- -03\nhttps://coastaleventures.com/events/ev-free-yoga-in-the-park-at-bayv
- iew-p-1004.html
-LOCATION:Bayview Park (dock next to the dog beach\, east of Bayview Senior
-  Resource Center)\, 2001 E. Lloyd Street\, Pensacola\, FL 32503
-URL:https://coastaleventures.com/events/ev-free-yoga-in-the-park-at-bayvie
- w-p-1004.html
+UID:ev_pokemon_league_challenge_october_a_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T130000
+DTEND:20261010T150000
+SUMMARY:Pokémon League Challenge (October) at Gamers N Geeks
+DESCRIPTION:The Pokémon League Challenge at Gamers N Geeks in Mobile is a
+  Play Pokémon event in the Standard format\, open to all ages. Entry is 
+ $15\, and everyone gets a promo pack for signing up while supplies last. 
+ The prize pool is 100 percent of entries\, paid in store credit by record
+  within each age division.\nPrice: from $15\nArea: Mobile & Baldwin Count
+ y\nTimes: Saturday 10/10 · 1:00 PM\nChecked against the venue's own page
+  on 2026-10-03\nhttps://coastaleventures.com/events/ev-pokemon-league-cha
+ llenge-october-a-1010.html
+LOCATION:Gamers N Geeks\, 5701 Moffett Rd Ste N\, Mobile\, AL 36618
+URL:https://coastaleventures.com/events/ev-pokemon-league-challenge-octobe
+ r-a-1010.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_pokemon_league_at_trinity_games_1004-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T130000
-DTEND:20261004T150000
+UID:ev_pokemon_vg_league_challenge_first_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T150000
+DTEND:20261010T170000
+SUMMARY:Pokémon VG League Challenge (first with Pokémon Champions) at Ga
+ mers N Geeks
+DESCRIPTION:The Pokémon VG League Challenge at Gamers N Geeks in Mobile i
+ s the shop's first video-game league event using Pokémon Champions. It's
+  double battles\, best of 3\, under the Season M-C regulation\, with pair
+ ings run on Pokémon's tournament software\, TOM. Entry is $15 and the pa
+ yout is 100 percent store credit.\nPrice: from $15\nArea: Mobile & Baldwi
+ n County\nTimes: Saturday 10/10 · 3:00 PM\nChecked against the venue's o
+ wn page on 2026-10-03\nhttps://coastaleventures.com/events/ev-pokemon-vg-
+ league-challenge-first-1010.html
+LOCATION:Gamers N Geeks\, 5701 Moffett Rd Ste N\, Mobile\, AL 36618
+URL:https://coastaleventures.com/events/ev-pokemon-vg-league-challenge-fir
+ st-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_pokeween_play_and_trade_day_at_gam_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T150000
+DTEND:20261010T170000
+SUMMARY:Pokeween Play and Trade Day at Gamers N Geeks
+DESCRIPTION:Pokeween Play and Trade Day at Gamers N Geeks in Mobile is a f
+ ree play and trade day\, and you don't need a tournament entry to earn th
+ e Pokeween promos. Everyone who takes part gets a Play Pack and this year
+ 's promos\, Zubat\, Golbat and Crobat. Kids also get Pokémon Halloween s
+ tickers.\nPrice: Free\nArea: Mobile & Baldwin County\nTimes: Saturday 10/
+ 10 · 3:00 PM\nChecked against the venue's own page on 2026-10-03\nhttps:
+ //coastaleventures.com/events/ev-pokeween-play-and-trade-day-at-gam-1010.
+ html
+LOCATION:Gamers N Geeks\, 5701 Moffett Rd Ste N\, Mobile\, AL 36618
+URL:https://coastaleventures.com/events/ev-pokeween-play-and-trade-day-at-
+ gam-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_every_step_counts_5k_run_walk_pres_1010-2026-10-10@coast-guide
+DTSTAMP:20261010T000000Z
+DTSTART:20261010T080000
+DTEND:20261010T100000
+SUMMARY:Every Step Counts 5K Run/Walk presented by Landrum
+DESCRIPTION:The Every Step Counts 5K is a run or walk that starts at Landr
+ um on E. Garden Street in Pensacola. Proceeds support Lakeview Center\, w
+ hich provides behavioral health care to adults and children. The race sta
+ rts at 8 AM on Saturday 10/10\, and packet pickup is Friday 10/9 from 3-7
+  PM at Seville Quarter.\nPrice: from $45\nArea: Pensacola\nTimes: Saturda
+ y 10/10 · 8:00 AM\nChecked against the venue's own page on 2026-10-03\nh
+ ttps://coastaleventures.com/events/ev-every-step-counts-5k-run-walk-pres-
+ 1010.html
+LOCATION:Landrum\, 219 E. Garden Street\, Pensacola\, FL 32502
+URL:https://coastaleventures.com/events/ev-every-step-counts-5k-run-walk-p
+ res-1010.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_sunmkt-2026-10-11@coast-guide
+DTSTAMP:20261011T000000Z
+DTSTART:20261011T100000
+DTEND:20261011T120000
+SUMMARY:Sunday Market on Palafox
+DESCRIPTION:The Sunday sibling of Palafox Market brings crafts\, art\, and
+  prepared food. Confirm each week's market on their Facebook page before 
+ driving.\nPrice: Free\nArea: Pensacola\nTimes: Sundays · ~10 AM-3 PM\nCh
+ ecked against the venue's own page on 2026-09-26\nhttps://coastaleventure
+ s.com/events/ev-sunmkt.html
+LOCATION:MLK Jr. Plaza\, Downtown Pensacola\, 200 N Palafox St\, Pensacola
+ \, FL 32502
+URL:https://coastaleventures.com/events/ev-sunmkt.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seville_sundaybrunch-2026-10-11@coast-guide
+DTSTAMP:20261011T000000Z
+DTSTART:20261011T110000
+DTEND:20261011T130000
+SUMMARY:Sunday Brunch with John Wheeler: Seville Quarter
+DESCRIPTION:Brunch runs in the courtyard room while John Wheeler plays thr
+ ough it. It is a daytime date that ends early enough to still leave a Sun
+ day afterward.\nPrice: not published by the venue\, so confirm before you
+  go\nArea: Pensacola\nTimes: Sundays · 11:00 AM-2:00 PM\nChecked against
+  the venue's own page on 2026-10-02\nhttps://coastaleventures.com/events/
+ ev-seville-sundaybrunch.html
+LOCATION:Seville Quarter\, Apple Annie's\, 130 E Government St\, Pensacola
+ \, FL 32502
+URL:https://coastaleventures.com/events/ev-seville-sundaybrunch.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_university_of_west_florida_men_s_soccer_vs_c_1011-2026-10-11@coast-
+ guide
+DTSTAMP:20261011T000000Z
+DTSTART:20261011T160000
+DTEND:20261011T180000
+SUMMARY:UWF Men's Soccer vs Central Arkansas: Sunday Funday
+DESCRIPTION:University of West Florida men's soccer hosts Central Arkansas
+  at the UWF Soccer Complex for a Sunday Funday match\, part of the progra
+ m's first NCAA Division I season. General admission is five dollars\, sen
+ iors\, military and visiting students pay three dollars\, and UWF student
+ s\, faculty and staff get in free\, along with children under six and you
+ th in team uniform. Tickets are sold at the gate on game day\, cash only.
+ \nPrice: from $3\nArea: Pensacola\nTimes: Sunday 10/11 · 4:00 PM to 6:00
+  PM\nChecked against the venue's own page on 2026-10-02\nhttps://coastale
+ ventures.com/events/ev-university-of-west-florida-men-s-soccer-vs-c-1011.
+ html
+LOCATION:UWF Soccer Complex\, 11000 University Parkway\, Pensacola\, FL 32
+ 514
+URL:https://coastaleventures.com/events/ev-university-of-west-florida-men-
+ s-soccer-vs-c-1011.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_university_of_west_florida_women_s_soccer_vs_1011-2026-10-11@coast-
+ guide
+DTSTAMP:20261011T000000Z
+DTSTART:20261011T130000
+DTEND:20261011T150000
+SUMMARY:UWF Women's Soccer vs Bellarmine
+DESCRIPTION:UWF women's soccer hosts Bellarmine at the Soccer Complex in t
+ he program's first NCAA Division I season. General admission is $5\, with
+  a $3 rate for seniors\, military and visiting students\, and free entry 
+ for UWF students\, staff\, children under 6 and youth in athletic team un
+ iform. Tickets are sold at the gate on game day only and cash is the only
+  accepted payment.\nPrice: from $3\nArea: Pensacola\nTimes: Sunday 10/11 
+ · 1:00 PM\nChecked against the venue's own page on 2026-10-02\nhttps://c
+ oastaleventures.com/events/ev-university-of-west-florida-women-s-soccer-v
+ s-1011.html
+LOCATION:UWF Soccer Complex\, 11000 University Parkway\, Pensacola\, FL 32
+ 514
+URL:https://coastaleventures.com/events/ev-university-of-west-florida-wome
+ n-s-soccer-vs-1011.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_university_of_west_florida_women_s_volleybal_1011-2026-10-11@coast-
+ guide
+DTSTAMP:20261011T000000Z
+DTSTART:20261011T130000
+DTEND:20261011T150000
+SUMMARY:UWF Women's Volleyball vs North Florida: Pack it Pink
+DESCRIPTION:UWF women's volleyball hosts North Florida for the Pack it Pin
+ k match at the Field House. General admission is $5\, with a $3 rate for 
+ seniors\, military and visiting students\, and free entry for UWF student
+ s\, staff and children under 6. Tickets are sold at the gate on game day 
+ only and cash is the only accepted payment.\nPrice: from $3\nArea: Pensac
+ ola\nTimes: Sunday 10/11 · 1:00 PM to 3:00 PM\nChecked against the venue
+ 's own page on 2026-10-02\nhttps://coastaleventures.com/events/ev-univers
+ ity-of-west-florida-women-s-volleybal-1011.html
+LOCATION:UWF Field House\, Building 54\, 11000 University Parkway\, Pensac
+ ola\, FL 32514
+URL:https://coastaleventures.com/events/ev-university-of-west-florida-wome
+ n-s-volleybal-1011.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_brunch_and_rally_0823-2026-10-11@coast-guide
+DTSTAMP:20261011T000000Z
+DTSTART:20261011T130000
+DTEND:20261011T150000
+SUMMARY:Brunch & Rally
+DESCRIPTION:Pickleball at OWA runs indoor open play every Sunday afternoon
+ \, paired with a discount for anyone who shows a same-day receipt from Wa
+ ffles R Wild. Open play costs $10 for nonmembers\, members play free\, an
+ d a Waffles R Wild receipt brings the nonmember rate down to $7. It repea
+ ts weekly\, so today's session is one stop on an ongoing schedule.\nPrice
+ : from $10\nArea: Orange Beach & Gulf Shores\nTimes: Sundays · 1:00 PM t
+ o 5:00 PM\nChecked against the venue's own page on 2026-10-02\nhttps://co
+ astaleventures.com/events/ev-brunch-and-rally-0823.html
+LOCATION:Pickleball at OWA\, 200-A N. OWA Blvd\, Foley\, AL 36535
+URL:https://coastaleventures.com/events/ev-brunch-and-rally-0823.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_flora_bama_oktoberfest_1011-2026-10-11@coast-guide
+DTSTAMP:20261011T000000Z
+DTSTART:20261011T150000
+DTEND:20261011T170000
+SUMMARY:Flora-Bama Oktoberfest
+DESCRIPTION:Flora-Bama throws a family-friendly Oktoberfest each October w
+ ith a stein-hoisting contest\, German food while supplies last\, and live
+  polka music from The Brats. There is no cover charge\, children are welc
+ ome\, and the free drink perk is limited to guests 21 and older. Stein re
+ gistration opens at 2:00 PM\, the contest begins at 3:00 PM\, with food a
+ nd music following at 4:00 PM.\nPrice: Free\nArea: Pensacola Beach & Perd
+ ido\nTimes: Sunday 10/11 · 3:00 PM to 6:00 PM\nChecked against the venue
+ 's own page on 2026-10-02\nhttps://coastaleventures.com/events/ev-flora-b
+ ama-oktoberfest-1011.html
+LOCATION:Flora-Bama\, 17401 Perdido Key Dr.\, Perdido Key\, FL 32507
+URL:https://coastaleventures.com/events/ev-flora-bama-oktoberfest-1011.htm
+ l
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_bernheim_afternoon_of_stars_1011-2026-10-11@coast-guide
+DTSTAMP:20261011T000000Z
+DTSTART:20261011T150000
+DTEND:20261011T170000
+SUMMARY:Afternoon of Stars: Mobile Opera Cast Showcase
+DESCRIPTION:Members of Mobile Opera's upcoming Romeo and Juliet cast perfo
+ rm favorite selections in a free Sunday-afternoon showcase at Bernheim Ha
+ ll inside Mobile's Ben May Main Library\, followed by light refreshments.
+  Mobile Opera's own event page marks the program free admission and runs 
+ it 3:00 to 4:30 PM\; a separate library calendar listing gives a later 5:
+ 00 PM end time.\nPrice: Free\nArea: Mobile & Baldwin County\nTimes: Sunda
+ y 10/11 · 3:00 PM to 4:30 PM\nChecked against the venue's own page on 20
+ 26-10-02\nhttps://coastaleventures.com/events/ev-bernheim-afternoon-of-st
+ ars-1011.html
+LOCATION:Ben May Main Library\, Bernheim Hall\, 701 Government Street\, Mo
+ bile\, AL 36602
+URL:https://coastaleventures.com/events/ev-bernheim-afternoon-of-stars-101
+ 1.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_bed4me_dinner-2026-10-11@coast-guide
+DTSTAMP:20261011T000000Z
+DTSTART:20261011T180000
+DTEND:20261011T200000
+SUMMARY:A Bed 4 Me: Dinner of Dreams
+DESCRIPTION:A Bed 4 Me marks its tenth Dinner of Dreams with a chef-statio
+ n tasting evening at Camp Timpoochee\, featuring live music from Roman St
+ reet Trio\, a raffle\, and a silent auction. The nonprofit uses the proce
+ eds to provide beds to local children who don't have one.\nPrice: from $1
+ 30\nArea: Destin & Fort Walton\nTimes: Sunday 10/11 · 6:00 PM to 8:30 PM
+ \nChecked against the venue's own page on 2026-10-02\nhttps://coastaleven
+ tures.com/events/ev-bed4me-dinner.html
+LOCATION:Camp Timpoochee\, 4750 Timpoochee Lane\, Niceville\, FL 32578
+URL:https://coastaleventures.com/events/ev-bed4me-dinner.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_ibcpace_wearemessengers-2026-10-11@coast-guide
+DTSTAMP:20261011T000000Z
+DTSTART:20261011T190000
+DTEND:20261011T210000
+SUMMARY:We Are Messengers: Halfway Home Tour
+DESCRIPTION:Christian band We Are Messengers brings the Halfway Home Tour 
+ to Immanuel Baptist Church's Worship Center for one October evening. Tick
+ ets have been on sale since mid-May through the tour's Awakening Events p
+ age\, though neither the church's listing nor the tour page publishes a n
+ umeric price.\nPrice: not published by the venue\, so confirm before you 
+ go\nArea: Milton & Pace\nTimes: Sunday 10/11 · 7:00 PM to 11:00 PM\nChec
+ ked against the venue's own page on 2026-10-02\nhttps://coastaleventures.
+ com/events/ev-ibcpace-wearemessengers.html
+LOCATION:Immanuel Baptist Church\, Worship Center\, 4187 US-90\, Pace\, FL
+  32571
+URL:https://coastaleventures.com/events/ev-ibcpace-wearemessengers.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_2026_breeze_o_ween_1011-2026-10-11@coast-guide
+DTSTAMP:20261011T000000Z
+DTSTART:20261011T170000
+DTEND:20261011T190000
+SUMMARY:2026 Breeze-O-Ween
+DESCRIPTION:Breeze-O-Ween is the City of Gulf Breeze's annual Halloween pa
+ rty at the Community Center. It has trunk treating\, carnival games\, las
+ er tag\, bounce houses\, food and drink vendors\, and the Gulf Breeze Fir
+ e Department on site. The city's own event page still shows last year's O
+ ctober 2025 date. This year's Sunday\, October 11\, 5 to 8 PM slot comes 
+ from a City Parks social post\, not the city's page.\nPrice: not publishe
+ d by the venue\, so confirm before you go\nArea: Gulf Breeze & Navarre\nT
+ imes: Sunday 10/11 · 5:00 PM to 8:00 PM\nChecked against the venue's own
+  page on 2026-09-26\nhttps://coastaleventures.com/events/ev-2026-breeze-o
+ -ween-1011.html
+LOCATION:Gulf Breeze Community Center\, 800 Shoreline Drive\, Gulf Breeze\
+ , FL 32561
+URL:https://coastaleventures.com/events/ev-2026-breeze-o-ween-1011.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_baldwin_pops_in_the_courtyard_1011-2026-10-11@coast-guide
+DTSTAMP:20261011T000000Z
+DTSTART:20261011T170000
+DTEND:20261011T190000
+SUMMARY:Baldwin Pops in the Courtyard
+DESCRIPTION:The volunteer Baldwin Pops perform a free concert in the water
+ front courtyard at the Coastal Arts Center of Orange Beach on Sunday\, Oc
+ tober 11\, at 5 PM. No ticket is required\, and the current fall announce
+ ment confirms open\, free admission. The courtyard setting puts the music
+  right on the water as the sun starts to go down.\nPrice: Free\nArea: Ora
+ nge Beach & Gulf Shores\nTimes: Sunday 10/11 · 5:00 PM\nChecked against 
+ the venue's own page on 2026-10-02\nhttps://coastaleventures.com/events/e
+ v-baldwin-pops-in-the-courtyard-1011.html
+LOCATION:Coastal Arts Center of Orange Beach\, 26389 Canal Rd\, Orange Bea
+ ch\, AL 36561
+URL:https://coastaleventures.com/events/ev-baldwin-pops-in-the-courtyard-1
+ 011.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_2026_alabama_911_gulf_coast_conference_1011-2026-10-11@coast-guide
+DTSTAMP:20261011T000000Z
+DTSTART;VALUE=DATE:20261011
+DTEND;VALUE=DATE:20261015
+SUMMARY:2026 Alabama 911 Gulf Coast Conference
+DESCRIPTION:Perdido Beach Resort hosts the 2026 Alabama 911 Gulf Coast Con
+ ference starting Sunday\, October 11\, running through October 13. Nine-o
+ ne-one professionals and industry partners gather for education on techno
+ logy\, operations\, leadership\, wellness\, and training. Onsite registra
+ tion October 11 through 13 runs $425.\nPrice: from $375\nArea: Orange Bea
+ ch & Gulf Shores\nTimes: Sunday 10/11\nChecked against the venue's own pa
+ ge on 2026-10-02\nhttps://coastaleventures.com/events/ev-2026-alabama-911
+ -gulf-coast-conference-1011.html
+LOCATION:Perdido Beach Resort\, 27200 Perdido Beach Blvd\, Orange Beach\, 
+ AL 36561
+URL:https://coastaleventures.com/events/ev-2026-alabama-911-gulf-coast-con
+ ference-1011.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_ob_fall_popup_farmers_market_1004-2026-10-11@coast-guide
+DTSTAMP:20261011T000000Z
+DTSTART:20261011T100000
+DTEND:20261011T120000
+SUMMARY:Fall Pop-Up Farmers Market at Orange Beach Waterfront Park
+DESCRIPTION:Orange Beach Parks and Recreation holds a fall edition of its 
+ Pop-Up Farmers Market at Waterfront Park on Canal Road. The city promises
+  fresh produce and a curated group of local vendors. It runs for four hou
+ rs on a Sunday\, which makes it an easy stop on a beach weekend.\nPrice: 
+ not published by the venue\, so confirm before you go\nArea: Orange Beach
+  & Gulf Shores\nTimes: Sunday 10/11 · 10:00 AM to 2:00 PM\nChecked again
+ st the venue's own page on 2026-10-02\nhttps://coastaleventures.com/event
+ s/ev-ob-fall-popup-farmers-market-1004.html
+LOCATION:Orange Beach Waterfront Park\, 26425 Canal Road\, Orange Beach\, 
+ AL 36561
+URL:https://coastaleventures.com/events/ev-ob-fall-popup-farmers-market-10
+ 04.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_navarre_charity_chili_cookoff_1011-2026-10-11@coast-guide
+DTSTAMP:20261011T000000Z
+DTSTART:20261011T140000
+DTEND:20261011T160000
+SUMMARY:Charity Chili Cookoff and Volleyball Tourney on Navarre Beach
+DESCRIPTION:Caring and Sharing of South Santa Rosa County holds its 33rd a
+ nnual chili and salsa cookoff with a beach volleyball tournament at Juana
+ 's Pagodas. Tastings run 2:00 PM to 4:00 PM for a $20 donation at the doo
+ r\, Goodbye August plays from 3:00 PM to 7:00 PM\, and winners and raffle
+  prizes are announced at 4:00 PM. The money buys holiday food for familie
+ s in South Santa Rosa County.\nPrice: from $20\nArea: Gulf Breeze & Navar
+ re\nTimes: Sunday 10/11 · tastings 2:00 PM to 4:00 PM\, music 3:00 PM to
+  7:00 PM\nChecked against the venue's own page on 2026-09-24\nhttps://coa
+ staleventures.com/events/ev-navarre-charity-chili-cookoff-1011.html
+LOCATION:Juana's Pagodas & Sailors' Grill\, 1451 Navarre Beach Causeway\, 
+ Navarre\, FL 32566
+URL:https://coastaleventures.com/events/ev-navarre-charity-chili-cookoff-1
+ 011.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_coastalmakers_witch_planter_1011-2026-10-11@coast-guide
+DTSTAMP:20261011T000000Z
+DTSTART:20261011T140000
+DTEND:20261011T160000
+SUMMARY:Wickedly Creative Witch Planter Workshop
+DESCRIPTION:A Halloween-themed painted planter class at Coastal Makers\, w
+ here each guest builds a witch-styled planter to take home over three hou
+ rs. Materials and instruction are included in the price.\nPrice: from $55
+ \nArea: Mobile & Baldwin County\nTimes: Sunday 10/11 · 2:00 PM to 5:00 P
+ M\nChecked against the venue's own page on 2026-09-24\nhttps://coastaleve
+ ntures.com/events/ev-coastalmakers-witch-planter-1011.html
+LOCATION:Coastal Makers\, 63 North Florida Street\, Mobile\, AL 36607
+URL:https://coastaleventures.com/events/ev-coastalmakers-witch-planter-101
+ 1.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_uwf_symphonic_band_gulf_breeze_1011-2026-10-11@coast-guide
+DTSTAMP:20261011T000000Z
+DTSTART:20261011T140000
+DTEND:20261011T160000
+SUMMARY:UWF Symphonic Band Concert in Gulf Breeze
+DESCRIPTION:The UWF Symphonic Band plays an afternoon concert at Gulf Bree
+ ze United Methodist Church. The band is made up of students from every ma
+ jor on campus and performs both traditional and contemporary wind band mu
+ sic. Admission is free.\nPrice: Free\nArea: Gulf Breeze & Navarre\nTimes:
+  Sunday 10/11 · 2:00 PM\nChecked against the venue's own page on 2026-10
+ -02\nhttps://coastaleventures.com/events/ev-uwf-symphonic-band-gulf-breez
+ e-1011.html
+LOCATION:Gulf Breeze United Methodist Church\, 75 Fairpoint Drive\, Gulf B
+ reeze\, FL 32561
+URL:https://coastaleventures.com/events/ev-uwf-symphonic-band-gulf-breeze-
+ 1011.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_yu_gi_oh_weekly_casual_play_and_to_1004-2026-10-11@coast-guide
+DTSTAMP:20261011T000000Z
+DTSTART:20261011T130000
+DTEND:20261011T150000
+SUMMARY:Yu-Gi-Oh! Weekly Casual Play and Tournament
+DESCRIPTION:The Yu-Gi-Oh weekly tournament is an Advanced Constructed Yu-G
+ i-Oh TCG event at GameMasters Guild in Crestview\, every Sunday at 1 PM. 
+ Entry is $5 including tax. Every player gets an OTS pack\, and top placer
+ s get more.\nPrice: from $5\nTimes: Sundays · 1 PM\nChecked against the 
+ venue's own page on 2026-10-03\nhttps://coastaleventures.com/events/ev-yu
+ -gi-oh-weekly-casual-play-and-to-1004.html
+LOCATION:GameMasters Guild\, 743 Ashley Drive\, Crestview\, FL 32536
+URL:https://coastaleventures.com/events/ev-yu-gi-oh-weekly-casual-play-and
+ -to-1004.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_pensacola_half_marathon_5k_1011-2026-10-11@coast-guide
+DTSTAMP:20261011T000000Z
+DTSTART:20261011T070000
+DTEND:20261011T090000
+SUMMARY:Pensacola Half Marathon & 5K
+DESCRIPTION:The Pensacola Half Marathon & 5K starts and finishes at Commun
+ ity Maritime Park inside the Blue Wahoos stadium on Sunday\, October 11 a
+ t 7 AM. The half loops through historic North Hill\, crosses the Bayou Ch
+ ico bridge\, passes through the downtown Historic District and returns to
+  Maritime Park\, with a 4-hour limit\, about 18 minutes per mile. The 5K 
+ can be run or walked. Parking is in the Wahoos stadium lot\, and there is
+  no gear check.\nPrice: from $50\nArea: Pensacola\nTimes: Sunday 10/11 ·
+  7:00 AM\nChecked against the venue's own page on 2026-10-03\nhttps://coa
+ staleventures.com/events/ev-pensacola-half-marathon-5k-1011.html
+LOCATION:Community Maritime Park / Blue Wahoos Stadium\, 301 W Main St\, P
+ ensacola\, FL 32502
+URL:https://coastaleventures.com/events/ev-pensacola-half-marathon-5k-1011
+ .html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_paint_your_pet_at_painting_with_a_1011-2026-10-11@coast-guide
+DTSTAMP:20261011T000000Z
+DTSTART:20261011T160000
+DTEND:20261011T180000
+SUMMARY:Paint Your Pet at Painting with a Twist Pensacola
+DESCRIPTION:Paint Your Pet is a three-hour class at Painting with a Twist 
+ Pensacola\, 4771 Bayou Blvd Suite C11\, where you paint your own pet from
+  a photo. It runs 4-7 PM on Sunday\, Oct 11\, and costs $55-$60.\nPrice: 
+ from $55\nArea: Pensacola\nTimes: Sunday 10/11 · 4:00 PM\nChecked agains
+ t the venue's own page on 2026-10-03\nhttps://coastaleventures.com/events
+ /ev-paint-your-pet-at-painting-with-a-1011.html
+LOCATION:Painting with a Twist Pensacola\, 4771 Bayou Blvd Suite C11\, Pen
+ sacola\, FL 32503
+URL:https://coastaleventures.com/events/ev-paint-your-pet-at-painting-with
+ -a-1011.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_pokemon_league_at_trinity_games_1004-2026-10-11@coast-guide
+DTSTAMP:20261011T000000Z
+DTSTART:20261011T130000
+DTEND:20261011T150000
 SUMMARY:Pokémon League at Trinity Games
 DESCRIPTION:Pokémon League at Trinity Games is a free weekly play session
   every Sunday from 1-4 PM at the shop in Pensacola. Trinity Games is a Wi
@@ -885,23 +3163,5 @@ LOCATION:Trinity Games\, 2400 W Michigan Ave Unit 27\, Pensacola\, FL 3252
  6
 URL:https://coastaleventures.com/events/ev-pokemon-league-at-trinity-games
  -1004.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_monthly_gym_leader_challenge_pokem_1004-2026-10-04@coast-guide
-DTSTAMP:20261004T000000Z
-DTSTART:20261004T130000
-DTEND:20261004T150000
-SUMMARY:Monthly Gym Leader Challenge (Pokémon) at Trinity Games
-DESCRIPTION:The Monthly Gym Leader Challenge is a free Pokémon event at T
- rinity Games in Pensacola on the first Sunday of each month\, 1-4 PM. Dec
- ks are mono-type\, and each player adds one booster pack to the prize poo
- l. Payout is the top 2 for 8 or fewer players\, the top 4 for 9 to 16\, a
- nd the top 8 for 17 or more. Rules are at gymleaderchallenge.com/rules.\n
- Price: Free\nArea: Pensacola\nTimes: First Sunday of the month · 1 PM-4 
- PM\nChecked against the venue's own page on 2026-10-03\nhttps://coastalev
- entures.com/events/ev-monthly-gym-leader-challenge-pokem-1004.html
-LOCATION:Trinity Games\, 2400 West Michigan Avenue\, Pensacola\, FL 32526
-URL:https://coastaleventures.com/events/ev-monthly-gym-leader-challenge-po
- kem-1004.html
 END:VEVENT
 END:VCALENDAR
