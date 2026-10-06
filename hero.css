@@ -1,5 +1,5 @@
 
-:root{--hero-sky-top:rgba(0, 0, 0, 0);--hero-sky-edge:rgba(0, 0, 0, 0);}
+:root{--hero-sky-top:rgb(127, 195, 227);--hero-sky-edge:rgba(0, 0, 0, 0);}
 .hk .hero { --gca-calm: calc(var(--gca-calm-base) * var(--gca-master) * var(--gca-g-hero)); }
 .hk[data-calmoff~="hero"] .hero *, .hk[data-calmoff~="world"] .tdec *, .hk[data-calmoff~="field"] .fldw *, .hk[data-calmoff~="mark"] .spdec *, .hk[data-calmoff~="sheen"] .sig * { animation-play-state: paused !important; }
 .hero { position: relative; overflow: hidden; margin: 0 calc(-1*var(--hk-gutter)) 0; padding: 22px 22px 38px; min-height: 248px; background: var(--sky); }
@@ -178,22 +178,6 @@
 @media (max-width: 430px){.hk .hero .boat-refl { top: 226.5px !important; }}
 .ph-golden .boat-refl { z-index: 2; }
 .ph-night .boat-refl { display: none; }
-.beachprops { position: absolute; left: 26px; bottom: 12px; width: 186px; height: 31px; z-index: 1; pointer-events: none; opacity: 0.95; }
-.ph-golden .beachprops { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
-.ph-dawn .beachprops { filter: sepia(0.18) saturate(1.05); }
-.ph-night .beachprops { filter: brightness(0.5) saturate(0.65); }
-.crabw { position: absolute; left: 8px; bottom: 30px; z-index: 1; pointer-events: none; will-change: transform; animation: auto linear 0s 1 normal forwards running hk_crabL; }
-.crabw.rtl { animation-name: hk_crabR; }
-.crabw.fore { z-index: 2; animation-name: hk_crabLf; }
-.crabw.fore.rtl { animation-name: hk_crabRf; }
-.supw { position: absolute; top: 211px; left: 30%; z-index: 3; pointer-events: none; opacity: 0.95; animation: hk_supdrift calc(12s * var(--gca-calm)) ease-in-out infinite alternate; }
-.supw svg { animation: hk_supbob calc(2.9s * var(--gca-calm)) ease-in-out infinite; }
-.paddle { transform-box: fill-box; transform-origin: 42% 40%; animation: hk_paddle calc(1.7s * var(--gca-calm)) ease-in-out infinite; }
-.paddler { transform-box: fill-box; transform-origin: 50% 95%; animation: hk_supbody calc(1.7s * var(--gca-calm)) ease-in-out infinite; }
-.ph-dawn .supw { opacity: 0.72; }
-.ripl { position: absolute; left: 0px; right: 0px; bottom: 0.5px; height: 1.6px; border-radius: 50%; background: rgb(234, 246, 250); opacity: 0; animation: auto ease-in-out 0s infinite normal none running hk_ripl; }
-.jskw.rtl { left: auto; right: -70px; animation-name: hk_jskR; }
-.baw.rtl { left: auto; right: -175px; animation-name: hk_baR; }
 .hero .stars span { position: absolute; border-radius: 50%; background: rgb(234, 242, 251); }
 .hero .stars .bright { box-shadow: rgba(220, 236, 252, 0.7) 0px 0px 5px 1px, rgba(190, 215, 245, 0.22) 0px 0px 12px 3px; }
 .hero .stars .hkn_sheet { position: absolute; left: 0px; top: 0px; width: 1320px; height: 150px; pointer-events: none; will-change: transform; animation: hkn_drift calc(21541s * var(--gca-calm)) linear infinite; }
@@ -236,9 +220,6 @@
 .ph-dawn .sun { background: radial-gradient(circle, rgba(255, 236, 214, 0.92), rgba(255, 204, 160, 0.48) 46%, rgba(255, 190, 140, 0) 72%); }
 .ph-golden .sun { background: radial-gradient(circle at 50% 52%, rgba(255, 238, 196, 0.98), rgba(255, 188, 110, 0.62) 44%, rgba(255, 170, 90, 0) 74%); }
 .phchip { position: absolute; left: auto; right: 10px; bottom: 46px; z-index: 5; display: inline-flex; align-items: center; gap: 6px; background: rgba(8, 22, 34, 0.66); color: rgb(234, 242, 246); font-size: 10.5px; font-weight: 800; letter-spacing: 0.3px; padding: 6px 12px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.26); backdrop-filter: blur(4px); animation: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0s 1 normal none running hk_pop; }
-.flyby.rtl { left: auto; right: -64px; animation-name: hk_flyR; }
-.skbg.rev { animation-name: hk_skgR; }
-.skbnear.rev { animation-name: hk_gullnearR; }
 .grain { position: absolute; inset: -12%; z-index: 3; pointer-events: none; opacity: 0.028; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E"); background-size: 160px 160px; animation: hk_grain calc(2.4s * var(--gca-calm)) steps(1) infinite; }
 .ph-night .grain { opacity: 0.045; }
 .hero-eyebtn { border: 0px; cursor: pointer; position: relative; font-family: "Cormorant Garamond", Georgia, serif; -webkit-tap-highlight-color: transparent; transition: border-color 0.2s, box-shadow 0.2s; }
@@ -382,16 +363,7 @@ html.hk_gd_dark .hk_sss_ic .sss_edge { stroke: rgb(122, 100, 168); }
 .swg.s3 .sw_heave { animation-duration: calc(6.3s * var(--gca-calm)); animation-delay: -3.4s; }
 .ph-night .hk_swellw { opacity: 0.55; }
 .ph-dawn .hk_swellw { opacity: 0.8; }
-.blurb.railclear::before { content: ""; float: right; width: 140px; height: calc(var(--blurb-rail-lines) * 1.52em); margin-left: 12px; pointer-events: none; }
 .hk.hk .hero-eyebrow, .hk.hk .hero-eyebtn, .hk.hk .hero-datebtn, .hk.hk .morewrap .morebtn { background: rgba(9, 32, 46, 0.3) !important; border: 1px solid rgba(232, 199, 123, 0.46) !important; border-radius: 999px !important; box-shadow: none !important; backdrop-filter: none !important; text-shadow: rgba(8, 24, 36, 0.9) 0px 1px 3px, rgba(8, 24, 36, 0.65) 0px 2px 10px !important; }
-.rays { overflow: hidden; border-radius: 14px; }
-.ray { position: absolute; top: -30%; width: 34px; height: 150%; transform: skewX(-16deg); background: linear-gradient(rgba(160, 200, 240, 0.15), rgba(160, 200, 240, 0) 78%); mask-image: linear-gradient(90deg, transparent 0%, rgb(0, 0, 0) 22%, rgb(0, 0, 0) 78%, transparent 100%); animation: hk_ray calc(9s * var(--gca-calm)) ease-in-out infinite; }
-.ray.r1 { left: 16%; }
-.ray.r2 { left: 44%; width: 20px; animation-delay: -4.5s; }
-.ccrab.rtl { left: auto; right: -18px; animation-name: hk_ccrabr; }
-.ccrab .legsA, .ccrab .legsB, .ccrab .crb_lgA, .ccrab .crb_lgB { animation-duration: 0.34s; }
-.gullw.rtl { left: auto; right: -80px; animation-name: hk_gullpr; }
-.trtw.rtl .trtb { animation-name: hk_trtupR; }
 .adparasail { position: absolute; top: 118px; left: -90px; z-index: 0; will-change: transform, opacity; animation: hk_adyacht calc(56s * var(--gca-calm)) linear calc(-34s * var(--gca-calm)) infinite; }
 .adparasail > svg { opacity: 0.92; }
 .adparasail_rig { transform-box: view-box; transform-origin: 99.5px 63px; will-change: transform; animation: hk_adparasway calc(7.6s * var(--gca-calm)) ease-in-out infinite; }
@@ -464,18 +436,9 @@ html:not(.hk_mo) .sunb::after { content: none; }
 .adboatname .adlbl { display: block; position: static; width: max-content; margin: 4px auto 0px; font-style: normal; font-size: 9px; font-weight: 700; letter-spacing: 0.7px; line-height: 1.3; padding: 1px 3px; border-radius: 2px; text-align: center; color: rgb(236, 243, 248); background: rgba(9, 20, 30, 0.75); }
 .ph-dawn .adboatname_bd, .ph-golden .adboatname_bd { text-shadow: rgba(26, 12, 3, 0.88) 0px -0.5px 0px, rgba(255, 220, 160, 0.62) 0px 0.5px 0px; }
 .ph-night .adboatname_bd { text-shadow: rgba(0, 0, 0, 0.92) 0px -0.5px 0px, rgba(255, 236, 190, 0.42) 0px 0.5px 0px; }
-.rplfield { position: absolute; inset: 0px; z-index: 1; pointer-events: none; }
-.rrip { position: absolute; border: 0px; border-radius: 50%; transform: translate(-50%, -50%) scale(0.25); opacity: 0; will-change: transform, opacity; background: radial-gradient(rgba(226, 244, 251, 0) 30%, rgba(232, 248, 253, 0.2) 52%, rgba(240, 252, 255, 0.46) 68%, rgba(206, 238, 250, 0.22) 84%, rgba(180, 222, 238, 0) 100%); animation: auto ease-out 0s 1 normal forwards running hk_rrip; }
-.ph-night .rrip { background: radial-gradient(rgba(150, 208, 255, 0) 30%, rgba(158, 214, 255, 0.17) 52%, rgba(178, 224, 255, 0.44) 68%, rgba(130, 196, 240, 0.18) 84%, rgba(110, 178, 228, 0) 100%); }
-.ph-golden .rrip { background: radial-gradient(rgba(255, 234, 200, 0) 30%, rgba(255, 238, 208, 0.19) 52%, rgba(255, 246, 224, 0.5) 68%, rgba(255, 220, 176, 0.2) 84%, rgba(255, 206, 158, 0) 100%); }
-.rrip.bio { background: radial-gradient(rgba(120, 224, 255, 0) 28%, rgba(140, 232, 255, 0.26) 50%, rgba(176, 244, 255, 0.66) 68%, rgba(110, 206, 246, 0.24) 84%, rgba(100, 196, 240, 0) 100%); box-shadow: rgba(120, 224, 255, 0.28) 0px 0px 7px; }
-.hcw.esc .hcrab .legsA, .hcw.esc .hcrab .legsB, .hcw.esc .hcrab .crb_lgA, .hcw.esc .hcrab .crb_lgB { animation-duration: 0.12s; }
-.tgw.rtl .tgjelly { animation-name: hk_tgjellyR; }
-.tgw.rtl .tgturtle { margin-left: 96px; animation-name: hk_tgturtleR; }
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .flyby, html:not(.hk_mo) .hk .grain, html:not(.hk_mo) .hk .baw, html:not(.hk_mo) .hk .gullw, html:not(.hk_mo) .hk .ccrab, html:not(.hk_mo) .hk .snote, html:not(.hk_mo) .hk .hpel, html:not(.hk_mo) .hk .fwx, html:not(.hk_mo) .hk .aspl, html:not(.hk_mo) .hk .asplg, html:not(.hk_mo) .hk .adaubg, html:not(.hk_mo) .hk .adripg, html:not(.hk_mo) .hk .rheart, html:not(.hk_mo) .hk .lspk, html:not(.hk_mo) .hk .dnm_bok, html:not(.hk_mo) .hk .tdust, html:not(.hk_mo) .hk .fly, html:not(.hk_mo) .hk .skbwrap, html:not(.hk_mo) .hk .pipw, html:not(.hk_mo) .hk .dnx_rolled, html:not(.hk_mo) .hk .trtw, html:not(.hk_mo) .hk .htchw, html:not(.hk_mo) .hk .kitew, html:not(.hk_mo) .hk .rplfield, html:not(.hk_mo) .hk .hcw, html:not(.hk_mo) .hk .tgw, html:not(.hk_mo) .hk .d2bw, html:not(.hk_mo) .hk .pelw, html:not(.hk_mo) .hk .dcw, html:not(.hk_mo) .hk .hkop, html:not(.hk_mo) .hk .dwgiant, html:not(.hk_mo) .hk .dwpod, html:not(.hk_mo) .hk .dwglow, html:not(.hk_mo) .hk .hboat, html:not(.hk_mo) .hk .dnote, html:not(.hk_mo) .hk .dbloom, html:not(.hk_mo) .hk .rmote, html:not(.hk_mo) .hk .rsmokew .hk .supw, html:not(.hk_mo) .hk .fld, html:not(.hk_mo) .hk .crbw, html:not(.hk_mo) .hk .crbh, html:not(.hk_mo) .hk .htchf, html:not(.hk_mo) .hk .lx_rock, html:not(.hk_mo) .hk .lx_dig, html:not(.hk_mo) .hk .mstrip, html:not(.hk_mo) .hk .mbeam, html:not(.hk_mo) .hk .cm_cone, html:not(.hk_mo) .hk .cm_pool, html:not(.hk_mo) .hk .romacc .racc_wash, html:not(.hk_mo) .hk .em_fly, html:not(.hk_mo) .hk .cs_shoot, html:not(.hk_mo) .hk .cs_neb, html:not(.hk_mo) .hk .brd, html:not(.hk_mo) .hk .mthrow, html:not(.hk_mo) .hk .mgrain, html:not(.hk_mo) .hk .bawrap, html:not(.hk_mo) .hk .popf, html:not(.hk_mo) .hk .rm_bulb, html:not(.hk_mo) .hk .rm_bg, html:not(.hk_mo) .hk .rflg, html:not(.hk_mo) .hk .cm_laugh, html:not(.hk_mo) .hk .cm_cable, html:not(.hk_mo) .hk .adrip, html:not(.hk_mo) .hk .adripg, html:not(.hk_mo) .hk .lsc_cur, html:not(.hk_mo) .hk .swash, html:not(.hk_mo) .hk .swash_lip, html:not(.hk_mo) .hk .backwash, html:not(.hk_mo) .hk .vwkw, html:not(.hk_mo) .hk .vwk, html:not(.hk_mo) .hk .fprt, html:not(.hk_mo) .hk .swl_crest { display: none !important; }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .swg, html:not(.hk_mo) .hk .sw_heave { animation: auto ease 0s 1 normal none running none !important; }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .swl_body { animation: auto ease 0s 1 normal none running none !important; opacity: 0.4 !important; }}
-@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .rm_swag, html:not(.hk_mo) .hk .cm_ring, html:not(.hk_mo) .hk .lsc_t { animation: auto ease 0s 1 normal none running none !important; }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .gl { opacity: 0.35; transform: scaleX(1); }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .cl { opacity: var(--clo,.18); animation: auto ease 0s 1 normal none running none !important; }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .clm1 { transform: translateX(300px); }}
@@ -483,206 +446,22 @@ html:not(.hk_mo) .sunb::after { content: none; }
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .cln1 { transform: translateX(430px); }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .adyacht { transform: none !important; left: 30% !important; }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .adcart { transform: none !important; left: 14% !important; opacity: 1 !important; }}
-.rdec .rm_swag { position: absolute; left: 0px; right: 0px; top: 4px; height: 46px; pointer-events: none; opacity: 0.85; transform-origin: 50% 0px; animation: hk_rmsway calc(9.4s * var(--gca-calm)) ease-in-out infinite alternate; }
-.rdec .rm_swag svg { position: absolute; inset: 0px; width: 100%; height: 100%; display: block; }
-.rdec .rm_wire { fill: none; stroke: rgba(240, 214, 160, 0.3); stroke-width: 1.1; stroke-linecap: round; }
-.rdec .rm_bulb { position: absolute; width: 5px; height: 5px; margin-left: -2.5px; margin-top: -2.5px; border-radius: 50%; background: radial-gradient(circle at 38% 34%, rgb(255, 246, 222), rgb(243, 195, 120) 62%, rgba(243, 195, 120, 0.1) 100%); box-shadow: rgba(255, 206, 132, 0.42) 0px 0px 7px 2px; }
-.rdec .rm_bg { position: absolute; inset: 0px; animation: hk_rmbulb calc(4.6s * var(--gca-calm)) ease-in-out infinite; }
-.cmdy .cm_ring.r2 { animation-delay: 0.42s; }
-.cmdy .cm_ring.r3 { animation-delay: 0.84s; }
-.htown .hpel.rtl { left: auto; right: -64px; animation-name: hk_hpelr; }
 .htown .hshim.s1 { left: 16%; width: 42%; bottom: 23px; animation: hk_hshim calc(4.2s * var(--gca-calm)) ease-in-out infinite alternate; }
 .htown .hshim.s2 { right: 14%; width: 30%; bottom: 31px; opacity: 0.7; animation: hk_hshim calc(5.6s * var(--gca-calm)) ease-in-out infinite alternate; }
-.rdec .rcandle.rsm { bottom: calc(var(--card-ad-clear) + 2px); width: 10px; height: 17px; opacity: 0.9; }
-.rdec .rcandle.rsm.cL { left: 2px; }
-.rdec .rcandle.rsm.cR { right: 2px; }
-.rdec .rcandle.rsm .rhalo { width: 24px; height: 24px; margin-left: -12px; top: -4px; }
-.rdec .rhearts { position: absolute; inset: 0px; overflow: hidden; }
-.rdec .rheart { position: absolute; bottom: calc(var(--card-ad-clear) + 8px); font-style: normal; font-size: 11px; line-height: 1; color: rgb(233, 169, 184); text-shadow: rgba(214, 124, 150, 0.45) 0px 0px 8px; opacity: 0.5; animation: auto ease 0s 1 normal none running none; }
-.rdec .rheart.h0 { left: 1px; font-size: 10px; }
-.rdec .rheart.h1 { left: calc(100% - 14px); font-size: 11px; }
-.rdec .rheart.h2 { left: 2px; font-size: 9px; }
-.rdec .rheart.h3 { left: calc(100% - 15px); font-size: 11px; }
-.rdec .rheart.h4 { left: 1px; font-size: 10px; }
-.rdec .rheart.h5 { left: calc(100% - 13px); font-size: 11px; }
-.rdec .rhg { position: absolute; inset: 0px; animation: hk_rheartA calc(12.6s * var(--gca-calm)) ease-in-out infinite; }
-.rdec .rhg.b { animation-name: hk_rheartB; }
-.rdec .rsmokew { position: absolute; bottom: calc(var(--card-ad-clear) + 17px); width: 16px; height: 96px; pointer-events: none; }
-.rdec .rsmokew.sR { right: 0px; }
-.rdec .rsmokew.sL { left: 0px; }
-.rdec .rsmokew.sR svg { transform: scaleX(-1); transform-origin: 100% 50%; }
-.rdec .rsmokew.sm { bottom: calc(var(--card-ad-clear) + 15px); width: 13px; height: 58px; opacity: 0.5; }
-.rdec .rsmokew.sm.sR { right: 1px; }
-.rdec .rsmokew.sm.sL { left: 1px; }
-.rdec .rsmokew svg { width: 34px; height: 100%; display: block; overflow: visible; fill: none; stroke: rgba(240, 226, 206, 0.5); stroke-width: 1.15; stroke-linecap: round; }
-.rdec .rwisp { stroke-dasharray: 70; stroke-dashoffset: 0; transform-box: fill-box; transform-origin: 50% 100%; animation: hk_rwisp calc(11s * var(--gca-calm)) ease-in-out infinite; will-change: transform, opacity; }
-.rdec .rsmokew.sm svg { width: 13px; }
-.rdec .rsmokew.sm .rwisp { animation-duration: calc(9.4s * var(--gca-calm)); animation-delay: -3.1s; }
-.rdec .rsheart { stroke: rgba(240, 178, 193, 0.95); stroke-width: 1.35; stroke-dasharray: 44; stroke-dashoffset: 0; filter: drop-shadow(rgba(214, 124, 150, 0.55) 0px 0px 5px); transform-box: fill-box; transform-origin: 50% 60%; opacity: 0; animation: hk_rsheart calc(11s * var(--gca-calm)) ease-in-out infinite; will-change: transform, opacity; }
-.rdec .rmotes { position: absolute; inset: 0px; animation: hk_rmote calc(7.4s * var(--gca-calm)) ease-in-out infinite; }
-.rdec .rmote { position: absolute; width: 2.6px; height: 2.6px; border-radius: 50%; background: rgb(243, 217, 160); box-shadow: rgba(243, 217, 160, 0.7) 0px 0px 7px 1px; opacity: 0.85; }
-.rdec .rmote.m0 { left: 8%; bottom: calc(var(--card-ad-clear) + 34px); }
-.rdec .rmote.m1 { left: 22%; bottom: calc(var(--card-ad-clear) + 60px); }
-.rdec .rmote.m2 { left: 37%; bottom: calc(var(--card-ad-clear) + 28px); }
-.rdec .rmote.m3 { left: 51%; bottom: calc(var(--card-ad-clear) + 72px); }
-.rdec .rmote.m4 { left: 66%; bottom: calc(var(--card-ad-clear) + 40px); }
-.rdec .rmote.m5 { left: 78%; bottom: calc(var(--card-ad-clear) + 64px); }
-.rdec .rmote.m6 { left: 88%; bottom: calc(var(--card-ad-clear) + 30px); }
-.rdec .rmote.m7 { left: 95%; bottom: calc(var(--card-ad-clear) + 56px); }
-@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .lx_g1, html:not(.hk_mo) .lx_g2, html:not(.hk_mo) .lx_arm, html:not(.hk_mo) .lx_pl1, html:not(.hk_mo) .lx_pl2, html:not(.hk_mo) .lx_stube, html:not(.hk_mo) .lx_cell, html:not(.hk_mo) .lx_bone, html:not(.hk_mo) .lx_brush, html:not(.hk_mo) .lx_flame, html:not(.hk_mo) .lx_bkb, html:not(.hk_mo) .lx_steam, html:not(.hk_mo) .crb_lgA, html:not(.hk_mo) .crb_lgB, html:not(.hk_mo) .crb_clw, html:not(.hk_mo) .crb_eye, html:not(.hk_mo) .crb_shl, html:not(.hk_mo) .crbb, html:not(.hk_mo) .h_fl, html:not(.hk_mo) .h_fr, html:not(.hk_mo) .h_rl, html:not(.hk_mo) .h_rr, html:not(.hk_mo) .h_all, html:not(.hk_mo) .cm_head, html:not(.hk_mo) .cm_glint, html:not(.hk_mo) .htown .hbeam, html:not(.hk_mo) .htown .hbeam::after, html:not(.hk_mo) .romacc .racc_candle .rflame, html:not(.hk_mo) .romacc .racc_halo, html:not(.hk_mo) .em_bl, html:not(.hk_mo) .em_shaft, html:not(.hk_mo) .htown.nite .hferry .fwin rect, html:not(.hk_mo) .htown.nite .hferry .flt, html:not(.hk_mo) .htown.nite .hferry .frefl, html:not(.hk_mo) .htown.nite .hbridge.nb .blamp circle { animation: auto ease 0s 1 normal none running none !important; }}
-.ldec .lring.r2 { transform: rotate(-58deg) scaleY(0.42); }
-.ldec .lring.r2 .lel { top: auto; bottom: -1.9px; }
 html:not(.hk_diag_livedec) .t-labNight .ldec .lfb.b1 { transform: translateY(0.4px); }
 html:not(.hk_diag_livedec) .t-labNight .ldec .lx_bone.b1 { transform: translate(-6.1px, 1.6px); }
-.rdec .rvig { position: absolute; inset: 0px; background: radial-gradient(120% 70% at 50% 108%, rgba(212, 137, 158, 0.13), transparent 58%); animation: hk_rvig calc(9s * var(--gca-calm)) ease-in-out infinite alternate; }
-.rdec .rcandle { position: absolute; bottom: var(--card-ad-clear); width: 13px; height: 21px; }
-.rdec .rcandle.cR { right: 1px; }
-.rdec .rcandle.cL { left: 1px; }
-.rdec .rflame { transform-box: fill-box; transform-origin: 50% 100%; animation: hk_rflame calc(1.15s * var(--gca-calm)) ease-in-out infinite; }
-.rdec .rfin { animation-duration: calc(.9s * var(--gca-calm)); }
-.rdec .rflg { transform-box: fill-box; transform-origin: 50% 100%; animation: hk_rflame calc(1.15s * var(--gca-calm)) ease-in-out infinite; }
-.rdec .rflg .rflame { animation: auto ease 0s 1 normal none running none; }
-.rdec .rhalo { position: absolute; left: 50%; top: -5px; width: 34px; height: 34px; margin-left: -17px; border-radius: 50%; background: radial-gradient(50% 50%, rgba(255, 207, 142, 0.4), rgba(255, 207, 142, 0.08) 55%, transparent 74%); opacity: 0.75; }
-.rheart { position: absolute; color: rgb(212, 137, 158); font-size: 10.5px; line-height: 1; opacity: 0.5; text-shadow: rgba(212, 137, 158, 0.35) 0px 0px 8px; }
-.rhsg { position: absolute; inset: 0px; pointer-events: none; animation: hk_rheart calc(11.5s * var(--gca-calm)) ease-in-out infinite; }
-html:not(.hk_diag_livedec) .t-rom .rdec .rvig { display: none; }
-html:not(.hk_diag_livedec) .t-rom .rhsg { display: none; }
-html:not(.hk_diag_livedec) .t-rom .rdec .rheart { bottom: auto; font-size: 10px; opacity: 0.62; text-shadow: none; transform: translateX(0.3px); }
-html:not(.hk_diag_livedec) .t-rom .rdec .rheart.h0 { top: calc(17% - 4px); left: 1.85px; }
-html:not(.hk_diag_livedec) .t-rom .rdec .rheart.h2 { top: calc(39% - 4px); left: 1.85px; }
-html:not(.hk_diag_livedec) .t-rom .rdec .rheart.h4 { top: calc(61% - 4px); left: 1.85px; }
-html:not(.hk_diag_livedec) .t-rom .rdec .rheart.h1, html:not(.hk_diag_livedec) .t-rom .rdec .rheart.h3, html:not(.hk_diag_livedec) .t-rom .rdec .rheart.h5 { display: none; }
-html:not(.hk_diag_livedec) .t-rom .rdec .rmote { width: 4px; height: 4px; bottom: auto; left: auto; right: 6.5px; transform: translateX(-0.5px); box-shadow: rgba(243, 217, 160, 0.6) 0px 0px 3px 0.5px; }
-html:not(.hk_diag_livedec) .t-rom .rdec .rmote.m0 { top: calc(28% - 2px); }
-html:not(.hk_diag_livedec) .t-rom .rdec .rmote.m2 { top: calc(50% - 2px); }
-html:not(.hk_diag_livedec) .t-rom .rdec .rmote.m4 { top: calc(94% - 2px); }
-html:not(.hk_diag_livedec) .t-rom .rdec .rmote.m1, html:not(.hk_diag_livedec) .t-rom .rdec .rmote.m3, html:not(.hk_diag_livedec) .t-rom .rdec .rmote.m5, html:not(.hk_diag_livedec) .t-rom .rdec .rmote.m6, html:not(.hk_diag_livedec) .t-rom .rdec .rmote.m7 { display: none; }
-html:not(.hk_diag_livedec) .t-rom .rdec .rwisp, html:not(.hk_diag_livedec) .t-rom .rdec .rsheart { display: none; }
-html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew { --rpx: 7.5px; --rpw: 5px; --rph: 9px; --rpy: 11px; --rp1: rgba(240,226,206,.30); --rp2: rgba(240,226,206,.12); background: radial-gradient(var(--rpw) var(--rph) at var(--rpx) calc(100% - var(--rpy)), var(--rp1), var(--rp2) 50%, transparent 100%); }
-html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew.sR { --rpx: 9.5px; }
-html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew.sm { --rpx: 6px; --rpw: 4px; --rph: 7px; --rpy: 6px; opacity: 0.7; }
-html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew.sm.sR { --rpx: 7px; }
-.romacc { z-index: 1; }
-.romacc .racc_wash { position: absolute; inset: 0px; background: radial-gradient(120% 62% at 50% 108%, rgba(212, 137, 158, 0.1), transparent 56%); animation: hk_rvig calc(9s * var(--gca-calm)) ease-in-out infinite alternate; }
-.t-town .romacc .racc_wash, .t-art .romacc .racc_wash, .t-movie .romacc .racc_wash, .t-coastal .romacc .racc_wash, .t-lab .romacc .racc_wash, .t-comedy .romacc .racc_wash { background: radial-gradient(120% 62% at 50% 108%, rgba(196, 86, 120, 0.11), transparent 58%); }
-.romacc .racc_candle { position: absolute; bottom: calc(var(--card-ad-clear) + 2px); width: 10px; height: 17px; opacity: 0.9; }
-.romacc .racc_candle.cL { left: 2px; }
-.romacc .racc_candle.cR { right: 2px; }
-.romacc .racc_halo { width: 24px; height: 24px; margin-left: -12px; top: -4px; }
-.romacc .fld.f-heart { --fo: .38; }
-.romacc .fld.f-mote { --fo: .55; }
-.crb { width: 26px; height: 19px; display: block; overflow: visible; }
-.crb_sh { fill: rgb(122, 74, 32); opacity: 0.2; }
-.crb_bod { fill: rgb(194, 96, 63); stroke: rgb(142, 61, 36); stroke-width: 0.7; }
-.crb_hi { fill: none; stroke: rgb(255, 213, 175); stroke-width: 0.8; stroke-linecap: round; opacity: 0.7; }
-.crb_und { fill: rgb(142, 61, 36); opacity: 0.5; }
-.crb_lgA path, .crb_lgB path { fill: none; stroke: rgb(142, 61, 36); stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
-.crb_clw .crb_arm { fill: none; stroke: rgb(142, 61, 36); stroke-width: 1.4; stroke-linecap: round; }
-.crb_clw .crb_hand { fill: rgb(194, 96, 63); stroke: rgb(142, 61, 36); stroke-width: 0.7; stroke-linejoin: round; }
-.crb_clw .crb_chi { fill: none; stroke: rgb(255, 213, 175); stroke-width: 0.6; stroke-linecap: round; opacity: 0.5; }
-.crb_eye path { stroke: rgb(142, 61, 36); stroke-width: 1.05; stroke-linecap: round; fill: none; }
-.crb_pup { fill: rgb(42, 18, 6); }
-.crb_gl { fill: rgb(255, 232, 208); opacity: 0.85; }
-.crb_shl path { fill: rgb(242, 223, 192); stroke: rgb(185, 154, 108); stroke-width: 0.55; }
-.crb_shl2 { fill: none !important; stroke: rgb(199, 164, 114) !important; stroke-width: 0.5 !important; }
-.crb_lgA, .crb_lgB { transform-box: view-box; transform-origin: 13px 12px; }
-.crb_lgA { animation: 0.44s ease-in-out 0s infinite alternate none running hk_crbleg2; }
-.crb_lgB { animation: 0.44s ease-in-out 0s infinite alternate-reverse none running hk_crbleg2; }
-.crb_clw { transform-box: view-box; transform-origin: 5.5px 11px; animation: hk_crbclaw2 calc(2.6s * var(--gca-calm)) ease-in-out infinite; }
-.crb_clw.r { transform-origin: 20.5px 11px; animation-delay: 0.9s; }
-.crb_eye { transform-box: view-box; transform-origin: 13px 7px; animation: hk_crbeye2 calc(4.9s * var(--gca-calm)) ease-in-out infinite; }
-.crb_shl { transform-box: fill-box; transform-origin: 80% 80%; animation: hk_crbshl calc(3.7s * var(--gca-calm)) ease-in-out infinite; }
-.crbw { position: absolute; left: -38px; width: 26px; height: 19px; opacity: 0.85; will-change: transform; transform: scale(var(--cs,1)); animation: hk_crbwalk calc(30s * var(--gca-calm)) linear infinite; }
-.crbw.rtl { left: auto; right: -38px; animation-name: hk_crbwalkr; }
-.crbw.rtl .crbb { transform: scaleX(-1); }
-.crbb { display: block; animation: hk_crbbob calc(.42s * var(--gca-calm)) ease-in-out infinite alternate; }
-.crbw.rtl .crbb { animation-name: hk_crbbobr; }
-html:not(.hk_diag_livedec) .card .crbw { transform: translate3d(var(--cx,0px),0,0) scale(var(--cs,1)); }
-html:not(.hk_diag_livedec) .card .crbw.rtl { transform: translate3d(calc(-1 * var(--cx,0px)),0,0) scale(var(--cs,1)); }
-.crbh { position: absolute; width: 26px; height: 26px; animation: hk_crbhole calc(19s * var(--gca-calm)) ease-in-out infinite; }
-.crbh_pit { position: absolute; left: 2px; bottom: 0px; width: 22px; height: 8px; border-radius: 50%; background: radial-gradient(52% 62% at 50% 42%, rgba(96, 60, 26, 0.62), rgba(120, 80, 36, 0.24) 66%, transparent 82%); box-shadow: rgba(255, 244, 214, 0.55) 0px 1.4px 0px, rgba(52, 30, 10, 0.5) 0px 1px 1px inset; }
-.crbh_pit::after { content: ""; position: absolute; left: -4px; right: -4px; bottom: -2px; height: 9px; border-radius: 50%; background: radial-gradient(50% 50%, rgba(236, 210, 166, 0.5), transparent 72%); }
-.t-coastalNight .crbh_pit { background: radial-gradient(52% 62% at 50% 42%, rgba(20, 14, 28, 0.7), rgba(40, 28, 50, 0.3) 66%, transparent 82%); box-shadow: rgba(232, 208, 150, 0.3) 0px 1.4px 0px; }
-.crbh_sand { position: absolute; left: 0px; bottom: 2px; width: 26px; height: 9px; border-radius: 50%; opacity: 0; background: radial-gradient(50% 60% at 50% 60%, rgba(240, 216, 176, 0.85), transparent 70%); animation: hk_crbpuff calc(19s * var(--gca-calm)) ease-in-out infinite; }
-.crbh_up { position: absolute; left: 0px; bottom: 2px; width: 26px; height: 19px; transform: translateY(15px); opacity: 0; }
-.crbh .crbh_up { animation: hk_crbpop calc(19s * var(--gca-calm)) ease-in-out infinite; }
-.t-coastalNight .crb_bod { fill: rgb(142, 69, 48); stroke: rgb(94, 39, 24); }
-.t-coastalNight .crbw, .t-coastalNight .crbh { opacity: 0.62; }
-.baw.rtl .ba_flip { transform-box: fill-box; transform-origin: 50% 50%; transform: scaleX(-1); }
-.cine .mp_reel.r2 { animation-duration: calc(4.6s * var(--gca-calm)); animation-direction: reverse; }
-.brd.rtl { animation-name: hk_bdflyR; }
-.agal .aribbon.rb1 { stroke: rgb(232, 93, 117); animation: hk_arib calc(26s * var(--gca-calm)) ease-in-out infinite alternate; }
-.agal.nite .aribbon.rb1 { stroke: rgb(255, 126, 156); opacity: 0.5; }
-.emrl .em_heron.rtl { left: auto; right: -13px; transform: scaleX(-1); }
 .emrl .em_bl.b1 { stroke-width: 1.1; stroke-opacity: 0.7; animation-duration: calc(6.4s * var(--gca-calm)); }
-html:not(.hk_diag_livedec) .emrl .em_heron, html:not(.hk_diag_livedec) .emrl .em_heron.rtl { inset: auto auto 16px 1.4px; width: 13px; height: 24.05px; opacity: 1; transform: translateX(0.6px); }
 .cosm .cs_shoot.s2 { left: 30%; top: auto; bottom: 6px; width: 46px; animation-duration: calc(23s * var(--gca-calm)); }
 .lx_bone.b1 { animation-delay: 3.4s; }
-.htown.nite .hferry .flt.r { fill: rgb(255, 122, 122); color: rgb(255, 122, 122); }
 .htown.nite .hshoot.s2 { animation-duration: calc(1.9s * var(--gca-calm)); width: 54px; }
 .htown .hshim.s1 { bottom: 165px; }
 .htown .hshim.s2 { bottom: 169px; }
-.hk_sw_fly.r { animation: 0.42s cubic-bezier(0.17, 0.72, 0.31, 1) 0s 1 normal both running hk_swFlyR; }
-.hk_sw_wash.roll.r { background: linear-gradient(270deg, rgba(216, 180, 94, 0.55), rgba(216, 180, 94, 0.06) 70%); }
-.hk_sw_wash.roll.l { background: linear-gradient(90deg, rgba(216, 180, 94, 0.55), rgba(216, 180, 94, 0.06) 70%); }
-.hk_sw_fly.r.peel { transform-origin: 100% 50%; animation: 0.4s cubic-bezier(0.32, 0.72, 0.28, 1) 0s 1 normal both running hk_fxPeelR; }
-.hk_sw_fly.r.file { animation: 0.42s cubic-bezier(0.5, 0, 0.6, 1) 0s 1 normal both running hk_fxFileR; }
-.hk_sw_fly.r.deal, .hk_sw_fly.l.deal { z-index: 0; animation: 0.38s cubic-bezier(0.36, 0.05, 0.28, 1) 0s 1 normal both running hk_fxDeal; }
-.hk_sw_fly.r.tumble { animation: 0.52s cubic-bezier(0.22, 0.62, 0.3, 1) 0s 1 normal both running hk_fxTumbleR; }
-.hk_sw_fly.r.spin { animation: 0.72s cubic-bezier(0.26, 0.5, 0.32, 1) 0s 1 normal both running hk_fxSpinR; }
-.hk_sw_fly.r.sail { animation: 0.5s cubic-bezier(0.3, 0.5, 0.3, 1) 0s 1 normal both running hk_fxSailR; }
-.hk_sw_fly.r.sailfile { animation: 0.56s cubic-bezier(0.32, 0.24, 0.3, 1) 0s 1 normal both running hk_fxSailFileR; }
-.hk_sw_fly.r.saildn { animation: 0.5s cubic-bezier(0.3, 0.5, 0.3, 1) 0s 1 normal both running hk_fxSailDnR; }
-.hk_sw_fly.r.saildnfile { animation: 0.56s cubic-bezier(0.32, 0.24, 0.3, 1) 0s 1 normal both running hk_fxSailDnFileR; }
-.hk_sw_fly.r.pop { animation: 0.26s cubic-bezier(0.3, 0.9, 0.4, 1) 0s 1 normal both running hk_fxPopR; }
-.hk_sw_fly.r.beam, .hk_sw_fly.l.beam { animation: 0.36s linear 0s 1 normal both running hk_fxBeam; }
-.hk_sw_fly.r.blink, .hk_sw_fly.l.blink { animation: 0.24s cubic-bezier(0.62, 0, 0.36, 1) 0s 1 normal both running hk_fxBlink; }
-.hk_sw_fly.r.bolt, .hk_sw_fly.l.bolt { animation: 0.3s steps(1) 0s 1 normal both running hk_fxBoltR; }
-.hk_sw_fly.r.bite, .hk_sw_fly.l.bite { animation: 0.46s linear 0s 1 normal both running hk_fxHold; }
-.hk_sw_fly.r.shot { animation: 0.62s linear 0s 1 normal both running hk_fxShotR; }
-.hk_sw_fly.r.spiral { animation: 0.58s cubic-bezier(0.22, 0.56, 0.3, 1) 0s 1 normal both running hk_fxSpiralR; }
-.hk_sw_fly.r.drain, .hk_sw_fly.l.drain { animation: 0.68s cubic-bezier(0.34, 0.02, 0.5, 1) 0s 1 normal both running hk_fxDrain; }
-.hk_sw_fly.r.blast, .hk_sw_fly.l.blast { animation: 0.54s linear 0s 1 normal both running hk_fxBlast; }
-.hk_sw_fly.r.crush, .hk_sw_fly.l.crush { animation: 0.42s linear 0s 1 normal both running hk_fxCrush; transform-origin: 50% 100%; }
-.hk_sw_fly.r.punt { animation: 0.6s cubic-bezier(0.16, 0.66, 0.36, 1) 0s 1 normal both running hk_fxPuntR; }
-.hk_fk_go.r { animation: 0.42s cubic-bezier(0.17, 0.72, 0.31, 1) 0s 1 normal both running hk_swFlyR !important; }
-.hk_fk_go.r.peel { transform-origin: 100% 50% !important; animation: 0.4s cubic-bezier(0.32, 0.72, 0.28, 1) 0s 1 normal both running hk_fxPeelR !important; }
-.hk_fk_go.r.file { animation: 0.42s cubic-bezier(0.5, 0, 0.6, 1) 0s 1 normal both running hk_fxFileR !important; }
-.hk_fk_go.r.deal, .hk_fk_go.l.deal { z-index: 0 !important; animation: 0.38s cubic-bezier(0.36, 0.05, 0.28, 1) 0s 1 normal both running hk_fxDeal !important; }
-.hk_fk_go.r.tumble { animation: 0.52s cubic-bezier(0.22, 0.62, 0.3, 1) 0s 1 normal both running hk_fxTumbleR !important; }
-.hk_fk_go.r.spin { animation: 0.72s cubic-bezier(0.26, 0.5, 0.32, 1) 0s 1 normal both running hk_fxSpinR !important; }
-.hk_fk_go.r.sail { animation: 0.5s cubic-bezier(0.3, 0.5, 0.3, 1) 0s 1 normal both running hk_fxSailR !important; }
-.hk_fk_go.r.sailfile { animation: 0.56s cubic-bezier(0.32, 0.24, 0.3, 1) 0s 1 normal both running hk_fxSailFileR !important; }
-.hk_fk_go.r.saildn { animation: 0.5s cubic-bezier(0.3, 0.5, 0.3, 1) 0s 1 normal both running hk_fxSailDnR !important; }
-.hk_fk_go.r.saildnfile { animation: 0.56s cubic-bezier(0.32, 0.24, 0.3, 1) 0s 1 normal both running hk_fxSailDnFileR !important; }
-.hk_fk_go.r.pop { animation: 0.26s cubic-bezier(0.3, 0.9, 0.4, 1) 0s 1 normal both running hk_fxPopR !important; }
-.hk_fk_go.r.beam, .hk_fk_go.l.beam { animation: 0.36s linear 0s 1 normal both running hk_fxBeam !important; }
-.hk_fk_go.r.blink, .hk_fk_go.l.blink { animation: 0.24s cubic-bezier(0.62, 0, 0.36, 1) 0s 1 normal both running hk_fxBlink !important; }
-.hk_fk_go.r.bolt, .hk_fk_go.l.bolt { animation: 0.3s steps(1) 0s 1 normal both running hk_fxBoltR !important; }
-.hk_fk_go.r.bite, .hk_fk_go.l.bite { animation: 0.46s linear 0s 1 normal both running hk_fxHold !important; }
-.hk_fk_go.r.shot { animation: 0.62s linear 0s 1 normal both running hk_fxShotR !important; }
-.hk_fk_go.r.spiral { animation: 0.58s cubic-bezier(0.22, 0.56, 0.3, 1) 0s 1 normal both running hk_fxSpiralR !important; }
-.hk_fk_go.r.drain, .hk_fk_go.l.drain { animation: 0.68s cubic-bezier(0.34, 0.02, 0.5, 1) 0s 1 normal both running hk_fxDrain !important; }
-.hk_fk_go.r.blast, .hk_fk_go.l.blast { animation: 0.54s linear 0s 1 normal both running hk_fxBlast !important; }
-.hk_fk_go.r.crush, .hk_fk_go.l.crush { animation: 0.42s linear 0s 1 normal both running hk_fxCrush !important; transform-origin: 50% 100% !important; }
-.hk_fk_go.r.punt { animation: 0.6s cubic-bezier(0.16, 0.66, 0.36, 1) 0s 1 normal both running hk_fxPuntR !important; }
-.hk_sw_live.arr.rise { animation: 0.22s cubic-bezier(0.16, 0.84, 0.3, 1) 0s 1 normal both running hk_arRise; transform-origin: 50% 0px; }
-@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk_sw_live.arr.rise, html:not(.hk_mo) .hk_sw_live.arr.none, html:not(.hk_mo) .hk_sw_live.arr.flip, html:not(.hk_mo) .hk_sw_live.arr.deal, html:not(.hk_mo) .hk_sw_live.arr.zoom, html:not(.hk_mo) .hk_sw_live.arr.beamin, html:not(.hk_mo) .hk_sw_live.arr.unfold, html:not(.hk_mo) .hk_sw_live.arr.drainin { animation: auto ease 0s 1 normal none running none; }}
-.hk_still .hk_sw_live.arr.rise, .hk_still .hk_sw_live.arr.none, .hk_still .hk_sw_live.arr.flip, .hk_still .hk_sw_live.arr.deal, .hk_still .hk_sw_live.arr.zoom, .hk_still .hk_sw_live.arr.beamin, .hk_still .hk_sw_live.arr.unfold, .hk_still .hk_sw_live.arr.drainin { animation: auto ease 0s 1 normal none running none; }
 .hk_sw_glint .gl1 { animation-delay: 0ms; }
 .hk_sw_glint .gl2 { animation-delay: 36ms; }
 .hk_sw_glint .gl3 { animation-delay: 52ms; }
 .hk_sw_glint .gl4 { animation-delay: 78ms; }
 .hk_sw_glint .gl5 { animation-delay: 94ms; }
 .hk_sw_glint .gl6 { animation-delay: 110ms; }
-.hk_fme.r { right: 1px; background: linear-gradient(270deg, rgba(10, 22, 38, 0.42), rgba(10, 22, 38, 0)); }
-.hk_fme.rest { display: none; }
-.hk_fme.r { animation: 2.6s ease-in-out 0s infinite normal none running hk_fmR; }
-@media (prefers-reduced-motion: reduce){.hk_fme.l, .hk_fme.r { animation: auto ease 0s 1 normal none running none; opacity: 0.85; transform: none; }}
-.hk_day .hk_fme.r { background: linear-gradient(270deg, rgba(255, 252, 244, 0.62), rgba(255, 252, 244, 0)); }
-.hk_gr_dark .hk_fme.r { background: linear-gradient(270deg, rgba(4, 6, 10, 0.5), rgba(4, 6, 10, 0)); }
-@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk_sw_fly.r, html:not(.hk_mo) .hk_sw_fly.l { animation: 0.16s linear 0s 1 normal both running hk_swFade; }}
-.hk_still .hk_sw_fly.r, .hk_still .hk_sw_fly.l { animation: 0.16s linear 0s 1 normal both running hk_swFade; }
 .hero-scrim { top: 90px; }
 .hero { min-height: 298px; padding-top: 10px; }
 .navrg { opacity: 0; }
@@ -690,40 +469,14 @@ html:not(.hk_diag_livedec) .emrl .em_heron, html:not(.hk_diag_livedec) .emrl .em
 .dnm_glow.gl1 { left: -40px; top: 34px; width: 230px; height: 170px; background: radial-gradient(closest-side, rgba(255, 190, 120, 0.13), transparent); }
 .dnm_glow.gl2 { right: -50px; top: 96px; width: 210px; height: 190px; background: radial-gradient(closest-side, rgba(232, 199, 123, 0.1), transparent); }
 .dnm_bok.b1 { left: 9%; bottom: 26px; width: 11px; height: 11px; }
-.tcard .dnx_res.recommended { --dn-pill: 240,185,95; }
-.tcard .dnx_res.required { --dn-pill: 240,170,180; }
 .tcard .dnx_tag.sun { --dn-pill: 248,196,107; }
-.dnx_res.required { background: rgba(136, 19, 55, 0.34); color: rgb(254, 205, 211); border-color: rgba(225, 29, 72, 0.5); }
-.dnx_res.recommended { background: rgba(120, 53, 15, 0.34); color: rgb(253, 230, 138); border-color: rgba(217, 119, 6, 0.5); }
 .dnx_tag.sun { color: rgb(248, 196, 107); border-color: rgba(244, 169, 59, 0.4); }
-.dnx_bt.route { background: rgba(232, 199, 123, 0.1); color: rgb(244, 228, 168); border: 1px solid rgb(201, 164, 78); box-shadow: rgba(255, 241, 184, 0.12) 0px 1px 0px inset; }
 .morewrap.ph-day .morebtn, .morewrap.ph-dawn .morebtn, .morewrap.ph-golden .morebtn { color: rgb(255, 253, 248); border-color: rgba(255, 253, 248, 0.58); background: linear-gradient(rgba(10, 34, 48, 0.4), rgba(6, 22, 32, 0.54)); box-shadow: rgba(255, 255, 255, 0.22) 0px 1px 0px inset, rgba(0, 0, 0, 0.34) 0px 6px 18px, rgba(0, 0, 0, 0.5) 0px 1px 2px; }
 .morewrap.ph-day .morebtn { border-color: rgba(255, 253, 248, 0.66); background: linear-gradient(rgba(8, 30, 44, 0.5), rgba(5, 20, 30, 0.62)); }
 .morewrap.ph-day .morebtn:hover, .morewrap.ph-dawn .morebtn:hover, .morewrap.ph-golden .morebtn:hover { color: rgb(255, 255, 255); border-color: rgb(255, 253, 248); box-shadow: rgba(255, 255, 255, 0.3) 0px 1px 0px inset, rgba(0, 0, 0, 0.4) 0px 8px 22px, rgba(255, 253, 248, 0.75) 0px 0px 16px -6px; }
-.hk_tgarrow.r { right: 5px; transform: rotate(45deg); }
 .hk_promoted .adlbl { display: block; margin: 0px 0px 8px; font: 800 11px / 1 Nunito, system-ui, sans-serif; letter-spacing: 1.1px; text-transform: uppercase; color: var(--csoft); opacity: 0.85; }
 .hk_promoted .adlbl.open { font-weight: 700; letter-spacing: 0.9px; opacity: 0.55; }
 .hk_promocard .adlbl { display: block; margin: 0px 0px 5px; font: 800 11px / 1 Nunito, system-ui, sans-serif; letter-spacing: 1.1px; text-transform: uppercase; color: var(--csoft); opacity: 0.85; }
-.t360w.mir { transform: scaleX(-1); }
-.dph360w.mir { transform: scaleX(-1); }
-.gul360w { position: relative; pointer-events: none; }
-.gul360w.mir { transform: scaleX(-1); }
-.gul360w > svg.gul360 { width: 100%; height: 100%; display: block; overflow: visible; }
-.gul_idle { display: block; transform-origin: 50% 92%; animation: gul_idle var(--gulp,6.7s) cubic-bezier(.3,.85,.35,1) infinite var(--gulo,0s); }
-.gul_peck { display: block; transform-origin: 50% 92%; animation: gul_peck var(--gulpk,19s) cubic-bezier(.3,.05,.35,1) infinite var(--gulo,0s); }
-.gul_peck .gul_tor { animation: gul_pkb var(--gulpk,19s) cubic-bezier(.3,.05,.35,1) infinite var(--gulo,0s); }
-.gul_peck .gul_hd { animation: gul_pkh var(--gulpk,19s) cubic-bezier(.3,.05,.35,1) infinite var(--gulo,0s); }
-.gul_peck .gul_tl { animation: gul_pkt var(--gulpk,19s) cubic-bezier(.3,.05,.35,1) infinite var(--gulo,0s); }
-.gul_bob .gul_leg { animation: gul_step var(--gulbb,.32s) linear infinite; }
-.gul_bob .gul_legB { animation-delay: calc(var(--gulbb,.32s) * -.5); }
-.hgulw { position: absolute; z-index: 1; pointer-events: none; }
-.hgulp { display: block; transform-origin: 50% 100%; }
-.hgulx { display: block; will-change: transform; }
-.ph-golden .hgulw { filter: sepia(0.24) saturate(1.12) brightness(1.02); }
-@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .gul_idle, html:not(.hk_mo) .gul_peck, html:not(.hk_mo) .gul_tor, html:not(.hk_mo) .gul_hd, html:not(.hk_mo) .gul_tl, html:not(.hk_mo) .gul_run, html:not(.hk_mo) .gul_bob, html:not(.hk_mo) .gul_leg, html:not(.hk_mo) .skn_gpath, html:not(.hk_mo) .skn_gbob, html:not(.hk_mo) .hgulw, html:not(.hk_mo) .hgulp { animation: auto ease 0s 1 normal none running none !important; }}
-.tgw.rtl .tgtin { animation-name: hk_tgnomR; }
-.dcw.rtl { animation-name: hk_dcruiseR; }
-.pelw.rtl { left: auto; right: -84px; animation-name: hk_pelpassR; }
 .skitz .adlbl { position: absolute; top: 5px; right: 8px; z-index: 9; font: 800 11px / 1 Nunito, system-ui, sans-serif; letter-spacing: 0.8px; text-transform: uppercase; color: var(--csoft); opacity: 1; padding: 2px 5px; border-radius: 4px; background: rgba(8, 20, 30, 0.92); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--au-b) 45%, transparent); }
 .skitz .adlbl.open { font-weight: 700; letter-spacing: 0.6px; opacity: 0.85; }
 .gcl_l { position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; }
@@ -731,27 +484,7 @@ html:not(.hk_diag_livedec) .emrl .em_heron, html:not(.hk_diag_livedec) .emrl .em
 .gcl_s { animation: auto ease 0s 1 normal none running none !important; transform: none !important; }
 .skc_oats .b1 { stroke: var(--skb_oat1,#B79A5C); animation-duration: calc(5.1s * var(--gca-calm)); }
 .skc_oatw .b1 { stroke: var(--skb_oat1,#B79A5C); animation-duration: calc(5.1s * var(--gca-calm)); }
-.skbeach .legsA, .skbeach .crb_lgA { animation-duration: 0.34s; }
-.skbeach .legsB, .skbeach .crb_lgB { animation-duration: 0.34s; }
-.skcrabv.crb { width: auto; height: auto; }
-.crbl_lgA { animation: 0.68s ease-in-out 0s infinite alternate none running gcl_crbleg2; }
-.crbl_lgB { animation: 0.68s ease-in-out 0s infinite alternate-reverse none running gcl_crbleg2; }
 .skitz svg, .hk_promoted svg, .skitz .gcl_w, .skitz .gcl_l { --gca-calm: calc(var(--gca-calm-base) * var(--gca-master) * 2); }
-.crbl_hi { animation: gcl_shellglow calc(2.6s * var(--gca-calm)) ease-in-out infinite; }
-.crbl_armL { animation: skc_arms var(--skd,26s) ease-in-out infinite var(--sko,0s); }
-.crbl_armR { animation: skc_armsR var(--skd,26s) ease-in-out infinite var(--sko,0s); }
-.crbl_clw { animation: hk_crbclaw2 calc(2.6s * var(--gca-calm)) ease-in-out infinite; }
-.crbl_clwR { animation: auto ease 0s 1 normal none running none; }
-.crbl_eye { animation: gcl_crbeye2 calc(4.9s * var(--gca-calm)) ease-in-out infinite; }
-.crbl_pup { animation: gcl_eyebob calc(3.8s * var(--gca-calm)) ease-in-out infinite; }
-.crbl_swt { opacity: 0; animation: gcl_swt var(--skd,26s) linear infinite var(--sko,0s); }
-.apt.land-rig .apt_flipper.rear.diag-a { animation: apt_scoot_a_rear calc(2.4s * var(--gca-calm)) cubic-bezier(.45,.04,.42,.98) infinite; }
-.apt.land-rig .apt_flipper.rear.diag-b { animation: apt_scoot_b_rear calc(2.4s * var(--gca-calm)) cubic-bezier(.45,.04,.42,.98) infinite; }
-.apt.swim .apt_flipper.rear { transform-origin: 8% 16%; }
-.apt.swim .apt_flipper.rear.far { animation: apt_sea_rudder_far calc(4.2s * var(--gca-calm)) ease-in-out infinite var(--apto,0s); }
-.apt.swim .apt_flipper.rear.near { animation: apt_sea_rudder_near calc(4.2s * var(--gca-calm)) ease-in-out infinite var(--apto,0s); }
-.apt_body .t360w.mir ~ .hkfx-head { left: auto; right: -8%; }
-.apt_body .t360w.mir ~ .aptfx_vein { left: auto; right: 7%; }
 .skn_bub.b1 { left: 168px; bottom: 32px; animation: skn_bub1 var(--skd,28s) linear infinite var(--sko,0s); }
 .skb_splash.s1 { left: 52px; top: 32px; animation: skb_spl1 var(--skd,18s) linear infinite var(--sko,0s); }
 .skb_splash.s2 { left: 28px; top: 34px; animation: skb_spl2 var(--skd,18s) linear infinite var(--sko,0s); }
@@ -761,204 +494,32 @@ html:not(.hk_diag_livedec) .emrl .em_heron, html:not(.hk_diag_livedec) .emrl .em
 .hk_supportfloat.dnpill .hsf_label b { font-size: 11px; color: rgb(255, 233, 239); text-shadow: rgba(20, 8, 26, 0.8) 0px 1px 2px; }
 .xsky_star.s1 { left: 28px; top: 18px; opacity: 0.3; }
 .xsky_star.s2 { left: 140px; top: 11px; animation: xskyTwinkle calc(3s * var(--gca-calm)) ease-in-out infinite; }
-.xsky_ref.r1 { left: 73px; --fd: 0.5s; --rd: -1.2s; }
-.xsky_ref.r2 { left: 249px; --fd: 0.7s; --rd: -3.6s; }
-.xsky_ref.r3 { left: 163px; --fd: 1.3s; --rd: -2.4s; }
 .xsky_ref .b1 { left: 13px; top: 2px; width: 2px; height: 16px; animation: xskyWob calc(2s * var(--gca-calm)) ease-in-out infinite; }
 .xps_star.s1 { left: 24px; top: 12px; opacity: 0.3; }
 .xps_star.s2 { left: 138px; top: 7px; animation: xpsTwinkle calc(3s * var(--gca-calm)) ease-in-out infinite; }
-.xps_ref.r1 { left: 148px; --fd: -0.6s; --rd: -1.2s; --refc: rgba(255,130,116,.62); }
-.xps_ref.r2 { left: 291px; --fd: 0.5s; --rd: -3.6s; --refc: rgba(126,178,255,.6); }
-.xps_ref.r3 { left: 220px; --fd: 1.5s; --rd: -2.4s; --refc: rgba(110,226,164,.6); }
-.xps_ref.r4 { left: 256px; --fd: 2.5s; --rd: -2.8s; --refc: rgba(206,146,255,.6); }
-.xps_ref.r5 { left: 184px; --fd: 3.5s; --rd: -1.6s; --refc: rgba(255,190,100,.62); }
-.xps_ref.r6 { left: 76px; --fd: 1.0s; --rd: -4.1s; --refc: rgba(255,190,100,.62); }
-.xps_ref.r7 { left: 40px; --fd: 2.0s; --rd: -0.9s; --refc: rgba(126,178,255,.6); }
-.xps_ref.r8 { left: 112px; --fd: 3.0s; --rd: -3.3s; --refc: rgba(110,226,164,.6); }
-.xps_ref.rh { left: 247px; --fd: 4.5s; --rd: -2.1s; --refc: rgba(255,124,156,.62); }
 .xps_ref .b1 { left: 13px; top: 2px; width: 2px; height: 15px; animation: xpsWob calc(2s * var(--gca-calm)) ease-in-out infinite; }
 .xps_ref.r2 .b1, .xps_ref.r8 .b1 { left: 10px; top: 3px; height: 12px; }
-.xps_ref.r2 .b2, .xps_ref.r8 .b2 { left: 16px; top: 7px; height: 10px; width: 1.7px; }
-.xps_ref.r2 .b3, .xps_ref.r8 .b3 { left: 6px; top: 15px; height: 8px; }
-.xps_ref.r2 .b4, .xps_ref.r8 .b4 { display: none; }
 .xps_ref.r3 .b1, .xps_ref.r7 .b1 { left: 15px; top: 3px; height: 10px; width: 1.8px; }
-.xps_ref.r3 .b2, .xps_ref.r7 .b2 { left: 9px; top: 12px; height: 12px; }
-.xps_ref.r3 .b3, .xps_ref.r7 .b3 { display: none; }
-.xps_ref.r3 .b4, .xps_ref.r7 .b4 { left: 17px; top: 20px; height: 6px; }
 .xps_ref.r4 .b1, .xps_ref.rh .b1 { left: 12px; height: 18px; width: 1.7px; }
-.xps_ref.r4 .b2, .xps_ref.rh .b2 { left: 18px; top: 10px; height: 7px; }
-.xps_ref.r4 .b3, .xps_ref.rh .b3 { left: 7px; top: 16px; height: 9px; width: 1.4px; }
-.xps_ref.r4 .b4, .xps_ref.rh .b4 { left: 12px; top: 25px; height: 5px; }
 .xps_ref.r5 .b1 { left: 14px; top: 4px; height: 9px; }
-.xps_ref.r5 .b2 { left: 8px; top: 8px; height: 14px; width: 1.6px; }
-.xps_ref.r5 .b3 { left: 18px; top: 17px; height: 7px; }
-.xps_ref.r5 .b4 { display: none; }
-.xp_supportstage.reviewing .xps_star { animation: auto ease 0s 1 normal none running none; opacity: 0.55; }
-.xp_supportstage.reviewing .xps_hairline { opacity: 0.85; }
-.xp_supportstage.cheering .xps_crab .crb_pup, .xp_supportstage.verified .xps_crab .crb_pup { transform-box: fill-box; transform-origin: center center; animation: xps_crabglee calc(1.24s * var(--gca-calm)) cubic-bezier(.3,0,.25,1) infinite; }
-.xp_supportstage .dph_gaze, .xp_supportstage .crb_pup, .xp_supportstage .pel_fly_eye { transform-box: fill-box; transform-origin: 50% 50%; transition: transform 0.3s cubic-bezier(0.22, 0.8, 0.3, 1); }
-.xp_supportstage.gazing .t360w.mir .hke_gaze { transform: translate(calc(var(--gx) * -.5px),calc(var(--gy) * .38px)); }
-.xp_supportstage.gazing .crb_pup { transform: translate(calc(var(--gx) * .55px),calc(var(--gy) * .4px)); }
-@media (prefers-reduced-motion: reduce){html:not(.hk_mo) .xp_supportstage.gazing .hke_gaze, html:not(.hk_mo) .xp_supportstage.gazing .dph_gaze, html:not(.hk_mo) .xp_supportstage.gazing .crb_pup, html:not(.hk_mo) .xp_supportstage.gazing .pel_fly_eye, html:not(.hk_mo) .xp_supportstage.gazing .osp_yaw { transform: none; }}
 .promo_bulb.b1 { animation-delay: -1.3s; }
 .promo_gca .bt_a { color: var(--bt-a); -webkit-text-stroke: .35px var(--bt-a); }
 .promo_gca .bt_b { color: var(--bt-b); }
 .promo_gca .bt_tail { opacity: 1; }
 .promo_gca .bswash path { fill: var(--bt-a); }
-.promo-urgency.red { color: rgb(255, 168, 168); background: rgba(140, 34, 34, 0.44); border: 1px solid rgba(232, 132, 132, 0.5); }
-.promo-dow.red { color: rgb(255, 172, 160); background: rgba(100, 16, 34, 0.7); border-color: rgba(255, 155, 140, 0.35); }
 .hk.glass-drift .card:not(.promo-card) > .inner::before { content: ""; position: absolute; z-index: -1; pointer-events: none; top: 0px; bottom: 0px; left: 0px; width: 220%; background-image: linear-gradient(100deg, rgba(255, 192, 110, 0.1) 6%, rgba(255, 150, 170, 0.09) 26%, rgba(150, 210, 255, 0.1) 48%, rgba(255, 214, 140, 0.08) 70%, rgba(255, 166, 150, 0.09) 88%); animation: hk_glassdrift calc(150s * var(--gca-calm)) ease-in-out infinite alternate; }
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .glass-drift .card > .inner::before { animation: auto ease 0s 1 normal none running none !important; }}
 .hk_day .hero { border-bottom: 2px solid rgb(138, 106, 34); }
 .hk_day .hk_promoted .adlbl.open { opacity: 0.7; }
 .hk_day .skitz .adlbl { color: rgb(68, 86, 106); background: rgba(255, 246, 228, 0.92); box-shadow: rgba(138, 90, 12, 0.4) 0px 0px 0px 1px inset; }
-.hk_day .t-midnight .ray { background: linear-gradient(rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0) 78%); }
-.hk_day .t-rom .rvig { background: radial-gradient(120% 70% at 50% 108%, rgba(230, 170, 190, 0.13), transparent 58%); }
-.hk_day .t-rom .rm_wire { stroke: rgb(154, 106, 86); }
-.hk_day .t-rom .rm_bulb { background: radial-gradient(circle at 38% 34%, rgb(255, 231, 176), rgb(224, 151, 62) 68%, rgba(224, 151, 62, 0.15) 100%); box-shadow: rgba(224, 151, 62, 0.3) 0px 0px 7px 2px; }
-.hk_day .t-rom .rcandle svg path:not(.rflame) { fill: rgb(156, 118, 80); }
-.hk_day .t-rom .rflame { fill: rgb(184, 111, 34); }
-.hk_day .t-rom .rflame.rfin { fill: rgb(216, 154, 78); }
-.hk_day .t-rom .rhalo { background: radial-gradient(50% 50%, rgba(255, 220, 170, 0.3), rgba(255, 220, 170, 0.06) 55%, transparent 74%); }
-.hk_day .t-rom .rsmokew svg { stroke: rgba(140, 119, 110, 0.5); }
-html:not(.hk_diag_livedec) .hk_day .t-rom .rdec .rsmokew { --rp1: rgba(140,119,110,.24); --rp2: rgba(140,119,110,.09); }
-html:not(.hk_diag_livedec) .hk_day .t-rom .rdec .rmote { box-shadow: rgba(131, 99, 15, 0.32) 0px 0px 3px 0.5px; }
-.hk_day .t-rom .rsheart { stroke: rgba(168, 72, 100, 0.85); filter: drop-shadow(rgba(168, 72, 100, 0.28) 0px 0px 5px); }
-.hk_day .t-rom .rheart { color: rgb(138, 60, 84); text-shadow: rgba(138, 60, 84, 0.18) 0px 0px 8px; }
-.hk_day .t-rom .rmote { background: rgb(131, 99, 15); box-shadow: rgba(131, 99, 15, 0.35) 0px 0px 7px 1px; }
-.hk_day .t-artNight .agal.nite .aribbon.rb1 { stroke: rgb(168, 58, 90); opacity: 0.42; }
-.hk_day .t-townNight .htown.nite .hferry .flt.r { fill: rgb(176, 74, 66); color: rgb(176, 74, 66); box-shadow: none; filter: drop-shadow(rgba(176, 74, 66, 0.4) 0px 0px 2px); }
 html.hk_diag_nohero .hero, html.hk_diag_nohero .hero::before, html.hk_diag_nohero .hero::after, html.hk_diag_nohero .hero *, html.hk_diag_nohero .hero ::before, html.hk_diag_nohero .hero ::after, html.hk_diag_nohero .dnmwrap, html.hk_diag_nohero .dnmwrap::before, html.hk_diag_nohero .dnmwrap::after, html.hk_diag_nohero .dnmwrap *, html.hk_diag_nohero .dnmwrap ::before, html.hk_diag_nohero .dnmwrap ::after { animation: auto ease 0s 1 normal none running none !important; transition: none !important; }
 html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx_card, html.hk_diag_nofilt .dnx_card *, html.hk_diag_nofilt .hk_supportfloat, html.hk_diag_nofilt .hk_supportfloat *, html.hk_diag_nofilt .hero, html.hk_diag_nofilt .hero *, html.hk_diag_nofilt .dnmwrap, html.hk_diag_nofilt .dnmwrap *, html.hk_diag_nofilt .skitz, html.hk_diag_nofilt .skitz *, html.hk_diag_nofilt .hk_promoted, html.hk_diag_nofilt .hk_promoted * { filter: none !important; mix-blend-mode: normal !important; backdrop-filter: none !important; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .rays:where(:not(.promo-card, .promo-card *)) { border-radius: 14px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .rays:where(:not(.promo-card, .promo-card *)) { border-radius: 14px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .ray:where(:not(.promo-card, .promo-card *)) { background: linear-gradient(rgba(170, 217, 255, 0.15), rgba(170, 217, 255, 0) 78%); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .ray:where(:not(.promo-card, .promo-card *)) { background: linear-gradient(rgba(159, 203, 246, 0.15), rgba(159, 203, 246, 0) 78%); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .rdec .rm_wire:where(:not(.promo-card, .promo-card *)) { fill: none; stroke: rgba(255, 232, 169, 0.3); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .rdec .rm_wire:where(:not(.promo-card, .promo-card *)) { fill: none; stroke: rgba(245, 216, 158, 0.3); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .rdec .rm_bulb:where(:not(.promo-card, .promo-card *)) { border-radius: 50%; background: radial-gradient(circle at 38% 34%, rgb(255, 255, 239), rgb(255, 210, 123) 62%, rgba(255, 210, 123, 0.1) 100%); box-shadow: rgba(255, 223, 136, 0.42) 0px 0px 7px 2px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .rdec .rm_bulb:where(:not(.promo-card, .promo-card *)) { border-radius: 50%; background: radial-gradient(circle at 38% 34%, rgb(255, 250, 223), rgb(249, 197, 115) 62%, rgba(249, 197, 115, 0.1) 100%); box-shadow: rgba(255, 208, 127, 0.42) 0px 0px 7px 2px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .rdec .rheart:where(:not(.promo-card, .promo-card *)) { color: rgb(255, 181, 199); text-shadow: rgba(236, 131, 162, 0.45) 0px 0px 8px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .rdec .rheart:where(:not(.promo-card, .promo-card *)) { color: rgb(239, 169, 186); text-shadow: rgba(221, 123, 151, 0.45) 0px 0px 8px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .rdec .rsmokew svg:where(:not(.promo-card, .promo-card *)) { fill: none; stroke: rgba(255, 245, 222, 0.5); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .rdec .rsmokew svg:where(:not(.promo-card, .promo-card *)) { fill: none; stroke: rgba(244, 229, 207, 0.5); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .rdec .rsheart:where(:not(.promo-card, .promo-card *)) { stroke: rgba(255, 191, 209, 0.95); filter: drop-shadow(rgba(236, 131, 162, 0.55) 0px 0px 5px); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .rdec .rsheart:where(:not(.promo-card, .promo-card *)) { stroke: rgba(246, 179, 195, 0.95); filter: drop-shadow(rgba(221, 123, 151, 0.55) 0px 0px 5px); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .rdec .rmote:where(:not(.promo-card, .promo-card *)) { border-radius: 50%; background: rgb(255, 235, 168); box-shadow: rgba(255, 235, 168, 0.7) 0px 0px 7px 1px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .rdec .rmote:where(:not(.promo-card, .promo-card *)) { border-radius: 50%; background: rgb(248, 220, 157); box-shadow: rgba(248, 220, 157, 0.7) 0px 0px 7px 1px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .rdec .rvig:where(:not(.promo-card, .promo-card *)) { background: radial-gradient(120% 70% at 50% 108%, rgba(233, 146, 170, 0.13), transparent 58%); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .rdec .rvig:where(:not(.promo-card, .promo-card *)) { background: radial-gradient(120% 70% at 50% 108%, rgba(218, 136, 159, 0.13), transparent 58%); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .rdec .rhalo:where(:not(.promo-card, .promo-card *)) { border-radius: 50%; background: radial-gradient(50% 50%, rgba(255, 224, 148, 0.4), rgba(255, 224, 148, 0.08) 55%, transparent 74%); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .rdec .rhalo:where(:not(.promo-card, .promo-card *)) { border-radius: 50%; background: radial-gradient(50% 50%, rgba(255, 209, 138, 0.4), rgba(255, 209, 138, 0.08) 55%, transparent 74%); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .rheart:where(:not(.promo-card, .promo-card *)) { color: rgb(233, 146, 170); text-shadow: rgba(233, 146, 170, 0.35) 0px 0px 8px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .rheart:where(:not(.promo-card, .promo-card *)) { color: rgb(218, 136, 159); text-shadow: rgba(218, 136, 159, 0.35) 0px 0px 8px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) html:not(.hk_diag_livedec) .t-rom .rdec .rheart:where(:not(.promo-card, .promo-card *)) { text-shadow: none; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) html:not(.hk_diag_livedec) .t-rom .rdec .rheart:where(:not(.promo-card, .promo-card *)) { text-shadow: none; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) html:not(.hk_diag_livedec) .t-rom .rdec .rmote:where(:not(.promo-card, .promo-card *)) { box-shadow: rgba(255, 235, 168, 0.6) 0px 0px 3px 0.5px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) html:not(.hk_diag_livedec) .t-rom .rdec .rmote:where(:not(.promo-card, .promo-card *)) { box-shadow: rgba(248, 220, 157, 0.6) 0px 0px 3px 0.5px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew:where(:not(.promo-card, .promo-card *)) { --rpx: 7.5px; --rpw: 5px; --rph: 9px; --rpy: 11px; --rp1: rgba(255,245,222,0.3); --rp2: rgba(255,245,222,0.12); background: radial-gradient(var(--rpw) var(--rph) at var(--rpx) calc(100% - var(--rpy)), var(--rp1), var(--rp2) 50%, transparent 100%); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew:where(:not(.promo-card, .promo-card *)) { --rpx: 7.5px; --rpw: 5px; --rph: 9px; --rpy: 11px; --rp1: rgba(244,229,207,0.3); --rp2: rgba(244,229,207,0.12); background: radial-gradient(var(--rpw) var(--rph) at var(--rpx) calc(100% - var(--rpy)), var(--rp1), var(--rp2) 50%, transparent 100%); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew.sR:where(:not(.promo-card, .promo-card *)) { --rpx: 9.5px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew.sR:where(:not(.promo-card, .promo-card *)) { --rpx: 9.5px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew.sm:where(:not(.promo-card, .promo-card *)) { --rpx: 6px; --rpw: 4px; --rph: 7px; --rpy: 6px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew.sm:where(:not(.promo-card, .promo-card *)) { --rpx: 6px; --rpw: 4px; --rph: 7px; --rpy: 6px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew.sm.sR:where(:not(.promo-card, .promo-card *)) { --rpx: 7px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) html:not(.hk_diag_livedec) .t-rom .rdec .rsmokew.sm.sR:where(:not(.promo-card, .promo-card *)) { --rpx: 7px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .romacc .racc_wash:where(:not(.promo-card, .promo-card *)) { background: radial-gradient(120% 62% at 50% 108%, rgba(233, 146, 170, 0.1), transparent 56%); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .romacc .racc_wash:where(:not(.promo-card, .promo-card *)) { background: radial-gradient(120% 62% at 50% 108%, rgba(218, 136, 159, 0.1), transparent 56%); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .t-town .romacc .racc_wash:where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .t-art .romacc .racc_wash:where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .t-movie .romacc .racc_wash:where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .t-coastal .romacc .racc_wash:where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .t-lab .romacc .racc_wash:where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .t-comedy .romacc .racc_wash:where(:not(.promo-card, .promo-card *)) { background: radial-gradient(120% 62% at 50% 108%, rgba(217, 89, 129, 0.11), transparent 58%); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .t-town .romacc .racc_wash:where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .t-art .romacc .racc_wash:where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .t-movie .romacc .racc_wash:where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .t-coastal .romacc .racc_wash:where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .t-lab .romacc .racc_wash:where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .t-comedy .romacc .racc_wash:where(:not(.promo-card, .promo-card *)) { background: radial-gradient(120% 62% at 50% 108%, rgba(203, 83, 120, 0.11), transparent 58%); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .romacc .fld.f-heart:where(:not(.promo-card, .promo-card *)) { --fo: .38; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .romacc .fld.f-heart:where(:not(.promo-card, .promo-card *)) { --fo: .38; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .romacc .fld.f-mote:where(:not(.promo-card, .promo-card *)) { --fo: .55; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .romacc .fld.f-mote:where(:not(.promo-card, .promo-card *)) { --fo: .55; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .crb_sh:where(:not(.promo-card, .promo-card *)) { fill: rgb(133, 77, 28); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .crb_sh:where(:not(.promo-card, .promo-card *)) { fill: rgb(124, 72, 26); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .crb_bod:where(:not(.promo-card, .promo-card *)) { fill: rgb(215, 100, 62); stroke: rgb(157, 62, 33); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .crb_bod:where(:not(.promo-card, .promo-card *)) { fill: rgb(201, 94, 58); stroke: rgb(146, 58, 31); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .crb_hi:where(:not(.promo-card, .promo-card *)) { fill: none; stroke: rgb(255, 230, 186); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .crb_hi:where(:not(.promo-card, .promo-card *)) { fill: none; stroke: rgb(255, 215, 174); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .crb_und:where(:not(.promo-card, .promo-card *)) { fill: rgb(157, 62, 33); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .crb_und:where(:not(.promo-card, .promo-card *)) { fill: rgb(146, 58, 31); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .crb_lgA path:where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .crb_lgB path:where(:not(.promo-card, .promo-card *)) { fill: none; stroke: rgb(157, 62, 33); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .crb_lgA path:where(:not(.promo-card, .promo-card *)), :where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .crb_lgB path:where(:not(.promo-card, .promo-card *)) { fill: none; stroke: rgb(146, 58, 31); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .crb_clw .crb_arm:where(:not(.promo-card, .promo-card *)) { fill: none; stroke: rgb(157, 62, 33); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .crb_clw .crb_arm:where(:not(.promo-card, .promo-card *)) { fill: none; stroke: rgb(146, 58, 31); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .crb_clw .crb_hand:where(:not(.promo-card, .promo-card *)) { fill: rgb(215, 100, 62); stroke: rgb(157, 62, 33); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .crb_clw .crb_hand:where(:not(.promo-card, .promo-card *)) { fill: rgb(201, 94, 58); stroke: rgb(146, 58, 31); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .crb_clw .crb_chi:where(:not(.promo-card, .promo-card *)) { fill: none; stroke: rgb(255, 230, 186); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .crb_clw .crb_chi:where(:not(.promo-card, .promo-card *)) { fill: none; stroke: rgb(255, 215, 174); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .crb_eye path:where(:not(.promo-card, .promo-card *)) { stroke: rgb(157, 62, 33); fill: none; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .crb_eye path:where(:not(.promo-card, .promo-card *)) { stroke: rgb(146, 58, 31); fill: none; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .crb_pup:where(:not(.promo-card, .promo-card *)) { fill: rgb(44, 15, 1); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .crb_pup:where(:not(.promo-card, .promo-card *)) { fill: rgb(41, 14, 1); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .crb_gl:where(:not(.promo-card, .promo-card *)) { fill: rgb(255, 251, 223); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .crb_gl:where(:not(.promo-card, .promo-card *)) { fill: rgb(255, 235, 209); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .crb_shl path:where(:not(.promo-card, .promo-card *)) { fill: rgb(255, 242, 205); stroke: rgb(202, 165, 112); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .crb_shl path:where(:not(.promo-card, .promo-card *)) { fill: rgb(246, 226, 192); stroke: rgb(188, 155, 104); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .crb_shl2:where(:not(.promo-card, .promo-card *)) { fill: none !important; stroke: rgb(217, 176, 118) !important; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .crb_shl2:where(:not(.promo-card, .promo-card *)) { fill: none !important; stroke: rgb(203, 165, 110) !important; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .crbh_pit:where(:not(.promo-card, .promo-card *)) { border-radius: 50%; background: radial-gradient(52% 62% at 50% 42%, rgba(104, 62, 22, 0.62), rgba(130, 84, 32, 0.24) 66%, transparent 82%); box-shadow: rgba(255, 255, 230, 0.55) 0px 1.4px 0px, rgba(54, 29, 5, 0.5) 0px 1px 1px inset; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .crbh_pit:where(:not(.promo-card, .promo-card *)) { border-radius: 50%; background: radial-gradient(52% 62% at 50% 42%, rgba(97, 58, 21, 0.62), rgba(122, 78, 30, 0.24) 66%, transparent 82%); box-shadow: rgba(255, 247, 215, 0.55) 0px 1.4px 0px, rgba(51, 27, 5, 0.5) 0px 1px 1px inset; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .crbh_pit:where(:not(.promo-card, .promo-card *))::after { border-radius: 50%; background: radial-gradient(50% 50%, rgba(255, 227, 176, 0.5), transparent 72%); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .crbh_pit:where(:not(.promo-card, .promo-card *))::after { border-radius: 50%; background: radial-gradient(50% 50%, rgba(241, 212, 164, 0.5), transparent 72%); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .t-coastalNight .crbh_pit:where(:not(.promo-card, .promo-card *)) { background: radial-gradient(52% 62% at 50% 42%, rgba(18, 11, 28, 0.7), rgba(41, 26, 52, 0.3) 66%, transparent 82%); box-shadow: rgba(253, 225, 157, 0.3) 0px 1.4px 0px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .t-coastalNight .crbh_pit:where(:not(.promo-card, .promo-card *)) { background: radial-gradient(52% 62% at 50% 42%, rgba(17, 10, 26, 0.7), rgba(38, 25, 49, 0.3) 66%, transparent 82%); box-shadow: rgba(237, 210, 147, 0.3) 0px 1.4px 0px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .crbh_sand:where(:not(.promo-card, .promo-card *)) { border-radius: 50%; background: radial-gradient(50% 60% at 50% 60%, rgba(255, 234, 187, 0.85), transparent 70%); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .crbh_sand:where(:not(.promo-card, .promo-card *)) { border-radius: 50%; background: radial-gradient(50% 60% at 50% 60%, rgba(245, 219, 175, 0.85), transparent 70%); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .t-coastalNight .crb_bod:where(:not(.promo-card, .promo-card *)) { fill: rgb(156, 71, 46); stroke: rgb(102, 38, 21); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .t-coastalNight .crb_bod:where(:not(.promo-card, .promo-card *)) { fill: rgb(146, 66, 43); stroke: rgb(96, 36, 19); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .agal .aribbon.rb1:where(:not(.promo-card, .promo-card *)) { stroke: rgb(255, 96, 124); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .agal .aribbon.rb1:where(:not(.promo-card, .promo-card *)) { stroke: rgb(242, 90, 116); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .agal.nite .aribbon.rb1:where(:not(.promo-card, .promo-card *)) { stroke: rgb(255, 133, 168); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .agal.nite .aribbon.rb1:where(:not(.promo-card, .promo-card *)) { stroke: rgb(255, 124, 157); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .htown.nite .hferry .flt.r:where(:not(.promo-card, .promo-card *)) { fill: rgb(255, 128, 128); color: rgb(255, 128, 128); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .htown.nite .hferry .flt.r:where(:not(.promo-card, .promo-card *)) { fill: rgb(255, 120, 120); color: rgb(255, 120, 120); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .hk_day .t-midnight .ray:where(:not(.promo-card, .promo-card *)) { background: linear-gradient(rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0) 78%); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .hk_day .t-midnight .ray:where(:not(.promo-card, .promo-card *)) { background: linear-gradient(rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0) 78%); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .hk_day .t-rom .rvig:where(:not(.promo-card, .promo-card *)) { background: radial-gradient(120% 70% at 50% 108%, rgba(252, 182, 206, 0.13), transparent 58%); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .hk_day .t-rom .rvig:where(:not(.promo-card, .promo-card *)) { background: radial-gradient(120% 70% at 50% 108%, rgba(236, 170, 192, 0.13), transparent 58%); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .hk_day .t-rom .rm_wire:where(:not(.promo-card, .promo-card *)) { stroke: rgb(168, 112, 89); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .hk_day .t-rom .rm_wire:where(:not(.promo-card, .promo-card *)) { stroke: rgb(157, 105, 83); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .hk_day .t-rom .rm_bulb:where(:not(.promo-card, .promo-card *)) { background: radial-gradient(circle at 38% 34%, rgb(255, 250, 186), rgb(247, 162, 58) 68%, rgba(247, 162, 58, 0.15) 100%); box-shadow: rgba(247, 162, 58, 0.3) 0px 0px 7px 2px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .hk_day .t-rom .rm_bulb:where(:not(.promo-card, .promo-card *)) { background: radial-gradient(circle at 38% 34%, rgb(255, 234, 174), rgb(231, 151, 54) 68%, rgba(231, 151, 54, 0.15) 100%); box-shadow: rgba(231, 151, 54, 0.3) 0px 0px 7px 2px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .hk_day .t-rom .rcandle svg path:not(.rflame):where(:not(.promo-card, .promo-card *)) { fill: rgb(170, 126, 81); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .hk_day .t-rom .rcandle svg path:not(.rflame):where(:not(.promo-card, .promo-card *)) { fill: rgb(159, 117, 76); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .hk_day .t-rom .rflame:where(:not(.promo-card, .promo-card *)) { fill: rgb(203, 118, 28); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .hk_day .t-rom .rflame:where(:not(.promo-card, .promo-card *)) { fill: rgb(190, 110, 26); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .hk_day .t-rom .rflame.rfin:where(:not(.promo-card, .promo-card *)) { fill: rgb(238, 165, 76); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .hk_day .t-rom .rflame.rfin:where(:not(.promo-card, .promo-card *)) { fill: rgb(222, 154, 71); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .hk_day .t-rom .rhalo:where(:not(.promo-card, .promo-card *)) { background: radial-gradient(50% 50%, rgba(255, 238, 180, 0.3), rgba(255, 238, 180, 0.06) 55%, transparent 74%); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .hk_day .t-rom .rhalo:where(:not(.promo-card, .promo-card *)) { background: radial-gradient(50% 50%, rgba(255, 223, 168, 0.3), rgba(255, 223, 168, 0.06) 55%, transparent 74%); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .hk_day .t-rom .rsmokew svg:where(:not(.promo-card, .promo-card *)) { stroke: rgba(151, 127, 116, 0.5); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .hk_day .t-rom .rsmokew svg:where(:not(.promo-card, .promo-card *)) { stroke: rgba(141, 119, 109, 0.5); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) html:not(.hk_diag_livedec) .hk_day .t-rom .rdec .rsmokew:where(:not(.promo-card, .promo-card *)) { --rp1: rgba(151,127,116,0.24); --rp2: rgba(151,127,116,0.09); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) html:not(.hk_diag_livedec) .hk_day .t-rom .rdec .rsmokew:where(:not(.promo-card, .promo-card *)) { --rp1: rgba(141,119,109,0.24); --rp2: rgba(141,119,109,0.09); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) html:not(.hk_diag_livedec) .hk_day .t-rom .rdec .rmote:where(:not(.promo-card, .promo-card *)) { box-shadow: rgba(142, 105, 7, 0.32) 0px 0px 3px 0.5px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) html:not(.hk_diag_livedec) .hk_day .t-rom .rdec .rmote:where(:not(.promo-card, .promo-card *)) { box-shadow: rgba(133, 98, 6, 0.32) 0px 0px 3px 0.5px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .hk_day .t-rom .rsheart:where(:not(.promo-card, .promo-card *)) { stroke: rgba(186, 74, 106, 0.85); filter: drop-shadow(rgba(186, 74, 106, 0.28) 0px 0px 5px); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .hk_day .t-rom .rsheart:where(:not(.promo-card, .promo-card *)) { stroke: rgba(174, 69, 100, 0.85); filter: drop-shadow(rgba(174, 69, 100, 0.28) 0px 0px 5px); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .hk_day .t-rom .rheart:where(:not(.promo-card, .promo-card *)) { color: rgb(152, 61, 89); text-shadow: rgba(152, 61, 89, 0.18) 0px 0px 8px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .hk_day .t-rom .rheart:where(:not(.promo-card, .promo-card *)) { color: rgb(142, 57, 83); text-shadow: rgba(142, 57, 83, 0.18) 0px 0px 8px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .hk_day .t-rom .rmote:where(:not(.promo-card, .promo-card *)) { background: rgb(142, 105, 7); box-shadow: rgba(142, 105, 7, 0.35) 0px 0px 7px 1px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .hk_day .t-rom .rmote:where(:not(.promo-card, .promo-card *)) { background: rgb(133, 98, 6); box-shadow: rgba(133, 98, 6, 0.35) 0px 0px 7px 1px; }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .hk_day .t-artNight .agal.nite .aribbon.rb1:where(:not(.promo-card, .promo-card *)) { stroke: rgb(187, 58, 96); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .hk_day .t-artNight .agal.nite .aribbon.rb1:where(:not(.promo-card, .promo-card *)) { stroke: rgb(174, 54, 89); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy:not(.hk_day), html:not(.hk_diag_nograde) .hk.epoxy.hk_day.hk_cl_gold) .hk_day .t-townNight .htown.nite .hferry .flt.r:where(:not(.promo-card, .promo-card *)) { fill: rgb(195, 76, 67); color: rgb(195, 76, 67); box-shadow: none; filter: drop-shadow(rgba(195, 76, 67, 0.4) 0px 0px 2px); }
-:where(html:not(.hk_diag_nograde) .hk.epoxy.hk_day:not(.hk_cl_gold)) .hk_day .t-townNight .htown.nite .hferry .flt.r:where(:not(.promo-card, .promo-card *)) { fill: rgb(182, 71, 62); color: rgb(182, 71, 62); box-shadow: none; filter: drop-shadow(rgba(182, 71, 62, 0.4) 0px 0px 2px); }
-html:not(.hk_diag_livedec) .hk.hk .ccrab.rtl { left: auto; right: 74px; }
-.promo-dow.red { color: rgb(255, 217, 210); background: rgba(88, 10, 26, 0.86); }
 .hk_rigsrc { pointer-events: none; position: absolute !important; width: 0px !important; height: 0px !important; overflow: hidden !important; opacity: 0 !important; }
 .hk_rigsrc, .hk_rigsrc * { animation: auto ease 0s 1 normal none running none !important; transition: none !important; }
 .hk.hk_day .dnx .dnm_glow.gl1 { background: radial-gradient(closest-side, rgba(232, 169, 99, 0.208), transparent); }
 .hk.hk_day .dnx .dnm_glow.gl2 { background: radial-gradient(closest-side, rgba(212, 179, 104, 0.16), transparent); }
-.hk.hk_day .dnx .tcard .dnx_res.recommended { --dn-pill: 100,15,63; }
-.hk.hk_day .dnx .tcard .dnx_res.required { --dn-pill: 92,36,48; }
 .hk.hk_day .dnx .tcard .dnx_tag.sun { --dn-pill: 94,10,58; }
-.hk.hk_day .dnx .dnx_res.required { background: rgba(248, 230, 232, 0.34); color: rgb(69, 33, 39); border-color: rgba(225, 29, 72, 0.65); }
-.hk.hk_day .dnx .dnx_res.recommended { background: rgba(247, 231, 224, 0.34); color: rgb(79, 1, 47); border-color: rgba(215, 117, 0, 0.75); }
 .hk.hk_day .dnx .dnx_tag.sun { color: rgb(94, 10, 58); border-color: rgba(201, 128, 0, 0.6); }
-.hk.hk_day .dnx .dnx_bt.route { background: rgba(212, 179, 104, 0.16); color: rgb(70, 22, 46); border: 1px solid rgb(177, 141, 52); box-shadow: rgba(172, 159, 104, 0.043) 0px 1px 0px inset; }
 .hk.hk_day .dnx .hk_supportfloat.dnpill .hsf_label b { color: rgb(37, 20, 41); text-shadow: rgba(71, 46, 68, 0.224) 0px 1px 2px; }
 .hk .hero-datebtn.hk_datecal .hk_datecalic { flex: 0 0 auto; transform: translateY(-1.2px); }
 .hero.hk_nhon { background: rgb(127, 195, 227); }
@@ -974,6 +535,52 @@ html:not(.hk_diag_livedec) .hk.hk .ccrab.rtl { left: auto; right: 74px; }
 @media (max-width: 389px){.hero.hk_nhon .hk_nh [id$="ad-parasail"] { transform: translateX(calc(197px - 50vw)); }}
 .hero.hk_nhon > :is(.sun, .clouds, .hz, .glit, .hk_boat, .hk_sailw, .boat-refl, .supw, .rplfield, .hero-wave, .hero-sand, .hk_swellw, .hero-surf, .beachprops, .crabw, .hgulw, .hero_slot_boatname, .hero_slot_yacht, .hero_slot_plane, .hero_slot_parasa) { display: none !important; }
 .hero.hk_nhon :is(.adparasail, .npw, [class^="hkn_"], [class*=" hkn_"]) { display: none !important; }
+.hk_nh [id$="move-bird"], .hk_nh [id$="move-bird2"], .hk_nh [id$="move-wings"], .hk_nh [id$="move-wings2"], .hk_nh [id$="move-doghead"] { transform-box: view-box; }
+.hk_nh [id="nhd_move-bird"] { transform-origin: 36px 52px; animation: 52s linear 0s infinite normal none running nh_fly1; }
+.hk_nh [id="nhd_move-bird2"] { transform-origin: 96px 55px; animation: 52s linear -26s infinite normal none running nh_fly2; }
+.hk_nh [id="nhd_move-wings"] { transform-origin: 36px 52px; animation: 0.7s ease-in-out 0s infinite alternate none running nh_flap; }
+.hk_nh [id="nhd_move-wings2"] { transform-origin: 96px 55px; animation: 0.6s ease-in-out -0.3s infinite alternate none running nh_flap; }
+.hk_nh [id="nhd_move-doghead"] { transform-origin: 255.5px 213.5px; animation: 8s ease-in-out 0s infinite normal none running nh_look; }
+.hk_nh [id$="move-dog"] { animation: auto ease 0s 1 normal none running none; }
+.hk_nh [id="nhk_move-bird"] { transform-origin: 36px 52px; animation: 52s linear 0s infinite normal none running nh_fly1k; }
+.hk_nh [id="nhk_move-bird2"] { transform-origin: 131px 69px; animation: 52s linear -26s infinite normal none running nh_fly2k; }
+.hk_nh [id="nhk_move-wings"] { transform-origin: 36px 52px; animation: 0.75s ease-in-out 0s infinite alternate none running nh_flap; }
+.hk_nh [id="nhk_move-wings2"] { transform-origin: 131px 69px; animation: 0.65s ease-in-out -0.3s infinite alternate none running nh_flap; }
+.hk_nh [id="nhk_move-doghead"] { transform-origin: 260px 213px; animation: 8s ease-in-out 0s infinite normal none running nh_look; }
+.hk_nh [id$="move-paddler"] { animation: 3.6s ease-in-out 0s infinite alternate none running nh_bob; }
+.hk_nh [id$="move-kids"] { animation: 1.8s ease-in-out 0s infinite alternate none running nh_hop; }
+.hk_nh [id$="move-ball"] { animation: 0.9s ease-out 0s infinite alternate none running nh_toss; }
+.hk_nh [id$="move-dog"] { animation: 1.2s ease-in-out 0s infinite alternate none running nh_hop; }
+.hk_nh [id$="move-oats"] { transform-box: fill-box; transform-origin: 50% 100%; animation: 4.2s ease-in-out 0s infinite alternate none running nh_sway; }
+.hk_nh [id$="move-sloop"] { animation: 34s linear 0s infinite alternate none running nh_drift; }
+.hk_nh :is([id$="rail-lamps"], [id$="move-lamps"]) { animation: 2.6s ease-in-out 0s infinite alternate none running nh_lamp; }
+.hk_nh :is([id$="move-glints"], [id$="move-reflections"]) { animation: 3.2s ease-in-out 0s infinite alternate none running nh_glint; }
+.hk_nh [id*="move-crab"] { animation: 8s ease-in-out 0s infinite normal none running nh_scuttle; }
+.hk_nh [id*="move-crab"]:nth-of-type(2n) { animation-duration: 11s; animation-delay: -4s; }
+.hk_nh [id$="move-hatchlings"] > g > * { transform-box: fill-box; transform-origin: 50% 50%; animation: 0.9s ease-in-out 0s infinite alternate none running nh_paddle; }
+.hk_nh [id$="move-hatchlings"] > g:nth-child(3n) > * { animation-duration: 1.1s; animation-delay: -0.4s; }
+.hk_nh [id$="move-hatchlings"] > g:nth-child(3n+1) > * { animation-duration: 0.8s; animation-delay: -0.2s; }
+.hk_nh [id$="move-hatchlings"] > g { animation: nh_crawlA var(--cyc, 32s) linear var(--dl, 0s) infinite; }
+.hk_nh [id$="move-hatchlings"] > g > * { animation: nh_rockA var(--cyc, 32s) ease-in-out var(--dl, 0s) infinite; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(1) { --hx: -14.7px; --hy: -18.9px; --p1: 0.32; --p2: 0.70; --cyc: 31s; --dl: -4s; animation-name: nh_crawlA; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(1) > * { animation-name: nh_rockA; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(2) { --hx: -26.2px; --hy: -49.3px; --p1: 0.22; --p2: 0.58; --cyc: 37s; --dl: -19s; animation-name: nh_crawlB; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(2) > * { animation-name: nh_rockB; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(3) { --hx: -3.0px; --hy: -11.3px; --p1: 0.40; --p2: 0.78; --cyc: 28s; --dl: -11s; animation-name: nh_crawlC; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(3) > * { animation-name: nh_rockC; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(4) { --hx: -32.6px; --hy: -18.8px; --p1: 0.28; --p2: 0.66; --cyc: 41s; --dl: -27s; animation-name: nh_crawlA; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(4) > * { animation-name: nh_rockA; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(5) { --hx: 4.6px; --hy: -43.8px; --p1: 0.35; --p2: 0.72; --cyc: 34s; --dl: -2s; animation-name: nh_crawlC; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(5) > * { animation-name: nh_rockC; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(6) { --hx: -25.6px; --hy: -63.4px; --p1: 0.25; --p2: 0.62; --cyc: 29s; --dl: -23s; animation-name: nh_crawlB; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(6) > * { animation-name: nh_rockB; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(7) { --hx: 5.2px; --hy: -18.1px; --p1: 0.38; --p2: 0.80; --cyc: 39s; --dl: -15s; animation-name: nh_crawlA; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(7) > * { animation-name: nh_rockA; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(8) { --hx: 35.0px; --hy: -36.2px; --p1: 0.30; --p2: 0.68; --cyc: 33s; --dl: -31s; animation-name: nh_crawlB; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(8) > * { animation-name: nh_rockB; }
+.hk_nh [id$="move-waves"] .nhws { animation: 6.5s ease-in-out 0s infinite alternate none running nh_swell; }
+.hk_nh [id$="move-waves"] .nhwp { animation: nh_wtravel var(--wcyc, 7s) linear calc(var(--wcyc, 7s) * var(--wp) / -4) infinite; }
+.hk_nh [id$="move-glitter"] { animation: 2.4s ease-in-out 0s infinite alternate none running nh_glint; }
 .hero[data-sea] .hk_nh [id$="move-waves"] { transition: opacity 0.6s; }
 .hero[data-sea="calm"] .hk_nh [id$="move-waves"] { opacity: 0.18; }
 .hero[data-sea="light"] .hk_nh [id$="move-waves"] { opacity: 0.5; }
@@ -981,13 +588,28 @@ html:not(.hk_diag_livedec) .hk.hk .ccrab.rtl { left: auto; right: 74px; }
 .hero[data-sea="rough"] .hk_nh [id$="move-waves"] { opacity: 1; }
 .hero[data-sea="calm"] .hk_nh [id$="whitecaps"], .hero[data-sea="light"] .hk_nh [id$="whitecaps"] { display: none; }
 .hero[data-sea="breezy"] .hk_nh [id$="whitecaps"] { opacity: 0.55; }
+.hk_nh [id$="sea-tone"] rect { opacity: 0; }
 .hero[data-sea="calm"] .hk_nh [id$="sea-tone"] .nh_clear { opacity: 1; }
 .hero[data-sea="breezy"] .hk_nh [id$="sea-tone"] .nh_murk { opacity: 0.45; }
 .hero[data-sea="rough"] .hk_nh [id$="sea-tone"] .nh_murk { opacity: 1; }
 .hero[data-bloom="red"] .hk_nh [id$="sea-tone"] .nh_bloom { opacity: 1; }
+.hk_nh [id="nhk_sea-tone"] { opacity: 0.75; }
+.hk_nh [id$="move-jellies"] { display: none; }
 .hero[data-marine] .hk_nh [id$="move-jellies"] { display: inline; }
 .hero[data-marine] .hk_nh .nhjd { animation: nh_jdrift calc(13s + var(--jn) * 3s) ease-in-out calc(var(--jn) * -4s) infinite alternate; }
 .hero[data-marine] .hk_nh .nhjb { transform-box: fill-box; transform-origin: 50% 100%; animation: nh_jpulse calc(2.1s + var(--jn) * .35s) ease-in-out infinite alternate; }
+.hk_nh [id$="move-dog"], .hk_nh [id$="move-kids"], .hk_nh [id$="move-ball"] { animation: auto ease 0s 1 normal none running none; }
+.hk_nh [id="nhd_move-dog"] > :nth-child(5) { transform-box: view-box; transform-origin: 272.5px 212px; animation: 4.5s ease-in-out 0s infinite normal none running nh_wag; }
+.hk_nh [id="nhd_move-doghead"] { transform-box: view-box; transform-origin: 255.5px 213.5px; animation: 8s ease-in-out 0s infinite normal none running nh_peer; }
+.hk_nh [id="nhd_move-dog"] > :nth-child(1), .hk_nh [id="nhd_move-dog"] > :nth-child(2) { animation: 3.2s ease-in-out 0s infinite alternate none running nh_ripple; }
+.hk_nh [id="nhd_move-kids"] > :nth-child(15) { transform-box: view-box; transform-origin: 209px 191px; animation: 2.4s ease-in-out 0s infinite normal none running nh_swat1; }
+.hk_nh [id="nhd_move-kids"] > :nth-child(25) { transform-box: view-box; transform-origin: 234.5px 195px; animation: 2.4s ease-in-out 0s infinite normal none running nh_swat2; }
+.hk_nh [id="nhd_move-kids"] > :nth-child(16) { transform-box: view-box; transform-origin: 201px 191px; animation: 2.4s ease-in-out 0s infinite alternate none running nh_armsway; }
+.hk_nh [id="nhd_move-kids"] > :nth-child(24) { transform-box: view-box; transform-origin: 241.5px 195px; animation: 2.4s ease-in-out 0s infinite alternate-reverse none running nh_armsway; }
+.hk_nh [id="nhd_move-kids"] > :nth-child(1) { animation: 2.8s ease-in-out 0s infinite alternate none running nh_ripple; }
+.hk_nh [id="nhd_move-ball"] > :nth-child(n+2) { transform-box: view-box; transform-origin: 222px 186px; animation: 2.4s linear 0s infinite normal none running nh_volley; }
+.hk_nh [id="nhd_move-ball"] > :nth-child(1) { transform-box: view-box; transform-origin: 222px 221px; animation: 2.4s linear 0s infinite normal none running nh_ballshade; }
+@media (prefers-reduced-motion: reduce){.hk_nh * { animation: auto ease 0s 1 normal none running none !important; }}
 .hk .hero { z-index: 1; }
 @keyframes hk_gl { 
   0%, 100% { opacity: 0; transform: scaleX(0.25); }
@@ -1095,77 +717,6 @@ html:not(.hk_diag_livedec) .hk.hk .ccrab.rtl { left: auto; right: 74px; }
   0% { transform: translateX(0px); }
   100% { transform: translateX(69.49px); }
 }
-@keyframes hk_crabL { 
-  0% { transform: translate(0px, 0px); }
-  26% { transform: translate(44px, 4px); }
-  34% { transform: translate(44px, 4px); }
-  62% { transform: translate(98px, 9px); }
-  70% { transform: translate(98px, 9px); }
-  100% { transform: translate(148px, 14px); }
-}
-@keyframes hk_crabR { 
-  0% { transform: translate(148px, 14px); }
-  30% { transform: translate(96px, 9px); }
-  38% { transform: translate(96px, 9px); }
-  66% { transform: translate(42px, 4px); }
-  74% { transform: translate(42px, 4px); }
-  100% { transform: translate(0px, 0px); }
-}
-@keyframes hk_crabLf { 
-  0% { transform: translate(0px, 0px); }
-  26% { transform: translate(66px, 0px); }
-  34% { transform: translate(66px, 0px); }
-  62% { transform: translate(148px, 0px); }
-  70% { transform: translate(148px, 0px); }
-  100% { transform: translate(225px, 0px); }
-}
-@keyframes hk_crabRf { 
-  0% { transform: translate(225px, 0px); }
-  30% { transform: translate(146px, 0px); }
-  38% { transform: translate(146px, 0px); }
-  66% { transform: translate(64px, 0px); }
-  74% { transform: translate(64px, 0px); }
-  100% { transform: translate(0px, 0px); }
-}
-@keyframes hk_supdrift { 
-  0% { transform: translate(0px, 0px); }
-  100% { transform: translate(9px, 1.5px); }
-}
-@keyframes hk_supbob { 
-  0%, 100% { transform: translateY(0px) rotate(-0.6deg); }
-  50% { transform: translateY(1.4px) rotate(0.7deg); }
-}
-@keyframes hk_paddle { 
-  0%, 5% { transform: rotate(5deg); }
-  11% { transform: rotate(0deg); }
-  30% { transform: rotate(-24deg); }
-  34% { transform: rotate(-29deg); }
-  44% { transform: rotate(-27deg); }
-  96%, 100% { transform: rotate(5deg); }
-}
-@keyframes hk_supbody { 
-  0%, 5% { transform: rotate(4deg); }
-  22% { transform: rotate(1deg); }
-  34% { transform: rotate(-3.4deg); }
-  48% { transform: rotate(-2deg); }
-  100% { transform: rotate(4deg); }
-}
-@keyframes hk_ripl { 
-  0%, 100% { opacity: 0; transform: scaleX(0.5); }
-  42% { opacity: 0.26; transform: scaleX(1); }
-  72% { opacity: 0.1; }
-}
-@keyframes hk_jskR { 
-  0% { transform: translate(0px, 0px); }
-  30% { transform: translate(-168px, -2px); }
-  60% { transform: translate(-336px, 1.5px); }
-  100% { transform: translate(-560px, -1px); }
-}
-@keyframes hk_baR { 
-  0% { opacity: 0; transform: translate(0px, 0px); }
-  14%, 91.5% { opacity: 0.95; }
-  100% { opacity: 0; transform: translate(calc(-1 * var(--ba-run,800px)),0); }
-}
 @keyframes hkn_drift { 
   0% { transform: translate3d(-50%, 0px, 0px); }
   100% { transform: translate3d(0px, 0px, 0px); }
@@ -1177,24 +728,6 @@ html:not(.hk_diag_livedec) .hk.hk .ccrab.rtl { left: auto; right: 74px; }
 @keyframes hk_pop { 
   0% { opacity: 0; transform: translateY(7px) scale(0.96); }
   100% { opacity: 1; transform: translateY(0px) scale(1); }
-}
-@keyframes hk_flyR { 
-  0% { transform: translate(0px, 0px); }
-  25% { transform: translate(-140px, -9px); }
-  50% { transform: translate(-280px, 2px); }
-  75% { transform: translate(-420px, -8px); }
-  100% { transform: translate(-560px, -3px); }
-}
-@keyframes hk_skgR { 
-  0% { transform: translateX(432px); }
-  46% { transform: translateX(-30px); }
-  100% { transform: translateX(-30px); }
-}
-@keyframes hk_gullnearR { 
-  0%, 55% { transform: translate(452px, 6px); }
-  70% { transform: translate(242px, -2px); }
-  84% { transform: translate(62px, 3px); }
-  100% { transform: translate(-90px, -4px); }
 }
 @keyframes hk_grain { 
   0% { transform: translate(0px, 0px); }
@@ -1255,35 +788,6 @@ html:not(.hk_diag_livedec) .hk.hk .ccrab.rtl { left: auto; right: 74px; }
 @keyframes hk_swheave { 
   0% { transform: translateY(-1.1px) scaleY(0.92); }
   100% { transform: translateY(1.4px) scaleY(1.1); }
-}
-@keyframes hk_ray { 
-  0%, 100% { opacity: 0.28; }
-  50% { opacity: 0.75; }
-}
-@keyframes hk_ccrabr { 
-  0%, 18% { opacity: 0; transform: translate(0px, 0px); }
-  19.5% { opacity: 0.9; }
-  26% { transform: translate(-92px, 1px); }
-  29% { transform: translate(-92px, 1px); }
-  38% { transform: translate(-214px, -1px); }
-  41% { transform: translate(-214px, -1px); }
-  55% { opacity: 0.9; }
-  57%, 100% { opacity: 0; transform: translate(-345px, 0px); }
-}
-@keyframes hk_gullpr { 
-  0%, 40% { opacity: 0; transform: translate3d(0px, 0px, 0px) scale(1); }
-  46% { opacity: 0.8; }
-  90% { opacity: 0.78; transform: translate3d(-327px, 245px, 0px) scale(1.06); }
-  96.5%, 100% { opacity: 0; transform: translate3d(-455px, 335px, 0px) scale(1.08); }
-}
-@keyframes hk_trtupR { 
-  0% { transform: translateY(112%) rotate(4deg); }
-  16% { transform: translateY(38%) rotate(1deg); }
-  30% { transform: translateY(33%) rotate(0deg); }
-  46% { transform: translateY(37%) rotate(-1deg); }
-  62% { transform: translateY(33%) rotate(0deg); }
-  80% { transform: translateY(37%) rotate(-2deg); }
-  100% { transform: translateY(114%) rotate(-6deg); }
 }
 @keyframes hk_adyacht { 
   0% { transform: translateX(-150px); }
@@ -1419,463 +923,9 @@ html:not(.hk_diag_livedec) .hk.hk .ccrab.rtl { left: auto; right: 74px; }
   62% { transform: translateY(0.3px); }
   100% { transform: translateY(2.5px); }
 }
-@keyframes hk_rrip { 
-  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.25); }
-  20% { opacity: 0.82; }
-  54% { opacity: 0.56; }
-  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.7); }
-}
-@keyframes hk_tgjellyR { 
-  0% { opacity: 0.9; transform: translateY(0px) scale(1, 1); }
-  16% { transform: translateY(-1.1px) scale(1.06, 0.93); }
-  30% { transform: translateY(0.5px) scale(0.96, 1.06); }
-  44% { transform: translateY(-1px) scale(1.05, 0.94); }
-  58% { opacity: 0.9; transform: translateY(0.4px) scale(0.97, 1.05); }
-  64% { transform: translateY(0px) scale(1, 1); }
-  67% { opacity: 0.9; transform: translateX(2px) scale(0.86, 0.9); }
-  73% { opacity: 0; transform: translateX(3px) translateY(1px) scale(0.5); }
-  100% { opacity: 0; }
-}
-@keyframes hk_tgturtleR { 
-  0% { transform: translateX(0px); opacity: 0; }
-  6% { opacity: 0.95; }
-  16% { transform: translateX(-22px); }
-  26% { transform: translateX(-29px); }
-  44% { transform: translateX(-33px); }
-  48% { transform: translateX(-36px); }
-  53% { transform: translateX(-43px); }
-  57% { transform: translateX(-56px); }
-  61% { transform: translateX(-72px); }
-  64% { transform: translateX(-84px); }
-  68% { transform: translateX(-76px); }
-  73% { transform: translateX(-79px); }
-  86% { transform: translateX(-96px); opacity: 0.9; }
-  100% { transform: translateX(-116px); opacity: 0; }
-}
-@keyframes hk_rmsway { 
-  0% { transform: translateY(-1px) rotate(-0.32deg); }
-  100% { transform: translateY(1.5px) rotate(0.32deg); }
-}
-@keyframes hk_rmbulb { 
-  0%, 100% { opacity: 0.38; }
-  46% { opacity: 1; }
-}
-@keyframes hk_hpelr { 
-  0%, 55% { opacity: 0; transform: translate3d(0px, 0px, 0px) scaleX(-1); }
-  61% { opacity: 0.8; }
-  92% { opacity: 0.75; transform: translate3d(-440px, -12px, 0px) scaleX(-1); }
-  97%, 100% { opacity: 0; transform: translate3d(-510px, -14px, 0px) scaleX(-1); }
-}
 @keyframes hk_hshim { 
   0% { opacity: 0.18; transform: translateX(-7px) scaleX(0.85); }
   100% { opacity: 0.85; transform: translateX(7px) scaleX(1); }
-}
-@keyframes hk_rheartA { 
-  0% { opacity: 0; transform: translate3d(0px, 0px, 0px); }
-  15% { opacity: 1; }
-  65% { opacity: 0.6; transform: translate3d(2px, -72px, 0px); }
-  100% { opacity: 0; transform: translate3d(1px, -120px, 0px); }
-}
-@keyframes hk_rheartB { 
-  0% { opacity: 0; transform: translate3d(0px, 0px, 0px); }
-  17% { opacity: 1; }
-  62% { opacity: 0.6; transform: translate3d(-3px, -78px, 0px); }
-  100% { opacity: 0; transform: translate3d(-1px, -128px, 0px); }
-}
-@keyframes hk_rwisp { 
-  0% { opacity: 0; transform: translateY(0px) scaleX(1); }
-  10% { opacity: 0.75; }
-  46% { opacity: 0.5; transform: translateY(-4px) scaleX(1.14); }
-  62%, 100% { opacity: 0; transform: translateY(-11px) scaleX(1.3); }
-}
-@keyframes hk_rsheart { 
-  0%, 44% { opacity: 0; transform: translateY(6px) scale(0.72); }
-  52% { opacity: 0.9; }
-  70% { opacity: 0.9; transform: translateY(0px) scale(1); }
-  86% { opacity: 0.55; transform: translateY(-7px) scale(1.1); }
-  100% { opacity: 0; transform: translateY(-16px) scale(1.24); }
-}
-@keyframes hk_rmote { 
-  0% { opacity: 0; transform: translate3d(0px, 0px, 0px); }
-  30% { opacity: 0.85; }
-  70% { opacity: 0.5; transform: translate3d(5px, -26px, 0px); }
-  100% { opacity: 0; transform: translate3d(-2px, -46px, 0px); }
-}
-@keyframes hk_rvig { 
-  0% { opacity: 0.62; }
-  100% { opacity: 1; }
-}
-@keyframes hk_rflame { 
-  0%, 100% { transform: scaleY(1); }
-  30% { transform: scaleY(0.9) skewX(2.5deg); }
-  55% { transform: scaleY(1.08); }
-  75% { transform: scaleY(0.93) skewX(-2deg); }
-}
-@keyframes hk_rheart { 
-  0% { transform: translateY(0px) translateX(0px); opacity: 0; }
-  10% { opacity: 1; }
-  50% { transform: translateY(-34px) translateX(3px); }
-  62% { opacity: 0.76; }
-  100% { transform: translateY(-66px) translateX(-2px); opacity: 0; }
-}
-@keyframes hk_crbleg2 { 
-  0% { transform: translateY(0.2px) rotate(-3.2deg); }
-  100% { transform: translateY(-0.9px) rotate(3.2deg); }
-}
-@keyframes hk_crbclaw2 { 
-  0%, 58%, 100% { transform: rotate(0deg); }
-  66% { transform: rotate(-9deg); }
-  74% { transform: rotate(5deg); }
-  82% { transform: rotate(-2deg); }
-}
-@keyframes hk_crbeye2 { 
-  0%, 62%, 100% { transform: translateY(0px) rotate(0deg); }
-  70% { transform: translateY(-0.5px) rotate(-5deg); }
-  84% { transform: translateY(-0.5px) rotate(5deg); }
-}
-@keyframes hk_crbshl { 
-  0%, 100% { transform: translateY(0px) rotate(-6deg); }
-  50% { transform: translateY(-1.6px) rotate(8deg); }
-}
-@keyframes hk_crbwalk { 
-  0% { transform: translate3d(0,0,0) scale(var(--cs,1)); }
-  100% { transform: translate3d(430px,0,0) scale(var(--cs,1)); }
-}
-@keyframes hk_crbwalkr { 
-  0% { transform: translate3d(0,0,0) scale(var(--cs,1)); }
-  100% { transform: translate3d(-430px,0,0) scale(var(--cs,1)); }
-}
-@keyframes hk_crbbob { 
-  0% { transform: translateY(0px) rotate(-1.5deg); }
-  100% { transform: translateY(-1.6px) rotate(1.5deg); }
-}
-@keyframes hk_crbbobr { 
-  0% { transform: scaleX(-1) translateY(0px) rotate(1.5deg); }
-  100% { transform: scaleX(-1) translateY(-1.6px) rotate(-1.5deg); }
-}
-@keyframes hk_crbhole { 
-  0%, 6% { }
-  100% { }
-}
-@keyframes hk_crbpuff { 
-  0%, 10% { opacity: 0; transform: scale(0.4); }
-  15% { opacity: 0.8; transform: scale(1); }
-  24% { opacity: 0; transform: scale(1.5); }
-  42% { opacity: 0; transform: scale(0.4); }
-  46% { opacity: 0.7; transform: scale(1.1); }
-  54%, 100% { opacity: 0; transform: scale(1.5); }
-}
-@keyframes hk_crbpop { 
-  0%, 10% { transform: translateY(15px) scale(0.9); opacity: 0; }
-  16% { transform: translateY(-1px) scale(1); opacity: 1; }
-  22% { transform: translateY(-3px) rotate(-5deg); }
-  30% { transform: translateY(-3px) rotate(5deg); }
-  38% { transform: translateY(-2px) rotate(0deg); opacity: 1; }
-  46% { transform: translateY(15px) scale(0.9); opacity: 0; }
-  100% { transform: translateY(15px) scale(0.9); opacity: 0; }
-}
-@keyframes hk_bdflyR { 
-  0% { opacity: 0; transform: translate3d(0,0,0) rotate(7deg) scaleX(-1) scale(var(--bs,1)); }
-  8% { opacity: var(--bo,.8); }
-  34% { transform: translate3d(-150px,-30px,0) rotate(4deg) scaleX(-1) scale(var(--bs,1)); }
-  62% { transform: translate3d(-300px,4px,0) rotate(-5deg) scaleX(-1) scale(var(--bs,1)); }
-  88% { opacity: var(--bo,.8); transform: translate3d(-430px,-16px,0) rotate(2deg) scaleX(-1) scale(var(--bs,1)); }
-  100% { opacity: 0; transform: translate3d(-500px,-24px,0) rotate(3deg) scaleX(-1) scale(var(--bs,1)); }
-}
-@keyframes hk_arib { 
-  0% { transform: translate3d(0px, -10px, 0px) scaleX(0.9); opacity: 0.24; }
-  100% { transform: translate3d(0px, 10px, 0px) scaleX(1.1); opacity: 0.55; }
-}
-@keyframes hk_swFlyR { 
-  0% { transform: translate3d(var(--flyx,0px),var(--flyy,0px),0) rotate(var(--flyr,0deg)) scale(1); opacity: 1; }
-  8% { transform: translate3d(calc(var(--flyx,0px) + 6%),var(--flyy,0px),0) rotate(calc(var(--flyr,0deg) + 2deg)) scale(1.03); opacity: 1; }
-  30% { opacity: 1; }
-  78% { opacity: 0; }
-  100% { transform: translate3d(calc(var(--flyx,0px) + 150%),calc(var(--flyy,0px) + 58px),0) rotate(calc(var(--flyr,0deg) + 24deg)) scale(.84); opacity: 0; }
-}
-@keyframes hk_fxPeelR { 
-  0% { transform: perspective(1100px) translate3d(var(--flyx,0px),var(--flyy,0px),0) rotateY(0deg); opacity: 1; }
-  100% { transform: perspective(1100px) translate3d(calc(var(--flyx,0px) + 18%),var(--flyy,0px),0) rotateY(-96deg); opacity: 0; }
-}
-@keyframes hk_fxFileR { 
-  0% { transform: translate3d(var(--flyx,0px),var(--flyy,0px),0) rotate(var(--flyr,0deg)) scale(1); opacity: 1; }
-  100% { transform: translate3d(29%, -62%, 0px) rotate(14deg) scale(0.16); opacity: 0; }
-}
-@keyframes hk_fxDeal { 
-  0% { transform: translate3d(var(--flyx,0px),var(--flyy,0px),0) rotate(var(--flyr,0deg)) scale(1); opacity: 1; }
-  34% { transform: translate3d(calc(var(--flyx,0px) * .35),-14px,0) rotate(calc(var(--flyr,0deg) * .3)) scale(1.02); opacity: 1; }
-  100% { transform: translate3d(0px, 26px, 0px) rotate(0deg) scale(0.93); opacity: 0; }
-}
-@keyframes hk_fxTumbleR { 
-  0% { transform: perspective(1200px) translate3d(var(--flyx,0px),var(--flyy,0px),0) rotateX(0deg) rotate(var(--flyr,0deg)) scale(1); opacity: 1; }
-  12% { transform: perspective(1200px) translate3d(calc(var(--flyx,0px) + 8%),calc(var(--flyy,0px) - 18px),0) rotateX(120deg) rotate(calc(var(--flyr,0deg) + 3deg)) scale(1.02); opacity: 1; }
-  100% { transform: perspective(1200px) translate3d(calc(var(--flyx,0px) + 132%),calc(var(--flyy,0px) + 36px),0) rotateX(900deg) rotate(calc(var(--flyr,0deg) + 10deg)) scale(.82); opacity: 0; }
-}
-@keyframes hk_fxSpinR { 
-  0% { transform: translate3d(var(--flyx,0px),var(--flyy,0px),0) rotate(var(--flyr,0deg)) scale(1); opacity: 1; }
-  100% { transform: translate3d(calc(var(--flyx,0px) + 138%),calc(var(--flyy,0px) + 30px),0) rotate(calc(var(--flyr,0deg) + 720deg)) scale(.76); opacity: 0; }
-}
-@keyframes hk_fxSailR { 
-  0% { transform: perspective(1000px) translate3d(var(--flyx,0px),var(--flyy,0px),0) rotateX(0deg) rotate(var(--flyr,0deg)) scale(1); opacity: 1; }
-  100% { transform: perspective(1000px) translate3d(calc(var(--flyx,0px) + 46%),-150%,0) rotateX(-58deg) rotate(calc(var(--flyr,0deg) + 16deg)) scale(.7); opacity: 0; }
-}
-@keyframes hk_fxSailFileR { 
-  0% { transform: perspective(1100px) translate3d(var(--flyx,0px),var(--flyy,0px),0) rotateX(0deg) rotate(var(--flyr,0deg)) scale(1); opacity: 1; }
-  34% { transform: perspective(1100px) translate3d(calc(var(--flyx,0px) + 16%),calc(var(--flyy,0px) - 30px),0) rotateX(26deg) rotate(calc(var(--flyr,0deg) + 7deg)) scale(.97); opacity: 1; }
-  100% { transform: perspective(1100px) translate3d(29%,-62%,0) rotateX(52deg) rotate(calc(var(--flyr,0deg) + 18deg)) scale(.14); opacity: 0; }
-}
-@keyframes hk_fxSailDnR { 
-  0% { transform: perspective(1000px) translate3d(var(--flyx,0px),var(--flyy,0px),0) rotateX(0deg) rotate(var(--flyr,0deg)) scale(1); opacity: 1; }
-  100% { transform: perspective(1000px) translate3d(calc(var(--flyx,0px) + 46%),150%,0) rotateX(58deg) rotate(calc(var(--flyr,0deg) + 16deg)) scale(.7); opacity: 0; }
-}
-@keyframes hk_fxSailDnFileR { 
-  0% { transform: perspective(1100px) translate3d(var(--flyx,0px),var(--flyy,0px),0) rotateX(0deg) rotate(var(--flyr,0deg)) scale(1); opacity: 1; }
-  34% { transform: perspective(1100px) translate3d(calc(var(--flyx,0px) + 16%),calc(var(--flyy,0px) + 30px),0) rotateX(-26deg) rotate(calc(var(--flyr,0deg) + 7deg)) scale(.97); opacity: 1; }
-  100% { transform: perspective(1100px) translate3d(29%,-62%,0) rotateX(52deg) rotate(calc(var(--flyr,0deg) + 18deg)) scale(.14); opacity: 0; }
-}
-@keyframes hk_fxPopR { 
-  0% { transform: translate3d(var(--flyx,0px),var(--flyy,0px),0) rotate(var(--flyr,0deg)) scale(1); opacity: 1; }
-  26% { transform: translate3d(calc(var(--flyx,0px) + 3%),calc(var(--flyy,0px) - 6px),0) rotate(calc(var(--flyr,0deg) + 2deg)) scale(1.06); opacity: 1; }
-  100% { transform: translate3d(calc(var(--flyx,0px) + 6%),calc(var(--flyy,0px) - 10px),0) rotate(calc(var(--flyr,0deg) + 3deg)) scale(.80); opacity: 0; }
-}
-@keyframes hk_fxBeam { 
-  0% { transform: translate3d(var(--flyx,0px),var(--flyy,0px),0) rotate(var(--flyr,0deg)) scale(1,1); opacity: 1; animation-timing-function: cubic-bezier(0.7, 0, 0.85, 0.3); }
-  48% { transform: translate3d(var(--flyx,0px),var(--flyy,0px),0) rotate(0deg) scale(.012,1.05); opacity: 1; animation-timing-function: cubic-bezier(0.5, 0, 0.75, 0.4); }
-  100% { transform: translate3d(var(--flyx,0px),var(--flyy,0px),0) rotate(0deg) scale(.012,.004); opacity: 0; }
-}
-@keyframes hk_fxBlink { 
-  0% { transform: translate3d(var(--flyx,0px),var(--flyy,0px),0) rotate(var(--flyr,0deg)) scale(1,1); opacity: 1; }
-  100% { transform: translate3d(var(--flyx,0px),var(--flyy,0px),0) rotate(0deg) scale(1.05,.004); opacity: 0; }
-}
-@keyframes hk_fxBoltR { 
-  0% { transform: translate3d(var(--flyx,0px),var(--flyy,0px),0) rotate(var(--flyr,0deg)) scale(1); opacity: 1; }
-  16% { transform: translate3d(calc(var(--flyx,0px) + 7px),calc(var(--flyy,0px) - 4px),0) rotate(calc(var(--flyr,0deg) - 1.4deg)) scale(1.02); opacity: 1; }
-  32% { transform: translate3d(calc(var(--flyx,0px) - 6px),calc(var(--flyy,0px) + 3px),0) rotate(calc(var(--flyr,0deg) + 1.2deg)) scale(.99); opacity: 1; }
-  48% { transform: translate3d(calc(var(--flyx,0px) + 4px),var(--flyy,0px),0) rotate(var(--flyr,0deg)) scale(1.03); opacity: 1; }
-  100% { transform: translate3d(var(--flyx,0px),calc(var(--flyy,0px) + 10px),0) rotate(var(--flyr,0deg)) scale(.90); opacity: 0; }
-}
-@keyframes hk_fxHold { 
-  0% { opacity: 1; }
-  100% { opacity: 1; }
-}
-@keyframes hk_fxShotR { 
-  0% { transform: translate3d(var(--flyx,0px),var(--flyy,0px),0) rotate(var(--flyr,0deg)) scale(1); opacity: 1; animation-timing-function: cubic-bezier(0.2, 0.62, 0.44, 1); }
-  46% { transform: translate3d(calc(var(--flyx,0px) + 26%),-150%,0) rotate(calc(var(--flyr,0deg) + 14deg)) scale(.66); opacity: 1; animation-timing-function: cubic-bezier(0.56, 0.06, 0.72, 0.9); }
-  100% { transform: translate3d(29%,-62%,0) rotate(calc(var(--flyr,0deg) + 26deg)) scale(.12); opacity: 0; }
-}
-@keyframes hk_fxSpiralR { 
-  0% { transform: perspective(1400px) translate3d(var(--flyx,0px),var(--flyy,0px),0) rotateY(0deg) rotate(var(--flyr,0deg)) scale(1); opacity: 1; }
-  100% { transform: perspective(1400px) translate3d(calc(var(--flyx,0px) + 146%),-38%,0) rotateY(1080deg) rotate(calc(var(--flyr,0deg) + 8deg)) scale(.58); opacity: 0; }
-}
-@keyframes hk_fxDrain { 
-  0% { transform: translate3d(var(--flyx,0px),var(--flyy,0px),0) rotate(var(--flyr,0deg)) scale(1); opacity: 1; }
-  25% { transform: translate3d(26%, 14%, 0px) rotate(96deg) scale(0.8); opacity: 1; }
-  50% { transform: translate3d(2%, 30%, 0px) rotate(228deg) scale(0.56); opacity: 1; }
-  72% { transform: translate3d(-14%, 20%, 0px) rotate(392deg) scale(0.32); opacity: 0.9; }
-  88% { transform: translate3d(-4%, 10%, 0px) rotate(560deg) scale(0.14); opacity: 0.6; }
-  100% { transform: translate3d(0px, 6%, 0px) rotate(760deg) scale(0.02); opacity: 0; }
-}
-@keyframes hk_fxBlast { 
-  0% { transform: translate3d(var(--flyx,0px),var(--flyy,0px),0) rotate(var(--flyr,0deg)) scale(1); opacity: 1; animation-timing-function: cubic-bezier(0.4, 0, 0.7, 0.5); }
-  18% { transform: translate3d(var(--flyx,0px),calc(var(--flyy,0px) + 15px),0) rotate(calc(var(--flyr,0deg) * .5)) scale(.985,.975); opacity: 1; animation-timing-function: cubic-bezier(0.5, 0, 0.62, 1); }
-  100% { transform: translate3d(calc(var(--flyx,0px) * .4),-205%,0) rotate(-3deg) scale(.52); opacity: 0; }
-}
-@keyframes hk_fxCrush { 
-  0% { transform: translate3d(var(--flyx,0px),var(--flyy,0px),0) rotate(var(--flyr,0deg)) scale(1,1); opacity: 1; animation-timing-function: cubic-bezier(0.3, 0, 0.9, 0.4); }
-  16% { transform: translate3d(var(--flyx,0px),var(--flyy,0px),0) rotate(calc(var(--flyr,0deg) * .6)) scale(.995,1.03); opacity: 1; animation-timing-function: cubic-bezier(0.52, 0, 0.62, 1); }
-  58% { transform: translate3d(var(--flyx,0px),var(--flyy,0px),0) rotate(0deg) scale(1.10,.07); opacity: 1; }
-  100% { transform: translate3d(var(--flyx,0px),var(--flyy,0px),0) rotate(0deg) scale(1.15,.02); opacity: 0; }
-}
-@keyframes hk_fxPuntR { 
-  0% { transform: perspective(1300px) translate3d(var(--flyx,0px),var(--flyy,0px),0) rotateX(0deg) rotate(var(--flyr,0deg)) scale(1); opacity: 1; }
-  24% { transform: perspective(1300px) translate3d(calc(var(--flyx,0px) + 24%),-86%,0) rotateX(210deg) rotate(calc(var(--flyr,0deg) + 5deg)) scale(.84); opacity: 1; }
-  100% { transform: perspective(1300px) translate3d(calc(var(--flyx,0px) + 104%),-230%,0) rotateX(760deg) rotate(calc(var(--flyr,0deg) + 12deg)) scale(.46); opacity: 0; }
-}
-@keyframes hk_arRise { 
-  0% { transform: translate3d(0px, 22px, 0px) scale(0.936); opacity: 0.42; }
-  100% { transform: none; opacity: 1; }
-}
-@keyframes hk_fmR { 
-  0%, 34% { opacity: 0.3; transform: translate3d(0px, 0px, 0px); }
-  50%, 59% { opacity: 1; transform: translate3d(2px, 0px, 0px); }
-  84%, 100% { opacity: 0.3; transform: translate3d(0px, 0px, 0px); }
-}
-@keyframes hk_swFade { 
-  100% { opacity: 0; }
-}
-@keyframes gul_idle { 
-  0%, 72% { transform: rotate(0deg) translateY(0px); }
-  76.5% { transform: rotate(calc(var(--guld,1) * -6.4deg)) translateY(.5px); }
-  80.4% { transform: rotate(calc(var(--guld,1) * -6.9deg)) translateY(.6px); }
-  83% { transform: rotate(calc(var(--guld,1) * 1.5deg)) translateY(-.2px); }
-  84.6% { transform: rotate(calc(var(--guld,1) * -.6deg)) translateY(0); }
-  86%, 100% { transform: rotate(0deg) translateY(0px); }
-}
-@keyframes gul_peck { 
-  0%, 56% { transform: rotate(0deg); }
-  57.3% { transform: rotate(0deg); }
-  58.8% { transform: rotate(calc(var(--guld,1) * -5deg)); }
-  59.2%, 62.4% { transform: rotate(calc(var(--guld,1) * -5deg)); }
-  63.6% { transform: rotate(calc(var(--guld,1) * -1.5deg)); }
-  64.8% { transform: rotate(0deg); }
-  66%, 74% { transform: rotate(0deg); }
-  75.2% { transform: rotate(0deg); }
-  76.6% { transform: rotate(calc(var(--guld,1) * -4.5deg)); }
-  77%, 79.4% { transform: rotate(calc(var(--guld,1) * -4.5deg)); }
-  80.6% { transform: rotate(calc(var(--guld,1) * -1deg)); }
-  81.8% { transform: rotate(0deg); }
-  83%, 100% { transform: rotate(0deg); }
-}
-@keyframes gul_pkb { 
-  0%, 56% { transform: translate(var(--gbx),var(--gby)) rotate(0deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))); }
-  57.3% { transform: translate(var(--gbx),var(--gby)) rotate(-1.5deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))); }
-  58.8% { transform: translate(var(--gbx),var(--gby)) rotate(-21deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))); }
-  59.2%, 62.4% { transform: translate(var(--gbx),var(--gby)) rotate(-21.5deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))); }
-  63.6% { transform: translate(var(--gbx),var(--gby)) rotate(-6deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))); }
-  64.8% { transform: translate(var(--gbx),var(--gby)) rotate(1.2deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))); }
-  66%, 74% { transform: translate(var(--gbx),var(--gby)) rotate(0deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))); }
-  75.2% { transform: translate(var(--gbx),var(--gby)) rotate(-1.5deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))); }
-  76.6% { transform: translate(var(--gbx),var(--gby)) rotate(-19.5deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))); }
-  77%, 79.4% { transform: translate(var(--gbx),var(--gby)) rotate(-20deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))); }
-  80.6% { transform: translate(var(--gbx),var(--gby)) rotate(-5deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))); }
-  81.8% { transform: translate(var(--gbx),var(--gby)) rotate(1deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))); }
-  83%, 100% { transform: translate(var(--gbx),var(--gby)) rotate(0deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))); }
-}
-@keyframes gul_pkh { 
-  0%, 56% { transform: translate(var(--gbx),var(--gby)) rotate(0deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))) translate(var(--gnx),var(--gny)) rotate(0deg) translate(calc(-1 * var(--gnx)),calc(-1 * var(--gny))); }
-  57.3% { transform: translate(var(--gbx),var(--gby)) rotate(-1.5deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))) translate(var(--gnx),var(--gny)) rotate(13deg) translate(calc(-1 * var(--gnx)),calc(-1 * var(--gny))); }
-  58.8% { transform: translate(var(--gbx),var(--gby)) rotate(-21deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))) translate(var(--gnx),var(--gny)) rotate(-34deg) translate(calc(-1 * var(--gnx)),calc(-1 * var(--gny))); }
-  59.2%, 62.4% { transform: translate(var(--gbx),var(--gby)) rotate(-21.5deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))) translate(var(--gnx),var(--gny)) rotate(-35deg) translate(calc(-1 * var(--gnx)),calc(-1 * var(--gny))); }
-  63.6% { transform: translate(var(--gbx),var(--gby)) rotate(-6deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))) translate(var(--gnx),var(--gny)) rotate(8deg) translate(calc(-1 * var(--gnx)),calc(-1 * var(--gny))); }
-  64.8% { transform: translate(var(--gbx),var(--gby)) rotate(1.2deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))) translate(var(--gnx),var(--gny)) rotate(-2.5deg) translate(calc(-1 * var(--gnx)),calc(-1 * var(--gny))); }
-  66%, 74% { transform: translate(var(--gbx),var(--gby)) rotate(0deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))) translate(var(--gnx),var(--gny)) rotate(0deg) translate(calc(-1 * var(--gnx)),calc(-1 * var(--gny))); }
-  75.2% { transform: translate(var(--gbx),var(--gby)) rotate(-1.5deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))) translate(var(--gnx),var(--gny)) rotate(12deg) translate(calc(-1 * var(--gnx)),calc(-1 * var(--gny))); }
-  76.6% { transform: translate(var(--gbx),var(--gby)) rotate(-19.5deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))) translate(var(--gnx),var(--gny)) rotate(-32deg) translate(calc(-1 * var(--gnx)),calc(-1 * var(--gny))); }
-  77%, 79.4% { transform: translate(var(--gbx),var(--gby)) rotate(-20deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))) translate(var(--gnx),var(--gny)) rotate(-33deg) translate(calc(-1 * var(--gnx)),calc(-1 * var(--gny))); }
-  80.6% { transform: translate(var(--gbx),var(--gby)) rotate(-5deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))) translate(var(--gnx),var(--gny)) rotate(7deg) translate(calc(-1 * var(--gnx)),calc(-1 * var(--gny))); }
-  81.8% { transform: translate(var(--gbx),var(--gby)) rotate(1deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))) translate(var(--gnx),var(--gny)) rotate(-2deg) translate(calc(-1 * var(--gnx)),calc(-1 * var(--gny))); }
-  83%, 100% { transform: translate(var(--gbx),var(--gby)) rotate(0deg) translate(calc(-1 * var(--gbx)),calc(-1 * var(--gby))) translate(var(--gnx),var(--gny)) rotate(0deg) translate(calc(-1 * var(--gnx)),calc(-1 * var(--gny))); }
-}
-@keyframes gul_pkt { 
-  0%, 56% { transform: translate(var(--gtx),var(--gty)) rotate(0deg) translate(calc(-1 * var(--gtx)),calc(-1 * var(--gty))); }
-  57.3% { transform: translate(var(--gtx),var(--gty)) rotate(0deg) translate(calc(-1 * var(--gtx)),calc(-1 * var(--gty))); }
-  58.8% { transform: translate(var(--gtx),var(--gty)) rotate(-9deg) translate(calc(-1 * var(--gtx)),calc(-1 * var(--gty))); }
-  59.2%, 62.4% { transform: translate(var(--gtx),var(--gty)) rotate(-10deg) translate(calc(-1 * var(--gtx)),calc(-1 * var(--gty))); }
-  63.6% { transform: translate(var(--gtx),var(--gty)) rotate(-3deg) translate(calc(-1 * var(--gtx)),calc(-1 * var(--gty))); }
-  64.8% { transform: translate(var(--gtx),var(--gty)) rotate(1deg) translate(calc(-1 * var(--gtx)),calc(-1 * var(--gty))); }
-  66%, 74% { transform: translate(var(--gtx),var(--gty)) rotate(0deg) translate(calc(-1 * var(--gtx)),calc(-1 * var(--gty))); }
-  75.2% { transform: translate(var(--gtx),var(--gty)) rotate(0deg) translate(calc(-1 * var(--gtx)),calc(-1 * var(--gty))); }
-  76.6% { transform: translate(var(--gtx),var(--gty)) rotate(-8deg) translate(calc(-1 * var(--gtx)),calc(-1 * var(--gty))); }
-  77%, 79.4% { transform: translate(var(--gtx),var(--gty)) rotate(-9deg) translate(calc(-1 * var(--gtx)),calc(-1 * var(--gty))); }
-  80.6% { transform: translate(var(--gtx),var(--gty)) rotate(-2.5deg) translate(calc(-1 * var(--gtx)),calc(-1 * var(--gty))); }
-  81.8% { transform: translate(var(--gtx),var(--gty)) rotate(0deg) translate(calc(-1 * var(--gtx)),calc(-1 * var(--gty))); }
-  83%, 100% { transform: translate(var(--gtx),var(--gty)) rotate(0deg) translate(calc(-1 * var(--gtx)),calc(-1 * var(--gty))); }
-}
-@keyframes gul_step { 
-  0% { transform: translate(var(--hx),var(--hy)) rotate(26deg) translate(calc(-1 * var(--hx)),calc(-1 * var(--hy))); animation-timing-function: linear; }
-  56% { transform: translate(var(--hx),var(--hy)) rotate(-22deg) translate(calc(-1 * var(--hx)),calc(-1 * var(--hy))); animation-timing-function: cubic-bezier(0.32, 0, 0.22, 1); }
-  72% { transform: translate(var(--hx),calc(var(--hy) - 1.7px)) rotate(-2deg) translate(calc(-1 * var(--hx)),calc(-1 * var(--hy))); }
-  86% { transform: translate(var(--hx),calc(var(--hy) - 1.1px)) rotate(28deg) translate(calc(-1 * var(--hx)),calc(-1 * var(--hy))); }
-  94% { transform: translate(var(--hx),var(--hy)) rotate(26.6deg) translate(calc(-1 * var(--hx)),calc(-1 * var(--hy))); }
-  100% { transform: translate(var(--hx),var(--hy)) rotate(26deg) translate(calc(-1 * var(--hx)),calc(-1 * var(--hy))); }
-}
-@keyframes hk_tgnomR { 
-  0%, 44% { transform: rotate(0deg) scale(1); }
-  50% { transform: rotate(5deg) scale(1); }
-  53% { transform: rotate(6.5deg) scale(0.985); }
-  59% { transform: rotate(-4deg) scale(1.03); }
-  62% { transform: rotate(-1deg) scale(1.06); }
-  65% { transform: rotate(7deg) scale(1.05); }
-  69% { transform: rotate(-6deg) scale(1.03); }
-  73% { transform: rotate(3deg) scale(1.01); }
-  78%, 100% { transform: rotate(0deg) scale(1); }
-}
-@keyframes hk_dcruiseR { 
-  0% { opacity: 0; transform: translate(150px, 2px); }
-  6% { opacity: 1; }
-  36% { transform: translate(40px, -1px); }
-  44% { transform: translate(22px, 1px); }
-  58% { transform: translate(20px, 1px); }
-  66% { transform: translate(4px, -1px); }
-  94% { opacity: 1; }
-  100% { opacity: 0; transform: translate(-90px, 0px); }
-}
-@keyframes hk_pelpassR { 
-  0% { transform: translate(0px, 0px); opacity: 0; }
-  5% { opacity: 0.96; }
-  26% { transform: translate(-130px, 8px); }
-  50% { transform: translate(-258px, -5px); }
-  76% { transform: translate(-392px, 6px); }
-  94% { opacity: 0.96; }
-  100% { transform: translate(-560px, -2px); opacity: 0; }
-}
-@keyframes gcl_crbleg2 { 
-  0% { transform: translateY(calc(.2px * var(--gcs))) rotate(-3.2deg); }
-  100% { transform: translateY(calc(-.9px * var(--gcs))) rotate(3.2deg); }
-}
-@keyframes gcl_shellglow { 
-  0%, 100% { opacity: 0.24; transform: translateX(calc(-.5px * var(--gcs))); }
-  46% { opacity: 0.7; transform: translateX(calc(.75px * var(--gcs))); }
-}
-@keyframes skc_arms { 
-  0%, 64% { transform: rotate(0deg); }
-  66%, 72.6% { transform: rotate(-36deg); }
-  73.2% { transform: rotate(-8deg); }
-  73.9% { transform: rotate(-66deg); }
-  75% { transform: rotate(-30deg); }
-  76.4% { transform: rotate(-44deg); }
-  80.2% { transform: rotate(-42deg); }
-  82% { transform: rotate(-8deg); }
-  84%, 94% { transform: rotate(-20deg); }
-  96%, 100% { transform: rotate(0deg); }
-}
-@keyframes skc_armsR { 
-  0%, 64% { transform: rotate(0deg); }
-  66%, 72.6% { transform: rotate(36deg); }
-  73.2% { transform: rotate(8deg); }
-  73.9% { transform: rotate(66deg); }
-  75% { transform: rotate(30deg); }
-  76.4% { transform: rotate(44deg); }
-  80.2% { transform: rotate(42deg); }
-  82% { transform: rotate(8deg); }
-  84%, 94% { transform: rotate(20deg); }
-  96%, 100% { transform: rotate(0deg); }
-}
-@keyframes gcl_crbeye2 { 
-  0%, 62%, 100% { transform: translateY(0px) rotate(0deg); }
-  70% { transform: translateY(calc(-.5px * var(--gcs))) rotate(-5deg); }
-  84% { transform: translateY(calc(-.5px * var(--gcs))) rotate(5deg); }
-}
-@keyframes gcl_eyebob { 
-  0%, 100% { transform: translateY(0px); }
-  47% { transform: translateY(calc(-.32px * var(--gcs))); }
-}
-@keyframes gcl_swt { 
-  0%, 81.2% { opacity: 0; transform: translate(0px, 0px); }
-  81.9% { opacity: 0.95; transform: translate(calc(.5px * var(--gcs)),calc(.7px * var(--gcs))); }
-  82.6%, 100% { opacity: 0; transform: translate(calc(1.2px * var(--gcs)),calc(2.6px * var(--gcs))); }
-}
-@keyframes apt_scoot_a_rear { 
-  0%, 8% { transform: rotate(-10deg); }
-  46%, 58% { transform: rotate(9deg); }
-  72%, 100% { transform: rotate(-10deg); }
-}
-@keyframes apt_scoot_b_rear { 
-  0%, 22% { transform: rotate(9deg); }
-  42%, 58% { transform: rotate(-10deg); }
-  96%, 100% { transform: rotate(9deg); }
-}
-@keyframes apt_sea_rudder_far { 
-  0%, 100% { transform: rotate(9deg); }
-  12% { transform: rotate(-3deg); }
-  34% { transform: rotate(2deg); }
-  68% { transform: rotate(7deg); }
-}
-@keyframes apt_sea_rudder_near { 
-  0%, 100% { transform: rotate(11deg); }
-  13% { transform: rotate(-4deg); }
-  34% { transform: rotate(1deg); }
-  68% { transform: rotate(8deg); }
 }
 @keyframes skn_bub1 { 
   0%, 29.5% { opacity: 0; transform: translate(0px, 0px); }
@@ -1916,18 +966,249 @@ html:not(.hk_diag_livedec) .hk.hk .ccrab.rtl { left: auto; right: 74px; }
   0%, 100% { transform: scaleY(1) translateX(0px); }
   50% { transform: scaleY(0.72) translateX(0.7px); }
 }
-@keyframes xps_crabglee { 
-  0%, 100% { transform: translate(0px, 0px) scale(1, 1); }
-  28% { transform: translate(0px, -0.9px) scale(1.22, 1.22); }
-  58% { transform: translate(0px, -0.5px) scale(1.12, 1.12); }
-}
 @keyframes hk_glassdrift { 
   0% { transform: translateX(0px); }
   100% { transform: translateX(-54.5%); }
+}
+@keyframes nh_fly1 { 
+  0% { translate: 0px; scale: 1; opacity: 0; }
+  5% { opacity: 1; }
+  82% { opacity: 1; }
+  100% { translate: 300px 15px; scale: 0.18; opacity: 0; }
+}
+@keyframes nh_fly2 { 
+  0% { translate: -60px -3px; scale: 1.6; opacity: 0; }
+  6% { opacity: 1; }
+  82% { opacity: 1; }
+  100% { translate: 242px 12px; scale: 0.2; opacity: 0; }
+}
+@keyframes nh_flap { 
+  0% { scale: 1; }
+  100% { scale: 1 -0.45; }
+}
+@keyframes nh_look { 
+  0%, 22% { rotate: 0deg; }
+  32%, 55% { rotate: -7deg; }
+  65%, 86% { rotate: 5deg; }
+  100% { rotate: 0deg; }
+}
+@keyframes nh_fly1k { 
+  0% { translate: 0px; scale: 1; opacity: 0; }
+  5% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { translate: 310px 52px; scale: 0.16; opacity: 0; }
+}
+@keyframes nh_fly2k { 
+  0% { translate: -95px -17px; scale: 1.6; opacity: 0; }
+  6% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { translate: 215px 35px; scale: 0.18; opacity: 0; }
+}
+@keyframes nh_bob { 
+  100% { translate: 0px 1.2px; }
+}
+@keyframes nh_hop { 
+  100% { translate: 0px -1.6px; }
+}
+@keyframes nh_toss { 
+  100% { translate: 0px -8px; }
+}
+@keyframes nh_sway { 
+  100% { rotate: 3deg; }
+}
+@keyframes nh_drift { 
+  100% { translate: -10px; }
+}
+@keyframes nh_lamp { 
+  100% { opacity: 0.78; }
+}
+@keyframes nh_glint { 
+  100% { opacity: 0.55; }
+}
+@keyframes nh_scuttle { 
+  0%, 30% { translate: 0px; }
+  40%, 70% { translate: 7px; }
+  80%, 100% { translate: 0px; }
+}
+@keyframes nh_paddle { 
+  0% { rotate: -6deg; }
+  100% { rotate: 6deg; }
+}
+@keyframes nh_crawlA { 
+  0% { translate: 0px; opacity: 1; }
+  55% { translate: 0px; animation-timing-function: ease-out; }
+  55% { translate: 0px; animation-timing-function: ease-out; }
+  60% { translate: calc(var(--hx) * var(--p1)) calc(var(--hy) * var(--p1)); }
+  64% { translate: calc(var(--hx) * var(--p1)) calc(var(--hy) * var(--p1)); animation-timing-function: ease-out; }
+  71% { translate: calc(var(--hx) * var(--p2)) calc(var(--hy) * var(--p2)); }
+  74% { translate: calc(var(--hx) * var(--p2)) calc(var(--hy) * var(--p2)); animation-timing-function: ease-out; }
+  80% { translate: var(--hx) var(--hy); }
+  80% { translate: var(--hx) var(--hy); opacity: 1; }
+  83% { translate: calc(var(--hx) * 1.04) calc(var(--hy) * 1.04); opacity: 0; }
+  85% { translate: 0px; opacity: 0; }
+  88% { translate: 0px; opacity: 1; }
+  100% { translate: 0px; opacity: 1; }
+}
+@keyframes nh_rockA { 
+  0% { rotate: 0deg; }
+  12% { rotate: -12deg; }
+  24% { rotate: -12deg; }
+  32% { rotate: 9deg; }
+  44% { rotate: 9deg; }
+  55% { rotate: 0deg; }
+  56.25% { rotate: 7deg; }
+  57.5% { rotate: -7deg; }
+  58.75% { rotate: 7deg; }
+  60% { rotate: 0deg; }
+  64% { rotate: 0deg; }
+  65.4% { rotate: 7deg; }
+  66.8% { rotate: -7deg; }
+  68.2% { rotate: 7deg; }
+  69.6% { rotate: -7deg; }
+  71% { rotate: 0deg; }
+  74% { rotate: 0deg; }
+  75.2% { rotate: 7deg; }
+  76.4% { rotate: -7deg; }
+  77.6% { rotate: 7deg; }
+  78.8% { rotate: -7deg; }
+  80% { rotate: 0deg; }
+  92% { rotate: 0deg; }
+  100% { rotate: 0deg; }
+}
+@keyframes nh_crawlB { 
+  0% { translate: 0px; opacity: 1; }
+  55% { translate: 0px; animation-timing-function: ease-out; }
+  55% { translate: 0px; animation-timing-function: ease-out; }
+  58% { translate: calc(var(--hx) * calc(var(--p1) * .5)) calc(var(--hy) * calc(var(--p1) * .5)); }
+  62.5% { translate: calc(var(--hx) * calc(var(--p1) * .5)) calc(var(--hy) * calc(var(--p1) * .5)); animation-timing-function: ease-out; }
+  66.25% { translate: calc(var(--hx) * var(--p1)) calc(var(--hy) * var(--p1)); }
+  68.75% { translate: calc(var(--hx) * var(--p1)) calc(var(--hy) * var(--p1)); animation-timing-function: ease-out; }
+  73.75% { translate: calc(var(--hx) * var(--p2)) calc(var(--hy) * var(--p2)); }
+  75.75% { translate: calc(var(--hx) * var(--p2)) calc(var(--hy) * var(--p2)); animation-timing-function: ease-out; }
+  80% { translate: var(--hx) var(--hy); }
+  80% { translate: var(--hx) var(--hy); opacity: 1; }
+  83% { translate: calc(var(--hx) * 1.04) calc(var(--hy) * 1.04); opacity: 0; }
+  85% { translate: 0px; opacity: 0; }
+  88% { translate: 0px; opacity: 1; }
+  100% { translate: 0px; opacity: 1; }
+}
+@keyframes nh_rockB { 
+  0% { rotate: 0deg; }
+  12% { rotate: -12deg; }
+  24% { rotate: -12deg; }
+  32% { rotate: 9deg; }
+  44% { rotate: 9deg; }
+  55% { rotate: 0deg; }
+  56.5% { rotate: 7deg; }
+  58% { rotate: 0deg; }
+  62.5% { rotate: 0deg; }
+  63.75% { rotate: 7deg; }
+  65% { rotate: -7deg; }
+  66.25% { rotate: 0deg; }
+  68.75% { rotate: 0deg; }
+  70% { rotate: 7deg; }
+  71.25% { rotate: -7deg; }
+  72.5% { rotate: 7deg; }
+  73.75% { rotate: 0deg; }
+  75.75% { rotate: 0deg; }
+  77.17% { rotate: 7deg; }
+  78.58% { rotate: -7deg; }
+  80% { rotate: 0deg; }
+  92% { rotate: 0deg; }
+  100% { rotate: 0deg; }
+}
+@keyframes nh_crawlC { 
+  0% { translate: 0px; opacity: 1; }
+  55% { translate: 0px; animation-timing-function: ease-out; }
+  55% { translate: 0px; animation-timing-function: ease-out; }
+  66.25% { translate: calc(var(--hx) * var(--p2)) calc(var(--hy) * var(--p2)); }
+  75% { translate: calc(var(--hx) * var(--p2)) calc(var(--hy) * var(--p2)); animation-timing-function: ease-out; }
+  80% { translate: var(--hx) var(--hy); }
+  80% { translate: var(--hx) var(--hy); opacity: 1; }
+  83% { translate: calc(var(--hx) * 1.04) calc(var(--hy) * 1.04); opacity: 0; }
+  85% { translate: 0px; opacity: 0; }
+  88% { translate: 0px; opacity: 1; }
+  100% { translate: 0px; opacity: 1; }
+}
+@keyframes nh_rockC { 
+  0% { rotate: 0deg; }
+  12% { rotate: -12deg; }
+  24% { rotate: -12deg; }
+  32% { rotate: 9deg; }
+  44% { rotate: 9deg; }
+  55% { rotate: 0deg; }
+  56.25% { rotate: 7deg; }
+  57.5% { rotate: -7deg; }
+  58.75% { rotate: 7deg; }
+  60% { rotate: -7deg; }
+  61.25% { rotate: 7deg; }
+  62.5% { rotate: -7deg; }
+  63.75% { rotate: 7deg; }
+  65% { rotate: -7deg; }
+  66.25% { rotate: 0deg; }
+  75% { rotate: 0deg; }
+  76.25% { rotate: 7deg; }
+  77.5% { rotate: -7deg; }
+  78.75% { rotate: 7deg; }
+  80% { rotate: 0deg; }
+  92% { rotate: 0deg; }
+  100% { rotate: 0deg; }
+}
+@keyframes nh_swell { 
+  100% { translate: -5px 0.6px; }
+}
+@keyframes nh_wtravel { 
+  0% { translate: 0px; opacity: 0; }
+  22% { opacity: 1; }
+  68% { opacity: 1; }
+  100% { translate: var(--wdx, 2px) var(--wdy, 4px); opacity: 0; }
 }
 @keyframes nh_jdrift { 
   100% { translate: 7px 2.5px; }
 }
 @keyframes nh_jpulse { 
   100% { scale: 1.06 0.86; }
+}
+@keyframes nh_wag { 
+  0%, 36%, 58%, 82%, 100% { transform: rotate(0deg); }
+  6%, 18%, 30%, 64%, 76% { transform: rotate(11deg); }
+  12%, 24%, 70% { transform: rotate(-9deg); }
+}
+@keyframes nh_peer { 
+  0%, 12%, 83%, 100% { transform: rotate(0deg); }
+  20%, 45% { transform: rotate(7deg); }
+  53%, 75% { transform: rotate(-6deg); }
+}
+@keyframes nh_ripple { 
+  0% { opacity: 1; }
+  100% { opacity: 0.55; }
+}
+@keyframes nh_swat1 { 
+  0% { transform: rotate(18deg); }
+  12%, 84% { transform: rotate(0deg); }
+  93% { transform: rotate(-14deg); }
+  100% { transform: rotate(18deg); }
+}
+@keyframes nh_swat2 { 
+  0%, 38%, 62%, 100% { transform: rotate(0deg); }
+  45% { transform: rotate(14deg); }
+  50% { transform: rotate(-18deg); }
+}
+@keyframes nh_armsway { 
+  0% { transform: rotate(-4deg); }
+  100% { transform: rotate(4deg); }
+}
+@keyframes nh_volley { 
+  0% { transform: translate(-4px, 0px) rotate(0deg); animation-timing-function: ease-out; }
+  25% { transform: translate(0px, -6px) rotate(45deg); animation-timing-function: ease-in; }
+  50% { transform: translate(4px, 0px) rotate(90deg); animation-timing-function: ease-out; }
+  75% { transform: translate(0px, -6px) rotate(45deg); animation-timing-function: ease-in; }
+  100% { transform: translate(-4px, 0px) rotate(0deg); }
+}
+@keyframes nh_ballshade { 
+  0% { transform: translate(-4px, 0px) scale(1); opacity: 0.5; animation-timing-function: ease-out; }
+  25% { transform: translate(0px, 0px) scale(0.8); opacity: 0.3; animation-timing-function: ease-in; }
+  50% { transform: translate(4px, 0px) scale(1); opacity: 0.5; animation-timing-function: ease-out; }
+  75% { transform: translate(0px, 0px) scale(0.8); opacity: 0.3; animation-timing-function: ease-in; }
+  100% { transform: translate(-4px, 0px) scale(1); opacity: 0.5; }
 }

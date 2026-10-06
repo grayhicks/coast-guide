@@ -43,9 +43,7 @@ body.ph-night .scene{--skytop:#16294A}
 @media (min-width:1220px){.scene{--sx:3.45;--vwl:calc(100vw / 3.45)}}
 @media (min-width:1450px){.scene{--sx:4.1;--vwl:calc(100vw / 4.1)}}
 @media (min-width:1750px){.scene{--sx:4.95;--vwl:calc(100vw / 4.95)}}
-@media (min-width:2100px){.scene{--sx:6;--vwl:calc(100vw / 6)}}
 
-@media (min-width:2600px){.scene{--sx:7;--vwl:calc(100vw / 7)}}
 @media (min-width:3000px){.scene{--sx:8;--vwl:calc(100vw / 8)}}
 @media (min-width:3500px){.scene{--sx:9;--vwl:calc(100vw / 9)}}
 
@@ -101,10 +99,8 @@ body.ph-night .scene{--skytop:#16294A}
 
 @media (min-width:1536px){.scene.tall{--moonr:40px;--boatr:30px}}
 @media (min-width:1750px){.scene.tall{--moonr:56px;--boatr:42px}}
-@media (min-width:2100px){.scene.tall{--moonr:84px;--boatr:64px}}
 
 @media (min-width:1750px){.scene.band{--boatr:40px}}
-@media (min-width:2100px){.scene.band{--moonr:150px;--boatr:66px}}
 
 
 
@@ -465,7 +461,6 @@ html, body { overflow-x: clip; }
   .scene.band .adplane > svg{transform-origin:100% 50%}
 }
 
-@media (min-width:2100px){ .scene.band .adplane{right:150px} }
 
 
 
@@ -573,4 +568,28 @@ html, body { overflow-x: clip; }
   .scene.band .adyacht > svg,.scene.band .adparasail > svg{
     scale:calc(var(--up) * var(--pb) / var(--sx)) calc(var(--up) * var(--pb) / var(--sy))}
   .scene.band .adparasail{left:calc(-94px * var(--pb) / var(--sx))}
+}
+
+
+
+.scene-stage .hero.hk_nhon.hk_nhon,
+.scene.tall .scene-stage .hero.hk_nhon.hk_nhon{ transform:none; inset:0; width:auto; height:auto; }
+
+.scene-stage .hero.hk_nhon.hk_nhon{ --sx:1; --sy:1; }
+
+@media (min-width:901px){ .scene .hero.hk_nhon .hk_nh [id$="ad-parasail"]{ translate:258px 52px; } }
+
+@media (max-width:900px){ .scene .hero.hk_nhon .hk_nh :is([id$="ad-banner-plane"], [id$="ad-parasail"]){ visibility:hidden; } }
+
+@media (min-width:1024px){ .scene.tall .hero.hk_nhon .hk_nh [id$="ad-banner-plane"]{ translate:0 0; } .scene.tall .hero.hk_nhon .hk_nh [id$="ad-parasail"]{ translate:236px 0; } }
+@media (min-width:1220px){ .scene.tall .hero.hk_nhon .hk_nh [id$="ad-banner-plane"]{ translate:0 18px; } .scene.tall .hero.hk_nhon .hk_nh [id$="ad-parasail"]{ translate:228px 18px; } }
+@media (min-width:1450px){ .scene.tall .hero.hk_nhon .hk_nh [id$="ad-banner-plane"]{ translate:0 28px; } .scene.tall .hero.hk_nhon .hk_nh [id$="ad-parasail"]{ translate:230px 28px; } }
+@media (min-width:1750px){ .scene.tall .hero.hk_nhon .hk_nh [id$="ad-banner-plane"]{ translate:0 38px; } .scene.tall .hero.hk_nhon .hk_nh [id$="ad-parasail"]{ translate:232px 38px; } }
+
+@media (min-width:2100px){ .scene .hero.hk_nhon .hk_nh :is([id$="ad-banner-plane"], [id$="ad-parasail"]){ visibility:hidden; } }
+
+@media (min-width:901px){ .scene .hero.hk_nhon .adcart{ translate:-25px 0; } }
+
+@media (max-width:900px){
+  .scene.tall .hero.hk_nhon.ph-night > :is(.hk_nh, .hk_nhfront) > svg{ position:absolute; top:0; right:0; height:100%; width:auto; aspect-ratio:390 / 298; max-width:none; }
 }
