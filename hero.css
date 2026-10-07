@@ -136,6 +136,12 @@
 .ph-dawn .adyacht g[fill="#EDF2F4"] { fill: rgb(234, 210, 198); stroke: rgb(234, 210, 198); }
 .ph-golden .adyacht .adyacht_paint { filter: saturate(1.04) brightness(1.04); }
 .ph-dawn .adyacht .adyacht_paint { filter: saturate(0.96) brightness(1); }
+.ph-golden .jskw path[fill="#E9EEF2"] { fill: rgb(240, 210, 162); }
+.ph-golden .jskw g[fill="#EAF4F8"] { fill: rgb(255, 226, 180); }
+.ph-golden .skbg path { fill: rgb(75, 56, 43); }
+.ph-golden .skbnear path[fill="#2A363F"] { fill: rgb(65, 48, 38); }
+.ph-golden .skbnear path[fill="#26313A"] { fill: rgb(58, 43, 34); }
+.ph-golden .skbnear path[stroke="#F2F6F1"] { stroke: rgb(255, 223, 176); }
 .ph-golden .hero-wave path { fill: rgb(36, 31, 48); }
 .ph-night .hero-wave path { fill: rgb(11, 21, 32); }
 .ph-golden .adcart { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
@@ -178,6 +184,8 @@
 @media (max-width: 430px){.hk .hero .boat-refl { top: 226.5px !important; }}
 .ph-golden .boat-refl { z-index: 2; }
 .ph-night .boat-refl { display: none; }
+.ph-golden .beachprops { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
+.ph-golden .baw { filter: sepia(0.22) saturate(1.12) brightness(1.04); }
 .hero .stars span { position: absolute; border-radius: 50%; background: rgb(234, 242, 251); }
 .hero .stars .bright { box-shadow: rgba(220, 236, 252, 0.7) 0px 0px 5px 1px, rgba(190, 215, 245, 0.22) 0px 0px 12px 3px; }
 .hero .stars .hkn_sheet { position: absolute; left: 0px; top: 0px; width: 1320px; height: 150px; pointer-events: none; will-change: transform; animation: hkn_drift calc(21541s * var(--gca-calm)) linear infinite; }
@@ -220,6 +228,7 @@
 .ph-dawn .sun { background: radial-gradient(circle, rgba(255, 236, 214, 0.92), rgba(255, 204, 160, 0.48) 46%, rgba(255, 190, 140, 0) 72%); }
 .ph-golden .sun { background: radial-gradient(circle at 50% 52%, rgba(255, 238, 196, 0.98), rgba(255, 188, 110, 0.62) 44%, rgba(255, 170, 90, 0) 74%); }
 .phchip { position: absolute; left: auto; right: 10px; bottom: 46px; z-index: 5; display: inline-flex; align-items: center; gap: 6px; background: rgba(8, 22, 34, 0.66); color: rgb(234, 242, 246); font-size: 10.5px; font-weight: 800; letter-spacing: 0.3px; padding: 6px 12px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.26); backdrop-filter: blur(4px); animation: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0s 1 normal none running hk_pop; }
+.ph-golden .pipw { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
 .grain { position: absolute; inset: -12%; z-index: 3; pointer-events: none; opacity: 0.028; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E"); background-size: 160px 160px; animation: hk_grain calc(2.4s * var(--gca-calm)) steps(1) infinite; }
 .ph-night .grain { opacity: 0.045; }
 .hero-eyebtn { border: 0px; cursor: pointer; position: relative; font-family: "Cormorant Garamond", Georgia, serif; -webkit-tap-highlight-color: transparent; transition: border-color 0.2s, box-shadow 0.2s; }
@@ -364,7 +373,11 @@ html.hk_gd_dark .hk_sss_ic .sss_edge { stroke: rgb(122, 100, 168); }
 .swg.s3 .sw_heave { animation-duration: calc(6.3s * var(--gca-calm)); animation-delay: -3.4s; }
 .ph-night .hk_swellw { opacity: 0.55; }
 .ph-dawn .hk_swellw { opacity: 0.8; }
+.ph-golden .vwk path { fill: rgba(255, 236, 204, 0.6); }
 .hk.hk .hero-eyebrow, .hk.hk .hero-eyebtn, .hk.hk .hero-datebtn, .hk.hk .morewrap .morebtn { background: rgba(9, 32, 46, 0.3) !important; border: 1px solid rgba(232, 199, 123, 0.46) !important; border-radius: 999px !important; box-shadow: none !important; backdrop-filter: none !important; text-shadow: rgba(8, 24, 36, 0.9) 0px 1px 3px, rgba(8, 24, 36, 0.65) 0px 2px 10px !important; }
+.ph-golden .trtw { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
+.ph-golden .htchw { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
+.ph-golden .kitew { filter: sepia(0.28) saturate(1.15) brightness(1.03); }
 .adparasail { position: absolute; top: 118px; left: -90px; z-index: 0; will-change: transform, opacity; animation: hk_adyacht calc(56s * var(--gca-calm)) linear calc(-34s * var(--gca-calm)) infinite; }
 .adparasail > svg { opacity: 0.92; }
 .adparasail_rig { transform-box: view-box; transform-origin: 99.5px 63px; will-change: transform; animation: hk_adparasway calc(7.6s * var(--gca-calm)) ease-in-out infinite; }
@@ -391,6 +404,7 @@ a.hero_sponsor > ::before, button.hero_house > ::before { content: none; }
 html:not(.hk_mo) .sunb::after { content: none; }
 .hero_sponsor .adlbl, .hero_slot .adlbl, .hero-eyespon .adlbl { position: absolute; left: 50%; top: 100%; margin-top: 2px; transform: translateX(-50%); font: 800 9px / 1 Nunito, system-ui, sans-serif; letter-spacing: 0.5px; text-transform: uppercase; color: rgb(242, 247, 250); background: rgba(14, 26, 36, 0.66); padding: 2px 4.5px; border-radius: 5px; white-space: nowrap; pointer-events: none; }
 .hero_sponsor .adlbl, .hero_slot .adlbl, .hero-eyespon .adlbl { background: rgba(8, 20, 30, 0.86); box-shadow: rgba(242, 196, 60, 0.5) 0px 0px 0px 1px inset; }
+.ph-golden .adbonfire { filter: drop-shadow(rgba(242, 160, 60, 0.6) 0px 0px 7px); }
 .adcart { --acw: 2.87s; position: absolute; bottom: 3px; left: -90px; z-index: 2; pointer-events: none; will-change: transform; animation: hk_adcart calc(59s * var(--gca-calm)) linear infinite; }
 .adcart_art { display: block; }
 .adcart_fig { transform-box: view-box; }
@@ -437,6 +451,7 @@ html:not(.hk_mo) .sunb::after { content: none; }
 .adboatname .adlbl { display: block; position: static; width: max-content; margin: 4px auto 0px; font-style: normal; font-size: 9px; font-weight: 700; letter-spacing: 0.7px; line-height: 1.3; padding: 1px 3px; border-radius: 2px; text-align: center; color: rgb(236, 243, 248); background: rgba(9, 20, 30, 0.75); }
 .ph-dawn .adboatname_bd, .ph-golden .adboatname_bd { text-shadow: rgba(26, 12, 3, 0.88) 0px -0.5px 0px, rgba(255, 220, 160, 0.62) 0px 0.5px 0px; }
 .ph-night .adboatname_bd { text-shadow: rgba(0, 0, 0, 0.92) 0px -0.5px 0px, rgba(255, 236, 190, 0.42) 0px 0.5px 0px; }
+.ph-golden .rrip { background: radial-gradient(rgba(255, 234, 200, 0) 30%, rgba(255, 238, 208, 0.19) 52%, rgba(255, 246, 224, 0.5) 68%, rgba(255, 220, 176, 0.2) 84%, rgba(255, 206, 158, 0) 100%); }
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .flyby, html:not(.hk_mo) .hk .grain, html:not(.hk_mo) .hk .baw, html:not(.hk_mo) .hk .gullw, html:not(.hk_mo) .hk .ccrab, html:not(.hk_mo) .hk .snote, html:not(.hk_mo) .hk .hpel, html:not(.hk_mo) .hk .fwx, html:not(.hk_mo) .hk .aspl, html:not(.hk_mo) .hk .asplg, html:not(.hk_mo) .hk .adaubg, html:not(.hk_mo) .hk .adripg, html:not(.hk_mo) .hk .rheart, html:not(.hk_mo) .hk .lspk, html:not(.hk_mo) .hk .dnm_bok, html:not(.hk_mo) .hk .tdust, html:not(.hk_mo) .hk .fly, html:not(.hk_mo) .hk .skbwrap, html:not(.hk_mo) .hk .pipw, html:not(.hk_mo) .hk .dnx_rolled, html:not(.hk_mo) .hk .trtw, html:not(.hk_mo) .hk .htchw, html:not(.hk_mo) .hk .kitew, html:not(.hk_mo) .hk .rplfield, html:not(.hk_mo) .hk .hcw, html:not(.hk_mo) .hk .tgw, html:not(.hk_mo) .hk .d2bw, html:not(.hk_mo) .hk .pelw, html:not(.hk_mo) .hk .dcw, html:not(.hk_mo) .hk .hkop, html:not(.hk_mo) .hk .dwgiant, html:not(.hk_mo) .hk .dwpod, html:not(.hk_mo) .hk .dwglow, html:not(.hk_mo) .hk .hboat, html:not(.hk_mo) .hk .dnote, html:not(.hk_mo) .hk .dbloom, html:not(.hk_mo) .hk .rmote, html:not(.hk_mo) .hk .rsmokew .hk .supw, html:not(.hk_mo) .hk .fld, html:not(.hk_mo) .hk .crbw, html:not(.hk_mo) .hk .crbh, html:not(.hk_mo) .hk .htchf, html:not(.hk_mo) .hk .lx_rock, html:not(.hk_mo) .hk .lx_dig, html:not(.hk_mo) .hk .mstrip, html:not(.hk_mo) .hk .mbeam, html:not(.hk_mo) .hk .cm_cone, html:not(.hk_mo) .hk .cm_pool, html:not(.hk_mo) .hk .romacc .racc_wash, html:not(.hk_mo) .hk .em_fly, html:not(.hk_mo) .hk .cs_shoot, html:not(.hk_mo) .hk .cs_neb, html:not(.hk_mo) .hk .brd, html:not(.hk_mo) .hk .mthrow, html:not(.hk_mo) .hk .mgrain, html:not(.hk_mo) .hk .bawrap, html:not(.hk_mo) .hk .popf, html:not(.hk_mo) .hk .rm_bulb, html:not(.hk_mo) .hk .rm_bg, html:not(.hk_mo) .hk .rflg, html:not(.hk_mo) .hk .cm_laugh, html:not(.hk_mo) .hk .cm_cable, html:not(.hk_mo) .hk .adrip, html:not(.hk_mo) .hk .adripg, html:not(.hk_mo) .hk .lsc_cur, html:not(.hk_mo) .hk .swash, html:not(.hk_mo) .hk .swash_lip, html:not(.hk_mo) .hk .backwash, html:not(.hk_mo) .hk .vwkw, html:not(.hk_mo) .hk .vwk, html:not(.hk_mo) .hk .fprt, html:not(.hk_mo) .hk .swl_crest { display: none !important; }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .swg, html:not(.hk_mo) .hk .sw_heave { animation: auto ease 0s 1 normal none running none !important; }}
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .swl_body { animation: auto ease 0s 1 normal none running none !important; opacity: 0.4 !important; }}
@@ -481,11 +496,11 @@ html:not(.hk_diag_livedec) .t-labNight .ldec .lx_bone.b2 { transform: translate(
 .tcard .dnx_tag.sun { --dn-pill: 248,196,107; }
 .dnx_tag.sun { color: rgb(248, 196, 107); border-color: rgba(244, 169, 59, 0.4); }
 .morewrap.ph-day .morebtn, .morewrap.ph-dawn .morebtn, .morewrap.ph-golden .morebtn { color: rgb(255, 253, 248); border-color: rgba(255, 253, 248, 0.58); background: linear-gradient(rgba(10, 34, 48, 0.4), rgba(6, 22, 32, 0.54)); box-shadow: rgba(255, 255, 255, 0.22) 0px 1px 0px inset, rgba(0, 0, 0, 0.34) 0px 6px 18px, rgba(0, 0, 0, 0.5) 0px 1px 2px; }
-.morewrap.ph-day .morebtn { border-color: rgba(255, 253, 248, 0.66); background: linear-gradient(rgba(8, 30, 44, 0.5), rgba(5, 20, 30, 0.62)); }
 .morewrap.ph-day .morebtn:hover, .morewrap.ph-dawn .morebtn:hover, .morewrap.ph-golden .morebtn:hover { color: rgb(255, 255, 255); border-color: rgb(255, 253, 248); box-shadow: rgba(255, 255, 255, 0.3) 0px 1px 0px inset, rgba(0, 0, 0, 0.4) 0px 8px 22px, rgba(255, 253, 248, 0.75) 0px 0px 16px -6px; }
 .hk_promoted .adlbl { display: block; margin: 0px 0px 8px; font: 800 11px / 1 Nunito, system-ui, sans-serif; letter-spacing: 1.1px; text-transform: uppercase; color: var(--csoft); opacity: 0.85; }
 .hk_promoted .adlbl.open { font-weight: 700; letter-spacing: 0.9px; opacity: 0.55; }
 .hk_promocard .adlbl { display: block; margin: 0px 0px 5px; font: 800 11px / 1 Nunito, system-ui, sans-serif; letter-spacing: 1.1px; text-transform: uppercase; color: var(--csoft); opacity: 0.85; }
+.ph-golden .hgulw { filter: sepia(0.24) saturate(1.12) brightness(1.02); }
 .skitz .adlbl { position: absolute; top: 5px; right: 8px; z-index: 9; font: 800 11px / 1 Nunito, system-ui, sans-serif; letter-spacing: 0.8px; text-transform: uppercase; color: var(--csoft); opacity: 1; padding: 2px 5px; border-radius: 4px; background: rgba(8, 20, 30, 0.92); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--au-b) 45%, transparent); }
 .skitz .adlbl.open { font-weight: 700; letter-spacing: 0.6px; opacity: 0.85; }
 .gcl_l { position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; }
