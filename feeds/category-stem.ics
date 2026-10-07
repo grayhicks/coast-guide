@@ -25,66 +25,8 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_maker_days_1006-2026-10-06@coastaleventures.com
-DTSTAMP:20261006T000000Z
-DTSTART;TZID=America/Chicago:20261006T090000
-DTEND;TZID=America/Chicago:20261006T120000
-SUMMARY:Maker Days
-LOCATION:Emerald Coast Science Center\, 31 Memorial Pkwy SW\, Fort Walton B
- each\, FL 32548
-DESCRIPTION:Tuesday 10/6 · 9:00 AM to 12:00 PM\n\nMaker Days is a hands-on
-  STEAM drop-off workshop at the Emerald Coast Science Center\, held the fi
- rst Monday and Tuesday of every month. October's lesson\, Blueprints of th
- e Wild\, covers animal engineering and biomimicry. It costs $35 for member
- s and $40 for nonmembers\, with $10 off each additional sibling\, and a sp
- ot isn't confirmed until you pay.\n\nPrice: from $40\n\nDetails: https://c
- oastaleventures.com/events/ev-maker-days-1006.html
-URL:https://coastaleventures.com/events/ev-maker-days-1006.html
-CATEGORIES:STEM and learning
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_pathways_middle_school_workshop_1006-2026-10-06@coastaleventures.com
-DTSTAMP:20261006T000000Z
-DTSTART;TZID=America/Chicago:20261006T090000
-DTEND;TZID=America/Chicago:20261006T120000
-SUMMARY:Pathways: Middle School Workshop
-LOCATION:Emerald Coast Science Center\, 31 SW Memorial Parkway\, Fort Walto
- n Beach\, FL 32548
-DESCRIPTION:Tuesday 10/6 · 9:00 AM to 12:00 PM\n\nThis drop-off STEM works
- hop at the Emerald Coast Science Center is for students ages 11 to 14\, he
- ld the first Tuesday of every month. Spaces are limited\, and registration
-  goes through an email to the center rather than an online form. It runs t
- he same morning as the center's separate Maker Days session.\n\nPrice: fro
- m $35\n\nDetails: https://coastaleventures.com/events/ev-pathways-middle-s
- chool-workshop-1006.html
-URL:https://coastaleventures.com/events/ev-pathways-middle-school-workshop-
- 1006.html
-CATEGORIES:STEM and learning
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_lego_fun_tuesday_at_semmes_0908-2026-10-06@coastaleventures.com
-DTSTAMP:20261006T000000Z
-DTSTART;TZID=America/Chicago:20261006T160000
-DTEND;TZID=America/Chicago:20261006T170000
-SUMMARY:LEGO Fun Tuesday at Semmes
-LOCATION:Semmes Regional Library\, 9150 Moffett Road
-DESCRIPTION:Tuesdays · 4:00 PM to 5:00 PM\n\nSemmes Regional Library runs 
- a LEGO building challenge meant to encourage imagination alongside buildin
- g skill\, for ages 6 through 18. It meets Tuesdays at 4 PM\, including Oct
- ober 6\, 20 and 27. On October 13 it becomes LEGO Haunted Tuesday\, with b
- uilding while watching Lego Scooby-Doo Haunted Hollywood.\n\nPrice: No pub
- lished price\n\nDetails: https://coastaleventures.com/events/ev-lego-fun-t
- uesday-at-semmes-0908.html
-URL:https://coastaleventures.com/events/ev-lego-fun-tuesday-at-semmes-0908.
- html
-CATEGORIES:STEM and learning
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_makerspace_studio_fall_2026_0923-2026-10-07@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261007T173000
 DTEND;TZID=America/Chicago:20261007T193000
 SUMMARY:Makerspace Studio Fall 2026
@@ -104,7 +46,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_draconids_1008-2026-10-08@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261010
 SUMMARY:Draconid Meteor Shower: the one that happens at bedtime
@@ -123,7 +65,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-10-08@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261008T101500
 DTEND;TZID=America/Chicago:20261008T111500
 SUMMARY:iPhone & iPad
@@ -141,7 +83,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_mini_makers_and_experimenters_lab_1008-2026-10-08@coastaleventures.c
  om
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261008T103000
 DTEND;TZID=America/Chicago:20261008T113000
 SUMMARY:Mini Makers and Experimenters Lab
@@ -163,7 +105,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_ai_and_emerging_tech_roundtable_workshop_1008-2026-10-08@coastaleven
  tures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261008T120000
 DTEND;TZID=America/Chicago:20261008T130000
 SUMMARY:AI & Emerging Tech Roundtable/Workshop
@@ -184,7 +126,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-10-08@coastaleventures.c
  om
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261008T150000
 DTEND;TZID=America/Chicago:20261008T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -202,7 +144,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_ship_to_shore_nautilus-2026-10-09@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261009T100000
 DTEND;TZID=America/Chicago:20261009T110000
 SUMMARY:Ship to Shore Chat with E/V Nautilus
@@ -219,7 +161,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_ecsc_gems_workshop_1010-2026-10-10@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261010T103000
 DTEND;TZID=America/Chicago:20261010T113000
 SUMMARY:Girls Empowered with Math and Science Workshop
@@ -237,7 +179,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_girls_empowered_with_math_and_science_1010-2026-10-10@coastaleventur
  es.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261010T103000
 DTEND;TZID=America/Chicago:20261010T120000
 SUMMARY:Girls Empowered with Math and Science Workshops
@@ -257,7 +199,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_naturenauts_academy_bellingrath_numbers_harv_1013-2026-10-13@coastal
  eventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261013T100000
 DTEND;TZID=America/Chicago:20261013T113000
 SUMMARY:NatureNauts Academy: Bellingrath Numbers Harvest
@@ -278,7 +220,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2026-10-13@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261013T160000
 DTEND;TZID=America/Chicago:20261013T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -297,7 +239,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_makerspace_studio_fall_2026_0923-2026-10-14@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261014T173000
 DTEND;TZID=America/Chicago:20261014T193000
 SUMMARY:Makerspace Studio Fall 2026
@@ -317,7 +259,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_planetarium_night_steam_wars_1015-2026-10-15@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Planetarium Night: STEAM Wars
@@ -337,7 +279,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-10-15@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261015T101500
 DTEND;TZID=America/Chicago:20261015T111500
 SUMMARY:iPhone & iPad
@@ -354,7 +296,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_breezemakers_1015-2026-10-15@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261015T150000
 DTEND;TZID=America/Chicago:20261015T170000
 SUMMARY:Breeze Makers
@@ -373,7 +315,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-10-15@coastaleventures.c
  om
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261015T150000
 DTEND;TZID=America/Chicago:20261015T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -391,7 +333,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_navarre_steamaker_1015-2026-10-15@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261015T160000
 DTEND;TZID=America/Chicago:20261015T170000
 SUMMARY:STEAMaker (Navarre)
@@ -407,7 +349,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_laser_etching_custom_keychain_fob_at_the_sea_1017-2026-10-17@coastal
  eventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261017T090000
 DTEND;TZID=America/Chicago:20261017T130000
 SUMMARY:Laser Etching: Custom Keychain FOB at the SEA Makerspace
@@ -427,7 +369,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_curiositylab_frankenstein_mess-2026-10-17@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261017T130000
 DTEND;TZID=America/Chicago:20261017T160000
 SUMMARY:Curiosity Lab: Frankenstein
@@ -446,7 +388,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2026-10-20@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261020T160000
 DTEND;TZID=America/Chicago:20261020T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -465,7 +407,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_makerspace_studio_fall_2026_0923-2026-10-21@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261021T173000
 DTEND;TZID=America/Chicago:20261021T193000
 SUMMARY:Makerspace Studio Fall 2026
@@ -485,7 +427,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_orionids_1022-2026-10-22@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261022T031500
 DTEND;TZID=America/Chicago:20261022T041500
 SUMMARY:Orionid Meteor Shower: Halley's Comet dust
@@ -503,7 +445,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-10-22@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261022T101500
 DTEND;TZID=America/Chicago:20261022T111500
 SUMMARY:iPhone & iPad
@@ -521,7 +463,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_gulf_breeze_tween_teen_tech_time_1022-2026-10-22@coastaleventures.co
  m
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261022T140000
 DTEND;TZID=America/Chicago:20261022T160000
 SUMMARY:Tween/Teen Tech-Time (Gulf Breeze)
@@ -540,7 +482,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-10-22@coastaleventures.c
  om
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261022T150000
 DTEND;TZID=America/Chicago:20261022T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -559,7 +501,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_planetarium_special_feature_spooky_secrets_o_1022-2026-10-22@coastal
  eventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261022T180000
 DTEND;TZID=America/Chicago:20261022T190000
 SUMMARY:Planetarium Special Feature: Spooky Secrets of the Stars
@@ -580,7 +522,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_usa_archaeology_museum_creepy_crawly_1024-2026-10-24@coastaleventure
  s.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261024T100000
 DTEND;TZID=America/Chicago:20261024T150000
 SUMMARY:Creepy Crawly Halloween at the Museum
@@ -599,7 +541,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2026-10-27@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261027T160000
 DTEND;TZID=America/Chicago:20261027T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -618,7 +560,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_makerspace_studio_fall_2026_0923-2026-10-28@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261028T173000
 DTEND;TZID=America/Chicago:20261028T193000
 SUMMARY:Makerspace Studio Fall 2026
@@ -638,7 +580,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-10-29@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261029T101500
 DTEND;TZID=America/Chicago:20261029T111500
 SUMMARY:iPhone & iPad
@@ -656,7 +598,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-10-29@coastaleventures.c
  om
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261029T150000
 DTEND;TZID=America/Chicago:20261029T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -674,7 +616,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_exploreum_fear_fest_conjuring_1031-2026-10-31@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261031T170000
 DTEND;TZID=America/Chicago:20261031T210000
 SUMMARY:Fear Fest: The Conjuring at the Exploreum
@@ -694,7 +636,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_destin_cooking_lab_1102-2026-11-02@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261102T180000
 DTEND;TZID=America/Chicago:20261102T193000
 SUMMARY:After-Hours Cooking Lab for Middle Schoolers
@@ -712,7 +654,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_saenger_ai_da_1102-2026-11-02@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261102T190000
 DTEND;TZID=America/Chicago:20261102T200000
 SUMMARY:Synthetic Creativity: Ai-Da Unveiled
@@ -731,7 +673,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2026-11-03@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261103T160000
 DTEND;TZID=America/Chicago:20261103T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -750,7 +692,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-11-05@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261105T101500
 DTEND;TZID=America/Chicago:20261105T111500
 SUMMARY:iPhone & iPad
@@ -768,7 +710,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-11-05@coastaleventures.c
  om
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261105T150000
 DTEND;TZID=America/Chicago:20261105T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -786,7 +728,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2026-11-10@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261110T160000
 DTEND;TZID=America/Chicago:20261110T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -805,7 +747,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-11-12@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261112T101500
 DTEND;TZID=America/Chicago:20261112T111500
 SUMMARY:iPhone & iPad
@@ -823,7 +765,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-11-12@coastaleventures.c
  om
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261112T150000
 DTEND;TZID=America/Chicago:20261112T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -841,7 +783,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2026-11-17@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261117T160000
 DTEND;TZID=America/Chicago:20261117T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -860,7 +802,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-11-19@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261119T101500
 DTEND;TZID=America/Chicago:20261119T111500
 SUMMARY:iPhone & iPad
@@ -878,7 +820,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-11-19@coastaleventures.c
  om
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261119T150000
 DTEND;TZID=America/Chicago:20261119T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -896,7 +838,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2026-11-24@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261124T160000
 DTEND;TZID=America/Chicago:20261124T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -915,7 +857,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-11-26@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261126T101500
 DTEND;TZID=America/Chicago:20261126T111500
 SUMMARY:iPhone & iPad
@@ -933,7 +875,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-11-26@coastaleventures.c
  om
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261126T150000
 DTEND;TZID=America/Chicago:20261126T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -951,7 +893,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2026-12-01@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261201T160000
 DTEND;TZID=America/Chicago:20261201T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -970,7 +912,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-12-03@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261203T101500
 DTEND;TZID=America/Chicago:20261203T111500
 SUMMARY:iPhone & iPad
@@ -988,7 +930,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-12-03@coastaleventures.c
  om
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261203T150000
 DTEND;TZID=America/Chicago:20261203T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -1006,7 +948,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2026-12-08@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261208T160000
 DTEND;TZID=America/Chicago:20261208T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -1025,7 +967,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-12-10@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261210T101500
 DTEND;TZID=America/Chicago:20261210T111500
 SUMMARY:iPhone & iPad
@@ -1043,7 +985,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-12-10@coastaleventures.c
  om
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261210T150000
 DTEND;TZID=America/Chicago:20261210T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -1061,7 +1003,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2026-12-15@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261215T160000
 DTEND;TZID=America/Chicago:20261215T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -1080,7 +1022,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-12-17@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261217T101500
 DTEND;TZID=America/Chicago:20261217T111500
 SUMMARY:iPhone & iPad
@@ -1098,7 +1040,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-12-17@coastaleventures.c
  om
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261217T150000
 DTEND;TZID=America/Chicago:20261217T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -1116,7 +1058,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2026-12-22@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261222T160000
 DTEND;TZID=America/Chicago:20261222T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -1135,7 +1077,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-12-24@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261224T101500
 DTEND;TZID=America/Chicago:20261224T111500
 SUMMARY:iPhone & iPad
@@ -1153,7 +1095,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-12-24@coastaleventures.c
  om
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261224T150000
 DTEND;TZID=America/Chicago:20261224T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -1171,7 +1113,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2026-12-29@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261229T160000
 DTEND;TZID=America/Chicago:20261229T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -1190,7 +1132,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-12-31@coastaleventures.com
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261231T101500
 DTEND;TZID=America/Chicago:20261231T111500
 SUMMARY:iPhone & iPad
@@ -1208,7 +1150,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-12-31@coastaleventures.c
  om
-DTSTAMP:20261006T000000Z
+DTSTAMP:20261007T000000Z
 DTSTART;TZID=America/Chicago:20261231T150000
 DTEND;TZID=America/Chicago:20261231T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -1221,6 +1163,25 @@ DESCRIPTION:Thursdays · 3:00 PM to 5:00 PM\n\nSemmes Regional Library host
  ventures.com/events/ev-chess-club-for-everyone-at-semmes-0910.html
 URL:https://coastaleventures.com/events/ev-chess-club-for-everyone-at-semme
  s-0910.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_lego_fun_tuesday_at_semmes_0908-2027-01-05@coastaleventures.com
+DTSTAMP:20261007T000000Z
+DTSTART;TZID=America/Chicago:20270105T160000
+DTEND;TZID=America/Chicago:20270105T170000
+SUMMARY:LEGO Fun Tuesday at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Tuesdays · 4:00 PM to 5:00 PM\n\nSemmes Regional Library runs 
+ a LEGO building challenge meant to encourage imagination alongside buildin
+ g skill\, for ages 6 through 18. It meets Tuesdays at 4 PM\, including Oct
+ ober 6\, 20 and 27. On October 13 it becomes LEGO Haunted Tuesday\, with b
+ uilding while watching Lego Scooby-Doo Haunted Hollywood.\n\nPrice: No pub
+ lished price\n\nDetails: https://coastaleventures.com/events/ev-lego-fun-t
+ uesday-at-semmes-0908.html
+URL:https://coastaleventures.com/events/ev-lego-fun-tuesday-at-semmes-0908.
+ html
 CATEGORIES:STEM and learning
 TRANSP:TRANSPARENT
 END:VEVENT
