@@ -104,7 +104,7 @@ BEGIN:VEVENT
 UID:ev_mobile_museum_make_take_art-2026-10-06@coast-guide
 DTSTAMP:20261006T000000Z
 DTSTART;VALUE=DATE:20261006
-DTEND;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261204
 SUMMARY:Make & Take Art: weekly drop-in art sessions
 DESCRIPTION:The museum runs a free Thursday afternoon art session most wee
  ks\, working through materials and techniques borrowed from artists on vi
@@ -112,9 +112,9 @@ DESCRIPTION:The museum runs a free Thursday afternoon art session most wee
  inosaur build. The printed schedule also lists a session for September 8\
  , but that date falls on a Tuesday\, not a Thursday\, so check with the m
  useum first.\nPrice: Free\nArea: Mobile & Baldwin County\nTimes: Thursday
- s 8/27 through 10/15 (except Sept 8) · 3:00 PM to 4:30 PM\nChecked again
- st the venue's own page on 2026-08-24\nhttps://coastaleventures.com/event
- s/ev-mobile-museum-make-take-art.html
+ s 8/27 through 12/3 · 3:00 PM to 4:30 PM\nChecked against the venue's ow
+ n page on 2026-08-24\nhttps://coastaleventures.com/events/ev-mobile-museu
+ m-make-take-art.html
 LOCATION:Mobile Museum of Art\, 4850 Museum Drive\, Mobile\, AL 36608
 URL:https://coastaleventures.com/events/ev-mobile-museum-make-take-art.htm
  l
@@ -644,24 +644,6 @@ LOCATION:downtown Milton / Blackwater River event area\, 5158 South Willin
  g Street\, Milton\, FL
 URL:https://coastaleventures.com/events/ev-bands-on-the-blackwater-fall-20
  26-0904.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_festa_italiana_1009-2026-10-09@coast-guide
-DTSTAMP:20261009T000000Z
-DTSTART;VALUE=DATE:20261009
-DTEND;VALUE=DATE:20261011
-SUMMARY:Festa Italiana
-DESCRIPTION:The Buona Fortuna Lodge turns Seville Square into an Italian s
- treet fair with shrimp scampi\, spaghetti and meatballs\, lasagna\, sausa
- ge and pepper sandwiches and tiramisu. There is Italian music\, a silent 
- auction\, a cash prize drawing and a Kids Corner with face painting and b
- alloons. Proceeds go to the lodge's charitable donations and scholarships
-  in the Pensacola area. Confirm the dates and hours with the lodge before
-  you go.\nPrice: Free\nArea: Pensacola\nTimes: Fri 10/9 and Sat 10/10 · 
- 11 AM to 6 PM\nhttps://coastaleventures.com/events/ev-festa-italiana-1009
- .html
-LOCATION:Seville Square\, 311 E Government St\, Pensacola\, FL 32502
-URL:https://coastaleventures.com/events/ev-festa-italiana-1009.html
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_decades_by_request_gulf_club_1002-2026-10-09@coast-guide
@@ -2443,6 +2425,25 @@ LOCATION:USS Alabama Battleship Memorial Park\, Medal of Honor Aircraft Pa
  vilion\, 2703 Battleship Parkway\, Mobile\, AL 36602
 URL:https://coastaleventures.com/events/ev-ussalabama-mobile-pops-concert-
  1111.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_festa_italiana_1009-2026-11-13@coast-guide
+DTSTAMP:20261113T000000Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261115
+SUMMARY:Festa Italiana
+DESCRIPTION:The Buona Fortuna Lodge turns Fountain Park in downtown Pensac
+ ola into an Italian street fair with shrimp scampi\, spaghetti and meatba
+ lls\, lasagna\, sausage and pepper sandwiches and tiramisu. There is Ital
+ ian music\, a silent auction\, a cash prize drawing and a Kids Corner wit
+ h face painting and balloons. Proceeds go to the lodge's charitable donat
+ ions and scholarships in the Pensacola area. Confirm the dates and hours 
+ with the lodge before you go.\nPrice: Free\nArea: Pensacola\nTimes: Fri 1
+ 1/13 and Sat 11/14 · hours for the new dates not posted yet\nhttps://coa
+ staleventures.com/events/ev-festa-italiana-1009.html
+LOCATION:Fountain Park\, downtown Pensacola\, Downtown Pensacola\, FL 3250
+ 2
+URL:https://coastaleventures.com/events/ev-festa-italiana-1009.html
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_foley_art_center_trim_a_tree_1113-2026-11-13@coast-guide

@@ -155,7 +155,7 @@
       "endDate": "2026-10-24",
       "startTime": null,
       "endTime": null,
-      "when": "Saturday 10/3 to Saturday 10/24 · times not posted",
+      "when": "Sunday 9/27 to Saturday 10/24 · times not posted",
       "venue": "Blue Morning Gallery",
       "address": "21 S. Palafox Place, Pensacola, FL 32502",
       "category": "art",
@@ -1364,10 +1364,10 @@
       "id": "ev_mobile_museum_make_take_art-2026-10-06",
       "title": "Make & Take Art: weekly drop-in art sessions",
       "date": "2026-10-06",
-      "endDate": "2026-10-15",
+      "endDate": "2026-12-03",
       "startTime": "15:00",
       "endTime": "16:30",
-      "when": "Thursdays 8/27 through 10/15 (except Sept 8) · 3:00 PM to 4:30 PM",
+      "when": "Thursdays 8/27 through 12/3 · 3:00 PM to 4:30 PM",
       "venue": "Mobile Museum of Art",
       "address": "4850 Museum Drive, Mobile, AL 36608",
       "category": "art",
@@ -1678,10 +1678,10 @@
       "id": "ev_crosspoint_strength-2026-10-06",
       "title": "From Strength to Strength Discussion Group",
       "date": "2026-10-06",
-      "endDate": "2026-10-14",
+      "endDate": "2026-11-04",
       "startTime": "18:00",
       "endTime": "19:00",
-      "when": "Wednesdays 9/9 – 10/14 (of a run through 11/4) · 6:00 PM-7:00 PM",
+      "when": "Wednesdays 9/9 – 11/4 · 6:00 PM-7:00 PM",
       "venue": "Crosspoint Niceville Campus Marler Chapel",
       "address": "214 Partin Dr S, Niceville, FL 32578",
       "category": "event",
@@ -6329,36 +6329,6 @@
       "checkedOn": "2026-09-26"
     },
     {
-      "id": "ev_festa_italiana_1009-2026-10-09",
-      "title": "Festa Italiana",
-      "date": "2026-10-09",
-      "endDate": "2026-10-10",
-      "startTime": "11:00",
-      "endTime": "18:00",
-      "when": "Fri 10/9 and Sat 10/10 · 11 AM to 6 PM",
-      "venue": "Seville Square",
-      "address": "311 E Government St, Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "The Buona Fortuna Lodge turns Seville Square into an Italian street fair with shrimp scampi, spaghetti and meatballs, lasagna, sausage and pepper sandwiches and tiramisu. There is Italian music, a silent auction, a cash prize drawing and a Kids Corner with face painting and balloons. Proceeds go to the lodge's charitable donations and scholarships in the Pensacola area. Confirm the dates and hours with the lodge before you go.",
-      "url": "https://coastaleventures.com/events/ev-festa-italiana-1009.html",
-      "sources": [
-        {
-          "note": "Buona Fortuna Lodge festival page: admission is free, Italian food, music, prize drawings, silent auction, Kids Corner; page shows no 2026 dates",
-          "url": "https://www.buonafortunalodge.org/festa-italiana-sf/"
-        },
-        {
-          "note": "Visit Pensacola festival listing: Oct 9-10 2026, 11 AM to 6 PM, Seville Square, free",
-          "url": "https://www.visitpensacola.com/events/signature-events/festa-italiana/"
-        }
-      ],
-      "checkedOn": null
-    },
-    {
       "id": "ev_gulf_breeze_preschool_storytime_1009-2026-10-09",
       "title": "Preschool Storytime (Gulf Breeze)",
       "date": "2026-10-09",
@@ -6485,7 +6455,7 @@
       "endDate": null,
       "startTime": "14:00",
       "endTime": "16:00",
-      "when": "Fridays 8/28 through 10/16 · 2:00 PM to 4:00 PM (space permitting)",
+      "when": "Fridays 8/28 through 12/11 · 2:00 PM to 4:00 PM (space permitting)",
       "venue": "Mobile Botanical Gardens",
       "address": "5151 Museum Drive, Mobile, AL 36608",
       "category": "art",
@@ -17207,7 +17177,7 @@
       "endDate": null,
       "startTime": "14:00",
       "endTime": "16:00",
-      "when": "Fridays 8/28 through 10/16 · 2:00 PM to 4:00 PM (space permitting)",
+      "when": "Fridays 8/28 through 12/11 · 2:00 PM to 4:00 PM (space permitting)",
       "venue": "Mobile Botanical Gardens",
       "address": "5151 Museum Drive, Mobile, AL 36608",
       "category": "art",
@@ -47723,6 +47693,40 @@
         }
       ],
       "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_festa_italiana_1009-2026-11-13",
+      "title": "Festa Italiana",
+      "date": "2026-11-13",
+      "endDate": "2026-11-14",
+      "startTime": null,
+      "endTime": null,
+      "when": "Fri 11/13 and Sat 11/14 · hours for the new dates not posted yet",
+      "venue": "Fountain Park, downtown Pensacola",
+      "address": "Downtown Pensacola, FL 32502",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "The Buona Fortuna Lodge turns Fountain Park in downtown Pensacola into an Italian street fair with shrimp scampi, spaghetti and meatballs, lasagna, sausage and pepper sandwiches and tiramisu. There is Italian music, a silent auction, a cash prize drawing and a Kids Corner with face painting and balloons. Proceeds go to the lodge's charitable donations and scholarships in the Pensacola area. Confirm the dates and hours with the lodge before you go.",
+      "url": "https://coastaleventures.com/events/ev-festa-italiana-1009.html",
+      "sources": [
+        {
+          "note": "buonafortunalodge.org: postponed to November 13-14 at Fountain Park in downtown Pensacola (read 10/07)",
+          "url": "https://www.buonafortunalodge.org/festa-italiana/"
+        },
+        {
+          "note": "Buona Fortuna Lodge festival page: admission is free, Italian food, music, prize drawings, silent auction, Kids Corner; page shows no 2026 dates",
+          "url": "https://www.buonafortunalodge.org/festa-italiana-sf/"
+        },
+        {
+          "note": "Visit Pensacola festival listing: Oct 9-10 2026, 11 AM to 6 PM, Seville Square, free",
+          "url": "https://www.visitpensacola.com/events/signature-events/festa-italiana/"
+        }
+      ],
+      "checkedOn": null
     },
     {
       "id": "ev_jlmobile_christmas_jubilee_1113-2026-11-13",
