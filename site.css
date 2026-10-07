@@ -2575,3 +2575,25 @@ main > .wrap > section.home-sec:only-child .quick:has(> .quick-card[href="gulf-b
 main > .wrap > section.home-sec:only-child .quick:has(> .quick-card[href="gulf-breeze.html"])::after{font:600 var(--fs-small)/1.4 var(--font-sans);letter-spacing:0;text-transform:none}
 main > .wrap > section.home-sec:only-child .quick:has(> .quick-card[href="gulf-breeze.html"]) > .quick-card::after{font:500 var(--fs-small)/1.5 var(--font-sans);letter-spacing:0;text-transform:none}
 main > .wrap > section.home-sec:only-child .quick:has(> .quick-card[href="gulf-breeze.html"]) .q-n{font:600 var(--fs-h3)/1.2 var(--font-sans);font-variant-numeric:tabular-nums}
+
+
+html[data-theme] .site-head{background:var(--bg);-webkit-backdrop-filter:none;backdrop-filter:none}
+
+.rail-chips{display:contents}
+@media(max-width:1023px){
+  .rail-chips{--g:var(--wrap-gutter,20px);display:flex;flex:0 0 calc(100% + 2 * var(--g));flex-wrap:nowrap;gap:8px;
+    overflow-x:auto;scrollbar-width:none;margin:0 calc(-1 * var(--g));padding:0 var(--g) 4px}
+  .rail-chips::-webkit-scrollbar{display:none}
+  .rail .rail-chips .chip{flex:0 0 auto;white-space:nowrap;min-height:44px;padding:7px 16px}
+  
+  .rail .rail-chips .chip.on{order:-1}
+  .jump{--g:var(--wrap-gutter,20px);flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;
+    margin-left:calc(-1 * var(--g));margin-right:calc(-1 * var(--g));padding:0 var(--g) 4px}
+  .jump::-webkit-scrollbar{display:none}
+  .jump a{flex:none}
+}
+
+@media(max-width:559px){
+  .scene-copy.hero .cta{flex-direction:column;align-items:stretch}
+  .scene-copy.hero .cta .btn{width:100%}
+}
