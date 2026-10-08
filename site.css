@@ -1255,6 +1255,10 @@ html[data-theme="light"] .chip.on::before{box-shadow:0 0 0 3px rgba(138,95,16,.1
 .jn{font:600 var(--fs-kicker)/1 var(--font-mono);color:var(--gold-bright);font-variant-numeric:tabular-nums;
   background:rgba(217,164,65,.12);border-radius:var(--r-pill);padding:5px 9px}
 html[data-theme="light"] .jn{background:rgba(138,95,16,.1)}
+
+.jump.kinds{margin-top:var(--s-4)}
+.jump.kinds a[aria-current="page"]{border-color:var(--gold);color:var(--gold-bright)}
+html[data-theme="light"] .jump.kinds a[aria-current="page"]{background:rgba(138,95,16,.1)}
 .group{margin-top:var(--s-7);scroll-margin-top:84px}
 .group:first-of-type{margin-top:var(--s-6)}
 .group-h{display:flex;align-items:baseline;gap:16px}
