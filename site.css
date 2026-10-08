@@ -2356,6 +2356,8 @@ html[data-theme="light"]{ --orn-rule:#7a4e08; }
 .card h3 a::before{border-radius:var(--r-ticket)}
 .card:has(h3 a:focus-visible){border-radius:var(--r-ticket)}
 
+.dn-list .card{border:2px solid color-mix(in srgb, var(--orn-rule) 55%, transparent)}
+
 
 
 
@@ -2582,3 +2584,11 @@ html[data-theme] .site-head{background:var(--bg);-webkit-backdrop-filter:none;ba
   .site-head .bar-do,.site-head .bar-about{margin-left:-7px}
   html:has(.site-head){scroll-padding-top:104px}
 }
+
+
+.storm-note{background:#FFF4DC;color:#3A2600;border-bottom:2px solid #E39B17;padding:10px 16px;font:500 15px/1.4 var(--sans, system-ui, sans-serif);text-align:center}
+.storm-note b{color:#8A4F00;font-weight:800;margin-right:4px}
+.storm-note .storm-read{display:block;font-size:13px;color:#5E4D2E;margin-top:2px}
+:root:not([data-theme="light"]) .storm-note{background:#2A1E06;color:#FFE7B0;border-bottom-color:#FFC247}
+:root:not([data-theme="light"]) .storm-note b{color:#FFC247}
+:root:not([data-theme="light"]) .storm-note .storm-read{color:#CDB98C}

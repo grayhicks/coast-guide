@@ -500,6 +500,24 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
 .hk_nh [id$="move-hatchlings"] > g:nth-of-type(7) > * { animation-name: nh_rockA; }
 .hk_nh [id$="move-hatchlings"] > g:nth-of-type(8) { --hx: 35.0px; --hy: -36.2px; --p1: 0.30; --p2: 0.68; --cyc: 33s; --dl: -31s; animation-name: nh_crawlB; }
 .hk_nh [id$="move-hatchlings"] > g:nth-of-type(8) > * { animation-name: nh_rockB; }
+.hk_nh [id$="move-hatchlings"] .nhf { transform-origin: 0px 0px; animation: nh_flipA var(--cyc, 32s) linear var(--dl, 0s) infinite; }
+.hk_nh [id$="move-hatchlings"] .nhf-r { animation-name: nh_flipAr; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(1) .nhf-f { animation-name: nh_flipA; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(1) .nhf-r { animation-name: nh_flipAr; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(2) .nhf-f { animation-name: nh_flipB; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(2) .nhf-r { animation-name: nh_flipBr; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(3) .nhf-f { animation-name: nh_flipC; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(3) .nhf-r { animation-name: nh_flipCr; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(4) .nhf-f { animation-name: nh_flipA; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(4) .nhf-r { animation-name: nh_flipAr; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(5) .nhf-f { animation-name: nh_flipC; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(5) .nhf-r { animation-name: nh_flipCr; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(6) .nhf-f { animation-name: nh_flipB; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(6) .nhf-r { animation-name: nh_flipBr; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(7) .nhf-f { animation-name: nh_flipA; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(7) .nhf-r { animation-name: nh_flipAr; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(8) .nhf-f { animation-name: nh_flipB; }
+.hk_nh [id$="move-hatchlings"] > g:nth-of-type(8) .nhf-r { animation-name: nh_flipBr; }
 .hk_nh [id$="move-waves"] .nhws { animation: 6.5s ease-in-out 0s infinite alternate none running nh_swell; }
 .hk_nh [id$="move-waves"] .nhwp { animation: nh_wtravel var(--wcyc, 7s) linear calc(var(--wcyc, 7s) * var(--wp) / -4) infinite; }
 .hk_nh [id$="move-glitter"] { animation: 2.4s ease-in-out 0s infinite alternate none running nh_glint; }
@@ -533,6 +551,10 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
 .hk_nh [id="nhd_move-ball"] > :nth-child(1) { transform-box: view-box; transform-origin: 222px 221px; animation: 2.4s linear 0s infinite normal none running nh_ballshade; }
 @media (prefers-reduced-motion: reduce){.hk_nh * { animation: auto ease 0s 1 normal none running none !important; }}
 .hk .hero { z-index: 1; }
+.hk .hk_supportfloat.dnpill .hsf_label::before { content: "♥︎"; font: 900 13px / 1 Nunito, system-ui, sans-serif; margin-right: 4px; color: rgb(70, 22, 46); }
+.hk .hk_supportfloat.dnpill .hsf_label b, .hk.hk_day .dnx .hk_supportfloat.dnpill .hsf_label b { color: rgb(70, 22, 46) !important; text-shadow: rgba(250, 243, 230, 0.9) 0px 0px 3px !important; }
+.hk:not(.hk_day) .hk_supportfloat.dnpill .hsf_label::before { color: rgb(255, 241, 207); }
+.hk:not(.hk_day) .hk_supportfloat.dnpill .hsf_label b { color: rgb(255, 241, 207) !important; text-shadow: rgba(20, 8, 26, 0.85) 0px 1px 2px !important; }
 @keyframes hk_gl { 
   0%, 100% { opacity: 0; transform: scaleX(0.25); }
   33%, 67% { opacity: var(--glo,.6); transform: scaleX(1); }
@@ -969,6 +991,156 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
   76.25% { rotate: 7deg; }
   77.5% { rotate: -7deg; }
   78.75% { rotate: 7deg; }
+  80% { rotate: 0deg; }
+  92% { rotate: 0deg; }
+  100% { rotate: 0deg; }
+}
+@keyframes nh_flipA { 
+  0% { rotate: 0deg; }
+  12% { rotate: 0deg; }
+  24% { rotate: 0deg; }
+  32% { rotate: 0deg; }
+  44% { rotate: 0deg; }
+  55% { rotate: 0deg; }
+  56.25% { rotate: 30deg; }
+  57.5% { rotate: -30deg; }
+  58.75% { rotate: 30deg; }
+  60% { rotate: 0deg; }
+  64% { rotate: 0deg; }
+  65.4% { rotate: 30deg; }
+  66.8% { rotate: -30deg; }
+  68.2% { rotate: 30deg; }
+  69.6% { rotate: -30deg; }
+  71% { rotate: 0deg; }
+  74% { rotate: 0deg; }
+  75.2% { rotate: 30deg; }
+  76.4% { rotate: -30deg; }
+  77.6% { rotate: 30deg; }
+  78.8% { rotate: -30deg; }
+  80% { rotate: 0deg; }
+  92% { rotate: 0deg; }
+  100% { rotate: 0deg; }
+}
+@keyframes nh_flipAr { 
+  0% { rotate: 0deg; }
+  12% { rotate: 0deg; }
+  24% { rotate: 0deg; }
+  32% { rotate: 0deg; }
+  44% { rotate: 0deg; }
+  55% { rotate: 0deg; }
+  56.25% { rotate: -30deg; }
+  57.5% { rotate: 30deg; }
+  58.75% { rotate: -30deg; }
+  60% { rotate: 0deg; }
+  64% { rotate: 0deg; }
+  65.4% { rotate: -30deg; }
+  66.8% { rotate: 30deg; }
+  68.2% { rotate: -30deg; }
+  69.6% { rotate: 30deg; }
+  71% { rotate: 0deg; }
+  74% { rotate: 0deg; }
+  75.2% { rotate: -30deg; }
+  76.4% { rotate: 30deg; }
+  77.6% { rotate: -30deg; }
+  78.8% { rotate: 30deg; }
+  80% { rotate: 0deg; }
+  92% { rotate: 0deg; }
+  100% { rotate: 0deg; }
+}
+@keyframes nh_flipB { 
+  0% { rotate: 0deg; }
+  12% { rotate: 0deg; }
+  24% { rotate: 0deg; }
+  32% { rotate: 0deg; }
+  44% { rotate: 0deg; }
+  55% { rotate: 0deg; }
+  56.5% { rotate: 30deg; }
+  58% { rotate: 0deg; }
+  62.5% { rotate: 0deg; }
+  63.75% { rotate: 30deg; }
+  65% { rotate: -30deg; }
+  66.25% { rotate: 0deg; }
+  68.75% { rotate: 0deg; }
+  70% { rotate: 30deg; }
+  71.25% { rotate: -30deg; }
+  72.5% { rotate: 30deg; }
+  73.75% { rotate: 0deg; }
+  75.75% { rotate: 0deg; }
+  77.17% { rotate: 30deg; }
+  78.58% { rotate: -30deg; }
+  80% { rotate: 0deg; }
+  92% { rotate: 0deg; }
+  100% { rotate: 0deg; }
+}
+@keyframes nh_flipBr { 
+  0% { rotate: 0deg; }
+  12% { rotate: 0deg; }
+  24% { rotate: 0deg; }
+  32% { rotate: 0deg; }
+  44% { rotate: 0deg; }
+  55% { rotate: 0deg; }
+  56.5% { rotate: -30deg; }
+  58% { rotate: 0deg; }
+  62.5% { rotate: 0deg; }
+  63.75% { rotate: -30deg; }
+  65% { rotate: 30deg; }
+  66.25% { rotate: 0deg; }
+  68.75% { rotate: 0deg; }
+  70% { rotate: -30deg; }
+  71.25% { rotate: 30deg; }
+  72.5% { rotate: -30deg; }
+  73.75% { rotate: 0deg; }
+  75.75% { rotate: 0deg; }
+  77.17% { rotate: -30deg; }
+  78.58% { rotate: 30deg; }
+  80% { rotate: 0deg; }
+  92% { rotate: 0deg; }
+  100% { rotate: 0deg; }
+}
+@keyframes nh_flipC { 
+  0% { rotate: 0deg; }
+  12% { rotate: 0deg; }
+  24% { rotate: 0deg; }
+  32% { rotate: 0deg; }
+  44% { rotate: 0deg; }
+  55% { rotate: 0deg; }
+  56.25% { rotate: 30deg; }
+  57.5% { rotate: -30deg; }
+  58.75% { rotate: 30deg; }
+  60% { rotate: -30deg; }
+  61.25% { rotate: 30deg; }
+  62.5% { rotate: -30deg; }
+  63.75% { rotate: 30deg; }
+  65% { rotate: -30deg; }
+  66.25% { rotate: 0deg; }
+  75% { rotate: 0deg; }
+  76.25% { rotate: 30deg; }
+  77.5% { rotate: -30deg; }
+  78.75% { rotate: 30deg; }
+  80% { rotate: 0deg; }
+  92% { rotate: 0deg; }
+  100% { rotate: 0deg; }
+}
+@keyframes nh_flipCr { 
+  0% { rotate: 0deg; }
+  12% { rotate: 0deg; }
+  24% { rotate: 0deg; }
+  32% { rotate: 0deg; }
+  44% { rotate: 0deg; }
+  55% { rotate: 0deg; }
+  56.25% { rotate: -30deg; }
+  57.5% { rotate: 30deg; }
+  58.75% { rotate: -30deg; }
+  60% { rotate: 30deg; }
+  61.25% { rotate: -30deg; }
+  62.5% { rotate: 30deg; }
+  63.75% { rotate: -30deg; }
+  65% { rotate: 30deg; }
+  66.25% { rotate: 0deg; }
+  75% { rotate: 0deg; }
+  76.25% { rotate: -30deg; }
+  77.5% { rotate: 30deg; }
+  78.75% { rotate: -30deg; }
   80% { rotate: 0deg; }
   92% { rotate: 0deg; }
   100% { rotate: 0deg; }

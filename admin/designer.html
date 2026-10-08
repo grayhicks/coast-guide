@@ -211,6 +211,8 @@ body.locked #lock{ display:flex; min-height:100vh; align-items:center; justify-c
 @media (min-width:821px){ .tabs{ flex-wrap:nowrap; gap:2px; } .tabs button{ flex:1 1 0; min-width:0 !important; } .panel, .panel > *, .box.picked, .levelrow{ min-width:0; } }
 @media (min-width:821px) and (max-width:1679px){ .tabs button span{ white-space:nowrap; } .tabs button{ padding-left:2px !important; padding-right:2px !important; font-size:clamp(10.5px, 0.85vw, 12px) !important; flex:1 1 auto !important; } }
 @media (min-width:1360px) and (max-width:1679px){ #width{ max-width:160px !important; } #lists, #look{ max-width:140px !important; } }
+/* 10/08 (J23): from 1200 the bar has room (at 1100 it pushed Save off the edge), so the three choices show their whole words ("iPhone (390)", "Full cards") */
+@media (min-width:1200px) and (max-width:1359px){ #width{ max-width:142px !important; } #lists, #look{ max-width:122px !important; } }
 .tabs button{ flex-direction:column; gap:2px; min-width:54px; min-height:54px; padding:6px 6px; font-size:12px; font-weight:700; color:var(--mute); background:transparent; border-color:transparent; }
 .tabs button.on{ background:var(--chipon); color:var(--mint); border-color:transparent; }
 .tools [data-tab]{ display:none; }
