@@ -1767,6 +1767,8 @@ html[data-theme="light"] .site-foot{background:linear-gradient(180deg,transparen
 @media(min-width:640px){.foot-cols{grid-template-columns:repeat(3,1fr)}}
 .foot-h,.foot-grid h2,.foot-cols h2{font:800 var(--fs-kicker)/1 var(--font-sans);letter-spacing:.18em;
   text-transform:uppercase;color:var(--ink-3);margin:0 0 8px}
+
+.foot-h2{margin-top:var(--s-5)}
 .foot-cols ul,.foot-grid ul{list-style:none;margin:0;padding:0}
 .foot-cols a,.foot-grid a{display:flex;align-items:center;min-height:40px;color:var(--ink-2);
   text-decoration:none;font-size:var(--fs-body);width:fit-content}
