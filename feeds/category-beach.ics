@@ -25,102 +25,8 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_crabs_hermit_crab_races_1010-2026-10-10@coastaleventures.com
-DTSTAMP:20261010T000000Z
-DTSTART;VALUE=DATE:20261010
-DTEND;VALUE=DATE:20261011
-SUMMARY:Hermit Crab Races at CRABS on the Beach
-LOCATION:CRABS on the Beach\, 6 Casino Beach Boardwalk\, Gulf Breeze\, FL 3
- 2561
-DESCRIPTION:Saturdays 10/10 and 10/17 · 5:00 PM and 6:00 PM\n\nCRABS on th
- e Beach races purple pincher hermit crabs in its playground on Saturday\, 
- October 10 and Saturday\, October 17\, with races at 5:00 PM and 6:00 PM. 
- The restaurant says it has run the races free of charge for smaller guests
-  for 23 years. The crabs are native to Honduras and Chile and live in tree
- s near the ocean.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/
- events/ev-crabs-hermit-crab-races-1010.html
-URL:https://coastaleventures.com/events/ev-crabs-hermit-crab-races-1010.htm
- l
-CATEGORIES:Beach
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_oceanhour-2026-10-10@coastaleventures.com
-DTSTAMP:20261010T000000Z
-DTSTART;VALUE=DATE:20261010
-DTEND;VALUE=DATE:20261011
-SUMMARY:Ocean Hour Beach Cleanup
-LOCATION:Rotating\, Pensacola Beach / area waterfronts\, Pensacola Beach\, 
- FL 32561
-DESCRIPTION:Saturdays · start time and site posted each week\n\nGive an ho
- ur and leave the beach better. Buckets\, grabbers\, and gloves are provide
- d. It is a service morning that fits the family's values and is kid-friend
- ly.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/events/ev-ocea
- nhour.html
-URL:https://coastaleventures.com/events/ev-oceanhour.html
-CATEGORIES:Beach
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_18th_annual_run_for_the_reef_1010-2026-10-10@coastaleventures.com
-DTSTAMP:20261010T000000Z
-DTSTART;TZID=America/Chicago:20261010T073000
-DTEND;TZID=America/Chicago:20261010T083000
-SUMMARY:Run for the Reef\, 18th year
-LOCATION:Windjammers on the Pier\, 8579 Gulf Blvd\, Navarre\, FL 32566
-DESCRIPTION:Saturday 10/10 · 7:30 AM\n\nA 10K\, a 5K run and walk\, and a 
- one mile fun run for ages twelve and under\, all starting from the pier at
-  Navarre Beach. The 5K and 10K run out and back along Gulf Blvd. The fun r
- un goes off on the Sea Turtle Center nature trail once the 5K has cleared.
-  The money pays for the Navarre Beach Marine Sanctuary's snorkelling and d
- iving reefs\, so the race funds the reef it's named after. An after-race p
- arty follows with food and refreshments.\n\nPrice: No published price\n\nD
- etails: https://coastaleventures.com/events/ev-18th-annual-run-for-the-ree
- f-1010.html
-URL:https://coastaleventures.com/events/ev-18th-annual-run-for-the-reef-101
- 0.html
-CATEGORIES:Beach
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_ferry-2026-10-10@coastaleventures.com
-DTSTAMP:20261010T000000Z
-DTSTART;TZID=America/Chicago:20261010T090000
-DTEND;TZID=America/Chicago:20261010T180000
-SUMMARY:Pensacola Bay Ferry to Fort Pickens
-LOCATION:Downtown ferry landing → Fort Pickens → Pensacola Beach\, 700 
- S Barracks St\, Pensacola\, FL 32502
-DESCRIPTION:Sat + Sun · runs 9 AM-6 PM\n\nBoat + fort + beach without the 
- car: ranger narration across the bay\, tunnels and batteries at Fort Picke
- ns for engineering-minded kids\, then the beach stop. Strollers roll aboar
- d.\n\nPrice: from $20\n\nDetails: https://coastaleventures.com/events/ev-f
- erry.html
-URL:https://coastaleventures.com/events/ev-ferry.html
-CATEGORIES:Beach
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_destin_rodeo_weighins-2026-10-10@coastaleventures.com
-DTSTAMP:20261010T000000Z
-DTSTART;TZID=America/Chicago:20261010T100000
-DTEND;TZID=America/Chicago:20261010T190000
-SUMMARY:Destin Fishing Rodeo: Daily Public Weigh-Ins
-LOCATION:Docks behind AJ's Seafood & Oyster Bar\, 116 Harbor Blvd\, Destin\
- , FL 32541
-DESCRIPTION:Daily\, Oct 1 – Oct 31 · 10:00 AM-7:00 PM\n\nAnglers competi
- ng in the month-long Destin Fishing Rodeo bring their catches to the scale
-  on the harbor docks behind AJ's Seafood & Oyster Bar every day in October
- . The public is welcome to watch for free from 10 AM to 7 PM\, and the cro
- wd tends to grow with the size of the fish coming off the boats.\n\nPrice:
-  Free\n\nDetails: https://coastaleventures.com/events/ev-destin-rodeo-weig
- hins.html
-URL:https://coastaleventures.com/events/ev-destin-rodeo-weighins.html
-CATEGORIES:Beach
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_navarre_charity_chili_cookoff_1011-2026-10-11@coastaleventures.com
-DTSTAMP:20261010T000000Z
+DTSTAMP:20261011T000000Z
 DTSTART;VALUE=DATE:20261011
 DTEND;VALUE=DATE:20261012
 SUMMARY:Charity Chili Cookoff and Volleyball Tourney on Navarre Beach
@@ -141,7 +47,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_ferry-2026-10-11@coastaleventures.com
-DTSTAMP:20261010T000000Z
+DTSTAMP:20261011T000000Z
 DTSTART;TZID=America/Chicago:20261011T090000
 DTEND;TZID=America/Chicago:20261011T180000
 SUMMARY:Pensacola Bay Ferry to Fort Pickens
@@ -157,8 +63,27 @@ CATEGORIES:Beach
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_destin_rodeo_weighins-2026-10-11@coastaleventures.com
+DTSTAMP:20261011T000000Z
+DTSTART;TZID=America/Chicago:20261011T100000
+DTEND;TZID=America/Chicago:20261011T190000
+SUMMARY:Destin Fishing Rodeo: Daily Public Weigh-Ins
+LOCATION:Docks behind AJ's Seafood & Oyster Bar\, 116 Harbor Blvd\, Destin\
+ , FL 32541
+DESCRIPTION:Daily\, Oct 1 – Oct 31 · 10:00 AM-7:00 PM\n\nAnglers competi
+ ng in the month-long Destin Fishing Rodeo bring their catches to the scale
+  on the harbor docks behind AJ's Seafood & Oyster Bar every day in October
+ . The public is welcome to watch for free from 10 AM to 7 PM\, and the cro
+ wd tends to grow with the size of the fish coming off the boats.\n\nPrice:
+  Free\n\nDetails: https://coastaleventures.com/events/ev-destin-rodeo-weig
+ hins.html
+URL:https://coastaleventures.com/events/ev-destin-rodeo-weighins.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_beach_o_ween_2026_1016-2026-10-16@coastaleventures.com
-DTSTAMP:20261010T000000Z
+DTSTAMP:20261011T000000Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261017
 SUMMARY:Beach-O-Ween 2026
@@ -176,7 +101,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_crabs_hermit_crab_races_1010-2026-10-17@coastaleventures.com
-DTSTAMP:20261010T000000Z
+DTSTAMP:20261011T000000Z
 DTSTART;VALUE=DATE:20261017
 DTEND;VALUE=DATE:20261018
 SUMMARY:Hermit Crab Races at CRABS on the Beach
@@ -196,7 +121,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_wickedwinerun_1121-2026-11-21@coastaleventures.com
-DTSTAMP:20261010T000000Z
+DTSTAMP:20261011T000000Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:SKECHERS Wicked Wine Run: Milton
