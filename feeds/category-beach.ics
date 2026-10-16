@@ -25,48 +25,10 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_navarre_charity_chili_cookoff_1011-2026-10-11@coastaleventures.com
-DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20261011
-DTEND;VALUE=DATE:20261012
-SUMMARY:Charity Chili Cookoff and Volleyball Tourney on Navarre Beach
-LOCATION:Juana's Pagodas & Sailors' Grill\, 1451 Navarre Beach Causeway\, N
- avarre\, FL 32566
-DESCRIPTION:Sunday 10/11 · tastings 2:00 PM to 4:00 PM\, music 3:00 PM to 
- 7:00 PM\n\nCaring and Sharing of South Santa Rosa County holds its 33rd an
- nual chili and salsa cookoff with a beach volleyball tournament at Juana's
-  Pagodas. Tastings run 2:00 PM to 4:00 PM for a $20 donation at the door\,
-  Goodbye August plays from 3:00 PM to 7:00 PM\, and winners and raffle pri
- zes are announced at 4:00 PM. The money buys holiday food for families in 
- South Santa Rosa County.\n\nPrice: from $20\n\nDetails: https://coastaleve
- ntures.com/events/ev-navarre-charity-chili-cookoff-1011.html
-URL:https://coastaleventures.com/events/ev-navarre-charity-chili-cookoff-10
- 11.html
-CATEGORIES:Beach
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_ferry-2026-10-11@coastaleventures.com
-DTSTAMP:20261011T000000Z
-DTSTART;TZID=America/Chicago:20261011T090000
-DTEND;TZID=America/Chicago:20261011T180000
-SUMMARY:Pensacola Bay Ferry to Fort Pickens
-LOCATION:Downtown ferry landing → Fort Pickens → Pensacola Beach\, 700 
- S Barracks St\, Pensacola\, FL 32502
-DESCRIPTION:Sat + Sun · runs 9 AM-6 PM\n\nBoat + fort + beach without the 
- car: ranger narration across the bay\, tunnels and batteries at Fort Picke
- ns for engineering-minded kids\, then the beach stop. Strollers roll aboar
- d.\n\nPrice: from $20\n\nDetails: https://coastaleventures.com/events/ev-f
- erry.html
-URL:https://coastaleventures.com/events/ev-ferry.html
-CATEGORIES:Beach
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_destin_rodeo_weighins-2026-10-11@coastaleventures.com
-DTSTAMP:20261011T000000Z
-DTSTART;TZID=America/Chicago:20261011T100000
-DTEND;TZID=America/Chicago:20261011T190000
+UID:ev_destin_rodeo_weighins-2026-10-16@coastaleventures.com
+DTSTAMP:20261016T000000Z
+DTSTART;TZID=America/Chicago:20261016T100000
+DTEND;TZID=America/Chicago:20261016T190000
 SUMMARY:Destin Fishing Rodeo: Daily Public Weigh-Ins
 LOCATION:Docks behind AJ's Seafood & Oyster Bar\, 116 Harbor Blvd\, Destin\
  , FL 32541
@@ -82,26 +44,8 @@ CATEGORIES:Beach
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_beach_o_ween_2026_1016-2026-10-16@coastaleventures.com
-DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20261016
-DTEND;VALUE=DATE:20261017
-SUMMARY:Beach-O-Ween 2026
-LOCATION:Pensacola Beach Boardwalk\, 400 Quietwater Beach Road\, Pensacola 
- Beach\, FL 32561
-DESCRIPTION:Friday 10/16\n\nBeach-O-Ween takes over the Pensacola Beach Boa
- rdwalk with a bounce house\, a costume contest\, games\, face painting\, h
- otdogs and candy\, and Visit Pensacola says every game and activity is fre
- e. Pets are asked to stay home for this one\, aside from service animals. 
- The Halloween event runs October 16.\n\nPrice: Free\n\nDetails: https://co
- astaleventures.com/events/ev-beach-o-ween-2026-1016.html
-URL:https://coastaleventures.com/events/ev-beach-o-ween-2026-1016.html
-CATEGORIES:Beach
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_crabs_hermit_crab_races_1010-2026-10-17@coastaleventures.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;VALUE=DATE:20261017
 DTEND;VALUE=DATE:20261018
 SUMMARY:Hermit Crab Races at CRABS on the Beach
@@ -121,7 +65,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_wickedwinerun_1121-2026-11-21@coastaleventures.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:SKECHERS Wicked Wine Run: Milton

@@ -25,63 +25,10 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_suds_n_cinema_scooby_doo_live_action_1008-2026-10-11@coastaleventure
- s.com
-DTSTAMP:20261011T000000Z
-DTSTART;TZID=America/Chicago:20261011T183000
-DTEND;TZID=America/Chicago:20261011T193000
-SUMMARY:Suds N Cinema: Scooby-Doo (Live Action)
-LOCATION:Suds N Cinema\, 174 Miracle Strip Pkwy SE\, Fort Walton Beach\, FL
-  32548
-DESCRIPTION:Thursday 10/8\, Friday 10/9\, Sunday 10/11 and Monday 10/12 · 
- 6:30 PM\n\nSuds N Cinema in Fort Walton Beach shows the early 2000s live-a
- ction Scooby-Doo as a spooky season screening for families. Staff deliver 
- pizza\, sandwiches\, snacks\, sodas and\, for parents\, beer and wine to y
- our seat. The show ends early enough for a school night.\n\nPrice: from $5
- \n\nDetails: https://coastaleventures.com/events/ev-suds-n-cinema-scooby-d
- oo-live-action-1008.html
-URL:https://coastaleventures.com/events/ev-suds-n-cinema-scooby-doo-live-ac
- tion-1008.html
-CATEGORIES:Movies
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_rodeo_kidsmovie_1012-2026-10-12@coastaleventures.com
-DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261013
-SUMMARY:Kids Fall Movie Festival
-LOCATION:AJ's Seafood & Oyster Bar\, 116 Harbor Blvd\, Destin\, FL 32541
-DESCRIPTION:Monday 10/12 (Columbus Day\, school out)\n\nAJ's shows a free m
- ovie on its JumboTron for kids out of school on Columbus Day. Hot dogs\, p
- opcorn and snow cones keep them fed while they watch.\n\nPrice: Free\n\nDe
- tails: https://coastaleventures.com/events/ev-rodeo-kidsmovie-1012.html
-URL:https://coastaleventures.com/events/ev-rodeo-kidsmovie-1012.html
-CATEGORIES:Movies
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_valparaiso_library_monsters_inc_1012-2026-10-12@coastaleventures.com
-DTSTAMP:20261011T000000Z
-DTSTART;TZID=America/Chicago:20261012T153000
-DTEND;TZID=America/Chicago:20261012T170000
-SUMMARY:All Ages Movie at the Valparaiso Library: Monsters\, Inc.
-LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
-DESCRIPTION:Monday 10/12 · 3:30 PM to 5:00 PM\n\nThe Valparaiso Library sh
- ows Monsters\, Inc.\, rated G\, for a Monday afternoon family movie. The l
- ibrary says snacks and drinks will be provided. The showing is listed for 
- families and everyone.\n\nPrice: No published price\n\nDetails: https://co
- astaleventures.com/events/ev-valparaiso-library-monsters-inc-1012.html
-URL:https://coastaleventures.com/events/ev-valparaiso-library-monsters-inc-
- 1012.html
-CATEGORIES:Movies
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_suds_n_cinema_the_shining_1014-2026-10-14@coastaleventures.com
-DTSTAMP:20261011T000000Z
-DTSTART;TZID=America/Chicago:20261014T183000
-DTEND;TZID=America/Chicago:20261014T193000
+UID:ev_suds_n_cinema_the_shining_1014-2026-10-16@coastaleventures.com
+DTSTAMP:20261016T000000Z
+DTSTART;TZID=America/Chicago:20261016T183000
+DTEND;TZID=America/Chicago:20261016T193000
 SUMMARY:Suds N Cinema: The Shining
 LOCATION:Suds N Cinema\, 174 Miracle Strip Pkwy SE\, Fort Walton Beach\, FL
   32548
@@ -97,46 +44,9 @@ CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_niceville_library_hoppers_1015-2026-10-15@coastaleventures.com
-DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20261015
-DTEND;VALUE=DATE:20261016
-SUMMARY:Family Movie at the Niceville Library: Hoppers
-LOCATION:Niceville Public Library\, 206 N Partin Dr\, Niceville\, FL 32578
-DESCRIPTION:Thursday 10/15 · 4:15 PM (room opens 4:00 PM)\n\nThe Niceville
-  Public Library shows Hoppers\, rated PG and 1 hour 40 minutes long\, on t
- he big screen in its children's program room. The film follows an animal-l
- oving college student who moves her mind into a robotic beaver to save a f
- orest glade from a highway plan. The library says refreshments will be ser
- ved.\n\nPrice: No published price\n\nDetails: https://coastaleventures.com
- /events/ev-niceville-library-hoppers-1015.html
-URL:https://coastaleventures.com/events/ev-niceville-library-hoppers-1015.h
- tml
-CATEGORIES:Movies
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_valparaiso_library_anime_club-2026-10-15@coastaleventures.com
-DTSTAMP:20261011T000000Z
-DTSTART;TZID=America/Chicago:20261015T150000
-DTEND;TZID=America/Chicago:20261015T160000
-SUMMARY:Anime Club at the Valparaiso Library
-LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
-DESCRIPTION:Thursdays · 3:00 PM to 4:00 PM\, through 12/17\n\nThe Valparai
- so Library's Anime Club meets every Thursday afternoon for middle and high
-  school students\, ages 11 to 17. The club watches anime rated from G to P
- G-13 and TV-14\, and manga is on hand to read during meetings.\n\nPrice: N
- o published price\n\nDetails: https://coastaleventures.com/events/ev-valpa
- raiso-library-anime-club.html
-URL:https://coastaleventures.com/events/ev-valparaiso-library-anime-club.ht
- ml
-CATEGORIES:Movies
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_seaside_central_square_cinema_hotel_transylvania_1016-2026-10-16@coa
  staleventures.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;TZID=America/Chicago:20261016T190000
 DTEND;TZID=America/Chicago:20261016T203000
 SUMMARY:Central Square Cinema at Seaside: Hotel Transylvania
@@ -157,7 +67,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_central_square_cinema_october_1009-2026-10-16@coastaleventur
  es.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;TZID=America/Chicago:20261016T190000
 DTEND;TZID=America/Chicago:20261016T200000
 SUMMARY:Central Square Cinema at Seaside: October Movies
@@ -178,7 +88,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_navarre_throwback_movie_tuesdays_1020-2026-10-20@coastaleventures.co
  m
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;TZID=America/Chicago:20261020T160000
 DTEND;TZID=America/Chicago:20261020T173000
 SUMMARY:Throwback Movie Tuesday: 20 Years of Stories
@@ -196,7 +106,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_suds_n_cinema_interview_with_a_vampire_1021-2026-10-21@coastaleventu
  res.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;TZID=America/Chicago:20261021T183000
 DTEND;TZID=America/Chicago:20261021T193000
 SUMMARY:Suds N Cinema: Interview with a Vampire
@@ -216,7 +126,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-10-22@coastaleventures.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;TZID=America/Chicago:20261022T150000
 DTEND;TZID=America/Chicago:20261022T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -233,28 +143,9 @@ CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_cinemas_sand_toystory5_1023-2026-10-23@coastaleventures.com
-DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20261023
-DTEND;VALUE=DATE:20261024
-SUMMARY:Cinemas in the Sand: “Toy Story 5”
-LOCATION:Gulfside Pavilion\, Casino Beach\, 20 Casino Beach Blvd\, Pensacol
- a Beach\, FL 32561
-DESCRIPTION:Fri 10/23/2026 · dusk\n\nToy Story 5 plays free on a giant out
- door screen at the Gulfside Pavilion stage\, right on the sand at Casino B
- each. The Santa Rosa Island Authority starts the movie at sunset\, weather
-  permitting. It suits families with younger kids who already know Woody an
- d Buzz. Bring your own chairs or a blanket since there is no seating.\n\nP
- rice: Free\n\nDetails: https://coastaleventures.com/events/ev-cinemas-sand
- -toystory5-1023.html
-URL:https://coastaleventures.com/events/ev-cinemas-sand-toystory5-1023.html
-CATEGORIES:Movies
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_crescent_wandaween_jennifers_body_1023-2026-10-23@coastaleventures.c
  om
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;VALUE=DATE:20261023
 DTEND;VALUE=DATE:20261024
 SUMMARY:Wandaween: Jennifer's Body Screening and Costume Contest
@@ -273,7 +164,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_haunted_hollow_een_hotel_transylvania_1023-2026-10-23@coastaleventur
  es.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;TZID=America/Chicago:20261023T180000
 DTEND;TZID=America/Chicago:20261023T200000
 SUMMARY:Haunted Hollow-een Movie Night: Hotel Transylvania
@@ -293,7 +184,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_central_square_cinema_coco_1023-2026-10-23@coastaleventures.
  com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;TZID=America/Chicago:20261023T190000
 DTEND;TZID=America/Chicago:20261023T203000
 SUMMARY:Central Square Cinema at Seaside: Coco
@@ -314,7 +205,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_central_square_cinema_october_1009-2026-10-23@coastaleventur
  es.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;TZID=America/Chicago:20261023T190000
 DTEND;TZID=America/Chicago:20261023T200000
 SUMMARY:Central Square Cinema at Seaside: October Movies
@@ -334,7 +225,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_fear_fest_exploreum_2026_series_1003-2026-10-24@coastaleventures.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;TZID=America/Chicago:20261024T170000
 DTEND;TZID=America/Chicago:20261024T210000
 SUMMARY:Fear Fest
@@ -354,7 +245,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-10-29@coastaleventures.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;TZID=America/Chicago:20261029T150000
 DTEND;TZID=America/Chicago:20261029T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -372,7 +263,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_baytowne_hocus_pocus_movie_1030-2026-10-30@coastaleventures.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
 SUMMARY:Hocus Pocus: Movie on the Lawn
@@ -392,7 +283,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_crescent_nosferatu_live_score_1030-2026-10-30@coastaleventures.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
 SUMMARY:Nosferatu with a Live Improvised Score
@@ -410,7 +301,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_harborwalk_movieslawn_1030-2026-10-30@coastaleventures.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;TZID=America/Chicago:20261030T170000
 DTEND;TZID=America/Chicago:20261030T200000
 SUMMARY:Movies On The Lawn: Fall Edition
@@ -426,7 +317,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_haunted_hollow_een_hocus_pocus_1030-2026-10-30@coastaleventures.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;TZID=America/Chicago:20261030T180000
 DTEND;TZID=America/Chicago:20261030T200000
 SUMMARY:Haunted Hollow-een Movie Night: Hocus Pocus
@@ -445,7 +336,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_fallintofun_miltonlibrary_1031-2026-10-31@coastaleventures.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;TZID=America/Chicago:20261031T100000
 DTEND;TZID=America/Chicago:20261031T120000
 SUMMARY:Fall Into Fun at Milton Library
@@ -464,7 +355,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-05@coastaleventures.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;TZID=America/Chicago:20261105T150000
 DTEND;TZID=America/Chicago:20261105T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -481,9 +372,28 @@ CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_destin_commons_movie_minions_1106-2026-11-06@coastaleventures.com
+DTSTAMP:20261016T000000Z
+DTSTART;TZID=America/Chicago:20261106T183000
+DTEND;TZID=America/Chicago:20261106T193000
+SUMMARY:Movie Night on the Lawn: Minions at Destin Commons
+LOCATION:The Lawn at South Street\, Destin Commons\, 4100 Legendary Drive\,
+  Destin\, FL 32541
+DESCRIPTION:Friday 11/6 · 6:30 PM\n\nDestin Commons shows Minions on the b
+ ig screen on The Lawn at South Street. Families bring their own blankets a
+ nd chairs and settle in before the 6:30 PM start. The shops and restaurant
+ s of the village sit right behind the lawn for dinner beforehand.\n\nPrice
+ : No published price\n\nDetails: https://coastaleventures.com/events/ev-de
+ stin-commons-movie-minions-1106.html
+URL:https://coastaleventures.com/events/ev-destin-commons-movie-minions-110
+ 6.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_cat_video_fest_2026_suds_n_cinema_1107-2026-11-07@coastaleventures.c
  om
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Cat Video Fest 2026 at Suds N Cinema
@@ -502,7 +412,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_fear_fest_1010-2026-11-07@coastaleventures.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;TZID=America/Chicago:20261107T170000
 DTEND;TZID=America/Chicago:20261107T210000
 SUMMARY:Fear Fest
@@ -520,7 +430,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-12@coastaleventures.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;TZID=America/Chicago:20261112T150000
 DTEND;TZID=America/Chicago:20261112T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -538,7 +448,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-19@coastaleventures.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;TZID=America/Chicago:20261119T150000
 DTEND;TZID=America/Chicago:20261119T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -556,7 +466,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-26@coastaleventures.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;TZID=America/Chicago:20261126T150000
 DTEND;TZID=America/Chicago:20261126T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -574,7 +484,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-03@coastaleventures.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;TZID=America/Chicago:20261203T150000
 DTEND;TZID=America/Chicago:20261203T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -593,7 +503,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_mobile_wheels_and_reels_christmas_pageant_1204-2026-12-04@coastaleve
  ntures.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;TZID=America/Chicago:20261204T180000
 DTEND;TZID=America/Chicago:20261204T220000
 SUMMARY:Wheels & Reels Drive-In Movies: The Best Christmas Pageant Ever
@@ -612,7 +522,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-10@coastaleventures.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;TZID=America/Chicago:20261210T150000
 DTEND;TZID=America/Chicago:20261210T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -630,7 +540,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-17@coastaleventures.com
-DTSTAMP:20261011T000000Z
+DTSTAMP:20261016T000000Z
 DTSTART;TZID=America/Chicago:20261217T150000
 DTEND;TZID=America/Chicago:20261217T160000
 SUMMARY:Anime Club at the Valparaiso Library
