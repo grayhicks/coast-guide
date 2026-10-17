@@ -349,6 +349,8 @@ html.hk_gd_dark .hk_sss_ic .sss_edge { stroke: rgb(122, 100, 168); }
 .ph-dawn .hk_swellw { opacity: 0.8; }
 .ph-night .vwk path { fill: rgba(150, 208, 244, 0.44); }
 .ph-night .fprt { background: radial-gradient(at 50% 45%, rgba(150, 212, 255, 0.26) 0%, rgba(120, 190, 240, 0.13) 46%, rgba(110, 180, 230, 0) 72%); }
+.zzz:not(:where(.hero)) *, .zzz:not(:where(.hero)) ::before, .zzz:not(:where(.hero)) ::after, .zzz:not(:where(.hero))::before, .zzz:not(:where(.hero))::after { animation: auto ease 0s 1 normal none running none !important; }
+.hero.zzz *, .hero.zzz ::before, .hero.zzz ::after, .hero.zzz::before, .hero.zzz::after { animation-play-state: paused !important; }
 .hk.hk .hero-eyebrow, .hk.hk .hero-eyebtn, .hk.hk .hero-datebtn, .hk.hk .morewrap .morebtn { background: rgba(9, 32, 46, 0.3) !important; border: 1px solid rgba(232, 199, 123, 0.46) !important; border-radius: 999px !important; box-shadow: none !important; backdrop-filter: none !important; text-shadow: rgba(8, 24, 36, 0.9) 0px 1px 3px, rgba(8, 24, 36, 0.65) 0px 2px 10px !important; }
 .adlbl:empty { display: none; }
 @media (max-width: 340px){.hk .hero .adyacht { left: -8px; }}
@@ -445,6 +447,7 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
 .hk.hk_day .dnx .dnmoon > circle:first-of-type { stroke: rgb(140, 106, 30); opacity: 0.75; }
 .hk .hero-datebtn.hk_datecal .hk_datecalic { flex: 0 0 auto; transform: translateY(-1.2px); }
 .hero.hk_nhon { background: rgb(127, 195, 227); }
+.hero.hk_nhon.ph-night { background: rgb(25, 34, 47); }
 .hero.hk_nhon > .hk_nh { position: absolute; inset: 0px; z-index: 0; overflow: hidden; pointer-events: none; }
 .hero.hk_nhon > .hk_nh > svg { display: block; width: 100%; height: 100%; }
 .hero.hk_nhon > .hk_nh [id$="_shade"] { display: none; }
