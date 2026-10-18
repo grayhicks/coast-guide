@@ -1,50 +1,20 @@
 {
   "name": "Coastal Eventures events",
   "site": "https://coastaleventures.com/",
-  "generated": "2026-10-17",
+  "generated": "2026-10-18",
   "timezone": "America/Chicago",
   "window": {
-    "from": "2026-10-17",
-    "to": "2027-02-14"
+    "from": "2026-10-18",
+    "to": "2027-02-15"
   },
-  "count": 2994,
+  "count": 2928,
   "note": "Event details are compiled from the venue or organizer pages named in each record's sources. Check the venue before you travel. Weather data elsewhere on the site is Open-Meteo, CC BY 4.0.",
   "events": [
     {
-      "id": "ev_baytowne_beerfest-2026-10-17",
-      "title": "18th Annual Baytowne Wharf Beer Festival",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Fri 10/16 · 6:00 PM to 8:00 PM (Backyard Bash) · Sat 10/17 · 2:00 PM to 5:00 PM (Grand Tasting)",
-      "venue": "Baytowne Wharf Events Plaza",
-      "address": "9300 Emerald Coast Parkway West, Miramar Beach, FL 32550",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $45"
-      },
-      "summary": "The 18th annual festival runs a Friday tailgate-style Backyard Bash followed by Saturday's grand craft-beer tasting, both with live music and food. The festival's own pages describe the beer lineup as either over 100 or 150+ craft beers depending on which page you read, and admission is 21+ for the tasting though the Village around it stays open to everyone.",
-      "url": "https://coastaleventures.com/events/ev-baytowne-beerfest.html",
-      "sources": [
-        {
-          "note": "Baytowne Beer Festival: official events page, ticket pricing",
-          "url": "https://baytownebeerfestival.com/events/"
-        },
-        {
-          "note": "Baytowne Beer Festival: official homepage",
-          "url": "https://baytownebeerfestival.com/"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_usta_alabama_junior_open_1017-2026-10-17",
+      "id": "ev_usta_alabama_junior_open_1017-2026-10-18",
       "title": "2026 USTA Alabama Junior Open",
-      "date": "2026-10-17",
-      "endDate": "2026-10-18",
+      "date": "2026-10-18",
+      "endDate": null,
       "startTime": null,
       "endTime": null,
       "when": "Sat 10/17 – Sun 10/18 · times not yet published",
@@ -71,40 +41,36 @@
       "checkedOn": "2026-10-02"
     },
     {
-      "id": "ev_walton_county_fair_2026_1012-2026-10-17",
-      "title": "2026 Walton County Fair",
-      "date": "2026-10-17",
-      "endDate": null,
+      "id": "ev_37th_annual_alabama_veterans_affairs_associa_1018-2026-10-18",
+      "title": "36th Annual Alabama Veterans Affairs Association Conference",
+      "date": "2026-10-18",
+      "endDate": "2026-10-22",
       "startTime": null,
       "endTime": null,
-      "when": "Monday 10/12 to Saturday 10/17 · gates 5:00 PM (Saturday noon) · final tickets sold at 9:00 PM",
-      "venue": "Walton County Fairgrounds",
-      "address": "790 N 9th St, DeFuniak Springs, FL 32433",
+      "when": "Sunday 10/18",
+      "venue": "Orange Beach Convention Center",
+      "address": "4671 Wharf Pkwy W, Orange Beach, AL 36561",
       "category": "event",
       "categoryLabel": "Events and festivals",
       "price": {
-        "kind": "priced",
-        "label": "from $5"
+        "kind": "tba",
+        "label": "No published price"
       },
-      "summary": "The Walton County Fair runs Monday, October 12 through Saturday, October 17 at the fairgrounds in DeFuniak Springs, with its tagline Rooted in Tradition, Built for the Future. The week has a carnival midway with new rides, the famous pig show and outdoor concerts on Friday and Saturday nights, plus vendor and food booths and food trucks. Gates open at 5:00 PM, or noon on Saturday, and the final tickets are sold at 9:00 PM each night.",
-      "url": "https://coastaleventures.com/events/ev-walton-county-fair-2026-1012.html",
+      "summary": "The Orange Beach Convention Center hosts the 36th Annual Alabama Veterans Affairs Association Conference from Sunday, October 18, through Thursday, October 22. The statewide conference brings training and professional development programming to Alabama Veterans Affairs Association members.",
+      "url": "https://coastaleventures.com/events/ev-37th-annual-alabama-veterans-affairs-associa-1018.html",
       "sources": [
         {
-          "note": "waltoncountyfair.com: 2026 Walton County Fair October 12 to 17, gates 5 PM Monday to Friday and noon Saturday, $5 gate admission Monday to Thursday, Friday and Saturday $5 ages 5 to 17 and $10 ages 18 and up",
-          "url": "https://www.waltoncountyfair.com"
-        },
-        {
-          "note": "waltoncountyfair.com fair schedule: booth and vendor hours 5 to 9 PM, Saturday noon to 9 PM, carnival midway with nightly wristbands, outside food trucks",
-          "url": "https://www.waltoncountyfair.com/fair-schedule"
+          "note": "avaa.online: the organizer's own page, read for the admission",
+          "url": "https://www.avaa.online/conference"
         }
       ],
-      "checkedOn": "2026-10-07"
+      "checkedOn": "2026-09-26"
     },
     {
-      "id": "ev_daphne_jubilee_festival_arts_1017-2026-10-17",
+      "id": "ev_daphne_jubilee_festival_arts_1017-2026-10-18",
       "title": "38th Annual Jubilee Festival of Arts",
-      "date": "2026-10-17",
-      "endDate": "2026-10-18",
+      "date": "2026-10-18",
+      "endDate": null,
       "startTime": null,
       "endTime": null,
       "when": "Saturday 10/17 · 10:00 AM to 5:00 PM · Sunday 10/18 · 10:00 AM to 4:00 PM",
@@ -135,35 +101,9 @@
       "checkedOn": "2026-09-25"
     },
     {
-      "id": "ev_blakeley_animal_adoption_1017-2026-10-17",
-      "title": "Animal Adoption Day at Historic Blakeley State Park",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Saturday 10/17 · during park hours",
-      "venue": "Historic Blakeley State Park",
-      "address": "34745 State Hwy 225, Spanish Fort, AL 36527",
-      "category": "nature",
-      "categoryLabel": "Nature and outdoors",
-      "price": {
-        "kind": "priced",
-        "label": "from $3"
-      },
-      "summary": "Historic Blakeley State Park teams up with the Baldwin Humane Society for an adoption day in the park. The park lists the event as complimentary with regular park admission. Coco Nutty's ice cream and frozen treat truck is also listed at the park that day.",
-      "url": "https://coastaleventures.com/events/ev-blakeley-animal-adoption-1017.html",
-      "sources": [
-        {
-          "note": "Historic Blakeley State Park: events page, read for the adoption day, partner, admission rule and the ice cream truck",
-          "url": "https://www.blakeleypark.com/Things-to-Do/Events"
-        }
-      ],
-      "checkedOn": "2026-09-24"
-    },
-    {
-      "id": "ev_blithespirit-2026-10-17",
+      "id": "ev_blithespirit-2026-10-18",
       "title": "Blithe Spirit: Theatre 98",
-      "date": "2026-10-17",
+      "date": "2026-10-18",
       "endDate": "2026-11-01",
       "startTime": null,
       "endTime": null,
@@ -187,10 +127,10 @@
       "checkedOn": "2026-10-02"
     },
     {
-      "id": "ev_ccb_lobster_fest_round2_1009-2026-10-17",
+      "id": "ev_ccb_lobster_fest_round2_1009-2026-10-18",
       "title": "CCB Lobster Fest, Round 2",
-      "date": "2026-10-17",
-      "endDate": "2026-10-18",
+      "date": "2026-10-18",
+      "endDate": null,
       "startTime": null,
       "endTime": null,
       "when": "Fri 10/16 to Sun 10/18 (moved from 10/9 to 10/11 for the weather)",
@@ -213,39 +153,9 @@
       "checkedOn": "2026-10-05"
     },
     {
-      "id": "ev_fall_ball_at_blue_wahoos_stadium_a_1017-2026-10-17",
-      "title": "Fall Ball at Blue Wahoos Stadium: Alabama vs. Georgia Tech (fall baseball exhibition)",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Saturday 10/17 · start time not posted",
-      "venue": "Blue Wahoos Stadium",
-      "address": "351 W Cedar St, Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Fall Ball: Alabama vs. Georgia Tech is a college baseball scrimmage at the Blue Wahoos' downtown ballpark on Saturday, October 17. It's one of three fall exhibitions in what the club calls its largest-ever fall schedule. Tickets are sold through bluewahoos.com.",
-      "url": "https://coastaleventures.com/events/ev-fall-ball-at-blue-wahoos-stadium-a-1017.html",
-      "sources": [
-        {
-          "note": "Blue Wahoos Fall Ball 2026 article: Oct 10 FSU-Auburn 1:00 PM CT, Oct 17 Alabama-Georgia Tech TBD, Oct 24 Florida-Troy TBD; box office (850) 934-8444",
-          "url": "https://www.milb.com/pensacola/news/fall-ball-2026"
-        },
-        {
-          "note": "Stadium special events page lists the three fall college baseball games; stadium address 351 W. Cedar St.",
-          "url": "https://www.milb.com/pensacola/tickets/specialevents"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_game_days_at_marina_bar_and_grill_1001-2026-10-17",
+      "id": "ev_game_days_at_marina_bar_and_grill_1001-2026-10-18",
       "title": "Game Days at Marina Bar & Grill",
-      "date": "2026-10-17",
+      "date": "2026-10-18",
       "endDate": "2026-12-31",
       "startTime": null,
       "endTime": null,
@@ -273,35 +183,9 @@
       "checkedOn": "2026-09-26"
     },
     {
-      "id": "ev_crabs_hermit_crab_races_1010-2026-10-17",
-      "title": "Hermit Crab Races at CRABS on the Beach",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Saturdays 10/10 and 10/17 · 5:00 PM and 6:00 PM",
-      "venue": "CRABS on the Beach",
-      "address": "6 Casino Beach Boardwalk, Gulf Breeze, FL 32561",
-      "category": "beach",
-      "categoryLabel": "Beach",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "CRABS on the Beach races purple pincher hermit crabs in its playground on Saturday, October 10 and Saturday, October 17, with races at 5:00 PM and 6:00 PM. The restaurant says it has run the races free of charge for smaller guests for 23 years. The crabs are native to Honduras and Chile and live in trees near the ocean.",
-      "url": "https://coastaleventures.com/events/ev-crabs-hermit-crab-races-1010.html",
-      "sources": [
-        {
-          "note": "crabsonthebeach.com: \"Saturday | Oct 10, 2026 | 5:00pm & 6:00pm\", \"Saturday | Oct 17, 2026 | 5:00pm & 6:00pm\", \"entertaining our smaller guests from around the world free of charge in our playground\"",
-          "url": "https://crabsonthebeach.com/HermitCrabRaces"
-        }
-      ],
-      "checkedOn": "2026-10-05"
-    },
-    {
-      "id": "ev_jazz_art_writers_south_festival_youth_exhibi_0915-2026-10-17",
+      "id": "ev_jazz_art_writers_south_festival_youth_exhibi_0915-2026-10-18",
       "title": "Jazz Art Writers South Festival Youth Exhibit",
-      "date": "2026-10-17",
+      "date": "2026-10-18",
       "endDate": "2026-11-01",
       "startTime": null,
       "endTime": null,
@@ -325,61 +209,9 @@
       "checkedOn": "2026-09-26"
     },
     {
-      "id": "ev_saenger_mobile_jokoy_1017-2026-10-17",
-      "title": "Jo Koy: Koy Meets World Tour",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Saturday 10/17 · 8:00 PM (doors 7:00 PM)",
-      "venue": "Saenger Theatre Mobile",
-      "address": "6 South Joachim St, Mobile, AL 36602",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Jo Koy brings his stand-up act to the Saenger Theatre in downtown Mobile for one show, with doors at 7:00 PM ahead of an 8:00 PM start. The venue's own event page does not publish an end time or any age guidance for the show.",
-      "url": "https://coastaleventures.com/events/ev-saenger-mobile-jokoy-1017.html",
-      "sources": [
-        {
-          "note": "Saenger Theatre Mobile (Regions Arena): official event page, read for the date, doors and show time",
-          "url": "https://www.regionsarena.com/events/detail/jo-koy-koy-meets-world-tour"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_make_your_own_glass_hot_glass_by_a_1007-2026-10-17",
-      "title": "Make Your Own Glass (hot glass, by appointment)",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "By appointment: Wednesdays 5 PM-9 PM, Saturdays 8 AM-11 AM",
-      "venue": "First City Art Center",
-      "address": "1060 N Guillemard St, Pensacola, FL 32501",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $85"
-      },
-      "summary": "Make Your Own Glass is a hands-on hot glass session at First City Art Center in Pensacola, where each participant makes a piece with a glassblower. It's for ages 8 and up including adults, by appointment on Wednesdays from 5-9 PM and Saturdays from 8-11 AM. The finished piece cools in an annealing oven and is picked up the following week. Standard pieces cost $85, and premium pieces such as a pumpkin, ornament, cup or bowl cost $110-$140.",
-      "url": "https://coastaleventures.com/events/ev-make-your-own-glass-hot-glass-by-a-1007.html",
-      "sources": [
-        {
-          "note": "FCAC product page: Wed 5-9 PM and Sat 8-11 AM, ages 8+, $85/$110-$140",
-          "url": "https://firstcityart.org/product/make-your-own-glass/"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_monochrome_exhibition_1003-2026-10-17",
+      "id": "ev_monochrome_exhibition_1003-2026-10-18",
       "title": "MONOCHROME exhibition",
-      "date": "2026-10-17",
+      "date": "2026-10-18",
       "endDate": "2026-10-24",
       "startTime": null,
       "endTime": null,
@@ -401,2672 +233,6 @@
         }
       ],
       "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_painting_with_a_twist_pensacola_pa_1003-2026-10-17",
-      "title": "Painting with a Twist Pensacola: paint-and-sip, family paint days and date nights (weekly programme)",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Classes most days: family days Saturday 10:30 AM, brunch Sunday 11 AM, evenings Wednesday to Saturday",
-      "venue": "Painting with a Twist Pensacola",
-      "address": "4771 Bayou Blvd Suite C11, Pensacola, FL 32503",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "$35 per family"
-      },
-      "summary": "Painting with a Twist Pensacola is an artist-led paint-and-sip studio at 4771 Bayou Blvd Suite C11 with several classes every week. October has family paint days (ages 6 and up with a parent, no alcohol), adult Paint & Sip and Date Night classes (ages 16 and up on date nights), Halloween-themed canvases and Paint Your Pet. Classes cost $35-$60 depending on the class, and alcohol is sold on site with no BYOB.",
-      "url": "https://coastaleventures.com/events/ev-painting-with-a-twist-pensacola-pa-1003.html",
-      "sources": [
-        {
-          "note": "Studio page: address 4771 Bayou Blvd Suite C11, phone (850) 471-1450, Alcohol for Purchase, No BYOB; Brushes & Brunch Oct 4 $35-45, Treat Yourself Tuesday Oct 6 6 PM",
-          "url": "https://www.paintingwithatwist.com/studio/pensacola"
-        },
-        {
-          "note": "October calendar: class names, times and prices Oct 3-31",
-          "url": "https://www.paintingwithatwist.com/studio/pensacola/calendar/"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_navarre_pinkpirates5k_1017-2026-10-17",
-      "title": "Pink Pirate's 5K for Breast Cancer",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Saturday 10/17 · Packet pickup 7:00 AM · Run/walk starts 8:00 AM",
-      "venue": "Navarre Beach Boat Launch Parking Lot",
-      "address": "Gulf Blvd, Navarre, FL 32566",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $25"
-      },
-      "summary": "Navarre Pink Pirates runs its 12th annual 5K run/walk along Navarre Beach to raise money for mammograms. The course heads west from the Boat Launch lot and back. Active.com's registration lists $25 for run or walk, $30 day-of, and the organizer's own site confirms the October 17 date. The first 200 registered participants get a T-shirt, with an advance packet pickup the day before at the Chamber office.",
-      "url": "https://coastaleventures.com/events/ev-navarre-pinkpirates5k-1017.html",
-      "sources": [
-        {
-          "note": "active.com: the event's official registration page, read 09/16/2026 for the date, address, schedule and price",
-          "url": "https://www.active.com/navarre-fl/running/distance-running/12th-annual-pink-pirate-s-5k-for-breast-cancer-2026"
-        },
-        {
-          "note": "navarrepinkpirates.com: the organizer's own site, read 09/16/2026, confirming the October 17, 2026 date",
-          "url": "https://navarrepinkpirates.com/what-we-are-doing"
-        }
-      ],
-      "checkedOn": "2026-09-16"
-    },
-    {
-      "id": "ev_pokemon_league_at_gamemasters_guil_1008-2026-10-17",
-      "title": "Pokémon League at GameMasters Guild",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Thursdays 3 PM-8 PM and Saturdays 12 PM-2 PM",
-      "venue": "GameMasters Guild",
-      "address": "743 Ashley Drive, Crestview, FL 32536",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Pokémon League at GameMasters Guild is free casual play for the Pokémon TCG, the Pokémon Champions video game and Pokémon GO. It runs Thursdays from 3 to 8 PM and Saturdays from 12 to 2 PM in Crestview. All ages are welcome, and the shop calls it a family-friendly space. Players get promo cards or special items while supplies last, and a free Pokémon account is needed to qualify (children under 13 register under a parent's account).",
-      "url": "https://coastaleventures.com/events/ev-pokemon-league-at-gamemasters-guil-1008.html",
-      "sources": [
-        {
-          "note": "Pokemon League: free, Thursdays 3-8 PM and Saturdays 12-2 PM, family-friendly",
-          "url": "https://gmgcrestview.com/events/"
-        },
-        {
-          "note": "GameMasters Guild's own embedded Google Calendar feed (gmgcrestview@aol.com), read as ICS today: Pokemon League: free, Thursdays 3-8 PM and Saturdays 12-2 PM, family-friendly",
-          "url": "https://calendar.google.com/calendar/ical/gmgcrestview%40aol.com/public/basic.ics"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_owa_primal_fear_2026-2026-10-17",
-      "title": "Primal Fear Haunted Attraction at OWA",
-      "date": "2026-10-17",
-      "endDate": "2026-10-31",
-      "startTime": null,
-      "endTime": null,
-      "when": "Select nights through October 31 · evenings",
-      "venue": "OWA Parks & Resort",
-      "address": "1501 S. OWA Blvd, Foley, AL 36535",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "OWA's immersive haunted attraction runs on select nights through the end of October, with dates including September 25 to 26 and October 2 to 3, 9 to 10, 16 to 17 and 19 to 31. A $7 Zombie Laser Tag add-on is available alongside the main attraction, and tickets are required.",
-      "url": "https://coastaleventures.com/events/ev-owa-primal-fear-2026.html",
-      "sources": [
-        {
-          "note": "OWA's own event page for dates and the laser tag add-on price",
-          "url": "https://visitowa.com/primal-fear-2026/"
-        }
-      ],
-      "checkedOn": "2026-09-24"
-    },
-    {
-      "id": "ev_bay_center_public_skate_1017-2026-10-17",
-      "title": "Public Ice Skating at the Pensacola Bay Center",
-      "date": "2026-10-17",
-      "endDate": "2026-10-30",
-      "startTime": null,
-      "endTime": null,
-      "when": "Oct 17 to Oct 30 · one hour sessions, see dates",
-      "venue": "Pensacola Bay Center",
-      "address": "201 E Gregory St, Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $15"
-      },
-      "summary": "The Pensacola Bay Center opens its ice for one-hour public skate sessions from October through April. The first sessions in this window run Saturday 10/17 at 9:30 PM, Sunday 10/18 at 1:30, 3:00 and 4:30 PM, Saturday 10/24 at 9:30 PM, Sunday 10/25 at 1:30, 3:00 and 4:30 PM, and Friday 10/30 at 9:30 PM. Capacity is limited for each session, so buy tickets early.",
-      "url": "https://coastaleventures.com/events/ev-bay-center-public-skate-1017.html",
-      "sources": [
-        {
-          "note": "Bay Center public skate page: $18 with rental, $15 own skates, sessions Oct 17 to Oct 30 2026",
-          "url": "https://www.pensacolabaycenter.com/events/detail/public-skate-2"
-        },
-        {
-          "note": "Bay Center ice skating page",
-          "url": "https://www.pensacolabaycenter.com/events/ice-skating"
-        }
-      ],
-      "checkedOn": "2026-09-29"
-    },
-    {
-      "id": "ev_pumpkin_decorating_contest_niceville_library_1017-2026-10-17",
-      "title": "Pumpkin Decorating Contest at Niceville Library",
-      "date": "2026-10-17",
-      "endDate": "2026-10-27",
-      "startTime": null,
-      "endTime": null,
-      "when": "Entries through Saturday 10/17 · voting Monday 10/19 to Saturday 10/24 · winners Tuesday 10/27",
-      "venue": "Niceville Library",
-      "address": "206 N Partin Dr, Niceville, FL 32578",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Niceville Library runs a pumpkin decorating contest for ages 13 and older. Entrants drop off a decorated pumpkin with a completed entry form during library hours through Saturday, October 17, and visitors vote for a favorite from October 19 to 24. The top three pumpkins win prizes announced on October 27, and entrants collect their pumpkins by 2:00 PM on October 31.",
-      "url": "https://coastaleventures.com/events/ev-pumpkin-decorating-contest-niceville-library-1017.html",
-      "sources": [
-        {
-          "note": "Okaloosa County Public Library Cooperative: Pumpkin Decorating Contest, deliver Oct. 5 to 17, vote Oct. 19 to 24, winners Oct. 27, ages 13 and older, Niceville Library",
-          "url": "https://okaloosa.librarycalendar.com/event/pumpkin-decorating-contest-last-day-submissions-84955"
-        }
-      ],
-      "checkedOn": "2026-10-07"
-    },
-    {
-      "id": "ev_seascape_shrimp_boil_1017-2026-10-17",
-      "title": "Shrimp Boil and Beach Bonfire at Seascape Resort",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Saturday 10/17",
-      "venue": "Seascape Resort",
-      "address": "11490 Emerald Coast Pkwy #101, Miramar Beach, FL 32550",
-      "category": "town",
-      "categoryLabel": "Town and community",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Seascape Resort's own events page lists a beach shrimp boil paired with a bonfire, without stating an exact time. Confirm the schedule with the resort before making the drive.",
-      "url": "https://coastaleventures.com/events/ev-seascape-shrimp-boil-1017.html",
-      "sources": [
-        {
-          "note": "Seascape Resort's own events page",
-          "url": "https://www.seascape-resort.com/experiences/events"
-        }
-      ],
-      "checkedOn": "2026-09-24"
-    },
-    {
-      "id": "ev_smokin_in_the_square_bbq_cookoff_1017-2026-10-17",
-      "title": "Smokin' in the Square BBQ Cookoff",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Saturday 10/17",
-      "venue": "St. Sylvester Catholic Church",
-      "address": "6464 Gulf Breeze Pkwy, Gulf Breeze, FL",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Smokin' in the Square is a barbecue cookoff at St. Sylvester Catholic Church on Saturday, October 17.",
-      "url": "https://coastaleventures.com/events/ev-smokin-in-the-square-bbq-cookoff-1017.html",
-      "sources": [
-        {
-          "note": "smokininthesquare.org: the organizer's own page for this event",
-          "url": "https://www.smokininthesquare.org/"
-        }
-      ],
-      "checkedOn": null
-    },
-    {
-      "id": "ev_sweet_dreams_haunted_attraction_mobile_1009-2026-10-17",
-      "title": "Sweet Dreams Haunted Attraction",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Fridays 7:00 PM to 10:00 PM · Saturdays 7:00 PM to 11:00 PM · Sundays 7:00 PM to 9:00 PM through 11/1",
-      "venue": "Sweet Dreams Haunted Attraction",
-      "address": "811 St Francis St, Mobile, AL 36602",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $25"
-      },
-      "summary": "Sweet Dreams Haunted Attraction runs an indoor haunted house at 811 St Francis St in downtown Mobile on Friday, Saturday and Sunday nights through Sunday, November 1. Guests walk through dark mazes with live scare actors, and optional Blackout and Chamber mini escape games cost extra. The attraction warns it may be too intense for younger children, and every child must be accompanied by an adult.",
-      "url": "https://coastaleventures.com/events/ev-sweet-dreams-haunted-attraction-mobile-1009.html",
-      "sources": [
-        {
-          "note": "sweetdreamshaunt.com: Fridays 7 to 10 PM, Saturdays 7 to 11 PM, Sundays 7 to 9 PM from September 19, tickets online or at the gate, no refunds, 811 St Francis St",
-          "url": "https://sweetdreamshaunt.com"
-        },
-        {
-          "note": "mobilecountyal.gov community events page: Sweet Dreams Haunted Attraction, tickets $25 and up, may be too intense for younger children",
-          "url": "https://www.mobilecountyal.gov/community_events/sweet-dreams-haunted-attraction-2026-10-04"
-        }
-      ],
-      "checkedOn": "2026-10-07"
-    },
-    {
-      "id": "ev_teen_dungeons_and_dragons_at_moorer_0905-2026-10-17",
-      "title": "Teen Dungeons and Dragons at Moorer",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Saturdays 11:30 AM to 1:30 PM · Tuesdays 4:00 PM to 6:00 PM",
-      "venue": "Monte L. Moorer/Spring Hill Branch Library",
-      "address": "4 S McGregor Ave, Mobile, AL 36608",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The Monte L. Moorer/Spring Hill Branch Library runs a tabletop Dungeons & Dragons adventure for teens ages 12 to 18. Registration is recommended, and upcoming sessions include Tuesday, October 6, Saturday, October 17, and Tuesday, October 20.",
-      "url": "https://coastaleventures.com/events/ev-teen-dungeons-and-dragons-at-moorer-0905.html",
-      "sources": [
-        {
-          "note": "mobilepubliclibrary.org: the organizer's own page, read for the admission and current schedule",
-          "url": "https://www.mobilepubliclibrary.org/events/week/2026/09/02"
-        },
-        {
-          "note": "mobilepubliclibrary.org: the admission and current schedule",
-          "url": "https://www.mobilepubliclibrary.org/events/week/2026/09/09"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_ectc_39steps-2026-10-17",
-      "title": "The 39 Steps: Hitchcock Farce (ECTC)",
-      "date": "2026-10-17",
-      "endDate": "2026-10-25",
-      "startTime": null,
-      "endTime": null,
-      "when": "Oct 15-25 · Thu-Sat 7 PM · Sun 2 PM · Wed 1 PM · Thu 10/22 also 1 PM",
-      "venue": "Emerald Coast Theatre Company",
-      "address": "560 Grand Blvd Suite 200, Miramar Beach, FL 32550",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Four actors play 150 roles in a full-tilt Hitchcock spoof that is clean, fast, and laugh-out-loud. It is the safe-bet theatre date of the fall.",
-      "url": "https://coastaleventures.com/events/ev-ectc-39steps.html",
-      "sources": [
-        {
-          "note": "ECTC On Stage: The 39 Steps Oct 15–25 (Season 14)",
-          "url": "https://www.emeraldcoasttheatre.org/on-stage"
-        }
-      ],
-      "checkedOn": null
-    },
-    {
-      "id": "ev_university_of_west_florida_football_vs_west__1017-2026-10-17",
-      "title": "UWF Football vs West Alabama: HOMECOMING",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Saturday 10/17 · 1:00 PM kickoff (moved from 4 PM) · gates open 12 PM",
-      "venue": "PenAir Field",
-      "address": "11000 University Parkway, Pensacola, FL 32514",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "University of West Florida football closes out its Homecoming weekend against West Alabama at PenAir Field, in the program's first NCAA Division I season. Tickets are on sale. UWF students attend free with registration on Argo Pulse and a Student Nautilus Card.",
-      "url": "https://coastaleventures.com/events/ev-university-of-west-florida-football-vs-west-1017.html",
-      "sources": [
-        {
-          "note": "goargos.com: the admission and current schedule",
-          "url": "https://goargos.com/news/2026/8/3/uwf-football-launch-single-season-tickets.aspx"
-        },
-        {
-          "note": "events.uwf.edu: the admission and current schedule",
-          "url": "https://events.uwf.edu/group/football"
-        },
-        {
-          "note": "goargos.com: the organizer's own page, read for the current schedule",
-          "url": "https://goargos.com/sports/football/schedule/2026"
-        },
-        {
-          "note": "events.uwf.edu: the current schedule",
-          "url": "https://events.uwf.edu/penair_field"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_pensacola_state_wanda_sullivan_bloem-2026-10-17",
-      "title": "Wanda Sullivan: Bloem Exhibition",
-      "date": "2026-10-17",
-      "endDate": "2026-12-11",
-      "startTime": null,
-      "endTime": null,
-      "when": "Now through December 11",
-      "venue": "Anna Lamar Switzer Center for Visual Arts",
-      "address": "1000 College Blvd. Bldg. 15, Pensacola, FL 32504",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "A gallery exhibition by artist Wanda Sullivan runs at Pensacola State College's visual arts center through mid-December. The center's own site does not publish an admission price.",
-      "url": "https://coastaleventures.com/events/ev-pensacola-state-wanda-sullivan-bloem.html",
-      "sources": [
-        {
-          "note": "Pensacola State College's own visual arts site for the exhibition dates and venue",
-          "url": "https://visualarts.pensacolastate.edu"
-        }
-      ],
-      "checkedOn": "2026-09-24"
-    },
-    {
-      "id": "ev_steves_farm_13th_catfish_tournament_1017-2026-10-17",
-      "title": "Steve's 13th Catfish Tournament",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "07:00",
-      "endTime": "13:00",
-      "when": "Saturday 10/17 · 7:00 AM to 1:00 PM",
-      "venue": "Steve's Fishing and Adventure Farm",
-      "address": "1201 S Highway 99, Walnut Hill, FL 32568",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $50"
-      },
-      "summary": "Steve's Fishing and Adventure Farm in Walnut Hill holds its 13th catfish tournament on Saturday, October 17 from 7:00 AM to 1:00 PM. Anglers fish two marked ponds with rod and reel only, and the single heaviest fish wins a cash prize split 60, 25 and 15 percent among the top three. Men's and women's brackets award gift cards and farm merchandise.",
-      "url": "https://coastaleventures.com/events/ev-steves-farm-13th-catfish-tournament-1017.html",
-      "sources": [
-        {
-          "note": "simpletix.com event page for Steve's Fishing & Adventure Farm: Steve's 13th Catfish Tournament, October 17, 2026, 7 AM to 1 PM, ticket price $50",
-          "url": "https://www.simpletix.com/e/steve-s-13th-catfish-tournament-tickets-287509"
-        },
-        {
-          "note": "stevesfarm.simpletix.com: Steve's Fishing & Adventure Farm events, 1201 South Highway 99, Walnut Hill",
-          "url": "https://stevesfarm.simpletix.com/"
-        }
-      ],
-      "checkedOn": "2026-10-07"
-    },
-    {
-      "id": "ev_chappie_james_bridge_run_1017-2026-10-17",
-      "title": "Chappie James Bridge Run",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "07:30",
-      "endTime": "10:00",
-      "when": "Saturday 10/17 · 7:30 AM to 10:00 AM",
-      "venue": "Visitor Welcome Center, Pensacola Bay Bridge route to Gulf Breeze",
-      "address": "1401 E Gregory St, Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $54.98"
-      },
-      "summary": "This 5K run or walk crosses the three-mile Pensacola Bay Bridge from Pensacola into Gulf Breeze and finishes next to The Bridge Bar and Sunset Lounge, with a post-race party of food, refreshments and live music. Buses run back to Pensacola, with the last one leaving Gulf Breeze at 10 AM.",
-      "url": "https://coastaleventures.com/events/ev-chappie-james-bridge-run-1017.html",
-      "sources": [
-        {
-          "note": "runsignup.com: the official registration page, read for the price, the route, the finish-line party and the last bus at 10 AM",
-          "url": "https://runsignup.com/Race/FL/Pensacola/ChappieJamesBridgeRun"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_mobile_fall_market_in_the_park_1010-2026-10-17",
-      "title": "Fall Market in the Park",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "07:30",
-      "endTime": "12:00",
-      "when": "Saturdays 10/17 to 11/14 · 7:30 AM to 12:00 PM",
-      "venue": "Cathedral Square",
-      "address": "Dauphin St at Cathedral Square, Mobile, AL 36602",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The City of Mobile runs Fall Market in the Park every Saturday morning from October 17 through November 14 in Cathedral Square. Farmers, artisans and food vendors sell seasonal produce, seafood, baked goods and art, and live entertainment plays in the park while you shop. Vendors accept Senior Farmer's Market Nutritional Program benefits, and leashed pets are welcome.",
-      "url": "https://coastaleventures.com/events/ev-mobile-fall-market-in-the-park-1010.html",
-      "sources": [
-        {
-          "note": "cityofmobile.gov events page: Fall Market in the Park, every Saturday October 10 through November 14, 7:30 AM to noon, Cathedral Square, senior farmers market benefits accepted, leashed pets welcome",
-          "url": "https://www.cityofmobile.gov/events/fall-market-in-the-park-cloned"
-        }
-      ],
-      "checkedOn": "2026-10-07"
-    },
-    {
-      "id": "ev_ride_more_bicycles_saturday_shop_r_1010-2026-10-17",
-      "title": "Ride MORE Bicycles Saturday Shop Ride",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "07:30",
-      "endTime": null,
-      "when": "Saturdays · 7:30 AM",
-      "venue": "Ride MORE Bicycles",
-      "address": "59 E Gregory St., Pensacola, FL",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The Ride MORE Bicycles Saturday Shop Ride is a weekly road group ride that leaves the shop at 59 E Gregory St. in Pensacola. It covers about 30 miles at a 17-19 mph average, with sprints and regrouping spots. The ride runs 7:30-9:30 AM every Saturday and road bikes are required.",
-      "url": "https://coastaleventures.com/events/ev-ride-more-bicycles-saturday-shop-r-1010.html",
-      "sources": [
-        {
-          "note": "Events page: Every Saturday Ride MORE Bicycles Shop Ride 7:30-9:30 AM, about 30 miles, 17-19 mph, road bikes a must",
-          "url": "https://ridemorebicycles.com/events/"
-        },
-        {
-          "note": "Same site footer: 59 E Gregory St., Pensacola, FL, (850) 912-8805",
-          "url": "https://ridemorebicycles.com/events/"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_2026_bud_light_charity_challenge_t_1016-2026-10-17",
-      "title": "2026 Bud Light Charity Challenge (tennis)",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "08:00",
-      "endTime": null,
-      "when": "Friday 10/16 to Saturday 10/17 · 8:00 AM",
-      "venue": "Roger Scott Tennis Complex",
-      "address": "2200A Summit Blvd, Pensacola, FL 32503",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "$15 for two"
-      },
-      "summary": "The 2026 Bud Light Charity Challenge is a two-day adult doubles tennis tournament at the Roger Scott Tennis Complex in Pensacola. It benefits The Arc Gateway and Pensacola Sports. Family and friends can attend with a guest pass picked up at check-in.",
-      "url": "https://coastaleventures.com/events/ev-2026-bud-light-charity-challenge-t-1016.html",
-      "sources": [
-        {
-          "note": "RunSignup page: Oct 16-17 2026, Roger Scott Tennis Complex, $80 per person, guest passes $15/$25",
-          "url": "https://runsignup.com/Race/FL/Pensacola/BudLightCharityTennisChallenge"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_great_bellingrath_harvest_0919-2026-10-17",
-      "title": "The Great Bellingrath Harvest",
-      "date": "2026-10-17",
-      "endDate": "2026-11-08",
-      "startTime": "08:00",
-      "endTime": "17:00",
-      "when": "Daily through 11/8 · 8:00 AM to 5:00 PM",
-      "venue": "Bellingrath Gardens and Home",
-      "address": "12401 Bellingrath Gardens Road, Theodore, AL 36582",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $11"
-      },
-      "summary": "Bellingrath Gardens and Home runs a fall festival from September 19 through November 8 with seasonal displays across the gardens, including the scarecrow exhibit and pumpkin displays. The gardens are open daily, and the general admission price applies. The events page does not list a separate price for the harvest, so the gardens ticket is the number to plan with.",
-      "url": "https://coastaleventures.com/events/ev-great-bellingrath-harvest-0919.html",
-      "sources": [
-        {
-          "note": "bellingrath.org: events page, Great Bellingrath Harvest dates September 19 to November 8 and 8:00 AM to 5:00 PM hours",
-          "url": "https://bellingrath.org/discover/events/"
-        },
-        {
-          "note": "bellingrath.org: plan your visit, admission prices, military discount, address and accessibility",
-          "url": "https://bellingrath.org/plan-your-visit/"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_steves_farm_adventure_zone_0929-2026-10-17",
-      "title": "Adventure Zone at Steve's Fishing and Adventure Farm",
-      "date": "2026-10-17",
-      "endDate": "2026-10-31",
-      "startTime": "09:00",
-      "endTime": "18:00",
-      "when": "Mon-Sat through Oct 31 · 9 AM to 6 PM",
-      "venue": "Steve's Fishing and Adventure Farm",
-      "address": "1201 S Highway 99, Walnut Hill, FL 32568",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Steve's Farm has rebranded as Steve's Fishing and Adventure Farm and opened a fall attraction in Walnut Hill with a corn maze, a giant slide, a kids' zipline, a jump pad, hayrides, a wagon train, a sunflower field and a pumpkin patch. It suits a family with small children who want a half day outdoors. The farm's own page does not print admission prices, so check the ticket page before driving out.",
-      "url": "https://coastaleventures.com/events/ev-steves-farm-adventure-zone-0929.html",
-      "sources": [
-        {
-          "note": "stevesfarm.net Adventure Zone page: corn maze, giant slide, kids' zipline, jump pad, hayride, wagon train, sunflower field and pumpkin patch, with single day and season passes",
-          "url": "https://stevesfarm.net/adventure-zone/"
-        },
-        {
-          "note": "stevesfarm.simpletix.com: Adventure Zone listed as an upcoming event starting 9/29/2026 at 1201 South Highway 99, Walnut Hill",
-          "url": "https://stevesfarm.simpletix.com/"
-        }
-      ],
-      "checkedOn": "2026-09-29"
-    },
-    {
-      "id": "ev_rockpainting_royalmelvin_1017-2026-10-17",
-      "title": "Back to School \"Rock Painting Party\"",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "09:00",
-      "endTime": "11:00",
-      "when": "Saturday 10/17 · 9-11 AM",
-      "venue": "Capt. Royal Melvin Heritage Park (Harbor Front)",
-      "address": "206 Harbor Boulevard, Destin, FL 32541",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $3"
-      },
-      "summary": "An outdoor rock-painting session at the harbor-front park comes with snacks. Rocks, paint and brushes are supplied, or bring your own rocks to paint. Pre-registration is required since space is limited.",
-      "url": "https://coastaleventures.com/events/ev-rockpainting-royalmelvin-1017.html",
-      "sources": [
-        {
-          "note": "cityofdestin.com: Calendar list view, Rock Painting Party 10/17, 9 AM to 11 AM at Royal Melvin Park, read 09/16/2026",
-          "url": "https://www.cityofdestin.com/calendar.aspx?view=list&CID=0"
-        }
-      ],
-      "checkedOn": "2026-09-16"
-    },
-    {
-      "id": "ev_big_rigs_at_the_library_foley_touch_a_truck_1017-2026-10-17",
-      "title": "Big Rigs at the Library: Touch-a-Truck in Foley",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "09:00",
-      "endTime": "11:00",
-      "when": "Saturday 10/17 · 9:00 AM to 11:00 AM",
-      "venue": "Foley Recreation Department Activity Center lawn",
-      "address": "315 E Jessamine Ave, Foley, AL 36535",
-      "category": "town",
-      "categoryLabel": "Town and community",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "The Foley Community Library hosts its third Touch-a-Truck, where children climb around tractors, backhoes, bucket trucks and other big machines. Foley's fire, police, public works and street departments bring vehicles, and Maynard Family Farms brings a petting zoo. A local musician plays live, and Kona Ice and ReNew Coffee Truck sell treats and drinks.",
-      "url": "https://coastaleventures.com/events/ev-big-rigs-at-the-library-foley-touch-a-truck-1017.html",
-      "sources": [
-        {
-          "note": "City of Foley: Foley Community Library hosts Big Rigs event Oct. 17, free Touch-a-Truck 9 to 11 AM at the Activity Center lawn, 315 E. Jessamine Ave., petting zoo and live music",
-          "url": "https://cityoffoley.org/foley-community-library-hosts-big-rigs-event-oct-17/"
-        }
-      ],
-      "checkedOn": "2026-10-07"
-    },
-    {
-      "id": "ev_gulf_coast_zoo_boo_1017-2026-10-17",
-      "title": "BOO at the ZOO at the Alabama Gulf Coast Zoo",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "09:00",
-      "endTime": "12:00",
-      "when": "Saturday 10/17 · 9:00 AM to 12:00 PM",
-      "venue": "Alabama Gulf Coast Zoo",
-      "address": "20499 Oak Road East, Gulf Shores, AL 36542",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $15.95"
-      },
-      "summary": "The Alabama Gulf Coast Zoo hosts a scare-free morning of trick or treating along the zoo paths. The zoo says the event is included with regular admission. Families should bring their own treat bags.",
-      "url": "https://coastaleventures.com/events/ev-gulf-coast-zoo-boo-1017.html",
-      "sources": [
-        {
-          "note": "Alabama Gulf Coast Zoo: event page for BOO at the ZOO, read for date, hours, admission and what to bring",
-          "url": "https://www.alabamagulfcoastzoo.com/boo-at-the-zoo-october-17/"
-        }
-      ],
-      "checkedOn": "2026-09-24"
-    },
-    {
-      "id": "ev_emerald_coast_fall_classic_1014-2026-10-17",
-      "title": "Emerald Coast Fall Classic Beach Volleyball",
-      "date": "2026-10-17",
-      "endDate": "2026-10-18",
-      "startTime": "09:00",
-      "endTime": "16:00",
-      "when": "Wednesday 10/14 to Sunday 10/18 · 9:00 AM to 4:00 PM daily",
-      "venue": "The Boardwalk on Okaloosa Island",
-      "address": "1450 Miracle Strip Parkway SE, Fort Walton Beach, FL 32548",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Beach volleyball teams play doubles and the Fudpucker four-player tournament on the sand at the Boardwalk on Okaloosa Island. Play runs 9:00 AM to 4:00 PM each day. The Men and Women pool play is Saturday, and playoffs and finals are Sunday, with the Women's Open final around 3:00 PM and a costume contest at 3:45 PM. The schedule is tentative, so check the tournament page before driving.",
-      "url": "https://coastaleventures.com/events/ev-emerald-coast-fall-classic-1014.html",
-      "sources": [
-        {
-          "note": "Emerald Coast Fall Classic page: October 14 to 18, 2026, schedule, Okaloosa Island Boardwalk, finals Sunday",
-          "url": "https://emeraldcoastvolleyball.com/ec-fall-classic/"
-        },
-        {
-          "note": "Emerald Coast Volleyball home page: next up Fall Classic October 14 to 18",
-          "url": "https://emeraldcoastvolleyball.com/"
-        }
-      ],
-      "checkedOn": "2026-10-14"
-    },
-    {
-      "id": "ev_fall_book_carnival_at_grand_boulevard_1017-2026-10-17",
-      "title": "Fall Book Carnival at Grand Boulevard",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "09:00",
-      "endTime": "13:00",
-      "when": "Saturday 10/17 · 9:00 AM to 1:00 PM",
-      "venue": "Grand Boulevard at Sandestin",
-      "address": "585 Grand Blvd, Miramar Beach, FL 32550",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The Fall Book Carnival takes over Grand Boulevard at Sandestin on Saturday, October 17, from 9 AM to 1 PM. Kids can pick up free books, work through hands on crafts, and listen to live music while families take part in the carnival's other activities.",
-      "url": "https://coastaleventures.com/events/ev-fall-book-carnival-at-grand-boulevard-1017.html",
-      "sources": [
-        {
-          "note": "grandboulevard.com: the organizer's own page, read for the admission",
-          "url": "https://grandboulevard.com/events/"
-        }
-      ],
-      "checkedOn": null
-    },
-    {
-      "id": "ev_fall_into_family_history_santa_rosa_libraries_1007-2026-10-17",
-      "title": "Fall Into Family History at Santa Rosa County Libraries",
-      "date": "2026-10-17",
-      "endDate": "2026-10-28",
-      "startTime": "09:00",
-      "endTime": "18:00",
-      "when": "Wednesday 10/7 Pace · Wednesday 10/14 Jay · Wednesday 10/21 Gulf Breeze · Wednesday 10/28 Navarre · 9:00 AM to 6:00 PM",
-      "venue": "Santa Rosa County libraries: Pace, Jay, Gulf Breeze and Navarre",
-      "address": "1060 Shoreline Drive, Gulf Breeze, FL 32561",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The library system's lead reference specialist visits one branch each Wednesday in October to help people start or extend a family tree. Visitors can bring a specific research question or simply stop by to learn how to get started with the library's genealogy resources. The help runs during regular library hours, so no appointment time is listed.",
-      "url": "https://coastaleventures.com/events/ev-fall-into-family-history-santa-rosa-libraries-1007.html",
-      "sources": [
-        {
-          "note": "Santa Rosa County Library System calendar: Fall Into Family History, personalized genealogy help during library hours, Oct. 7 Pace, Oct. 14 Jay, Oct. 21 Gulf Breeze, Oct. 28 Navarre",
-          "url": "https://santarosa.fl.gov/Calendar.aspx?EID=11458"
-        }
-      ],
-      "checkedOn": "2026-10-07"
-    },
-    {
-      "id": "ev_laser_etching_custom_keychain_fob_at_the_sea_1017-2026-10-17",
-      "title": "Laser Etching: Custom Keychain FOB at the SEA Makerspace",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "09:00",
-      "endTime": "13:00",
-      "when": "Saturday 10/17 · 9:00 AM to 1:00 PM",
-      "venue": "Downtown Pensacola, Museum of Commerce",
-      "address": "201 E Zaragoza St, Pensacola, FL 32502",
-      "category": "stem",
-      "categoryLabel": "STEM and learning",
-      "price": {
-        "kind": "priced",
-        "label": "from $65"
-      },
-      "summary": "This hands on workshop at the Museum of Commerce in downtown Pensacola teaches you to prepare artwork, operate a laser cutter, and make a wooden keychain fob. Finishing it also qualifies you to use the SEA Makerspace laser on your own afterward. It runs Saturday morning from 9 AM to 1 PM, and tuition is $65 per person.",
-      "url": "https://coastaleventures.com/events/ev-laser-etching-custom-keychain-fob-at-the-sea-1017.html",
-      "sources": [
-        {
-          "note": "historicpensacola.org: the museum's own page, read for the street address. UWF's own page says the SEA Makerspace studio sits inside the Museum of Commerce",
-          "url": "https://historicpensacola.org/plan-your-visit/museums-properties/museum-of-commerce/"
-        },
-        {
-          "note": "uwf.edu: the organizer's own page, read for the admission",
-          "url": "https://uwf.edu/continuinged/programs/personal-enrichment/"
-        },
-        {
-          "note": "uwf.edu: the admission",
-          "url": "https://uwf.edu/continuinged/programs/personal-enrichment/makerspace-studio/"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_srsc_local_2902_pistol_rifle_shoot_with_pavilion_1017-2026-10-17",
-      "title": "Local 2902 Pistol/Rifle Shoot with Pavilion",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "09:00",
-      "endTime": "13:00",
-      "when": "Saturday 10/17 · 9:00 AM to 1:00 PM",
-      "venue": "Santa Rosa Shooting Center",
-      "address": "6950 Quintette Rd, Pace, FL 32571",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Santa Rosa Shooting Center sets aside the day for Local 2902 Pistol/Rifle Shoot with Pavilion. Call the range closer to the date to register.",
-      "url": "https://coastaleventures.com/events/ev-srsc-local-2902-pistol-rifle-shoot-with-pavilion-1017.html",
-      "sources": [
-        {
-          "note": "santarosashootingcenter.com: the range's own events calendar, read 09/16/2026, giving the date, time and venue for this event",
-          "url": "https://santarosashootingcenter.com/events"
-        }
-      ],
-      "checkedOn": "2026-09-16"
-    },
-    {
-      "id": "ev_palafox-2026-10-17",
-      "title": "Palafox Market",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "09:00",
-      "endTime": "14:00",
-      "when": "Saturdays · 9 AM-2 PM",
-      "venue": "MLK Jr. Plaza + Plaza Ferdinand, Downtown Pensacola",
-      "address": "200 N Palafox St, Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "A big Saturday market fills downtown with produce, local makers, art, and food. A free trolley runs between plazas. It is stroller-friendly.",
-      "url": "https://coastaleventures.com/events/ev-palafox.html",
-      "sources": [
-        {
-          "note": "Downtown Pensacola: the market's own page, read 09/02/2026 for the Saturday 9 AM to 2 PM hours and the two blocks it now runs on",
-          "url": "https://downtownpensacola.com/palafox/palafox-market"
-        },
-        {
-          "note": "Downtown Pensacola: the free market trolley, 10:30 AM to 2:30 PM, and the free city lot at 600 Commendencia Street",
-          "url": "https://downtownpensacola.com/palafox/testing-entry"
-        }
-      ],
-      "checkedOn": "2026-09-02"
-    },
-    {
-      "id": "ev_destin_rock_painting_party_1017-2026-10-17",
-      "title": "Rock Painting Party at Royal Melvin Park",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "09:00",
-      "endTime": "11:00",
-      "when": "Saturday 10/17 · 9:00 AM to 11:00 AM",
-      "venue": "Captain Royal Melvin Heritage Park",
-      "address": "206 Harbor Boulevard, Destin, FL 32541",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $3"
-      },
-      "summary": "Destin Parks and Recreation runs a second Rock Painting Party at Captain Royal Melvin Heritage Park on the harbor front. Rocks, paint and brushes are provided, and guests may bring their own rocks. Snacks and refreshments are served. Space is limited and pre-registration is required, so sign up before the morning.",
-      "url": "https://coastaleventures.com/events/ev-destin-rock-painting-party-1017.html",
-      "sources": [
-        {
-          "note": "City of Destin event page: Saturday 10/17, 9:00 AM to 11:00 AM, $3 residents and $5 non-residents, pre-registration required, supplies provided",
-          "url": "https://www.cityofdestin.com/m/calendar/event/detail/7320"
-        }
-      ],
-      "checkedOn": "2026-10-07"
-    },
-    {
-      "id": "ev_seaside_farmers_market-2026-10-17",
-      "title": "Seaside Farmers Market",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "09:00",
-      "endTime": "13:00",
-      "when": "Saturdays · 9:00 AM to 1:00 PM",
-      "venue": "Seaside Amphitheater",
-      "address": "Central Square, Santa Rosa Beach, FL 32459",
-      "category": "town",
-      "categoryLabel": "Town and community",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The Seaside Farmers Market fills the amphitheater in Seaside's Central Square every Saturday morning with local farmers, growers and artisans. Stalls sell fresh produce, baked goods and specialty foods, and live music plays while you browse. The market runs rain or shine unless the weather turns unsafe.",
-      "url": "https://coastaleventures.com/events/ev-seaside-farmers-market.html",
-      "sources": [
-        {
-          "note": "Seaside: Farmers Market event page, read for the Saturday hours, the amphitheater location, what is sold, the rain or shine rule and the seasonal schedule",
-          "url": "https://seasidefl.com/event/seaside-farmers-market/2026-10-03/"
-        },
-        {
-          "note": "Seaside: events calendar, read for the listing",
-          "url": "https://seasidefl.com/events"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_monster_ball_1017-2026-10-17",
-      "title": "Monster Ball",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "09:30",
-      "endTime": "14:00",
-      "when": "Saturday 10/17 · 9:30 AM to 2:00 PM",
-      "venue": "Exploreum Science Center",
-      "address": "65 Government St., Mobile, AL 36602",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The Exploreum Science Center turns Halloween into a daytime science event with Monster Ball, running from 9:30 AM to 2:00 PM. The museum's 2026 listing does not carry forward the detailed activity lineup from past years.",
-      "url": "https://coastaleventures.com/events/ev-monster-ball-1017.html",
-      "sources": [
-        {
-          "note": "exploreum.com: the organizer's own page, read for the admission and current schedule",
-          "url": "https://www.exploreum.com/events/"
-        },
-        {
-          "note": "exploreum.com: the current schedule",
-          "url": "https://www.exploreum.com/events/list/page/5/?tribe-bar-date=2025-04-21"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_saturday_morning_art_class_mixed_media_ages__0919-2026-10-17",
-      "title": "Saturday Morning Art Class: Mixed Media Ages 6+",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "09:30",
-      "endTime": "12:00",
-      "when": "Sep 19 and Oct 17 · 9:30 AM to 12:00 PM",
-      "venue": "First City Art Center",
-      "address": "1060 N. Guillemard St., Pensacola, FL 32501",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $35"
-      },
-      "summary": "First City Art Center runs a Saturday morning mixed media art class open to anyone age 6 and up, from 9:30 AM to noon. A single class costs $35, or $32.20 for FCAC members. The class repeats October 17 for anyone who misses this date.",
-      "url": "https://coastaleventures.com/events/ev-saturday-morning-art-class-mixed-media-ages-0919.html",
-      "sources": [
-        {
-          "note": "firstcityart.org: the organizer's own page, read for the admission",
-          "url": "https://firstcityart.org/product/saturday-morning-art-class/"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_lumberjack_festival_1017-2026-10-17",
-      "title": "37th Annual Lumberjack Festival",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "10:00",
-      "endTime": "15:00",
-      "when": "Saturday 10/17 · 10:00 AM to 3:00 PM",
-      "venue": "Pensacola State College, Milton Campus",
-      "address": "5988 Hwy 90, Milton, FL 32583",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Pensacola State College's Milton campus hosts the 37th annual Lumberjack Festival, a one day outdoor event of lumberjack games, children's activities and vendors. Competitions include axe throwing, knife throwing, log roll, bow sawing, cross-cut sawing and pole toss, and adults 16 and older can enter. The festival page does not publish a visitor admission price.",
-      "url": "https://coastaleventures.com/events/ev-lumberjack-festival-1017.html",
-      "sources": [
-        {
-          "note": "Pensacola State College Lumberjack Festival page: one-day event of lumberjack games, children's activities and vendors, competitions for ages 16 and up, $5 registration for participation only, Milton Campus at 5988 Hwy. 90, coming October 17 2026, read 10/07/2026",
-          "url": "https://pensacolastate.edu/lumberjack/"
-        },
-        {
-          "note": "Pensacola State College calendar: 37th Annual Lumberjack Festival, Saturday October 17 2026, 10:00 AM to 3:00 PM, Milton Campus, read 10/07/2026",
-          "url": "https://pensacolastate.edu/news/calendar/"
-        }
-      ],
-      "checkedOn": "2026-10-07"
-    },
-    {
-      "id": "ev_coco_and_crawlers_0917-2026-10-17",
-      "title": "Coco & Crawlers",
-      "date": "2026-10-17",
-      "endDate": "2026-12-17",
-      "startTime": "10:00",
-      "endTime": "11:00",
-      "when": "Thursday 9/17 · 10:00 AM to 11:00 AM",
-      "venue": "Ben May Main Library, Youth Programming Room",
-      "address": "701 Government St, Mobile, AL",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "This caregiver meetup in the Youth Programming Room at Ben May Main Library pairs children's play with a warm drink. It gives caregivers time to connect with each other. It runs Thursday morning from 10 AM to 11 AM, repeating on the third Thursday of the month, with more dates on October 15, November 19 and December 17. Registration is requested but not required.",
-      "url": "https://coastaleventures.com/events/ev-coco-and-crawlers-0917.html",
-      "sources": [
-        {
-          "note": "mobilepubliclibrary.org: the organizer's own page for this event",
-          "url": "https://www.mobilepubliclibrary.org/event/coco-crawlers-16284"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_destin_rodeo_weighins-2026-10-17",
-      "title": "Destin Fishing Rodeo: Daily Public Weigh-Ins",
-      "date": "2026-10-17",
-      "endDate": "2026-10-31",
-      "startTime": "10:00",
-      "endTime": "19:00",
-      "when": "Daily, Oct 1 – Oct 31 · 10:00 AM-7:00 PM",
-      "venue": "Docks behind AJ's Seafood & Oyster Bar",
-      "address": "116 Harbor Blvd, Destin, FL 32541",
-      "category": "beach",
-      "categoryLabel": "Beach",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Anglers competing in the month-long Destin Fishing Rodeo bring their catches to the scale on the harbor docks behind AJ's Seafood & Oyster Bar every day in October. The public is welcome to watch for free from 10 AM to 7 PM, and the crowd tends to grow with the size of the fish coming off the boats.",
-      "url": "https://coastaleventures.com/events/ev-destin-rodeo-weighins.html",
-      "sources": [
-        {
-          "note": "Destin Fishing Rodeo: Rodeo Events page (free public weigh-ins)",
-          "url": "https://destinfishingrodeo.org/rodeo-fun-for-everyone/rodeo-events/"
-        },
-        {
-          "note": "Destin Fishing Rodeo: Contact Us page",
-          "url": "https://destinfishingrodeo.org/destin-fishing-rodeo/contact-us/"
-        },
-        {
-          "note": "Destin Fishing Rodeo: How to Participate page",
-          "url": "https://destinfishingrodeo.org/just-for-anglers/how-to-participate/"
-        },
-        {
-          "note": "Destin Fishing Rodeo: parking map",
-          "url": "https://destinfishingrodeo.org/destin-fishing-rodeo/where-to-park-map/"
-        }
-      ],
-      "checkedOn": "2026-08-24"
-    },
-    {
-      "id": "ev_gentle_yoga_adults_destin_communit_1010-2026-10-17",
-      "title": "Gentle Yoga (Adults), Destin Community Center",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "10:00",
-      "endTime": "11:00",
-      "when": "Saturdays through 10/31 · 10 AM-11 AM",
-      "venue": "Destin Community Center",
-      "address": "101 Stahlman Ave, Destin, FL 32541",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $5"
-      },
-      "summary": "Gentle Yoga is a weekly adult class run by City of Destin Parks & Recreation at Destin Community Center. It meets Saturdays from 10 to 11 AM, and each class costs $5. Posted dates are October 3, 10, 17, 24 and 31.",
-      "url": "https://coastaleventures.com/events/ev-gentle-yoga-adults-destin-communit-1010.html",
-      "sources": [
-        {
-          "note": "City of Destin calendar: Gentle Yoga Oct 3,10,17,24,31 10-11 AM, $5",
-          "url": "https://www.cityofdestin.com/calendar.aspx"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_uwf_make_it_last_1001-2026-10-17",
-      "title": "Make It Last: Gallery Exhibition at UWF",
-      "date": "2026-10-17",
-      "endDate": "2026-11-20",
-      "startTime": "10:00",
-      "endTime": "16:00",
-      "when": "Weekdays through 11/20 · 10:00 AM to 4:00 PM",
-      "venue": "UWF Center for Fine and Performing Arts, Building 82, The Art Gallery",
-      "address": "11000 University Parkway, Pensacola, FL 32514",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Make It Last is an exhibition in The Art Gallery at the UWF Center for Fine and Performing Arts, curated by a UWF graduate. Six artists share the space, which includes a conversation pit in the gallery alcove and a poetry wall that visitors fill with their own work. Admission is free.",
-      "url": "https://coastaleventures.com/events/ev-uwf-make-it-last-1001.html",
-      "sources": [
-        {
-          "note": "events.uwf.edu: Make It Last, free, weekdays 10 AM to 4 PM from October 1 to November 20 at the Center for Fine and Performing Arts, Building 82, with an opening reception October 8 from 5 to 7 PM",
-          "url": "https://events.uwf.edu/event/make-it-last"
-        },
-        {
-          "note": "events.uwf.edu: opening reception for Make It Last, October 8, 5 to 7 PM, free",
-          "url": "https://events.uwf.edu/event/opening-reception-for-make-it-last"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_niceville_bazaar_1017-2026-10-17",
-      "title": "Niceville Bazaar",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "10:00",
-      "endTime": "16:00",
-      "when": "Saturday 10/17 · 10:00 AM to 4:00 PM",
-      "venue": "Niceville Mullet Festival Grounds",
-      "address": "598 FL-85, Niceville, FL 32578",
-      "category": "town",
-      "categoryLabel": "Town and community",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "The Niceville Bazaar sets up vendor booths and food trucks on the Mullet Festival Grounds for one Saturday in October, and admission is free for every age. The event benefits Freedom Life Compass, so browsing the tables supports that organization directly. It runs from 10 AM to 4 PM, plenty of time to walk the whole grounds.",
-      "url": "https://coastaleventures.com/events/ev-niceville-bazaar-1017.html",
-      "sources": [
-        {
-          "note": "business.nicevillechamber.com: the organizer's own page, read for the admission",
-          "url": "https://business.nicevillechamber.com/events/details/niceville-bazaar-10-17-2026-14215?calendarMonth=2026-10-01"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_simple_and_elegant_sewing_0919-2026-10-17",
-      "title": "Simple and Elegant Sewing",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "10:00",
-      "endTime": "14:00",
-      "when": "10:00 AM to 2:00 PM",
-      "venue": "Fort Walton Beach Library",
-      "address": "185 Miracle Strip Parkway SE, Fort Walton Beach, FL 32548",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "A library workshop introduces adults to the basics of sewing, taught by Anne-Marie Wilkerson. It is built for people who want a starting point rather than experienced sewers looking for a challenge. The library has not published a price for this session, so call ahead to confirm what it costs.",
-      "url": "https://coastaleventures.com/events/ev-simple-and-elegant-sewing-0919.html",
-      "sources": [
-        {
-          "note": "okaloosa.librarycalendar.com: the organizer's own page, read for the admission and current schedule",
-          "url": "https://okaloosa.librarycalendar.com/events/list?program_types%5B56%5D=56"
-        },
-        {
-          "note": "fwb.org: the current schedule and street address",
-          "url": "https://www.fwb.org/305/Library"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_r_e_a_d_reading_education_assistance_dogs_0919-2026-10-17",
-      "title": "R.E.A.D.: Reading Education Assistance Dogs",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "10:30",
-      "endTime": "13:00",
-      "when": "10:30 AM to 1:00 PM",
-      "venue": "Fort Walton Beach Library",
-      "address": "185 Miracle Strip Parkway SE, Fort Walton Beach, FL 32548",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "A trained therapy dog gives children one-on-one reading practice at the Fort Walton Beach Library. Each child gets a 20-minute slot to read aloud without the pressure of a classroom audience. Registration is required.",
-      "url": "https://coastaleventures.com/events/ev-r-e-a-d-reading-education-assistance-dogs-0919.html",
-      "sources": [
-        {
-          "note": "okaloosa.librarycalendar.com: the organizer's own page, read for the admission and current schedule",
-          "url": "https://okaloosa.librarycalendar.com/index.php/events/list?program_types%5B171%5D=171"
-        },
-        {
-          "note": "fwb.org: the current schedule and street address",
-          "url": "https://www.fwb.org/305/Library"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_snake_yoga_at_emerald_coast_zoo_1010-2026-10-17",
-      "title": "Snake Yoga at Emerald Coast Zoo",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "10:30",
-      "endTime": null,
-      "when": "Saturday 10/17 · 10:30 AM",
-      "venue": "Emerald Coast Zoo",
-      "address": "5262 Deer Springs Dr, Crestview, FL 32539",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $40"
-      },
-      "summary": "Snake Yoga is a yoga session with snakes at Emerald Coast Zoo in Crestview, held Saturday, October 10 and Saturday, October 17 at 10:30 AM. The price is $40 per person, and zoo admission is included.",
-      "url": "https://coastaleventures.com/events/ev-snake-yoga-at-emerald-coast-zoo-1010.html",
-      "sources": [
-        {
-          "note": "Emerald Coast Zoo homepage: Snake Yoga Oct 10 & 17 2026, 10:30 AM, $40 pp admission included",
-          "url": "https://www.emeraldcoastzoo.com/"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_crosspoint_disciplestory-2026-10-17",
-      "title": "DiscipleStory",
-      "date": "2026-10-17",
-      "endDate": "2026-10-18",
-      "startTime": "11:00",
-      "endTime": null,
-      "when": "Sundays 9/13 – 10/18 (of an 8-week class) · 11:00 AM (end time not published)",
-      "venue": "Crosspoint Niceville Campus, Room 912",
-      "address": "214 Partin Dr S, Niceville, FL 32578",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "An eight-week Sunday morning class at Crosspoint's Niceville campus walks participants through identifying their own story, passions, abilities and role in the church's mission. The class starts September 13 at 11 AM; the campus newsletter does not publish an end time.",
-      "url": "https://coastaleventures.com/events/ev-crosspoint-disciplestory.html",
-      "sources": [
-        {
-          "note": "Crosspoint Church: Niceville Campus eLetter",
-          "url": "https://crosspoint.church/news/eletternv/"
-        },
-        {
-          "note": "Crosspoint Church: campus locations",
-          "url": "https://crosspoint.church/locations/"
-        }
-      ],
-      "checkedOn": "2026-08-24"
-    },
-    {
-      "id": "ev_kiwanis_2nd_annual_corn_hole_tournament_1017-2026-10-17",
-      "title": "Kiwanis 2nd Annual Corn Hole Tournament",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "11:00",
-      "endTime": "13:30",
-      "when": "Saturday 10/17 · 11:00 AM to 1:30 PM",
-      "venue": "Soundside Waterfront Bar",
-      "address": "189 Brooks St SE, Fort Walton Beach, FL 32548",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $47"
-      },
-      "summary": "The second annual Kiwanis Corn Hole Tournament sets up at Soundside Waterfront Bar, with proceeds benefiting Rally Childhood Cancer Research. Entry runs $47 per team, and play runs from 11 AM to 1:30 PM on the water. This is the second year Kiwanis has run the tournament at this location.",
-      "url": "https://coastaleventures.com/events/ev-kiwanis-2nd-annual-corn-hole-tournament-1017.html",
-      "sources": [
-        {
-          "note": "fwbchamber.org: the organizer's own page, read for the admission",
-          "url": "https://www.fwbchamber.org/events/details/kiwanis-2nd-annual-corn-hole-tournament-25209"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_foley_midday_melodies_1007-2026-10-17",
-      "title": "Midday Melodies: Downtown Foley",
-      "date": "2026-10-17",
-      "endDate": "2026-10-28",
-      "startTime": "11:00",
-      "endTime": null,
-      "when": "Wednesday 10/7 · 11:00 AM",
-      "venue": "Heritage Park",
-      "address": "104 N. McKenzie St, Foley, AL 36535",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Foley Main Street schedules a lunchtime concert at Heritage Park on Wednesdays in October, starting October 7 at 11:00 AM. The 2026 lineup is the Wiley Pete Duo on October 7, Dan Lee on October 14, This Side of 49 on October 21, and Tennessee Tim and Doug Drake on October 28. The 2025 series invited guests to bring a picnic blanket or lawn chair and pick up lunch from a nearby downtown restaurant.",
-      "url": "https://coastaleventures.com/events/ev-foley-midday-melodies-1007.html",
-      "sources": [
-        {
-          "note": "foleymainstreet.com: community calendar, Fall series of Midday Melodies at 104 N McKenzie St, 11:00 AM on October 7, 14, 21 and 28",
-          "url": "https://www.foleymainstreet.com/community-calendar"
-        },
-        {
-          "note": "foleymainstreet.com: home page listing the fall series schedule",
-          "url": "https://www.foleymainstreet.com/"
-        }
-      ],
-      "checkedOn": "2026-09-29"
-    },
-    {
-      "id": "ev_greek_fest_mobile_1015-2026-10-17",
-      "title": "Mobile Greek Fest 2026",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "11:00",
-      "endTime": "21:00",
-      "when": "Thu 10/15 – Sat 10/17 · 11:00 AM to 9:00 PM",
-      "venue": "Annunciation Greek Orthodox Church",
-      "address": "50 S Ann Street, Mobile, AL 36604",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Mobile's Greek community has run a festival downtown since Greek Night began in 1962, and the modern three-day version fills the church grounds with food, sanctuary tours, live Greek music and youth dance performances. The festival is cashless this year, so bring a card rather than cash.",
-      "url": "https://coastaleventures.com/events/ev-greek-fest-mobile-1015.html",
-      "sources": [
-        {
-          "note": "Mobile County, AL: official community events calendar listing free admission for Mobile Greek Festival 2026",
-          "url": "https://www.mobilecountyal.gov/community_events/events/mobile-greek-festival-2026-10-15/"
-        },
-        {
-          "note": "Greek Fest Mobile: official festival site, 2026 dates and hours",
-          "url": "https://greekfestmobile.com/"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_tbs_fwb_pokemon_saturday-2026-10-17",
-      "title": "Pokémon at TBS Comics Fort Walton Beach",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "11:00",
-      "endTime": null,
-      "when": "Saturdays · 11:00 AM",
-      "venue": "TBS Comics Fort Walton Beach",
-      "address": "550 Mary Esther Blvd Unit 5, Fort Walton Beach, FL 32548",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "TBS Comics in Fort Walton Beach lists a Saturday morning Pokémon session on its gaming schedule. The page prints no entry fee and no description, so call the shop for the format.",
-      "url": "https://coastaleventures.com/events/ev-tbs-fwb-pokemon-saturday.html",
-      "sources": [
-        {
-          "note": "tbscomics.com gaming page: Pokemon 11:00 AM on Saturday",
-          "url": "https://www.tbscomics.com/gaming/"
-        }
-      ],
-      "checkedOn": "2026-09-29"
-    },
-    {
-      "id": "ev_smokin_in_the_square_bbq_1017-2026-10-17",
-      "title": "Smokin' in the Square Charity BBQ Competition",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "11:00",
-      "endTime": "14:00",
-      "when": "Saturday 10/17 · 11:00 AM to 2:00 PM",
-      "venue": "Smokin' in the Square",
-      "address": "6464 Gulf Breeze Parkway, Gulf Breeze, FL 32563",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The sixteenth annual charity barbecue cook-off sets up right in Gulf Breeze, with competing pitmasters and a fall event weekend built around it. The organizer's own site does not publish an admission price.",
-      "url": "https://coastaleventures.com/events/ev-smokin-in-the-square-bbq-1017.html",
-      "sources": [
-        {
-          "note": "Smokin' in the Square's own calendar for date, time and venue",
-          "url": "https://smokininthesquare.org/calendar"
-        }
-      ],
-      "checkedOn": "2026-09-24"
-    },
-    {
-      "id": "ev_steam_midnight_kitty_painting_pens_1010-2026-10-17",
-      "title": "STEAM: Midnight Kitty Painting (Pensacola Library)",
-      "date": "2026-10-17",
-      "endDate": "2026-10-31",
-      "startTime": "11:00",
-      "endTime": null,
-      "when": "Saturday 10/17 to Saturday 10/31 · 11:00 AM",
-      "venue": "Pensacola Library",
-      "address": "239 N. Spring St., Pensacola, FL 32502",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "STEAM: Midnight Kitty Painting is a step-by-step painting class at Pensacola Library, 239 N. Spring St., where you paint a little shadow kitty watching the moon. It is recommended for ages 10 and up. A themed painting class is held almost every Saturday through Oct 31 at 11 AM.",
-      "url": "https://coastaleventures.com/events/ev-steam-midnight-kitty-painting-pens-1010.html",
-      "sources": [
-        {
-          "note": "WFPL event page: STEAM: Midnight Kitty Painting (Pensacola Library), 2026-10-10, 11:00 AM",
-          "url": "https://mywfpl.com/events/details/2026/10/10/default-calendar/steam-midnight-kitty-painting"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_florabama_tailgateinthetent_0919-2026-10-17",
-      "title": "Tailgate in the Tent: Flora-Bama",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "11:00",
-      "endTime": "18:00",
-      "when": "Saturdays · 11:00 AM to 6:00 PM",
-      "venue": "Flora-Bama: Tent Stage",
-      "address": "17401 Perdido Key Dr, Perdido Key, FL 32507",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Flora-Bama turns its Tent Stage into a game-day sports bar every Saturday through the fall, with a big screen on SEC matchups, live music on two other stages, and a fresh-oyster walk-up bar. It runs 11 AM to 6 PM, so the early part of the day is a family beach-bar visit before it turns into an adult crowd by kickoff of the late games.",
-      "url": "https://coastaleventures.com/events/ev-florabama-tailgateinthetent-0919.html",
-      "sources": [
-        {
-          "note": "florabama.com/daily-events: 'Tailgate in the Tent, September 19, 2026 11:00 AM to 6:00 PM, Flora-Bama Lounge & Package,' rendered calendar read 09/16/2026, repeats weekly through at least 11/21",
-          "url": "https://florabama.com/daily-events"
-        },
-        {
-          "note": "florabama.com: 'Get Your Game Day Fix! Tailgate in the Tent is BACK at the Flora-Bama' (own article: big screen on SEC games, live music, fresh oysters, Tent Stage)",
-          "url": "https://www.florabama.com/get-your-game-day-fix-tailgate-in-the-tent-is-back-at-the-flora-bama"
-        }
-      ],
-      "checkedOn": "2026-09-16"
-    },
-    {
-      "id": "ev_woofstock_2026_arf_mobile_1017-2026-10-17",
-      "title": "Woofstock 2026: Animal Rescue Foundation Fundraiser",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "11:00",
-      "endTime": "16:00",
-      "when": "Saturday 10/17 · 11:00 AM to 4:00 PM",
-      "venue": "Oyster City Mobile",
-      "address": "603 Conti St, Mobile, AL 36602",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $5"
-      },
-      "summary": "Animal Rescue Foundation marks its 31st anniversary with Woofstock on Saturday, October 17 from 11:00 AM to 4:00 PM at Oyster City Mobile. It is the foundation's biggest fundraiser of the year, with a dog costume contest, wiener dog races, a dog pie eating contest, beer, food, entertainment and kids activities. Admission is $10, $5 for children, and free for kids under 3 and for dogs.",
-      "url": "https://coastaleventures.com/events/ev-woofstock-2026-arf-mobile-1017.html",
-      "sources": [
-        {
-          "note": "mobilecountyal.gov community events page: Woofstock 2026, Saturday October 17, 11 AM to 4 PM, Oyster City Mobile, admission $10, $5 for children, free for kids under 3 and dogs",
-          "url": "https://www.mobilecountyal.gov/community_events/woofstock-2026-2026-10-17"
-        }
-      ],
-      "checkedOn": "2026-10-07"
-    },
-    {
-      "id": "ev_uss_alabama_baptist_family_fun_day_1003-2026-10-17",
-      "title": "Baptist Convention Family Fun Day at USS Alabama",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "12:00",
-      "endTime": "16:00",
-      "when": "Saturday 10/17 · 12:00 PM to 4:00 PM",
-      "venue": "USS ALABAMA Battleship Memorial Park",
-      "address": "2703 Battleship Parkway, Mobile, AL 36602",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The Mobile Baptist Convention holds a family fun day in the recreational area of USS Alabama Battleship Memorial Park to celebrate America 250. The park's page promises live music, food and activities. It does not say whether park admission applies, so check before you go.",
-      "url": "https://coastaleventures.com/events/ev-uss-alabama-baptist-family-fun-day-1003.html",
-      "sources": [
-        {
-          "note": "USS ALABAMA Battleship Memorial Park: event page, read for the date, time, recreational area location, host and the description",
-          "url": "https://www.ussalabama.com/event/baptist-convention-family-fun-day/"
-        },
-        {
-          "note": "USS ALABAMA Battleship Memorial Park: events page, read for the listing",
-          "url": "https://www.ussalabama.com/events/"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_disney_lorcana_league_1010-2026-10-17",
-      "title": "Disney Lorcana League",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "12:00",
-      "endTime": "15:00",
-      "when": "Weekly · Saturdays 12 PM-3 PM (confirm the day)",
-      "venue": "GameMasters Guild",
-      "address": "743 Ashley Drive, Crestview, FL 32536",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Disney Lorcana League is casual league play at GameMasters Guild in Crestview. Players earn league points toward monthly prizes and a promo card the first time they play each month, and you can borrow a deck or buy one. The shop describes it as great for families. Casual play is free, tournaments vary in price, and a free Carde.io account is needed to earn promos.",
-      "url": "https://coastaleventures.com/events/ev-disney-lorcana-league-1010.html",
-      "sources": [
-        {
-          "note": "Lorcana League Saturdays 12-3 PM",
-          "url": "https://gmgcrestview.com/events/"
-        },
-        {
-          "note": "GameMasters Guild's own embedded Google Calendar feed (gmgcrestview@aol.com), read as ICS today: Lorcana League Saturdays 12-3 PM",
-          "url": "https://calendar.google.com/calendar/ical/gmgcrestview%40aol.com/public/basic.ics"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_zen_den_dwarf_jade_prost_office_milton_1017-2026-10-17",
-      "title": "Dwarf Jade Bonsai Workshop at The Prost Office Brewery",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "12:00",
-      "endTime": "14:00",
-      "when": "Saturday 10/17 · 12:00 PM to 2:00 PM",
-      "venue": "The Prost Office Brewery",
-      "address": "6821 Caroline St, Milton, FL 32570",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $85"
-      },
-      "summary": "Zen Den Bonsai Workshops runs a two hour Level 1 Foundations class at The Prost Office Brewery in Milton on Saturday, October 17 from 12:00 PM to 2:00 PM. A guide walks each guest through potting, pruning, shaping and wiring a dwarf jade bonsai, and every ticket covers a tree, tools and a workspace. Guests leave with the tree they shaped and the knowledge to keep caring for it.",
-      "url": "https://coastaleventures.com/events/ev-zen-den-dwarf-jade-prost-office-milton-1017.html",
-      "sources": [
-        {
-          "note": "zendenbonsai.com event page: Dwarf Jade Bonsai Workshop at The Prost Office Brewery, Saturday October 17, 12 to 2 PM, Bonsai Experience Pass $85 plus $5.95 sales tax",
-          "url": "https://www.zendenbonsai.com/event-details/dwarf-jade-bonsai-workshop-prost-office-milton-2"
-        }
-      ],
-      "checkedOn": "2026-10-07"
-    },
-    {
-      "id": "ev_monarch_madness_2026_1017-2026-10-17",
-      "title": "Monarch Madness 2026",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "12:00",
-      "endTime": null,
-      "when": "Saturday 10/17 · 12:00 PM",
-      "venue": "Panhandle Butterfly House & Nature Center",
-      "address": "4966 Henry Street, Milton, FL 32570",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $5"
-      },
-      "summary": "Monarch Madness 2026 is an afternoon at the Panhandle Butterfly House & Nature Center in Milton on Saturday, October 17, from 12 to 4 PM. Admission is $7 for adults and $5 for children. An optional Monarch Passport Challenge costs $10 and gives a chance to win a prize.",
-      "url": "https://coastaleventures.com/events/ev-monarch-madness-2026-1017.html",
-      "sources": [
-        {
-          "note": "Panhandle Butterfly House site: Monarch Madness 2026 Sat Oct 17 12-4, 4966 Henry Street Milton, $7/$5/$10",
-          "url": "https://panhandlebutterflyhouse.org"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_wheel_throwing_fall_ceramics_workshop_0912-2026-10-17",
-      "title": "Wheel Throwing: Fall Ceramics Workshop",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "12:30",
-      "endTime": "15:30",
-      "when": "Saturdays · 12:30 PM to 3:30 PM",
-      "venue": "UWF Pensacola Campus, Building 82",
-      "address": "11000 University Pkwy, Pensacola, FL 32514",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $275"
-      },
-      "summary": "This six week adult ceramics course at UWF meets Saturday afternoons from 12:30 PM to 3:30 PM, covering wheel throwing, centering, forms, firing, and glazing. It is built for beginners and for anyone who wants a refresher, running through October 17. Tuition runs $275 per person.",
-      "url": "https://coastaleventures.com/events/ev-wheel-throwing-fall-ceramics-workshop-0912.html",
-      "sources": [
-        {
-          "note": "uwf.edu: the university's own locations page. UWF publishes one address for the whole Pensacola campus, not one per building",
-          "url": "https://uwf.edu/about/university-locations/"
-        },
-        {
-          "note": "uwf.edu: the organizer's own page, read for the admission",
-          "url": "https://uwf.edu/continuinged/programs/personal-enrichment/"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_curiositylab_frankenstein_mess-2026-10-17",
-      "title": "Curiosity Lab: Frankenstein",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "13:00",
-      "endTime": "16:00",
-      "when": "Saturday 10/17 · 1:00 PM to 4:00 PM",
-      "venue": "Pensacola MESS Hall",
-      "address": "116 N Tarragona St, Pensacola, FL 32502",
-      "category": "stem",
-      "categoryLabel": "STEM and learning",
-      "price": {
-        "kind": "priced",
-        "label": "from $15"
-      },
-      "summary": "October's Curiosity Lab goes spooky: kids build their own monster mechanisms using string finger, jumping jack, and automata mechanics. It suits ages 7 and up and is included with general admission. The rest of the museum, including mess kits, is open for exploration 10 AM to 5 PM the same Saturday.",
-      "url": "https://coastaleventures.com/events/ev-curiositylab-frankenstein-mess.html",
-      "sources": [
-        {
-          "note": "pensacolamesshall.org: Curiosity Lab: Frankenstein, Saturday October 17, 2026, 1-4 PM, ages 7+, included with admission",
-          "url": "https://pensacolamesshall.org/curiosityday-october2026/"
-        },
-        {
-          "note": "pensacolamesshall.org: general admission $15 adults & children 3+, active duty $14",
-          "url": "https://pensacolamesshall.org/visit/"
-        }
-      ],
-      "checkedOn": "2026-09-16"
-    },
-    {
-      "id": "ev_leather_crafting_1017-2026-10-17",
-      "title": "Leather Crafting",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "13:00",
-      "endTime": null,
-      "when": "Saturday 10/17 · 1:00 PM",
-      "venue": "Century Library (West Florida Public Libraries)",
-      "address": "7991 N. Century Blvd., Century, FL 32535",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Leather Crafting is a basic leather design class at Century Library in Century, at 1 PM on Saturday, October 17. Each person makes a keychain or bag tag, and all supplies are provided.",
-      "url": "https://coastaleventures.com/events/ev-leather-crafting-1017.html",
-      "sources": [
-        {
-          "note": "Event detail page: title, date, time, branch, address and description as listed",
-          "url": "https://mywfpl.com/events/details/2026/10/17/default-calendar/leather-crafting"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_wayne_miller_author_signing_1017-2026-10-17",
-      "title": "Wayne Miller: Author Signing",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "13:00",
-      "endTime": "15:00",
-      "when": "Saturday 10/17 · 1:00 PM to 3:00 PM",
-      "venue": "Page & Palette",
-      "address": "32 South Section Street, Fairhope, AL 36532",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Page & Palette hosts Wayne Miller for a children's signing, Saturday from 1 PM to 3 PM, for his locally set pirate adventure about kids playing around Fairhope's beaches and parks.",
-      "url": "https://coastaleventures.com/events/ev-wayne-miller-author-signing-1017.html",
-      "sources": [
-        {
-          "note": "pageandpalette.com: the store's own events list, read for the date and admission",
-          "url": "https://www.pageandpalette.com/book-events"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_five_crowns_showdown_brownsville_l_1017-2026-10-17",
-      "title": "Five Crowns Showdown (Brownsville Library)",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "13:30",
-      "endTime": null,
-      "when": "Every other Saturday through 10/31 · 1:30 PM",
-      "venue": "Brownsville Library",
-      "address": "3300 W. De Soto St., Pensacola, FL 32505",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Five Crowns Showdown is an afternoon of the Five Crowns card game at Brownsville Library, 3300 W. De Soto Street. Newcomers and experienced players are both welcome. It runs at 1:30 PM on Saturday, Oct 17, and again on Oct 31.",
-      "url": "https://coastaleventures.com/events/ev-five-crowns-showdown-brownsville-l-1017.html",
-      "sources": [
-        {
-          "note": "WFPL event page: Five Crowns Showdown (Brownsville Library), 2026-10-03, 1:30 PM",
-          "url": "https://mywfpl.com/events/details/2026/10/03/default-calendar/five-crowns-showdown"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_um_womens_soccer_vs_point_1017-2026-10-17",
-      "title": "University of Mobile Women's Soccer vs Point University",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "13:30",
-      "endTime": "15:30",
-      "when": "Saturday 10/17 · 1:30 PM to 3:30 PM",
-      "venue": "The Jungle, University of Mobile",
-      "address": "5735 College Parkway, Mobile, AL 36613",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "University of Mobile's women's soccer team hosts Point University at The Jungle for a Saturday afternoon match that kicks off at 1:30 PM and runs about two hours.",
-      "url": "https://coastaleventures.com/events/ev-um-womens-soccer-vs-point-1017.html",
-      "sources": [
-        {
-          "note": "University of Mobile Rams: official 2026 women's soccer schedule",
-          "url": "https://umobilerams.com/sports/womens-soccer/schedule/2026"
-        },
-        {
-          "note": "University of Mobile: official events page",
-          "url": "https://umobile.edu/events/"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_acrylic_workshop_with_jan_dale_pal_1017-2026-10-17",
-      "title": "Acrylic Workshop with Jan Dale: Palm Trees",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "14:00",
-      "endTime": null,
-      "when": "Saturday 10/17 · 2:00 PM",
-      "venue": "Aurora Light Arts",
-      "address": "8766 Ortega Park Drive, Navarre, FL 32566",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $65"
-      },
-      "summary": "Acrylic Workshop: Palm Trees is a painting class at Aurora Light Arts in Navarre, led by a coastal artist, on Saturday, October 17 at 4:30 PM. Participants paint bright palm trees in acrylic and finish two 8x10 canvases. The cost is $65.",
-      "url": "https://coastaleventures.com/events/ev-acrylic-workshop-with-jan-dale-pal-1017.html",
-      "sources": [
-        {
-          "note": "Studio booking page: Acrylic Workshop with Jan Dale: Palm Trees 2026-10-17, $65",
-          "url": "https://www.auroralightarts.net/service-page/acrylic-workshop-w-jan-dale-10-17"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_chess_club_for_everyone_at_moorer_0905-2026-10-17",
-      "title": "Chess Club for Everyone at Moorer",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "14:00",
-      "endTime": "16:00",
-      "when": "Saturdays · 2:00 PM to 4:00 PM",
-      "venue": "Monte L. Moorer/Spring Hill Branch Library",
-      "address": "4 S McGregor Ave, Mobile, AL 36608",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The Monte L. Moorer/Spring Hill Branch Library runs a chess club open to beginners and experienced players alike. The library says the program suits ages 6 and up, including teens, and it emphasizes concentration and problem solving over competition. Saturday sessions at 2 PM repeat weekly through October, including October 3 and October 10, so a missed week is not a missed chance.",
-      "url": "https://coastaleventures.com/events/ev-chess-club-for-everyone-at-moorer-0905.html",
-      "sources": [
-        {
-          "note": "mobilepubliclibrary.org: the organizer's own page, read for the admission and current schedule",
-          "url": "https://www.mobilepubliclibrary.org/events/week/2026/09/02"
-        },
-        {
-          "note": "mobilepubliclibrary.org: the admission and current schedule",
-          "url": "https://www.mobilepubliclibrary.org/events/week/2026/09/09"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_destin_commons_market_1017-2026-10-17",
-      "title": "Destin Commons Market",
-      "date": "2026-10-17",
-      "endDate": "2026-12-05",
-      "startTime": "14:00",
-      "endTime": "18:00",
-      "when": "Saturdays 10/17, 11/21 and 12/5 · 2 PM-6 PM",
-      "venue": "The Lawn at South Street, Destin Commons",
-      "address": "4100 Legendary Drive, Destin, FL 32541",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The Destin Commons Market is a monthly market on The Lawn at South Street at Destin Commons. Local farmers, artisans, small businesses and specialty vendors sell handcrafted goods, baked items, artwork, jewelry and wellness products. It runs 2-6 PM on October 17, November 21 and December 5, and the December date adds kids' crafts.",
-      "url": "https://coastaleventures.com/events/ev-destin-commons-market-1017.html",
-      "sources": [
-        {
-          "note": "destincommons.com/market: 3rd Saturday 2-6 PM, Oct 17, Nov 21, Dec 5, The Lawn at South Street, 4100 Legendary Drive",
-          "url": "https://destincommons.com/market/"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_noonan_center_boobash-2026-10-17",
-      "title": "Hansel & Gretel's Boo Bash!",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "14:00",
-      "endTime": null,
-      "when": "Sat 10/17 · 2:00 PM",
-      "venue": "Jane C. Noonan Center",
-      "address": "46 E. Chase St., Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Pensacola Opera builds a Halloween-themed Boo Bash around its Hansel & Gretel material at the Jane C. Noonan Center. Treat it as an October special rather than a repeating date.",
-      "url": "https://coastaleventures.com/events/ev-noonan-center-boobash.html",
-      "sources": [
-        {
-          "note": "Pensacola Opera: official events page confirming date and start time",
-          "url": "https://pensacolaopera.com/events/"
-        },
-        {
-          "note": "Pensacola Opera: official upcoming events listing",
-          "url": "https://pensacolaopera.com/upcoming-events/"
-        },
-        {
-          "note": "Pensacola Children's Chorus: identifies the Jane C. Noonan Center address",
-          "url": "https://www.pensacolasings.org/performances"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_mary_esther_lib_trunk_or_treat_1017-2026-10-17",
-      "title": "Trunk or Treat at Mary Esther Library",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "14:00",
-      "endTime": "16:00",
-      "when": "Saturday 10/17 · 2:00 PM to 4:00 PM",
-      "venue": "Mary Esther Library",
-      "address": "100 W. Hollywood Blvd, Mary Esther, FL 32569",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Mary Esther Library's staff run their annual Trunk or Treat with candy, snacks, games, pumpkin decorating and a stiltwalker, and the library's own page says come one, come all with no registration needed. It is an outdoor, daylight event in the library's own parking lot, aimed at every age from toddlers to teens. Photos and video from the event may be used to promote the library, per its own notice.",
-      "url": "https://coastaleventures.com/events/ev-mary-esther-lib-trunk-or-treat-1017.html",
-      "sources": [
-        {
-          "note": "okaloosa.librarycalendar.com: the organizer's own branch events list, filtered to Mary Esther Library, confirming the 10/17/2026 date, time and activities, read 09/16/2026",
-          "url": "https://okaloosa.librarycalendar.com/events/list?branches%5B100%5D=100"
-        }
-      ],
-      "checkedOn": "2026-09-16"
-    },
-    {
-      "id": "ev_mobile_museum_make_take_art-2026-10-17",
-      "title": "Make & Take Art: weekly drop-in art sessions",
-      "date": "2026-10-17",
-      "endDate": "2026-12-03",
-      "startTime": "15:00",
-      "endTime": "16:30",
-      "when": "Thursdays 8/27 through 12/3 · 3:00 PM to 4:30 PM",
-      "venue": "Mobile Museum of Art",
-      "address": "4850 Museum Drive, Mobile, AL 36608",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "The museum runs a free Thursday afternoon art session most weeks, working through materials and techniques borrowed from artists on view. Projects range from geometric shape painting to a Basquiat-inspired dinosaur build. The printed schedule also lists a session for September 8, but that date falls on a Tuesday, not a Thursday, so check with the museum first.",
-      "url": "https://coastaleventures.com/events/ev-mobile-museum-make-take-art.html",
-      "sources": [
-        {
-          "note": "Mobile Museum of Art: official Make & Take Art event page and weekly topic schedule",
-          "url": "https://www.mobilemuseumofart.com/event/make-take-art-7-2/2026-04-02/"
-        }
-      ],
-      "checkedOn": "2026-08-24"
-    },
-    {
-      "id": "ev_painting_with_a_twist_fort_walton_1003-2026-10-17",
-      "title": "Painting with a Twist Fort Walton Beach: paint nights and all-ages sessions (weekly programme)",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "15:00",
-      "endTime": null,
-      "when": "Classes most weeks: Sunday 3 PM, Monday evenings, Saturday all-ages open studio",
-      "venue": "Painting with a Twist Fort Walton Beach",
-      "address": "255 Miracle Strip Pkwy SE, Suite B-8, Fort Walton Beach, FL 32548",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $27"
-      },
-      "summary": "Painting with a Twist Fort Walton Beach is an artist-led canvas painting studio at 255 Miracle Strip Pkwy SE, Suite B-8, in the Publix shopping center in downtown Fort Walton Beach. October has an all-ages open studio, Halloween sessions, a book-lovers paint night and blacklight painting. Standard canvases cost $37-$39, all-ages sessions $27-$60 and Paint Your Pet $57-$59, and the studio is BYOB-friendly.",
-      "url": "https://coastaleventures.com/events/ev-painting-with-a-twist-fort-walton-1003.html",
-      "sources": [
-        {
-          "note": "Studio page: address, phone (850) 226-7218, BYOB-friendly, Oct 4 Spooky Highland 3 PM $37-39",
-          "url": "https://www.paintingwithatwist.com/studio/fort-walton-beach/"
-        },
-        {
-          "note": "October calendar with ALL AGES sessions and prices",
-          "url": "https://www.paintingwithatwist.com/studio/fort-walton-beach/calendar/"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_destin_commons_pumpkin_arts_1017-2026-10-17",
-      "title": "Pumpkin Arts and Crafts at Destin Commons",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "15:00",
-      "endTime": "17:00",
-      "when": "Saturday 10/17 · 3:00 PM to 5:00 PM",
-      "venue": "The Lawn at South Street, Destin Commons",
-      "address": "4100 Legendary Drive, Destin, FL 32541",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Kids paint pumpkins at a free craft table set up during the Saturday Destin Commons Market. Parents can browse the vendors and eat at the shopping village while the children work. Supplies are limited, so arriving at the start of the window is the safer plan.",
-      "url": "https://coastaleventures.com/events/ev-destin-commons-pumpkin-arts-1017.html",
-      "sources": [
-        {
-          "note": "Destin Commons happenings page: free pumpkin painting for kids during the Destin Market, October 17, 3 to 5 PM",
-          "url": "https://destincommons.com/happenings-events/pumpkin-arts-crafts/"
-        }
-      ],
-      "checkedOn": "2026-10-14"
-    },
-    {
-      "id": "ev_smoke_at_the_park_grand_bay_1016-2026-10-17",
-      "title": "Smoke at the Park 2026",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "15:00",
-      "endTime": "22:00",
-      "when": "Friday 10/16 and Saturday 10/17 · 3:00 PM to 10:00 PM",
-      "venue": "Creekside RV Park",
-      "address": "9560 Grand Bay-Wilmer Rd, Grand Bay, AL 36541",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Smoke at the Park is a two day BBQ weekend at Creekside RV Park in Grand Bay on Friday, October 16 and Saturday, October 17, from 3:00 PM to 10:00 PM each day. It has barbecue competition, live music, local vendors, food trucks and family fun, and benefits Farmers in Action. General admission is free, and a $20 People's Choice pass gets you into the tasting area with a vote for the best BBQ.",
-      "url": "https://coastaleventures.com/events/ev-smoke-at-the-park-grand-bay-1016.html",
-      "sources": [
-        {
-          "note": "mobilecountyal.gov community events page: Smoke at the Park 2026, October 16 and 17, 3 to 10 PM, Creekside RV Park, Grand Bay, free general admission, $20 People's Choice pass",
-          "url": "https://www.mobilecountyal.gov/community_events/smoke-at-the-park-2026-2026-10-16"
-        }
-      ],
-      "checkedOn": "2026-10-07"
-    },
-    {
-      "id": "ev_artel_jam_session_1007-2026-10-17",
-      "title": "Artel Jam Session",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "16:00",
-      "endTime": "19:00",
-      "when": "Wednesdays and Saturdays · 4 PM-7 PM",
-      "venue": "Artel Gallery",
-      "address": "223 Palafox Pl, Pensacola, FL 32502",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Artel Jam Session is an open musical gathering at Artel Gallery, 223 Palafox Pl in downtown Pensacola. It meets every Wednesday and Saturday from 4-7 PM and welcomes participants from the community.",
-      "url": "https://coastaleventures.com/events/ev-artel-jam-session-1007.html",
-      "sources": [
-        {
-          "note": "Artel events page: Jam Session every Wednesday and Saturday 4-7 PM",
-          "url": "https://www.artelgallery.org/events"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_greek_fest_fwb_2026_1016-2026-10-17",
-      "title": "Greek Fest FWB 2026",
-      "date": "2026-10-17",
-      "endDate": "2026-10-18",
-      "startTime": "16:00",
-      "endTime": null,
-      "when": "Friday 10/16 to Sunday 10/18 · 4:00 PM",
-      "venue": "Saints Markella and Demetrios Greek Orthodox Church",
-      "address": "104 Bryn Mawr Boulevard, Mary Esther, FL",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The Greek Fest at Saints Markella and Demetrios Greek Orthodox Church in Mary Esther runs Friday, October 16 to Sunday, October 18. It has Greek food, pastries, beer and wine, and Greek dancing, with lamb roasted on an outdoor spit. Families can find a bounce house, a balloon artist and vendor booths.",
-      "url": "https://coastaleventures.com/events/ev-greek-fest-fwb-2026-1016.html",
-      "sources": [
-        {
-          "note": "Dates Oct 16-18, 2026, hours by day, address 104 Bryn Mawr Blvd Mary Esther, phone",
-          "url": "https://www.greekfestfwb.com/"
-        },
-        {
-          "note": "Oct 16-18 listing with organiser link",
-          "url": "https://www.destinfwb.com/blog/cant-miss-fall-events-in-destin-fort-walton-beach/"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_fwb_library_trunk_or_treat_1017-2026-10-17",
-      "title": "Trick-or-Treat at the Fort Walton Beach Library",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "16:00",
-      "endTime": "18:00",
-      "when": "Saturday 10/17 · 4:00 PM to 6:00 PM",
-      "venue": "Fort Walton Beach Library",
-      "address": "185 Miracle Strip Parkway SE, Fort Walton Beach, FL 32548",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The Fort Walton Beach Library holds its third annual Trunk-or-Treat in the library parking lot, with children walking from decorated trunk to decorated trunk for candy and small giveaways. Families, businesses and individuals sign up to decorate trunks in family-friendly themes, and trick-or-treaters do not need to sign up. It is an easy Saturday afternoon stop for babies through teens.",
-      "url": "https://coastaleventures.com/events/ev-fwb-library-trunk-or-treat-1017.html",
-      "sources": [
-        {
-          "note": "okaloosa.librarycalendar.com: Fort Walton Beach Library's 3rd annual Trunk-or-Treat, Saturday October 17, 4 to 6 PM, held in the library parking lot, with parking at the public lot on Ferry Road or the Temple Mound Museum lot at the end of Beal Parkway",
-          "url": "https://okaloosa.librarycalendar.com/event/trunk-or-treat-85295"
-        },
-        {
-          "note": "okaloosa.librarycalendar.com: sign-up for people decorating trunks, open September 24 through October 16, with no sign-up for trick-or-treaters",
-          "url": "https://okaloosa.librarycalendar.com/event/volunteer-your-trunk-fwb-librarys-trunk-or-treat-85177"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_um_mens_soccer_vs_point_1017-2026-10-17",
-      "title": "University of Mobile Men's Soccer vs Point University",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "16:00",
-      "endTime": "18:00",
-      "when": "Saturday 10/17 · 4:00 PM to 6:00 PM",
-      "venue": "The Jungle, University of Mobile",
-      "address": "5735 College Parkway, Mobile, AL 36613",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "University of Mobile's men's soccer team hosts Point University at The Jungle for a Saturday afternoon match that kicks off at 4:00 PM and runs about two hours.",
-      "url": "https://coastaleventures.com/events/ev-um-mens-soccer-vs-point-1017.html",
-      "sources": [
-        {
-          "note": "University of Mobile Rams Athletics: official men's soccer schedule",
-          "url": "https://umobilerams.com/sports/mens-soccer/schedule/2026"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_seaside_childrens_theater_dragons_love_tacos-2026-10-17",
-      "title": "Dragons Love Tacos: Fall Children's Theater at Seaside",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "17:00",
-      "endTime": "18:00",
-      "when": "Saturdays through 10/17 · 5:00 PM to 6:00 PM",
-      "venue": "Seaside Amphitheater",
-      "address": "Central Square, Santa Rosa Beach, FL 32459",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Emerald Coast Theatre Company performs Dragons Love Tacos at the Seaside Amphitheater on Saturday afternoons this fall. Seven performers tell the story of a boy and his dog learning the dos and don'ts of feeding dragons. The show is complimentary, paid for by the arts and entertainment fee the Merchants of Seaside collect.",
-      "url": "https://coastaleventures.com/events/ev-seaside-childrens-theater-dragons-love-tacos.html",
-      "sources": [
-        {
-          "note": "Seaside: Fall Children's Theater Show event page, read for the show, company, Saturday dates, time, location and the complimentary admission",
-          "url": "https://seasidefl.com/event/childrens-theater-4/2026-10-03/"
-        },
-        {
-          "note": "Seaside: events calendar, read for the listing",
-          "url": "https://seasidefl.com/events"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_crosspoint_strength-2026-10-17",
-      "title": "From Strength to Strength Discussion Group",
-      "date": "2026-10-17",
-      "endDate": "2026-11-04",
-      "startTime": "18:00",
-      "endTime": "19:00",
-      "when": "Wednesdays 9/9 – 11/4 · 6:00 PM-7:00 PM",
-      "venue": "Crosspoint Niceville Campus Marler Chapel",
-      "address": "214 Partin Dr S, Niceville, FL 32578",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "A Wednesday evening discussion group at Crosspoint's Niceville campus works through Arthur C. Brooks' From Strength to Strength, on finding purpose and happiness in the second half of life. The full run goes from September 9 through November 4. Participants order the book on their own.",
-      "url": "https://coastaleventures.com/events/ev-crosspoint-strength.html",
-      "sources": [
-        {
-          "note": "Crosspoint Church: Niceville Campus eLetter",
-          "url": "https://crosspoint.church/news/eletternv/"
-        },
-        {
-          "note": "Crosspoint Church: campus locations",
-          "url": "https://crosspoint.church/locations/"
-        }
-      ],
-      "checkedOn": "2026-08-24"
-    },
-    {
-      "id": "ev_live_music_five_sisters_blues_cafe_1008-2026-10-17",
-      "title": "Live Music at Five Sisters Blues Cafe",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "18:00",
-      "endTime": null,
-      "when": "Tuesday, Thursday, Friday and Saturday evenings · 6:00 PM",
-      "venue": "Five Sisters Blues Cafe",
-      "address": "421 W Belmont St, Pensacola, FL 32501",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Five Sisters Blues Cafe in downtown Pensacola books live music most evenings. The calendar shows 6:00 PM duo and solo sets on weeknights and 6:00 PM to 10:00 PM bands on Fridays and Saturdays, with the Glenn Parker Band holding down Saturdays. Wing Wednesday adds 75 cent wings from 4:00 PM.",
-      "url": "https://coastaleventures.com/events/ev-live-music-five-sisters-blues-cafe-1008.html",
-      "sources": [
-        {
-          "note": "Five Sisters Blues Cafe calendar: live music October 8 Cat Daddy Duo, October 9 Me and the Misfits, October 10 Glenn Parker Band, October 13 John Wheeler, October 15 D. Scott Riggs, October 16 Joshua Strickland Trio",
-          "url": "https://fivesistersbluescafe.com/calendar/"
-        }
-      ],
-      "checkedOn": "2026-10-07"
-    },
-    {
-      "id": "ev_miltoncemetery_tour-2026-10-17",
-      "title": "Milton Historic Cemetery Tour",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "18:00",
-      "endTime": "21:00",
-      "when": "Fri 10/16 - Sat 10/17 · timed tours every 15 minutes, 6:00 PM to 9:00 PM",
-      "venue": "Milton Historic Cemetery",
-      "address": "6683 Berryhill Road, Milton, FL 32572",
-      "category": "town",
-      "categoryLabel": "Town and community",
-      "price": {
-        "kind": "priced",
-        "label": "from $25"
-      },
-      "summary": "Milton Historic Cemetery runs timed evening tours over two nights in October, with groups departing every 15 minutes rather than one mass tour start. The City of Milton sells no tickets on-site, so a reservation made in advance or by phone is the only way in. It is an outdoor, after-dark walk through headstones, better suited to older kids and adults than to strollers.",
-      "url": "https://coastaleventures.com/events/ev-miltoncemetery-tour.html",
-      "sources": [
-        {
-          "note": "City of Milton: official event calendar with dates, times and ticketing instructions",
-          "url": "https://www.miltonfl.org/Calendar.aspx?EID=9862"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_harborwalk_rocktober_nights_1010-2026-10-17",
-      "title": "Rocktober Nights at HarborWalk Village",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "18:00",
-      "endTime": "21:00",
-      "when": "Saturdays 10/10 to 10/31 · concert 6:00 PM to 9:00 PM · fireworks 9:00 PM",
-      "venue": "HarborWalk Village",
-      "address": "10 Harbor Blvd, Destin, FL 32541",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "HarborWalk Village in Destin spends every Saturday evening in October on Rocktober Nights. A Rocktober Concert Series plays on the main stage from 6:00 PM to 9:00 PM, and fireworks light the Destin Harbor sky at 9:00 PM.",
-      "url": "https://coastaleventures.com/events/ev-harborwalk-rocktober-nights-1010.html",
-      "sources": [
-        {
-          "note": "emeraldgrandefl.com HarborWalk Village upcoming events: Rocktober Nights every Saturday in October, concert 6 to 9 PM on the main stage, fireworks over Destin Harbor at 9 PM",
-          "url": "https://emeraldgrandefl.com/upcoming-events/"
-        }
-      ],
-      "checkedOn": "2026-10-07"
-    },
-    {
-      "id": "ev_ecsc_wizarding-2026-10-17",
-      "title": "Sip & Science: Wizarding World",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "18:00",
-      "endTime": "21:00",
-      "when": "Saturday 10/17 · 6:00 PM to 9:00 PM (21+, ID required)",
-      "venue": "Emerald Coast Science Center",
-      "address": "31 Memorial Pkwy SW, Fort Walton Beach, FL 32548",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $30"
-      },
-      "summary": "Emerald Coast Science Center turns its exhibit floor into a 21-and-over Harry Potter tribute for one October evening, with themed cocktails, food, trivia and an optional potions-class add-on layered over the regular museum galleries. Photo ID is checked at the door. Ticket prices step up in tiers, so booking before the week-of price increase saves five dollars per ticket.",
-      "url": "https://coastaleventures.com/events/ev-ecsc-wizarding.html",
-      "sources": [
-        {
-          "note": "Greater Fort Walton Beach Chamber: event listing with 2026 date, price tiers and organizer link",
-          "url": "https://www.fwbchamber.org/events/details/sip-science-wizarding-world-10-17-2026-25202"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_sip_science_wizarding_world_21_1022-2026-10-17",
-      "title": "Sip & Science: Wizarding World (21+)",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "18:00",
-      "endTime": "21:00",
-      "when": "Saturday 10/17 · 6:00 PM to 9:00 PM",
-      "venue": "Emerald Coast Science Center",
-      "address": "31 Memorial Pkwy SW, Fort Walton Beach, FL 32548",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $30"
-      },
-      "summary": "Sip & Science: Wizarding World is an adults-only, 21-and-over after-hours night at the Emerald Coast Science Center in Fort Walton Beach with a Wizarding World theme. A ticket includes admission, exhibits, drink tickets for beer and a specialty cocktail, and food.",
-      "url": "https://coastaleventures.com/events/ev-sip-science-wizarding-world-21-1022.html",
-      "sources": [
-        {
-          "note": "Sip & Science page: Date/Time October 22, 2026 6-9 PM, theme Wizarding World, prices as listed, 21+",
-          "url": "https://www.ecscience.org/sip-science"
-        },
-        {
-          "note": "Events calendar grid showing Oct 17 6:00 PM Sip & Science: Wizarding World",
-          "url": "https://www.ecscience.org/events"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_feef_jubilee_party_at_the_pavilion_1017-2026-10-17",
-      "title": "Jubilee: Party at the Pavilion",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "18:30",
-      "endTime": null,
-      "when": "Saturday 10/17 · 6:30 PM",
-      "venue": "The Pavilion at The Nest",
-      "address": "108 S Summit St, Fairhope, AL 36532",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $100"
-      },
-      "summary": "The Fairhope Educational Enrichment Foundation holds Jubilee, a Party at the Pavilion benefit on Saturday, October 17 at 6:30 PM. The evening has live music and dancing, coastal cuisine, craft cocktails, a silent auction and raffle prizes at the Pelican's Nest pavilion. Proceeds fund STEAM programs, outdoor classrooms, teacher grants and the Pelican's Nest Science Lab in Fairhope's public schools.",
-      "url": "https://coastaleventures.com/events/ev-feef-jubilee-party-at-the-pavilion-1017.html",
-      "sources": [
-        {
-          "note": "feefonline.org event page: Jubilee Party at the Pavilion, October 17, 2026, 6:30 PM, The Pavilion at The Nest, entry fee $100",
-          "url": "https://feefonline.org/jubilee-party-at-the-pavilion/"
-        }
-      ],
-      "checkedOn": "2026-10-07"
-    },
-    {
-      "id": "ev_suds_n_cinema_the_shining_1014-2026-10-17",
-      "title": "Suds N Cinema: The Shining",
-      "date": "2026-10-17",
-      "endDate": "2026-10-19",
-      "startTime": "18:30",
-      "endTime": null,
-      "when": "Wednesday 10/14 to Monday 10/19 · 6:30 PM",
-      "venue": "Suds N Cinema",
-      "address": "174 Miracle Strip Pkwy SE, Fort Walton Beach, FL 32548",
-      "category": "movie",
-      "categoryLabel": "Movies",
-      "price": {
-        "kind": "priced",
-        "label": "from $5"
-      },
-      "summary": "Suds N Cinema screens Stanley Kubrick's horror film The Shining for six nights in a row. The theater delivers hot food and cold drinks to your seat while the story of a caretaker's descent into madness plays on the screen. The film is rated R.",
-      "url": "https://coastaleventures.com/events/ev-suds-n-cinema-the-shining-1014.html",
-      "sources": [
-        {
-          "note": "Suds N Cinema: The Shining, Oct. 14 to 19, doors 6:00 PM and show 6:30 PM, Rated R, $5 Classic Movie Admission, military and first responders free with ID",
-          "url": "https://www.sudsncinema.com/event-details/the-shining-2026-10-14-18-30"
-        }
-      ],
-      "checkedOn": "2026-10-07"
-    },
-    {
-      "id": "ev_hadji_haunted_house_1009-2026-10-17",
-      "title": "Hadji Haunted House",
-      "date": "2026-10-17",
-      "endDate": "2026-10-31",
-      "startTime": "19:00",
-      "endTime": "22:30",
-      "when": "Fri and Sat 10/16 to 10/31 · 7:00 PM to 10:30 PM",
-      "venue": "Hadji Shrine Temple",
-      "address": "800 W 9 Mile Road, Pensacola, FL 32534",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $25"
-      },
-      "summary": "The Hadji Shriners fill their temple on West 9 Mile Road with more than 40 haunted rooms each Friday and Saturday night in October. A 3D funhouse is open from 6:00 PM for guests who want something gentler, and one afternoon on October 25 is set aside as a kid friendly haunted house. Tickets are $25 and general admission doors open at 7:00 PM.",
-      "url": "https://coastaleventures.com/events/ev-hadji-haunted-house-1009.html",
-      "sources": [
-        {
-          "note": "hadjishriners.org event page: Hadji Haunted House October 9 to 31, 2026, price $25, 800 W 9 Mile Road, Pensacola FL 32534, phone 850-476-9384",
-          "url": "https://www.hadjishriners.org/event/hadji-haunted-house/"
-        },
-        {
-          "note": "hadjihauntedhouse.com: over 40 rooms of terror on October 9, 10, 16, 17, 23, 24, 30 and 31, with a kid friendly 3D funhouse and one kid friendly haunted house night on 10/25",
-          "url": "https://hadjihauntedhouse.com/"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_mobile_vampire_ball_1017-2026-10-17",
-      "title": "Mobile Vampire Ball",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "19:00",
-      "endTime": "23:30",
-      "when": "Saturday 10/17 · 7:00 PM to 11:30 PM",
-      "venue": "The Pillars Mobile",
-      "address": "1757 Government St, Mobile, AL 36604",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $35"
-      },
-      "summary": "The Mobile Vampire Ball is a Halloween costume party on Saturday, October 17 from 7:00 PM to 11:30 PM at The Pillars on Government Street. Each room of the historic event space is dressed as its own haunting realm, from vampire lairs and witches' covens to graveyards and werewolf dens. The night has live bands, DJs, surprise performances, vendors, full bars and plenty of photo spots.",
-      "url": "https://coastaleventures.com/events/ev-mobile-vampire-ball-1017.html",
-      "sources": [
-        {
-          "note": "mobilecountyal.gov community events page: Mobile Vampire Ball, Saturday October 17, 7 to 11:30 PM, The Pillars, tickets $35",
-          "url": "https://www.mobilecountyal.gov/community_events/mobile-vampire-ball-2026-10-17"
-        }
-      ],
-      "checkedOn": "2026-10-07"
-    },
-    {
-      "id": "ev_mkac_nfso_fireandfate-2026-10-17",
-      "title": "NFSO: Fire and Fate",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "19:00",
-      "endTime": "21:00",
-      "when": "Saturday 10/17 · 7:00 PM-9:00 PM",
-      "venue": "Mattie Kelly Arts Center",
-      "address": "100 College Blvd East, Niceville, FL 32578",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "priced",
-        "label": "from $16"
-      },
-      "summary": "The Northwest Florida Symphony Orchestra opens its 40th anniversary season with pianist Stewart Goodyear performing Beethoven's Piano Concerto No. 4, alongside Hailstork's Fanfare on Amazing Grace and Tchaikovsky's Symphony No. 5. The concert runs a single evening at the Mattie Kelly Arts Center.",
-      "url": "https://coastaleventures.com/events/ev-mkac-nfso-fireandfate.html",
-      "sources": [
-        {
-          "note": "Mattie Kelly Arts Center: NFSO Fire and Fate event page",
-          "url": "https://mattiekellyartscenter.org/events/fire-and-fate/"
-        },
-        {
-          "note": "Mattie Kelly Arts Center: events listing",
-          "url": "https://mattiekellyartscenter.org/events/"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_brandonstyles_variety-2026-10-17",
-      "title": "The Brandon Styles Variety Show",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "19:00",
-      "endTime": null,
-      "when": "Tuesdays and Saturdays · 7:00 PM",
-      "venue": "Brandon Styles Theater at OWA",
-      "address": "1501 S OWA Blvd, Foley, AL 36535",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $35"
-      },
-      "summary": "Celebrity impressions, comedy, and magic play a purpose-built theatre at OWA, twice a week. It is marketed all-ages and it means it, a rare thing that a nine-year-old and two adults can all sit through happily.",
-      "url": "https://coastaleventures.com/events/ev-brandonstyles-variety.html",
-      "sources": [
-        {
-          "note": "Brandon Styles, own show schedule: \"The Brandon Styles Variety Show ... runs every Tuesday and Saturday at 7 PM ... Adult General Admission (Ages 18+) $35.00.\"",
-          "url": "https://www.brandonstyles.com/show-schedule"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_pensacola_ice_flyers_2026_27_home_season_ope_1017-2026-10-17",
-      "title": "Pensacola Ice Flyers: 2026-27 Home Season Opening Date",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "19:05",
-      "endTime": null,
-      "when": "Saturday 10/17 · 7:05 PM",
-      "venue": "Pensacola Bay Center",
-      "address": "201 E. Gregory St., Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The Pensacola Bay Center opens the Ice Flyers' 2026-27 home season on October 17, with home games running through April 2, 2027. Opening Night is against the Macon Mayhem, with the puck dropping at 7:05 PM. Fans of all ages are welcome.",
-      "url": "https://coastaleventures.com/events/ev-pensacola-ice-flyers-2026-27-home-season-ope-1017.html",
-      "sources": [
-        {
-          "note": "pensacolabaycenter.com: the organizer's own page, read for the admission and current schedule",
-          "url": "https://www.pensacolabaycenter.com/events"
-        },
-        {
-          "note": "pensacolabaycenter.com: the current schedule",
-          "url": "https://www.pensacolabaycenter.com/"
-        },
-        {
-          "note": "iceflyers.com theme nights, read 10/02/2026: \"Saturday, October 17 at 7:05 PM, Opening Night versus Macon Mayhem\"",
-          "url": "https://iceflyers.com/theme-nights/"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_destin_wizardofoz_1017-2026-10-17",
-      "title": "Film in Concert: The Wizard of Oz",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "19:30",
-      "endTime": null,
-      "when": "Saturday 10/17 · 7:30 PM",
-      "venue": "Mattie Kelly Arts Foundation Dugas Pavilion",
-      "address": "4323 Commons Drive West, Destin, FL 32541",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "priced",
-        "label": "from $15"
-      },
-      "summary": "Sinfonia Gulf Coast opens its 2026-27 season with a live orchestral performance of Herbert Stothart's score synchronized to The Wizard of Oz on the outdoor screen. Guests may bring a picnic supper or buy food from the food trucks on site, and lawn seats run $25, with $15 for students, $20 for military and $45 per person for reserved table seating.",
-      "url": "https://coastaleventures.com/events/ev-destin-wizardofoz-1017.html",
-      "sources": [
-        {
-          "note": "business.destinchamber.com: the Destin Chamber's member news release, read 2026-09-06 for the date, time and pricing",
-          "url": "https://business.destinchamber.com/news/details/news-release-9-2-2026-5605"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_comedy_ali_siddiq_the_custom_fit_tour_1017-2026-10-17",
-      "title": "Comedy Ali Siddiq: The Custom Fit Tour",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "20:00",
-      "endTime": null,
-      "when": "Saturday 10/17 · 8:00 PM",
-      "venue": "Pensacola Saenger Theatre",
-      "address": "118 South Palafox Place, Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Comedian Ali Siddiq brings new stand-up material to the Pensacola Saenger Theatre on the Custom Fit Tour. The show is phone-free: phones, smart watches, cameras and recording devices are secured in Yondr pouches at the door, and designated phone-use areas are available. All seats are reserved and tickets are available through the venue.",
-      "url": "https://coastaleventures.com/events/ev-comedy-ali-siddiq-the-custom-fit-tour-1017.html",
-      "sources": [
-        {
-          "note": "pensacolasaenger.com: the organizer's own page, read for the admission and current schedule",
-          "url": "https://www.pensacolasaenger.com/events/ali-siddiq-the-custom-fit-tour"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_crawling_a_tribute_to_early_linkin_park_and__1017-2026-10-17",
-      "title": "Crawling (A Tribute To Early Linkin Park) & Nirvanna (Tribute To Nirvana)",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "20:00",
-      "endTime": null,
-      "when": "Saturday 10/17 · 8:00 PM",
-      "venue": "Soul Kitchen",
-      "address": "219 Dauphin St., Mobile, AL 36602",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "priced",
-        "label": "from $20"
-      },
-      "summary": "This tribute show pairs Crawling, a tribute to early Linkin Park, with Nirvanna, a tribute to Nirvana, for a night of rock covers at Soul Kitchen. Doors open at 7:00 PM ahead of an 8:00 PM start. Soul Kitchen requires anyone under 18 to attend with a parent, and anyone under 21 pays a $5 surcharge at the door.",
-      "url": "https://coastaleventures.com/events/ev-crawling-a-tribute-to-early-linkin-park-and-1017.html",
-      "sources": [
-        {
-          "note": "soulkitchenmobile.com: the organizer's own page, read for the admission and current schedule",
-          "url": "https://www.soulkitchenmobile.com/tm-event/"
-        },
-        {
-          "note": "soulkitchenmobile.com: the current schedule",
-          "url": "https://www.soulkitchenmobile.com/calendar/"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_led_zeppelin_tribute_houses_of_the_holy_1017-2026-10-17",
-      "title": "Led Zeppelin Tribute: Houses of the Holy",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "20:00",
-      "endTime": null,
-      "when": "Saturday 10/17 · 8:00 PM",
-      "venue": "Club LA",
-      "address": "34876 Emerald Coast Pkwy, Destin, FL 32541",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Houses of the Holy brings a Led Zeppelin tribute to Club LA on Saturday, October 17, with the show starting at 8 PM. Tickets are handled through Ticketmaster. This closes out a run of tribute and touring acts booked at the venue through mid October.",
-      "url": "https://coastaleventures.com/events/ev-led-zeppelin-tribute-houses-of-the-holy-1017.html",
-      "sources": [
-        {
-          "note": "ticketmaster.com: the organizer's own page, read for the admission",
-          "url": "https://www.ticketmaster.com/club-la-tickets-destin/venue/222557"
-        }
-      ],
-      "checkedOn": null
-    },
-    {
-      "id": "ev_seville_karaoke-2026-10-17",
-      "title": "Lili Marlene's Karaoke",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "20:00",
-      "endTime": "23:00",
-      "when": "Sunday and Tuesday to Saturday · 8:00-11:00 PM",
-      "venue": "Seville Quarter, Lili Marlene's",
-      "address": "130 E Government St, Pensacola, FL 32502",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Karaoke runs every night but Monday in the aviators' room, not just on the weekend. It has a supportive room, a real sound system, and no sign-up fee posted.",
-      "url": "https://coastaleventures.com/events/ev-seville-karaoke.html",
-      "sources": [
-        {
-          "note": "Seville Quarter, own week calendar 08/09–08/15/2026 lists Karaoke 8:00–11:00 PM at Lili Marlene's on every night of the week",
-          "url": "https://sevillequarter.com/events/week/2026-08-09/"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_bamboowillies_thin_ice_1017-2026-10-17",
-      "title": "Thin Ice at Bamboo Willie's",
-      "date": "2026-10-17",
-      "endDate": null,
-      "startTime": "20:00",
-      "endTime": null,
-      "when": "Saturday 10/17 · 8:00 PM",
-      "venue": "Bamboo Willie's",
-      "address": "400 Quietwater Beach Rd, Pensacola Beach, FL 32561",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Thin Ice plays live at Bamboo Willie's on Pensacola Beach on Saturday, October 17, starting at 8:00 PM. The band covers classic rock, alternative and modern rock from the 1960s through the 2000s and also plays its own originals. Its shows run about four hours in 50 minute sets with 10 minute breaks.",
-      "url": "https://coastaleventures.com/events/ev-bamboowillies-thin-ice-1017.html",
-      "sources": [
-        {
-          "note": "bamboowillies.com event page: \"Thin Ice at Bamboo Willies on October 17, 2026\", starts at 8:00 PM, 400 Quietwater Beach Rd, Pensacola Beach, FL 32561",
-          "url": "https://bamboowillies.com/article-detail/post_detail/thin-ice-2026-10-17"
-        }
-      ],
-      "checkedOn": "2026-10-07"
-    },
-    {
-      "id": "ev_37th_annual_alabama_veterans_affairs_associa_1018-2026-10-18",
-      "title": "36th Annual Alabama Veterans Affairs Association Conference",
-      "date": "2026-10-18",
-      "endDate": "2026-10-22",
-      "startTime": null,
-      "endTime": null,
-      "when": "Sunday 10/18",
-      "venue": "Orange Beach Convention Center",
-      "address": "4671 Wharf Pkwy W, Orange Beach, AL 36561",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The Orange Beach Convention Center hosts the 36th Annual Alabama Veterans Affairs Association Conference from Sunday, October 18, through Thursday, October 22. The statewide conference brings training and professional development programming to Alabama Veterans Affairs Association members.",
-      "url": "https://coastaleventures.com/events/ev-37th-annual-alabama-veterans-affairs-associa-1018.html",
-      "sources": [
-        {
-          "note": "avaa.online: the organizer's own page, read for the admission",
-          "url": "https://www.avaa.online/conference"
-        }
-      ],
-      "checkedOn": "2026-09-26"
     },
     {
       "id": "ev_painting_with_a_twist_pensacola_pa_1003-2026-10-18",
@@ -3099,6 +265,88 @@
       "checkedOn": "2026-10-03"
     },
     {
+      "id": "ev_owa_primal_fear_2026-2026-10-18",
+      "title": "Primal Fear Haunted Attraction at OWA",
+      "date": "2026-10-18",
+      "endDate": "2026-10-31",
+      "startTime": null,
+      "endTime": null,
+      "when": "Select nights through October 31 · evenings",
+      "venue": "OWA Parks & Resort",
+      "address": "1501 S. OWA Blvd, Foley, AL 36535",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "OWA's immersive haunted attraction runs on select nights through the end of October, with dates including September 25 to 26 and October 2 to 3, 9 to 10, 16 to 17 and 19 to 31. A $7 Zombie Laser Tag add-on is available alongside the main attraction, and tickets are required.",
+      "url": "https://coastaleventures.com/events/ev-owa-primal-fear-2026.html",
+      "sources": [
+        {
+          "note": "OWA's own event page for dates and the laser tag add-on price",
+          "url": "https://visitowa.com/primal-fear-2026/"
+        }
+      ],
+      "checkedOn": "2026-09-24"
+    },
+    {
+      "id": "ev_bay_center_public_skate_1017-2026-10-18",
+      "title": "Public Ice Skating at the Pensacola Bay Center",
+      "date": "2026-10-18",
+      "endDate": "2026-10-30",
+      "startTime": null,
+      "endTime": null,
+      "when": "Oct 17 to Oct 30 · one hour sessions, see dates",
+      "venue": "Pensacola Bay Center",
+      "address": "201 E Gregory St, Pensacola, FL 32502",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $15"
+      },
+      "summary": "The Pensacola Bay Center opens its ice for one-hour public skate sessions from October through April. The first sessions in this window run Saturday 10/17 at 9:30 PM, Sunday 10/18 at 1:30, 3:00 and 4:30 PM, Saturday 10/24 at 9:30 PM, Sunday 10/25 at 1:30, 3:00 and 4:30 PM, and Friday 10/30 at 9:30 PM. Capacity is limited for each session, so buy tickets early.",
+      "url": "https://coastaleventures.com/events/ev-bay-center-public-skate-1017.html",
+      "sources": [
+        {
+          "note": "Bay Center public skate page: $18 with rental, $15 own skates, sessions Oct 17 to Oct 30 2026",
+          "url": "https://www.pensacolabaycenter.com/events/detail/public-skate-2"
+        },
+        {
+          "note": "Bay Center ice skating page",
+          "url": "https://www.pensacolabaycenter.com/events/ice-skating"
+        }
+      ],
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "ev_pumpkin_decorating_contest_niceville_library_1017-2026-10-18",
+      "title": "Pumpkin Decorating Contest at Niceville Library",
+      "date": "2026-10-18",
+      "endDate": "2026-10-27",
+      "startTime": null,
+      "endTime": null,
+      "when": "Entries through Saturday 10/17 · voting Monday 10/19 to Saturday 10/24 · winners Tuesday 10/27",
+      "venue": "Niceville Library",
+      "address": "206 N Partin Dr, Niceville, FL 32578",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Niceville Library runs a pumpkin decorating contest for ages 13 and older. Entrants drop off a decorated pumpkin with a completed entry form during library hours through Saturday, October 17, and visitors vote for a favorite from October 19 to 24. The top three pumpkins win prizes announced on October 27, and entrants collect their pumpkins by 2:00 PM on October 31.",
+      "url": "https://coastaleventures.com/events/ev-pumpkin-decorating-contest-niceville-library-1017.html",
+      "sources": [
+        {
+          "note": "Okaloosa County Public Library Cooperative: Pumpkin Decorating Contest, deliver Oct. 5 to 17, vote Oct. 19 to 24, winners Oct. 27, ages 13 and older, Niceville Library",
+          "url": "https://okaloosa.librarycalendar.com/event/pumpkin-decorating-contest-last-day-submissions-84955"
+        }
+      ],
+      "checkedOn": "2026-10-07"
+    },
+    {
       "id": "ev_sweet_dreams_haunted_attraction_mobile_1009-2026-10-18",
       "title": "Sweet Dreams Haunted Attraction",
       "date": "2026-10-18",
@@ -3124,6 +372,174 @@
         {
           "note": "mobilecountyal.gov community events page: Sweet Dreams Haunted Attraction, tickets $25 and up, may be too intense for younger children",
           "url": "https://www.mobilecountyal.gov/community_events/sweet-dreams-haunted-attraction-2026-10-04"
+        }
+      ],
+      "checkedOn": "2026-10-07"
+    },
+    {
+      "id": "ev_ectc_39steps-2026-10-18",
+      "title": "The 39 Steps: Hitchcock Farce (ECTC)",
+      "date": "2026-10-18",
+      "endDate": "2026-10-25",
+      "startTime": null,
+      "endTime": null,
+      "when": "Oct 15-25 · Thu-Sat 7 PM · Sun 2 PM · Wed 1 PM · Thu 10/22 also 1 PM",
+      "venue": "Emerald Coast Theatre Company",
+      "address": "560 Grand Blvd Suite 200, Miramar Beach, FL 32550",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Four actors play 150 roles in a full-tilt Hitchcock spoof that is clean, fast, and laugh-out-loud. It is the safe-bet theatre date of the fall.",
+      "url": "https://coastaleventures.com/events/ev-ectc-39steps.html",
+      "sources": [
+        {
+          "note": "ECTC On Stage: The 39 Steps Oct 15–25 (Season 14)",
+          "url": "https://www.emeraldcoasttheatre.org/on-stage"
+        }
+      ],
+      "checkedOn": null
+    },
+    {
+      "id": "ev_pensacola_state_wanda_sullivan_bloem-2026-10-18",
+      "title": "Wanda Sullivan: Bloem Exhibition",
+      "date": "2026-10-18",
+      "endDate": "2026-12-11",
+      "startTime": null,
+      "endTime": null,
+      "when": "Now through December 11",
+      "venue": "Anna Lamar Switzer Center for Visual Arts",
+      "address": "1000 College Blvd. Bldg. 15, Pensacola, FL 32504",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "A gallery exhibition by artist Wanda Sullivan runs at Pensacola State College's visual arts center through mid-December. The center's own site does not publish an admission price.",
+      "url": "https://coastaleventures.com/events/ev-pensacola-state-wanda-sullivan-bloem.html",
+      "sources": [
+        {
+          "note": "Pensacola State College's own visual arts site for the exhibition dates and venue",
+          "url": "https://visualarts.pensacolastate.edu"
+        }
+      ],
+      "checkedOn": "2026-09-24"
+    },
+    {
+      "id": "ev_great_bellingrath_harvest_0919-2026-10-18",
+      "title": "The Great Bellingrath Harvest",
+      "date": "2026-10-18",
+      "endDate": "2026-11-08",
+      "startTime": "08:00",
+      "endTime": "17:00",
+      "when": "Daily through 11/8 · 8:00 AM to 5:00 PM",
+      "venue": "Bellingrath Gardens and Home",
+      "address": "12401 Bellingrath Gardens Road, Theodore, AL 36582",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $11"
+      },
+      "summary": "Bellingrath Gardens and Home runs a fall festival from September 19 through November 8 with seasonal displays across the gardens, including the scarecrow exhibit and pumpkin displays. The gardens are open daily, and the general admission price applies. The events page does not list a separate price for the harvest, so the gardens ticket is the number to plan with.",
+      "url": "https://coastaleventures.com/events/ev-great-bellingrath-harvest-0919.html",
+      "sources": [
+        {
+          "note": "bellingrath.org: events page, Great Bellingrath Harvest dates September 19 to November 8 and 8:00 AM to 5:00 PM hours",
+          "url": "https://bellingrath.org/discover/events/"
+        },
+        {
+          "note": "bellingrath.org: plan your visit, admission prices, military discount, address and accessibility",
+          "url": "https://bellingrath.org/plan-your-visit/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "id": "ev_steves_farm_adventure_zone_0929-2026-10-18",
+      "title": "Adventure Zone at Steve's Fishing and Adventure Farm",
+      "date": "2026-10-18",
+      "endDate": "2026-10-31",
+      "startTime": "09:00",
+      "endTime": "18:00",
+      "when": "Mon-Sat through Oct 31 · 9 AM to 6 PM",
+      "venue": "Steve's Fishing and Adventure Farm",
+      "address": "1201 S Highway 99, Walnut Hill, FL 32568",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Steve's Farm has rebranded as Steve's Fishing and Adventure Farm and opened a fall attraction in Walnut Hill with a corn maze, a giant slide, a kids' zipline, a jump pad, hayrides, a wagon train, a sunflower field and a pumpkin patch. It suits a family with small children who want a half day outdoors. The farm's own page does not print admission prices, so check the ticket page before driving out.",
+      "url": "https://coastaleventures.com/events/ev-steves-farm-adventure-zone-0929.html",
+      "sources": [
+        {
+          "note": "stevesfarm.net Adventure Zone page: corn maze, giant slide, kids' zipline, jump pad, hayride, wagon train, sunflower field and pumpkin patch, with single day and season passes",
+          "url": "https://stevesfarm.net/adventure-zone/"
+        },
+        {
+          "note": "stevesfarm.simpletix.com: Adventure Zone listed as an upcoming event starting 9/29/2026 at 1201 South Highway 99, Walnut Hill",
+          "url": "https://stevesfarm.simpletix.com/"
+        }
+      ],
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "ev_emerald_coast_fall_classic_1014-2026-10-18",
+      "title": "Emerald Coast Fall Classic Beach Volleyball",
+      "date": "2026-10-18",
+      "endDate": null,
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "when": "Wednesday 10/14 to Sunday 10/18 · 9:00 AM to 4:00 PM daily",
+      "venue": "The Boardwalk on Okaloosa Island",
+      "address": "1450 Miracle Strip Parkway SE, Fort Walton Beach, FL 32548",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Beach volleyball teams play doubles and the Fudpucker four-player tournament on the sand at the Boardwalk on Okaloosa Island. Play runs 9:00 AM to 4:00 PM each day. The Men and Women pool play is Saturday, and playoffs and finals are Sunday, with the Women's Open final around 3:00 PM and a costume contest at 3:45 PM. The schedule is tentative, so check the tournament page before driving.",
+      "url": "https://coastaleventures.com/events/ev-emerald-coast-fall-classic-1014.html",
+      "sources": [
+        {
+          "note": "Emerald Coast Fall Classic page: October 14 to 18, 2026, schedule, Okaloosa Island Boardwalk, finals Sunday",
+          "url": "https://emeraldcoastvolleyball.com/ec-fall-classic/"
+        },
+        {
+          "note": "Emerald Coast Volleyball home page: next up Fall Classic October 14 to 18",
+          "url": "https://emeraldcoastvolleyball.com/"
+        }
+      ],
+      "checkedOn": "2026-10-14"
+    },
+    {
+      "id": "ev_fall_into_family_history_santa_rosa_libraries_1007-2026-10-18",
+      "title": "Fall Into Family History at Santa Rosa County Libraries",
+      "date": "2026-10-18",
+      "endDate": "2026-10-28",
+      "startTime": "09:00",
+      "endTime": "18:00",
+      "when": "Wednesday 10/7 Pace · Wednesday 10/14 Jay · Wednesday 10/21 Gulf Breeze · Wednesday 10/28 Navarre · 9:00 AM to 6:00 PM",
+      "venue": "Santa Rosa County libraries: Pace, Jay, Gulf Breeze and Navarre",
+      "address": "1060 Shoreline Drive, Gulf Breeze, FL 32561",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "The library system's lead reference specialist visits one branch each Wednesday in October to help people start or extend a family tree. Visitors can bring a specific research question or simply stop by to learn how to get started with the library's genealogy resources. The help runs during regular library hours, so no appointment time is listed.",
+      "url": "https://coastaleventures.com/events/ev-fall-into-family-history-santa-rosa-libraries-1007.html",
+      "sources": [
+        {
+          "note": "Santa Rosa County Library System calendar: Fall Into Family History, personalized genealogy help during library hours, Oct. 7 Pace, Oct. 14 Jay, Oct. 21 Gulf Breeze, Oct. 28 Navarre",
+          "url": "https://santarosa.fl.gov/Calendar.aspx?EID=11458"
         }
       ],
       "checkedOn": "2026-10-07"
@@ -3189,6 +605,70 @@
       "checkedOn": "2026-10-07"
     },
     {
+      "id": "ev_coco_and_crawlers_0917-2026-10-18",
+      "title": "Coco & Crawlers",
+      "date": "2026-10-18",
+      "endDate": "2026-12-17",
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "when": "Thursday 9/17 · 10:00 AM to 11:00 AM",
+      "venue": "Ben May Main Library, Youth Programming Room",
+      "address": "701 Government St, Mobile, AL",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "This caregiver meetup in the Youth Programming Room at Ben May Main Library pairs children's play with a warm drink. It gives caregivers time to connect with each other. It runs Thursday morning from 10 AM to 11 AM, repeating on the third Thursday of the month, with more dates on October 15, November 19 and December 17. Registration is requested but not required.",
+      "url": "https://coastaleventures.com/events/ev-coco-and-crawlers-0917.html",
+      "sources": [
+        {
+          "note": "mobilepubliclibrary.org: the organizer's own page for this event",
+          "url": "https://www.mobilepubliclibrary.org/event/coco-crawlers-16284"
+        }
+      ],
+      "checkedOn": "2026-09-26"
+    },
+    {
+      "id": "ev_destin_rodeo_weighins-2026-10-18",
+      "title": "Destin Fishing Rodeo: Daily Public Weigh-Ins",
+      "date": "2026-10-18",
+      "endDate": "2026-10-31",
+      "startTime": "10:00",
+      "endTime": "19:00",
+      "when": "Daily, Oct 1 – Oct 31 · 10:00 AM-7:00 PM",
+      "venue": "Docks behind AJ's Seafood & Oyster Bar",
+      "address": "116 Harbor Blvd, Destin, FL 32541",
+      "category": "beach",
+      "categoryLabel": "Beach",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "Anglers competing in the month-long Destin Fishing Rodeo bring their catches to the scale on the harbor docks behind AJ's Seafood & Oyster Bar every day in October. The public is welcome to watch for free from 10 AM to 7 PM, and the crowd tends to grow with the size of the fish coming off the boats.",
+      "url": "https://coastaleventures.com/events/ev-destin-rodeo-weighins.html",
+      "sources": [
+        {
+          "note": "Destin Fishing Rodeo: Rodeo Events page (free public weigh-ins)",
+          "url": "https://destinfishingrodeo.org/rodeo-fun-for-everyone/rodeo-events/"
+        },
+        {
+          "note": "Destin Fishing Rodeo: Contact Us page",
+          "url": "https://destinfishingrodeo.org/destin-fishing-rodeo/contact-us/"
+        },
+        {
+          "note": "Destin Fishing Rodeo: How to Participate page",
+          "url": "https://destinfishingrodeo.org/just-for-anglers/how-to-participate/"
+        },
+        {
+          "note": "Destin Fishing Rodeo: parking map",
+          "url": "https://destinfishingrodeo.org/destin-fishing-rodeo/where-to-park-map/"
+        }
+      ],
+      "checkedOn": "2026-08-24"
+    },
+    {
       "id": "ev_ob_fall_popup_farmers_market_1004-2026-10-18",
       "title": "Fall Pop-Up Farmers Market at Orange Beach Waterfront Park",
       "date": "2026-10-18",
@@ -3213,6 +693,122 @@
         }
       ],
       "checkedOn": "2026-10-06"
+    },
+    {
+      "id": "ev_uwf_make_it_last_1001-2026-10-18",
+      "title": "Make It Last: Gallery Exhibition at UWF",
+      "date": "2026-10-18",
+      "endDate": "2026-11-20",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "when": "Weekdays through 11/20 · 10:00 AM to 4:00 PM",
+      "venue": "UWF Center for Fine and Performing Arts, Building 82, The Art Gallery",
+      "address": "11000 University Parkway, Pensacola, FL 32514",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "Make It Last is an exhibition in The Art Gallery at the UWF Center for Fine and Performing Arts, curated by a UWF graduate. Six artists share the space, which includes a conversation pit in the gallery alcove and a poetry wall that visitors fill with their own work. Admission is free.",
+      "url": "https://coastaleventures.com/events/ev-uwf-make-it-last-1001.html",
+      "sources": [
+        {
+          "note": "events.uwf.edu: Make It Last, free, weekdays 10 AM to 4 PM from October 1 to November 20 at the Center for Fine and Performing Arts, Building 82, with an opening reception October 8 from 5 to 7 PM",
+          "url": "https://events.uwf.edu/event/make-it-last"
+        },
+        {
+          "note": "events.uwf.edu: opening reception for Make It Last, October 8, 5 to 7 PM, free",
+          "url": "https://events.uwf.edu/event/opening-reception-for-make-it-last"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "id": "ev_crosspoint_disciplestory-2026-10-18",
+      "title": "DiscipleStory",
+      "date": "2026-10-18",
+      "endDate": null,
+      "startTime": "11:00",
+      "endTime": null,
+      "when": "Sundays 9/13 – 10/18 (of an 8-week class) · 11:00 AM (end time not published)",
+      "venue": "Crosspoint Niceville Campus, Room 912",
+      "address": "214 Partin Dr S, Niceville, FL 32578",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "An eight-week Sunday morning class at Crosspoint's Niceville campus walks participants through identifying their own story, passions, abilities and role in the church's mission. The class starts September 13 at 11 AM; the campus newsletter does not publish an end time.",
+      "url": "https://coastaleventures.com/events/ev-crosspoint-disciplestory.html",
+      "sources": [
+        {
+          "note": "Crosspoint Church: Niceville Campus eLetter",
+          "url": "https://crosspoint.church/news/eletternv/"
+        },
+        {
+          "note": "Crosspoint Church: campus locations",
+          "url": "https://crosspoint.church/locations/"
+        }
+      ],
+      "checkedOn": "2026-08-24"
+    },
+    {
+      "id": "ev_foley_midday_melodies_1007-2026-10-18",
+      "title": "Midday Melodies: Downtown Foley",
+      "date": "2026-10-18",
+      "endDate": "2026-10-28",
+      "startTime": "11:00",
+      "endTime": null,
+      "when": "Wednesday 10/7 · 11:00 AM",
+      "venue": "Heritage Park",
+      "address": "104 N. McKenzie St, Foley, AL 36535",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Foley Main Street schedules a lunchtime concert at Heritage Park on Wednesdays in October, starting October 7 at 11:00 AM. The 2026 lineup is the Wiley Pete Duo on October 7, Dan Lee on October 14, This Side of 49 on October 21, and Tennessee Tim and Doug Drake on October 28. The 2025 series invited guests to bring a picnic blanket or lawn chair and pick up lunch from a nearby downtown restaurant.",
+      "url": "https://coastaleventures.com/events/ev-foley-midday-melodies-1007.html",
+      "sources": [
+        {
+          "note": "foleymainstreet.com: community calendar, Fall series of Midday Melodies at 104 N McKenzie St, 11:00 AM on October 7, 14, 21 and 28",
+          "url": "https://www.foleymainstreet.com/community-calendar"
+        },
+        {
+          "note": "foleymainstreet.com: home page listing the fall series schedule",
+          "url": "https://www.foleymainstreet.com/"
+        }
+      ],
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "ev_steam_midnight_kitty_painting_pens_1010-2026-10-18",
+      "title": "STEAM: Midnight Kitty Painting (Pensacola Library)",
+      "date": "2026-10-18",
+      "endDate": "2026-10-31",
+      "startTime": "11:00",
+      "endTime": null,
+      "when": "Saturday 10/17 to Saturday 10/31 · 11:00 AM",
+      "venue": "Pensacola Library",
+      "address": "239 N. Spring St., Pensacola, FL 32502",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "STEAM: Midnight Kitty Painting is a step-by-step painting class at Pensacola Library, 239 N. Spring St., where you paint a little shadow kitty watching the moon. It is recommended for ages 10 and up. A themed painting class is held almost every Saturday through Oct 31 at 11 AM.",
+      "url": "https://coastaleventures.com/events/ev-steam-midnight-kitty-painting-pens-1010.html",
+      "sources": [
+        {
+          "note": "WFPL event page: STEAM: Midnight Kitty Painting (Pensacola Library), 2026-10-10, 11:00 AM",
+          "url": "https://mywfpl.com/events/details/2026/10/10/default-calendar/steam-midnight-kitty-painting"
+        }
+      ],
+      "checkedOn": "2026-10-03"
     },
     {
       "id": "ev_seville_sundaybrunch-2026-10-18",
@@ -3383,6 +979,32 @@
       "checkedOn": "2026-10-03"
     },
     {
+      "id": "ev_destin_commons_market_1017-2026-10-18",
+      "title": "Destin Commons Market",
+      "date": "2026-10-18",
+      "endDate": "2026-12-05",
+      "startTime": "14:00",
+      "endTime": "18:00",
+      "when": "Saturdays 10/17, 11/21 and 12/5 · 2 PM-6 PM",
+      "venue": "The Lawn at South Street, Destin Commons",
+      "address": "4100 Legendary Drive, Destin, FL 32541",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "The Destin Commons Market is a monthly market on The Lawn at South Street at Destin Commons. Local farmers, artisans, small businesses and specialty vendors sell handcrafted goods, baked items, artwork, jewelry and wellness products. It runs 2-6 PM on October 17, November 21 and December 5, and the December date adds kids' crafts.",
+      "url": "https://coastaleventures.com/events/ev-destin-commons-market-1017.html",
+      "sources": [
+        {
+          "note": "destincommons.com/market: 3rd Saturday 2-6 PM, Oct 17, Nov 21, Dec 5, The Lawn at South Street, 4100 Legendary Drive",
+          "url": "https://destincommons.com/market/"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
       "id": "ev_perfectplain_poursencores-2026-10-18",
       "title": "Pours & Encores",
       "date": "2026-10-18",
@@ -3469,6 +1091,32 @@
       "checkedOn": "2026-10-02"
     },
     {
+      "id": "ev_mobile_museum_make_take_art-2026-10-18",
+      "title": "Make & Take Art: weekly drop-in art sessions",
+      "date": "2026-10-18",
+      "endDate": "2026-12-03",
+      "startTime": "15:00",
+      "endTime": "16:30",
+      "when": "Thursdays 8/27 through 12/3 · 3:00 PM to 4:30 PM",
+      "venue": "Mobile Museum of Art",
+      "address": "4850 Museum Drive, Mobile, AL 36608",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "The museum runs a free Thursday afternoon art session most weeks, working through materials and techniques borrowed from artists on view. Projects range from geometric shape painting to a Basquiat-inspired dinosaur build. The printed schedule also lists a session for September 8, but that date falls on a Tuesday, not a Thursday, so check with the museum first.",
+      "url": "https://coastaleventures.com/events/ev-mobile-museum-make-take-art.html",
+      "sources": [
+        {
+          "note": "Mobile Museum of Art: official Make & Take Art event page and weekly topic schedule",
+          "url": "https://www.mobilemuseumofart.com/event/make-take-art-7-2/2026-04-02/"
+        }
+      ],
+      "checkedOn": "2026-08-24"
+    },
+    {
       "id": "ev_paint_your_pet_at_painting_with_a_1018-2026-10-18",
       "title": "Paint Your Pet at Painting with a Twist Fort Walton Beach (all ages)",
       "date": "2026-10-18",
@@ -3525,6 +1173,36 @@
       "checkedOn": "2026-10-03"
     },
     {
+      "id": "ev_greek_fest_fwb_2026_1016-2026-10-18",
+      "title": "Greek Fest FWB 2026",
+      "date": "2026-10-18",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "when": "Friday 10/16 to Sunday 10/18 · 4:00 PM",
+      "venue": "Saints Markella and Demetrios Greek Orthodox Church",
+      "address": "104 Bryn Mawr Boulevard, Mary Esther, FL",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "The Greek Fest at Saints Markella and Demetrios Greek Orthodox Church in Mary Esther runs Friday, October 16 to Sunday, October 18. It has Greek food, pastries, beer and wine, and Greek dancing, with lamb roasted on an outdoor spit. Families can find a bounce house, a balloon artist and vendor booths.",
+      "url": "https://coastaleventures.com/events/ev-greek-fest-fwb-2026-1016.html",
+      "sources": [
+        {
+          "note": "Dates Oct 16-18, 2026, hours by day, address 104 Bryn Mawr Blvd Mary Esther, phone",
+          "url": "https://www.greekfestfwb.com/"
+        },
+        {
+          "note": "Oct 16-18 listing with organiser link",
+          "url": "https://www.destinfwb.com/blog/cant-miss-fall-events-in-destin-fort-walton-beach/"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
       "id": "ev_daphne_sunday_sunset_concert_1018-2026-10-18",
       "title": "Sunday Sunset Concert: Everybody's Here",
       "date": "2026-10-18",
@@ -3551,6 +1229,36 @@
       "checkedOn": "2026-09-24"
     },
     {
+      "id": "ev_crosspoint_strength-2026-10-18",
+      "title": "From Strength to Strength Discussion Group",
+      "date": "2026-10-18",
+      "endDate": "2026-11-04",
+      "startTime": "18:00",
+      "endTime": "19:00",
+      "when": "Wednesdays 9/9 – 11/4 · 6:00 PM-7:00 PM",
+      "venue": "Crosspoint Niceville Campus Marler Chapel",
+      "address": "214 Partin Dr S, Niceville, FL 32578",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "A Wednesday evening discussion group at Crosspoint's Niceville campus works through Arthur C. Brooks' From Strength to Strength, on finding purpose and happiness in the second half of life. The full run goes from September 9 through November 4. Participants order the book on their own.",
+      "url": "https://coastaleventures.com/events/ev-crosspoint-strength.html",
+      "sources": [
+        {
+          "note": "Crosspoint Church: Niceville Campus eLetter",
+          "url": "https://crosspoint.church/news/eletternv/"
+        },
+        {
+          "note": "Crosspoint Church: campus locations",
+          "url": "https://crosspoint.church/locations/"
+        }
+      ],
+      "checkedOn": "2026-08-24"
+    },
+    {
       "id": "ev_soulkitchen_song4song_last_song_1018-2026-10-18",
       "title": "Song4Song Music: Last Song Competition at Soul Kitchen",
       "date": "2026-10-18",
@@ -3575,6 +1283,32 @@
         }
       ],
       "checkedOn": "2026-10-05"
+    },
+    {
+      "id": "ev_suds_n_cinema_the_shining_1014-2026-10-18",
+      "title": "Suds N Cinema: The Shining",
+      "date": "2026-10-18",
+      "endDate": "2026-10-19",
+      "startTime": "18:30",
+      "endTime": null,
+      "when": "Wednesday 10/14 to Monday 10/19 · 6:30 PM",
+      "venue": "Suds N Cinema",
+      "address": "174 Miracle Strip Pkwy SE, Fort Walton Beach, FL 32548",
+      "category": "movie",
+      "categoryLabel": "Movies",
+      "price": {
+        "kind": "priced",
+        "label": "from $5"
+      },
+      "summary": "Suds N Cinema screens Stanley Kubrick's horror film The Shining for six nights in a row. The theater delivers hot food and cold drinks to your seat while the story of a caretaker's descent into madness plays on the screen. The film is rated R.",
+      "url": "https://coastaleventures.com/events/ev-suds-n-cinema-the-shining-1014.html",
+      "sources": [
+        {
+          "note": "Suds N Cinema: The Shining, Oct. 14 to 19, doors 6:00 PM and show 6:30 PM, Rated R, $5 Classic Movie Admission, military and first responders free with ID",
+          "url": "https://www.sudsncinema.com/event-details/the-shining-2026-10-14-18-30"
+        }
+      ],
+      "checkedOn": "2026-10-07"
     },
     {
       "id": "ev_club27_lauren_gray_1018-2026-10-18",
@@ -3605,6 +1339,36 @@
         }
       ],
       "checkedOn": "2026-10-05"
+    },
+    {
+      "id": "ev_hadji_haunted_house_1009-2026-10-18",
+      "title": "Hadji Haunted House",
+      "date": "2026-10-18",
+      "endDate": "2026-10-31",
+      "startTime": "19:00",
+      "endTime": "22:30",
+      "when": "Fri and Sat 10/16 to 10/31 · 7:00 PM to 10:30 PM",
+      "venue": "Hadji Shrine Temple",
+      "address": "800 W 9 Mile Road, Pensacola, FL 32534",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $25"
+      },
+      "summary": "The Hadji Shriners fill their temple on West 9 Mile Road with more than 40 haunted rooms each Friday and Saturday night in October. A 3D funhouse is open from 6:00 PM for guests who want something gentler, and one afternoon on October 25 is set aside as a kid friendly haunted house. Tickets are $25 and general admission doors open at 7:00 PM.",
+      "url": "https://coastaleventures.com/events/ev-hadji-haunted-house-1009.html",
+      "sources": [
+        {
+          "note": "hadjishriners.org event page: Hadji Haunted House October 9 to 31, 2026, price $25, 800 W 9 Mile Road, Pensacola FL 32534, phone 850-476-9384",
+          "url": "https://www.hadjishriners.org/event/hadji-haunted-house/"
+        },
+        {
+          "note": "hadjihauntedhouse.com: over 40 rooms of terror on October 9, 10, 16, 17, 23, 24, 30 and 31, with a kid friendly 3D funhouse and one kid friendly haunted house night on 10/25",
+          "url": "https://hadjihauntedhouse.com/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_the_billy_joel_legacy_a_tribute_performance_1018-2026-10-18",
@@ -80969,6 +78733,96 @@
       "checkedOn": "2026-09-26"
     },
     {
+      "id": "ev_simple_and_elegant_sewing_0919-2027-01-16",
+      "title": "Simple and Elegant Sewing",
+      "date": "2027-01-16",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "when": "10:00 AM to 2:00 PM",
+      "venue": "Fort Walton Beach Library",
+      "address": "185 Miracle Strip Parkway SE, Fort Walton Beach, FL 32548",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "A library workshop introduces adults to the basics of sewing, taught by Anne-Marie Wilkerson. It is built for people who want a starting point rather than experienced sewers looking for a challenge. The library has not published a price for this session, so call ahead to confirm what it costs.",
+      "url": "https://coastaleventures.com/events/ev-simple-and-elegant-sewing-0919.html",
+      "sources": [
+        {
+          "note": "okaloosa.librarycalendar.com: the organizer's own page, read for the admission and current schedule",
+          "url": "https://okaloosa.librarycalendar.com/events/list?program_types%5B56%5D=56"
+        },
+        {
+          "note": "fwb.org: the current schedule and street address",
+          "url": "https://www.fwb.org/305/Library"
+        }
+      ],
+      "checkedOn": "2026-09-26"
+    },
+    {
+      "id": "ev_qigong_for_beginners_0912-2027-01-16",
+      "title": "Qigong for Beginners",
+      "date": "2027-01-16",
+      "endDate": null,
+      "startTime": "10:30",
+      "endTime": "11:30",
+      "when": "Saturdays · 10:30 AM to 11:30 AM",
+      "venue": "Monte L. Moorer/Spring Hill Branch Library",
+      "address": "4 S McGregor Ave, Mobile, AL 36608",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "An adults-only beginner Qigong class at the Moorer/Spring Hill Branch Library combines gentle repetitive movement, breathing and focused meditation. It meets every other Saturday morning, and registration is required through the branch.",
+      "url": "https://coastaleventures.com/events/ev-qigong-for-beginners-0912.html",
+      "sources": [
+        {
+          "note": "mobilepubliclibrary.org: the organizer's own page, read for the admission and current schedule",
+          "url": "https://www.mobilepubliclibrary.org/events/week/2026/09/09"
+        },
+        {
+          "note": "mobilepubliclibrary.org: the current schedule",
+          "url": "https://www.mobilepubliclibrary.org/branch/monte-l-moorerspring-hill-branch-library"
+        }
+      ],
+      "checkedOn": "2026-09-26"
+    },
+    {
+      "id": "ev_r_e_a_d_reading_education_assistance_dogs_0919-2027-01-16",
+      "title": "R.E.A.D.: Reading Education Assistance Dogs",
+      "date": "2027-01-16",
+      "endDate": null,
+      "startTime": "10:30",
+      "endTime": "13:00",
+      "when": "10:30 AM to 1:00 PM",
+      "venue": "Fort Walton Beach Library",
+      "address": "185 Miracle Strip Parkway SE, Fort Walton Beach, FL 32548",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "A trained therapy dog gives children one-on-one reading practice at the Fort Walton Beach Library. Each child gets a 20-minute slot to read aloud without the pressure of a classroom audience. Registration is required.",
+      "url": "https://coastaleventures.com/events/ev-r-e-a-d-reading-education-assistance-dogs-0919.html",
+      "sources": [
+        {
+          "note": "okaloosa.librarycalendar.com: the organizer's own page, read for the admission and current schedule",
+          "url": "https://okaloosa.librarycalendar.com/index.php/events/list?program_types%5B171%5D=171"
+        },
+        {
+          "note": "fwb.org: the current schedule and street address",
+          "url": "https://www.fwb.org/305/Library"
+        }
+      ],
+      "checkedOn": "2026-09-26"
+    },
+    {
       "id": "ev_tbs_fwb_pokemon_saturday-2027-01-16",
       "title": "Pokémon at TBS Comics Fort Walton Beach",
       "date": "2027-01-16",
@@ -81053,6 +78907,36 @@
         }
       ],
       "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_chess_club_for_everyone_at_moorer_0905-2027-01-16",
+      "title": "Chess Club for Everyone at Moorer",
+      "date": "2027-01-16",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": "16:00",
+      "when": "Saturdays · 2:00 PM to 4:00 PM",
+      "venue": "Monte L. Moorer/Spring Hill Branch Library",
+      "address": "4 S McGregor Ave, Mobile, AL 36608",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "The Monte L. Moorer/Spring Hill Branch Library runs a chess club open to beginners and experienced players alike. The library says the program suits ages 6 and up, including teens, and it emphasizes concentration and problem solving over competition. Saturday sessions at 2 PM repeat weekly through October, including October 3 and October 10, so a missed week is not a missed chance.",
+      "url": "https://coastaleventures.com/events/ev-chess-club-for-everyone-at-moorer-0905.html",
+      "sources": [
+        {
+          "note": "mobilepubliclibrary.org: the organizer's own page, read for the admission and current schedule",
+          "url": "https://www.mobilepubliclibrary.org/events/week/2026/09/02"
+        },
+        {
+          "note": "mobilepubliclibrary.org: the admission and current schedule",
+          "url": "https://www.mobilepubliclibrary.org/events/week/2026/09/09"
+        }
+      ],
+      "checkedOn": "2026-10-02"
     },
     {
       "id": "ev_painting_with_a_twist_fort_walton_1003-2027-01-16",
@@ -87738,6 +85622,282 @@
         {
           "note": "October calendar with ALL AGES sessions and prices",
           "url": "https://www.paintingwithatwist.com/studio/fort-walton-beach/calendar/"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_painting_with_a_twist_fort_walton_1003-2027-02-15",
+      "title": "Painting with a Twist Fort Walton Beach: paint nights and all-ages sessions (weekly programme)",
+      "date": "2027-02-15",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "when": "Classes most weeks: Sunday 3 PM, Monday evenings, Saturday all-ages open studio",
+      "venue": "Painting with a Twist Fort Walton Beach",
+      "address": "255 Miracle Strip Pkwy SE, Suite B-8, Fort Walton Beach, FL 32548",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "priced",
+        "label": "from $27"
+      },
+      "summary": "Painting with a Twist Fort Walton Beach is an artist-led canvas painting studio at 255 Miracle Strip Pkwy SE, Suite B-8, in the Publix shopping center in downtown Fort Walton Beach. October has an all-ages open studio, Halloween sessions, a book-lovers paint night and blacklight painting. Standard canvases cost $37-$39, all-ages sessions $27-$60 and Paint Your Pet $57-$59, and the studio is BYOB-friendly.",
+      "url": "https://coastaleventures.com/events/ev-painting-with-a-twist-fort-walton-1003.html",
+      "sources": [
+        {
+          "note": "Studio page: address, phone (850) 226-7218, BYOB-friendly, Oct 4 Spooky Highland 3 PM $37-39",
+          "url": "https://www.paintingwithatwist.com/studio/fort-walton-beach/"
+        },
+        {
+          "note": "October calendar with ALL AGES sessions and prices",
+          "url": "https://www.paintingwithatwist.com/studio/fort-walton-beach/calendar/"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_crestview_library_youth_chess-2027-02-15",
+      "title": "Youth Chess Club at the Crestview Library",
+      "date": "2027-02-15",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": "16:30",
+      "when": "Mondays · 3:00 PM to 4:30 PM",
+      "venue": "Crestview Library",
+      "address": "1445 Commerce Dr, Crestview, FL 32539",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "The Crestview Library runs a Youth Chess Club every Monday afternoon for school-age players. The club is built to teach new players the game and to help experienced players improve.",
+      "url": "https://coastaleventures.com/events/ev-crestview-library-youth-chess.html",
+      "sources": [
+        {
+          "note": "Okaloosa County library calendar: Crestview Library entry for Youth Chess Club, read for the weekly schedule, ages and purpose",
+          "url": "https://okaloosa.librarycalendar.com/event/youth-chess-63982"
+        }
+      ],
+      "checkedOn": "2026-09-26"
+    },
+    {
+      "id": "ev_tbs_comics_fort_walton_beach_weekl_1005-2027-02-15",
+      "title": "TBS Comics Fort Walton Beach weekly game nights (Yu-Gi-Oh, D&D, Magic, Lorcana, One Piece and more)",
+      "date": "2027-02-15",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "when": "Game nights Monday, Tuesday, Wednesday and Friday · from 5 PM",
+      "venue": "TBS Comics Fort Walton Beach",
+      "address": "550 Mary Esther Blvd, Fort Walton Beach, FL 32548",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "TBS Comics Fort Walton Beach hosts weekly game nights at its shop on Mary Esther Blvd. Monday is Yu-Gi-Oh at 6 PM, and Tuesday is D&D Adventurers League at 5 PM. Wednesday has casual Magic all day and Digimon at 6 PM, and Friday has Magic Commander at 6 PM and Yu-Gi-Oh at 7 PM.",
+      "url": "https://coastaleventures.com/events/ev-tbs-comics-fort-walton-beach-weekl-1005.html",
+      "sources": [
+        {
+          "note": "TBS gaming page weekly schedule for Fort Walton Beach",
+          "url": "https://www.tbscomics.com/gaming/"
+        },
+        {
+          "note": "Store locations: 550 Mary Esther Blvd, FWB 32548",
+          "url": "https://www.tbscomics.com/store-locations/"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_tbs_comics_pensacola_weekly_game_n_1005-2027-02-15",
+      "title": "TBS Comics Pensacola weekly game nights (Magic, Yu-Gi-Oh, Lorcana, One Piece, D&D and more)",
+      "date": "2027-02-15",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "when": "Game nights Monday, Wednesday and Thursday · from 5 PM",
+      "venue": "TBS Comics Pensacola",
+      "address": "6895 North 9th Ave, Pensacola, FL 32504",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "TBS Comics Pensacola hosts weekly game nights at its shop on North 9th Ave. Monday is Magic Commander at 6:30 PM. Wednesday has Marvel Crisis Protocol at 5 PM, Board Game Night at 6 PM, and D&D Adventurers League, Riftbound and Star Wars Unlimited at 6:30 PM. Thursday has Yu-Gi-Oh and Gundam TCG at 6:30 PM and Magic Modern at 7 PM, and Friday has Star Wars Unlimited, Digimon and Magic Commander at 7 PM.",
+      "url": "https://coastaleventures.com/events/ev-tbs-comics-pensacola-weekly-game-n-1005.html",
+      "sources": [
+        {
+          "note": "TBS gaming page weekly schedule for Pensacola",
+          "url": "https://www.tbscomics.com/gaming/"
+        },
+        {
+          "note": "Store locations: 6895 North 9th Ave, Pensacola 32504, (850) 474-1419",
+          "url": "https://www.tbscomics.com/store-locations/"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_free_yoga_at_east_pensacola_height_1005-2027-02-15",
+      "title": "Free Yoga at East Pensacola Heights Clubhouse (Mondays)",
+      "date": "2027-02-15",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": "19:00",
+      "when": "Mondays · 6 PM-7 PM",
+      "venue": "East Pensacola Heights Clubhouse",
+      "address": "3208 E Gonzalez St, Pensacola, FL 32503",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "Free Yoga at the East Pensacola Heights Clubhouse is a weekly class every Monday from 6-7 PM, led by a volunteer instructor, for ages 18 and up. A trauma-informed Free PTSD Yoga class is also listed at the same time and place. It's free.",
+      "url": "https://coastaleventures.com/events/ev-free-yoga-at-east-pensacola-height-1005.html",
+      "sources": [
+        {
+          "note": "Mondays 6-7 PM, East Pensacola Heights Clubhouse, 3208 E Gonzalez St, free, 18+, (850) 494-7360",
+          "url": "https://www.cityofpensacola.com/3409/Yoga-and-Wellness"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_life_drawing_group_1005-2027-02-15",
+      "title": "Life Drawing Group",
+      "date": "2027-02-15",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": "21:00",
+      "when": "Mondays · 6 PM-9 PM",
+      "venue": "Artel Gallery",
+      "address": "223 Palafox Pl, Pensacola, FL 32502",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Life Drawing Group is a weekly life drawing session at Artel Gallery, a volunteer-run contemporary art gallery at 223 Palafox Pl in downtown Pensacola. It meets every Monday from 6-9 PM.",
+      "url": "https://coastaleventures.com/events/ev-life-drawing-group-1005.html",
+      "sources": [
+        {
+          "note": "Artel events page: Life Drawing Group every Monday 6-9 PM",
+          "url": "https://www.artelgallery.org/events"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_nwftc_monday_run_at_harry_t_s_1005-2027-02-15",
+      "title": "NWFTC Monday run at Harry T's",
+      "date": "2027-02-15",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": "19:00",
+      "when": "Mondays · 6 PM-7 PM",
+      "venue": "Harry T's",
+      "address": "46 Harbor Blvd, Destin, FL 32541",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "The Northwest Florida Track Club's Monday run is a weekly training run starting at Harry T's on Destin Harbor. It runs 6-7 PM every Monday at various paces and distances, with refreshments at Harry T's afterward.",
+      "url": "https://coastaleventures.com/events/ev-nwftc-monday-run-at-harry-t-s-1005.html",
+      "sources": [
+        {
+          "note": "NWFTC training-runs page: Monday, Harry T's, 46 Harbor Blvd Destin FL 32541, 6 PM-7 PM, various paces and distances, refreshments afterwards",
+          "url": "https://www.nwftc.com/training-runs"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_perdido_run_club_fleet_feet_monday_1005-2027-02-15",
+      "title": "Perdido Run Club (Fleet Feet, Mondays)",
+      "date": "2027-02-15",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "when": "Mondays · 6 PM",
+      "venue": "Hub Stacey's at The Point",
+      "address": "5851 Galvez Rd, Pensacola, FL 32507",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Perdido Run Club is a weekly Fleet Feet run or walk club that meets at Hub Stacey's at The Point, 5851 Galvez Rd, in the Perdido Key area. The route is 3 to 4 miles. The group meets every Monday at 6 PM and the session runs 6-7 PM.",
+      "url": "https://coastaleventures.com/events/ev-perdido-run-club-fleet-feet-monday-1005.html",
+      "sources": [
+        {
+          "note": "Pensacola Area Groups: Perdido Run Club, Monday, meet 6:00 PM, Hub Stacey's at the Point, 3-4 miles",
+          "url": "https://www.fleetfeet.com/s/mobile-pensacola/pensacola-area-runwalk-groups"
+        },
+        {
+          "note": "Fleet Feet calendar lists Perdido Run Club Oct 5 6:00-7:00 PM at 5851 Galvez Rd 32507",
+          "url": "https://www.fleetfeet.com/s/mobile-pensacola/locations/pensacola"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_midway_baptist_mens_bible_0921-2027-02-15",
+      "title": "Men's Bible Study at Midway Baptist Church",
+      "date": "2027-02-15",
+      "endDate": null,
+      "startTime": "18:30",
+      "endTime": "19:30",
+      "when": "Mondays through October 26 · 6:30 PM to 7:30 PM",
+      "venue": "Midway Baptist Church",
+      "address": "5471 Gulf Breeze Pkwy, Gulf Breeze, FL 32563",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Midway Baptist Church opens a men's Bible study on Monday evenings, 6:30 PM to 7:30 PM, running through 10/26. The church's own calendar names the group and the hour and posts no price. Call ahead if you want to know what to expect before walking in.",
+      "url": "https://coastaleventures.com/events/ev-midway-baptist-mens-bible-0921.html",
+      "sources": [
+        {
+          "note": "midwaybaptist.org: the church's own live calendar for the week of 9/14-9/20/2026, listing Men's Bible Study Monday 6:30-7:30 PM, read 09/16/2026",
+          "url": "https://midwaybaptist.org/all-events/"
+        }
+      ],
+      "checkedOn": "2026-09-16"
+    },
+    {
+      "id": "ev_trinity_games_weekly_game_nights_m_1005-2027-02-15",
+      "title": "Trinity Games weekly game nights (Magic, Gundam, One Piece, Flesh and Blood, Riftbound and more)",
+      "date": "2027-02-15",
+      "endDate": null,
+      "startTime": "18:30",
+      "endTime": null,
+      "when": "Game nights Monday to Thursday · 6:30 PM",
+      "venue": "Trinity Games",
+      "address": "2400 W Michigan Ave Unit 27, Pensacola, FL 32526",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $5"
+      },
+      "summary": "Trinity Games runs weekly game nights at its Pensacola shop for Magic, Gundam, One Piece, Flesh and Blood, Riftbound and more. Monday has Gundam Locals at 6:30 PM and Flesh and Blood at 7 PM. Tuesday has Digimon Locals and MTG Pauper at 6:30 PM, and Wednesday has One Piece Locals and CyberPunk Locals at 6:30 PM. Thursday has Magic Commander Day all day, Riftbound Competitive at 6:30 PM and HoloLive Locals at 7 PM, and Friday has MTG Modern at 7 PM.",
+      "url": "https://coastaleventures.com/events/ev-trinity-games-weekly-game-nights-m-1005.html",
+      "sources": [
+        {
+          "note": "Weekly Events banner image with day, game, time, entry",
+          "url": "https://trinitygamesllc.com/pages/events"
         }
       ],
       "checkedOn": "2026-10-03"

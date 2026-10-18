@@ -25,30 +25,10 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_crabs_hermit_crab_races_1010-2026-10-17@coastaleventures.com
-DTSTAMP:20261017T000000Z
-DTSTART;VALUE=DATE:20261017
-DTEND;VALUE=DATE:20261018
-SUMMARY:Hermit Crab Races at CRABS on the Beach
-LOCATION:CRABS on the Beach\, 6 Casino Beach Boardwalk\, Gulf Breeze\, FL 3
- 2561
-DESCRIPTION:Saturdays 10/10 and 10/17 · 5:00 PM and 6:00 PM\n\nCRABS on th
- e Beach races purple pincher hermit crabs in its playground on Saturday\, 
- October 10 and Saturday\, October 17\, with races at 5:00 PM and 6:00 PM. 
- The restaurant says it has run the races free of charge for smaller guests
-  for 23 years. The crabs are native to Honduras and Chile and live in tree
- s near the ocean.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/
- events/ev-crabs-hermit-crab-races-1010.html
-URL:https://coastaleventures.com/events/ev-crabs-hermit-crab-races-1010.htm
- l
-CATEGORIES:Beach
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_destin_rodeo_weighins-2026-10-17@coastaleventures.com
-DTSTAMP:20261017T000000Z
-DTSTART;TZID=America/Chicago:20261017T100000
-DTEND;TZID=America/Chicago:20261017T190000
+UID:ev_destin_rodeo_weighins-2026-10-18@coastaleventures.com
+DTSTAMP:20261018T000000Z
+DTSTART;TZID=America/Chicago:20261018T100000
+DTEND;TZID=America/Chicago:20261018T190000
 SUMMARY:Destin Fishing Rodeo: Daily Public Weigh-Ins
 LOCATION:Docks behind AJ's Seafood & Oyster Bar\, 116 Harbor Blvd\, Destin\
  , FL 32541
@@ -65,7 +45,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_ba_cruise-2026-10-20@coastaleventures.com
-DTSTAMP:20261017T000000Z
+DTSTAMP:20261018T000000Z
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
 SUMMARY:Blue Angels + Dolphin Cruise (watch practice from the water)
@@ -82,7 +62,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_wickedwinerun_1121-2026-11-21@coastaleventures.com
-DTSTAMP:20261017T000000Z
+DTSTAMP:20261018T000000Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:SKECHERS Wicked Wine Run: Milton
