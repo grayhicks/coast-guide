@@ -458,6 +458,7 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
 .hero.hk_nhon .hk_nh [id$="ad-banner-plane"] { transform-box: view-box; transform-origin: 388px 100px; }
 @media (max-width: 389px){.hero.hk_nhon .hk_nh [id$="ad-banner-plane"] { transform: translate(calc(-197px + 50vw), -40px) scale(0.9); }}
 @media (max-width: 389px){.hero.hk_nhon .hk_nh [id$="ad-parasail"] { transform: translateX(calc(197px - 50vw)); }}
+@media (max-width: 389px){.hero.hk_nhon .hk_nh [id$="ad-pier-sign"] { translate: calc(-195px + 50vw) calc(-53.04px + 13.6vw); }}
 .hero.hk_nhon > :is(.sun, .clouds, .hz, .glit, .hk_boat, .hk_sailw, .boat-refl, .supw, .rplfield, .hero-wave, .hero-sand, .hk_swellw, .hero-surf, .beachprops, .crabw, .hgulw, .hero_slot_boatname, .hero_slot_yacht, .hero_slot_plane, .hero_slot_parasa) { display: none !important; }
 .hero.hk_nhon :is(.adparasail, .npw, [class^="hkn_"], [class*=" hkn_"]) { display: none !important; }
 .hk_nh [id$="move-bird"], .hk_nh [id$="move-bird2"], .hk_nh [id$="move-wings"], .hk_nh [id$="move-wings2"], .hk_nh [id$="move-doghead"] { transform-box: view-box; }
