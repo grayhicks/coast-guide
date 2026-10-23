@@ -25,27 +25,10 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_ba_cruise-2026-10-20@coastaleventures.com
-DTSTAMP:20261020T000000Z
-DTSTART;VALUE=DATE:20261020
-DTEND;VALUE=DATE:20261021
-SUMMARY:Blue Angels + Dolphin Cruise (watch practice from the water)
-LOCATION:Frisky Mermaid\, departs behind Shaggy's\, 701 Pensacola Beach Blv
- d\, Pensacola Beach\, FL 32561
-DESCRIPTION:Tuesday 10/20 · departs 9:35 AM\, flight ~10:30 AM\n\nWatch th
- e Blues practice from the bay with dolphins alongside\, the double-header 
- of a space-obsessed kid's dreams. It runs on NAS practice mornings and sel
- ls out days ahead.\n\nPrice: from $55\n\nDetails: https://coastaleventures
- .com/events/ev-ba-cruise.html
-URL:https://coastaleventures.com/events/ev-ba-cruise.html
-CATEGORIES:Beach
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_destin_rodeo_weighins-2026-10-20@coastaleventures.com
-DTSTAMP:20261020T000000Z
-DTSTART;TZID=America/Chicago:20261020T100000
-DTEND;TZID=America/Chicago:20261020T190000
+UID:ev_destin_rodeo_weighins-2026-10-23@coastaleventures.com
+DTSTAMP:20261023T000000Z
+DTSTART;TZID=America/Chicago:20261023T100000
+DTEND;TZID=America/Chicago:20261023T190000
 SUMMARY:Destin Fishing Rodeo: Daily Public Weigh-Ins
 LOCATION:Docks behind AJ's Seafood & Oyster Bar\, 116 Harbor Blvd\, Destin\
  , FL 32541
@@ -61,8 +44,28 @@ CATEGORIES:Beach
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_full_moon_beach_yoga_navarre_1024-2026-10-24@coastaleventures.com
+DTSTAMP:20261023T000000Z
+DTSTART;TZID=America/Chicago:20261024T181500
+DTEND;TZID=America/Chicago:20261024T191500
+SUMMARY:Full Moon Beach Yoga by the Navarre Beach Pier
+LOCATION:Beside the Navarre Beach Pier\, 8579 Gulf Blvd\, Navarre\, FL 3256
+ 6
+DESCRIPTION:Saturday 10/24 · 6:15 PM to 7:15 PM\n\nNavarre Beach Yoga and 
+ Wellness Academy holds its monthly full moon class on the sand right besid
+ e the Navarre Beach Pier\, open to families\, locals and visitors. Adults 
+ register online\, and anyone under 18 can join without registering if a gu
+ ardian comes too. The class is canceled unless at least two people registe
+ r two hours ahead.\n\nPrice: Free\n\nDetails: https://coastaleventures.com
+ /events/ev-full-moon-beach-yoga-navarre-1024.html
+URL:https://coastaleventures.com/events/ev-full-moon-beach-yoga-navarre-102
+ 4.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_wickedwinerun_1121-2026-11-21@coastaleventures.com
-DTSTAMP:20261020T000000Z
+DTSTAMP:20261023T000000Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:SKECHERS Wicked Wine Run: Milton

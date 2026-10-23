@@ -1,0 +1,66 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Coastal Eventures//Events feed//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Coastal Eventures: Coastal
+X-WR-TIMEZONE:America/Chicago
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:ev_marinemax_boat_toberfest_1024-2026-10-24@coastaleventures.com
+DTSTAMP:20261023T000000Z
+DTSTART;TZID=America/Chicago:20261024T100000
+DTEND;TZID=America/Chicago:20261024T150000
+SUMMARY:Boat-Toberfest Fall Showcase at MarineMax
+LOCATION:MarineMax Fort Walton Beach\, 14 Miracle Strip Pkwy SW\, Fort Walt
+ on Beach\, FL 32548
+DESCRIPTION:Saturday 10/24 · 10:00 AM to 3:00 PM\n\nMarineMax Fort Walton 
+ Beach puts its new boats on show for a fall Saturday with food\, drinks an
+ d live entertainment. The company calls it family friendly and is promotin
+ g seasonal savings on the latest models. Registration is free and parking 
+ is free.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/events/ev
+ -marinemax-boat-toberfest-1024.html
+URL:https://coastaleventures.com/events/ev-marinemax-boat-toberfest-1024.ht
+ ml
+CATEGORIES:Coastal
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_solaris_thanksgiving_cruises_1126-2026-11-26@coastaleventures.com
+DTSTAMP:20261023T000000Z
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261127
+SUMMARY:Thanksgiving Day buffet cruises aboard Solaris
+LOCATION:Solaris yacht\, Baytowne Marina\, 8330 Mike Hayes Dr\, Miramar Bea
+ ch\, FL 32550
+DESCRIPTION:Thursday 11/26 · lunch cruise 11:30 AM to 2:00 PM · dinner cr
+ uise 6:00 PM to 8:30 PM\n\nSunQuest Cruises serves a Thanksgiving buffet o
+ n the 125-foot Solaris yacht\, with a lunch sailing and a dinner sailing o
+ ut of Baytowne Marina\, each about two and a half hours. Children 3 to 10 
+ are $55 and infants ride for $30 with no meal. SunQuest says the holiday c
+ ruises sell out every year.\n\nPrice: from $30\n\nDetails: https://coastal
+ eventures.com/events/ev-solaris-thanksgiving-cruises-1126.html
+URL:https://coastaleventures.com/events/ev-solaris-thanksgiving-cruises-112
+ 6.html
+CATEGORIES:Coastal
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

@@ -25,66 +25,9 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_navarre_throwback_movie_tuesdays_1020-2026-10-20@coastaleventures.co
- m
-DTSTAMP:20261020T000000Z
-DTSTART;TZID=America/Chicago:20261020T160000
-DTEND;TZID=America/Chicago:20261020T173000
-SUMMARY:Throwback Movie Tuesday: 20 Years of Stories
-LOCATION:Navarre Library\, 8484 James M. Harvell Road\, Navarre\, FL 32566
-DESCRIPTION:Tuesday 10/20 · 4:00 PM to 5:30 PM\n\nThrowback Movie Tuesday 
- is a one time screening at the Navarre Library\, part of the library syste
- m's twentieth anniversary programming this month.\n\nPrice: No published p
- rice\n\nDetails: https://coastaleventures.com/events/ev-navarre-throwback-
- movie-tuesdays-1020.html
-URL:https://coastaleventures.com/events/ev-navarre-throwback-movie-tuesdays
- -1020.html
-CATEGORIES:Movies
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_suds_n_cinema_interview_with_a_vampire_1021-2026-10-21@coastaleventu
- res.com
-DTSTAMP:20261020T000000Z
-DTSTART;TZID=America/Chicago:20261021T183000
-DTEND;TZID=America/Chicago:20261021T193000
-SUMMARY:Suds N Cinema: Interview with a Vampire
-LOCATION:Suds N Cinema\, 174 Miracle Strip Pkwy SE\, Fort Walton Beach\, FL
-  32548
-DESCRIPTION:Wednesday 10/21\, Thursday 10/22\, Friday 10/23 and Sunday 10/2
- 5 · 6:30 PM\n\nSuds N Cinema screens the 1994 gothic horror film Intervie
- w with a Vampire for four nights. The story follows two vampires through c
- enturies of blood and betrayal from 18th century New Orleans onward. Hot f
- ood and ice cold drinks are delivered to your seat\, and the film is rated
-  R.\n\nPrice: from $5\n\nDetails: https://coastaleventures.com/events/ev-s
- uds-n-cinema-interview-with-a-vampire-1021.html
-URL:https://coastaleventures.com/events/ev-suds-n-cinema-interview-with-a-v
- ampire-1021.html
-CATEGORIES:Movies
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_valparaiso_library_anime_club-2026-10-22@coastaleventures.com
-DTSTAMP:20261020T000000Z
-DTSTART;TZID=America/Chicago:20261022T150000
-DTEND;TZID=America/Chicago:20261022T160000
-SUMMARY:Anime Club at the Valparaiso Library
-LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
-DESCRIPTION:Thursdays · 3:00 PM to 4:00 PM\, through 12/17\n\nThe Valparai
- so Library's Anime Club meets every Thursday afternoon for middle and high
-  school students\, ages 11 to 17. The club watches anime rated from G to P
- G-13 and TV-14\, and manga is on hand to read during meetings.\n\nPrice: N
- o published price\n\nDetails: https://coastaleventures.com/events/ev-valpa
- raiso-library-anime-club.html
-URL:https://coastaleventures.com/events/ev-valparaiso-library-anime-club.ht
- ml
-CATEGORIES:Movies
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_crescent_wandaween_jennifers_body_1023-2026-10-23@coastaleventures.c
  om
-DTSTAMP:20261020T000000Z
+DTSTAMP:20261023T000000Z
 DTSTART;VALUE=DATE:20261023
 DTEND;VALUE=DATE:20261024
 SUMMARY:Wandaween: Jennifer's Body Screening and Costume Contest
@@ -101,29 +44,30 @@ CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_haunted_hollow_een_hotel_transylvania_1023-2026-10-23@coastaleventur
- es.com
-DTSTAMP:20261020T000000Z
-DTSTART;TZID=America/Chicago:20261023T180000
-DTEND;TZID=America/Chicago:20261023T200000
-SUMMARY:Haunted Hollow-een Movie Night: Hotel Transylvania
-LOCATION:Escatawpa Hollow Park & Campground\, 15551-B Moffett Rd\, Wilmer\,
-  AL 36587
-DESCRIPTION:Friday 10/23 · 6:00 PM to 8:00 PM\n\nMobile County Parks shows
-  Hotel Transylvania on the lawn at Escatawpa Hollow Park & Campground on F
- riday\, October 23 at 6:00 PM as part of Haunted Hollow-een. The screening
-  is free. Families bring lawn chairs or blankets and can pick up a bite fr
- om Riverside Cafe & Grill.\n\nPrice: Free\n\nDetails: https://coastalevent
- ures.com/events/ev-haunted-hollow-een-hotel-transylvania-1023.html
-URL:https://coastaleventures.com/events/ev-haunted-hollow-een-hotel-transyl
- vania-1023.html
+UID:ev_suds_n_cinema_interview_with_a_vampire_1021-2026-10-23@coastaleventu
+ res.com
+DTSTAMP:20261023T000000Z
+DTSTART;TZID=America/Chicago:20261023T183000
+DTEND;TZID=America/Chicago:20261023T193000
+SUMMARY:Suds N Cinema: Interview with a Vampire
+LOCATION:Suds N Cinema\, 174 Miracle Strip Pkwy SE\, Fort Walton Beach\, FL
+  32548
+DESCRIPTION:Wednesday 10/21\, Thursday 10/22\, Friday 10/23 and Sunday 10/2
+ 5 · 6:30 PM\n\nSuds N Cinema screens the 1994 gothic horror film Intervie
+ w with a Vampire for four nights. The story follows two vampires through c
+ enturies of blood and betrayal from 18th century New Orleans onward. Hot f
+ ood and ice cold drinks are delivered to your seat\, and the film is rated
+  R.\n\nPrice: from $5\n\nDetails: https://coastaleventures.com/events/ev-s
+ uds-n-cinema-interview-with-a-vampire-1021.html
+URL:https://coastaleventures.com/events/ev-suds-n-cinema-interview-with-a-v
+ ampire-1021.html
 CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_central_square_cinema_coco_1023-2026-10-23@coastaleventures.
  com
-DTSTAMP:20261020T000000Z
+DTSTAMP:20261023T000000Z
 DTSTART;TZID=America/Chicago:20261023T190000
 DTEND;TZID=America/Chicago:20261023T203000
 SUMMARY:Central Square Cinema at Seaside: Coco
@@ -144,7 +88,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_central_square_cinema_october_1009-2026-10-23@coastaleventur
  es.com
-DTSTAMP:20261020T000000Z
+DTSTAMP:20261023T000000Z
 DTSTART;TZID=America/Chicago:20261023T190000
 DTEND;TZID=America/Chicago:20261023T200000
 SUMMARY:Central Square Cinema at Seaside: October Movies
@@ -163,8 +107,27 @@ CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_false_memories_premiere_suds_1023-2026-10-23@coastaleventures.com
+DTSTAMP:20261023T000000Z
+DTSTART;TZID=America/Chicago:20261023T210000
+DTEND;TZID=America/Chicago:20261023T220000
+SUMMARY:False Memories: Secrets world premiere
+LOCATION:Suds n Cinema\, 174 Miracle Strip Pkwy SE\, Fort Walton Beach\, FL
+  32548
+DESCRIPTION:Friday 10/23 · 9:00 PM to 10:00 PM\n\nSuds n Cinema hosts the 
+ world premiere of the horror short film False Memories: Secrets on its big
+  screen. The listing is 18 and over\, so it is not one for the kids. Parki
+ ng is free and refunds are not offered.\n\nPrice: No published price\n\nDe
+ tails: https://coastaleventures.com/events/ev-false-memories-premiere-suds
+ -1023.html
+URL:https://coastaleventures.com/events/ev-false-memories-premiere-suds-102
+ 3.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_fear_fest_exploreum_2026_series_1003-2026-10-24@coastaleventures.com
-DTSTAMP:20261020T000000Z
+DTSTAMP:20261023T000000Z
 DTSTART;TZID=America/Chicago:20261024T170000
 DTEND;TZID=America/Chicago:20261024T210000
 SUMMARY:Fear Fest
@@ -183,8 +146,29 @@ CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_haunted_hollow_een_hotel_transylvania_1023-2026-10-24@coastaleventur
+ es.com
+DTSTAMP:20261023T000000Z
+DTSTART;TZID=America/Chicago:20261024T180000
+DTEND;TZID=America/Chicago:20261024T200000
+SUMMARY:Haunted Hollow-een Movie Night: Hotel Transylvania
+LOCATION:Escatawpa Hollow Park & Campground\, 15551-B Moffett Rd\, Wilmer\,
+  AL 36587
+DESCRIPTION:Saturday 10/24 · 6:00 PM to 8:00 PM (moved from Friday 10/23)\
+ n\nMobile County Parks shows Hotel Transylvania on the lawn at Escatawpa H
+ ollow Park & Campground on Saturday\, October 24 at 6:00 PM as part of Hau
+ nted Hollow-een. The screening is free. Families bring lawn chairs or blan
+ kets and can pick up a bite from Riverside Cafe & Grill.\n\nPrice: Free\n\
+ nDetails: https://coastaleventures.com/events/ev-haunted-hollow-een-hotel-
+ transylvania-1023.html
+URL:https://coastaleventures.com/events/ev-haunted-hollow-een-hotel-transyl
+ vania-1023.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-10-29@coastaleventures.com
-DTSTAMP:20261020T000000Z
+DTSTAMP:20261023T000000Z
 DTSTART;TZID=America/Chicago:20261029T150000
 DTEND;TZID=America/Chicago:20261029T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -202,7 +186,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_baytowne_hocus_pocus_movie_1030-2026-10-30@coastaleventures.com
-DTSTAMP:20261020T000000Z
+DTSTAMP:20261023T000000Z
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
 SUMMARY:Hocus Pocus: Movie on the Lawn
@@ -222,7 +206,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_crescent_nosferatu_live_score_1030-2026-10-30@coastaleventures.com
-DTSTAMP:20261020T000000Z
+DTSTAMP:20261023T000000Z
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
 SUMMARY:Nosferatu with a Live Improvised Score
@@ -240,7 +224,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_harborwalk_movieslawn_1030-2026-10-30@coastaleventures.com
-DTSTAMP:20261020T000000Z
+DTSTAMP:20261023T000000Z
 DTSTART;TZID=America/Chicago:20261030T170000
 DTEND;TZID=America/Chicago:20261030T200000
 SUMMARY:Movies On The Lawn: Fall Edition
@@ -256,7 +240,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_haunted_hollow_een_hocus_pocus_1030-2026-10-30@coastaleventures.com
-DTSTAMP:20261020T000000Z
+DTSTAMP:20261023T000000Z
 DTSTART;TZID=America/Chicago:20261030T180000
 DTEND;TZID=America/Chicago:20261030T200000
 SUMMARY:Haunted Hollow-een Movie Night: Hocus Pocus
@@ -275,7 +259,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_fallintofun_miltonlibrary_1031-2026-10-31@coastaleventures.com
-DTSTAMP:20261020T000000Z
+DTSTAMP:20261023T000000Z
 DTSTART;TZID=America/Chicago:20261031T100000
 DTEND;TZID=America/Chicago:20261031T120000
 SUMMARY:Fall Into Fun at Milton Library
@@ -294,7 +278,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-05@coastaleventures.com
-DTSTAMP:20261020T000000Z
+DTSTAMP:20261023T000000Z
 DTSTART;TZID=America/Chicago:20261105T150000
 DTEND;TZID=America/Chicago:20261105T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -312,7 +296,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_destin_commons_movie_minions_1106-2026-11-06@coastaleventures.com
-DTSTAMP:20261020T000000Z
+DTSTAMP:20261023T000000Z
 DTSTART;TZID=America/Chicago:20261106T183000
 DTEND;TZID=America/Chicago:20261106T193000
 SUMMARY:Movie Night on the Lawn: Minions at Destin Commons
@@ -332,7 +316,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_cat_video_fest_2026_suds_n_cinema_1107-2026-11-07@coastaleventures.c
  om
-DTSTAMP:20261020T000000Z
+DTSTAMP:20261023T000000Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Cat Video Fest 2026 at Suds N Cinema
@@ -351,7 +335,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_fear_fest_1010-2026-11-07@coastaleventures.com
-DTSTAMP:20261020T000000Z
+DTSTAMP:20261023T000000Z
 DTSTART;TZID=America/Chicago:20261107T170000
 DTEND;TZID=America/Chicago:20261107T210000
 SUMMARY:Fear Fest
@@ -369,7 +353,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-12@coastaleventures.com
-DTSTAMP:20261020T000000Z
+DTSTAMP:20261023T000000Z
 DTSTART;TZID=America/Chicago:20261112T150000
 DTEND;TZID=America/Chicago:20261112T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -386,8 +370,27 @@ CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_stamped_film_festival_1113-2026-11-13@coastaleventures.com
+DTSTAMP:20261023T000000Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261116
+SUMMARY:Stamped Film Festival
+LOCATION:Clark Family Cultural Center (Pensacola Little Theatre)\, 400 S Je
+ fferson St\, Pensacola\, FL 32502
+DESCRIPTION:Friday 11/13 to Sunday 11/15 · schedule not yet posted\n\nStam
+ ped is Pensacola's LGBTQ+ film festival\, with screenings\, filmmaker Q&As
+ \, panels and creativity workshops at the Clark Family Cultural Center. Sp
+ onsors cover the cost\, so every day is free with a reserved ticket. Sunda
+ y is a Family Day program for all ages\, and Thursday\, November 12 is a p
+ rivate sponsor event.\n\nPrice: Free\n\nDetails: https://coastaleventures.
+ com/events/ev-stamped-film-festival-1113.html
+URL:https://coastaleventures.com/events/ev-stamped-film-festival-1113.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-19@coastaleventures.com
-DTSTAMP:20261020T000000Z
+DTSTAMP:20261023T000000Z
 DTSTART;TZID=America/Chicago:20261119T150000
 DTEND;TZID=America/Chicago:20261119T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -405,7 +408,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-26@coastaleventures.com
-DTSTAMP:20261020T000000Z
+DTSTAMP:20261023T000000Z
 DTSTART;TZID=America/Chicago:20261126T150000
 DTEND;TZID=America/Chicago:20261126T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -423,7 +426,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-03@coastaleventures.com
-DTSTAMP:20261020T000000Z
+DTSTAMP:20261023T000000Z
 DTSTART;TZID=America/Chicago:20261203T150000
 DTEND;TZID=America/Chicago:20261203T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -442,7 +445,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_mobile_wheels_and_reels_christmas_pageant_1204-2026-12-04@coastaleve
  ntures.com
-DTSTAMP:20261020T000000Z
+DTSTAMP:20261023T000000Z
 DTSTART;TZID=America/Chicago:20261204T180000
 DTEND;TZID=America/Chicago:20261204T220000
 SUMMARY:Wheels & Reels Drive-In Movies: The Best Christmas Pageant Ever
@@ -461,7 +464,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-10@coastaleventures.com
-DTSTAMP:20261020T000000Z
+DTSTAMP:20261023T000000Z
 DTSTART;TZID=America/Chicago:20261210T150000
 DTEND;TZID=America/Chicago:20261210T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -479,7 +482,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-17@coastaleventures.com
-DTSTAMP:20261020T000000Z
+DTSTAMP:20261023T000000Z
 DTSTART;TZID=America/Chicago:20261217T150000
 DTEND;TZID=America/Chicago:20261217T160000
 SUMMARY:Anime Club at the Valparaiso Library
