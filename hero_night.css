@@ -450,6 +450,7 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
 .hero.hk_nhon.ph-night { background: rgb(25, 34, 47); }
 .hero.hk_nhon > .hk_nh { position: absolute; inset: 0px; z-index: 0; overflow: hidden; pointer-events: none; }
 .hero.hk_nhon > .hk_nh > svg { display: block; width: 100%; height: 100%; }
+.hero.hk_nhon > .hk_nhbak { position: absolute; inset: 0px; z-index: 0; display: block; width: 100%; height: 100%; max-width: none; margin: 0px; pointer-events: none; user-select: none; will-change: transform; }
 .hero.hk_nhon > .hk_nh [id$="_shade"] { display: none; }
 .hero.hk_nhon > .hk_nhfront { position: absolute; inset: 0px; z-index: 3; overflow: hidden; pointer-events: none; }
 .hero.hk_nhon > .hk_nhfront > svg { display: block; width: 100%; height: 100%; }
@@ -854,8 +855,8 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
   100% { translate: 242px 12px; scale: 0.2; opacity: 0; }
 }
 @keyframes nh_flap { 
-  0% { scale: 1; }
-  100% { scale: 1 -0.45; }
+  0% { transform: scale(1, 1); }
+  100% { transform: scale(1, -0.45); }
 }
 @keyframes nh_look { 
   0%, 22% { rotate: 0deg; }
@@ -876,7 +877,7 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
   100% { translate: 215px 35px; scale: 0.18; opacity: 0; }
 }
 @keyframes nh_bob { 
-  100% { translate: 0px 1.2px; }
+  100% { transform: translate(0px, 1.2px); }
 }
 @keyframes nh_hop { 
   100% { translate: 0px -1.6px; }
@@ -888,7 +889,7 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
   100% { rotate: 3deg; }
 }
 @keyframes nh_drift { 
-  100% { translate: -10px; }
+  100% { transform: translate(-10px, 0px); }
 }
 @keyframes nh_lamp { 
   100% { opacity: 0.78; }
@@ -1176,7 +1177,7 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
   100% { rotate: 0deg; }
 }
 @keyframes nh_swell { 
-  100% { translate: -5px 0.6px; }
+  100% { transform: translate(-5px, 0.6px); }
 }
 @keyframes nh_wtravel { 
   0% { translate: 0px; opacity: 0; }
