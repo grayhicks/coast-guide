@@ -25,27 +25,8 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_marinemax_boat_toberfest_1024-2026-10-24@coastaleventures.com
-DTSTAMP:20261024T000000Z
-DTSTART;TZID=America/Chicago:20261024T100000
-DTEND;TZID=America/Chicago:20261024T150000
-SUMMARY:Boat-Toberfest Fall Showcase at MarineMax
-LOCATION:MarineMax Fort Walton Beach\, 14 Miracle Strip Pkwy SW\, Fort Walt
- on Beach\, FL 32548
-DESCRIPTION:Saturday 10/24 · 10:00 AM to 3:00 PM\n\nMarineMax Fort Walton 
- Beach puts its new boats on show for a fall Saturday with food\, drinks an
- d live entertainment. The company calls it family friendly and is promotin
- g seasonal savings on the latest models. Registration is free and parking 
- is free.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/events/ev
- -marinemax-boat-toberfest-1024.html
-URL:https://coastaleventures.com/events/ev-marinemax-boat-toberfest-1024.ht
- ml
-CATEGORIES:Coastal
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_solaris_thanksgiving_cruises_1126-2026-11-26@coastaleventures.com
-DTSTAMP:20261024T000000Z
+DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261126
 DTEND;VALUE=DATE:20261127
 SUMMARY:Thanksgiving Day buffet cruises aboard Solaris
