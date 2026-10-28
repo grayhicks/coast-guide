@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-10-29@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261029T150000
 DTEND;TZID=America/Chicago:20261029T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -43,8 +43,67 @@ CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_great_movie_adventure_hotel_transylvania_3_1029-2026-10-29@coastalev
+ entures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261029T151500
+DTEND;TZID=America/Chicago:20261029T164500
+SUMMARY:Great Movie Adventure: Hotel Transylvania 3
+LOCATION:Virginia Dillard Smith/Toulminville Branch Library\, Meeting Room 
+ A/B\, 601 Stanton Road\, Mobile\, AL 36617
+DESCRIPTION:Thursday 10/29 · 3:15 PM to 4:45 PM\n\nThe Toulminville Branch
+  of the Mobile Public Library shows Hotel Transylvania 3\, a PG animated f
+ ilm that runs 1 hour and 37 minutes. The program is for ages 6 to 11 and c
+ omes with snacks. The library recommends registering.\n\nPrice: Free\n\nDe
+ tails: https://coastaleventures.com/events/ev-great-movie-adventure-hotel-
+ transylvania-3-1029.html
+URL:https://coastaleventures.com/events/ev-great-movie-adventure-hotel-tran
+ sylvania-3-1029.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_milton_movie_night_1029-2026-10-29@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261029T160000
+DTEND;TZID=America/Chicago:20261029T173000
+SUMMARY:Movie Night at Milton Library
+LOCATION:Milton Library\, 5541 Alabama Street\, Milton\, FL 32570
+DESCRIPTION:Thursday 10/29 · 4:00 PM to 5:30 PM\n\nMilton Library shows a 
+ movie on Thursday\, October 29\, with the Friends of the Milton Library pr
+ oviding refreshments. The library's calendar describes Movie Night as a fo
+ urth Thursday program with movies that begin at 4:00 PM. The calendar does
+  not name the film.\n\nPrice: No published price\n\nDetails: https://coast
+ aleventures.com/events/ev-milton-movie-night-1029.html
+URL:https://coastaleventures.com/events/ev-milton-movie-night-1029.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_niceville_library_dracula_hidden_kingdom_documentary_1029-2026-10-29
+ @coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261029T170000
+DTEND;TZID=America/Chicago:20261029T180000
+SUMMARY:Documentary of the Month: Dracula's Hidden Kingdom at the Niceville
+  Library
+LOCATION:Niceville Library\, 206 N Partin Dr\, Niceville\, FL 32578
+DESCRIPTION:Thursday 10/29 · 5:00 PM to 6:00 PM\n\nThe Niceville Library s
+ creens the nature documentary Dracula's Hidden Kingdom\, a 55 minute look 
+ at the wildlife and wild places of Transylvania. The film covers the Carpa
+ thian Mountains\, ancient forests\, wolves\, bears\, bats\, storks and lyn
+ x. Seating is first come\, first served and the screening is for ages 18 a
+ nd up.\n\nPrice: No published price\n\nDetails: https://coastaleventures.c
+ om/events/ev-niceville-library-dracula-hidden-kingdom-documentary-1029.htm
+ l
+URL:https://coastaleventures.com/events/ev-niceville-library-dracula-hidden
+ -kingdom-documentary-1029.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_baytowne_hocus_pocus_movie_1030-2026-10-30@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
 SUMMARY:Hocus Pocus: Movie on the Lawn
@@ -64,25 +123,45 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_crescent_nosferatu_live_score_1030-2026-10-30@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;VALUE=DATE:20261030
-DTEND;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261101
 SUMMARY:Nosferatu with a Live Improvised Score
 LOCATION:Crescent Theater\, 208 Dauphin St\, Mobile\, AL
-DESCRIPTION:Friday 10/30 · 8:00 PM (doors 7:00 PM)\n\nThe Crescent Theater
-  in downtown Mobile screens the silent horror classic Nosferatu while Mike
-  Dillon\, Chris "Baby" Spies\, Brian Haas and James Singleton improvise a 
- score live. The theater lists the show as all ages. Doors open at 7:00 PM 
- ahead of the 8:00 PM start.\n\nPrice: from $39.01\n\nDetails: https://coas
- taleventures.com/events/ev-crescent-nosferatu-live-score-1030.html
+DESCRIPTION:Friday 10/30 and Saturday 10/31 · 8:00 PM (doors 7:00 PM)\n\nT
+ he Crescent Theater in downtown Mobile screens the silent horror classic N
+ osferatu while Mike Dillon\, Chris "Baby" Spies\, Brian Haas and James Sin
+ gleton improvise a score live. The theater lists the show as all ages. Doo
+ rs open at 7:00 PM ahead of the 8:00 PM start.\n\nPrice: from $39.01\n\nDe
+ tails: https://coastaleventures.com/events/ev-crescent-nosferatu-live-scor
+ e-1030.html
 URL:https://coastaleventures.com/events/ev-crescent-nosferatu-live-score-10
  30.html
 CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_craftflix_corpse_bride_molino_library_1030-2026-10-30@coastaleventur
+ es.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261030T150000
+DTEND;TZID=America/Chicago:20261030T160000
+SUMMARY:Craftflix at Molino Library: Corpse Bride
+LOCATION:Molino Library\, 6450-A Highway 95A\, Molino\, FL 32577
+DESCRIPTION:Friday 10/30 · 3:00 PM\n\nMolino Library invites guests to bri
+ ng a project and spend the afternoon making things while watching the Tim 
+ Burton movie Corpse Bride from 2006. The film is rated PG. The library lis
+ ts a start time of 3:00 PM and does not print an end time.\n\nPrice: No pu
+ blished price\n\nDetails: https://coastaleventures.com/events/ev-craftflix
+ -corpse-bride-molino-library-1030.html
+URL:https://coastaleventures.com/events/ev-craftflix-corpse-bride-molino-li
+ brary-1030.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_harborwalk_movieslawn_1030-2026-10-30@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261030T170000
 DTEND;TZID=America/Chicago:20261030T200000
 SUMMARY:Movies On The Lawn: Fall Edition
@@ -98,7 +177,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_haunted_hollow_een_hocus_pocus_1030-2026-10-30@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261030T180000
 DTEND;TZID=America/Chicago:20261030T200000
 SUMMARY:Haunted Hollow-een Movie Night: Hocus Pocus
@@ -117,7 +196,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_fallintofun_miltonlibrary_1031-2026-10-31@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261031T100000
 DTEND;TZID=America/Chicago:20261031T120000
 SUMMARY:Fall Into Fun at Milton Library
@@ -135,8 +214,47 @@ CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_mpl_at_the_movies_coco_semmes_1102-2026-11-02@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261102T140000
+DTEND;TZID=America/Chicago:20261102T160000
+SUMMARY:At the Movies: Coco at Semmes Regional Library
+LOCATION:Semmes Regional Library\, Meeting Room\, 9150 Moffett Road\, Semme
+ s\, AL 36575
+DESCRIPTION:Monday 11/2 · 2:00 PM to 4:00 PM\n\nSemmes Regional Library sh
+ ows Coco\, the 2017 PG film about a boy who dreams of becoming a musician\
+ , on Monday afternoon with popcorn. The movie runs one hour and 45 minutes
+ \, and the library pairs it with a morning papel picado craft.\n\nPrice: N
+ o published price\n\nDetails: https://coastaleventures.com/events/ev-mpl-a
+ t-the-movies-coco-semmes-1102.html
+URL:https://coastaleventures.com/events/ev-mpl-at-the-movies-coco-semmes-11
+ 02.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_documentaries_anthropologist_dolly_library_1103-2026-11-03@coastalev
+ entures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261103T140000
+DTEND;TZID=America/Chicago:20261103T160000
+SUMMARY:Documentaries with an Anthropologist: The Library That Dolly Built
+LOCATION:Ben May Main Library\, Bernheim Hall\, 701 Government Street\, Mob
+ ile\, AL 36602
+DESCRIPTION:Tuesday 11/3 · 2:00 PM to 4:00 PM\n\nThe Ben May Main Library 
+ screens The Library That Dolly Built\, a 2021 documentary that runs 1 hour
+  and 8 minutes. The film is about Dolly Parton's Imagination Library. The 
+ county listing says an anthropologist leads an open discussion after the s
+ creening.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/events/e
+ v-documentaries-anthropologist-dolly-library-1103.html
+URL:https://coastaleventures.com/events/ev-documentaries-anthropologist-dol
+ ly-library-1103.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-05@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261105T150000
 DTEND;TZID=America/Chicago:20261105T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -154,7 +272,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_destin_commons_movie_minions_1106-2026-11-06@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261106T183000
 DTEND;TZID=America/Chicago:20261106T193000
 SUMMARY:Movie Night on the Lawn: Minions at Destin Commons
@@ -174,7 +292,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_cat_video_fest_2026_suds_n_cinema_1107-2026-11-07@coastaleventures.c
  om
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Cat Video Fest 2026 at Suds N Cinema
@@ -192,8 +310,25 @@ CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_mobile_animation_film_festival_2026-2026-11-07@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261107T130000
+DTEND;TZID=America/Chicago:20261107T160000
+SUMMARY:Mobile Animation Film Festival 2026
+LOCATION:Crescent Theater\, 208 Dauphin St\, Mobile\, AL
+DESCRIPTION:Saturday 11/7 · 1:00 PM to 4:00 PM\n\nThe Crescent Theater scr
+ eens the Mobile Animation Film Festival for three hours on a Saturday afte
+ rnoon\, free to attend. Some programming may include adult content\, thoug
+ h no specific age cutoff is posted.\n\nPrice: Free\n\nDetails: https://coa
+ staleventures.com/events/ev-mobile-animation-film-festival-2026.html
+URL:https://coastaleventures.com/events/ev-mobile-animation-film-festival-2
+ 026.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_fear_fest_1010-2026-11-07@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261107T170000
 DTEND;TZID=America/Chicago:20261107T210000
 SUMMARY:Fear Fest
@@ -210,8 +345,26 @@ CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_brother_bear_movie_valparaiso_1109-2026-11-09@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261109T153000
+DTEND;TZID=America/Chicago:20261109T170000
+SUMMARY:Brother Bear family movie at Valparaiso Library
+LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
+DESCRIPTION:Monday 11/9 · 3:30 PM to 5:00 PM\n\nThe Valparaiso Library sho
+ ws the animated movie Brother Bear\, rated G\, with a run time of 1 hour a
+ nd 25 minutes. Snacks and drinks are provided and all ages are welcome. Th
+ e library holds a family movie on a Monday each month.\n\nPrice: No publis
+ hed price\n\nDetails: https://coastaleventures.com/events/ev-brother-bear-
+ movie-valparaiso-1109.html
+URL:https://coastaleventures.com/events/ev-brother-bear-movie-valparaiso-11
+ 09.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-12@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261112T150000
 DTEND;TZID=America/Chicago:20261112T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -228,8 +381,26 @@ CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_princess_bride_movie_night_mobile_1112-2026-11-12@coastaleventures.c
+ om
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261112T160000
+DTEND;TZID=America/Chicago:20261112T180000
+SUMMARY:Princess Bride Movie Night
+LOCATION:Ben May Main Library\, 701 Government St\, Mobile\, AL 36602
+DESCRIPTION:Thursday 11/12 · 4:00 PM to 6:00 PM\n\nMobile Public Library s
+ creens the 1987 classic The Princess Bride (PG\, 1 hour 38 minutes) in Ber
+ nheim Hall at the Ben May Main Library. Popcorn is unlimited\, and the pro
+ gram is listed for teens and adults.\n\nPrice: Free\n\nDetails: https://co
+ astaleventures.com/events/ev-princess-bride-movie-night-mobile-1112.html
+URL:https://coastaleventures.com/events/ev-princess-bride-movie-night-mobil
+ e-1112.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_stamped_film_festival_1113-2026-11-13@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261116
 SUMMARY:Stamped Film Festival
@@ -248,7 +419,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-19@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261119T150000
 DTEND;TZID=America/Chicago:20261119T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -266,7 +437,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-26@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261126T150000
 DTEND;TZID=America/Chicago:20261126T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -284,7 +455,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-03@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261203T150000
 DTEND;TZID=America/Chicago:20261203T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -303,7 +474,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_mobile_wheels_and_reels_christmas_pageant_1204-2026-12-04@coastaleve
  ntures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261204T180000
 DTEND;TZID=America/Chicago:20261204T220000
 SUMMARY:Wheels & Reels Drive-In Movies: The Best Christmas Pageant Ever
@@ -321,8 +492,27 @@ CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_exploreum_21_after_hours_gremlins_1205-2026-12-05@coastaleventures.c
+ om
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261205T180000
+DTEND;TZID=America/Chicago:20261205T190000
+SUMMARY:21+ After Hours: Gremlins at the Exploreum
+LOCATION:Exploreum Science Center\, 65 Government St\, Mobile\, AL 36602
+DESCRIPTION:Saturday 12/5 · 6:00 PM\n\nThe Exploreum Science Center turns 
+ its galleries into an adults-only evening built around the movie Gremlins.
+  The night runs from 6:00 to 10:00 PM and is limited to guests 21 and over
+ . Ticket details have not been posted yet\, so the box office is the place
+  to ask.\n\nPrice: No published price\n\nDetails: https://coastaleventures
+ .com/events/ev-exploreum-21-after-hours-gremlins-1205.html
+URL:https://coastaleventures.com/events/ev-exploreum-21-after-hours-gremlin
+ s-1205.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-10@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261210T150000
 DTEND;TZID=America/Chicago:20261210T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -340,7 +530,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-17@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261217T150000
 DTEND;TZID=America/Chicago:20261217T160000
 SUMMARY:Anime Club at the Valparaiso Library

@@ -25,10 +25,10 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_destin_rodeo_weighins-2026-10-26@coastaleventures.com
-DTSTAMP:20261026T000000Z
-DTSTART;TZID=America/Chicago:20261026T100000
-DTEND;TZID=America/Chicago:20261026T190000
+UID:ev_destin_rodeo_weighins-2026-10-28@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261028T100000
+DTEND;TZID=America/Chicago:20261028T190000
 SUMMARY:Destin Fishing Rodeo: Daily Public Weigh-Ins
 LOCATION:Docks behind AJ's Seafood & Oyster Bar\, 116 Harbor Blvd\, Destin\
  , FL 32541
@@ -44,8 +44,64 @@ CATEGORIES:Beach
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_tob_sunset_cruise_1029-2026-10-29@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261029T170000
+DTEND;TZID=America/Chicago:20261029T193000
+SUMMARY:Taste of the Beach sunset cruise on Pensacola Beach
+LOCATION:Baja Coastal Kitchen\, Pensacola Beach\, Pensacola Beach\, FL 3256
+ 1
+DESCRIPTION:Thursday 10/29 · 5:00 PM to 7:30 PM\n\nThe Pensacola Beach Cha
+ mber of Commerce opens Taste of the Beach with a ticketed sunset cruise an
+ d a menu cooked by a featured chef at Baja Coastal Kitchen. The chamber li
+ sts the evening from 5:00 PM to 7:30 PM and describes waterfront views and
+  a relaxed coastal atmosphere. It is one of several separately ticketed ev
+ ents in the four-day festival.\n\nPrice: from $125\n\nDetails: https://coa
+ staleventures.com/events/ev-tob-sunset-cruise-1029.html
+URL:https://coastaleventures.com/events/ev-tob-sunset-cruise-1029.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_tob_vip_trolley_1030-2026-10-30@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:Taste of the Beach VIP trolley dinner on Pensacola Beach
+LOCATION:Pensacola Beach restaurants\, by trolley\, Pensacola Beach\, FL 32
+ 561
+DESCRIPTION:Friday 10/30 · departures 4:45 PM\, 5:30 PM\, 6:15 PM and 7:00
+  PM\n\nThe Pensacola Beach Chamber of Commerce runs a multi-course dinner 
+ by trolley that stops at select Pensacola Beach restaurants. Guests pick o
+ ne of four departure times between 4:45 PM and 7:00 PM. A pricier 7:45 PM 
+ Party Dinner Trolley adds a DJ\, a trolley host\, a cocktail at each board
+ ing and an after-party.\n\nPrice: from $150\n\nDetails: https://coastaleve
+ ntures.com/events/ev-tob-vip-trolley-1030.html
+URL:https://coastaleventures.com/events/ev-tob-vip-trolley-1030.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_tidal_treasures_gulf_state_park_1107-2026-11-07@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261107T100000
+DTEND;TZID=America/Chicago:20261107T110000
+SUMMARY:Tidal Treasures at Gulf State Park
+LOCATION:Gulf State Park\, 20115 State Hwy 135\, Gulf Shores\, AL 36542
+DESCRIPTION:Saturday 11/7 · 10:00 AM\n\nA Gulf State Park program explores
+  the shells\, sea life and other treasures that wash ashore along the beac
+ h. The registration page lists Saturday\, November 7 at 10 AM at $3 a pers
+ on. Later sessions run on January 19 and February 11.\n\nPrice: from $3\n\
+ nDetails: https://coastaleventures.com/events/ev-tidal-treasures-gulf-stat
+ e-park-1107.html
+URL:https://coastaleventures.com/events/ev-tidal-treasures-gulf-state-park-
+ 1107.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_wickedwinerun_1121-2026-11-21@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:SKECHERS Wicked Wine Run: Milton
@@ -58,6 +114,83 @@ DESCRIPTION:Sat 11/21/2026 · gates 8:30 AM · 5K at 10:30 AM · 1K tasting
   is the point and nobody is timing you.\n\nPrice: $20 per vehicle\n\nDetai
  ls: https://coastaleventures.com/events/ev-wickedwinerun-1121.html
 URL:https://coastaleventures.com/events/ev-wickedwinerun-1121.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_pb_lighted_boat_parade_1204-2026-12-04@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261204T183000
+DTEND;TZID=America/Chicago:20261204T193000
+SUMMARY:Pensacola Beach Christmas lighted boat parade
+LOCATION:Sabine Marina to the Pensacola Beach Boardwalk\, Pensacola Beach B
+ oardwalk\, Pensacola Beach\, FL 32561
+DESCRIPTION:Friday 12/4 · 6:30 PM\n\nDecorated boats form a lighted proces
+ sion from Sabine Marina in Little Sabine Bay to the Pensacola Beach Boardw
+ alk on the Santa Rosa Sound. Santa rides on the lead boat and then greets 
+ families on the boardwalk by about 8:00 PM. The Santa Rosa Island Authorit
+ y calendar lists the parade for December 4 at 6:30 PM.\n\nPrice: No publis
+ hed price\n\nDetails: https://coastaleventures.com/events/ev-pb-lighted-bo
+ at-parade-1204.html
+URL:https://coastaleventures.com/events/ev-pb-lighted-boat-parade-1204.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_pb_surfing_santa_parade_1206-2026-12-06@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261206T140000
+DTEND;TZID=America/Chicago:20261206T150000
+SUMMARY:Surfing Santa Beach Parade on Pensacola Beach
+LOCATION:Via De Luna Drive to the Gulfside Pavilion\, Via De Luna Drive fro
+ m Avenida 10 to the Gulfside Pavilion\, Pensacola Beach\, FL 32561
+DESCRIPTION:Sunday 12/6 · 2:00 PM\n\nFamilies line Via De Luna Drive on Pe
+ nsacola Beach to watch Santa Claus come down the road in the annual Surfin
+ g Santa Beach Parade. The parade starts at 2:00 PM from Avenida 10\, runs 
+ toward Casino Beach\, and ends at the Gulfside Pavilion. The Santa Rosa Is
+ land Authority calendar lists it for Sunday December 6.\n\nPrice: No publi
+ shed price\n\nDetails: https://coastaleventures.com/events/ev-pb-surfing-s
+ anta-parade-1206.html
+URL:https://coastaleventures.com/events/ev-pb-surfing-santa-parade-1206.htm
+ l
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_flora_bama_polar_bear_dip_0101-2027-01-01@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:Flora-Bama Polar Bear Dip
+LOCATION:Flora-Bama Lounge\, 17401 Perdido Key Drive\, Pensacola\, FL 32507
+DESCRIPTION:Friday 1/1 · noon plunge\n\nGroups and families gather on the 
+ beach behind the Flora-Bama on New Year's Day and walk into the Gulf toget
+ her at noon\, many in costume. Anyone who fully submerges gets a free draf
+ t beer and a New Year's lunch of ham\, black-eyed peas\, greens and cornbr
+ ead. Wading in is optional\, and the party inside continues with live musi
+ c all day.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/events/
+ ev-flora-bama-polar-bear-dip-0101.html
+URL:https://coastaleventures.com/events/ev-flora-bama-polar-bear-dip-0101.h
+ tml
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_polar_bear_plunge_pensacola_beach_0101-2027-01-01@coastaleventures.c
+ om
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20270101T140000
+DTEND;TZID=America/Chicago:20270101T150000
+SUMMARY:Polar Bear Plunge at Pensacola Beach
+LOCATION:The Sound\, Pensacola Beach\, Pensacola Beach\, FL 32561
+DESCRIPTION:Friday 1/1 · 2:00 PM\n\nPensacola Beach starts the New Year wi
+ th a plunge into the Santa Rosa Sound at 2 PM on January 1. The Santa Rosa
+  Island Authority calendar invites visitors to brave the cold and take a d
+ ip. The page prints no entry fee and no meeting spot.\n\nPrice: No publish
+ ed price\n\nDetails: https://coastaleventures.com/events/ev-polar-bear-plu
+ nge-pensacola-beach-0101.html
+URL:https://coastaleventures.com/events/ev-polar-bear-plunge-pensacola-beac
+ h-0101.html
 CATEGORIES:Beach
 TRANSP:TRANSPARENT
 END:VEVENT

@@ -25,8 +25,50 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+UID:ev_history_museum_mobile_gilded_age_1009-2026-10-28@coastaleventures.co
+ m
+DTSTAMP:20261028T000000Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20270607
+SUMMARY:Mobile in the Gilded Age exhibition at the History Museum of Mobile
+LOCATION:History Museum of Mobile\, 111 S Royal St\, Mobile\, AL 36602
+DESCRIPTION:Monday to Saturday 9:00 AM to 5:00 PM · Sunday 1:00 PM to 5:00
+  PM · through 6/6/2027\n\nThe History Museum of Mobile opened Mobile in t
+ he Gilded Age on October 9\, 2026\, and the exhibition stays up through Ju
+ ne 6\, 2027. Gowns\, inventions and everyday objects show how railroads\, 
+ new technology and department stores changed life in Mobile in the late 18
+ 00s and early 1900s. The exhibition also covers the unequal opportunities 
+ and segregation of the period.\n\nPrice: from $8\n\nDetails: https://coast
+ aleventures.com/events/ev-history-museum-mobile-gilded-age-1009.html
+URL:https://coastaleventures.com/events/ev-history-museum-mobile-gilded-age
+ -1009.html
+CATEGORIES:Coastal icons
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_ss_united_states_farewell_cruise_mobile_1109-2026-11-09@coastalevent
+ ures.com
+DTSTAMP:20261028T000000Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
+SUMMARY:SS United States Farewell Tour aboard the Perdido Queen
+LOCATION:Perdido Queen Cruises\, 1 South Water Street\, Mobile\, AL 36602
+DESCRIPTION:Monday 11/9 · departure time is on the booking calendar\n\nPer
+ dido Queen Cruises runs a specialty river cruise on November 9\, 2026 so g
+ uests can watch the SS United States depart Mobile from the water. The oce
+ an liner was the world's fastest\, and a guide tells its story while the b
+ oat passes Mobile's working port. The cruise lasts 1 hour with 30 minutes 
+ of boarding\, and the climate-controlled boat has open-air balconies and a
+  full cash bar.\n\nPrice: from $20.99\n\nDetails: https://coastaleventures
+ .com/events/ev-ss-united-states-farewell-cruise-mobile-1109.html
+URL:https://coastaleventures.com/events/ev-ss-united-states-farewell-cruise
+ -mobile-1109.html
+CATEGORIES:Coastal icons
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_uss_alabama_december_drill_1205-2026-12-05@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261205T080000
 DTEND;TZID=America/Chicago:20261205T150000
 SUMMARY:December Living History Drill at USS ALABAMA
@@ -41,6 +83,27 @@ DESCRIPTION:Saturday 12/5 · 8:00 AM to 3:00 PM\n\nWWII reenactors in Navy
  -uss-alabama-december-drill-1205.html
 URL:https://coastaleventures.com/events/ev-uss-alabama-december-drill-1205.
  html
+CATEGORIES:Coastal icons
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_blakeley_old_mobile_tour_1212-2026-12-12@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261212T083000
+DTEND;TZID=America/Chicago:20261212T123000
+SUMMARY:Guided tour of the Old Mobile site from Historic Blakeley
+LOCATION:East Pointe Baptist Church (charter bus departs for the Old Mobile
+  site)\, 34742 AL-225\, Spanish Fort\, AL 36527
+DESCRIPTION:Saturday 12/12 · 8:30 AM to 12:30 PM\n\nHistoric Blakeley Stat
+ e Park offers a guided tour of the original site of the town of Mobile\, f
+ ounded in 1702 and the capital of French Louisiana until 1711. The site si
+ ts on the Mobile River 27 miles north of modern downtown and is not ordina
+ rily open to the public. The Friends of Old Mobile will also unveil a new 
+ stone monument listing those known to be buried in Mobile's first cemetery
+ .\n\nPrice: from $30\n\nDetails: https://coastaleventures.com/events/ev-bl
+ akeley-old-mobile-tour-1212.html
+URL:https://coastaleventures.com/events/ev-blakeley-old-mobile-tour-1212.ht
+ ml
 CATEGORIES:Coastal icons
 TRANSP:TRANSPARENT
 END:VEVENT

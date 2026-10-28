@@ -25,48 +25,47 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_lego_fun_tuesday_at_semmes_0908-2026-10-27@coastaleventures.com
-DTSTAMP:20261026T000000Z
-DTSTART;TZID=America/Chicago:20261027T160000
-DTEND;TZID=America/Chicago:20261027T170000
-SUMMARY:LEGO Fun Tuesday at Semmes
-LOCATION:Semmes Regional Library\, 9150 Moffett Road
-DESCRIPTION:Tuesdays · 4:00 PM to 5:00 PM\n\nSemmes Regional Library runs 
- a LEGO building challenge meant to encourage imagination alongside buildin
- g skill\, for ages 6 through 18. It meets Tuesdays at 4 PM\, including Oct
- ober 6\, 20 and 27. On October 13 it becomes LEGO Haunted Tuesday\, with b
- uilding while watching Lego Scooby-Doo Haunted Hollywood.\n\nPrice: No pub
- lished price\n\nDetails: https://coastaleventures.com/events/ev-lego-fun-t
- uesday-at-semmes-0908.html
-URL:https://coastaleventures.com/events/ev-lego-fun-tuesday-at-semmes-0908.
+UID:ev_mary_esther_library_bat_week_family_steam_1028-2026-10-28@coastaleve
+ ntures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261028T143000
+DTEND;TZID=America/Chicago:20261028T160000
+SUMMARY:Bat Week Drop In Family STEAM at the Mary Esther Library
+LOCATION:Mary Esther Library\, 100 W. Hollywood Blvd\, Mary Esther\, FL 325
+ 69
+DESCRIPTION:Wednesday 10/28 · 2:30 PM to 4:00 PM · also Friday 11/13\n\nN
+ onie's Animal Encounters visits the Mary Esther Library for a hands-on Bat
+  Week program about bats and why they matter. Families drop in\, and the l
+ ibrary asks guests to dress for permanent art supplies. Children under 13 
+ must be accompanied by an adult.\n\nPrice: No published price\n\nDetails: 
+ https://coastaleventures.com/events/ev-mary-esther-library-bat-week-family
+ -steam-1028.html
+URL:https://coastaleventures.com/events/ev-mary-esther-library-bat-week-fam
+ ily-steam-1028.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_story_and_tinker_time_mess_1028-2026-10-28@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261028T154500
+DTEND;TZID=America/Chicago:20261028T163000
+SUMMARY:Story and Tinker Time at the Pensacola MESS Hall
+LOCATION:Pensacola MESS Hall\, 418 E Wright Street\, Pensacola\, FL 32501
+DESCRIPTION:Wednesday 10/28 · 3:45 PM to 4:30 PM\n\nStory and Tinker Time 
+ pairs a picture book with hands-on science and engineering for children ag
+ es 3 to 6 and their caregivers. Today's session is Extra Yarn\, where chil
+ dren weave webs like spiders and investigate patterns. The program is free
+  thanks to the Melba Bayers Meyer Foundation.\n\nPrice: Free\n\nDetails: h
+ ttps://coastaleventures.com/events/ev-story-and-tinker-time-mess-1028.html
+URL:https://coastaleventures.com/events/ev-story-and-tinker-time-mess-1028.
  html
 CATEGORIES:STEM and learning
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_nwfaa_astronomy_workshop_crestview_1027-2026-10-27@coastaleventures.
- com
-DTSTAMP:20261026T000000Z
-DTSTART;TZID=America/Chicago:20261027T170000
-DTEND;TZID=America/Chicago:20261027T180000
-SUMMARY:NWFAA Astronomy Workshop at Crestview Library
-LOCATION:Crestview Library\, 1445 Commerce Dr\, Crestview\, FL 32539
-DESCRIPTION:Tuesday 10/27 · 5:00 PM to 6:00 PM\n\nThe Northwest Florida Am
- ateur Astronomers Association meets at Crestview Library for an hour of sk
- y talk that supports the library's loan-a-telescope program. The group cov
- ers astronomical objects and events visible over the next 30 days\, recent
-  astronomy news and general questions. The listing marks it for families a
- nd everyone\, and the workshop is free.\n\nPrice: Free\n\nDetails: https:/
- /coastaleventures.com/events/ev-nwfaa-astronomy-workshop-crestview-1027.ht
- ml
-URL:https://coastaleventures.com/events/ev-nwfaa-astronomy-workshop-crestvi
- ew-1027.html
-CATEGORIES:STEM and learning
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_makerspace_studio_fall_2026_0923-2026-10-28@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261028T173000
 DTEND;TZID=America/Chicago:20261028T193000
 SUMMARY:Makerspace Studio Fall 2026
@@ -85,8 +84,27 @@ CATEGORIES:STEM and learning
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_mpl_chess_for_everyone_ben_may_1028-2026-10-28@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261028T180000
+DTEND;TZID=America/Chicago:20261028T193000
+SUMMARY:Chess for Everyone at Ben May Main Library
+LOCATION:Ben May Main Library\, Armbrecht Briskman Meeting Room\, 701 Gover
+ nment Street\, Mobile\, AL 36602
+DESCRIPTION:Wednesdays · 6:00 PM to 7:30 PM\n\nThe Ben May Main Library ho
+ sts a weekly chess club in its meeting room every Wednesday evening. Begin
+ ners and experienced players are both welcome\, and no experience is neede
+ d. The club runs from 6:00 to 7:30 PM.\n\nPrice: No published price\n\nDet
+ ails: https://coastaleventures.com/events/ev-mpl-chess-for-everyone-ben-ma
+ y-1028.html
+URL:https://coastaleventures.com/events/ev-mpl-chess-for-everyone-ben-may-1
+ 028.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-10-29@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261029T101500
 DTEND;TZID=America/Chicago:20261029T111500
 SUMMARY:iPhone & iPad
@@ -102,9 +120,26 @@ CATEGORIES:STEM and learning
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_fairhope_garageband_1029-2026-10-29@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261029T110000
+DTEND;TZID=America/Chicago:20261029T120000
+SUMMARY:Introduction to GarageBand at Fairhope Public Library
+LOCATION:MakerSpace\, Fairhope Public Library\, 501 Fairhope Avenue\, Fairh
+ ope\, AL 36532
+DESCRIPTION:Thursday 10/29 · 11:00 AM to 12:00 PM\n\nThe library MakerSpac
+ e offers an hour-long introduction to GarageBand\, Apple's music making so
+ ftware. The class is for ages 13 and up. Registration is required and spac
+ e is limited.\n\nPrice: No published price\n\nDetails: https://coastaleven
+ tures.com/events/ev-fairhope-garageband-1029.html
+URL:https://coastaleventures.com/events/ev-fairhope-garageband-1029.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-10-29@coastaleventures.c
  om
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261029T150000
 DTEND;TZID=America/Chicago:20261029T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -122,7 +157,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_exploreum_fear_fest_conjuring_1031-2026-10-31@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261031T170000
 DTEND;TZID=America/Chicago:20261031T210000
 SUMMARY:Fear Fest: The Conjuring at the Exploreum
@@ -142,7 +177,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_destin_cooking_lab_1102-2026-11-02@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261102T180000
 DTEND;TZID=America/Chicago:20261102T193000
 SUMMARY:After-Hours Cooking Lab for Middle Schoolers
@@ -159,8 +194,27 @@ CATEGORIES:STEM and learning
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_mpl_computers_made_easy_west_1103-2026-11-03@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261103T140000
+DTEND;TZID=America/Chicago:20261103T150000
+SUMMARY:Computers Made Easy beginner class at West Regional Library
+LOCATION:West Regional Library\, AT&T Technology Center\, 5555 Grelot Road\
+ , Mobile\, AL 36609
+DESCRIPTION:Tuesday 11/3 · 2:00 PM to 3:00 PM\n\nWest Regional Library tea
+ ches adults to use a mouse\, browse the Internet and send email\, step by 
+ step. The class is relaxed and supportive\, and each student takes home a 
+ simple summary to keep practicing.\n\nPrice: No published price\n\nDetails
+ : https://coastaleventures.com/events/ev-mpl-computers-made-easy-west-1103
+ .html
+URL:https://coastaleventures.com/events/ev-mpl-computers-made-easy-west-110
+ 3.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2026-11-03@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261103T160000
 DTEND;TZID=America/Chicago:20261103T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -178,8 +232,28 @@ CATEGORIES:STEM and learning
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_uwf_edmund_fitzgerald_talk_1104-2026-11-04@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261104T180000
+DTEND;TZID=America/Chicago:20261104T190000
+SUMMARY:The Edmund Fitzgerald: the physics of a storm
+LOCATION:UWF Tech Campus Library\, 1170 Martin Luther King Jr Blvd\, Fort W
+ alton Beach\, FL 32547
+DESCRIPTION:Wednesday 11/4 · 6:00 PM\n\nUWF librarian Travis Souther expla
+ ins the physics behind the 1975 loss of the Edmund Fitzgerald\, the larges
+ t freighter on the Great Lakes\, in a storm on Lake Superior. The talk is 
+ part of the library's Forces of Nature\, Failures of Man series. It takes 
+ place in the Student Government Association room.\n\nPrice: Free\n\nDetail
+ s: https://coastaleventures.com/events/ev-uwf-edmund-fitzgerald-talk-1104.
+ html
+URL:https://coastaleventures.com/events/ev-uwf-edmund-fitzgerald-talk-1104.
+ html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-11-05@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261105T101500
 DTEND;TZID=America/Chicago:20261105T111500
 SUMMARY:iPhone & iPad
@@ -197,7 +271,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-11-05@coastaleventures.c
  om
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261105T150000
 DTEND;TZID=America/Chicago:20261105T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -214,8 +288,47 @@ CATEGORIES:STEM and learning
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_psc_season_of_light_planetarium_1106-2026-11-06@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261106T180000
+DTEND;TZID=America/Chicago:20261106T190000
+SUMMARY:Season of Light planetarium show at Pensacola State College
+LOCATION:Pensacola State College Planetarium\, 1000 College Blvd\, Building
+  21\, Pensacola\, FL 32504
+DESCRIPTION:Friday 11/6 · 6:00 PM\n\nThis 35-minute planetarium program tr
+ aces the winter customs of light\, from Christian and Jewish holidays to C
+ eltic\, Nordic\, Roman\, Mexican and Hopi traditions. It also covers winte
+ r constellations and why the seasons change. A live narrated night sky pre
+ sentation follows\, so plan on about an hour inside.\n\nPrice: from $4\n\n
+ Details: https://coastaleventures.com/events/ev-psc-season-of-light-planet
+ arium-1106.html
+URL:https://coastaleventures.com/events/ev-psc-season-of-light-planetarium-
+ 1106.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mpl_ai_what_is_this_tool_west_1107-2026-11-07@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261107T100000
+DTEND;TZID=America/Chicago:20261107T113000
+SUMMARY:AI: What is this tool? at West Regional Library
+LOCATION:West Regional Library\, AT&T Technology Center\, 5555 Grelot Road\
+ , Mobile\, AL 36609
+DESCRIPTION:Saturday 11/7 · 10:00 AM to 11:30 AM\n\nTwo doctoral candidate
+ s from the University of South Alabama explain how to use AI tools safely 
+ at West Regional Library. The session covers the good and bad aspects of A
+ I and what a person can create with it.\n\nPrice: No published price\n\nDe
+ tails: https://coastaleventures.com/events/ev-mpl-ai-what-is-this-tool-wes
+ t-1107.html
+URL:https://coastaleventures.com/events/ev-mpl-ai-what-is-this-tool-west-11
+ 07.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_nmmog_current_to_code_1107-2026-11-07@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261107T100000
 DTEND;TZID=America/Chicago:20261107T120000
 SUMMARY:From Current to Code Kids Workshop
@@ -233,8 +346,28 @@ CATEGORIES:STEM and learning
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_homeschool_explorations_map_it_out_1109-2026-11-09@coastaleventures.
+ com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261109T090000
+DTEND;TZID=America/Chicago:20261109T130000
+SUMMARY:Homeschool Explorations: Map It Out at the Pensacola MESS Hall
+LOCATION:Pensacola MESS Hall\, 418 E Wright Street\, Pensacola\, FL 32501
+DESCRIPTION:Monday 11/9 · 9:00 AM to 1:00 PM\n\nThe Pensacola MESS Hall ru
+ ns Home School Science Explorations for students ages 7-12. Students unplu
+ g from the GPS and learn the basics of mapping and navigating. The class i
+ s a drop-off classroom program from 9 AM to 1 PM\, and the museum exhibits
+  are not open for exploration during it.\n\nPrice: from $35\n\nDetails: ht
+ tps://coastaleventures.com/events/ev-homeschool-explorations-map-it-out-11
+ 09.html
+URL:https://coastaleventures.com/events/ev-homeschool-explorations-map-it-o
+ ut-1109.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2026-11-10@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261110T160000
 DTEND;TZID=America/Chicago:20261110T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -253,7 +386,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-11-12@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261112T101500
 DTEND;TZID=America/Chicago:20261112T111500
 SUMMARY:iPhone & iPad
@@ -271,7 +404,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-11-12@coastaleventures.c
  om
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261112T150000
 DTEND;TZID=America/Chicago:20261112T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -288,8 +421,48 @@ CATEGORIES:STEM and learning
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_curiosity_lab_moon_day_mess_1114-2026-11-14@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261114T130000
+DTEND;TZID=America/Chicago:20261114T160000
+SUMMARY:Curiosity Lab: Moon Day at the Pensacola MESS Hall
+LOCATION:Pensacola MESS Hall\, 418 E Wright Street\, Pensacola\, FL 32501
+DESCRIPTION:Saturday 11/14 · 1:00 PM to 4:00 PM\n\nThe November Curiosity 
+ Lab at the Pensacola MESS Hall is themed on the Moon. Families discover ho
+ w far the moon and the other planets are in a hands-on workshop suited to 
+ ages 7 and up. The workshop is included with museum admission\, and the mu
+ seum is open for exploration from 10 AM to 5 PM that Saturday.\n\nPrice: f
+ rom $15\n\nDetails: https://coastaleventures.com/events/ev-curiosity-lab-m
+ oon-day-mess-1114.html
+URL:https://coastaleventures.com/events/ev-curiosity-lab-moon-day-mess-1114
+ .html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_3d_printing_workshop_sea_makerspace_1117-2026-11-17@coastaleventures
+ .com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261117T090000
+DTEND;TZID=America/Chicago:20261117T130000
+SUMMARY:3D Printing workshop at the SEA Makerspace
+LOCATION:Downtown Pensacola\, Museum of Commerce (SEA Makerspace)\, 201 E Z
+ aragoza St\, Pensacola\, FL 32502
+DESCRIPTION:Tuesday 11/17 · 9:00 AM to 1:00 PM\n\nThe University of West F
+ lorida's SEA Makerspace teaches a four hour hands on 3D printing workshop 
+ for complete beginners. Participants learn basic 3D design in Tinkercad\, 
+ walk through the printing process with PrusaSlicer\, and start their own p
+ rint job before leaving. The workshop meets at the Museum of Commerce in d
+ owntown Pensacola.\n\nPrice: from $65\n\nDetails: https://coastaleventures
+ .com/events/ev-3d-printing-workshop-sea-makerspace-1117.html
+URL:https://coastaleventures.com/events/ev-3d-printing-workshop-sea-makersp
+ ace-1117.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2026-11-17@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261117T160000
 DTEND;TZID=America/Chicago:20261117T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -308,7 +481,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-11-19@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261119T101500
 DTEND;TZID=America/Chicago:20261119T111500
 SUMMARY:iPhone & iPad
@@ -326,7 +499,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-11-19@coastaleventures.c
  om
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261119T150000
 DTEND;TZID=America/Chicago:20261119T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -343,8 +516,47 @@ CATEGORIES:STEM and learning
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_kids_night_out_mess_hall_1120-2026-11-20@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261205
+SUMMARY:Kids Night Out at the Pensacola MESS Hall
+LOCATION:Pensacola MESS Hall\, 418 E Wright Street\, Pensacola\, FL 32501
+DESCRIPTION:Friday 11/20 · 6:00 PM to 8:00 PM · Friday 12/4 · 6:00 PM to
+  8:00 PM\n\nThe Pensacola MESS Hall gives parents a Friday night off on No
+ vember 20 and December 4. Kids in grade 1 and up spend two hours on hands-
+ on science\, games and cheese pizza. A child with a different meal in mind
+  can bring one\, and everyone should bring a water bottle.\n\nPrice: from 
+ $20\n\nDetails: https://coastaleventures.com/events/ev-kids-night-out-mess
+ -hall-1120.html
+URL:https://coastaleventures.com/events/ev-kids-night-out-mess-hall-1120.ht
+ ml
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mwr_november_science_sunday_butter_churning_nasp_library_1122-2026-1
+ 1-22@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:November Science Sunday: Butter Churning at the NAS Pensacola Libra
+ ry
+LOCATION:NAS Pensacola Library\, NAS Pensacola\, Pensacola\, FL 32508
+DESCRIPTION:Sunday 11/22 · time not published\n\nThe NAS Pensacola Library
+ 's November Science Sunday shows how butter is made. A hands-on butter-chu
+ rning activity explores emulsification and phase changes. The event is on 
+ Sunday\, November 22.\n\nPrice: No published price\n\nDetails: https://coa
+ staleventures.com/events/ev-mwr-november-science-sunday-butter-churning-na
+ sp-library-1122.html
+URL:https://coastaleventures.com/events/ev-mwr-november-science-sunday-butt
+ er-churning-nasp-library-1122.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2026-11-24@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261124T160000
 DTEND;TZID=America/Chicago:20261124T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -363,7 +575,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-11-26@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261126T101500
 DTEND;TZID=America/Chicago:20261126T111500
 SUMMARY:iPhone & iPad
@@ -381,7 +593,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-11-26@coastaleventures.c
  om
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261126T150000
 DTEND;TZID=America/Chicago:20261126T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -399,7 +611,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2026-12-01@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261201T160000
 DTEND;TZID=America/Chicago:20261201T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -418,7 +630,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-12-03@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261203T101500
 DTEND;TZID=America/Chicago:20261203T111500
 SUMMARY:iPhone & iPad
@@ -436,7 +648,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-12-03@coastaleventures.c
  om
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261203T150000
 DTEND;TZID=America/Chicago:20261203T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -453,8 +665,27 @@ CATEGORIES:STEM and learning
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_psc_let_it_snow_planetarium_1204-2026-12-04@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261204T180000
+DTEND;TZID=America/Chicago:20261204T190000
+SUMMARY:Let it Snow planetarium show at Pensacola State College
+LOCATION:Pensacola State College Planetarium\, 1000 College Blvd\, Building
+  21\, Pensacola\, FL 32504
+DESCRIPTION:Friday 12/4 · 6:00 PM to 7:00 PM\n\nLet it Snow: A Holiday Mus
+ ical Journey is a 32 minute planetarium program that the college lists for
+  all ages. The Pensacola State College calendar schedules a public showing
+  on Friday\, December 4 from 6:00 PM to 7:00 PM. The planetarium seats 97 
+ people.\n\nPrice: from $4\n\nDetails: https://coastaleventures.com/events/
+ ev-psc-let-it-snow-planetarium-1204.html
+URL:https://coastaleventures.com/events/ev-psc-let-it-snow-planetarium-1204
+ .html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2026-12-08@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261208T160000
 DTEND;TZID=America/Chicago:20261208T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -473,7 +704,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-12-10@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261210T101500
 DTEND;TZID=America/Chicago:20261210T111500
 SUMMARY:iPhone & iPad
@@ -491,7 +722,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-12-10@coastaleventures.c
  om
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261210T150000
 DTEND;TZID=America/Chicago:20261210T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -508,8 +739,28 @@ CATEGORIES:STEM and learning
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_curiosity_lab_merry_and_bright_mess_1212-2026-12-12@coastaleventures
+ .com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261212T130000
+DTEND;TZID=America/Chicago:20261212T160000
+SUMMARY:Curiosity Lab: Merry and Bright at the Pensacola MESS Hall
+LOCATION:Pensacola MESS Hall\, 418 E Wright Street\, Pensacola\, FL 32501
+DESCRIPTION:Saturday 12/12 · 1:00 PM to 4:00 PM\n\nThe December Curiosity 
+ Lab at the Pensacola MESS Hall has families build a Merry and Bright holid
+ ay card using paper circuits. Workshops run at 1 PM and 2 PM and suit ages
+  7 and up. The workshop is included with museum admission\, and the museum
+  is open from 10 AM to 5 PM that Saturday.\n\nPrice: from $15\n\nDetails: 
+ https://coastaleventures.com/events/ev-curiosity-lab-merry-and-bright-mess
+ -1212.html
+URL:https://coastaleventures.com/events/ev-curiosity-lab-merry-and-bright-m
+ ess-1212.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2026-12-15@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261215T160000
 DTEND;TZID=America/Chicago:20261215T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -528,7 +779,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-12-17@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261217T101500
 DTEND;TZID=America/Chicago:20261217T111500
 SUMMARY:iPhone & iPad
@@ -546,7 +797,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-12-17@coastaleventures.c
  om
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261217T150000
 DTEND;TZID=America/Chicago:20261217T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -564,7 +815,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2026-12-22@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261222T160000
 DTEND;TZID=America/Chicago:20261222T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -583,7 +834,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-12-24@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261224T101500
 DTEND;TZID=America/Chicago:20261224T111500
 SUMMARY:iPhone & iPad
@@ -601,7 +852,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-12-24@coastaleventures.c
  om
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261224T150000
 DTEND;TZID=America/Chicago:20261224T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -619,7 +870,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2026-12-29@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261229T160000
 DTEND;TZID=America/Chicago:20261229T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -638,7 +889,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2026-12-31@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261231T101500
 DTEND;TZID=America/Chicago:20261231T111500
 SUMMARY:iPhone & iPad
@@ -656,7 +907,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2026-12-31@coastaleventures.c
  om
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261231T150000
 DTEND;TZID=America/Chicago:20261231T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -674,7 +925,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2027-01-05@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270105T160000
 DTEND;TZID=America/Chicago:20270105T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -693,7 +944,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2027-01-07@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270107T101500
 DTEND;TZID=America/Chicago:20270107T111500
 SUMMARY:iPhone & iPad
@@ -711,7 +962,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2027-01-07@coastaleventures.c
  om
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270107T150000
 DTEND;TZID=America/Chicago:20270107T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -728,8 +979,28 @@ CATEGORIES:STEM and learning
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_homeschool_explorations_sound_off_0111-2027-01-11@coastaleventures.c
+ om
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20270111T090000
+DTEND;TZID=America/Chicago:20270111T130000
+SUMMARY:Homeschool Explorations: Sound Off! at the Pensacola MESS Hall
+LOCATION:Pensacola MESS Hall\, 418 E Wright Street\, Pensacola\, FL 32501
+DESCRIPTION:Monday 1/11 · 9:00 AM to 1:00 PM\n\nThe Pensacola MESS Hall ru
+ ns Home School Science Explorations for students ages 7-12. Students detec
+ t sound\, make sound and see sound in a loud but not too loud day of exper
+ iments. The class is a drop-off classroom program from 9 AM to 1 PM\, and 
+ the museum exhibits are not open for exploration during it.\n\nPrice: from
+  $35\n\nDetails: https://coastaleventures.com/events/ev-homeschool-explora
+ tions-sound-off-0111.html
+URL:https://coastaleventures.com/events/ev-homeschool-explorations-sound-of
+ f-0111.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2027-01-12@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270112T160000
 DTEND;TZID=America/Chicago:20270112T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -748,7 +1019,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2027-01-14@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270114T101500
 DTEND;TZID=America/Chicago:20270114T111500
 SUMMARY:iPhone & iPad
@@ -766,7 +1037,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2027-01-14@coastaleventures.c
  om
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270114T150000
 DTEND;TZID=America/Chicago:20270114T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -784,7 +1055,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_lego_fun_tuesday_at_semmes_0908-2027-01-19@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270119T160000
 DTEND;TZID=America/Chicago:20270119T170000
 SUMMARY:LEGO Fun Tuesday at Semmes
@@ -803,7 +1074,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_iphone_and_ipad_0903-2027-01-21@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270121T101500
 DTEND;TZID=America/Chicago:20270121T111500
 SUMMARY:iPhone & iPad
@@ -821,7 +1092,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_chess_club_for_everyone_at_semmes_0910-2027-01-21@coastaleventures.c
  om
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270121T150000
 DTEND;TZID=America/Chicago:20270121T170000
 SUMMARY:Chess Club for Everyone at Semmes
@@ -834,6 +1105,44 @@ DESCRIPTION:Thursdays · 3:00 PM to 5:00 PM\n\nSemmes Regional Library host
  ventures.com/events/ev-chess-club-for-everyone-at-semmes-0910.html
 URL:https://coastaleventures.com/events/ev-chess-club-for-everyone-at-semme
  s-0910.html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_lego_fun_tuesday_at_semmes_0908-2027-01-26@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20270126T160000
+DTEND;TZID=America/Chicago:20270126T170000
+SUMMARY:LEGO Fun Tuesday at Semmes
+LOCATION:Semmes Regional Library\, 9150 Moffett Road
+DESCRIPTION:Tuesdays · 4:00 PM to 5:00 PM\n\nSemmes Regional Library runs 
+ a LEGO building challenge meant to encourage imagination alongside buildin
+ g skill\, for ages 6 through 18. It meets Tuesdays at 4 PM\, including Oct
+ ober 6\, 20 and 27. On October 13 it becomes LEGO Haunted Tuesday\, with b
+ uilding while watching Lego Scooby-Doo Haunted Hollywood.\n\nPrice: No pub
+ lished price\n\nDetails: https://coastaleventures.com/events/ev-lego-fun-t
+ uesday-at-semmes-0908.html
+URL:https://coastaleventures.com/events/ev-lego-fun-tuesday-at-semmes-0908.
+ html
+CATEGORIES:STEM and learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_homeschool_explorations_watery_world_0201-2027-02-01@coastaleventure
+ s.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20270201T090000
+DTEND;TZID=America/Chicago:20270201T130000
+SUMMARY:Homeschool Explorations: Watery World at the Pensacola MESS Hall
+LOCATION:Pensacola MESS Hall\, 418 E Wright Street\, Pensacola\, FL 32501
+DESCRIPTION:Monday 2/1 · 9:00 AM to 1:00 PM\n\nThe Pensacola MESS Hall run
+ s Home School Science Explorations for students ages 7-12. Students invest
+ igate and experiment with water in surprising ways. The class is a drop-of
+ f classroom program from 9 AM to 1 PM\, and the museum exhibits are not op
+ en for exploration during it.\n\nPrice: from $35\n\nDetails: https://coast
+ aleventures.com/events/ev-homeschool-explorations-watery-world-0201.html
+URL:https://coastaleventures.com/events/ev-homeschool-explorations-watery-w
+ orld-0201.html
 CATEGORIES:STEM and learning
 TRANSP:TRANSPARENT
 END:VEVENT

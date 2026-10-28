@@ -25,9 +25,29 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+UID:ev_little_park_pals_pumpkin_playtime_1029-2026-10-29@coastaleventures.c
+ om
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261029T100000
+DTEND;TZID=America/Chicago:20261029T110000
+SUMMARY:Little Park Pals: Pumpkin Playtime at Gulf State Park
+LOCATION:Gulf State Park Nature Center\, 22120 Campground Road\, Gulf Shore
+ s\, AL 36542
+DESCRIPTION:Thursday 10/29 · 10:00 AM\n\nGulf State Park naturalists run a
+  pumpkin themed program for children ages 5 and under. Kids hear a pumpkin
+  story\, plant their own pumpkin seed and make a festive pumpkin craft to 
+ take home. Parents must be present but do not need to register.\n\nPrice: 
+ from $5\n\nDetails: https://coastaleventures.com/events/ev-little-park-pal
+ s-pumpkin-playtime-1029.html
+URL:https://coastaleventures.com/events/ev-little-park-pals-pumpkin-playtim
+ e-1029.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_pensacolabeach_civilwartrunk_fortpickens-2026-10-29@coastaleventures
  .com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261029T140000
 DTEND;TZID=America/Chicago:20261029T160000
 SUMMARY:Civil War Trunk at Fort Pickens
@@ -47,7 +67,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_ob_treats_on_the_trail_1030-2026-10-30@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261030T163000
 DTEND;TZID=America/Chicago:20261030T183000
 SUMMARY:Treats on the Trail at the Orange Beach Sportsplex
@@ -65,8 +85,50 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_blakeley_seafood_cruise_1030-2026-10-30@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261030T173000
+DTEND;TZID=America/Chicago:20261030T201500
+SUMMARY:Seafood buffet dinner cruise from Five Rivers
+LOCATION:Bartram dock\, Five Rivers Delta Resource Center\, AWF Delta and B
+ ay Conservation Center at Five Rivers\, Spanish Fort\, AL 36527
+DESCRIPTION:Friday 10/30 · 5:30 PM to 8:15 PM\n\nHistoric Blakeley State P
+ ark runs an early evening cruise from the Bartram dock at Five Rivers acro
+ ss the lower Mobile-Tensaw Delta and Mobile Bay at sunset. The boat ties u
+ p at the Original Oyster House for a seafood buffet that includes Florenti
+ ne stuffed flounder\, blackened shrimp Alfredo and popcorn shrimp. The tic
+ ket includes the meal\, and the cruise returns to Five Rivers by 8:15 PM.\
+ n\nPrice: from $49\n\nDetails: https://coastaleventures.com/events/ev-blak
+ eley-seafood-cruise-1030.html
+URL:https://coastaleventures.com/events/ev-blakeley-seafood-cruise-1030.htm
+ l
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_blakeley_delta_discovery_1031-2026-10-31@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261102
+SUMMARY:Delta Discovery cruise from Five Rivers
+LOCATION:Bartram dock\, Five Rivers Delta Resource Center\, AWF Delta and B
+ ay Conservation Center at Five Rivers\, Spanish Fort\, AL 36527
+DESCRIPTION:Saturday 10/31 · 10:00 AM and 1:00 PM · Sunday 11/1 · 1:30 P
+ M\n\nHistoric Blakeley State Park runs 90-minute boat trips into the Mobil
+ e-Tensaw Delta\, which the park calls the American Amazon. The boats leave
+  from the Bartram dock at the AWF Delta and Bay Conservation Center at Fiv
+ e Rivers. The park lists two departures on Saturday\, October 31\, at 10:0
+ 0 AM and 1:00 PM\, and one on Sunday\, November 1\, at 1:30 PM.\n\nPrice: 
+ from $15\n\nDetails: https://coastaleventures.com/events/ev-blakeley-delta
+ -discovery-1031.html
+URL:https://coastaleventures.com/events/ev-blakeley-delta-discovery-1031.ht
+ ml
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_trashbash_navarre_1031-2026-10-31@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261101
 SUMMARY:Trash Bash Beach Clean-Up
@@ -86,7 +148,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_oceanhour_saturday_cleanups_fall_1017-2026-10-31@coastaleventures.co
  m
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261031T084500
 DTEND;TZID=America/Chicago:20261031T094500
 SUMMARY:Ocean Hour Saturday Cleanups: Fall Schedule
@@ -106,7 +168,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_sweet_season_trick_or_treat_1031-2026-10-31@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261031T090000
 DTEND;TZID=America/Chicago:20261031T170000
 SUMMARY:Trick or Treat at the Farm
@@ -123,28 +185,87 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_halloween_critters_of_the_night_gulf_state_park_1031-2026-10-31@coas
+ taleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261031T130000
+DTEND;TZID=America/Chicago:20261031T140000
+SUMMARY:Halloween Critters of the Night at Gulf State Park
+LOCATION:Gulf State Park Nature Center\, 22120 Campground Road\, Gulf Shore
+ s\, AL 36542
+DESCRIPTION:Saturday 10/31 · 1:00 PM\n\nGulf State Park naturalists lead a
+  Halloween themed look at the Gulf Coast animals that are active after dar
+ k. Visitors bring a flashlight\, meet live animal ambassadors and learn ho
+ w nocturnal creatures adapt. The program is best suited to ages 8 and up.\
+ n\nPrice: from $3\n\nDetails: https://coastaleventures.com/events/ev-hallo
+ ween-critters-of-the-night-gulf-state-park-1031.html
+URL:https://coastaleventures.com/events/ev-halloween-critters-of-the-night-
+ gulf-state-park-1031.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_coastal_dune_lake_plant_tour_1102-2026-11-02@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261102T090000
 DTEND;TZID=America/Chicago:20261102T110000
 SUMMARY:Coastal Dune Lake native plant tour at Topsail Hill
 LOCATION:Topsail Hill Preserve State Park\, 7525 W County Hwy 30A\, Santa R
  osa Beach\, FL 32459
-DESCRIPTION:Monday 11/2 · 9:00 AM to 11:00 AM\n\nMaster Gardener Volunteer
-  Bill Kuenstler leads a guided walk through the native plants around South
-  Walton's coastal dune lakes for Coastal Dune Lake Week. The tour is free\
- , but Topsail Hill charges its $6 park entry. Registration is through Even
- tbrite.\n\nPrice: from $6\n\nDetails: https://coastaleventures.com/events/
- ev-coastal-dune-lake-plant-tour-1102.html
+DESCRIPTION:Monday 11/2 · 9:00 AM to 11:00 AM (SOLD OUT)\n\nMaster Gardene
+ r Volunteer Bill Kuenstler leads a guided walk through the native plants a
+ round South Walton's coastal dune lakes for Coastal Dune Lake Week. The to
+ ur is free\, but Topsail Hill charges its $6 park entry. Eventbrite now sh
+ ows the tour sold out.\n\nPrice: from $6\n\nDetails: https://coastaleventu
+ res.com/events/ev-coastal-dune-lake-plant-tour-1102.html
 URL:https://coastaleventures.com/events/ev-coastal-dune-lake-plant-tour-110
  2.html
 CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_explore_the_shore_gulf_state_park_1103-2026-11-03@coastaleventures.c
+ om
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261103T090000
+DTEND;TZID=America/Chicago:20261103T100000
+SUMMARY:Explore the Shore at Gulf State Park
+LOCATION:Gulf State Park\, 20115 State Hwy 135\, Gulf Shores\, AL 36542
+DESCRIPTION:Tuesday 11/3 · 9:00 AM\n\nA Gulf State Park program teaches vi
+ sitors about the coastal plants and animals that live along the beach. The
+  registration page lists Tuesday\, November 3 at 9 AM\, with other session
+ s on November 16 and January 18. The program is free.\n\nPrice: Free\n\nDe
+ tails: https://coastaleventures.com/events/ev-explore-the-shore-gulf-state
+ -park-1103.html
+URL:https://coastaleventures.com/events/ev-explore-the-shore-gulf-state-par
+ k-1103.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_audubon_sky_islands_program_1105-2026-11-05@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:Audubon program: Arizona Sky Islands
+LOCATION:Chandler Center\, Room 800\, Crosspoint Church\, 519 Helms St\, Ni
+ ceville\, FL
+DESCRIPTION:Thursday 11/5 · 7:00 PM (socializing 6:30 PM)\n\nChoctawhatche
+ e Audubon Society hosts a slide show program on birding in the high desert
+  and mountain ranges of southern Arizona. A guest speaker shares experienc
+ es from the Sky Islands\, the isolated mountain ranges that rise out of th
+ e desert. The program starts at 7:00 PM\, with socializing from 6:30 PM\, 
+ and is free and open to the public.\n\nPrice: Free\n\nDetails: https://coa
+ staleventures.com/events/ev-audubon-sky-islands-program-1105.html
+URL:https://coastaleventures.com/events/ev-audubon-sky-islands-program-1105
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_pensacolabeach_civilwartrunk_fortpickens-2026-11-05@coastaleventures
  .com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261105T140000
 DTEND;TZID=America/Chicago:20261105T160000
 SUMMARY:Civil War Trunk at Fort Pickens
@@ -164,7 +285,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_show_me_reptiles_pensacola_1107-2026-11-07@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261109
 SUMMARY:Show Me Reptiles reptile show
@@ -182,9 +303,29 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_audubon_coffee_birding_shalimar_1107-2026-11-07@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261107T073000
+DTEND;TZID=America/Chicago:20261107T110000
+SUMMARY:Coffee and Birding in Shalimar on Garniers Bayou
+LOCATION:Combs Park (parking for the Garniers Bayou coffee and birding morn
+ ing)\, 15 Cherokee Rd\, Shalimar\, FL
+DESCRIPTION:Saturday 11/7 · 7:30 AM to 11:00 AM\n\nChoctawhatchee Audubon 
+ Society invites birders to coffee and birding on Garniers Bayou in Shalima
+ r from 7:30 AM to 11:00 AM. Group size is limited\, so a spot has to be re
+ served with the walk leader before going. Guests park at Combs Park and ta
+ ke the crosswalk to the meeting spot named on the Audubon page.\n\nPrice: 
+ Free\n\nDetails: https://coastaleventures.com/events/ev-audubon-coffee-bir
+ ding-shalimar-1107.html
+URL:https://coastaleventures.com/events/ev-audubon-coffee-birding-shalimar-
+ 1107.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_oceanhour_saturday_cleanups_fall_1017-2026-11-07@coastaleventures.co
  m
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261107T084500
 DTEND;TZID=America/Chicago:20261107T094500
 SUMMARY:Ocean Hour Saturday Cleanups: Fall Schedule
@@ -203,9 +344,26 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_snakes_of_gulf_state_park_1111-2026-11-11@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261111T100000
+DTEND;TZID=America/Chicago:20261111T110000
+SUMMARY:Snakes of Gulf State Park
+LOCATION:Gulf State Park\, 20115 State Hwy 135\, Gulf Shores\, AL 36542
+DESCRIPTION:Wednesday 11/11 · 10:00 AM\n\nGulf State Park lists a Snakes o
+ f Gulf State Park program on Wednesday\, November 11 at 10 AM. The park's 
+ events page prints only the title\, date and time. Price\, ages and the me
+ eting place are not shown there.\n\nPrice: No published price\n\nDetails: 
+ https://coastaleventures.com/events/ev-snakes-of-gulf-state-park-1111.html
+URL:https://coastaleventures.com/events/ev-snakes-of-gulf-state-park-1111.h
+ tml
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_pensacolabeach_civilwartrunk_fortpickens-2026-11-12@coastaleventures
  .com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261112T140000
 DTEND;TZID=America/Chicago:20261112T160000
 SUMMARY:Civil War Trunk at Fort Pickens
@@ -226,7 +384,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_cast_for_a_cause_derrick_stone_mem_1114-2026-11-14@coastaleventures.
  com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261114T060000
 DTEND;TZID=America/Chicago:20261114T070000
 SUMMARY:Cast for a Cause surf fishing tournament
@@ -244,9 +402,29 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_audubon_twin_hills_bird_walk_1114-2026-11-14@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261114T073000
+DTEND;TZID=America/Chicago:20261114T083000
+SUMMARY:Audubon bird walk at Twin Hills Park in Crestview
+LOCATION:Twin Hills Park\, parking lot by the children's park\, 100 Hathawa
+ y St\, Crestview\, FL 32539
+DESCRIPTION:Saturday 11/14 · 7:30 AM\n\nChoctawhatchee Audubon Society lea
+ ds a Saturday morning bird walk at Twin Hills Park in Crestview. The two l
+ arge ponds are likely to hold ducks\, coots\, cormorants\, herons and egre
+ ts\, along with songbirds in the surrounding trees. The group meets at 7:3
+ 0 AM in the parking lot by the children's park.\n\nPrice: Free\n\nDetails:
+  https://coastaleventures.com/events/ev-audubon-twin-hills-bird-walk-1114.
+ html
+URL:https://coastaleventures.com/events/ev-audubon-twin-hills-bird-walk-111
+ 4.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_oceanhour_saturday_cleanups_fall_1017-2026-11-14@coastaleventures.co
  m
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261114T084500
 DTEND;TZID=America/Chicago:20261114T094500
 SUMMARY:Ocean Hour Saturday Cleanups: Fall Schedule
@@ -266,7 +444,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_garnier_beach_garden_club_0912-2026-11-14@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261114T103000
 DTEND;TZID=America/Chicago:20261114T130000
 SUMMARY:Garnier Beach Garden Club
@@ -286,7 +464,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_pensacolabeach_civilwartrunk_fortpickens-2026-11-19@coastaleventures
  .com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261119T140000
 DTEND;TZID=America/Chicago:20261119T160000
 SUMMARY:Civil War Trunk at Fort Pickens
@@ -307,7 +485,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_oceanhour_saturday_cleanups_fall_1017-2026-11-21@coastaleventures.co
  m
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261121T084500
 DTEND;TZID=America/Chicago:20261121T094500
 SUMMARY:Ocean Hour Saturday Cleanups: Fall Schedule
@@ -326,8 +504,50 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_blakeley_bottle_creek_mounds_1121-2026-11-21@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261121T090000
+DTEND;TZID=America/Chicago:20261121T123000
+SUMMARY:Excursion to the Bottle Creek Indian Mound Complex
+LOCATION:Live Oak Landing\, boarding point for Historic Blakeley's Bottle C
+ reek excursion\, Live Oak Landing\, off Alabama State Highway 225\, Stockt
+ on area\, AL
+DESCRIPTION:Saturday 11/21 · 9:00 AM to 12:30 PM\n\nHistoric Blakeley Stat
+ e Park takes guests by boat to the Bottle Creek site\, which has 18 earthe
+ n mounds built centuries ago by Native Americans and was once one of the l
+ argest communities in the Southeast. The site is reachable only by water. 
+ Guests board at Live Oak Landing\, less than a mile north of I-65 in the S
+ tockton area\, and walk about a half mile on the island.\n\nPrice: from $3
+ 5\n\nDetails: https://coastaleventures.com/events/ev-blakeley-bottle-creek
+ -mounds-1121.html
+URL:https://coastaleventures.com/events/ev-blakeley-bottle-creek-mounds-112
+ 1.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_blakeley_fall_color_cruise_1121-2026-11-21@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261121T130000
+DTEND;TZID=America/Chicago:20261121T150000
+SUMMARY:Fall Color in the Delta Cruise at Historic Blakeley
+LOCATION:Historic Blakeley State Park\, 34745 State Hwy 225\, Spanish Fort\
+ , AL 36527
+DESCRIPTION:Saturday 11/21 · 1:00 PM to 3:00 PM\n\nHistoric Blakeley State
+  Park runs a relaxing seasonal cruise through the scenic backwaters of the
+  upper Mobile-Tensaw Delta. Cooler temperatures and thinner vegetation in 
+ late fall open up views of the Delta\, and hardwood trees add a hint of co
+ lor to an otherwise green landscape. The cruise runs from 1:00 PM to 3:00 
+ PM on Saturday 11/21.\n\nPrice: from $5\n\nDetails: https://coastaleventur
+ es.com/events/ev-blakeley-fall-color-cruise-1121.html
+URL:https://coastaleventures.com/events/ev-blakeley-fall-color-cruise-1121.
+ html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_farm_to_flame_ts_farm_1121-2026-11-21@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261121T150000
 DTEND;TZID=America/Chicago:20261121T210000
 SUMMARY:Farm to Flame free community meal at T's Farm
@@ -346,7 +566,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_pensacolabeach_civilwartrunk_fortpickens-2026-11-26@coastaleventures
  .com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261126T140000
 DTEND;TZID=America/Chicago:20261126T160000
 SUMMARY:Civil War Trunk at Fort Pickens
@@ -365,9 +585,28 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_audubon_destin_shorebirds_walk_1128-2026-11-28@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261128T073000
+DTEND;TZID=America/Chicago:20261128T083000
+SUMMARY:Audubon Destin shorebirds bird walk
+LOCATION:Destin CVS parking lot\, Highway 98 and Main Street\, Hwy 98 and M
+ ain St\, Destin\, FL
+DESCRIPTION:Saturday 11/28 · 7:30 AM\n\nChoctawhatchee Audubon Society lea
+ ds a Saturday morning shorebird walk in Destin. The group meets at 7:30 AM
+  in the CVS parking lot at Highway 98 and Main Street\, opposite Regions B
+ ank. Walkers should dress for the weather and be ready to carpool.\n\nPric
+ e: Free\n\nDetails: https://coastaleventures.com/events/ev-audubon-destin-
+ shorebirds-walk-1128.html
+URL:https://coastaleventures.com/events/ev-audubon-destin-shorebirds-walk-1
+ 128.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_oceanhour_saturday_cleanups_fall_1017-2026-11-28@coastaleventures.co
  m
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261128T084500
 DTEND;TZID=America/Chicago:20261128T094500
 SUMMARY:Ocean Hour Saturday Cleanups: Fall Schedule
@@ -386,9 +625,28 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_audubon_longleaf_pine_program_1203-2026-12-03@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261204
+SUMMARY:Audubon program: Longleaf Pine Ecosystem
+LOCATION:Chandler Center\, Room 800\, Crosspoint Church\, 519 Helms St\, Ni
+ ceville\, FL
+DESCRIPTION:Thursday 12/3 · 7:00 PM (socializing 6:30 PM)\n\nChoctawhatche
+ e Audubon Society hosts a talk on the longleaf pine ecosystem by a wildlif
+ e biologist from the Nokuse Land Conservancy. The program starts at 7:00 P
+ M\, with socializing from 6:30 PM\, in Room 800 of the Chandler Center. Ad
+ mission is free and open to the public.\n\nPrice: Free\n\nDetails: https:/
+ /coastaleventures.com/events/ev-audubon-longleaf-pine-program-1203.html
+URL:https://coastaleventures.com/events/ev-audubon-longleaf-pine-program-12
+ 03.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_pensacolabeach_civilwartrunk_fortpickens-2026-12-03@coastaleventures
  .com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261203T140000
 DTEND;TZID=America/Chicago:20261203T160000
 SUMMARY:Civil War Trunk at Fort Pickens
@@ -407,9 +665,29 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_blakeley_mifflin_lake_cruise_1205-2026-12-05@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261205T130000
+DTEND;TZID=America/Chicago:20261205T150000
+SUMMARY:Mifflin Lake Cruise at Historic Blakeley
+LOCATION:Historic Blakeley State Park\, 34745 State Hwy 225\, Spanish Fort\
+ , AL 36527
+DESCRIPTION:Saturday 12/5 · 1:00 PM to 3:00 PM\n\nHistoric Blakeley State 
+ Park runs a cruise into the upper reaches of the Mobile-Tensaw Delta that 
+ explores the Tensaw River and Mifflin Lake. The winding waterway sits betw
+ een the Tensaw and Middle rivers and is home to a lot of wildlife. It is a
+  short distance from what was once an international boundary between the U
+ nited States and a Spanish colony.\n\nPrice: from $19\n\nDetails: https://
+ coastaleventures.com/events/ev-blakeley-mifflin-lake-cruise-1205.html
+URL:https://coastaleventures.com/events/ev-blakeley-mifflin-lake-cruise-120
+ 5.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_pensacolabeach_civilwartrunk_fortpickens-2026-12-10@coastaleventures
  .com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261210T140000
 DTEND;TZID=America/Chicago:20261210T160000
 SUMMARY:Civil War Trunk at Fort Pickens
@@ -429,7 +707,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_garnier_beach_garden_club_0912-2026-12-12@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261212T103000
 DTEND;TZID=America/Chicago:20261212T130000
 SUMMARY:Garnier Beach Garden Club
@@ -448,7 +726,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_camellia_flower_show_1212-2026-12-12@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261212T130000
 DTEND;TZID=America/Chicago:20261212T160000
 SUMMARY:88th Annual Camellia Flower Show
@@ -468,7 +746,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_pensacolabeach_civilwartrunk_fortpickens-2026-12-17@coastaleventures
  .com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261217T140000
 DTEND;TZID=America/Chicago:20261217T160000
 SUMMARY:Civil War Trunk at Fort Pickens
@@ -489,7 +767,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_pensacolabeach_civilwartrunk_fortpickens-2026-12-24@coastaleventures
  .com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261224T140000
 DTEND;TZID=America/Chicago:20261224T160000
 SUMMARY:Civil War Trunk at Fort Pickens
@@ -510,7 +788,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_pensacolabeach_civilwartrunk_fortpickens-2026-12-31@coastaleventures
  .com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261231T140000
 DTEND;TZID=America/Chicago:20261231T160000
 SUMMARY:Civil War Trunk at Fort Pickens
@@ -531,7 +809,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_pensacolabeach_civilwartrunk_fortpickens-2027-01-07@coastaleventures
  .com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270107T140000
 DTEND;TZID=America/Chicago:20270107T160000
 SUMMARY:Civil War Trunk at Fort Pickens
@@ -551,7 +829,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_garnier_beach_garden_club_0912-2027-01-09@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270109T103000
 DTEND;TZID=America/Chicago:20270109T130000
 SUMMARY:Garnier Beach Garden Club
@@ -571,7 +849,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_pensacolabeach_civilwartrunk_fortpickens-2027-01-14@coastaleventures
  .com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270114T140000
 DTEND;TZID=America/Chicago:20270114T160000
 SUMMARY:Civil War Trunk at Fort Pickens
@@ -592,7 +870,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_pensacolabeach_civilwartrunk_fortpickens-2027-01-21@coastaleventures
  .com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270121T140000
 DTEND;TZID=America/Chicago:20270121T160000
 SUMMARY:Civil War Trunk at Fort Pickens
@@ -613,7 +891,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_pensacolabeach_civilwartrunk_fortpickens-2027-01-28@coastaleventures
  .com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270128T140000
 DTEND;TZID=America/Chicago:20270128T160000
 SUMMARY:Civil War Trunk at Fort Pickens
@@ -634,7 +912,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_pensacolabeach_civilwartrunk_fortpickens-2027-02-04@coastaleventures
  .com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270204T140000
 DTEND;TZID=America/Chicago:20270204T160000
 SUMMARY:Civil War Trunk at Fort Pickens
@@ -655,7 +933,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_pensacolabeach_civilwartrunk_fortpickens-2027-02-11@coastaleventures
  .com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270211T140000
 DTEND;TZID=America/Chicago:20270211T160000
 SUMMARY:Civil War Trunk at Fort Pickens
@@ -676,9 +954,50 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_pensacolabeach_civilwartrunk_fortpickens-2027-02-18@coastaleventures
  .com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270218T140000
 DTEND;TZID=America/Chicago:20270218T160000
+SUMMARY:Civil War Trunk at Fort Pickens
+LOCATION:Fort Pickens\, Gulf Islands National Seashore\, 1400 Fort Pickens 
+ Rd.\, Pensacola Beach\, FL 32561
+DESCRIPTION:Thursdays · 2:00 PM to 4:00 PM\n\nPark rangers open a hands-on
+  Civil War trunk program at Fort Pickens every Thursday afternoon through 
+ October 29. The program itself is free\, but the National Park Service's o
+ wn fee page says the normal Gulf Islands National Seashore entrance fee or
+  a qualifying park pass still applies to get into the park.\n\nPrice: Free
+ \n\nDetails: https://coastaleventures.com/events/ev-pensacolabeach-civilwa
+ rtrunk-fortpickens.html
+URL:https://coastaleventures.com/events/ev-pensacolabeach-civilwartrunk-for
+ tpickens.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_community_camellia_show_pensacola_0220-2027-02-20@coastaleventures.c
+ om
+DTSTAMP:20261028T000000Z
+DTSTART;VALUE=DATE:20270220
+DTEND;VALUE=DATE:20270221
+SUMMARY:Community Camellia Show and Plant Sale at the downtown library
+LOCATION:Downtown Library\, 239 N. Spring St.\, Pensacola\, FL 32502
+DESCRIPTION:Saturday 2/20 · 9:00 AM to 3:00 PM · public viewing 12:00 PM 
+ to 3:00 PM\n\nThe Pensacola Camellia Club hosts a community camellia show 
+ and plant sale at the downtown Pensacola library. Residents bring blooms t
+ o enter from 9:00 AM to 11:30 AM\, judging runs until noon\, and the publi
+ c views the winning blooms from noon to 3:00 PM. Admission is free\, and p
+ lants are sold at the event.\n\nPrice: Free\n\nDetails: https://coastaleve
+ ntures.com/events/ev-community-camellia-show-pensacola-0220.html
+URL:https://coastaleventures.com/events/ev-community-camellia-show-pensacol
+ a-0220.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_pensacolabeach_civilwartrunk_fortpickens-2027-02-25@coastaleventures
+ .com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20270225T140000
+DTEND;TZID=America/Chicago:20270225T160000
 SUMMARY:Civil War Trunk at Fort Pickens
 LOCATION:Fort Pickens\, Gulf Islands National Seashore\, 1400 Fort Pickens 
  Rd.\, Pensacola Beach\, FL 32561

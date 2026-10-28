@@ -25,27 +25,26 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_hillcrest_openplay-2026-10-26@coastaleventures.com
-DTSTAMP:20261026T000000Z
-DTSTART;TZID=America/Chicago:20261026T090000
-DTEND;TZID=America/Chicago:20261026T110000
-SUMMARY:Preschool Playground Open Play: Hillcrest
-LOCATION:Hillcrest Church Preschool\, 800 E Nine Mile Rd\, Pensacola\, FL 3
- 2514
-DESCRIPTION:Last Monday of the month · 9:00 AM-11:00 AM\n\nThe preschool o
- pens its playground to the public for two hours on the last Monday of ever
- y month. It moves at a toddler's speed exactly\, with toddler-scale equipm
- ent\, shade\, and other little ones\, and none of the drive that a real pa
- rk day costs.\n\nPrice: No published price\n\nDetails: https://coastaleven
- tures.com/events/ev-hillcrest-openplay.html
-URL:https://coastaleventures.com/events/ev-hillcrest-openplay.html
+UID:ev_daphne_homework_hangout_1028-2026-10-28@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261028T153000
+DTEND;TZID=America/Chicago:20261028T170000
+SUMMARY:Children Homework Hangout at Daphne Public Library
+LOCATION:Daphne Public Library\, 2607 US Hwy 98\, Daphne\, AL 36526
+DESCRIPTION:Wednesday 10/28 · 3:30 PM to 5:00 PM\n\nThe Daphne Public Libr
+ ary invites children in kindergarten through fifth grade to hang out\, hav
+ e a snack and do homework. The program runs from 3:30 PM to 5:00 PM on Wed
+ nesday 10/28.\n\nPrice: No published price\n\nDetails: https://coastaleven
+ tures.com/events/ev-daphne-homework-hangout-1028.html
+URL:https://coastaleventures.com/events/ev-daphne-homework-hangout-1028.htm
+ l
 CATEGORIES:Town and community
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_spirits_of_crestview_walking_tour_1022-2026-10-29@coastaleventures.c
  om
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261029T180000
 DTEND;TZID=America/Chicago:20261029T210000
 SUMMARY:Spirits of Crestview Guided Stroll
@@ -67,7 +66,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_semmes_library_pumpkins_pajamas_1029-2026-10-29@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261029T183000
 DTEND;TZID=America/Chicago:20261029T190000
 SUMMARY:Pumpkins 'n Pajamas Storytime
@@ -84,7 +83,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_owa_little_creatures_ball_1030-2026-10-30@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261030T180000
 DTEND;TZID=America/Chicago:20261030T200000
 SUMMARY:Little Creatures' Ball at Downtown OWA
@@ -104,7 +103,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_tpsa_spooktacular_trunk_or_treat_1031-2026-10-31@coastaleventures.co
  m
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261101
 SUMMARY:TPSA Spooktacular 5v5: Trunk or Treat
@@ -123,8 +122,29 @@ CATEGORIES:Town and community
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_ferry_park_community_cleanup_1031-2026-10-31@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261031T080000
+DTEND;TZID=America/Chicago:20261031T100000
+SUMMARY:Ferry Park community cleanup
+LOCATION:Ferry Park\, Hughes Street NE entrance near the pickleball courts\
+ , Fort Walton Beach\, FL
+DESCRIPTION:Saturday 10/31 · 8:00 AM to 10:00 AM\n\nThe City of Fort Walto
+ n Beach has rescheduled its Ferry Park community cleanup to Saturday Octob
+ er 31. Volunteers gather at the Hughes Street entrance near the pickleball
+  courts for a short briefing at 8:00 AM and then split into small groups. 
+ The city provides some equipment and asks volunteers to bring a rake and a
+  cardboard box if they have them.\n\nPrice: No published price\n\nDetails:
+  https://coastaleventures.com/events/ev-ferry-park-community-cleanup-1031.
+ html
+URL:https://coastaleventures.com/events/ev-ferry-park-community-cleanup-103
+ 1.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_grand_boulevard_farmers_market_1024-2026-10-31@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261031T090000
 DTEND;TZID=America/Chicago:20261031T130000
 SUMMARY:Grand Boulevard Farmers Market
@@ -144,7 +164,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_farmers_market-2026-10-31@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261031T090000
 DTEND;TZID=America/Chicago:20261031T130000
 SUMMARY:Seaside Farmers Market
@@ -163,7 +183,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_owa_wag_o_ween_1031-2026-10-31@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261031T110000
 DTEND;TZID=America/Chicago:20261031T130000
 SUMMARY:Wag-O-Ween Pet Halloween Event at OWA
@@ -180,7 +200,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_owa_candy_crawl_1031-2026-10-31@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261031T140000
 DTEND;TZID=America/Chicago:20261031T170000
 SUMMARY:Candy Crawl at Downtown OWA
@@ -198,7 +218,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_theodore_oaks_library_dia_de_los_muertos_1031-2026-10-31@coastaleven
  tures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261031T150000
 DTEND;TZID=America/Chicago:20261031T160000
 SUMMARY:Dia de los Muertos Saturday Crafternoon
@@ -216,7 +236,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_grand_boulevard_farmers_market_1024-2026-11-07@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261107T090000
 DTEND;TZID=America/Chicago:20261107T130000
 SUMMARY:Grand Boulevard Farmers Market
@@ -236,7 +256,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_farmers_market-2026-11-07@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261107T090000
 DTEND;TZID=America/Chicago:20261107T130000
 SUMMARY:Seaside Farmers Market
@@ -254,8 +274,28 @@ CATEGORIES:Town and community
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_bellingrath_todd_talk_master_plan_1110-2026-11-10@coastaleventures.c
+ om
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261110T103000
+DTEND;TZID=America/Chicago:20261110T113000
+SUMMARY:Todd Talk: The Master Plan at Bellingrath
+LOCATION:Magnolia Room\, Bellingrath Gardens and Home\, 12401 Bellingrath G
+ ardens Road\, Theodore\, AL 36582
+DESCRIPTION:Tuesday 11/10 · 10:30 AM to 11:30 AM\n\nBellingrath's Executiv
+ e Director presents the estate's Master Plan in the Magnolia Room on Tuesd
+ ay November 10. The talk covers the vision\, priorities and plans for the 
+ growth and preservation of the gardens and home. The event page lists the 
+ time as 10:30 AM to 11:30 AM.\n\nPrice: from $16.50\n\nDetails: https://co
+ astaleventures.com/events/ev-bellingrath-todd-talk-master-plan-1110.html
+URL:https://coastaleventures.com/events/ev-bellingrath-todd-talk-master-pla
+ n-1110.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_crestview_holiday_market_1114-2026-11-14@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;VALUE=DATE:20261114
 DTEND;VALUE=DATE:20261115
 SUMMARY:Main Street Crestview Holiday Market
@@ -274,7 +314,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_downtown_fwb_saturday_market_0912-2026-11-14@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261114T080000
 DTEND;TZID=America/Chicago:20261114T130000
 SUMMARY:Downtown FWB Saturday Market
@@ -294,7 +334,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_grand_boulevard_farmers_market_1024-2026-11-14@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261114T090000
 DTEND;TZID=America/Chicago:20261114T130000
 SUMMARY:Grand Boulevard Farmers Market
@@ -314,7 +354,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_farmers_market-2026-11-14@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261114T090000
 DTEND;TZID=America/Chicago:20261114T130000
 SUMMARY:Seaside Farmers Market
@@ -332,8 +372,45 @@ CATEGORIES:Town and community
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_rural_roots_day_jay_1114-2026-11-14@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261114T100000
+DTEND;TZID=America/Chicago:20261114T140000
+SUMMARY:Santa Rosa Rural Roots Day Ag Expo
+LOCATION:UF/IFAS Research Center\, 4253 Experiment Drive\, Jay\, FL 32565
+DESCRIPTION:Saturday 11/14 · 10:00 AM to 2:00 PM\n\nSanta Rosa County host
+ s Rural Roots Day to celebrate local farming. The day includes a farmer pa
+ nel\, live animals\, a hay maze\, a planting station\, crafts and a Kid's 
+ Corner. Food and activities are complimentary\, and a Fall Heritage Pie Co
+ ntest takes entries until 10:30 AM.\n\nPrice: Free\n\nDetails: https://coa
+ staleventures.com/events/ev-rural-roots-day-jay-1114.html
+URL:https://coastaleventures.com/events/ev-rural-roots-day-jay-1114.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_daphne_fire_first_aid_class_1114-2026-11-14@coastaleventures.com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261114T123000
+DTEND;TZID=America/Chicago:20261114T143000
+SUMMARY:Daphne Fire Department First Aid certification class
+LOCATION:Fire Station 1 and Training Facility\, 25250 Bailey Yelding Jr Dri
+ ve\, Daphne\, AL 36526
+DESCRIPTION:Saturday 11/14 · 12:30 PM to 2:30 PM\n\nThe Daphne Fire Depart
+ ment teaches a First Aid certification class on Saturday 11/14 at Fire Sta
+ tion 1. Attendees who also take the Heartsaver class earn the combined Hea
+ rtsaver and First Aid card for a single $30 fee. Reserving a spot requires
+  a phone call\, and class times may vary.\n\nPrice: from $30\n\nDetails: h
+ ttps://coastaleventures.com/events/ev-daphne-fire-first-aid-class-1114.htm
+ l
+URL:https://coastaleventures.com/events/ev-daphne-fire-first-aid-class-1114
+ .html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_owa_tree_lighting_1121-2026-11-21@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:Annual Tree Lighting at Downtown OWA
@@ -351,8 +428,30 @@ CATEGORIES:Town and community
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_defrance_christmas_open_house_beal_1121-2026-11-21@coastaleventures.
+ com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261121T090000
+DTEND;TZID=America/Chicago:20261121T140000
+SUMMARY:Christmas Open House at DeFrance on Beal
+LOCATION:DeFrance Antiques on Beal\, 74B Beal Parkway NW\, Fort Walton Beac
+ h\, FL 32548
+DESCRIPTION:Saturday 11/21 · 9:00 AM to 2:00 PM\n\nDeFrance Antiques on Be
+ al holds a Christmas open house with sweet treats\, finger food\, booth sa
+ les\, door prizes and live music. DeFrance Boutique at 70 Beal Parkway NW 
+ runs its own open house the same day from 10:00 AM to 6:00 PM\, with cooki
+ e decorating and letters to Santa for children. Both shops sit in the Beal
+  Street Station shopping center.\n\nPrice: No published price\n\nDetails: 
+ https://coastaleventures.com/events/ev-defrance-christmas-open-house-beal-
+ 1121.html
+URL:https://coastaleventures.com/events/ev-defrance-christmas-open-house-be
+ al-1121.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_grand_boulevard_farmers_market_1024-2026-11-21@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261121T090000
 DTEND;TZID=America/Chicago:20261121T130000
 SUMMARY:Grand Boulevard Farmers Market
@@ -372,7 +471,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_farmers_market-2026-11-21@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261121T090000
 DTEND;TZID=America/Chicago:20261121T130000
 SUMMARY:Seaside Farmers Market
@@ -391,7 +490,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_pensacola_elf_parade_1127-2026-11-27@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:Pensacola Elf Parade
@@ -411,7 +510,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_navarre_christmas_tree_lighting_1127-2026-11-27@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261127T163000
 DTEND;TZID=America/Chicago:20261127T173000
 SUMMARY:Navarre Community Christmas Tree Lighting
@@ -429,7 +528,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_downtown_fwb_saturday_market_0912-2026-11-28@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261128T080000
 DTEND;TZID=America/Chicago:20261128T130000
 SUMMARY:Downtown FWB Saturday Market
@@ -449,7 +548,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_grand_boulevard_farmers_market_1024-2026-11-28@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261128T090000
 DTEND;TZID=America/Chicago:20261128T130000
 SUMMARY:Grand Boulevard Farmers Market
@@ -469,7 +568,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_farmers_market-2026-11-28@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261128T090000
 DTEND;TZID=America/Chicago:20261128T130000
 SUMMARY:Seaside Farmers Market
@@ -488,7 +587,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_hillcrest_openplay-2026-11-30@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261130T090000
 DTEND;TZID=America/Chicago:20261130T110000
 SUMMARY:Preschool Playground Open Play: Hillcrest
@@ -506,7 +605,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_foley_christmas_in_the_park_1204-2026-12-04@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261204T180000
 DTEND;TZID=America/Chicago:20261204T190000
 SUMMARY:Christmas in the Park\, Foley
@@ -526,7 +625,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_crestview_christmas_parade_1205-2026-12-05@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261206
 SUMMARY:Main Street Crestview Christmas Parade
@@ -544,9 +643,31 @@ CATEGORIES:Town and community
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_defrance_christmas_open_house_eglin_1205-2026-12-05@coastaleventures
+ .com
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261205T090000
+DTEND;TZID=America/Chicago:20261205T170000
+SUMMARY:Christmas Open House at DeFrance on Eglin Parkway
+LOCATION:DeFrance Antiques on Eglin Parkway\, 230 Eglin Pkwy SE\, Fort Walt
+ on Beach\, FL 32548
+DESCRIPTION:Saturday 12/5 · 9:00 AM to 5:00 PM\n\nDeFrance Antiques thanks
+  its customers each year on the first Saturday of December with sweet trea
+ ts\, finger food and vendor sales. A special mailbox lets children write l
+ etters to Santa. An outdoor market with vendors runs in the west parking l
+ ot from 9:00 AM to 2:00 PM\, and the owner grills burgers and hot dogs to 
+ fund Christmas gifts for children in need.\n\nPrice: No published price\n\
+ nDetails: https://coastaleventures.com/events/ev-defrance-christmas-open-h
+ ouse-eglin-1205.html
+URL:https://coastaleventures.com/events/ev-defrance-christmas-open-house-eg
+ lin-1205.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_foley_christmas_parade_let_it_snow_1205-2026-12-05@coastaleventures.
  com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261205T090000
 DTEND;TZID=America/Chicago:20261205T140000
 SUMMARY:Foley Christmas Parade and Let It Snow Marketplace
@@ -566,7 +687,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_grand_boulevard_farmers_market_1024-2026-12-05@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261205T090000
 DTEND;TZID=America/Chicago:20261205T130000
 SUMMARY:Grand Boulevard Farmers Market
@@ -586,7 +707,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_farmers_market-2026-12-05@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261205T090000
 DTEND;TZID=America/Chicago:20261205T130000
 SUMMARY:Seaside Farmers Market
@@ -605,7 +726,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_navarre_christmas_parade_1205-2026-12-05@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261205T130000
 DTEND;TZID=America/Chicago:20261205T140000
 SUMMARY:Navarre Community Christmas Parade
@@ -625,7 +746,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_downtown_fwb_saturday_market_0912-2026-12-12@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261212T080000
 DTEND;TZID=America/Chicago:20261212T130000
 SUMMARY:Downtown FWB Saturday Market
@@ -645,7 +766,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_grand_boulevard_farmers_market_1024-2026-12-12@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261212T090000
 DTEND;TZID=America/Chicago:20261212T130000
 SUMMARY:Grand Boulevard Farmers Market
@@ -665,7 +786,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_farmers_market-2026-12-12@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261212T090000
 DTEND;TZID=America/Chicago:20261212T130000
 SUMMARY:Seaside Farmers Market
@@ -684,7 +805,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_a_very_niceville_christmas_1212-2026-12-12@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261212T140000
 DTEND;TZID=America/Chicago:20261212T200000
 SUMMARY:A Very Niceville Christmas
@@ -704,7 +825,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_grand_boulevard_farmers_market_1024-2026-12-19@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261219T090000
 DTEND;TZID=America/Chicago:20261219T130000
 SUMMARY:Grand Boulevard Farmers Market
@@ -724,7 +845,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_farmers_market-2026-12-19@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261219T090000
 DTEND;TZID=America/Chicago:20261219T130000
 SUMMARY:Seaside Farmers Market
@@ -743,7 +864,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_downtown_fwb_saturday_market_0912-2026-12-26@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261226T080000
 DTEND;TZID=America/Chicago:20261226T130000
 SUMMARY:Downtown FWB Saturday Market
@@ -763,7 +884,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_grand_boulevard_farmers_market_1024-2026-12-26@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261226T090000
 DTEND;TZID=America/Chicago:20261226T130000
 SUMMARY:Grand Boulevard Farmers Market
@@ -783,7 +904,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_farmers_market-2026-12-26@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261226T090000
 DTEND;TZID=America/Chicago:20261226T130000
 SUMMARY:Seaside Farmers Market
@@ -802,7 +923,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_hillcrest_openplay-2026-12-28@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20261228T090000
 DTEND;TZID=America/Chicago:20261228T110000
 SUMMARY:Preschool Playground Open Play: Hillcrest
@@ -820,7 +941,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_moonpie_over_mobile_1231-2026-12-31@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:MoonPie Over Mobile New Year's Eve
@@ -840,7 +961,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_grand_boulevard_farmers_market_1024-2027-01-02@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270102T090000
 DTEND;TZID=America/Chicago:20270102T130000
 SUMMARY:Grand Boulevard Farmers Market
@@ -860,7 +981,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_farmers_market-2027-01-02@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270102T090000
 DTEND;TZID=America/Chicago:20270102T130000
 SUMMARY:Seaside Farmers Market
@@ -879,7 +1000,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_downtown_fwb_saturday_market_0912-2027-01-09@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270109T080000
 DTEND;TZID=America/Chicago:20270109T130000
 SUMMARY:Downtown FWB Saturday Market
@@ -899,7 +1020,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_grand_boulevard_farmers_market_1024-2027-01-09@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270109T090000
 DTEND;TZID=America/Chicago:20270109T130000
 SUMMARY:Grand Boulevard Farmers Market
@@ -919,7 +1040,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_farmers_market-2027-01-09@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270109T090000
 DTEND;TZID=America/Chicago:20270109T130000
 SUMMARY:Seaside Farmers Market
@@ -938,7 +1059,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_grand_boulevard_farmers_market_1024-2027-01-16@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270116T090000
 DTEND;TZID=America/Chicago:20270116T130000
 SUMMARY:Grand Boulevard Farmers Market
@@ -958,7 +1079,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_farmers_market-2027-01-16@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270116T090000
 DTEND;TZID=America/Chicago:20270116T130000
 SUMMARY:Seaside Farmers Market
@@ -977,7 +1098,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_downtown_fwb_saturday_market_0912-2027-01-23@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270123T080000
 DTEND;TZID=America/Chicago:20270123T130000
 SUMMARY:Downtown FWB Saturday Market
@@ -997,7 +1118,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_grand_boulevard_farmers_market_1024-2027-01-23@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270123T090000
 DTEND;TZID=America/Chicago:20270123T130000
 SUMMARY:Grand Boulevard Farmers Market
@@ -1017,7 +1138,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_farmers_market-2027-01-23@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270123T090000
 DTEND;TZID=America/Chicago:20270123T130000
 SUMMARY:Seaside Farmers Market
@@ -1036,7 +1157,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_grand_boulevard_farmers_market_1024-2027-01-30@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270130T090000
 DTEND;TZID=America/Chicago:20270130T130000
 SUMMARY:Grand Boulevard Farmers Market
@@ -1056,7 +1177,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_farmers_market-2027-01-30@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270130T090000
 DTEND;TZID=America/Chicago:20270130T130000
 SUMMARY:Seaside Farmers Market
@@ -1075,7 +1196,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_grand_boulevard_farmers_market_1024-2027-02-06@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270206T090000
 DTEND;TZID=America/Chicago:20270206T130000
 SUMMARY:Grand Boulevard Farmers Market
@@ -1095,7 +1216,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_farmers_market-2027-02-06@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270206T090000
 DTEND;TZID=America/Chicago:20270206T130000
 SUMMARY:Seaside Farmers Market
@@ -1114,7 +1235,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_grand_boulevard_farmers_market_1024-2027-02-13@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270213T090000
 DTEND;TZID=America/Chicago:20270213T130000
 SUMMARY:Grand Boulevard Farmers Market
@@ -1134,7 +1255,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_farmers_market-2027-02-13@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270213T090000
 DTEND;TZID=America/Chicago:20270213T130000
 SUMMARY:Seaside Farmers Market
@@ -1153,7 +1274,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_grand_boulevard_farmers_market_1024-2027-02-20@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270220T090000
 DTEND;TZID=America/Chicago:20270220T130000
 SUMMARY:Grand Boulevard Farmers Market
@@ -1173,7 +1294,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seaside_farmers_market-2027-02-20@coastaleventures.com
-DTSTAMP:20261026T000000Z
+DTSTAMP:20261028T000000Z
 DTSTART;TZID=America/Chicago:20270220T090000
 DTEND;TZID=America/Chicago:20270220T130000
 SUMMARY:Seaside Farmers Market
@@ -1187,6 +1308,27 @@ DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nThe Seaside Farmers Market f
  lished price\n\nDetails: https://coastaleventures.com/events/ev-seaside-fa
  rmers-market.html
 URL:https://coastaleventures.com/events/ev-seaside-farmers-market.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_historic_mobile_hidden_history_lecture_0221-2027-02-21@coastaleventu
+ res.com
+DTSTAMP:20261028T000000Z
+DTSTART;VALUE=DATE:20270221
+DTEND;VALUE=DATE:20270222
+SUMMARY:Mobile's Hidden History lecture at Oakleigh
+LOCATION:Historic Oakleigh\, Cox-Deasy Cottage\, 350 Oakleigh Pl\, Mobile\,
+  AL 36604
+DESCRIPTION:Sunday 2/21 · afternoon\n\nAuthor and former radio host Joe Cu
+ haj tells forgotten stories of Mobile history at Historic Oakleigh\, inclu
+ ding the earliest days of baseball in the city in the 1860s and legends th
+ at sound too unlikely to be true. Seating is limited. Historic Mobile Pres
+ ervation Society members attend free.\n\nPrice: from $10\n\nDetails: https
+ ://coastaleventures.com/events/ev-historic-mobile-hidden-history-lecture-0
+ 221.html
+URL:https://coastaleventures.com/events/ev-historic-mobile-hidden-history-l
+ ecture-0221.html
 CATEGORIES:Town and community
 TRANSP:TRANSPARENT
 END:VEVENT
