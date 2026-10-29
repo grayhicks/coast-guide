@@ -25,10 +25,10 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_history_museum_mobile_gilded_age_1009-2026-10-28@coastaleventures.co
+UID:ev_history_museum_mobile_gilded_age_1009-2026-10-29@coastaleventures.co
  m
-DTSTAMP:20261028T000000Z
-DTSTART;VALUE=DATE:20261028
+DTSTAMP:20261029T000000Z
+DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20270607
 SUMMARY:Mobile in the Gilded Age exhibition at the History Museum of Mobile
 LOCATION:History Museum of Mobile\, 111 S Royal St\, Mobile\, AL 36602
@@ -48,7 +48,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_ss_united_states_farewell_cruise_mobile_1109-2026-11-09@coastalevent
  ures.com
-DTSTAMP:20261028T000000Z
+DTSTAMP:20261029T000000Z
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20261110
 SUMMARY:SS United States Farewell Tour aboard the Perdido Queen
@@ -68,7 +68,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_uss_alabama_december_drill_1205-2026-12-05@coastaleventures.com
-DTSTAMP:20261028T000000Z
+DTSTAMP:20261029T000000Z
 DTSTART;TZID=America/Chicago:20261205T080000
 DTEND;TZID=America/Chicago:20261205T150000
 SUMMARY:December Living History Drill at USS ALABAMA
@@ -88,7 +88,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_old_mobile_tour_1212-2026-12-12@coastaleventures.com
-DTSTAMP:20261028T000000Z
+DTSTAMP:20261029T000000Z
 DTSTART;TZID=America/Chicago:20261212T083000
 DTEND;TZID=America/Chicago:20261212T123000
 SUMMARY:Guided tour of the Old Mobile site from Historic Blakeley
