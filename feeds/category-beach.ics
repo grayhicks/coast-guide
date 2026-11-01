@@ -25,65 +25,8 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_destin_rodeo_weighins-2026-10-29@coastaleventures.com
-DTSTAMP:20261029T000000Z
-DTSTART;TZID=America/Chicago:20261029T100000
-DTEND;TZID=America/Chicago:20261029T190000
-SUMMARY:Destin Fishing Rodeo: Daily Public Weigh-Ins
-LOCATION:Docks behind AJ's Seafood & Oyster Bar\, 116 Harbor Blvd\, Destin\
- , FL 32541
-DESCRIPTION:Daily\, Oct 1 – Oct 31 · 10:00 AM-7:00 PM\n\nAnglers competi
- ng in the month-long Destin Fishing Rodeo bring their catches to the scale
-  on the harbor docks behind AJ's Seafood & Oyster Bar every day in October
- . The public is welcome to watch for free from 10 AM to 7 PM\, and the cro
- wd tends to grow with the size of the fish coming off the boats.\n\nPrice:
-  Free\n\nDetails: https://coastaleventures.com/events/ev-destin-rodeo-weig
- hins.html
-URL:https://coastaleventures.com/events/ev-destin-rodeo-weighins.html
-CATEGORIES:Beach
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_tob_sunset_cruise_1029-2026-10-29@coastaleventures.com
-DTSTAMP:20261029T000000Z
-DTSTART;TZID=America/Chicago:20261029T170000
-DTEND;TZID=America/Chicago:20261029T193000
-SUMMARY:Taste of the Beach sunset cruise on Pensacola Beach
-LOCATION:Baja Coastal Kitchen\, Pensacola Beach\, Pensacola Beach\, FL 3256
- 1
-DESCRIPTION:Thursday 10/29 · 5:00 PM to 7:30 PM\n\nThe Pensacola Beach Cha
- mber of Commerce opens Taste of the Beach with a ticketed sunset cruise an
- d a menu cooked by a featured chef at Baja Coastal Kitchen. The chamber li
- sts the evening from 5:00 PM to 7:30 PM and describes waterfront views and
-  a relaxed coastal atmosphere. It is one of several separately ticketed ev
- ents in the four-day festival.\n\nPrice: from $125\n\nDetails: https://coa
- staleventures.com/events/ev-tob-sunset-cruise-1029.html
-URL:https://coastaleventures.com/events/ev-tob-sunset-cruise-1029.html
-CATEGORIES:Beach
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_tob_vip_trolley_1030-2026-10-30@coastaleventures.com
-DTSTAMP:20261029T000000Z
-DTSTART;VALUE=DATE:20261030
-DTEND;VALUE=DATE:20261031
-SUMMARY:Taste of the Beach VIP trolley dinner on Pensacola Beach
-LOCATION:Pensacola Beach restaurants\, by trolley\, Pensacola Beach\, FL 32
- 561
-DESCRIPTION:Friday 10/30 · departures 4:45 PM\, 5:30 PM\, 6:15 PM and 7:00
-  PM\n\nThe Pensacola Beach Chamber of Commerce runs a multi-course dinner 
- by trolley that stops at select Pensacola Beach restaurants. Guests pick o
- ne of four departure times between 4:45 PM and 7:00 PM. A pricier 7:45 PM 
- Party Dinner Trolley adds a DJ\, a trolley host\, a cocktail at each board
- ing and an after-party.\n\nPrice: from $150\n\nDetails: https://coastaleve
- ntures.com/events/ev-tob-vip-trolley-1030.html
-URL:https://coastaleventures.com/events/ev-tob-vip-trolley-1030.html
-CATEGORIES:Beach
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_tidal_treasures_gulf_state_park_1107-2026-11-07@coastaleventures.com
-DTSTAMP:20261029T000000Z
+DTSTAMP:20261101T000000Z
 DTSTART;TZID=America/Chicago:20261107T100000
 DTEND;TZID=America/Chicago:20261107T110000
 SUMMARY:Tidal Treasures at Gulf State Park
@@ -101,7 +44,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_wickedwinerun_1121-2026-11-21@coastaleventures.com
-DTSTAMP:20261029T000000Z
+DTSTAMP:20261101T000000Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:SKECHERS Wicked Wine Run: Milton
@@ -119,7 +62,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_pb_lighted_boat_parade_1204-2026-12-04@coastaleventures.com
-DTSTAMP:20261029T000000Z
+DTSTAMP:20261101T000000Z
 DTSTART;TZID=America/Chicago:20261204T183000
 DTEND;TZID=America/Chicago:20261204T193000
 SUMMARY:Pensacola Beach Christmas lighted boat parade
@@ -138,7 +81,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_pb_surfing_santa_parade_1206-2026-12-06@coastaleventures.com
-DTSTAMP:20261029T000000Z
+DTSTAMP:20261101T000000Z
 DTSTART;TZID=America/Chicago:20261206T140000
 DTEND;TZID=America/Chicago:20261206T150000
 SUMMARY:Surfing Santa Beach Parade on Pensacola Beach
@@ -158,7 +101,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_flora_bama_polar_bear_dip_0101-2027-01-01@coastaleventures.com
-DTSTAMP:20261029T000000Z
+DTSTAMP:20261101T000000Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Flora-Bama Polar Bear Dip
@@ -178,7 +121,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_polar_bear_plunge_pensacola_beach_0101-2027-01-01@coastaleventures.c
  om
-DTSTAMP:20261029T000000Z
+DTSTAMP:20261101T000000Z
 DTSTART;TZID=America/Chicago:20270101T140000
 DTEND;TZID=America/Chicago:20270101T150000
 SUMMARY:Polar Bear Plunge at Pensacola Beach
