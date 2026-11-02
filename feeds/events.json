@@ -1,45 +1,19 @@
 {
   "name": "Coastal Eventures events",
   "site": "https://coastaleventures.com/",
-  "generated": "2026-11-01",
+  "generated": "2026-11-02",
   "timezone": "America/Chicago",
   "window": {
-    "from": "2026-11-01",
-    "to": "2027-03-01"
+    "from": "2026-11-02",
+    "to": "2027-03-02"
   },
-  "count": 3132,
+  "count": 3111,
   "note": "Event details are compiled from the venue or organizer pages named in each record's sources. Check the venue before you travel. Weather data elsewhere on the site is Open-Meteo, CC BY 4.0.",
   "events": [
     {
-      "id": "ev_blithespirit-2026-11-01",
-      "title": "Blithe Spirit: Theatre 98",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Thu to Sun through 11/1 · 7:30 PM Thu to Sat, 2:30 PM Sun",
-      "venue": "Theatre 98, Fairhope",
-      "address": "350 Morphy Ave, Fairhope, AL 36532",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $20"
-      },
-      "summary": "Noël Coward's classic ghost comedy plays at Theatre 98, Fairhope's intimate community playhouse. The remaining shows run Thursday 10/29 to Sunday 11/1, which makes it an easy dressed-up date night.",
-      "url": "https://coastaleventures.com/events/ev-blithespirit.html",
-      "sources": [
-        {
-          "note": "eschamber.org: Blithe Spirit, Theatre 98 (10/30/2026 performance)",
-          "url": "https://business.eschamber.org/events/details/blithe-spirit-presented-by-theatre-98-10-30-2026-39781"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_ballet_carnival_animals_1101-2026-11-01",
+      "id": "ev_ballet_carnival_animals_1101-2026-11-02",
       "title": "Carnival of the Animals: Ballet Pensacola (Foo Foo Fest)",
-      "date": "2026-11-01",
+      "date": "2026-11-02",
       "endDate": "2026-11-03",
       "startTime": null,
       "endTime": null,
@@ -63,95 +37,9 @@
       "checkedOn": "2026-09-29"
     },
     {
-      "id": "ev_coastal_cat_catpuccinos_cosplay_1101-2026-11-01",
-      "title": "Cat-puccinos and Cosplay HizashiCon charity brunch",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Sunday 11/1 · 9:30 AM to 10:45 AM · 11:15 AM to 12:30 PM",
-      "venue": "Coastal Cat Cafe",
-      "address": "1508 W Garden St, Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $60"
-      },
-      "summary": "Coastal Cat Cafe hosts a charity brunch before HizashiCon with coffee, snacks and a lounge full of 20 or more adoptable cats. Guests can come in costume or as they are, and the cafe is decorated for Halloween weekend. Of each $60 ticket, $15 goes to the cafe's rescue partners. The brunch has two sessions, 9:30 AM to 10:45 AM and 11:15 AM to 12:30 PM.",
-      "url": "https://coastaleventures.com/events/ev-coastal-cat-catpuccinos-cosplay-1101.html",
-      "sources": [
-        {
-          "note": "Coastal Cat Cafe: Cat-puccinos and Cosplay page, read for sessions, price and charity share",
-          "url": "https://www.coastalcatpcola.com/event-details/cat-puccinos-and-cosplay-hizashicon-charity-brunch"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_blakeley_delta_discovery_1031-2026-11-01",
-      "title": "Delta Discovery cruise from Five Rivers",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Saturday 10/31 · 10:00 AM and 1:00 PM · Sunday 11/1 · 1:30 PM",
-      "venue": "Bartram dock, Five Rivers Delta Resource Center",
-      "address": "AWF Delta and Bay Conservation Center at Five Rivers, Spanish Fort, AL 36527",
-      "category": "nature",
-      "categoryLabel": "Nature and outdoors",
-      "price": {
-        "kind": "priced",
-        "label": "from $15"
-      },
-      "summary": "Historic Blakeley State Park runs 90-minute boat trips into the Mobile-Tensaw Delta, which the park calls the American Amazon. The boats leave from the Bartram dock at the AWF Delta and Bay Conservation Center at Five Rivers. The park lists two departures on Saturday, October 31, at 10:00 AM and 1:00 PM, and one on Sunday, November 1, at 1:30 PM.",
-      "url": "https://coastaleventures.com/events/ev-blakeley-delta-discovery-1031.html",
-      "sources": [
-        {
-          "note": "Historic Blakeley State Park: Delta Discovery Tour pages, read for the 10:00 AM and 1:00 PM departures on October 31, the 1:30 PM departure on November 1, $22 adults and $15 kids 6 to 12",
-          "url": "https://www.blakeleypark.com/Things-to-Do/Events"
-        },
-        {
-          "note": "Historic Blakeley State Park: Delta Discovery Tour detail page for the 10:00 AM departure",
-          "url": "https://www.blakeleypark.com/Things-to-Do/Events/AgentType/View/PropertyID/270"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_trinity_delta_reign_prerelease_1025-2026-11-01",
-      "title": "Delta Reign Pre-Release at Trinity Games",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Sunday 11/1 · start time not posted · SOLD OUT",
-      "venue": "Trinity Games",
-      "address": "2400 West Michigan Avenue Unit 27, Pensacola, FL 32526",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $30"
-      },
-      "summary": "Trinity Games runs the Pokémon TCG Mega Evolution Delta Reign pre-release tournament on Sunday, November 1. Entry is $30 and includes a ready-to-play 40-card deck, four booster packs, a stamped promo card and a digital code card. Play is Swiss with random pairings. The shop's page showed the November 1 date as sold out on 10/28.",
-      "url": "https://coastaleventures.com/events/ev-trinity-delta-reign-prerelease-1025.html",
-      "sources": [
-        {
-          "note": "trinitygamesllc.com entry page, read 2026-10-21: dates October 25th and November 1st, $30.00; the October 25th option is sold out, November 1st is available",
-          "url": "https://trinitygamesllc.com/products/delta-reign-pre-release-entry"
-        },
-        {
-          "note": "trinitygamesllc.com contact page: 2400 West Michigan Avenue, Unit 27, Pensacola, 850-285-0202",
-          "url": "https://trinitygamesllc.com/pages/contact"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_fwb_library_elevate_relationship_workshop_1030-2026-11-01",
+      "id": "ev_fwb_library_elevate_relationship_workshop_1030-2026-11-02",
       "title": "Elevate Relationship Workshop at the Fort Walton Beach Library",
-      "date": "2026-11-01",
+      "date": "2026-11-02",
       "endDate": "2026-11-07",
       "startTime": null,
       "endTime": null,
@@ -175,9 +63,9 @@
       "checkedOn": "2026-10-28"
     },
     {
-      "id": "ev_foo_foo_festival_2026-2026-11-01",
+      "id": "ev_foo_foo_festival_2026-2026-11-02",
       "title": "Foo Foo Festival",
-      "date": "2026-11-01",
+      "date": "2026-11-02",
       "endDate": "2026-11-09",
       "startTime": null,
       "endTime": null,
@@ -201,39 +89,9 @@
       "checkedOn": null
     },
     {
-      "id": "ev_game_days_at_marina_bar_and_grill_1001-2026-11-01",
-      "title": "Game Days at Marina Bar & Grill",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Saturdays (college football) and Sundays (NFL), plus select Monday and Thursday nights",
-      "venue": "Marina Bar & Grill, Sandestin Golf and Beach Resort",
-      "address": "9300 Emerald Coast Pkwy W, Miramar Beach, FL 32550",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Marina Bar & Grill at Baytowne Marina runs its own Game Days program, showing NCAA football on Saturdays and NFL games on Sundays plus select Monday and Thursday nights. It sits right on the marina at Sandestin.",
-      "url": "https://coastaleventures.com/events/ev-game-days-at-marina-bar-and-grill-1001.html",
-      "sources": [
-        {
-          "note": "sandestin.com: the organizer's own page, read for the admission",
-          "url": "https://www.sandestin.com/things-to-do/events/game-days-at-marina-bar-grill-0"
-        },
-        {
-          "note": "sandestin.com: the admission",
-          "url": "https://www.sandestin.com/marina-bar-grill"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_greater_gulf_state_fair_1030-2026-11-01",
+      "id": "ev_greater_gulf_state_fair_1030-2026-11-02",
       "title": "Greater Gulf State Fair",
-      "date": "2026-11-01",
+      "date": "2026-11-02",
       "endDate": "2026-11-08",
       "startTime": null,
       "endTime": null,
@@ -265,35 +123,9 @@
       "checkedOn": "2026-09-29"
     },
     {
-      "id": "ev_jazz_art_writers_south_festival_youth_exhibi_0915-2026-11-01",
-      "title": "Jazz Art Writers South Festival Youth Exhibit",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "During library hours through 11/1",
-      "venue": "West Regional Library",
-      "address": "5555 Grelot Road, Mobile, AL 36609",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "West Regional Library hosts this youth exhibition tied to the Jazz Art Writers South Festival, a partnership between Mobile Arts Council and Amp Up Arts. More than 50 paintings by artists ages 8 to 18 line the space, each interpreting jazz through color and line. It hangs all day during the library's own hours through November 1, so call the library to confirm them before you go.",
-      "url": "https://coastaleventures.com/events/ev-jazz-art-writers-south-festival-youth-exhibi-0915.html",
-      "sources": [
-        {
-          "note": "mobilepubliclibrary.org: the organizer's own page, read for the admission",
-          "url": "https://www.mobilepubliclibrary.org/events/day/2026/09/17"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_jazz_art_writers_south_festival_youth_exhibi_0801-2026-11-01",
+      "id": "ev_jazz_art_writers_south_festival_youth_exhibi_0801-2026-11-02",
       "title": "Jazz Art Writers South Festival Youth Exhibit 2026",
-      "date": "2026-11-01",
+      "date": "2026-11-02",
       "endDate": "2026-12-15",
       "startTime": null,
       "endTime": null,
@@ -317,35 +149,9 @@
       "checkedOn": "2026-10-28"
     },
     {
-      "id": "ev_downtown_music_hall_last_rites_1031-2026-11-01",
-      "title": "Last Rites vampire night at Downtown Music Hall",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Saturday 10/31 · 10:00 PM to 3:00 AM",
-      "venue": "Downtown Music Hall",
-      "address": "212 Miracle Strip Pkwy SE, Fort Walton Beach, FL 32548",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "priced",
-        "label": "from $20"
-      },
-      "summary": "Downtown Music Hall stays open until 3 AM on Halloween for a vampire-themed night of goth, industrial and darkwave DJs, with DJ Chubby, DJ Interface and DJ Meduxa. Expect blood bags, specialty cocktails, a costume contest and photo spots. It is 18 and over, and gothic or dark formal dress is encouraged.",
-      "url": "https://coastaleventures.com/events/ev-downtown-music-hall-last-rites-1031.html",
-      "sources": [
-        {
-          "note": "Downtown Music Hall Eventbrite page: \"a night of vampires, ritual, decadence, and dancing until the early hours\", $20 ADV / $25 DOS, 18+",
-          "url": "https://www.eventbrite.com/e/downtown-music-hall-presents-last-rites-tickets-1998387523879"
-        }
-      ],
-      "checkedOn": "2026-10-23"
-    },
-    {
-      "id": "ev_lightspill_mirrored_sphere_art_ins_1029-2026-11-01",
+      "id": "ev_lightspill_mirrored_sphere_art_ins_1029-2026-11-02",
       "title": "Lightspill (mirrored-sphere art installation)",
-      "date": "2026-11-01",
+      "date": "2026-11-02",
       "endDate": "2026-11-09",
       "startTime": null,
       "endTime": null,
@@ -369,9 +175,9 @@
       "checkedOn": "2026-10-03"
     },
     {
-      "id": "ev_history_museum_mobile_gilded_age_1009-2026-11-01",
+      "id": "ev_history_museum_mobile_gilded_age_1009-2026-11-02",
       "title": "Mobile in the Gilded Age exhibition at the History Museum of Mobile",
-      "date": "2026-11-01",
+      "date": "2026-11-02",
       "endDate": "2027-06-06",
       "startTime": null,
       "endTime": null,
@@ -399,9 +205,9 @@
       "checkedOn": "2026-10-28"
     },
     {
-      "id": "ev_mpl_mobile_music_legends_exhibit_moorer_1101-2026-11-01",
+      "id": "ev_mpl_mobile_music_legends_exhibit_moorer_1101-2026-11-02",
       "title": "Mobile Music Legends exhibit at Moorer Branch Library",
-      "date": "2026-11-01",
+      "date": "2026-11-02",
       "endDate": "2026-12-15",
       "startTime": null,
       "endTime": null,
@@ -425,39 +231,9 @@
       "checkedOn": "2026-10-28"
     },
     {
-      "id": "ev_neal_francis_lagunas_1101-2026-11-01",
-      "title": "Neal Francis with Sam Fribush Trio at Laguna's",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Sunday 11/1 · doors 6:00 PM, show 7:30 PM",
-      "venue": "Laguna's Adventure Park (Tiki Deck)",
-      "address": "460 Pensacola Beach Blvd, Pensacola Beach, FL 32561",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Neal Francis plays the Tiki Deck at Laguna's on Pensacola Beach, with the Sam Fribush Trio opening. He is touring his album Return To Zero, a mix of rock and 1970s dance music. Night Moves Pensacola, Foo Foo Fest and Floored present the show.",
-      "url": "https://coastaleventures.com/events/ev-neal-francis-lagunas-1101.html",
-      "sources": [
-        {
-          "note": "Visit Pensacola listing: \"Sunday, November 1 @ 7:30P, Doors at 6PM, 460 Pensacola Beach Blvd\"",
-          "url": "https://www.visitpensacola.com/events/neal-francis-at-lagunas/"
-        },
-        {
-          "note": "JamBase venue page: \"Neal Francis at Laguna's Beach Bar + Grill, Sun Nov 1, 2026\"",
-          "url": "https://www.jambase.com/venue/lagunas-beach-bar-grill"
-        }
-      ],
-      "checkedOn": "2026-10-23"
-    },
-    {
-      "id": "ev_night_moves_music_fest_1029-2026-11-01",
+      "id": "ev_night_moves_music_fest_1029-2026-11-02",
       "title": "Night Moves Music Fest",
-      "date": "2026-11-01",
+      "date": "2026-11-02",
       "endDate": "2026-11-08",
       "startTime": null,
       "endTime": null,
@@ -489,65 +265,9 @@
       "checkedOn": "2026-10-23"
     },
     {
-      "id": "ev_painting_with_a_twist_pensacola_pa_1003-2026-11-01",
-      "title": "Painting with a Twist Pensacola: paint-and-sip, family paint days and date nights (weekly programme)",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Classes most days: family days Saturday 10:30 AM, brunch Sunday 11 AM, evenings Wednesday to Saturday",
-      "venue": "Painting with a Twist Pensacola",
-      "address": "4771 Bayou Blvd Suite C11, Pensacola, FL 32503",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "$35 per family"
-      },
-      "summary": "Painting with a Twist Pensacola is an artist-led paint-and-sip studio at 4771 Bayou Blvd Suite C11 with several classes every week. October has family paint days (ages 6 and up with a parent, no alcohol), adult Paint & Sip and Date Night classes (ages 16 and up on date nights), Halloween-themed canvases and Paint Your Pet. Classes cost $35-$60 depending on the class, and alcohol is sold on site with no BYOB.",
-      "url": "https://coastaleventures.com/events/ev-painting-with-a-twist-pensacola-pa-1003.html",
-      "sources": [
-        {
-          "note": "Studio page: address 4771 Bayou Blvd Suite C11, phone (850) 471-1450, Alcohol for Purchase, No BYOB; Brushes & Brunch Oct 4 $35-45, Treat Yourself Tuesday Oct 6 6 PM",
-          "url": "https://www.paintingwithatwist.com/studio/pensacola"
-        },
-        {
-          "note": "October calendar: class names, times and prices Oct 3-31",
-          "url": "https://www.paintingwithatwist.com/studio/pensacola/calendar/"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_fair-2026-11-01",
-      "title": "Pensacola Interstate Fair",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Oct 22 to Nov 1",
-      "venue": "Pensacola Interstate Fairgrounds",
-      "address": "6655 Mobile Hwy, Pensacola, FL 32526",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $7.24"
-      },
-      "summary": "Eleven days of rides, livestock barns and fried everything at the fairgrounds off Mobile Highway. Gate admission is $16.06 for adults and $7.24 for children 4 to 11, and children 3 and under are free.",
-      "url": "https://coastaleventures.com/events/ev-fair.html",
-      "sources": [
-        {
-          "note": "pensacolafair.com: “The 2026 Pensacola Interstate Fair will take place on October 22 to November 1”",
-          "url": "https://pensacolafair.com/general-fair-information/"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_bay_center_public_skate_nov_1101-2026-11-01",
+      "id": "ev_bay_center_public_skate_nov_1101-2026-11-02",
       "title": "Public Ice Skating at the Pensacola Bay Center, November sessions",
-      "date": "2026-11-01",
+      "date": "2026-11-02",
       "endDate": "2026-11-25",
       "startTime": null,
       "endTime": null,
@@ -571,9 +291,9 @@
       "checkedOn": "2026-10-28"
     },
     {
-      "id": "ev_science_on_the_street_sound_and_mu_1029-2026-11-01",
+      "id": "ev_science_on_the_street_sound_and_mu_1029-2026-11-02",
       "title": "Science on the Street (sound and music science)",
-      "date": "2026-11-01",
+      "date": "2026-11-02",
       "endDate": "2026-11-08",
       "startTime": null,
       "endTime": null,
@@ -597,9 +317,9 @@
       "checkedOn": "2026-10-28"
     },
     {
-      "id": "ev_side_show_musical_penarts_1030-2026-11-01",
+      "id": "ev_side_show_musical_penarts_1030-2026-11-02",
       "title": "Side Show (musical, PenArts)",
-      "date": "2026-11-01",
+      "date": "2026-11-02",
       "endDate": "2026-11-08",
       "startTime": null,
       "endTime": null,
@@ -623,117 +343,9 @@
       "checkedOn": "2026-10-28"
     },
     {
-      "id": "ev_crescent_sunday_funniez_1101-2026-11-01",
-      "title": "Sunday Funniez Comedy Showcase",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Sunday 11/1 · 6:00 PM (doors 5:00 PM)",
-      "venue": "Crescent Theater",
-      "address": "208 Dauphin St, Mobile, AL 36602",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The Crescent Theater on Dauphin Street hosts the Sunday Funniez Comedy Showcase, a stand-up night for adults. The theater's page lists the show for ages 18 and up and gives no lineup, so the comics are a surprise. Doors open an hour before the 6:00 PM start.",
-      "url": "https://coastaleventures.com/events/ev-crescent-sunday-funniez-1101.html",
-      "sources": [
-        {
-          "note": "Sunday Funniez Comedy Showcase on the Crescent Theater's own event page, with date, time and ticket price",
-          "url": "https://crescenttheater.com/tm-event/sunday-funniez-comedy-showcase/"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_psc_sweeney_todd_1023-2026-11-01",
-      "title": "Sweeney Todd: The Demon Barber of Fleet Street",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Fri 10/23 to Sun 11/1 · Fri and Sat 7:30 PM, Sun 2:30 PM",
-      "venue": "Pensacola State College, Ashmore Auditorium, Building 8",
-      "address": "1000 College Blvd, Building 8, Pensacola, FL 32504",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $7"
-      },
-      "summary": "Pensacola State College stages Sweeney Todd: The Demon Barber of Fleet Street in Ashmore Auditorium over two weekends, October 23 to 25 and October 30 to November 1. The college describes the eight-time Tony Award winning musical as a thriller about an exiled barber who seeks revenge on a corrupt system of justice. One performance falls on Halloween night.",
-      "url": "https://coastaleventures.com/events/ev-psc-sweeney-todd-1023.html",
-      "sources": [
-        {
-          "note": "performingarts.pensacolastate.edu: \"Friday, Oct. 23, 7:30 p.m., Saturday, Oct. 24, 7:30 p.m., Sunday, Oct. 25, 2:30 p.m. Friday, Oct. 30, 7:30 p.m., Saturday, Oct. 31, 7:30 p.m., Sunday, Nov. 1, 2:30 p.m.\", Ashmore Auditorium, 1000 College Boulevard, Bldg. 8, Pensacola, Florida 32504, (850) 484-1800",
-          "url": "https://performingarts.pensacolastate.edu"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_sweet_dreams_haunted_attraction_mobile_1009-2026-11-01",
-      "title": "Sweet Dreams Haunted Attraction",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Fridays 7:00 PM to 10:00 PM · Saturdays 7:00 PM to 11:00 PM · Sundays 7:00 PM to 9:00 PM through 11/1",
-      "venue": "Sweet Dreams Haunted Attraction",
-      "address": "811 St Francis St, Mobile, AL 36602",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $25"
-      },
-      "summary": "Sweet Dreams Haunted Attraction runs an indoor haunted house at 811 St Francis St in downtown Mobile on Friday, Saturday and Sunday nights through Sunday, November 1. Guests walk through dark mazes with live scare actors, and optional Blackout and Chamber mini escape games cost extra. The attraction warns it may be too intense for younger children, and every child must be accompanied by an adult.",
-      "url": "https://coastaleventures.com/events/ev-sweet-dreams-haunted-attraction-mobile-1009.html",
-      "sources": [
-        {
-          "note": "sweetdreamshaunt.com: Fridays 7 to 10 PM, Saturdays 7 to 11 PM, Sundays 7 to 9 PM from September 19, tickets online or at the gate, no refunds, 811 St Francis St",
-          "url": "https://sweetdreamshaunt.com"
-        },
-        {
-          "note": "mobilecountyal.gov community events page: Sweet Dreams Haunted Attraction, tickets $25 and up, may be too intense for younger children",
-          "url": "https://www.mobilecountyal.gov/community_events/sweet-dreams-haunted-attraction-2026-10-04"
-        }
-      ],
-      "checkedOn": "2026-10-07"
-    },
-    {
-      "id": "ev_tasteofbeach-2026-11-01",
-      "title": "Taste of the Beach: Pensacola Beach",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Oct 29-Nov 1 · Sat daytime = the family window",
-      "venue": "Casino Beach / beach venues",
-      "address": "7 Casino Beach Blvd., Pensacola Beach, FL 32561",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Saturday is the daylong event at Casino Beach, with cooking demonstrations, challenges and tastings from more than a dozen beach restaurants, and sand for the kids between plates. Thursday opens the weekend with a sunset cruise, Friday is a VIP trolley dinner and Sunday closes with a trolley brunch. Those three are ticketed separately.",
-      "url": "https://coastaleventures.com/events/ev-tasteofbeach.html",
-      "sources": [
-        {
-          "note": "SRIA calendar: Taste of the Beach Oct 29-Nov 1",
-          "url": "https://www.visitpensacolabeach.com/whats-happening-calendar/"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_blue_morning_view_within_1025-2026-11-01",
+      "id": "ev_blue_morning_view_within_1025-2026-11-02",
       "title": "The View Within exhibition at Blue Morning Gallery",
-      "date": "2026-11-01",
+      "date": "2026-11-02",
       "endDate": "2026-11-28",
       "startTime": null,
       "endTime": null,
@@ -757,9 +369,9 @@
       "checkedOn": "2026-10-28"
     },
     {
-      "id": "ev_pensacola_state_wanda_sullivan_bloem-2026-11-01",
+      "id": "ev_pensacola_state_wanda_sullivan_bloem-2026-11-02",
       "title": "Wanda Sullivan: Bloem Exhibition",
-      "date": "2026-11-01",
+      "date": "2026-11-02",
       "endDate": "2026-12-11",
       "startTime": null,
       "endTime": null,
@@ -783,47 +395,9 @@
       "checkedOn": "2026-09-24"
     },
     {
-      "id": "ev_10th_annual_bras_across_the_causeway_5k_and__1010-2026-11-01",
-      "title": "10th Annual Bras Across the CAUSEway 5K & Fun Run",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": "07:30",
-      "endTime": null,
-      "when": "Sunday 11/1 · 5K and 1-mile fun run 7:30 AM (moved from Sat 10/10)",
-      "venue": "USS ALABAMA Battleship Memorial Park",
-      "address": "2703 Battleship Parkway, Mobile, AL 36602",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $35"
-      },
-      "summary": "The 10th annual Bras Across the CAUSEway moved to Sunday, November 1, at USS Alabama Battleship Memorial Park because of Isaias, with a 5K, a festival and a Sunday service. It offers a timed 5K and a family-friendly 1-mile fun run, both at 7:30 AM, with a virtual option too, and raises money for local breast-cancer patients. Registration is $40 for ages 13 and up and $35 for 12 and under through October 31, and parking is $5 per vehicle.",
-      "url": "https://coastaleventures.com/events/ev-10th-annual-bras-across-the-causeway-5k-and-1010.html",
-      "sources": [
-        {
-          "note": "brasacrossthecauseway.org: the organizer's own page, read for the admission",
-          "url": "https://www.brasacrossthecauseway.org/"
-        },
-        {
-          "note": "runsignup.com: the admission",
-          "url": "https://runsignup.com/Race/AL/Mobile/BrasAcrosstheCAUSEway"
-        },
-        {
-          "note": "runsignup.com: the admission",
-          "url": "https://runsignup.com/Race/BrasAcrosstheCAUSEway/Page/FAQs"
-        },
-        {
-          "note": "ussalabama.com: the admission",
-          "url": "https://www.ussalabama.com/events/"
-        }
-      ],
-      "checkedOn": "2026-10-08"
-    },
-    {
-      "id": "ev_great_bellingrath_harvest_0919-2026-11-01",
+      "id": "ev_great_bellingrath_harvest_0919-2026-11-02",
       "title": "The Great Bellingrath Harvest",
-      "date": "2026-11-01",
+      "date": "2026-11-02",
       "endDate": "2026-11-08",
       "startTime": "08:00",
       "endTime": "17:00",
@@ -849,682 +423,6 @@
         }
       ],
       "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_fort_gaines_gatalop_renfest_1030-2026-11-01",
-      "title": "Gatalop 42 Renaissance Festival",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": "09:00",
-      "endTime": "17:00",
-      "when": "Friday 10/30 to Sunday 11/1 · 9:00 AM to 5:00 PM daily",
-      "venue": "Historic Fort Gaines",
-      "address": "95 Bienville Blvd., Dauphin Island, AL 36528",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Costumed performers stage a Renaissance-fair-style weekend inside the walls of Historic Fort Gaines on Dauphin Island. Mobile County's listing does not publish an admission price.",
-      "url": "https://coastaleventures.com/events/ev-fort-gaines-gatalop-renfest-1030.html",
-      "sources": [
-        {
-          "note": "Mobile County's community events listing, linking to the event's tourism-board page",
-          "url": "https://www.mobilecountyal.gov/community_events/draft-gatalop-42-renaissance-festival-2026-10-30"
-        }
-      ],
-      "checkedOn": "2026-09-24"
-    },
-    {
-      "id": "ev_mma_aminah_robinson_journeys_home_0109-2026-11-01",
-      "title": "Aminah Robinson: Journeys Home at the Mobile Museum of Art",
-      "date": "2026-11-01",
-      "endDate": "2027-01-09",
-      "startTime": "10:00",
-      "endTime": "17:00",
-      "when": "Tuesday to Saturday · 10:00 AM to 5:00 PM · through 1/9",
-      "venue": "Mobile Museum of Art",
-      "address": "4850 Museum Drive, Mobile, AL 36608",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $8"
-      },
-      "summary": "Aminah Robinson: Journeys Home is a special exhibition at the Mobile Museum of Art that draws on the artist's historical research, folklore and personal narrative. The museum describes it as a visual memoir of her life and a tableau of the African American experience. It stays open through January 9, 2027.",
-      "url": "https://coastaleventures.com/events/ev-mma-aminah-robinson-journeys-home-0109.html",
-      "sources": [
-        {
-          "note": "Mobile Museum of Art home page, read for the exhibition description and closing date",
-          "url": "https://mobilemuseumofart.com/"
-        },
-        {
-          "note": "Mobile Museum of Art visit page, read for hours, address and general admission prices",
-          "url": "https://www.mobilemuseumofart.com/visit/"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_mobile_museum_gateway_exhibition_0901-2026-11-01",
-      "title": "Gateway: From Graffiti to Gallery at the Mobile Museum of Art",
-      "date": "2026-11-01",
-      "endDate": "2027-09-01",
-      "startTime": "10:00",
-      "endTime": "17:00",
-      "when": "Wednesday to Saturday · 10:00 AM to 5:00 PM, through 9/1/2027",
-      "venue": "Mobile Museum of Art",
-      "address": "4850 Museum Dr, Mobile, AL 36608",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $8"
-      },
-      "summary": "The Mobile Museum of Art traces how artists who started with graffiti in New York's subways moved into galleries, with work by Basquiat, Haring, Scharf, KAWS and Banksy from the Masterworks Foundation collection. The show runs a full year, Wednesday through Saturday. Mobile County residents get in free on Thursdays.",
-      "url": "https://coastaleventures.com/events/ev-mobile-museum-gateway-exhibition-0901.html",
-      "sources": [
-        {
-          "note": "Mobile Museum of Art exhibition page: \"September 1, 2026 to September 1, 2027; Tuesday through Saturday, 10am to 5pm; Adults $12\"",
-          "url": "https://www.mobilemuseumofart.com/exhibitions/gateway/"
-        },
-        {
-          "note": "Mobile Museum of Art home page: \"Open through Sept. 1, 2027\"",
-          "url": "https://mobilemuseumofart.com"
-        },
-        {
-          "note": "Mobile County listing: \"FREE on Thursdays for Mobile County residents\"",
-          "url": "https://www.mobilecountyal.gov/community_events/gateway-from-graffiti-to-gallery-2026-09-01"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_greater_gulf_artisan_showcase_1030-2026-11-01",
-      "title": "Greater Gulf Artisan Showcase",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": "10:00",
-      "endTime": "17:00",
-      "when": "Friday 10/30 to Sunday 11/1 · 10:00 AM to 5:00 PM daily",
-      "venue": "The Grounds",
-      "address": "1035 Cody Rd N, Mobile, AL 36608",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Local artists, artisans and makers fill The Grounds in Mobile for a three-day market of original artwork, jewelry, home decor, textiles, ceramics and prints. There are live art demonstrations and local food vendors. Admission is free all three days.",
-      "url": "https://coastaleventures.com/events/ev-greater-gulf-artisan-showcase-1030.html",
-      "sources": [
-        {
-          "note": "Eventbrite page: \"October 30 to November 1, 2026, Friday to Sunday, 10:00 AM to 5:00 PM, 1035 Cody Road North, Mobile, FREE for all guests!\"",
-          "url": "https://www.eventbrite.com/e/greater-gulf-artisan-showcase-tickets-2003509905059"
-        }
-      ],
-      "checkedOn": "2026-10-23"
-    },
-    {
-      "id": "ev_mma_handle_with_care_0327-2026-11-01",
-      "title": "Handle with Care at the Mobile Museum of Art",
-      "date": "2026-11-01",
-      "endDate": "2027-03-27",
-      "startTime": "10:00",
-      "endTime": "17:00",
-      "when": "Tuesday to Saturday · 10:00 AM to 5:00 PM · through 3/27",
-      "venue": "Mobile Museum of Art",
-      "address": "4850 Museum Drive, Mobile, AL 36608",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $8"
-      },
-      "summary": "Handle with Care is an interactive special exhibition at the Mobile Museum of Art. Artists Calder Kamin of Austin and Jacob Reptile of New Orleans turn trash into soft, complex sculptures that visitors move through as an environment. It stays open through March 27, 2027.",
-      "url": "https://coastaleventures.com/events/ev-mma-handle-with-care-0327.html",
-      "sources": [
-        {
-          "note": "Mobile Museum of Art home page, read for the exhibition description and closing date",
-          "url": "https://mobilemuseumofart.com/"
-        },
-        {
-          "note": "Mobile Museum of Art visit page, read for hours, address and general admission prices",
-          "url": "https://www.mobilemuseumofart.com/visit/"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_uwf_make_it_last_1001-2026-11-01",
-      "title": "Make It Last: Gallery Exhibition at UWF",
-      "date": "2026-11-01",
-      "endDate": "2026-11-20",
-      "startTime": "10:00",
-      "endTime": "16:00",
-      "when": "Weekdays through 11/20 · 10:00 AM to 4:00 PM",
-      "venue": "UWF Center for Fine and Performing Arts, Building 82, The Art Gallery",
-      "address": "11000 University Parkway, Pensacola, FL 32514",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Make It Last is an exhibition in The Art Gallery at the UWF Center for Fine and Performing Arts, curated by a UWF graduate. Six artists share the space, which includes a conversation pit in the gallery alcove and a poetry wall that visitors fill with their own work. Admission is free.",
-      "url": "https://coastaleventures.com/events/ev-uwf-make-it-last-1001.html",
-      "sources": [
-        {
-          "note": "events.uwf.edu: Make It Last, free, weekdays 10 AM to 4 PM from October 1 to November 20 at the Center for Fine and Performing Arts, Building 82, with an opening reception October 8 from 5 to 7 PM",
-          "url": "https://events.uwf.edu/event/make-it-last"
-        },
-        {
-          "note": "events.uwf.edu: opening reception for Make It Last, October 8, 5 to 7 PM, free",
-          "url": "https://events.uwf.edu/event/opening-reception-for-make-it-last"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_mma_timeless_hats_0130-2026-11-01",
-      "title": "Timeless Hats by Susie Mae Pugh-Williams at the Mobile Museum of Art",
-      "date": "2026-11-01",
-      "endDate": "2027-01-30",
-      "startTime": "10:00",
-      "endTime": "17:00",
-      "when": "Tuesday to Saturday · 10:00 AM to 5:00 PM · through 1/30",
-      "venue": "Mobile Museum of Art",
-      "address": "4850 Museum Drive, Mobile, AL 36608",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $8"
-      },
-      "summary": "Timeless Hats is a special exhibition of more than two dozen hats at the Mobile Museum of Art. Some were made by Mrs. Williams, and others are hats she admired and drew inspiration from for her own creations. It stays open through January 30, 2027.",
-      "url": "https://coastaleventures.com/events/ev-mma-timeless-hats-0130.html",
-      "sources": [
-        {
-          "note": "Mobile Museum of Art home page, read for the exhibition description and closing date",
-          "url": "https://mobilemuseumofart.com/"
-        },
-        {
-          "note": "Mobile Museum of Art visit page, read for hours, address and general admission prices",
-          "url": "https://www.mobilemuseumofart.com/visit/"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_decorate_with_us_quayside_1008-2026-11-01",
-      "title": "Decorate with Us at Quayside Art Gallery",
-      "date": "2026-11-01",
-      "endDate": "2026-11-16",
-      "startTime": "11:00",
-      "endTime": "17:00",
-      "when": "Daily through 11/16 · 11:00 AM to 5:00 PM",
-      "venue": "Quayside Art Gallery",
-      "address": "17 E Zaragoza St, Pensacola, FL 32502",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Quayside Art Gallery in Pensacola's historic district turns its first floor into a set of home style living spaces to show how local art fits a room. The show highlights all of the gallery's artists, with work ranging from large paintings and photography to pottery, glass, jewelry and wooden inlaid furniture. It is aimed at decorators, designers, realtors and condo owners, though anyone can walk in.",
-      "url": "https://coastaleventures.com/events/ev-decorate-with-us-quayside-1008.html",
-      "sources": [
-        {
-          "note": "Quayside Art Gallery's own Decorate with US flyer, read for the October 8 to November 16 run, daily 11 AM to 5 PM hours and the November 6 First Friday late opening",
-          "url": "https://www.quaysidegallery.com/publicevents/"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_onehopeful_chili_cookoff_1101-2026-11-01",
-      "title": "One Hopeful Place Chili Cook-Off",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": "11:00",
-      "endTime": "14:00",
-      "when": "Sunday 11/1 · 11:00 AM to 2:00 PM",
-      "venue": "Lou's Tavern",
-      "address": "605 James Lee Rd, Fort Walton Beach, FL 32548",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $10"
-      },
-      "summary": "Local cooks compete for first, second and third place while guests taste the chilis and vote. Proceeds support One Hopeful Place and the people it serves. The page does not say whether children are welcome, so call before bringing them.",
-      "url": "https://coastaleventures.com/events/ev-onehopeful-chili-cookoff-1101.html",
-      "sources": [
-        {
-          "note": "One Hopeful Place 2026 chili cook-off page: Sunday November 1, 11 AM to 2 PM, Lou's Tavern, $10 tasting ticket",
-          "url": "https://onehopefulplace.org/2026-chili-cook-off/"
-        }
-      ],
-      "checkedOn": "2026-10-21"
-    },
-    {
-      "id": "ev_coastalmakers_grand_opening_1101-2026-11-01",
-      "title": "Coastal Makers grand opening party",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": "12:00",
-      "endTime": "16:00",
-      "when": "Sunday 11/1 · 12:00 PM to 4:00 PM",
-      "venue": "Coastal Makers",
-      "address": "63 N Florida St, Mobile, AL 36607",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Coastal Makers celebrates the opening of its 5,000 square foot creative studio in downtown Mobile. The party has free crafts and hands-on experiences, food, giveaways and a chance to meet the artists who teach there. Grand opening membership specials are also offered.",
-      "url": "https://coastaleventures.com/events/ev-coastalmakers-grand-opening-1101.html",
-      "sources": [
-        {
-          "note": "Coastal Makers: upcoming events calendar, read for the November 1 grand opening, hours and free crafts",
-          "url": "https://coastalmakers.com/upcomingevents"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_pvc_vintage_block_party_1101-2026-11-01",
-      "title": "PVc Vintage Block Party Market",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": "12:00",
-      "endTime": "17:00",
-      "when": "Sunday 11/1 · 12:00 PM to 5:00 PM",
-      "venue": "The Handlebar (outdoors)",
-      "address": "319 N Tarragona St, Pensacola, FL 32501",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Dozens of vintage clothing dealers set up outside The Handlebar for a Sunday afternoon market, alongside art, handmade goods, jewelry and home decor. Food trucks, drinks and live music are planned, and entry is free. Visit Pensacola notes that downtown parking is free on Sundays.",
-      "url": "https://coastaleventures.com/events/ev-pvc-vintage-block-party-1101.html",
-      "sources": [
-        {
-          "note": "Visit Pensacola listing: \"Free family friendly event\" on Sunday Nov 1, noon to 5 PM",
-          "url": "https://www.visitpensacola.com/events/pvc-vintage-block-party-market1/"
-        },
-        {
-          "note": "Allevents listing: \"FREE family friendly event\"",
-          "url": "https://allevents.in/pensacola/pvc-vintage-block-party-market/200030879446720"
-        }
-      ],
-      "checkedOn": "2026-10-23"
-    },
-    {
-      "id": "ev_flounders_sunday_music_1101-2026-11-01",
-      "title": "Sunday afternoon live music at Flounder's Chowder House",
-      "date": "2026-11-01",
-      "endDate": "2026-12-27",
-      "startTime": "12:00",
-      "endTime": "16:00",
-      "when": "Sundays 11/1 through 12/27 · 12:00 PM to 4:00 PM",
-      "venue": "Flounder's Chowder House",
-      "address": "800 Quietwater Beach Road, Gulf Breeze, FL 32561",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Flounder's Chowder House on Quietwater Beach schedules live music on Sunday afternoons from 12:00 PM to 4:00 PM. Tim Spencer plays November 1, 15 and 29 and December 27, John Hart plays November 8 and December 6, and Jason Crysell plays November 22 and December 20. The page also lists Tim Spencer on Saturday December 12 for the same hours.",
-      "url": "https://coastaleventures.com/events/ev-flounders-sunday-music-1101.html",
-      "sources": [
-        {
-          "note": "Flounder's Chowder House: entertainment page, read for the Sunday performers, dates and 12:00 PM to 4:00 PM hours",
-          "url": "https://flounderschowderhouse.com/entertainment"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_brunch_and_rally_0823-2026-11-01",
-      "title": "Brunch & Rally",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": "13:00",
-      "endTime": "17:00",
-      "when": "Sundays · 1:00 PM to 5:00 PM",
-      "venue": "Pickleball at OWA",
-      "address": "200-A N. OWA Blvd, Foley, AL 36535",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $10"
-      },
-      "summary": "Pickleball at OWA runs indoor open play every Sunday afternoon, paired with a discount for anyone who shows a same-day receipt from Waffles R Wild. Open play costs $10 for nonmembers, members play free, and a Waffles R Wild receipt brings the nonmember rate down to $7. It repeats weekly, so today's session is one stop on an ongoing schedule.",
-      "url": "https://coastaleventures.com/events/ev-brunch-and-rally-0823.html",
-      "sources": [
-        {
-          "note": "visitowa.com: the organizer's own page, read for the admission and current schedule",
-          "url": "https://visitowa.com/entertainment/pickleball-at-owa/"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_pokemon_league_at_trinity_games_1004-2026-11-01",
-      "title": "Pokémon League at Trinity Games",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": "13:00",
-      "endTime": "16:00",
-      "when": "Sundays · 1 PM-4 PM",
-      "venue": "Trinity Games",
-      "address": "2400 W Michigan Ave Unit 27, Pensacola, FL 32526",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Pokémon League at Trinity Games is a free weekly play session every Sunday from 1-4 PM at the shop in Pensacola. Trinity Games is a Wizards-certified Magic and trading card store with open play tables. The shop also runs other Pokémon events.",
-      "url": "https://coastaleventures.com/events/ev-pokemon-league-at-trinity-games-1004.html",
-      "sources": [
-        {
-          "note": "Weekly Events banner: Sun PokeMon League 1-4 PM FREE",
-          "url": "https://trinitygamesllc.com/pages/events"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_yu_gi_oh_weekly_casual_play_and_to_1004-2026-11-01",
-      "title": "Yu-Gi-Oh! Weekly Casual Play and Tournament",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": "13:00",
-      "endTime": null,
-      "when": "Sundays · 1 PM",
-      "venue": "GameMasters Guild",
-      "address": "743 Ashley Drive, Crestview, FL 32536",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $5"
-      },
-      "summary": "The Yu-Gi-Oh weekly tournament is an Advanced Constructed Yu-Gi-Oh TCG event at GameMasters Guild in Crestview, every Sunday at 1 PM. Entry is $5 including tax. Every player gets an OTS pack, and top placers get more.",
-      "url": "https://coastaleventures.com/events/ev-yu-gi-oh-weekly-casual-play-and-to-1004.html",
-      "sources": [
-        {
-          "note": "Yu-Gi-Oh weekly Sunday tournament 1 PM $5",
-          "url": "https://gmgcrestview.com/events/"
-        },
-        {
-          "note": "GameMasters Guild's own embedded Google Calendar feed (gmgcrestview@aol.com), read as ICS today: Yu-Gi-Oh weekly Sunday tournament 1 PM $5",
-          "url": "https://calendar.google.com/calendar/ical/gmgcrestview%40aol.com/public/basic.ics"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_friendsgiving_favorites_pensacola_cooks_1101-2026-11-01",
-      "title": "Friendsgiving Favorites cooking class at Pensacola Cooks",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": "14:00",
-      "endTime": "17:00",
-      "when": "Sunday 11/1 · 2:00 PM to 5:00 PM",
-      "venue": "Pensacola Cooks",
-      "address": "4051 Barrancas Avenue, Pensacola, FL",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Pensacola Cooks teaches a Sunday afternoon class on Friendsgiving dishes. Pensacola Cooks lists the class on its public cooking class calendar, and registration happens online at checkout. The class page does not print a price, though the shop's FAQ says public classes cost $60 to $85.",
-      "url": "https://coastaleventures.com/events/ev-friendsgiving-favorites-pensacola-cooks-1101.html",
-      "sources": [
-        {
-          "note": "Pensacola Cooks: cooking classes page, class date and time, FAQ price range $60 to $85, non-refundable",
-          "url": "https://pensacolacooks.com/cooking-classes"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_hive_fest_hatcher_farms_1101-2026-11-01",
-      "title": "Hive Fest music festival at Hatcher Farms",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": "14:00",
-      "endTime": null,
-      "when": "Sunday 11/1 · 2:00 PM",
-      "venue": "Hatcher Farms Venue",
-      "address": "10780 Jeff Hamilton Road, Mobile, AL 36695",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "priced",
-        "label": "from $65"
-      },
-      "summary": "Hive Fest is a benefit music festival at Hatcher Farms for Be The Change Gulf Coast, a charity that helps individuals and families along the Gulf Coast. The Mobile County listing describes live music, food, drinks, local vendors and lawn games from 2:00 to 6:00 PM. Ticket sales go to the charity.",
-      "url": "https://coastaleventures.com/events/ev-hive-fest-hatcher-farms-1101.html",
-      "sources": [
-        {
-          "note": "Be The Change Gulf Coast on Givebutter: Hive Fest at Hatcher Farms, Sunday November 1 at 2:00 PM, address and Purchase Tickets button",
-          "url": "https://givebutter.com/hive-fest-at-hatcher-farms"
-        },
-        {
-          "note": "Mobile County community events listing: 2:00 to 6:00 PM, live music, food, drinks, vendors, lawn games, general admission $65 per person",
-          "url": "https://www.mobilecountyal.gov/community_events/draft-hive-fest-2026-11-01"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_mary_esther_library_bat_week_family_steam_1028-2026-11-01",
-      "title": "Bat Week Drop In Family STEAM at the Mary Esther Library",
-      "date": "2026-11-01",
-      "endDate": "2026-11-13",
-      "startTime": "14:30",
-      "endTime": "16:00",
-      "when": "Wednesday 10/28 · 2:30 PM to 4:00 PM · also Friday 11/13",
-      "venue": "Mary Esther Library",
-      "address": "100 W. Hollywood Blvd, Mary Esther, FL 32569",
-      "category": "stem",
-      "categoryLabel": "STEM and learning",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Nonie's Animal Encounters visits the Mary Esther Library for a hands-on Bat Week program about bats and why they matter. Families drop in, and the library asks guests to dress for permanent art supplies. Children under 13 must be accompanied by an adult.",
-      "url": "https://coastaleventures.com/events/ev-mary-esther-library-bat-week-family-steam-1028.html",
-      "sources": [
-        {
-          "note": "Okaloosa County Public Library Cooperative calendar page, read for date, time, Bat Week program, adult rule and the November 13 session",
-          "url": "https://okaloosa.librarycalendar.com/event/drop-family-steam-83339"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_painting_with_a_twist_fort_walton_1003-2026-11-01",
-      "title": "Painting with a Twist Fort Walton Beach: paint nights and all-ages sessions (weekly programme)",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": "15:00",
-      "endTime": null,
-      "when": "Classes most weeks: Sunday 3 PM, Monday evenings, Saturday all-ages open studio",
-      "venue": "Painting with a Twist Fort Walton Beach",
-      "address": "255 Miracle Strip Pkwy SE, Suite B-8, Fort Walton Beach, FL 32548",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $27"
-      },
-      "summary": "Painting with a Twist Fort Walton Beach is an artist-led canvas painting studio at 255 Miracle Strip Pkwy SE, Suite B-8, in the Publix shopping center in downtown Fort Walton Beach. October has an all-ages open studio, Halloween sessions, a book-lovers paint night and blacklight painting. Standard canvases cost $37-$39, all-ages sessions $27-$60 and Paint Your Pet $57-$59, and the studio is BYOB-friendly.",
-      "url": "https://coastaleventures.com/events/ev-painting-with-a-twist-fort-walton-1003.html",
-      "sources": [
-        {
-          "note": "Studio page: address, phone (850) 226-7218, BYOB-friendly, Oct 4 Spooky Highland 3 PM $37-39",
-          "url": "https://www.paintingwithatwist.com/studio/fort-walton-beach/"
-        },
-        {
-          "note": "October calendar with ALL AGES sessions and prices",
-          "url": "https://www.paintingwithatwist.com/studio/fort-walton-beach/calendar/"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_hizashicon_anime_festival_1030-2026-11-01",
-      "title": "HizashiCon Anime Festival",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": "16:00",
-      "endTime": null,
-      "when": "Friday 10/30 to Sunday 11/1 · 4:00 PM",
-      "venue": "First United Methodist Church, Wright Place",
-      "address": "6 E Wright St, Pensacola, FL 32501",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $18.36"
-      },
-      "summary": "HizashiCon is an anime and Japanese pop-culture convention put on by the Japan-America Society of Northwest Florida as part of Foo Foo Festival, from October 30 to November 1 in Pensacola. The program includes cosplay contests, panels with voice actors, video game tournaments, artist alley, a vendor hall, live music and an Idol Fest. A Giant Robot documentary screening and a Cat-puccinos and Cosplay brunch at Coastal Cat Cafe are also scheduled.",
-      "url": "https://coastaleventures.com/events/ev-hizashicon-anime-festival-1030.html",
-      "sources": [
-        {
-          "note": "Foo Foo HizashiCon page: Oct 30-Nov 1, schedule, Wright Place 6 E Wright St",
-          "url": "https://foofoofest.com/2026-event/hizashicon/"
-        },
-        {
-          "note": "Organiser passes page: $39.36 weekend, $28.86 Sat, $23.61 Sun, kids 10 and under free",
-          "url": "https://animepensacola.com/passes/"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_tiki_terror_perfect_plain_garden_g_1031-2026-11-01",
-      "title": "Tiki Terror (Perfect Plain, Garden & Grain, The Well)",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": "16:00",
-      "endTime": null,
-      "when": "Saturday 10/31 to Sunday 11/1 · 4:00 PM",
-      "venue": "Perfect Plain Brewing Co.",
-      "address": "50 East Garden Street, Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Tiki Terror is a Halloween event across three venues on East Garden Street: Perfect Plain, Garden & Grain and The Well. It has cursed drink specials, live music, fire dancers and a photo booth. Each drink comes with a tiki token, and one guest is drawn for a grand prize.",
-      "url": "https://coastaleventures.com/events/ev-tiki-terror-perfect-plain-garden-g-1031.html",
-      "sources": [
-        {
-          "note": "Event page: Oct 31 4 PM to Nov 1 1 AM, 50 East Garden Street, costume contest 7 PM",
-          "url": "https://www.perfectplain.com/upcoming-events/tiki-terror"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_ice_flyers_day_of_dead_1101-2026-11-01",
-      "title": "Ice Flyers Day of the Dead Night vs Birmingham",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": "16:05",
-      "endTime": null,
-      "when": "Sunday 11/1 · 4:05 PM",
-      "venue": "Pensacola Bay Center",
-      "address": "201 E Gregory St, Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The Pensacola Ice Flyers host the Birmingham Bulls on Day of the Dead Night, an afternoon game at the Pensacola Bay Center. Puck drop is at 4:05 PM. It is the first home game of November.",
-      "url": "https://coastaleventures.com/events/ev-ice-flyers-day-of-dead-1101.html",
-      "sources": [
-        {
-          "note": "iceflyers.com 2026-27 theme nights: Day of the Dead Night Sunday 11/1 at 4:05 PM against the Birmingham Bulls",
-          "url": "https://iceflyers.com/theme-nights/"
-        },
-        {
-          "note": "iceflyers.com single game tickets: Ticketmaster or the Bay Center box office, no ticket for children 2 and under, children 3 to 12 get 25 percent off at the box office",
-          "url": "https://iceflyers.com/tickets/single-game-tickets/"
-        },
-        {
-          "note": "iceflyers.com military tickets: $2 off at the box office for active, retired and veteran service members and their entire party",
-          "url": "https://iceflyers.com/military-tickets/"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_club27_aaron_heltz_1101-2026-11-01",
-      "title": "Club 27 Comedy: Aaron Heltz",
-      "date": "2026-11-01",
-      "endDate": null,
-      "startTime": "19:00",
-      "endTime": null,
-      "when": "Sunday 11/1 · 7:00 PM",
-      "venue": "Club 27 Comedy",
-      "address": "130 E Government St, Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $20"
-      },
-      "summary": "Aaron Heltz, one of Kill Tony's most recent Golden Ticket winners, plays Club 27 Comedy on Sunday, November 1 at 7:00 PM. The club lists him as a stand-up comedian and entertainer who performs across Louisiana and surrounding areas. Doors open at 6:00 PM, and the show is 21 and over.",
-      "url": "https://coastaleventures.com/events/ev-club27-aaron-heltz-1101.html",
-      "sources": [
-        {
-          "note": "club27comedy.com event page: \"Sunday November 1st, 2026\", \"7:00PM\", Doors 6pm, General Admission $20.00, Table for 2 $55.00, Table for 4 $100.00, 21+",
-          "url": "https://club27comedy.com/events/aaron-heltz"
-        }
-      ],
-      "checkedOn": "2026-10-05"
-    },
-    {
-      "id": "ev_rockyhorror_plt-2026-11-01",
-      "title": "Richard O'Brien's The Rocky Horror Show",
-      "date": "2026-11-01",
-      "endDate": "2026-11-08",
-      "startTime": "19:30",
-      "endTime": null,
-      "when": "Opens Friday 10/30 at 7:30 PM · runs through 11/8",
-      "venue": "Pensacola Little Theatre",
-      "address": "400 S Jefferson St, Pensacola, FL 32502",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Pensacola Little Theatre's Mainstage opens the cult musical The Rocky Horror Show on Halloween weekend, directed by Justin Gaylard, and runs through November 8. The campy sci-fi horror spoof carries adult content and innuendo throughout.",
-      "url": "https://coastaleventures.com/events/ev-rockyhorror-plt.html",
-      "sources": [
-        {
-          "note": "pensacolalittletheatre.com: Richard O'Brien's The Rocky Horror Show, Mainstage, October 30-November 8, 2026, opens 7:30 PM",
-          "url": "https://www.pensacolalittletheatre.com/shows-and-events/richard-obriens-the-rocky-horror-show"
-        }
-      ],
-      "checkedOn": "2026-09-16"
     },
     {
       "id": "ev_cornhole_open_play_0901-2026-11-02",
@@ -1757,6 +655,130 @@
       "checkedOn": "2026-09-26"
     },
     {
+      "id": "ev_mma_aminah_robinson_journeys_home_0109-2026-11-02",
+      "title": "Aminah Robinson: Journeys Home at the Mobile Museum of Art",
+      "date": "2026-11-02",
+      "endDate": "2027-01-09",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "when": "Tuesday to Saturday · 10:00 AM to 5:00 PM · through 1/9",
+      "venue": "Mobile Museum of Art",
+      "address": "4850 Museum Drive, Mobile, AL 36608",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "priced",
+        "label": "from $8"
+      },
+      "summary": "Aminah Robinson: Journeys Home is a special exhibition at the Mobile Museum of Art that draws on the artist's historical research, folklore and personal narrative. The museum describes it as a visual memoir of her life and a tableau of the African American experience. It stays open through January 9, 2027.",
+      "url": "https://coastaleventures.com/events/ev-mma-aminah-robinson-journeys-home-0109.html",
+      "sources": [
+        {
+          "note": "Mobile Museum of Art home page, read for the exhibition description and closing date",
+          "url": "https://mobilemuseumofart.com/"
+        },
+        {
+          "note": "Mobile Museum of Art visit page, read for hours, address and general admission prices",
+          "url": "https://www.mobilemuseumofart.com/visit/"
+        }
+      ],
+      "checkedOn": "2026-10-28"
+    },
+    {
+      "id": "ev_mobile_museum_gateway_exhibition_0901-2026-11-02",
+      "title": "Gateway: From Graffiti to Gallery at the Mobile Museum of Art",
+      "date": "2026-11-02",
+      "endDate": "2027-09-01",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "when": "Wednesday to Saturday · 10:00 AM to 5:00 PM, through 9/1/2027",
+      "venue": "Mobile Museum of Art",
+      "address": "4850 Museum Dr, Mobile, AL 36608",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "priced",
+        "label": "from $8"
+      },
+      "summary": "The Mobile Museum of Art traces how artists who started with graffiti in New York's subways moved into galleries, with work by Basquiat, Haring, Scharf, KAWS and Banksy from the Masterworks Foundation collection. The show runs a full year, Wednesday through Saturday. Mobile County residents get in free on Thursdays.",
+      "url": "https://coastaleventures.com/events/ev-mobile-museum-gateway-exhibition-0901.html",
+      "sources": [
+        {
+          "note": "Mobile Museum of Art exhibition page: \"September 1, 2026 to September 1, 2027; Tuesday through Saturday, 10am to 5pm; Adults $12\"",
+          "url": "https://www.mobilemuseumofart.com/exhibitions/gateway/"
+        },
+        {
+          "note": "Mobile Museum of Art home page: \"Open through Sept. 1, 2027\"",
+          "url": "https://mobilemuseumofart.com"
+        },
+        {
+          "note": "Mobile County listing: \"FREE on Thursdays for Mobile County residents\"",
+          "url": "https://www.mobilecountyal.gov/community_events/gateway-from-graffiti-to-gallery-2026-09-01"
+        }
+      ],
+      "checkedOn": "2026-10-28"
+    },
+    {
+      "id": "ev_mma_handle_with_care_0327-2026-11-02",
+      "title": "Handle with Care at the Mobile Museum of Art",
+      "date": "2026-11-02",
+      "endDate": "2027-03-27",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "when": "Tuesday to Saturday · 10:00 AM to 5:00 PM · through 3/27",
+      "venue": "Mobile Museum of Art",
+      "address": "4850 Museum Drive, Mobile, AL 36608",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "priced",
+        "label": "from $8"
+      },
+      "summary": "Handle with Care is an interactive special exhibition at the Mobile Museum of Art. Artists Calder Kamin of Austin and Jacob Reptile of New Orleans turn trash into soft, complex sculptures that visitors move through as an environment. It stays open through March 27, 2027.",
+      "url": "https://coastaleventures.com/events/ev-mma-handle-with-care-0327.html",
+      "sources": [
+        {
+          "note": "Mobile Museum of Art home page, read for the exhibition description and closing date",
+          "url": "https://mobilemuseumofart.com/"
+        },
+        {
+          "note": "Mobile Museum of Art visit page, read for hours, address and general admission prices",
+          "url": "https://www.mobilemuseumofart.com/visit/"
+        }
+      ],
+      "checkedOn": "2026-10-28"
+    },
+    {
+      "id": "ev_uwf_make_it_last_1001-2026-11-02",
+      "title": "Make It Last: Gallery Exhibition at UWF",
+      "date": "2026-11-02",
+      "endDate": "2026-11-20",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "when": "Weekdays through 11/20 · 10:00 AM to 4:00 PM",
+      "venue": "UWF Center for Fine and Performing Arts, Building 82, The Art Gallery",
+      "address": "11000 University Parkway, Pensacola, FL 32514",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "Make It Last is an exhibition in The Art Gallery at the UWF Center for Fine and Performing Arts, curated by a UWF graduate. Six artists share the space, which includes a conversation pit in the gallery alcove and a poetry wall that visitors fill with their own work. Admission is free.",
+      "url": "https://coastaleventures.com/events/ev-uwf-make-it-last-1001.html",
+      "sources": [
+        {
+          "note": "events.uwf.edu: Make It Last, free, weekdays 10 AM to 4 PM from October 1 to November 20 at the Center for Fine and Performing Arts, Building 82, with an opening reception October 8 from 5 to 7 PM",
+          "url": "https://events.uwf.edu/event/make-it-last"
+        },
+        {
+          "note": "events.uwf.edu: opening reception for Make It Last, October 8, 5 to 7 PM, free",
+          "url": "https://events.uwf.edu/event/opening-reception-for-make-it-last"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
       "id": "ev_messy_monday_0907-2026-11-02",
       "title": "Messy Monday",
       "date": "2026-11-02",
@@ -1843,6 +865,36 @@
       "checkedOn": "2026-10-28"
     },
     {
+      "id": "ev_mma_timeless_hats_0130-2026-11-02",
+      "title": "Timeless Hats by Susie Mae Pugh-Williams at the Mobile Museum of Art",
+      "date": "2026-11-02",
+      "endDate": "2027-01-30",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "when": "Tuesday to Saturday · 10:00 AM to 5:00 PM · through 1/30",
+      "venue": "Mobile Museum of Art",
+      "address": "4850 Museum Drive, Mobile, AL 36608",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "priced",
+        "label": "from $8"
+      },
+      "summary": "Timeless Hats is a special exhibition of more than two dozen hats at the Mobile Museum of Art. Some were made by Mrs. Williams, and others are hats she admired and drew inspiration from for her own creations. It stays open through January 30, 2027.",
+      "url": "https://coastaleventures.com/events/ev-mma-timeless-hats-0130.html",
+      "sources": [
+        {
+          "note": "Mobile Museum of Art home page, read for the exhibition description and closing date",
+          "url": "https://mobilemuseumofart.com/"
+        },
+        {
+          "note": "Mobile Museum of Art visit page, read for hours, address and general admission prices",
+          "url": "https://www.mobilemuseumofart.com/visit/"
+        }
+      ],
+      "checkedOn": "2026-10-28"
+    },
+    {
       "id": "ev_mary_esther_library_its_a_mystery_book_club_1102-2026-11-02",
       "title": "It's A Mystery Book Club at the Mary Esther Library",
       "date": "2026-11-02",
@@ -1890,6 +942,58 @@
         {
           "note": "Mobile Public Library event page: Papel Picado, Monday November 2, 10:30 to 11:30 AM, Semmes Regional Library, ages 6-11, Coco later in the afternoon",
           "url": "https://www.mobilepubliclibrary.org/event/dia-de-los-muertos-papel-picado-16645"
+        }
+      ],
+      "checkedOn": "2026-10-28"
+    },
+    {
+      "id": "ev_decorate_with_us_quayside_1008-2026-11-02",
+      "title": "Decorate with Us at Quayside Art Gallery",
+      "date": "2026-11-02",
+      "endDate": "2026-11-16",
+      "startTime": "11:00",
+      "endTime": "17:00",
+      "when": "Daily through 11/16 · 11:00 AM to 5:00 PM",
+      "venue": "Quayside Art Gallery",
+      "address": "17 E Zaragoza St, Pensacola, FL 32502",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Quayside Art Gallery in Pensacola's historic district turns its first floor into a set of home style living spaces to show how local art fits a room. The show highlights all of the gallery's artists, with work ranging from large paintings and photography to pottery, glass, jewelry and wooden inlaid furniture. It is aimed at decorators, designers, realtors and condo owners, though anyone can walk in.",
+      "url": "https://coastaleventures.com/events/ev-decorate-with-us-quayside-1008.html",
+      "sources": [
+        {
+          "note": "Quayside Art Gallery's own Decorate with US flyer, read for the October 8 to November 16 run, daily 11 AM to 5 PM hours and the November 6 First Friday late opening",
+          "url": "https://www.quaysidegallery.com/publicevents/"
+        }
+      ],
+      "checkedOn": "2026-10-28"
+    },
+    {
+      "id": "ev_flounders_sunday_music_1101-2026-11-02",
+      "title": "Sunday afternoon live music at Flounder's Chowder House",
+      "date": "2026-11-02",
+      "endDate": "2026-12-27",
+      "startTime": "12:00",
+      "endTime": "16:00",
+      "when": "Sundays 11/1 through 12/27 · 12:00 PM to 4:00 PM",
+      "venue": "Flounder's Chowder House",
+      "address": "800 Quietwater Beach Road, Gulf Breeze, FL 32561",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Flounder's Chowder House on Quietwater Beach schedules live music on Sunday afternoons from 12:00 PM to 4:00 PM. Tim Spencer plays November 1, 15 and 29 and December 27, John Hart plays November 8 and December 6, and Jason Crysell plays November 22 and December 20. The page also lists Tim Spencer on Saturday December 12 for the same hours.",
+      "url": "https://coastaleventures.com/events/ev-flounders-sunday-music-1101.html",
+      "sources": [
+        {
+          "note": "Flounder's Chowder House: entertainment page, read for the Sunday performers, dates and 12:00 PM to 4:00 PM hours",
+          "url": "https://flounderschowderhouse.com/entertainment"
         }
       ],
       "checkedOn": "2026-10-28"
@@ -2009,6 +1113,32 @@
         }
       ],
       "checkedOn": "2026-09-26"
+    },
+    {
+      "id": "ev_mary_esther_library_bat_week_family_steam_1028-2026-11-02",
+      "title": "Bat Week Drop In Family STEAM at the Mary Esther Library",
+      "date": "2026-11-02",
+      "endDate": "2026-11-13",
+      "startTime": "14:30",
+      "endTime": "16:00",
+      "when": "Wednesday 10/28 · 2:30 PM to 4:00 PM · also Friday 11/13",
+      "venue": "Mary Esther Library",
+      "address": "100 W. Hollywood Blvd, Mary Esther, FL 32569",
+      "category": "stem",
+      "categoryLabel": "STEM and learning",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Nonie's Animal Encounters visits the Mary Esther Library for a hands-on Bat Week program about bats and why they matter. Families drop in, and the library asks guests to dress for permanent art supplies. Children under 13 must be accompanied by an adult.",
+      "url": "https://coastaleventures.com/events/ev-mary-esther-library-bat-week-family-steam-1028.html",
+      "sources": [
+        {
+          "note": "Okaloosa County Public Library Cooperative calendar page, read for date, time, Bat Week program, adult rule and the November 13 session",
+          "url": "https://okaloosa.librarycalendar.com/event/drop-family-steam-83339"
+        }
+      ],
+      "checkedOn": "2026-10-28"
     },
     {
       "id": "ev_painting_with_a_twist_fort_walton_1003-2026-11-02",
@@ -2475,6 +1605,32 @@
         }
       ],
       "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_rockyhorror_plt-2026-11-02",
+      "title": "Richard O'Brien's The Rocky Horror Show",
+      "date": "2026-11-02",
+      "endDate": "2026-11-08",
+      "startTime": "19:30",
+      "endTime": null,
+      "when": "Opens Friday 10/30 at 7:30 PM · runs through 11/8",
+      "venue": "Pensacola Little Theatre",
+      "address": "400 S Jefferson St, Pensacola, FL 32502",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Pensacola Little Theatre's Mainstage opens the cult musical The Rocky Horror Show on Halloween weekend, directed by Justin Gaylard, and runs through November 8. The campy sci-fi horror spoof carries adult content and innuendo throughout.",
+      "url": "https://coastaleventures.com/events/ev-rockyhorror-plt.html",
+      "sources": [
+        {
+          "note": "pensacolalittletheatre.com: Richard O'Brien's The Rocky Horror Show, Mainstage, October 30-November 8, 2026, opens 7:30 PM",
+          "url": "https://www.pensacolalittletheatre.com/shows-and-events/richard-obriens-the-rocky-horror-show"
+        }
+      ],
+      "checkedOn": "2026-09-16"
     },
     {
       "id": "ev_foley_library_story_time_craft_1031-2026-11-03",
@@ -91810,6 +90966,252 @@
         {
           "note": "Weekly Events banner image with day, game, time, entry",
           "url": "https://trinitygamesllc.com/pages/events"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_foley_library_story_time_craft_1031-2027-03-02",
+      "title": "Story Time and Craft at Foley Community Library",
+      "date": "2027-03-02",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "when": "Tuesdays 10:00 AM and 5:30 PM · Saturdays 10:00 AM",
+      "venue": "Foley Community Library",
+      "address": "230 East Orange Ave, Foley, AL 36535",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "The Foley Community Library holds a story time with a craft every Tuesday and Saturday from August through May. Tuesday sessions run at 10:00 AM and 5:30 PM, and the Saturday session runs at 10:00 AM. No age limit or price is posted.",
+      "url": "https://coastaleventures.com/events/ev-foley-library-story-time-craft-1031.html",
+      "sources": [
+        {
+          "note": "Foley Community Library: children's page, read for the schedule, times, ages and registration wording",
+          "url": "https://www.foleylibrary.org/children"
+        },
+        {
+          "note": "Foley Community Library: calendar entry for Halloween Story Time and Craft on Saturday October 31, 10:00 to 11:00 AM",
+          "url": "https://foleylibrary.librarycalendar.com/event/saturday-story-time-craft-20632"
+        }
+      ],
+      "checkedOn": "2026-11-01"
+    },
+    {
+      "id": "ev_board_game_night_1006-2027-03-02",
+      "title": "Board Game Night",
+      "date": "2027-03-02",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": "21:00",
+      "when": "Tuesdays · 3 PM-9 PM",
+      "venue": "GameMasters Guild",
+      "address": "743 Ashley Drive, Crestview, FL 32536",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Board Game Night at GameMasters Guild in Crestview runs every Tuesday from 3 to 9 PM. Bring your own game or pick one from the shop's game library. All ages are welcome, and children under 13 must be accompanied by an adult.",
+      "url": "https://coastaleventures.com/events/ev-board-game-night-1006.html",
+      "sources": [
+        {
+          "note": "Board Game Night every Tuesday 3-9 PM, all ages",
+          "url": "https://gmgcrestview.com/events/"
+        },
+        {
+          "note": "GameMasters Guild's own embedded Google Calendar feed (gmgcrestview@aol.com), read as ICS today: Board Game Night every Tuesday 3-9 PM, all ages",
+          "url": "https://calendar.google.com/calendar/ical/gmgcrestview%40aol.com/public/basic.ics"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_nwftc_tuesday_group_run_at_run_wit_1006-2027-03-02",
+      "title": "NWFTC Tuesday group run at Run With It",
+      "date": "2027-03-02",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": "18:00",
+      "when": "Tuesdays · 5 PM-6 PM",
+      "venue": "Run With It",
+      "address": "21 Racetrack Road NE, Fort Walton Beach, FL 32547",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "The NWFTC Tuesday group run is a weekly training run from Run With It with the Northwest Florida Track Club. Runs go every Tuesday at 5-6 PM, and various paces and distances are available.",
+      "url": "https://coastaleventures.com/events/ev-nwftc-tuesday-group-run-at-run-wit-1006.html",
+      "sources": [
+        {
+          "note": "Tuesday 5-6 PM at Run With It, 21 Racetrack Road NE, Fort Walton Beach, FL 32547",
+          "url": "https://www.nwftc.com/training-runs"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_tbs_comics_fort_walton_beach_weekl_1005-2027-03-02",
+      "title": "TBS Comics Fort Walton Beach weekly game nights (Yu-Gi-Oh, D&D, Magic, Lorcana, One Piece and more)",
+      "date": "2027-03-02",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "when": "Game nights Monday, Tuesday, Wednesday and Friday · from 5 PM",
+      "venue": "TBS Comics Fort Walton Beach",
+      "address": "550 Mary Esther Blvd, Fort Walton Beach, FL 32548",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "TBS Comics Fort Walton Beach hosts weekly game nights at its shop on Mary Esther Blvd. Monday is Yu-Gi-Oh at 6 PM, and Tuesday is D&D Adventurers League at 5 PM. Wednesday has casual Magic all day and Digimon at 6 PM, and Friday has Magic Commander at 6 PM and Yu-Gi-Oh at 7 PM.",
+      "url": "https://coastaleventures.com/events/ev-tbs-comics-fort-walton-beach-weekl-1005.html",
+      "sources": [
+        {
+          "note": "TBS gaming page weekly schedule for Fort Walton Beach",
+          "url": "https://www.tbscomics.com/gaming/"
+        },
+        {
+          "note": "Store locations: 550 Mary Esther Blvd, FWB 32548",
+          "url": "https://www.tbscomics.com/store-locations/"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_tempo_tuesday_with_the_west_florid_1006-2027-03-02",
+      "title": "Tempo Tuesday with the West Florida Wheelmen",
+      "date": "2027-03-02",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "when": "Tuesdays · 6 PM",
+      "venue": "Ride MORE Bicycles",
+      "address": "59 E Gregory St., Pensacola, FL",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Tempo Tuesday is a weekly group road ride that departs from Ride MORE Bicycles, 59 E Gregory St. in downtown Pensacola, and is led with the West Florida Wheelmen. It covers about 33 miles at an average of 17-20 mph. The ride runs 6-7:30 PM every Tuesday.",
+      "url": "https://coastaleventures.com/events/ev-tempo-tuesday-with-the-west-florid-1006.html",
+      "sources": [
+        {
+          "note": "Events page: Every Tuesday Tempo Tuesday with the West Florida Wheelmen, 6-7:30 PM, about 33 miles, 17-20 mph",
+          "url": "https://ridemorebicycles.com/events/"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_fleet_feet_pensacola_free_run_club_1006-2027-03-02",
+      "title": "Fleet Feet Pensacola Free Run Clubs",
+      "date": "2027-03-02",
+      "endDate": null,
+      "startTime": "18:15",
+      "endTime": null,
+      "when": "Tuesdays and Thursdays · 6:15 PM",
+      "venue": "Fleet Feet Pensacola",
+      "address": "236 West Garden Street, Unit 1, Pensacola, FL 32502",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "The Fleet Feet Pensacola Free Run Clubs meet Tuesday and Thursday at 6:15 PM at the shop on West Garden Street. Tuesday offers a social club, a 1-mile walk, a 1.8-mile run or walk, or a 5K. Thursday offers a 1-mile walk, a 1.8-mile run or walk, a 5K or a 10K. Both are free.",
+      "url": "https://coastaleventures.com/events/ev-fleet-feet-pensacola-free-run-club-1006.html",
+      "sources": [
+        {
+          "note": "RunSignup page: Tue and Thu 6:15 PM, 236 West Garden St Unit 1, price $0",
+          "url": "https://runsignup.com/Race/FL/Pensacola/FLEETFEETPENSACOLATUESDAYANDTHURSDAYFREERUNCLUBS"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_trinity_games_weekly_game_nights_m_1005-2027-03-02",
+      "title": "Trinity Games weekly game nights (Magic, Gundam, One Piece, Flesh and Blood, Riftbound and more)",
+      "date": "2027-03-02",
+      "endDate": null,
+      "startTime": "18:30",
+      "endTime": null,
+      "when": "Game nights Monday to Thursday · 6:30 PM",
+      "venue": "Trinity Games",
+      "address": "2400 W Michigan Ave Unit 27, Pensacola, FL 32526",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $5"
+      },
+      "summary": "Trinity Games runs weekly game nights at its Pensacola shop for Magic, Gundam, One Piece, Flesh and Blood, Riftbound and more. Monday has Gundam Locals at 6:30 PM and Flesh and Blood at 7 PM. Tuesday has Digimon Locals and MTG Pauper at 6:30 PM, and Wednesday has One Piece Locals and CyberPunk Locals at 6:30 PM. Thursday has Magic Commander Day all day, Riftbound Competitive at 6:30 PM and HoloLive Locals at 7 PM, and Friday has MTG Modern at 7 PM.",
+      "url": "https://coastaleventures.com/events/ev-trinity-games-weekly-game-nights-m-1005.html",
+      "sources": [
+        {
+          "note": "Weekly Events banner image with day, game, time, entry",
+          "url": "https://trinitygamesllc.com/pages/events"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_gab_spot_karaoke_taco_tuesday_1013-2027-03-02",
+      "title": "Karaoke and Taco Tuesday at The GAB Spot",
+      "date": "2027-03-02",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": "22:00",
+      "when": "Tuesdays · 7:00 PM to 10:00 PM",
+      "venue": "The GAB Spot",
+      "address": "913 N Beal Pkwy, Unit J, Fort Walton Beach, FL 32547",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "The GAB Spot in Fort Walton Beach hosts karaoke every Tuesday from 7:00 PM to 10:00 PM. During karaoke the venue runs a Taco Tuesday special of three old school tacos, chicken or beef, plus a house margarita for $17. Drink specials run all night.",
+      "url": "https://coastaleventures.com/events/ev-gab-spot-karaoke-taco-tuesday-1013.html",
+      "sources": [
+        {
+          "note": "thegabspotfwb.com calendar: Karaoke, Tuesday October 13, 7 to 10 PM, Taco Tuesday special of 3 Old School Tacos and a House Margarita for $17",
+          "url": "https://thegabspotfwb.com/calendar-of-events/karaoke-6b3r4-yrstx-t7lz9-9swfd-da6g2"
+        }
+      ],
+      "checkedOn": "2026-10-07"
+    },
+    {
+      "id": "ev_weekly_trivia_tuesdays_perfect_pla_1006-2027-03-02",
+      "title": "Weekly Trivia Tuesdays (Perfect Plain)",
+      "date": "2027-03-02",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": "21:00",
+      "when": "Tuesdays · 7 PM-9 PM",
+      "venue": "Perfect Plain Brewing Co.",
+      "address": "50 E. Garden Street, Pensacola, FL 32502",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "Weekly Trivia Tuesdays is a brewery trivia night at Perfect Plain Brewing Co., 50 E. Garden Street, with adoptable dogs as honorary co-hosts. It is free and runs 7-9 PM every Tuesday.",
+      "url": "https://coastaleventures.com/events/ev-weekly-trivia-tuesdays-perfect-pla-1006.html",
+      "sources": [
+        {
+          "note": "Perfect Plain upcoming events: Trivia Tuesdays 7-9 PM, free, at Perfect Plain Brewing Co.",
+          "url": "https://www.perfectplain.com/upcoming-events"
         }
       ],
       "checkedOn": "2026-10-03"
