@@ -25,6 +25,25 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+UID:ev_gsp_guided_pier_walk_1113-2026-11-13@coastaleventures.com
+DTSTAMP:20261104T000000Z
+DTSTART;TZID=America/Chicago:20261113T090000
+DTEND;TZID=America/Chicago:20261113T100000
+SUMMARY:Guided Pier Walk at Gulf State Park
+LOCATION:Gulf State Park Pier\, 20800 East Beach Blvd.\, Gulf Shores\, AL 3
+ 6542
+DESCRIPTION:Friday 11/13 · 9:00 AM · Friday 11/20 · 9:00 AM\n\nA Gulf St
+ ate Park naturalist leads a guided tour of the Gulf State Park Pier on two
+  Friday mornings in November. The walk covers the pier's history\, local c
+ onservation work\, and the fish and birds that live around it. The park li
+ sts the walk as free and great for all ages\, but pier parking costs $15 f
+ or the day.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/events
+ /ev-gsp-guided-pier-walk-1113.html
+URL:https://coastaleventures.com/events/ev-gsp-guided-pier-walk-1113.html
+CATEGORIES:Coastal
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_solaris_thanksgiving_cruises_1126-2026-11-26@coastaleventures.com
 DTSTAMP:20261104T000000Z
 DTSTART;VALUE=DATE:20261126
