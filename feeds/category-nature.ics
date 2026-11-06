@@ -25,30 +25,10 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_audubon_sky_islands_program_1105-2026-11-05@coastaleventures.com
-DTSTAMP:20261105T000000Z
-DTSTART;VALUE=DATE:20261105
-DTEND;VALUE=DATE:20261106
-SUMMARY:Audubon program: Arizona Sky Islands
-LOCATION:Chandler Center\, Room 800\, Crosspoint Church\, 519 Helms St\, Ni
- ceville\, FL
-DESCRIPTION:Thursday 11/5 · 7:00 PM (socializing 6:30 PM)\n\nChoctawhatche
- e Audubon Society hosts a slide show program on birding in the high desert
-  and mountain ranges of southern Arizona. A guest speaker shares experienc
- es from the Sky Islands\, the isolated mountain ranges that rise out of th
- e desert. The program starts at 7:00 PM\, with socializing from 6:30 PM\, 
- and is free and open to the public.\n\nPrice: Free\n\nDetails: https://coa
- staleventures.com/events/ev-audubon-sky-islands-program-1105.html
-URL:https://coastaleventures.com/events/ev-audubon-sky-islands-program-1105
- .html
-CATEGORIES:Nature and outdoors
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_hollandfarms-2026-11-05@coastaleventures.com
-DTSTAMP:20261105T000000Z
-DTSTART;TZID=America/Chicago:20261105T080000
-DTEND;TZID=America/Chicago:20261105T180000
+UID:ev_hollandfarms-2026-11-06@coastaleventures.com
+DTSTAMP:20261106T000000Z
+DTSTART;TZID=America/Chicago:20261106T080000
+DTEND;TZID=America/Chicago:20261106T180000
 SUMMARY:Holland Farms Pumpkin Patch & Corn Maze
 LOCATION:Holland Farms\, 2055 Homer Holland Rd\, Milton\, FL 32570
 DESCRIPTION:Sat 09/26/2026 to Sun 11/08/2026 · 8:00 AM to 6:00 PM daily\n\
@@ -63,7 +43,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_show_me_reptiles_pensacola_1107-2026-11-07@coastaleventures.com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261109
 SUMMARY:Show Me Reptiles reptile show
@@ -82,7 +62,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_audubon_coffee_birding_shalimar_1107-2026-11-07@coastaleventures.com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261107T073000
 DTEND;TZID=America/Chicago:20261107T110000
 SUMMARY:Coffee and Birding in Shalimar on Garniers Bayou
@@ -103,7 +83,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_oceanhour_saturday_cleanups_fall_1017-2026-11-07@coastaleventures.co
  m
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261107T084500
 DTEND;TZID=America/Chicago:20261107T094500
 SUMMARY:Ocean Hour Saturday Cleanups: Fall Schedule
@@ -124,7 +104,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_nonies_animal_encounters_fwb_library_1107-2026-11-07@coastaleventure
  s.com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261107T103000
 DTEND;TZID=America/Chicago:20261107T113000
 SUMMARY:Nonie's Animal Encounters at the Fort Walton Beach Library
@@ -146,7 +126,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_family_night_walk_nonie_mary_esther_1110-2026-11-10@coastaleventures
  .com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261110T163000
 DTEND;TZID=America/Chicago:20261110T173000
 SUMMARY:Family night walk with Nonie at Oak Tree Nature Park
@@ -168,7 +148,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_gulf_islands_fee_free_veterans_day_1111-2026-11-11@coastaleventures.
  com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261112
 SUMMARY:Veterans Day fee-free entrance at Gulf Islands National Seashore
@@ -187,7 +167,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_snakes_of_gulf_state_park_1111-2026-11-11@coastaleventures.com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261111T100000
 DTEND;TZID=America/Chicago:20261111T110000
 SUMMARY:Snakes of Gulf State Park
@@ -204,7 +184,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_gsp_eagles_ecosystems_walk_1112-2026-11-12@coastaleventures.com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261112T130000
 DTEND;TZID=America/Chicago:20261112T140000
 SUMMARY:Eagles and Ecosystems Nature Walk at Gulf State Park
@@ -224,7 +204,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_mobile_harbor_cruise_1113-2026-11-13@coastaleventures.com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261114
 SUMMARY:Mobile Harbor cruise with John Sledge at Historic Blakeley
@@ -244,7 +224,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_cast_for_a_cause_derrick_stone_mem_1114-2026-11-14@coastaleventures.
  com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261114T063000
 DTEND;TZID=America/Chicago:20261114T073000
 SUMMARY:Cast for a Cause surf fishing tournament
@@ -263,7 +243,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_audubon_twin_hills_bird_walk_1114-2026-11-14@coastaleventures.com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261114T073000
 DTEND;TZID=America/Chicago:20261114T083000
 SUMMARY:Audubon bird walk at Twin Hills Park in Crestview
@@ -284,7 +264,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_oceanhour_saturday_cleanups_fall_1017-2026-11-14@coastaleventures.co
  m
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261114T084500
 DTEND;TZID=America/Chicago:20261114T094500
 SUMMARY:Ocean Hour Saturday Cleanups: Fall Schedule
@@ -304,7 +284,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_gulfarium_kids_free_weekend_1114-2026-11-14@coastaleventures.com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261114T090000
 DTEND;TZID=America/Chicago:20261114T163000
 SUMMARY:Kids Free Weekend at the Gulfarium
@@ -325,7 +305,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_gsp_junior_rangers_shark_scientist_1114-2026-11-14@coastaleventures.
  com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261114T100000
 DTEND;TZID=America/Chicago:20261114T110000
 SUMMARY:Junior Rangers: Shark Scientist at Gulf State Park
@@ -345,7 +325,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_garnier_beach_garden_club_0912-2026-11-14@coastaleventures.com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261114T103000
 DTEND;TZID=America/Chicago:20261114T130000
 SUMMARY:Garnier Beach Garden Club
@@ -365,7 +345,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_delta_discovery_tour_1114-2026-11-14@coastaleventures.com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261114T130000
 DTEND;TZID=America/Chicago:20261114T140000
 SUMMARY:Delta Discovery Tour from Bartram Landing
@@ -386,7 +366,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_explore_the_shore_gulf_state_park_1103-2026-11-16@coastaleventures.c
  om
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261116T090000
 DTEND;TZID=America/Chicago:20261116T100000
 SUMMARY:Explore the Shore at Gulf State Park
@@ -405,7 +385,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_mary_esther_teen_night_walk_nonie_1120-2026-11-20@coastaleventures.c
  om
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261120T163000
 DTEND;TZID=America/Chicago:20261120T180000
 SUMMARY:12+ Night Walk with Nonie at Oak Tree Nature Park
@@ -427,7 +407,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_oceanhour_saturday_cleanups_fall_1017-2026-11-21@coastaleventures.co
  m
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261121T084500
 DTEND;TZID=America/Chicago:20261121T094500
 SUMMARY:Ocean Hour Saturday Cleanups: Fall Schedule
@@ -447,7 +427,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_bottle_creek_mounds_1121-2026-11-21@coastaleventures.com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261121T090000
 DTEND;TZID=America/Chicago:20261121T123000
 SUMMARY:Excursion to the Bottle Creek Indian Mound Complex
@@ -469,7 +449,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_gsp_alligator_adventures_1121-2026-11-21@coastaleventures.com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261121T100000
 DTEND;TZID=America/Chicago:20261121T110000
 SUMMARY:Alligator Adventures at Gulf State Park
@@ -487,7 +467,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_fall_color_cruise_1121-2026-11-21@coastaleventures.com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261121T130000
 DTEND;TZID=America/Chicago:20261121T150000
 SUMMARY:Fall Color in the Delta Cruise at Historic Blakeley
@@ -507,7 +487,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_farm_to_flame_ts_farm_1121-2026-11-21@coastaleventures.com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261121T150000
 DTEND;TZID=America/Chicago:20261121T210000
 SUMMARY:Farm to Flame free community meal at T's Farm
@@ -525,7 +505,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_audubon_destin_shorebirds_walk_1128-2026-11-28@coastaleventures.com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261128T073000
 DTEND;TZID=America/Chicago:20261128T083000
 SUMMARY:Audubon Destin shorebirds bird walk
@@ -545,7 +525,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_oceanhour_saturday_cleanups_fall_1017-2026-11-28@coastaleventures.co
  m
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261128T084500
 DTEND;TZID=America/Chicago:20261128T094500
 SUMMARY:Ocean Hour Saturday Cleanups: Fall Schedule
@@ -565,7 +545,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_audubon_longleaf_pine_program_1203-2026-12-03@coastaleventures.com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:Audubon program: Longleaf Pine Ecosystem
@@ -584,7 +564,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_mifflin_lake_cruise_1205-2026-12-05@coastaleventures.com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261205T130000
 DTEND;TZID=America/Chicago:20261205T150000
 SUMMARY:Mifflin Lake Cruise at Historic Blakeley
@@ -604,7 +584,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_garnier_beach_garden_club_0912-2026-12-12@coastaleventures.com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261212T103000
 DTEND;TZID=America/Chicago:20261212T130000
 SUMMARY:Garnier Beach Garden Club
@@ -624,7 +604,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_camellia_flower_show_1212-2026-12-12@coastaleventures.com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20261212T130000
 DTEND;TZID=America/Chicago:20261212T160000
 SUMMARY:88th Annual Camellia Flower Show
@@ -643,7 +623,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_garnier_beach_garden_club_0912-2027-01-09@coastaleventures.com
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;TZID=America/Chicago:20270109T103000
 DTEND;TZID=America/Chicago:20270109T130000
 SUMMARY:Garnier Beach Garden Club
@@ -664,7 +644,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_community_camellia_show_pensacola_0220-2027-02-20@coastaleventures.c
  om
-DTSTAMP:20261105T000000Z
+DTSTAMP:20261106T000000Z
 DTSTART;VALUE=DATE:20270220
 DTEND;VALUE=DATE:20270221
 SUMMARY:Community Camellia Show and Plant Sale at the downtown library
