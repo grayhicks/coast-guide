@@ -646,6 +646,11 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
 .hero[data-marine] .hk_nh [id$="move-jellies"] { display: inline; }
 .hero[data-marine] .hk_nh .nhjd { animation: nh_jdrift calc(13s + var(--jn) * 3s) ease-in-out calc(var(--jn) * -4s) infinite alternate; }
 .hero[data-marine] .hk_nh .nhjb { transform-box: fill-box; transform-origin: 50% 100%; animation: nh_jpulse calc(2.1s + var(--jn) * .35s) ease-in-out infinite alternate; }
+.hk_nh [id$="rip-current"], .hk_nh [id$="move-shark"] { display: none; }
+.hero[data-rip] .hk_nh [id$="rip-current"] { display: inline; }
+.hero[data-rip] .hk_nh [id$="rip-plume"] { animation: 9s ease-in-out 0s infinite normal none running nh_ripout; }
+.hero[data-marine] .hk_nh [id$="move-shark"] { display: inline; animation: 26s ease-in-out -6s infinite normal none running nh_shark; }
+@media (prefers-reduced-motion: reduce){.hero[data-rip] .hk_nh [id$="rip-plume"], .hero[data-marine] .hk_nh [id$="move-shark"] { animation: auto ease 0s 1 normal none running none; }}
 .hk_nh [id$="move-dog"], .hk_nh [id$="move-kids"], .hk_nh [id$="move-ball"] { animation: auto ease 0s 1 normal none running none; }
 .hk_nh [id="nhd_move-dog"] > :nth-child(5) { transform-box: view-box; transform-origin: 272.5px 212px; animation: 4.5s ease-in-out 0s infinite normal none running nh_wag; }
 .hk_nh [id="nhd_move-doghead"] { transform-box: view-box; transform-origin: 255.5px 213.5px; animation: 8s ease-in-out 0s infinite normal none running nh_peer; }
@@ -1391,6 +1396,18 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
 }
 @keyframes nh_jpulse { 
   100% { scale: 1.06 0.86; }
+}
+@keyframes nh_ripout { 
+  0% { translate: 0px; opacity: 0.55; }
+  50% { opacity: 1; }
+  100% { translate: 2px -5px; opacity: 0.55; }
+}
+@keyframes nh_shark { 
+  0% { translate: -6px; opacity: 0; }
+  12% { opacity: 1; }
+  62% { opacity: 1; }
+  74% { translate: 26px; opacity: 0; }
+  100% { translate: 26px; opacity: 0; }
 }
 @keyframes nh_wag { 
   0%, 36%, 58%, 82%, 100% { transform: rotate(0deg); }
