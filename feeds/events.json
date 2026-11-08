@@ -7,7 +7,7 @@
     "from": "2026-11-08",
     "to": "2027-03-08"
   },
-  "count": 3401,
+  "count": 3403,
   "note": "Event details are compiled from the venue or organizer pages named in each record's sources. Check the venue before you travel. Weather data elsewhere on the site is Open-Meteo, CC BY 4.0.",
   "events": [
     {
@@ -13209,6 +13209,36 @@
       "checkedOn": "2026-11-04"
     },
     {
+      "id": "ev_launch_grand_opening_1114-2026-11-14",
+      "title": "Launch Pensacola grand opening",
+      "date": "2026-11-14",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "22:00",
+      "when": "Saturday 11/14 · open 10 AM to 10 PM",
+      "venue": "Launch Family Entertainment, Ferry Pass Plaza",
+      "address": "8102 N Davis Hwy, Pensacola, FL 32514",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $27"
+      },
+      "summary": "The new trampoline park on North Davis Highway holds its grand opening on Saturday. Launch says the first 150 guests get free jumping for a whole year. Inside are trampolines, duckpin bowling, a ninja course, an arcade and a KRAVE restaurant and bar.",
+      "url": "https://coastaleventures.com/events/ev-launch-grand-opening-1114.html",
+      "sources": [
+        {
+          "note": "Launch press release, 10/28/2026: grand opening “Saturday, November 14”; “Launch will reward the first 150 guests with free jumping for an entire year.”",
+          "url": "https://www.franchising.com/news/20261028_launch_family_entertainment_announces_grand_opening_of_new_pensacola_locati.html"
+        },
+        {
+          "note": "Launch Pensacola, read 11/08/2026: Saturday hours 10am - 10pm, “GET ALL DAY • $27”",
+          "url": "https://launchfamilyentertainment.com/pensacola/"
+        }
+      ],
+      "checkedOn": "2026-11-08"
+    },
+    {
       "id": "ev_fort_conde_living_history_festival_1114-2026-11-14",
       "title": "Living History Festival at Colonial Fort Conde",
       "date": "2026-11-14",
@@ -22517,6 +22547,36 @@
         }
       ],
       "checkedOn": "2026-10-02"
+    },
+    {
+      "id": "ev_ecsc_planetarium_nights_1119-2026-11-19",
+      "title": "Planetarium Night at the Emerald Coast Science Center",
+      "date": "2026-11-19",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "when": "Thursday 11/19 · 6:00 PM show",
+      "venue": "Emerald Coast Science Center",
+      "address": "31 Memorial Pkwy SW, Fort Walton Beach, FL 32548",
+      "category": "stem",
+      "categoryLabel": "STEM and learning",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "The Emerald Coast Science Center opens its planetarium for an evening show on Thursday at 6 PM. The science center has not posted the price for this night; its October Planetarium Night was $12 a person for nonmembers, free for members and for children 2 and under.",
+      "url": "https://coastaleventures.com/events/ev-ecsc-planetarium-nights-1119.html",
+      "sources": [
+        {
+          "note": "Emerald Coast Science Center calendar, read 11/08/2026: November 19, “6:00 PM” “Planetarium Nights: 6 p.m. Show”",
+          "url": "https://www.ecscience.org/events"
+        },
+        {
+          "note": "ecscience.org, October Planetarium Night: nonmember admission $12, members free, children 2 and under free",
+          "url": "https://www.ecscience.org/events-1/planetarium-night-steam-wars-6-p-m-show-1"
+        }
+      ],
+      "checkedOn": "2026-11-08"
     },
     {
       "id": "ev_fleet_feet_pensacola_free_run_club_1006-2026-11-19",
