@@ -998,6 +998,8 @@ html.hk_gd_dark .hk_sss_ic .sss_edge{ stroke:#7A64A8; }
 .hk.hk .hero-date.hero-datebtn{ min-height:30px; top:4.5px; min-width:var(--sss-dw); }
 
 .hk.hk .morewrap{ top:4.5px; }
+
+.hk.hk .hero-datebtn{ padding-top:5px; padding-bottom:3px; }
 .hk.hk .morewrap .morebtn{ min-height:30px; box-sizing:border-box; display:inline-flex; align-items:center; }
 
 .hk.hk .hero .hero-eyerain{ left:calc((86.5px - var(--sss-dw)) / 2); }
@@ -19077,6 +19079,9 @@ html .hk .hk_ptile .hk_ptcaltab{ top:1px; }
 .hero[data-bloom="red"] .hk_nh [id$="sea-tone"] .nh_bloom{ opacity:1; }
 .hk_nh [id="nhk_sea-tone"]{ opacity:.75; }
 
+.hero.hero .hk_nh.hk_nh [id="nhd_sea-tone"] .nh_murk{ opacity:1; }
+.hero.hero .hk_nh.hk_nh [id="nhd_sea-tone"] .nh_clear{ opacity:0; }
+
 .hk_nh [id$="move-jellies"]{ display:none; }
 .hero[data-marine] .hk_nh [id$="move-jellies"]{ display:inline; }
 .hero[data-marine] .hk_nh .nhjd{ animation:nh_jdrift calc(13s + var(--jn) * 3s) ease-in-out calc(var(--jn) * -4s) infinite alternate; }
@@ -19104,18 +19109,19 @@ html .hk .hk_ptile .hk_ptcaltab{ top:1px; }
 @keyframes nh_paddle{ from{ rotate:-6deg; } to{ rotate:6deg; } }
 
 .hk_nh [id$="move-dog"], .hk_nh [id$="move-kids"], .hk_nh [id$="move-ball"]{ animation:none; }
-.hk_nh [id="nhd_move-dog"] > :nth-child(5){ transform-box:view-box; transform-origin:272.5px 212px; animation:nh_wag 4.5s ease-in-out infinite; }
+
+.hk_nh [id="nhd_move-dog"] > :nth-child(7){ transform-box:view-box; transform-origin:272.5px 212px; animation:nh_wag 4.5s ease-in-out infinite; }
 @keyframes nh_wag{ 0%,36%,58%,82%,100%{ transform:rotate(0deg); } 6%,18%,30%,64%,76%{ transform:rotate(11deg); } 12%,24%,70%{ transform:rotate(-9deg); } }
 .hk_nh [id="nhd_move-doghead"]{ transform-box:view-box; transform-origin:255.5px 213.5px; animation:nh_peer 8s ease-in-out infinite; }
 @keyframes nh_peer{ 0%,12%,83%,100%{ transform:rotate(0deg); } 20%,45%{ transform:rotate(7deg); } 53%,75%{ transform:rotate(-6deg); } }
 .hk_nh [id="nhd_move-dog"] > :nth-child(1), .hk_nh [id="nhd_move-dog"] > :nth-child(2){ animation:nh_ripple 3.2s ease-in-out infinite alternate; }
 @keyframes nh_ripple{ from{ opacity:1; } to{ opacity:.55; } }
-.hk_nh [id="nhd_move-kids"] > :nth-child(15){ transform-box:view-box; transform-origin:209px 191px; animation:nh_swat1 2.4s ease-in-out infinite; }
+.hk_nh [id="nhd_move-kids"] > :nth-child(17){ transform-box:view-box; transform-origin:209px 191px; animation:nh_swat1 2.4s ease-in-out infinite; }
 @keyframes nh_swat1{ 0%{ transform:rotate(18deg); } 12%,84%{ transform:rotate(0deg); } 93%{ transform:rotate(-14deg); } 100%{ transform:rotate(18deg); } }
-.hk_nh [id="nhd_move-kids"] > :nth-child(25){ transform-box:view-box; transform-origin:234.5px 195px; animation:nh_swat2 2.4s ease-in-out infinite; }
+.hk_nh [id="nhd_move-kids"] > :nth-child(27){ transform-box:view-box; transform-origin:234.5px 195px; animation:nh_swat2 2.4s ease-in-out infinite; }
 @keyframes nh_swat2{ 0%,38%,62%,100%{ transform:rotate(0deg); } 45%{ transform:rotate(14deg); } 50%{ transform:rotate(-18deg); } }
-.hk_nh [id="nhd_move-kids"] > :nth-child(16){ transform-box:view-box; transform-origin:201px 191px; animation:nh_armsway 2.4s ease-in-out infinite alternate; }
-.hk_nh [id="nhd_move-kids"] > :nth-child(24){ transform-box:view-box; transform-origin:241.5px 195px; animation:nh_armsway 2.4s ease-in-out infinite alternate-reverse; }
+.hk_nh [id="nhd_move-kids"] > :nth-child(9){ transform-box:view-box; transform-origin:201px 191px; animation:nh_armsway 2.4s ease-in-out infinite alternate; }
+.hk_nh [id="nhd_move-kids"] > :nth-child(19){ transform-box:view-box; transform-origin:241.5px 195px; animation:nh_armsway 2.4s ease-in-out infinite alternate-reverse; }
 @keyframes nh_armsway{ from{ transform:rotate(-4deg); } to{ transform:rotate(4deg); } }
 .hk_nh [id="nhd_move-kids"] > :nth-child(1){ animation:nh_ripple 2.8s ease-in-out infinite alternate; }
 .hk_nh [id="nhd_move-ball"] > :nth-child(n+2){ transform-box:view-box; transform-origin:222px 186px; animation:nh_volley 2.4s linear infinite; }

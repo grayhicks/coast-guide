@@ -312,6 +312,7 @@ html.gca_cold .bswash { opacity: 0; }
 html.hk_gd_cream .hk_sss_ic .sss_edge { stroke: rgb(255, 249, 236); }
 html.hk_gd_dark .hk_sss_ic .sss_edge { stroke: rgb(122, 100, 168); }
 .hk.hk .hero-date.hero-datebtn { min-height: 30px; top: 4.5px; min-width: var(--sss-dw); }
+.hk.hk .hero-datebtn { padding-top: 5px; padding-bottom: 3px; }
 .hk.hk .hero .hero-eyerain { left: calc((86.5px - var(--sss-dw)) / 2); }
 @media (min-width: 370px){.hk .ph-night .sunb .moon { transform: translate(4px, -4px) scale(1.25); }}
 @media (min-width: 382px){.hk .ph-night .sunb .moon { transform: translate(4px, -4px) scale(1.4667); }}
@@ -543,6 +544,8 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
 .hero[data-sea="rough"] .hk_nh [id$="sea-tone"] .nh_murk { opacity: 1; }
 .hero[data-bloom="red"] .hk_nh [id$="sea-tone"] .nh_bloom { opacity: 1; }
 .hk_nh [id="nhk_sea-tone"] { opacity: 0.75; }
+.hero.hero .hk_nh.hk_nh [id="nhd_sea-tone"] .nh_murk { opacity: 1; }
+.hero.hero .hk_nh.hk_nh [id="nhd_sea-tone"] .nh_clear { opacity: 0; }
 .hk_nh [id$="move-jellies"] { display: none; }
 .hero[data-marine] .hk_nh [id$="move-jellies"] { display: inline; }
 .hero[data-marine] .hk_nh .nhjd { animation: nh_jdrift calc(13s + var(--jn) * 3s) ease-in-out calc(var(--jn) * -4s) infinite alternate; }
@@ -553,13 +556,13 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
 .hero[data-marine] .hk_nh [id$="move-shark"] { display: inline; animation: 26s ease-in-out -6s infinite normal none running nh_shark; }
 @media (prefers-reduced-motion: reduce){.hero[data-rip] .hk_nh [id$="rip-plume"], .hero[data-marine] .hk_nh [id$="move-shark"] { animation: auto ease 0s 1 normal none running none; }}
 .hk_nh [id$="move-dog"], .hk_nh [id$="move-kids"], .hk_nh [id$="move-ball"] { animation: auto ease 0s 1 normal none running none; }
-.hk_nh [id="nhd_move-dog"] > :nth-child(5) { transform-box: view-box; transform-origin: 272.5px 212px; animation: 4.5s ease-in-out 0s infinite normal none running nh_wag; }
+.hk_nh [id="nhd_move-dog"] > :nth-child(7) { transform-box: view-box; transform-origin: 272.5px 212px; animation: 4.5s ease-in-out 0s infinite normal none running nh_wag; }
 .hk_nh [id="nhd_move-doghead"] { transform-box: view-box; transform-origin: 255.5px 213.5px; animation: 8s ease-in-out 0s infinite normal none running nh_peer; }
 .hk_nh [id="nhd_move-dog"] > :nth-child(1), .hk_nh [id="nhd_move-dog"] > :nth-child(2) { animation: 3.2s ease-in-out 0s infinite alternate none running nh_ripple; }
-.hk_nh [id="nhd_move-kids"] > :nth-child(15) { transform-box: view-box; transform-origin: 209px 191px; animation: 2.4s ease-in-out 0s infinite normal none running nh_swat1; }
-.hk_nh [id="nhd_move-kids"] > :nth-child(25) { transform-box: view-box; transform-origin: 234.5px 195px; animation: 2.4s ease-in-out 0s infinite normal none running nh_swat2; }
-.hk_nh [id="nhd_move-kids"] > :nth-child(16) { transform-box: view-box; transform-origin: 201px 191px; animation: 2.4s ease-in-out 0s infinite alternate none running nh_armsway; }
-.hk_nh [id="nhd_move-kids"] > :nth-child(24) { transform-box: view-box; transform-origin: 241.5px 195px; animation: 2.4s ease-in-out 0s infinite alternate-reverse none running nh_armsway; }
+.hk_nh [id="nhd_move-kids"] > :nth-child(17) { transform-box: view-box; transform-origin: 209px 191px; animation: 2.4s ease-in-out 0s infinite normal none running nh_swat1; }
+.hk_nh [id="nhd_move-kids"] > :nth-child(27) { transform-box: view-box; transform-origin: 234.5px 195px; animation: 2.4s ease-in-out 0s infinite normal none running nh_swat2; }
+.hk_nh [id="nhd_move-kids"] > :nth-child(9) { transform-box: view-box; transform-origin: 201px 191px; animation: 2.4s ease-in-out 0s infinite alternate none running nh_armsway; }
+.hk_nh [id="nhd_move-kids"] > :nth-child(19) { transform-box: view-box; transform-origin: 241.5px 195px; animation: 2.4s ease-in-out 0s infinite alternate-reverse none running nh_armsway; }
 .hk_nh [id="nhd_move-kids"] > :nth-child(1) { animation: 2.8s ease-in-out 0s infinite alternate none running nh_ripple; }
 .hk_nh [id="nhd_move-ball"] > :nth-child(n+2) { transform-box: view-box; transform-origin: 222px 186px; animation: 2.4s linear 0s infinite normal none running nh_volley; }
 .hk_nh [id="nhd_move-ball"] > :nth-child(1) { transform-box: view-box; transform-origin: 222px 221px; animation: 2.4s linear 0s infinite normal none running nh_ballshade; }
