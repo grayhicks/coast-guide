@@ -25,26 +25,8 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_tidal_treasures_gulf_state_park_1107-2026-11-07@coastaleventures.com
-DTSTAMP:20261107T000000Z
-DTSTART;TZID=America/Chicago:20261107T100000
-DTEND;TZID=America/Chicago:20261107T110000
-SUMMARY:Tidal Treasures at Gulf State Park
-LOCATION:Gulf State Park\, 20115 State Hwy 135\, Gulf Shores\, AL 36542
-DESCRIPTION:Saturday 11/7 · 10:00 AM\n\nA Gulf State Park program explores
-  the shells\, sea life and other treasures that wash ashore along the beac
- h. The registration page lists Saturday\, November 7 at 10 AM at $3 a pers
- on. Later sessions run on January 19 and February 11.\n\nPrice: from $3\n\
- nDetails: https://coastaleventures.com/events/ev-tidal-treasures-gulf-stat
- e-park-1107.html
-URL:https://coastaleventures.com/events/ev-tidal-treasures-gulf-state-park-
- 1107.html
-CATEGORIES:Beach
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_wickedwinerun_1121-2026-11-21@coastaleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:SKECHERS Wicked Wine Run: Milton
@@ -62,7 +44,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_pb_lighted_boat_parade_1204-2026-12-04@coastaleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20261204T183000
 DTEND;TZID=America/Chicago:20261204T193000
 SUMMARY:Pensacola Beach Christmas lighted boat parade
@@ -81,7 +63,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_pb_surfing_santa_parade_1206-2026-12-06@coastaleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20261206T140000
 DTEND;TZID=America/Chicago:20261206T150000
 SUMMARY:Surfing Santa Beach Parade on Pensacola Beach
@@ -101,7 +83,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_flora_bama_polar_bear_dip_0101-2027-01-01@coastaleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Flora-Bama Polar Bear Dip
@@ -121,7 +103,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_polar_bear_plunge_pensacola_beach_0101-2027-01-01@coastaleventures.c
  om
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20270101T140000
 DTEND;TZID=America/Chicago:20270101T150000
 SUMMARY:Polar Bear Plunge at Pensacola Beach

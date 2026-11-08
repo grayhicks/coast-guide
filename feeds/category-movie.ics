@@ -25,65 +25,10 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_cat_video_fest_2026_suds_n_cinema_1107-2026-11-07@coastaleventures.c
- om
-DTSTAMP:20261107T000000Z
-DTSTART;VALUE=DATE:20261107
-DTEND;VALUE=DATE:20261108
-SUMMARY:Cat Video Fest 2026 at Suds N Cinema
-LOCATION:Suds N Cinema\, 174 Miracle Strip Pkwy SE\, Fort Walton Beach\, FL
-  32548
-DESCRIPTION:Saturday 11/7 · 5:15 PM show · doors 4:30 PM\n\nCat Video Fes
- t strings together a 77 minute reel of the latest and funniest cat clips o
- n the big screen at Suds N Cinema. The festival bills itself as the world'
- s number one cat video festival. Guests are welcome to wear cat themed clo
- thing or get cat face paint.\n\nPrice: from $7\n\nDetails: https://coastal
- eventures.com/events/ev-cat-video-fest-2026-suds-n-cinema-1107.html
-URL:https://coastaleventures.com/events/ev-cat-video-fest-2026-suds-n-cinem
- a-1107.html
-CATEGORIES:Movies
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_mobile_animation_film_festival_2026-2026-11-07@coastaleventures.com
-DTSTAMP:20261107T000000Z
-DTSTART;TZID=America/Chicago:20261107T130000
-DTEND;TZID=America/Chicago:20261107T160000
-SUMMARY:Mobile Animation Film Festival 2026
-LOCATION:Crescent Theater\, 208 Dauphin St\, Mobile\, AL
-DESCRIPTION:Saturday 11/7 · 1:00 PM to 4:00 PM\n\nThe Crescent Theater scr
- eens the Mobile Animation Film Festival for three hours on a Saturday afte
- rnoon\, free to attend. Some programming may include adult content\, thoug
- h no specific age cutoff is posted.\n\nPrice: Free\n\nDetails: https://coa
- staleventures.com/events/ev-mobile-animation-film-festival-2026.html
-URL:https://coastaleventures.com/events/ev-mobile-animation-film-festival-2
- 026.html
-CATEGORIES:Movies
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_fear_fest_1010-2026-11-07@coastaleventures.com
-DTSTAMP:20261107T000000Z
-DTSTART;TZID=America/Chicago:20261107T170000
-DTEND;TZID=America/Chicago:20261107T210000
-SUMMARY:Fear Fest
-LOCATION:Exploreum Science Center\, 65 Government St.\, Mobile\, AL 36602
-DESCRIPTION:Saturday 11/7 · 5:00 PM to 9:00 PM\n\nThe Exploreum Science Ce
- nter pairs its immersive Fear exhibit with a 6:30 PM screening of Final De
- stination for one evening\, now Saturday\, November 7. The film is rated R
- \, and the museum recommends the event for guests 17 and older\, requiring
-  anyone younger to be accompanied by a parent or legal guardian. Admission
-  runs $15 for non-members and $12 for Exploreum members.\n\nPrice: from $1
- 5\n\nDetails: https://coastaleventures.com/events/ev-fear-fest-1010.html
-URL:https://coastaleventures.com/events/ev-fear-fest-1010.html
-CATEGORIES:Movies
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_suds_casablanca_1104-2026-11-07@coastaleventures.com
-DTSTAMP:20261107T000000Z
-DTSTART;TZID=America/Chicago:20261107T183000
-DTEND;TZID=America/Chicago:20261107T193000
+UID:ev_suds_casablanca_1104-2026-11-08@coastaleventures.com
+DTSTAMP:20261108T000000Z
+DTSTART;TZID=America/Chicago:20261108T183000
+DTEND;TZID=America/Chicago:20261108T193000
 SUMMARY:Casablanca at Suds N Cinema
 LOCATION:Suds N Cinema\, 174 Miracle Strip Pkwy SE\, Fort Walton Beach\, FL
   32548
@@ -99,7 +44,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_brother_bear_movie_valparaiso_1109-2026-11-09@coastaleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20261109T153000
 DTEND;TZID=America/Chicago:20261109T170000
 SUMMARY:Brother Bear family movie at Valparaiso Library
@@ -117,7 +62,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_suds_blazing_saddles_1111-2026-11-11@coastaleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20261111T183000
 DTEND;TZID=America/Chicago:20261111T193000
 SUMMARY:Blazing Saddles at Suds N Cinema
@@ -135,7 +80,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-12@coastaleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20261112T150000
 DTEND;TZID=America/Chicago:20261112T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -153,7 +98,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_theater_thursday_gulf_breeze_1112-2026-11-12@coastaleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20261112T150000
 DTEND;TZID=America/Chicago:20261112T170000
 SUMMARY:Theater Thursday: Open Season at the Gulf Breeze Library
@@ -173,7 +118,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_great_movie_adventure_inside_out_2_toulminville_1112-2026-11-12@coas
  taleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20261112T151500
 DTEND;TZID=America/Chicago:20261112T161500
 SUMMARY:Great Movie Adventure (Inside Out 2) at Toulminville Library
@@ -193,7 +138,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_princess_bride_movie_night_mobile_1112-2026-11-12@coastaleventures.c
  om
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20261112T160000
 DTEND;TZID=America/Chicago:20261112T180000
 SUMMARY:Princess Bride Movie Night
@@ -210,7 +155,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_stamped_film_festival_1113-2026-11-13@coastaleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261116
 SUMMARY:Stamped Film Festival
@@ -229,7 +174,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_suds_cigarette_surfboard_1113-2026-11-13@coastaleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20261113T183000
 DTEND;TZID=America/Chicago:20261113T203000
 SUMMARY:The Cigarette Surfboard screening for the Emerald Coast Science Cen
@@ -250,7 +195,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_navarre_library_throwback_movie_1117-2026-11-17@coastaleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20261117T160000
 DTEND;TZID=America/Chicago:20261117T170000
 SUMMARY:Throwback Movie Tuesday at Navarre Library
@@ -268,7 +213,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_teen_space_movie_hunger_games_1119-2026-11-19@coastaleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20261119T143000
 DTEND;TZID=America/Chicago:20261119T160000
 SUMMARY:Movie in the Teen Space: The Hunger Games
@@ -288,7 +233,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-19@coastaleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20261119T150000
 DTEND;TZID=America/Chicago:20261119T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -306,7 +251,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_destin_commons_movie_moana_1122-2026-11-22@coastaleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20261122T183000
 DTEND;TZID=America/Chicago:20261122T193000
 SUMMARY:Movie Night: Moana at Destin Commons
@@ -325,7 +270,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-26@coastaleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20261126T150000
 DTEND;TZID=America/Chicago:20261126T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -343,7 +288,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-03@coastaleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20261203T150000
 DTEND;TZID=America/Chicago:20261203T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -362,7 +307,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_mobile_wheels_and_reels_christmas_pageant_1204-2026-12-04@coastaleve
  ntures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20261204T180000
 DTEND;TZID=America/Chicago:20261204T220000
 SUMMARY:Wheels & Reels Drive-In Movies: The Best Christmas Pageant Ever
@@ -382,7 +327,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_exploreum_21_after_hours_gremlins_1205-2026-12-05@coastaleventures.c
  om
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20261205T180000
 DTEND;TZID=America/Chicago:20261205T190000
 SUMMARY:21+ After Hours: Gremlins at the Exploreum
@@ -400,7 +345,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-10@coastaleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20261210T150000
 DTEND;TZID=America/Chicago:20261210T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -418,7 +363,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_wharf_jingle_bell_movie_bash_1212-2026-12-12@coastaleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20261212T110000
 DTEND;TZID=America/Chicago:20261212T120000
 SUMMARY:Jingle Bell Movie Bash at Portside on Main
@@ -438,7 +383,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_navarre_throwback_deck_halls_1215-2026-12-15@coastaleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20261215T160000
 DTEND;TZID=America/Chicago:20261215T170000
 SUMMARY:Throwback Movie Tuesday: Deck the Halls at Navarre Library
@@ -457,7 +402,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-17@coastaleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20261217T150000
 DTEND;TZID=America/Chicago:20261217T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -475,7 +420,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_destin_commons_movie_home_alone_1218-2026-12-18@coastaleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;TZID=America/Chicago:20261218T183000
 DTEND;TZID=America/Chicago:20261218T193000
 SUMMARY:Movie Night: Home Alone at Destin Commons
@@ -494,7 +439,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_milton_movie_night_1222-2026-12-22@coastaleventures.com
-DTSTAMP:20261107T000000Z
+DTSTAMP:20261108T000000Z
 DTSTART;VALUE=DATE:20261222
 DTEND;VALUE=DATE:20261230
 SUMMARY:Movie Night at Milton Library
