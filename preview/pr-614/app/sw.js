@@ -3,7 +3,7 @@
    plus a version.txt probe it deliberately never caches (see the note in the fetch handler).
    Nothing here reports anything anywhere, which is a product guarantee, not an implementation
    detail — gate_pwa.js asserts it against this file. */
-const CACHE = "gca-b44f317915cf1cf8";
+const CACHE = "gca-7c2d9ae7a89858d7";
 
 /* ⚠ 08/20 — THE APP IS ONE 4.5MB DOCUMENT AND THIS USED TO DOWNLOAD IT TWICE. The precache list
    was ["./", "./index.html", "./app.webmanifest"] fed to cache.addAll(). The first two are the
@@ -24,7 +24,7 @@ self.addEventListener("install", e => {
       if (!res || !res.ok) throw new Error("precache: index.html " + (res && res.status));
       /* put() twice off ONE response — clone before the body is consumed by the first put */
       return c.put("./index.html", res.clone()).then(() => c.put("./", res));
-    }).then(() => c.add("./app-b44f317915cf1cf8.js")).then(() => c.add("./data-b44f317915cf1cf8.js")).then(() => c.add("./app.webmanifest"))
+    }).then(() => c.add("./app-7c2d9ae7a89858d7.js")).then(() => c.add("./data-7c2d9ae7a89858d7.js")).then(() => c.add("./app.webmanifest"))
   ).then(() => self.skipWaiting()));
 });
 
