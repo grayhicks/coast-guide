@@ -720,7 +720,8 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
 .hk .hk_calc.m.on .hk_calev { background: rgba(11, 26, 38, 0.2); color: rgb(11, 26, 38); }
 .hk.hk_day .hk_calc.m.on .hk_calev { background: rgba(255, 255, 255, 0.22); color: rgb(255, 255, 255); }
 .hk_ptile :is(.hk_ptcorner, .hk_ptbar) :is(.pin, .cardrateact).on { background: var(--hk-bub) !important; color: rgb(255, 250, 240) !important; }
-.hk.hk .tabpanel:has(.hk_sw_top) .hk_secjump:not(.has-win) .hk_secjumpb.on { font: 600 21px / 1.1 Newsreader, Georgia, serif; letter-spacing: -0.2px; text-decoration: none; }
+.hk.hk .tabpanel:has(.hk_sw_top) .hk_secjump:not(.has-win) .hk_secjumpb.on { font: 600 clamp(15px, -1px + 4.6vw, 21px) / 1.1 Newsreader, Georgia, serif; letter-spacing: -0.2px; text-decoration: none; }
+@media (max-width: 374px){.hk.hk .tabpanel:has(.hk_sw_top) .hk_secjump:not(.has-win) .hk_secjumpb.on { font: 800 13.5px / 1.2 Nunito, system-ui, sans-serif; letter-spacing: 0px; }}
 .hero.hk_nhon { background: rgb(127, 195, 227); }
 .hero.hk_nhon.ph-night { background: rgb(25, 34, 47); }
 .hero.hk_nhon { background: linear-gradient(rgb(91, 169, 211) 3.1%, rgb(111, 164, 168) 9.4%, rgb(148, 197, 205) 15.6%, rgb(180, 203, 180) 21.9%, rgb(172, 211, 198) 28.1%, rgb(186, 217, 215) 34.4%, rgb(21, 92, 123) 40.6%, rgb(13, 111, 123) 46.9%, rgb(16, 127, 125) 53.1%, rgb(23, 146, 139) 59.4%, rgb(51, 180, 171) 65.6%, rgb(101, 201, 187) 71.9%, rgb(168, 221, 201) 78.1%, rgb(250, 246, 236) 84.4%, rgb(246, 240, 225) 90.6%, rgb(243, 236, 216) 96.9%) rgb(127, 195, 227); }
