@@ -19069,6 +19069,14 @@ html .hk .hk_ptile .hk_ptcaltab{ top:1px; }
 .hk_ptfoot .hk_ptstamps .hk_ptkind{ margin-left:auto; width:26px; height:26px; flex:0 0 26px; border-radius:50%; display:flex; align-items:center; justify-content:center;
   background:rgba(255,250,240,.94); color:var(--hk-bub); box-shadow:0 0 0 1.5px var(--hk-bub), 1px 1px 0 1.5px rgba(20,24,28,.35); }
 .hk_ptfoot .hk_ptstamps .hk_ptkind svg{ display:block; }
+
+.hk_ptile:has(.hk_ptph .hk_ptstamp) .hk_ptfoot .hk_ptstamps .hk_ptkind{ margin-left:0; margin-right:auto; order:-1; }
+
+.hk.hk .tabpanel:has(.hk_sw_top){ padding-top:4px; }
+.hk.hk .tabpanel:has(.hk_sw_top) .hk_sctop{ display:none; }
+.hk.hk .tabpanel:has(.hk_sw_top) .hk_secjump{ margin-top:2px; margin-bottom:6px; }
+.hk.hk .tabpanel:has(.hk_sw_top) .hk_tds{ margin-bottom:6px; }
+.hk.hk .tabpanel:has(.hk_sw_top) .hk_sw_top{ margin-bottom:6px; }
 .hk_ptstamp_ink{ display:inline-block; white-space:nowrap; padding:2px 6px 1px; border:2px solid currentColor; border-radius:4px; background:rgba(255,250,240,.9);
   box-shadow:inset 0 0 0 1.5px rgba(255,250,240,.9), inset 0 0 0 2.5px currentColor; font:900 10px/1.2 Nunito, sans-serif; letter-spacing:1.1px; text-transform:uppercase;
   transform:rotate(calc(var(--pt-tilt, 0deg) * 1.5 - 6deg)); }
