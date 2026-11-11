@@ -19981,6 +19981,33 @@ html.hk_gd_cream body::after{ content:''; position:fixed; inset:-25%; z-index:0;
     linear-gradient(180deg, rgba(22,40,84,0) 73%, rgba(22,40,84,.22) 100%);
 }
 
+.hero.hk_nhon .hero-title{
+  text-shadow:
+    -1px 1px 0 rgba(11,64,89,.96),
+    -2px 2px 0 rgba(11,64,89,.96),
+    -3px 3px 0 rgba(11,64,89,.50),
+    -3px 5px 0 rgba(6,24,36,.26),
+    -5px 11px 16px rgba(6,24,36,.32) !important;
+}
+.hero.hk_nhon.ph-golden .hero-title, .hero.hk_nhon.ph-dawn .hero-title{
+  text-shadow:
+    -1px 1px 0 rgba(70,30,50,.96),
+    -2px 2px 0 rgba(70,30,50,.96),
+    -3px 3px 0 rgba(70,30,50,.50),
+    -3px 5px 0 rgba(28,12,24,.28),
+    -5px 11px 16px rgba(28,12,24,.34) !important;
+}
+.hero.hk_nhon.ph-night .hero-title{
+  text-shadow:
+    -1px 1px 0 rgba(3,12,28,.98),
+    -2px 2px 0 rgba(3,12,28,.98),
+    -3px 3px 0 rgba(3,12,28,.55),
+    -3px 5px 0 rgba(1,4,10,.40),
+    -5px 11px 18px rgba(1,4,10,.50) !important;
+}
+
+@media (min-width:390px){ .hero.hk_nhon .hero-title{ scale:1.05 !important; transform-origin:50% 0 !important; } }
+
 .hk .tabpanel{
   --tdy-ink:#F2F0E9; --tdy-word:#D9DEDC; --tdy-soft:#A9BBC0;
   --tdy-live:#7DD3FC; --tdy-fig:#7DD3FC; --tdy-bar:#7DD3FC;
