@@ -20543,6 +20543,118 @@ html.hk_gd_cream body::after{ content:''; position:fixed; inset:-25%; z-index:0;
 .hk.hk .hk_nearbtn{ padding-top:4px !important; padding-bottom:0 !important; }
 @media (min-width:390px){ .hk.hk .hk_decktog{ padding-top:4px !important; padding-bottom:0 !important; } }
 
+.hk .tabpanel{ --fhf-seat:clamp(13.5px, 4.1vw, 18px); --fhf-lead:.9em; --fhf-star:19px; --fhf-fol:11px; --fhf-note:12px; --fhf-ls:.16em; }
+@media (max-width:360px){ .hk .tabpanel{ --fhf-ls:.13em; } }
+@media (max-width:340px){ .hk .tabpanel{ --fhf-lead:.78em; --fhf-star:0px; --fhf-ls:.1em; } }
+.hk.hk_ts_lg .tabpanel{ --fhf-seat:clamp(11.7px, 3.57vw, 18px); --fhf-lead:.7em; --fhf-fol:min(11px, 3.3vw); --fhf-note:min(12px, 3.6vw); --fhf-ls:.08em; }
+.hk.hk_ts_xl .tabpanel{ --fhf-seat:clamp(10.3px, 3.15vw, 18px); --fhf-lead:.62em; --fhf-fol:min(11px, 3vw); --fhf-note:min(12px, 3.3vw); --fhf-ls:.08em; }
+
+.hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll):has(> .hk_sctop + .hk_secjump){ padding-top:6px !important; }
+.hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll) > .hk_sctop{
+  height:26px !important; line-height:16px !important; margin-bottom:calc(var(--fhf-seat) * .47 - 10px) !important;
+  font-size:var(--fhf-fol) !important; letter-spacing:var(--fhf-ls) !important;
+  background:linear-gradient(var(--tdy-rule2),var(--tdy-rule2)) 0 21px/100% 2px no-repeat,
+    linear-gradient(var(--tdy-rule),var(--tdy-rule)) 0 25px/100% 1px no-repeat !important; }
+.hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll):has(> .tabin > .hk_frontrow > .hk_twhide) > .hk_sctop{
+  padding-right:calc(var(--fhf-note) * 7.8 + 10px) !important; overflow:hidden !important; text-overflow:ellipsis !important; }
+
+.hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll) > .hk_sctop + .hk_secjump{
+  height:40px !important; margin:0 calc(var(--fhf-seat) * 2.45 + var(--fhf-star) + 18px) 0 -12px !important; padding:0 0 0 14px !important;
+  border-bottom:0 !important; background:none !important;
+  overflow-x:auto !important; overflow-y:hidden !important; scrollbar-width:none !important; }
+.hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll) > .hk_sctop + .hk_secjump .hk_secjumpb{
+  flex:0 0 auto !important; display:block !important; padding:0 0 0 var(--fhf-lead) !important; background:none !important;
+  font-size:var(--fhf-seat) !important; line-height:40px !important; }
+.hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll) > .hk_sctop + .hk_secjump > .hk_secjumpb.hk_secwin{
+  padding:0 !important; }
+.hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll) > .hk_sctop + .hk_secjump > .hk_secjumpb.hk_secwin::before{
+  right:0 !important; bottom:7px !important; }
+.hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll) > .hk_sctop + .hk_secjump > .hk_secjumpb.hk_secwin .chev{
+  margin:0 0 0 5px !important; }
+.hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll) > .hk_sctop + .hk_secjump :is(.hk_sjn, .hk_wcn){
+  font-size:.82em !important; }
+.hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll) > .hk_sctop + .hk_secjump .hk_sjn{
+  margin-left:5px !important; }
+.hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll) > .hk_sctop + .hk_secjump > .hk_secord{
+  background:none !important; }
+
+.hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll) > .hk_sctop + .hk_secjump + .tabin > .sechead:not(.sechead ~ .sechead){
+  margin-top:calc(5px + var(--tdy-ts) * .074) !important; }
+
+.hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll) > .hk_sctop + .hk_secjump + .tabin > .hk_frontrow:first-child:has(> .hk_planchip:first-child){
+  position:relative !important; display:flex !important; flex-wrap:nowrap !important; justify-content:flex-end !important;
+  align-items:flex-start !important; gap:0 !important; height:1px !important; min-height:0 !important; margin:0 2px -1px !important;
+  padding:0 !important; overflow:visible !important; -webkit-mask-image:none !important; mask-image:none !important; }
+.hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll) > .hk_sctop + .hk_secjump + .tabin > .hk_frontrow:first-child:has(> .hk_planchip:first-child) :is(.hk_newyou, .hk_tds_n){
+  display:none !important; }
+.hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll) > .hk_sctop + .hk_secjump + .tabin > .hk_frontrow:first-child:has(> .hk_planchip:first-child) > .hk_planchip{
+  position:relative !important; top:-40px !important; z-index:1 !important; min-width:44px !important; padding:0 !important; gap:5px !important;
+  justify-content:flex-end !important; font:600 var(--fhf-seat)/1 Newsreader,Georgia,serif !important; letter-spacing:-.01em !important;
+  text-transform:none !important; color:var(--tdy-word) !important; transform:none !important; transition:transform .12s ease; }
+.hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll) > .hk_sctop + .hk_secjump + .tabin > .hk_frontrow:first-child:has(> .hk_planchip:first-child) > .hk_planchip > span{
+  padding-bottom:0 !important; margin-bottom:0 !important; background:none !important; }
+.hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll) > .hk_sctop + .hk_secjump + .tabin > .hk_frontrow:first-child:has(> .hk_planchip:first-child) > .hk_twhide{
+  position:absolute !important; right:0 !important; top:calc(-67px - var(--fhf-seat) * .47) !important; display:block !important;
+  height:40px !important; min-height:0 !important; min-width:44px !important; padding:11px 0 0 12px !important; text-align:right !important;
+  font:700 var(--fhf-note)/16px Nunito,system-ui,sans-serif !important; letter-spacing:.01em !important; text-transform:none !important;
+  color:var(--tdy-soft) !important; transform:none !important; transition:transform .12s ease; }
+.hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll) > .hk_sctop + .hk_secjump + .tabin > .hk_frontrow:first-child:has(> .hk_planchip:first-child) > .hk_twhide > .hk_twgo{
+  margin-left:.4em !important; font-size:1.15em !important; line-height:0 !important; }
+.hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll) > .hk_sctop + .hk_secjump + .tabin > .hk_frontrow:first-child:has(> .hk_planchip:first-child) > :is(.hk_planchip, .hk_twhide):active{
+  transform:scale(.97) !important; }
+
+@media (max-width:340px){
+  .hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll) > .hk_sctop + .hk_secjump + .tabin > .hk_frontrow:first-child:has(> .hk_planchip:first-child) > .hk_planchip > svg{
+    display:none !important; } }
+@media (prefers-reduced-motion:reduce){
+  .hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll) > .hk_sctop + .hk_secjump + .tabin > .hk_frontrow:first-child:has(> .hk_planchip:first-child) > :is(.hk_planchip, .hk_twhide){
+    transition:none; }
+  .hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll) > .hk_sctop + .hk_secjump + .tabin > .hk_frontrow:first-child:has(> .hk_planchip:first-child) > :is(.hk_planchip, .hk_twhide):active{
+    transform:none !important; } }
+
+html.hk_hol .hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll) > .hk_sctop{
+  background-image:linear-gradient(var(--hol-a, var(--tdy-rule2)),var(--hol-a, var(--tdy-rule2))),
+    linear-gradient(var(--hol-b, var(--tdy-rule)),var(--hol-b, var(--tdy-rule))) !important; }
+html.hk_hol .hk.hk .tabpanel:not(:has(.hk_sw_top)):has(> .hk_secjump.has-win > .hk_secjumpscroll) > .hk_sctop + .hk_secjump > .hk_secjumpb.hk_secwin::before{
+  background:linear-gradient(90deg, var(--hol-a, var(--tdy-bar)) 0 44%, var(--hol-c, var(--tdy-bar)) 44% 56%, var(--hol-b, var(--tdy-bar)) 56% 100%) !important;
+  box-shadow:none !important; }
+
+html.hk_hol_veterans{ --hol-a:#F25A66; --hol-b:#6FA8FF; --hol-c:#FFFFFF; }
+html.hk_hol_veterans .hk.hk_day{ --hol-a:#B22234; --hol-b:#23408E; --hol-c:#FFFFFF; }
+
+html.hk_hol_thanksgiving{ --hol-a:#FF8A2A; --hol-b:#E8527A; --hol-c:#F2C14E; }
+html.hk_hol_thanksgiving .hk.hk_day{ --hol-a:#D9560A; --hol-b:#9B1B3F; --hol-c:#E0A21A; }
+
+html.hk_hol_christmas{ --hol-a:#FF5A5F; --hol-b:#45D483; --hol-c:#F2C14E; }
+html.hk_hol_christmas .hk.hk_day{ --hol-a:#C21F30; --hol-b:#146B4A; --hol-c:#D9A21B; }
+
+html.hk_hol_newyear{ --hol-a:#F2C94C; --hol-b:#C9D6E2; --hol-c:#FFFFFF; }
+html.hk_hol_newyear .hk.hk_day{ --hol-a:#14213D; --hol-b:#967126; --hol-c:#8496AB; }
+
+html.hk_hol_mardigras{ --hol-a:#B88CFF; --hol-b:#3FD68A; --hol-c:#F5C542; }
+html.hk_hol_mardigras .hk.hk_day{ --hol-a:#5B2A91; --hol-b:#0B7A48; --hol-c:#E0A91A; }
+
+html.hk_hol_valentine{ --hol-a:#FF4D6D; --hol-b:#FF9EBB; --hol-c:#FFFFFF; }
+html.hk_hol_valentine .hk.hk_day{ --hol-a:#C2183D; --hol-b:#D9487F; --hol-c:#FFFFFF; }
+
+html.hk_hol_stpatrick{ --hol-a:#3DDC84; --hol-b:#FF9F45; --hol-c:#FFFFFF; }
+html.hk_hol_stpatrick .hk.hk_day{ --hol-a:#0E7A45; --hol-b:#DB5F0B; --hol-c:#FFFFFF; }
+
+html.hk_hol_easter{ --hol-a:#C9A7FF; --hol-b:#7FE3E0; --hol-c:#FFE27A; }
+html.hk_hol_easter .hk.hk_day{ --hol-a:#7E4FBF; --hol-b:#12889A; --hol-c:#EBB90F; }
+
+html.hk_hol_memorial{ --hol-a:#FF5D4D; --hol-b:#7FA6F5; --hol-c:#FFFFFF; }
+html.hk_hol_memorial .hk.hk_day{ --hol-a:#C8281E; --hol-b:#1F3A7A; --hol-c:#FFFFFF; }
+
+html.hk_hol_july4{ --hol-a:#FF4D5E; --hol-b:#4FA3FF; --hol-c:#FFFFFF; }
+html.hk_hol_july4 .hk.hk_day{ --hol-a:#C1121F; --hol-b:#1D4ED8; --hol-c:#FFFFFF; }
+
+html.hk_hol_labor{ --hol-a:#6FA8FF; --hol-b:#F25A66; --hol-c:#FFFFFF; }
+html.hk_hol_labor .hk.hk_day{ --hol-a:#2B4C9B; --hol-b:#B22234; --hol-c:#FFFFFF; }
+
+html.hk_hol_halloween{ --hol-a:#FF7A1A; --hol-b:#F2EDDF; --hol-c:#B57CFF; }
+html.hk_hol_halloween .hk.hk_day{ --hol-a:#E0600A; --hol-b:#1B1B22; --hol-c:#6A2BB0; }
+
 .hk.hk{
   --tk-ink:#F3EBDD; --tk-soft:#9FB6B4; --tk-mark:#E8C77B; --tk-link:#E8C77B;
   --tk-paper:linear-gradient(180deg, rgba(255,255,255,.085), rgba(255,255,255,.05)); --tk-stub:rgba(255,255,255,.05);
