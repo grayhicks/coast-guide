@@ -25,26 +25,8 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_suds_blazing_saddles_1111-2026-11-11@coastaleventures.com
-DTSTAMP:20261111T000000Z
-DTSTART;TZID=America/Chicago:20261111T183000
-DTEND;TZID=America/Chicago:20261111T193000
-SUMMARY:Blazing Saddles at Suds N Cinema
-LOCATION:Suds N Cinema\, 174 Miracle Strip Pkwy SE\, Fort Walton Beach\, FL
-  32548
-DESCRIPTION:Wednesday 11/11 · 6:30 PM\n\nSuds N Cinema in Fort Walton Beac
- h brings the Mel Brooks western comedy Blazing Saddles back to the big scr
- een. Guests can order local craft beer\, wine\, pizza and concessions to t
- heir seats. Tickets are $5 for a Classic Ticket plus tax and a service fee
- \, and the theater warns that seats are limited.\n\nPrice: from $5\n\nDeta
- ils: https://coastaleventures.com/events/ev-suds-blazing-saddles-1111.html
-URL:https://coastaleventures.com/events/ev-suds-blazing-saddles-1111.html
-CATEGORIES:Movies
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-12@coastaleventures.com
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;TZID=America/Chicago:20261112T150000
 DTEND;TZID=America/Chicago:20261112T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -62,7 +44,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_theater_thursday_gulf_breeze_1112-2026-11-12@coastaleventures.com
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;TZID=America/Chicago:20261112T150000
 DTEND;TZID=America/Chicago:20261112T170000
 SUMMARY:Theater Thursday: Open Season at the Gulf Breeze Library
@@ -82,7 +64,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_great_movie_adventure_inside_out_2_toulminville_1112-2026-11-12@coas
  taleventures.com
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;TZID=America/Chicago:20261112T151500
 DTEND;TZID=America/Chicago:20261112T161500
 SUMMARY:Great Movie Adventure (Inside Out 2) at Toulminville Library
@@ -102,7 +84,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_princess_bride_movie_night_mobile_1112-2026-11-12@coastaleventures.c
  om
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;TZID=America/Chicago:20261112T160000
 DTEND;TZID=America/Chicago:20261112T180000
 SUMMARY:Princess Bride Movie Night
@@ -118,8 +100,26 @@ CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_suds_blazing_saddles_1111-2026-11-12@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261112T183000
+DTEND;TZID=America/Chicago:20261112T193000
+SUMMARY:Blazing Saddles at Suds N Cinema
+LOCATION:Suds N Cinema\, 174 Miracle Strip Pkwy SE\, Fort Walton Beach\, FL
+  32548
+DESCRIPTION:Wednesday 11/11 · 6:30 PM\n\nSuds N Cinema in Fort Walton Beac
+ h brings the Mel Brooks western comedy Blazing Saddles back to the big scr
+ een. Guests can order local craft beer\, wine\, pizza and concessions to t
+ heir seats. Tickets are $5 for a Classic Ticket plus tax and a service fee
+ \, and the theater warns that seats are limited.\n\nPrice: from $5\n\nDeta
+ ils: https://coastaleventures.com/events/ev-suds-blazing-saddles-1111.html
+URL:https://coastaleventures.com/events/ev-suds-blazing-saddles-1111.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_stamped_film_festival_1113-2026-11-13@coastaleventures.com
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261116
 SUMMARY:Stamped Film Festival
@@ -138,7 +138,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_suds_cigarette_surfboard_1113-2026-11-13@coastaleventures.com
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;TZID=America/Chicago:20261113T183000
 DTEND;TZID=America/Chicago:20261113T203000
 SUMMARY:The Cigarette Surfboard screening for the Emerald Coast Science Cen
@@ -159,7 +159,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_navarre_library_throwback_movie_1117-2026-11-17@coastaleventures.com
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;TZID=America/Chicago:20261117T160000
 DTEND;TZID=America/Chicago:20261117T170000
 SUMMARY:Throwback Movie Tuesday at Navarre Library
@@ -177,7 +177,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_suds_wizard_of_oz_1118-2026-11-18@coastaleventures.com
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;TZID=America/Chicago:20261118T183000
 DTEND;TZID=America/Chicago:20261118T193000
 SUMMARY:The Wizard of Oz at Suds N Cinema
@@ -196,7 +196,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_teen_space_movie_hunger_games_1119-2026-11-19@coastaleventures.com
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;TZID=America/Chicago:20261119T143000
 DTEND;TZID=America/Chicago:20261119T160000
 SUMMARY:Movie in the Teen Space: The Hunger Games
@@ -216,7 +216,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-19@coastaleventures.com
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;TZID=America/Chicago:20261119T150000
 DTEND;TZID=America/Chicago:20261119T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -235,7 +235,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_great_movie_adventure_elemental_toulminville_1119-2026-11-19@coastal
  eventures.com
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;TZID=America/Chicago:20261119T151500
 DTEND;TZID=America/Chicago:20261119T161500
 SUMMARY:Great Movie Adventure (Elemental) at Toulminville Library
@@ -254,7 +254,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_destin_commons_movie_moana_1122-2026-11-22@coastaleventures.com
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;TZID=America/Chicago:20261122T183000
 DTEND;TZID=America/Chicago:20261122T193000
 SUMMARY:Movie Night: Moana at Destin Commons
@@ -273,7 +273,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_suds_christmas_vacation_1124-2026-11-24@coastaleventures.com
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:Christmas Vacation at Suds N Cinema
@@ -293,7 +293,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-26@coastaleventures.com
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;TZID=America/Chicago:20261126T150000
 DTEND;TZID=America/Chicago:20261126T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -311,7 +311,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-03@coastaleventures.com
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;TZID=America/Chicago:20261203T150000
 DTEND;TZID=America/Chicago:20261203T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -330,7 +330,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_mobile_wheels_and_reels_christmas_pageant_1204-2026-12-04@coastaleve
  ntures.com
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;TZID=America/Chicago:20261204T180000
 DTEND;TZID=America/Chicago:20261204T220000
 SUMMARY:Wheels & Reels Drive-In Movies: The Best Christmas Pageant Ever
@@ -350,7 +350,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_exploreum_21_after_hours_gremlins_1205-2026-12-05@coastaleventures.c
  om
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;TZID=America/Chicago:20261205T180000
 DTEND;TZID=America/Chicago:20261205T190000
 SUMMARY:21+ After Hours: Gremlins at the Exploreum
@@ -368,7 +368,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-10@coastaleventures.com
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;TZID=America/Chicago:20261210T150000
 DTEND;TZID=America/Chicago:20261210T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -386,7 +386,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_wharf_jingle_bell_movie_bash_1212-2026-12-12@coastaleventures.com
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;TZID=America/Chicago:20261212T110000
 DTEND;TZID=America/Chicago:20261212T120000
 SUMMARY:Jingle Bell Movie Bash at Portside on Main
@@ -406,7 +406,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_navarre_throwback_deck_halls_1215-2026-12-15@coastaleventures.com
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;TZID=America/Chicago:20261215T160000
 DTEND;TZID=America/Chicago:20261215T170000
 SUMMARY:Throwback Movie Tuesday: Deck the Halls at Navarre Library
@@ -425,7 +425,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-17@coastaleventures.com
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;TZID=America/Chicago:20261217T150000
 DTEND;TZID=America/Chicago:20261217T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -443,7 +443,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_destin_commons_movie_home_alone_1218-2026-12-18@coastaleventures.com
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;TZID=America/Chicago:20261218T183000
 DTEND;TZID=America/Chicago:20261218T193000
 SUMMARY:Movie Night: Elf at Destin Commons
@@ -461,7 +461,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_milton_movie_night_1222-2026-12-22@coastaleventures.com
-DTSTAMP:20261111T000000Z
+DTSTAMP:20261112T000000Z
 DTSTART;VALUE=DATE:20261222
 DTEND;VALUE=DATE:20261230
 SUMMARY:Movie Night at Milton Library
