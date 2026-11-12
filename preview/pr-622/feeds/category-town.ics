@@ -1,0 +1,1368 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Coastal Eventures//Events feed//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Coastal Eventures: Town and community
+X-WR-TIMEZONE:America/Chicago
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:ev_destin_library_puzzle_club_1112-2026-11-12@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261112T173000
+DTEND;TZID=America/Chicago:20261112T183000
+SUMMARY:Puzzle Club at Destin Library
+LOCATION:Destin Library\, David Neal Room\, 150 Sibert Ave\, Destin\, FL 32
+ 541
+DESCRIPTION:Thursday 11/12 · 5:30 PM\n\nAdults bring their own jigsaw puzz
+ le or work on one from the library's collection. The club is drop-in from 
+ 5:30 to 7:00 PM\, free\, and open to all skill levels. Registration is off
+ ered and closes when the event starts.\n\nPrice: Free\n\nDetails: https://
+ coastaleventures.com/events/ev-destin-library-puzzle-club-1112.html
+URL:https://coastaleventures.com/events/ev-destin-library-puzzle-club-1112.
+ html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_crestview_holiday_market_1114-2026-11-14@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20261115
+SUMMARY:Main Street Crestview Holiday Market
+LOCATION:Historic Downtown Crestview\, Main Street\, Main Street\, Crestvie
+ w\, FL 32536
+DESCRIPTION:Saturday 11/14\n\nThe Main Street Crestview Association holds i
+ ts annual Holiday Market in downtown Crestview under a Storybook Christmas
+  theme. The listing names local shopping\, photos with Santa\, train rides
+  and a beer tent. Hours and admission are not published yet\, so confirm b
+ oth before driving up.\n\nPrice: No published price\n\nDetails: https://co
+ astaleventures.com/events/ev-crestview-holiday-market-1114.html
+URL:https://coastaleventures.com/events/ev-crestview-holiday-market-1114.ht
+ ml
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_downtown_fwb_saturday_market_0912-2026-11-14@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261114T080000
+DTEND;TZID=America/Chicago:20261114T130000
+SUMMARY:Downtown FWB Saturday Market
+LOCATION:Fort Walton Beach Landing Park\, 139 Brooks St SE\, Fort Walton Be
+ ach\, FL 32547
+DESCRIPTION:8:00 AM to 1:00 PM\n\nThe Downtown FWB Saturday Market sets up 
+ at Fort Walton Beach Landing Park on the waterfront from 8 AM to 1 PM\, fr
+ ee to browse for the whole family. Local artisans\, produce growers\, and 
+ other vendors fill the park on the second and fourth Saturday of every mon
+ th\, year-round. Walking the market alongside the water is as much the poi
+ nt as the shopping.\n\nPrice: Free\n\nDetails: https://coastaleventures.co
+ m/events/ev-downtown-fwb-saturday-market-0912.html
+URL:https://coastaleventures.com/events/ev-downtown-fwb-saturday-market-091
+ 2.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grand_boulevard_farmers_market_1024-2026-11-14@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261114T090000
+DTEND;TZID=America/Chicago:20261114T130000
+SUMMARY:Grand Boulevard Farmers Market
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Boulevard\, 
+ Miramar Beach\, FL 32550
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nGrand Boulevard holds an ope
+ n-air farmers market every Saturday morning in Grand Park\, between Cantin
+ a Laredo and Tommy Bahama. Vendors sell produce\, meats\, dairy\, eggs\, h
+ oney\, baked goods\, artisanal foods and handmade goods. The market runs y
+ ear-round in a walkable shopping district.\n\nPrice: Free\n\nDetails: http
+ s://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1024.htm
+ l
+URL:https://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1
+ 024.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_farmers_market-2026-11-14@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261114T090000
+DTEND;TZID=America/Chicago:20261114T130000
+SUMMARY:Seaside Farmers Market
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 3245
+ 9
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nThe Seaside Farmers Market f
+ ills the amphitheater in Seaside's Central Square every Saturday morning w
+ ith local farmers\, growers and artisans. Stalls sell fresh produce\, bake
+ d goods and specialty foods\, and live music plays while you browse. The m
+ arket runs rain or shine unless the weather turns unsafe.\n\nPrice: No pub
+ lished price\n\nDetails: https://coastaleventures.com/events/ev-seaside-fa
+ rmers-market.html
+URL:https://coastaleventures.com/events/ev-seaside-farmers-market.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_rural_roots_day_jay_1114-2026-11-14@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261114T100000
+DTEND;TZID=America/Chicago:20261114T140000
+SUMMARY:Santa Rosa Rural Roots Day Ag Expo
+LOCATION:UF/IFAS Research Center\, 4253 Experiment Drive\, Jay\, FL 32565
+DESCRIPTION:Saturday 11/14 · 10:00 AM to 2:00 PM\n\nSanta Rosa County host
+ s Rural Roots Day to celebrate local farming. The day includes a farmer pa
+ nel\, live animals\, a hay maze\, a planting station\, crafts and a Kid's 
+ Corner. Food and activities are complimentary\, and a Fall Heritage Pie Co
+ ntest takes entries until 10:30 AM.\n\nPrice: Free\n\nDetails: https://coa
+ staleventures.com/events/ev-rural-roots-day-jay-1114.html
+URL:https://coastaleventures.com/events/ev-rural-roots-day-jay-1114.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_orange_beach_police_fire_cookout_1114-2026-11-14@coastaleventures.co
+ m
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261114T110000
+DTEND;TZID=America/Chicago:20261114T120000
+SUMMARY:Police and Fire Community Cookout at Waterfront Park
+LOCATION:Orange Beach Waterfront Park\, 26425 Canal Road\, Orange Beach\, A
+ L 36561
+DESCRIPTION:Saturday 11/14 · 11:00 AM\n\nThe Orange Beach Police and Fire 
+ departments serve hamburgers and hot dogs free to the community at Waterfr
+ ont Park. The lunch runs 11:00 AM to 1:00 PM. It is the departments' way o
+ f giving back to the town they serve.\n\nPrice: Free\n\nDetails: https://c
+ oastaleventures.com/events/ev-orange-beach-police-fire-cookout-1114.html
+URL:https://coastaleventures.com/events/ev-orange-beach-police-fire-cookout
+ -1114.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_daphne_fire_first_aid_class_1114-2026-11-14@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261114T123000
+DTEND;TZID=America/Chicago:20261114T143000
+SUMMARY:Daphne Fire Department First Aid certification class
+LOCATION:Fire Station 1 and Training Facility\, 25250 Bailey Yelding Jr Dri
+ ve\, Daphne\, AL 36526
+DESCRIPTION:Saturday 11/14 · 12:30 PM to 2:30 PM\n\nThe Daphne Fire Depart
+ ment teaches a First Aid certification class on Saturday 11/14 at Fire Sta
+ tion 1. Attendees who also take the Heartsaver class earn the combined Hea
+ rtsaver and First Aid card for a single $30 fee. Reserving a spot requires
+  a phone call\, and class times may vary.\n\nPrice: from $30\n\nDetails: h
+ ttps://coastaleventures.com/events/ev-daphne-fire-first-aid-class-1114.htm
+ l
+URL:https://coastaleventures.com/events/ev-daphne-fire-first-aid-class-1114
+ .html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_bellingrath_todd_talk_master_plan_1110-2026-11-17@coastaleventures.c
+ om
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261117T130000
+DTEND;TZID=America/Chicago:20261117T140000
+SUMMARY:Todd Talk: The Master Plan at Bellingrath
+LOCATION:Magnolia Room\, Bellingrath Gardens and Home\, 12401 Bellingrath G
+ ardens Road\, Theodore\, AL 36582
+DESCRIPTION:Tuesday 11/17 · 1:00 PM to 2:00 PM\n\nBellingrath's Executive 
+ Director\, Todd Lasseigne\, presents the estate's Master Plan in the Magno
+ lia Room on Tuesday November 17. The talk covers the vision\, priorities a
+ nd plans for the growth and preservation of the gardens and home. The even
+ t page lists the time as 1:00 PM to 2:00 PM.\n\nPrice: from $17\n\nDetails
+ : https://coastaleventures.com/events/ev-bellingrath-todd-talk-master-plan
+ -1110.html
+URL:https://coastaleventures.com/events/ev-bellingrath-todd-talk-master-pla
+ n-1110.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_destin_library_pokemon_club_1117-2026-11-17@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261117T173000
+DTEND;TZID=America/Chicago:20261117T183000
+SUMMARY:Pokémon Club at Destin Library
+LOCATION:Destin Library\, Calhoun Room\, 150 Sibert Ave\, Destin\, FL 32541
+DESCRIPTION:Tuesday 11/17 · 5:30 PM\n\nSchool-age Pokémon fans battle\, t
+ rade and craft with a library staffer from 5:30 to 6:30 PM. Registration i
+ s required. The page prints no cost.\n\nPrice: No published price\n\nDetai
+ ls: https://coastaleventures.com/events/ev-destin-library-pokemon-club-111
+ 7.html
+URL:https://coastaleventures.com/events/ev-destin-library-pokemon-club-1117
+ .html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_pageandpalette_fascinating_females_1119-2026-11-19@coastaleventures.
+ com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261119T173000
+DTEND;TZID=America/Chicago:20261119T193000
+SUMMARY:Fascinating Females of Fairhope 2027 calendar signing
+LOCATION:Page & Palette\, 32 South Section Street\, Fairhope\, AL 36532
+DESCRIPTION:Thursday 11/19 · 5:30 PM to 7:30 PM\n\nPage & Palette holds a 
+ calendar signing outside the store during Lighting of the Trees in Fairhop
+ e. The 2027 calendar features twelve local women\, and proceeds go to Art 
+ with a Purpose. Guests can meet the women in the calendar and get a copy s
+ igned.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/events/ev-p
+ ageandpalette-fascinating-females-1119.html
+URL:https://coastaleventures.com/events/ev-pageandpalette-fascinating-femal
+ es-1119.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_fairhope_lighting_of_the_trees_1119-2026-11-19@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261119T173000
+DTEND;TZID=America/Chicago:20261119T183000
+SUMMARY:Lighting of the Trees in Fairhope
+LOCATION:Downtown Fairhope\, 2 N Section Street\, Fairhope\, AL 36532
+DESCRIPTION:Thursday 11/19 · 5:30 PM\n\nThe City of Fairhope holds its Lig
+ hting of the Trees on Thursday evening at 2 N Section Street. The event be
+ gins at 5:30 PM. Bring a jacket for the wait after dark.\n\nPrice: No publ
+ ished price\n\nDetails: https://coastaleventures.com/events/ev-fairhope-li
+ ghting-of-the-trees-1119.html
+URL:https://coastaleventures.com/events/ev-fairhope-lighting-of-the-trees-1
+ 119.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_owa_tree_lighting_1121-2026-11-21@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:Annual Tree Lighting at Downtown OWA
+LOCATION:Downtown OWA\, 205-A N OWA Blvd\, Foley\, AL 36535
+DESCRIPTION:Saturday 11/21 · time not yet posted\n\nOWA Parks & Resort kic
+ ks off its holiday season with the Annual Tree Lighting in Downtown OWA on
+  November 21. The Christmas at OWA page also lists Christmas fireworks\, a
+  Very Merry Tree Walk and a Christmas projection show that lights up the d
+ owntown buildings each night. The page gives no start time or price for th
+ e tree lighting yet\, so check it before you drive to Foley.\n\nPrice: No 
+ published price\n\nDetails: https://coastaleventures.com/events/ev-owa-tre
+ e-lighting-1121.html
+URL:https://coastaleventures.com/events/ev-owa-tree-lighting-1121.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_defrance_christmas_open_house_beal_1121-2026-11-21@coastaleventures.
+ com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261121T090000
+DTEND;TZID=America/Chicago:20261121T140000
+SUMMARY:Christmas Open House at DeFrance on Beal
+LOCATION:DeFrance Antiques on Beal\, 74B Beal Parkway NW\, Fort Walton Beac
+ h\, FL 32548
+DESCRIPTION:Saturday 11/21 · 9:00 AM to 2:00 PM\n\nDeFrance Antiques on Be
+ al holds a Christmas open house with sweet treats\, finger food\, booth sa
+ les\, door prizes and live music. DeFrance Boutique at 70 Beal Parkway NW 
+ runs its own open house the same day from 10:00 AM to 6:00 PM\, with cooki
+ e decorating and letters to Santa for children. Both shops sit in the Beal
+  Street Station shopping center.\n\nPrice: No published price\n\nDetails: 
+ https://coastaleventures.com/events/ev-defrance-christmas-open-house-beal-
+ 1121.html
+URL:https://coastaleventures.com/events/ev-defrance-christmas-open-house-be
+ al-1121.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grand_boulevard_farmers_market_1024-2026-11-21@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261121T090000
+DTEND;TZID=America/Chicago:20261121T130000
+SUMMARY:Grand Boulevard Farmers Market
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Boulevard\, 
+ Miramar Beach\, FL 32550
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nGrand Boulevard holds an ope
+ n-air farmers market every Saturday morning in Grand Park\, between Cantin
+ a Laredo and Tommy Bahama. Vendors sell produce\, meats\, dairy\, eggs\, h
+ oney\, baked goods\, artisanal foods and handmade goods. The market runs y
+ ear-round in a walkable shopping district.\n\nPrice: Free\n\nDetails: http
+ s://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1024.htm
+ l
+URL:https://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1
+ 024.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_farmers_market-2026-11-21@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261121T090000
+DTEND;TZID=America/Chicago:20261121T130000
+SUMMARY:Seaside Farmers Market
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 3245
+ 9
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nThe Seaside Farmers Market f
+ ills the amphitheater in Seaside's Central Square every Saturday morning w
+ ith local farmers\, growers and artisans. Stalls sell fresh produce\, bake
+ d goods and specialty foods\, and live music plays while you browse. The m
+ arket runs rain or shine unless the weather turns unsafe.\n\nPrice: No pub
+ lished price\n\nDetails: https://coastaleventures.com/events/ev-seaside-fa
+ rmers-market.html
+URL:https://coastaleventures.com/events/ev-seaside-farmers-market.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_fairhope_christmas_movie_in_the_street_1121-2026-11-21@coastaleventu
+ res.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261121T183000
+DTEND;TZID=America/Chicago:20261121T193000
+SUMMARY:Christmas Movie in the Street in Fairhope
+LOCATION:Downtown Fairhope\, Corner of Fairhope Avenue and Section Street\,
+  Fairhope\, AL 36532
+DESCRIPTION:Saturday 11/21 · 6:30 PM\n\nThe City of Fairhope shows a Chris
+ tmas movie outdoors at the corner of Fairhope Avenue and Section Street. T
+ he event begins at 6:30 PM on Saturday. Bring a chair and a blanket for th
+ e sidewalk.\n\nPrice: No published price\n\nDetails: https://coastaleventu
+ res.com/events/ev-fairhope-christmas-movie-in-the-street-1121.html
+URL:https://coastaleventures.com/events/ev-fairhope-christmas-movie-in-the-
+ street-1121.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_pensacola_elf_parade_1127-2026-11-27@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261128
+SUMMARY:Pensacola Elf Parade
+LOCATION:Government St and Palafox Pl\, S Palafox Pl at E Government St\, P
+ ensacola\, FL 32502
+DESCRIPTION:Friday 11/27 · 2:00 PM (lineup 12:30 PM)\n\nThe Elf Parade ope
+ ns the downtown Pensacola holiday season on the Friday after Thanksgiving\
+ , with a costume contest\, wagons and groups marching through the Palafox 
+ area. Families line up at Government Street and Palafox Place at 12:30 PM\
+ , judging is at 1:25 PM and the parade steps off at 2:00 PM. Winterfest ev
+ ening tours start the same night\, so the parade and a tour fit into one t
+ rip.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/events/ev-pen
+ sacola-elf-parade-1127.html
+URL:https://coastaleventures.com/events/ev-pensacola-elf-parade-1127.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_navarre_christmas_tree_lighting_1127-2026-11-27@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261127T163000
+DTEND;TZID=America/Chicago:20261127T173000
+SUMMARY:Navarre Community Christmas Tree Lighting
+LOCATION:Navarre Park\, 8513 Navarre Parkway\, Navarre\, FL 32566
+DESCRIPTION:Friday 11/27 · 4:30 PM to 5:30 PM\n\nNavarre Park on Santa Ros
+ a Sound hosts the town's Christmas tree lighting with holiday music from 4
+ :30 PM. The tree lights at about 5:25 PM\, and sponsors hand out hot choco
+ late\, coffee and cookies. It is short\, which makes it an easy start to t
+ he season.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/events/
+ ev-navarre-christmas-tree-lighting-1127.html
+URL:https://coastaleventures.com/events/ev-navarre-christmas-tree-lighting-
+ 1127.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_downtown_fwb_saturday_market_0912-2026-11-28@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261128T080000
+DTEND;TZID=America/Chicago:20261128T130000
+SUMMARY:Downtown FWB Saturday Market
+LOCATION:Fort Walton Beach Landing Park\, 139 Brooks St SE\, Fort Walton Be
+ ach\, FL 32547
+DESCRIPTION:8:00 AM to 1:00 PM\n\nThe Downtown FWB Saturday Market sets up 
+ at Fort Walton Beach Landing Park on the waterfront from 8 AM to 1 PM\, fr
+ ee to browse for the whole family. Local artisans\, produce growers\, and 
+ other vendors fill the park on the second and fourth Saturday of every mon
+ th\, year-round. Walking the market alongside the water is as much the poi
+ nt as the shopping.\n\nPrice: Free\n\nDetails: https://coastaleventures.co
+ m/events/ev-downtown-fwb-saturday-market-0912.html
+URL:https://coastaleventures.com/events/ev-downtown-fwb-saturday-market-091
+ 2.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grand_boulevard_farmers_market_1024-2026-11-28@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261128T090000
+DTEND;TZID=America/Chicago:20261128T130000
+SUMMARY:Grand Boulevard Farmers Market
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Boulevard\, 
+ Miramar Beach\, FL 32550
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nGrand Boulevard holds an ope
+ n-air farmers market every Saturday morning in Grand Park\, between Cantin
+ a Laredo and Tommy Bahama. Vendors sell produce\, meats\, dairy\, eggs\, h
+ oney\, baked goods\, artisanal foods and handmade goods. The market runs y
+ ear-round in a walkable shopping district.\n\nPrice: Free\n\nDetails: http
+ s://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1024.htm
+ l
+URL:https://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1
+ 024.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_farmers_market-2026-11-28@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261128T090000
+DTEND;TZID=America/Chicago:20261128T130000
+SUMMARY:Seaside Farmers Market
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 3245
+ 9
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nThe Seaside Farmers Market f
+ ills the amphitheater in Seaside's Central Square every Saturday morning w
+ ith local farmers\, growers and artisans. Stalls sell fresh produce\, bake
+ d goods and specialty foods\, and live music plays while you browse. The m
+ arket runs rain or shine unless the weather turns unsafe.\n\nPrice: No pub
+ lished price\n\nDetails: https://coastaleventures.com/events/ev-seaside-fa
+ rmers-market.html
+URL:https://coastaleventures.com/events/ev-seaside-farmers-market.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_hillcrest_openplay-2026-11-30@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261130T090000
+DTEND;TZID=America/Chicago:20261130T110000
+SUMMARY:Preschool Playground Open Play: Hillcrest
+LOCATION:Hillcrest Church Preschool\, 800 E Nine Mile Rd\, Pensacola\, FL 3
+ 2514
+DESCRIPTION:Last Monday of the month · 9:00 AM-11:00 AM\n\nThe preschool o
+ pens its playground to the public for two hours on the last Monday of ever
+ y month. It moves at a toddler's speed exactly\, with toddler-scale equipm
+ ent\, shade\, and other little ones\, and none of the drive that a real pa
+ rk day costs.\n\nPrice: No published price\n\nDetails: https://coastaleven
+ tures.com/events/ev-hillcrest-openplay.html
+URL:https://coastaleventures.com/events/ev-hillcrest-openplay.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gulf_shores_community_christmas_1203-2026-12-03@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261203T173000
+DTEND;TZID=America/Chicago:20261203T183000
+SUMMARY:Community Christmas and tree lighting in Gulf Shores
+LOCATION:City of Gulf Shores city facilities\, Clubhouse Drive\, Clubhouse 
+ Drive\, Gulf Shores\, AL 36542
+DESCRIPTION:Thursday 12/3 · 5:30 PM\n\nThe City of Gulf Shores spreads a f
+ ree holiday evening across its city buildings. Families get carriage rides
+ \, a visit with Santa\, camel rides outside the Civic Center\, Whoville st
+ orytime at the library and a historic Christmas village at the museum. The
+  tree lights up at the Gulf Shores Public Library at 5:45 PM while the Gul
+ f Shores Elementary School Choir sings carols. Parking is at the Bodenhame
+ r Recreation Center and the Dog Park\, among other spots.\n\nPrice: Free\n
+ \nDetails: https://coastaleventures.com/events/ev-gulf-shores-community-ch
+ ristmas-1203.html
+URL:https://coastaleventures.com/events/ev-gulf-shores-community-christmas-
+ 1203.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_foley_christmas_in_the_park_1204-2026-12-04@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261204T180000
+DTEND;TZID=America/Chicago:20261204T190000
+SUMMARY:Christmas in the Park\, Foley
+LOCATION:Heritage Park\, Foley\, 101 E Laurel Ave\, Foley\, AL 36535
+DESCRIPTION:Friday 12/4 · 6:00 PM\n\nThe City of Foley opens its holiday s
+ eason with Christmas in the Park at Heritage Park\, where the crowd sings 
+ carols\, watches the city Christmas tree get lit and visits with Santa. Ho
+ t cocoa and snacks are served\, and the Christmas Tree Decorating Contest 
+ awards are handed out during the evening. Admission is free\, and the ligh
+ ting makes an easy kickoff to the Let It Snow marketplace and parade the n
+ ext morning.\n\nPrice: Free\n\nDetails: https://coastaleventures.com/event
+ s/ev-foley-christmas-in-the-park-1204.html
+URL:https://coastaleventures.com/events/ev-foley-christmas-in-the-park-1204
+ .html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_foley_christmas_parade_let_it_snow_1205-2026-12-05@coastaleventures.
+ com
+DTSTAMP:20261112T000000Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:Foley Christmas Parade and Let It Snow Marketplace
+LOCATION:Heritage Park\, Foley\, 101 E Laurel Ave\, Foley\, AL 36535
+DESCRIPTION:Saturday 12/5 · Marketplace 9:00 AM to 2:00 PM · Parade 10:00
+  AM to 11:00 AM\n\nFoley spends a Saturday on Christmas\, with the Let It 
+ Snow marketplace in Heritage Park from 9:00 AM to 2:00 PM and the Christma
+ s Parade from 10:00 AM to 11:00 AM. The marketplace has kids' activities a
+ nd live entertainment\, and Santa joins the park directly after the parade
+ . Admission is free. The city's page lists the parade time but no route\, 
+ so allow time to find a curb in downtown Foley.\n\nPrice: Free\n\nDetails:
+  https://coastaleventures.com/events/ev-foley-christmas-parade-let-it-snow
+ -1205.html
+URL:https://coastaleventures.com/events/ev-foley-christmas-parade-let-it-sn
+ ow-1205.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_crestview_christmas_parade_1205-2026-12-05@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:Main Street Crestview Christmas Parade
+LOCATION:Historic Downtown Crestview\, Main Street\, Main Street\, Crestvie
+ w\, FL 32536
+DESCRIPTION:Saturday 12/5\n\nDowntown Crestview stages the annual Christmas
+  parade on Main Street with floats\, music and a visit from Santa. The ass
+ ociation calls it the largest Christmas parade in Okaloosa County. The lis
+ ting gives the date but no start time\, so check the association's page fo
+ r the schedule before you go.\n\nPrice: No published price\n\nDetails: htt
+ ps://coastaleventures.com/events/ev-crestview-christmas-parade-1205.html
+URL:https://coastaleventures.com/events/ev-crestview-christmas-parade-1205.
+ html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_defrance_christmas_open_house_eglin_1205-2026-12-05@coastaleventures
+ .com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261205T090000
+DTEND;TZID=America/Chicago:20261205T170000
+SUMMARY:Christmas Open House at DeFrance on Eglin Parkway
+LOCATION:DeFrance Antiques on Eglin Parkway\, 230 Eglin Pkwy SE\, Fort Walt
+ on Beach\, FL 32548
+DESCRIPTION:Saturday 12/5 · 9:00 AM to 5:00 PM\n\nDeFrance Antiques thanks
+  its customers each year on the first Saturday of December with sweet trea
+ ts\, finger food and vendor sales. A special mailbox lets children write l
+ etters to Santa. An outdoor market with vendors runs in the west parking l
+ ot from 9:00 AM to 2:00 PM\, and the owner grills burgers and hot dogs to 
+ fund Christmas gifts for children in need.\n\nPrice: No published price\n\
+ nDetails: https://coastaleventures.com/events/ev-defrance-christmas-open-h
+ ouse-eglin-1205.html
+URL:https://coastaleventures.com/events/ev-defrance-christmas-open-house-eg
+ lin-1205.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grand_boulevard_farmers_market_1024-2026-12-05@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261205T090000
+DTEND;TZID=America/Chicago:20261205T130000
+SUMMARY:Grand Boulevard Farmers Market
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Boulevard\, 
+ Miramar Beach\, FL 32550
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nGrand Boulevard holds an ope
+ n-air farmers market every Saturday morning in Grand Park\, between Cantin
+ a Laredo and Tommy Bahama. Vendors sell produce\, meats\, dairy\, eggs\, h
+ oney\, baked goods\, artisanal foods and handmade goods. The market runs y
+ ear-round in a walkable shopping district.\n\nPrice: Free\n\nDetails: http
+ s://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1024.htm
+ l
+URL:https://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1
+ 024.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_farmers_market-2026-12-05@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261205T090000
+DTEND;TZID=America/Chicago:20261205T130000
+SUMMARY:Seaside Farmers Market
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 3245
+ 9
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nThe Seaside Farmers Market f
+ ills the amphitheater in Seaside's Central Square every Saturday morning w
+ ith local farmers\, growers and artisans. Stalls sell fresh produce\, bake
+ d goods and specialty foods\, and live music plays while you browse. The m
+ arket runs rain or shine unless the weather turns unsafe.\n\nPrice: No pub
+ lished price\n\nDetails: https://coastaleventures.com/events/ev-seaside-fa
+ rmers-market.html
+URL:https://coastaleventures.com/events/ev-seaside-farmers-market.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_navarre_christmas_parade_1205-2026-12-05@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261205T130000
+DTEND;TZID=America/Chicago:20261205T140000
+SUMMARY:Navarre Community Christmas Parade
+LOCATION:Navarre Park\, 8513 Navarre Parkway\, Navarre\, FL 32566
+DESCRIPTION:Saturday 12/5 · 1:00 PM\n\nThe Navarre Area Chamber of Commerc
+ e's Spirit of the Season parade steps off at 1 PM from the Navarre Library
+ \, runs south on Presidio Street\, turns left on Esplanade Street and ends
+  in the back lot of Centennial Bank. Santa and Mrs. Claus arrive by fire t
+ ruck and take free photos with children in Navarre Park afterward\, with f
+ ree baked goods at Mrs. Claus' Bakery and a Merry Market of local artists 
+ and crafters. The parade has run since 1994.\n\nPrice: Free\n\nDetails: ht
+ tps://coastaleventures.com/events/ev-navarre-christmas-parade-1205.html
+URL:https://coastaleventures.com/events/ev-navarre-christmas-parade-1205.ht
+ ml
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_free_first_sunday_0906-2026-12-06@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261206T130000
+DTEND;TZID=America/Chicago:20261206T170000
+SUMMARY:Free First Sunday
+LOCATION:History Museum of Mobile\, 111 South Royal Street\, Mobile\, AL 36
+ 602
+DESCRIPTION:First Sunday of the month · 1:00 PM to 5:00 PM\n\nOn the first
+  Sunday of each month\, the History Museum of Mobile opens free from 1:00 
+ to 5:00 PM. The same free admission covers Colonial Fort Condé and the Ph
+ oenix Fire Museum next door. Expect interactive exhibits\, architectural t
+ ours of the fire museum\, and living history touches throughout.\n\nPrice:
+  Free\n\nDetails: https://coastaleventures.com/events/ev-free-first-sunday
+ -0906.html
+URL:https://coastaleventures.com/events/ev-free-first-sunday-0906.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_downtown_fwb_saturday_market_0912-2026-12-12@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261212T080000
+DTEND;TZID=America/Chicago:20261212T130000
+SUMMARY:Downtown FWB Saturday Market
+LOCATION:Fort Walton Beach Landing Park\, 139 Brooks St SE\, Fort Walton Be
+ ach\, FL 32547
+DESCRIPTION:8:00 AM to 1:00 PM\n\nThe Downtown FWB Saturday Market sets up 
+ at Fort Walton Beach Landing Park on the waterfront from 8 AM to 1 PM\, fr
+ ee to browse for the whole family. Local artisans\, produce growers\, and 
+ other vendors fill the park on the second and fourth Saturday of every mon
+ th\, year-round. Walking the market alongside the water is as much the poi
+ nt as the shopping.\n\nPrice: Free\n\nDetails: https://coastaleventures.co
+ m/events/ev-downtown-fwb-saturday-market-0912.html
+URL:https://coastaleventures.com/events/ev-downtown-fwb-saturday-market-091
+ 2.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grand_boulevard_farmers_market_1024-2026-12-12@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261212T090000
+DTEND;TZID=America/Chicago:20261212T130000
+SUMMARY:Grand Boulevard Farmers Market
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Boulevard\, 
+ Miramar Beach\, FL 32550
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nGrand Boulevard holds an ope
+ n-air farmers market every Saturday morning in Grand Park\, between Cantin
+ a Laredo and Tommy Bahama. Vendors sell produce\, meats\, dairy\, eggs\, h
+ oney\, baked goods\, artisanal foods and handmade goods. The market runs y
+ ear-round in a walkable shopping district.\n\nPrice: Free\n\nDetails: http
+ s://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1024.htm
+ l
+URL:https://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1
+ 024.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_farmers_market-2026-12-12@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261212T090000
+DTEND;TZID=America/Chicago:20261212T130000
+SUMMARY:Seaside Farmers Market
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 3245
+ 9
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nThe Seaside Farmers Market f
+ ills the amphitheater in Seaside's Central Square every Saturday morning w
+ ith local farmers\, growers and artisans. Stalls sell fresh produce\, bake
+ d goods and specialty foods\, and live music plays while you browse. The m
+ arket runs rain or shine unless the weather turns unsafe.\n\nPrice: No pub
+ lished price\n\nDetails: https://coastaleventures.com/events/ev-seaside-fa
+ rmers-market.html
+URL:https://coastaleventures.com/events/ev-seaside-farmers-market.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_a_very_niceville_christmas_1212-2026-12-12@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261212T140000
+DTEND;TZID=America/Chicago:20261212T200000
+SUMMARY:A Very Niceville Christmas
+LOCATION:Niceville Municipal Complex\, 208 Partin Drive North\, Niceville\,
+  FL 32578
+DESCRIPTION:Saturday 12/12 · 2:00 PM to 8:00 PM\n\nThe City of Niceville t
+ urns its Municipal Complex into a winter wonderland with hayrides\, pony r
+ ides\, food trucks\, craft vendors\, hot cocoa and a cake walk. The Childr
+ en's Park next door hosts Santa in the Park from 5:00 PM to 8:00 PM. The l
+ isting publishes no admission price or parking note.\n\nPrice: No publishe
+ d price\n\nDetails: https://coastaleventures.com/events/ev-a-very-nicevill
+ e-christmas-1212.html
+URL:https://coastaleventures.com/events/ev-a-very-niceville-christmas-1212.
+ html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grand_boulevard_farmers_market_1024-2026-12-19@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261219T090000
+DTEND;TZID=America/Chicago:20261219T130000
+SUMMARY:Grand Boulevard Farmers Market
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Boulevard\, 
+ Miramar Beach\, FL 32550
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nGrand Boulevard holds an ope
+ n-air farmers market every Saturday morning in Grand Park\, between Cantin
+ a Laredo and Tommy Bahama. Vendors sell produce\, meats\, dairy\, eggs\, h
+ oney\, baked goods\, artisanal foods and handmade goods. The market runs y
+ ear-round in a walkable shopping district.\n\nPrice: Free\n\nDetails: http
+ s://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1024.htm
+ l
+URL:https://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1
+ 024.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_farmers_market-2026-12-19@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261219T090000
+DTEND;TZID=America/Chicago:20261219T130000
+SUMMARY:Seaside Farmers Market
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 3245
+ 9
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nThe Seaside Farmers Market f
+ ills the amphitheater in Seaside's Central Square every Saturday morning w
+ ith local farmers\, growers and artisans. Stalls sell fresh produce\, bake
+ d goods and specialty foods\, and live music plays while you browse. The m
+ arket runs rain or shine unless the weather turns unsafe.\n\nPrice: No pub
+ lished price\n\nDetails: https://coastaleventures.com/events/ev-seaside-fa
+ rmers-market.html
+URL:https://coastaleventures.com/events/ev-seaside-farmers-market.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mpl_anime_hangout_semmes_1219-2026-12-19@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261219T100000
+DTEND;TZID=America/Chicago:20261219T120000
+SUMMARY:Saturday Anime Hangout at Semmes Regional Library
+LOCATION:Semmes Regional Library\, 9150 Moffett Road\, Semmes\, AL 36575
+DESCRIPTION:Saturday 12/19 · 10:00 AM to 12:00 PM\n\nSemmes Regional Libra
+ ry holds a monthly anime and manga hangout for teens in its meeting room. 
+ The group watches anime movies and shows\, plays games and talks manga. Te
+ ens ages 12 to 18 are welcome.\n\nPrice: No published price\n\nDetails: ht
+ tps://coastaleventures.com/events/ev-mpl-anime-hangout-semmes-1219.html
+URL:https://coastaleventures.com/events/ev-mpl-anime-hangout-semmes-1219.ht
+ ml
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mpl_chess_club_moorer_1219-2026-12-19@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261219T140000
+DTEND;TZID=America/Chicago:20261219T160000
+SUMMARY:Chess Club for Everyone at Moorer Library
+LOCATION:Monte L. Moorer/Spring Hill Branch Library\, 4 S McGregor Ave\, Mo
+ bile\, AL 36608
+DESCRIPTION:Saturday 12/19 · 2:00 PM to 4:00 PM\n\nThe Monte L. Moorer/Spr
+ ing Hill Branch Library hosts a chess club for beginners and experienced p
+ layers ages 6 and up. The library says chess practice builds concentration
+  and problem solving. The club meets in the branch meeting room.\n\nPrice:
+  No published price\n\nDetails: https://coastaleventures.com/events/ev-mpl
+ -chess-club-moorer-1219.html
+URL:https://coastaleventures.com/events/ev-mpl-chess-club-moorer-1219.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_downtown_fwb_saturday_market_0912-2026-12-26@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261226T080000
+DTEND;TZID=America/Chicago:20261226T130000
+SUMMARY:Downtown FWB Saturday Market
+LOCATION:Fort Walton Beach Landing Park\, 139 Brooks St SE\, Fort Walton Be
+ ach\, FL 32547
+DESCRIPTION:8:00 AM to 1:00 PM\n\nThe Downtown FWB Saturday Market sets up 
+ at Fort Walton Beach Landing Park on the waterfront from 8 AM to 1 PM\, fr
+ ee to browse for the whole family. Local artisans\, produce growers\, and 
+ other vendors fill the park on the second and fourth Saturday of every mon
+ th\, year-round. Walking the market alongside the water is as much the poi
+ nt as the shopping.\n\nPrice: Free\n\nDetails: https://coastaleventures.co
+ m/events/ev-downtown-fwb-saturday-market-0912.html
+URL:https://coastaleventures.com/events/ev-downtown-fwb-saturday-market-091
+ 2.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grand_boulevard_farmers_market_1024-2026-12-26@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261226T090000
+DTEND;TZID=America/Chicago:20261226T130000
+SUMMARY:Grand Boulevard Farmers Market
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Boulevard\, 
+ Miramar Beach\, FL 32550
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nGrand Boulevard holds an ope
+ n-air farmers market every Saturday morning in Grand Park\, between Cantin
+ a Laredo and Tommy Bahama. Vendors sell produce\, meats\, dairy\, eggs\, h
+ oney\, baked goods\, artisanal foods and handmade goods. The market runs y
+ ear-round in a walkable shopping district.\n\nPrice: Free\n\nDetails: http
+ s://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1024.htm
+ l
+URL:https://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1
+ 024.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_farmers_market-2026-12-26@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261226T090000
+DTEND;TZID=America/Chicago:20261226T130000
+SUMMARY:Seaside Farmers Market
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 3245
+ 9
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nThe Seaside Farmers Market f
+ ills the amphitheater in Seaside's Central Square every Saturday morning w
+ ith local farmers\, growers and artisans. Stalls sell fresh produce\, bake
+ d goods and specialty foods\, and live music plays while you browse. The m
+ arket runs rain or shine unless the weather turns unsafe.\n\nPrice: No pub
+ lished price\n\nDetails: https://coastaleventures.com/events/ev-seaside-fa
+ rmers-market.html
+URL:https://coastaleventures.com/events/ev-seaside-farmers-market.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_hillcrest_openplay-2026-12-28@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20261228T090000
+DTEND;TZID=America/Chicago:20261228T110000
+SUMMARY:Preschool Playground Open Play: Hillcrest
+LOCATION:Hillcrest Church Preschool\, 800 E Nine Mile Rd\, Pensacola\, FL 3
+ 2514
+DESCRIPTION:Last Monday of the month · 9:00 AM-11:00 AM\n\nThe preschool o
+ pens its playground to the public for two hours on the last Monday of ever
+ y month. It moves at a toddler's speed exactly\, with toddler-scale equipm
+ ent\, shade\, and other little ones\, and none of the drive that a real pa
+ rk day costs.\n\nPrice: No published price\n\nDetails: https://coastaleven
+ tures.com/events/ev-hillcrest-openplay.html
+URL:https://coastaleventures.com/events/ev-hillcrest-openplay.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_moonpie_over_mobile_1231-2026-12-31@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:MoonPie Over Mobile New Year's Eve
+LOCATION:Downtown Mobile: Mardi Gras Park and main stage\, Downtown Mobile\
+ , AL 36602
+DESCRIPTION:Thursday 12/31 · New Year's Eve · times not posted yet\n\nDow
+ ntown Mobile rings in the new year by lowering a giant electric MoonPie fr
+ om the RSA Trustmark building at midnight. The 2026 celebration is on\, an
+ d its music lineup was due to be announced on September 15. The night's fu
+ ll schedule is not posted yet. Last year it opened at 11 AM with a kids zo
+ ne in Mardi Gras Park and a noon drop for children.\n\nPrice: No published
+  price\n\nDetails: https://coastaleventures.com/events/ev-moonpie-over-mob
+ ile-1231.html
+URL:https://coastaleventures.com/events/ev-moonpie-over-mobile-1231.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grand_boulevard_farmers_market_1024-2027-01-02@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270102T090000
+DTEND;TZID=America/Chicago:20270102T130000
+SUMMARY:Grand Boulevard Farmers Market
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Boulevard\, 
+ Miramar Beach\, FL 32550
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nGrand Boulevard holds an ope
+ n-air farmers market every Saturday morning in Grand Park\, between Cantin
+ a Laredo and Tommy Bahama. Vendors sell produce\, meats\, dairy\, eggs\, h
+ oney\, baked goods\, artisanal foods and handmade goods. The market runs y
+ ear-round in a walkable shopping district.\n\nPrice: Free\n\nDetails: http
+ s://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1024.htm
+ l
+URL:https://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1
+ 024.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_farmers_market-2027-01-02@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270102T090000
+DTEND;TZID=America/Chicago:20270102T130000
+SUMMARY:Seaside Farmers Market
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 3245
+ 9
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nThe Seaside Farmers Market f
+ ills the amphitheater in Seaside's Central Square every Saturday morning w
+ ith local farmers\, growers and artisans. Stalls sell fresh produce\, bake
+ d goods and specialty foods\, and live music plays while you browse. The m
+ arket runs rain or shine unless the weather turns unsafe.\n\nPrice: No pub
+ lished price\n\nDetails: https://coastaleventures.com/events/ev-seaside-fa
+ rmers-market.html
+URL:https://coastaleventures.com/events/ev-seaside-farmers-market.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_downtown_fwb_saturday_market_0912-2027-01-09@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270109T080000
+DTEND;TZID=America/Chicago:20270109T130000
+SUMMARY:Downtown FWB Saturday Market
+LOCATION:Fort Walton Beach Landing Park\, 139 Brooks St SE\, Fort Walton Be
+ ach\, FL 32547
+DESCRIPTION:8:00 AM to 1:00 PM\n\nThe Downtown FWB Saturday Market sets up 
+ at Fort Walton Beach Landing Park on the waterfront from 8 AM to 1 PM\, fr
+ ee to browse for the whole family. Local artisans\, produce growers\, and 
+ other vendors fill the park on the second and fourth Saturday of every mon
+ th\, year-round. Walking the market alongside the water is as much the poi
+ nt as the shopping.\n\nPrice: Free\n\nDetails: https://coastaleventures.co
+ m/events/ev-downtown-fwb-saturday-market-0912.html
+URL:https://coastaleventures.com/events/ev-downtown-fwb-saturday-market-091
+ 2.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grand_boulevard_farmers_market_1024-2027-01-09@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270109T090000
+DTEND;TZID=America/Chicago:20270109T130000
+SUMMARY:Grand Boulevard Farmers Market
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Boulevard\, 
+ Miramar Beach\, FL 32550
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nGrand Boulevard holds an ope
+ n-air farmers market every Saturday morning in Grand Park\, between Cantin
+ a Laredo and Tommy Bahama. Vendors sell produce\, meats\, dairy\, eggs\, h
+ oney\, baked goods\, artisanal foods and handmade goods. The market runs y
+ ear-round in a walkable shopping district.\n\nPrice: Free\n\nDetails: http
+ s://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1024.htm
+ l
+URL:https://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1
+ 024.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_farmers_market-2027-01-09@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270109T090000
+DTEND;TZID=America/Chicago:20270109T130000
+SUMMARY:Seaside Farmers Market
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 3245
+ 9
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nThe Seaside Farmers Market f
+ ills the amphitheater in Seaside's Central Square every Saturday morning w
+ ith local farmers\, growers and artisans. Stalls sell fresh produce\, bake
+ d goods and specialty foods\, and live music plays while you browse. The m
+ arket runs rain or shine unless the weather turns unsafe.\n\nPrice: No pub
+ lished price\n\nDetails: https://coastaleventures.com/events/ev-seaside-fa
+ rmers-market.html
+URL:https://coastaleventures.com/events/ev-seaside-farmers-market.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_foley_snowbird_coffee_0112-2027-01-12@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270112T090000
+DTEND;TZID=America/Chicago:20270112T120000
+SUMMARY:Foley Snowbird Coffee
+LOCATION:Foley Civic Center\, 407 East Laurel Avenue\, Foley\, AL 36535
+DESCRIPTION:Tuesday 1/12 · 9:00 AM to 12:00 PM\n\nThe City of Foley hosts 
+ coffee and pastries for winter visitors at the Foley Civic Center. Guests 
+ get a welcome bag with coupons and local information. A scavenger hunt thr
+ ough downtown Foley offers a chance at prizes. The page does not print a p
+ rice.\n\nPrice: No published price\n\nDetails: https://coastaleventures.co
+ m/events/ev-foley-snowbird-coffee-0112.html
+URL:https://coastaleventures.com/events/ev-foley-snowbird-coffee-0112.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grand_boulevard_farmers_market_1024-2027-01-16@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270116T090000
+DTEND;TZID=America/Chicago:20270116T130000
+SUMMARY:Grand Boulevard Farmers Market
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Boulevard\, 
+ Miramar Beach\, FL 32550
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nGrand Boulevard holds an ope
+ n-air farmers market every Saturday morning in Grand Park\, between Cantin
+ a Laredo and Tommy Bahama. Vendors sell produce\, meats\, dairy\, eggs\, h
+ oney\, baked goods\, artisanal foods and handmade goods. The market runs y
+ ear-round in a walkable shopping district.\n\nPrice: Free\n\nDetails: http
+ s://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1024.htm
+ l
+URL:https://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1
+ 024.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_farmers_market-2027-01-16@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270116T090000
+DTEND;TZID=America/Chicago:20270116T130000
+SUMMARY:Seaside Farmers Market
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 3245
+ 9
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nThe Seaside Farmers Market f
+ ills the amphitheater in Seaside's Central Square every Saturday morning w
+ ith local farmers\, growers and artisans. Stalls sell fresh produce\, bake
+ d goods and specialty foods\, and live music plays while you browse. The m
+ arket runs rain or shine unless the weather turns unsafe.\n\nPrice: No pub
+ lished price\n\nDetails: https://coastaleventures.com/events/ev-seaside-fa
+ rmers-market.html
+URL:https://coastaleventures.com/events/ev-seaside-farmers-market.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_downtown_fwb_saturday_market_0912-2027-01-23@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270123T080000
+DTEND;TZID=America/Chicago:20270123T130000
+SUMMARY:Downtown FWB Saturday Market
+LOCATION:Fort Walton Beach Landing Park\, 139 Brooks St SE\, Fort Walton Be
+ ach\, FL 32547
+DESCRIPTION:8:00 AM to 1:00 PM\n\nThe Downtown FWB Saturday Market sets up 
+ at Fort Walton Beach Landing Park on the waterfront from 8 AM to 1 PM\, fr
+ ee to browse for the whole family. Local artisans\, produce growers\, and 
+ other vendors fill the park on the second and fourth Saturday of every mon
+ th\, year-round. Walking the market alongside the water is as much the poi
+ nt as the shopping.\n\nPrice: Free\n\nDetails: https://coastaleventures.co
+ m/events/ev-downtown-fwb-saturday-market-0912.html
+URL:https://coastaleventures.com/events/ev-downtown-fwb-saturday-market-091
+ 2.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grand_boulevard_farmers_market_1024-2027-01-23@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270123T090000
+DTEND;TZID=America/Chicago:20270123T130000
+SUMMARY:Grand Boulevard Farmers Market
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Boulevard\, 
+ Miramar Beach\, FL 32550
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nGrand Boulevard holds an ope
+ n-air farmers market every Saturday morning in Grand Park\, between Cantin
+ a Laredo and Tommy Bahama. Vendors sell produce\, meats\, dairy\, eggs\, h
+ oney\, baked goods\, artisanal foods and handmade goods. The market runs y
+ ear-round in a walkable shopping district.\n\nPrice: Free\n\nDetails: http
+ s://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1024.htm
+ l
+URL:https://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1
+ 024.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_farmers_market-2027-01-23@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270123T090000
+DTEND;TZID=America/Chicago:20270123T130000
+SUMMARY:Seaside Farmers Market
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 3245
+ 9
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nThe Seaside Farmers Market f
+ ills the amphitheater in Seaside's Central Square every Saturday morning w
+ ith local farmers\, growers and artisans. Stalls sell fresh produce\, bake
+ d goods and specialty foods\, and live music plays while you browse. The m
+ arket runs rain or shine unless the weather turns unsafe.\n\nPrice: No pub
+ lished price\n\nDetails: https://coastaleventures.com/events/ev-seaside-fa
+ rmers-market.html
+URL:https://coastaleventures.com/events/ev-seaside-farmers-market.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grand_boulevard_farmers_market_1024-2027-01-30@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270130T090000
+DTEND;TZID=America/Chicago:20270130T130000
+SUMMARY:Grand Boulevard Farmers Market
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Boulevard\, 
+ Miramar Beach\, FL 32550
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nGrand Boulevard holds an ope
+ n-air farmers market every Saturday morning in Grand Park\, between Cantin
+ a Laredo and Tommy Bahama. Vendors sell produce\, meats\, dairy\, eggs\, h
+ oney\, baked goods\, artisanal foods and handmade goods. The market runs y
+ ear-round in a walkable shopping district.\n\nPrice: Free\n\nDetails: http
+ s://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1024.htm
+ l
+URL:https://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1
+ 024.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_farmers_market-2027-01-30@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270130T090000
+DTEND;TZID=America/Chicago:20270130T130000
+SUMMARY:Seaside Farmers Market
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 3245
+ 9
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nThe Seaside Farmers Market f
+ ills the amphitheater in Seaside's Central Square every Saturday morning w
+ ith local farmers\, growers and artisans. Stalls sell fresh produce\, bake
+ d goods and specialty foods\, and live music plays while you browse. The m
+ arket runs rain or shine unless the weather turns unsafe.\n\nPrice: No pub
+ lished price\n\nDetails: https://coastaleventures.com/events/ev-seaside-fa
+ rmers-market.html
+URL:https://coastaleventures.com/events/ev-seaside-farmers-market.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grand_boulevard_farmers_market_1024-2027-02-06@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270206T090000
+DTEND;TZID=America/Chicago:20270206T130000
+SUMMARY:Grand Boulevard Farmers Market
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Boulevard\, 
+ Miramar Beach\, FL 32550
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nGrand Boulevard holds an ope
+ n-air farmers market every Saturday morning in Grand Park\, between Cantin
+ a Laredo and Tommy Bahama. Vendors sell produce\, meats\, dairy\, eggs\, h
+ oney\, baked goods\, artisanal foods and handmade goods. The market runs y
+ ear-round in a walkable shopping district.\n\nPrice: Free\n\nDetails: http
+ s://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1024.htm
+ l
+URL:https://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1
+ 024.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_farmers_market-2027-02-06@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270206T090000
+DTEND;TZID=America/Chicago:20270206T130000
+SUMMARY:Seaside Farmers Market
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 3245
+ 9
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nThe Seaside Farmers Market f
+ ills the amphitheater in Seaside's Central Square every Saturday morning w
+ ith local farmers\, growers and artisans. Stalls sell fresh produce\, bake
+ d goods and specialty foods\, and live music plays while you browse. The m
+ arket runs rain or shine unless the weather turns unsafe.\n\nPrice: No pub
+ lished price\n\nDetails: https://coastaleventures.com/events/ev-seaside-fa
+ rmers-market.html
+URL:https://coastaleventures.com/events/ev-seaside-farmers-market.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grand_boulevard_farmers_market_1024-2027-02-13@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270213T090000
+DTEND;TZID=America/Chicago:20270213T130000
+SUMMARY:Grand Boulevard Farmers Market
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Boulevard\, 
+ Miramar Beach\, FL 32550
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nGrand Boulevard holds an ope
+ n-air farmers market every Saturday morning in Grand Park\, between Cantin
+ a Laredo and Tommy Bahama. Vendors sell produce\, meats\, dairy\, eggs\, h
+ oney\, baked goods\, artisanal foods and handmade goods. The market runs y
+ ear-round in a walkable shopping district.\n\nPrice: Free\n\nDetails: http
+ s://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1024.htm
+ l
+URL:https://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1
+ 024.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_farmers_market-2027-02-13@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270213T090000
+DTEND;TZID=America/Chicago:20270213T130000
+SUMMARY:Seaside Farmers Market
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 3245
+ 9
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nThe Seaside Farmers Market f
+ ills the amphitheater in Seaside's Central Square every Saturday morning w
+ ith local farmers\, growers and artisans. Stalls sell fresh produce\, bake
+ d goods and specialty foods\, and live music plays while you browse. The m
+ arket runs rain or shine unless the weather turns unsafe.\n\nPrice: No pub
+ lished price\n\nDetails: https://coastaleventures.com/events/ev-seaside-fa
+ rmers-market.html
+URL:https://coastaleventures.com/events/ev-seaside-farmers-market.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grand_boulevard_farmers_market_1024-2027-02-20@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270220T090000
+DTEND;TZID=America/Chicago:20270220T130000
+SUMMARY:Grand Boulevard Farmers Market
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Boulevard\, 
+ Miramar Beach\, FL 32550
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nGrand Boulevard holds an ope
+ n-air farmers market every Saturday morning in Grand Park\, between Cantin
+ a Laredo and Tommy Bahama. Vendors sell produce\, meats\, dairy\, eggs\, h
+ oney\, baked goods\, artisanal foods and handmade goods. The market runs y
+ ear-round in a walkable shopping district.\n\nPrice: Free\n\nDetails: http
+ s://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1024.htm
+ l
+URL:https://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1
+ 024.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_farmers_market-2027-02-20@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270220T090000
+DTEND;TZID=America/Chicago:20270220T130000
+SUMMARY:Seaside Farmers Market
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 3245
+ 9
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nThe Seaside Farmers Market f
+ ills the amphitheater in Seaside's Central Square every Saturday morning w
+ ith local farmers\, growers and artisans. Stalls sell fresh produce\, bake
+ d goods and specialty foods\, and live music plays while you browse. The m
+ arket runs rain or shine unless the weather turns unsafe.\n\nPrice: No pub
+ lished price\n\nDetails: https://coastaleventures.com/events/ev-seaside-fa
+ rmers-market.html
+URL:https://coastaleventures.com/events/ev-seaside-farmers-market.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_historic_mobile_hidden_history_lecture_0221-2027-02-21@coastaleventu
+ res.com
+DTSTAMP:20261112T000000Z
+DTSTART;VALUE=DATE:20270221
+DTEND;VALUE=DATE:20270222
+SUMMARY:Mobile's Hidden History lecture at Oakleigh
+LOCATION:Historic Oakleigh\, Cox-Deasy Cottage\, 350 Oakleigh Pl\, Mobile\,
+  AL 36604
+DESCRIPTION:Sunday 2/21 · afternoon\n\nAuthor and former radio host Joe Cu
+ haj tells forgotten stories of Mobile history at Historic Oakleigh\, inclu
+ ding the earliest days of baseball in the city in the 1860s and legends th
+ at sound too unlikely to be true. Seating is limited. Historic Mobile Pres
+ ervation Society members attend free.\n\nPrice: from $10\n\nDetails: https
+ ://coastaleventures.com/events/ev-historic-mobile-hidden-history-lecture-0
+ 221.html
+URL:https://coastaleventures.com/events/ev-historic-mobile-hidden-history-l
+ ecture-0221.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grand_boulevard_farmers_market_1024-2027-02-27@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270227T090000
+DTEND;TZID=America/Chicago:20270227T130000
+SUMMARY:Grand Boulevard Farmers Market
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Boulevard\, 
+ Miramar Beach\, FL 32550
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nGrand Boulevard holds an ope
+ n-air farmers market every Saturday morning in Grand Park\, between Cantin
+ a Laredo and Tommy Bahama. Vendors sell produce\, meats\, dairy\, eggs\, h
+ oney\, baked goods\, artisanal foods and handmade goods. The market runs y
+ ear-round in a walkable shopping district.\n\nPrice: Free\n\nDetails: http
+ s://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1024.htm
+ l
+URL:https://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1
+ 024.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_farmers_market-2027-02-27@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270227T090000
+DTEND;TZID=America/Chicago:20270227T130000
+SUMMARY:Seaside Farmers Market
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 3245
+ 9
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nThe Seaside Farmers Market f
+ ills the amphitheater in Seaside's Central Square every Saturday morning w
+ ith local farmers\, growers and artisans. Stalls sell fresh produce\, bake
+ d goods and specialty foods\, and live music plays while you browse. The m
+ arket runs rain or shine unless the weather turns unsafe.\n\nPrice: No pub
+ lished price\n\nDetails: https://coastaleventures.com/events/ev-seaside-fa
+ rmers-market.html
+URL:https://coastaleventures.com/events/ev-seaside-farmers-market.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grand_boulevard_farmers_market_1024-2027-03-06@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270306T090000
+DTEND;TZID=America/Chicago:20270306T130000
+SUMMARY:Grand Boulevard Farmers Market
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Boulevard\, 
+ Miramar Beach\, FL 32550
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nGrand Boulevard holds an ope
+ n-air farmers market every Saturday morning in Grand Park\, between Cantin
+ a Laredo and Tommy Bahama. Vendors sell produce\, meats\, dairy\, eggs\, h
+ oney\, baked goods\, artisanal foods and handmade goods. The market runs y
+ ear-round in a walkable shopping district.\n\nPrice: Free\n\nDetails: http
+ s://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1024.htm
+ l
+URL:https://coastaleventures.com/events/ev-grand-boulevard-farmers-market-1
+ 024.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_seaside_farmers_market-2027-03-06@coastaleventures.com
+DTSTAMP:20261112T000000Z
+DTSTART;TZID=America/Chicago:20270306T090000
+DTEND;TZID=America/Chicago:20270306T130000
+SUMMARY:Seaside Farmers Market
+LOCATION:Seaside Amphitheater\, Central Square\, Santa Rosa Beach\, FL 3245
+ 9
+DESCRIPTION:Saturdays · 9:00 AM to 1:00 PM\n\nThe Seaside Farmers Market f
+ ills the amphitheater in Seaside's Central Square every Saturday morning w
+ ith local farmers\, growers and artisans. Stalls sell fresh produce\, bake
+ d goods and specialty foods\, and live music plays while you browse. The m
+ arket runs rain or shine unless the weather turns unsafe.\n\nPrice: No pub
+ lished price\n\nDetails: https://coastaleventures.com/events/ev-seaside-fa
+ rmers-market.html
+URL:https://coastaleventures.com/events/ev-seaside-farmers-market.html
+CATEGORIES:Town and community
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
