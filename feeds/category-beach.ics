@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:ev_wickedwinerun_1121-2026-11-21@coastaleventures.com
-DTSTAMP:20261112T000000Z
+DTSTAMP:20261113T000000Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:SKECHERS Wicked Wine Run: Milton
@@ -44,7 +44,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_pb_lighted_boat_parade_1204-2026-12-04@coastaleventures.com
-DTSTAMP:20261112T000000Z
+DTSTAMP:20261113T000000Z
 DTSTART;TZID=America/Chicago:20261204T183000
 DTEND;TZID=America/Chicago:20261204T193000
 SUMMARY:Pensacola Beach Christmas lighted boat parade
@@ -63,7 +63,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_pb_surfing_santa_parade_1206-2026-12-06@coastaleventures.com
-DTSTAMP:20261112T000000Z
+DTSTAMP:20261113T000000Z
 DTSTART;TZID=America/Chicago:20261206T140000
 DTEND;TZID=America/Chicago:20261206T150000
 SUMMARY:Surfing Santa Beach Parade on Pensacola Beach
@@ -83,7 +83,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_flora_bama_polar_bear_dip_0101-2027-01-01@coastaleventures.com
-DTSTAMP:20261112T000000Z
+DTSTAMP:20261113T000000Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Flora-Bama Polar Bear Dip
@@ -103,7 +103,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_polar_bear_plunge_pensacola_beach_0101-2027-01-01@coastaleventures.c
  om
-DTSTAMP:20261112T000000Z
+DTSTAMP:20261113T000000Z
 DTSTART;TZID=America/Chicago:20270101T140000
 DTEND;TZID=America/Chicago:20270101T150000
 SUMMARY:Polar Bear Plunge at Pensacola Beach
@@ -116,6 +116,24 @@ DESCRIPTION:Friday 1/1 · 2:00 PM\n\nPensacola Beach starts the New Year wi
  nge-pensacola-beach-0101.html
 URL:https://coastaleventures.com/events/ev-polar-bear-plunge-pensacola-beac
  h-0101.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_florabama_beach_run_warriors_0313-2027-03-13@coastaleventures.com
+DTSTAMP:20261113T000000Z
+DTSTART;VALUE=DATE:20270313
+DTEND;VALUE=DATE:20270314
+SUMMARY:Flora-Bama Beach Run for America's Warriors
+LOCATION:Flora-Bama\, 17401 Perdido Key Dr\, Perdido Key\, FL 32507
+DESCRIPTION:Saturday 3/13\n\nThe 14th annual Flora-Bama Beach Run and Walk 
+ starts and ends at the bar and runs entirely on the sand. Five-kilometer r
+ unners head into Alabama and half marathoners head into Florida. All regis
+ tration fees go to the Special Operations Warrior Foundation.\n\nPrice: fr
+ om $30\n\nDetails: https://coastaleventures.com/events/ev-florabama-beach-
+ run-warriors-0313.html
+URL:https://coastaleventures.com/events/ev-florabama-beach-run-warriors-031
+ 3.html
 CATEGORIES:Beach
 TRANSP:TRANSPARENT
 END:VEVENT
