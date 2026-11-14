@@ -3,7 +3,7 @@
    plus a version.txt probe it deliberately never caches (see the note in the fetch handler).
    Nothing here reports anything anywhere, which is a product guarantee, not an implementation
    detail — gate_pwa.js asserts it against this file. */
-const CACHE = "gca-71dbed93ee6a06c5";
+const CACHE = "gca-d1aa9d1d2d9d3a53";
 
 /* ⚠ 08/20 — THE APP IS ONE 4.5MB DOCUMENT AND THIS USED TO DOWNLOAD IT TWICE. The precache list
    was ["./", "./index.html", "./app.webmanifest"] fed to cache.addAll(). The first two are the
@@ -24,13 +24,13 @@ self.addEventListener("install", e => {
       if (!res || !res.ok) throw new Error("precache: index.html " + (res && res.status));
       /* put() twice off ONE response — clone before the body is consumed by the first put */
       return c.put("./index.html", res.clone()).then(() => c.put("./", res));
-    }).then(() => c.add("./app-71dbed93ee6a06c5.js")).then(() => c.add("./data-71dbed93ee6a06c5.js")).then(() => c.add("./app.webmanifest"))
+    }).then(() => c.add("./app-d1aa9d1d2d9d3a53.js")).then(() => c.add("./data-d1aa9d1d2d9d3a53.js")).then(() => c.add("./app.webmanifest"))
   ).then(() => self.skipWaiting()));
 });
 
 self.addEventListener("activate", e => {
   e.waitUntil(caches.keys()
-    .then(keys => Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k))))
+    .then(keys => Promise.all(keys.filter(k => k !== CACHE && k !== "gca-lib-pixi-8.22.0").map(k => caches.delete(k))))
     .then(() => self.clients.claim()));
 });
 
@@ -107,6 +107,14 @@ self.addEventListener("fetch", e => {
      pointing at a word in an English sentence. That is CLAUDE.md §0 law 1, and it was earned again
      right here: the first draft quoted the two method names in backticks. */
   if (/\/version\.txt$/.test(url.pathname)) return;
+  /* J25: the hero light library, named by its own version, kept across builds in its own cache (never cleared by a new build) */
+  if (/pixi-[0-9.]+\.js$/.test(url.pathname)) {
+    e.respondWith(caches.open("gca-lib-pixi-8.22.0").then(c => c.match(e.request, { ignoreSearch: true }).then(hit => hit || fetch(e.request).then(res => {
+      if (res && res.ok && res.type === "basic") c.put(e.request, res.clone());
+      return res;
+    }))));
+    return;
+  }
   /* ⛔⛔ THE DECISION PAGES UNDER app/ ARE NOT THE APP AND THIS WORKER MUST NOT TOUCH THEM.
      flick-lab.html is a scratch A/B page that lives beside the app so it stays out of the site's
      page census. Left to the handler below it broke two ways at once, and both look like the page
