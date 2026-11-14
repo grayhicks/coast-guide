@@ -1,0 +1,383 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Coastal Eventures//Events feed//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Coastal Eventures: Movies
+X-WR-TIMEZONE:America/Chicago
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:ev_stamped_film_festival_1113-2026-11-14@coastaleventures.com
+DTSTAMP:20261114T000000Z
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20261116
+SUMMARY:Stamped Film Festival
+LOCATION:Clark Family Cultural Center (Pensacola Little Theatre)\, 400 S Je
+ fferson St\, Pensacola\, FL 32502
+DESCRIPTION:Friday 11/13 to Sunday 11/15 · schedule not yet posted\n\nStam
+ ped is Pensacola's LGBTQ+ film festival\, with screenings\, filmmaker Q&As
+ \, panels and creativity workshops at the Clark Family Cultural Center. Sp
+ onsors cover the cost\, so every day is free with a reserved ticket. Sunda
+ y is a Family Day program for all ages\, and Thursday\, November 12 is a p
+ rivate sponsor event.\n\nPrice: Free\n\nDetails: https://coastaleventures.
+ com/events/ev-stamped-film-festival-1113.html
+URL:https://coastaleventures.com/events/ev-stamped-film-festival-1113.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_suds_blazing_saddles_1111-2026-11-14@coastaleventures.com
+DTSTAMP:20261114T000000Z
+DTSTART;TZID=America/Chicago:20261114T183000
+DTEND;TZID=America/Chicago:20261114T193000
+SUMMARY:Blazing Saddles at Suds N Cinema
+LOCATION:Suds N Cinema\, 174 Miracle Strip Pkwy SE\, Fort Walton Beach\, FL
+  32548
+DESCRIPTION:Wednesday 11/11 · 6:30 PM\n\nSuds N Cinema in Fort Walton Beac
+ h brings the Mel Brooks western comedy Blazing Saddles back to the big scr
+ een. Guests can order local craft beer\, wine\, pizza and concessions to t
+ heir seats. Tickets are $5 for a Classic Ticket plus tax and a service fee
+ \, and the theater warns that seats are limited.\n\nPrice: from $5\n\nDeta
+ ils: https://coastaleventures.com/events/ev-suds-blazing-saddles-1111.html
+URL:https://coastaleventures.com/events/ev-suds-blazing-saddles-1111.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_navarre_library_throwback_movie_1117-2026-11-17@coastaleventures.com
+DTSTAMP:20261114T000000Z
+DTSTART;TZID=America/Chicago:20261117T160000
+DTEND;TZID=America/Chicago:20261117T170000
+SUMMARY:Throwback Movie Tuesday at Navarre Library
+LOCATION:Navarre Library\, 8484 James M. Harvell Road\, Navarre\, FL 32566
+DESCRIPTION:Tuesday 11/17 · 4:00 PM\n\nNavarre Library shows a movie for i
+ ts Throwback Movie Tuesdays series from 4:00 PM to 5:30 PM. This one is pa
+ rt of the library's 20 Years of Stories anniversary program. The county ca
+ lendar does not name the film.\n\nPrice: No published price\n\nDetails: ht
+ tps://coastaleventures.com/events/ev-navarre-library-throwback-movie-1117.
+ html
+URL:https://coastaleventures.com/events/ev-navarre-library-throwback-movie-
+ 1117.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_suds_wizard_of_oz_1118-2026-11-18@coastaleventures.com
+DTSTAMP:20261114T000000Z
+DTSTART;TZID=America/Chicago:20261118T183000
+DTEND;TZID=America/Chicago:20261118T193000
+SUMMARY:The Wizard of Oz at Suds N Cinema
+LOCATION:Suds N Cinema\, 174 Miracle Strip Pkwy SE\, Fort Walton Beach\, FL
+  32548
+DESCRIPTION:Wednesday 11/18 to Monday 11/23 · 6:30 PM nightly\n\nSuds N Ci
+ nema in Fort Walton Beach puts The Wizard of Oz back on the big screen for
+  six nights to kick off the holidays. It is dinner and a movie: full resta
+ urant service comes to your seat during the film\, with local craft beer a
+ nd wine on the menu. The theater calls it a classic for audiences of all a
+ ges\, and a Classic Ticket is $5.\n\nPrice: from $5\n\nDetails: https://co
+ astaleventures.com/events/ev-suds-wizard-of-oz-1118.html
+URL:https://coastaleventures.com/events/ev-suds-wizard-of-oz-1118.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_teen_space_movie_hunger_games_1119-2026-11-19@coastaleventures.com
+DTSTAMP:20261114T000000Z
+DTSTART;TZID=America/Chicago:20261119T143000
+DTEND;TZID=America/Chicago:20261119T160000
+SUMMARY:Movie in the Teen Space: The Hunger Games
+LOCATION:Teen Space @ the Niceville Library\, 206 Partin Drive North\, Nice
+ ville\, FL 32578
+DESCRIPTION:Thursday 11/19 · 2:30 PM to 4:00 PM\n\nThe Niceville Library's
+  Teen Space screens the first Hunger Games film ahead of the theater relea
+ se of Sunrise on the Reaping. The movie is rated PG-13\, and refreshments 
+ are served. Entry is limited to students age 13 to 17 with an active libra
+ ry card and an emergency contact form on file.\n\nPrice: No published pric
+ e\n\nDetails: https://coastaleventures.com/events/ev-teen-space-movie-hung
+ er-games-1119.html
+URL:https://coastaleventures.com/events/ev-teen-space-movie-hunger-games-11
+ 19.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_valparaiso_library_anime_club-2026-11-19@coastaleventures.com
+DTSTAMP:20261114T000000Z
+DTSTART;TZID=America/Chicago:20261119T150000
+DTEND;TZID=America/Chicago:20261119T160000
+SUMMARY:Anime Club at the Valparaiso Library
+LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
+DESCRIPTION:Thursdays · 3:00 PM to 4:00 PM\, through 12/17\n\nThe Valparai
+ so Library's Anime Club meets every Thursday afternoon for middle and high
+  school students\, ages 11 to 17. The club watches anime rated from G to P
+ G-13 and TV-14\, and manga is on hand to read during meetings.\n\nPrice: N
+ o published price\n\nDetails: https://coastaleventures.com/events/ev-valpa
+ raiso-library-anime-club.html
+URL:https://coastaleventures.com/events/ev-valparaiso-library-anime-club.ht
+ ml
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_great_movie_adventure_elemental_toulminville_1119-2026-11-19@coastal
+ eventures.com
+DTSTAMP:20261114T000000Z
+DTSTART;TZID=America/Chicago:20261119T151500
+DTEND;TZID=America/Chicago:20261119T161500
+SUMMARY:Great Movie Adventure (Elemental) at Toulminville Library
+LOCATION:Virginia Dillard Smith/Toulminville Branch Library\, 601 Stanton R
+ oad\, Mobile\, AL 36617
+DESCRIPTION:Thursday 11/19 · 3:15 PM\n\nThe Toulminville Branch shows Elem
+ ental\, the 2023 Pixar film rated PG and running 1 hour 49 minutes\, with 
+ snacks. The screening runs in the branch meeting room. The library recomme
+ nds registering ahead.\n\nPrice: No published price\n\nDetails: https://co
+ astaleventures.com/events/ev-great-movie-adventure-elemental-toulminville-
+ 1119.html
+URL:https://coastaleventures.com/events/ev-great-movie-adventure-elemental-
+ toulminville-1119.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_destin_commons_movie_moana_1122-2026-11-22@coastaleventures.com
+DTSTAMP:20261114T000000Z
+DTSTART;TZID=America/Chicago:20261122T183000
+DTEND;TZID=America/Chicago:20261122T193000
+SUMMARY:Movie Night: Moana at Destin Commons
+LOCATION:Destin Commons\, 4100 Legendary Drive\, Destin\, FL 32541
+DESCRIPTION:Sunday 11/22 · 6:30 PM\n\nDestin Commons lists Moana as a movi
+ e night on Sunday 11/22 · 6:30 PM. The shopping center does not say where
+  on the property the screen goes up or what it costs\, so call before you 
+ pack the chairs. Destin Commons shows its movie nights on the lawn in othe
+ r months\, which is an outdoor setup.\n\nPrice: No published price\n\nDeta
+ ils: https://coastaleventures.com/events/ev-destin-commons-movie-moana-112
+ 2.html
+URL:https://coastaleventures.com/events/ev-destin-commons-movie-moana-1122.
+ html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_suds_christmas_vacation_1124-2026-11-24@coastaleventures.com
+DTSTAMP:20261114T000000Z
+DTSTART;VALUE=DATE:20261124
+DTEND;VALUE=DATE:20261125
+SUMMARY:Christmas Vacation at Suds N Cinema
+LOCATION:Suds N Cinema\, 174 Miracle Strip Pkwy SE\, Fort Walton Beach\, FL
+  32548
+DESCRIPTION:Tuesday 11/24 · doors 5:45 PM\, movie 6:30 PM\n\nSuds N Cinema
+  shows National Lampoon's Christmas Vacation during Thanksgiving week\, wi
+ th Clark Griswold and family on the big screen. Full restaurant service co
+ mes to your seat during the movie\, so nobody has to cook or do dishes. Th
+ e event page lists doors at 5:45 PM and the show at 6:30 PM\, and a Classi
+ c Ticket is $5.\n\nPrice: from $5\n\nDetails: https://coastaleventures.com
+ /events/ev-suds-christmas-vacation-1124.html
+URL:https://coastaleventures.com/events/ev-suds-christmas-vacation-1124.htm
+ l
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_valparaiso_library_anime_club-2026-11-26@coastaleventures.com
+DTSTAMP:20261114T000000Z
+DTSTART;TZID=America/Chicago:20261126T150000
+DTEND;TZID=America/Chicago:20261126T160000
+SUMMARY:Anime Club at the Valparaiso Library
+LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
+DESCRIPTION:Thursdays · 3:00 PM to 4:00 PM\, through 12/17\n\nThe Valparai
+ so Library's Anime Club meets every Thursday afternoon for middle and high
+  school students\, ages 11 to 17. The club watches anime rated from G to P
+ G-13 and TV-14\, and manga is on hand to read during meetings.\n\nPrice: N
+ o published price\n\nDetails: https://coastaleventures.com/events/ev-valpa
+ raiso-library-anime-club.html
+URL:https://coastaleventures.com/events/ev-valparaiso-library-anime-club.ht
+ ml
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_valparaiso_library_anime_club-2026-12-03@coastaleventures.com
+DTSTAMP:20261114T000000Z
+DTSTART;TZID=America/Chicago:20261203T150000
+DTEND;TZID=America/Chicago:20261203T160000
+SUMMARY:Anime Club at the Valparaiso Library
+LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
+DESCRIPTION:Thursdays · 3:00 PM to 4:00 PM\, through 12/17\n\nThe Valparai
+ so Library's Anime Club meets every Thursday afternoon for middle and high
+  school students\, ages 11 to 17. The club watches anime rated from G to P
+ G-13 and TV-14\, and manga is on hand to read during meetings.\n\nPrice: N
+ o published price\n\nDetails: https://coastaleventures.com/events/ev-valpa
+ raiso-library-anime-club.html
+URL:https://coastaleventures.com/events/ev-valparaiso-library-anime-club.ht
+ ml
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mobile_wheels_and_reels_christmas_pageant_1204-2026-12-04@coastaleve
+ ntures.com
+DTSTAMP:20261114T000000Z
+DTSTART;TZID=America/Chicago:20261204T180000
+DTEND;TZID=America/Chicago:20261204T220000
+SUMMARY:Wheels & Reels Drive-In Movies: The Best Christmas Pageant Ever
+LOCATION:Mobile Flea Market\, 401 Schillinger Rd N\, Mobile\, AL
+DESCRIPTION:Friday 12/4 · 6:00 PM to 10:00 PM · movie at 7:00 PM\n\nThe C
+ ity of Mobile closes its Wheels & Reels drive-in series on Friday\, Decemb
+ er 4 with The Best Christmas Pageant Ever\, rated PG. The movie starts at 
+ 7:00 PM at the Mobile Flea Market\, and food trucks are on site. Guests wa
+ tch from their vehicles or from designated seating areas.\n\nPrice: Free\n
+ \nDetails: https://coastaleventures.com/events/ev-mobile-wheels-and-reels-
+ christmas-pageant-1204.html
+URL:https://coastaleventures.com/events/ev-mobile-wheels-and-reels-christma
+ s-pageant-1204.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_exploreum_21_after_hours_gremlins_1205-2026-12-05@coastaleventures.c
+ om
+DTSTAMP:20261114T000000Z
+DTSTART;TZID=America/Chicago:20261205T180000
+DTEND;TZID=America/Chicago:20261205T190000
+SUMMARY:21+ After Hours: Gremlins at the Exploreum
+LOCATION:Exploreum Science Center\, 65 Government St\, Mobile\, AL 36602
+DESCRIPTION:Saturday 12/5 · 6:00 PM\n\nThe Exploreum Science Center turns 
+ its galleries into an adults-only evening built around the movie Gremlins.
+  The night runs from 6:00 to 10:00 PM and is limited to guests 21 and over
+ . Ticket details have not been posted yet\, so the box office is the place
+  to ask.\n\nPrice: No published price\n\nDetails: https://coastaleventures
+ .com/events/ev-exploreum-21-after-hours-gremlins-1205.html
+URL:https://coastaleventures.com/events/ev-exploreum-21-after-hours-gremlin
+ s-1205.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_valparaiso_library_anime_club-2026-12-10@coastaleventures.com
+DTSTAMP:20261114T000000Z
+DTSTART;TZID=America/Chicago:20261210T150000
+DTEND;TZID=America/Chicago:20261210T160000
+SUMMARY:Anime Club at the Valparaiso Library
+LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
+DESCRIPTION:Thursdays · 3:00 PM to 4:00 PM\, through 12/17\n\nThe Valparai
+ so Library's Anime Club meets every Thursday afternoon for middle and high
+  school students\, ages 11 to 17. The club watches anime rated from G to P
+ G-13 and TV-14\, and manga is on hand to read during meetings.\n\nPrice: N
+ o published price\n\nDetails: https://coastaleventures.com/events/ev-valpa
+ raiso-library-anime-club.html
+URL:https://coastaleventures.com/events/ev-valparaiso-library-anime-club.ht
+ ml
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_wharf_jingle_bell_movie_bash_1212-2026-12-12@coastaleventures.com
+DTSTAMP:20261114T000000Z
+DTSTART;TZID=America/Chicago:20261212T110000
+DTEND;TZID=America/Chicago:20261212T120000
+SUMMARY:Jingle Bell Movie Bash at Portside on Main
+LOCATION:Portside on Main\, The Wharf\, 23101 Canal Road\, Orange Beach\, A
+ L 36561
+DESCRIPTION:Saturday 12/12 · movies start at 11:00 AM\n\nThe Wharf turns P
+ ortside on Main into a free Christmas movie day starting at 11:00 AM. The 
+ lineup is Mickey's Once Upon a Christmas\, The Grinch and National Lampoon
+ 's Christmas Vacation. Popcorn and Pepsi products are free\, and there are
+  face painting\, snow machines\, a prize wheel and holiday photo spots. Pa
+ jamas are encouraged.\n\nPrice: Free\n\nDetails: https://coastaleventures.
+ com/events/ev-wharf-jingle-bell-movie-bash-1212.html
+URL:https://coastaleventures.com/events/ev-wharf-jingle-bell-movie-bash-121
+ 2.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_navarre_throwback_deck_halls_1215-2026-12-15@coastaleventures.com
+DTSTAMP:20261114T000000Z
+DTSTART;TZID=America/Chicago:20261215T160000
+DTEND;TZID=America/Chicago:20261215T170000
+SUMMARY:Throwback Movie Tuesday: Deck the Halls at Navarre Library
+LOCATION:Navarre Library\, 8484 James M. Harvell Road\, Navarre\, FL 32566
+DESCRIPTION:Tuesday 12/15 · 4:00 PM\n\nThe Navarre Library shows Deck the 
+ Halls\, a PG comedy from 2006\, for its Throwback Movie Tuesdays series on
+  the third Tuesday of the month. The series features family friendly films
+  from 2006\, the year the Santa Rosa County Library System opened\, and th
+ e Friends of the Navarre Library provide refreshments. The movie starts at
+  4:00 PM.\n\nPrice: No published price\n\nDetails: https://coastaleventure
+ s.com/events/ev-navarre-throwback-deck-halls-1215.html
+URL:https://coastaleventures.com/events/ev-navarre-throwback-deck-halls-121
+ 5.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_valparaiso_library_anime_club-2026-12-17@coastaleventures.com
+DTSTAMP:20261114T000000Z
+DTSTART;TZID=America/Chicago:20261217T150000
+DTEND;TZID=America/Chicago:20261217T160000
+SUMMARY:Anime Club at the Valparaiso Library
+LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
+DESCRIPTION:Thursdays · 3:00 PM to 4:00 PM\, through 12/17\n\nThe Valparai
+ so Library's Anime Club meets every Thursday afternoon for middle and high
+  school students\, ages 11 to 17. The club watches anime rated from G to P
+ G-13 and TV-14\, and manga is on hand to read during meetings.\n\nPrice: N
+ o published price\n\nDetails: https://coastaleventures.com/events/ev-valpa
+ raiso-library-anime-club.html
+URL:https://coastaleventures.com/events/ev-valparaiso-library-anime-club.ht
+ ml
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_destin_commons_movie_home_alone_1218-2026-12-18@coastaleventures.com
+DTSTAMP:20261114T000000Z
+DTSTART;TZID=America/Chicago:20261218T183000
+DTEND;TZID=America/Chicago:20261218T193000
+SUMMARY:Movie Night: Elf at Destin Commons
+LOCATION:Destin Commons\, 4100 Legendary Drive\, Destin\, FL 32541
+DESCRIPTION:Friday 12/18 · 6:30 PM\n\nDestin Commons kicks off winter brea
+ k with Elf on the lawn on Friday\, December 18\, at 6:30 PM. Bring blanket
+ s and lawn chairs and come early for a spot. AMC Destin Commons hands out 
+ free popcorn\, and Crepe Hut and Wetzel's Pretzels take 50% off during the
+  movie.\n\nPrice: No published price\n\nDetails: https://coastaleventures.
+ com/events/ev-destin-commons-movie-home-alone-1218.html
+URL:https://coastaleventures.com/events/ev-destin-commons-movie-home-alone-
+ 1218.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_milton_movie_night_1222-2026-12-22@coastaleventures.com
+DTSTAMP:20261114T000000Z
+DTSTART;VALUE=DATE:20261222
+DTEND;VALUE=DATE:20261230
+SUMMARY:Movie Night at Milton Library
+LOCATION:Milton Library\, 5541 Alabama Street\, Milton\, FL 32570
+DESCRIPTION:Tuesday 12/22 · 4:00 PM to 6:00 PM · Tuesday 12/29 · 4:00 PM
+  to 6:00 PM\n\nThe Milton Library shows a movie at 4:00 PM on two Tuesdays
+  at the end of December\, and the Friends of the Milton Library provide re
+ freshments. The county page does not name either film. The window on the c
+ alendar runs from 4:00 PM to 6:00 PM.\n\nPrice: No published price\n\nDeta
+ ils: https://coastaleventures.com/events/ev-milton-movie-night-1222.html
+URL:https://coastaleventures.com/events/ev-milton-movie-night-1222.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
