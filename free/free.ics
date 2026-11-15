@@ -5,92 +5,9 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Gulf Coast: free things
 BEGIN:VEVENT
-UID:ev_palafox-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T090000
-DTEND:20261114T140000
-SUMMARY:Palafox Market
-DESCRIPTION:A big Saturday market fills downtown with produce\, local make
- rs\, art\, and food. A free trolley runs between plazas. It is stroller-f
- riendly.\nPrice: Free\nArea: Pensacola\nTimes: Saturdays · 9 AM-2 PM\nCh
- ecked against the venue's own page on 2026-09-02\nhttps://coastaleventure
- s.com/events/ev-palafox.html
-LOCATION:MLK Jr. Plaza + Plaza Ferdinand\, Downtown Pensacola\, 200 N Pala
- fox St\, Pensacola\, FL 32502
-URL:https://coastaleventures.com/events/ev-palafox.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_grandblvd_mkt-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T090000
-DTEND:20261114T130000
-SUMMARY:Grand Boulevard Farmers' Market
-DESCRIPTION:A Saturday farmers and makers market fills the Sandestin green
- \, with local honey\, produce\, and kettle corn. Pair it with a Destin/Ba
- ytowne day.\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Saturdays ·
-  9 AM-1 PM\nChecked against the venue's own page on 2026-11-04\nhttps://c
- oastaleventures.com/events/ev-grandblvd-mkt.html
-LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Blvd\, Mira
- mar Beach\, FL 32550
-URL:https://coastaleventures.com/events/ev-grandblvd-mkt.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_parkrun-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T073000
-DTEND:20261114T093000
-SUMMARY:Parkrun: Free Timed 5K (Rec Plex North)
-DESCRIPTION:A free\, timed\, all-comers 5K runs every Saturday. Walk\, run
- \, or push the jogging stroller. The kids can earn official times too\, w
- ith one-time free barcode registration.\nPrice: Free\nArea: Pensacola\nTi
- mes: Saturdays · 7:30 AM\nChecked against the venue's own page on 2026-1
- 1-04\nhttps://coastaleventures.com/events/ev-parkrun.html
-LOCATION:UWF Rec Plex North Field\, 11000 University Pkwy\, Pensacola\, FL
-  32514
-URL:https://coastaleventures.com/events/ev-parkrun.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_downtown_fwb_saturday_market_0912-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T080000
-DTEND:20261114T130000
-SUMMARY:Downtown FWB Saturday Market
-DESCRIPTION:The Downtown FWB Saturday Market sets up at Fort Walton Beach 
- Landing Park on the waterfront from 8 AM to 1 PM\, free to browse for the
-  whole family. Local artisans\, produce growers\, and other vendors fill 
- the park on the second and fourth Saturday of every month\, year-round. W
- alking the market alongside the water is as much the point as the shoppin
- g.\nPrice: Free\nArea: Destin & Fort Walton\nTimes: 8:00 AM to 1:00 PM\nC
- hecked against the venue's own page on 2026-10-02\nhttps://coastaleventur
- es.com/events/ev-downtown-fwb-saturday-market-0912.html
-LOCATION:Fort Walton Beach Landing Park\, 139 Brooks St SE\, Fort Walton B
- each\, FL 32547
-URL:https://coastaleventures.com/events/ev-downtown-fwb-saturday-market-09
- 12.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_festa_italiana_1009-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART;VALUE=DATE:20261114
-DTEND;VALUE=DATE:20261115
-SUMMARY:Festa Italiana
-DESCRIPTION:The Buona Fortuna Lodge turns Fountain Park in downtown Pensac
- ola into an Italian street fair with shrimp scampi\, spaghetti and meatba
- lls\, lasagna\, sausage and pepper sandwiches and tiramisu. There is Ital
- ian music\, a silent auction\, a cash prize drawing and a Kids Corner wit
- h face painting and balloons. Proceeds go to the lodge's charitable donat
- ions and scholarships in the Pensacola area. Confirm the dates and hours 
- with the lodge before you go.\nPrice: Free\nArea: Pensacola\nTimes: Fri 1
- 1/13 and Sat 11/14 · hours for the new dates not posted yet\nhttps://coa
- staleventures.com/events/ev-festa-italiana-1009.html
-LOCATION:Fountain Park\, downtown Pensacola\, Downtown Pensacola\, FL 3250
- 2
-URL:https://coastaleventures.com/events/ev-festa-italiana-1009.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_uwf_make_it_last_1001-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART;VALUE=DATE:20261114
+UID:ev_uwf_make_it_last_1001-2026-11-15@coast-guide
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261121
 SUMMARY:Make It Last: Gallery Exhibition at UWF
 DESCRIPTION:Make It Last is an exhibition in The Art Gallery at the UWF Ce
@@ -105,9 +22,9 @@ LOCATION:UWF Center for Fine and Performing Arts\, Building 82\, The Art G
 URL:https://coastaleventures.com/events/ev-uwf-make-it-last-1001.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_foley_art_center_trim_a_tree_1113-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART;VALUE=DATE:20261114
+UID:ev_foley_art_center_trim_a_tree_1113-2026-11-15@coast-guide
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261224
 SUMMARY:Trim-a-Tree at the Foley Art Center
 DESCRIPTION:Since 1967 the Foley Art Center has opened its Trim-a-Tree hol
@@ -122,481 +39,6 @@ DESCRIPTION:Since 1967 the Foley Art Center has opened its Trim-a-Tree hol
 LOCATION:Foley Art Center\, 211 N McKenzie St\, Foley\, AL 36535
 URL:https://coastaleventures.com/events/ev-foley-art-center-trim-a-tree-11
  13.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_pokemon_league_at_gamemasters_guil_1008-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T150000
-DTEND:20261114T200000
-SUMMARY:Pokémon League at GameMasters Guild
-DESCRIPTION:Pokémon League at GameMasters Guild is free casual play for t
- he Pokémon TCG\, the Pokémon Champions video game and Pokémon GO. It r
- uns Thursdays from 3 to 8 PM and Saturdays from 12 to 2 PM in Crestview. 
- All ages are welcome\, and the shop calls it a family-friendly space. Pla
- yers get promo cards or special items while supplies last\, and a free Po
- kémon account is needed to qualify (children under 13 register under a p
- arent's account).\nPrice: Free\nTimes: Thursdays 3 PM-8 PM and Saturdays 
- 12 PM-2 PM\nChecked against the venue's own page on 2026-10-03\nhttps://c
- oastaleventures.com/events/ev-pokemon-league-at-gamemasters-guil-1008.htm
- l
-LOCATION:GameMasters Guild\, 743 Ashley Drive\, Crestview\, FL 32536
-URL:https://coastaleventures.com/events/ev-pokemon-league-at-gamemasters-g
- uil-1008.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_disney_lorcana_league_1010-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T120000
-DTEND:20261114T150000
-SUMMARY:Disney Lorcana League
-DESCRIPTION:Disney Lorcana League is casual league play at GameMasters Gui
- ld in Crestview. Players earn league points toward monthly prizes and a p
- romo card the first time they play each month\, and you can borrow a deck
-  or buy one. The shop describes it as great for families. Casual play is 
- free\, tournaments vary in price\, and a free Carde.io account is needed 
- to earn promos.\nPrice: Free\nTimes: Weekly · Saturdays 12 PM-3 PM (conf
- irm the day)\nChecked against the venue's own page on 2026-10-03\nhttps:/
- /coastaleventures.com/events/ev-disney-lorcana-league-1010.html
-LOCATION:GameMasters Guild\, 743 Ashley Drive\, Crestview\, FL 32536
-URL:https://coastaleventures.com/events/ev-disney-lorcana-league-1010.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_20th_annual_holiday_craft_show_1113-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T100000
-DTEND:20261114T120000
-SUMMARY:20th Annual Holiday Craft Show
-DESCRIPTION:The 20th Annual Holiday Craft Show is a City of Destin holiday
-  craft show at Destin Community Center over two days. It runs 10 AM-4 PM 
- on Friday\, November 13 and 9 AM-3 PM on Saturday\, November 14\, and adm
- ission is free.\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Friday 1
- 1/13 to Saturday 11/14 · 10:00 AM\nChecked against the venue's own page 
- on 2026-10-03\nhttps://coastaleventures.com/events/ev-20th-annual-holiday
- -craft-show-1113.html
-LOCATION:Destin Community Center\, 101 Stahlman Ave\, Destin\, FL 32541
-URL:https://coastaleventures.com/events/ev-20th-annual-holiday-craft-show-
- 1113.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_japan_culture_day_uwf_japan_house_1114-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T130000
-DTEND:20261114T150000
-SUMMARY:Japan Culture Day (UWF Japan House)
-DESCRIPTION:Japan Culture Day is a free afternoon at the International Cen
- ter and Japan House\, Building 71 at UWF\, with cultural activities\, wor
- kshops\, performances and displays for all ages. There are crafts such as
-  origami\, calligraphy and coloring\, plus take-home Japanese-themed gift
- s and snacks. It runs 1-4 PM on Saturday\, Nov 14.\nPrice: Free\nArea: Pe
- nsacola\nTimes: Saturday 11/14 · 1:00 PM\nChecked against the venue's ow
- n page on 2026-10-03\nhttps://coastaleventures.com/events/ev-japan-cultur
- e-day-uwf-japan-house-1114.html
-LOCATION:International Center and Japan House\, Building 71\, UWF\, 11000 
- University Parkway\, Building 71\, Pensacola\, FL 32514
-URL:https://coastaleventures.com/events/ev-japan-culture-day-uwf-japan-hou
- se-1114.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_north_hill_fall_fest_1114-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T170000
-DTEND:20261114T190000
-SUMMARY:North Hill Fall Fest
-DESCRIPTION:North Hill Fall Fest is a free neighborhood picnic at Alabama 
- Square Park in North Hill. Bring a dish to share or buy dinner from the f
- ood trucks\, and a family-friendly movie is set up. It runs 5-8 PM on Sat
- urday\, Nov 14\, and no RSVP is required.\nPrice: Free\nArea: Pensacola\n
- Times: Saturday 11/14 · 5:00 PM\nChecked against the venue's own page on
-  2026-10-03\nhttps://coastaleventures.com/events/ev-north-hill-fall-fest-
- 1114.html
-LOCATION:Alabama Square Park\, 401 West Gonzalez Street (Alabama Square)\,
-  Pensacola\, FL 32501
-URL:https://coastaleventures.com/events/ev-north-hill-fall-fest-1114.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_anchor_up_monthly_card_show_1114-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T090000
-DTEND:20261114T110000
-SUMMARY:Anchor Up Monthly Card Show
-DESCRIPTION:The Anchor Up Monthly Card Show is a sports card and trading c
- ard show at Emerald Fortress in Pensacola. It has 70 vendor tables and li
- ve raffles\, with sports cards\, Pokémon\, One Piece TCG\, memorabilia\,
-  supplies\, sealed wax and packs\, and silver and gold coins. Admission i
- s free\, and Anchor Up calls itself the Gulf Coast card community.\nPrice
- : Free\nArea: Pensacola\nTimes: Saturday 11/14 · 9:00 AM\nChecked agains
- t the venue's own page on 2026-10-03\nhttps://coastaleventures.com/events
- /ev-anchor-up-monthly-card-show-1114.html
-LOCATION:Emerald Fortress\, 319 E Nine Mile Rd\, Pensacola\, FL 32514
-URL:https://coastaleventures.com/events/ev-anchor-up-monthly-card-show-111
- 4.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_oceanhour_saturday_cleanups_fall_1017-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART;VALUE=DATE:20261114
-DTEND;VALUE=DATE:20261129
-SUMMARY:Ocean Hour Saturday Cleanups: Fall Schedule
-DESCRIPTION:Ocean Hour holds one hour volunteer cleanups on Saturday morni
- ngs at 8:45 AM at parks\, trailheads and beaches around Pensacola and Pen
- sacola Beach. The fall schedule runs from October 24 through November 28\
- , with two or three sites each week. Volunteers only need closed toe shoe
- s\, water and sunscreen\, and Ocean Hour supplies all equipment.\nPrice: 
- Free\nArea: Pensacola Beach & Perdido\nTimes: Saturdays 10/24 to 11/28 ·
-  8:45 AM\nChecked against the venue's own page on 2026-10-07\nhttps://coa
- staleventures.com/events/ev-oceanhour-saturday-cleanups-fall-1017.html
-LOCATION:Ocean Hour cleanup sites around Pensacola\, Rotating sites around
-  Pensacola and Pensacola Beach\; see the schedule on oceanhourfl.com
-URL:https://coastaleventures.com/events/ev-oceanhour-saturday-cleanups-fal
- l-1017.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_full_throttle_for_vets_1114-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T090000
-DTEND:20261114T160000
-SUMMARY:Full Throttle for Vets Show and Shine
-DESCRIPTION:The sixth Full Throttle for Vets car show fills Five Flags Spe
- edway on Saturday\, open to every make and model. Spectators walk in free
- \, and showing a car is $25 ahead or $35 on the day. All proceeds go to H
- ealing Paws for Warriors\, which pairs veterans with rescue dogs trained 
- as service dogs.\nPrice: Free\nArea: Pensacola\nTimes: Saturday 11/14 · 
- 9:00 AM to 4:00 PM\nChecked against the venue's own page on 2026-10-23\nh
- ttps://coastaleventures.com/events/ev-full-throttle-for-vets-1114.html
-LOCATION:Five Flags Speedway\, 7451 Pine Forest Rd\, Pensacola\, FL 32526
-URL:https://coastaleventures.com/events/ev-full-throttle-for-vets-1114.htm
- l
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_stamped_film_festival_1113-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART;VALUE=DATE:20261114
-DTEND;VALUE=DATE:20261116
-SUMMARY:Stamped Film Festival
-DESCRIPTION:Stamped is Pensacola's LGBTQ+ film festival\, with screenings\
- , filmmaker Q&As\, panels and creativity workshops at the Clark Family Cu
- ltural Center. Sponsors cover the cost\, so every day is free with a rese
- rved ticket. Sunday is a Family Day program for all ages\, and Thursday\,
-  November 12 is a private sponsor event.\nPrice: Free\nArea: Pensacola\nT
- imes: Friday 11/13 to Sunday 11/15 · schedule not yet posted\nChecked ag
- ainst the venue's own page on 2026-10-23\nhttps://coastaleventures.com/ev
- ents/ev-stamped-film-festival-1113.html
-LOCATION:Clark Family Cultural Center (Pensacola Little Theatre)\, 400 S J
- efferson St\, Pensacola\, FL 32502
-URL:https://coastaleventures.com/events/ev-stamped-film-festival-1113.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_opry_in_the_barn_jay_1114-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T170000
-DTEND:20261114T190000
-SUMMARY:Opry in the Barn: Kelly Crabb and The Bowling Sisters
-DESCRIPTION:My Father's Arrows\, a ministry to foster children in Jay\, ho
- sts a gospel night in its barn with Kelly Crabb and The Bowling Sisters. 
- The evening starts with an open house of the campus\, then a free dinner 
- at 6 PM and the concert at 6:30 PM\, with fellowship and a silent auction
- . Admission is free\, but tickets must be reserved.\nPrice: Free\nArea: M
- ilton & Pace\nTimes: Saturday 11/14 · open house 5:00 PM\, dinner 6:00 P
- M\, concert 6:30 PM\nChecked against the venue's own page on 2026-10-23\n
- https://coastaleventures.com/events/ev-opry-in-the-barn-jay-1114.html
-LOCATION:My Father's Arrows\, 4025 County Road 178\, Jay\, FL 32565
-URL:https://coastaleventures.com/events/ev-opry-in-the-barn-jay-1114.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_grand_boulevard_farmers_market_1024-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T090000
-DTEND:20261114T130000
-SUMMARY:Grand Boulevard Farmers Market
-DESCRIPTION:Grand Boulevard holds an open-air farmers market every Saturda
- y morning in Grand Park\, between Cantina Laredo and Tommy Bahama. Vendor
- s sell produce\, meats\, dairy\, eggs\, honey\, baked goods\, artisanal f
- oods and handmade goods. The market runs year-round in a walkable shoppin
- g district.\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Saturdays ·
-  9:00 AM to 1:00 PM\nChecked against the venue's own page on 2026-10-23\n
- https://coastaleventures.com/events/ev-grand-boulevard-farmers-market-102
- 4.html
-LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Boulevard\,
-  Miramar Beach\, FL 32550
-URL:https://coastaleventures.com/events/ev-grand-boulevard-farmers-market-
- 1024.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_alys_beach_holiday_makers_market_1113-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART;VALUE=DATE:20261114
-DTEND;VALUE=DATE:20261116
-SUMMARY:Holiday Makers Market at Alys Beach Crafted
-DESCRIPTION:Regional artisans show and talk about their work at the Alys B
- each Amphitheatre\, and you can buy handmade holiday gifts. There is live
-  music\, plus food and drinks from Town Center merchants\, and Santa pose
- s for photos from noon to 2 PM on Saturday and Sunday. The Cultural Arts 
- Alliance booth lets kids and adults make something to take home.\nPrice: 
- Free\nArea: 30A & South Walton\nTimes: Friday 11/13 · 2:00 PM to 4:30 PM
-  · Saturday 11/14 and Sunday 11/15 · 10:00 AM to 2:00 PM\nChecked again
- st the venue's own page on 2026-10-23\nhttps://coastaleventures.com/event
- s/ev-alys-beach-holiday-makers-market-1113.html
-LOCATION:Alys Beach Amphitheatre\, Somerset Street\, Alys Beach\, FL 32461
-URL:https://coastaleventures.com/events/ev-alys-beach-holiday-makers-marke
- t-1113.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_rural_roots_day_jay_1114-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T100000
-DTEND:20261114T140000
-SUMMARY:Santa Rosa Rural Roots Day Ag Expo
-DESCRIPTION:Santa Rosa County hosts Rural Roots Day to celebrate local far
- ming. The day includes a farmer panel\, live animals\, a hay maze\, a pla
- nting station\, crafts and a Kid's Corner. Food and activities are compli
- mentary\, and a Fall Heritage Pie Contest takes entries until 10:30 AM.\n
- Price: Free\nArea: Milton & Pace\nTimes: Saturday 11/14 · 10:00 AM to 2:
- 00 PM\nChecked against the venue's own page on 2026-10-28\nhttps://coasta
- leventures.com/events/ev-rural-roots-day-jay-1114.html
-LOCATION:UF/IFAS Research Center\, 4253 Experiment Drive\, Jay\, FL 32565
-URL:https://coastaleventures.com/events/ev-rural-roots-day-jay-1114.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_audubon_twin_hills_bird_walk_1114-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T073000
-DTEND:20261114T093000
-SUMMARY:Audubon bird walk at Twin Hills Park in Crestview
-DESCRIPTION:Choctawhatchee Audubon Society leads a Saturday morning bird w
- alk at Twin Hills Park in Crestview. The two large ponds are likely to ho
- ld ducks\, coots\, cormorants\, herons and egrets\, along with songbirds 
- in the surrounding trees. The group meets at 7:30 AM in the parking lot b
- y the children's park.\nPrice: Free\nTimes: Saturday 11/14 · 7:30 AM\nCh
- ecked against the venue's own page on 2026-10-28\nhttps://coastaleventure
- s.com/events/ev-audubon-twin-hills-bird-walk-1114.html
-LOCATION:Twin Hills Park\, parking lot by the children's park\, 100 Hathaw
- ay St\, Crestview\, FL 32539
-URL:https://coastaleventures.com/events/ev-audubon-twin-hills-bird-walk-11
- 14.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_fort_conde_living_history_festival_1114-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T100000
-DTEND:20261114T153000
-SUMMARY:Living History Festival at Colonial Fort Conde
-DESCRIPTION:Colonial Fort Conde in downtown Mobile marks the 50th annivers
- ary of its reconstruction with a day of 18th century demonstrations. Hist
- orical groups from across the region show musket firing\, military drills
-  and colonial skills\, and explain how people handled laundry\, money and
-  hygiene. The festival also looks at the foods and social life of Europea
- n and Indigenous colonial communities.\nPrice: Free\nArea: Mobile & Baldw
- in County\nTimes: Saturday 11/14 · 10:00 AM to 3:30 PM\nChecked against 
- the venue's own page on 2026-10-28\nhttps://coastaleventures.com/events/e
- v-fort-conde-living-history-festival-1114.html
-LOCATION:Colonial Fort Conde\, 150 S. Royal Street\, Mobile\, AL 36602
-URL:https://coastaleventures.com/events/ev-fort-conde-living-history-festi
- val-1114.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_america_recycles_day_theodore_1114-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T083000
-DTEND:20261114T113000
-SUMMARY:Keep Mobile Beautiful America Recycles Day drive-through
-DESCRIPTION:Keep Mobile Beautiful runs a drive-through recycling day at Am
- erican Legion Post 250 in Theodore. Volunteers unload paper for free shre
- dding\, electronics with a cord\, household recycling\, grease and tires 
- from each car. The group also collects canned goods for Thanksgiving meal
- s.\nPrice: Free\nTimes: Saturday 11/14 · 8:30 AM to 11:30 AM\nChecked ag
- ainst the venue's own page on 2026-10-28\nhttps://coastaleventures.com/ev
- ents/ev-america-recycles-day-theodore-1114.html
-LOCATION:American Legion Post 250\, 10950 Dauphin Island Parkway\, Theodor
- e\, AL 36582
-URL:https://coastaleventures.com/events/ev-america-recycles-day-theodore-1
- 114.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_gems_mushroom_fairy_garden_fwb_1114-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T103000
-DTEND:20261114T123000
-SUMMARY:GEMS mushroom fairy garden workshop for girls at the Fort Walton B
- each Library
-DESCRIPTION:The Emerald Coast Science Center runs a Girls Empowered with M
- ath and Science workshop in the Children's Story Room. Girls ages 8 to 15
-  look at Beatrix Potter's mushroom illustrations\, dissect a mushroom and
-  build a mushroom fairy garden. The workshop runs 10:30 AM to noon.\nPric
- e: Free\nArea: Destin & Fort Walton\nTimes: Saturday 11/14 · 10:30 AM\nC
- hecked against the venue's own page on 2026-11-04\nhttps://coastaleventur
- es.com/events/ev-gems-mushroom-fairy-garden-fwb-1114.html
-LOCATION:Fort Walton Beach Library\, 185 Miracle Strip Parkway SE\, Fort W
- alton Beach\, FL 32548
-URL:https://coastaleventures.com/events/ev-gems-mushroom-fairy-garden-fwb-
- 1114.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_orange_beach_police_fire_cookout_1114-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T110000
-DTEND:20261114T130000
-SUMMARY:Police and Fire Community Cookout at Waterfront Park
-DESCRIPTION:The Orange Beach Police and Fire departments serve hamburgers 
- and hot dogs free to the community at Waterfront Park. The lunch runs 11:
- 00 AM to 1:00 PM. It is the departments' way of giving back to the town t
- hey serve.\nPrice: Free\nArea: Orange Beach & Gulf Shores\nTimes: Saturda
- y 11/14 · 11:00 AM\nChecked against the venue's own page on 2026-11-04\n
- https://coastaleventures.com/events/ev-orange-beach-police-fire-cookout-1
- 114.html
-LOCATION:Orange Beach Waterfront Park\, 26425 Canal Road\, Orange Beach\, 
- AL 36561
-URL:https://coastaleventures.com/events/ev-orange-beach-police-fire-cookou
- t-1114.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_locals_art_day_orange_beach_1114-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T100000
-DTEND:20261114T120000
-SUMMARY:Locals Art Day at the Coastal Arts Center
-DESCRIPTION:The Coastal Arts Center of Orange Beach hosts Locals Art Day f
- rom 10:00 AM to 3:00 PM. The kids lighthouse painting project is free for
-  all ages. Other classes are priced separately\, so call the Parks and Re
- creation office for details.\nPrice: Free\nArea: Orange Beach & Gulf Shor
- es\nTimes: Saturday 11/14 · 10:00 AM\nChecked against the venue's own pa
- ge on 2026-11-04\nhttps://coastaleventures.com/events/ev-locals-art-day-o
- range-beach-1114.html
-LOCATION:Coastal Arts Center of Orange Beach\, 26389 Canal Rd\, Orange Bea
- ch\, AL 36561
-URL:https://coastaleventures.com/events/ev-locals-art-day-orange-beach-111
- 4.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_namaste_by_the_bay_waterfront_park_1107-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART;VALUE=DATE:20261114
-DTEND;VALUE=DATE:20261129
-SUMMARY:Namaste by the Bay free community yoga at Waterfront Park
-DESCRIPTION:Orange Beach Parks and Recreation runs free community yoga by 
- the water on Saturday mornings from 9:00 AM to 10:00 AM\, with a differen
- t instructor each week. All ages and levels are welcome. The November ses
- sions fall on 11/7\, 11/14\, 11/21 and 11/28.\nPrice: Free\nArea: Orange 
- Beach & Gulf Shores\nTimes: Saturday 9:00 AM\nChecked against the venue's
-  own page on 2026-11-04\nhttps://coastaleventures.com/events/ev-namaste-b
- y-the-bay-waterfront-park-1107.html
-LOCATION:Orange Beach Waterfront Park\, 26425 Canal Road\, Orange Beach\, 
- AL 36561
-URL:https://coastaleventures.com/events/ev-namaste-by-the-bay-waterfront-p
- ark-1107.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_mobile_county_parks_fall_festival_bayfront_1114-2026-11-14@coast-gu
- ide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T120000
-DTEND:20261114T140000
-SUMMARY:Mobile County Parks fall festival at Bayfront Park
-DESCRIPTION:Mobile County runs a free fall festival from noon to 2:00 PM a
- t two county parks on the same day. Bayfront Park in Coden and Escatawpa 
- Hollow Park and Campground in Wilmer both have live music\, arts and craf
- ts\, face painting\, mini carnival games and a fall photo area. At Bayfro
- nt Park\, park in the marked event parking area and take the free shuttle
-  to the park.\nPrice: Free\nTimes: Saturday 11/14 · 12:00 PM to 2:00 PM\
- nChecked against the venue's own page on 2026-11-04\nhttps://coastalevent
- ures.com/events/ev-mobile-county-parks-fall-festival-bayfront-1114.html
-LOCATION:Bayfront Park\, Coden\, 15961 Dauphin Island Parkway\, Coden\, AL
-  36523
-URL:https://coastaleventures.com/events/ev-mobile-county-parks-fall-festiv
- al-bayfront-1114.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_perdido_key_christmas_market_1112-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T170000
-DTEND:20261114T200000
-SUMMARY:Christmas Lighted Night Market\, Perdido Key
-DESCRIPTION:The Perdido Key Area Chamber of Commerce hosts a Christmas mar
- ket under the lights at the Villagio Town Centre on Perdido Key. Come Fri
- day evening or Saturday morning for early holiday shopping.\nPrice: Free\
- nArea: Pensacola Beach & Perdido\nTimes: Friday 11/13 · 5:00 PM to 8:00 
- PM · Saturday 11/14 · 9:00 AM to 1:00 PM\nChecked against the venue's o
- wn page on 2026-11-10\nhttps://coastaleventures.com/events/ev-perdido-key
- -christmas-market-1112.html
-LOCATION:The Villagio Perdido Town Centre\, 13700 Perdido Key Dr\, Pensaco
- la\, FL 32507
-URL:https://coastaleventures.com/events/ev-perdido-key-christmas-market-11
- 12.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_pma_preschool_art_storytime_1114-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T143000
-DTEND:20261114T153000
-SUMMARY:Preschool Art and Storytime at Pensacola Museum of Art
-DESCRIPTION:The Pensacola Museum of Art pairs stories and movement with a 
- hands-on art activity for children ages 2 to 5. Each registered child com
- es with one parent\, guardian or adult. The museum offers the hour free o
- f charge and holds the program on a second Saturday schedule that skipped
-  October.\nPrice: Free\nArea: Pensacola\nTimes: Saturday 11/14 · 2:30 PM
-  to 3:30 PM\nChecked against the venue's own page on 2026-11-04\nhttps://
- coastaleventures.com/events/ev-pma-preschool-art-storytime-1114.html
-LOCATION:Pensacola Museum of Art\, 407 S Jefferson St\, Pensacola\, FL 325
- 02
-URL:https://coastaleventures.com/events/ev-pma-preschool-art-storytime-111
- 4.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_gsp_guided_pier_walk_1113-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART;VALUE=DATE:20261114
-DTEND;VALUE=DATE:20261121
-SUMMARY:Guided Pier Walk at Gulf State Park
-DESCRIPTION:A Gulf State Park naturalist leads a guided tour of the Gulf S
- tate Park Pier on two Friday mornings in November. The walk covers the pi
- er's history\, local conservation work\, and the fish and birds that live
-  around it. The park lists the walk as free and great for all ages\, but 
- pier parking costs $15 for the day.\nPrice: Free\nArea: Orange Beach & Gu
- lf Shores\nTimes: Friday 11/13 · 9:00 AM · Friday 11/20 · 9:00 AM\nChe
- cked against the venue's own page on 2026-11-04\nhttps://coastaleventures
- .com/events/ev-gsp-guided-pier-walk-1113.html
-LOCATION:Gulf State Park Pier\, 20800 East Beach Blvd.\, Gulf Shores\, AL 
- 36542
-URL:https://coastaleventures.com/events/ev-gsp-guided-pier-walk-1113.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_ecokids_from_the_ground_up_garden_1114-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T100000
-DTEND:20261114T140000
-SUMMARY:ECOKids day at From the Ground Up Community Garden
-DESCRIPTION:From the Ground Up Community Garden hosts ECOKids\, a free mor
- ning and early afternoon of nature learning for children. A play called O
- ld Plastic\, New Rules runs from 10 AM to 11 AM\, followed by a relay of 
- learning stations from 11 AM to 1 PM run by groups such as Dune Defenders
- \, Keep Pensacola Beautiful and the Navarre Beach Sea Turtle Conservation
-  Center. Local kid musicians play from 1 PM to 2 PM. Admission is free.\n
- Price: Free\nArea: Pensacola\nTimes: Saturday 11/14 · 10:00 AM to 2:00 P
- M\nChecked against the venue's own page on 2026-11-11\nhttps://coastaleve
- ntures.com/events/ev-ecokids-from-the-ground-up-garden-1114.html
-LOCATION:From the Ground Up Community Garden\, 200 E La Rua St\, Pensacola
- \, FL 32501
-URL:https://coastaleventures.com/events/ev-ecokids-from-the-ground-up-gard
- en-1114.html
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_fmwas_fort_pickens_bird_trip_1114-2026-11-14@coast-guide
-DTSTAMP:20261114T000000Z
-DTSTART:20261114T063000
-DTEND:20261114T100000
-SUMMARY:Audubon bird walk at Fort Pickens
-DESCRIPTION:The Francis M. Weston Audubon Society leads a guided bird walk
-  at Battery Langdon in Fort Pickens. Winter birds are arriving\, so expec
- t scaup\, bufflehead and red-breasted merganser on the water and sparrows
-  plus yellow-rumped warblers in the oaks. The walk is mostly even ground 
- with some loose sand. Registration is required and the walk is free\, but
-  entering the national seashore costs a park fee.\nPrice: Free\nArea: Pen
- sacola Beach & Perdido\nTimes: Saturday 11/14 · 6:30 AM to 10:00 AM\nChe
- cked against the venue's own page on 2026-11-11\nhttps://coastaleventures
- .com/events/ev-fmwas-fort-pickens-bird-trip-1114.html
-LOCATION:Battery Langdon\, Fort Pickens\, Gulf Islands National Seashore\,
-  Battery Langdon\, Fort Pickens Rd\, Pensacola Beach\, FL 32561
-URL:https://coastaleventures.com/events/ev-fmwas-fort-pickens-bird-trip-11
- 14.html
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_pokemon_league_at_trinity_games_1004-2026-11-15@coast-guide
@@ -636,6 +78,43 @@ URL:https://coastaleventures.com/events/ev-barktoberfest-pensacola-1115.ht
  ml
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_stamped_film_festival_1113-2026-11-15@coast-guide
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20261115
+DTEND;VALUE=DATE:20261116
+SUMMARY:Stamped Film Festival
+DESCRIPTION:Stamped is Pensacola's LGBTQ+ film festival\, with screenings\
+ , filmmaker Q&As\, panels and creativity workshops at the Clark Family Cu
+ ltural Center. Sponsors cover the cost\, so every day is free with a rese
+ rved ticket. Sunday is a Family Day program for all ages\, and Thursday\,
+  November 12 is a private sponsor event.\nPrice: Free\nArea: Pensacola\nT
+ imes: Friday 11/13 to Sunday 11/15 · schedule not yet posted\nChecked ag
+ ainst the venue's own page on 2026-10-23\nhttps://coastaleventures.com/ev
+ ents/ev-stamped-film-festival-1113.html
+LOCATION:Clark Family Cultural Center (Pensacola Little Theatre)\, 400 S J
+ efferson St\, Pensacola\, FL 32502
+URL:https://coastaleventures.com/events/ev-stamped-film-festival-1113.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_alys_beach_holiday_makers_market_1113-2026-11-15@coast-guide
+DTSTAMP:20261115T000000Z
+DTSTART:20261115T140000
+DTEND:20261115T163000
+SUMMARY:Holiday Makers Market at Alys Beach Crafted
+DESCRIPTION:Regional artisans show and talk about their work at the Alys B
+ each Amphitheatre\, and you can buy handmade holiday gifts. There is live
+  music\, plus food and drinks from Town Center merchants\, and Santa pose
+ s for photos from noon to 2 PM on Saturday and Sunday. The Cultural Arts 
+ Alliance booth lets kids and adults make something to take home.\nPrice: 
+ Free\nArea: 30A & South Walton\nTimes: Friday 11/13 · 2:00 PM to 4:30 PM
+  · Saturday 11/14 and Sunday 11/15 · 10:00 AM to 2:00 PM\nChecked again
+ st the venue's own page on 2026-10-23\nhttps://coastaleventures.com/event
+ s/ev-alys-beach-holiday-makers-market-1113.html
+LOCATION:Alys Beach Amphitheatre\, Somerset Street\, Alys Beach\, FL 32461
+URL:https://coastaleventures.com/events/ev-alys-beach-holiday-makers-marke
+ t-1113.html
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_msyo_fall_concert_1115-2026-11-15@coast-guide
 DTSTAMP:20261115T000000Z
 DTSTART:20261115T143000
@@ -667,6 +146,42 @@ DESCRIPTION:The NAS Pensacola Library runs a Fall Puzzle Tree Craft class
 LOCATION:NAS Pensacola Library\, NAS Pensacola\, Pensacola\, FL 32508
 URL:https://coastaleventures.com/events/ev-mwr-fall-puzzle-tree-craft-nasp
  -library-1115.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_namaste_by_the_bay_waterfront_park_1107-2026-11-15@coast-guide
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20261115
+DTEND;VALUE=DATE:20261129
+SUMMARY:Namaste by the Bay free community yoga at Waterfront Park
+DESCRIPTION:Orange Beach Parks and Recreation runs free community yoga by 
+ the water on Saturday mornings from 9:00 AM to 10:00 AM\, with a differen
+ t instructor each week. All ages and levels are welcome. The November ses
+ sions fall on 11/7\, 11/14\, 11/21 and 11/28.\nPrice: Free\nArea: Orange 
+ Beach & Gulf Shores\nTimes: Saturday 9:00 AM\nChecked against the venue's
+  own page on 2026-11-04\nhttps://coastaleventures.com/events/ev-namaste-b
+ y-the-bay-waterfront-park-1107.html
+LOCATION:Orange Beach Waterfront Park\, 26425 Canal Road\, Orange Beach\, 
+ AL 36561
+URL:https://coastaleventures.com/events/ev-namaste-by-the-bay-waterfront-p
+ ark-1107.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gsp_guided_pier_walk_1113-2026-11-15@coast-guide
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20261115
+DTEND;VALUE=DATE:20261121
+SUMMARY:Guided Pier Walk at Gulf State Park
+DESCRIPTION:A Gulf State Park naturalist leads a guided tour of the Gulf S
+ tate Park Pier on two Friday mornings in November. The walk covers the pi
+ er's history\, local conservation work\, and the fish and birds that live
+  around it. The park lists the walk as free and great for all ages\, but 
+ pier parking costs $15 for the day.\nPrice: Free\nArea: Orange Beach & Gu
+ lf Shores\nTimes: Friday 11/13 · 9:00 AM · Friday 11/20 · 9:00 AM\nChe
+ cked against the venue's own page on 2026-11-04\nhttps://coastaleventures
+ .com/events/ev-gsp-guided-pier-walk-1113.html
+LOCATION:Gulf State Park Pier\, 20800 East Beach Blvd.\, Gulf Shores\, AL 
+ 36542
+URL:https://coastaleventures.com/events/ev-gsp-guided-pier-walk-1113.html
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_seville_barbingo-2026-11-16@coast-guide
@@ -1060,6 +575,26 @@ URL:https://coastaleventures.com/events/ev-mobile-museum-make-take-art.htm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_pokemon_league_at_gamemasters_guil_1008-2026-11-19@coast-guide
+DTSTAMP:20261119T000000Z
+DTSTART:20261119T150000
+DTEND:20261119T200000
+SUMMARY:Pokémon League at GameMasters Guild
+DESCRIPTION:Pokémon League at GameMasters Guild is free casual play for t
+ he Pokémon TCG\, the Pokémon Champions video game and Pokémon GO. It r
+ uns Thursdays from 3 to 8 PM and Saturdays from 12 to 2 PM in Crestview. 
+ All ages are welcome\, and the shop calls it a family-friendly space. Pla
+ yers get promo cards or special items while supplies last\, and a free Po
+ kémon account is needed to qualify (children under 13 register under a p
+ arent's account).\nPrice: Free\nTimes: Thursdays 3 PM-8 PM and Saturdays 
+ 12 PM-2 PM\nChecked against the venue's own page on 2026-10-03\nhttps://c
+ oastaleventures.com/events/ev-pokemon-league-at-gamemasters-guil-1008.htm
+ l
+LOCATION:GameMasters Guild\, 743 Ashley Drive\, Crestview\, FL 32536
+URL:https://coastaleventures.com/events/ev-pokemon-league-at-gamemasters-g
+ uil-1008.html
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_3rd_planet_singo_music_bingo_1008-2026-11-19@coast-guide
 DTSTAMP:20261119T000000Z
 DTSTART:20261119T183000
@@ -1397,6 +932,68 @@ URL:https://coastaleventures.com/events/ev-destin-commons-jolly-jubilee-11
  20.html
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_palafox-2026-11-21@coast-guide
+DTSTAMP:20261121T000000Z
+DTSTART:20261121T090000
+DTEND:20261121T140000
+SUMMARY:Palafox Market
+DESCRIPTION:A big Saturday market fills downtown with produce\, local make
+ rs\, art\, and food. A free trolley runs between plazas. It is stroller-f
+ riendly.\nPrice: Free\nArea: Pensacola\nTimes: Saturdays · 9 AM-2 PM\nCh
+ ecked against the venue's own page on 2026-09-02\nhttps://coastaleventure
+ s.com/events/ev-palafox.html
+LOCATION:MLK Jr. Plaza + Plaza Ferdinand\, Downtown Pensacola\, 200 N Pala
+ fox St\, Pensacola\, FL 32502
+URL:https://coastaleventures.com/events/ev-palafox.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grandblvd_mkt-2026-11-21@coast-guide
+DTSTAMP:20261121T000000Z
+DTSTART:20261121T090000
+DTEND:20261121T130000
+SUMMARY:Grand Boulevard Farmers' Market
+DESCRIPTION:A Saturday farmers and makers market fills the Sandestin green
+ \, with local honey\, produce\, and kettle corn. Pair it with a Destin/Ba
+ ytowne day.\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Saturdays ·
+  9 AM-1 PM\nChecked against the venue's own page on 2026-11-04\nhttps://c
+ oastaleventures.com/events/ev-grandblvd-mkt.html
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Blvd\, Mira
+ mar Beach\, FL 32550
+URL:https://coastaleventures.com/events/ev-grandblvd-mkt.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_parkrun-2026-11-21@coast-guide
+DTSTAMP:20261121T000000Z
+DTSTART:20261121T073000
+DTEND:20261121T093000
+SUMMARY:Parkrun: Free Timed 5K (Rec Plex North)
+DESCRIPTION:A free\, timed\, all-comers 5K runs every Saturday. Walk\, run
+ \, or push the jogging stroller. The kids can earn official times too\, w
+ ith one-time free barcode registration.\nPrice: Free\nArea: Pensacola\nTi
+ mes: Saturdays · 7:30 AM\nChecked against the venue's own page on 2026-1
+ 1-04\nhttps://coastaleventures.com/events/ev-parkrun.html
+LOCATION:UWF Rec Plex North Field\, 11000 University Pkwy\, Pensacola\, FL
+  32514
+URL:https://coastaleventures.com/events/ev-parkrun.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_disney_lorcana_league_1010-2026-11-21@coast-guide
+DTSTAMP:20261121T000000Z
+DTSTART:20261121T120000
+DTEND:20261121T150000
+SUMMARY:Disney Lorcana League
+DESCRIPTION:Disney Lorcana League is casual league play at GameMasters Gui
+ ld in Crestview. Players earn league points toward monthly prizes and a p
+ romo card the first time they play each month\, and you can borrow a deck
+  or buy one. The shop describes it as great for families. Casual play is 
+ free\, tournaments vary in price\, and a free Carde.io account is needed 
+ to earn promos.\nPrice: Free\nTimes: Weekly · Saturdays 12 PM-3 PM (conf
+ irm the day)\nChecked against the venue's own page on 2026-10-03\nhttps:/
+ /coastaleventures.com/events/ev-disney-lorcana-league-1010.html
+LOCATION:GameMasters Guild\, 743 Ashley Drive\, Crestview\, FL 32536
+URL:https://coastaleventures.com/events/ev-disney-lorcana-league-1010.html
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_anchor_up_monthly_card_show_1121-2026-11-21@coast-guide
 DTSTAMP:20261121T000000Z
 DTSTART:20261121T090000
@@ -1413,6 +1010,25 @@ DESCRIPTION:The Anchor Up Monthly Card Show is a sports card and trading c
 LOCATION:Emerald Fortress\, 319 E Nine Mile Rd\, Pensacola\, FL 32514
 URL:https://coastaleventures.com/events/ev-anchor-up-monthly-card-show-112
  1.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_oceanhour_saturday_cleanups_fall_1017-2026-11-21@coast-guide
+DTSTAMP:20261121T000000Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261129
+SUMMARY:Ocean Hour Saturday Cleanups: Fall Schedule
+DESCRIPTION:Ocean Hour holds one hour volunteer cleanups on Saturday morni
+ ngs at 8:45 AM at parks\, trailheads and beaches around Pensacola and Pen
+ sacola Beach. The fall schedule runs from October 24 through November 28\
+ , with two or three sites each week. Volunteers only need closed toe shoe
+ s\, water and sunscreen\, and Ocean Hour supplies all equipment.\nPrice: 
+ Free\nArea: Pensacola Beach & Perdido\nTimes: Saturdays 10/24 to 11/28 ·
+  8:45 AM\nChecked against the venue's own page on 2026-10-07\nhttps://coa
+ staleventures.com/events/ev-oceanhour-saturday-cleanups-fall-1017.html
+LOCATION:Ocean Hour cleanup sites around Pensacola\, Rotating sites around
+  Pensacola and Pensacola Beach\; see the schedule on oceanhourfl.com
+URL:https://coastaleventures.com/events/ev-oceanhour-saturday-cleanups-fal
+ l-1017.html
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_hwy87_sanddollar_1121-2026-11-21@coast-guide
@@ -1446,6 +1062,25 @@ DESCRIPTION:Emerald Coast Food Rescue gathers regional food producers at T
  \nhttps://coastaleventures.com/events/ev-farm-to-flame-ts-farm-1121.html
 LOCATION:T's Farm\, 1956 L G Russell Rd\, Baker\, FL 32531
 URL:https://coastaleventures.com/events/ev-farm-to-flame-ts-farm-1121.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_grand_boulevard_farmers_market_1024-2026-11-21@coast-guide
+DTSTAMP:20261121T000000Z
+DTSTART:20261121T090000
+DTEND:20261121T130000
+SUMMARY:Grand Boulevard Farmers Market
+DESCRIPTION:Grand Boulevard holds an open-air farmers market every Saturda
+ y morning in Grand Park\, between Cantina Laredo and Tommy Bahama. Vendor
+ s sell produce\, meats\, dairy\, eggs\, honey\, baked goods\, artisanal f
+ oods and handmade goods. The market runs year-round in a walkable shoppin
+ g district.\nPrice: Free\nArea: Destin & Fort Walton\nTimes: Saturdays ·
+  9:00 AM to 1:00 PM\nChecked against the venue's own page on 2026-10-23\n
+ https://coastaleventures.com/events/ev-grand-boulevard-farmers-market-102
+ 4.html
+LOCATION:Grand Park\, Grand Boulevard at Sandestin\, 600 Grand Boulevard\,
+  Miramar Beach\, FL 32550
+URL:https://coastaleventures.com/events/ev-grand-boulevard-farmers-market-
+ 1024.html
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_destin_yoga_park_1121-2026-11-21@coast-guide
@@ -1740,6 +1375,25 @@ LOCATION:Participating Navarre businesses\, 1804 Prado St\, Navarre\, FL 3
  2566
 URL:https://coastaleventures.com/events/ev-navarre-shop-dine-explore-1127.
  html
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_downtown_fwb_saturday_market_0912-2026-11-28@coast-guide
+DTSTAMP:20261128T000000Z
+DTSTART:20261128T080000
+DTEND:20261128T130000
+SUMMARY:Downtown FWB Saturday Market
+DESCRIPTION:The Downtown FWB Saturday Market sets up at Fort Walton Beach 
+ Landing Park on the waterfront from 8 AM to 1 PM\, free to browse for the
+  whole family. Local artisans\, produce growers\, and other vendors fill 
+ the park on the second and fourth Saturday of every month\, year-round. W
+ alking the market alongside the water is as much the point as the shoppin
+ g.\nPrice: Free\nArea: Destin & Fort Walton\nTimes: 8:00 AM to 1:00 PM\nC
+ hecked against the venue's own page on 2026-10-02\nhttps://coastaleventur
+ es.com/events/ev-downtown-fwb-saturday-market-0912.html
+LOCATION:Fort Walton Beach Landing Park\, 139 Brooks St SE\, Fort Walton B
+ each\, FL 32547
+URL:https://coastaleventures.com/events/ev-downtown-fwb-saturday-market-09
+ 12.html
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_shop_small_holiday_marketplace_1128-2026-11-28@coast-guide
