@@ -2900,3 +2900,25 @@ html[data-theme="light"] .dt-photo{
   .wrap > .dt-photo ~ .detail-layout > article{grid-area:3 / 1;margin-top:var(--s-5)}
   .wrap > .dt-photo ~ .detail-layout > .facts{grid-area:1 / 2 / span 3 / auto;margin-top:var(--s-4)}
 }
+
+
+.price-terms{overflow-x:auto;margin:14px 0 6px}
+.price-terms table{border-collapse:collapse;border:1px solid var(--line-soft);width:100%;min-width:640px;font-variant-numeric:tabular-nums;font-size:14px;color:var(--ink)}
+.price-terms caption{text-align:left;padding:10px 12px 6px;font-weight:700;color:var(--ink)}
+.price-terms th,.price-terms td{padding:8px 12px;border-top:1px solid var(--line-soft);text-align:right;white-space:nowrap}
+.price-terms th[scope="row"],.price-terms thead th:first-child{text-align:left}
+.price-terms thead th{font-size:12px;letter-spacing:.4px;color:var(--ink-3);font-weight:700}
+.price-terms td:last-child,.price-terms thead th:last-child{font-weight:700}
+.price-terms-h{margin:14px 0 0}
+
+.price-terms{container-type:inline-size}
+@container (max-width:700px){
+  .price-terms table{min-width:0;border:0}
+  .price-terms thead{display:none}
+  .price-terms table,.price-terms tbody,.price-terms tr,.price-terms th,.price-terms td{display:block;width:auto}
+  .price-terms tbody{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+  .price-terms tr{border:1px solid var(--line-soft);border-radius:12px;padding:6px 0;margin:0}
+  .price-terms th[scope="row"]{border:0;padding:6px 12px 4px;font-size:15px}
+  .price-terms td{display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--line-soft);padding:6px 12px}
+  .price-terms td::before{content:attr(data-label);color:var(--ink-3);font-weight:400}
+}
