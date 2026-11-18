@@ -25,9 +25,45 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+UID:ev_blakeley_sledge_enterprise_cruise_1118-2026-11-18@coastaleventures.c
+ om
+DTSTAMP:20261118T000000Z
+DTSTART;TZID=America/Chicago:20261118T160000
+DTEND;TZID=America/Chicago:20261118T170000
+SUMMARY:Mobile Harbor sunset cruise with USS Enterprise guide John Sledge
+LOCATION:Historic Blakeley State Park\, 34745 St. Hwy 225\, Spanish Fort\, 
+ AL 36527
+DESCRIPTION:Wednesday 11/18 · 4:00 PM\n\nHistoric Blakeley State Park runs
+  a sunset cruise on Mobile Harbor with a view of the USS Enterprise. Marit
+ ime historian John Sledge guides the outing. The cruise runs from 4:00 PM 
+ to 5:30 PM.\n\nPrice: from $25\n\nDetails: https://coastaleventures.com/ev
+ ents/ev-blakeley-sledge-enterprise-cruise-1118.html
+URL:https://coastaleventures.com/events/ev-blakeley-sledge-enterprise-cruis
+ e-1118.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_mbg_tales_and_trails_1119-2026-11-19@coastaleventures.com
+DTSTAMP:20261118T000000Z
+DTSTART;TZID=America/Chicago:20261119T103000
+DTEND;TZID=America/Chicago:20261119T113000
+SUMMARY:Tales & Trails story time at Mobile Botanical Gardens
+LOCATION:Mobile Botanical Gardens\, 5151 Museum Drive\, Mobile\, AL 36608
+DESCRIPTION:Thursday 11/19 · 10:30 AM\n\nTales & Trails is a morning class
+  at Mobile Botanical Gardens for preschoolers\, toddlers and their caregiv
+ ers. Each class pairs a themed story time with a nature activity. This is 
+ the last date on the Gardens' calendar. It is included with general admiss
+ ion and free for Garden members.\n\nPrice: No published price\n\nDetails: 
+ https://coastaleventures.com/events/ev-mbg-tales-and-trails-1119.html
+URL:https://coastaleventures.com/events/ev-mbg-tales-and-trails-1119.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_mary_esther_teen_night_walk_nonie_1120-2026-11-20@coastaleventures.c
  om
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261120T163000
 DTEND;TZID=America/Chicago:20261120T180000
 SUMMARY:12+ Night Walk with Nonie at Oak Tree Nature Park
@@ -49,7 +85,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_oceanhour_saturday_cleanups_fall_1017-2026-11-21@coastaleventures.co
  m
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261121T084500
 DTEND;TZID=America/Chicago:20261121T094500
 SUMMARY:Ocean Hour Saturday Cleanups: Fall Schedule
@@ -69,7 +105,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_bottle_creek_mounds_1121-2026-11-21@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261121T090000
 DTEND;TZID=America/Chicago:20261121T123000
 SUMMARY:Excursion to the Bottle Creek Indian Mound Complex
@@ -91,7 +127,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_gsp_alligator_adventures_1121-2026-11-21@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261121T100000
 DTEND;TZID=America/Chicago:20261121T110000
 SUMMARY:Alligator Adventures at Gulf State Park
@@ -109,7 +145,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_fmwas_birdsgiving_cantonment_1121-2026-11-21@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261121T100000
 DTEND;TZID=America/Chicago:20261121T160000
 SUMMARY:Birdsgiving at the Escambia County Extension Office
@@ -128,7 +164,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_search_rescue_kids_1121-2026-11-21@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261121T110000
 DTEND;TZID=America/Chicago:20261121T120000
 SUMMARY:Lost-in-the-Woods search and rescue program for kids
@@ -148,7 +184,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_fall_color_cruise_1121-2026-11-21@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261121T130000
 DTEND;TZID=America/Chicago:20261121T150000
 SUMMARY:Fall Color in the Delta Cruise at Historic Blakeley
@@ -168,7 +204,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_farm_to_flame_ts_farm_1121-2026-11-21@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261121T150000
 DTEND;TZID=America/Chicago:20261121T210000
 SUMMARY:Farm to Flame free community meal at T's Farm
@@ -186,7 +222,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_gsp_night_and_day_birds_of_prey_1123-2026-11-23@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261123T100000
 DTEND;TZID=America/Chicago:20261123T110000
 SUMMARY:Night and Day Birds of Prey at Gulf State Park
@@ -205,7 +241,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_gsp_fall_craft_for_kids_1124-2026-11-24@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261124T100000
 DTEND;TZID=America/Chicago:20261124T110000
 SUMMARY:Fall Craft for Kids at Gulf State Park
@@ -224,8 +260,64 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_gsp_snakes_1125-2026-11-25@coastaleventures.com
+DTSTAMP:20261118T000000Z
+DTSTART;TZID=America/Chicago:20261125T100000
+DTEND;TZID=America/Chicago:20261125T110000
+SUMMARY:Snakes of Gulf State Park
+LOCATION:Gulf State Park\, 20115 State Hwy 135\, Gulf Shores\, AL 36542
+DESCRIPTION:Wednesday 11/25 · 10:00 AM\n\nGulf State Park lists Snakes of 
+ Gulf State Park on its events page for Wednesday\, November 25 at 10:00 AM
+ . The listing prints only the title\, date and time. The price\, ages and 
+ meeting place are not shown there.\n\nPrice: No published price\n\nDetails
+ : https://coastaleventures.com/events/ev-gsp-snakes-1125.html
+URL:https://coastaleventures.com/events/ev-gsp-snakes-1125.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_blakeley_sledge_enterprise_cruise_1125-2026-11-25@coastaleventures.c
+ om
+DTSTAMP:20261118T000000Z
+DTSTART;TZID=America/Chicago:20261125T160000
+DTEND;TZID=America/Chicago:20261125T170000
+SUMMARY:Mobile Harbor sunset cruise with USS Enterprise guide John Sledge
+LOCATION:Historic Blakeley State Park\, 34745 St. Hwy 225\, Spanish Fort\, 
+ AL 36527
+DESCRIPTION:Wednesday 11/25 · 4:00 PM\n\nHistoric Blakeley State Park runs
+  a sunset cruise on Mobile Harbor with a view of the USS Enterprise. Marit
+ ime historian John Sledge guides the outing. The cruise runs from 4:00 PM 
+ to 5:30 PM.\n\nPrice: from $25\n\nDetails: https://coastaleventures.com/ev
+ ents/ev-blakeley-sledge-enterprise-cruise-1125.html
+URL:https://coastaleventures.com/events/ev-blakeley-sledge-enterprise-cruis
+ e-1125.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_blakeley_five_rivers_sunset_cruise_1127-2026-11-27@coastaleventures.
+ com
+DTSTAMP:20261118T000000Z
+DTSTART;TZID=America/Chicago:20261127T162000
+DTEND;TZID=America/Chicago:20261127T172000
+SUMMARY:Sunset cruise from Five Rivers on the Mobile-Tensaw Delta
+LOCATION:Bartram Landing\, AWF Delta and Bay Conservation Center at Five Ri
+ vers\, AWF Delta and Bay Conservation Center at Five Rivers\, Spanish Fort
+ \, AL 36527
+DESCRIPTION:Friday 11/27 · 4:20 PM\n\nHistoric Blakeley State Park runs a 
+ one-hour sunset cruise that leaves from Bartram Landing at the Delta and B
+ ay Conservation Center at Five Rivers. It is short enough for younger kids
+  and gets you back in time for a seafood dinner on the Causeway. The cruis
+ e runs from 4:20 PM to 5:20 PM.\n\nPrice: from $10\n\nDetails: https://coa
+ staleventures.com/events/ev-blakeley-five-rivers-sunset-cruise-1127.html
+URL:https://coastaleventures.com/events/ev-blakeley-five-rivers-sunset-crui
+ se-1127.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_audubon_destin_shorebirds_walk_1128-2026-11-28@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261128T073000
 DTEND;TZID=America/Chicago:20261128T083000
 SUMMARY:Audubon Destin shorebirds bird walk
@@ -245,7 +337,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_oceanhour_saturday_cleanups_fall_1017-2026-11-28@coastaleventures.co
  m
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261128T084500
 DTEND;TZID=America/Chicago:20261128T094500
 SUMMARY:Ocean Hour Saturday Cleanups: Fall Schedule
@@ -266,7 +358,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_harbor_cruise_enterprise_1128-2026-11-28@coastaleventures.c
  om
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261128T100000
 DTEND;TZID=America/Chicago:20261128T110000
 SUMMARY:Mobile Harbor cruise to see the USS Enterprise
@@ -284,7 +376,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_delta_discovery_tour_1128-2026-11-28@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261128T130000
 DTEND;TZID=America/Chicago:20261128T140000
 SUMMARY:Delta Discovery Tour from Bartram Landing
@@ -304,7 +396,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_delta_discovery_tour_1129-2026-11-29@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261129T133000
 DTEND;TZID=America/Chicago:20261129T143000
 SUMMARY:Delta Discovery Tour from Bartram Landing
@@ -323,8 +415,60 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_gsp_eagles_ecosystems_walk_1130-2026-11-30@coastaleventures.com
+DTSTAMP:20261118T000000Z
+DTSTART;TZID=America/Chicago:20261130T090000
+DTEND;TZID=America/Chicago:20261130T100000
+SUMMARY:Eagles and Ecosystems Nature Walk at Gulf State Park
+LOCATION:Gulf State Park\, 20115 State Hwy 135\, Gulf Shores\, AL 36542
+DESCRIPTION:Monday 11/30 · 9:00 AM\n\nA Gulf State Park naturalist leads a
+  guided walk along Eagle Loop. Wear walking shoes. The program is free and
+  registration runs through the Alabama State Parks reservation page.\n\nPr
+ ice: Free\n\nDetails: https://coastaleventures.com/events/ev-gsp-eagles-ec
+ osystems-walk-1130.html
+URL:https://coastaleventures.com/events/ev-gsp-eagles-ecosystems-walk-1130.
+ html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gsp_trivia_1201-2026-12-01@coastaleventures.com
+DTSTAMP:20261118T000000Z
+DTSTART;TZID=America/Chicago:20261201T100000
+DTEND;TZID=America/Chicago:20261201T110000
+SUMMARY:Gulf State Park Trivia
+LOCATION:Gulf State Park\, 20115 State Hwy 135\, Gulf Shores\, AL 36542
+DESCRIPTION:Tuesday 12/1 · 10:00 AM\n\nGulf State Park lists Gulf State Pa
+ rk Trivia on its events page for Tuesday\, December 1 at 10:00 AM. The lis
+ ting prints only the title\, date and time. The price\, ages and meeting p
+ lace are not shown there.\n\nPrice: No published price\n\nDetails: https:/
+ /coastaleventures.com/events/ev-gsp-trivia-1201.html
+URL:https://coastaleventures.com/events/ev-gsp-trivia-1201.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gsp_birding_beginners_al_point_east_1202-2026-12-02@coastaleventures
+ .com
+DTSTAMP:20261118T000000Z
+DTSTART;TZID=America/Chicago:20261202T090000
+DTEND;TZID=America/Chicago:20261202T100000
+SUMMARY:Birding for Beginners at AL Point East
+LOCATION:Gulf State Park\, 20115 State Hwy 135\, Gulf Shores\, AL 36542
+DESCRIPTION:Wednesday 12/2 · 9:00 AM\n\nGulf State Park lists Birding for 
+ Beginners at AL Point East on its events page for Wednesday\, December 2 a
+ t 9:00 AM. The listing prints only the title\, date and time. The price\, 
+ ages and meeting place are not shown there.\n\nPrice: No published price\n
+ \nDetails: https://coastaleventures.com/events/ev-gsp-birding-beginners-al
+ -point-east-1202.html
+URL:https://coastaleventures.com/events/ev-gsp-birding-beginners-al-point-e
+ ast-1202.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_audubon_longleaf_pine_program_1203-2026-12-03@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:Audubon program: Longleaf Pine Ecosystem
@@ -342,8 +486,24 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_gsp_oil_spill_disaster_1203-2026-12-03@coastaleventures.com
+DTSTAMP:20261118T000000Z
+DTSTART;TZID=America/Chicago:20261203T100000
+DTEND;TZID=America/Chicago:20261203T110000
+SUMMARY:Oil Spill Disaster program at Gulf State Park
+LOCATION:Gulf State Park\, 20115 State Hwy 135\, Gulf Shores\, AL 36542
+DESCRIPTION:Thursday 12/3 · 10:00 AM\n\nGulf State Park lists Oil Spill Di
+ saster program on its events page for Thursday\, December 3 at 10:00 AM. T
+ he listing prints only the title\, date and time. The price\, ages and mee
+ ting place are not shown there.\n\nPrice: No published price\n\nDetails: h
+ ttps://coastaleventures.com/events/ev-gsp-oil-spill-disaster-1203.html
+URL:https://coastaleventures.com/events/ev-gsp-oil-spill-disaster-1203.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_blakeley_bottle_creek_mounds_1205-2026-12-05@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261205T090000
 DTEND;TZID=America/Chicago:20261205T100000
 SUMMARY:Excursion to the Bottle Creek Indian Mound Complex
@@ -364,7 +524,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_gulf_state_park_holiday_craft_1205-2026-12-05@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261205T100000
 DTEND;TZID=America/Chicago:20261205T110000
 SUMMARY:Holiday Craft class at Gulf State Park Nature Center
@@ -384,7 +544,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_mifflin_lake_cruise_1205-2026-12-05@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261205T130000
 DTEND;TZID=America/Chicago:20261205T150000
 SUMMARY:Mifflin Lake Cruise at Historic Blakeley
@@ -403,8 +563,27 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_blakeley_harbor_cruise_enterprise_1210-2026-12-10@coastaleventures.c
+ om
+DTSTAMP:20261118T000000Z
+DTSTART;TZID=America/Chicago:20261210T153000
+DTEND;TZID=America/Chicago:20261210T163000
+SUMMARY:Mobile Harbor cruise to see the USS Enterprise
+LOCATION:Historic Blakeley State Park\, 34745 St. Hwy 225\, Spanish Fort\, 
+ AL 36527
+DESCRIPTION:Thursday 12/10 · 3:30 PM\n\nHistoric Blakeley State Park runs 
+ an afternoon cruise into Mobile Harbor for views of the USS Enterprise. Th
+ is Thursday sailing runs from 3:30 PM to 5:00 PM.\n\nPrice: from $22\n\nDe
+ tails: https://coastaleventures.com/events/ev-blakeley-harbor-cruise-enter
+ prise-1210.html
+URL:https://coastaleventures.com/events/ev-blakeley-harbor-cruise-enterpris
+ e-1210.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_garnier_beach_garden_club_0912-2026-12-12@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261212T103000
 DTEND;TZID=America/Chicago:20261212T130000
 SUMMARY:Garnier Beach Garden Club
@@ -424,7 +603,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_animal_adoption_1212-2026-12-12@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261212T110000
 DTEND;TZID=America/Chicago:20261212T120000
 SUMMARY:Animal Adoption Event at Historic Blakeley
@@ -443,7 +622,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_camellia_flower_show_1212-2026-12-12@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261212T130000
 DTEND;TZID=America/Chicago:20261212T160000
 SUMMARY:88th Annual Camellia Flower Show
@@ -463,7 +642,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_fmwas_birds_and_brew_admiral_mason_1213-2026-12-13@coastaleventures.
  com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261213T153000
 DTEND;TZID=America/Chicago:20261213T181500
 SUMMARY:Birds and Brew at Admiral Mason Park and Cactus Cantina
@@ -484,7 +663,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_gsp_christmas_owl_1219-2026-12-19@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20261219T100000
 DTEND;TZID=America/Chicago:20261219T110000
 SUMMARY:Little Park Pals: The Christmas Owl at Gulf State Park
@@ -502,9 +681,29 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_gulfarium_sunset_camp_1222-2026-12-22@coastaleventures.com
+DTSTAMP:20261118T000000Z
+DTSTART;TZID=America/Chicago:20261222T133000
+DTEND;TZID=America/Chicago:20261222T190000
+SUMMARY:Sunset Camp at Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Tuesday 12/22\, Wednesday 12/23\, 12/29 and 12/30 · 1:30 PM to
+  7:00 PM\n\nGulfarium runs an afternoon and evening camp for kids ages 6 t
+ o 14 on four days over winter break. Campers get a dockside encounter with
+  a dolphin\, a walk along the beach at dusk\, ocean-themed activities and 
+ a scavenger hunt. Parents drop off at 1:30 PM and pick up at 7:00 PM. Spot
+ s are limited and the camp is paid in full when you reserve.\n\nPrice: fro
+ m $89\n\nDetails: https://coastaleventures.com/events/ev-gulfarium-sunset-
+ camp-1222.html
+URL:https://coastaleventures.com/events/ev-gulfarium-sunset-camp-1222.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_audubon_american_oystercatchers_program_0107-2027-01-07@coastalevent
  ures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;VALUE=DATE:20270107
 DTEND;VALUE=DATE:20270108
 SUMMARY:Audubon program: American Oystercatchers
@@ -524,7 +723,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_garnier_beach_garden_club_0912-2027-01-09@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20270109T103000
 DTEND;TZID=America/Chicago:20270109T130000
 SUMMARY:Garnier Beach Garden Club
@@ -544,7 +743,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_battlefield_blitz_0130-2027-01-30@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20270130T080000
 DTEND;TZID=America/Chicago:20270130T090000
 SUMMARY:Battlefield Blitz 5K and Fun Run
@@ -564,7 +763,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_audubon_small_bird_photography_program_0204-2027-02-04@coastaleventu
  res.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270205
 SUMMARY:Audubon program: Small Bird Photography
@@ -583,7 +782,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_garnier_beach_garden_club_0912-2027-02-13@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20270213T103000
 DTEND;TZID=America/Chicago:20270213T130000
 SUMMARY:Garnier Beach Garden Club
@@ -604,7 +803,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_community_camellia_show_pensacola_0220-2027-02-20@coastaleventures.c
  om
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;VALUE=DATE:20270220
 DTEND;VALUE=DATE:20270221
 SUMMARY:Community Camellia Show and Plant Sale at the downtown library
@@ -623,7 +822,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_uwf_camellia_garden_tour_0307-2027-03-07@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;TZID=America/Chicago:20270307T120000
 DTEND;TZID=America/Chicago:20270307T160000
 SUMMARY:UWF Camellia Garden guided tour with the Pensacola Camellia Club
@@ -644,7 +843,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_kite-2027-03-12@coastaleventures.com
-DTSTAMP:20261117T000000Z
+DTSTAMP:20261118T000000Z
 DTSTART;VALUE=DATE:20270312
 DTEND;VALUE=DATE:20270313
 SUMMARY:Kites on the Coast (Pensacola Beach)
