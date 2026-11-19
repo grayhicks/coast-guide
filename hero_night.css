@@ -840,6 +840,7 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
 .hk_nh [id="nhd_move-ball"] > :nth-child(n+2) { transform-box: view-box; transform-origin: 222px 186px; animation: 2.4s linear 0s infinite normal none running nh_volley; }
 .hk_nh [id="nhd_move-ball"] > :nth-child(1) { transform-box: view-box; transform-origin: 222px 221px; animation: 2.4s linear 0s infinite normal none running nh_ballshade; }
 @media (prefers-reduced-motion: reduce){.hk_nh * { animation: auto ease 0s 1 normal none running none !important; }}
+.hk_still .hk_nh * { animation: auto ease 0s 1 normal none running none !important; }
 .hk.hk.hk.hk .card.card:not(.hk_sc) :is(.cardweb, .cardshare, .pin:not(.on), .cardrateact:not(.on), .cardphoneact, .hrcall) { --b1: #5AA9DB; --b2: #1E6497; --b3: #123F61; color: rgb(255, 255, 255) !important; border: 1px solid var(--b3) !important; background: linear-gradient(180deg, var(--b1) 0%, var(--b2) 55%, var(--b2) 100%) !important; box-shadow: rgba(255, 255, 255, 0.45) 0px 1px 0px inset, rgba(16, 22, 28, 0.22) 0px 1px 2px !important; }
 .hk.hk.hk.hk.hk .card.card.card:not(.hk_sc) :is(.cardweb, .cardshare, .pin:not(.on), .cardrateact:not(.on), .cardphoneact, .hrcall) { color: var(--b2) !important; border: 2px solid var(--b2) !important; background: rgb(203, 219, 219) !important; box-shadow: rgba(16, 22, 28, 0.18) 0px 1px 2px !important; }
 .hk.hk.hk.hk.hk .card.card.card:not(.hk_sc) :is(.cardweb, .cardshare, .pin:not(.on), .cardrateact:not(.on), .cardphoneact, .hrcall) svg { stroke: var(--b2) !important; color: var(--b2) !important; filter: none !important; }
@@ -907,6 +908,19 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
 .hk_still .hero.hk_nhon > .hk_nhbak, .hk_still .hero.hk_nhon > .hk_nh, .hk_still .hero.hk_nhon > .hk_nhfront, .hk_still .hero.hk_nhon > .hfp, .hk_still .hero.hk_nhon > .sunb { animation: auto ease 0s 1 normal none running none; }
 html.hk_zoom .hero.hk_nhon { min-height: 420px; }
 @media (min-width: 560px) and (min-height: 600px){.hero.hk_nhon { min-height: clamp(298px, 0.72 * min(100vw, 640px), 460px); }}
+.hk.hk.hk_gr_dark.hk_gr_dark .hk_info.dawn.hk_setroom .hk_setpages .hk_setpage.on { color: rgb(46, 36, 19); background: linear-gradient(rgb(231, 192, 103), rgb(210, 163, 63)); border-color: rgb(180, 144, 58); box-shadow: rgba(255, 241, 184, 0.5) 0px 0px 0px 1px inset; }
+.hk.hk_gr_dark .hk_info.dawn.hk_setroom .hk_setpage:not(.on) { border-color: rgba(227, 196, 113, 0.38); }
+.hk.hk_gr_dark .moremenu .mitem:not(.on) .mi { background: linear-gradient(rgb(59, 50, 31), rgb(31, 29, 26)); border-color: rgba(227, 196, 113, 0.58); box-shadow: rgba(255, 232, 176, 0.16) 0px 1px 0px inset; }
+.hk.hk_gr_dark .moremenu .mitem:not(.on):hover .mi { border-color: rgba(227, 196, 113, 0.82); }
+.hk.hk.hk.hk.hk.hk_cl_gold:not(.hk_sitecards) .card.card.card:not(.promo-card) :is(.cardweb, .cardshare, .pin:not(.on), .cardrateact:not(.on), .cardphoneact, .hrcall, .cardcopyact, .cardcal:not(.inrail)) { background: var(--r6-fill) !important; border-color: var(--r6-line) !important; color: rgb(243, 233, 210) !important; box-shadow: none !important; }
+.hk.hk.hk.hk.hk.hk_cl_gold:not(.hk_sitecards) .card.card.card:not(.promo-card) :is(.cardweb, .cardshare, .pin:not(.on), .cardrateact:not(.on), .cardphoneact, .hrcall, .cardcopyact, .cardcal:not(.inrail)) svg { color: rgb(243, 233, 210) !important; stroke: rgb(243, 233, 210) !important; }
+.hk.hk.hk.hk.hk.hk_cl_gold:not(.hk_sitecards) .card.card.card:not(.promo-card) :is(.pin, .cardrateact).on { background: var(--r6-gold) !important; border-color: rgb(180, 144, 58) !important; color: rgb(46, 36, 19) !important; box-shadow: none !important; }
+.hk.hk.hk.hk.hk.hk_cl_gold:not(.hk_sitecards) .card.card.card:not(.promo-card) :is(.pin, .cardrateact).on svg { color: rgb(46, 36, 19) !important; stroke: rgb(46, 36, 19) !important; }
+.hk.hk.hk.hk.hk.hk_cl_gold:not(.hk_sitecards) .hk_ptile.hk_ptile :is(.hk_ptab, .pin:not(.on), .cardrateact:not(.on), .hk_ptcalpg) { background: rgb(38, 39, 43) !important; border: 1px solid rgba(217, 180, 92, 0.6) !important; box-shadow: none !important; color: rgb(243, 233, 210) !important; }
+.hk.hk.hk.hk.hk.hk_cl_gold:not(.hk_sitecards) .hk_ptile.hk_ptile :is(.hk_ptab, .pin:not(.on), .cardrateact:not(.on)) svg { color: rgb(243, 233, 210) !important; stroke: rgb(243, 233, 210) !important; }
+.hk.hk.hk.hk.hk.hk_cl_gold:not(.hk_sitecards) .hk_ptile.hk_ptile :is(.hk_ptcorner, .hk_ptbar) :is(.pin, .cardrateact).on { background: linear-gradient(rgb(231, 192, 103), rgb(210, 163, 63)) !important; border: 1px solid rgb(180, 144, 58) !important; color: rgb(46, 36, 19) !important; box-shadow: none !important; }
+.hk.hk.hk.hk.hk.hk_cl_gold:not(.hk_sitecards) .hk_ptile.hk_ptile :is(.hk_ptcorner, .hk_ptbar) :is(.pin, .cardrateact).on svg { color: rgb(46, 36, 19) !important; stroke: rgb(46, 36, 19) !important; }
+html.hk_zoom .hero.hk_nhon { min-height: clamp(420px, calc(var(--hk-lw, 640px) * .59), 500px); }
 @keyframes hk_drift { 
   0% { transform: translateX(0px); opacity: 0; }
   7% { opacity: var(--clo,.18); }
