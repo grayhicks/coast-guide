@@ -926,6 +926,7 @@ html.hk_zoom .hero.hk_nhon { min-height: 420px; }
 .hk.hk.hk.hk.hk.hk_cl_gold:not(.hk_sitecards) .card.card.card.promo-card :is(.pin, .cardrateact).on svg { color: rgb(46, 36, 19) !important; stroke: rgb(46, 36, 19) !important; }
 html.hk_zoom .hero.hk_nhon { min-height: var(--hk-hh, 420px); }
 html.hk_zoom.hk_calopen .hk .hero { content-visibility: hidden; }
+html.hk_zoom .hero .grain { display: none; }
 @keyframes hk_drift { 
   0% { transform: translateX(0px); opacity: 0; }
   7% { opacity: var(--clo,.18); }
