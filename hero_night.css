@@ -930,6 +930,12 @@ html.hk_zoom .hero.hk_nhon { min-height: 420px; }
 html.hk_zoom .hero.hk_nhon { min-height: var(--hk-hh, 420px); }
 html.hk_zoom.hk_calopen .hk .hero { content-visibility: hidden; }
 html.hk_zoom .hero .grain { display: none; }
+.hk.hk .hk_calqb.on { color: rgb(224, 161, 0); border-color: rgb(224, 161, 0); }
+.hk.hk .hk_calqb.on.star svg { fill: currentcolor; }
+.hk.hk .hk_calmb.on { background: rgba(19, 133, 103, 0.14); border-color: rgb(19, 133, 103); color: rgb(19, 133, 103); }
+.hk.hk .hk_calmb.on.dn { background: rgba(184, 52, 52, 0.12); border-color: rgb(184, 52, 52); color: rgb(184, 52, 52); }
+.hk.hk .hk_calmb.on { background: color-mix(in srgb, var(--mb) 22%, transparent); border-color: var(--mb); color: inherit; }
+.hk.hk .hk_calmb.on.dn { background: color-mix(in srgb, var(--mb) 22%, transparent); border-color: var(--mb); color: inherit; }
 @keyframes hk_drift { 
   0% { transform: translateX(0px); opacity: 0; }
   7% { opacity: var(--clo,.18); }
