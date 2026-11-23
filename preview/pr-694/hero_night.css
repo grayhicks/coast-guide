@@ -447,6 +447,8 @@ html:not(.hk_mo) .sunb::after { content: none; }
 .hk_sw_pilec.on { background: currentcolor; }
 .hk_sw_pilec.on > * { color: rgb(20, 32, 43); }
 .hk_sw_pilec.on b { background: rgba(20, 32, 43, 0.15); }
+.hk_sw_lookb.on { background: rgba(125, 211, 252, 0.22); color: rgb(207, 232, 247); }
+.hk_day .hk_sw_lookb.on { background: rgba(28, 107, 181, 0.14); color: rgb(28, 107, 181); }
 .hk_swbtn.on { color: rgb(18, 32, 15); background: rgb(216, 180, 94); border-color: rgb(240, 220, 164); }
 .hk_swbtn.on b { opacity: 0.66; border-left-color: rgba(18, 32, 15, 0.3); }
 .hk_day .hk_swbtn.on { color: rgb(46, 36, 19); background: rgb(227, 196, 113); border-color: rgb(150, 113, 38); }
