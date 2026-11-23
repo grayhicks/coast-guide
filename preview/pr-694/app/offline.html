@@ -6231,6 +6231,13 @@ html .hk:not(.hk_sitecards) .hk_nav.hk_nav.hk_nav.hk_nav .dock .fbar .sbox input
 html .hk.hk .xp.promotions-page .promo_discovery :is(.promo_filterbtn, .promo_search){ min-height:40px !important; height:40px !important; }
 html .hk.hk .xp.promotions-page .promo_discovery .promo_filterbtn{ font-size:14.5px !important; }
 html .hk.hk .xp.promotions-page .promo_discovery .promo_search::placeholder{ font-size:14.5px !important; }
+
+.hk.hk_ts_sm{ --hk-tsz:.92; } .hk.hk_ts_lg{ --hk-tsz:1.15; } .hk.hk_ts_xl{ --hk-tsz:1.3; }
+html .hk.hk .xp.promotions-page .promo_discovery :is(.promo_filterbtn, .promo_search){ min-height:calc(40px / var(--hk-tsz, 1)) !important; height:calc(40px / var(--hk-tsz, 1)) !important; }
+html .hk.hk .xp.promotions-page .promo_discovery .promo_filterbtn{ font-size:calc(14.5px / var(--hk-tsz, 1)) !important; padding-left:calc(14px / var(--hk-tsz, 1)); padding-right:calc(14px / var(--hk-tsz, 1)); }
+html .hk.hk .xp.promotions-page .promo_discovery .promo_filterbtn b{ font-size:calc(14.5px / var(--hk-tsz, 1)) !important; }
+html .hk.hk .xp.promotions-page .promo_discovery .promo_search, html .hk.hk .xp.promotions-page .promo_discovery .promo_search::placeholder{ font-size:calc(14.5px / var(--hk-tsz, 1)) !important; }
+html .hk.hk .xp.promotions-page .promo_discovery .promo_calbtn svg{ width:calc(17px / var(--hk-tsz, 1)); height:calc(17px / var(--hk-tsz, 1)); }
 html .hk:not(.hk_sitecards) .hk_nav.hk_nav.hk_nav.hk_nav .dock .fbar .hk_mine{ flex-basis:36px !important; width:36px !important; min-width:36px !important; max-width:36px !important; }
 .hk .hk_sw .hk_sw_fly.u.u{ animation:hk_swFlyU .42s cubic-bezier(.17,.72,.31,1) both; }
 @keyframes hk_swFlyU{ from{ transform:none; opacity:1; } to{ transform:translateY(-38%) scale(.9); opacity:0; } }
