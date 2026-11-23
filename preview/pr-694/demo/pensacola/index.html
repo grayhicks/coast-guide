@@ -22069,17 +22069,31 @@ html.hk_zoom .hero .grain{ display:none; }
 .hk.hk.hk_day .hk_calinline .hk_calpill.pile.kept{ color:#0F6B53; } .hk.hk.hk_day .hk_calinline .hk_calpill.pile.maybe{ color:#8A5A0B; }
 .hk.hk .hk_calinline .hk_calpill:not(.ended):not(.sold):not(.age):not(.pile){ border:0; background:linear-gradient(180deg,#F3D68F,#D9A944); color:#1B1408; font-weight:900; letter-spacing:.02em; }
 .hk.hk .hk_calinline .hk_calpill.free:not(.pile){ background:linear-gradient(180deg,#7FE0C4,#2FB38E); color:#062018; }
-@media (max-width:519px){
-  .hk.hk .hk_calsheet.hk_calinline .hk_callist .hk_calitem > .hk_calrow{ grid-template-columns:minmax(0,1fr) 112px; grid-template-areas:"when end" "what end"; column-gap:12px; row-gap:3px; }
-  .hk.hk .hk_calsheet.hk_calinline .hk_calrow > .hk_calwhen{ grid-area:when; flex-direction:row; align-items:baseline; flex-wrap:wrap; gap:0 6px; padding-top:0; }
-  .hk.hk .hk_calsheet.hk_calinline .hk_calrow > .hk_calwhen span{ white-space:nowrap; }
-  .hk.hk .hk_calsheet.hk_calinline .hk_calrow > .hk_calwhat{ grid-area:what; }
-  .hk.hk .hk_calsheet.hk_calinline .hk_calrow > .hk_calend{ grid-area:end; align-self:center; }
 
-  .hk.hk .hk_calsheet.hk_calinline .hk_calthumb{ width:112px; height:112px; border-radius:16px; box-shadow:0 4px 14px rgba(0,0,0,.3); }
-  .hk.hk .hk_calsheet.hk_calinline .hk_calthumb img{ width:100%; height:100%; object-fit:cover; display:block; }
-  .hk.hk .hk_calsheet.hk_calinline .hk_calthumb.mark{ display:flex; align-items:center; justify-content:center; }
-  .hk.hk .hk_calsheet.hk_calinline .hk_caltitle{ font-size:17px; line-height:1.25; }
+.hk.hk .hk_calsheet.hk_calinline .hk_callist .hk_calitem > .hk_calrow{ grid-template-columns:104px minmax(0,1fr); grid-template-areas:"end when" "end what"; column-gap:14px; row-gap:3px; align-items:start; }
+.hk.hk .hk_calsheet.hk_calinline .hk_calrow > .hk_calwhen{ grid-area:when; flex-direction:row; align-items:baseline; flex-wrap:wrap; gap:0 6px; padding-top:0; }
+.hk.hk .hk_calsheet.hk_calinline .hk_calrow > .hk_calwhen span{ white-space:nowrap; }
+.hk.hk .hk_calsheet.hk_calinline .hk_calrow > .hk_calwhat{ grid-area:what; }
+.hk.hk .hk_calsheet.hk_calinline .hk_calitem > .hk_calrow > .hk_calend{ grid-area:end; width:auto; padding-top:0; align-self:stretch; justify-content:flex-start; display:flex; }
+.hk.hk .hk_calsheet.hk_calinline .hk_calrow .hk_calchev{ display:none; }
+.hk.hk .hk_calsheet.hk_calinline .hk_calthumb{ width:104px; height:104px; border-radius:16px; box-shadow:0 6px 16px rgba(0,0,0,.28); }
+.hk.hk .hk_calsheet.hk_calinline .hk_calthumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+.hk.hk .hk_calsheet.hk_calinline .hk_calthumb.mark{ display:flex; align-items:center; justify-content:center; }
+.hk.hk .hk_calsheet.hk_calinline .hk_caltitle{ font-size:17px; line-height:1.25; }
+.hk.hk .hk_calsheet.hk_calinline .hk_calrow .hk_calwhen b{ font-size:15px; }
+
+.hk.hk .hk_calsheet .hk_calitem.open > .hk_calqa{ display:none; }
+@media (min-width:520px){
+  .hk.hk .hk_calsheet.hk_calinline .hk_callist .hk_calitem > .hk_calrow{ grid-template-columns:150px minmax(0,1fr); column-gap:16px; }
+
+  .hk.hk .hk_calsheet.hk_calinline .hk_callist .hk_calitem > .hk_calrow, .hk.hk .hk_calsheet.hk_calinline .hk_callist .hk_calitem:first-child > .hk_calrow{ padding-right:64px; min-height:136px; }
+  .hk.hk .hk_calsheet.hk_calinline .hk_calqa{ flex-direction:column; gap:6px; top:12px; right:12px; }
+  .hk.hk .hk_calsheet.hk_calinline .hk_calthumb{ width:150px; height:112px; }
+  .hk.hk .hk_calsheet.hk_calinline .hk_caltitle{ font-size:18px; }
+}
+@media (max-width:360px){
+  .hk.hk .hk_calsheet.hk_calinline .hk_callist .hk_calitem > .hk_calrow{ grid-template-columns:84px minmax(0,1fr); column-gap:10px; }
+  .hk.hk .hk_calsheet.hk_calinline .hk_calthumb{ width:84px; height:84px; }
 }
 .hk.hk .hk_calsheet .hk_calchip.hk_cwsum{ flex:0 1 auto; min-width:0; margin:0 auto 0 0; display:inline-flex; align-items:center; gap:6px; height:36px; padding:0 12px; overflow:hidden; white-space:nowrap; }
 .hk.hk .hk_cwsum > svg{ flex:none; }
