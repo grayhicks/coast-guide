@@ -444,6 +444,11 @@ html:not(.hk_mo) .sunb::after { content: none; }
 .hk_sw_glint .gl5 { animation-delay: 94ms; }
 .hk_sw_glint .gl6 { animation-delay: 110ms; }
 .hk .hk_sw_flipset.on { color: rgb(43, 32, 7); background: rgb(228, 201, 120); border-color: rgb(176, 138, 46); }
+.hk_sw_pilec.on { background: currentcolor; }
+.hk_sw_pilec.on > * { color: rgb(20, 32, 43); }
+.hk_sw_pilec.on b { background: rgba(20, 32, 43, 0.15); }
+.hk_sw_lookb.on { background: rgba(125, 211, 252, 0.22); color: rgb(207, 232, 247); }
+.hk_day .hk_sw_lookb.on { background: rgba(28, 107, 181, 0.14); color: rgb(28, 107, 181); }
 .hk_swbtn.on { color: rgb(18, 32, 15); background: rgb(216, 180, 94); border-color: rgb(240, 220, 164); }
 .hk_swbtn.on b { opacity: 0.66; border-left-color: rgba(18, 32, 15, 0.3); }
 .hk_day .hk_swbtn.on { color: rgb(46, 36, 19); background: rgb(227, 196, 113); border-color: rgb(150, 113, 38); }
@@ -896,6 +901,10 @@ html.hk_diag_nofilt .card, html.hk_diag_nofilt .card *, html.hk_diag_nofilt .dnx
 .hk:not(.hk_sitecards) .hk_nav.hk_nav.hk_nav.hk_nav .dock .fbar .sbox:is(.on, :focus-within) { --pl: var(--dk-line-on); }
 .hk:not(.hk_sitecards) .hk_nav.hk_nav.hk_nav.hk_nav .dock .fbar .sbox:not(.on):not(:focus-within) { flex: 0 0 28px !important; width: 28px !important; min-width: 28px !important; max-width: 28px !important; padding: 0px !important; justify-content: center !important; overflow: visible !important; }
 .hk:not(.hk_sitecards) .hk_nav.hk_nav.hk_nav.hk_nav .dock .fbar .sbox:not(.on):not(:focus-within) input { position: absolute !important; z-index: 1 !important; inset: -8px auto auto -8px !important; width: calc(100% + 16px) !important; height: calc(100% + 16px) !important; min-width: 0px !important; min-height: 0px !important; max-width: none !important; margin: 0px !important; padding: 0px !important; opacity: 0 !important; }
+.hk:not(.hk_sitecards) .hk_nav.hk_nav.hk_nav.hk_nav .dock .fbar .sbox.sbox:not(.on):not(:focus-within) { flex: 1 1 auto !important; width: auto !important; min-width: 96px !important; max-width: none !important; padding: 0px 2px 0px 8px !important; justify-content: flex-start !important; gap: 6px !important; }
+.hk:not(.hk_sitecards) .hk_nav.hk_nav.hk_nav.hk_nav .dock .fbar .sbox.sbox:not(.on):not(:focus-within) input { position: static !important; z-index: 1 !important; flex: 1 1 auto !important; width: auto !important; height: auto !important; min-width: 0px !important; opacity: 1 !important; padding: 0px !important; }
+.hk_sbnear.on { color: rgb(28, 107, 181); background: rgba(28, 107, 181, 0.12); }
+.hk:not(.hk_day) .hk_sbnear.on { color: rgb(125, 211, 252); background: rgba(125, 211, 252, 0.16); }
 .hero .adcart { animation-delay: calc(-14.2s * var(--gca-calm, 1)); }
 .hk.hk .planday.hk_dayhead .hk_dh_b.on { background: var(--tk-on); color: var(--tk-ink); }
 .hk.hk.hk_day .dnx .dnday.on .dd_dot { background: rgb(75, 43, 64); }
