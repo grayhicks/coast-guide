@@ -445,6 +445,9 @@ html:not(.hk_mo) .sunb::after { content: none; }
 .hk_sw_glint .gl5 { animation-delay: 94ms; }
 .hk_sw_glint .gl6 { animation-delay: 110ms; }
 .hk .hk_sw_flipset.on { color: rgb(43, 32, 7); background: rgb(228, 201, 120); border-color: rgb(176, 138, 46); }
+.hk_sw_pilec.on { background: currentcolor; }
+.hk_sw_pilec.on > * { color: rgb(20, 32, 43); }
+.hk_sw_pilec.on b { background: rgba(20, 32, 43, 0.15); }
 .hk_swbtn.on { color: rgb(18, 32, 15); background: rgb(216, 180, 94); border-color: rgb(240, 220, 164); }
 .hk_swbtn.on b { opacity: 0.66; border-left-color: rgba(18, 32, 15, 0.3); }
 .hk_day .hk_swbtn.on { color: rgb(46, 36, 19); background: rgb(227, 196, 113); border-color: rgb(150, 113, 38); }
