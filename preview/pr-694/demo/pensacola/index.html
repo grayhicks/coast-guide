@@ -6225,7 +6225,7 @@ html.hk_ar_i .hk .card:where(:not(.hk_sw_live, .hk_sw_live *, .hk_sw_fly, .hk_sw
 .hk_sw_pilei.is-card{ gap:8px; padding:12px 0 16px; }
 .hk_sw_pilecard{ margin:0 -4px; }
 
-html .hk:not(.hk_sitecards) .hk_nav.hk_nav.hk_nav.hk_nav .dock .fbar :is(.hk_decktog, .fbtn, .hk_mine, .sbox){ min-height:40px !important; height:40px !important; }
+html .hk:not(.hk_sitecards) .hk_nav.hk_nav.hk_nav.hk_nav .dock .fbar :is(.hk_decktog, .fbtn, .hk_mine, .sbox){ min-height:44px !important; height:44px !important; }
 html .hk:not(.hk_sitecards) .hk_nav.hk_nav.hk_nav.hk_nav .dock .fbar :is(.hk_decktog, .fbtn){ font-size:14.5px !important; }
 html .hk:not(.hk_sitecards) .hk_nav.hk_nav.hk_nav.hk_nav .dock .fbar .sbox input::placeholder{ font-size:14.5px; }
 html .hk.hk .xp.promotions-page .promo_discovery :is(.promo_filterbtn, .promo_search){ min-height:40px !important; height:40px !important; }
@@ -6233,7 +6233,7 @@ html .hk.hk .xp.promotions-page .promo_discovery .promo_filterbtn{ font-size:14.
 html .hk.hk .xp.promotions-page .promo_discovery .promo_search::placeholder{ font-size:14.5px !important; }
 
 .hk.hk_ts_sm{ --hk-tsz:.92; } .hk.hk_ts_lg{ --hk-tsz:1.15; } .hk.hk_ts_xl{ --hk-tsz:1.3; }
-html .hk.hk .xp.promotions-page .promo_discovery :is(.promo_filterbtn, .promo_search){ min-height:calc(40px / var(--hk-tsz, 1)) !important; height:calc(40px / var(--hk-tsz, 1)) !important; }
+html .hk.hk .xp.promotions-page .promo_discovery :is(.promo_filterbtn, .promo_search){ min-height:calc(38px / var(--hk-tsz, 1)) !important; height:calc(38px / var(--hk-tsz, 1)) !important; }
 html .hk.hk .xp.promotions-page .promo_discovery .promo_filterbtn{ font-size:calc(14.5px / var(--hk-tsz, 1)) !important; padding-left:calc(14px / var(--hk-tsz, 1)); padding-right:calc(14px / var(--hk-tsz, 1)); }
 html .hk.hk .xp.promotions-page .promo_discovery .promo_filterbtn b{ font-size:calc(14.5px / var(--hk-tsz, 1)) !important; }
 html .hk.hk .xp.promotions-page .promo_discovery .promo_search, html .hk.hk .xp.promotions-page .promo_discovery .promo_search::placeholder{ font-size:calc(14.5px / var(--hk-tsz, 1)) !important; }
@@ -22081,6 +22081,22 @@ html.hk_zoom .hero .grain{ display:none; }
 .hk.hk .hk_calsheet.hk_calinline .hk_calthumb.mark{ display:flex; align-items:center; justify-content:center; }
 .hk.hk .hk_calsheet.hk_calinline .hk_caltitle{ font-size:17px; line-height:1.25; }
 .hk.hk .hk_calsheet.hk_calinline .hk_calrow .hk_calwhen b{ font-size:15px; }
+
+.hk.hk .hk_calsheet.hk_calinline .hk_callist .hk_calitem > .hk_calrow{ grid-template-areas:"end what"; background:linear-gradient(100deg, color-mix(in srgb, var(--hk-bub, #1A8FC4) 14%, transparent), transparent 62%) !important; }
+.hk.hk .hk_calsheet.hk_calinline .hk_calrow > .hk_calwhen{ grid-area:end; align-self:end; justify-self:start; z-index:2; margin:0 0 7px 7px; padding:4px 9px; border-radius:10px;
+  background:rgba(10,18,28,.78); backdrop-filter:none; color:#FFFFFF; flex-direction:column; gap:0; box-shadow:0 2px 6px rgba(0,0,0,.3); }
+.hk.hk .hk_calsheet.hk_calinline .hk_calrow > .hk_calwhen b{ color:#FFFFFF; font:900 14px/1.1 Nunito, system-ui, sans-serif; }
+.hk.hk .hk_calsheet.hk_calinline .hk_calrow > .hk_calwhen span{ color:rgba(255,255,255,.82); font:700 11px/1.15 Nunito, system-ui, sans-serif; }
+.hk.hk .hk_calsheet.hk_calinline .hk_calrow > .hk_calwhen b.tba{ font-size:12px; }
+.hk.hk .hk_calsheet.hk_calinline .hk_calrow > .hk_calwhat{ align-self:center; display:flex; flex-direction:column; gap:4px; }
+.hk.hk .hk_calsheet.hk_calinline .hk_calthumb{ outline:2.5px solid color-mix(in srgb, var(--hk-bub, #1A8FC4) 75%, transparent); outline-offset:-2.5px; }
+.hk.hk .hk_calsheet.hk_calinline .hk_calthumb.mark{ background:color-mix(in srgb, var(--hk-bub, #1A8FC4) 18%, rgba(237,232,220,.06)); color:var(--hk-bub, #1A8FC4); }
+.hk.hk .hk_calsheet.hk_calinline .hk_caltitle{ font-size:18px; line-height:1.22; }
+.hk.hk .hk_calsheet.hk_calinline .hk_calwhat > .hk_calwhere::before{ content:""; display:inline-block; width:11px; height:13px; margin:0 5px -1px 0; background:currentColor; opacity:.75;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 14'%3E%3Cpath d='M6 0a5 5 0 0 0-5 5c0 3.6 5 9 5 9s5-5.4 5-9a5 5 0 0 0-5-5Zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z'/%3E%3C/svg%3E") center/contain no-repeat;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 14'%3E%3Cpath d='M6 0a5 5 0 0 0-5 5c0 3.6 5 9 5 9s5-5.4 5-9a5 5 0 0 0-5-5Zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z'/%3E%3C/svg%3E") center/contain no-repeat; }
+.hk.hk.hk_day .hk_calsheet.hk_calinline .hk_callist .hk_calitem > .hk_calrow{ background:linear-gradient(100deg, color-mix(in srgb, var(--hk-bub, #1A8FC4) 11%, transparent), transparent 62%) !important; }
+@media (min-width:520px){ .hk.hk .hk_calsheet.hk_calinline .hk_caltitle{ font-size:19px; } }
 
 .hk.hk .hk_calsheet .hk_calitem.open > .hk_calqa{ display:none; }
 @media (min-width:520px){
