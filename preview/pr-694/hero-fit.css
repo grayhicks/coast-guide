@@ -1,0 +1,596 @@
+
+
+
+
+
+.scene-stage{--gca-calm-base:1.5;--gca-master:1;--gca-g-hero:1;
+  --gca-calm:calc(var(--gca-calm-base) * var(--gca-master) * var(--gca-g-hero))}
+
+.scene-stage{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;
+  
+  background:var(--skytop,#050B18)}
+body.ph-day .scene{--skytop:#4FA5D2}
+body.ph-dawn .scene{--skytop:#6D83AE}
+body.ph-golden .scene{--skytop:#5F7CA8}
+body.ph-night .scene{--skytop:#16294A}
+
+
+.scene-stage .hero.ph-night{
+  --sky:
+    radial-gradient(52% 40% at 84% 22%, rgba(214,230,248,.30) 0%, rgba(196,216,240,.11) 46%, rgba(180,204,232,0) 68%),
+    radial-gradient(40% 9% at 10% 44.5%, rgba(255,178,106,.26) 0%, rgba(255,164,92,.09) 55%, rgba(255,160,90,0) 100%),
+    radial-gradient(24% 6.5% at 42% 44.8%, rgba(255,190,128,.10) 0%, rgba(255,190,128,0) 100%),
+    linear-gradient(180deg, rgba(126,196,204,0) 39.5%, rgba(126,196,204,.05) 43%, rgba(150,206,214,.045) 44.2%, rgba(126,196,204,0) 47%),
+    linear-gradient(177deg,#16294A 0%,#1D3357 14%,#24406A 28%,#2A4C78 42%,#123A50 62%,#0E4359 80%,#0B4A61 92%,#0A4E66 100%)}
+
+.scene-stage .hero{position:absolute;right:0;bottom:0;width:430px;height:298px;
+  margin:0;padding:0;min-height:0;overflow:visible;
+  transform:scale(var(--sx),var(--sy));transform-origin:100% 100%}
+
+
+.scene-stage .hero::before{content:"";position:absolute;bottom:100%;left:0;
+  width:100%;height:340px;background:var(--skytop,#050B18)}
+
+
+
+
+.scene{--sx:1.35;--vwl:calc(100vw / 1.35)}
+@media (min-width:431px){.scene{--sx:1.45;--vwl:calc(100vw / 1.45)}}
+@media (min-width:540px){.scene{--sx:1.7;--vwl:calc(100vw / 1.7)}}
+@media (min-width:680px){.scene{--sx:2;--vwl:calc(100vw / 2)}}
+@media (min-width:820px){.scene{--sx:2.45;--vwl:calc(100vw / 2.45)}}
+@media (min-width:1024px){.scene{--sx:2.9;--vwl:calc(100vw / 2.9)}}
+@media (min-width:1220px){.scene{--sx:3.45;--vwl:calc(100vw / 3.45)}}
+@media (min-width:1450px){.scene{--sx:4.1;--vwl:calc(100vw / 4.1)}}
+@media (min-width:1750px){.scene{--sx:4.95;--vwl:calc(100vw / 4.95)}}
+
+@media (min-width:3000px){.scene{--sx:8;--vwl:calc(100vw / 8)}}
+@media (min-width:3500px){.scene{--sx:9;--vwl:calc(100vw / 9)}}
+
+
+
+
+.scene.tall{--sy:2.1;--um:1.2;--us:1.25;--ub:1.15;--up:1.05;
+  min-height:calc(298px * var(--sy))}
+@media (min-width:768px){.scene.tall{--sy:1.85;--um:1.7;--us:1.5;--ub:1.5;--up:1.3}}
+@media (min-width:1024px){.scene.tall{--sy:2;--um:1.9;--us:1.6;--ub:1.7;--up:1.45}}
+@media (min-width:1280px){.scene.tall{--sy:2.2;--um:2.1;--us:1.9;--ub:1.9;--up:1.6}}
+@media (min-width:1536px){.scene.tall{--sy:2.25;--um:2.3;--us:2.05;--ub:2.05;--up:1.75}}
+
+
+
+@media (max-width:900px){
+  .scene.tall{--sy:2.72;--um:.85;--us:1.25;--ub:1.3;--up:1.05;--moonr:2px;
+    min-height:calc(298px * 2.72)}
+  .scene.tall .scene-stage .hero{
+    transform:scale(var(--sx),var(--sy)) translateY(57px)}
+  .scene.tall .sunb{top:-66px}
+  
+  .scene.tall .hk_boat{top:138px !important}
+  .scene.tall .boat-refl{top:195px}
+  .scene.tall{--ub:1.5}
+  
+  .scene.tall .glit{top:148px;height:100px}
+  .scene.tall .glit .lane{filter:blur(1.3px);opacity:.95}
+}
+
+
+.scene.band{--sy:.83;--um:1;--us:1.05;--ub:1.05;--up:.9;min-height:200px}
+@media (min-width:768px){.scene.band{--sy:.9;--um:1.35;--us:1.2;--ub:1.25;--up:1.05;min-height:232px}}
+
+@media (min-width:901px){.scene.band{--moonr:110px}}
+@media (min-width:1280px){.scene.band{--sy:1;--um:1.6;--us:1.35;--ub:1.45;--up:1.2;min-height:264px;--moonr:130px}}
+
+.scene.band.short{--sy:.68;--um:1;--up:.85;min-height:176px}
+@media (min-width:768px){.scene.band.short{--sy:.78;--um:1.1;--up:.95;min-height:200px}}
+@media (min-width:1280px){.scene.band.short{--sy:.84;--um:1.15;--up:1.05;min-height:216px}}
+
+
+.scene.band .sunb{top:calc(145px - (60px * var(--um) + var(--seat,26px)) / var(--sy))}
+
+
+
+
+@media (max-width:900px){.scene.band{--moonr:110px;--seat:4px}}
+
+@media (max-width:430px){.scene.band{--moonr:30px;--seat:64px}}
+@media (min-width:901px){.scene.band{--seat:10px}}
+
+
+@media (min-width:1536px){.scene.tall{--moonr:40px;--boatr:30px}}
+@media (min-width:1750px){.scene.tall{--moonr:56px;--boatr:42px}}
+
+@media (min-width:1750px){.scene.band{--boatr:40px}}
+
+
+
+
+
+@media (max-width:1023px){.scene.tall{--moondrop:34px}}
+.scene-stage .sunb{translate:0 calc(var(--moondrop,0px) / var(--sy))}
+
+
+@media (min-width:901px){
+  .scene-stage .ph-night .sunb{right:150.8px}
+  .scene:not(.band) .scene-stage .ph-night .sunb{translate:0 calc(-50px / var(--sy))}
+}
+.scene-stage .sunb{transform-origin:100% 0;right:var(--moonr,28px);
+  transform:scale(calc(var(--um) / var(--sx)),calc(var(--um) / var(--sy)))}
+
+.scene-stage .sun{transform-origin:100% 0;
+  scale:calc(var(--um) / var(--sx)) calc(var(--um) / var(--sy))}
+
+
+
+.scene{--k:calc(var(--um) / var(--sx));--kb:calc(var(--ub) / var(--sx));
+  --lcx:calc(var(--moonr,28px) + 47px * var(--k));
+  --bcx:calc(var(--boatr,18px) + 49px * var(--kb))}
+
+
+.scene-stage .glit{
+  top:145px;right:0;height:96px;
+  width:calc(var(--moonr,28px) + 118px * var(--k) + 14px);
+  clip-path:none;
+  -webkit-mask-image:radial-gradient(135% 160% at right var(--lcx) top 0px,
+    rgba(0,0,0,1) 0%,rgba(0,0,0,.88) 18%,rgba(0,0,0,.62) 40%,
+    rgba(0,0,0,.38) 62%,rgba(0,0,0,.16) 82%,transparent 98%);
+  mask-image:radial-gradient(135% 160% at right var(--lcx) top 0px,
+    rgba(0,0,0,1) 0%,rgba(0,0,0,.88) 18%,rgba(0,0,0,.62) 40%,
+    rgba(0,0,0,.38) 62%,rgba(0,0,0,.16) 82%,transparent 98%)}
+
+
+.scene-stage .hk_boat{transform-origin:100% 74%;right:var(--boatr,18px) !important;
+  transform:scale(calc(var(--ub) / var(--sx)),calc(var(--ub) / var(--sy)))}
+.scene-stage .boat-refl{transform-origin:100% 50%;right:calc(var(--boatr,18px) + 4px)}
+
+
+.scene{--stx:calc(var(--us) / var(--sx));--sty:calc(var(--us) / var(--sy))}
+
+
+
+.scene{--uc:1}
+@media (min-width:768px){.scene{--uc:1.25}}
+@media (min-width:1024px){.scene{--uc:1.4}}
+@media (min-width:1280px){.scene{--uc:1.6}}
+@media (min-width:1536px){.scene{--uc:1.8}}
+@media (min-width:1750px){.scene{--uc:2}}
+
+.scene-stage .skbg > .sksoar > svg,
+.scene-stage .pipw svg,
+.scene-stage .skbwrap svg{
+  transform:scale(calc(var(--uc) / var(--sx)),calc(var(--uc) / var(--sy)));
+  transform-origin:50% 50%}
+.scene-stage .hkn_st1,.scene-stage .hkn_st2,.scene-stage .hkn_st3{
+  transform:scale(var(--stx),var(--sty))}
+
+
+.scene-stage .beachprops{transform-origin:0 100%;
+  transform:translateX(calc(430px - var(--vwl)))
+    scale(calc(var(--up) / var(--sx)),calc(var(--up) / var(--sy)))}
+
+
+.scene-stage .hkn_tl{
+  transform:translateX(calc(430px - var(--vwl))) scaleX(calc(var(--sy) / var(--sx)))}
+
+
+
+
+
+.scene-stage .adyacht > svg,.scene-stage .supw > svg,.scene-stage .npw > svg,
+.scene-stage .adparasail > svg,.scene-stage .adcart > svg{transform-origin:0 100%;
+  scale:calc(var(--up) / var(--sx)) calc(var(--up) / var(--sy))}
+
+
+.scene-stage .adplane > svg{transform-origin:0 50%;
+  scale:calc(var(--up) / var(--sx)) calc(var(--up) / var(--sy))}
+.scene-stage .gv{transform-origin:50% 100%;
+  scale:calc(var(--uc) / var(--sx)) calc(var(--uc) / var(--sy))}
+.scene-stage .pipw .pipsh{transform-origin:50% 100%;
+  scale:calc(var(--uc) / var(--sx)) calc(var(--uc) / var(--sy))}
+
+
+.scene-stage .crabw > svg{transform-origin:50% 100%;
+  scale:calc(var(--uc) / var(--sx)) calc(var(--uc) / var(--sy))}
+
+
+.scene-stage .hero_sponsor .adlbl,.scene-stage .hero_slot .adlbl{transform-origin:50% 0;
+  scale:calc(var(--up) / var(--sx)) calc(var(--up) / var(--sy))}
+
+
+.scene-stage .hero-sand,.scene-stage .hkn_wet{width:100%}
+
+
+.scene-stage .glit .lane{width:auto;margin:0;opacity:1;filter:blur(.7px);background:
+  radial-gradient(26px 2.6px at right var(--lcx) top 2px,color-mix(in srgb,var(--glitc) 100%,transparent),transparent 72%),
+  radial-gradient(48px 6px at right calc(var(--lcx) - 3px * var(--k)) top 3px,color-mix(in srgb,var(--glitc) 72%,transparent),transparent 74%),
+  radial-gradient(55% 10px at right calc(var(--lcx) - 8px * var(--k)) top 5px,color-mix(in srgb,var(--glitc) 34%,transparent),transparent 78%),
+  radial-gradient(34px 46px at right calc(var(--lcx) + 4px * var(--k)) top 14px,color-mix(in srgb,var(--glitc) 26%,transparent),transparent 74%),
+  radial-gradient(26% 88px at right calc(var(--lcx) - 7px * var(--k)) top 40px,color-mix(in srgb,var(--glitc) 16%,transparent),transparent 78%),
+  radial-gradient(60% 90px at right calc(var(--lcx) * .62) top 66px,color-mix(in srgb,var(--glitc) 12%,transparent),transparent 80%),
+  radial-gradient(34% 34px at right calc(var(--bcx) + 6px * var(--kb)) top 58px,color-mix(in srgb,var(--glitc) 18%,transparent),transparent 78%),
+  radial-gradient(9px 1.6px at right calc(var(--lcx) - 16px * var(--k)) top 6px,color-mix(in srgb,var(--glitc) 66%,transparent),transparent 70%),
+  radial-gradient(6px 1.3px at right calc(var(--lcx) + 10px * var(--k)) top 4px,color-mix(in srgb,var(--glitc) 74%,transparent),transparent 70%),
+  radial-gradient(12px 1.8px at right calc(var(--lcx) + 19px * var(--k)) top 9px,color-mix(in srgb,var(--glitc) 55%,transparent),transparent 70%),
+  radial-gradient(7px 1.5px at right calc(var(--lcx) - 6px * var(--k)) top 12px,color-mix(in srgb,var(--glitc) 62%,transparent),transparent 70%),
+  radial-gradient(14px 2.0px at right calc(var(--lcx) + 2px * var(--k)) top 17px,color-mix(in srgb,var(--glitc) 50%,transparent),transparent 70%),
+  radial-gradient(10px 2.0px at right calc(var(--lcx) - 24px * var(--k)) top 21px,color-mix(in srgb,var(--glitc) 44%,transparent),transparent 70%),
+  radial-gradient(16px 2.2px at right calc(var(--lcx) + 13px * var(--k)) top 24px,color-mix(in srgb,var(--glitc) 46%,transparent),transparent 70%),
+  radial-gradient(9px 1.8px at right calc(var(--lcx) + 30px * var(--k)) top 31px,color-mix(in srgb,var(--glitc) 38%,transparent),transparent 70%),
+  radial-gradient(18px 2.4px at right calc(var(--lcx) - 11px * var(--k)) top 34px,color-mix(in srgb,var(--glitc) 40%,transparent),transparent 70%),
+  radial-gradient(12px 2.2px at right calc(var(--lcx) - 30px * var(--k)) top 42px,color-mix(in srgb,var(--glitc) 30%,transparent),transparent 70%),
+  radial-gradient(20px 2.6px at right calc(var(--lcx) + 5px * var(--k)) top 45px,color-mix(in srgb,var(--glitc) 34%,transparent),transparent 70%),
+  radial-gradient(13px 2.4px at right calc(var(--lcx) + 22px * var(--k)) top 52px,color-mix(in srgb,var(--glitc) 28%,transparent),transparent 70%),
+  radial-gradient(24px 3.0px at right calc(var(--lcx) - 18px * var(--k)) top 57px,color-mix(in srgb,var(--glitc) 26%,transparent),transparent 70%),
+  radial-gradient(15px 2.6px at right calc(var(--lcx) + 38px * var(--k)) top 63px,color-mix(in srgb,var(--glitc) 24%,transparent),transparent 70%),
+  radial-gradient(28px 3.2px at right calc(var(--lcx) - 4px * var(--k)) top 68px,color-mix(in srgb,var(--glitc) 22%,transparent),transparent 70%),
+  radial-gradient(18px 3.0px at right calc(var(--lcx) + 12px * var(--k)) top 78px,color-mix(in srgb,var(--glitc) 19%,transparent),transparent 70%),
+  radial-gradient(30px 3.6px at right calc(var(--lcx) - 26px * var(--k)) top 84px,color-mix(in srgb,var(--glitc) 15%,transparent),transparent 70%),
+  radial-gradient(22px 3.4px at right calc(var(--lcx) + 2px * var(--k)) top 92px,color-mix(in srgb,var(--glitc) 12%,transparent),transparent 70%),
+  radial-gradient(14px 2.2px at right calc((var(--lcx) + var(--bcx)) / 2 + 8px * var(--k)) top 48px,color-mix(in srgb,var(--glitc) 26%,transparent),transparent 70%),
+  radial-gradient(18px 2.6px at right calc((var(--lcx) + var(--bcx)) / 2 - 6px * var(--k)) top 60px,color-mix(in srgb,var(--glitc) 20%,transparent),transparent 70%),
+  radial-gradient(24px 3.0px at right calc((var(--lcx) + var(--bcx)) / 2 + 2px * var(--k)) top 74px,color-mix(in srgb,var(--glitc) 15%,transparent),transparent 70%),
+  radial-gradient(10px 1.8px at right calc(var(--bcx) - 10px * var(--kb)) top 50px,color-mix(in srgb,var(--glitc) 30%,transparent),transparent 70%),
+  radial-gradient(13px 2.0px at right calc(var(--bcx) + 13px * var(--kb)) top 56px,color-mix(in srgb,var(--glitc) 26%,transparent),transparent 70%),
+  radial-gradient(20px 2.8px at right calc(var(--bcx) + 2px * var(--kb)) top 66px,color-mix(in srgb,var(--glitc) 20%,transparent),transparent 70%),
+  radial-gradient(16px 2.8px at right calc(var(--bcx) - 6px * var(--kb)) top 76px,color-mix(in srgb,var(--glitc) 16%,transparent),transparent 70%)}
+
+
+.scene-stage .gl{height:1.6px;filter:blur(.5px)}
+.scene-stage .glit .gl:nth-of-type(2n){--gr:1.6deg;--gsy:.75}
+.scene-stage .glit .gl:nth-of-type(3n){--gr:-1.3deg;--gsy:1.3}
+.scene-stage .glit .gl:nth-of-type(4n+1){--gr:-.7deg;--gsy:.9}
+.scene-stage .glit .gl:nth-of-type(5n){--gr:2.1deg;--gsy:.6}
+@keyframes hk_gl{
+  0%,100%{opacity:0;transform:scale(.3,var(--gsy,1)) rotate(var(--gr,0deg))}
+  45%,55%{opacity:min(calc(var(--glo,.6) * .8),.5);transform:scale(1,var(--gsy,1)) rotate(var(--gr,0deg))}
+}
+
+
+.scene-stage .hk_boat{opacity:1 !important}
+.scene-stage .hk_boat .sails path{fill:#C9D8E6}
+.scene-stage .hk_boat .sails path[fill="url(#hk_maing)"]{fill:#D3E0EC}
+
+.scene-stage .hk_boat .sails path[fill="url(#hk_jibg)"]{fill:#C2D2E2}
+.scene-stage .boat-refl{display:block;opacity:.5}
+
+
+.scene-stage .hero-sand{opacity:.92;filter:brightness(.68) saturate(.75)}
+.scene-stage .beachprops{opacity:.95;filter:brightness(.72) saturate(.78)}
+.scene-stage .hero-surf{opacity:.62}
+.scene-stage .hk_swellw{opacity:.66}
+
+
+.scene-stage .grain{background-size:calc(160px / var(--sx)) calc(160px / var(--sy))}
+
+
+.scene-stage .hero_slot .adboatname,.scene-stage .hero_slot .adyacht,
+.scene-stage .hero_slot .adparasail,.scene-stage .hero_slot .adcart,
+.scene-stage .hero_slot .adplane{display:none}
+
+
+
+.spec-stage{position:relative;width:100%;height:286px;overflow:hidden;
+  background:var(--scene-ground,#0b1826)}
+
+.spec-stage .hero{position:absolute;left:0;right:0;bottom:0;width:100%;height:298px;
+  margin:0;padding:0;min-height:0;overflow:visible}
+
+.spec-stage .hero-sand,.spec-stage .hkn_wet{width:100%}
+
+
+@keyframes spec_adyacht{ 0%{ transform:translateX(-110px); } 100%{ transform:translateX(575px); } }
+@keyframes spec_adplane{ 0%{ transform:translateX(-230px); } 100%{ transform:translateX(560px); } }
+@keyframes spec_adcart{
+  0%,13%{ transform:translateX(-20px); opacity:0; }
+  17%{ transform:translateX(0); opacity:1; }
+  97%{ transform:translateX(560px); opacity:1; }
+  100%{ transform:translateX(580px); opacity:0; } }
+
+.spec-stage .hero-wave{animation-delay:0s;animation-play-state:paused}
+.spec-stage .adplane{animation-name:spec_adplane;animation-delay:-16.5s;animation-play-state:paused}
+.spec-stage .adparasail,.spec-stage .adyacht{animation-name:spec_adyacht;animation-delay:-17s;animation-play-state:paused}
+.spec-stage .adcart{animation-name:spec_adcart;animation-delay:-18s;animation-play-state:paused}
+
+
+
+
+@keyframes hk_drift{
+  0%{transform:translateX(0);opacity:0}
+  7%{opacity:var(--clo,.18)}
+  90%{opacity:var(--clo,.18)}
+  100%{transform:translateX(calc(480px + var(--vwl)));opacity:0}
+}
+
+
+@keyframes hk_ntw1{
+  0%,100%{opacity:.86;transform:scale(var(--stx),var(--sty))}
+  50%{opacity:1;transform:scale(calc(var(--stx) * 1.06),calc(var(--sty) * 1.06))}
+}
+@keyframes hk_ntw2{
+  0%,100%{opacity:.5;transform:scale(calc(var(--stx) * .92),calc(var(--sty) * .92))}
+  50%{opacity:.95;transform:scale(var(--stx),var(--sty))}
+}
+@keyframes hk_ntw3{
+  0%,100%{opacity:.14;transform:scale(calc(var(--stx) * .75),calc(var(--sty) * .75))}
+  55%{opacity:.7;transform:scale(var(--stx),var(--sty))}
+}
+
+
+.scene{--btx:calc(var(--ub) / var(--sx));--bty:calc(var(--ub) / var(--sy))}
+@keyframes hk_sailbob{
+  0%{transform:scale(var(--btx),var(--bty)) translateY(2.5px) rotate(1.1deg)}
+  34%{transform:scale(var(--btx),var(--bty)) translateY(-.4px) rotate(-1.35deg)}
+  44%{transform:scale(var(--btx),var(--bty)) translateY(.1px) rotate(-1.2deg)}
+  62%{transform:scale(var(--btx),var(--bty)) translateY(.3px) rotate(-1.05deg)}
+  100%{transform:scale(var(--btx),var(--bty)) translateY(2.5px) rotate(1.1deg)}
+}
+@keyframes hk_refl{
+  0%,100%{transform:scale(var(--btx),var(--bty)) scaleX(1);opacity:.55}
+  50%{transform:scale(var(--btx),var(--bty)) scaleX(.86);opacity:.36}
+}
+
+
+
+
+.scene .wrap.hero{margin:0 auto;min-height:0;background:none;overflow:visible;
+  padding-left:var(--wrap-gutter);padding-right:var(--wrap-gutter)}
+
+
+
+@media (prefers-reduced-motion:reduce){
+  .scene-stage .hero *,
+  .scene-stage .hero *::before,
+  .scene-stage .hero *::after{animation:none !important;transition:none !important}
+  .scene-stage .cl{opacity:var(--clo,.18)}
+  .scene-stage .clm1{transform:translateX(300px)}
+  .scene-stage .clm2{transform:translateX(150px)}
+  .scene-stage .cln1{transform:translateX(430px)}
+  
+  .scene-stage .gl{display:none}
+  
+  
+  .scene-stage .hk_boat .sails path[fill="url(#hk_jibg)"]{
+    d:path("M65.922,6.355 C38.576,22.062 36.655,47.713 19.592,74.494 C30.892,73.364 45.582,72.573 59.142,72.46 C65.357,49.295 68.182,25 65.922,6.355 Z") !important}
+  .scene-stage .hk_boat .sails path[fill="url(#hk_maing)"]{
+    d:path("M69.312,6.355 C72.137,23.305 72.137,45.905 67.73,67.601 C78.917,66.132 96.432,64.098 109.766,62.968 C107.732,36.865 81.742,13.16 69.312,6.355 Z") !important}
+  .scene-stage .hk_boat path[fill="#C74B3C"]{
+    d:path("M69.312,-2.233 L78.917,.253 L69.312,3.191 Z") !important}
+  .scene-stage .hk_boat .hk_rig{animation:none}
+  .scene-stage .boat-refl{opacity:.4}
+  
+  .scene-stage .swash,
+  .scene-stage .swash_lip,
+  .scene-stage .backwash,
+  .scene-stage .swl_crest,
+  .scene-stage .sswp,
+  .scene-stage .shootN,
+  .scene-stage .skbwrap,
+  .scene-stage .rplfield,
+  .scene-stage .grain{display:none}
+  .scene-stage .swl_body{opacity:.4}
+}
+
+
+.scene, .scene-stage { overflow: hidden; }
+.scene-stage { contain: paint; }
+
+
+html, body { overflow-x: clip; }
+
+
+
+
+
+
+
+
+.scene::before{content:"";position:absolute;left:0;right:0;bottom:0;height:64px;
+  z-index:2;pointer-events:none;
+  background:linear-gradient(180deg,
+    rgba(0,0,0,0) 0,
+    color-mix(in srgb, var(--bg) 34%, transparent) 42%,
+    color-mix(in srgb, var(--bg) 78%, transparent) 76%,
+    var(--bg) 100%)}
+
+.scene.band.short::before{height:38px}
+
+
+@media (max-width:767px){
+  .scene.band:not(.short){--sy:1.0403;min-height:310px}
+  .scene.band:not(.short) > .wrap{margin-top:34px}
+  
+  .scene.band:not(.short) .scene-copy::before{top:0;
+    background:linear-gradient(180deg,
+      rgba(10,52,70,0) 0,
+      rgba(10,52,70,.12) 12px,
+      rgba(10,52,70,.48) 26px,
+      rgba(10,52,70,.54) 40px,
+      rgba(10,52,70,.54) 100px,
+      rgba(10,52,70,.48) 132px,
+      rgba(10,52,70,.42) 205px,
+      rgba(10,52,70,.24) 248px,
+      rgba(10,52,70,0) 292px)}
+  
+  
+  
+}
+
+
+
+
+
+.scene-stage .adbonfire{left:200px}
+
+
+
+@keyframes hk_adyacht{
+  0%{ opacity:0; transform:translateX(292px); }
+  9%,91%{ opacity:1; }
+  100%{ opacity:0; transform:translateX(312px); }
+}
+@keyframes hk_adcart{
+  0%{ opacity:0; transform:translateX(288px); }
+  7%,93%{ opacity:1; }
+  100%{ opacity:0; transform:translateX(416px); }
+}
+@keyframes hk_adplane{
+  0%{ opacity:0; transform:translateX(-230px); }
+  12%,88%{ opacity:1; }
+  100%{ opacity:0; transform:translateX(560px); }
+}
+
+
+.scene-stage .adcart{bottom:6px}
+.scene-stage .adbonfire{bottom:6px}
+.scene-stage .adyacht{top:auto;bottom:12px}
+
+.scene.band .adyacht{top:132px;bottom:auto}
+
+
+.scene-stage .adparasail{left:calc(-94px / var(--sx))}
+
+.scene.tall .scene-stage .adparasail{top:calc(110px + 92px)}
+
+
+
+
+.scene.band .adplane{display:none}
+@media (min-width:1024px){
+  
+  .scene.band .adplane{display:block; left:auto; right:72px; top:2px; animation:none}
+  
+  .scene.band .adplane > svg{transform-origin:100% 50%}
+}
+
+
+
+
+@media (max-width:900px){ .scene.tall .adplane{translate:0 calc(-242px / var(--sy))} }
+@media (min-width:901px) and (max-width:1023px){ .scene.tall .adplane{translate:0 calc(-120px / var(--sy))} }
+
+@media (max-width:767px){
+  .scene-stage .adparasail{display:none}
+  
+  .scene.band:not(.short){--pbp:1.3}
+  .scene.band:not(.short) .scene-stage .adparasail{display:block}
+  .scene.band:not(.short) .adparasail > svg{
+    scale:calc(var(--up) * var(--pbp) / var(--sx)) calc(var(--up) * var(--pbp) / var(--sy))}
+  .scene.band:not(.short) .adparasail{left:calc(-94px * var(--pbp) / var(--sx))}
+  
+  .scene.band:not(.short){--boatr:-10px}
+  
+  
+  
+  .scene.band:not(.short) .adyacht,.scene.band:not(.short) .adparasail{
+    animation-name:hk_adyacht_wide;
+    --yx0:calc(292px - 15px / var(--sx));
+    --yx1:calc(292px - 25px / var(--sx));
+    animation-duration:26s}
+  
+  .scene.band:not(.short) .scene-copy .sub{max-width:184px}
+  .scene.band:not(.short) .adyacht{top:113px}
+  
+  
+  .scene.band:not(.short) .sun{translate:0 calc(-45px / var(--sy))}
+  .scene.band:not(.short) .adparasail{top:55px;
+    --yx0:calc(292px + 15px / var(--sx));
+    --yx1:calc(292px + 5px / var(--sx))}
+}
+
+
+.scene .hk_skybtn{position:absolute;z-index:13;min-width:44px;min-height:44px;
+  padding:0;border:0;background:none;border-radius:50%;cursor:pointer;
+  -webkit-tap-highlight-color:transparent}
+.scene .hk_skybtn:focus-visible{outline:2px solid var(--hero-focus,#F2DFAE);outline-offset:3px}
+
+
+.scene .hk_skypanel{position:absolute;z-index:14;right:14px;top:0;max-width:min(320px,calc(100% - 28px));
+  translate:0 calc(var(--moondrop,0px) + 8px)}
+.scene .hk_skypanel .phchip{position:static;right:auto;bottom:auto;max-width:100%}
+
+.scene .hk_skypanel .phchip{background:linear-gradient(180deg,rgba(9,27,40,.975),rgba(6,20,31,.985));
+  border:1px solid rgba(232,196,95,.34);box-shadow:0 18px 46px rgba(3,10,16,.55)}
+@supports (backdrop-filter:blur(2px)){.scene .hk_skypanel .phchip{backdrop-filter:blur(7px)}}
+@media (min-width:1024px){.scene .hk_skypanel{right:calc(var(--moonr,28px) + 10px)}}
+
+
+.scene-stage .supw{left:46%}
+
+
+
+
+@media (min-width:901px){
+  .scene-stage .hero{--sunshift:-27px}
+}
+
+@media (min-width:1220px){
+  .scene-copy::before{
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.10) 8%,rgba(0,0,0,.26) 15%,rgba(0,0,0,.48) 22%,rgba(0,0,0,.72) 29%,rgba(0,0,0,.90) 35%,#000 42%,#000 62%,rgba(0,0,0,.35) 78%,transparent 92%);
+            mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.10) 8%,rgba(0,0,0,.26) 15%,rgba(0,0,0,.48) 22%,rgba(0,0,0,.72) 29%,rgba(0,0,0,.90) 35%,#000 42%,#000 62%,rgba(0,0,0,.35) 78%,transparent 92%)}
+}
+
+
+@keyframes hk_adyacht_wide{
+  0%{ opacity:0; transform:translateX(var(--yx0,292px)); }
+  2%,97%{ opacity:1; }
+  100%{ opacity:0; transform:translateX(var(--yx1,312px)); }
+}
+
+
+
+@media (min-width:1024px){
+  .scene.band .adyacht,.scene.band .adparasail{
+    animation-name:hk_adyacht_wide; --yl:70px;
+    --yx0:calc(292px + (40px - var(--yl)) / var(--sx));
+    --yx1:calc(292px - (30px + var(--yl)) / var(--sx)); animation-duration:24s}
+}
+@media (min-width:1440px){
+  .scene.band .adyacht,.scene.band .adparasail{
+    --yl:150px;
+    --yx0:calc(292px + (90px - var(--yl)) / var(--sx));
+    --yx1:calc(292px - (40px + var(--yl)) / var(--sx)); animation-duration:44s}
+}
+@media (min-width:1900px){
+  .scene.band .adyacht,.scene.band .adparasail{
+    --yl:200px;
+    --yx0:calc(292px + (120px - var(--yl)) / var(--sx));
+    --yx1:calc(292px - (20px + var(--yl)) / var(--sx)); animation-duration:48s}
+}
+@media (min-width:2400px){
+  .scene.band .adyacht,.scene.band .adparasail{
+    --yl:250px;
+    --yx0:calc(292px + (90px - var(--yl)) / var(--sx));
+    --yx1:calc(292px - (30px + var(--yl)) / var(--sx)); animation-duration:40s}
+}
+
+
+@media (min-width:1024px){
+  .scene.band{--pb:1.34}
+  .scene.band .adyacht > svg,.scene.band .adparasail > svg{
+    scale:calc(var(--up) * var(--pb) / var(--sx)) calc(var(--up) * var(--pb) / var(--sy))}
+  .scene.band .adparasail{left:calc(-94px * var(--pb) / var(--sx))}
+}
+
+
+
+.scene-stage .hero.hk_nhon.hk_nhon,
+.scene.tall .scene-stage .hero.hk_nhon.hk_nhon{ transform:none; inset:0; width:auto; height:auto; }
+
+.scene-stage .hero.hk_nhon.hk_nhon{ --sx:1; --sy:1; }
+
+@media (min-width:901px){ .scene .hero.hk_nhon .hk_nh [id$="ad-parasail"]{ translate:258px 52px; } }
+
+@media (max-width:900px){ .scene .hero.hk_nhon .hk_nh :is([id$="ad-banner-plane"], [id$="ad-parasail"]){ visibility:hidden; } }
+
+@media (min-width:1024px){ .scene.tall .hero.hk_nhon .hk_nh [id$="ad-banner-plane"]{ translate:0 0; } .scene.tall .hero.hk_nhon .hk_nh [id$="ad-parasail"]{ translate:236px 0; } }
+@media (min-width:1220px){ .scene.tall .hero.hk_nhon .hk_nh [id$="ad-banner-plane"]{ translate:0 18px; } .scene.tall .hero.hk_nhon .hk_nh [id$="ad-parasail"]{ translate:228px 18px; } }
+@media (min-width:1450px){ .scene.tall .hero.hk_nhon .hk_nh [id$="ad-banner-plane"]{ translate:0 28px; } .scene.tall .hero.hk_nhon .hk_nh [id$="ad-parasail"]{ translate:230px 28px; } }
+@media (min-width:1750px){ .scene.tall .hero.hk_nhon .hk_nh [id$="ad-banner-plane"]{ translate:0 38px; } .scene.tall .hero.hk_nhon .hk_nh [id$="ad-parasail"]{ translate:232px 38px; } }
+
+@media (min-width:2100px){ .scene .hero.hk_nhon .hk_nh :is([id$="ad-banner-plane"], [id$="ad-parasail"]){ visibility:hidden; } }
+
+@media (min-width:901px){ .scene .hero.hk_nhon .adcart{ translate:-25px 0; } }
+
+@media (max-width:900px){
+  .scene.tall .hero.hk_nhon.ph-night > :is(.hk_nh, .hk_nhfront) > svg{ position:absolute; top:0; right:0; height:100%; width:auto; aspect-ratio:390 / 298; max-width:none; }
+}
