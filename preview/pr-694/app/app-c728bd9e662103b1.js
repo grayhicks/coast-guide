@@ -21827,8 +21827,8 @@ html.hk_zoom .hero .grain{ display:none; }
 .hk.hk .hk_calinline .hk_cal > .hk_calhead{ flex:1 1 auto; min-width:max-content; gap:6px; }
 .hk.hk .hk_calinline .hk_cal > .hk_calhead + .hk_calview{ flex:0 0 auto; width:136px; margin:0 0 0 auto; }
 .hk.hk .hk_calinline .hk_cal > .hk_calhead .hk_calnav{ flex:none; width:32px; height:32px; font-size:19px; }
-.hk.hk .hk_calinline .hk_cal > .hk_calhead .hk_calm{ font-size:clamp(16.5px, 5vw, 24px); white-space:nowrap; }
-@media (max-width:419px){ .hk.hk .hk_calinline .hk_cal > .hk_calhead .hk_calm{ font-size:16.5px; } }
+.hk.hk .hk_calinline .hk_cal > .hk_calhead .hk_calm{ font-size:clamp(17px, 5.2vw, 26px); white-space:nowrap; }
+@media (max-width:419px){ .hk.hk .hk_calinline .hk_cal > .hk_calhead .hk_calm{ font-size:17px; } }
 .hk.hk .hk_calinline .hk_cal > .hk_calhead + .hk_calview > .hk_calsegb{ flex:1 1 0; min-width:0; padding:0 4px; min-height:32px; font-size:13px; }
 
 .hk.hk .hk_calsheet.hk_calinline .hk_calchip{ min-height:32px; padding:0 12px; font-size:12.5px; }
@@ -21926,6 +21926,11 @@ html .hk.hk.hk .tabin > .hk_twhide.hk_twhide{ display:flex; margin:0 0 6px auto 
 html .hk.hk.hk .hk_twhide.hk_twhide{ display:inline-flex; align-items:center !important; justify-content:center; line-height:1 !important; box-sizing:border-box; }
 html .hk.hk.hk .tabin > .hk_twhide.hk_twhide:has(+ .sechead){ display:flex; position:relative; z-index:1; margin:2px 0 -30px auto !important; }
 html .hk.hk.hk .tabin > .hk_twhide.hk_twhide + .sechead .sectitle{ padding-right:150px; }
+
+html .hk.hk.hk .tabpanel .sechead .sectitle.sectitle, html .hk.hk.hk .tabpanel.tabpanel > .tabin .sechead .sectitle.sectitle,
+html .hk.hk.hk .xp.promotions-page .sechead .sectitle.sectitle{ font-size:clamp(26px, 7.4vw, 32px) !important; line-height:1.1 !important; }
+html .hk.hk.hk .tabpanel .tabin > .sechead:first-of-type, html .hk.hk.hk .xp.promotions-page .sechead:first-of-type{ margin-top:20px !important; margin-bottom:8px !important; }
+html .hk.hk.hk .tabin > .hk_twhide.hk_twhide:has(+ .sechead){ margin:22px 0 -40px auto !important; }
 
 html .hk.hk .promotions-page .promo_filterbtn:not(.promo_calbtn){ padding-top:4px !important; padding-bottom:0 !important; }
 html .hk.hk .promotions-page .promo_calbtn .promo_calw{ position:relative; top:2px; }
