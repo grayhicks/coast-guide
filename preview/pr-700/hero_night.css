@@ -1,5 +1,7 @@
 
 .hk3d.on { opacity: 1; }
+.hk3d.on { background: rgba(10, 16, 28, 0.3); }
+.hk3d:not(.on) .hk3d_st, .hk3d:not(.on) .hk3d_bar { visibility: hidden; }
 .hk .hero { --gca-calm: calc(var(--gca-calm-base) * var(--gca-master) * var(--gca-g-hero)); }
 .hk[data-calmoff~="hero"] .hero *, .hk[data-calmoff~="world"] .tdec *, .hk[data-calmoff~="field"] .fldw *, .hk[data-calmoff~="mark"] .spdec *, .hk[data-calmoff~="sheen"] .sig * { animation-play-state: paused !important; }
 .hero { position: relative; overflow: hidden; margin: 0 calc(-1*var(--hk-gutter)) 0; padding: 22px 22px 38px; min-height: 248px; background: var(--sky); }
