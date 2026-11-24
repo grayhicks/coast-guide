@@ -1,0 +1,222 @@
+# GCA-1025, 09/30 — the card editor (Sveltia CMS, Decap-compatible). Gray's pick B.
+# What it edits: content/cards/<pool>/<id>.json, one file per card. The next daily update runs
+# claude/harness/sync_cards.js, which settles these files with the app file field by field and
+# publishes. A field not listed here is never lost: the sync keeps whatever the editor does not show.
+# Cards are edited here, not created or deleted: new cards still come in through the weekly scan.
+backend:
+  name: github
+  repo: grayhicks/gca-widget
+  branch: main
+  commit_messages:
+    update: "Card editor: {{collection}} “{{slug}}”"
+media_folder: content/uploads
+site_url: https://coastaleventures.com/app/
+display_url: https://coastaleventures.com/app/
+editor:
+  preview: false
+
+collections:
+  - name: events
+    label: Events
+    label_singular: Event
+    folder: content/cards/events
+    format: json
+    extension: json
+    create: false
+    delete: false
+    identifier_field: title
+    summary: "{{title}} · {{date}} · {{venue}}"
+    sortable_fields: [title, date, verifiedOn]
+    fields:
+      - { name: id, label: "Card ID (never changes)", widget: string, readonly: true }
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: "Date (YYYY-MM-DD)", widget: string, pattern: ['^\d{4}-\d{2}-\d{2}$', "Use YYYY-MM-DD, e.g. 2026-10-03"] }
+      - { name: dateEnd, label: "Last day, if it runs more than one day (YYYY-MM-DD)", widget: string, required: false }
+      - { name: when, label: "When, as the card prints it", widget: string, required: false, hint: "e.g. Sat 10:00 AM to 4:00 PM" }
+      - { name: venue, label: Venue, widget: string }
+      - { name: address, label: "Street address", widget: string, required: false }
+      - { name: blurb, label: Description, widget: text }
+      - &cost
+        name: cost
+        label: Price
+        widget: object
+        required: false
+        collapsed: false
+        fields:
+          - { name: total, label: "Total for the party ($)", widget: number, value_type: float, required: false }
+          - name: rows
+            label: Price rows
+            widget: list
+            required: false
+            hint: "One row per price the organizer publishes, e.g. Adult $15."
+            fields:
+              - { name: label, label: "Who (as printed)", widget: string }
+              - { name: price, label: "Price ($)", widget: number, value_type: float }
+              - { name: who, label: "Kind (ad, kid, flat...; leave blank if unsure)", widget: string, required: false }
+          - { name: note, label: "Price note", widget: text, required: false }
+      - &book
+        name: book
+        label: Main link button
+        widget: object
+        required: false
+        fields:
+          - { name: label, label: "Button words", widget: string, required: false }
+          - { name: url, label: "Link", widget: string, required: false }
+      - { name: verifiedOn, label: "Checked on the organizer's page (YYYY-MM-DD)", widget: string, required: false }
+      - { name: tags, label: Tags, widget: list, required: false }
+      - { name: steps, label: "The plan (one step per line)", widget: list, required: false }
+      - { name: watch, label: "Heads-up lines", widget: list, required: false }
+      - &sources
+        name: sources
+        label: Where the facts came from
+        widget: list
+        required: false
+        fields:
+          - { name: label, label: "What was read", widget: string }
+          - { name: url, label: "Link", widget: string }
+
+  - name: places
+    label: Places
+    label_singular: Place
+    folder: content/cards/places
+    format: json
+    extension: json
+    create: false
+    delete: false
+    identifier_field: title
+    summary: "{{title}} · {{venue}}"
+    sortable_fields: [title, verifiedOn]
+    fields:
+      - { name: id, label: "Card ID (never changes)", widget: string, readonly: true }
+      - { name: title, label: Title, widget: string }
+      - { name: venue, label: "Venue line", widget: string, required: false }
+      - { name: address, label: "Street address", widget: string }
+      - { name: hours, label: Hours, widget: text, required: false }
+      - { name: phone, label: Phone, widget: string, required: false }
+      - { name: blurb, label: Description, widget: text }
+      - *cost
+      - *book
+      - { name: verifiedOn, label: "Checked on the place's own page (YYYY-MM-DD)", widget: string, required: false }
+      - { name: tags, label: Tags, widget: list, required: false }
+      - { name: steps, label: "The plan (one step per line)", widget: list, required: false }
+      - { name: watch, label: "Heads-up lines", widget: list, required: false }
+      - *sources
+
+  - name: openings
+    label: New & coming soon
+    label_singular: Opening
+    folder: content/cards/openings
+    format: json
+    extension: json
+    create: false
+    delete: false
+    identifier_field: name
+    summary: "{{name}} · {{area}}"
+    sortable_fields: [name]
+    fields:
+      - { name: id, label: "Card ID (never changes)", widget: string, readonly: true }
+      - { name: name, label: Name, widget: string }
+      - { name: kind, label: "Kind (restaurant, shop...)", widget: string, required: false }
+      - { name: area, label: Area, widget: string, required: false }
+      - { name: address, label: "Street address", widget: string, required: false }
+      - { name: dateNote, label: "Opening, as the card prints it", widget: string, required: false }
+      - { name: openingDate, label: "Opening date, if announced (YYYY-MM-DD)", widget: string, required: false }
+      - { name: estOpen, label: "Expected opening, if only estimated", widget: string, required: false }
+      - { name: hours, label: Hours, widget: string, required: false }
+      - { name: phone, label: Phone, widget: string, required: false }
+      - { name: url, label: "Their website", widget: string, required: false }
+      - { name: blurb, label: Description, widget: text }
+
+  - name: deals
+    label: Deals
+    label_singular: Deal
+    folder: content/cards/deals
+    format: json
+    extension: json
+    create: false
+    delete: false
+    identifier_field: biz
+    summary: "{{biz}} · {{offer}}"
+    sortable_fields: [biz, checked]
+    fields:
+      - { name: id, label: "Card ID (never changes)", widget: string, readonly: true }
+      - { name: biz, label: Business, widget: string }
+      - { name: offer, label: "The deal (headline)", widget: string }
+      - { name: detail, label: "The deal (full terms)", widget: text }
+      - { name: start, label: "Starts (YYYY-MM-DD)", widget: string, required: false }
+      - { name: end, label: "Ends (YYYY-MM-DD)", widget: string, required: false }
+      - { name: days, label: "Days it runs (Mon, Tue...)", widget: list, required: false }
+      - { name: code, label: "Promo code", widget: string, required: false }
+      - { name: addr, label: "Street address", widget: string, required: false }
+      - { name: phone, label: Phone, widget: string, required: false }
+      - { name: url, label: "Link to the deal", widget: string }
+      - { name: checked, label: "Checked on (YYYY-MM-DD)", widget: string, required: false }
+      - { name: mil, label: "Military deal", widget: boolean, required: false }
+
+  - name: datenight
+    label: Date night
+    label_singular: Date night stop
+    folder: content/cards/datenight
+    format: json
+    extension: json
+    create: false
+    delete: false
+    identifier_field: name
+    summary: "{{name}} · {{area}}"
+    sortable_fields: [name, area]
+    fields:
+      - { name: id, label: "Card ID (never changes)", widget: string, readonly: true }
+      - { name: name, label: Name, widget: string }
+      - { name: area, label: Area, widget: string, required: false }
+      - { name: addr, label: "Street address", widget: string, required: false }
+      - { name: pitch, label: "Why go", widget: text, required: false }
+      - { name: hrs, label: Hours, widget: string, required: false }
+      - { name: phone, label: Phone, widget: string, required: false }
+      - { name: url, label: "Their website", widget: string, required: false }
+      - { name: res, label: "Reservations", widget: string, required: false }
+      - { name: wear, label: "What to wear", widget: string, required: false }
+      - { name: cost2, label: "Cost for two ($)", widget: number, value_type: float, required: false }
+      - { name: tags, label: Tags, widget: list, required: false }
+
+  # T15, 10/01 — the moderation queue. A submission that arrives by email (the app's and the site's
+  # "Send us an event" open the sender's own mail app) is typed in here as pending. A second person
+  # sets it to approved, and `node claude/harness/import_events.js --queue --apply` turns every
+  # approved one into a card through the same checks a scanned card passes. Rejected ones stay here
+  # with their reason, so nobody asks twice.
+  - name: submissions
+    label: Submissions (moderation queue)
+    label_singular: Submission
+    folder: content/submissions
+    format: json
+    extension: json
+    create: true
+    delete: true
+    identifier_field: title
+    summary: "{{status}} · {{date}} · {{title}}"
+    sortable_fields: [status, date, title]
+    fields:
+      - { name: status, label: "Status", widget: select, options: [pending, approved, rejected], default: pending }
+      - { name: reason, label: "Why rejected (if it was)", widget: string, required: false }
+      - { name: title, label: "Event name", widget: string }
+      - { name: date, label: "Date (YYYY-MM-DD)", widget: string, pattern: ['^\d{4}-\d{2}-\d{2}$', "Use YYYY-MM-DD"] }
+      - { name: time, label: "Start time (6:30 PM)", widget: string, required: false }
+      - { name: venue, label: "Venue", widget: string }
+      - { name: address, label: "Street address with town and ZIP", widget: string }
+      - { name: inout, label: "Indoor or outdoor", widget: select, options: [Indoor, Outdoor] }
+      - { name: price, label: "Price: free, TBA, or the adult price as a number", widget: string }
+      - { name: kid_price, label: "Child price (number, optional)", widget: string, required: false }
+      - { name: audience, label: "Only for", widget: select, options: ["", adults, kids], required: false }
+      - { name: price_note, label: "Where the price came from", widget: string, required: false }
+      - { name: military_note, label: "Military price, or 'No military rate'", widget: string }
+      - { name: book_label, label: "Booking link name", widget: string, required: false }
+      - { name: book_url, label: "Booking link", widget: string, required: false }
+      - { name: source_label, label: "Source name", widget: string }
+      - { name: source_url, label: "Source link (the organiser's own page)", widget: string }
+      - { name: verified_on, label: "Day the source was read (YYYY-MM-DD)", widget: string }
+      - { name: blurb, label: "Two to five sentences about it", widget: text }
+      - { name: steps, label: "Three to six steps", widget: list }
+      - { name: tags, label: "Two or more tags (Family, Free, Outdoor...)", widget: list }
+      - { name: cat, label: "Category", widget: select, options: [event, music, art, movie, stem, nature, beach, town, iconic, coastal] }
+      - { name: icon, label: "One emoji", widget: string }
+      - { name: badge, label: "Short label, 18 characters or fewer", widget: string }
+      - { name: night, label: "Evening event", widget: boolean, required: false }
