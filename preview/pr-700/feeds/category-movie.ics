@@ -25,49 +25,8 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_suds_christmas_vacation_1124-2026-11-24@coastaleventures.com
-DTSTAMP:20261124T000000Z
-DTSTART;VALUE=DATE:20261124
-DTEND;VALUE=DATE:20261125
-SUMMARY:Christmas Vacation at Suds N Cinema
-LOCATION:Suds N Cinema\, 174 Miracle Strip Pkwy SE\, Fort Walton Beach\, FL
-  32548
-DESCRIPTION:Tuesday 11/24 · doors 5:45 PM\, movie 6:30 PM\n\nSuds N Cinema
-  shows National Lampoon's Christmas Vacation during Thanksgiving week\, wi
- th Clark Griswold and family on the big screen. Full restaurant service co
- mes to your seat during the movie\, so nobody has to cook or do dishes. Th
- e event page lists doors at 5:45 PM and the show at 6:30 PM\, and a Classi
- c Ticket is $5.\n\nPrice: from $5\n\nDetails: https://coastaleventures.com
- /events/ev-suds-christmas-vacation-1124.html
-URL:https://coastaleventures.com/events/ev-suds-christmas-vacation-1124.htm
- l
-CATEGORIES:Movies
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_fwb_library_family_movie_treasure_planet_1124-2026-11-24@coastaleven
- tures.com
-DTSTAMP:20261124T000000Z
-DTSTART;TZID=America/Chicago:20261124T103000
-DTEND;TZID=America/Chicago:20261124T120000
-SUMMARY:Family movie: Treasure Planet at Fort Walton Beach Library
-LOCATION:Fort Walton Beach Library\, 185 Miracle Strip Parkway SE\, Fort Wa
- lton Beach\, FL 32548
-DESCRIPTION:Tuesday 11/24 · 10:30 AM to 12:00 PM\n\nFort Walton Beach Libr
- ary shows the Disney film Treasure Planet (PG) in the Children's Story Roo
- m on Tuesday\, November 24. Kids get popcorn and coloring sheets while the
-  movie plays. The movie starts at 10:30 AM and the library says families c
- an join at any time.\n\nPrice: No published price\n\nDetails: https://coas
- taleventures.com/events/ev-fwb-library-family-movie-treasure-planet-1124.h
- tml
-URL:https://coastaleventures.com/events/ev-fwb-library-family-movie-treasur
- e-planet-1124.html
-CATEGORIES:Movies
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_fwb_library_family_movie_spirit_1125-2026-11-25@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261125T103000
 DTEND;TZID=America/Chicago:20261125T120000
 SUMMARY:Family movie: Spirit at Fort Walton Beach Library
@@ -87,7 +46,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_free_birds_movie_1125-2026-11-25@coastaleventures
  .com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261125T153000
 DTEND;TZID=America/Chicago:20261125T170000
 SUMMARY:Free Birds family movie at Valparaiso Library
@@ -105,7 +64,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-26@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261126T150000
 DTEND;TZID=America/Chicago:20261126T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -123,7 +82,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-03@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261203T150000
 DTEND;TZID=America/Chicago:20261203T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -142,7 +101,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_mobile_wheels_and_reels_christmas_pageant_1204-2026-12-04@coastaleve
  ntures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261204T180000
 DTEND;TZID=America/Chicago:20261204T220000
 SUMMARY:Wheels & Reels Drive-In Movies: The Best Christmas Pageant Ever
@@ -162,7 +121,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_exploreum_21_after_hours_gremlins_1205-2026-12-05@coastaleventures.c
  om
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261205T180000
 DTEND;TZID=America/Chicago:20261205T190000
 SUMMARY:21+ After Hours: Gremlins at the Exploreum
@@ -180,7 +139,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-10@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261210T150000
 DTEND;TZID=America/Chicago:20261210T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -198,7 +157,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_daphne_movie_night_in_the_park_1211-2026-12-11@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261211T160000
 DTEND;TZID=America/Chicago:20261211T200000
 SUMMARY:Movie Night in the Park in Daphne
@@ -217,7 +176,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_wharf_jingle_bell_movie_bash_1212-2026-12-12@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261212T110000
 DTEND;TZID=America/Chicago:20261212T120000
 SUMMARY:Jingle Bell Movie Bash at Portside on Main
@@ -238,7 +197,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_polar_express_1214-2026-12-14@coastaleventures.co
  m
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261214T153000
 DTEND;TZID=America/Chicago:20261214T163000
 SUMMARY:The Polar Express movie with cookies and cocoa at the Valparaiso Li
@@ -256,7 +215,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_navarre_throwback_deck_halls_1215-2026-12-15@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261215T160000
 DTEND;TZID=America/Chicago:20261215T170000
 SUMMARY:Throwback Movie Tuesday: Deck the Halls at Navarre Library
@@ -275,7 +234,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-17@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261217T150000
 DTEND;TZID=America/Chicago:20261217T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -293,7 +252,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_destin_commons_movie_home_alone_1218-2026-12-18@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261218T183000
 DTEND;TZID=America/Chicago:20261218T193000
 SUMMARY:Movie Night: Elf at Destin Commons
@@ -311,7 +270,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_milton_movie_night_1222-2026-12-22@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;VALUE=DATE:20261222
 DTEND;VALUE=DATE:20261230
 SUMMARY:Movie Night at Milton Library
@@ -328,7 +287,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_mary_esther_library_moana_0123-2027-01-23@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20270123T100000
 DTEND;TZID=America/Chicago:20270123T110000
 SUMMARY:Family Movie: Moana at the Mary Esther Library

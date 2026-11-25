@@ -1,19 +1,19 @@
 {
   "name": "Coastal Eventures events",
   "site": "https://coastaleventures.com/",
-  "generated": "2026-11-24",
+  "generated": "2026-11-25",
   "timezone": "America/Chicago",
   "window": {
-    "from": "2026-11-24",
-    "to": "2027-03-24"
+    "from": "2026-11-25",
+    "to": "2027-03-25"
   },
-  "count": 3116,
+  "count": 3076,
   "note": "Event details are compiled from the venue or organizer pages named in each record's sources. Check the venue before you travel. Weather data elsewhere on the site is Open-Meteo, CC BY 4.0.",
   "events": [
     {
-      "id": "ev_steves_farm_adventure_zone_0929-2026-11-24",
+      "id": "ev_steves_farm_adventure_zone_0929-2026-11-25",
       "title": "Adventure Zone at Steve's Fishing and Adventure Farm",
-      "date": "2026-11-24",
+      "date": "2026-11-25",
       "endDate": "2026-12-12",
       "startTime": null,
       "endTime": null,
@@ -45,35 +45,9 @@
       "checkedOn": "2026-11-18"
     },
     {
-      "id": "ev_suds_christmas_vacation_1124-2026-11-24",
-      "title": "Christmas Vacation at Suds N Cinema",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Tuesday 11/24 · doors 5:45 PM, movie 6:30 PM",
-      "venue": "Suds N Cinema",
-      "address": "174 Miracle Strip Pkwy SE, Fort Walton Beach, FL 32548",
-      "category": "movie",
-      "categoryLabel": "Movies",
-      "price": {
-        "kind": "priced",
-        "label": "from $5"
-      },
-      "summary": "Suds N Cinema shows National Lampoon's Christmas Vacation during Thanksgiving week, with Clark Griswold and family on the big screen. Full restaurant service comes to your seat during the movie, so nobody has to cook or do dishes. The event page lists doors at 5:45 PM and the show at 6:30 PM, and a Classic Ticket is $5.",
-      "url": "https://coastaleventures.com/events/ev-suds-christmas-vacation-1124.html",
-      "sources": [
-        {
-          "note": "Suds N Cinema: Christmas Vacation event page, read for the Tuesday 11/24 schedule (doors 5:45 PM, show 6:30 PM) and the $5 Classic Ticket",
-          "url": "https://www.sudsncinema.com/event-details/christmas-vacation"
-        }
-      ],
-      "checkedOn": "2026-11-11"
-    },
-    {
-      "id": "ev_wharf_ice_rink_1113-2026-11-24",
+      "id": "ev_wharf_ice_rink_1113-2026-11-25",
       "title": "Ice skating rink presented by Pepsi at The Wharf",
-      "date": "2026-11-24",
+      "date": "2026-11-25",
       "endDate": "2027-01-18",
       "startTime": null,
       "endTime": null,
@@ -105,9 +79,9 @@
       "checkedOn": "2026-11-04"
     },
     {
-      "id": "ev_jazz_art_writers_south_festival_youth_exhibi_0801-2026-11-24",
+      "id": "ev_jazz_art_writers_south_festival_youth_exhibi_0801-2026-11-25",
       "title": "Jazz Art Writers South Festival Youth Exhibit 2026",
-      "date": "2026-11-24",
+      "date": "2026-11-25",
       "endDate": "2026-12-15",
       "startTime": null,
       "endTime": null,
@@ -131,9 +105,9 @@
       "checkedOn": "2026-10-28"
     },
     {
-      "id": "ev_kids_night_out_mess_hall_1120-2026-11-24",
+      "id": "ev_kids_night_out_mess_hall_1120-2026-11-25",
       "title": "Kids Night Out at the Pensacola MESS Hall",
-      "date": "2026-11-24",
+      "date": "2026-11-25",
       "endDate": "2026-12-04",
       "startTime": null,
       "endTime": null,
@@ -157,9 +131,35 @@
       "checkedOn": "2026-10-28"
     },
     {
-      "id": "ev_history_museum_mobile_gilded_age_1009-2026-11-24",
+      "id": "ev_make_your_own_glass_hot_glass_by_a_1007-2026-11-25",
+      "title": "Make Your Own Glass (hot glass, by appointment)",
+      "date": "2026-11-25",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "when": "By appointment: Wednesdays 5 PM-9 PM, Saturdays 8 AM-11 AM",
+      "venue": "First City Art Center",
+      "address": "1060 N Guillemard St, Pensacola, FL 32501",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "priced",
+        "label": "from $85"
+      },
+      "summary": "Make Your Own Glass is a hands-on hot glass session at First City Art Center in Pensacola, where each participant makes a piece with a glassblower. It's for ages 8 and up including adults, by appointment on Wednesdays from 5-9 PM and Saturdays from 8-11 AM. The finished piece cools in an annealing oven and is picked up the following week. Standard pieces cost $85, and premium pieces such as a pumpkin, ornament, cup or bowl cost $110-$140.",
+      "url": "https://coastaleventures.com/events/ev-make-your-own-glass-hot-glass-by-a-1007.html",
+      "sources": [
+        {
+          "note": "FCAC product page: Wed 5-9 PM and Sat 8-11 AM, ages 8+, $85/$110-$140",
+          "url": "https://firstcityart.org/product/make-your-own-glass/"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_history_museum_mobile_gilded_age_1009-2026-11-25",
       "title": "Mobile in the Gilded Age exhibition at the History Museum of Mobile",
-      "date": "2026-11-24",
+      "date": "2026-11-25",
       "endDate": "2027-06-06",
       "startTime": null,
       "endTime": null,
@@ -187,9 +187,9 @@
       "checkedOn": "2026-10-28"
     },
     {
-      "id": "ev_mpl_mobile_music_legends_exhibit_moorer_1101-2026-11-24",
+      "id": "ev_mpl_mobile_music_legends_exhibit_moorer_1101-2026-11-25",
       "title": "Mobile Music Legends exhibit at Moorer Branch Library",
-      "date": "2026-11-24",
+      "date": "2026-11-25",
       "endDate": "2026-12-15",
       "startTime": null,
       "endTime": null,
@@ -213,9 +213,9 @@
       "checkedOn": "2026-10-28"
     },
     {
-      "id": "ev_psc_moonlight_garden_exhibition_1118-2026-11-24",
+      "id": "ev_psc_moonlight_garden_exhibition_1118-2026-11-25",
       "title": "Moonlight Garden photography exhibition at Pensacola State College",
-      "date": "2026-11-24",
+      "date": "2026-11-25",
       "endDate": "2026-12-11",
       "startTime": null,
       "endTime": null,
@@ -239,9 +239,9 @@
       "checkedOn": "2026-11-18"
     },
     {
-      "id": "ev_psc_moonlight_garden_photography_1105-2026-11-24",
+      "id": "ev_psc_moonlight_garden_photography_1105-2026-11-25",
       "title": "Moonlight Garden photography exhibition by Mark Alan Francis",
-      "date": "2026-11-24",
+      "date": "2026-11-25",
       "endDate": "2026-12-11",
       "startTime": null,
       "endTime": null,
@@ -267,2490 +267,6 @@
         }
       ],
       "checkedOn": "2026-11-11"
-    },
-    {
-      "id": "ev_wharf_santa_photos_1113-2026-11-24",
-      "title": "Photos with Santa at The Wharf",
-      "date": "2026-11-24",
-      "endDate": "2026-12-24",
-      "startTime": null,
-      "endTime": null,
-      "when": "Fridays to Sundays 11/13 to 12/24 · Fri 3 PM to 6 PM, Sat 10 AM to 6 PM, Sun 12 PM to 6 PM",
-      "venue": "The Wharf",
-      "address": "23101 Canal Road, Orange Beach, AL 36561",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The Wharf in Orange Beach sets up Photos with Santa on Fridays through Sundays from November 13 to December 24. Friday hours run 3:00 PM to 6:00 PM, Saturday 10:00 AM to 6:00 PM and Sunday 12:00 PM to 6:00 PM. The Wharf sells various price packages, and the ice rink sits next door at the same property.",
-      "url": "https://coastaleventures.com/events/ev-wharf-santa-photos-1113.html",
-      "sources": [
-        {
-          "note": "The Wharf news page, read for Photos with Santa open Fridays to Sundays, November 13 to December 24, various price packages",
-          "url": "https://alwharf.com/news/skate-the-coast-tips-tricks-for-ice-skating-at-the-wharf"
-        },
-        {
-          "note": "The Wharf upcoming events calendar for November 2026, read for the Photos with Santa hours on each Friday, Saturday and Sunday",
-          "url": "https://alwharf.com/events/2026/11"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_psc_holiday_art_market_1120-2026-11-24",
-      "title": "PSC Annual Holiday Art Market",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Friday 11/20 · 12:00 PM to 6:00 PM · Monday 11/23 and Tuesday 11/24 · 11:00 AM to 1:00 PM",
-      "venue": "Switzer Gallery, Pensacola State College",
-      "address": "1000 College Blvd, Pensacola, FL 32504",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Pensacola State College holds its annual Holiday Art Market in the Switzer Gallery in Building 15. It opens Friday afternoon and again for two short midday sessions on Monday and Tuesday of Thanksgiving week. PSC's pages give no description or price, and the campus line is (850) 484-2544.",
-      "url": "https://coastaleventures.com/events/ev-psc-holiday-art-market-1120.html",
-      "sources": [
-        {
-          "note": "PSC event page: \"Monday, November 23, 2026, 11:00 AM to 1:00 PM, Switzer Gallery, Bldg. 15\"",
-          "url": "https://pensacolastate.edu/psc-events/annual-holiday-art-market/"
-        },
-        {
-          "note": "PSC November calendar: Friday, November 20, 2026, 12:00 to 6:00 PM and Tuesday, November 24, 11:00 AM to 1:00 PM",
-          "url": "https://www.pensacolastate.edu/news/calendar/?psc_month=11&psc_year=2026"
-        }
-      ],
-      "checkedOn": "2026-10-23"
-    },
-    {
-      "id": "ev_bay_center_public_skate_nov_1101-2026-11-24",
-      "title": "Public Ice Skating at the Pensacola Bay Center, November sessions",
-      "date": "2026-11-24",
-      "endDate": "2026-11-25",
-      "startTime": null,
-      "endTime": null,
-      "when": "Nov 1 to Nov 25 · one hour sessions, see dates",
-      "venue": "Pensacola Bay Center",
-      "address": "201 E. Gregory St., Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $15"
-      },
-      "summary": "The Pensacola Bay Center opens its ice for one-hour public skate sessions. The November sessions run Sunday 11/1 at 6:30 PM, Saturday 11/7 and Sunday 11/8 at 1:30, 3:00 and 4:30 PM, Friday 11/13 and Saturday 11/14 at 9:30 PM, Sunday 11/15 at 1:30, 3:00 and 4:30 PM, and Wednesday 11/25 at 9:30 PM. The Bay Center states that all sessions are subject to change.",
-      "url": "https://coastaleventures.com/events/ev-bay-center-public-skate-nov-1101.html",
-      "sources": [
-        {
-          "note": "Pensacola Bay Center public skate page: November session dates and times, $18 with rental, $15 own skates, group rate and season passes",
-          "url": "https://www.pensacolabaycenter.com/events/detail/public-skate-2"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_destin_commons_santas_letters_1120-2026-11-24",
-      "title": "Santa's Letters to the North Pole mailbox at Destin Commons",
-      "date": "2026-11-24",
-      "endDate": "2026-12-13",
-      "startTime": null,
-      "endTime": null,
-      "when": "Friday 11/20 · open during center hours · through Sunday 12/13",
-      "venue": "Destin Commons",
-      "address": "4100 Legendary Drive, Destin, FL 32541",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Children can write a letter to Santa and drop it in the North Pole mailbox on South Street, in front of Chipotle. Every child who submits a letter is entered to win a family staycation package. The mailbox is up from November 20 through December 13.",
-      "url": "https://coastaleventures.com/events/ev-destin-commons-santas-letters-1120.html",
-      "sources": [
-        {
-          "note": "Destin Commons: Santa's Letters to the North Pole page, read for the dates, mailbox location and staycation drawing",
-          "url": "https://destincommons.com/happenings-events/santas-letters-to-the-north-pole/"
-        },
-        {
-          "note": "Destin Commons: Happenings page listing the event",
-          "url": "https://destincommons.com/enjoy-entertainment/happenings/"
-        }
-      ],
-      "checkedOn": "2026-11-11"
-    },
-    {
-      "id": "ev_foley_library_story_time_craft_1031-2026-11-24",
-      "title": "Story Time and Craft at Foley Community Library",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "Tuesdays 10:00 AM and 5:30 PM · Saturdays 10:00 AM",
-      "venue": "Foley Community Library",
-      "address": "230 East Orange Ave, Foley, AL 36535",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The Foley Community Library holds a story time with a craft every Tuesday and Saturday from August through May. Tuesday sessions run at 10:00 AM and 5:30 PM, and the Saturday session runs at 10:00 AM. No age limit or price is posted.",
-      "url": "https://coastaleventures.com/events/ev-foley-library-story-time-craft-1031.html",
-      "sources": [
-        {
-          "note": "Foley Community Library: children's page, read for the schedule, times, ages and registration wording",
-          "url": "https://www.foleylibrary.org/children"
-        },
-        {
-          "note": "Foley Community Library: calendar entry for Halloween Story Time and Craft on Saturday October 31, 10:00 to 11:00 AM",
-          "url": "https://foleylibrary.librarycalendar.com/event/saturday-story-time-craft-20632"
-        }
-      ],
-      "checkedOn": "2026-11-01"
-    },
-    {
-      "id": "ev_blue_morning_view_within_1025-2026-11-24",
-      "title": "The View Within exhibition at Blue Morning Gallery",
-      "date": "2026-11-24",
-      "endDate": "2026-11-28",
-      "startTime": null,
-      "endTime": null,
-      "when": "Sunday 10/25 to Saturday 11/28 · reception Friday 11/6 at 4:30",
-      "venue": "Blue Morning Gallery",
-      "address": "21 S. Palafox Place, Pensacola, FL 32502",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Blue Morning Gallery in downtown Pensacola shows The View Within, an exhibition of colorful abstract paintings by the featured artist, from October 25 through November 28. A reception on Friday November 6 at 4:30 lets visitors meet the artist, hear live music and enjoy refreshments and conversation.",
-      "url": "https://coastaleventures.com/events/ev-blue-morning-view-within-1025.html",
-      "sources": [
-        {
-          "note": "Blue Morning Gallery: news page, read for The View Within dates, the November 6 reception and the artist description",
-          "url": "https://bluemorninggallery.com/news/"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_foley_art_center_trim_a_tree_1113-2026-11-24",
-      "title": "Trim-a-Tree at the Foley Art Center",
-      "date": "2026-11-24",
-      "endDate": "2026-12-23",
-      "startTime": null,
-      "endTime": null,
-      "when": "Friday 11/13 to Wednesday 12/23 · daily (hours to confirm)",
-      "venue": "Foley Art Center",
-      "address": "211 N McKenzie St, Foley, AL 36535",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Since 1967 the Foley Art Center has opened its Trim-a-Tree holiday show on the second Friday in November, and it runs through December 23. More than 125 local artists and craftspeople sell pottery, woodcarvings, florals, jewelry, blown glass, textiles, soy candles, wooden toys and ornaments on consignment. Admission is free.",
-      "url": "https://coastaleventures.com/events/ev-foley-art-center-trim-a-tree-1113.html",
-      "sources": [
-        {
-          "note": "gulfshores.com: “Since 1967, the Foley Art Center has presented “Trim-a-Tree,” which always begins on the second Friday in November and ends on December 23.”",
-          "url": "https://www.gulfshores.com/events-calendar/annual-events-and-festivals/annual-trim-a-tree/"
-        },
-        {
-          "note": "gulfshores.com: “Over 125 local fine Artists and craftsmen's work is for sale on consignment.”",
-          "url": "https://www.gulfshores.com/events-calendar/annual-events-and-festivals/annual-trim-a-tree/"
-        },
-        {
-          "note": "gulfshores.com: “Admission:”",
-          "url": "https://www.gulfshores.com/events-calendar/annual-events-and-festivals/annual-trim-a-tree/"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_pensacola_state_wanda_sullivan_bloem-2026-11-24",
-      "title": "Wanda Sullivan: Bloem Exhibition",
-      "date": "2026-11-24",
-      "endDate": "2026-12-11",
-      "startTime": null,
-      "endTime": null,
-      "when": "Now through December 11",
-      "venue": "Anna Lamar Switzer Center for Visual Arts",
-      "address": "1000 College Blvd. Bldg. 15, Pensacola, FL 32504",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "A gallery exhibition by artist Wanda Sullivan runs at Pensacola State College's visual arts center through mid-December. The center's own site does not publish an admission price.",
-      "url": "https://coastaleventures.com/events/ev-pensacola-state-wanda-sullivan-bloem.html",
-      "sources": [
-        {
-          "note": "Pensacola State College's own visual arts site for the exhibition dates and venue",
-          "url": "https://visualarts.pensacolastate.edu"
-        }
-      ],
-      "checkedOn": "2026-09-24"
-    },
-    {
-      "id": "ev_cornhole_open_play_0901-2026-11-24",
-      "title": "Cornhole Open Play",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "08:30",
-      "endTime": "16:30",
-      "when": "8:30 AM to 4:30 PM",
-      "venue": "Niceville Senior Center",
-      "address": "201 Campbell Drive, Niceville, FL 32578",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $5"
-      },
-      "summary": "Members toss bags at the boards during open-play cornhole at the Niceville Senior Center. It runs casually throughout the center's regular weekday hours. City of Niceville residents play free, and everyone else pays a $5 day rate.",
-      "url": "https://coastaleventures.com/events/ev-cornhole-open-play-0901.html",
-      "sources": [
-        {
-          "note": "cityofniceville.org: the admission, current schedule and street address",
-          "url": "https://www.cityofniceville.org/463/Senior-Center"
-        },
-        {
-          "note": "cityofniceville.org: the admission and current schedule",
-          "url": "https://www.cityofniceville.org/DocumentCenter/View/1153/Niceville-Senior-Center-Member-Registration-Form"
-        },
-        {
-          "note": "cityofniceville.org: the organizer's own page, read for the admission and current schedule",
-          "url": "https://cityofniceville.org/calendar.aspx?day=1&month=9&view=list&year=2026"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_exercise_room_0901-2026-11-24",
-      "title": "Exercise Room",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "08:30",
-      "endTime": "16:30",
-      "when": "8:30 AM to 4:30 PM",
-      "venue": "Niceville Senior Center",
-      "address": "201 Campbell Drive, Niceville, FL 32578",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $5"
-      },
-      "summary": "The Niceville Senior Center's exercise room stays open for members to work through strength, cardio, and flexibility routines on their own schedule. Equipment includes two recumbent bikes, a treadmill, free weights, a stability ball, mats, and stretch bands. City of Niceville residents get free access, and everyone else pays a $5 day rate.",
-      "url": "https://coastaleventures.com/events/ev-exercise-room-0901.html",
-      "sources": [
-        {
-          "note": "cityofniceville.org: the admission, current schedule and street address",
-          "url": "https://www.cityofniceville.org/463/Senior-Center"
-        },
-        {
-          "note": "cityofniceville.org: the admission and current schedule",
-          "url": "https://www.cityofniceville.org/DocumentCenter/View/1153/Niceville-Senior-Center-Member-Registration-Form"
-        },
-        {
-          "note": "cityofniceville.org: the organizer's own page, read for the admission and current schedule",
-          "url": "https://cityofniceville.org/calendar.aspx?day=1&month=9&view=list&year=2026"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_putting_green_open_play_0901-2026-11-24",
-      "title": "Putting Green Open Play",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "08:30",
-      "endTime": "16:30",
-      "when": "8:30 AM to 4:30 PM",
-      "venue": "Niceville Senior Center",
-      "address": "201 Campbell Drive, Niceville, FL 32578",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $5"
-      },
-      "summary": "Members check out putters and balls at the front desk to practice on the Niceville Senior Center's putting green. It is casual, and you can work on your short game alone or play a round with friends. City of Niceville residents get free access, and everyone else pays a $5 day rate.",
-      "url": "https://coastaleventures.com/events/ev-putting-green-open-play-0901.html",
-      "sources": [
-        {
-          "note": "cityofniceville.org: the admission, current schedule and street address",
-          "url": "https://www.cityofniceville.org/463/Senior-Center"
-        },
-        {
-          "note": "cityofniceville.org: the admission and current schedule",
-          "url": "https://www.cityofniceville.org/DocumentCenter/View/1153/Niceville-Senior-Center-Member-Registration-Form"
-        },
-        {
-          "note": "cityofniceville.org: the organizer's own page, read for the admission and current schedule",
-          "url": "https://cityofniceville.org/calendar.aspx?day=1&month=9&view=list&year=2026"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_stretch_and_flow_yoga_0901-2026-11-24",
-      "title": "Stretch & Flow Yoga",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "08:30",
-      "endTime": "09:30",
-      "when": "Tuesdays · 8:30 AM to 9:30 AM",
-      "venue": "Niceville Senior Center",
-      "address": "201 Campbell Drive, Niceville, FL 32578",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $5"
-      },
-      "summary": "This Vinyasa-style yoga class blends longer intentional holds with gentle flow to build flexibility and release tension. It meets for an hour first thing in the morning at the Niceville Senior Center. The center requests a $3 donation for the class, on top of its usual access rates.",
-      "url": "https://coastaleventures.com/events/ev-stretch-and-flow-yoga-0901.html",
-      "sources": [
-        {
-          "note": "cityofniceville.org: the admission, current schedule and street address",
-          "url": "https://www.cityofniceville.org/463/Senior-Center"
-        },
-        {
-          "note": "cityofniceville.org: the admission and current schedule",
-          "url": "https://www.cityofniceville.org/DocumentCenter/View/1153/Niceville-Senior-Center-Member-Registration-Form"
-        },
-        {
-          "note": "cityofniceville.org: the organizer's own page, read for the admission and current schedule",
-          "url": "https://cityofniceville.org/calendar.aspx?day=1&month=9&view=list&year=2026"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_table_tennis_open_play_0901-2026-11-24",
-      "title": "Table Tennis Open Play",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "08:30",
-      "endTime": "16:30",
-      "when": "8:30 AM to 4:30 PM",
-      "venue": "Niceville Senior Center",
-      "address": "201 Campbell Drive, Niceville, FL 32578",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Niceville Senior Center's table tennis room is open for casual, drop-in play with no experience required. The city describes it as an active, social way to spend the morning rather than a competitive league. It shares the Tuesday 8:30 AM to 4:30 PM window with several other open-play programs at the center, and members age 55 and up are the intended audience.",
-      "url": "https://coastaleventures.com/events/ev-table-tennis-open-play-0901.html",
-      "sources": [
-        {
-          "note": "nicevillefl.gov: the organizer's own page, read for the admission and current schedule",
-          "url": "https://www.nicevillefl.gov/Calendar.aspx?EID=35841&calType=0&day=1&month=9&year=2026"
-        },
-        {
-          "note": "nicevillefl.gov: the admission and current schedule",
-          "url": "https://www.nicevillefl.gov/463/Senior-Center"
-        },
-        {
-          "note": "nicevillefl.gov: the current schedule",
-          "url": "https://www.nicevillefl.gov/calendar.aspx?CID=0&month=9&view=month&year=2026"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_destin_fall_break_camp_1123-2026-11-24",
-      "title": "Half-day fall break camp at the Destin Community Center",
-      "date": "2026-11-24",
-      "endDate": "2026-11-25",
-      "startTime": "09:00",
-      "endTime": "13:00",
-      "when": "Monday 11/23 to Wednesday 11/25 · 9:00 AM to 1:00 PM",
-      "venue": "Destin Community Center",
-      "address": "101 Stahlman Ave, Destin, FL 32541",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $80"
-      },
-      "summary": "The City of Destin runs a three-day half-day camp for children ages 5 to 12 during the Thanksgiving school break. Camp meets Monday through Wednesday from 9:00 AM to 1:00 PM at the Destin Community Center. The Destin Chamber's repost of the city notice lists games, crafts, outdoor time, snacks and lunch each day. Pre-registration is required and the city says space is limited.",
-      "url": "https://coastaleventures.com/events/ev-destin-fall-break-camp-1123.html",
-      "sources": [
-        {
-          "note": "City of Destin recreation catalog: Holiday Camps, read for Half-Day Fall Break 2026, ages 5 to 12, Monday to Wednesday 11/23 to 11/25, 9am to 1pm, $65, pre-registration required",
-          "url": "https://secure.rec1.com/FL/destin-fl/catalog"
-        },
-        {
-          "note": "Destin Chamber repost of the city notice, read for the $80 non-resident rate, 850-654-5184 and the day's activities",
-          "url": "https://business.destinchamber.com/events/details/fall-break-half-day-camp-destin-community-center-61161"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_namaste_by_the_bay_waterfront_park_1107-2026-11-24",
-      "title": "Namaste by the Bay free community yoga at Waterfront Park",
-      "date": "2026-11-24",
-      "endDate": "2026-11-28",
-      "startTime": "09:00",
-      "endTime": null,
-      "when": "Saturday 9:00 AM",
-      "venue": "Orange Beach Waterfront Park",
-      "address": "26425 Canal Road, Orange Beach, AL 36561",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Orange Beach Parks and Recreation runs free community yoga by the water on Saturday mornings from 9:00 AM to 10:00 AM, with a different instructor each week. All ages and levels are welcome. The November sessions fall on 11/7, 11/14, 11/21 and 11/28.",
-      "url": "https://coastaleventures.com/events/ev-namaste-by-the-bay-waterfront-park-1107.html",
-      "sources": [
-        {
-          "note": "City of Orange Beach calendar: Namaste by the Bay page, read for time, place, instructors and Saturday dates",
-          "url": "https://www.orangebeachal.gov/Calendar.aspx?EID=11262&month=11&year=2026&day=4&calType=0"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_party_bridge_0901-2026-11-24",
-      "title": "Party Bridge",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "09:00",
-      "endTime": "13:00",
-      "when": "Tuesdays · 9:00 AM to 1:00 PM",
-      "venue": "Niceville Senior Center",
-      "address": "201 Campbell Drive, Niceville, FL 32578",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "This game at the Niceville Senior Center is built for seasoned players rather than beginners. Players call the Senior Center's bridge organizer to reserve a seat, so spots are not first come, first served. It runs Tuesday mornings into early afternoon.",
-      "url": "https://coastaleventures.com/events/ev-party-bridge-0901.html",
-      "sources": [
-        {
-          "note": "nicevillefl.gov: the organizer's own page, read for the admission and current schedule",
-          "url": "https://www.nicevillefl.gov/Calendar.aspx?EID=41589&calType=0&day=1&month=9&year=2026"
-        },
-        {
-          "note": "nicevillefl.gov: the admission and current schedule",
-          "url": "https://www.nicevillefl.gov/463/Senior-Center"
-        },
-        {
-          "note": "nicevillefl.gov: the current schedule",
-          "url": "https://www.nicevillefl.gov/calendar.aspx?CID=0&month=9&view=month&year=2026"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_teen_quiet_study_day_0908-2026-11-24",
-      "title": "Teen Quiet / Study Day",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "09:00",
-      "endTime": "18:00",
-      "when": "Tuesdays · 9:00 AM to 6:00 PM · through 11/24",
-      "venue": "Niceville Public Library, Teen Space",
-      "address": "206 Partin Dr N, Niceville, FL 32578",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "The Niceville Public Library sets aside its Teen Space as a quiet study day, open from 9 AM to 6 PM. Admission is free, and the room is meant for teens who need a place to read, work or study without the usual noise. The city calendar lists it every Tuesday through November 24.",
-      "url": "https://coastaleventures.com/events/ev-teen-quiet-study-day-0908.html",
-      "sources": [
-        {
-          "note": "cityofniceville.org: the organizer's own page, read for the admission",
-          "url": "https://cityofniceville.org/calendar.aspx?CID=0&month=9&view=list&year=2026"
-        },
-        {
-          "note": "nicevillefl.gov: the city's own event page, read for the Tuesday schedule through November 24",
-          "url": "https://www.nicevillefl.gov/Calendar.aspx?EID=42069"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_youth_art_camp_fall_break_first_ci_1123-2026-11-24",
-      "title": "Youth Art Camp: Fall Break (First City Art Center)",
-      "date": "2026-11-24",
-      "endDate": "2026-11-25",
-      "startTime": "09:00",
-      "endTime": null,
-      "when": "Monday 11/23 to Wednesday 11/25 · 9:00 AM",
-      "venue": "First City Art Center, Youth Art Building (Building #6, De Soto St parking)",
-      "address": "1060 N. Guillemard Street, Pensacola, FL 32501",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $50"
-      },
-      "summary": "The Youth Art Camp for Fall Break is a three-day Thanksgiving-week art camp for ages 5-12 at First City Art Center in Pensacola. It meets in the Youth Art Building, Monday 11/23 through Wednesday 11/25. Half day (9 AM-12 PM) is $50, and full day (9 AM-4 PM) is $80 for ages 6-12, with a member discount at checkout.",
-      "url": "https://coastaleventures.com/events/ev-youth-art-camp-fall-break-first-ci-1123.html",
-      "sources": [
-        {
-          "note": "Fall Break camp Nov 23-25; prices",
-          "url": "https://firstcityart.org/education/youth-art-camps/"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_chair_yoga_0901-2026-11-24",
-      "title": "Chair Yoga",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "09:45",
-      "endTime": "10:45",
-      "when": "9:45 AM to 10:45 AM",
-      "venue": "Niceville Senior Center",
-      "address": "201 Campbell Drive, Niceville, FL 32578",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $3"
-      },
-      "summary": "This Chair Yoga class at the Niceville Senior Center mixes seated poses with supported standing work. It aims at posture, flexibility, core strength, joint mobility, balance, stability and stress reduction. It asks a $3 donation and repeats every Tuesday and Thursday morning, for members age 55 and up.",
-      "url": "https://coastaleventures.com/events/ev-chair-yoga-0901.html",
-      "sources": [
-        {
-          "note": "nicevillefl.gov: the organizer's own page, read for the admission and current schedule",
-          "url": "https://www.nicevillefl.gov/Calendar.aspx?EID=38253&calType=0&day=1&month=9&year=2026"
-        },
-        {
-          "note": "nicevillefl.gov: the admission and current schedule",
-          "url": "https://www.nicevillefl.gov/463/Senior-Center"
-        },
-        {
-          "note": "nicevillefl.gov: the current schedule",
-          "url": "https://www.nicevillefl.gov/calendar.aspx?CID=0&month=9&view=month&year=2026"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_twist_fwb_christmas_squishy_1124-2026-11-24",
-      "title": "All ages Christmas Squishy painting class at Painting with a Twist",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "10:00",
-      "endTime": null,
-      "when": "Tuesday 11/24 · 10:00 AM",
-      "venue": "Painting with a Twist, Fort Walton Beach",
-      "address": "255 Miracle Strip Pkwy SE, Suite B-8, Fort Walton Beach, FL 32548",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $32"
-      },
-      "summary": "Painting with a Twist in Fort Walton Beach holds a two hour all ages Christmas Squishy canvas class on Tuesday morning, a good fit for the school break week. Families pick an 11x14 or a 16x20 canvas. Parents stay with children for the whole class, and no alcohol is allowed.",
-      "url": "https://coastaleventures.com/events/ev-twist-fwb-christmas-squishy-1124.html",
-      "sources": [
-        {
-          "note": "Painting with a Twist event page for Christmas Squishy, read for date, 10:00 AM to 12:00 PM time, canvas prices, address and all ages rules",
-          "url": "https://www.paintingwithatwist.com/studio/fort-walton-beach/event/4417647/"
-        },
-        {
-          "note": "Painting with a Twist Fort Walton Beach calendar listing the class",
-          "url": "https://www.paintingwithatwist.com/studio/fort-walton-beach/calendar/"
-        }
-      ],
-      "checkedOn": "2026-11-11"
-    },
-    {
-      "id": "ev_mma_aminah_robinson_journeys_home_0109-2026-11-24",
-      "title": "Aminah Robinson: Journeys Home at the Mobile Museum of Art",
-      "date": "2026-11-24",
-      "endDate": "2027-01-09",
-      "startTime": "10:00",
-      "endTime": "17:00",
-      "when": "Tuesday to Saturday · 10:00 AM to 5:00 PM · through 1/9",
-      "venue": "Mobile Museum of Art",
-      "address": "4850 Museum Drive, Mobile, AL 36608",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $8"
-      },
-      "summary": "Aminah Robinson: Journeys Home is a special exhibition at the Mobile Museum of Art that draws on the artist's historical research, folklore and personal narrative. The museum describes it as a visual memoir of her life and a tableau of the African American experience. It stays open through January 9, 2027.",
-      "url": "https://coastaleventures.com/events/ev-mma-aminah-robinson-journeys-home-0109.html",
-      "sources": [
-        {
-          "note": "Mobile Museum of Art home page, read for the exhibition description and closing date",
-          "url": "https://mobilemuseumofart.com/"
-        },
-        {
-          "note": "Mobile Museum of Art visit page, read for hours, address and general admission prices",
-          "url": "https://www.mobilemuseumofart.com/visit/"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_gsp_fall_craft_for_kids_1124-2026-11-24",
-      "title": "Fall Craft for Kids at Gulf State Park",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "10:00",
-      "endTime": null,
-      "when": "Tuesday 11/24 · 10:00 AM",
-      "venue": "Gulf State Park Nature Center",
-      "address": "22120 Campground Road, Gulf Shores, AL 36542",
-      "category": "nature",
-      "categoryLabel": "Nature and outdoors",
-      "price": {
-        "kind": "priced",
-        "label": "from $5"
-      },
-      "summary": "Gulf State Park naturalists lead a fall craft program for kids at the Nature Center. Children make crafts from natural and artificial materials, and they can follow the staff examples or invent their own. Parents must stay but do not need to register. The page showed 14 tickets left when it was read.",
-      "url": "https://coastaleventures.com/events/ev-gsp-fall-craft-for-kids-1124.html",
-      "sources": [
-        {
-          "note": "Alabama State Parks registration page for Fall Craft for Kids, read for the November 24 10:00 AM time, $5 fee, location, registration rule and tickets left",
-          "url": "https://reserve.alapark.com/register/kids-fall-craft"
-        }
-      ],
-      "checkedOn": "2026-11-11"
-    },
-    {
-      "id": "ev_ecsc_fall_for_all_1123-2026-11-24",
-      "title": "Fall for All fall break days at Emerald Coast Science Center",
-      "date": "2026-11-24",
-      "endDate": "2026-11-27",
-      "startTime": "10:00",
-      "endTime": "15:00",
-      "when": "Mon 11/23, Tue 11/24, Wed 11/25 and Fri 11/27 · 10:00 AM to 3:00 PM",
-      "venue": "Emerald Coast Science Center",
-      "address": "31 Memorial Pkwy SW, Fort Walton Beach, FL 32548",
-      "category": "stem",
-      "categoryLabel": "STEM and learning",
-      "price": {
-        "kind": "priced",
-        "label": "from $15"
-      },
-      "summary": "The science center runs a fall break program on four days, with new activities each day. Kids make a glowing pumpkin squishy circuit, a corn snake maze, pumpkin slime or a pumpkin chemistry experiment, depending on the day. A Creature Feature with the animal ambassadors and sciPad fall games run alongside. The museum is closed Thanksgiving Day.",
-      "url": "https://coastaleventures.com/events/ev-ecsc-fall-for-all-1123.html",
-      "sources": [
-        {
-          "note": "Emerald Coast Science Center: Fall for All November 23 page, read for $15 admission, hours and the Autumn Adventures workshop",
-          "url": "https://www.ecscience.org/events-1/fall-for-all-november-23-3"
-        },
-        {
-          "note": "Emerald Coast Science Center: Fall for All November 24 page, read for the corn snake maze and schedule",
-          "url": "https://www.ecscience.org/events-1/fall-for-all-november-24-3"
-        },
-        {
-          "note": "Emerald Coast Science Center: Fall for All November 25 page, read for the pumpkin slime workshop",
-          "url": "https://www.ecscience.org/events-1/fall-for-all-november-25-3"
-        },
-        {
-          "note": "Emerald Coast Science Center: Fall for All November 27 page, read for the pumpkin chemistry demonstration",
-          "url": "https://www.ecscience.org/events-1/fall-for-all-november-27-1"
-        },
-        {
-          "note": "Emerald Coast Science Center: hours and pricing page, read for the closure on Thanksgiving Day and the free under 3 rate",
-          "url": "https://ecscience.org/admission-info"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_mobile_museum_gateway_exhibition_0901-2026-11-24",
-      "title": "Gateway: From Graffiti to Gallery at the Mobile Museum of Art",
-      "date": "2026-11-24",
-      "endDate": "2027-09-01",
-      "startTime": "10:00",
-      "endTime": "17:00",
-      "when": "Tuesday to Saturday · 10:00 AM to 5:00 PM, through 9/1/2027",
-      "venue": "Mobile Museum of Art",
-      "address": "4850 Museum Dr, Mobile, AL 36608",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $8"
-      },
-      "summary": "The Mobile Museum of Art traces how artists who started with graffiti in New York's subways moved into galleries, with work by Basquiat, Haring, Scharf, KAWS and Banksy from the Masterworks Foundation collection. The show runs a full year, Tuesday through Saturday. Mobile County residents get in free on Thursdays.",
-      "url": "https://coastaleventures.com/events/ev-mobile-museum-gateway-exhibition-0901.html",
-      "sources": [
-        {
-          "note": "Mobile Museum of Art exhibition page: \"September 1, 2026 to September 1, 2027; Tuesday through Saturday, 10am to 5pm; Adults $12\"",
-          "url": "https://www.mobilemuseumofart.com/exhibitions/gateway/"
-        },
-        {
-          "note": "Mobile Museum of Art home page: \"Open through Sept. 1, 2027\"",
-          "url": "https://mobilemuseumofart.com"
-        },
-        {
-          "note": "Mobile County listing: \"FREE on Thursdays for Mobile County residents\"",
-          "url": "https://www.mobilecountyal.gov/community_events/gateway-from-graffiti-to-gallery-2026-09-01"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_good_listener_s_storytime_at_parkway_0901-2026-11-24",
-      "title": "Good Listener's Storytime at Parkway",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "10:00",
-      "endTime": "10:30",
-      "when": "Tuesdays · 10:00 AM to 10:30 AM · through 12/29",
-      "venue": "Parkway Branch Library",
-      "address": "1924-B Dauphin Island Pkwy, Mobile, AL 36605",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Parkway Branch Library runs a storytime built for listening, with stories, rhyming games, and crafts, aimed at children ages 3 to 7. The library asks that groups register ahead of time, though individual families are not required to. It repeats every Tuesday through December 29.",
-      "url": "https://coastaleventures.com/events/ev-good-listener-s-storytime-at-parkway-0901.html",
-      "sources": [
-        {
-          "note": "mobilepubliclibrary.org: the organizer's own page, read for the admission and current schedule",
-          "url": "https://www.mobilepubliclibrary.org/events/week/2026/09/02"
-        },
-        {
-          "note": "mobilepubliclibrary.org: the admission and current schedule",
-          "url": "https://www.mobilepubliclibrary.org/events/week/2026/09/09"
-        },
-        {
-          "note": "mobilepubliclibrary.org: the library's own event pages, read for the Tuesday sessions through December 29",
-          "url": "https://www.mobilepubliclibrary.org/event/good-listeners-storytime-parkway-16534"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_mma_handle_with_care_0327-2026-11-24",
-      "title": "Handle with Care at the Mobile Museum of Art",
-      "date": "2026-11-24",
-      "endDate": "2027-03-27",
-      "startTime": "10:00",
-      "endTime": "17:00",
-      "when": "Tuesday to Saturday · 10:00 AM to 5:00 PM · through 3/27",
-      "venue": "Mobile Museum of Art",
-      "address": "4850 Museum Drive, Mobile, AL 36608",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $8"
-      },
-      "summary": "Handle with Care is an interactive special exhibition at the Mobile Museum of Art. Artists Calder Kamin of Austin and Jacob Reptile of New Orleans turn trash into soft, complex sculptures that visitors move through as an environment. It stays open through March 27, 2027.",
-      "url": "https://coastaleventures.com/events/ev-mma-handle-with-care-0327.html",
-      "sources": [
-        {
-          "note": "Mobile Museum of Art home page, read for the exhibition description and closing date",
-          "url": "https://mobilemuseumofart.com/"
-        },
-        {
-          "note": "Mobile Museum of Art visit page, read for hours, address and general admission prices",
-          "url": "https://www.mobilemuseumofart.com/visit/"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_orange_beach_library_storytime_confirmed_sep_0908-2026-11-24",
-      "title": "Orange Beach Library Storytime: Confirmed September Dates",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "10:00",
-      "endTime": "10:30",
-      "when": "Tuesdays · 10:00 AM to 10:30 AM · through 12/8",
-      "venue": "Orange Beach Public Library",
-      "address": "26267 Canal Rd, Orange Beach, AL 36561",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The Orange Beach Public Library hosts a caregiver and child storytime on Tuesday mornings from 10 AM to 10:30 AM. The half hour combines books, songs, puppets and bubbles, and wraps up with a themed craft. It runs weekly through December 8.",
-      "url": "https://coastaleventures.com/events/ev-orange-beach-library-storytime-confirmed-sep-0908.html",
-      "sources": [
-        {
-          "note": "orangebeach.librarycalendar.com: the organizer's own page, read for the admission",
-          "url": "https://orangebeach.librarycalendar.com/events/month"
-        },
-        {
-          "note": "orangebeach.librarycalendar.com: the admission",
-          "url": "https://orangebeach.librarycalendar.com/events/week/2026/09/30"
-        },
-        {
-          "note": "orangebeach.librarycalendar.com: the library's own event page, read for the Tuesday sessions through December 8",
-          "url": "https://orangebeach.librarycalendar.com/event/storytime-5793"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_ob_library_storytime_1124-2026-11-24",
-      "title": "Storytime at the Orange Beach Public Library",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "10:00",
-      "endTime": "10:30",
-      "when": "Tuesday 11/24 · 10:00 AM to 10:30 AM",
-      "venue": "Orange Beach Public Library",
-      "address": "26267 Canal Rd, Orange Beach, AL 36561",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The Orange Beach Public Library runs a Tuesday storytime with books, songs, puppets, bubbles and a themed craft each week. It is made for babies through pre-K kids and their caregivers, and the adult stays and joins in. The calendar lists sessions on November 24, December 1 and December 8.",
-      "url": "https://coastaleventures.com/events/ev-ob-library-storytime-1124.html",
-      "sources": [
-        {
-          "note": "Orange Beach Public Library: Storytime Tuesdays Nov 24, Dec 1 and Dec 8, 10:00 to 10:30 AM, books, songs, puppets, bubbles and a craft",
-          "url": "https://orangebeach.librarycalendar.com/events/upcoming"
-        }
-      ],
-      "checkedOn": "2026-11-18"
-    },
-    {
-      "id": "ev_mma_timeless_hats_0130-2026-11-24",
-      "title": "Timeless Hats by Susie Mae Pugh-Williams at the Mobile Museum of Art",
-      "date": "2026-11-24",
-      "endDate": "2027-01-30",
-      "startTime": "10:00",
-      "endTime": "17:00",
-      "when": "Tuesday to Saturday · 10:00 AM to 5:00 PM · through 1/30",
-      "venue": "Mobile Museum of Art",
-      "address": "4850 Museum Drive, Mobile, AL 36608",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $8"
-      },
-      "summary": "Timeless Hats is a special exhibition of more than two dozen hats at the Mobile Museum of Art. Some were made by Mrs. Williams, and others are hats she admired and drew inspiration from for her own creations. It stays open through January 30, 2027.",
-      "url": "https://coastaleventures.com/events/ev-mma-timeless-hats-0130.html",
-      "sources": [
-        {
-          "note": "Mobile Museum of Art home page, read for the exhibition description and closing date",
-          "url": "https://mobilemuseumofart.com/"
-        },
-        {
-          "note": "Mobile Museum of Art visit page, read for hours, address and general admission prices",
-          "url": "https://www.mobilemuseumofart.com/visit/"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_words_with_friends_0901-2026-11-24",
-      "title": "Words with Friends",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "10:00",
-      "endTime": "11:00",
-      "when": "Tuesdays · 10:00 AM to 11:00 AM",
-      "venue": "Niceville Senior Center",
-      "address": "201 Campbell Drive, Niceville, FL 32578",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Despite the name, this Niceville Senior Center program is a writing and sharing group, not a session of the mobile word game. Participants work from simple prompts and writing exercises, then read their stories aloud, and the city says no writing experience is required. It meets Tuesday mornings.",
-      "url": "https://coastaleventures.com/events/ev-words-with-friends-0901.html",
-      "sources": [
-        {
-          "note": "nicevillefl.gov: the organizer's own page, read for the admission and current schedule",
-          "url": "https://www.nicevillefl.gov/Calendar.aspx?EID=39611&calType=0&day=1&month=9&year=2026"
-        },
-        {
-          "note": "nicevillefl.gov: the admission and current schedule",
-          "url": "https://www.nicevillefl.gov/463/Senior-Center"
-        },
-        {
-          "note": "nicevillefl.gov: the current schedule",
-          "url": "https://www.nicevillefl.gov/calendar.aspx?CID=0&month=9&view=month&year=2026"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_children_lap_babies_storytime_0901-2026-11-24",
-      "title": "Children: Lap Babies Storytime",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "10:30",
-      "endTime": "11:30",
-      "when": "Tuesdays · 10:30 AM to 11:30 AM",
-      "venue": "Daphne Public Library",
-      "address": "2607 US Hwy 98, Daphne, AL 36526",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Daphne Public Library hosts a storytime for lap babies, Tuesday from 10:30 AM to 11:30 AM. Tuesday sessions in November fall on the 3rd, 10th and 17th at this same time.",
-      "url": "https://coastaleventures.com/events/ev-children-lap-babies-storytime-0901.html",
-      "sources": [
-        {
-          "note": "daphneal.com: the organizer's own page, read for the admission",
-          "url": "https://www.daphneal.com/calendar.aspx?CID=0&month=9&view=list&year=2026"
-        }
-      ],
-      "checkedOn": "2026-11-01"
-    },
-    {
-      "id": "ev_fwb_library_family_movie_treasure_planet_1124-2026-11-24",
-      "title": "Family movie: Treasure Planet at Fort Walton Beach Library",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "10:30",
-      "endTime": "12:00",
-      "when": "Tuesday 11/24 · 10:30 AM to 12:00 PM",
-      "venue": "Fort Walton Beach Library",
-      "address": "185 Miracle Strip Parkway SE, Fort Walton Beach, FL 32548",
-      "category": "movie",
-      "categoryLabel": "Movies",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Fort Walton Beach Library shows the Disney film Treasure Planet (PG) in the Children's Story Room on Tuesday, November 24. Kids get popcorn and coloring sheets while the movie plays. The movie starts at 10:30 AM and the library says families can join at any time.",
-      "url": "https://coastaleventures.com/events/ev-fwb-library-family-movie-treasure-planet-1124.html",
-      "sources": [
-        {
-          "note": "Okaloosa library calendar: Family Movie, Treasure Planet (PG), Tuesday November 24, 10:30 AM to 12:00 PM, FWB Children's Story Room",
-          "url": "https://okaloosa.librarycalendar.com/event/family-movie-treasure-planet-87108"
-        }
-      ],
-      "checkedOn": "2026-11-18"
-    },
-    {
-      "id": "ev_craft_and_chat_the_library_0825-2026-11-24",
-      "title": "Craft & Chat @ the Library",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "11:00",
-      "endTime": "13:00",
-      "when": "Second and fourth Tuesday of the month · 11:00 AM to 1:00 PM · through 12/22",
-      "venue": "Niceville Public Library",
-      "address": "206 Partin Drive North, Niceville, FL 32578",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Niceville Public Library hosts Craft & Chat on the second and fourth Tuesday of each month, a two-hour gathering for crafting and conversation. Bring your latest project; the Friends of the Niceville Library provide treats, and you are welcome to pack a sack lunch.",
-      "url": "https://coastaleventures.com/events/ev-craft-and-chat-the-library-0825.html",
-      "sources": [
-        {
-          "note": "nicevillefl.gov: the organizer's own page, read for the admission and current schedule",
-          "url": "https://www.nicevillefl.gov/calendar.aspx?CID=22"
-        },
-        {
-          "note": "nicevillefl.gov: the admission and current schedule",
-          "url": "https://www.nicevillefl.gov/593/Library"
-        },
-        {
-          "note": "okaloosa.librarycalendar.com: the library's own event page, read for the second and fourth Tuesday schedule through December 22",
-          "url": "https://okaloosa.librarycalendar.com/event/craft-chat-66913"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_preschool_storytime_at_jay_library_1006-2026-11-24",
-      "title": "Preschool Storytime at Jay Library",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "11:00",
-      "endTime": "11:30",
-      "when": "Tuesdays · 11 AM-11:30 AM, through 12/1",
-      "venue": "Jay Library",
-      "address": "5259 Booker Ln., Jay, FL 32565",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Preschool Storytime is a weekly storytime for preschoolers at Jay Library, 5259 Booker Ln., part of the Santa Rosa County Library System. It runs 11-11:30 AM on Tuesdays from Oct 6 through Dec 1.",
-      "url": "https://coastaleventures.com/events/ev-preschool-storytime-at-jay-library-1006.html",
-      "sources": [
-        {
-          "note": "County library calendar: Preschool Storytime, Jay, Oct 6/13/20/27 11:00-11:30 AM",
-          "url": "https://www.santarosa.fl.gov/calendar.aspx?CID=30&view=list"
-        },
-        {
-          "note": "Nov and Dec listings: Tuesdays Nov 3/10/17, Dec 1",
-          "url": "https://www.santarosa.fl.gov/Calendar.aspx?view=list&year=2026&month=11"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_seated_zumba_gold_0901-2026-11-24",
-      "title": "Seated Zumba Gold",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "11:00",
-      "endTime": "12:00",
-      "when": "11:00 AM to 12:00 PM",
-      "venue": "Niceville Senior Center",
-      "address": "201 Campbell Drive, Niceville, FL 32578",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $3"
-      },
-      "summary": "Seated Zumba Gold is a chair-based dance-fitness class for members who use a wheelchair or live with limited mobility or balance concerns, set to lively music. It asks a $3 donation every Tuesday and Thursday late morning. The class is part of the Niceville Senior Center's programming for members age 55 and up.",
-      "url": "https://coastaleventures.com/events/ev-seated-zumba-gold-0901.html",
-      "sources": [
-        {
-          "note": "nicevillefl.gov: the organizer's own page, read for the admission and current schedule",
-          "url": "https://www.nicevillefl.gov/Calendar.aspx?EID=38043&calType=0&day=1&month=9&year=2026"
-        },
-        {
-          "note": "nicevillefl.gov: the admission and current schedule",
-          "url": "https://www.nicevillefl.gov/463/Senior-Center"
-        },
-        {
-          "note": "nicevillefl.gov: the current schedule",
-          "url": "https://www.nicevillefl.gov/calendar.aspx?CID=0&month=9&view=month&year=2026"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_tuesday_time_out_storytime_0908-2026-11-24",
-      "title": "Tuesday Time Out Storytime",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "11:00",
-      "endTime": "11:30",
-      "when": "Tuesdays · 11:00 AM to 11:30 AM",
-      "venue": "Grand Bay Library",
-      "address": "10329 Freeland Ave",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Grand Bay Library runs a preschool oriented storytime for children ages 0 through 5. Tuesday sessions run at 11 AM through November, including November 3, 10, 17 and 24.",
-      "url": "https://coastaleventures.com/events/ev-tuesday-time-out-storytime-0908.html",
-      "sources": [
-        {
-          "note": "mobilepubliclibrary.org: the organizer's own page, read for the admission and current schedule",
-          "url": "https://www.mobilepubliclibrary.org/events/week/2026/09/09"
-        },
-        {
-          "note": "mobilepubliclibrary.org: street address",
-          "url": "https://www.mobilepubliclibrary.org/locations-hours/grand-bay"
-        }
-      ],
-      "checkedOn": "2026-11-01"
-    },
-    {
-      "id": "ev_genealogy_with_larry_crestview_1104-2026-11-24",
-      "title": "Genealogy with Larry at Crestview Library",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "12:00",
-      "endTime": "15:00",
-      "when": "Tuesdays and Wednesdays · 12:00 PM to 3:00 PM",
-      "venue": "Crestview Library",
-      "address": "1445 Commerce Dr, Crestview, FL 32539",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "A volunteer named Larry helps visitors start researching their family history at Crestview Library. He gets newcomers going on a genealogy search and helps with the next step. The library lists the session on Tuesdays and Wednesdays and prints no price.",
-      "url": "https://coastaleventures.com/events/ev-genealogy-with-larry-crestview-1104.html",
-      "sources": [
-        {
-          "note": "Okaloosa County Public Library Cooperative: event page, read on 2026-11-04 for date, time, age group and description",
-          "url": "https://okaloosa.librarycalendar.com/event/genealogy-larry-83881"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_crestview_library_genealogy_with_larry_1028-2026-11-24",
-      "title": "Genealogy with Larry at the Crestview Library",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "12:00",
-      "endTime": "15:00",
-      "when": "Tuesdays and Wednesdays · 12:00 PM to 3:00 PM",
-      "venue": "Crestview Library",
-      "address": "1445 Commerce Dr, Crestview, FL 32539",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Larry, helps visitors research their family history at the Crestview Library. He gets beginners started on a genealogy project and guides people who are already digging. The calendar lists the session as open to everyone.",
-      "url": "https://coastaleventures.com/events/ev-crestview-library-genealogy-with-larry-1028.html",
-      "sources": [
-        {
-          "note": "Okaloosa County Public Library Cooperative calendar page, read for date, time, description and audience",
-          "url": "https://okaloosa.librarycalendar.com/event/genealogy-larry-83879"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_flounders_sunday_music_1101-2026-11-24",
-      "title": "Sunday afternoon live music at Flounder's Chowder House",
-      "date": "2026-11-24",
-      "endDate": "2026-12-27",
-      "startTime": "12:00",
-      "endTime": "16:00",
-      "when": "Sundays 11/1 through 12/27 · 12:00 PM to 4:00 PM",
-      "venue": "Flounder's Chowder House",
-      "address": "800 Quietwater Beach Road, Gulf Breeze, FL 32561",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Flounder's Chowder House on Quietwater Beach schedules live music on Sunday afternoons from 12:00 PM to 4:00 PM. Tim Spencer plays November 1, 15 and 29 and December 27, John Hart plays November 8 and December 6, and Jason Crysell plays November 22 and December 20. The page also lists Tim Spencer on Saturday December 12 for the same hours.",
-      "url": "https://coastaleventures.com/events/ev-flounders-sunday-music-1101.html",
-      "sources": [
-        {
-          "note": "Flounder's Chowder House: entertainment page, read for the Sunday performers, dates and 12:00 PM to 4:00 PM hours",
-          "url": "https://flounderschowderhouse.com/entertainment"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_zumba_gold_0901-2026-11-24",
-      "title": "Zumba Gold",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "12:15",
-      "endTime": "13:15",
-      "when": "12:15 PM to 1:15 PM",
-      "venue": "Niceville Senior Center",
-      "address": "201 Campbell Drive, Niceville, FL 32578",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $3"
-      },
-      "summary": "Zumba Gold is a lower-impact dance and fitness class built around routines that are easy to follow, aimed at the Niceville Senior Center's members. It asks a $3 donation and repeats every Tuesday and Thursday around midday. It comes right after Seated Zumba Gold, so members can do both back to back if they choose.",
-      "url": "https://coastaleventures.com/events/ev-zumba-gold-0901.html",
-      "sources": [
-        {
-          "note": "nicevillefl.gov: the organizer's own page, read for the admission and current schedule",
-          "url": "https://www.nicevillefl.gov/Calendar.aspx?EID=37912&calType=0&day=1&month=9&year=2026"
-        },
-        {
-          "note": "nicevillefl.gov: the admission and current schedule",
-          "url": "https://www.nicevillefl.gov/463/Senior-Center"
-        },
-        {
-          "note": "nicevillefl.gov: the current schedule",
-          "url": "https://www.nicevillefl.gov/calendar.aspx?CID=0&month=9&view=month&year=2026"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_games_club_fort_walton_beach_1110-2026-11-24",
-      "title": "Games Club at Fort Walton Beach Library",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "13:00",
-      "endTime": "16:00",
-      "when": "Second and fourth Tuesdays · 1:00 PM to 4:00 PM",
-      "venue": "Fort Walton Beach Library",
-      "address": "185 Miracle Strip Parkway SE, Fort Walton Beach, FL 32548",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Fort Walton Beach Library sets aside an afternoon for adults to play tabletop, board and card games. The session is self-directed with no host, so players use the library's games or bring their own.",
-      "url": "https://coastaleventures.com/events/ev-games-club-fort-walton-beach-1110.html",
-      "sources": [
-        {
-          "note": "Okaloosa County Public Library Cooperative: event page, read on 2026-11-04 for date, time, age group and description",
-          "url": "https://okaloosa.librarycalendar.com/event/games-club-65924"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_crestview_library_knitting_and_crochet_group_1103-2026-11-24",
-      "title": "Knitting and Crochet Group at the Crestview Library",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "13:00",
-      "endTime": "15:00",
-      "when": "Tuesdays · 1:00 PM to 3:00 PM · through 12/29",
-      "venue": "Crestview Library",
-      "address": "1445 Commerce Dr, Crestview, FL 32539",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Knitters and crocheters of every skill level meet weekly in the Quiet Cafe at the Crestview Library to make friends and share ideas. One on one instruction is available on request. The calendar lists the group for families and adults.",
-      "url": "https://coastaleventures.com/events/ev-crestview-library-knitting-and-crochet-group-1103.html",
-      "sources": [
-        {
-          "note": "Okaloosa County Public Library Cooperative calendar page, read for date, time, weekly schedule and skill-level welcome",
-          "url": "https://okaloosa.librarycalendar.com/event/knitting-and-crochet-group-77742"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_let_s_play_national_mah_jongg_0901-2026-11-24",
-      "title": "Let's Play National Mah Jongg",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "13:00",
-      "endTime": "15:00",
-      "when": "Tuesdays · 1:00 PM to 3:00 PM",
-      "venue": "Niceville Senior Center",
-      "address": "201 Campbell Drive, Niceville, FL 32578",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "This Mah Jongg session follows the American National Mah Jongg League style of play rather than the traditional Chinese rules. Players are asked to bring their own 2026 National Mah Jongg League card, so it suits regulars more than total newcomers. It runs Tuesday afternoons.",
-      "url": "https://coastaleventures.com/events/ev-let-s-play-national-mah-jongg-0901.html",
-      "sources": [
-        {
-          "note": "nicevillefl.gov: the organizer's own page, read for the admission and current schedule",
-          "url": "https://www.nicevillefl.gov/Calendar.aspx?EID=39558&calType=0&day=1&month=9&year=2026"
-        },
-        {
-          "note": "nicevillefl.gov: the admission and current schedule",
-          "url": "https://www.nicevillefl.gov/463/Senior-Center"
-        },
-        {
-          "note": "nicevillefl.gov: the current schedule",
-          "url": "https://www.nicevillefl.gov/calendar.aspx?CID=0&month=9&view=month&year=2026"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_fwb_library_decorate_library_card_1124-2026-11-24",
-      "title": "Decorate Your Library Card at Fort Walton Beach Library",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "14:00",
-      "endTime": "15:30",
-      "when": "Tuesday 11/24 · 2:00 PM to 3:30 PM",
-      "venue": "Fort Walton Beach Library",
-      "address": "185 Miracle Strip Parkway SE, Fort Walton Beach, FL 32548",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Fort Walton Beach Library sets out photocard holders on Tuesday, November 24, so kids and adults can decorate one and slip a library card inside. It is drop-in with no registration, and people can come and go as they finish. Younger children may need a guardian's help.",
-      "url": "https://coastaleventures.com/events/ev-fwb-library-decorate-library-card-1124.html",
-      "sources": [
-        {
-          "note": "Okaloosa library calendar: Decorate Your Library Card, Tuesday November 24, 2:00 to 3:30 PM, FWB Children's Story Room, drop-in",
-          "url": "https://okaloosa.librarycalendar.com/events/month"
-        }
-      ],
-      "checkedOn": "2026-11-18"
-    },
-    {
-      "id": "ev_teen_hang_out_valparaiso_1104-2026-11-24",
-      "title": "Teen Hang-Out at Valparaiso Library",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "14:00",
-      "endTime": "15:00",
-      "when": "Weekdays on school days · 2:00 PM to 3:00 PM",
-      "venue": "Valparaiso Library",
-      "address": "459 Valparaiso Pkwy, Valparaiso, FL 32580",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Valparaiso Library opens a daily after-school hangout for teens ages 11 to 17. Staff set out activities every day, and there is room to do homework or sit with friends. It runs Monday through Friday on school days.",
-      "url": "https://coastaleventures.com/events/ev-teen-hang-out-valparaiso-1104.html",
-      "sources": [
-        {
-          "note": "Okaloosa County Public Library Cooperative: event page, read on 2026-11-04 for date, time, age group and description",
-          "url": "https://okaloosa.librarycalendar.com/event/teen-hang-out-83015"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_twist_pensacola_winter_penguin_cutie_1124-2026-11-24",
-      "title": "Winter Penguin Cutie family painting class at Painting with a Twist Pensacola",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "14:00",
-      "endTime": "16:00",
-      "when": "Tuesday 11/24 · 2:00 PM to 4:00 PM",
-      "venue": "Painting with a Twist Pensacola",
-      "address": "4771 Bayou Blvd Suite C11, Pensacola, FL 32503",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $35"
-      },
-      "summary": "Painting with a Twist Pensacola teaches Winter Penguin Cutie on Tuesday afternoon as a family class for ages 6 and up. An artist guides adults and kids step by step, and all supplies are included.",
-      "url": "https://coastaleventures.com/events/ev-twist-pensacola-winter-penguin-cutie-1124.html",
-      "sources": [
-        {
-          "note": "Painting with a Twist Pensacola: event page for this class, read for the date, time, $35 and $40 prices and age rule",
-          "url": "https://www.paintingwithatwist.com/studio/pensacola/event/4424882/"
-        },
-        {
-          "note": "Painting with a Twist Pensacola: studio calendar listing this class",
-          "url": "https://www.paintingwithatwist.com/studio/pensacola/calendar/"
-        }
-      ],
-      "checkedOn": "2026-11-18"
-    },
-    {
-      "id": "ev_board_game_night_1006-2026-11-24",
-      "title": "Board Game Night",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "15:00",
-      "endTime": "21:00",
-      "when": "Tuesdays · 3 PM-9 PM",
-      "venue": "GameMasters Guild",
-      "address": "743 Ashley Drive, Crestview, FL 32536",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Board Game Night at GameMasters Guild in Crestview runs every Tuesday from 3 to 9 PM. Bring your own game or pick one from the shop's game library. All ages are welcome, and children under 13 must be accompanied by an adult.",
-      "url": "https://coastaleventures.com/events/ev-board-game-night-1006.html",
-      "sources": [
-        {
-          "note": "Board Game Night every Tuesday 3-9 PM, all ages",
-          "url": "https://gmgcrestview.com/events/"
-        },
-        {
-          "note": "GameMasters Guild's own embedded Google Calendar feed (gmgcrestview@aol.com), read as ICS today: Board Game Night every Tuesday 3-9 PM, all ages",
-          "url": "https://calendar.google.com/calendar/ical/gmgcrestview%40aol.com/public/basic.ics"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_destin_commons_kids_arts_crafts_1121-2026-11-24",
-      "title": "Kids Arts & Crafts: decorate your own ornament at Destin Commons",
-      "date": "2026-11-24",
-      "endDate": "2026-12-05",
-      "startTime": "15:00",
-      "endTime": "17:00",
-      "when": "Saturday 11/21 · 3:00 PM to 5:00 PM · runs through 12/5",
-      "venue": "Destin Commons",
-      "address": "4100 Legendary Drive, Destin, FL 32541",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Children can decorate their own holiday ornament at the Destin Commons Market from 3:00 PM to 5:00 PM. The activity is free, supplies are limited, and families can browse the market vendors while the kids craft. The page gives a run of November 21 through December 5.",
-      "url": "https://coastaleventures.com/events/ev-destin-commons-kids-arts-crafts-1121.html",
-      "sources": [
-        {
-          "note": "Destin Commons: Kids Arts & Crafts page, read for the date range, 3:00 PM to 5:00 PM hours, free admission and supplies-limited note",
-          "url": "https://destincommons.com/happenings-events/kids-arts-crafts/"
-        },
-        {
-          "note": "Destin Commons: Happenings page listing the event",
-          "url": "https://destincommons.com/enjoy-entertainment/happenings/"
-        }
-      ],
-      "checkedOn": "2026-11-11"
-    },
-    {
-      "id": "ev_destin_commons_jolly_jubilee_1120-2026-11-24",
-      "title": "Jolly Jubilee holiday music series at Destin Commons",
-      "date": "2026-11-24",
-      "endDate": "2026-12-23",
-      "startTime": "16:00",
-      "endTime": null,
-      "when": "Friday 11/20 · 4:00 PM · select days through 12/23",
-      "venue": "Destin Commons",
-      "address": "4100 Legendary Drive, Destin, FL 32541",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Destin Commons books free holiday performers on twelve days from November 20 through December 23: 11/20, 11/21, 11/27, 11/28, 11/29, 12/4, 12/5, 12/12, 12/18, 12/19, 12/20 and 12/23. The Cincinnati Christmas Carolers and Joe Occhipinti trade two-hour sets, usually 1:00 PM to 3:00 PM and 4:00 PM to 6:00 PM, and the Niceville Jazz Band plays Saturday 12/12 from 4:00 PM to 6:00 PM. Times shift on some days, so check the schedule for yours.",
-      "url": "https://coastaleventures.com/events/ev-destin-commons-jolly-jubilee-1120.html",
-      "sources": [
-        {
-          "note": "Destin Commons: Jolly Jubilee Series page, read for the performer schedule and complimentary entertainment note",
-          "url": "https://destincommons.com/happenings-events/jolly-jubilee-series/"
-        },
-        {
-          "note": "Destin Commons: Happenings page listing the event",
-          "url": "https://destincommons.com/enjoy-entertainment/happenings/"
-        }
-      ],
-      "checkedOn": "2026-11-11"
-    },
-    {
-      "id": "ev_mmoa_landscapes_in_oil_1107-2026-11-24",
-      "title": "Landscapes in Oil four-week painting class at the Mobile Museum of Art",
-      "date": "2026-11-24",
-      "endDate": "2026-11-28",
-      "startTime": "16:00",
-      "endTime": "18:00",
-      "when": "Saturdays 11/7, 11/14, 11/21 and 11/28 · 4:00 PM to 6:00 PM",
-      "venue": "Mobile Museum of Art",
-      "address": "4850 Museum Drive, Mobile, AL 36608",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $150"
-      },
-      "summary": "The Mobile Museum of Art teaches a four-week oil painting class on four Saturday afternoons. Students learn to build depth in a landscape with atmospheric perspective. The class studies landscapes in the museum's collection, paints with a guide, and includes one plein air session. It is for ages 16 and up and runs eight hours in total.",
-      "url": "https://coastaleventures.com/events/ev-mmoa-landscapes-in-oil-1107.html",
-      "sources": [
-        {
-          "note": "Mobile Museum of Art: Landscapes in Oil class page, read for the four Saturday dates, 4 to 6 PM times, age 16+ rule and $150 and $180 fees",
-          "url": "https://www.mobilemuseumofart.com/landscapes-in-oil"
-        },
-        {
-          "note": "Mobile Museum of Art: classes page, read for the street address",
-          "url": "https://www.mobilemuseumofart.com/classes"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_lego_fun_tuesday_at_semmes_0908-2026-11-24",
-      "title": "LEGO Fun Tuesday at Semmes",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "16:00",
-      "endTime": "17:00",
-      "when": "Tuesdays · 4:00 PM to 5:00 PM",
-      "venue": "Semmes Regional Library",
-      "address": "9150 Moffett Road",
-      "category": "stem",
-      "categoryLabel": "STEM and learning",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Semmes Regional Library runs a LEGO building challenge meant to encourage imagination alongside building skill, for ages 6 through 18. It meets Tuesdays at 4 PM, including November 3, 10, 17 and 24.",
-      "url": "https://coastaleventures.com/events/ev-lego-fun-tuesday-at-semmes-0908.html",
-      "sources": [
-        {
-          "note": "mobilepubliclibrary.org: the organizer's own page, read for the admission and current schedule",
-          "url": "https://www.mobilepubliclibrary.org/events/week/2026/09/09"
-        },
-        {
-          "note": "mobilepubliclibrary.org: street address",
-          "url": "https://www.mobilepubliclibrary.org/locations-hours/semmes"
-        }
-      ],
-      "checkedOn": "2026-11-01"
-    },
-    {
-      "id": "ev_watercolor_beginners_moorer_1110-2026-11-24",
-      "title": "Watercolor for Beginners at Moorer Branch Library",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "16:00",
-      "endTime": "17:00",
-      "when": "Every other Tuesday · 4:00 PM to 5:00 PM",
-      "venue": "Monte L. Moorer/Spring Hill Branch Library",
-      "address": "4 S McGregor Ave, Mobile, AL 36608",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The Moorer Branch teaches watercolor techniques to adults with no experience needed. The class meets every other Tuesday, and registration is required through the branch. The page prints no price.",
-      "url": "https://coastaleventures.com/events/ev-watercolor-beginners-moorer-1110.html",
-      "sources": [
-        {
-          "note": "Mobile Public Library: event page, read on 2026-11-04 for date, time, age group and description",
-          "url": "https://www.mobilepubliclibrary.org/event/watercolor-beginners-15277"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_mma_wednesday_art_club_5_7_1104-2026-11-24",
-      "title": "Wednesday Art Club for ages 5 to 7 at the Mobile Museum of Art",
-      "date": "2026-11-24",
-      "endDate": "2026-12-30",
-      "startTime": "16:00",
-      "endTime": "17:30",
-      "when": "Wednesdays · 4:00 PM to 5:30 PM · 11/4, 11/18, 11/25, 12/2, 12/9, 12/16 and 12/30",
-      "venue": "Mobile Museum of Art",
-      "address": "4850 Museum Drive, Mobile, AL 36608",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $150"
-      },
-      "summary": "Young artists ages 5 to 7 meet on Wednesday afternoons at the Mobile Museum of Art for hands-on projects with color, texture and technique. Each class includes visits to For Children, the museum's interactive gallery for kids. The museum sells the club in three sessions, and Sessions 2 and 3 run through the end of December.",
-      "url": "https://coastaleventures.com/events/ev-mma-wednesday-art-club-5-7-1104.html",
-      "sources": [
-        {
-          "note": "Mobile Museum of Art class page for Wednesday Art Club ages 5 to 7, read for times, session dates and fees",
-          "url": "https://www.mobilemuseumofart.com/event/wednesday-art-club-for-ages-5-7/2026-10-28/"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_bellingrath_magic_christmas_1120-2026-11-24",
-      "title": "31st Annual Magic Christmas in Lights at Bellingrath",
-      "date": "2026-11-24",
-      "endDate": "2027-01-09",
-      "startTime": "17:00",
-      "endTime": "21:00",
-      "when": "Nov 20 to Jan 9 · 5 PM to 9 PM nightly",
-      "venue": "Bellingrath Gardens and Home",
-      "address": "12401 Bellingrath Gardens Rd, Theodore, AL 36582",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Bellingrath Gardens strings its grounds with thousands of lights each winter, and this is the 31st season of the walk-through show in Theodore. Evening hours run from 5 PM to 9 PM, and the home tour stays open until 8:30 PM. The show is closed on November 25 and 26, December 25 and January 1. Ticket prices are not yet published, so check the garden's ticket page before you go.",
-      "url": "https://coastaleventures.com/events/ev-bellingrath-magic-christmas-1120.html",
-      "sources": [
-        {
-          "note": "bellingrath.org Magic Christmas in Lights page: November 20 to January 9, evening hours 5 PM to 9 PM, closed Nov 25-26, Dec 25 and Jan 1, complimentary parking, tickets on sale in October",
-          "url": "https://www.bellingrath.org/magic-christmas-in-lights"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_nwfaa_astronomy_workshop_crestview_1124-2026-11-24",
-      "title": "NWFAA Astronomy Workshop at the Crestview Library",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "17:00",
-      "endTime": "18:00",
-      "when": "Tuesday 11/24 · 5:00 PM to 6:00 PM",
-      "venue": "Crestview Library",
-      "address": "1445 Commerce Dr, Crestview, FL 32539",
-      "category": "stem",
-      "categoryLabel": "STEM and learning",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "The Northwest Florida Astronomical Association runs a monthly workshop in the Crestview Library meeting room. The group talks about the objects and events visible in the sky over the next 30 days, plus recent astronomy news. The workshop supports the library's telescope program and is free to all.",
-      "url": "https://coastaleventures.com/events/ev-nwfaa-astronomy-workshop-crestview-1124.html",
-      "sources": [
-        {
-          "note": "Okaloosa County Public Library Cooperative event page, read for the Nov 24 5 to 6 PM session, free admission, topic and presenter",
-          "url": "https://okaloosa.librarycalendar.com/event/nwfaa-astronomy-workshop-64067"
-        }
-      ],
-      "checkedOn": "2026-11-18"
-    },
-    {
-      "id": "ev_nwftc_tuesday_group_run_at_run_wit_1006-2026-11-24",
-      "title": "NWFTC Tuesday group run at Run With It",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "17:00",
-      "endTime": "18:00",
-      "when": "Tuesdays · 5 PM-6 PM",
-      "venue": "Run With It",
-      "address": "21 Racetrack Road NE, Fort Walton Beach, FL 32547",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The NWFTC Tuesday group run is a weekly training run from Run With It with the Northwest Florida Track Club. Runs go every Tuesday at 5-6 PM, and various paces and distances are available.",
-      "url": "https://coastaleventures.com/events/ev-nwftc-tuesday-group-run-at-run-wit-1006.html",
-      "sources": [
-        {
-          "note": "Tuesday 5-6 PM at Run With It, 21 Racetrack Road NE, Fort Walton Beach, FL 32547",
-          "url": "https://www.nwftc.com/training-runs"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_winterfest_photos_with_santa_1120-2026-11-24",
-      "title": "Photos with Santa at Pensacola Winterfest",
-      "date": "2026-11-24",
-      "endDate": "2026-12-24",
-      "startTime": "17:00",
-      "endTime": "20:00",
-      "when": "Fri-Sun from 11/20, then nightly from 12/18 · 5:00 PM to 8:00 PM",
-      "venue": "Winterfest Plaza",
-      "address": "223 South Palafox Place, Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $37"
-      },
-      "summary": "Santa sits in his sleigh in Winterfest Plaza on Palafox Place, and each family books a time slot online. An elf asks the kids for their Christmas wishes, then the whole family poses on presents beside the sleigh. Every package includes candid shots and all full-quality digital photos, texted to your phone. Santa is there on Fridays, Saturdays and Sundays from November 20, and every night from December 18 through Christmas Eve.",
-      "url": "https://coastaleventures.com/events/ev-winterfest-photos-with-santa-1120.html",
-      "sources": [
-        {
-          "note": "Pensacola Winterfest, Photos with Santa page, read for package prices, session hours, location and the dates Santa is downtown",
-          "url": "https://pensacolawinterfest.org/photos-with-santa"
-        }
-      ],
-      "checkedOn": "2026-11-18"
-    },
-    {
-      "id": "ev_psc_pirates_mbb_south_georgia_technical_college_1124-2026-11-24",
-      "title": "PSC Pirates men's basketball vs. South Georgia Technical College",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "17:00",
-      "endTime": null,
-      "when": "Tuesday 11/24 · 5:00 PM",
-      "venue": "Hartsell Arena, Pensacola State College",
-      "address": "1000 College Blvd, Pensacola, FL 32504",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The Pensacola State College Pirates host South Georgia Technical College in men's basketball on Tuesday, November 24 at 5:00 PM. The college calendar lists the game at Hartsell Arena on the Pensacola campus. The calendar prints no admission price.",
-      "url": "https://coastaleventures.com/events/ev-psc-pirates-mbb-south-georgia-technical-college-1124.html",
-      "sources": [
-        {
-          "note": "Pensacola State College calendar, read for the Men's Basketball Home Game, Pirates vs. South Georgia Technical College, Tuesday, November 24 at 5:00 PM at Hartsell Arena",
-          "url": "https://www.pensacolastate.edu/news/calendar/?psc_month=11&psc_year=2026"
-        }
-      ],
-      "checkedOn": "2026-11-18"
-    },
-    {
-      "id": "ev_tbs_comics_fort_walton_beach_weekl_1005-2026-11-24",
-      "title": "TBS Comics Fort Walton Beach weekly game nights (Yu-Gi-Oh, D&D, Magic, Lorcana, One Piece and more)",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "17:00",
-      "endTime": null,
-      "when": "Game nights Monday, Tuesday, Wednesday and Friday · from 5 PM",
-      "venue": "TBS Comics Fort Walton Beach",
-      "address": "550 Mary Esther Blvd, Fort Walton Beach, FL 32548",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "TBS Comics Fort Walton Beach hosts weekly game nights at its shop on Mary Esther Blvd. Monday is Yu-Gi-Oh at 6 PM, and Tuesday is D&D Adventurers League at 5 PM. Wednesday has casual Magic all day and Digimon at 6 PM, and Friday has Magic Commander at 6 PM and Yu-Gi-Oh at 7 PM.",
-      "url": "https://coastaleventures.com/events/ev-tbs-comics-fort-walton-beach-weekl-1005.html",
-      "sources": [
-        {
-          "note": "TBS gaming page weekly schedule for Fort Walton Beach",
-          "url": "https://www.tbscomics.com/gaming/"
-        },
-        {
-          "note": "Store locations: 550 Mary Esther Blvd, FWB 32548",
-          "url": "https://www.tbscomics.com/store-locations/"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_ob_teen_game_night_1124-2026-11-24",
-      "title": "Teen Night: Game Night at Orange Beach Library",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "17:00",
-      "endTime": "18:00",
-      "when": "Tuesday 11/24 · 5:00 PM to 6:00 PM",
-      "venue": "Orange Beach Public Library",
-      "address": "26267 Canal Rd, Orange Beach, AL 36561",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Teens learn new games or play their favorites at the Orange Beach Public Library, and snacks are part of the hour. The program is for sixth through twelfth graders. Registration is required and closes when the night starts.",
-      "url": "https://coastaleventures.com/events/ev-ob-teen-game-night-1124.html",
-      "sources": [
-        {
-          "note": "Orange Beach Public Library event page, read for date, time, age group, registration status and description",
-          "url": "https://orangebeach.librarycalendar.com/event/teen-night-game-night-6845"
-        },
-        {
-          "note": "Orange Beach Public Library upcoming events calendar, read for the November listing",
-          "url": "https://orangebeach.librarycalendar.com/events/upcoming"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_destin_writers_group_0915-2026-11-24",
-      "title": "Destin Writers' Group",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "17:30",
-      "endTime": "19:30",
-      "when": "Tuesdays · 5:30 PM to 7:30 PM",
-      "venue": "Destin Library: Small Conference Room",
-      "address": "150 Sibert Ave, Destin, FL 32541",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Destin Library hosts a casual writing group for adults working in any genre and at any experience level. The only requirement to join is an active email address, and the library has not published an admission charge. This particular session runs from 5:30 PM to 7:30 PM in the Small Conference Room.",
-      "url": "https://coastaleventures.com/events/ev-destin-writers-group-0915.html",
-      "sources": [
-        {
-          "note": "okaloosa.librarycalendar.com: the organizer's own page, read for the admission and current schedule",
-          "url": "https://okaloosa.librarycalendar.com/events/list?age_groups%5B24%5D=24&page=3"
-        }
-      ],
-      "checkedOn": "2026-09-26"
-    },
-    {
-      "id": "ev_mma_driven_to_draw_tuesday_am_1103-2026-11-24",
-      "title": "Driven to Draw Tuesday evening drawing class at the Mobile Museum of Art",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "17:30",
-      "endTime": "19:30",
-      "when": "Tuesdays · 5:30 PM to 7:30 PM · 11/3, 11/10, 11/17 and 11/24",
-      "venue": "Mobile Museum of Art",
-      "address": "4850 Museum Drive, Mobile, AL 36608",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $180"
-      },
-      "summary": "This four-week evening drawing class at the Mobile Museum of Art covers essential drawing techniques, playful exploration and confidence building. The museum welcomes beginners and people refining their skills, with supportive guidance in a relaxed room. Classes meet on four Tuesdays in November.",
-      "url": "https://coastaleventures.com/events/ev-mma-driven-to-draw-tuesday-am-1103.html",
-      "sources": [
-        {
-          "note": "Mobile Museum of Art class page for Driven to Draw Tuesday PM, read for dates, times and fees",
-          "url": "https://www.mobilemuseumofart.com/event/driven-to-draw-tuesday-am/2026-11-03/"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_orange_beach_thanksgiving_bingo_1124-2026-11-24",
-      "title": "Thanksgiving Bingo by the Bay",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "17:30",
-      "endTime": "19:00",
-      "when": "Tuesday 11/24 · 5:30 PM to 7:00 PM",
-      "venue": "Coastal Arts Center of Orange Beach",
-      "address": "26389 Canal Road, Orange Beach, AL 36561",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Orange Beach Parks and Recreation hosts an hour of all-ages bingo in the outdoor tent at the Coastal Arts Center. Warm soup and cider are served, and the prizes are Thanksgiving pies, cakes and desserts. It is free and no registration is needed.",
-      "url": "https://coastaleventures.com/events/ev-orange-beach-thanksgiving-bingo-1124.html",
-      "sources": [
-        {
-          "note": "City of Orange Beach calendar entry for Thanksgiving Bingo by the Bay, read for date, 5:30 to 7:00 PM hours, soup and cider, prizes and free entry",
-          "url": "https://www.orangebeachal.gov/Calendar.aspx?EID=11270&month=11&year=2026&day=4&calType=0"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_great_southern_world_is_your_oyster_1124-2026-11-24",
-      "title": "The World Is Your Oyster collaboration dinner at The Fish House",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "17:30",
-      "endTime": null,
-      "when": "Tuesday 11/24 · 5:30 PM",
-      "venue": "The Fish House",
-      "address": "600 South Barracks Street, Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $60"
-      },
-      "summary": "The Fish House and Jackson's Steakhouse team up for a five-course oyster dinner with four paired drinks, from raw oysters to a chocolate oyster dessert. Chef Irv Miller's cookbook on Gulf Coast oysters is available for purchase and signing for $35. Seating is limited and reservations are required.",
-      "url": "https://coastaleventures.com/events/ev-great-southern-world-is-your-oyster-1124.html",
-      "sources": [
-        {
-          "note": "Great Southern Restaurants: The World Is Your Oyster page, read for date, 5:30 PM start, $60 price, menu, cookbook and reservation phone",
-          "url": "https://greatsouthernrestaurants.com/2026/09/the-fish-house-and-jacksons-steakhouse-present-the-world-is-your-oyster-a-collaboration-dinner/"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_christmas_nights_in_lights_mobile_1106-2026-11-24",
-      "title": "Christmas Nights in Lights drive-thru",
-      "date": "2026-11-24",
-      "endDate": "2026-12-27",
-      "startTime": "18:00",
-      "endTime": "21:00",
-      "when": "Select nights 11/6 to 12/27 · 6:00 PM to 9:00 PM",
-      "venue": "Dauphin Way Baptist Church",
-      "address": "3661 Dauphin St, Mobile, AL 36608",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $9.99"
-      },
-      "summary": "Christmas Nights in Lights is a drive-thru display of more than one million lights synchronized to holiday songs on the car radio. Cars roll through the grounds of Dauphin Way Baptist Church in Mobile on selected nights from November 6 through December 27. Pets are welcome as long as they stay in the car. Tickets can be bought online or at the drive-up.",
-      "url": "https://coastaleventures.com/events/ev-christmas-nights-in-lights-mobile-1106.html",
-      "sources": [
-        {
-          "note": "Nights in Lights, the organizer's page: drive-thru returns to Dauphin Way Baptist Church in Mobile on November 6, 2026",
-          "url": "https://nightsinlights.com"
-        },
-        {
-          "note": "Ticket Tailor: Christmas Nights in Lights at Dauphin Way Baptist Church, multiple dates and times",
-          "url": "https://www.tickettailor.com/events/nightsinlights/2462542"
-        },
-        {
-          "note": "Visit Mobile: listed dates, $9.99 per person, children 2 and under free, 6:00 PM to 9:00 PM",
-          "url": "https://www.mobile.org/event/christmas-nights-in-lights/24247/"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_dark_and_mysterious_true_crime_book_club_0929-2026-11-24",
-      "title": "Dark & Mysterious True Crime Book Club",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "18:00",
-      "endTime": "19:00",
-      "when": "6:00 PM to 7:00 PM",
-      "venue": "Parkway Branch Library",
-      "address": "1924-B Dauphin Island Pkwy",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Parkway Branch Library runs an adult book club centered on true crime, with members digging into the genre's darker cases together. The next meeting is Tuesday, November 24, from 6:00 PM to 7:00 PM.",
-      "url": "https://coastaleventures.com/events/ev-dark-and-mysterious-true-crime-book-club-0929.html",
-      "sources": [
-        {
-          "note": "mobilepubliclibrary.org: the organizer's own page, read for the admission and current schedule",
-          "url": "https://www.mobilepubliclibrary.org/events/upcoming?age_groups%5B4%5D=4&page=2&program_types%5B15%5D=15"
-        },
-        {
-          "note": "mobilepubliclibrary.org: street address",
-          "url": "https://www.mobilepubliclibrary.org/locations-hours/parkway"
-        }
-      ],
-      "checkedOn": null
-    },
-    {
-      "id": "ev_calverts_monday_bingo_1109-2026-11-24",
-      "title": "Monday Night Bingo at Calvert's in the Heights",
-      "date": "2026-11-24",
-      "endDate": "2027-02-22",
-      "startTime": "18:00",
-      "endTime": null,
-      "when": "Mondays · 6:00 PM",
-      "venue": "Calvert's in the Heights",
-      "address": "670 Scenic Hwy, Pensacola, FL 32503",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Calvert's in the Heights runs bingo every Monday night from 6:00 PM to 8:00 PM. The calendar lists weekly games from November 9 through February 22. No admission price is posted.",
-      "url": "https://coastaleventures.com/events/ev-calverts-monday-bingo-1109.html",
-      "sources": [
-        {
-          "note": "Calvert's in the Heights events calendar: Monday Night Bingo, 6 to 8 PM, Nov 9 through Feb 22",
-          "url": "https://calvertsintheheights.com/events"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_tacos_tequila_and_trivia_0901-2026-11-24",
-      "title": "Tacos, Tequila, & Trivia",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "18:00",
-      "endTime": "20:00",
-      "when": "Tuesdays · 6:00 PM to 8:00 PM",
-      "venue": "Waffles R Wild: The Speakeasy",
-      "address": "100-F S. OWA Blvd., Foley, AL 36535",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Waffles R Wild's weekly trivia night pairs $10 tacos and $7 margaritas with a 1990s theme at OWA's Speakeasy venue. The series runs every Tuesday night, including November 3, 10, 17 and 24. The cost is whatever you order.",
-      "url": "https://coastaleventures.com/events/ev-tacos-tequila-and-trivia-0901.html",
-      "sources": [
-        {
-          "note": "visitowa.com: the organizer's own page, read for the admission and current schedule",
-          "url": "https://visitowa.com/events/week/2026-09-01/"
-        },
-        {
-          "note": "visitowa.com: the admission, current schedule and street address",
-          "url": "https://visitowa.com/dining/waffles-r-wild/"
-        }
-      ],
-      "checkedOn": "2026-11-01"
-    },
-    {
-      "id": "ev_tempo_tuesday_with_the_west_florid_1006-2026-11-24",
-      "title": "Tempo Tuesday with the West Florida Wheelmen",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "18:00",
-      "endTime": null,
-      "when": "Tuesdays · 6 PM",
-      "venue": "Ride MORE Bicycles",
-      "address": "59 E Gregory St., Pensacola, FL",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Tempo Tuesday is a weekly group road ride that departs from Ride MORE Bicycles, 59 E Gregory St. in downtown Pensacola, and is led with the West Florida Wheelmen. It covers about 33 miles at an average of 17-20 mph. The ride runs 6-7:30 PM every Tuesday.",
-      "url": "https://coastaleventures.com/events/ev-tempo-tuesday-with-the-west-florid-1006.html",
-      "sources": [
-        {
-          "note": "Events page: Every Tuesday Tempo Tuesday with the West Florida Wheelmen, 6-7:30 PM, about 33 miles, 17-20 mph",
-          "url": "https://ridemorebicycles.com/events/"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_trivia_night_in_fort_walton_beach_0901-2026-11-24",
-      "title": "Trivia Night in Fort Walton Beach",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "18:00",
-      "endTime": "20:00",
-      "when": "Tuesdays · 6:00 PM to 8:00 PM",
-      "venue": "Rick's Crab Trap on Eglin Parkway",
-      "address": "178 Eglin Pkwy NE, Fort Walton Beach, FL 32548",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Trivia Night at Rick's Crab Trap runs free every Tuesday from 6 to 8 PM, hosted by a local trivia company with a live emcee. Admission is free for all ages, and the game repeats weekly on Eglin Parkway. Teams compete through general knowledge rounds for the full two hours.",
-      "url": "https://coastaleventures.com/events/ev-trivia-night-in-fort-walton-beach-0901.html",
-      "sources": [
-        {
-          "note": "fwbchamber.org: the organizer's own page, read for the admission",
-          "url": "https://www.fwbchamber.org/events/details/trivia-night-in-fort-walton-beach-09-01-2026-20674"
-        }
-      ],
-      "checkedOn": "2026-10-02"
-    },
-    {
-      "id": "ev_mmoa_teen_art_club_1103-2026-11-24",
-      "title": "Tuesday Teen Art Club at the Mobile Museum of Art",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "18:00",
-      "endTime": "19:30",
-      "when": "Tuesdays 11/3, 11/10, 11/17 and 11/24 · 6:00 PM to 7:30 PM",
-      "venue": "Mobile Museum of Art",
-      "address": "4850 Museum Drive, Mobile, AL 36608",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $150"
-      },
-      "summary": "The Mobile Museum of Art runs Teen Art Club for ages 12 and up on Tuesday evenings. Teens try new materials and techniques, with a different project at each session. Session 1 meets November 3, 10, 17 and 24, and registration covers all four evenings.",
-      "url": "https://coastaleventures.com/events/ev-mmoa-teen-art-club-1103.html",
-      "sources": [
-        {
-          "note": "Mobile Museum of Art Tuesday Teen Art Club page, read for ages 12 and up, Session 1 dates, 6:00 to 7:30 PM time and member and not-yet-member prices",
-          "url": "https://www.mobilemuseumofart.com/event/tuesday-teen-art-club/2026-11-03/"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_mma_wednesday_art_club_8_11_1104-2026-11-24",
-      "title": "Wednesday Art Club for ages 8 to 11 at the Mobile Museum of Art",
-      "date": "2026-11-24",
-      "endDate": "2026-12-30",
-      "startTime": "18:00",
-      "endTime": "19:30",
-      "when": "Wednesdays · 6:00 PM to 7:30 PM · 11/4, 11/18, 11/25, 12/2, 12/9, 12/16 and 12/30",
-      "venue": "Mobile Museum of Art",
-      "address": "4850 Museum Drive, Mobile, AL 36608",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $150"
-      },
-      "summary": "Kids ages 8 to 11 take a Wednesday evening art class at the Mobile Museum of Art, with a new project each week. Students try different approaches and develop their own ideas in a supportive group. The museum sells the club in three sessions, and Sessions 2 and 3 run through the end of December.",
-      "url": "https://coastaleventures.com/events/ev-mma-wednesday-art-club-8-11-1104.html",
-      "sources": [
-        {
-          "note": "Mobile Museum of Art class page for Wednesday Art Club ages 8 to 11, read for times, session dates and fees",
-          "url": "https://www.mobilemuseumofart.com/event/wednesday-art-club-for-ages-8-11/2026-10-28/"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_fleet_feet_pensacola_free_run_club_1006-2026-11-24",
-      "title": "Fleet Feet Pensacola Free Run Clubs",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "18:15",
-      "endTime": null,
-      "when": "Tuesdays and Thursdays · 6:15 PM",
-      "venue": "Fleet Feet Pensacola",
-      "address": "236 West Garden Street, Unit 1, Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "The Fleet Feet Pensacola Free Run Clubs meet Tuesday and Thursday at 6:15 PM at the shop on West Garden Street. Tuesday offers a social club, a 1-mile walk, a 1.8-mile run or walk, or a 5K. Thursday offers a 1-mile walk, a 1.8-mile run or walk, a 5K or a 10K. Both are free.",
-      "url": "https://coastaleventures.com/events/ev-fleet-feet-pensacola-free-run-club-1006.html",
-      "sources": [
-        {
-          "note": "RunSignup page: Tue and Thu 6:15 PM, 236 West Garden St Unit 1, price $0",
-          "url": "https://runsignup.com/Race/FL/Pensacola/FLEETFEETPENSACOLATUESDAYANDTHURSDAYFREERUNCLUBS"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_clubla_born_of_osiris_miss_may_i_1124-2026-11-24",
-      "title": "Born of Osiris and Miss May I",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "18:30",
-      "endTime": null,
-      "when": "Tuesday 11/24 · 6:30 PM",
-      "venue": "Club LA",
-      "address": "34876 Emerald Coast Pkwy, Destin, FL 32541",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Born of Osiris and Miss May I plays Club LA in Destin on Tuesday 11/24 · 6:30 PM. Doors open at 6:00 PM and the show starts at 6:30 PM. The night is presented by 99 Rock. Club LA admits ages 16 and up. The calendar page does not show a ticket price, so check the ticket link before you drive.",
-      "url": "https://coastaleventures.com/events/ev-clubla-born-of-osiris-miss-may-i-1124.html",
-      "sources": [
-        {
-          "note": "Rock Destin home page: calendar listing with date, doors and show times, presenter, ages 16 and up and address",
-          "url": "https://www.rockdestin.com/"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_3rd_planet_trivia_tuesday_1124-2026-11-24",
-      "title": "Live trivia night at 3rd Planet Brewing",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "18:30",
-      "endTime": null,
-      "when": "Tuesday 11/24 · 6:30 PM",
-      "venue": "3rd Planet Brewing",
-      "address": "1400 E John Sims Parkway, Niceville, FL 32578",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "3rd Planet Brewing in Niceville runs live trivia with Challenge Entertainment every Tuesday at 6:30 PM. Teams compete for prizes and the brewery says the game is always free to play. Food and drinks are sold on site.",
-      "url": "https://coastaleventures.com/events/ev-3rd-planet-trivia-tuesday-1124.html",
-      "sources": [
-        {
-          "note": "3rd Planet Brewing event page for live trivia, read for the Tuesday 6:30 PM time and the free-to-play note",
-          "url": "https://www.3rdplanetbrewing.com/events/"
-        },
-        {
-          "note": "3rd Planet Brewing events list, read for the date and listing",
-          "url": "https://www.3rdplanetbrewing.com/events/"
-        }
-      ],
-      "checkedOn": "2026-11-18"
-    },
-    {
-      "id": "nl_ccbrew_trivia-2026-11-24",
-      "title": "Team Trivia Night: Coastal County Brewing",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "18:30",
-      "endTime": null,
-      "when": "Tuesdays · 6:30 PM",
-      "venue": "Coastal County Brewing Co.",
-      "address": "3041 East Olive Rd, Pensacola, FL 32514",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Grab a team and a local craft pour. Coastal County runs team trivia every Tuesday at 6:30 in the taproom. It is a low-key adult night out, about 25 minutes from the bridge.",
-      "url": "https://coastaleventures.com/events/nl-ccbrew-trivia.html",
-      "sources": [
-        {
-          "note": "Coastal County Brewing, Team Trivia 6:30 (own weekly schedule)",
-          "url": "https://coastalcountybrewing.com/weekly-schedule"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_trinity_games_weekly_game_nights_m_1005-2026-11-24",
-      "title": "Trinity Games weekly game nights (Magic, Gundam, One Piece, Flesh and Blood, Riftbound and more)",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "18:30",
-      "endTime": null,
-      "when": "Game nights Monday to Thursday · 6:30 PM",
-      "venue": "Trinity Games",
-      "address": "2400 W Michigan Ave Unit 27, Pensacola, FL 32526",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $5"
-      },
-      "summary": "Trinity Games runs weekly game nights at its Pensacola shop for Magic, Gundam, One Piece, Flesh and Blood, Riftbound and more. Monday has Gundam Locals at 6:30 PM and Flesh and Blood at 7 PM. Tuesday has Digimon Locals and MTG Pauper at 6:30 PM, and Wednesday has One Piece Locals and CyberPunk Locals at 6:30 PM. Thursday has Magic Commander Day all day, Riftbound Competitive at 6:30 PM and HoloLive Locals at 7 PM, and Friday has MTG Modern at 7 PM.",
-      "url": "https://coastaleventures.com/events/ev-trinity-games-weekly-game-nights-m-1005.html",
-      "sources": [
-        {
-          "note": "Weekly Events banner image with day, game, time, entry",
-          "url": "https://trinitygamesllc.com/pages/events"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_boots_buckles_boogie_1006-2026-11-24",
-      "title": "Boots, Buckles & Boogie: Tuesday Country Night",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "19:00",
-      "endTime": null,
-      "when": "Tuesdays 10/6 to 12/1 · 7:00 PM",
-      "venue": "Phineas Phogg's, Seville Quarter",
-      "address": "130 E Government St, Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Seville Quarter turns Phineas Phogg's into a honky-tonk dance floor every Tuesday, starting October 6 and listed on its calendar through December 1. A dance instructor teaches line dances and partner dances from 7:00 PM to 9:00 PM, covering Country Two-Step and Country Swing. A DJ then plays country dance songs for the rest of the night.",
-      "url": "https://coastaleventures.com/events/ev-boots-buckles-boogie-1006.html",
-      "sources": [
-        {
-          "note": "sevillequarter.com event page: \"Beginning Tuesday, October 6, Boots, Buckles & Boogie takes over Phineas Phogg's at Seville Quarter with line dancing, partner dancing, Country Two-Step, Country Swing\", lessons from 7 to 9 p.m.",
-          "url": "https://sevillequarter.com/event/boots-buckles-boogie/2026-10-06/"
-        },
-        {
-          "note": "sevillequarter.com events calendar: every Tuesday from Oct 6 through Dec 1, 7:00 PM to 9:00 PM, Phineas Phogg's",
-          "url": "https://sevillequarter.com/events"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_brandon_styles_variety_show_tue_1124-2026-11-24",
-      "title": "Brandon Styles Variety Show: comedy, magic and 60 impressions",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "19:00",
-      "endTime": null,
-      "when": "Tuesday 11/24 · 7:00 PM",
-      "venue": "Brandon Styles Theater & Magic Shop",
-      "address": "101 South OWA Blvd, Foley, AL 36535",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $30"
-      },
-      "summary": "Brandon Styles plays nearly 60 famous voices, from Frank Sinatra to Justin Bieber, and mixes in comedy, magic, dancing, ventriloquism and audience participation. The show runs about 70 minutes. Youth ages 4 to 17 get in free with a paying adult.",
-      "url": "https://coastaleventures.com/events/ev-brandon-styles-variety-show-tue-1124.html",
-      "sources": [
-        {
-          "note": "Brandon Styles Theater booking page: Variety Show every Tuesday and Saturday at 7:00 PM, 70 minutes, ticket prices",
-          "url": "https://reservations.waverez.com/brandonstyles"
-        }
-      ],
-      "checkedOn": "2026-11-18"
-    },
-    {
-      "id": "ev_gab_spot_karaoke_taco_tuesday_1013-2026-11-24",
-      "title": "Karaoke and Taco Tuesday at The GAB Spot",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "19:00",
-      "endTime": "22:00",
-      "when": "Tuesdays · 7:00 PM to 10:00 PM",
-      "venue": "The GAB Spot",
-      "address": "913 N Beal Pkwy, Unit J, Fort Walton Beach, FL 32547",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "The GAB Spot in Fort Walton Beach hosts karaoke every Tuesday from 7:00 PM to 10:00 PM. During karaoke the venue runs a Taco Tuesday special of three old school tacos, chicken or beef, plus a house margarita for $17. Drink specials run all night.",
-      "url": "https://coastaleventures.com/events/ev-gab-spot-karaoke-taco-tuesday-1013.html",
-      "sources": [
-        {
-          "note": "thegabspotfwb.com calendar: Karaoke, Tuesday October 13, 7 to 10 PM, Taco Tuesday special of 3 Old School Tacos and a House Margarita for $17",
-          "url": "https://thegabspotfwb.com/calendar-of-events/karaoke-6b3r4-yrstx-t7lz9-9swfd-da6g2"
-        }
-      ],
-      "checkedOn": "2026-10-07"
-    },
-    {
-      "id": "ev_usa_mbb_famu_1124-2026-11-24",
-      "title": "South Alabama men's basketball vs FAMU",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "19:00",
-      "endTime": null,
-      "when": "Tuesday 11/24 · 7:00 PM",
-      "venue": "Mitchell Center, University of South Alabama",
-      "address": "5950 Old Shell Road, Mobile, AL 36688",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "South Alabama men's basketball plays FAMU in the Mitchell Center arena. Tip-off is 7:00 PM on Tuesday, November 24.",
-      "url": "https://coastaleventures.com/events/ev-usa-mbb-famu-1124.html",
-      "sources": [
-        {
-          "note": "University of South Alabama Mitchell Center upcoming events page, read for game date, time and location",
-          "url": "https://www.southalabama.edu/departments/mitchellcenter/upcomingevents.html"
-        }
-      ],
-      "checkedOn": "2026-11-11"
-    },
-    {
-      "id": "ev_brandonstyles_variety-2026-11-24",
-      "title": "The Brandon Styles Variety Show",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "19:00",
-      "endTime": null,
-      "when": "Tuesdays and Saturdays · 7:00 PM",
-      "venue": "Brandon Styles Theater at OWA",
-      "address": "1501 S OWA Blvd, Foley, AL 36535",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $25"
-      },
-      "summary": "Celebrity impressions, comedy, and magic play a purpose-built theatre at OWA, twice a week. It is marketed all-ages and it means it, a rare thing that a nine-year-old and two adults can all sit through happily.",
-      "url": "https://coastaleventures.com/events/ev-brandonstyles-variety.html",
-      "sources": [
-        {
-          "note": "Brandon Styles, own show schedule: \"The Brandon Styles Variety Show ... runs every Tuesday and Saturday at 7 PM ... Adult General Admission (Ages 18+) $35.00.\"",
-          "url": "https://www.brandonstyles.com/show-schedule"
-        }
-      ],
-      "checkedOn": "2026-10-28"
-    },
-    {
-      "id": "ev_weekly_trivia_tuesdays_perfect_pla_1006-2026-11-24",
-      "title": "Weekly Trivia Tuesdays (Perfect Plain)",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "19:00",
-      "endTime": "21:00",
-      "when": "Tuesdays · 7 PM-9 PM",
-      "venue": "Perfect Plain Brewing Co.",
-      "address": "50 E. Garden Street, Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "free",
-        "label": "Free"
-      },
-      "summary": "Weekly Trivia Tuesdays is a brewery trivia night at Perfect Plain Brewing Co., 50 E. Garden Street, with adoptable dogs as honorary co-hosts. It is free and runs 7-9 PM every Tuesday.",
-      "url": "https://coastaleventures.com/events/ev-weekly-trivia-tuesdays-perfect-pla-1006.html",
-      "sources": [
-        {
-          "note": "Perfect Plain upcoming events: Trivia Tuesdays 7-9 PM, free, at Perfect Plain Brewing Co.",
-          "url": "https://www.perfectplain.com/upcoming-events"
-        }
-      ],
-      "checkedOn": "2026-10-03"
-    },
-    {
-      "id": "ev_seville_karaoke-2026-11-24",
-      "title": "Lili Marlene's Karaoke",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "20:00",
-      "endTime": "23:00",
-      "when": "Sunday and Tuesday to Saturday · 8:00-11:00 PM",
-      "venue": "Seville Quarter, Lili Marlene's",
-      "address": "130 E Government St, Pensacola, FL 32502",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Karaoke runs every night but Monday in the aviators' room, not just on the weekend. It has a supportive room, a real sound system, and no sign-up fee posted.",
-      "url": "https://coastaleventures.com/events/ev-seville-karaoke.html",
-      "sources": [
-        {
-          "note": "Seville Quarter, own week calendar 08/09–08/15/2026 lists Karaoke 8:00–11:00 PM at Lili Marlene's on every night of the week",
-          "url": "https://sevillequarter.com/events/week/2026-08-09/"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_seville_eoa_live_music_1104-2026-11-24",
-      "title": "Live music at End o' the Alley Bar, Seville Quarter",
-      "date": "2026-11-24",
-      "endDate": null,
-      "startTime": "21:00",
-      "endTime": "23:30",
-      "when": "Mondays, Tuesdays and Wednesdays · 9:00 PM to 11:30 PM",
-      "venue": "End o' the Alley Bar, Seville Quarter",
-      "address": "130 E Government St, Pensacola, FL 32502",
-      "category": "music",
-      "categoryLabel": "Live music",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Seville Quarter books a live music set at End o' the Alley Bar, its courtyard bar in downtown Pensacola, on Monday, Tuesday and Wednesday nights. The November calendar lists Joey Collins on Mondays, Declan Moran on Tuesdays and Schofield on Wednesdays, each from 9:00 PM to 11:30 PM. The calendar does not state a cover charge.",
-      "url": "https://coastaleventures.com/events/ev-seville-eoa-live-music-1104.html",
-      "sources": [
-        {
-          "note": "Seville Quarter events calendar, read for Live Music with Schofield (Wed), Joey Collins (Mon) and Declan Moran (Tue), 9:00 PM to 11:30 PM, listed through November 30",
-          "url": "https://sevillequarter.com/events"
-        }
-      ],
-      "checkedOn": "2026-11-04"
-    },
-    {
-      "id": "ev_make_your_own_glass_hot_glass_by_a_1007-2026-11-25",
-      "title": "Make Your Own Glass (hot glass, by appointment)",
-      "date": "2026-11-25",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "when": "By appointment: Wednesdays 5 PM-9 PM, Saturdays 8 AM-11 AM",
-      "venue": "First City Art Center",
-      "address": "1060 N Guillemard St, Pensacola, FL 32501",
-      "category": "art",
-      "categoryLabel": "Arts and culture",
-      "price": {
-        "kind": "priced",
-        "label": "from $85"
-      },
-      "summary": "Make Your Own Glass is a hands-on hot glass session at First City Art Center in Pensacola, where each participant makes a piece with a glassblower. It's for ages 8 and up including adults, by appointment on Wednesdays from 5-9 PM and Saturdays from 8-11 AM. The finished piece cools in an annealing oven and is picked up the following week. Standard pieces cost $85, and premium pieces such as a pumpkin, ornament, cup or bowl cost $110-$140.",
-      "url": "https://coastaleventures.com/events/ev-make-your-own-glass-hot-glass-by-a-1007.html",
-      "sources": [
-        {
-          "note": "FCAC product page: Wed 5-9 PM and Sat 8-11 AM, ages 8+, $85/$110-$140",
-          "url": "https://firstcityart.org/product/make-your-own-glass/"
-        }
-      ],
-      "checkedOn": "2026-10-03"
     },
     {
       "id": "ev_painting_with_a_twist_pensacola_pa_1003-2026-11-25",
@@ -2811,6 +327,178 @@
         }
       ],
       "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_wharf_santa_photos_1113-2026-11-25",
+      "title": "Photos with Santa at The Wharf",
+      "date": "2026-11-25",
+      "endDate": "2026-12-24",
+      "startTime": null,
+      "endTime": null,
+      "when": "Fridays to Sundays 11/13 to 12/24 · Fri 3 PM to 6 PM, Sat 10 AM to 6 PM, Sun 12 PM to 6 PM",
+      "venue": "The Wharf",
+      "address": "23101 Canal Road, Orange Beach, AL 36561",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "The Wharf in Orange Beach sets up Photos with Santa on Fridays through Sundays from November 13 to December 24. Friday hours run 3:00 PM to 6:00 PM, Saturday 10:00 AM to 6:00 PM and Sunday 12:00 PM to 6:00 PM. The Wharf sells various price packages, and the ice rink sits next door at the same property.",
+      "url": "https://coastaleventures.com/events/ev-wharf-santa-photos-1113.html",
+      "sources": [
+        {
+          "note": "The Wharf news page, read for Photos with Santa open Fridays to Sundays, November 13 to December 24, various price packages",
+          "url": "https://alwharf.com/news/skate-the-coast-tips-tricks-for-ice-skating-at-the-wharf"
+        },
+        {
+          "note": "The Wharf upcoming events calendar for November 2026, read for the Photos with Santa hours on each Friday, Saturday and Sunday",
+          "url": "https://alwharf.com/events/2026/11"
+        }
+      ],
+      "checkedOn": "2026-11-04"
+    },
+    {
+      "id": "ev_bay_center_public_skate_nov_1101-2026-11-25",
+      "title": "Public Ice Skating at the Pensacola Bay Center, November sessions",
+      "date": "2026-11-25",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "when": "Nov 1 to Nov 25 · one hour sessions, see dates",
+      "venue": "Pensacola Bay Center",
+      "address": "201 E. Gregory St., Pensacola, FL 32502",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $15"
+      },
+      "summary": "The Pensacola Bay Center opens its ice for one-hour public skate sessions. The November sessions run Sunday 11/1 at 6:30 PM, Saturday 11/7 and Sunday 11/8 at 1:30, 3:00 and 4:30 PM, Friday 11/13 and Saturday 11/14 at 9:30 PM, Sunday 11/15 at 1:30, 3:00 and 4:30 PM, and Wednesday 11/25 at 9:30 PM. The Bay Center states that all sessions are subject to change.",
+      "url": "https://coastaleventures.com/events/ev-bay-center-public-skate-nov-1101.html",
+      "sources": [
+        {
+          "note": "Pensacola Bay Center public skate page: November session dates and times, $18 with rental, $15 own skates, group rate and season passes",
+          "url": "https://www.pensacolabaycenter.com/events/detail/public-skate-2"
+        }
+      ],
+      "checkedOn": "2026-10-28"
+    },
+    {
+      "id": "ev_destin_commons_santas_letters_1120-2026-11-25",
+      "title": "Santa's Letters to the North Pole mailbox at Destin Commons",
+      "date": "2026-11-25",
+      "endDate": "2026-12-13",
+      "startTime": null,
+      "endTime": null,
+      "when": "Friday 11/20 · open during center hours · through Sunday 12/13",
+      "venue": "Destin Commons",
+      "address": "4100 Legendary Drive, Destin, FL 32541",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "Children can write a letter to Santa and drop it in the North Pole mailbox on South Street, in front of Chipotle. Every child who submits a letter is entered to win a family staycation package. The mailbox is up from November 20 through December 13.",
+      "url": "https://coastaleventures.com/events/ev-destin-commons-santas-letters-1120.html",
+      "sources": [
+        {
+          "note": "Destin Commons: Santa's Letters to the North Pole page, read for the dates, mailbox location and staycation drawing",
+          "url": "https://destincommons.com/happenings-events/santas-letters-to-the-north-pole/"
+        },
+        {
+          "note": "Destin Commons: Happenings page listing the event",
+          "url": "https://destincommons.com/enjoy-entertainment/happenings/"
+        }
+      ],
+      "checkedOn": "2026-11-11"
+    },
+    {
+      "id": "ev_blue_morning_view_within_1025-2026-11-25",
+      "title": "The View Within exhibition at Blue Morning Gallery",
+      "date": "2026-11-25",
+      "endDate": "2026-11-28",
+      "startTime": null,
+      "endTime": null,
+      "when": "Sunday 10/25 to Saturday 11/28 · reception Friday 11/6 at 4:30",
+      "venue": "Blue Morning Gallery",
+      "address": "21 S. Palafox Place, Pensacola, FL 32502",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Blue Morning Gallery in downtown Pensacola shows The View Within, an exhibition of colorful abstract paintings by the featured artist, from October 25 through November 28. A reception on Friday November 6 at 4:30 lets visitors meet the artist, hear live music and enjoy refreshments and conversation.",
+      "url": "https://coastaleventures.com/events/ev-blue-morning-view-within-1025.html",
+      "sources": [
+        {
+          "note": "Blue Morning Gallery: news page, read for The View Within dates, the November 6 reception and the artist description",
+          "url": "https://bluemorninggallery.com/news/"
+        }
+      ],
+      "checkedOn": "2026-10-28"
+    },
+    {
+      "id": "ev_foley_art_center_trim_a_tree_1113-2026-11-25",
+      "title": "Trim-a-Tree at the Foley Art Center",
+      "date": "2026-11-25",
+      "endDate": "2026-12-23",
+      "startTime": null,
+      "endTime": null,
+      "when": "Friday 11/13 to Wednesday 12/23 · daily (hours to confirm)",
+      "venue": "Foley Art Center",
+      "address": "211 N McKenzie St, Foley, AL 36535",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "Since 1967 the Foley Art Center has opened its Trim-a-Tree holiday show on the second Friday in November, and it runs through December 23. More than 125 local artists and craftspeople sell pottery, woodcarvings, florals, jewelry, blown glass, textiles, soy candles, wooden toys and ornaments on consignment. Admission is free.",
+      "url": "https://coastaleventures.com/events/ev-foley-art-center-trim-a-tree-1113.html",
+      "sources": [
+        {
+          "note": "gulfshores.com: “Since 1967, the Foley Art Center has presented “Trim-a-Tree,” which always begins on the second Friday in November and ends on December 23.”",
+          "url": "https://www.gulfshores.com/events-calendar/annual-events-and-festivals/annual-trim-a-tree/"
+        },
+        {
+          "note": "gulfshores.com: “Over 125 local fine Artists and craftsmen's work is for sale on consignment.”",
+          "url": "https://www.gulfshores.com/events-calendar/annual-events-and-festivals/annual-trim-a-tree/"
+        },
+        {
+          "note": "gulfshores.com: “Admission:”",
+          "url": "https://www.gulfshores.com/events-calendar/annual-events-and-festivals/annual-trim-a-tree/"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "id": "ev_pensacola_state_wanda_sullivan_bloem-2026-11-25",
+      "title": "Wanda Sullivan: Bloem Exhibition",
+      "date": "2026-11-25",
+      "endDate": "2026-12-11",
+      "startTime": null,
+      "endTime": null,
+      "when": "Now through December 11",
+      "venue": "Anna Lamar Switzer Center for Visual Arts",
+      "address": "1000 College Blvd. Bldg. 15, Pensacola, FL 32504",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "A gallery exhibition by artist Wanda Sullivan runs at Pensacola State College's visual arts center through mid-December. The center's own site does not publish an admission price.",
+      "url": "https://coastaleventures.com/events/ev-pensacola-state-wanda-sullivan-bloem.html",
+      "sources": [
+        {
+          "note": "Pensacola State College's own visual arts site for the exhibition dates and venue",
+          "url": "https://visualarts.pensacolastate.edu"
+        }
+      ],
+      "checkedOn": "2026-09-24"
     },
     {
       "id": "ev_shape_and_sculpt_fitness_class_0826-2026-11-25",
@@ -3009,6 +697,62 @@
       "checkedOn": "2026-10-02"
     },
     {
+      "id": "ev_destin_fall_break_camp_1123-2026-11-25",
+      "title": "Half-day fall break camp at the Destin Community Center",
+      "date": "2026-11-25",
+      "endDate": null,
+      "startTime": "09:00",
+      "endTime": "13:00",
+      "when": "Monday 11/23 to Wednesday 11/25 · 9:00 AM to 1:00 PM",
+      "venue": "Destin Community Center",
+      "address": "101 Stahlman Ave, Destin, FL 32541",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $80"
+      },
+      "summary": "The City of Destin runs a three-day half-day camp for children ages 5 to 12 during the Thanksgiving school break. Camp meets Monday through Wednesday from 9:00 AM to 1:00 PM at the Destin Community Center. The Destin Chamber's repost of the city notice lists games, crafts, outdoor time, snacks and lunch each day. Pre-registration is required and the city says space is limited.",
+      "url": "https://coastaleventures.com/events/ev-destin-fall-break-camp-1123.html",
+      "sources": [
+        {
+          "note": "City of Destin recreation catalog: Holiday Camps, read for Half-Day Fall Break 2026, ages 5 to 12, Monday to Wednesday 11/23 to 11/25, 9am to 1pm, $65, pre-registration required",
+          "url": "https://secure.rec1.com/FL/destin-fl/catalog"
+        },
+        {
+          "note": "Destin Chamber repost of the city notice, read for the $80 non-resident rate, 850-654-5184 and the day's activities",
+          "url": "https://business.destinchamber.com/events/details/fall-break-half-day-camp-destin-community-center-61161"
+        }
+      ],
+      "checkedOn": "2026-10-28"
+    },
+    {
+      "id": "ev_namaste_by_the_bay_waterfront_park_1107-2026-11-25",
+      "title": "Namaste by the Bay free community yoga at Waterfront Park",
+      "date": "2026-11-25",
+      "endDate": "2026-11-28",
+      "startTime": "09:00",
+      "endTime": null,
+      "when": "Saturday 9:00 AM",
+      "venue": "Orange Beach Waterfront Park",
+      "address": "26425 Canal Road, Orange Beach, AL 36561",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "Orange Beach Parks and Recreation runs free community yoga by the water on Saturday mornings from 9:00 AM to 10:00 AM, with a different instructor each week. All ages and levels are welcome. The November sessions fall on 11/7, 11/14, 11/21 and 11/28.",
+      "url": "https://coastaleventures.com/events/ev-namaste-by-the-bay-waterfront-park-1107.html",
+      "sources": [
+        {
+          "note": "City of Orange Beach calendar: Namaste by the Bay page, read for time, place, instructors and Saturday dates",
+          "url": "https://www.orangebeachal.gov/Calendar.aspx?EID=11262&month=11&year=2026&day=4&calType=0"
+        }
+      ],
+      "checkedOn": "2026-11-04"
+    },
+    {
       "id": "ev_veterans_chat_n_chew_0902-2026-11-25",
       "title": "Veterans Chat 'n Chew",
       "date": "2026-11-25",
@@ -3041,6 +785,32 @@
         }
       ],
       "checkedOn": "2026-10-02"
+    },
+    {
+      "id": "ev_youth_art_camp_fall_break_first_ci_1123-2026-11-25",
+      "title": "Youth Art Camp: Fall Break (First City Art Center)",
+      "date": "2026-11-25",
+      "endDate": null,
+      "startTime": "09:00",
+      "endTime": null,
+      "when": "Monday 11/23 to Wednesday 11/25 · 9:00 AM",
+      "venue": "First City Art Center, Youth Art Building (Building #6, De Soto St parking)",
+      "address": "1060 N. Guillemard Street, Pensacola, FL 32501",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "priced",
+        "label": "from $50"
+      },
+      "summary": "The Youth Art Camp for Fall Break is a three-day Thanksgiving-week art camp for ages 5-12 at First City Art Center in Pensacola. It meets in the Youth Art Building, Monday 11/23 through Wednesday 11/25. Half day (9 AM-12 PM) is $50, and full day (9 AM-4 PM) is $80 for ages 6-12, with a member discount at checkout.",
+      "url": "https://coastaleventures.com/events/ev-youth-art-camp-fall-break-first-ci-1123.html",
+      "sources": [
+        {
+          "note": "Fall Break camp Nov 23-25; prices",
+          "url": "https://firstcityart.org/education/youth-art-camps/"
+        }
+      ],
+      "checkedOn": "2026-10-03"
     },
     {
       "id": "ev_beginner_line_dance_wednesday_0902-2026-11-25",
@@ -3167,6 +937,36 @@
       "checkedOn": "2026-11-18"
     },
     {
+      "id": "ev_mma_aminah_robinson_journeys_home_0109-2026-11-25",
+      "title": "Aminah Robinson: Journeys Home at the Mobile Museum of Art",
+      "date": "2026-11-25",
+      "endDate": "2027-01-09",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "when": "Tuesday to Saturday · 10:00 AM to 5:00 PM · through 1/9",
+      "venue": "Mobile Museum of Art",
+      "address": "4850 Museum Drive, Mobile, AL 36608",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "priced",
+        "label": "from $8"
+      },
+      "summary": "Aminah Robinson: Journeys Home is a special exhibition at the Mobile Museum of Art that draws on the artist's historical research, folklore and personal narrative. The museum describes it as a visual memoir of her life and a tableau of the African American experience. It stays open through January 9, 2027.",
+      "url": "https://coastaleventures.com/events/ev-mma-aminah-robinson-journeys-home-0109.html",
+      "sources": [
+        {
+          "note": "Mobile Museum of Art home page, read for the exhibition description and closing date",
+          "url": "https://mobilemuseumofart.com/"
+        },
+        {
+          "note": "Mobile Museum of Art visit page, read for hours, address and general admission prices",
+          "url": "https://www.mobilemuseumofart.com/visit/"
+        }
+      ],
+      "checkedOn": "2026-10-28"
+    },
+    {
       "id": "ev_career_and_workforce_connections_help_clinic_0902-2026-11-25",
       "title": "Career & Workforce Connections: Help Clinic",
       "date": "2026-11-25",
@@ -3192,6 +992,82 @@
         {
           "note": "mobilepubliclibrary.org: the library's own event page, read for the weekly Wednesday sessions through December 30",
           "url": "https://www.mobilepubliclibrary.org/event/career-workforce-connections-help-clinic-15596"
+        }
+      ],
+      "checkedOn": "2026-11-04"
+    },
+    {
+      "id": "ev_ecsc_fall_for_all_1123-2026-11-25",
+      "title": "Fall for All fall break days at Emerald Coast Science Center",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "when": "Mon 11/23, Tue 11/24, Wed 11/25 and Fri 11/27 · 10:00 AM to 3:00 PM",
+      "venue": "Emerald Coast Science Center",
+      "address": "31 Memorial Pkwy SW, Fort Walton Beach, FL 32548",
+      "category": "stem",
+      "categoryLabel": "STEM and learning",
+      "price": {
+        "kind": "priced",
+        "label": "from $15"
+      },
+      "summary": "The science center runs a fall break program on four days, with new activities each day. Kids make a glowing pumpkin squishy circuit, a corn snake maze, pumpkin slime or a pumpkin chemistry experiment, depending on the day. A Creature Feature with the animal ambassadors and sciPad fall games run alongside. The museum is closed Thanksgiving Day.",
+      "url": "https://coastaleventures.com/events/ev-ecsc-fall-for-all-1123.html",
+      "sources": [
+        {
+          "note": "Emerald Coast Science Center: Fall for All November 23 page, read for $15 admission, hours and the Autumn Adventures workshop",
+          "url": "https://www.ecscience.org/events-1/fall-for-all-november-23-3"
+        },
+        {
+          "note": "Emerald Coast Science Center: Fall for All November 24 page, read for the corn snake maze and schedule",
+          "url": "https://www.ecscience.org/events-1/fall-for-all-november-24-3"
+        },
+        {
+          "note": "Emerald Coast Science Center: Fall for All November 25 page, read for the pumpkin slime workshop",
+          "url": "https://www.ecscience.org/events-1/fall-for-all-november-25-3"
+        },
+        {
+          "note": "Emerald Coast Science Center: Fall for All November 27 page, read for the pumpkin chemistry demonstration",
+          "url": "https://www.ecscience.org/events-1/fall-for-all-november-27-1"
+        },
+        {
+          "note": "Emerald Coast Science Center: hours and pricing page, read for the closure on Thanksgiving Day and the free under 3 rate",
+          "url": "https://ecscience.org/admission-info"
+        }
+      ],
+      "checkedOn": "2026-11-04"
+    },
+    {
+      "id": "ev_mobile_museum_gateway_exhibition_0901-2026-11-25",
+      "title": "Gateway: From Graffiti to Gallery at the Mobile Museum of Art",
+      "date": "2026-11-25",
+      "endDate": "2027-09-01",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "when": "Tuesday to Saturday · 10:00 AM to 5:00 PM, through 9/1/2027",
+      "venue": "Mobile Museum of Art",
+      "address": "4850 Museum Dr, Mobile, AL 36608",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "priced",
+        "label": "from $8"
+      },
+      "summary": "The Mobile Museum of Art traces how artists who started with graffiti in New York's subways moved into galleries, with work by Basquiat, Haring, Scharf, KAWS and Banksy from the Masterworks Foundation collection. The show runs a full year, Tuesday through Saturday. Mobile County residents get in free on Thursdays.",
+      "url": "https://coastaleventures.com/events/ev-mobile-museum-gateway-exhibition-0901.html",
+      "sources": [
+        {
+          "note": "Mobile Museum of Art exhibition page: \"September 1, 2026 to September 1, 2027; Tuesday through Saturday, 10am to 5pm; Adults $12\"",
+          "url": "https://www.mobilemuseumofart.com/exhibitions/gateway/"
+        },
+        {
+          "note": "Mobile Museum of Art home page: \"Open through Sept. 1, 2027\"",
+          "url": "https://mobilemuseumofart.com"
+        },
+        {
+          "note": "Mobile County listing: \"FREE on Thursdays for Mobile County residents\"",
+          "url": "https://www.mobilecountyal.gov/community_events/gateway-from-graffiti-to-gallery-2026-09-01"
         }
       ],
       "checkedOn": "2026-11-04"
@@ -3225,6 +1101,36 @@
         }
       ],
       "checkedOn": "2026-11-01"
+    },
+    {
+      "id": "ev_mma_handle_with_care_0327-2026-11-25",
+      "title": "Handle with Care at the Mobile Museum of Art",
+      "date": "2026-11-25",
+      "endDate": "2027-03-27",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "when": "Tuesday to Saturday · 10:00 AM to 5:00 PM · through 3/27",
+      "venue": "Mobile Museum of Art",
+      "address": "4850 Museum Drive, Mobile, AL 36608",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "priced",
+        "label": "from $8"
+      },
+      "summary": "Handle with Care is an interactive special exhibition at the Mobile Museum of Art. Artists Calder Kamin of Austin and Jacob Reptile of New Orleans turn trash into soft, complex sculptures that visitors move through as an environment. It stays open through March 27, 2027.",
+      "url": "https://coastaleventures.com/events/ev-mma-handle-with-care-0327.html",
+      "sources": [
+        {
+          "note": "Mobile Museum of Art home page, read for the exhibition description and closing date",
+          "url": "https://mobilemuseumofart.com/"
+        },
+        {
+          "note": "Mobile Museum of Art visit page, read for hours, address and general admission prices",
+          "url": "https://www.mobilemuseumofart.com/visit/"
+        }
+      ],
+      "checkedOn": "2026-10-28"
     },
     {
       "id": "ev_mexican_train_dominoes_0902-2026-11-25",
@@ -3285,6 +1191,36 @@
         }
       ],
       "checkedOn": "2026-11-18"
+    },
+    {
+      "id": "ev_mma_timeless_hats_0130-2026-11-25",
+      "title": "Timeless Hats by Susie Mae Pugh-Williams at the Mobile Museum of Art",
+      "date": "2026-11-25",
+      "endDate": "2027-01-30",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "when": "Tuesday to Saturday · 10:00 AM to 5:00 PM · through 1/30",
+      "venue": "Mobile Museum of Art",
+      "address": "4850 Museum Drive, Mobile, AL 36608",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "priced",
+        "label": "from $8"
+      },
+      "summary": "Timeless Hats is a special exhibition of more than two dozen hats at the Mobile Museum of Art. Some were made by Mrs. Williams, and others are hats she admired and drew inspiration from for her own creations. It stays open through January 30, 2027.",
+      "url": "https://coastaleventures.com/events/ev-mma-timeless-hats-0130.html",
+      "sources": [
+        {
+          "note": "Mobile Museum of Art home page, read for the exhibition description and closing date",
+          "url": "https://mobilemuseumofart.com/"
+        },
+        {
+          "note": "Mobile Museum of Art visit page, read for hours, address and general admission prices",
+          "url": "https://www.mobilemuseumofart.com/visit/"
+        }
+      ],
+      "checkedOn": "2026-10-28"
     },
     {
       "id": "ev_theodore_wonderful_wednesday_storytime_0930-2026-11-25",
@@ -3593,6 +1529,32 @@
       "checkedOn": "2026-11-04"
     },
     {
+      "id": "ev_flounders_sunday_music_1101-2026-11-25",
+      "title": "Sunday afternoon live music at Flounder's Chowder House",
+      "date": "2026-11-25",
+      "endDate": "2026-12-27",
+      "startTime": "12:00",
+      "endTime": "16:00",
+      "when": "Sundays 11/1 through 12/27 · 12:00 PM to 4:00 PM",
+      "venue": "Flounder's Chowder House",
+      "address": "800 Quietwater Beach Road, Gulf Breeze, FL 32561",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Flounder's Chowder House on Quietwater Beach schedules live music on Sunday afternoons from 12:00 PM to 4:00 PM. Tim Spencer plays November 1, 15 and 29 and December 27, John Hart plays November 8 and December 6, and Jason Crysell plays November 22 and December 20. The page also lists Tim Spencer on Saturday December 12 for the same hours.",
+      "url": "https://coastaleventures.com/events/ev-flounders-sunday-music-1101.html",
+      "sources": [
+        {
+          "note": "Flounder's Chowder House: entertainment page, read for the Sunday performers, dates and 12:00 PM to 4:00 PM hours",
+          "url": "https://flounderschowderhouse.com/entertainment"
+        }
+      ],
+      "checkedOn": "2026-10-28"
+    },
+    {
       "id": "ev_acrylic_and_watercolor_painting_0909-2026-11-25",
       "title": "Acrylic & Watercolor Painting",
       "date": "2026-11-25",
@@ -3807,6 +1769,36 @@
       "checkedOn": "2026-11-11"
     },
     {
+      "id": "ev_destin_commons_kids_arts_crafts_1121-2026-11-25",
+      "title": "Kids Arts & Crafts: decorate your own ornament at Destin Commons",
+      "date": "2026-11-25",
+      "endDate": "2026-12-05",
+      "startTime": "15:00",
+      "endTime": "17:00",
+      "when": "Saturday 11/21 · 3:00 PM to 5:00 PM · runs through 12/5",
+      "venue": "Destin Commons",
+      "address": "4100 Legendary Drive, Destin, FL 32541",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "Children can decorate their own holiday ornament at the Destin Commons Market from 3:00 PM to 5:00 PM. The activity is free, supplies are limited, and families can browse the market vendors while the kids craft. The page gives a run of November 21 through December 5.",
+      "url": "https://coastaleventures.com/events/ev-destin-commons-kids-arts-crafts-1121.html",
+      "sources": [
+        {
+          "note": "Destin Commons: Kids Arts & Crafts page, read for the date range, 3:00 PM to 5:00 PM hours, free admission and supplies-limited note",
+          "url": "https://destincommons.com/happenings-events/kids-arts-crafts/"
+        },
+        {
+          "note": "Destin Commons: Happenings page listing the event",
+          "url": "https://destincommons.com/enjoy-entertainment/happenings/"
+        }
+      ],
+      "checkedOn": "2026-11-11"
+    },
+    {
       "id": "ev_valparaiso_library_free_birds_movie_1125-2026-11-25",
       "title": "Free Birds family movie at Valparaiso Library",
       "date": "2026-11-25",
@@ -3859,6 +1851,66 @@
       "checkedOn": "2026-10-03"
     },
     {
+      "id": "ev_destin_commons_jolly_jubilee_1120-2026-11-25",
+      "title": "Jolly Jubilee holiday music series at Destin Commons",
+      "date": "2026-11-25",
+      "endDate": "2026-12-23",
+      "startTime": "16:00",
+      "endTime": null,
+      "when": "Friday 11/20 · 4:00 PM · select days through 12/23",
+      "venue": "Destin Commons",
+      "address": "4100 Legendary Drive, Destin, FL 32541",
+      "category": "music",
+      "categoryLabel": "Live music",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "Destin Commons books free holiday performers on twelve days from November 20 through December 23: 11/20, 11/21, 11/27, 11/28, 11/29, 12/4, 12/5, 12/12, 12/18, 12/19, 12/20 and 12/23. The Cincinnati Christmas Carolers and Joe Occhipinti trade two-hour sets, usually 1:00 PM to 3:00 PM and 4:00 PM to 6:00 PM, and the Niceville Jazz Band plays Saturday 12/12 from 4:00 PM to 6:00 PM. Times shift on some days, so check the schedule for yours.",
+      "url": "https://coastaleventures.com/events/ev-destin-commons-jolly-jubilee-1120.html",
+      "sources": [
+        {
+          "note": "Destin Commons: Jolly Jubilee Series page, read for the performer schedule and complimentary entertainment note",
+          "url": "https://destincommons.com/happenings-events/jolly-jubilee-series/"
+        },
+        {
+          "note": "Destin Commons: Happenings page listing the event",
+          "url": "https://destincommons.com/enjoy-entertainment/happenings/"
+        }
+      ],
+      "checkedOn": "2026-11-11"
+    },
+    {
+      "id": "ev_mmoa_landscapes_in_oil_1107-2026-11-25",
+      "title": "Landscapes in Oil four-week painting class at the Mobile Museum of Art",
+      "date": "2026-11-25",
+      "endDate": "2026-11-28",
+      "startTime": "16:00",
+      "endTime": "18:00",
+      "when": "Saturdays 11/7, 11/14, 11/21 and 11/28 · 4:00 PM to 6:00 PM",
+      "venue": "Mobile Museum of Art",
+      "address": "4850 Museum Drive, Mobile, AL 36608",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "priced",
+        "label": "from $150"
+      },
+      "summary": "The Mobile Museum of Art teaches a four-week oil painting class on four Saturday afternoons. Students learn to build depth in a landscape with atmospheric perspective. The class studies landscapes in the museum's collection, paints with a guide, and includes one plein air session. It is for ages 16 and up and runs eight hours in total.",
+      "url": "https://coastaleventures.com/events/ev-mmoa-landscapes-in-oil-1107.html",
+      "sources": [
+        {
+          "note": "Mobile Museum of Art: Landscapes in Oil class page, read for the four Saturday dates, 4 to 6 PM times, age 16+ rule and $150 and $180 fees",
+          "url": "https://www.mobilemuseumofart.com/landscapes-in-oil"
+        },
+        {
+          "note": "Mobile Museum of Art: classes page, read for the street address",
+          "url": "https://www.mobilemuseumofart.com/classes"
+        }
+      ],
+      "checkedOn": "2026-11-04"
+    },
+    {
       "id": "ev_blakeley_sledge_enterprise_cruise_1125-2026-11-25",
       "title": "Mobile Harbor sunset cruise with USS Enterprise guide John Sledge",
       "date": "2026-11-25",
@@ -3887,6 +1939,58 @@
         }
       ],
       "checkedOn": "2026-11-18"
+    },
+    {
+      "id": "ev_mma_wednesday_art_club_5_7_1104-2026-11-25",
+      "title": "Wednesday Art Club for ages 5 to 7 at the Mobile Museum of Art",
+      "date": "2026-11-25",
+      "endDate": "2026-12-30",
+      "startTime": "16:00",
+      "endTime": "17:30",
+      "when": "Wednesdays · 4:00 PM to 5:30 PM · 11/4, 11/18, 11/25, 12/2, 12/9, 12/16 and 12/30",
+      "venue": "Mobile Museum of Art",
+      "address": "4850 Museum Drive, Mobile, AL 36608",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "priced",
+        "label": "from $150"
+      },
+      "summary": "Young artists ages 5 to 7 meet on Wednesday afternoons at the Mobile Museum of Art for hands-on projects with color, texture and technique. Each class includes visits to For Children, the museum's interactive gallery for kids. The museum sells the club in three sessions, and Sessions 2 and 3 run through the end of December.",
+      "url": "https://coastaleventures.com/events/ev-mma-wednesday-art-club-5-7-1104.html",
+      "sources": [
+        {
+          "note": "Mobile Museum of Art class page for Wednesday Art Club ages 5 to 7, read for times, session dates and fees",
+          "url": "https://www.mobilemuseumofart.com/event/wednesday-art-club-for-ages-5-7/2026-10-28/"
+        }
+      ],
+      "checkedOn": "2026-10-28"
+    },
+    {
+      "id": "ev_bellingrath_magic_christmas_1120-2026-11-25",
+      "title": "31st Annual Magic Christmas in Lights at Bellingrath",
+      "date": "2026-11-25",
+      "endDate": "2027-01-09",
+      "startTime": "17:00",
+      "endTime": "21:00",
+      "when": "Nov 20 to Jan 9 · 5 PM to 9 PM nightly",
+      "venue": "Bellingrath Gardens and Home",
+      "address": "12401 Bellingrath Gardens Rd, Theodore, AL 36582",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Bellingrath Gardens strings its grounds with thousands of lights each winter, and this is the 31st season of the walk-through show in Theodore. Evening hours run from 5 PM to 9 PM, and the home tour stays open until 8:30 PM. The show is closed on November 25 and 26, December 25 and January 1. Ticket prices are not yet published, so check the garden's ticket page before you go.",
+      "url": "https://coastaleventures.com/events/ev-bellingrath-magic-christmas-1120.html",
+      "sources": [
+        {
+          "note": "bellingrath.org Magic Christmas in Lights page: November 20 to January 9, evening hours 5 PM to 9 PM, closed Nov 25-26, Dec 25 and Jan 1, complimentary parking, tickets on sale in October",
+          "url": "https://www.bellingrath.org/magic-christmas-in-lights"
+        }
+      ],
+      "checkedOn": "2026-10-28"
     },
     {
       "id": "ev_d_d_encounters_and_rpg_meet_n_gree_1007-2026-11-25",
@@ -3947,6 +2051,32 @@
         }
       ],
       "checkedOn": "2026-09-26"
+    },
+    {
+      "id": "ev_winterfest_photos_with_santa_1120-2026-11-25",
+      "title": "Photos with Santa at Pensacola Winterfest",
+      "date": "2026-11-25",
+      "endDate": "2026-12-24",
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "when": "Fri-Sun from 11/20, then nightly from 12/18 · 5:00 PM to 8:00 PM",
+      "venue": "Winterfest Plaza",
+      "address": "223 South Palafox Place, Pensacola, FL 32502",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $37"
+      },
+      "summary": "Santa sits in his sleigh in Winterfest Plaza on Palafox Place, and each family books a time slot online. An elf asks the kids for their Christmas wishes, then the whole family poses on presents beside the sleigh. Every package includes candid shots and all full-quality digital photos, texted to your phone. Santa is there on Fridays, Saturdays and Sundays from November 20, and every night from December 18 through Christmas Eve.",
+      "url": "https://coastaleventures.com/events/ev-winterfest-photos-with-santa-1120.html",
+      "sources": [
+        {
+          "note": "Pensacola Winterfest, Photos with Santa page, read for package prices, session hours, location and the dates Santa is downtown",
+          "url": "https://pensacolawinterfest.org/photos-with-santa"
+        }
+      ],
+      "checkedOn": "2026-11-18"
     },
     {
       "id": "ev_tbs_comics_fort_walton_beach_weekl_1005-2026-11-25",
@@ -4069,6 +2199,40 @@
       "checkedOn": "2026-09-26"
     },
     {
+      "id": "ev_christmas_nights_in_lights_mobile_1106-2026-11-25",
+      "title": "Christmas Nights in Lights drive-thru",
+      "date": "2026-11-25",
+      "endDate": "2026-12-27",
+      "startTime": "18:00",
+      "endTime": "21:00",
+      "when": "Select nights 11/6 to 12/27 · 6:00 PM to 9:00 PM",
+      "venue": "Dauphin Way Baptist Church",
+      "address": "3661 Dauphin St, Mobile, AL 36608",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $9.99"
+      },
+      "summary": "Christmas Nights in Lights is a drive-thru display of more than one million lights synchronized to holiday songs on the car radio. Cars roll through the grounds of Dauphin Way Baptist Church in Mobile on selected nights from November 6 through December 27. Pets are welcome as long as they stay in the car. Tickets can be bought online or at the drive-up.",
+      "url": "https://coastaleventures.com/events/ev-christmas-nights-in-lights-mobile-1106.html",
+      "sources": [
+        {
+          "note": "Nights in Lights, the organizer's page: drive-thru returns to Dauphin Way Baptist Church in Mobile on November 6, 2026",
+          "url": "https://nightsinlights.com"
+        },
+        {
+          "note": "Ticket Tailor: Christmas Nights in Lights at Dauphin Way Baptist Church, multiple dates and times",
+          "url": "https://www.tickettailor.com/events/nightsinlights/2462542"
+        },
+        {
+          "note": "Visit Mobile: listed dates, $9.99 per person, children 2 and under free, 6:00 PM to 9:00 PM",
+          "url": "https://www.mobile.org/event/christmas-nights-in-lights/24247/"
+        }
+      ],
+      "checkedOn": "2026-10-28"
+    },
+    {
       "id": "nl_ajs_karaoke-2026-11-25",
       "title": "Karaoke Night: AJ's Oyster Shanty",
       "date": "2026-11-25",
@@ -4093,6 +2257,32 @@
         }
       ],
       "checkedOn": "2026-10-28"
+    },
+    {
+      "id": "ev_calverts_monday_bingo_1109-2026-11-25",
+      "title": "Monday Night Bingo at Calvert's in the Heights",
+      "date": "2026-11-25",
+      "endDate": "2027-02-22",
+      "startTime": "18:00",
+      "endTime": null,
+      "when": "Mondays · 6:00 PM",
+      "venue": "Calvert's in the Heights",
+      "address": "670 Scenic Hwy, Pensacola, FL 32503",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Calvert's in the Heights runs bingo every Monday night from 6:00 PM to 8:00 PM. The calendar lists weekly games from November 9 through February 22. No admission price is posted.",
+      "url": "https://coastaleventures.com/events/ev-calverts-monday-bingo-1109.html",
+      "sources": [
+        {
+          "note": "Calvert's in the Heights events calendar: Monday Night Bingo, 6 to 8 PM, Nov 9 through Feb 22",
+          "url": "https://calvertsintheheights.com/events"
+        }
+      ],
+      "checkedOn": "2026-11-04"
     },
     {
       "id": "ev_gulfclub_music_trivia_bamf_1007-2026-11-25",
@@ -4176,6 +2366,32 @@
         {
           "note": "THE POINTE happenings page listing the weekly Oyster Night",
           "url": "https://thepointegb.com/happenings"
+        }
+      ],
+      "checkedOn": "2026-10-28"
+    },
+    {
+      "id": "ev_mma_wednesday_art_club_8_11_1104-2026-11-25",
+      "title": "Wednesday Art Club for ages 8 to 11 at the Mobile Museum of Art",
+      "date": "2026-11-25",
+      "endDate": "2026-12-30",
+      "startTime": "18:00",
+      "endTime": "19:30",
+      "when": "Wednesdays · 6:00 PM to 7:30 PM · 11/4, 11/18, 11/25, 12/2, 12/9, 12/16 and 12/30",
+      "venue": "Mobile Museum of Art",
+      "address": "4850 Museum Drive, Mobile, AL 36608",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "priced",
+        "label": "from $150"
+      },
+      "summary": "Kids ages 8 to 11 take a Wednesday evening art class at the Mobile Museum of Art, with a new project each week. Students try different approaches and develop their own ideas in a supportive group. The museum sells the club in three sessions, and Sessions 2 and 3 run through the end of December.",
+      "url": "https://coastaleventures.com/events/ev-mma-wednesday-art-club-8-11-1104.html",
+      "sources": [
+        {
+          "note": "Mobile Museum of Art class page for Wednesday Art Club ages 8 to 11, read for times, session dates and fees",
+          "url": "https://www.mobilemuseumofart.com/event/wednesday-art-club-for-ages-8-11/2026-10-28/"
         }
       ],
       "checkedOn": "2026-10-28"
@@ -81809,6 +80025,466 @@
       "checkedOn": "2026-11-01"
     },
     {
+      "id": "ev_teen_dungeons_and_dragons_at_moorer_0905-2027-02-23",
+      "title": "Teen Dungeons and Dragons at Moorer",
+      "date": "2027-02-23",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "when": "Saturdays 11:30 AM to 1:30 PM · Tuesdays 4:00 PM to 6:00 PM",
+      "venue": "Monte L. Moorer/Spring Hill Branch Library",
+      "address": "4 S McGregor Ave, Mobile, AL 36608",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "The Monte L. Moorer/Spring Hill Branch Library runs a tabletop Dungeons & Dragons adventure for teens ages 12 to 18. Registration is recommended, and upcoming sessions include Tuesday, November 3, Saturday, November 14, Tuesday, November 17, and Saturday, November 28.",
+      "url": "https://coastaleventures.com/events/ev-teen-dungeons-and-dragons-at-moorer-0905.html",
+      "sources": [
+        {
+          "note": "mobilepubliclibrary.org: the organizer's own page, read for the admission and current schedule",
+          "url": "https://www.mobilepubliclibrary.org/events/week/2026/09/02"
+        },
+        {
+          "note": "mobilepubliclibrary.org: the admission and current schedule",
+          "url": "https://www.mobilepubliclibrary.org/events/week/2026/09/09"
+        }
+      ],
+      "checkedOn": "2026-11-01"
+    },
+    {
+      "id": "ev_cornhole_open_play_0901-2027-02-23",
+      "title": "Cornhole Open Play",
+      "date": "2027-02-23",
+      "endDate": null,
+      "startTime": "08:30",
+      "endTime": "16:30",
+      "when": "8:30 AM to 4:30 PM",
+      "venue": "Niceville Senior Center",
+      "address": "201 Campbell Drive, Niceville, FL 32578",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $5"
+      },
+      "summary": "Members toss bags at the boards during open-play cornhole at the Niceville Senior Center. It runs casually throughout the center's regular weekday hours. City of Niceville residents play free, and everyone else pays a $5 day rate.",
+      "url": "https://coastaleventures.com/events/ev-cornhole-open-play-0901.html",
+      "sources": [
+        {
+          "note": "cityofniceville.org: the admission, current schedule and street address",
+          "url": "https://www.cityofniceville.org/463/Senior-Center"
+        },
+        {
+          "note": "cityofniceville.org: the admission and current schedule",
+          "url": "https://www.cityofniceville.org/DocumentCenter/View/1153/Niceville-Senior-Center-Member-Registration-Form"
+        },
+        {
+          "note": "cityofniceville.org: the organizer's own page, read for the admission and current schedule",
+          "url": "https://cityofniceville.org/calendar.aspx?day=1&month=9&view=list&year=2026"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "id": "ev_exercise_room_0901-2027-02-23",
+      "title": "Exercise Room",
+      "date": "2027-02-23",
+      "endDate": null,
+      "startTime": "08:30",
+      "endTime": "16:30",
+      "when": "8:30 AM to 4:30 PM",
+      "venue": "Niceville Senior Center",
+      "address": "201 Campbell Drive, Niceville, FL 32578",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $5"
+      },
+      "summary": "The Niceville Senior Center's exercise room stays open for members to work through strength, cardio, and flexibility routines on their own schedule. Equipment includes two recumbent bikes, a treadmill, free weights, a stability ball, mats, and stretch bands. City of Niceville residents get free access, and everyone else pays a $5 day rate.",
+      "url": "https://coastaleventures.com/events/ev-exercise-room-0901.html",
+      "sources": [
+        {
+          "note": "cityofniceville.org: the admission, current schedule and street address",
+          "url": "https://www.cityofniceville.org/463/Senior-Center"
+        },
+        {
+          "note": "cityofniceville.org: the admission and current schedule",
+          "url": "https://www.cityofniceville.org/DocumentCenter/View/1153/Niceville-Senior-Center-Member-Registration-Form"
+        },
+        {
+          "note": "cityofniceville.org: the organizer's own page, read for the admission and current schedule",
+          "url": "https://cityofniceville.org/calendar.aspx?day=1&month=9&view=list&year=2026"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "id": "ev_putting_green_open_play_0901-2027-02-23",
+      "title": "Putting Green Open Play",
+      "date": "2027-02-23",
+      "endDate": null,
+      "startTime": "08:30",
+      "endTime": "16:30",
+      "when": "8:30 AM to 4:30 PM",
+      "venue": "Niceville Senior Center",
+      "address": "201 Campbell Drive, Niceville, FL 32578",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $5"
+      },
+      "summary": "Members check out putters and balls at the front desk to practice on the Niceville Senior Center's putting green. It is casual, and you can work on your short game alone or play a round with friends. City of Niceville residents get free access, and everyone else pays a $5 day rate.",
+      "url": "https://coastaleventures.com/events/ev-putting-green-open-play-0901.html",
+      "sources": [
+        {
+          "note": "cityofniceville.org: the admission, current schedule and street address",
+          "url": "https://www.cityofniceville.org/463/Senior-Center"
+        },
+        {
+          "note": "cityofniceville.org: the admission and current schedule",
+          "url": "https://www.cityofniceville.org/DocumentCenter/View/1153/Niceville-Senior-Center-Member-Registration-Form"
+        },
+        {
+          "note": "cityofniceville.org: the organizer's own page, read for the admission and current schedule",
+          "url": "https://cityofniceville.org/calendar.aspx?day=1&month=9&view=list&year=2026"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "id": "ev_stretch_and_flow_yoga_0901-2027-02-23",
+      "title": "Stretch & Flow Yoga",
+      "date": "2027-02-23",
+      "endDate": null,
+      "startTime": "08:30",
+      "endTime": "09:30",
+      "when": "Tuesdays · 8:30 AM to 9:30 AM",
+      "venue": "Niceville Senior Center",
+      "address": "201 Campbell Drive, Niceville, FL 32578",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $5"
+      },
+      "summary": "This Vinyasa-style yoga class blends longer intentional holds with gentle flow to build flexibility and release tension. It meets for an hour first thing in the morning at the Niceville Senior Center. The center requests a $3 donation for the class, on top of its usual access rates.",
+      "url": "https://coastaleventures.com/events/ev-stretch-and-flow-yoga-0901.html",
+      "sources": [
+        {
+          "note": "cityofniceville.org: the admission, current schedule and street address",
+          "url": "https://www.cityofniceville.org/463/Senior-Center"
+        },
+        {
+          "note": "cityofniceville.org: the admission and current schedule",
+          "url": "https://www.cityofniceville.org/DocumentCenter/View/1153/Niceville-Senior-Center-Member-Registration-Form"
+        },
+        {
+          "note": "cityofniceville.org: the organizer's own page, read for the admission and current schedule",
+          "url": "https://cityofniceville.org/calendar.aspx?day=1&month=9&view=list&year=2026"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "id": "ev_table_tennis_open_play_0901-2027-02-23",
+      "title": "Table Tennis Open Play",
+      "date": "2027-02-23",
+      "endDate": null,
+      "startTime": "08:30",
+      "endTime": "16:30",
+      "when": "8:30 AM to 4:30 PM",
+      "venue": "Niceville Senior Center",
+      "address": "201 Campbell Drive, Niceville, FL 32578",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Niceville Senior Center's table tennis room is open for casual, drop-in play with no experience required. The city describes it as an active, social way to spend the morning rather than a competitive league. It shares the Tuesday 8:30 AM to 4:30 PM window with several other open-play programs at the center, and members age 55 and up are the intended audience.",
+      "url": "https://coastaleventures.com/events/ev-table-tennis-open-play-0901.html",
+      "sources": [
+        {
+          "note": "nicevillefl.gov: the organizer's own page, read for the admission and current schedule",
+          "url": "https://www.nicevillefl.gov/Calendar.aspx?EID=35841&calType=0&day=1&month=9&year=2026"
+        },
+        {
+          "note": "nicevillefl.gov: the admission and current schedule",
+          "url": "https://www.nicevillefl.gov/463/Senior-Center"
+        },
+        {
+          "note": "nicevillefl.gov: the current schedule",
+          "url": "https://www.nicevillefl.gov/calendar.aspx?CID=0&month=9&view=month&year=2026"
+        }
+      ],
+      "checkedOn": "2026-09-26"
+    },
+    {
+      "id": "ev_party_bridge_0901-2027-02-23",
+      "title": "Party Bridge",
+      "date": "2027-02-23",
+      "endDate": null,
+      "startTime": "09:00",
+      "endTime": "13:00",
+      "when": "Tuesdays · 9:00 AM to 1:00 PM",
+      "venue": "Niceville Senior Center",
+      "address": "201 Campbell Drive, Niceville, FL 32578",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "This game at the Niceville Senior Center is built for seasoned players rather than beginners. Players call the Senior Center's bridge organizer to reserve a seat, so spots are not first come, first served. It runs Tuesday mornings into early afternoon.",
+      "url": "https://coastaleventures.com/events/ev-party-bridge-0901.html",
+      "sources": [
+        {
+          "note": "nicevillefl.gov: the organizer's own page, read for the admission and current schedule",
+          "url": "https://www.nicevillefl.gov/Calendar.aspx?EID=41589&calType=0&day=1&month=9&year=2026"
+        },
+        {
+          "note": "nicevillefl.gov: the admission and current schedule",
+          "url": "https://www.nicevillefl.gov/463/Senior-Center"
+        },
+        {
+          "note": "nicevillefl.gov: the current schedule",
+          "url": "https://www.nicevillefl.gov/calendar.aspx?CID=0&month=9&view=month&year=2026"
+        }
+      ],
+      "checkedOn": "2026-09-26"
+    },
+    {
+      "id": "ev_chair_yoga_0901-2027-02-23",
+      "title": "Chair Yoga",
+      "date": "2027-02-23",
+      "endDate": null,
+      "startTime": "09:45",
+      "endTime": "10:45",
+      "when": "9:45 AM to 10:45 AM",
+      "venue": "Niceville Senior Center",
+      "address": "201 Campbell Drive, Niceville, FL 32578",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $3"
+      },
+      "summary": "This Chair Yoga class at the Niceville Senior Center mixes seated poses with supported standing work. It aims at posture, flexibility, core strength, joint mobility, balance, stability and stress reduction. It asks a $3 donation and repeats every Tuesday and Thursday morning, for members age 55 and up.",
+      "url": "https://coastaleventures.com/events/ev-chair-yoga-0901.html",
+      "sources": [
+        {
+          "note": "nicevillefl.gov: the organizer's own page, read for the admission and current schedule",
+          "url": "https://www.nicevillefl.gov/Calendar.aspx?EID=38253&calType=0&day=1&month=9&year=2026"
+        },
+        {
+          "note": "nicevillefl.gov: the admission and current schedule",
+          "url": "https://www.nicevillefl.gov/463/Senior-Center"
+        },
+        {
+          "note": "nicevillefl.gov: the current schedule",
+          "url": "https://www.nicevillefl.gov/calendar.aspx?CID=0&month=9&view=month&year=2026"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "id": "ev_read_and_play_storytime_0901-2027-02-23",
+      "title": "Read & Play Storytime",
+      "date": "2027-02-23",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "when": "Tuesdays · 10:00 AM to 11:00 AM",
+      "venue": "Ben May Main Library: Youth Programming Room",
+      "address": "701 Government Street, Mobile, AL 36602",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Ben May Main Library's Read & Play Storytime combines books, songs, and fingerplays for babies and toddlers alongside a caregiver. The library says it is best suited for ages 0 to 3 and is built to support sensory, listening, and memory development. It repeats every Tuesday, including November 3, 10 and 17.",
+      "url": "https://coastaleventures.com/events/ev-read-and-play-storytime-0901.html",
+      "sources": [
+        {
+          "note": "mobilepubliclibrary.org: the organizer's own page, read for the admission and current schedule",
+          "url": "https://www.mobilepubliclibrary.org/events/week/2026/09/02"
+        },
+        {
+          "note": "mobilepubliclibrary.org: the admission and current schedule",
+          "url": "https://www.mobilepubliclibrary.org/events/week/2026/09/09"
+        }
+      ],
+      "checkedOn": "2026-11-01"
+    },
+    {
+      "id": "ev_words_with_friends_0901-2027-02-23",
+      "title": "Words with Friends",
+      "date": "2027-02-23",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "when": "Tuesdays · 10:00 AM to 11:00 AM",
+      "venue": "Niceville Senior Center",
+      "address": "201 Campbell Drive, Niceville, FL 32578",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Despite the name, this Niceville Senior Center program is a writing and sharing group, not a session of the mobile word game. Participants work from simple prompts and writing exercises, then read their stories aloud, and the city says no writing experience is required. It meets Tuesday mornings.",
+      "url": "https://coastaleventures.com/events/ev-words-with-friends-0901.html",
+      "sources": [
+        {
+          "note": "nicevillefl.gov: the organizer's own page, read for the admission and current schedule",
+          "url": "https://www.nicevillefl.gov/Calendar.aspx?EID=39611&calType=0&day=1&month=9&year=2026"
+        },
+        {
+          "note": "nicevillefl.gov: the admission and current schedule",
+          "url": "https://www.nicevillefl.gov/463/Senior-Center"
+        },
+        {
+          "note": "nicevillefl.gov: the current schedule",
+          "url": "https://www.nicevillefl.gov/calendar.aspx?CID=0&month=9&view=month&year=2026"
+        }
+      ],
+      "checkedOn": "2026-09-26"
+    },
+    {
+      "id": "ev_children_lap_babies_storytime_0901-2027-02-23",
+      "title": "Children: Lap Babies Storytime",
+      "date": "2027-02-23",
+      "endDate": null,
+      "startTime": "10:30",
+      "endTime": "11:30",
+      "when": "Tuesdays · 10:30 AM to 11:30 AM",
+      "venue": "Daphne Public Library",
+      "address": "2607 US Hwy 98, Daphne, AL 36526",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Daphne Public Library hosts a storytime for lap babies, Tuesday from 10:30 AM to 11:30 AM. Tuesday sessions in November fall on the 3rd, 10th and 17th at this same time.",
+      "url": "https://coastaleventures.com/events/ev-children-lap-babies-storytime-0901.html",
+      "sources": [
+        {
+          "note": "daphneal.com: the organizer's own page, read for the admission",
+          "url": "https://www.daphneal.com/calendar.aspx?CID=0&month=9&view=list&year=2026"
+        }
+      ],
+      "checkedOn": "2026-11-01"
+    },
+    {
+      "id": "ev_seated_zumba_gold_0901-2027-02-23",
+      "title": "Seated Zumba Gold",
+      "date": "2027-02-23",
+      "endDate": null,
+      "startTime": "11:00",
+      "endTime": "12:00",
+      "when": "11:00 AM to 12:00 PM",
+      "venue": "Niceville Senior Center",
+      "address": "201 Campbell Drive, Niceville, FL 32578",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $3"
+      },
+      "summary": "Seated Zumba Gold is a chair-based dance-fitness class for members who use a wheelchair or live with limited mobility or balance concerns, set to lively music. It asks a $3 donation every Tuesday and Thursday late morning. The class is part of the Niceville Senior Center's programming for members age 55 and up.",
+      "url": "https://coastaleventures.com/events/ev-seated-zumba-gold-0901.html",
+      "sources": [
+        {
+          "note": "nicevillefl.gov: the organizer's own page, read for the admission and current schedule",
+          "url": "https://www.nicevillefl.gov/Calendar.aspx?EID=38043&calType=0&day=1&month=9&year=2026"
+        },
+        {
+          "note": "nicevillefl.gov: the admission and current schedule",
+          "url": "https://www.nicevillefl.gov/463/Senior-Center"
+        },
+        {
+          "note": "nicevillefl.gov: the current schedule",
+          "url": "https://www.nicevillefl.gov/calendar.aspx?CID=0&month=9&view=month&year=2026"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "id": "ev_zumba_gold_0901-2027-02-23",
+      "title": "Zumba Gold",
+      "date": "2027-02-23",
+      "endDate": null,
+      "startTime": "12:15",
+      "endTime": "13:15",
+      "when": "12:15 PM to 1:15 PM",
+      "venue": "Niceville Senior Center",
+      "address": "201 Campbell Drive, Niceville, FL 32578",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $3"
+      },
+      "summary": "Zumba Gold is a lower-impact dance and fitness class built around routines that are easy to follow, aimed at the Niceville Senior Center's members. It asks a $3 donation and repeats every Tuesday and Thursday around midday. It comes right after Seated Zumba Gold, so members can do both back to back if they choose.",
+      "url": "https://coastaleventures.com/events/ev-zumba-gold-0901.html",
+      "sources": [
+        {
+          "note": "nicevillefl.gov: the organizer's own page, read for the admission and current schedule",
+          "url": "https://www.nicevillefl.gov/Calendar.aspx?EID=37912&calType=0&day=1&month=9&year=2026"
+        },
+        {
+          "note": "nicevillefl.gov: the admission and current schedule",
+          "url": "https://www.nicevillefl.gov/463/Senior-Center"
+        },
+        {
+          "note": "nicevillefl.gov: the current schedule",
+          "url": "https://www.nicevillefl.gov/calendar.aspx?CID=0&month=9&view=month&year=2026"
+        }
+      ],
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "id": "ev_let_s_play_national_mah_jongg_0901-2027-02-23",
+      "title": "Let's Play National Mah Jongg",
+      "date": "2027-02-23",
+      "endDate": null,
+      "startTime": "13:00",
+      "endTime": "15:00",
+      "when": "Tuesdays · 1:00 PM to 3:00 PM",
+      "venue": "Niceville Senior Center",
+      "address": "201 Campbell Drive, Niceville, FL 32578",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "This Mah Jongg session follows the American National Mah Jongg League style of play rather than the traditional Chinese rules. Players are asked to bring their own 2026 National Mah Jongg League card, so it suits regulars more than total newcomers. It runs Tuesday afternoons.",
+      "url": "https://coastaleventures.com/events/ev-let-s-play-national-mah-jongg-0901.html",
+      "sources": [
+        {
+          "note": "nicevillefl.gov: the organizer's own page, read for the admission and current schedule",
+          "url": "https://www.nicevillefl.gov/Calendar.aspx?EID=39558&calType=0&day=1&month=9&year=2026"
+        },
+        {
+          "note": "nicevillefl.gov: the admission and current schedule",
+          "url": "https://www.nicevillefl.gov/463/Senior-Center"
+        },
+        {
+          "note": "nicevillefl.gov: the current schedule",
+          "url": "https://www.nicevillefl.gov/calendar.aspx?CID=0&month=9&view=month&year=2026"
+        }
+      ],
+      "checkedOn": "2026-09-26"
+    },
+    {
       "id": "ev_board_game_night_1006-2027-02-23",
       "title": "Board Game Night",
       "date": "2027-02-23",
@@ -81837,6 +80513,36 @@
         }
       ],
       "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_lego_fun_tuesday_at_semmes_0908-2027-02-23",
+      "title": "LEGO Fun Tuesday at Semmes",
+      "date": "2027-02-23",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "when": "Tuesdays · 4:00 PM to 5:00 PM",
+      "venue": "Semmes Regional Library",
+      "address": "9150 Moffett Road",
+      "category": "stem",
+      "categoryLabel": "STEM and learning",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Semmes Regional Library runs a LEGO building challenge meant to encourage imagination alongside building skill, for ages 6 through 18. It meets Tuesdays at 4 PM, including November 3, 10, 17 and 24.",
+      "url": "https://coastaleventures.com/events/ev-lego-fun-tuesday-at-semmes-0908.html",
+      "sources": [
+        {
+          "note": "mobilepubliclibrary.org: the organizer's own page, read for the admission and current schedule",
+          "url": "https://www.mobilepubliclibrary.org/events/week/2026/09/09"
+        },
+        {
+          "note": "mobilepubliclibrary.org: street address",
+          "url": "https://www.mobilepubliclibrary.org/locations-hours/semmes"
+        }
+      ],
+      "checkedOn": "2026-11-01"
     },
     {
       "id": "ev_nwftc_tuesday_group_run_at_run_wit_1006-2027-02-23",
@@ -81893,6 +80599,36 @@
         }
       ],
       "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_tacos_tequila_and_trivia_0901-2027-02-23",
+      "title": "Tacos, Tequila, & Trivia",
+      "date": "2027-02-23",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": "20:00",
+      "when": "Tuesdays · 6:00 PM to 8:00 PM",
+      "venue": "Waffles R Wild: The Speakeasy",
+      "address": "100-F S. OWA Blvd., Foley, AL 36535",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "Waffles R Wild's weekly trivia night pairs $10 tacos and $7 margaritas with a 1990s theme at OWA's Speakeasy venue. The series runs every Tuesday night, including November 3, 10, 17 and 24. The cost is whatever you order.",
+      "url": "https://coastaleventures.com/events/ev-tacos-tequila-and-trivia-0901.html",
+      "sources": [
+        {
+          "note": "visitowa.com: the organizer's own page, read for the admission and current schedule",
+          "url": "https://visitowa.com/events/week/2026-09-01/"
+        },
+        {
+          "note": "visitowa.com: the admission, current schedule and street address",
+          "url": "https://visitowa.com/dining/waffles-r-wild/"
+        }
+      ],
+      "checkedOn": "2026-11-01"
     },
     {
       "id": "ev_tempo_tuesday_with_the_west_florid_1006-2027-02-23",
@@ -91090,6 +89826,174 @@
         {
           "note": "Pensacola Bay Center event page: MercyMe with Ben Fuller and Peter Burton, read for date, 7:00 PM start, doors at 6:00 PM and the starting ticket price",
           "url": "https://www.pensacolabaycenter.com/events/detail/mercyme-2027"
+        }
+      ],
+      "checkedOn": "2026-10-28"
+    },
+    {
+      "id": "ev_painting_with_a_twist_pensacola_pa_1003-2027-03-25",
+      "title": "Painting with a Twist Pensacola: paint-and-sip, family paint days and date nights (weekly programme)",
+      "date": "2027-03-25",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "when": "Classes most days: family days Saturday 10:30 AM, brunch Sunday 11 AM, evenings Wednesday to Saturday",
+      "venue": "Painting with a Twist Pensacola",
+      "address": "4771 Bayou Blvd Suite C11, Pensacola, FL 32503",
+      "category": "art",
+      "categoryLabel": "Arts and culture",
+      "price": {
+        "kind": "priced",
+        "label": "$35 per family"
+      },
+      "summary": "Painting with a Twist Pensacola is an artist-led paint-and-sip studio at 4771 Bayou Blvd Suite C11 with several classes every week. October has family paint days (ages 6 and up with a parent, no alcohol), adult Paint & Sip and Date Night classes (ages 16 and up on date nights), Halloween-themed canvases and Paint Your Pet. Classes cost $35-$60 depending on the class, and alcohol is sold on site with no BYOB.",
+      "url": "https://coastaleventures.com/events/ev-painting-with-a-twist-pensacola-pa-1003.html",
+      "sources": [
+        {
+          "note": "Studio page: address 4771 Bayou Blvd Suite C11, phone (850) 471-1450, Alcohol for Purchase, No BYOB; Brushes & Brunch Oct 4 $35-45, Treat Yourself Tuesday Oct 6 6 PM",
+          "url": "https://www.paintingwithatwist.com/studio/pensacola"
+        },
+        {
+          "note": "October calendar: class names, times and prices Oct 3-31",
+          "url": "https://www.paintingwithatwist.com/studio/pensacola/calendar/"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_tbs_comics_pensacola_weekly_game_n_1005-2027-03-25",
+      "title": "TBS Comics Pensacola weekly game nights (Magic, Yu-Gi-Oh, Lorcana, One Piece, D&D and more)",
+      "date": "2027-03-25",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "when": "Game nights Monday, Wednesday and Thursday · from 5 PM",
+      "venue": "TBS Comics Pensacola",
+      "address": "6895 North 9th Ave, Pensacola, FL 32504",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "TBS Comics Pensacola hosts weekly game nights at its shop on North 9th Ave. Monday is Magic Commander at 6:30 PM. Wednesday has Marvel Crisis Protocol at 5 PM, Board Game Night at 6 PM, and D&D Adventurers League, Riftbound and Star Wars Unlimited at 6:30 PM. Thursday has Yu-Gi-Oh and Gundam TCG at 6:30 PM and Magic Modern at 7 PM, and Friday has Star Wars Unlimited, Digimon and Magic Commander at 7 PM.",
+      "url": "https://coastaleventures.com/events/ev-tbs-comics-pensacola-weekly-game-n-1005.html",
+      "sources": [
+        {
+          "note": "TBS gaming page weekly schedule for Pensacola",
+          "url": "https://www.tbscomics.com/gaming/"
+        },
+        {
+          "note": "Store locations: 6895 North 9th Ave, Pensacola 32504, (850) 474-1419",
+          "url": "https://www.tbscomics.com/store-locations/"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_fleet_feet_pensacola_free_run_club_1006-2027-03-25",
+      "title": "Fleet Feet Pensacola Free Run Clubs",
+      "date": "2027-03-25",
+      "endDate": null,
+      "startTime": "18:15",
+      "endTime": null,
+      "when": "Tuesdays and Thursdays · 6:15 PM",
+      "venue": "Fleet Feet Pensacola",
+      "address": "236 West Garden Street, Unit 1, Pensacola, FL 32502",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "The Fleet Feet Pensacola Free Run Clubs meet Tuesday and Thursday at 6:15 PM at the shop on West Garden Street. Tuesday offers a social club, a 1-mile walk, a 1.8-mile run or walk, or a 5K. Thursday offers a 1-mile walk, a 1.8-mile run or walk, a 5K or a 10K. Both are free.",
+      "url": "https://coastaleventures.com/events/ev-fleet-feet-pensacola-free-run-club-1006.html",
+      "sources": [
+        {
+          "note": "RunSignup page: Tue and Thu 6:15 PM, 236 West Garden St Unit 1, price $0",
+          "url": "https://runsignup.com/Race/FL/Pensacola/FLEETFEETPENSACOLATUESDAYANDTHURSDAYFREERUNCLUBS"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_3rd_planet_singo_music_bingo_1008-2027-03-25",
+      "title": "Singo Music Bingo at 3rd Planet Brewing",
+      "date": "2027-03-25",
+      "endDate": null,
+      "startTime": "18:30",
+      "endTime": "20:30",
+      "when": "Thursdays · 6:30 PM to 8:30 PM",
+      "venue": "3rd Planet Brewing",
+      "address": "1400 E John Sims Pkwy, Niceville, FL 32578",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "Challenge Entertainment hosts Singo music bingo at 3rd Planet Brewing in Niceville every Thursday night at 6:30 PM. The host plays 150 hits as 45 second clips, and players have several chances to win house cash, with prizes every round. The game is free to play.",
+      "url": "https://coastaleventures.com/events/ev-3rd-planet-singo-music-bingo-1008.html",
+      "sources": [
+        {
+          "note": "3rdplanetbrewing.com events calendar (its old Singo event page is gone): Singo Music Bingo every Thursday at 6:30 PM, free to play, house cash prizes",
+          "url": "https://www.3rdplanetbrewing.com/events/"
+        }
+      ],
+      "checkedOn": "2026-10-07"
+    },
+    {
+      "id": "ev_trinity_games_weekly_game_nights_m_1005-2027-03-25",
+      "title": "Trinity Games weekly game nights (Magic, Gundam, One Piece, Flesh and Blood, Riftbound and more)",
+      "date": "2027-03-25",
+      "endDate": null,
+      "startTime": "18:30",
+      "endTime": null,
+      "when": "Game nights Monday to Thursday · 6:30 PM",
+      "venue": "Trinity Games",
+      "address": "2400 W Michigan Ave Unit 27, Pensacola, FL 32526",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $5"
+      },
+      "summary": "Trinity Games runs weekly game nights at its Pensacola shop for Magic, Gundam, One Piece, Flesh and Blood, Riftbound and more. Monday has Gundam Locals at 6:30 PM and Flesh and Blood at 7 PM. Tuesday has Digimon Locals and MTG Pauper at 6:30 PM, and Wednesday has One Piece Locals and CyberPunk Locals at 6:30 PM. Thursday has Magic Commander Day all day, Riftbound Competitive at 6:30 PM and HoloLive Locals at 7 PM, and Friday has MTG Modern at 7 PM.",
+      "url": "https://coastaleventures.com/events/ev-trinity-games-weekly-game-nights-m-1005.html",
+      "sources": [
+        {
+          "note": "Weekly Events banner image with day, game, time, entry",
+          "url": "https://trinitygamesllc.com/pages/events"
+        }
+      ],
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "id": "ev_thursday_night_bingo_the_pointe_1029-2027-03-25",
+      "title": "Thursday Night Bingo at THE POINTE",
+      "date": "2027-03-25",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "when": "Thursday 10/29 · 7:00 PM",
+      "venue": "THE POINTE restaurant",
+      "address": "1255 Country Club Road, Gulf Breeze, FL 32563",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "free",
+        "label": "Free"
+      },
+      "summary": "The Pointe in Gulf Breeze hosts bingo every Thursday night, with six rounds that start at 7 PM. The restaurant calls it crazy fun and a little rowdy, and each round's winner gets a prize. The page says it is free to play.",
+      "url": "https://coastaleventures.com/events/ev-thursday-night-bingo-the-pointe-1029.html",
+      "sources": [
+        {
+          "note": "THE POINTE event page for Thursday Night Bingo on October 29, read for the 7 PM start, six rounds and free to play line",
+          "url": "https://thepointegb.com/event-detail/post_detail/bingo-night-at-the-point-2026-10-29?r=2026-10-29"
+        },
+        {
+          "note": "THE POINTE happenings page listing the weekly bingo night",
+          "url": "https://thepointegb.com/happenings"
         }
       ],
       "checkedOn": "2026-10-28"

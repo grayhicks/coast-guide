@@ -25,28 +25,8 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_gsp_fall_craft_for_kids_1124-2026-11-24@coastaleventures.com
-DTSTAMP:20261124T000000Z
-DTSTART;TZID=America/Chicago:20261124T100000
-DTEND;TZID=America/Chicago:20261124T110000
-SUMMARY:Fall Craft for Kids at Gulf State Park
-LOCATION:Gulf State Park Nature Center\, 22120 Campground Road\, Gulf Shore
- s\, AL 36542
-DESCRIPTION:Tuesday 11/24 · 10:00 AM\n\nGulf State Park naturalists lead a
-  fall craft program for kids at the Nature Center. Children make crafts fr
- om natural and artificial materials\, and they can follow the staff exampl
- es or invent their own. Parents must stay but do not need to register. The
-  page showed 14 tickets left when it was read.\n\nPrice: from $5\n\nDetail
- s: https://coastaleventures.com/events/ev-gsp-fall-craft-for-kids-1124.htm
- l
-URL:https://coastaleventures.com/events/ev-gsp-fall-craft-for-kids-1124.htm
- l
-CATEGORIES:Nature and outdoors
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_gsp_snakes_1125-2026-11-25@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261125T100000
 DTEND;TZID=America/Chicago:20261125T110000
 SUMMARY:Snakes of Gulf State Park
@@ -63,7 +43,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_sledge_enterprise_cruise_1125-2026-11-25@coastaleventures.c
  om
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261125T160000
 DTEND;TZID=America/Chicago:20261125T170000
 SUMMARY:Mobile Harbor sunset cruise with USS Enterprise guide John Sledge
@@ -82,7 +62,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_five_rivers_sunset_cruise_1127-2026-11-27@coastaleventures.
  com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261127T162000
 DTEND;TZID=America/Chicago:20261127T172000
 SUMMARY:Sunset cruise from Five Rivers on the Mobile-Tensaw Delta
@@ -102,7 +82,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_audubon_destin_shorebirds_walk_1128-2026-11-28@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261128T073000
 DTEND;TZID=America/Chicago:20261128T083000
 SUMMARY:Audubon Destin shorebirds bird walk
@@ -122,7 +102,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_oceanhour_saturday_cleanups_fall_1017-2026-11-28@coastaleventures.co
  m
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261128T084500
 DTEND;TZID=America/Chicago:20261128T094500
 SUMMARY:Ocean Hour Saturday Cleanups: Fall Schedule
@@ -143,7 +123,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_harbor_cruise_enterprise_1128-2026-11-28@coastaleventures.c
  om
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261128T100000
 DTEND;TZID=America/Chicago:20261128T110000
 SUMMARY:Mobile Harbor cruise to see the USS Enterprise
@@ -161,7 +141,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_delta_discovery_tour_1128-2026-11-28@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261128T130000
 DTEND;TZID=America/Chicago:20261128T140000
 SUMMARY:Delta Discovery Tour from Bartram Landing
@@ -181,7 +161,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_delta_discovery_tour_1129-2026-11-29@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261129T133000
 DTEND;TZID=America/Chicago:20261129T143000
 SUMMARY:Delta Discovery Tour from Bartram Landing
@@ -201,7 +181,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_gsp_eagles_ecosystems_walk_1130-2026-11-30@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261130T090000
 DTEND;TZID=America/Chicago:20261130T100000
 SUMMARY:Eagles and Ecosystems Nature Walk at Gulf State Park
@@ -218,7 +198,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_gsp_trivia_1201-2026-12-01@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261201T100000
 DTEND;TZID=America/Chicago:20261201T110000
 SUMMARY:Gulf State Park Trivia
@@ -235,7 +215,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_gsp_birding_beginners_al_point_east_1202-2026-12-02@coastaleventures
  .com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261202T090000
 DTEND;TZID=America/Chicago:20261202T100000
 SUMMARY:Birding for Beginners at AL Point East
@@ -253,7 +233,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_audubon_longleaf_pine_program_1203-2026-12-03@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:Audubon program: Longleaf Pine Ecosystem
@@ -272,7 +252,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_gsp_oil_spill_disaster_1203-2026-12-03@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261203T100000
 DTEND;TZID=America/Chicago:20261203T110000
 SUMMARY:Oil Spill Disaster program at Gulf State Park
@@ -288,7 +268,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_bottle_creek_mounds_1205-2026-12-05@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261205T090000
 DTEND;TZID=America/Chicago:20261205T100000
 SUMMARY:Excursion to the Bottle Creek Indian Mound Complex
@@ -309,7 +289,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_gulf_state_park_holiday_craft_1205-2026-12-05@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261205T100000
 DTEND;TZID=America/Chicago:20261205T110000
 SUMMARY:Holiday Craft class at Gulf State Park Nature Center
@@ -329,7 +309,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_mifflin_lake_cruise_1205-2026-12-05@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261205T130000
 DTEND;TZID=America/Chicago:20261205T150000
 SUMMARY:Mifflin Lake Cruise at Historic Blakeley
@@ -350,7 +330,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_harbor_cruise_enterprise_1210-2026-12-10@coastaleventures.c
  om
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261210T153000
 DTEND;TZID=America/Chicago:20261210T163000
 SUMMARY:Mobile Harbor cruise to see the USS Enterprise
@@ -368,7 +348,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_garnier_beach_garden_club_0912-2026-12-12@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261212T103000
 DTEND;TZID=America/Chicago:20261212T130000
 SUMMARY:Garnier Beach Garden Club
@@ -388,7 +368,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_animal_adoption_1212-2026-12-12@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261212T110000
 DTEND;TZID=America/Chicago:20261212T120000
 SUMMARY:Animal Adoption Event at Historic Blakeley
@@ -407,7 +387,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_camellia_flower_show_1212-2026-12-12@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261212T130000
 DTEND;TZID=America/Chicago:20261212T160000
 SUMMARY:88th Annual Camellia Flower Show
@@ -427,7 +407,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_fmwas_birds_and_brew_admiral_mason_1213-2026-12-13@coastaleventures.
  com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261213T153000
 DTEND;TZID=America/Chicago:20261213T181500
 SUMMARY:Birds and Brew at Admiral Mason Park and Cactus Cantina
@@ -448,7 +428,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_gsp_christmas_owl_1219-2026-12-19@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261219T100000
 DTEND;TZID=America/Chicago:20261219T110000
 SUMMARY:Little Park Pals: The Christmas Owl at Gulf State Park
@@ -467,7 +447,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_gulfarium_sunset_camp_1222-2026-12-22@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261222T133000
 DTEND;TZID=America/Chicago:20261222T190000
 SUMMARY:Sunset Camp at Gulfarium
@@ -488,7 +468,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_audubon_american_oystercatchers_program_0107-2027-01-07@coastalevent
  ures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;VALUE=DATE:20270107
 DTEND;VALUE=DATE:20270108
 SUMMARY:Audubon program: American Oystercatchers
@@ -508,7 +488,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_garnier_beach_garden_club_0912-2027-01-09@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20270109T103000
 DTEND;TZID=America/Chicago:20270109T130000
 SUMMARY:Garnier Beach Garden Club
@@ -528,7 +508,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_battlefield_blitz_0130-2027-01-30@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20270130T080000
 DTEND;TZID=America/Chicago:20270130T090000
 SUMMARY:Battlefield Blitz 5K and Fun Run
@@ -548,7 +528,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_audubon_small_bird_photography_program_0204-2027-02-04@coastaleventu
  res.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270205
 SUMMARY:Audubon program: Small Bird Photography
@@ -567,7 +547,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_garnier_beach_garden_club_0912-2027-02-13@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20270213T103000
 DTEND;TZID=America/Chicago:20270213T130000
 SUMMARY:Garnier Beach Garden Club
@@ -588,7 +568,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_community_camellia_show_pensacola_0220-2027-02-20@coastaleventures.c
  om
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;VALUE=DATE:20270220
 DTEND;VALUE=DATE:20270221
 SUMMARY:Community Camellia Show and Plant Sale at the downtown library
@@ -607,7 +587,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_uwf_camellia_garden_tour_0307-2027-03-07@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20270307T120000
 DTEND;TZID=America/Chicago:20270307T160000
 SUMMARY:UWF Camellia Garden guided tour with the Pensacola Camellia Club
@@ -628,7 +608,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_kite-2027-03-12@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;VALUE=DATE:20270312
 DTEND;VALUE=DATE:20270313
 SUMMARY:Kites on the Coast (Pensacola Beach)

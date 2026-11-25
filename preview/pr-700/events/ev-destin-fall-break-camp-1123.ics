@@ -5,10 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Half-day fall break camp at the Destin Community Center
 BEGIN:VEVENT
-UID:ev_destin_fall_break_camp_1123-2026-11-24@coast-guide
-DTSTAMP:20261124T000000Z
-DTSTART;VALUE=DATE:20261124
-DTEND;VALUE=DATE:20261126
+UID:ev_destin_fall_break_camp_1123-2026-11-25@coast-guide
+DTSTAMP:20261125T000000Z
+DTSTART:20261125T090000
+DTEND:20261125T130000
 SUMMARY:Half-day fall break camp at the Destin Community Center
 DESCRIPTION:The City of Destin runs a three-day half-day camp for children
   ages 5 to 12 during the Thanksgiving school break. Camp meets Monday thr
