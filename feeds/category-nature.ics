@@ -25,28 +25,8 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_gsp_fall_craft_for_kids_1124-2026-11-24@coastaleventures.com
-DTSTAMP:20261124T000000Z
-DTSTART;TZID=America/Chicago:20261124T100000
-DTEND;TZID=America/Chicago:20261124T110000
-SUMMARY:Fall Craft for Kids at Gulf State Park
-LOCATION:Gulf State Park Nature Center\, 22120 Campground Road\, Gulf Shore
- s\, AL 36542
-DESCRIPTION:Tuesday 11/24 · 10:00 AM\n\nGulf State Park naturalists lead a
-  fall craft program for kids at the Nature Center. Children make crafts fr
- om natural and artificial materials\, and they can follow the staff exampl
- es or invent their own. Parents must stay but do not need to register. The
-  page showed 14 tickets left when it was read.\n\nPrice: from $5\n\nDetail
- s: https://coastaleventures.com/events/ev-gsp-fall-craft-for-kids-1124.htm
- l
-URL:https://coastaleventures.com/events/ev-gsp-fall-craft-for-kids-1124.htm
- l
-CATEGORIES:Nature and outdoors
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_gsp_snakes_1125-2026-11-25@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261125T100000
 DTEND;TZID=America/Chicago:20261125T110000
 SUMMARY:Snakes of Gulf State Park
@@ -61,9 +41,31 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_gulfarium_holiday_photos_penguin_gator_1125-2026-11-25@coastaleventu
+ res.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261125T131500
+DTEND;TZID=America/Chicago:20261125T141500
+SUMMARY:Holiday photos with a penguin or an alligator at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Wed 11/25\, Fri 11/27 to Sun 11/29\, then 12/5\, 12/6\, 12/13\,
+  12/19\, 12/21 and 12/26 · 1:15 PM\n\nOn select days through the holiday 
+ season\, the Gulfarium sets up a festive display where a family can pose b
+ eside an African penguin or an American alligator. A trainer or staff memb
+ er takes the photo on your own phone\, so there is no print to buy. Guests
+  may not touch the animal. Park admission is required and is bought separa
+ tely.\n\nPrice: from $26.95\n\nDetails: https://coastaleventures.com/event
+ s/ev-gulfarium-holiday-photos-penguin-gator-1125.html
+URL:https://coastaleventures.com/events/ev-gulfarium-holiday-photos-penguin
+ -gator-1125.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_blakeley_sledge_enterprise_cruise_1125-2026-11-25@coastaleventures.c
  om
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261125T160000
 DTEND;TZID=America/Chicago:20261125T170000
 SUMMARY:Mobile Harbor sunset cruise with USS Enterprise guide John Sledge
@@ -82,7 +84,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_five_rivers_sunset_cruise_1127-2026-11-27@coastaleventures.
  com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261127T162000
 DTEND;TZID=America/Chicago:20261127T172000
 SUMMARY:Sunset cruise from Five Rivers on the Mobile-Tensaw Delta
@@ -102,7 +104,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_audubon_destin_shorebirds_walk_1128-2026-11-28@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261128T073000
 DTEND;TZID=America/Chicago:20261128T083000
 SUMMARY:Audubon Destin shorebirds bird walk
@@ -122,7 +124,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_oceanhour_saturday_cleanups_fall_1017-2026-11-28@coastaleventures.co
  m
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261128T084500
 DTEND;TZID=America/Chicago:20261128T094500
 SUMMARY:Ocean Hour Saturday Cleanups: Fall Schedule
@@ -141,9 +143,30 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2026-11-28@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261128T090000
+DTEND;TZID=America/Chicago:20261128T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_blakeley_harbor_cruise_enterprise_1128-2026-11-28@coastaleventures.c
  om
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261128T100000
 DTEND;TZID=America/Chicago:20261128T110000
 SUMMARY:Mobile Harbor cruise to see the USS Enterprise
@@ -161,7 +184,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_delta_discovery_tour_1128-2026-11-28@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261128T130000
 DTEND;TZID=America/Chicago:20261128T140000
 SUMMARY:Delta Discovery Tour from Bartram Landing
@@ -180,8 +203,29 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2026-11-29@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261129T090000
+DTEND;TZID=America/Chicago:20261129T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_blakeley_delta_discovery_tour_1129-2026-11-29@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261129T133000
 DTEND;TZID=America/Chicago:20261129T143000
 SUMMARY:Delta Discovery Tour from Bartram Landing
@@ -201,7 +245,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_gsp_eagles_ecosystems_walk_1130-2026-11-30@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261130T090000
 DTEND;TZID=America/Chicago:20261130T100000
 SUMMARY:Eagles and Ecosystems Nature Walk at Gulf State Park
@@ -218,7 +262,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_gsp_trivia_1201-2026-12-01@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261201T100000
 DTEND;TZID=America/Chicago:20261201T110000
 SUMMARY:Gulf State Park Trivia
@@ -235,7 +279,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_gsp_birding_beginners_al_point_east_1202-2026-12-02@coastaleventures
  .com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261202T090000
 DTEND;TZID=America/Chicago:20261202T100000
 SUMMARY:Birding for Beginners at AL Point East
@@ -253,7 +297,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_audubon_longleaf_pine_program_1203-2026-12-03@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:Audubon program: Longleaf Pine Ecosystem
@@ -272,7 +316,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_gsp_oil_spill_disaster_1203-2026-12-03@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261203T100000
 DTEND;TZID=America/Chicago:20261203T110000
 SUMMARY:Oil Spill Disaster program at Gulf State Park
@@ -287,8 +331,25 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_gsp_guided_pier_walk_1204-2026-12-04@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261204T090000
+DTEND;TZID=America/Chicago:20261204T100000
+SUMMARY:Guided Pier Walk at Gulf State Park
+LOCATION:Gulf State Park\, 20115 State Hwy 135\, Gulf Shores\, AL 36542
+DESCRIPTION:Friday 12/4 · 9:00 AM\n\nGulf State Park lists Guided Pier Wal
+ k on its events page for Friday\, December 4 at 9:00 AM. A park naturalist
+  leads a walk along the Gulf State Park Pier. The listing prints only the 
+ title\, date and time. The price\, ages and meeting place are not shown th
+ ere.\n\nPrice: No published price\n\nDetails: https://coastaleventures.com
+ /events/ev-gsp-guided-pier-walk-1204.html
+URL:https://coastaleventures.com/events/ev-gsp-guided-pier-walk-1204.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_blakeley_bottle_creek_mounds_1205-2026-12-05@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261205T090000
 DTEND;TZID=America/Chicago:20261205T100000
 SUMMARY:Excursion to the Bottle Creek Indian Mound Complex
@@ -308,8 +369,29 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2026-12-05@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261205T090000
+DTEND;TZID=America/Chicago:20261205T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_gulf_state_park_holiday_craft_1205-2026-12-05@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261205T100000
 DTEND;TZID=America/Chicago:20261205T110000
 SUMMARY:Holiday Craft class at Gulf State Park Nature Center
@@ -329,7 +411,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_mifflin_lake_cruise_1205-2026-12-05@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261205T130000
 DTEND;TZID=America/Chicago:20261205T150000
 SUMMARY:Mifflin Lake Cruise at Historic Blakeley
@@ -348,9 +430,66 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2026-12-06@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261206T090000
+DTEND;TZID=America/Chicago:20261206T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gsp_eagles_ecosystems_walk_1208-2026-12-08@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261208T130000
+DTEND;TZID=America/Chicago:20261208T140000
+SUMMARY:Eagles and Ecosystems Nature Walk at Gulf State Park
+LOCATION:Gulf State Park\, 20115 State Hwy 135\, Gulf Shores\, AL 36542
+DESCRIPTION:Tuesday 12/8 · 1:00 PM\n\nGulf State Park lists Eagles and Eco
+ systems Nature Walk on its events page for Tuesday\, December 8 at 1:00 PM
+ . A guided nature walk on the park's trails. The listing prints only the t
+ itle\, date and time. The price\, ages and meeting place are not shown the
+ re.\n\nPrice: No published price\n\nDetails: https://coastaleventures.com/
+ events/ev-gsp-eagles-ecosystems-walk-1208.html
+URL:https://coastaleventures.com/events/ev-gsp-eagles-ecosystems-walk-1208.
+ html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gsp_alligator_adventures_1209-2026-12-09@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261209T130000
+DTEND;TZID=America/Chicago:20261209T140000
+SUMMARY:Alligator Adventures at Gulf State Park
+LOCATION:Gulf State Park\, 20115 State Hwy 135\, Gulf Shores\, AL 36542
+DESCRIPTION:Wednesday 12/9 · 1:00 PM\n\nGulf State Park lists Alligator Ad
+ ventures on its events page for Wednesday\, December 9 at 1:00 PM. A range
+ r program about the park's alligators. The listing prints only the title\,
+  date and time. The price\, ages and meeting place are not shown there.\n\
+ nPrice: No published price\n\nDetails: https://coastaleventures.com/events
+ /ev-gsp-alligator-adventures-1209.html
+URL:https://coastaleventures.com/events/ev-gsp-alligator-adventures-1209.ht
+ ml
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_blakeley_harbor_cruise_enterprise_1210-2026-12-10@coastaleventures.c
  om
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261210T153000
 DTEND;TZID=America/Chicago:20261210T163000
 SUMMARY:Mobile Harbor cruise to see the USS Enterprise
@@ -367,8 +506,29 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2026-12-12@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261212T090000
+DTEND;TZID=America/Chicago:20261212T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_garnier_beach_garden_club_0912-2026-12-12@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261212T103000
 DTEND;TZID=America/Chicago:20261212T130000
 SUMMARY:Garnier Beach Garden Club
@@ -388,7 +548,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_blakeley_animal_adoption_1212-2026-12-12@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261212T110000
 DTEND;TZID=America/Chicago:20261212T120000
 SUMMARY:Animal Adoption Event at Historic Blakeley
@@ -407,7 +567,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_camellia_flower_show_1212-2026-12-12@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261212T130000
 DTEND;TZID=America/Chicago:20261212T160000
 SUMMARY:88th Annual Camellia Flower Show
@@ -425,9 +585,30 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2026-12-13@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261213T090000
+DTEND;TZID=America/Chicago:20261213T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_fmwas_birds_and_brew_admiral_mason_1213-2026-12-13@coastaleventures.
  com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261213T153000
 DTEND;TZID=America/Chicago:20261213T181500
 SUMMARY:Birds and Brew at Admiral Mason Park and Cactus Cantina
@@ -447,8 +628,67 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_gsp_12_days_christmas_snakes_1216-2026-12-16@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261216T100000
+DTEND;TZID=America/Chicago:20261216T110000
+SUMMARY:12 Days of Christmas Snakes at Gulf State Park
+LOCATION:Gulf State Park\, 20115 State Hwy 135\, Gulf Shores\, AL 36542
+DESCRIPTION:Wednesday 12/16 · 10:00 AM\n\nGulf State Park lists 12 Days of
+  Christmas Snakes on its events page for Wednesday\, December 16 at 10:00 
+ AM. A holiday-themed snake program at the park. The listing prints only th
+ e title\, date and time. The price\, ages and meeting place are not shown 
+ there.\n\nPrice: No published price\n\nDetails: https://coastaleventures.c
+ om/events/ev-gsp-12-days-christmas-snakes-1216.html
+URL:https://coastaleventures.com/events/ev-gsp-12-days-christmas-snakes-121
+ 6.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2026-12-19@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261219T090000
+DTEND;TZID=America/Chicago:20261219T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_agc_zoo_santa_savings_saturday_1219-2026-12-19@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261219T090000
+DTEND;TZID=America/Chicago:20261219T100000
+SUMMARY:Santa Savings Saturday at the Alabama Gulf Coast Zoo
+LOCATION:Alabama Gulf Coast Zoo\, 20499 Oak Road East\, Gulf Shores\, AL 36
+ 542
+DESCRIPTION:Saturday 12/19 · 9:00 AM\n\nSanta visits the Alabama Gulf Coas
+ t Zoo on Saturday\, December 19\, and every admission drops to the child p
+ rice of $15.95. Selfies with Santa run from 10 AM to 2 PM at the Giraffe P
+ avilion and are included with admission. The zoo is decorated for the holi
+ days and has a Santa's Mailbox for letters.\n\nPrice: from $15.95\n\nDetai
+ ls: https://coastaleventures.com/events/ev-agc-zoo-santa-savings-saturday-
+ 1219.html
+URL:https://coastaleventures.com/events/ev-agc-zoo-santa-savings-saturday-1
+ 219.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_gsp_christmas_owl_1219-2026-12-19@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261219T100000
 DTEND;TZID=America/Chicago:20261219T110000
 SUMMARY:Little Park Pals: The Christmas Owl at Gulf State Park
@@ -466,8 +706,29 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2026-12-20@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261220T090000
+DTEND;TZID=America/Chicago:20261220T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_gulfarium_sunset_camp_1222-2026-12-22@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261222T133000
 DTEND;TZID=America/Chicago:20261222T190000
 SUMMARY:Sunset Camp at Gulfarium
@@ -486,9 +747,128 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_gsp_12_days_christmas_snakes_1223-2026-12-23@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261223T100000
+DTEND;TZID=America/Chicago:20261223T110000
+SUMMARY:12 Days of Christmas Snakes at Gulf State Park
+LOCATION:Gulf State Park\, 20115 State Hwy 135\, Gulf Shores\, AL 36542
+DESCRIPTION:Wednesday 12/23 · 10:00 AM\n\nGulf State Park lists 12 Days of
+  Christmas Snakes on its events page for Wednesday\, December 23 at 10:00 
+ AM. A holiday-themed snake program at the park. The listing prints only th
+ e title\, date and time. The price\, ages and meeting place are not shown 
+ there.\n\nPrice: No published price\n\nDetails: https://coastaleventures.c
+ om/events/ev-gsp-12-days-christmas-snakes-1223.html
+URL:https://coastaleventures.com/events/ev-gsp-12-days-christmas-snakes-122
+ 3.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2026-12-26@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261226T090000
+DTEND;TZID=America/Chicago:20261226T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2026-12-27@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261227T090000
+DTEND;TZID=America/Chicago:20261227T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gsp_first_day_hike_0101-2027-01-01@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20270101T080000
+DTEND;TZID=America/Chicago:20270101T090000
+SUMMARY:First Day Hike 2027 at Gulf State Park
+LOCATION:Gulf State Park\, 20115 State Hwy 135\, Gulf Shores\, AL 36542
+DESCRIPTION:Friday 1/1 · 8:00 AM\n\nGulf State Park lists First Day Hike 2
+ 027 on its events page for Friday\, January 1 at 8:00 AM. A New Year's Day
+  guided hike at the park. The listing prints only the title\, date and tim
+ e. The price\, ages and meeting place are not shown there.\n\nPrice: No pu
+ blished price\n\nDetails: https://coastaleventures.com/events/ev-gsp-first
+ -day-hike-0101.html
+URL:https://coastaleventures.com/events/ev-gsp-first-day-hike-0101.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2027-01-02@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20270102T090000
+DTEND;TZID=America/Chicago:20270102T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2027-01-03@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20270103T090000
+DTEND;TZID=America/Chicago:20270103T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_audubon_american_oystercatchers_program_0107-2027-01-07@coastalevent
  ures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;VALUE=DATE:20270107
 DTEND;VALUE=DATE:20270108
 SUMMARY:Audubon program: American Oystercatchers
@@ -507,8 +887,29 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2027-01-09@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20270109T090000
+DTEND;TZID=America/Chicago:20270109T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_garnier_beach_garden_club_0912-2027-01-09@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20270109T103000
 DTEND;TZID=America/Chicago:20270109T130000
 SUMMARY:Garnier Beach Garden Club
@@ -527,8 +928,113 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2027-01-10@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20270110T090000
+DTEND;TZID=America/Chicago:20270110T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2027-01-16@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20270116T090000
+DTEND;TZID=America/Chicago:20270116T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2027-01-17@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20270117T090000
+DTEND;TZID=America/Chicago:20270117T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2027-01-23@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20270123T090000
+DTEND;TZID=America/Chicago:20270123T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2027-01-24@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20270124T090000
+DTEND;TZID=America/Chicago:20270124T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_blakeley_battlefield_blitz_0130-2027-01-30@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20270130T080000
 DTEND;TZID=America/Chicago:20270130T090000
 SUMMARY:Battlefield Blitz 5K and Fun Run
@@ -546,9 +1052,73 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2027-01-30@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20270130T090000
+DTEND;TZID=America/Chicago:20270130T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2027-01-31@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20270131T090000
+DTEND;TZID=America/Chicago:20270131T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_bellingrath_hidden_treasure_dindo_0203-2027-02-03@coastaleventures.c
+ om
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20270203T130000
+DTEND;TZID=America/Chicago:20270203T140000
+SUMMARY:Hidden Treasure: From the Delta to the Gulf with Dr. John Dindo at 
+ Bellingrath
+LOCATION:Bellingrath Gardens and Home: Magnolia Cafe\, 12401 Bellingrath Ga
+ rdens Road\, Theodore\, AL 36582
+DESCRIPTION:Wednesday 2/3 · 1:00 PM to 2:00 PM\n\nDr. John Dindo\, Associa
+ te Director of the Dauphin Island Sea Lab\, presents slides and video of t
+ he Mobile-Tensaw Delta\, often called America's Amazon\, and follows its w
+ aters to the Gulf of Mexico. The talk is on Wednesday\, February 3\, 2027\
+ , in the Magnolia Cafe at Bellingrath. Non-members pay $15 and members att
+ end free.\n\nPrice: from $15\n\nDetails: https://coastaleventures.com/even
+ ts/ev-bellingrath-hidden-treasure-dindo-0203.html
+URL:https://coastaleventures.com/events/ev-bellingrath-hidden-treasure-dind
+ o-0203.html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_audubon_small_bird_photography_program_0204-2027-02-04@coastaleventu
  res.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270205
 SUMMARY:Audubon program: Small Bird Photography
@@ -566,8 +1136,71 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2027-02-06@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20270206T090000
+DTEND;TZID=America/Chicago:20270206T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2027-02-07@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20270207T090000
+DTEND;TZID=America/Chicago:20270207T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2027-02-13@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20270213T090000
+DTEND;TZID=America/Chicago:20270213T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_garnier_beach_garden_club_0912-2027-02-13@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20270213T103000
 DTEND;TZID=America/Chicago:20270213T130000
 SUMMARY:Garnier Beach Garden Club
@@ -586,9 +1219,30 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2027-02-14@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20270214T090000
+DTEND;TZID=America/Chicago:20270214T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_community_camellia_show_pensacola_0220-2027-02-20@coastaleventures.c
  om
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;VALUE=DATE:20270220
 DTEND;VALUE=DATE:20270221
 SUMMARY:Community Camellia Show and Plant Sale at the downtown library
@@ -606,8 +1260,92 @@ CATEGORIES:Nature and outdoors
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2027-02-20@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20270220T090000
+DTEND;TZID=America/Chicago:20270220T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2027-02-21@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20270221T090000
+DTEND;TZID=America/Chicago:20270221T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2027-02-27@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20270227T090000
+DTEND;TZID=America/Chicago:20270227T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_gulfarium_military_weekends_1128-2027-02-28@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20270228T090000
+DTEND;TZID=America/Chicago:20270228T163000
+SUMMARY:Military Weekends at the Gulfarium
+LOCATION:Gulfarium Marine Adventure Park\, 1010 Miracle Strip Parkway SE\, 
+ Fort Walton Beach\, FL 32548
+DESCRIPTION:Saturdays and Sundays\, 11/28 to 2/28 · 9:00 AM to 4:30 PM\n\n
+ Every Saturday and Sunday from November 7 through February 28\, military I
+ D holders and their immediate families get 50 percent off admission to the
+  Gulfarium. Tickets are bought at the park with a valid military ID. The o
+ ffer cannot be combined with other discounts. The park is open 9:00 AM to 
+ 4:30 PM\, and admission closes at 3:30 PM.\n\nPrice: from $13.48\n\nDetail
+ s: https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+URL:https://coastaleventures.com/events/ev-gulfarium-military-weekends-1128
+ .html
+CATEGORIES:Nature and outdoors
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_uwf_camellia_garden_tour_0307-2027-03-07@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20270307T120000
 DTEND;TZID=America/Chicago:20270307T160000
 SUMMARY:UWF Camellia Garden guided tour with the Pensacola Camellia Club
@@ -628,7 +1366,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_kite-2027-03-12@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;VALUE=DATE:20270312
 DTEND;VALUE=DATE:20270313
 SUMMARY:Kites on the Coast (Pensacola Beach)

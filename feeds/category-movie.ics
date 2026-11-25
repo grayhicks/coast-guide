@@ -25,49 +25,8 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_suds_christmas_vacation_1124-2026-11-24@coastaleventures.com
-DTSTAMP:20261124T000000Z
-DTSTART;VALUE=DATE:20261124
-DTEND;VALUE=DATE:20261125
-SUMMARY:Christmas Vacation at Suds N Cinema
-LOCATION:Suds N Cinema\, 174 Miracle Strip Pkwy SE\, Fort Walton Beach\, FL
-  32548
-DESCRIPTION:Tuesday 11/24 · doors 5:45 PM\, movie 6:30 PM\n\nSuds N Cinema
-  shows National Lampoon's Christmas Vacation during Thanksgiving week\, wi
- th Clark Griswold and family on the big screen. Full restaurant service co
- mes to your seat during the movie\, so nobody has to cook or do dishes. Th
- e event page lists doors at 5:45 PM and the show at 6:30 PM\, and a Classi
- c Ticket is $5.\n\nPrice: from $5\n\nDetails: https://coastaleventures.com
- /events/ev-suds-christmas-vacation-1124.html
-URL:https://coastaleventures.com/events/ev-suds-christmas-vacation-1124.htm
- l
-CATEGORIES:Movies
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_fwb_library_family_movie_treasure_planet_1124-2026-11-24@coastaleven
- tures.com
-DTSTAMP:20261124T000000Z
-DTSTART;TZID=America/Chicago:20261124T103000
-DTEND;TZID=America/Chicago:20261124T120000
-SUMMARY:Family movie: Treasure Planet at Fort Walton Beach Library
-LOCATION:Fort Walton Beach Library\, 185 Miracle Strip Parkway SE\, Fort Wa
- lton Beach\, FL 32548
-DESCRIPTION:Tuesday 11/24 · 10:30 AM to 12:00 PM\n\nFort Walton Beach Libr
- ary shows the Disney film Treasure Planet (PG) in the Children's Story Roo
- m on Tuesday\, November 24. Kids get popcorn and coloring sheets while the
-  movie plays. The movie starts at 10:30 AM and the library says families c
- an join at any time.\n\nPrice: No published price\n\nDetails: https://coas
- taleventures.com/events/ev-fwb-library-family-movie-treasure-planet-1124.h
- tml
-URL:https://coastaleventures.com/events/ev-fwb-library-family-movie-treasur
- e-planet-1124.html
-CATEGORIES:Movies
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_fwb_library_family_movie_spirit_1125-2026-11-25@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261125T103000
 DTEND;TZID=America/Chicago:20261125T120000
 SUMMARY:Family movie: Spirit at Fort Walton Beach Library
@@ -87,7 +46,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_free_birds_movie_1125-2026-11-25@coastaleventures
  .com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261125T153000
 DTEND;TZID=America/Chicago:20261125T170000
 SUMMARY:Free Birds family movie at Valparaiso Library
@@ -104,8 +63,29 @@ CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_suds_christmas_vacation_run_1125-2026-11-25@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261125T183000
+DTEND;TZID=America/Chicago:20261125T193000
+SUMMARY:Christmas Vacation at Suds N Cinema\, Thanksgiving week showings
+LOCATION:Suds N Cinema\, 174 Miracle Strip Pkwy SE\, Fort Walton Beach\, FL
+  32548
+DESCRIPTION:Wednesday 11/25 to Monday 11/30 · 6:30 PM nightly\n\nSuds N Ci
+ nema keeps National Lampoon's Christmas Vacation on the screen every eveni
+ ng through Monday\, November 30\, with a 6:30 PM start. Full restaurant se
+ rvice comes to your seat during the movie\, so nobody cooks or washes dish
+ es. The theater closes on Thanksgiving Day itself for the regular schedule
+  shown below\, so check the date you pick.\n\nPrice: from $5\n\nDetails: h
+ ttps://coastaleventures.com/events/ev-suds-christmas-vacation-run-1125.htm
+ l
+URL:https://coastaleventures.com/events/ev-suds-christmas-vacation-run-1125
+ .html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-11-26@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261126T150000
 DTEND;TZID=America/Chicago:20261126T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -122,8 +102,47 @@ CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_mpl_documentaries_anthropologist_1201-2026-12-01@coastaleventures.co
+ m
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261201T140000
+DTEND;TZID=America/Chicago:20261201T160000
+SUMMARY:Documentaries with an Anthropologist: The Booksellers
+LOCATION:Ben May Main Library\, Bernheim Hall\, 701 Government Street\, Mob
+ ile\, AL 36602
+DESCRIPTION:Tuesday 12/1 · 2:00 PM to 4:00 PM\n\nThe Ben May Main Library 
+ screens The Booksellers\, a 2019 documentary that runs 1 hour 39 minutes. 
+ The monthly series is aimed at adults and is led by a library anthropologi
+ st. Email Dr. Daniel Spotswood at the library or call for more information
+ .\n\nPrice: Free\n\nDetails: https://coastaleventures.com/events/ev-mpl-do
+ cumentaries-anthropologist-1201.html
+URL:https://coastaleventures.com/events/ev-mpl-documentaries-anthropologist
+ -1201.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_suds_goonies_1202-2026-12-02@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261202T183000
+DTEND;TZID=America/Chicago:20261202T193000
+SUMMARY:The Goonies at Suds N Cinema
+LOCATION:Suds N Cinema\, 174 Miracle Strip Pkwy SE\, Fort Walton Beach\, FL
+  32548
+DESCRIPTION:Wednesday 12/2 to Monday 12/7 · 6:30 PM (no Friday show)\n\nSu
+ ds N Cinema shows The Goonies on Wednesday 12/2\, Thursday 12/3 and Saturd
+ ay 12/5 through Monday 12/7 at 6:30 PM. The event page calls it an undergr
+ ound pirate adventure with booby traps and missing treasure\, served with 
+ full restaurant service at your seat. The page suggests bringing the kids.
+ \n\nPrice: from $5\n\nDetails: https://coastaleventures.com/events/ev-suds
+ -goonies-1202.html
+URL:https://coastaleventures.com/events/ev-suds-goonies-1202.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-03@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261203T150000
 DTEND;TZID=America/Chicago:20261203T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -140,9 +159,29 @@ CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_moes_daphne_december_movie_nights_1204-2026-12-04@coastaleventures.c
+ om
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261204T180000
+DTEND;TZID=America/Chicago:20261204T190000
+SUMMARY:Family movie nights at Moe's Original BBQ in Daphne
+LOCATION:Moe's Original BBQ\, Daphne\, 6423 Bayfront Park Drive\, Daphne\, 
+ AL 36526
+DESCRIPTION:Fridays 12/4\, 12/11 and 12/18 · 6:00 PM\n\nMoe's Original BBQ
+  in Daphne shows holiday movies outdoors on three December Fridays from 6:
+ 00 to 8:00 PM. The lineup is How the Grinch Stole Christmas on 12/4\, The 
+ Polar Express on 12/11 and A Christmas Story on 12/18. Popcorn is free.\n\
+ nPrice: Free\n\nDetails: https://coastaleventures.com/events/ev-moes-daphn
+ e-december-movie-nights-1204.html
+URL:https://coastaleventures.com/events/ev-moes-daphne-december-movie-night
+ s-1204.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_mobile_wheels_and_reels_christmas_pageant_1204-2026-12-04@coastaleve
  ntures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261204T180000
 DTEND;TZID=America/Chicago:20261204T220000
 SUMMARY:Wheels & Reels Drive-In Movies: The Best Christmas Pageant Ever
@@ -162,7 +201,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_exploreum_21_after_hours_gremlins_1205-2026-12-05@coastaleventures.c
  om
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261205T180000
 DTEND;TZID=America/Chicago:20261205T190000
 SUMMARY:21+ After Hours: Gremlins at the Exploreum
@@ -179,8 +218,30 @@ CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_crestview_library_cookie_polar_express_1209-2026-12-09@coastaleventu
+ res.com
+DTSTAMP:20261125T000000Z
+DTSTART;VALUE=DATE:20261209
+DTEND;VALUE=DATE:20261210
+SUMMARY:Holiday cookie decorating and Polar Express movie night at the Cres
+ tview Library
+LOCATION:Crestview Library\, 1445 Commerce Dr\, Crestview\, FL 32539
+DESCRIPTION:Wednesday 12/9 · 3:00 PM or 4:30 PM\n\nThe Crestview Library s
+ hows The Polar Express twice on Wednesday\, December 9\, with cookie decor
+ ating before each showing. The first session starts at 3:00 PM and the sec
+ ond at 4:30 PM\, and the library asks families to wear festive pajamas and
+  bring blankets. Popcorn\, cookies and hot chocolate are provided\, and re
+ gistration is required.\n\nPrice: No published price\n\nDetails: https://c
+ oastaleventures.com/events/ev-crestview-library-cookie-polar-express-1209.
+ html
+URL:https://coastaleventures.com/events/ev-crestview-library-cookie-polar-e
+ xpress-1209.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-10@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261210T150000
 DTEND;TZID=America/Chicago:20261210T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -198,7 +259,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_daphne_movie_night_in_the_park_1211-2026-12-11@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261211T160000
 DTEND;TZID=America/Chicago:20261211T200000
 SUMMARY:Movie Night in the Park in Daphne
@@ -217,7 +278,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_wharf_jingle_bell_movie_bash_1212-2026-12-12@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261212T110000
 DTEND;TZID=America/Chicago:20261212T120000
 SUMMARY:Jingle Bell Movie Bash at Portside on Main
@@ -238,7 +299,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_polar_express_1214-2026-12-14@coastaleventures.co
  m
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261214T153000
 DTEND;TZID=America/Chicago:20261214T163000
 SUMMARY:The Polar Express movie with cookies and cocoa at the Valparaiso Li
@@ -256,7 +317,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_navarre_throwback_deck_halls_1215-2026-12-15@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261215T160000
 DTEND;TZID=America/Chicago:20261215T170000
 SUMMARY:Throwback Movie Tuesday: Deck the Halls at Navarre Library
@@ -275,7 +336,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-17@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261217T150000
 DTEND;TZID=America/Chicago:20261217T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -292,14 +353,32 @@ CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_niceville_library_polar_express_1217-2026-12-17@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261217T160000
+DTEND;TZID=America/Chicago:20261217T174500
+SUMMARY:Family Movie at the Niceville Library: The Polar Express
+LOCATION:Niceville Library\, 206 N Partin Dr\, Niceville\, FL 32578
+DESCRIPTION:Thursday 12/17 · 4:00 PM to 5:45 PM\n\nThe Niceville Library s
+ hows The Polar Express at 4:00 PM on Thursday\, December 17. The film is r
+ ated G and refreshments are served. The calendar lists the program for sch
+ ool-age children and families.\n\nPrice: No published price\n\nDetails: ht
+ tps://coastaleventures.com/events/ev-niceville-library-polar-express-1217.
+ html
+URL:https://coastaleventures.com/events/ev-niceville-library-polar-express-
+ 1217.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_destin_commons_movie_home_alone_1218-2026-12-18@coastaleventures.com
-DTSTAMP:20261124T000000Z
-DTSTART;TZID=America/Chicago:20261218T183000
-DTEND;TZID=America/Chicago:20261218T193000
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261218T173000
+DTEND;TZID=America/Chicago:20261218T183000
 SUMMARY:Movie Night: Elf at Destin Commons
 LOCATION:Destin Commons\, 4100 Legendary Drive\, Destin\, FL 32541
-DESCRIPTION:Friday 12/18 · 6:30 PM\n\nDestin Commons kicks off winter brea
- k with Elf on the lawn on Friday\, December 18\, at 6:30 PM. Bring blanket
+DESCRIPTION:Friday 12/18 · 5:30 PM\n\nDestin Commons kicks off winter brea
+ k with Elf on the lawn on Friday\, December 18\, at 5:30 PM. Bring blanket
  s and lawn chairs and come early for a spot. AMC Destin Commons hands out 
  free popcorn\, and Crepe Hut and Wetzel's Pretzels take 50% off during the
   movie.\n\nPrice: No published price\n\nDetails: https://coastaleventures.
@@ -311,7 +390,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_milton_movie_night_1222-2026-12-22@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;VALUE=DATE:20261222
 DTEND;VALUE=DATE:20261230
 SUMMARY:Movie Night at Milton Library
@@ -327,8 +406,30 @@ CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_fwb_library_nightmare_before_christmas_1222-2026-12-22@coastaleventu
+ res.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20261222T103000
+DTEND;TZID=America/Chicago:20261222T114500
+SUMMARY:Family Movie at the Fort Walton Beach Library: The Nightmare Before
+  Christmas
+LOCATION:Fort Walton Beach Library\, 185 Miracle Strip Parkway SE\, Fort Wa
+ lton Beach\, FL 32548
+DESCRIPTION:Tuesday 12/22 · 10:30 AM to 11:45 AM\n\nThe Fort Walton Beach 
+ Library shows The Nightmare Before Christmas\, rated PG\, on Tuesday\, Dec
+ ember 22\, as part of its winter break Family Movie Series. The movie star
+ ts at 10:30 AM and guests can join at any time. Kids get popcorn and color
+ ing sheets while they watch.\n\nPrice: No published price\n\nDetails: http
+ s://coastaleventures.com/events/ev-fwb-library-nightmare-before-christmas-
+ 1222.html
+URL:https://coastaleventures.com/events/ev-fwb-library-nightmare-before-chr
+ istmas-1222.html
+CATEGORIES:Movies
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_mary_esther_library_moana_0123-2027-01-23@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20270123T100000
 DTEND;TZID=America/Chicago:20270123T110000
 SUMMARY:Family Movie: Moana at the Mary Esther Library

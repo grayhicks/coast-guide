@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:ev_pb_lighted_boat_parade_1204-2026-12-04@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261204T183000
 DTEND;TZID=America/Chicago:20261204T193000
 SUMMARY:Pensacola Beach Christmas lighted boat parade
@@ -45,7 +45,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_pb_surfing_santa_parade_1206-2026-12-06@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261206T140000
 DTEND;TZID=America/Chicago:20261206T150000
 SUMMARY:Surfing Santa Beach Parade on Pensacola Beach
@@ -65,7 +65,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_navarre_beach_nye_fireworks_1231-2026-12-31@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20261231T000000
 DTEND;TZID=America/Chicago:20261231T010000
 SUMMARY:New Year's Eve fireworks over Santa Rosa Sound at Navarre Beach
@@ -84,7 +84,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_flora_bama_polar_bear_dip_0101-2027-01-01@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Flora-Bama Polar Bear Dip
@@ -102,9 +102,48 @@ CATEGORIES:Beach
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ev_juanas_penguin_plunge_n_paddle_0101-2027-01-01@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20270101T090000
+DTEND;TZID=America/Chicago:20270101T100000
+SUMMARY:18th Annual Penguin Plunge'n Paddle at Juana's
+LOCATION:Juana's Pagodas & Sailors' Grill\, 1451 Navarre Beach Causeway\, N
+ avarre Beach\, FL 32566
+DESCRIPTION:Friday 1/1 · 9 AM\n\nJuana's hosts the 18th Annual Penguin Plu
+ nge'n Paddle on New Year's Day from 9 AM to 4 PM. Participants dash from t
+ he beach into Santa Rosa Sound\, take a stand-up paddle lap\, or cheer fro
+ m the sand. The day supports the Gulf Coast Kiln Walk Society and its cera
+ mic arts education work. Raffle tickets run 5 for $20 in advance or 4 for 
+ $20 on the day.\n\nPrice: from $36.22\n\nDetails: https://coastaleventures
+ .com/events/ev-juanas-penguin-plunge-n-paddle-0101.html
+URL:https://coastaleventures.com/events/ev-juanas-penguin-plunge-n-paddle-0
+ 101.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ev_navarre_pirate_plunge_0101-2027-01-01@coastaleventures.com
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=America/Chicago:20270101T120000
+DTEND;TZID=America/Chicago:20270101T130000
+SUMMARY:9th Annual Pirate Plunge at Navarre Beach
+LOCATION:Navarre Beach\, starting at Andy D's\, Navarre Beach\, FL 32566 (s
+ tarting point at Andy D's)
+DESCRIPTION:Friday 1/1 · 12 PM\n\nPirates on the Panhandle\, a Florida non
+ profit\, runs its 9th Annual Pirate Plunge into the Gulf at noon on New Ye
+ ar's Day. Local officials are invited to take the plunge with everyone els
+ e. An after-plunge Pirate Party follows until 3 PM with the Rowdies Rock B
+ and\, food and drink for wristband holders\, and a 50/50 raffle. Proceeds 
+ support Shadows of Strength.\n\nPrice: Free\n\nDetails: https://coastaleve
+ ntures.com/events/ev-navarre-pirate-plunge-0101.html
+URL:https://coastaleventures.com/events/ev-navarre-pirate-plunge-0101.html
+CATEGORIES:Beach
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ev_polar_bear_plunge_pensacola_beach_0101-2027-01-01@coastaleventures.c
  om
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;TZID=America/Chicago:20270101T140000
 DTEND;TZID=America/Chicago:20270101T150000
 SUMMARY:Polar Bear Plunge at Pensacola Beach
@@ -122,7 +161,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_florabama_beach_run_warriors_0313-2027-03-13@coastaleventures.com
-DTSTAMP:20261124T000000Z
+DTSTAMP:20261125T000000Z
 DTSTART;VALUE=DATE:20270313
 DTEND;VALUE=DATE:20270314
 SUMMARY:Flora-Bama Beach Run for America's Warriors
