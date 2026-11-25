@@ -1,6 +1,6 @@
 
 .hk3d.on { opacity: 1; }
-.hk3d.on { background: rgba(10, 16, 28, 0.3); }
+.hk3d.on { background: rgba(10, 16, 28, 0.55); }
 .hk3d:not(.on) .hk3d_st, .hk3d:not(.on) .hk3d_bar { visibility: hidden; }
 .hk3d:not(.on) .hk3d_xx { visibility: hidden; }
 .hk .hero { --gca-calm: calc(var(--gca-calm-base) * var(--gca-master) * var(--gca-g-hero)); }
