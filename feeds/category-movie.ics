@@ -25,48 +25,28 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ev_fwb_library_family_movie_spirit_1125-2026-11-25@coastaleventures.com
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261125T103000
-DTEND;TZID=America/Chicago:20261125T120000
-SUMMARY:Family movie: Spirit at Fort Walton Beach Library
-LOCATION:Fort Walton Beach Library\, 185 Miracle Strip Parkway SE\, Fort Wa
- lton Beach\, FL 32548
-DESCRIPTION:Wednesday 11/25 · 10:30 AM to 12:00 PM\n\nFort Walton Beach Li
- brary shows Spirit: Stallion of the Cimarron (G) in the Children's Story R
- oom on Wednesday\, November 25. Kids get popcorn and coloring sheets durin
- g the movie. The movie starts at 10:30 AM and families can join at any tim
- e.\n\nPrice: No published price\n\nDetails: https://coastaleventures.com/e
- vents/ev-fwb-library-family-movie-spirit-1125.html
-URL:https://coastaleventures.com/events/ev-fwb-library-family-movie-spirit-
- 1125.html
-CATEGORIES:Movies
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ev_valparaiso_library_free_birds_movie_1125-2026-11-25@coastaleventures
- .com
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261125T153000
-DTEND;TZID=America/Chicago:20261125T170000
-SUMMARY:Free Birds family movie at Valparaiso Library
+UID:ev_valparaiso_library_anime_club-2026-11-26@coastaleventures.com
+DTSTAMP:20261126T000000Z
+DTSTART;TZID=America/Chicago:20261126T150000
+DTEND;TZID=America/Chicago:20261126T160000
+SUMMARY:Anime Club at the Valparaiso Library
 LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
-DESCRIPTION:Wednesday 11/25 · 3:30 PM to 5:00 PM\n\nValparaiso Community L
- ibrary shows the animated film Free Birds (PG\, 91 minutes) on Wednesday\,
-  November 25. Snacks and drinks are provided\, all ages are welcome\, and 
- no registration is needed. Children come with an adult\, because drop-offs
-  are not allowed.\n\nPrice: No published price\n\nDetails: https://coastal
- eventures.com/events/ev-valparaiso-library-free-birds-movie-1125.html
-URL:https://coastaleventures.com/events/ev-valparaiso-library-free-birds-mo
- vie-1125.html
+DESCRIPTION:Thursdays · 3:00 PM to 4:00 PM\, through 12/17\n\nThe Valparai
+ so Library's Anime Club meets every Thursday afternoon for middle and high
+  school students\, ages 11 to 17. The club watches anime rated from G to P
+ G-13 and TV-14\, and manga is on hand to read during meetings.\n\nPrice: N
+ o published price\n\nDetails: https://coastaleventures.com/events/ev-valpa
+ raiso-library-anime-club.html
+URL:https://coastaleventures.com/events/ev-valparaiso-library-anime-club.ht
+ ml
 CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_suds_christmas_vacation_run_1125-2026-11-25@coastaleventures.com
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261125T183000
-DTEND;TZID=America/Chicago:20261125T193000
+UID:ev_suds_christmas_vacation_run_1125-2026-11-26@coastaleventures.com
+DTSTAMP:20261126T000000Z
+DTSTART;TZID=America/Chicago:20261126T183000
+DTEND;TZID=America/Chicago:20261126T193000
 SUMMARY:Christmas Vacation at Suds N Cinema\, Thanksgiving week showings
 LOCATION:Suds N Cinema\, 174 Miracle Strip Pkwy SE\, Fort Walton Beach\, FL
   32548
@@ -84,27 +64,9 @@ CATEGORIES:Movies
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:ev_valparaiso_library_anime_club-2026-11-26@coastaleventures.com
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261126T150000
-DTEND;TZID=America/Chicago:20261126T160000
-SUMMARY:Anime Club at the Valparaiso Library
-LOCATION:Valparaiso Library\, 459 Valparaiso Pkwy\, Valparaiso\, FL 32580
-DESCRIPTION:Thursdays · 3:00 PM to 4:00 PM\, through 12/17\n\nThe Valparai
- so Library's Anime Club meets every Thursday afternoon for middle and high
-  school students\, ages 11 to 17. The club watches anime rated from G to P
- G-13 and TV-14\, and manga is on hand to read during meetings.\n\nPrice: N
- o published price\n\nDetails: https://coastaleventures.com/events/ev-valpa
- raiso-library-anime-club.html
-URL:https://coastaleventures.com/events/ev-valparaiso-library-anime-club.ht
- ml
-CATEGORIES:Movies
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:ev_mpl_documentaries_anthropologist_1201-2026-12-01@coastaleventures.co
  m
-DTSTAMP:20261125T000000Z
+DTSTAMP:20261126T000000Z
 DTSTART;TZID=America/Chicago:20261201T140000
 DTEND;TZID=America/Chicago:20261201T160000
 SUMMARY:Documentaries with an Anthropologist: The Booksellers
@@ -123,7 +85,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_suds_goonies_1202-2026-12-02@coastaleventures.com
-DTSTAMP:20261125T000000Z
+DTSTAMP:20261126T000000Z
 DTSTART;TZID=America/Chicago:20261202T183000
 DTEND;TZID=America/Chicago:20261202T193000
 SUMMARY:The Goonies at Suds N Cinema
@@ -142,7 +104,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-03@coastaleventures.com
-DTSTAMP:20261125T000000Z
+DTSTAMP:20261126T000000Z
 DTSTART;TZID=America/Chicago:20261203T150000
 DTEND;TZID=America/Chicago:20261203T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -161,7 +123,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_moes_daphne_december_movie_nights_1204-2026-12-04@coastaleventures.c
  om
-DTSTAMP:20261125T000000Z
+DTSTAMP:20261126T000000Z
 DTSTART;TZID=America/Chicago:20261204T180000
 DTEND;TZID=America/Chicago:20261204T190000
 SUMMARY:Family movie nights at Moe's Original BBQ in Daphne
@@ -181,7 +143,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_mobile_wheels_and_reels_christmas_pageant_1204-2026-12-04@coastaleve
  ntures.com
-DTSTAMP:20261125T000000Z
+DTSTAMP:20261126T000000Z
 DTSTART;TZID=America/Chicago:20261204T180000
 DTEND;TZID=America/Chicago:20261204T220000
 SUMMARY:Wheels & Reels Drive-In Movies: The Best Christmas Pageant Ever
@@ -201,7 +163,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_exploreum_21_after_hours_gremlins_1205-2026-12-05@coastaleventures.c
  om
-DTSTAMP:20261125T000000Z
+DTSTAMP:20261126T000000Z
 DTSTART;TZID=America/Chicago:20261205T180000
 DTEND;TZID=America/Chicago:20261205T190000
 SUMMARY:21+ After Hours: Gremlins at the Exploreum
@@ -220,7 +182,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_crestview_library_cookie_polar_express_1209-2026-12-09@coastaleventu
  res.com
-DTSTAMP:20261125T000000Z
+DTSTAMP:20261126T000000Z
 DTSTART;VALUE=DATE:20261209
 DTEND;VALUE=DATE:20261210
 SUMMARY:Holiday cookie decorating and Polar Express movie night at the Cres
@@ -241,7 +203,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-10@coastaleventures.com
-DTSTAMP:20261125T000000Z
+DTSTAMP:20261126T000000Z
 DTSTART;TZID=America/Chicago:20261210T150000
 DTEND;TZID=America/Chicago:20261210T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -259,7 +221,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_daphne_movie_night_in_the_park_1211-2026-12-11@coastaleventures.com
-DTSTAMP:20261125T000000Z
+DTSTAMP:20261126T000000Z
 DTSTART;TZID=America/Chicago:20261211T160000
 DTEND;TZID=America/Chicago:20261211T200000
 SUMMARY:Movie Night in the Park in Daphne
@@ -278,7 +240,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_wharf_jingle_bell_movie_bash_1212-2026-12-12@coastaleventures.com
-DTSTAMP:20261125T000000Z
+DTSTAMP:20261126T000000Z
 DTSTART;TZID=America/Chicago:20261212T110000
 DTEND;TZID=America/Chicago:20261212T120000
 SUMMARY:Jingle Bell Movie Bash at Portside on Main
@@ -299,7 +261,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_polar_express_1214-2026-12-14@coastaleventures.co
  m
-DTSTAMP:20261125T000000Z
+DTSTAMP:20261126T000000Z
 DTSTART;TZID=America/Chicago:20261214T153000
 DTEND;TZID=America/Chicago:20261214T163000
 SUMMARY:The Polar Express movie with cookies and cocoa at the Valparaiso Li
@@ -317,7 +279,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_navarre_throwback_deck_halls_1215-2026-12-15@coastaleventures.com
-DTSTAMP:20261125T000000Z
+DTSTAMP:20261126T000000Z
 DTSTART;TZID=America/Chicago:20261215T160000
 DTEND;TZID=America/Chicago:20261215T170000
 SUMMARY:Throwback Movie Tuesday: Deck the Halls at Navarre Library
@@ -336,7 +298,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_valparaiso_library_anime_club-2026-12-17@coastaleventures.com
-DTSTAMP:20261125T000000Z
+DTSTAMP:20261126T000000Z
 DTSTART;TZID=America/Chicago:20261217T150000
 DTEND;TZID=America/Chicago:20261217T160000
 SUMMARY:Anime Club at the Valparaiso Library
@@ -354,7 +316,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_niceville_library_polar_express_1217-2026-12-17@coastaleventures.com
-DTSTAMP:20261125T000000Z
+DTSTAMP:20261126T000000Z
 DTSTART;TZID=America/Chicago:20261217T160000
 DTEND;TZID=America/Chicago:20261217T174500
 SUMMARY:Family Movie at the Niceville Library: The Polar Express
@@ -372,7 +334,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_destin_commons_movie_home_alone_1218-2026-12-18@coastaleventures.com
-DTSTAMP:20261125T000000Z
+DTSTAMP:20261126T000000Z
 DTSTART;TZID=America/Chicago:20261218T173000
 DTEND;TZID=America/Chicago:20261218T183000
 SUMMARY:Movie Night: Elf at Destin Commons
@@ -390,7 +352,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_milton_movie_night_1222-2026-12-22@coastaleventures.com
-DTSTAMP:20261125T000000Z
+DTSTAMP:20261126T000000Z
 DTSTART;VALUE=DATE:20261222
 DTEND;VALUE=DATE:20261230
 SUMMARY:Movie Night at Milton Library
@@ -408,7 +370,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ev_fwb_library_nightmare_before_christmas_1222-2026-12-22@coastaleventu
  res.com
-DTSTAMP:20261125T000000Z
+DTSTAMP:20261126T000000Z
 DTSTART;TZID=America/Chicago:20261222T103000
 DTEND;TZID=America/Chicago:20261222T114500
 SUMMARY:Family Movie at the Fort Walton Beach Library: The Nightmare Before
@@ -429,7 +391,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev_mary_esther_library_moana_0123-2027-01-23@coastaleventures.com
-DTSTAMP:20261125T000000Z
+DTSTAMP:20261126T000000Z
 DTSTART;TZID=America/Chicago:20270123T100000
 DTEND;TZID=America/Chicago:20270123T110000
 SUMMARY:Family Movie: Moana at the Mary Esther Library
