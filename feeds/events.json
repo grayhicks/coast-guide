@@ -7,7 +7,7 @@
     "from": "2026-11-26",
     "to": "2027-03-26"
   },
-  "count": 3309,
+  "count": 3314,
   "note": "Event details are compiled from the venue or organizer pages named in each record's sources. Check the venue before you travel. Weather data elsewhere on the site is Open-Meteo, CC BY 4.0.",
   "events": [
     {
@@ -34993,6 +34993,40 @@
       "checkedOn": "2026-11-25"
     },
     {
+      "id": "ev_gulf_breeze_zoo_christmas_zoobilee_1219-2026-12-19",
+      "title": "Christmas Zoobilee at the Gulf Breeze Zoo",
+      "date": "2026-12-19",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "when": "Saturday 12/19 and Sunday 12/20 · 10:00 AM to 4:00 PM",
+      "venue": "Gulf Breeze Zoo",
+      "address": "5701 Gulf Breeze Parkway, Gulf Breeze, FL 32563",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "tba",
+        "label": "No published price"
+      },
+      "summary": "The Gulf Breeze Zoo's 8th annual Christmas Zoobilee runs one weekend only, December 19 and 20, 10 AM to 4 PM. It has visits with Santa, live entertainment, kids' winter activities, a Candy Cane Market of local artists and vendors, and the zoo's three tiger cubs on their first Christmas. Everything is included with regular daytime admission.",
+      "url": "https://coastaleventures.com/events/ev-gulf-breeze-zoo-christmas-zoobilee-1219.html",
+      "sources": [
+        {
+          "note": "Gulf Breeze Zoo own page lists Saturday, December 19 and Sunday, December 20, 2026, 10 a.m. to 4 p.m., last admission at 3 p.m.",
+          "url": "https://gbzoo.com/event/christmas-zoobilee/"
+        },
+        {
+          "note": "Gulf Breeze Zoo own page: \"All Christmas Zoobilee activities are included with regular daytime Zoo admission\"",
+          "url": "https://gbzoo.com/event/christmas-zoobilee/"
+        },
+        {
+          "note": "Gulf Breeze Zoo own page: \"5701 Gulf Breeze Parkway, Gulf Breeze, FL 32563\"",
+          "url": "https://gbzoo.com/"
+        }
+      ],
+      "checkedOn": "2026-11-26"
+    },
+    {
       "id": "ev_gsp_christmas_owl_1219-2026-12-19",
       "title": "Little Park Pals: The Christmas Owl at Gulf State Park",
       "date": "2026-12-19",
@@ -47905,6 +47939,40 @@
         }
       ],
       "checkedOn": "2026-11-25"
+    },
+    {
+      "id": "ev_gmg_pokemon_league_challenges_0102-2027-01-02",
+      "title": "Pokémon League Challenges (TCG, VG Champions, GO), Jan 2",
+      "date": "2027-01-02",
+      "endDate": null,
+      "startTime": "13:00",
+      "endTime": null,
+      "when": "Saturday 1/2 · 1:00 PM",
+      "venue": "GameMasters Guild",
+      "address": "743 Ashley Drive, Crestview, FL 32536",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $5"
+      },
+      "summary": "GameMasters Guild in Crestview runs three Pokémon League Challenges on Saturday, January 2. Pokémon GO starts at 1:00 PM for $5, the TCG event at 2:00 PM for $10 and the VG Champions event at 6:00 PM for $5. The TCG event is capped at 48 players across all age divisions and deck lists are required.",
+      "url": "https://coastaleventures.com/events/ev-gmg-pokemon-league-challenges-0102.html",
+      "sources": [
+        {
+          "note": "GameMasters Guild's own Google Calendar: \"Pokemon TCG League Challenge at GameMasters Guild / Date: Saturday, January 2 / Entry Fee: $10.00 per player, all age divisions (includes sales tax) / Registration Period: 12:00pm-1:30pm / Tournament Start Time: 2:00pm\"",
+          "url": "https://calendar.google.com/calendar/ical/gmgcrestview%40aol.com/public/basic.ics"
+        },
+        {
+          "note": "GameMasters Guild events page (embeds the Google Calendar read above)",
+          "url": "https://gmgcrestview.com/events/"
+        },
+        {
+          "note": "GameMasters Guild's own Google Calendar: \"Pokemon GO League Challenge ... Date: Saturday, January 2 ... Entry Fee: $5.00 per player ... Tournament Start Time: 1:00pm\"",
+          "url": "https://calendar.google.com/calendar/ical/gmgcrestview%40aol.com/public/basic.ics"
+        }
+      ],
+      "checkedOn": "2026-11-26"
     },
     {
       "id": "ev_usa_wbb_app_state_0102-2027-01-02",
@@ -63755,6 +63823,36 @@
       "checkedOn": "2026-11-25"
     },
     {
+      "id": "ev_gmg_pokemon_go_league_cup_0123-2027-01-23",
+      "title": "Pokémon GO League Cup at GameMasters Guild",
+      "date": "2027-01-23",
+      "endDate": null,
+      "startTime": "13:00",
+      "endTime": null,
+      "when": "Saturday 1/23 · 1:00 PM",
+      "venue": "GameMasters Guild",
+      "address": "743 Ashley Drive, Crestview, FL 32536",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $10"
+      },
+      "summary": "GameMasters Guild in Crestview hosts a Pokémon GO League Cup on Saturday, January 23, at 1:00 PM. Entry is $10 per player, play is best of three in Great League (1500 CP max per Pokémon) with a top cut, and the field is capped at 24.",
+      "url": "https://coastaleventures.com/events/ev-gmg-pokemon-go-league-cup-0123.html",
+      "sources": [
+        {
+          "note": "GameMasters Guild's own Google Calendar: \"Pokemon GO League Cup at GameMasters Guild / Date: Saturday, January 23 / Entry Fee: $10.00 per player (includes sales tax) / Registration Period: 12:00pm-12:45pm / Tournament Start Time: 1:00pm\"",
+          "url": "https://calendar.google.com/calendar/ical/gmgcrestview%40aol.com/public/basic.ics"
+        },
+        {
+          "note": "GameMasters Guild events page (embeds the Google Calendar read above)",
+          "url": "https://gmgcrestview.com/events/"
+        }
+      ],
+      "checkedOn": "2026-11-26"
+    },
+    {
       "id": "ev_chess_club_for_everyone_at_moorer_0905-2027-01-23",
       "title": "Chess Club for Everyone at Moorer",
       "date": "2027-01-23",
@@ -74041,6 +74139,40 @@
         }
       ],
       "checkedOn": "2026-11-25"
+    },
+    {
+      "id": "ev_gmg_pokemon_league_challenges_0206-2027-02-06",
+      "title": "Pokémon League Challenges (TCG, VG Champions, GO), Feb 6",
+      "date": "2027-02-06",
+      "endDate": null,
+      "startTime": "13:00",
+      "endTime": null,
+      "when": "Saturday 2/6 · 1:00 PM",
+      "venue": "GameMasters Guild",
+      "address": "743 Ashley Drive, Crestview, FL 32536",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $5"
+      },
+      "summary": "GameMasters Guild in Crestview runs three Pokémon League Challenges on Saturday, February 6. Pokémon GO starts at 1:00 PM for $5, the TCG event at 2:00 PM for $10 and the VG Champions event at 6:00 PM for $5. The TCG event is capped at 48 players and deck lists are required.",
+      "url": "https://coastaleventures.com/events/ev-gmg-pokemon-league-challenges-0206.html",
+      "sources": [
+        {
+          "note": "GameMasters Guild's own Google Calendar: \"Pokemon TCG League Challenge at GameMasters Guild / Date: Saturday, February 6 / Entry Fee: $10.00 per player, all age divisions (includes sales tax) / Registration Period: 12:00pm-1:30pm / Tournament Start Time: 2:00pm\"",
+          "url": "https://calendar.google.com/calendar/ical/gmgcrestview%40aol.com/public/basic.ics"
+        },
+        {
+          "note": "GameMasters Guild events page (embeds the Google Calendar read above)",
+          "url": "https://gmgcrestview.com/events/"
+        },
+        {
+          "note": "GameMasters Guild's own Google Calendar: \"Pokemon GO League Challenge ... Date: Saturday, February 6 ... Entry Fee: $5.00 per player ... Tournament Start Time: 1:00pm\"",
+          "url": "https://calendar.google.com/calendar/ical/gmgcrestview%40aol.com/public/basic.ics"
+        }
+      ],
+      "checkedOn": "2026-11-26"
     },
     {
       "id": "ev_chess_club_for_everyone_at_moorer_0905-2027-02-06",
@@ -88417,6 +88549,36 @@
         }
       ],
       "checkedOn": "2026-11-25"
+    },
+    {
+      "id": "ev_gmg_pokemon_vg_champions_league_cup_0227-2027-02-27",
+      "title": "Pokémon VG Champions League Cup at GameMasters Guild",
+      "date": "2027-02-27",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "when": "Saturday 2/27 · 3:00 PM",
+      "venue": "GameMasters Guild",
+      "address": "743 Ashley Drive, Crestview, FL 32536",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $10"
+      },
+      "summary": "GameMasters Guild in Crestview hosts a Pokémon VG Champions League Cup on Saturday, February 27, at 3:00 PM. Entry is $10 per player, play is best of three with swiss rounds and a single-elimination top cut, and the field is capped at 24.",
+      "url": "https://coastaleventures.com/events/ev-gmg-pokemon-vg-champions-league-cup-0227.html",
+      "sources": [
+        {
+          "note": "GameMasters Guild's own Google Calendar: \"Pokemon VG Champions League Cup at GameMasters Guild Date: Saturday, February 27 Entry Fee: $10.00 per player (includes sales tax) Registration Period: 12:00pm-2:45pm Tournament Start Time: 3:00pm\"",
+          "url": "https://calendar.google.com/calendar/ical/gmgcrestview%40aol.com/public/basic.ics"
+        },
+        {
+          "note": "GameMasters Guild events page (embeds the Google Calendar read above)",
+          "url": "https://gmgcrestview.com/events/"
+        }
+      ],
+      "checkedOn": "2026-11-26"
     },
     {
       "id": "ev_pcc_one_world_many_voices_0227-2027-02-27",
