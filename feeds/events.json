@@ -7,7 +7,7 @@
     "from": "2026-11-27",
     "to": "2027-03-27"
   },
-  "count": 3298,
+  "count": 3297,
   "note": "Event details are compiled from the venue or organizer pages named in each record's sources. Check the venue before you travel. Weather data elsewhere on the site is Open-Meteo, CC BY 4.0.",
   "events": [
     {
@@ -187,39 +187,13 @@
       "checkedOn": "2026-11-25"
     },
     {
-      "id": "ev_psc_moonlight_garden_exhibition_1118-2026-11-27",
-      "title": "Moonlight Garden photography exhibition at Pensacola State College",
-      "date": "2026-11-27",
-      "endDate": "2026-12-11",
-      "startTime": null,
-      "endTime": null,
-      "when": "Through Friday 12/11 · Mon to Thu 9 AM to 5 PM, Fri 9 AM to 3 PM",
-      "venue": "Switzer Gallery, Pensacola State College",
-      "address": "1000 College Boulevard, Building 15, Pensacola, FL 32504",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "tba",
-        "label": "No published price"
-      },
-      "summary": "Photographer Mark Alan Francis shows landscape prints made with the Mordançage process, which gives black and white silver gelatin prints earth tones of copper, tan and burnt sienna. The pictures look like they were taken at night under moonlight. It runs in the Switzer Gallery through Friday 12/11 and is a quiet stop on a weekday.",
-      "url": "https://coastaleventures.com/events/ev-psc-moonlight-garden-exhibition-1118.html",
-      "sources": [
-        {
-          "note": "Pensacola State College Visual Arts: Mark Alan Francis exhibition page, read for viewing dates November 5 to December 11, gallery hours, location and description",
-          "url": "https://visualarts.pensacolastate.edu/gallery_exhibitions/mark-alan-francis-moonlight-garden-photography-exhibition/"
-        }
-      ],
-      "checkedOn": "2026-11-18"
-    },
-    {
       "id": "ev_psc_moonlight_garden_photography_1105-2026-11-27",
       "title": "Moonlight Garden photography exhibition by Mark Alan Francis",
       "date": "2026-11-27",
       "endDate": "2026-12-11",
       "startTime": null,
       "endTime": null,
-      "when": "Through Friday 12/11 · Weekdays",
+      "when": "Through Friday 12/11 · Mon to Thu 9 AM to 5 PM, Fri 9 AM to 3 PM",
       "venue": "Switzer Gallery, Pensacola State College",
       "address": "1000 College Blvd., Bldg. 15, Pensacola, FL 32504",
       "category": "art",
@@ -328,36 +302,6 @@
         {
           "note": "Winterfest guide: Elf Parade attendance and participation free on Black Friday",
           "url": "https://pensacolawinterfest.org/.well-known/llms.txt"
-        }
-      ],
-      "checkedOn": "2026-11-25"
-    },
-    {
-      "id": "ev_pensacola_winterfest_1127-2026-11-27",
-      "title": "Pensacola Winterfest",
-      "date": "2026-11-27",
-      "endDate": "2026-12-24",
-      "startTime": null,
-      "endTime": null,
-      "when": "Fri 11/27 to Thu 12/24 · Fri to Sun evenings, then daily from 12/18",
-      "venue": "Plaza Wonderland, Old County Courthouse",
-      "address": "223 S Palafox Pl, Pensacola, FL 32502",
-      "category": "event",
-      "categoryLabel": "Events and festivals",
-      "price": {
-        "kind": "priced",
-        "label": "from $17"
-      },
-      "summary": "Pensacola Winterfest is a volunteer-run holiday event around the Old County Courthouse in downtown Pensacola, with snow falling on Plaza Wonderland and trolley tours themed on Peanuts, The Polar Express and the Grinch, plus a Scrooge and Marley tour in Christmas week. Each tour runs about 25 minutes. Snow and music in the plaza are free, and photo sessions with Santa are booked by the group. Reservations are strongly recommended because recent seasons sold out in advance.",
-      "url": "https://coastaleventures.com/events/ev-pensacola-winterfest-1127.html",
-      "sources": [
-        {
-          "note": "Winterfest feed and guide: 2026 season Nov 27 to Dec 24, tour prices, age thresholds, free activities",
-          "url": "https://pensacolawinterfest.org/.well-known/llms.txt"
-        },
-        {
-          "note": "Winterfest home page: tours, Plaza Wonderland, opening night",
-          "url": "https://pensacolawinterfest.org/"
         }
       ],
       "checkedOn": "2026-11-25"
@@ -1613,6 +1557,36 @@
         }
       ],
       "checkedOn": "2026-11-25"
+    },
+    {
+      "id": "ev_pensacola_winterfest_1127-2026-11-27",
+      "title": "Pensacola Winterfest",
+      "date": "2026-11-27",
+      "endDate": "2026-12-24",
+      "startTime": "17:00",
+      "endTime": null,
+      "when": "Select nights from 5 PM: Fri 11/27, Sat 11/28 · Fri 12/4, Sat 12/5, Fri 12/11, Sun 12/13 · nightly 12/18 to 12/24",
+      "venue": "Plaza Wonderland, Old County Courthouse",
+      "address": "223 S Palafox Pl, Pensacola, FL 32502",
+      "category": "event",
+      "categoryLabel": "Events and festivals",
+      "price": {
+        "kind": "priced",
+        "label": "from $17"
+      },
+      "summary": "Pensacola Winterfest is a volunteer-run holiday event around the Old County Courthouse in downtown Pensacola, with snow falling on Plaza Wonderland and trolley tours themed on Peanuts, The Polar Express and the Grinch, plus a Scrooge and Marley tour in Christmas week. Each tour runs about 25 minutes. Snow and music in the plaza are free, and photo sessions with Santa are booked by the group. Reservations are strongly recommended because recent seasons sold out in advance.",
+      "url": "https://coastaleventures.com/events/ev-pensacola-winterfest-1127.html",
+      "sources": [
+        {
+          "note": "Winterfest feed and guide: 2026 season Nov 27 to Dec 24, tour prices, age thresholds, free activities",
+          "url": "https://pensacolawinterfest.org/.well-known/llms.txt"
+        },
+        {
+          "note": "Winterfest home page: tours, Plaza Wonderland, opening night",
+          "url": "https://pensacolawinterfest.org/"
+        }
+      ],
+      "checkedOn": "2026-11-27"
     },
     {
       "id": "ev_winterfest_photos_with_santa_1120-2026-11-27",
