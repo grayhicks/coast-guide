@@ -502,11 +502,16 @@ html:not(.hk_mo) .sunb::after { content: none; }
 @media (prefers-reduced-motion: reduce){html:not(.hk_mo) .hk .adcart { transform: none !important; left: 14% !important; opacity: 1 !important; }}
 .htown .hshim.s1 { left: 16%; width: 42%; bottom: 23px; animation: hk_hshim calc(4.2s * var(--gca-calm)) ease-in-out infinite alternate; }
 .htown .hshim.s2 { right: 14%; width: 30%; bottom: 31px; opacity: 0.7; animation: hk_hshim calc(5.6s * var(--gca-calm)) ease-in-out infinite alternate; }
+.ldec .lfb.b2 { animation-delay: 0.9s; }
 html:not(.hk_diag_livedec) .t-labNight .ldec .lfb.b1 { transform: translateY(0.4px); }
+html:not(.hk_diag_livedec) .t-labNight .ldec .lfb.b2 { transform: translateY(-2.8px); }
 html:not(.hk_diag_livedec) .t-labNight .ldec .lx_bone.b1 { transform: translate(-6.1px, 1.6px); }
+html:not(.hk_diag_livedec) .t-labNight .ldec .lx_bone.b2 { transform: translate(-19.8px, 0px); }
 .emrl .em_bl.b1 { stroke-width: 1.1; stroke-opacity: 0.7; animation-duration: calc(6.4s * var(--gca-calm)); }
+.emrl .em_bl.b2 { stroke-width: 1.8; stroke-opacity: 0.5; animation-duration: calc(4.4s * var(--gca-calm)); }
 .cosm .cs_shoot.s2 { left: 30%; top: auto; bottom: 6px; width: 46px; animation-duration: calc(23s * var(--gca-calm)); }
 .lx_bone.b1 { animation-delay: 3.4s; }
+.lx_bone.b2 { animation-delay: 7.1s; }
 .htown.nite .hshoot.s2 { animation-duration: calc(1.9s * var(--gca-calm)); width: 54px; }
 .htown .hshim.s1 { bottom: 165px; }
 .htown .hshim.s2 { bottom: 169px; }
@@ -629,9 +634,12 @@ html:not(.hk_diag_livedec) .t-labNight .ldec .lx_bone.b1 { transform: translate(
 .gcl_l > svg { position: absolute; left: 0px; top: 0px; display: block; width: 100%; height: 100%; overflow: visible; }
 .gcl_s { animation: auto ease 0s 1 normal none running none !important; transform: none !important; }
 .skc_oats .b1 { stroke: var(--skb_oat1,#B79A5C); animation-duration: calc(5.1s * var(--gca-calm)); }
+.skc_oats .b2 { stroke: var(--skb_oat2,#9C844A); animation-duration: calc(3.8s * var(--gca-calm)); }
 .skc_oatw .b1 { stroke: var(--skb_oat1,#B79A5C); animation-duration: calc(5.1s * var(--gca-calm)); }
+.skc_oatw .b2 { stroke: var(--skb_oat2,#9C844A); animation-duration: calc(3.8s * var(--gca-calm)); }
 .skitz svg, .hk_promoted svg, .skitz .gcl_w, .skitz .gcl_l { --gca-calm: calc(var(--gca-calm-base) * var(--gca-master) * 2); }
 .skn_bub.b1 { left: calc(168px + var(--skn-dx, 0px)); bottom: 32px; animation: skn_bub1 var(--skd,28s) linear infinite var(--sko,0s); }
+.skn_bub.b2 { left: calc(176px + var(--skn-dx, 0px)); bottom: 28px; width: 3px; height: 3px; animation: skn_bub2 var(--skd,28s) linear infinite var(--sko,0s); }
 .skb_splash.s1 { left: 52px; top: 32px; animation: skb_spl1 var(--skd,18s) linear infinite var(--sko,0s); }
 .skb_splash.s2 { left: 28px; top: 34px; animation: skb_spl2 var(--skd,18s) linear infinite var(--sko,0s); }
 .hk_supportfloat .hsf_label { position: relative; z-index: 4; display: inline-flex; align-items: center; line-height: 1; }
@@ -641,16 +649,28 @@ html:not(.hk_diag_livedec) .t-labNight .ldec .lx_bone.b1 { transform: translate(
 .xsky_star.s1 { left: 28px; top: 18px; opacity: 0.3; }
 .xsky_star.s2 { left: 140px; top: 11px; animation: xskyTwinkle calc(3s * var(--gca-calm)) ease-in-out infinite; }
 .xsky_ref .b1 { left: 13px; top: 2px; width: 2px; height: 16px; animation: xskyWob calc(2s * var(--gca-calm)) ease-in-out infinite; }
+.xsky_ref .b2 { left: 8px; top: 11px; width: 2px; height: 10px; opacity: 0.7; animation: xskyWob calc(3s * var(--gca-calm)) ease-in-out -1s infinite; }
 .xp_gift.on { color: rgb(23, 48, 68); background: linear-gradient(145deg, rgb(247, 228, 174), rgb(217, 184, 94)); border-color: rgb(255, 241, 199); box-shadow: rgba(245, 210, 118, 0.9) 0px 7px 18px -10px; }
 .xps_star.s1 { left: 24px; top: 12px; opacity: 0.3; }
 .xps_star.s2 { left: 138px; top: 7px; animation: xpsTwinkle calc(3s * var(--gca-calm)) ease-in-out infinite; }
 .xps_ref .b1 { left: 13px; top: 2px; width: 2px; height: 15px; animation: xpsWob calc(2s * var(--gca-calm)) ease-in-out infinite; }
+.xps_ref .b2 { left: 8px; top: 9px; width: 2px; height: 9px; opacity: 0.7; animation: xpsWob calc(3s * var(--gca-calm)) ease-in-out -1s infinite; }
 .xps_ref.r2 .b1, .xps_ref.r8 .b1 { left: 10px; top: 3px; height: 12px; }
+.xps_ref.r2 .b2, .xps_ref.r8 .b2 { left: 16px; top: 7px; height: 10px; width: 1.7px; }
 .xps_ref.r3 .b1, .xps_ref.r7 .b1 { left: 15px; top: 3px; height: 10px; width: 1.8px; }
+.xps_ref.r3 .b2, .xps_ref.r7 .b2 { left: 9px; top: 12px; height: 12px; }
 .xps_ref.r4 .b1, .xps_ref.rh .b1 { left: 12px; height: 18px; width: 1.7px; }
+.xps_ref.r4 .b2, .xps_ref.rh .b2 { left: 18px; top: 10px; height: 7px; }
 .xps_ref.r5 .b1 { left: 14px; top: 4px; height: 9px; }
+.xps_ref.r5 .b2 { left: 8px; top: 8px; height: 14px; width: 1.6px; }
+.xps_dolphin.b2 { left: 250px; top: 101px; z-index: 4; opacity: 0.72; animation-delay: -3.1s; }
+.xps_shorebird.b2 { top: 33px; width: 7px; --x0: 356px; --xd: -402px; }
+.xps_shorebird.b2 { animation-duration: calc(47s * var(--gca-calm)); animation-delay: -33s; }
+.xp_supportstage.verified .xps_dolphin.b2 .xps_joyw { animation-delay: 0.55s; }
+.xps_shorebird.b2 { --flap: .61s; }
 .xp_step.on { color: rgb(23, 48, 68); background: rgb(235, 212, 135); border-color: rgb(255, 240, 190); }
 .promo_bulb.b1 { animation-delay: -1.3s; }
+.promo_bulb.b2 { animation-delay: -2.6s; }
 .promo_gca .bt_a { color: var(--bt-a); -webkit-text-stroke: .35px var(--bt-a); }
 .promo_gca .bt_b { color: var(--bt-b); }
 .promo_gca .bt_tail { opacity: 1; }
@@ -1402,6 +1422,17 @@ html.hk_zoom .hero .grain { display: none; }
   58.5% { opacity: 0.9; transform: translate(-0.5px, -4px); }
   62% { opacity: 0.8; transform: translate(1px, -11px); }
   65% { opacity: 0; transform: translate(-1px, -18px); }
+  100% { opacity: 0; }
+}
+@keyframes skn_bub2 { 
+  0%, 32% { opacity: 0; transform: translate(0px, 0px); }
+  33% { opacity: 0.85; transform: translate(-0.5px, -3px); }
+  36.5% { opacity: 0.8; transform: translate(1px, -9px); }
+  40% { opacity: 0; transform: translate(-1px, -15px); }
+  59.5% { opacity: 0; transform: translate(0px, 0px); }
+  60.5% { opacity: 0.85; transform: translate(0.5px, -3px); }
+  64% { opacity: 0.8; transform: translate(-1px, -10px); }
+  67% { opacity: 0; transform: translate(1px, -16px); }
   100% { opacity: 0; }
 }
 @keyframes skb_spl1 { 

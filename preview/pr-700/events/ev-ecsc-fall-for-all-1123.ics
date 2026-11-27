@@ -5,10 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Fall for All fall break days at Emerald Coast Science Center
 BEGIN:VEVENT
-UID:ev_ecsc_fall_for_all_1123-2026-11-25@coast-guide
-DTSTAMP:20261125T000000Z
-DTSTART;VALUE=DATE:20261125
-DTEND;VALUE=DATE:20261128
+UID:ev_ecsc_fall_for_all_1123-2026-11-27@coast-guide
+DTSTAMP:20261127T000000Z
+DTSTART:20261127T100000
+DTEND:20261127T150000
 SUMMARY:Fall for All fall break days at Emerald Coast Science Center
 DESCRIPTION:The science center runs a fall break program on four days\, wi
  th new activities each day. Kids make a glowing pumpkin squishy circuit\,
